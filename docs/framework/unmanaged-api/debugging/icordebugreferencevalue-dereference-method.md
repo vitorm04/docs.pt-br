@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5ec8cf76-3deb-4ce6-9a49-77a4c35d80b9
 topic_type:
 - apiref
-ms.openlocfilehash: 6bb2a6b68a3c6e981a2d6c833d3f44d4c836bd23
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7c64823e1a5c519eb74b508af093afeb1132e608
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124004"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210079"
 ---
 # <a name="icordebugreferencevaluedereference-method"></a>Método ICorDebugReferenceValue::Dereference
 Obtém o objeto que é referenciado.  
@@ -38,13 +38,13 @@ HRESULT Dereference (
  fora Um ponteiro para o endereço de um ICorDebugValue que representa o objeto ao qual esse objeto ICorDebugReferenceValue aponta.  
   
 ## <a name="remarks"></a>Comentários  
- O objeto `ICorDebugValue` é válido somente enquanto sua referência ainda não foi desabilitada.  
+ O `ICorDebugValue` objeto é válido somente enquanto sua referência ainda não foi desabilitada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

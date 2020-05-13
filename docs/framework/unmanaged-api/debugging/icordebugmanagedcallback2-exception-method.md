@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-ms.openlocfilehash: e7125d923fb1d3757bb4ca53f5a7db806b241dd9
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 612b63ba9aa3504cab5196932293946d486955ce
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781525"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210196"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>Método ICorDebugManagedCallback2::Exception
 Notifica o depurador de que uma pesquisa de um manipulador de exceção foi iniciada.  
@@ -46,10 +46,10 @@ HRESULT Exception (
  no Um ponteiro para um objeto ICorDebugThread que representa o thread no qual a exceção foi gerada.  
   
  `pFrame`  
- no Um ponteiro para um objeto ICorDebugFrame que representa um quadro, conforme determinado pelo parâmetro `dwEventType`. Para obter mais informações, consulte a tabela na seção comentários.  
+ no Um ponteiro para um objeto ICorDebugFrame que representa um quadro, conforme determinado pelo `dwEventType` parâmetro. Para obter mais informações, consulte a tabela na seção comentários.  
   
  `nOffset`  
- no Um inteiro que especifica um deslocamento, conforme determinado pelo parâmetro `dwEventType`. Para obter mais informações, consulte a tabela na seção comentários.  
+ no Um inteiro que especifica um deslocamento, conforme determinado pelo `dwEventType` parâmetro. Para obter mais informações, consulte a tabela na seção comentários.  
   
  `dwEventType`  
  no Um valor da enumeração CorDebugExceptionCallbackType que especifica o tipo deste retorno de chamada de exceção.  
@@ -58,29 +58,29 @@ HRESULT Exception (
  no Um valor da enumeração [CorDebugExceptionFlags](cordebugexceptionflags-enumeration.md) que especifica informações adicionais sobre a exceção  
   
 ## <a name="remarks"></a>Comentários  
- O retorno de chamada `Exception` é chamado em vários pontos durante a fase de pesquisa do processo de tratamento de exceção. Ou seja, ele pode ser chamado mais de uma vez ao desenrolar uma exceção.  
+ O `Exception` retorno de chamada é chamado em vários pontos durante a fase de pesquisa do processo de tratamento de exceção. Ou seja, ele pode ser chamado mais de uma vez ao desenrolar uma exceção.  
   
- A exceção que está sendo processada pode ser recuperada do objeto ICorDebugThread referenciado pelo parâmetro `pThread`.  
+ A exceção que está sendo processada pode ser recuperada do objeto ICorDebugThread referenciado pelo `pThread` parâmetro.  
   
- O quadro e o deslocamento específicos são determinados pelo parâmetro `dwEventType` da seguinte maneira:  
+ O quadro e o deslocamento específicos são determinados pelo `dwEventType` parâmetro da seguinte maneira:  
   
 |Valor de `dwEventType`|Valor de `pFrame`|Valor de `nOffset`|  
 |----------------------------|-----------------------|------------------------|  
 |DEBUG_EXCEPTION_FIRST_CHANCE|O quadro que gerou a exceção.|O ponteiro de instrução no quadro.|  
 |DEBUG_EXCEPTION_USER_FIRST_CHANCE|O quadro de código do usuário mais próximo do ponto da exceção gerada.|O ponteiro de instrução no quadro.|  
 |DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|O quadro que contém o manipulador catch.|O deslocamento da MSIL (Microsoft Intermediate Language) do início do manipulador catch.|  
-|DEBUG_EXCEPTION_UNHANDLED|NULL|Indefinido.|  
+|DEBUG_EXCEPTION_UNHANDLED|NULO|Indefinido.|  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)
 - [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

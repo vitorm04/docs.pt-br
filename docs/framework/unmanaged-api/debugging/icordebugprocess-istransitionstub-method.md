@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7653317-7e48-4163-be03-f50f1a4b0f70
 topic_type:
 - apiref
-ms.openlocfilehash: 852c77be0dc8ef91933bacbbd3d6b3f5a69ae8c8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ab2121605f974fdf3f9053214a4d29d8b0dd72db
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139393"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210522"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a>Método ICorDebugProcess::IsTransitionStub
 Obtém um valor que indica se um endereço está dentro de um stub que causará uma transição para o código gerenciado.  
@@ -35,21 +35,21 @@ HRESULT IsTransitionStub(
   
 ## <a name="parameters"></a>Parâmetros  
  `address`  
- no Um valor `CORDB_ADDRESS` que especifica o endereço em questão.  
+ no Um `CORDB_ADDRESS` valor que especifica o endereço em questão.  
   
  `pbTransitionStub`  
- fora Um ponteiro para um valor booliano `true` se o endereço especificado estiver dentro de um stub que causará uma transição para o código gerenciado; caso contrário, *`pbTransitionStub` será `false`.  
+ fora Um ponteiro para um valor booliano que é `true` se o endereço especificado estiver dentro de um stub que causará uma transição para o código gerenciado; caso contrário, * `pbTransitionStub` será `false` .  
   
 ## <a name="remarks"></a>Comentários  
- O método `IsTransitionStub` pode ser usado por código de depuração não gerenciado para decidir quando retornar o controle de etapas para o stepper gerenciado.  
+ O `IsTransitionStub` método pode ser usado por código de depuração não gerenciado para decidir quando retornar o controle de etapas para o stepper gerenciado.  
   
  Você também pode identificar stubs de transição examinando as informações no arquivo executável portátil (PE).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

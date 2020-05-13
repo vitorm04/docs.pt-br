@@ -5,25 +5,25 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 089d5d7c7a95e2de4629f53255d9d9790fd5508a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7bcc7e68810c97142cebca7595266a0e4a69ed51
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705386"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207944"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Controle de versão com as palavras-chave override e new (Guia de Programação em C#)
 A linguagem C# foi projetada para que o controle de versão entre classes derivadas e [base](../../language-reference/keywords/base.md) em diferentes bibliotecas possa evoluir e manter a compatibilidade com versões anteriores. Isso significa, por exemplo, que a introdução de um novo membro em uma [classe](../../language-reference/keywords/class.md) base com o mesmo nome que um membro em uma classe derivada tem suporte completo pelo C# e não leva a comportamento inesperado. Isso também significa que uma classe deve declarar explicitamente se um método destina-se a substituir um método herdado ou se um método é um novo método que oculta um método herdado de nome semelhante.  
   
  No C#, as classes derivadas podem conter métodos com o mesmo nome que os métodos da classe base.  
-  
-- O método de classe base deve ser definido como [virtual](../../language-reference/keywords/virtual.md).  
-  
+
 - Se o método na classe derivada não for precedido pelas palavras-chave [new](../../language-reference/keywords/new-modifier.md) ou [override](../../language-reference/keywords/override.md), o compilador emitirá um aviso e o método se comportará como se a palavra-chave `new` estivesse presente.  
   
 - Se o método na classe derivada for precedido pela palavra-chave `new`, o método será definido como sendo independente do método na classe base.  
   
 - Se o método na classe derivada for precedido pela palavra-chave `override`, os objetos da classe derivada chamarão esse método em vez do método da classe base.  
+
+- Para aplicar a `override` palavra-chave ao método na classe derivada, o método da classe base deve ser definido como [virtual](../../language-reference/keywords/virtual.md).
   
 - O método da classe base pode ser chamado de dentro da classe derivada usando a palavra-chave `base`.  
   
@@ -68,11 +68,11 @@ A linguagem C# foi projetada para que o controle de versão entre classes deriva
   
  [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  
   
- Quando `DoWork` é chamado em uma instância do `Derived`, o compilador C# tenta primeiro tornar a chamada compatível com as versões do `DoWork` originalmente declarado em `Derived`. Os métodos de substituição não são considerados como declarados em uma classe, eles são novas implementações de um método declarado em uma classe base. Somente se o compilador C# não puder corresponder a chamada de método a um método original no `Derived` ele tentará corresponder a chamada a um método com o mesmo nome e parâmetros compatíveis. Por exemplo:   
+ Quando `DoWork` é chamado em uma instância do `Derived`, o compilador C# tenta primeiro tornar a chamada compatível com as versões do `DoWork` originalmente declarado em `Derived`. Os métodos de substituição não são considerados como declarados em uma classe, eles são novas implementações de um método declarado em uma classe base. Somente se o compilador C# não puder corresponder a chamada de método a um método original no `Derived` ele tentará corresponder a chamada a um método com o mesmo nome e parâmetros compatíveis. Por exemplo:  
   
  [!code-csharp[csProgGuideInheritance#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#33)]  
   
- Como a variável `val` pode ser convertida para um duplo implicitamente, o compilador C# chama `DoWork(double)` em vez de `DoWork(int)`. Há duas formas de evitar isso. Primeiro, evite declarar novos métodos com o mesmo nome que os métodos virtuais. Segundo, você pode instruir o compilador C# para chamar o método virtual fazendo-o pesquisar a lista do método de classe base convertendo a instância do `Derived` para `Base`. Como o método é virtual, a implementação de `DoWork(int)` em `Derived` será chamada. Por exemplo:   
+ Como a variável `val` pode ser convertida para um duplo implicitamente, o compilador C# chama `DoWork(double)` em vez de `DoWork(int)`. Há duas formas de evitar isso. Primeiro, evite declarar novos métodos com o mesmo nome que os métodos virtuais. Segundo, você pode instruir o compilador C# para chamar o método virtual fazendo-o pesquisar a lista do método de classe base convertendo a instância do `Derived` para `Base`. Como o método é virtual, a implementação de `DoWork(int)` em `Derived` será chamada. Por exemplo:  
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   
@@ -80,7 +80,7 @@ A linguagem C# foi projetada para que o controle de versão entre classes deriva
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Classes e structs](./index.md)
 - [Métodos](./methods.md)
 - [Herança](./inheritance.md)

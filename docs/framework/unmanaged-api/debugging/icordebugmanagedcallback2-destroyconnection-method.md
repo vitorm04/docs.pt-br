@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf7940e9-4558-4319-925c-09f6c98c8fcd
 topic_type:
 - apiref
-ms.openlocfilehash: 4f6940f863504a9aedd9539e121c7b3791f746b9
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c5527f3bd0b04857a1ebc520016b81ddbe3c23f8
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788300"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208844"
 ---
 # <a name="icordebugmanagedcallback2destroyconnection-method"></a>Método ICorDebugManagedCallback2::DestroyConnection
 Notifica o depurador de que a conexão especificada foi encerrada.  
@@ -42,18 +42,18 @@ HRESULT DestroyConnection (
  no A ID da conexão que foi destruída.  
   
 ## <a name="remarks"></a>Comentários  
- Um retorno de chamada `DestroyConnection` será acionado quando um host chamar [ICLRDebugManager:: EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) na [API de hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md).  
+ Um `DestroyConnection` retorno de chamada será acionado quando um host chamar [ICLRDebugManager:: EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) na [API de hospedagem](../hosting/index.md).  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)
 - [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

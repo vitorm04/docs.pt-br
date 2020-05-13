@@ -14,37 +14,37 @@ helpviewer_keywords:
 ms.assetid: ee3f85d3-044e-46b8-945c-93ebfa5d9e91
 topic_type:
 - apiref
-ms.openlocfilehash: 6cc1ef5f778902efaa53156fbefe334046c82114
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4bc8d56bf116cd64e3e1c5d2238e557784c56711
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794530"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209585"
 ---
 # <a name="icordebugframeenum-interface"></a>Interface ICorDebugFrameEnum
 
 Implementa métodos ICorDebugEnum e enumera matrizes ICorDebugFrame.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Next](icordebugframeenum-next-method.md)|Obtém o número especificado de instâncias de `ICorDebugFrame` da enumeração, começando na posição atual.|  
+|[Método Next](icordebugframeenum-next-method.md)|Obtém o número especificado de `ICorDebugFrame` instâncias da enumeração, começando na posição atual.|  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Depurando interfaces](debugging-interfaces.md)

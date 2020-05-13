@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-ms.openlocfilehash: 4b48132ee60bcaebb218d8f583de6558372f5055
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de570507c4312f09def0908b9d56e5371c63527e
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178606"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207287"
 ---
 # <a name="icordebugprocess5getobject-method"></a>Método ICorDebugProcess5::GetObject
 Converte um endereço de objeto em um objeto "ICorDebugObjectValue".  
@@ -34,24 +34,24 @@ HRESULT GetObject(
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `addr`  
- [em] O endereço do objeto.  
+ no O endereço do objeto.  
   
  `ppObject`  
- [fora] Um ponteiro para o endereço de um objeto "ICorDebugObjectValue".  
+ fora Um ponteiro para o endereço de um objeto "ICorDebugObjectValue".  
   
 ## <a name="remarks"></a>Comentários  
- Se `addr` não apontar para um objeto `GetObject` gerenciado `E_FAIL`válido, o método retorna .  
+ Se `addr` o não apontar para um objeto gerenciado válido, o `GetObject` método retornará `E_FAIL` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 

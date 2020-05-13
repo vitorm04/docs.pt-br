@@ -4,30 +4,30 @@ description: Saiba como usar a ferramenta .NET Portability Analyzer para avaliar
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 8d019bef5fddac9f7c3d93e416cea061905c82ff
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 94dd6de8839b03bbdc33ae1ed03599853241d40b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728441"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209359"
 ---
 # <a name="the-net-portability-analyzer"></a>O .NET Portability Analyzer
 
 Deseja fazer suas bibliotecas serem compatíveis com multiplataforma? Deseja ver quanto trabalho é necessário para fazer seu .NET Framework aplicativo ser executado no .NET Core? O [.net Portability Analyzer](https://github.com/microsoft/dotnet-apiport) é uma ferramenta que analisa os assemblies e fornece um relatório detalhado sobre as APIs do .NET que estão faltando para que os aplicativos ou bibliotecas sejam portáteis em suas plataformas .net de destino especificadas. O analisador de portabilidade é oferecido como uma [extensão do Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), que analisa um assembly por projeto e como um [aplicativo de console ApiPort](https://aka.ms/apiportdownload), que analisa os assemblies por arquivos ou diretórios especificados.
 
-Depois de converter seu projeto para direcionar a nova plataforma, como o .NET Core, você pode usar a [ferramenta Analisador de API](api-analyzer.md) baseada em Roslyn para <xref:System.PlatformNotSupportedException> identificar as APIs que geram exceções e outros problemas de compatibilidade.
+Depois de converter seu projeto para direcionar a nova plataforma, como o .NET Core, você pode usar a [ferramenta Analisador de API](api-analyzer.md) baseada em Roslyn para identificar as APIs que geram <xref:System.PlatformNotSupportedException> exceções e outros problemas de compatibilidade.
 
 ## <a name="common-targets"></a>Destinos comuns
 
-- [.NET Core](../../core/index.yml): tem um design modular, utiliza lado a lado e está direcionado a cenários de plataforma cruzada. O lado a lado permite adotar novas versões do .NET Core sem interromper outros aplicativos. Se sua meta é portar seu aplicativo para as plataformas cruzadas compatíveis com o .NET Core, esse é o destino recomendado.
-- . [Net Standard](../../standard/net-standard.md): inclui as APIs de .net Standard disponíveis em todas as implementações do .net. Se sua meta é fazer sua biblioteca ser executada em todas as plataformas compatíveis com o .NET, esse é o destino recomendado.
+- [.NET Core](../../core/index.yml): tem um design modular, dá suporte à instalação lado a lado e tem como alvo cenários de plataforma cruzada. A instalação lado a lado permite que você adote novas versões do .NET Core sem interromper outros aplicativos. Se seu objetivo é portar seu aplicativo para o .NET Core e oferecer suporte a várias plataformas, esse é o destino recomendado.
+- . [Net Standard](../../standard/net-standard.md): inclui as APIs de .net Standard disponíveis em todas as implementações do .net. Se seu objetivo é fazer com que sua biblioteca seja executada em todas as plataformas com suporte do .NET, esse é o destino recomendado.
 - [ASP.NET Core](/aspnet/core): uma estrutura da Web moderna criada no .NET Core. Se sua meta é portar seu aplicativo Web para o .NET Core para dar suporte a várias plataformas, esse é o destino recomendado.
 - [Extensões de plataforma](../../core/porting/windows-compat-pack.md).NET Core +: inclui as APIs do .NET Core, além do pacote de compatibilidade do Windows, que fornece muitas das .NET Framework tecnologias disponíveis. Esse é um destino recomendado para portar seu aplicativo do .NET Framework para o .NET Core no Windows.
 - .NET Standard + [extensões de plataforma](../../core/porting/windows-compat-pack.md): inclui as APIs de .net Standard além do pacote de compatibilidade do Windows, que fornece muitas das .NET Framework tecnologias disponíveis. Esse é um destino recomendado para portar sua biblioteca do .NET Framework para o .NET Core no Windows.
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>Como usar o Analisador de Portabilidade do .NET
 
-Para começar a usar o Analisador de Portabilidade do .NET no Visual Studio, primeiro é necessário baixar e instalar a extensão do [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Ele funciona no Visual Studio 2017 e versões posteriores. Configure-o no Visual Studio **usando** > **as configurações** do analisador de portabilidade e selecione suas plataformas de destino, que são as plataformas .net/versões que você deseja avaliar as lacunas de portabilidade que são comparadas com a plataforma/versão com a qual seu assembly atual foi criado.
+Para começar a usar o Analisador de Portabilidade do .NET no Visual Studio, primeiro é necessário baixar e instalar a extensão do [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Ele funciona no Visual Studio 2017 e versões posteriores. Configure-o no Visual Studio **usando**  >  **as configurações** do analisador de portabilidade e selecione suas plataformas de destino, que são as plataformas .net/versões que você deseja avaliar as lacunas de portabilidade que são comparadas com a plataforma/versão com a qual seu assembly atual foi criado.
 
 ![Captura de tela do analisador de portabilidade.](./media/portability-analyzer/portability-screenshot.png)
 
@@ -67,7 +67,7 @@ A seção de **detalhes** do relatório lista as APIs ausentes em qualquer uma d
 - Membro de destino: o método está ausente de uma Plataforma de Destino
 - Nome do assembly: o assembly do .NET Framework no qual a API ausente reside.
 - Cada uma das plataformas de destino selecionadas é uma coluna, como ".NET Core": o valor "sem suporte" significa que a API não tem suporte nesta plataforma de destino.
-- Alterações recomendadas: a API ou a tecnologia recomendada para alterar. Atualmente, esse campo está vazio ou desatualizado para muitas APIs. Devido ao grande número de APIs, temos um desafio significativo para mantê-la atualizada. Estamos examinando soluções alternativas para fornecer informações úteis aos clientes.
+- Alterações recomendadas: a API ou a tecnologia recomendada para alterar. Atualmente, esse campo está vazio ou desatualizado para muitas APIs. Devido ao grande número de APIs, temos um desafio significativo para mantê-lo atualizado. Estamos examinando soluções alternativas para fornecer informações úteis aos clientes.
 
 #### <a name="missing-assemblies"></a>Assemblies Ausentes
 

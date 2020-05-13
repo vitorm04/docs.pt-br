@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93f79627-bd31-4f4f-b95d-46a032a52fe4
 topic_type:
 - apiref
-ms.openlocfilehash: bf9ea40cc81be37499e6729006e7177a8000c000
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f850b3cd35fda8bd554b99e14553100008cb4eca
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793293"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208519"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>Método ICorDebugManagedCallback2::MDANotification
 Fornece uma notificação de que a execução de código encontrou um MDA (Assistente de depuração gerenciada) no aplicativo que está sendo depurado.  
@@ -58,19 +58,19 @@ HRESULT MDANotification(
   
  O MDAs pode ser enfileirado e disparado logo após o MDA ser encontrado. Isso pode acontecer se o tempo de execução precisar esperar até chegar a um ponto seguro para acionar o MDA, em vez de acionar o MDA quando ele encontrá-lo. Isso também significa que o tempo de execução pode disparar vários MDAs em um único conjunto de retornos de chamada em fila (semelhante a uma operação de evento "Attach").  
   
- Um depurador deve liberar a referência a uma instância de `ICorDebugMDA` imediatamente após retornar do `MDANotification` de retorno de chamada, para permitir que o CLR Recicle a memória consumida por um MDA. A liberação da instância pode melhorar o desempenho se muitas MDAs estiverem sendo acionadas.  
+ Um depurador deve liberar a referência a uma `ICorDebugMDA` instância imediatamente após retornar do `MDANotification` retorno de chamada, para permitir que o CLR Recicle a memória consumida por um MDA. A liberação da instância pode melhorar o desempenho se muitas MDAs estiverem sendo acionadas.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interface ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)
 - [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

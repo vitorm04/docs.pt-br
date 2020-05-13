@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: a95389d3-cf2e-47a4-9805-61426acc6b65
 topic_type:
 - apiref
-ms.openlocfilehash: b97f29b94ed4fad6892697ca1c7ed4a20c99c03e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 63e3f166c4cbf17f4892dccf770343bfbf6e0284
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793277"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209741"
 ---
 # <a name="icordebugmanagedcallback3-interface"></a>Interface ICorDebugManagedCallback3
 Fornece um método de retorno de chamada que indica que uma notificação personalizada ativada do depurador foi gerada.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
@@ -36,16 +36,16 @@ Fornece um método de retorno de chamada que indica que uma notificação person
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)
 - [Interface ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)

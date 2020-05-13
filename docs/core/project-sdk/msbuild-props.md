@@ -1,18 +1,18 @@
 ---
 title: Propriedades do MSBuild para Microsoft. NET. Sdk
-description: Referência para as propriedades do MSBuild que são compreendidas pelo SDK do .NET Core.
+description: Referência para as propriedades e os itens do MSBuild que são compreendidos pelo SDK do .NET Core.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 800ff59310d8437d7f770bf20a5bdf37714f8515
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: cda56b3e23592a341d9fe672fc1f1530adcdab49
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795567"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206103"
 ---
-# <a name="msbuild-properties-for-net-core-sdk-projects"></a>Propriedades do MSBuild para projetos SDK do .NET Core
+# <a name="msbuild-reference-for-net-core-sdk-projects"></a>Referência do MSBuild para projetos de SDK do .NET Core
 
-Esta página descreve as propriedades do MSBuild para configurar projetos do .NET Core. Você pode especificar *metadados* para cada propriedade como elementos filho da propriedade.
+Esta página é uma referência para as propriedades e os itens do MSBuild que você pode usar para configurar projetos do .NET Core.
 
 > [!NOTE]
 > Esta página é um trabalho em andamento e não lista todas as propriedades de MSBuild úteis para o SDK do .NET Core. Para obter uma lista de propriedades comuns do MSBuild, consulte [Propriedades comuns do MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).
@@ -37,10 +37,10 @@ Para obter mais informações, consulte [estruturas de destino em projetos em es
 
 ### <a name="targetframeworks"></a>TargetFrameworks
 
-Use a `TargetFrameworks` Propriedade quando desejar que seu aplicativo direcione várias plataformas. Para obter uma lista de monikers de estrutura de destino válidos, consulte [estruturas de destino em projetos em estilo SDK](../../standard/frameworks.md#supported-target-framework-versions).
+Use a `TargetFrameworks` propriedade quando desejar que seu aplicativo direcione várias plataformas. Para obter uma lista de monikers de estrutura de destino válidos, consulte [estruturas de destino em projetos em estilo SDK](../../standard/frameworks.md#supported-target-framework-versions).
 
 > [!NOTE]
-> Essa propriedade será ignorada `TargetFramework` se (singular) for especificado.
+> Essa propriedade será ignorada se `TargetFramework` (singular) for especificado.
 
 ```xml
 <PropertyGroup>
@@ -53,9 +53,9 @@ Para obter mais informações, consulte [estruturas de destino em projetos em es
 ### <a name="netstandardimplicitpackageversion"></a>NetStandardImplicitPackageVersion
 
 > [!NOTE]
-> Essa propriedade só se aplica a projetos `netstandard1.x`que usam o. Ele não se aplica a projetos que `netstandard2.x`usam o.
+> Essa propriedade só se aplica a projetos que usam o `netstandard1.x` . Ele não se aplica a projetos que usam o `netstandard2.x` .
 
-Use a `NetStandardImplicitPackageVersion` Propriedade quando desejar especificar uma versão de estrutura inferior à versão do [metapacote](../packages.md#metapackages) . O arquivo de projeto no exemplo a seguir `netstandard1.3` tem como destino, mas usa `NETStandard.Library`a versão 1.6.0 do.
+Use a `NetStandardImplicitPackageVersion` propriedade quando desejar especificar uma versão de estrutura inferior à versão do [metapacote](../packages.md#metapackages) . O arquivo de projeto no exemplo a seguir tem `netstandard1.3` como destino, mas usa a versão 1.6.0 do `NETStandard.Library` .
 
 ```xml
 <PropertyGroup>
@@ -66,7 +66,7 @@ Use a `NetStandardImplicitPackageVersion` Propriedade quando desejar especificar
 
 ## <a name="package-properties"></a>Propriedades do pacote
 
-Você `PackageId`pode especificar propriedades como, `PackageVersion` `PackageIcon` `Title`,, e `Description` para descrever o pacote que é criado a partir do seu projeto. Para obter informações sobre essas e outras propriedades, consulte [pacote de destino](/nuget/reference/msbuild-targets#pack-target).
+Você pode especificar propriedades como `PackageId` ,, `PackageVersion` , `PackageIcon` `Title` e `Description` para descrever o pacote que é criado a partir do seu projeto. Para obter informações sobre essas e outras propriedades, consulte [pacote de destino](/nuget/reference/msbuild-targets#pack-target).
 
 ```xml
 <PropertyGroup>
@@ -78,7 +78,7 @@ Você `PackageId`pode especificar propriedades como, `PackageVersion` `PackageIc
 </PropertyGroup>
 ```
 
-## <a name="publish-properties"></a>Publicar propriedades
+## <a name="publish-properties-and-items"></a>Publicar Propriedades e itens
 
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
@@ -110,7 +110,7 @@ A `RuntimeIdentifiers` propriedade permite que você especifique uma lista delim
 
 ### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
 
-O `TrimmerRootAssembly` item permite que você exclua um assembly de [*corte*](../deploying/trim-self-contained.md). O corte é o processo de remover partes não usadas do tempo de execução de um aplicativo empacotado. Em alguns casos, a remoção pode remover incorretamente as referências necessárias.
+O `TrimmerRootAssembly` Item permite que você exclua um assembly de [*corte*](../deploying/trim-self-contained.md). O corte é o processo de remover partes não usadas do tempo de execução de um aplicativo empacotado. Em alguns casos, a remoção pode remover incorretamente as referências necessárias.
 
 O XML a seguir exclui o `System.Security` assembly de corte.
 
@@ -122,9 +122,9 @@ O XML a seguir exclui o `System.Security` assembly de corte.
 
 ### <a name="useapphost"></a>UseAppHost
 
-A `UseAppHost` Propriedade foi introduzida na versão 2.1.400 do SDK do .NET Core. Ele controla se um executável nativo é criado para uma implantação ou não. Um executável nativo é necessário para implantações independentes.
+A `UseAppHost` propriedade foi introduzida na versão 2.1.400 do SDK do .NET Core. Ele controla se um executável nativo é criado para uma implantação ou não. Um executável nativo é necessário para implantações independentes.
 
-No .NET Core 3,0 e versões posteriores, um executável dependente da estrutura é criado por padrão. Defina a `UseAppHost` Propriedade como `false` para desabilitar a geração do executável.
+No .NET Core 3,0 e versões posteriores, um executável dependente da estrutura é criado por padrão. Defina a `UseAppHost` propriedade como `false` para desabilitar a geração do executável.
 
 ```xml
 <PropertyGroup>
@@ -136,11 +136,27 @@ Para obter mais informações sobre a implantação, consulte [implantação de 
 
 ## <a name="compile-properties"></a>Compilar propriedades
 
+- [EmbeddedResourceUseDependentUponConvention](#embeddedresourceusedependentuponconvention)
 - [LangVersion](#langversion)
+
+### <a name="embeddedresourceusedependentuponconvention"></a>EmbeddedResourceUseDependentUponConvention
+
+A `EmbeddedResourceUseDependentUponConvention` propriedade define se os nomes de arquivo de manifesto de recurso são gerados a partir de informações de tipo em arquivos de origem que são colocados com arquivos de recursos. Por exemplo, se *Form1. resx* estiver na mesma pasta que *Form1.cs*e `EmbeddedResourceUseDependentUponConvention` for definido como `true` , o arquivo *. Resources* gerado usará seu nome do primeiro tipo definido em *Form1.cs*. Por exemplo, se `MyNamespace.Form1` for o primeiro tipo definido em *Form1.cs*, o nome de arquivo gerado *será MyNamespace. Form1. Resources*.
+
+> [!NOTE]
+> Se `LogicalName` `ManifestResourceName` os metadados,, ou `DependentUpon` forem especificados para um `EmbeddedResource` Item, o nome do arquivo de manifesto gerado para esse arquivo de recurso será baseado nesses metadados em vez disso.
+
+Por padrão, em um novo projeto .NET Core, essa propriedade é definida como `true` . Se for definido como `false` , e não `LogicalName` , ou os `ManifestResourceName` `DependentUpon` metadados forem especificados para o `EmbeddedResource` item no arquivo de projeto, o nome do arquivo de manifesto de recurso será baseado no namespace raiz do projeto e no caminho de arquivo relativo para o arquivo *. resx* . Para obter mais informações, consulte [como os arquivos de manifesto de recurso são nomeados](../resources/manifest-file-names.md).
+
+```xml
+<PropertyGroup>
+  <EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
+</PropertyGroup>
+```
 
 ### <a name="langversion"></a>LangVersion
 
-A `LangVersion` propriedade permite especificar uma versão de linguagem de programação específica. Por exemplo, se você quiser acessar os recursos do C# Preview, `LangVersion` defina `preview`como.
+A `LangVersion` propriedade permite especificar uma versão de linguagem de programação específica. Por exemplo, se você quiser acessar os recursos do C# Preview, defina `LangVersion` como `preview` .
 
 ```xml
 <PropertyGroup>
@@ -196,7 +212,7 @@ A `RetainVMGarbageCollection` Propriedade configura o coletor de lixo para coloc
 
 ### <a name="servergarbagecollection"></a>ServerGarbageCollection
 
-A `ServerGarbageCollection` propriedade define se o aplicativo usa a coleta de lixo da [estação de trabalho ou a coleta de lixo do servidor](../../standard/garbage-collection/workstation-server-gc.md). Defina o valor como `true` para usar a coleta de lixo do servidor. Para obter mais informações, consulte [System. GC. Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
+A `ServerGarbageCollection` propriedade define se o aplicativo usa a coleta de lixo da [estação de trabalho ou a coleta de lixo do servidor](../../standard/garbage-collection/workstation-server-gc.md). Defina o valor como para `true` usar a coleta de lixo do servidor. Para obter mais informações, consulte [System. GC. Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
 
 ```xml
 <PropertyGroup>
@@ -254,7 +270,7 @@ A `TieredCompilationQuickJitForLoops` propriedade define se o compilador JIT usa
 </PropertyGroup>
 ```
 
-## <a name="reference-properties"></a>Propriedades de referência
+## <a name="reference-properties-and-items"></a>Propriedades e itens de referência
 
 - [AssetTargetFallback](#assettargetfallback)
 - [PackageReference](#packagereference)
@@ -264,7 +280,7 @@ A `TieredCompilationQuickJitForLoops` propriedade define se o compilador JIT usa
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
-A `AssetTargetFallback` propriedade permite que você especifique versões de estrutura compatíveis adicionais para referências de projeto e pacotes NuGet. Por exemplo, se você especificar uma dependência de pacote `PackageReference` usando, mas esse pacote não contiver ativos que são compatíveis com `TargetFramework`seus projetos `AssetTargetFallback` , a propriedade entrará em cena. A compatibilidade do pacote referenciado é verificada novamente usando cada estrutura de destino especificada em `AssetTargetFallback`.
+A `AssetTargetFallback` propriedade permite que você especifique versões de estrutura compatíveis adicionais para referências de projeto e pacotes NuGet. Por exemplo, se você especificar uma dependência de pacote usando `PackageReference` , mas esse pacote não contiver ativos que são compatíveis com seus projetos `TargetFramework` , a `AssetTargetFallback` Propriedade entrará em cena. A compatibilidade do pacote referenciado é verificada novamente usando cada estrutura de destino especificada em `AssetTargetFallback` .
 
 Você pode definir a `AssetTargetFallback` propriedade para uma ou mais [versões da estrutura de destino](../../standard/frameworks.md#supported-target-framework-versions).
 
@@ -276,9 +292,9 @@ Você pode definir a `AssetTargetFallback` propriedade para uma ou mais [versõe
 
 ### <a name="packagereference"></a>PackageReference
 
-O `PackageReference` define uma referência a um pacote NuGet. Por exemplo, talvez você queira fazer referência a um único pacote em vez de um [metapacote](../packages.md#metapackages).
+O `PackageReference` Item define uma referência a um pacote NuGet. Por exemplo, talvez você queira fazer referência a um único pacote em vez de um [metapacote](../packages.md#metapackages).
 
-O atributo `Include` especifica a ID do pacote. O `Version` atributo especifica a versão ou o intervalo de versão. Para obter informações sobre como especificar uma versão mínima, a versão máxima, o intervalo ou a correspondência exata, consulte [intervalos de versão](/nuget/concepts/package-versioning#version-ranges). Você também pode adicionar os seguintes metadados a uma referência de projeto `IncludeAssets`: `ExcludeAssets`, e `PrivateAssets`.
+O atributo `Include` especifica a ID do pacote. O `Version` atributo especifica a versão ou o intervalo de versão. Para obter informações sobre como especificar uma versão mínima, a versão máxima, o intervalo ou a correspondência exata, consulte [intervalos de versão](/nuget/concepts/package-versioning#version-ranges). Você também pode adicionar os seguintes metadados a uma referência de projeto: `IncludeAssets` , `ExcludeAssets` e `PrivateAssets` .
 
 O trecho do arquivo de projeto no exemplo a seguir faz referência ao pacote [System. Runtime](https://www.nuget.org/packages/System.Runtime/) .
 
@@ -292,11 +308,11 @@ Para obter mais informações, consulte [referências de pacote em arquivos de p
 
 ### <a name="projectreference"></a>ProjectReference
 
-O `ProjectReference` item define uma referência a outro projeto. O projeto referenciado é adicionado como uma dependência de pacote NuGet, ou seja, é tratado da mesma forma `PackageReference`que um.
+O `ProjectReference` Item define uma referência a outro projeto. O projeto referenciado é adicionado como uma dependência de pacote NuGet, ou seja, é tratado da mesma forma que um `PackageReference` .
 
-O `Include` atributo especifica o caminho para o projeto. Você também pode adicionar os seguintes metadados a uma referência de projeto `IncludeAssets`: `ExcludeAssets`, e `PrivateAssets`.
+O `Include` atributo especifica o caminho para o projeto. Você também pode adicionar os seguintes metadados a uma referência de projeto: `IncludeAssets` , `ExcludeAssets` e `PrivateAssets` .
 
-O trecho do arquivo de projeto no exemplo a seguir faz referência `Project2`a um projeto chamado.
+O trecho do arquivo de projeto no exemplo a seguir faz referência a um projeto chamado `Project2` .
 
 ```xml
 <ItemGroup>
@@ -306,9 +322,9 @@ O trecho do arquivo de projeto no exemplo a seguir faz referência `Project2`a u
 
 ### <a name="reference"></a>Referência
 
-O `Reference` item define uma referência a um arquivo de assembly.
+O `Reference` Item define uma referência a um arquivo de assembly.
 
-O `Include` atributo especifica o nome do arquivo e o `HintPath` elemento filho especifica o caminho para o assembly.
+O `Include` atributo especifica o nome do arquivo e os `HintPath` metadados especificam o caminho para o assembly.
 
 ```xml
 <ItemGroup>
@@ -320,7 +336,7 @@ O `Include` atributo especifica o nome do arquivo e o `HintPath` elemento filho 
 
 ### <a name="restore-properties"></a>Restaurar propriedades
 
-A restauração de um pacote referenciado instala todas as suas dependências diretas e todas as dependências dessas dependências. Você pode personalizar a restauração do pacote especificando propriedades como `RestorePackagesPath` e `RestoreIgnoreFailedSources`. Para obter mais informações sobre essas e outras propriedades, consulte [Restore Target](/nuget/reference/msbuild-targets#restore-target).
+A restauração de um pacote referenciado instala todas as suas dependências diretas e todas as dependências dessas dependências. Você pode personalizar a restauração do pacote especificando propriedades como `RestorePackagesPath` e `RestoreIgnoreFailedSources` . Para obter mais informações sobre essas e outras propriedades, consulte [Restore Target](/nuget/reference/msbuild-targets#restore-target).
 
 ```xml
 <PropertyGroup>
@@ -328,7 +344,7 @@ A restauração de um pacote referenciado instala todas as suas dependências di
 </PropertyGroup>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência de esquema do MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference)
 - [Propriedades comuns do MSBuild](/visualstudio/msbuild/common-msbuild-project-properties)

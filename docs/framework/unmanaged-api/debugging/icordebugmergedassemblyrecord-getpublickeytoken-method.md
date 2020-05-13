@@ -1,16 +1,16 @@
 ---
-title: ICorDebugMergeDRecord::GetPublicKeyToken Method
+title: 'Método ICorDebugMergedAssemblyRecord:: GetPublicKeyToken'
 ms.date: 03/30/2017
 ms.assetid: 72020b72-9611-4bc3-b1e7-5a16b023bfa3
-ms.openlocfilehash: 79df5c3e8b07879a26272f595664abab011101bd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4cd0ff788401a7b5d70e215209194c0eb6cad1f8
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178719"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212107"
 ---
-# <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>ICorDebugMergeDRecord::GetPublicKeyToken Method
-Recebe o símbolo da chave pública da assembléia.  
+# <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>Método ICorDebugMergedAssemblyRecord:: GetPublicKeyToken
+Obtém o token de chave pública do assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -22,30 +22,30 @@ HRESULT GetPublicKeyToken(
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cbPublicKeyToken`  
- [em] O número máximo de bytes na `pbPublicKeyToken` matriz.  
+ no O número máximo de bytes na `pbPublicKeyToken` matriz.  
   
  `pcbPublicKeyToken`  
- [fora] Um ponteiro para o número real de `pbPublicKeyToken` bytes escritos para a matriz.  
+ fora Um ponteiro para o número real de bytes gravados na `pbPublicKeyToken` matriz.  
   
  `pbPublicKeyToken`  
- [fora] Um ponteiro para uma matriz de bytes que contém o token de chave pública da montagem.  
+ fora Um ponteiro para uma matriz de bytes que contém o token de chave pública do assembly.  
   
 ## <a name="remarks"></a>Comentários  
- O símbolo de chave pública de uma assembléia é o último oito bytes de um hash SHA1 de sua chave pública.  
+ O token de chave pública de um assembly são os últimos oito bytes de um hash SHA1 de sua chave pública.  
   
 > [!NOTE]
-> Este método está disponível apenas com .NET Native.  
+> Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 

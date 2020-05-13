@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 879d2311-0ff1-4616-a8b3-959ea5868b2e
 topic_type:
 - apiref
-ms.openlocfilehash: 39175e338e4fd98dd4af1325138da732ed81c764
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7bf73266f0269cfcd5371c5155856800036cc066
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137917"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209832"
 ---
 # <a name="icordebugframegetfunction-method"></a>Método ICorDebugFrame::GetFunction
 Obtém a função que contém o código associado a este quadro de pilhas.  
@@ -38,13 +38,13 @@ HRESULT GetFunction (
  fora Um ponteiro para o endereço de um objeto ICorDebugFunction que representa a função que contém o código associado a esse quadro de pilhas.  
   
 ## <a name="remarks"></a>Comentários  
- O método `GetFunction` poderá falhar se o quadro não estiver associado a nenhuma função específica.  
+ O `GetFunction` método poderá falhar se o quadro não estiver associado a nenhuma função específica.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

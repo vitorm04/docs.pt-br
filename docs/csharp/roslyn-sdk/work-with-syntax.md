@@ -3,29 +3,29 @@ title: Usar o modelo de sintaxe do SDK do .NET Compiler Platform
 description: Esta visão geral fornece uma compreensão dos tipos usados para entender e manipular nós de sintaxe.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 87b79c3af4958299fcd966dcc4b04868f88675c7
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: fdb13095c2b91e54d58988a51a51b05652e57ea6
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975908"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208389"
 ---
 # <a name="work-with-syntax"></a>Trabalhar com sintaxe
 
-A **árvore de sintaxe** é uma estrutura de dados fundamental exposta pelas APIs do compilador. Essas árvores representam a estrutura lexical e sintática do código-fonte. Elas servem duas finalidades importantes:
+A *árvore de sintaxe* é uma estrutura de dados fundamental exposta pelas APIs do compilador. Essas árvores representam a estrutura lexical e sintática do código-fonte. Elas servem duas finalidades importantes:
 
-1. Permitir que ferramentas – como um IDE, suplementos, ferramentas de análise de código e refatorações – vejam e processem a estrutura sintática do código-fonte no projeto do usuário.
-2. Para habilitar ferramentas – como refatorações e um IDE, para criar, modificar e reorganizar o código-fonte de maneira natural sem precisar usar edições de texto direto. Criando e manipulando árvores, as ferramentas podem criar e reorganizar o código-fonte com facilidade.
+- Para permitir ferramentas – como um IDE, suplementos, ferramentas de análise de código e refatoração – para ver e processar a estrutura sintática do código-fonte no projeto de um usuário.
+- Para habilitar ferramentas – como refatorações e um IDE, para criar, modificar e reorganizar o código-fonte de maneira natural sem precisar usar edições de texto direto. Criando e manipulando árvores, as ferramentas podem criar e reorganizar o código-fonte com facilidade.
 
 ## <a name="syntax-trees"></a>Árvores de sintaxe
 
 Árvores de sintaxe são a estrutura principal usada para compilação, análise de código, associação, refatoração, recursos de IDE e geração de código. Nenhuma parte do código-fonte é entendida sem primeiro ser identificada e categorizada em um dos muitos elementos de linguagem estrutural conhecidos.
 
-As árvores de sintaxe têm três atributos-chave. O primeiro atributo é que as árvores de sintaxe mantêm todas as informações de origem em fidelidade total. Isso significa que a árvore de sintaxe contém cada informação encontrada no texto de origem, cada constructo gramatical, cada token lexical e todo o resto, incluindo espaço em branco, comentários e diretivas do pré-processador. Por exemplo, cada literal mencionado na fonte é representado exatamente como foi digitado. As árvores de sintaxe também representam erros no código-fonte quando o programa está incompleto ou mal-formado, com a representação de tokens ignorados ou ausentes na árvore de sintaxe.
+As árvores de sintaxe têm três atributos-chave. O primeiro atributo é que as árvores de sintaxe mantêm todas as informações de origem em fidelidade total. Fidelidade total significa que a árvore de sintaxe contém todas as informações encontradas no texto de origem, todas as construções gramaticais, todos os tokens léxicos e todo o restante entre eles, incluindo o espaço em branco, os comentários e as diretivas de pré-processador. Por exemplo, cada literal mencionado na fonte é representado exatamente como foi digitado. As árvores de sintaxe também capturam erros no código-fonte quando o programa está incompleto ou malformado, representando tokens ignorados ou ausentes.
 
-Isso possibilita o segundo atributo das árvores de sintaxe. Uma árvore de sintaxe obtida do analisador pode produzir o texto exato com base no qual ela foi analisada. Em qualquer nó de sintaxe, é possível obter a representação de texto da subárvore com raiz nesse nó. Isso significa que as árvores de sintaxe podem ser usadas como uma maneira de construir e editar o texto de origem. Ao criar uma árvore, por implicação, você criou o texto equivalente e, ao editar uma árvore de sintaxe criando uma nova árvore com base nas alterações de uma árvore existente, você editou o texto efetivamente.
+O segundo atributo de árvores de sintaxe é que eles podem produzir o texto exato do qual foram analisados. De qualquer nó de sintaxe, é possível obter a representação de texto da subárvore com raiz nesse nó. Essa capacidade significa que as árvores de sintaxe podem ser usadas como uma maneira de construir e editar o texto de origem. Criando uma árvore que você tem, por implicação, criou o texto equivalente e editando uma árvore de sintaxe, fazendo uma nova árvore fora das alterações em uma árvore existente, você editou o texto com eficiência.
 
-O terceiro atributo das árvores de sintaxe é que elas são imutáveis e thread-safe.  Isso significa que, depois que uma árvore é obtida, ela é um instantâneo do estado atual do código e nunca é alterada. Isso permite que vários usuários interajam com a mesma árvore de sintaxe ao mesmo tempo em threads diferentes sem bloqueio nem duplicação. Como as árvores são imutáveis e nenhuma modificação pode ser feita diretamente em uma árvore, os métodos de fábrica ajudam a criar e modificar árvores de sintaxe criando instantâneos adicionais da árvore. As árvores são eficientes no modo como reutilizam os nós subjacentes, de forma que uma nova versão possa ser recompilada rapidamente e com pouca memória extra.
+O terceiro atributo das árvores de sintaxe é que elas são imutáveis e thread-safe. Depois que uma árvore é obtida, é um instantâneo do estado atual do código e nunca é alterado. Isso permite que vários usuários interajam com a mesma árvore de sintaxe ao mesmo tempo em threads diferentes sem bloqueio nem duplicação. Como as árvores são imutáveis e nenhuma modificação pode ser feita diretamente em uma árvore, os métodos de fábrica ajudam a criar e modificar árvores de sintaxe criando instantâneos adicionais da árvore. As árvores são eficientes no modo como reutilizam os nós subjacentes, de forma que uma nova versão possa ser recompilada rapidamente e com pouca memória extra.
 
 Uma árvore de sintaxe é literalmente uma estrutura de dados de árvore, em que os elementos estruturais não terminais são pais de outros elementos. Cada árvore de sintaxe é composta por nós, tokens e desafios.
 
@@ -35,7 +35,7 @@ Nós de sintaxe são um dos elementos principais das árvores de sintaxe. Esses 
 
 Todos os nós de sintaxe são nós não terminais na árvore de sintaxe, o que significa que eles sempre têm outros nós e tokens como filhos. Como filho de outro nó, cada nó tem um nó pai que pode ser acessado por meio da propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.Parent?displayProperty=nameWithType>. Como os nós e as árvores são imutáveis, o pai de um nó nunca é alterado. A raiz da árvore tem um pai nulo.
 
-Cada nó tem um método <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType>, que retorna uma lista de nós filho em ordem sequencial com base em sua posição no texto de origem. Essa lista não contém tokens. Cada nó também tem métodos para examinar descendentes, como <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A>ou <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A> -que representam uma lista de todos os nós, tokens ou Trívia que existem na subárvore com raiz por esse nó.
+Cada nó tem um método <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType>, que retorna uma lista de nós filho em ordem sequencial com base em sua posição no texto de origem. Essa lista não contém tokens. Cada nó também tem métodos para examinar descendentes, como <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A> , <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A> ou <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A> -que representam uma lista de todos os nós, tokens ou Trívia que existem na subárvore com raiz por esse nó.
 
 Além disso, cada subclasse de nó de sintaxe expõe os mesmos filhos por meio de propriedades fortemente tipadas. Por exemplo, uma classe de nó <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> tem três propriedades adicionais específicas aos operadores binários: <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> e <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>. O tipo de <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left> e <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> é <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax> e o tipo de <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> é <xref:Microsoft.CodeAnalysis.SyntaxToken>.
 
@@ -57,7 +57,7 @@ Os desafios de sintaxe representam as partes do texto de origem que são amplame
 
 Como os desafios não fazem parte da sintaxe de linguagem normal e podem aparecer em qualquer lugar entre dois tokens quaisquer, eles não são incluídos na árvore de sintaxe como um filho de um nó. Apesar disso, como eles são importantes ao implementar um recurso como refatoração e para manter fidelidade total com o texto de origem, eles existem como parte da árvore de sintaxe.
 
-Acesse os desafios inspecionando as coleções <xref:Microsoft.CodeAnalysis.SyntaxToken.LeadingTrivia?displayProperty=nameWithType> ou <xref:Microsoft.CodeAnalysis.SyntaxToken.TrailingTrivia?displayProperty=nameWithType> de um token. Quando o texto de origem é analisado, sequências de desafios são associadas aos tokens. Em geral, um token possui qualquer desafio após ele na mesma linha até o próximo token. Qualquer desafio após essa linha é associado ao próximo token. O primeiro token no arquivo de origem obtém todos as desafios iniciais e a última sequência de desafios no arquivo é anexada ao token de fim do arquivo, que, de outro modo, tem largura zero.
+Você pode acessar o Trívia inspecionando as <xref:Microsoft.CodeAnalysis.SyntaxToken.LeadingTrivia?displayProperty=nameWithType> coleções ou um token <xref:Microsoft.CodeAnalysis.SyntaxToken.TrailingTrivia?displayProperty=nameWithType> . Quando o texto de origem é analisado, sequências de desafios são associadas aos tokens. Em geral, um token possui qualquer desafio após ele na mesma linha até o próximo token. Qualquer desafio após essa linha é associado ao próximo token. O primeiro token no arquivo de origem obtém todos as desafios iniciais e a última sequência de desafios no arquivo é anexada ao token de fim do arquivo, que, de outro modo, tem largura zero.
 
 Ao contrário dos nós e tokens de sintaxe, os desafios de sintaxe não têm pais. Apesar disso, como eles fazem parte da árvore e cada um deles é associado um único token, você poderá acessar o token ao qual ele está associado usando a propriedade <xref:Microsoft.CodeAnalysis.SyntaxTrivia.Token?displayProperty=nameWithType>.
 
@@ -67,9 +67,9 @@ Cada nó, token ou desafio conhece sua posição dentro do texto de origem e o n
 
 Cada nó tem duas propriedades <xref:Microsoft.CodeAnalysis.Text.TextSpan>: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> e <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A>.
 
-A propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> é o intervalo de texto do início do primeiro token na subárvore do nó ao final do último token. Esse intervalo não inclui nenhum desafio à esquerda ou à direita.
+A <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> propriedade é o intervalo de texto desde o início do primeiro token na subárvore do nó até o final do último token. Esse intervalo não inclui nenhum desafio à esquerda ou à direita.
 
-A propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A> é o intervalo de texto que inclui o intervalo normal do nó mais o intervalo de qualquer desafio à esquerda ou à direita.
+A <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A> propriedade é o intervalo de texto que inclui o span normal do nó, além do intervalo de qualquer Trívia à esquerda ou à direita.
 
 Por exemplo:
 
@@ -85,7 +85,7 @@ O nó de instrução dentro do bloco tem um intervalo indicado pelas barras vert
 
 ## <a name="kinds"></a>Variantes
 
-Cada nó, token ou desafio tem uma propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType>, do tipo <xref:System.Int32?displayProperty=nameWithType>, que identifica o elemento de sintaxe exato representado. Esse valor pode ser convertido em uma enumeração específica a um idioma. Cada idioma, C# ou Visual Basic, tem uma única `SyntaxKind` Enumeração (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> e <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, respectivamente) que lista todos os nós, tokens e elementos Trívia possíveis na gramática. Esta conversão pode ser feita automaticamente acessando os métodos de extensão <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A?displayProperty=nameWithType> ou <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind%2A?displayProperty=nameWithType>.
+Cada nó, token ou desafio tem uma propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType>, do tipo <xref:System.Int32?displayProperty=nameWithType>, que identifica o elemento de sintaxe exato representado. Esse valor pode ser convertido em uma enumeração específica a um idioma. Cada idioma, C# ou Visual Basic, tem uma única `SyntaxKind` Enumeração ( <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> e <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType> , respectivamente) que lista todos os nós, tokens e elementos Trívia possíveis na gramática. Esta conversão pode ser feita automaticamente acessando os métodos de extensão <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A?displayProperty=nameWithType> ou <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind%2A?displayProperty=nameWithType>.
 
 A propriedade <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> permite a desambiguidade fácil de tipos de nó de sintaxe que compartilham a mesma classe de nó. Para tokens e desafios, essa propriedade é a única maneira de diferenciar um tipo de elemento de outro.
 
@@ -93,8 +93,8 @@ Por exemplo, uma única classe <xref:Microsoft.CodeAnalysis.CSharp.Syntax.Binary
 
 ## <a name="errors"></a>Errors
 
-Mesmo quando o texto de origem contém erros de sintaxe, uma árvore de sintaxe completa com ida e volta para a origem é exposta. Quando o analisador encontra um código que não está em conformidade com a sintaxe definida da linguagem, ele usa uma das duas técnicas para criar uma árvore de sintaxe.
+Mesmo quando o texto de origem contém erros de sintaxe, uma árvore de sintaxe completa com ida e volta para a origem é exposta. Quando o analisador encontra código que não está de acordo com a sintaxe definida do idioma, ele usa uma das duas técnicas para criar uma árvore de sintaxe:
 
-Primeiro, se o analisador espera determinado tipo de token, mas não o encontra, ele pode inserir um token ausente na árvore de sintaxe no local em que o token era esperado. Um token ausente representa o token real que era esperado, mas tem um intervalo vazio e sua propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.IsMissing?displayProperty=nameWithType> retorna `true`.
+- Se o analisador espera um tipo específico de token, mas não o encontra, ele pode inserir um token ausente na árvore de sintaxe no local em que o token era esperado. Um token ausente representa o token real que era esperado, mas tem um intervalo vazio e sua propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.IsMissing?displayProperty=nameWithType> retorna `true`.
 
-Em segundo lugar, o analisador pode ignorar tokens até encontrar um no qual pode continuar a análise. Nesse caso, os tokens ignorados são anexados como um nó de desafio com o tipo <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SkippedTokensTrivia>.
+- O analisador pode ignorar tokens até encontrar um onde possa continuar a análise. Nesse caso, os tokens ignorados são anexados como um nó de desafio com o tipo <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SkippedTokensTrivia>.

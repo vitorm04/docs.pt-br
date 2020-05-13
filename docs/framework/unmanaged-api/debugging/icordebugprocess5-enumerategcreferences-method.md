@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-ms.openlocfilehash: a97c14d83f99c847bb8569a33e175ab6eb5bccd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d98df05291ed8405addcfd183d7e02332e4e025
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178615"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209689"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>Método ICorDebugProcess5::EnumerateGCReferences
-Recebe um enumerador para todos os objetos que devem ser coletados em um processo.  
+Obtém um enumerador para todos os objetos que devem ser coletados pelo lixo em um processo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,24 +34,24 @@ HRESULT EnumerateGCReferences(
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `enumerateWeakReferences`  
- [em] Um valor booleano que indica se referências fracas também devem ser enumeradas. Se `enumerateWeakReferences` `true`for, `ppEnum` o enumerador inclui referências fortes e referências fracas. Se `enumerateWeakReferences` `false`for, o enumerador inclui apenas referências fortes.  
+ no Um valor booliano que indica se referências fracas também devem ser enumeradas. Se `enumerateWeakReferences` for `true` , o `ppEnum` enumerador incluirá referências fortes e fracas. Se `enumerateWeakReferences` for `false` , o enumerador incluirá apenas referências fortes.  
   
  `ppEnum`  
- [fora] Um ponteiro para o endereço de um [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) que é um enumerador para que os objetos sejam coletados em lixo.  
+ fora Um ponteiro para o endereço de um [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) que é um enumerador para os objetos a serem coletados como lixo.  
   
 ## <a name="remarks"></a>Comentários  
- Este método fornece uma maneira de determinar a cadeia de raiz completa para qualquer objeto gerenciado em um processo e pode ser usado para determinar por que um objeto ainda está vivo.  
+ Esse método fornece uma maneira de determinar a cadeia de raiz completa para qualquer objeto gerenciado em um processo e pode ser usado para determinar por que um objeto ainda está ativo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 

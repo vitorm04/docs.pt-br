@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-ms.openlocfilehash: e98748b523b948dc002f2ebc4e2e79fc7d659918
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 51d34e68851bc6a60d25f643f63d112396abdc4e
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781590"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209065"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>Método ICorDebugManagedCallback2::CreateConnection
 Notifica o depurador de que uma nova conexão foi criada.  
@@ -46,22 +46,22 @@ HRESULT CreateConnection (
  no Um ponteiro para o nome da nova conexão.  
   
 ## <a name="remarks"></a>Comentários  
- Um retorno de chamada `CreateConnection` será acionado em um dos seguintes casos:  
+ Um `CreateConnection` retorno de chamada será acionado em qualquer um dos seguintes casos:  
   
-- Quando um depurador é anexado a um processo que contém conexões. Nesse caso, o tempo de execução irá gerar e distribuir um evento de `CreateConnection` e um evento [ICorDebugManagedCallback2:: ChangeConnection](icordebugmanagedcallback2-changeconnection-method.md) para cada conexão no processo.  
+- Quando um depurador é anexado a um processo que contém conexões. Nesse caso, o tempo de execução irá gerar e distribuir um evento `CreateConnection` e um evento [ICorDebugManagedCallback2:: ChangeConnection](icordebugmanagedcallback2-changeconnection-method.md) para cada conexão no processo.  
   
-- Quando um host chama [ICLRDebugManager:: BeginConnect](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) na API de [hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md).  
+- Quando um host chama [ICLRDebugManager:: BeginConnect](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) na API de [hospedagem](../hosting/index.md).  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)
 - [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aaf5938d-179c-4eaa-8d35-8523a4fadded
 topic_type:
 - apiref
-ms.openlocfilehash: 482afd09ce370fb1247864b9ac2032ee7e3a1dca
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 8f66369d3ac5ddcfe38fe579cac728eb3a250165
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788286"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205621"
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a>Método ICorDebugManagedCallback2::ExceptionUnwind
 Fornece uma notificação de status durante o processo de desenrolamento de exceções.  
@@ -50,20 +50,20 @@ HRESULT ExceptionUnwind (
  no Um valor da enumeração [CorDebugExceptionFlags](cordebugexceptionflags-enumeration.md) que especifica informações adicionais sobre a exceção.  
   
 ## <a name="remarks"></a>Comentários  
- `ExceptionUnwind` é chamado em vários pontos durante a fase de desenrolamento do processo de tratamento de exceção. `ExceptionUnwind` pode ser chamado mais de uma vez ao desenrolar uma única exceção.  
+ `ExceptionUnwind`é chamado em vários pontos durante a fase de desenrolamento do processo de tratamento de exceção. `ExceptionUnwind`pode ser chamado mais de uma vez ao desenrolar uma única exceção.  
   
  Se `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, o ponteiro de instrução estará no quadro folha do thread, no ponto de sequência antes (isso pode ser várias instruções antes) a instrução que levou à exceção.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)
 - [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

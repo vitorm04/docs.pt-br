@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e02ee1a-e495-4578-bfb5-b946274bede7
 topic_type:
 - apiref
-ms.openlocfilehash: 4cfacb7f3303947ec8b11362fde82649687889d8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b8d20de990ff4a27a82590342494a307c986457e
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792659"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207389"
 ---
 # <a name="icordebugprocessclearcurrentexception-method"></a>Método ICorDebugProcess::ClearCurrentException
 Limpa a exceção não gerenciada atual no thread determinado.  
@@ -40,11 +40,11 @@ HRESULT ClearCurrentException([in] DWORD threadID);
   
  Use [ICorDebugThread2:: InterceptCurrentException](icordebugthread2-interceptcurrentexception-method.md) para interceptar a exceção gerenciada atual em um thread.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

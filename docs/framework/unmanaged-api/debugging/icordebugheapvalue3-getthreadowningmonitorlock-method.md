@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-ms.openlocfilehash: 8be7c0e32f6183deb354d8b3936ef55c2520fe9f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 9cc68e39dfef096b8ab6a8ba743f7a516cc349be
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788615"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210404"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>Método ICorDebugHeapValue3::GetThreadOwningMonitorLock
 Retorna o thread gerenciado que possui o bloqueio de monitor neste objeto.  
@@ -41,7 +41,7 @@ HRESULT GetThreadOwningMonitorLock (
  `pAcquisitionCount`  
  fora O número de vezes que esse thread teria que liberar o bloqueio antes que ele retorne sem proprietário.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -58,22 +58,22 @@ HRESULT GetThreadOwningMonitorLock (
   
 - O objeto de thread é válido até que o thread saia.  
   
- Se nenhum thread gerenciado possuir o bloqueio de monitor nesse objeto, `ppThread` e `pAcquisitionCount` não serão alterados e o método retornará S_FALSE.  
+ Se nenhum thread gerenciado possuir o bloqueio de monitor nesse objeto `ppThread` e não `pAcquisitionCount` for alterado, e o método retornar S_FALSE.  
   
  Se `ppThread` ou `pAcquisitionCount` não for um ponteiro válido, o resultado será indefinido.  
   
  Se ocorrer um erro de modo que não possa ser determinado que, se houver, thread possui o bloqueio de monitor nesse objeto, o método retornará um HRESULT que indica falha.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Depurando interfaces](debugging-interfaces.md)
 - [Depuração](index.md)

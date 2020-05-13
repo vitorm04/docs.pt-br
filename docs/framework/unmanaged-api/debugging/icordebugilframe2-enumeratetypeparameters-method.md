@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 722d0d74-e0df-491f-98c4-62d501dfaf6f
 topic_type:
 - apiref
-ms.openlocfilehash: 715ff5d4a06b53361d550f04e5154023d0b641bb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9020fed83b1c57cae3cc492872a279afb0195983
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095117"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205171"
 ---
 # <a name="icordebugilframe2enumeratetypeparameters-method"></a>Método ICorDebugILFrame2::EnumerateTypeParameters
-Obtém um objeto ICorDebugTypeEnum que contém os parâmetros de <xref:System.Type> neste quadro.  
+Obtém um objeto ICorDebugTypeEnum que contém os <xref:System.Type> parâmetros neste quadro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,15 +40,15 @@ HRESULT EnumerateTypeParameters (
  A lista de parâmetros de tipo inclui os parâmetros de tipo de classe (se houver) seguidos pelos parâmetros de tipo de método (se houver).  
   
 ## <a name="remarks"></a>Comentários  
- Use o método [IMetaDataImport2:: EnumGenericParams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) para determinar quantos parâmetros de tipo de classe e parâmetros de tipo de método essa lista contém.  
+ Use o método [IMetaDataImport2:: EnumGenericParams](../metadata/imetadataimport2-enumgenericparams-method.md) para determinar quantos parâmetros de tipo de classe e parâmetros de tipo de método essa lista contém.  
   
  Os parâmetros de tipo nem sempre estão disponíveis.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

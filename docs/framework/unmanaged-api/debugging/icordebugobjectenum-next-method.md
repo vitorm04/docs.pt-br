@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 10093e3d-26b6-4ad7-8ef3-bbf66243fc02
 topic_type:
 - apiref
-ms.openlocfilehash: e9b32980a5606629676549905d3c9956633f25b0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 70514464f27d6123a4de1d5800ed016a39541287
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178695"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207551"
 ---
 # <a name="icordebugobjectenumnext-method"></a>Método ICorDebugObjectEnum::Next
 Obtém os endereços virtuais relativos (RVAs) do número especificado de objetos da enumeração, começando na posição atual.  
@@ -36,23 +36,23 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `celt`  
- [em] O número de objetos a serem recuperados.  
+ no O número de objetos a serem recuperados.  
   
  `objects`  
- [fora] Uma matriz de ponteiros, cada um dos quais aponta para um objeto CORDB_ADDRESS.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto CORDB_ADDRESS.  
   
  `pceltFetched`  
- [fora] Ponteiro para o número de objetos realmente retornado. Este valor pode `celt` ser nulo se for um.  
+ fora Aponta para o número de objetos realmente retornados. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: d5cf5056-da4d-4629-914d-afe42a5393df
 topic_type:
 - apiref
-ms.openlocfilehash: 7a27b8ec512498c7bf817aca36267c37d8070a4c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1f1e42cd929d2d6282d282cf62dce00104b3a925
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788577"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210235"
 ---
 # <a name="icordebugilframe-interface"></a>Interface ICorDebugILFrame
 
 Representa um quadro de pilha do código MSIL (Microsoft Intermediate Language). Essa interface é uma subclasse da interface ICorDebugFrame.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
@@ -40,20 +40,20 @@ Representa um quadro de pilha do código MSIL (Microsoft Intermediate Language).
 |[Método SetIP](icordebugilframe-setip-method.md)|Define o ponteiro de instrução para o local de deslocamento especificado no código MSIL.|  
   
 ## <a name="remarks"></a>Comentários  
- A interface `ICorDebugILFrame` é uma interface ICorDebugFrame especializada. Ele é usado para quadros de código MSIL ou para quadros compilados just-in-time (JIT). Os quadros compilados em JIT implementam a interface de `ICorDebugILFrame` e a interface ICorDebugNativeFrame.  
+ A `ICorDebugILFrame` interface é uma interface ICorDebugFrame especializada. Ele é usado para quadros de código MSIL ou para quadros compilados just-in-time (JIT). Os quadros compilados em JIT implementam a interface `ICorDebugILFrame` e a interface ICorDebugNativeFrame.  
   
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Depurando interfaces](debugging-interfaces.md)

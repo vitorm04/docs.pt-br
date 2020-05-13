@@ -1,38 +1,39 @@
 ---
-title: Visão geral do Projeto .NET Core SDK
+title: Visão geral do SDK do projeto .NET Core
+titleSuffix: ''
 description: Saiba mais sobre os SDKs do projeto .NET Core.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: d0ac01dca31dffea482745126e00c34b1da20774
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 88ec1bf2c4917c69b80b997d090219097694d2bc
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389662"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206056"
 ---
-# <a name="net-core-project-sdks"></a>SDKs do projeto .NET Core
+# <a name="net-core-project-sdks"></a>SDKs do projeto do .NET Core
 
-Os projetos .NET Core estão associados a um kit de desenvolvimento de software (SDK). Cada *projeto SDK* é um conjunto de metas do MSBuild e [tarefas associadas](/visualstudio/msbuild/msbuild-targets) que são responsáveis pela compilação, embalagem e publicação de códigos. [tasks](/visualstudio/msbuild/msbuild-tasks) Um projeto que faz referência a um projeto SDK é às vezes referido como um *projeto no estilo SDK.*
+Os projetos do .NET Core são associados a um Software Development Kit (SDK). Cada *SDK do projeto* é um conjunto de [destinos](/visualstudio/msbuild/msbuild-targets) do MSBuild e [tarefas](/visualstudio/msbuild/msbuild-tasks) associadas que são responsáveis por compilar, empacotar e publicar código. Um projeto que faz referência a um SDK de projeto é, às vezes, chamado de *projeto de estilo SDK*.
 
 ## <a name="available-sdks"></a>SDKs disponíveis
 
-Os seguintes SDKs estão disponíveis para .NET Core:
+Os seguintes SDKs estão disponíveis para o .NET Core:
 
-| ID | Descrição | Repo|
+| ID | Descrição | Repositório|
 | - | - | - |
-| `Microsoft.NET.Sdk` | O .NET Core SDK | https://github.com/dotnet/sdk |
-| `Microsoft.NET.Sdk.Web` | O .NET Core [Web SDK](/aspnet/core/razor-pages/web-sdk) | https://github.com/aspnet/websdk |
-| `Microsoft.NET.Sdk.Razor` | O .NET Core [Razor SDK](/aspnet/core/razor-pages/sdk) |
-| `Microsoft.NET.Sdk.Worker` | O .NET Core Worker Service SDK |
-| `Microsoft.NET.Sdk.WindowsDesktop` | O .NET Core WinForms e o WPF SDK |
+| `Microsoft.NET.Sdk` | O SDK do .NET Core | https://github.com/dotnet/sdk |
+| `Microsoft.NET.Sdk.Web` | O [SDK Web](/aspnet/core/razor-pages/web-sdk) do .NET Core | https://github.com/aspnet/websdk |
+| `Microsoft.NET.Sdk.Razor` | O SDK do .NET Core do [Razor](/aspnet/core/razor-pages/sdk) |
+| `Microsoft.NET.Sdk.Worker` | O SDK do serviço de trabalho do .NET Core |
+| `Microsoft.NET.Sdk.WindowsDesktop` | O SDK do .NET Core WinForms e WPF |
 
-O .NET Core SDK é o SDK base para .NET Core. Os outros SDKs fazem referência ao .NET Core SDK, e os projetos associados aos outros SDKs têm todas as propriedades sdk do Núcleo .NET disponíveis para eles. O Web SDK, por exemplo, depende tanto do .NET Core SDK quanto do Razor SDK.
+O SDK do .NET Core é o SDK base para .NET Core. Os outros SDKs fazem referência à SDK do .NET Core e os projetos associados a outros SDKs têm todas as propriedades de SDK do .NET Core disponíveis para eles. O SDK da Web, por exemplo, depende do SDK do .NET Core e do SDK do Razor.
 
-Você também pode escrever seu próprio SDK que pode ser distribuído via NuGet.
+Você também pode criar seu próprio SDK que pode ser distribuído via NuGet.
 
 ## <a name="project-files"></a>Arquivos de projeto
 
-Os projetos .NET Core são baseados no formato [MSBuild.](/visualstudio/msbuild/msbuild) Os arquivos do projeto, que possuem extensões como *.csproj* para projetos C# e *.fsproj* para projetos F#, estão no formato XML. O elemento raiz de um arquivo de projeto MSBuild é o elemento [Project.](/visualstudio/msbuild/project-element-msbuild) O `Project` elemento tem `Sdk` um atributo opcional que especifica qual SDK (e versão) usar. Para usar as ferramentas .NET Core e `Sdk` construir seu código, defina o atributo para um dos IDs na tabela [SDKs disponíveis.](#available-sdks)
+Os projetos do .NET Core são baseados no formato [MSBuild](/visualstudio/msbuild/msbuild) . Arquivos de projeto, que têm extensões como *. csproj* para projetos C# e *. Fsproj* para projetos F #, estão no formato XML. O elemento raiz de um arquivo de projeto do MSBuild é o elemento [Project](/visualstudio/msbuild/project-element-msbuild) . O `Project` elemento tem um `Sdk` atributo opcional que especifica qual SDK (e versão) usar. Para usar as ferramentas do .NET Core e criar seu código, defina o `Sdk` atributo como uma das IDs na tabela de [SDKs disponíveis](#available-sdks) .
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -40,7 +41,7 @@ Os projetos .NET Core são baseados no formato [MSBuild.](/visualstudio/msbuild/
 </Project>
 ```
 
-Para especificar um SDK que vem do NuGet, inclua a versão no final do nome ou especifique o nome e a versão no arquivo *global.json.*
+Para especificar um SDK proveniente do NuGet, inclua a versão no final do nome ou especifique o nome e a versão no arquivo *global. JSON* .
 
 ```xml
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
@@ -48,7 +49,7 @@ Para especificar um SDK que vem do NuGet, inclua a versão no final do nome ou e
 </Project>
 ```
 
-Outra maneira de especificar o SDK é com o elemento [SDK](/visualstudio/msbuild/sdk-element-msbuild) de nível superior:
+Outra maneira de especificar o SDK é com o elemento do [SDK](/visualstudio/msbuild/sdk-element-msbuild) de nível superior:
 
 ```xml
 <Project>
@@ -57,7 +58,7 @@ Outra maneira de especificar o SDK é com o elemento [SDK](/visualstudio/msbuild
 </Project>
 ```
 
-Referenciar um SDK em uma dessas maneiras simplifica muito os arquivos de projeto para .NET Core. Ao avaliar o projeto, o MSBuild adiciona importações implícitas para `Sdk.props` a parte superior do arquivo do projeto e `Sdk.targets` na parte inferior.
+Fazer referência a um SDK de uma dessas maneiras simplifica bastante os arquivos de projeto para o .NET Core. Ao avaliar o projeto, o MSBuild adiciona importações implícitas para `Sdk.props` na parte superior do arquivo de projeto e `Sdk.targets` na parte inferior.
 
 ```xml
 <Project>
@@ -70,21 +71,21 @@ Referenciar um SDK em uma dessas maneiras simplifica muito os arquivos de projet
 ```
 
 > [!TIP]
-> Em uma máquina Windows, os arquivos *Sdk.props* e *Sdk.targets* podem ser encontrados na pasta *%ProgramFiles%\dotnet\sdk\\[versão]\Sdks\Microsoft.NET.Sdk\Sdk\Sdk.*
+> Em um computador Windows, os arquivos *SDK. props* e *SDK. targets* podem ser encontrados na pasta *%ProgramFiles%\dotnet\sdk \\ [Version] \Sdks\Microsoft.net.Sdk\Sdk*
 
-### <a name="preprocess-the-project-file"></a>Pré-processar o arquivo do projeto
+### <a name="preprocess-the-project-file"></a>Pré-processar o arquivo de projeto
 
-Você pode ver o projeto totalmente expandido à medida que o MSBuild o `dotnet msbuild -preprocess` vê depois que o SDK e seus alvos são incluídos usando o comando. O interruptor de [`dotnet msbuild`](../tools/dotnet-msbuild.md) [pré-processo](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) do comando mostra quais arquivos são importados, suas fontes e suas contribuições para a construção sem realmente construir o projeto.
+Você pode ver o projeto totalmente expandido, pois o MSBuild o vê depois que o SDK e seus destinos são incluídos usando o `dotnet msbuild -preprocess` comando. A opção de [pré-processamento](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) do [`dotnet msbuild`](../tools/dotnet-msbuild.md) comando mostra quais arquivos são importados, suas origens e suas contribuições para a compilação sem realmente criar o projeto.
 
-Se o projeto tiver várias estruturas de destino, concentre os resultados do comando em apenas uma estrutura, especificando-o como uma propriedade MSBuild. Por exemplo:
+Se o projeto tiver várias estruturas de destino, concentre os resultados do comando em apenas uma estrutura especificando-o como uma propriedade do MSBuild. Por exemplo:
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
-### <a name="default-compilation-includes"></a>Compilação padrão inclui
+### <a name="default-compilation-includes"></a>A compilação padrão inclui
 
-O padrão inclui e exclui para itens de compilação e os recursos incorporados são definidos no SDK. Ao contrário dos projetos não-SDK .NET Framework, você não precisa especificar esses itens no arquivo do projeto, porque os padrões cobrem casos de uso mais comuns. Isso leva a arquivos de projeto menores que são mais fáceis de entender, bem como editar manualmente, se necessário.
+O padrão inclui e exclui itens de compilação, recursos incorporados e `None` itens são definidos no SDK. Ao contrário dos projetos .NET Framework não SDK, você não precisa especificar esses itens no arquivo de projeto, pois os padrões abrangem os casos de uso mais comuns. Isso torna o arquivo de projeto menor e mais fácil de entender e editar manualmente, se necessário.
 
-A tabela a seguir mostra qual elemento e quais [globs](https://en.wikipedia.org/wiki/Glob_(programming)) estão incluídos e excluídos no .NET Core SDK:
+A tabela a seguir mostra quais elementos e quais [globs](https://en.wikipedia.org/wiki/Glob_(programming)) são incluídos e excluídos no SDK do .NET Core:
 
 | Elemento           | Incluir glob                              | Excluir glob                                                  | Remover glob              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
@@ -93,53 +94,57 @@ A tabela a seguir mostra qual elemento e quais [globs](https://en.wikipedia.org/
 | Nenhum              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx |
 
 > [!NOTE]
-> As `./bin` `./obj` pastas, que são `$(BaseOutputPath)` representadas pelas propriedades MSBuild e `$(BaseIntermediateOutputPath)` MSBuild, são excluídas das globs por padrão. Os exclussão são `$(DefaultItemExcludes)`representados pela propriedade.
+> As `./bin` `./obj` pastas e, que são representadas pelas `$(BaseOutputPath)` Propriedades do e do `$(BaseIntermediateOutputPath)` MSBuild, são excluídas do globs por padrão. As exclusões são representadas pela propriedade `$(DefaultItemExcludes)` .
 
-Se você definir explicitamente esses itens no arquivo do projeto, é provável que você receba o seguinte erro:
+#### <a name="build-errors"></a>Erros de compilação
 
-**Foram incluídos itens de compilação duplicada. O .NET SDK inclui compilar itens do diretório do projeto por padrão. Você pode remover esses itens do arquivo do projeto ou definir a propriedade 'EnableDefaultCompileItems' como 'falsa' se quiser incluí-los explicitamente no arquivo do projeto.**
+Se você definir explicitamente qualquer um desses itens em seu arquivo de projeto, provavelmente receberá um erro de compilação "NETSDK1022" semelhante ao seguinte:
 
-Para resolver o erro, `Compile` remova os itens explícitos que correspondem aos implícitos `false`listados na tabela anterior ou defina a propriedade para , o que desativa a `EnableDefaultCompileItems` inclusão implícita:
+  > Itens ' compile ' duplicados foram incluídos. O SDK do .NET inclui, por padrão, itens de "Compilar" do diretório do projeto. É possível remover esses itens do arquivo de projeto ou definir a propriedade “EnableDefaultCompileItems” como “false” se desejar incluí-los explicitamente no arquivo de projeto.
 
-```xml
-<PropertyGroup>
-  <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-</PropertyGroup>
-```
+  > Itens ' EmbeddedResource ' duplicados foram incluídos. O SDK do .NET inclui os itens ' EmbeddedResource ' do diretório do projeto por padrão. Você pode remover esses itens do arquivo de projeto ou definir a propriedade ' EnableDefaultEmbeddedResourceItems ' como ' false ' se quiser incluí-los explicitamente em seu arquivo de projeto.
 
-Se você quiser especificar, por exemplo, alguns arquivos para serem publicados com seu aplicativo, você `Content` ainda pode usar os mecanismos conhecidos do MSBuild para isso, por exemplo, o elemento.
+Para resolver os erros, siga um destes procedimentos:
 
-`EnableDefaultCompileItems`apenas desativa `Compile` globs, mas não afeta outros `None` globs, como \*o glob implícito que também se aplica a itens .cs. Por causa disso, o Solution \*Explorer no Visual Studio mostra itens .cs como parte do projeto, incluídos como `None` itens. Para desativar o `None` glob `EnableDefaultNoneItems` implícito, definido como: `false`
+- Remova os itens explícitos `Compile` , `EmbeddedResource` ou `None` que correspondem aos implícitos listados na tabela anterior.
 
-```xml
-<PropertyGroup>
-  <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
-</PropertyGroup>
-```
+- Defina a `EnableDefaultItems` propriedade como `false` para desabilitar toda a inclusão de arquivo implícito:
 
-Para desativar *todos os* globs `EnableDefaultItems` implícitos, defina a propriedade como: `false`
+  ```xml
+  <PropertyGroup>
+    <EnableDefaultItems>false</EnableDefaultItems>
+  </PropertyGroup>
+  ```
 
-```xml
-<PropertyGroup>
-  <EnableDefaultItems>false</EnableDefaultItems>
-</PropertyGroup>
-```
+  Se você quiser especificar arquivos a serem publicados com seu aplicativo, ainda poderá usar os mecanismos do MSBuild conhecidos para isso, por exemplo, o `Content` elemento.
 
-## <a name="customize-the-build"></a>Personalize a compilação
+- Desabilite seletivamente apenas `Compile` , `EmbeddedResource` , ou `None` globs definindo a `EnableDefaultCompileItems` propriedade, `EnableDefaultEmbeddedResourceItems` ou `EnableDefaultNoneItems` como `false` :
 
-Existem várias maneiras de [personalizar uma compilação.](/visualstudio/msbuild/customize-your-build) Você pode querer substituir uma propriedade passando-a como um argumento para um comando [msbuild](/visualstudio/msbuild/msbuild-command-line-reference) ou [dotnet.](../tools/index.md) Você também pode adicionar a propriedade ao arquivo do projeto ou a um arquivo *Directory.Build.props.* Para obter uma lista de propriedades úteis para projetos .NET Core, consulte [propriedades MSBuild para projetos .NET Core SDK](msbuild-props.md).
+  ```xml
+  <PropertyGroup>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+  </PropertyGroup>
+  ```
+
+  Se você desabilitar apenas `Compile` globs, Gerenciador de soluções no Visual Studio ainda mostrará \* itens. cs como parte do projeto, incluídos como `None` itens. Para desabilitar o `None` glob implícito, defina `EnableDefaultNoneItems` como `false` também.
+
+## <a name="customize-the-build"></a>Personalizar a compilação
+
+Há várias maneiras de [personalizar uma compilação](/visualstudio/msbuild/customize-your-build). Talvez você queira substituir uma propriedade passando-a como um argumento para um comando [MSBuild](/visualstudio/msbuild/msbuild-command-line-reference) ou [dotnet](../tools/index.md) . Você também pode adicionar a propriedade ao arquivo de projeto ou a um arquivo *Directory. Build. props* . Para obter uma lista de propriedades úteis para projetos do .NET Core, consulte [referência do MSBuild para projetos de SDK do .NET Core](msbuild-props.md).
 
 ### <a name="custom-targets"></a>Destinos personalizados
 
-Os projetos .NET Core podem empacotar metas e propriedades personalizadas do MSBuild para uso por projetos que consomem o pacote. Use este tipo de extensibilidade quando quiser:
+Os projetos do .NET Core podem empacotar destinos e propriedades do MSBuild personalizados para uso por projetos que consomem o pacote. Use esse tipo de extensibilidade quando desejar:
 
-- Estender o processo de construção.
-- Acesso a artefatos do processo de construção, como arquivos gerados.
+- Estenda o processo de compilação.
+- Acessar artefatos do processo de compilação, como arquivos gerados.
 - Inspecione a configuração sob a qual a compilação é invocada.
 
-Você adiciona metas ou propriedades de compilação `<package_id>.targets` `<package_id>.props` personalizadas colocando `Contoso.Utility.UsefulStuff.targets`arquivos no formulário ou (por exemplo) na pasta de *compilação* do projeto.
+Você adiciona propriedades ou destinos de compilação personalizados colocando arquivos no formulário `<package_id>.targets` ou `<package_id>.props` (por exemplo, `Contoso.Utility.UsefulStuff.targets` ) na pasta *Build* do projeto.
 
-O XML a seguir é um trecho de um arquivo [`dotnet pack`](../tools/dotnet-pack.md) *.csproj* que instrui o comando o que empacotar. O `<ItemGroup Label="dotnet pack instructions">` elemento coloca os arquivos de destino na pasta *de compilação* dentro do pacote. O `<Target Name="CollectRuntimeOutputs" BeforeTargets="_GetPackageFiles">` elemento coloca os conjuntos e arquivos *.json* na pasta *de compilação.*
+O XML a seguir é um trecho de código de um arquivo *. csproj* que instrui o [`dotnet pack`](../tools/dotnet-pack.md) comando o que deve ser empacotado. O `<ItemGroup Label="dotnet pack instructions">` elemento coloca os arquivos de destino na pasta de *compilação* dentro do pacote. O `<Target Name="CollectRuntimeOutputs" BeforeTargets="_GetPackageFiles">` elemento coloca os assemblies e os arquivos *. JSON* na pasta *Build* .
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -165,12 +170,12 @@ O XML a seguir é um trecho de um arquivo [`dotnet pack`](../tools/dotnet-pack.m
 </Project>
 ```
 
-Para consumir um alvo personalizado em `PackageReference` seu projeto, adicione um elemento que aponte para o pacote e sua versão. Ao contrário das ferramentas, o pacote de metas personalizadas está incluído no fechamento de dependência do projeto de consumo.
+Para consumir um destino personalizado em seu projeto, adicione um `PackageReference` elemento que aponte para o pacote e sua versão. Ao contrário das ferramentas, o pacote de destinos personalizados é incluído no fechamento de dependência do projeto de consumo.
 
-Você pode configurar como usar o alvo personalizado. Como é um alvo do MSBuild, ele pode depender de um determinado alvo, correr `dotnet msbuild -t:<target-name>` atrás de outro alvo ou ser invocado manualmente usando o comando. No entanto, para proporcionar uma melhor experiência ao usuário, você pode combinar ferramentas por projeto e alvos personalizados. Nesse cenário, a ferramenta por projeto aceita todos os parâmetros [`dotnet msbuild`](../tools/dotnet-msbuild.md) necessários e traduz isso na invocação necessária que executa o alvo. Veja um exemplo desse tipo de sinergia no repositório [Exemplos do MVP Summit 2016 Hackathon](https://github.com/dotnet/MVPSummitHackathon2016) do projeto [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer).
+Você pode configurar como usar o destino personalizado. Como é um destino do MSBuild, ele pode depender de um determinado destino, executado após outro destino ou ser invocado manualmente usando o `dotnet msbuild -t:<target-name>` comando. No entanto, para proporcionar uma melhor experiência do usuário, você pode combinar ferramentas por projeto e destinos personalizados. Nesse cenário, a ferramenta por projeto aceita todos os parâmetros necessários e converte-os na [`dotnet msbuild`](../tools/dotnet-msbuild.md) invocação necessária que executa o destino. Veja um exemplo desse tipo de sinergia no repositório [Exemplos do MVP Summit 2016 Hackathon](https://github.com/dotnet/MVPSummitHackathon2016) do projeto [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer).
 
 ## <a name="see-also"></a>Confira também
 
 - [Instalar o .NET Core](../install/index.md)
-- [Como usar SDKs do projeto MSBuild](/visualstudio/msbuild/how-to-use-project-sdk)
-- [Pacote mSBuild alvos e adereços personalizados com NuGet](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)
+- [Como usar SDKs de projeto do MSBuild](/visualstudio/msbuild/how-to-use-project-sdk)
+- [Empacotar destinos e props personalizados do MSBuild com o NuGet](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)

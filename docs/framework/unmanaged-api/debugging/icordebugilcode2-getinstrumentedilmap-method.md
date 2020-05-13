@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 7a4e3085-8f95-40ef-a4be-7d6146f47ce2
 topic_type:
 - apiref
-ms.openlocfilehash: 728a6c83dc321fa28dc4ff84c4e874d886524b36
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c6fdb7040620bb7a5b6aea6e0dc41e08d6f346d0
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788565"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210352"
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::Método GetInstrumentedILMap
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
@@ -36,7 +36,7 @@ HRESULT GetInstrumentedILMap(
   
 ## <a name="parameters"></a>Parâmetros  
  cMap  
- [in] A capacidade de armazenamento da matriz de `map`. Consulte a seção Comentários para obter mais informações.  
+ [in] A capacidade de armazenamento da matriz de `map`. Para obter mais informações, consulte a seção Comentários.  
   
  pcMap  
  [out] O número dos valores COR_IL_MAP gravados na matriz de mapa.  
@@ -45,23 +45,23 @@ HRESULT GetInstrumentedILMap(
  [out] Uma matriz de valores do COR_IL_MAP que fornece informações sobre mapeamentos da IL instrumentada pelo criador de perfis para a IL do método original.  
   
 ## <a name="remarks"></a>Comentários  
- Se o criador de perfil definir o mapeamento chamando o método [ICorProfilerInfo:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) , o depurador poderá chamar esse método para recuperar o mapeamento e usar o mapeamento internamente ao calcular deslocamentos de Il para rastreamentos de pilha e tempos de vida variáveis.  
+ Se o criador de perfil definir o mapeamento chamando o método [ICorProfilerInfo:: SetILInstrumentedCodeMap](../profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) , o depurador poderá chamar esse método para recuperar o mapeamento e usar o mapeamento internamente ao calcular deslocamentos de Il para rastreamentos de pilha e tempos de vida variáveis.  
   
- Se `cMap` for 0 e `pcMap` for não**nulo**, `pcMap` será definido como o número de valores de COR_IL_MAP disponíveis. Se `cMap` for não zero, representará a capacidade de armazenamento da matriz do `map`. Quando o método retorna, `map` contém um máximo de `cMap` itens e `pcMap` é definido como o número de valores de COR_IL_MAP gravados na matriz de `map`.  
+ Se `cMap` for 0 e `pcMap` for não**nulo**, `pcMap` será definido como o número de valores de COR_IL_MAP disponíveis. Se `cMap` for não zero, representará a capacidade de armazenamento da matriz do `map`. Quando o método retorna, `map` contém um máximo de `cMap` itens e `pcMap` é definido como o número de COR_IL_MAP valores gravados na `map` matriz.  
   
  Se a IL não tiver sido instrumentada ou o mapeamento não tiver sido fornecido por um criador de perfil, esse método retorna `S_OK` e define `pcMap` para 0.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
+- [ICorProfilerInfo::SetILInstrumentedCodeMap](../profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
 - [Interface ICorDebugILCode2](icordebugilcode2-interface.md)
 - [Depurando interfaces](debugging-interfaces.md)

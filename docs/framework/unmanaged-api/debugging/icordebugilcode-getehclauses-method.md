@@ -12,12 +12,12 @@ api_type:
 ms.assetid: cf7a0e00-06ae-47a5-8037-598b26196802
 topic_type:
 - apiref
-ms.openlocfilehash: ac9a4e4b54b302afeae4ede1dd574c15ded3ff12
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e1fd68cd079b381d941d416831133c54e49ac48a
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788611"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210378"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>ICorDebugILCode::Método GetEHClauses
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
@@ -35,7 +35,7 @@ HRESULT GetEHClauses(
   
 ## <a name="parameters"></a>Parâmetros  
  `cClauses`  
- [in] A capacidade de armazenamento da matriz de `clauses`. Consulte a seção Comentários para obter mais informações.  
+ [in] A capacidade de armazenamento da matriz de `clauses`. Para obter mais informações, consulte a seção Comentários.  
   
  `pcClauses`  
  [out] O número de cláusulas sobre quais informações são gravadas na matriz `clauses`.  
@@ -46,16 +46,16 @@ HRESULT GetEHClauses(
 ## <a name="remarks"></a>Comentários  
  Se `cClauses` for 0 e `pcClauses` for não**nulo**, `pcClauses` será definido como o número de cláusulas de tratamento de exceção disponíveis. Se `cClauses` for não zero, representará a capacidade de armazenamento da matriz do `clauses`. Quando o método retorna, `clauses` contém o máximo de itens `cClauses` e `pcClauses` estará definido como o número de cláusulas realmente gravadas na matriz `clauses`.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugILCode](icordebugilcode-interface.md)
 - [Estrutura CorDebugEHClause](cordebugehclause-structure.md)

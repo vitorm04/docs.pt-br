@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01d1b481-ca67-4712-8744-d342ec0df639
 topic_type:
 - apiref
-ms.openlocfilehash: e3744cbfa08de30c53f15c457034b50e2fc5d283
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 522e992e6d7e9a64f7590bbec0e9106e0e1f8f47
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793243"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212133"
 ---
 # <a name="icordebugmdagetdescription-method"></a>Método ICorDebugMDA::GetDescription
 Obtém uma cadeia de caracteres que contém a descrição do MDA (Assistente de depuração gerenciada) representado por [ICorDebugMDA](icordebugmda-interface.md).  
@@ -49,16 +49,16 @@ HRESULT GetDescription (
 ## <a name="remarks"></a>Comentários  
  A cadeia de caracteres pode ser de comprimento zero.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugMDA](icordebugmda-interface.md)
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

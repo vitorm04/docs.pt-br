@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92d8136d-0436-4c7e-a6b2-80765f892a0d
 topic_type:
 - apiref
-ms.openlocfilehash: b83dec65e1dd4fc610be3190e8126e6d9d38a6e8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 51ac10f936db129282720f2bcae8729f56735b59
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121218"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205376"
 ---
 # <a name="icordebugframegetcallee-method"></a>Método ICorDebugFrame::GetCallee
 Obtém um ponteiro para o objeto ICorDebugFrame na cadeia atual que esse quadro chamou.  
@@ -35,13 +35,13 @@ HRESULT GetCallee (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppFrame`  
- fora Um ponteiro para o endereço de um objeto de `ICorDebugFrame` que representa o quadro chamado. Esse valor será nulo se o quadro de chamada for o quadro interno na cadeia atual.  
+ fora Um ponteiro para o endereço de um `ICorDebugFrame` objeto que representa o quadro chamado. Esse valor será nulo se o quadro de chamada for o quadro interno na cadeia atual.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -1,7 +1,7 @@
 ---
 title: Operadores de comparação – referência do C#
 description: Saiba mais sobre operadores de comparação em C# que você pode usar para verificar a ordem dos valores numéricos.
-ms.date: 04/25/2019
+ms.date: 05/11/2020
 author: pkulikov
 f1_keywords:
 - <_CSharpKeyword
@@ -19,23 +19,25 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 68502205193a1fc8ab7410053e13274560ffffb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eda039d950e4be13d9c041c8bb95b6ea773b83f6
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399241"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207222"
 ---
 # <a name="comparison-operators-c-reference"></a>Operadores de comparação (referência do C#)
 
-A [ `<` ](#less-than-operator-)comparação (menor [ `>` que) (maior que)](#greater-than-operator-) [ `<=` (menor ou igual)](#less-than-or-equal-operator-)e [ `>=` (maior ou igual),](#greater-than-or-equal-operator-) também conhecida como relacional, os operadores comparam seus operands. Esses operadores são suportados por todos os tipos numéricos [integrais](../builtin-types/integral-numeric-types.md) e [de ponto flutuante.](../builtin-types/floating-point-numeric-types.md)
+A comparação [ `<` (menor que)](#less-than-operator-), [ `>` (maior que)](#greater-than-operator-), [ `<=` (menor que ou igual)](#less-than-or-equal-operator-)e [ `>=` (maior que ou igual)](#greater-than-or-equal-operator-) , também conhecida como operadores relacionais, comparam seus operandos. Esses operadores têm suporte de todos os tipos numéricos [integral](../builtin-types/integral-numeric-types.md) e [de ponto flutuante](../builtin-types/floating-point-numeric-types.md) .
 
 > [!NOTE]
 > Para os operadores `==`, `<`, `>`, `<=` e `>=`, se nenhum dos operandos for um número (<xref:System.Double.NaN?displayProperty=nameWithType> ou <xref:System.Single.NaN?displayProperty=nameWithType>), o resultado da operação será `false`. Isso significa que o valor `NaN` não é superior, inferior nem igual a nenhum outro valor `double` (ou `float`), incluindo `NaN`. Para obter mais informações e exemplos, consulte o artigo de referência <xref:System.Double.NaN?displayProperty=nameWithType> ou <xref:System.Single.NaN?displayProperty=nameWithType>.
 
+O tipo [Char](../builtin-types/char.md) também dá suporte a operadores de comparação. No caso dos `char` operandos, os códigos de caractere correspondentes são comparados.
+
 Tipos de enumeração também dão suporte a operadores de comparação. No caso dos operandos do mesmo tipo de [enum](../builtin-types/enum.md), os valores correspondentes do tipo integral subjacente são comparados.
 
-Os [ `==` `!=` operadores e operadores](equality-operators.md) verificam se seus operands são iguais ou não.
+Os [ `==` `!=` operadores e](equality-operators.md) verificam se seus operandos são iguais ou não.
 
 ## <a name="less-than-operator-"></a>Operador menor que \<
 
@@ -63,7 +65,7 @@ O operador `>=` retornará `true` se o operando à esquerda for maior ou igual a
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
-Um tipo definido pelo usuário `>` `<=`pode `>=` [sobrecarregar](operator-overloading.md) os `<`operadores e operadores.
+Um tipo definido pelo usuário pode [sobrecarregar](operator-overloading.md) os `<` operadores,, `>` `<=` e `>=` .
 
 Se um tipo sobrecarregar um dos operadores `<` ou `>`, ele deverá sobrecarregar tanto `<` quanto `>`. Se um tipo sobrecarregar um dos operadores `<=` ou `>=`, ele deverá sobrecarregar tanto `<=` quanto `>=`.
 

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 30a39d79-1f10-4328-9c5d-094ed824e2ba
 topic_type:
 - apiref
-ms.openlocfilehash: 263124db75abdc058d26ffb606a13fc711aed8bf
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1953a3e0492e4cfcdaea761b68ea22cf5a4a8ed7
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792295"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205528"
 ---
 # <a name="icordebugprocess5-interface"></a>Interface ICorDebugProcess5
 Estende a interface ICorDebugProcess para dar suporte ao acesso ao heap gerenciado, para fornecer informações sobre a coleta de lixo de objetos gerenciados e para determinar se um depurador carrega imagens do cache de imagem nativa local do aplicativo.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
@@ -47,16 +47,16 @@ Estende a interface ICorDebugProcess para dar suporte ao acesso ao heap gerencia
 > [!NOTE]
 > Esta interface não dá suporte a chamadas remotas de outro computador ou de outro processo.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Depurando interfaces](debugging-interfaces.md)
 - [Depuração](index.md)

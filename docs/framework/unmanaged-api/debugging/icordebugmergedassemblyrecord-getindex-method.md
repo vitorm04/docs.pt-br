@@ -2,12 +2,12 @@
 title: 'Método ICorDebugMergedAssemblyRecord:: GetIndex'
 ms.date: 03/30/2017
 ms.assetid: 98701444-b9bc-4978-9548-89ac3394147d
-ms.openlocfilehash: c8fb5ace27fbf7fbebdaca5822af99cd6673e8cf
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b13e589e32b3317b567a4a89a5b48fc1299a1a84
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793135"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206948"
 ---
 # <a name="icordebugmergedassemblyrecordgetindex-method"></a>Método ICorDebugMergedAssemblyRecord:: GetIndex
 Obtém o índice de prefixo do assembly.  
@@ -30,16 +30,16 @@ HRESULT GetIndex(
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)
 - [Depurando interfaces](debugging-interfaces.md)

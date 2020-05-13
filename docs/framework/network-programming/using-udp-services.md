@@ -17,19 +17,20 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-ms.openlocfilehash: 477095ada6e44f66cbc60cd80375da9a87f38e39
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ff40e8759b1732d4ad228b1414f96f9c37e5ac5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180611"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209767"
 ---
-# <a name="using-udp-services"></a>Usando os serviços UDP
+# <a name="use-udp-services"></a>Usar serviços UDP
+
 A classe <xref:System.Net.Sockets.UdpClient> se comunica com os serviços de rede usando o UDP. As propriedades e os métodos da classe <xref:System.Net.Sockets.UdpClient> abstraem os detalhes da criação de um <xref:System.Net.Sockets.Socket> para solicitar e receber dados usando o UDP.
 
 O protocolo UDP é um protocolo simples que se esforça para fornecer dados para um host remoto. No entanto, como o protocolo UDP é um protocolo sem conexão, os datagramas UDP enviados para o ponto de extremidade remoto não têm a garantia de serem recebidos, nem a garantia de serem recebidos na mesma sequência em que são enviados. Os aplicativos que usam o UDP devem estar preparados para manipular datagramas ausentes, duplicados e fora de sequência.
 
-Para enviar um datagrama usando o UDP, você deve saber o endereço de rede do dispositivo de rede que hospeda o serviço necessário e o número da porta UDP usada pelo serviço para se comunicar. A IANA (Internet Assigned Numbers Authority) define os números da porta de serviços comuns (veja [Registro de número da porta do protocolo de transporte e nome de serviço](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)). Os serviços que não estão na lista da IANA podem ter números de porta no intervalo de 1.024 a 65.535.
+Para enviar um datagrama usando o UDP, você deve saber o endereço de rede do dispositivo de rede que hospeda o serviço necessário e o número da porta UDP usada pelo serviço para se comunicar. A IANA (Internet Assigned Numbers Authority) define números de porta para serviços comuns (consulte o [nome do serviço e o registro do número da porta do protocolo de transporte](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)). Os serviços que não estão na lista IANA podem ter números de porta no intervalo de 1.024 a 65.535.
 
 Endereços de rede especiais são usados para dar suporte a mensagens de difusão do UDP em redes baseadas em IP. A discussão a seguir usa a família de endereços IP versão 4 usada na Internet como exemplo.
 

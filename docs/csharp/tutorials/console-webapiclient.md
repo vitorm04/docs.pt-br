@@ -3,18 +3,18 @@ title: Cria um cliente REST usando .NET Core
 description: Este tutorial ensina vários recursos no .NET Core e da linguagem C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 0105db519f7accec6bf8bfbafdc6a67a444b1074
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: c7b7e9803b0c05f4956f5c007bca8aa4b200cfca
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249162"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208019"
 ---
 # <a name="rest-client"></a>Cliente REST
 
 Este tutorial ensina vários recursos no .NET Core e da linguagem C#. Você aprenderá:
 
-* O básico do .NET Core CLI.
+* As noções básicas do CLI do .NET Core.
 * Uma visão geral dos recursos da linguagem C#.
 * Gerenciamento de dependências com o NuGet
 * Comunicações HTTP
@@ -29,27 +29,27 @@ Se preferir acompanhar com o [exemplo final](https://github.com/dotnet/samples/t
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você precisará configurar seu computador para executar o .NET Core. Você pode encontrar as instruções de instalação na página [.NET Core Downloads.](https://dotnet.microsoft.com/download) Execute esse aplicativo no Windows, Linux, macOS ou em um contêiner do Docker.
+Você precisará configurar seu computador para executar o .NET Core. Você pode encontrar as instruções de instalação na página de [downloads do .NET Core](https://dotnet.microsoft.com/download) . Execute esse aplicativo no Windows, Linux, macOS ou em um contêiner do Docker.
 Será necessário instalar o editor de código de sua preferência. As descrições a seguir usam o [Visual Studio Code](https://code.visualstudio.com/), que é uma software livre, no editor de plataforma. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
 
 ## <a name="create-the-application"></a>Criar o aplicativo
 
-A primeira etapa é criar um novo aplicativo. Abra um prompt de comando e crie um novo diretório para seu aplicativo. Torne ele o diretório atual. Digite o seguinte comando em uma janela do console:
+A primeira etapa é criar um novo aplicativo. Abra um prompt de comando e crie um novo diretório para seu aplicativo. Torne ele o diretório atual. Digite o seguinte comando em uma janela de console:
 
 ```dotnetcli
 dotnet new console --name WebApiClient
 ```
 
-Isso cria os arquivos iniciais de um aplicativo "Olá, Mundo" básico. O nome do projeto é "WebApiClient". Como este é um novo projeto, nenhuma das dependências está em vigor. A primeira execução baixará a estrutura do .NET Core, instalará um certificado de desenvolvimento e executará o gerenciador de pacotes NuGet para restaurar as dependências ausentes.
+Isso cria os arquivos iniciais de um aplicativo "Olá, Mundo" básico. O nome do projeto é "WebApiClient". Como esse é um novo projeto, nenhuma das dependências está em vigor. A primeira execução baixará o .NET Core Framework, instalará um certificado de desenvolvimento e executará o Gerenciador de pacotes NuGet para restaurar as dependências ausentes.
 
 Antes de começar a fazer modificações, digite `dotnet run` ([veja a observação](#dotnet-restore-note)) no prompt de comando para executar seu aplicativo. `dotnet run` executará automaticamente `dotnet restore` se estiverem faltando dependências em seu ambiente. Ele também executará `dotnet build` se seu aplicativo precisar ser reconstruído.
 Após sua configuração inicial, você só precisará executar `dotnet restore` ou `dotnet build` quando fizer sentido para seu projeto.
 
 ## <a name="adding-new-dependencies"></a>Adicionar novas dependências
 
-Uma das principais metas de design para o .NET Core é minimizar o tamanho da instalação do .NET. Se um aplicativo precisar de mais bibliotecas para alguns de seus recursos, adicione essas dependências ao seu arquivo de projeto de C# (\*.csproj). Para nosso exemplo, você precisará `System.Runtime.Serialization.Json` adicionar o pacote, para que seu aplicativo possa processar as respostas do JSON.
+Uma das principais metas de design para o .NET Core é minimizar o tamanho da instalação do .NET. Se um aplicativo precisar de mais bibliotecas para alguns de seus recursos, adicione essas dependências ao seu arquivo de projeto de C# (\*.csproj). Para nosso exemplo, você precisará adicionar o `System.Runtime.Serialization.Json` pacote, para que seu aplicativo possa processar respostas JSON.
 
-Você vai precisar `System.Runtime.Serialization.Json` do pacote para esta aplicação. Adicione-o ao seu projeto executando o seguinte comando [.NET CLI:](../../core/tools/dotnet-add-package.md)
+Você precisará do `System.Runtime.Serialization.Json` pacote para este aplicativo. Adicione-o ao seu projeto executando o seguinte comando da [CLI do .net](../../core/tools/dotnet-add-package.md) :
 
 ```dotnetcli
 dotnet add package System.Text.Json
@@ -69,7 +69,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-Você precisará adicionar uma `using` diretiva no topo `Main` do seu método para que o <xref:System.Threading.Tasks.Task> compilador C# reconheça o tipo:
+Você precisará adicionar uma `using` diretiva na parte superior do seu `Main` método para que o compilador C# reconheça o <xref:System.Threading.Tasks.Task> tipo:
 
 ```csharp
 using System.Threading.Tasks;
@@ -77,9 +77,7 @@ using System.Threading.Tasks;
 
 Se você compilar o projeto neste momento, receberá um aviso gerado para esse método, pois ele não contém operadores `await` e executará de forma síncrona. Ignore isso por enquanto. Adicione os operadores `await` à medida que você preenche o método.
 
-Em seguida, renomeie o namespace definido na instrução `namespace`, alterando o padrão de `ConsoleApp` para `WebAPIClient`. Posteriormente, definiremos uma classe `repo` neste namespace.
-
-Em seguida, atualize o método `Main` para chamar esse método. O `ProcessRepositories` método retorna uma tarefa, e você não deve sair do programa antes que essa tarefa termine. Portanto, você deve mudar `Main`a assinatura de . Adicione `async` o modificador e altere `Task`o tipo de retorno para . Em seguida, no corpo do método, `ProcessRepositories`adicione uma chamada a . Adicione `await` a palavra-chave a essa chamada de método:
+Em seguida, atualize o `Main` método para chamar o `ProcessRepositories` método. O `ProcessRepositories` método retorna uma tarefa e você não deve sair do programa antes que essa tarefa seja concluída. Portanto, você deve alterar a assinatura de `Main` . Adicione o `async` modificador e altere o tipo de retorno para `Task` . Em seguida, no corpo do método, adicione uma chamada para `ProcessRepositories` . Adicione a `await` palavra-chave a essa chamada de método:
 
 ```csharp
 static async Task Main(string[] args)
@@ -90,7 +88,7 @@ static async Task Main(string[] args)
 
 Agora, você tem um programa que não faz nada, mas o faz de forma assíncrona. Vamos melhorar isso.
 
-Primeiro você precisa de um objeto que é capaz de recuperar dados da Web; você pode usar um <xref:System.Net.Http.HttpClient> para fazer isso. Esse objeto manipula a solicitação e as respostas. Instanciar uma única instância `Program` desse tipo na classe dentro do arquivo *Program.cs.*
+Primeiro você precisa de um objeto que é capaz de recuperar dados da Web; você pode usar um <xref:System.Net.Http.HttpClient> para fazer isso. Esse objeto manipula a solicitação e as respostas. Crie uma instância única desse tipo na `Program` classe dentro do arquivo *Program.cs* .
 
 ```csharp
 namespace WebAPIClient
@@ -124,7 +122,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-Você também precisará adicionar duas `using` novas diretivas na parte superior do arquivo para que isso seja compilado:
+Você também precisará adicionar duas novas `using` diretivas na parte superior do arquivo para que isso seja compilado:
 
 ```csharp
 using System.Net.Http;
@@ -143,7 +141,7 @@ Compilar o aplicativo e executá-lo. O aviso de compilação desapareceu, pois a
 
 Neste ponto, você já escreveu o código para recuperar uma resposta de um servidor da Web e exibiu o texto contido nessa resposta. Agora, vamos converter essa resposta em JSON em objetos de C#.
 
-A <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> classe serializa objetos para JSON e desserializa JSON em objetos. Comece definindo uma classe `repo` para representar o objeto JSON retornado da API do GitHub:
+A <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> classe serializa objetos para JSON e DESSERIALIZA JSON em objetos. Comece definindo uma classe para representar o `repo` objeto JSON retornado da API do github:
 
 ```csharp
 using System;
@@ -163,20 +161,20 @@ Esse recurso facilita a criação de tipos que funcionam apenas com um subconjun
 
 Agora que você criou o tipo, vamos desserializá-lo.
 
-Em seguida, você usará o serializador para converter JSON em objetos de C#. Substitua a <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> chamada `ProcessRepositories` para o seu método pelas seguintes linhas:
+Em seguida, você usará o serializador para converter JSON em objetos de C#. Substitua a chamada para <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> no seu `ProcessRepositories` método pelas seguintes linhas:
 
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
 var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);
 ```
 
-Você está usando um novo namespace, então você precisará adicioná-lo na parte superior do arquivo também:
+Você está usando um novo namespace, portanto, você precisará adicioná-lo na parte superior do arquivo também:
 
 ```csharp
 using System.Text.Json;
 ```
 
-Observe que agora você está usando <xref:System.Net.Http.HttpClient.GetStreamAsync(System.String)> em vez de <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)>. O serializador usa um fluxo, em vez de uma cadeia de caracteres, como sua fonte. Vamos explicar algumas características da linguagem C# que estão sendo usadas na segunda linha do trecho de código anterior. O primeiro <xref:System.Text.Json.JsonSerializer.DeserializeAsync%60%601(System.IO.Stream,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)?displayProperty=nameWithType> argumento `await` é uma expressão. (Os outros dois parâmetros são opcionais e são omitidos no trecho do código.) As expressões de aguardem em quase qualquer lugar do seu código, mesmo que até agora, você só as tenha visto como parte de uma declaração de atribuição. O `Deserialize` método é *genérico,* o que significa que você deve fornecer argumentos de tipo para que tipo de objetos devem ser criados a partir do texto JSON. Neste exemplo, você está desserializando para um `List<Repository>`, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>que é outro objeto genérico, o . A `List<>` classe armazena uma coleção de objetos. O argumento de tipo declara o `List<>`tipo de objetos armazenados no . O texto JSON representa uma coleção de objetos de `Repository`relo, então o argumento do tipo é .
+Observe que agora você está usando <xref:System.Net.Http.HttpClient.GetStreamAsync(System.String)> em vez de <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)>. O serializador usa um fluxo, em vez de uma cadeia de caracteres, como sua fonte. Vamos explicar alguns recursos da linguagem C# que estão sendo usados na segunda linha do trecho de código anterior. O primeiro argumento para <xref:System.Text.Json.JsonSerializer.DeserializeAsync%60%601(System.IO.Stream,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)?displayProperty=nameWithType> é uma `await` expressão. (Os outros dois parâmetros são opcionais e são omitidos no trecho de código.) As expressões Await podem aparecer quase em qualquer lugar no seu código, embora até agora você as tenha visto apenas como parte de uma instrução de atribuição. O `Deserialize` método é *genérico*, o que significa que você deve fornecer argumentos de tipo para o tipo de objeto que deve ser criado a partir do texto JSON. Neste exemplo, você está desserializando para um `List<Repository>` , que é outro objeto genérico, o <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> . A `List<>` classe armazena uma coleção de objetos. O argumento Type declara o tipo de objetos armazenados no `List<>` . O texto JSON representa uma coleção de objetos de repositório, portanto, o argumento de tipo é `Repository` .
 
 Você está quase terminando esta seção. Agora que você converteu o JSON em objetos C#, vamos exibir o nome de cada repositório. Substitua as linhas que mostram:
 
@@ -196,14 +194,14 @@ Compile e execute o aplicativo. Ele imprimirá os nomes dos repositórios que fa
 
 ## <a name="controlling-serialization"></a>Controle da serialização
 
-Antes de adicionar mais recursos, `name` vamos abordar `[JsonPropertyName]` a propriedade usando o atributo. Faça as seguintes alterações na declaração do campo `name` em repo.cs:
+Antes de adicionar mais recursos, vamos abordar a `name` propriedade usando o `[JsonPropertyName]` atributo. Faça as seguintes alterações na declaração do campo `name` em repo.cs:
 
 ```csharp
 [JsonPropertyName("name")]
 public string Name { get; set; }
 ```
 
-Para `[JsonPropertyName]` usar o atributo, <xref:System.Text.Json.Serialization> você precisará `using` adicionar o namespace às diretivas:
+Para usar o `[JsonPropertyName]` atributo, será necessário adicionar o <xref:System.Text.Json.Serialization> namespace às `using` diretivas:
 
 ```csharp
 using System.Text.Json.Serialization;
@@ -215,7 +213,7 @@ Essa alteração significa que você precisa alterar o código que grava o nome 
 Console.WriteLine(repo.Name);
 ```
 
-Execute `dotnet run` para ter certeza de que você tem os mapeamentos corretos. Você deve ver o mesmo resultado de antes.
+Execute `dotnet run` para certificar-se de que você tem os mapeamentos corretos. Você deve ver o mesmo resultado de antes.
 
 Vamos fazer mais uma alteração antes de adicionar novos recursos. O método `ProcessRepositories` pode fazer o trabalho assíncrono e retornar uma coleção de repositórios. Vamos retornar o `List<Repository>` desse método e mover o código que grava as informações no método `Main`.
 
@@ -288,7 +286,7 @@ Como etapa final, vamos adicionar as informações para a última operação de 
 2016-02-08T21:27:00Z
 ```
 
-Esse formato está no Tempo Universal Coordenado (UTC) <xref:System.DateTime> para <xref:System.DateTime.Kind%2A> que <xref:System.DateTimeKind.Utc>você obtenha um valor cuja propriedade é . Se você preferir uma data representada no seu fuso horário, você precisará escrever um método de conversão personalizado. Primeiro, defina `public` uma propriedade que manterá a representação `Repository` UTC `LastPush` `readonly` da data e hora em sua classe e uma propriedade que retorna a data convertida em horário local:
+Esse formato está em UTC (tempo Universal Coordenado), portanto, você obterá um <xref:System.DateTime> valor cuja <xref:System.DateTime.Kind%2A> propriedade é <xref:System.DateTimeKind.Utc> . Se você preferir uma data representada em seu fuso horário, precisará escrever um método de conversão personalizado. Primeiro, defina uma `public` propriedade que conterá a representação UTC da data e hora em sua `Repository` classe e uma `LastPush` `readonly` propriedade que retorna a data convertida para a hora local:
 
 ```csharp
 [JsonPropertyName("pushed_at")]
@@ -297,7 +295,7 @@ public DateTime LastPushUtc { get; set; }
 public DateTime LastPush => LastPushUtc.ToLocalTime();
 ```
 
-Vamos repassar as novas construções que acabamos de definir. A `LastPush` propriedade é definida usando um *membro encorpado de expressão* para o `get` acessório. Não há nenhum acessador `set`. Omitir o `set` acessório é como você define uma propriedade *somente leitura* em C#. (Sim, você pode criar propriedades *somente gravação* em C#, mas o valor delas é limitado.)
+Vamos examinar as novas construções que acabamos de definir. A `LastPush` propriedade é definida usando um *membro expression-apto para* para o `get` acessador. Não há nenhum acessador `set`. Omitir o `set` acessador é como você define uma propriedade *somente leitura* em C#. (Sim, você pode criar propriedades *somente gravação* em C#, mas o valor delas é limitado.)
 
 Por fim, adicione mais uma instrução de saída no console, e você estará pronto para compilar e executar esse aplicativo novamente:
 

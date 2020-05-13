@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5396c4c3-4ec3-4e3a-a38d-d65b21f0a2fc
 topic_type:
 - apiref
-ms.openlocfilehash: c6c1fa12248b9ff871e4a62a1a3584f688f2a921
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d49992b1f4b25586f6171a51b351a25d453560f2
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781482"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212146"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a>Método ICorDebugManagedCallback2::FunctionRemapComplete
 Notifica o depurador de que a execução de código mudou para uma nova versão de uma função editada.  
@@ -48,16 +48,16 @@ HRESULT FunctionRemapComplete (
 ## <a name="remarks"></a>Comentários  
  Esse retorno de chamada dá ao depurador uma oportunidade de recriar todos os apresentadores que existiam anteriormente.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)
 - [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

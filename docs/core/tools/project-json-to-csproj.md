@@ -3,12 +3,12 @@ title: Comparação entre project.json e csproj
 description: Veja um mapeamento entre os elementos project.json e csproj.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: feaa7e9cde7e1aa4dfe94d699b14a018fc728f27
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: a997b48f645ed58d15610a68aee7c67411f9763f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794615"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205830"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Um mapeamento entre as propriedades de project.json e csproj
 
@@ -52,7 +52,7 @@ Por padrão, o nome de arquivo do projeto também especifica o valor das proprie
 O `<AssemblyName>` terá um valor diferente de `<PackageId>` se a propriedade `buildOptions\outputName` tiver sido definida em project.json.
 Para obter mais informações, consulte [Outras opções comuns de build](#other-common-build-options).
 
-### <a name="version"></a>Versão
+### <a name="version"></a>version
 
 ```json
 {
@@ -179,7 +179,7 @@ Use a propriedade `TargetFrameworks` para definir a lista de estruturas de desti
 </PropertyGroup>
 ```
 
-Observe que o valor `<RuntimeFrameworkVersion>` do projeto migrado é determinado pela versão do SDK instalada.
+O `<RuntimeFrameworkVersion>` valor no projeto migrado é determinado pela versão do SDK que está instalado.
 
 ### <a name="top-level-dependencies"></a>Dependências de nível superior
 
@@ -485,8 +485,7 @@ Consulte também [Arquivos](#files).
 </PropertyGroup>
 ```
 
-Não há nenhum equivalente do elemento `owners` no MSBuild.
-Para `summary`o, você pode usar a `<Description>` Propriedade MSBuild, embora o valor de `summary` não seja migrado automaticamente para essa propriedade, já que essa propriedade é mapeada para [`description`](#other-common-root-level-options) o elemento.
+Não há nenhum equivalente do elemento `owners` no MSBuild. Para `summary` o, você pode usar a `<Description>` Propriedade MSBuild. O valor de `summary` não é migrado automaticamente para essa propriedade, já que essa propriedade é mapeada para o [`description`](#other-common-root-level-options) elemento.
 
 ## <a name="scripts"></a>scripts
 
@@ -499,7 +498,7 @@ Para `summary`o, você pode usar a `<Description>` Propriedade MSBuild, embora o
 }
 ```
 
-Seu equivalente no MSBuild são [destinos](/visualstudio/msbuild/msbuild-targets):
+Seus equivalentes no MSBuild são [destinos](/visualstudio/msbuild/msbuild-targets):
 
 ```xml
 <Target Name="MyPreCompileTarget" BeforeTargets="Build">
@@ -528,7 +527,7 @@ Seu equivalente no MSBuild são [destinos](/visualstudio/msbuild/msbuild-targets
 }
 ```
 
-Todas as configurações desse grupo, com exceção da propriedade “System.GC.Server”, são colocadas em um arquivo chamado *runtimeconfig.template.json* na pasta do projeto, com as opções elevadas para o objeto raiz durante o processo de migração:
+Todas as configurações nesse grupo, exceto para a `System.GC.Server` propriedade, são colocadas em um arquivo chamado *runtimeconfig. Template. JSON* na pasta do projeto, com opções levantadas para o objeto raiz durante o processo de migração:
 
 ```json
 {
@@ -541,7 +540,7 @@ Todas as configurações desse grupo, com exceção da propriedade “System.GC.
 }
 ```
 
-A propriedade “System.GC.Server” é migrada para o arquivo csproj:
+A `System.GC.Server` propriedade é migrada para o arquivo csproj:
 
 ```xml
 <PropertyGroup>
@@ -569,7 +568,7 @@ No entanto, é possível definir todos esses valores em csproj, bem como proprie
 }
 ```
 
-Sem suporte em csproj. Em vez disso, é necessário criar e incluir arquivos de conteúdo no arquivo *.nuspec*.
+Sem suporte em csproj. Em vez disso, Crie arquivos de conteúdo de inclusão em seu arquivo *. nuspec* .
 Para obter mais informações, consulte [Incluindo arquivos de conteúdo](/nuget/schema/nuspec#including-content-files).
 
 ## <a name="files"></a>files
@@ -621,8 +620,7 @@ No MSBuild, isso é feito com [itens](/visualstudio/msbuild/common-msbuild-proje
 ```
 
 > [!NOTE]
-> Muitos dos [padrões de recurso de curinga](https://en.wikipedia.org/wiki/Glob_(programming)) são adicionados automaticamente pelo SDK do .NET Core.
-> Para obter mais informações, consulte [Valores de item de compilação padrão](https://aka.ms/sdkimplicititems).
+> Muitos dos [padrões de recurso de curinga](https://en.wikipedia.org/wiki/Glob_(programming)) são adicionados automaticamente pelo SDK do .NET Core. Para obter mais informações, consulte a [compilação padrão inclui](../project-sdk/overview.md#default-compilation-includes).
 
 Todos os elementos `ItemGroup` do MSBuild dão suporte a `Include`, `Exclude` e `Remove`.
 
@@ -673,6 +671,6 @@ Para obter mais informações, consulte [Incluindo conteúdo em um pacote](/nuge
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral de alto nível das alterações na CLI](cli-msbuild-architecture.md)

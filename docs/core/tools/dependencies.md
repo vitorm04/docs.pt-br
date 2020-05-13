@@ -6,18 +6,18 @@ no-loc:
 - dotnet remove package
 - dotnet list package
 ms.date: 02/25/2020
-ms.openlocfilehash: 3e1d807ea69e66e31b277a92cd6a1dc0e76531b5
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: b77acc7d4f03a45784f753d3daaa9810f110a6ac
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795541"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205948"
 ---
 # <a name="manage-dependencies-in-net-core-applications"></a>Gerenciar dependências em aplicativos .NET Core
 
 Este artigo explica como adicionar e remover dependências editando o arquivo de projeto ou usando a CLI.
 
-## <a name="the-packagereference-element"></a>O \<elemento> PackageReference
+## <a name="the-packagereference-element"></a>O \< elemento> PackageReference
 
 O `<PackageReference>` elemento de arquivo de projeto tem a seguinte estrutura:
 
@@ -40,7 +40,7 @@ A dependência no exemplo anterior só será válida se a compilação estiver a
 
 ## <a name="add-a-dependency-by-editing-the-project-file"></a>Adicionar uma dependência editando o arquivo de projeto
 
-Para adicionar uma dependência, adicione um `<PackageReference>` elemento dentro de `<ItemGroup>` um elemento. Você pode adicionar um existente `<ItemGroup>` ou criar um novo. O exemplo a seguir usa o projeto de aplicativo de console padrão criado `dotnet new console`por:
+Para adicionar uma dependência, adicione um `<PackageReference>` elemento dentro de um `<ItemGroup>` elemento. Você pode adicionar um existente `<ItemGroup>` ou criar um novo. O exemplo a seguir usa o projeto de aplicativo de console padrão criado por `dotnet new console` :
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
@@ -76,7 +76,7 @@ Para remover uma dependência, execute o [dotnet remove package](dotnet-remove-p
 dotnet remove package Microsoft.EntityFrameworkCore
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-* [Referências de pacotes em arquivos de projeto](../project-sdk/msbuild-props.md#reference-properties)
+* [Referências de pacotes em arquivos de projeto](../project-sdk/msbuild-props.md#reference-properties-and-items)
 * [dotnet list packagelinha](dotnet-remove-package.md)
