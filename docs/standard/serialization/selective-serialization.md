@@ -1,5 +1,6 @@
 ---
 title: Serialização seletiva
+description: Este artigo mostra como marcar campos com o atributo NonSerialized, que impede que esse campo seja serializado.
 ms.date: 08/07/2017
 dev_langs:
 - CSharp
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - serialization, selective serialization
 - binary serialization, selective serialization
 ms.assetid: 39c56635-95d2-4afd-aff1-b022e7649bb3
-ms.openlocfilehash: cc5d7964d5f3268f08721593fefc07e3eff853ca
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: c7203c4ea13c65f8d88c55de96988d3b1d9e9611
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159592"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379171"
 ---
 # <a name="selective-serialization"></a>Serialização seletiva
 Uma classe geralmente contém os campos que não devem ser serializados. Por exemplo, presuma que uma classe armazene uma ID de thread em uma variável de membro. Quando a classe é desserializada, o thread que armazenou a ID de quando a classe foi serializada pode não estar mais em execução; portanto, serializar esse valor não faz sentido. Você pode impedir que variáveis de membros sejam serializadas marcando-as com o atributo [NonSerialized](xref:System.NonSerializedAttribute) da maneira a seguir.  
@@ -31,7 +32,7 @@ Se possível, crie um objeto que possa conter dados confidenciais de segurança 
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Serialização binária](binary-serialization.md)
 - [Serialização de XML e SOAP](xml-and-soap-serialization.md)

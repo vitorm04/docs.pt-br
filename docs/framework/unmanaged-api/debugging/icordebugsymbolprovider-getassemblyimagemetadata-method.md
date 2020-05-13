@@ -2,12 +2,12 @@
 title: 'Método ICorDebugSymbolProvider:: GetAssemblyImageMetadata'
 ms.date: 03/30/2017
 ms.assetid: c3c9de67-b865-4ecf-b887-1f1d0719a0c0
-ms.openlocfilehash: 3ee80c18d3091406bf0bbd5b22c5f6021888906d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d118f0c984663e0844783ff52859698dd5335058
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791665"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83376141"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a>Método ICorDebugSymbolProvider:: GetAssemblyImageMetadata
 Retorna os metadados de um assembly mesclado.  
@@ -29,16 +29,16 @@ HRESULT GetAssemblyImageMetadata(
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)
 - [Depurando interfaces](debugging-interfaces.md)

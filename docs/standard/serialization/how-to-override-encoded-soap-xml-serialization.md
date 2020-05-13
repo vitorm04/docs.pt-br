@@ -1,16 +1,17 @@
 ---
 title: Como substituir a serialização XML de SOAP codificada
+description: Saiba mais sobre a substituição da serialização XML de objetos como mensagens SOAP, que é semelhante ao processo de substituição da serialização XML padrão.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 1bc9b228e61ccb0852ae489d44c5b692c54b642d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76e8009b83182d8517ff403f4f1e67bf0e7846b8
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922584"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83375841"
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>Como substituir a serialização XML de SOAP codificada
 
@@ -278,7 +279,7 @@ public class Run
 }
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Serialização de XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - [Atributos que controlam a serialização SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)

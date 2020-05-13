@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-ms.openlocfilehash: 680af5afa3ebef5bcaf9e34580e421dcc8093aaf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 953b7c1cb5e471072776fe03e53a46d3ff19c0ac
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178459"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379858"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>Método ICorDebugThread3::GetActiveInternalFrames
-Retorna uma matriz de quadros internos (objetos[ICorDebugInternalFrame2)](icordebuginternalframe2-interface.md) na pilha.  
+Retorna uma matriz de quadros internos (objetos[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) ) na pilha.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,44 +37,44 @@ HRESULT GetActiveInternalFrames
       );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cInternalFrames`  
- [em] O número de quadros `ppInternalFrames`internos esperados em .  
+ no O número de quadros internos esperados em `ppInternalFrames` .  
   
  `pcInternalFrames`  
- [fora] Um ponteiro `ULONG32` para um que contém o número de quadros internos na pilha.  
+ fora Um ponteiro para um `ULONG32` que contém o número de quadros internos na pilha.  
   
  `ppInternalFrames`  
- [dentro, fora] Um ponteiro para o endereço de uma matriz de quadros internos na pilha.  
+ [entrada, saída] Um ponteiro para o endereço de uma matriz de quadros internos na pilha.  
   
 ## <a name="return-value"></a>Valor retornado  
- Este método retorna os seguintes HRESULTs específicos, bem como erros de HRESULT que indicam falha do método.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|O objeto [ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) foi criado com sucesso.|  
-|E_INVALIDARG|`cInternalFrames`não é `ppInternalFrames` zero `null`e `pcInternalFrames` `null`é, ou é .|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames`é menor do que a contagem de quadros internos.|  
+|S_OK|O objeto [ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) foi criado com êxito.|  
+|E_INVALIDARG|`cInternalFrames`Não é zero e `ppInternalFrames` é `null` `pcInternalFrames` `null` .|  
+|HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames`é menor do que a contagem de quadros internos.|  
   
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- Quadros internos são estruturas de dados empurradas para a pilha pelo tempo de execução para armazenar dados temporários.  
+ Os quadros internos são estruturas de dados enviadas por push para a pilha pelo tempo de execução para armazenar dados temporários.  
   
- Quando você `GetActiveInternalFrames`chamar pela primeira `cInternalFrames` vez, você deve definir `ppInternalFrames` o parâmetro como 0 (zero) e o parâmetro para nulo. Quando `GetActiveInternalFrames` retorna `pcInternalFrames` pela primeira vez, contém a contagem dos quadros internos na pilha.  
+ Ao chamar pela primeira vez `GetActiveInternalFrames` , você deve definir o `cInternalFrames` parâmetro como 0 (zero) e o `ppInternalFrames` parâmetro como NULL. Quando `GetActiveInternalFrames` o primeiro retorna, `pcInternalFrames` contém a contagem dos quadros internos na pilha.  
   
- `GetActiveInternalFrames`então deve ser chamado uma segunda vez. Você deve passar a`pcInternalFrames`contagem `cInternalFrames` adequada ( ) no parâmetro, e `ppInternalFrames`especificar um ponteiro para uma matriz de tamanho apropriado em .  
+ `GetActiveInternalFrames`deve ser chamado uma segunda vez. Você deve passar a contagem apropriada ( `pcInternalFrames` ) no `cInternalFrames` parâmetro e especificar um ponteiro para uma matriz de tamanho apropriado no `ppInternalFrames` .  
   
- Use o método [ICorDebugStackWalk::GetFrame](icordebugthread3-getactiveinternalframes-method.md) para retornar quadros reais de pilha.  
+ Use o método [ICorDebugStackWalk:: GetFrame](icordebugthread3-getactiveinternalframes-method.md) para retornar os quadros de pilhas reais.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 

@@ -1,5 +1,6 @@
 ---
 title: Assinar um assembly com atraso
+description: Este artigo descreve a assinatura atrasada ou parcial, que reserva espaço no arquivo PE para a assinatura de nome forte, mas adia a assinatura real.
 ms.date: 08/19/2019
 helpviewer_keywords:
 - deferring assembly signing
@@ -12,30 +13,30 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 113df1ad3fc3ac1e27ebfef572494c1f15a3dbb5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b5c8c8463fdc573782fa457bf5671c72a7e25f7
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73733167"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378499"
 ---
 # <a name="delay-sign-an-assembly"></a>Assinar um assembly com atraso
 
-Uma organização pode ter um par de chaves bem guardado que os desenvolvedores não podem acessar diariamente. A chave pública normalmente está disponível, mas o acesso à chave privada é restrito a apenas algumas pessoas. Ao desenvolver assemblies com nomes fortes, cada assembly que referencia o assembly de destino com nome forte contém o token da chave pública usada para fornecer ao assembly de destino um nome forte. Isso requer que a chave pública esteja disponível durante o processo de desenvolvimento.
+Uma organização pode ter um par de chaves bem protegido que os desenvolvedores não podem acessar diariamente. A chave pública normalmente está disponível, mas o acesso à chave privada é restrito a apenas algumas pessoas. Ao desenvolver assemblies com nomes fortes, cada assembly que referencia o assembly de destino com nome forte contém o token da chave pública usada para fornecer ao assembly de destino um nome forte. Isso requer que a chave pública esteja disponível durante o processo de desenvolvimento.
 
-Você pode usar a assinatura atrasada ou parcial no tempo de construção para reservar espaço no arquivo executável portátil (PE) para a assinatura do nome forte, mas adiar a assinatura real até algum estágio posterior, geralmente pouco antes de enviar o conjunto.
+Você pode usar a assinatura atrasada ou parcial no momento da compilação para reservar espaço no arquivo executável portátil (PE) para a assinatura de nome forte, mas adiar a assinatura real até algum estágio posterior, geralmente antes de enviar o assembly.
 
-Para atrasar a sinalização de uma assembléia:
+Para assinar um assembly com atraso:
 
-1. Obtenha a parte de chave pública do par-chave da organização que fará a eventual assinatura. Normalmente, essa chave está na forma de um arquivo *.snk,* que pode ser criado usando a [ferramenta Nome Forte (Sn.exe)](../../framework/tools/sn-exe-strong-name-tool.md) fornecida pelo Windows SDK.
+1. Obtenha a parte da chave pública do par de chaves da organização que fará a assinatura eventual. Normalmente, essa chave está na forma de um arquivo *. SNK* , que pode ser criado usando a [ferramenta de nome forte (SN. exe)](../../framework/tools/sn-exe-strong-name-tool.md) fornecida pelo SDK do Windows.
 
 2. Anote o código-fonte para o assembly com dois atributos personalizados de <xref:System.Reflection>:
 
    - <xref:System.Reflection.AssemblyKeyFileAttribute>, que passa o nome do arquivo que contém a chave pública como um parâmetro para seu construtor.
 
-   - <xref:System.Reflection.AssemblyDelaySignAttribute>, o que indica que a assinatura de atraso está sendo usada passando **verdadeiro** como parâmetro para seu construtor.
+   - <xref:System.Reflection.AssemblyDelaySignAttribute>, que indica que o atraso da assinatura está sendo usado passando **true** como um parâmetro para seu construtor.
 
-   Por exemplo: 
+   Por exemplo:
 
    ```cpp
    [assembly:AssemblyKeyFileAttribute("myKey.snk")];
@@ -56,7 +57,7 @@ Para atrasar a sinalização de uma assembléia:
 
 4. Como o assembly não tem uma assinatura de nome forte válida, a verificação dessa assinatura deve ser desativada. Você pode fazer isso usando a opção **– Vr** com a ferramenta Nome Forte.
 
-     O exemplo a seguir desativa a verificação de uma montagem chamada *myAssembly.dll*.
+     O exemplo a seguir desativa a verificação para um assembly chamado *myAssembly. dll*.
 
    ```console
    sn –Vr myAssembly.dll
@@ -68,17 +69,17 @@ Para atrasar a sinalização de uma assembléia:
    sn –Vk myRegFile.reg myAssembly.dll
    ```
 
-   Com a opção **–Vr** ou **–Vk),** você pode incluir opcionalmente um arquivo *.snk* para assinatura de chave de teste.
+   Com a opção **– VR** ou **– VK** , você pode, opcionalmente, incluir um arquivo *. SNK* para assinatura de chave de teste.
 
    > [!WARNING]
    > Por segurança, não confie em nomes fortes. Eles apenas fornecem uma identidade exclusiva.
 
    > [!NOTE]
-   > Se você usar o atraso de assinatura durante o desenvolvimento com o Visual Studio em um computador de 64 bits e compilar um assembly para **Qualquer CPU**, talvez seja necessário aplicar a opção **-Vr** duas vezes. (No Visual Studio, **qualquer CPU** é um valor da propriedade de compilação de destino de **plataforma;** quando você compila a partir da linha de comando, é o padrão.) Para executar seu aplicativo a partir da linha de comando ou do File Explorer, use a versão de 64 bits da [ferramenta Sn.exe (Strong Name)](../../framework/tools/sn-exe-strong-name-tool.md) para aplicar a opção **-Vr** ao conjunto. Para carregar o assembly no Visual Studio no tempo de design (por exemplo, se o assembly contiver componentes que são usados por outros assemblies em seu aplicativo), use a versão de 32 bits da ferramenta de nome forte. Isso ocorre porque o compilador JIT (Just-in-time) compila o assembly para código nativo de 64 bits quando o assembly é executado da linha de comando e para código nativo de 32 bits quando o assembly é carregado no ambiente de tempo de design.
+   > Se você usar o atraso de assinatura durante o desenvolvimento com o Visual Studio em um computador de 64 bits e compilar um assembly para **Qualquer CPU**, talvez seja necessário aplicar a opção **-Vr** duas vezes. (No Visual Studio, **qualquer CPU** é um valor da propriedade de compilação de **destino de plataforma** ; quando você compila a partir da linha de comando, é o padrão.) Para executar o aplicativo na linha de comando ou no explorador de arquivos, use a versão de 64 bits do [sn. exe (Strong Name Tool)](../../framework/tools/sn-exe-strong-name-tool.md) para aplicar a opção **-VR** ao assembly. Para carregar o assembly no Visual Studio no tempo de design (por exemplo, se o assembly contiver componentes que são usados por outros assemblies em seu aplicativo), use a versão de 32 bits da ferramenta de nome forte. Isso ocorre porque o compilador JIT (Just-in-time) compila o assembly para código nativo de 64 bits quando o assembly é executado da linha de comando e para código nativo de 32 bits quando o assembly é carregado no ambiente de tempo de design.
 
 5. Posteriormente, normalmente imediatamente antes do envio, você envia o assembly para a autoridade de assinatura da sua organização para a assinatura de nome forte real usando a opção **–R** com a ferramenta Nome Forte.
 
-   O exemplo a seguir assina um conjunto chamado *myAssembly.dll* com um nome forte usando o par de tecla *sgKey.snk.*
+   O exemplo a seguir assina um assembly chamado *myAssembly. dll* com um nome forte usando o par de chaves *sgKey. SNK* .
 
    ```console
    sn -R myAssembly.dll sgKey.snk
@@ -88,4 +89,4 @@ Para atrasar a sinalização de uma assembléia:
 
 - [Criar assemblies](create.md)
 - [Como criar um par de chaves pública/privada](create-public-private-key-pair.md)
-- [Sn.exe (ferramenta Nome Forte)](../../framework/tools/sn-exe-strong-name-tool.md)
+- [Sn. exe (ferramenta Strong Name)](../../framework/tools/sn-exe-strong-name-tool.md)

@@ -1,5 +1,6 @@
 ---
 title: Controlando a serialização XML usando atributos
+description: Os atributos podem ser usados para controlar a serialização XML de um objeto ou criar um fluxo XML alternativo do mesmo conjunto de classes.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: e11152dc626b1e3619b9ecbc04d8a237ca9f13d3
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 4fc7667a2123a106b995a1ea3a31da4551ca650e
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248037"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83375957"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Controlando a serialização XML usando atributos
 
@@ -315,7 +316,7 @@ Por outro lado, se você quisesse serializar uma instância da classe, somente `
 
 Pode haver situações quando uma propriedade pública ou um campo não precisam ser serializados. Por exemplo, um campo ou propriedade podem ser usados para conter metadados. Nesses casos, aplicar o <xref:System.Xml.Serialization.XmlIgnoreAttribute> ao campo ou propriedade e o <xref:System.Xml.Serialization.XmlSerializer> o ignorarão.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Atributos que controlam a serialização de XML](attributes-that-control-xml-serialization.md)
 - [Atributos que controlam a serialização SOAP codificada](attributes-that-control-encoded-soap-serialization.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36605067-33d3-4579-9c72-fb0e551ab0f1
 topic_type:
 - apiref
-ms.openlocfilehash: 0c622e0eba27f501446d2b7d9d264ee0834e869c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f66ef88646c314502dcb610cec8ce822cab1fca2
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133614"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379276"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>Método ICorDebugThread::CreateEval
 Cria um objeto ICorDebugEval que coleta e expõe a funcionalidade desse ICorDebugThread.  
@@ -35,16 +35,16 @@ HRESULT CreateEval (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppEval`  
- fora Um ponteiro para o endereço de um objeto `ICorDebugEval` que coleta e expõe a funcionalidade desse thread.  
+ fora Um ponteiro para o endereço de um `ICorDebugEval` objeto que coleta e expõe a funcionalidade desse thread.  
   
 ## <a name="remarks"></a>Comentários  
  O objeto de avaliação enviará por push uma nova cadeia no thread antes de fazer seu cálculo. Isso interrompe a computação que está sendo executada atualmente no thread até que a avaliação seja concluída.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

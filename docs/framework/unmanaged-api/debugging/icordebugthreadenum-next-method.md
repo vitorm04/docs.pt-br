@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f967c93d-9a7f-4aaf-99a1-a1317899ff3f
 topic_type:
 - apiref
-ms.openlocfilehash: 0c455706b0d644d2444e9fbdf49c5a5d4f5295a9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c025afac1b53b23636a6160a475704011999d434
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122397"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379054"
 ---
 # <a name="icordebugthreadenumnext-method"></a>Método ICorDebugThreadEnum::Next
 Obtém o número de instâncias ICorDebugThread especificadas da enumeração, começando na posição atual.  
@@ -38,19 +38,19 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- no O número de instâncias de `ICorDebugThread` a serem recuperadas.  
+ no O número de `ICorDebugThread` instâncias a serem recuperadas.  
   
  `threads`  
- fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto `ICorDebugThread` que representa um thread.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um `ICorDebugThread` objeto que representa um thread.  
   
  `pceltFetched`  
- fora Aponta para o número de instâncias de `ICorDebugThread` retornadas na verdade. Esse valor pode ser nulo se `celt` for um.  
+ fora Aponta para o número de `ICorDebugThread` instâncias realmente retornadas. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

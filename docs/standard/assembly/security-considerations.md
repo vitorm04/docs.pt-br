@@ -1,5 +1,6 @@
 ---
 title: Considerações sobre a segurança do assembly
+description: Ao criar um assembly .NET, você pode especificar as permissões que o assembly requer para ser executado. Este artigo aborda os assemblies de nome forte e as ferramentas de assinatura.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], security
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: 77c9f9131b556e0b8fa639cd723bf1ca8cd6602e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7f897241b121cf1bd52d02ee5f487aeafafc3cb0
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73972304"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378652"
 ---
 # <a name="assembly-security-considerations"></a>Considerações sobre a segurança do assembly
 Ao criar um assembly, você pode especificar um conjunto de permissões que o assembly exige para ser executado. Se determinadas permissões são concedidas ou não a um assembly é algo que se baseia na evidência.  
@@ -42,7 +43,7 @@ Ao criar um assembly, você pode especificar um conjunto de permissões que o as
   
  No momento do carregamento, a evidência do assembly é usada como entrada para uma política de segurança. A política de segurança é estabelecida pela empresa e pelo administrador do computador, bem como por configurações de política do usuário e determina o conjunto de permissões concedido a todo o código gerenciado quando executado. A política de segurança pode ser estabelecida para o editor do assembly (se ele tiver uma assinatura gerada por uma ferramenta de assinatura), para o site e a zona (em termos do Internet Explorer) de onde o assembly foi baixado, ou para o nome forte do assembly. Por exemplo, um administrador de computador pode estabelecer uma política de segurança que permite que todo código baixado de um site e assinado por uma determinada empresa de software acesse um banco de dados em um computador, mas não dê acesso para gravar no disco do computador.  
   
-## <a name="strong-named-assemblies-and-signing-tools"></a>Assembléias com nomes fortes e ferramentas de assinatura  
+## <a name="strong-named-assemblies-and-signing-tools"></a>Assemblies de nome forte e ferramentas de assinatura  
 
  > [!WARNING]
  > Por segurança, não confie em nomes fortes. Eles apenas fornecem uma identidade exclusiva.
@@ -62,6 +63,6 @@ Ao criar um assembly, você pode especificar um conjunto de permissões que o as
   
 ## <a name="see-also"></a>Confira também
 
-- [Assembléias com nomes fortes](strong-named.md)
+- [Assemblies de nome forte](strong-named.md)
 - [Assemblies no .NET](index.md)
-- [SignTool.exe (Ferramenta de Assinatura)](../../framework/tools/signtool-exe.md)
+- [SignTool. exe (ferramenta de assinatura)](../../framework/tools/signtool-exe.md)

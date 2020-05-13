@@ -1,5 +1,6 @@
 ---
 title: Controle de versão do assembly
+description: Saiba mais sobre o controle de versão de assemblies .NET. Todas as versões de assemblies que usam o CLR são feitas no nível do assembly.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - informational versions
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - resolving assembly binding requests
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
-ms.openlocfilehash: bbb3dae2ce66c93d05a2a1c0f7e426901fa7b2e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fdffbcc0bbafed62228cba35e8f85fbec7f7fbab
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140185"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380079"
 ---
 # <a name="assembly-versioning"></a>Controle de versão do assembly
 
@@ -30,13 +31,13 @@ O ambiente de runtime realiza várias etapas para resolver uma solicitação de 
   
 3. Determina o assembly correto com base na referência do assembly original e qualquer redirecionamento especificado nos arquivos de configuração, além de determinar a versão que deve ser associada ao assembly de chamada.  
   
-4. Verifica o cache de montagem global, as bases de código especificadas nos arquivos de configuração e, em seguida, verifica o diretório e os subdiretórios do aplicativo usando as regras de sondagem explicadas em [Como o tempo de execução localiza conjuntos](../../framework/deployment/how-the-runtime-locates-assemblies.md).  
+4. Verifica o cache de assembly global, codebases especificados em arquivos de configuração e, em seguida, verifica o diretório e os subdiretórios do aplicativo usando as regras de investigação explicadas em [como o tempo de execução localiza assemblies](../../framework/deployment/how-the-runtime-locates-assemblies.md).  
   
 A seguinte ilustração mostra estas etapas:  
   
 ![Diagrama que mostra as etapas na resolução da solicitação de associação de assembly.](./media/versioning/resolve-assembly-binding-request.gif)
   
-Para obter mais informações sobre a configuração de aplicativos, consulte [Configurar aplicativos](../../framework/configure-apps/index.md). Para obter mais informações sobre a política de vinculação, consulte [Como o tempo de execução localiza conjuntos](../../framework/deployment/how-the-runtime-locates-assemblies.md).  
+Para obter mais informações sobre como configurar aplicativos, consulte [configurar aplicativos](../../framework/configure-apps/index.md). Para obter mais informações sobre a política de associação, consulte [como o tempo de execução localiza assemblies](../../framework/deployment/how-the-runtime-locates-assemblies.md).  
   
 ## <a name="version-information"></a>Informações da versão  
 
@@ -60,7 +61,7 @@ Quando um assembly é compilado, a ferramenta de desenvolvimento registra as inf
   
 O runtime diferencia assemblies regulares de assemblies com nomes fortes para fins de controle de versão. A verificação de versão só ocorre em assemblies com nomes fortes.  
   
-Para obter informações sobre como especificar políticas de vinculação de versões, consulte [Configurar aplicativos](../../framework/configure-apps/index.md). Para obter informações sobre como o tempo de execução usa informações de versão para encontrar um conjunto específico, consulte [Como o tempo de execução localiza conjuntos](../../framework/deployment/how-the-runtime-locates-assemblies.md).  
+Para obter informações sobre como especificar políticas de associação de versão, consulte [configurar aplicativos](../../framework/configure-apps/index.md). Para obter informações sobre como o tempo de execução usa informações de versão para localizar um assembly específico, consulte [como o tempo de execução localiza assemblies](../../framework/deployment/how-the-runtime-locates-assemblies.md).  
   
 ### <a name="assembly-informational-version"></a>Versão informativa do assembly  
 
@@ -69,11 +70,11 @@ A versão informativa é uma cadeia de caracteres que anexa informações adicio
 > [!NOTE]
 > Embora você possa especificar qualquer texto, uma mensagem de aviso aparecerá durante a compilação se a cadeia de caracteres não estiver no formato usado pelo número de versão do assembly ou se ela estiver no formato correto, mas contiver curingas. Esse aviso é inofensivo.  
   
-A versão informativa é representada usando-se o atributo personalizado <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType>. Para obter mais informações sobre o atributo da versão informacional, consulte [Definir atributos de montagem](set-attributes.md).  
+A versão informativa é representada usando-se o atributo personalizado <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType>. Para obter mais informações sobre o atributo versão informativa, consulte [set Assembly Attributes](set-attributes.md).  
   
 ## <a name="see-also"></a>Confira também
 
-- [Como o tempo de execução localiza conjuntos](../../framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Como o tempo de execução localiza assemblies](../../framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Configurar aplicativos](../../framework/configure-apps/index.md)
 - [Definir atributos do assembly](set-attributes.md)
 - [Assemblies no .NET](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 172ef8c4-2ead-4cfc-bd2e-dee4fb7191cd
 topic_type:
 - apiref
-ms.openlocfilehash: 33219d9a67379244e23da49c13617a4c4a2fa66d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 16aafa439fc81c3606f98ca2ba860316ec46e0db
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133460"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379746"
 ---
 # <a name="icordebugthreadgethandle-method"></a>Método ICorDebugThread::GetHandle
 Obtém o identificador atual da parte ativa deste ICorDebugThread.  
@@ -43,10 +43,10 @@ HRESULT GetHandle (
  Esse identificador é de propriedade da API de depuração. O depurador deve duplicá-lo antes de usá-lo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

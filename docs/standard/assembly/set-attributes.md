@@ -1,5 +1,6 @@
 ---
 title: Definir atributos do assembly
+description: Você pode definir atributos de assembly para um assembly .NET, incluindo identidade de assembly, informativo, manifesto de assembly e atributos de nome forte.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], attributes
@@ -10,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 0e4e2e595ed4f95511bd23ab0ed00139f71b2c8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e3a077dcd1b62a4676a3ac6492a90e38c548e41b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73740476"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378643"
 ---
 # <a name="set-assembly-attributes"></a>Definir atributos do assembly
 
@@ -37,9 +38,9 @@ A tabela a seguir descreve os atributos de versão e cultura.
 
 |Atributo de identidade do assembly|Descrição|
 |---------------------------------|-----------------|
-|<xref:System.Reflection.AssemblyCultureAttribute>|Campo enumerado que indica a cultura compatível com o assembly. Um assembly também pode especificar a independência da cultura, indicando que ela contém os recursos para a cultura padrão. **Observação:** o runtime trata qualquer assembly que não tenha o atributo de cultura definido como nulo, como um assembly satélite. Esses assemblies estão sujeitos às regras de associação de assembly satélite. Para obter mais informações, consulte [Como o tempo de execução localiza conjuntos](../../framework/deployment/how-the-runtime-locates-assemblies.md).|
+|<xref:System.Reflection.AssemblyCultureAttribute>|Campo enumerado que indica a cultura compatível com o assembly. Um assembly também pode especificar a independência da cultura, indicando que ela contém os recursos para a cultura padrão. **Observação:** o runtime trata qualquer assembly que não tenha o atributo de cultura definido como nulo, como um assembly satélite. Esses assemblies estão sujeitos às regras de associação de assembly satélite. Para obter mais informações, consulte [como o tempo de execução localiza assemblies](../../framework/deployment/how-the-runtime-locates-assemblies.md).|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|O valor que define os atributos de assembly; por exemplo, se o assembly pode ser executado lado a lado.|
-|<xref:System.Reflection.AssemblyVersionAttribute>|Valor numérico no formato *principal*.*secundário*.*compilação*.*revisão* (por exemplo, 2.4.0.0). O Common Language Runtime usa esse valor para executar operações de associação em assemblies com nome forte. **Nota:**  Se <xref:System.Reflection.AssemblyInformationalVersionAttribute> o atributo não for aplicado a um conjunto, o número <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>de <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> versão especificado pelo atributo <xref:System.Reflection.AssemblyVersionAttribute> é usado pelas propriedades e propriedades.|
+|<xref:System.Reflection.AssemblyVersionAttribute>|Valor numérico no formato *principal*.*secundário*.*compilação*.*revisão* (por exemplo, 2.4.0.0). O Common Language Runtime usa esse valor para executar operações de associação em assemblies com nome forte. **Observação:**  Se o <xref:System.Reflection.AssemblyInformationalVersionAttribute> atributo não for aplicado a um assembly, o número de versão especificado pelo <xref:System.Reflection.AssemblyVersionAttribute> atributo será usado pelas <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> Propriedades, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> .|
 
 O exemplo de código a seguir mostra como aplicar os atributos de versão e cultura a um assembly.
 
@@ -88,7 +89,7 @@ Também é possível usar atributos de manifesto do assembly para fornecer infor
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|O valor de cadeia de caracteres que indica a configuração do assembly, como Retail ou Depuração. O runtime não usa esse valor.|
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|O valor de cadeia de caracteres que especifica um alias padrão a ser usado ao fazer referências de assemblies. Esse valor fornece um nome amigável quando o nome do assembly em si não o for (como um valor GUID). Esse valor também pode ser usado como uma forma abreviada do nome completo do assembly.|
 |<xref:System.Reflection.AssemblyDescriptionAttribute>|O valor de cadeia de caracteres que especifica uma breve descrição que resume a natureza e o objetivo do assembly.|
-|<xref:System.Reflection.AssemblyTitleAttribute>|O valor de cadeia de caracteres que especifica um nome amigável para o assembly. Por exemplo, um conjunto chamado *comdlg* pode ter o título Microsoft Common Dialog Control.|
+|<xref:System.Reflection.AssemblyTitleAttribute>|O valor de cadeia de caracteres que especifica um nome amigável para o assembly. Por exemplo, um assembly chamado *comdlg* pode ter o título controle de caixa de diálogo comum da Microsoft.|
 
 ## <a name="strong-name-attributes"></a>Atributos de nome forte
 
@@ -97,10 +98,10 @@ Você pode usar atributos de nome forte para definir um nome forte para um assem
 |Atributo de nome forte|Descrição|
 |----------------------------|-----------------|
 |<xref:System.Reflection.AssemblyDelaySignAttribute>|O valor booliano que indica que a assinatura em atraso está sendo usada.|
-|<xref:System.Reflection.AssemblyKeyFileAttribute>|O valor de cadeia de caracteres que indica o nome do arquivo que contém a chave pública (se usando assinatura em atraso) ou as chaves pública e privada passadas como um parâmetro ao construtor desse atributo. Observe que o nome do arquivo é relativo ao caminho do arquivo de saída (o *.exe* ou *.dll),* não o caminho do arquivo de origem.|
+|<xref:System.Reflection.AssemblyKeyFileAttribute>|O valor de cadeia de caracteres que indica o nome do arquivo que contém a chave pública (se usando assinatura em atraso) ou as chaves pública e privada passadas como um parâmetro ao construtor desse atributo. Observe que o nome do arquivo é relativo ao caminho do arquivo de saída (o *. exe* ou *. dll*), não o caminho do arquivo de origem.|
 |<xref:System.Reflection.AssemblyKeyNameAttribute>|Indica o contêiner de chaves que contém o par de chaves passado como um parâmetro ao construtor desse atributo.|
 
-O exemplo de código a seguir mostra os atributos a serem aplicados ao usar a assinatura de atraso para criar um conjunto com nome forte com um arquivo de chave pública chamado *myKey.snk*.
+O exemplo de código a seguir mostra os atributos a serem aplicados ao usar a assinatura de atraso para criar um assembly de nome forte com um arquivo de chave pública chamado *myKey. SNK*.
 
 ```cpp
 [assembly:AssemblyKeyFileAttribute("myKey.snk")];

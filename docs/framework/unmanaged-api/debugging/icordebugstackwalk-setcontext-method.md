@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bac0b156-31a3-4e7f-be4d-ab21789c81f1
 topic_type:
 - apiref
-ms.openlocfilehash: 23ad8882ad97e5ceaeb690dfae08a6be55b85f64
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 896e797acc76e8d8034bd964e488317a62eed97b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791852"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378772"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>Método ICorDebugStackWalk::SetContext
 Define o contexto atual do objeto [ICorDebugStackWalk](icordebugstackwalk-interface.md) como um contexto válido para o thread.  
@@ -38,20 +38,20 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
  no Um sinalizador [CorDebugSetContextFlag](cordebugsetcontextflag-enumeration.md) que indica se o contexto é do quadro ativo na pilha ou um contexto obtido com o desenrolamento da pilha.  
   
  `contextSize`  
- no O tamanho alocado do buffer de `CONTEXT`.  
+ no O tamanho alocado do `CONTEXT` buffer.  
   
  `context`  
- no O buffer de `CONTEXT`.  
+ no O `CONTEXT` buffer.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|O contexto do objeto de `ICorDebugStackWalk` foi definido com êxito.|  
-|{1&gt;E_FAIL&lt;1}|O contexto do objeto de `ICorDebugStackWalk` não foi definido.|  
-|{1&gt;E_INVALIDARG&lt;1}|O contexto é nulo.|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|O buffer de contexto é muito pequeno.|  
+|S_OK|O `ICorDebugStackWalk` contexto do objeto foi definido com êxito.|  
+|E_FAIL|O `ICorDebugStackWalk` contexto do objeto não foi definido.|  
+|E_INVALIDARG|O contexto é nulo.|  
+|HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT_BUFFER)|O buffer de contexto é muito pequeno.|  
   
 ## <a name="exceptions"></a>Exceções  
   
@@ -62,16 +62,16 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
  Você pode recuperar uma cópia de bit exata desse contexto chamando imediatamente o método [ICorDebugStackWalk:: GetContext](icordebugstackwalk-getcontext-method.md) .  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Depurando interfaces](debugging-interfaces.md)
 - [Depuração](index.md)

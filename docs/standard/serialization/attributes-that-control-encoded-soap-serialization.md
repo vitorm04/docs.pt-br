@@ -1,5 +1,6 @@
 ---
 title: Atributos que controlam a serialização SOAP codificada
+description: Este artigo lista um conjunto especial de atributos encontrados no namespace System. xml. Serialization necessário para estar em conformidade com a especificação SOAP.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SOAP, XML serialization
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-ms.openlocfilehash: 2961d9abc6c32e78b5a61e8f2bbea5cfcf6677bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e99856c3ac70b122c0def23e36bbc3059c5891c
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794934"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378468"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>Atributos que controlam a serialização SOAP codificada
 
@@ -32,7 +33,7 @@ Para obter mais informações sobre atributos, consulte [Atributos](../../../doc
 |<xref:System.Xml.Serialization.SoapIncludeAttribute>|Declarações públicas de classe derivada e métodos públicos para documentos da linguagem WSDL.|O tipo deve ser incluído ao gerar esquemas (para serem reconhecidos quando serializados).|
 |<xref:System.Xml.Serialization.SoapTypeAttribute>|Declarações públicas de classe.|A classe deverá ser serializada como um tipo XML.|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Serialização de XML e SOAP](xml-and-soap-serialization.md)
 - [Como serializar um objeto como um fluxo XML codificado para SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

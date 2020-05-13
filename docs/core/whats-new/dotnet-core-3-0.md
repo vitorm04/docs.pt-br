@@ -6,37 +6,37 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: be5c26c81480dc2854b849dd7f2b1c46ee3e526a
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 422cb7b20e2644ab44f9573f101fb6b53ab1dd2f
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989162"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378831"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novidades do .NET Core 3.0
 
-Este artigo descreve o que há de novo no .NET Core 3.0. Um dos maiores avanços é o suporte para aplicativos Windows de área de trabalho (somente Windows). Usando a Área de Trabalho do Windows do componente de SDK do .NET Core 3.0, você pode portar seus aplicativos Windows Forms e WPF (Windows Presentation Foundation). Para deixar claro, o componente Windows Desktop só é compatível com o Windows e só é incluído nele. Para obter mais informações, consulte a seção [Área de Trabalho do Windows](#windows-desktop) mais adiante neste artigo.
+Este artigo descreve o que há de novo no .NET Core 3,0. Um dos maiores avanços é o suporte para aplicativos Windows de área de trabalho (somente Windows). Usando a Área de Trabalho do Windows do componente de SDK do .NET Core 3.0, você pode portar seus aplicativos Windows Forms e WPF (Windows Presentation Foundation). Para deixar claro, o componente Windows Desktop só é compatível com o Windows e só é incluído nele. Para obter mais informações, consulte a seção [Área de Trabalho do Windows](#windows-desktop) mais adiante neste artigo.
 
-O .NET Core 3.0 adiciona suporte para C# 8.0. É altamente recomendável que você use [visual studio 2019 versão 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou mais recente, [Visual Studio para Mac 8.3](/visualstudio/mac/install-preview) ou mais recente, ou [Visual Studio Code](https://code.visualstudio.com/) com a mais recente **extensão C#**.
+O .NET Core 3.0 adiciona suporte para C# 8.0. É altamente recomendável que você use o [Visual Studio 2019 versão 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou mais recente, [Visual Studio para Mac 8,3](/visualstudio/mac/install-preview) ou mais recente ou [Visual Studio Code](https://code.visualstudio.com/) com a **extensão C#** mais recente.
 
-[Baixe e comece com o .NET Core 3.0](https://aka.ms/netcore3download) agora mesmo no Windows, macOS ou Linux.
+[Baixe e comece a usar o .NET Core 3,0](https://aka.ms/netcore3download) agora no Windows, no MacOS ou no Linux.
 
-Para obter mais informações sobre a versão, consulte o [anúncio do .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
+Para obter mais informações sobre a versão, consulte o [anúncio do .NET Core 3,0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
 
-.NET Core RC1 foi considerado pronto para produção pela Microsoft e foi totalmente suportado. Se você estiver usando uma versão de pré-visualização, você deve mover-se para a versão RTM para suporte contínuo.
+O .NET Core RC1 foi considerado pronto para produção pela Microsoft e foi totalmente suportado. Se você estiver usando uma versão de visualização, deverá mover para a versão RTM para obter suporte contínuo.
 
-## <a name="language-improvements-c-80"></a>Melhorias linguísticas C# 8.0
+## <a name="language-improvements-c-80"></a>Aprimoramentos na linguagem C# 8,0
 
-C# 8.0 também faz parte desta versão, que inclui o recurso [de tipos de referência anulados,](../../csharp/tutorials/nullable-reference-types.md) [fluxos assíncronos](../../csharp/tutorials/generate-consume-asynchronous-stream.md)e [mais padrões](../../csharp/tutorials/pattern-matching.md). Para obter mais informações sobre recursos do C# 8.0, consulte [Novidades do C# 8.0](../../csharp/whats-new/csharp-8.md).
+O C# 8,0 também faz parte desta versão, que inclui o recurso de [tipos de referência anulável](../../csharp/tutorials/nullable-reference-types.md) , [fluxos assíncronos](../../csharp/tutorials/generate-consume-asynchronous-stream.md)e [mais padrões](../../csharp/tutorials/pattern-matching.md). Para obter mais informações sobre recursos do C# 8.0, consulte [Novidades do C# 8.0](../../csharp/whats-new/csharp-8.md).
 
-Aprimoramentos de idioma foram adicionados para suportar os seguintes recursos de API detalhados abaixo:
+Foram adicionados aprimoramentos de linguagem para dar suporte aos seguintes recursos de API detalhados abaixo:
 
 - [Intervalos e índices](#ranges-and-indices)
 - [Fluxos assíncronos](#async-streams)
 
 ## <a name="net-standard-21"></a>.NET Standard 2.1
 
-.NET Core 3.0 implementa **.NET Standard 2.1**. No entanto, o modelo padrão `dotnet new classlib` gera um projeto que ainda tem como alvo o **.NET Standard 2.0**. Para direcionar ao **.NET Standard 2.1**, edite seu arquivo de projeto e altere a propriedade `TargetFramework` para `netstandard2.1`:
+O .NET Core 3,0 implementa **.NET Standard 2,1**. No entanto, o `dotnet new classlib` modelo padrão gera um projeto que ainda tem como alvo **.net Standard 2,0**. Para direcionar ao **.NET Standard 2.1**, edite seu arquivo de projeto e altere a propriedade `TargetFramework` para `netstandard2.1`:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -50,28 +50,28 @@ Aprimoramentos de idioma foram adicionados para suportar os seguintes recursos d
 
 Se você estiver usando o Visual Studio, precisará do [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), já que o Visual Studio 2017 não dá suporte ao **.NET Standard 2.1** nem ao **.NET Core 3.0**.
 
-## <a name="compiledeploy"></a>Compilação/implantação
+## <a name="compiledeploy"></a>Compilar/implantar
 
 ### <a name="default-executables"></a>Executáveis por padrão
 
-O .NET Core agora constrói [executáveis dependentes de tempo de execução](../deploying/index.md#publish-runtime-dependent) por padrão. Esse comportamento é novo para aplicativos que usam uma versão do .NET Core instalada globalmente. Anteriormente, apenas [implantações autocontidas](../deploying/index.md#publish-self-contained) produziam um executável.
+O .NET Core agora cria [executáveis dependentes de tempo de execução](../deploying/index.md#publish-runtime-dependent) por padrão. Esse comportamento é novo para aplicativos que usam uma versão do .NET Core instalada globalmente. Anteriormente, apenas [implantações autocontidas](../deploying/index.md#publish-self-contained) produziam um executável.
 
-Durante `dotnet build` `dotnet publish`ou , um executável (conhecido como **appHost**) é criado que corresponde ao ambiente e plataforma do SDK que você está usando. Você pode esperar desses executáveis o mesmo que de outros executáveis nativos, como:
+Durante `dotnet build` ou `dotnet publish` , um executável (conhecido como **appHost**) é criado que corresponde ao ambiente e à plataforma do SDK que você está usando. Você pode esperar desses executáveis o mesmo que de outros executáveis nativos, como:
 
 - Você pode clicar duas vezes no arquivo executável.
 - Você pode iniciar o aplicativo diretamente de um prompt de comando, como `myapp.exe` no Windows e `./myapp` no Linux e macOS.
 
-### <a name="macos-apphost-and-notarization"></a>aplicativo macOSHost e autenticação em cartório
+### <a name="macos-apphost-and-notarization"></a>macOS appHost e notarization
 
-*somente para macOS*
+*somente macOS*
 
-Começando com o .NET Core SDK 3.0 autenticado em cartório para macOS, a configuração para produzir um executável padrão (conhecido como appHost) é desativada por padrão. Para obter mais informações, consulte [macOS Catalina Notarization e o impacto em downloads e projetos do .NET Core](../install/macos-notarization-issues.md).
+A partir do notarized SDK do .NET Core 3,0 para macOS, a configuração para produzir um executável padrão (conhecida como appHost) é desabilitada por padrão. Para obter mais informações, consulte [o notarization Catalina do MacOS e o impacto sobre os downloads e projetos do .NET Core](../install/macos-notarization-issues.md).
 
-Quando a configuração appHost está ativada, o .NET Core gera um executável Mach-O nativo quando você constrói ou publica. Seu aplicativo é executado no contexto do aplicativoHost quando `dotnet run` é executado a partir do código-fonte com o comando, ou iniciando o executável Mach-O diretamente.
+Quando a configuração appHost está habilitada, o .NET Core gera um executável de Mach-O nativo quando você cria ou publica. Seu aplicativo é executado no contexto do appHost quando ele é executado do código-fonte com o `dotnet run` comando ou iniciando o executável de Mach-o diretamente.
 
-Sem o aplicativoHost, a única maneira de um usuário `dotnet <filename.dll>` iniciar um aplicativo dependente de tempo de [execução](../deploying/index.md#publish-runtime-dependent) é com o comando. Um aplicativoHost é sempre criado quando você publica seu aplicativo [independente](../deploying/index.md#publish-self-contained).
+Sem o appHost, a única maneira como um usuário pode iniciar um aplicativo [dependente de tempo de execução](../deploying/index.md#publish-runtime-dependent) é com o `dotnet <filename.dll>` comando. Um appHost é sempre criado quando você publica [seu aplicativo independente](../deploying/index.md#publish-self-contained).
 
-Você pode configurar o appHost no nível do projeto ou alternar `dotnet` o `-p:UseAppHost` aplicativoHost para um comando específico com o parâmetro:
+Você pode configurar o appHost no nível do projeto ou alternar o appHost para um `dotnet` comando específico com o `-p:UseAppHost` parâmetro:
 
 - Arquivo de projeto
 
@@ -87,7 +87,7 @@ Você pode configurar o appHost no nível do projeto ou alternar `dotnet` o `-p:
   dotnet run -p:UseAppHost=true
   ```
 
-Para obter mais `UseAppHost` informações sobre a configuração, consulte [as propriedades MSBuild para Microsoft.NET.Sdk](../project-sdk/msbuild-props.md#useapphost).
+Para obter mais informações sobre a `UseAppHost` configuração, consulte [Propriedades do MSBuild para Microsoft. net. SDK](../project-sdk/msbuild-props.md#useapphost).
 
 ### <a name="single-file-executables"></a>Executáveis de arquivo único
 
@@ -116,7 +116,7 @@ O SDK do .NET Core 3.0 vem com uma ferramenta que pode reduzir o tamanho dos apl
 
 Os aplicativos autossuficientes incluem todos os componentes necessários para executar seu código, sem exigir que o .NET seja instalado no computador host. No entanto, muitas vezes o aplicativo requer apenas um pequeno subconjunto da estrutura para funcionar, e outras bibliotecas não utilizadas podem ser removidas.
 
-O .NET Core agora inclui uma configuração que usará a ferramenta[Vinculador de IL](https://github.com/mono/linker) para verificar a IL do seu aplicativo. Esta ferramenta detecta o código necessário e, em seguida, apara bibliotecas não utilizadas. Ela pode reduzir significativamente o tamanho da implantação de alguns aplicativos.
+O .NET Core agora inclui uma configuração que usará a ferramenta[Vinculador de IL](https://github.com/mono/linker) para verificar a IL do seu aplicativo. Essa ferramenta detecta o código necessário e, em seguida, corta as bibliotecas não utilizadas. Ela pode reduzir significativamente o tamanho da implantação de alguns aplicativos.
 
 Para habilitá-la, adicione a configuração `<PublishTrimmed>` ao seu projeto e publique um aplicativo autossuficiente:
 
@@ -140,20 +140,20 @@ Para saber mais sobre a ferramenta Vinculador de IL, confira a [documentação](
 
 ### <a name="tiered-compilation"></a>Compilação em camadas
 
-A TC ([compilação em camadas](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md)) está ativa por padrão com o .NET Core 3.0. Esse recurso permite que o tempo de execução use mais adaptativamente o compilador Just-in-Time (JIT) para obter um melhor desempenho.
+A TC ([compilação em camadas](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md)) está ativa por padrão com o .NET Core 3.0. Esse recurso permite que o tempo de execução use de forma mais adaptável o compilador JIT (just-in-time) para obter um melhor desempenho.
 
-O principal benefício da compilação hierárquica é fornecer duas maneiras de métodos de jitting: em um nível de menor qualidade, mas mais rápido ou em um nível mais lento, mas de maior qualidade. A qualidade refere-se ao quão bem o método é otimizado. O TC ajuda a melhorar o desempenho de um aplicativo à medida que passa por várias etapas de execução, desde a inicialização até o estado estável. Quando a compilação hierárquica é desativada, cada método é compilado de uma única maneira que é tendenciosa para o desempenho de estado estável sobre o desempenho da inicialização.
+O principal benefício da compilação em camadas é fornecer duas maneiras de métodos de jitting: em uma camada de qualidade inferior, mas mais rápida, ou em uma camada de qualidade superior, mas mais lenta. A qualidade refere-se ao quão bem o método é otimizado. O TC ajuda a melhorar o desempenho de um aplicativo à medida que passa por vários estágios de execução, desde a inicialização até o estado estável. Quando a compilação em camadas é desabilitada, cada método é compilado de uma única maneira que é ajustada ao desempenho de estado estável no desempenho de inicialização.
 
-Quando o TC está ativado, o seguinte comportamento se aplica à compilação de métodos quando um aplicativo é iniciado:
+Quando TC está habilitado, o comportamento a seguir se aplica à compilação do método quando um aplicativo é inicializado:
 
-- Se o método tiver código compilado com antecedência ou [ReadyToRun,](#readytorun-images)o código pré-gerado será usado.
-- Caso contrário, o método é jitted. Normalmente, esses métodos são genéricos sobre tipos de valor.
-  - *O Quick JIT* produz código de menor qualidade (ou menos otimizado) mais rapidamente. No .NET Core 3.0, o Quick JIT é habilitado por padrão para métodos que não contêm loops e é preferido durante a inicialização.
-  - O JIT totalmente otimizado produz código de maior qualidade (ou mais otimizado) mais lentamente. Para métodos onde o Quick JIT não seria usado (por <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>exemplo, se o método for atribuído), o JIT totalmente otimizado é usado.
+- Se o método tiver código com compilação antecipada de tempo ou [ReadyToRun](#readytorun-images), o código gerado previamente será usado.
+- Caso contrário, o método é JIT. Normalmente, esses métodos são genéricos sobre tipos de valor.
+  - O *Quick JIT* produz código mais rápido (ou menos otimizado) com mais rapidez. No .NET Core 3,0, o JIT rápido é habilitado por padrão para métodos que não contêm loops e são preferenciais durante a inicialização.
+  - O JIT de Otimização total produz um código de qualidade mais alta (ou mais otimizado) mais lentamente. Para métodos em que o JIT rápido não seria usado (por exemplo, se o método for atribuído com <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType> ), o JIT de Otimização total será usado.
 
-Para métodos frequentemente chamados, o compilador just-in-time eventualmente cria código totalmente otimizado em segundo plano. O código otimizado substitui o código pré-compilado para esse método.
+Para métodos chamados com frequência, o compilador just-in-time, eventualmente, cria código totalmente otimizado em segundo plano. Em seguida, o código otimizado substitui o código pré-compilado para esse método.
 
-O código gerado pelo Quick JIT pode ser executado mais devagar, alocar mais memória ou usar mais espaço de pilha. Se houver problemas, você pode desativar o Quick JIT usando esta propriedade Do MSBuild no arquivo do projeto:
+O código gerado pelo Quick JIT pode ser executado mais lentamente, alocar mais memória ou usar mais espaço de pilha. Se houver problemas, você poderá desabilitar o JIT rápido usando essa propriedade do MSBuild no arquivo de projeto:
 
 ```xml
 <PropertyGroup>
@@ -161,7 +161,7 @@ O código gerado pelo Quick JIT pode ser executado mais devagar, alocar mais mem
 </PropertyGroup>
 ```
 
-Para desativar o TC completamente, use esta propriedade MSBuild no arquivo do projeto:
+Para desabilitar completamente o TC, use essa propriedade do MSBuild em seu arquivo de projeto:
 
 ```xml
 <PropertyGroup>
@@ -170,9 +170,9 @@ Para desativar o TC completamente, use esta propriedade MSBuild no arquivo do pr
 ```
 
 > [!TIP]
-> Se você alterar essas configurações no arquivo do projeto, talvez seja necessário executar uma compilação limpa para que as novas configurações sejam refletidas (exclua os `obj` diretórios e `bin` a reconstrução).
+> Se você alterar essas configurações no arquivo de projeto, talvez seja necessário executar uma compilação limpa para que as novas configurações sejam refletidas (exclua `obj` os `bin` diretórios e e recompile).
 
-Para obter mais informações sobre a configuração da compilação em tempo de execução, consulte [opções de configuração em tempo de execução para compilação](../run-time-config/compilation.md).
+Para obter mais informações sobre como configurar a compilação em tempo de execução, consulte [Opções de configuração de tempo de execução para compilação](../run-time-config/compilation.md).
 
 ### <a name="readytorun-images"></a>Imagens ReadyToRun
 
@@ -182,7 +182,7 @@ Os binários R2R melhoram o desempenho de inicialização reduzindo a quantidade
 
 Para compilar seu projeto como ReadyToRun, faça o seguinte:
 
-01. Adicione `<PublishReadyToRun>` a configuração ao seu projeto:
+01. Adicione a `<PublishReadyToRun>` configuração ao seu projeto:
 
     ```xml
     <PropertyGroup>
@@ -208,31 +208,33 @@ Exceções ao direcionamento cruzado:
 
 ## <a name="runtimesdk"></a>Tempo de execução/SDK
 
-### <a name="major-version-runtime-roll-forward"></a>Rolo de tempo de execução da versão principal para a frente
+### <a name="major-version-runtime-roll-forward"></a>Roll forward de tempo de execução de versão principal
 
 O .NET Core 3.0 introduz um recurso opcional que permite que seu aplicativo efetue roll forward para a versão principal mais recente do .NET Core. Adicionalmente, foi adicionada uma nova configuração para controlar como o roll forward é aplicado ao seu aplicativo. Isso pode ser configurado das seguintes maneiras:
 
 - Propriedade do arquivo de projeto: `RollForward`
-- Propriedade de arquivo de configuração em tempo de execução:`rollForward`
+- Propriedade do arquivo de configuração de tempo de execução:`rollForward`
 - Variável de ambiente: `DOTNET_ROLL_FORWARD`
 - Argumento de linha de comando: `--roll-forward`
 
 Um dos valores a seguir precisa ser especificado. Se a configuração for omitida, **Secundária** será o padrão.
 
-- **ÚltimasPatch**\
+- **LatestPatch**\
 Efetuar roll forward para a versão de patch mais recente. Isso desabilita o roll forward da versão secundária.
-- **Menor**\
+- **Secundária**\
 Se a versão secundária solicitada estiver ausente, efetue roll forward para a menor versão secundária mais alta. Se a versão secundária solicitada estiver presente, a política **LatestPatch** será usada.
-- **Principais**\
+- **Primária**\
 Se a versão principal solicitada estiver ausente, efetuar roll forward para a versão principal mais alta e a versão secundária mais baixa. Se a versão principal solicitada está presente, a política **Secundária** é usada.
-- **Últimas**\
+- **LatestMinor**\
 Efetuar roll forward para a versão secundária mais recente, mesmo se a versão secundária solicitada estiver presente. Destinado a cenários de hospedagem de componente.
-- **ÚltimasMaiores**\
+- **LatestMajor**\
 Efetuar roll forward para a versão principal e a secundária mais altas, mesmo se a principal solicitada estiver presente. Destinado a cenários de hospedagem de componente.
 - **Desativar**\
 Não efetuar roll forward. Associar somente à versão especificada. Essa política não é recomendada para uso geral, pois ela desabilita a capacidade de efetuar roll forward para os patches mais recentes. Esse valor só é recomendado para teste.
 
 Com a exceção da configuração **Desabilitar**, todas as configurações usarão a versão de patch mais recente disponível.
+
+Por padrão, se a versão solicitada (conforme especificado em `.runtimeconfig.json` para o aplicativo) for uma versão de lançamento, somente as versões de lançamento serão consideradas para roll-forward. Todas as versões de pré-lançamento são ignoradas. Se não houver nenhuma versão de lançamento correspondente, as versões de pré-lançamento serão levadas em conta. Esse comportamento pode ser alterado por meio da configuração `DOTNET_ROLL_FORWARD_TO_PRERELEASE=1` , caso em que todas as versões são sempre consideradas.
 
 ### <a name="build-copies-dependencies"></a>O build copia dependências
 
@@ -242,7 +244,7 @@ Há algumas operações, como vinculação e publicação de página do razor, q
 
 ### <a name="local-tools"></a>Ferramentas locais
 
-O .NET Core 3.0 apresenta ferramentas locais. As ferramentas locais são semelhantes às [ferramentas globais,](../tools/global-tools.md) mas estão associadas a um determinado local no disco. Ferramentas locais não estão disponíveis globalmente e são distribuídas como pacotes NuGet.
+O .NET Core 3.0 apresenta ferramentas locais. As ferramentas locais são semelhantes às [ferramentas globais](../tools/global-tools.md) , mas são associadas a um local específico no disco. Ferramentas locais não estão disponíveis globalmente e são distribuídas como pacotes NuGet.
 
 > [!WARNING]
 > Se você tiver tentado ferramentas locais no .NET Core 3.0 Versão Prévia 1, tais como executar `dotnet tool restore` ou `dotnet tool install`, exclua a pasta de cache local de ferramentas. Caso contrário, as ferramentas locais não funcionarão em nenhuma versão mais recente. Essa pasta está localizada em:
@@ -255,14 +257,14 @@ As ferramentas locais dependem de um nome de arquivo de manifesto `dotnet-tools.
 
 Para ferramentas globais e locais, é necessária uma versão compatível do runtime. Muitas ferramentas que estão atualmente em NuGet.org direcionam para o runtime do .NET Core 2.1. Para instalar essas ferramentas, de forma global ou local, você ainda precisará instalar o [Runtime do NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
 
-### <a name="new-globaljson-options"></a>Novas opções global.json
+### <a name="new-globaljson-options"></a>Novas opções global. JSON
 
-O arquivo *global.json* tem novas opções que fornecem mais flexibilidade quando você está tentando definir qual versão do .NET Core SDK é usada. As novas opções são:
+O arquivo *global. JSON* tem novas opções que fornecem mais flexibilidade quando você está tentando definir qual versão do SDK do .NET Core é usada. As novas opções são:
 
-- `allowPrerelease`: Indica se o resolver SDK deve considerar as versões de pré-lançamento ao selecionar a versão SDK a ser usada.
-- `rollForward`: Indica a diretiva roll-forward a ser usada ao selecionar uma versão SDK, seja como um recuo quando uma versão específica do SDK estiver faltando ou como uma diretiva para usar uma versão superior.
+- `allowPrerelease`: Indica se o resolvedor do SDK deve considerar versões de pré-lançamento ao selecionar a versão do SDK a ser usada.
+- `rollForward`: Indica a política de roll forward a ser usada ao selecionar uma versão do SDK, seja como um fallback quando uma versão específica do SDK estiver ausente ou como uma diretiva para usar uma versão superior.
 
-Para obter mais informações sobre as alterações, incluindo valores padrão, valores suportados e novas regras de correspondência, consulte [visão geral global.json](../tools/global-json.md).
+Para obter mais informações sobre as alterações, incluindo valores padrão, valores com suporte e novas regras de correspondência, consulte [visão geral global. JSON](../tools/global-json.md).
 
 ### <a name="smaller-garbage-collection-heap-sizes"></a>Tamanhos menores de heap de coleta de lixo
 
@@ -337,7 +339,7 @@ O arquivo de projeto do .NET Core precisa especificar os runtimes compatíveis n
 <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
 ```
 
-## <a name="linux-improvements"></a>Melhorias no Linux
+## <a name="linux-improvements"></a>Aprimoramentos do Linux
 
 ### <a name="serialport-for-linux"></a>SerialPort para Linux
 
@@ -349,7 +351,7 @@ Para saber mais sobre o suporte limitado para a porta serial no Linux, confira o
 
 ### <a name="docker-and-cgroup-memory-limits"></a>Limites de memória do Docker e cgroup
 
-Executar o .NET Core 3.0 no Linux com o Docker funciona melhor com os limites de memória cgroup. Executar um contêiner do Docker com limites de memória, tais como `docker run -m`, altera o comportamento do .NET Core.
+A execução do .NET Core 3,0 no Linux com o Docker funciona melhor com limites de memória CGroup. Executar um contêiner do Docker com limites de memória, tais como `docker run -m`, altera o comportamento do .NET Core.
 
 - Tamanho de heap do GC (coletor de lixo) padrão: máximo de 20 MB ou 75% do limite de memória no contêiner.
 - O tamanho explícito pode ser definido como um número absoluto ou um percentual do limite de cgroup.
@@ -426,7 +428,7 @@ Os métodos de exportação produzem dados binários codificados em DER e os mé
 
 Arquivos **PKCS nº 8** podem ser inspecionados com <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?displayProperty=nameWithType> e **arquivos PFX/PKCS nº 12** podem ser inspecionados com <xref:System.Security.Cryptography.Pkcs.Pkcs12Info?displayProperty=nameWithType>. Arquivos **PFX/PKCS nº 12** podem ser manipulados com <xref:System.Security.Cryptography.Pkcs.Pkcs12Builder?displayProperty=nameWithType>.
 
-## <a name="net-core-30-api-changes"></a>Alterações da API do .NET Core 3.0
+## <a name="net-core-30-api-changes"></a>Alterações da API do .NET Core 3,0
 
 ### <a name="ranges-and-indices"></a>Intervalos e índices
 
@@ -467,9 +469,9 @@ Além de poder `await foreach`, você também pode criar iteradores assíncronos
 
 Para obter mais informações, consulte o [tutorial de fluxos assíncronos](../../csharp/tutorials/generate-consume-asynchronous-stream.md).
 
-### <a name="ieee-floating-point"></a>Ponto flutuante do IEEE
+### <a name="ieee-floating-point"></a>Ponto flutuante de IEEE
 
-APIs de ponto flutuante estão sendo atualizadas para entrar em conformidade com a [revisão IEEE 754-2008](https://en.wikipedia.org/wiki/IEEE_754-2008_revision). O objetivo dessas mudanças é expor todas as operações **necessárias** e garantir que elas estejam em conformidade com a especificação do IEEE. Para obter mais informações sobre melhorias em pontos flutuantes, consulte as melhorias de análise e formatação de pontos flutuantes na publicação do blog [.NET Core 3.0.](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/)
+APIs de ponto flutuante estão sendo atualizadas para entrar em conformidade com a [revisão IEEE 754-2008](https://en.wikipedia.org/wiki/IEEE_754-2008_revision). O objetivo dessas alterações é expor todas as operações **necessárias** e garantir que elas sejam compatíveis de forma comportamental com a especificação IEEE. Para obter mais informações sobre melhorias de ponto flutuante, consulte a postagem de [ponto flutuante e aprimoramentos de formatação no blog do .NET Core 3,0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) .
 
 As correções de análise e formatação incluem:
 
@@ -495,7 +497,7 @@ Corresponde à operação IEEE `scaleB` que usa um valor integral, ele retorna e
 Corresponde à operação `log2` do IEEE; retorna o logaritmo de base 2. Minimiza o erro de arredondamento.
 
 - <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
-Corresponde à operação `fma` do IEEE; executa uma adição e multiplicação fundida. Em outras palavras, realiza `(x * y) + z` como uma única operação, minimizando o erro de arredondamento. Um exemplo `FusedMultiplyAdd(1e308, 2.0, -1e308)`é, `1e308`que retorna. O `(1e308 * 2.0) - 1e308` regular retorna `double.PositiveInfinity`.
+Corresponde à operação `fma` do IEEE; executa uma adição e multiplicação fundida. Em outras palavras, realiza `(x * y) + z` como uma única operação, minimizando o erro de arredondamento. Um exemplo é `FusedMultiplyAdd(1e308, 2.0, -1e308)` , que retorna `1e308` . O `(1e308 * 2.0) - 1e308` regular retorna `double.PositiveInfinity`.
 
 - <xref:System.Math.CopySign(System.Double,System.Double)>\
 Corresponde à operação `copySign` do IEEE; retorna o valor de `x`, mas com o sinal de `y`.
@@ -506,7 +508,7 @@ Foram adicionadas APIs que permitem acesso a determinadas instruções da CPU or
 
 Quando apropriado, as bibliotecas .NET começaram usando estas instruções para melhorar o desempenho.
 
-Para obter mais informações, consulte [Intrínseca dependente da plataforma .NET](https://github.com/dotnet/designs/blob/master/accepted/2018/platform-intrinsics.md).
+Para obter mais informações, consulte [intrínsecos dependentes da plataforma .net](https://github.com/dotnet/designs/blob/master/accepted/2018/platform-intrinsics.md).
 
 ### <a name="improved-net-core-version-apis"></a>APIs de versão aprimoradas do .NET Core
 
@@ -537,13 +539,13 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ### <a name="fast-built-in-json-support"></a>Suporte interno rápido a JSON
 
-Os usuários do .NET têm confiado em grande parte em [Newtonsoft.Json](https://www.newtonsoft.com/json) e outras bibliotecas json populares, que continuam a ser boas escolhas. `Newtonsoft.Json`usa as strings .NET como seu tipo de dados base, que é UTF-16 sob o capô.
+Os usuários do .NET confiam amplamente no [Newtonsoft. JSON](https://www.newtonsoft.com/json) e em outras bibliotecas JSON populares, que continuam a ser boas escolhas. `Newtonsoft.Json`usa cadeias de caracteres .NET como seu tipo de dados base, que é UTF-16 nos bastidores.
 
-O novo suporte JSON incorporado é de alto desempenho, baixa alocação e funciona com o texto JSON codificado utf-8. Para obter mais <xref:System.Text.Json> informações sobre o namespace e os tipos, consulte os seguintes artigos:
+O novo suporte interno a JSON é alto desempenho, baixa alocação e funciona com texto JSON codificado em UTF-8. Para obter mais informações sobre o <xref:System.Text.Json> namespace e os tipos, consulte os seguintes artigos:
 
-* [Serialização JSON em .NET - visão geral](../../standard/serialization/system-text-json-overview.md)
-* [Como serializar e desserializar JSON em .NET](../../standard/serialization/system-text-json-how-to.md).
-* [Como migrar de Newtonsoft.Json para System.Text.Json](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Serialização JSON no .NET-visão geral](../../standard/serialization/system-text-json-overview.md)
+* [Como serializar e desserializar JSON no .net](../../standard/serialization/system-text-json-how-to.md).
+* [Como migrar de Newtonsoft. JSON para System. Text. JSON](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
 
 ### <a name="http2-support"></a>Suporte do HTTP/2
 
@@ -563,5 +565,5 @@ Muitas vezes, quando você está desenvolvendo um aplicativo, quer usar uma cone
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Revise as alterações de quebra entre o Núcleo .NET 2.2 e o 3.0.](../compatibility/2.2-3.0.md)
-- [Revise as alterações de quebra no .NET Core 3.0 para aplicativos do Windows Forms.](../compatibility/winforms.md#net-core-30)
+- [Examine as alterações significativas entre o .NET Core 2,2 e 3,0.](../compatibility/2.2-3.0.md)
+- [Examine as alterações significativas no .NET Core 3,0 para aplicativos Windows Forms.](../compatibility/winforms.md#net-core-30)

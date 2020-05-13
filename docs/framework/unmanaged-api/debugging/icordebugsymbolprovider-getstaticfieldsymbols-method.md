@@ -2,12 +2,12 @@
 title: 'Método ICorDebugSymbolProvider:: GetStaticFieldSymbols'
 ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
-ms.openlocfilehash: 02cc62a421058f83e28ce945ae9e76745f768988
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2428521b9b08060fd147a7c9b9054239bf957f69
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791561"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379371"
 ---
 # <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>Método ICorDebugSymbolProvider:: GetStaticFieldSymbols
 Obtém os símbolos de campo estático que correspondem a uma assinatura de TypeSpec.  
@@ -26,10 +26,10 @@ HRESULT GetStaticFieldSymbols(
   
 ## <a name="parameters"></a>Parâmetros  
  `cbSignature`  
- no O número de bytes na matriz de `typeSig`.  
+ no O número de bytes na `typeSig` matriz.  
   
  `typeSig`  
- no Uma matriz de bytes que contém a assinatura `typespec`.  
+ no Uma matriz de bytes que contém a `typespec` assinatura.  
   
  `cRequestedSymbols`  
  no O número de símbolos solicitados.  
@@ -45,16 +45,16 @@ HRESULT GetStaticFieldSymbols(
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Método GetInstanceFieldSymbols](icordebugsymbolprovider-getinstancefieldsymbols-method.md)
 - [Interface ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)

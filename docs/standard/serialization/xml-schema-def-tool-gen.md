@@ -1,5 +1,6 @@
 ---
 title: Como usar a ferramenta de definição de esquema XML para gerar classes e documentos de esquema XML
+description: Saiba como usar a ferramenta de definição de esquema XML para gerar um esquema XML que descreve uma classe ou para gerar a classe definida por um esquema XML.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 2bbdced0f984b653a58afba9685683e8c0891271
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 21ce4ad846e21a328ba199f6253bd259be9d932b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389795"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379532"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Como usar a ferramenta de definição de esquema XML para gerar classes e documentos de esquema XML
 A ferramenta de Definição de Esquema XML (Xsd.exe) permite gerar um esquema XML que descreve uma classe ou gerar a classe definida por um esquema XML. Os seguintes procedimentos mostram como executar essas operações.
 
 A ferramenta de definição de esquema XML (XSD. exe) geralmente pode ser encontrada no seguinte caminho: \
-_C:\\arquivos de programas (x86\\) Microsoft\\SDKs\\Windows {version\\}\\Bint {Version} ferramentas\\_
+_C: \\ arquivos de programas (x86) \\ Microsoft SDKs \\ Windows \\ {version} \\ Bint \\ {version} ferramentas\\_
 
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>Para gerar classes que estão em conformidade com um esquema específico  
   
@@ -30,7 +31,7 @@ _C:\\arquivos de programas (x86\\) Microsoft\\SDKs\\Windows {version\\}\\Bint {V
     xsd mySchema.xsd  
     ```  
   
-     A ferramenta somente pode processar esquemas que fazem referência à especificação de XML World Wide Web Consortium de 16 de março de 2001. Em outras palavras, o namespace do esquema XML deve serhttp://www.w3.org/2001/XMLSchema"", conforme mostrado no exemplo a seguir.  
+     A ferramenta somente pode processar esquemas que fazem referência à especificação de XML World Wide Web Consortium de 16 de março de 2001. Em outras palavras, o namespace do esquema XML deve ser " http://www.w3.org/2001/XMLSchema ", conforme mostrado no exemplo a seguir.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -55,7 +56,7 @@ _C:\\arquivos de programas (x86\\) Microsoft\\SDKs\\Windows {version\\}\\Bint {V
   
      O esquema (ou esquemas) serão escritos, começando com o nome "schema0.xsd".  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Data.DataSet>
 - [A ferramenta de definição de esquema XML e a serialização XML](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)

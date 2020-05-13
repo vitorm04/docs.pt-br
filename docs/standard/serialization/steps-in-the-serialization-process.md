@@ -1,16 +1,17 @@
 ---
 title: Etapas do processo de serialização
+description: O processo de serialização começa quando o método Serialize é chamado em um formatador. Este artigo descreve a sequência de eventos.
 ms.date: 08/07/2017
 helpviewer_keywords:
 - binary serialization, steps
 - serialization, steps
 ms.assetid: 4bcbc883-2a91-418f-b968-6c86a25e9737
-ms.openlocfilehash: f30dd550437e6bc1030c79865bf2edd2c0efbfa9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 1f749b9102182e78bc3fda436cf386a9f5759d5a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741044"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379095"
 ---
 # <a name="steps-in-the-serialization-process"></a>Etapas do processo de serialização
 Quando o método <xref:System.Runtime.Serialization.Formatter.Serialize%2A> é chamado em um [formatador](xref:System.Runtime.Serialization.Formatter), a serialização do objeto procede de acordo com a seguinte sequência de regras:
@@ -25,7 +26,7 @@ Quando o método <xref:System.Runtime.Serialization.Formatter.Serialize%2A> é c
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Serialização binária](binary-serialization.md)
 - [Serialização de XML e SOAP](xml-and-soap-serialization.md)

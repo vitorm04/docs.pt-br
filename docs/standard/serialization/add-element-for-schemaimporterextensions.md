@@ -1,18 +1,19 @@
 ---
 title: Elemento <add> para <schemaImporterExtensions>
+description: O <add> elemento Adiciona tipos usados pela classe XmlSchemaImporter para mapear tipos XSD para .NET Framework tipos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 4f47623aa305ae6e98625acc3d199a76e27d2ea5
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 401d1ba9cc2f97e93d7851f96f73b552e6ed6356
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159930"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378476"
 ---
-# <a name="add-element-for-schemaimporterextensions"></a>\<Adicionar> elemento para \<schemaImporterExtensions>
+# <a name="add-element-for-schemaimporterextensions"></a>\<Adicionar> elemento para \< schemaImporterExtensions>
 Adiciona tipos usados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> para mapeamento de tipos XSD para tipos do .NET Framework. Para obter mais informações sobre arquivos de configuração, consulte [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md).  
   
  \<configuration>  
@@ -34,7 +35,7 @@ Adiciona tipos usados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> par
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |**name**|Um nome simples que é usado para localizar a instância.|  
-|**type**|Obrigatórios. Especifica a classe de extensão de esquema para adicionar. O valor de atributo **type** deve ser uma linha e incluir o nome do tipo totalmente qualificado. Quando o assembly é colocado no GAC (cache de assembly global), ele também deve incluir a versão, cultura e token de chave pública do assembly assinado.|  
+|**tipo**|Obrigatórios. Especifica a classe de extensão de esquema para adicionar. O valor de atributo **type** deve ser uma linha e incluir o nome do tipo totalmente qualificado. Quando o assembly é colocado no GAC (cache de assembly global), ele também deve incluir a versão, cultura e token de chave pública do assembly assinado.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum.  
@@ -60,7 +61,7 @@ Adiciona tipos usados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> par
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - [\<Elemento de> System. xml. Serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)

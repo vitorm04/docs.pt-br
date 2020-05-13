@@ -1,16 +1,16 @@
 ---
-title: ICorDebugSymbolProvider::GetAssemblyImageBytes Method
+title: 'Método ICorDebugSymbolProvider:: GetAssemblyImageBytes'
 ms.date: 03/30/2017
 ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
-ms.openlocfilehash: 6361b12802876ef480acbe1cc13f32b77ba0be49
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a555acb9e23098b0a0f70924032771b1ae18e88e
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178488"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83376111"
 ---
-# <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider::GetAssemblyImageBytes Method
-Lê dados de um conjunto mesclado dado um endereço virtual relativo (RVA) no conjunto mesclado.  
+# <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>Método ICorDebugSymbolProvider:: GetAssemblyImageBytes
+Lê dados de um assembly mesclado, dado um endereço virtual relativo (RVA) no assembly mesclado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -22,29 +22,29 @@ HRESULT GetAssemblyImageBytes(
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `rva`  
- [em] Um endereço virtual relativo (RVA) em um conjunto mesclado.  
+ no Um RVA (endereço virtual relativo) em um assembly mesclado.  
   
  `length`  
- O número de bytes a serem lidos da montagem fundida.  
+ O número de bytes a serem lidos do assembly mesclado.  
   
  `ppMemoryBuffer`  
- Um ponteiro para o endereço de um objeto [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) que contém informações sobre o buffer de memória com metadados de montagem mesclados.  
+ Um ponteiro para o endereço de um objeto [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) que contém informações sobre o buffer de memória com metadados de assembly mesclados.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
-> Este método está disponível apenas com .NET Native.  
+> Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 

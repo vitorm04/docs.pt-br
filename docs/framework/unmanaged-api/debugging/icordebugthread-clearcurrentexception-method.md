@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31b8e65b-95e7-4748-ab93-8074cd5556b4
 topic_type:
 - apiref
-ms.openlocfilehash: 0d64752ceeffe2e085974c44f675ee092391c384
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a0dacdfaf13dd69b26f2ba6e7aa50a283af90d3d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133577"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379306"
 ---
 # <a name="icordebugthreadclearcurrentexception-method"></a>Método ICorDebugThread::ClearCurrentException
 Este método não está implementado. Não o use.  
@@ -32,10 +32,10 @@ HRESULT ClearCurrentException();
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: Como partir dados serializados
+description: Você pode dividir os dados para evitar problemas com grandes conjuntos. Implemente a interface IXmlSerializable para controlar a serialização e a desserialização.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - serialization, examples
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
-ms.openlocfilehash: 6a39997d8854d525146c044ed4bbf939de615d3f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 860fdcae0d1937f53ee964d9d4631ec812b3d379
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602429"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379136"
 ---
 # <a name="how-to-chunk-serialized-data"></a>Como partir dados serializados
 
@@ -58,6 +59,6 @@ O exemplo de código a seguir mostra o método da Web no cliente que desativa o 
   
 - O código usa os seguintes namespaces: <xref:System>, <xref:System.Runtime.Serialization>, <xref:System.Web.Services>, <xref:System.Web.Services.Protocols>, <xref:System.Xml>, <xref:System.Xml.Serialization> e <xref:System.Xml.Schema>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Serialização personalizada](custom-serialization.md)

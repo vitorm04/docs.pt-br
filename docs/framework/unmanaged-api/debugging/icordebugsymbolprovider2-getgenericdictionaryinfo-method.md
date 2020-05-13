@@ -2,12 +2,12 @@
 title: 'Método ICorDebugSymbolProvider2:: GetGenericDictionaryInfo'
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-ms.openlocfilehash: 02ecaf56e845680472f42c04f3978e54e7a69272
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a6c32b72c5924399aeb13d56ddf9242fe7990f35
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791502"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379317"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Método ICorDebugSymbolProvider2:: GetGenericDictionaryInfo
 
@@ -24,7 +24,7 @@ HRESULT GetGenericDictionaryInfo(
 ## <a name="parameters"></a>Parâmetros
 
 `ppMemoryBuffer`\
-fora Um ponteiro para o endereço de um objeto [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) que contém o mapa de dicionário genérico. Consulte a seção Comentários para obter mais informações.
+fora Um ponteiro para o endereço de um objeto [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) que contém o mapa de dicionário genérico. Para obter mais informações, consulte a seção Comentários.
 
 ## <a name="remarks"></a>Comentários
 
@@ -63,7 +63,7 @@ O tamanho do heap pode ser calculado por um leitor de fluxo subtraindo o comprim
 Heap Size = Stream.Length – (Directory Size + 4)
 ```
 
-onde o tamanho do diretório é `N * 8`.
+onde o tamanho do diretório é `N * 8` .
 
 O formato de cada item de informações de instanciação no heap é:
 
@@ -75,17 +75,17 @@ O formato de cada item de informações de instanciação no heap é:
 
 A inclusão do comprimento de cada elemento de heap permite a classificação simples da seção de diretório sem afetar o heap.
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
-**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
 **Cabeçalho:** CorDebug.idl, CorDebug.h
 
 **Biblioteca:** CorGuids.lib
 
-**Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
+**.NET Framework versões:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugSymbolProvider2](icordebugsymbolprovider2-interface.md)
 - [Depurando interfaces](debugging-interfaces.md)

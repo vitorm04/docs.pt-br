@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f24e1af9-c220-4f79-ae62-4153ec17ea81
 topic_type:
 - apiref
-ms.openlocfilehash: cff527aa7cde6a13667d47d030a0ef7db96ad5ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fc406f6e87e5b2be48c6fe7d5fc988774ac5cd11
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122339"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379985"
 ---
 # <a name="icordebugtypegetbase-method"></a>Método ICorDebugType::GetBase
-Obtém um ponteiro de interface para um ICorDebugType que representa o tipo base, se houver um, do tipo representado por esse `ICorDebugType`.  
+Obtém um ponteiro de interface para um ICorDebugType que representa o tipo base, se houver um, do tipo representado por este `ICorDebugType` .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,16 +35,16 @@ HRESULT GetBase (
   
 ## <a name="parameters"></a>Parâmetros  
  `pBase`  
- fora Um ponteiro para o endereço de um objeto de `ICorDebugType` que representa o tipo base.  
+ fora Um ponteiro para o endereço de um `ICorDebugType` objeto que representa o tipo base.  
   
 ## <a name="remarks"></a>Comentários  
  Pesquisar o tipo base de um tipo é útil para implementar a funcionalidade comum do depurador, como imprimir todos os campos de um objeto ou suas classes pai.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

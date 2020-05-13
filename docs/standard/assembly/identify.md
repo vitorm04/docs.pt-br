@@ -1,28 +1,29 @@
 ---
-title: 'Como: Determinar se um arquivo é um conjunto'
+title: Como determinar se um arquivo é um assembly
+description: Este artigo mostra como determinar se um arquivo é um assembly .NET, manualmente e programaticamente.
 ms.date: 08/19/2019
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1d66c0c166724f195a3cafd9bcbe3c7414c08ebb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb1bcfa50ec380f10ab67cc47331f91dc3e4b32d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159501"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380143"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly"></a>Como: Determinar se um arquivo é um conjunto
+# <a name="how-to-determine-if-a-file-is-an-assembly"></a>Como determinar se um arquivo é um assembly
 
-Um arquivo será um assembly somente se ele for gerenciado e se contiver uma entrada de assembly em seus metadados. Para obter mais informações sobre assembléias e metadados, consulte [o manifesto assembly](manifest.md).  
+Um arquivo será um assembly somente se ele for gerenciado e se contiver uma entrada de assembly em seus metadados. Para obter mais informações sobre assemblies e metadados, consulte [manifesto do assembly](manifest.md).  
   
 ## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Como determinar manualmente se um arquivo é um assembly  
   
 1. Inicie o [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md).  
   
-2. Carregue o arquivo que deseja testar.  
+2. Carregue o arquivo que você deseja testar.  
   
-3. Se o **ILDASM** relatar que o arquivo não é um arquivo PE (executável portátil), então ele não será um assembly. Para obter mais informações, consulte o tópico [Como: Exibir conteúdos de montagem](view-contents.md).  
+3. Se o **ILDASM** relatar que o arquivo não é um arquivo PE (executável portátil), então ele não será um assembly. Para obter mais informações, consulte o tópico [How to: View assembly Contents](view-contents.md).  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Como determinar programaticamente se um arquivo é um assembly  
   

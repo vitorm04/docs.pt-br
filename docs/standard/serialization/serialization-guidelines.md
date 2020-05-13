@@ -1,5 +1,6 @@
 ---
 title: Diretrizes de serialização
+description: Este documento fornece diretrizes a serem consideradas ao criar uma API para ser serializada e um resumo das três ofertas principais de tecnologias de serialização .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 067f32a026e3354e6c4256602ed17fd7d7bde0b8
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: af0b857e98ffbe0ff9f12108174b79f873c2b38f
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159787"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378384"
 ---
 # <a name="serialization-guidelines"></a>Diretrizes de serialização
 Este documento lista as diretrizes a serem consideradas na criação de uma API a ser serializado.  
@@ -69,7 +70,7 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
      [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
-     <xref:System.Runtime.Serialization.OnDeserializedAttribute> é o atributo de retorno de chamada mais usado. Os outros atributos da família são <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>e. <xref:System.Runtime.Serialization.OnSerializedAttribute> Eles podem ser usados para marcar os retornos de chamada que são executados antes de desserialização, antes da serialização e, por fim, após a serialização, respectivamente.  
+     <xref:System.Runtime.Serialization.OnDeserializedAttribute> é o atributo de retorno de chamada mais usado. Os outros atributos da família são <xref:System.Runtime.Serialization.OnDeserializingAttribute> , <xref:System.Runtime.Serialization.OnSerializingAttribute> e <xref:System.Runtime.Serialization.OnSerializedAttribute> . Eles podem ser usados para marcar os retornos de chamada que são executados antes de desserialização, antes da serialização e, por fim, após a serialização, respectivamente.  
   
 4. CONSIDERE o uso do <xref:System.Runtime.Serialization.KnownTypeAttribute> para indicar os tipos concretos que devem ser usados ao desserializar um grafo de objeto complexo.  
   
@@ -103,7 +104,7 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2. CONSIDERE implementar a interface <xref:System.Xml.Serialization.IXmlSerializable> se quiser ainda mais controle sobre o formato do XML serializado do que o que é oferecido aplicando os atributos de Serialização XML. Dois métodos da interface <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> e <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>permitem controlar totalmente o fluxo XML serializado. Você também pode controlar o esquema XML gerado para o tipo aplicando o atributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>.  
+2. CONSIDERE implementar a interface <xref:System.Xml.Serialization.IXmlSerializable> se quiser ainda mais controle sobre o formato do XML serializado do que o que é oferecido aplicando os atributos de Serialização XML. Dois métodos da interface <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> e <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> permitem controlar totalmente o fluxo XML serializado. Você também pode controlar o esquema XML gerado para o tipo aplicando o atributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>.  
   
 #### <a name="supporting-runtime-serialization"></a>Suporte à serialização em runtime  
  A *serialização em runtime* é uma tecnologia usada pelo .NET Remoting. Se você considerar que os tipos serão transportados por meio da comunicação remota .NET, será necessário verificar se eles oferecem suporte à serialização em runtime.  
@@ -137,7 +138,7 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Usando contratos de dados](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Serializador de contrato de dados](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)

@@ -1,5 +1,6 @@
 ---
 title: Serializar e desserializar JSON usando C#-.NET
+description: Esta visão geral descreve a System.Text.Json funcionalidade de namespace para serialização e desserialização do JSON no .net.
 ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 660a2831aa6a807486fc47eae880bcd11347c547
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 909d979d46b30939e304af071de65d230febd92d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159540"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380132"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>Serialização e desserialização JSON (empacotamento e desempacotamento) no .NET-visão geral
 

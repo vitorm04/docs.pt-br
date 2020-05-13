@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-ms.openlocfilehash: 54a5fb50a0177fe9886582c112f16ce871ea9df4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b7a356d80d63fae65191bbf4fc0a23d7e02004c9
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792058"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378226"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>Método ICorDebugRegisterSet2::GetRegisters
 Obtém o valor de cada registro (para a plataforma em que o código está em execução no momento) que é especificado pela máscara de bits fornecida.  
@@ -38,7 +38,7 @@ HRESULT GetRegisters (
   
 ## <a name="parameters"></a>Parâmetros  
  `maskCount`  
- no O tamanho, em bytes, da matriz de `mask`.  
+ no O tamanho, em bytes, da `mask` matriz.  
   
  `mask`  
  no Uma matriz de bytes, cada bit corresponde a um registro. Se o bit for 1, o valor do registro correspondente será recuperado.  
@@ -47,27 +47,27 @@ HRESULT GetRegisters (
  no O número de valores de registro a serem recuperados.  
   
  `regBuffer`  
- fora Uma matriz de objetos `CORDB_REGISTER`, cada um deles recebe o valor de um registro.  
+ fora Uma matriz de `CORDB_REGISTER` objetos, cada um deles recebe o valor de um registro.  
   
 ## <a name="remarks"></a>Comentários  
- O método `GetRegisters` retorna uma matriz de valores dos registros que são especificados pela máscara. A matriz não contém valores de registros cujo bit de máscara não esteja definido. Assim, o tamanho da matriz de `regBuffer` deve ser igual ao número de 1 na máscara. Se o valor de `regCount` for muito pequeno para o número de registros indicado pela máscara, os valores dos registros numerados mais altos serão truncados do conjunto. Se `regCount` for muito grande, os elementos de `regBuffer` não utilizados não serão modificados.  
+ O `GetRegisters` método retorna uma matriz de valores dos registros que são especificados pela máscara. A matriz não contém valores de registros cujo bit de máscara não esteja definido. Portanto, o tamanho da `regBuffer` matriz deve ser igual ao número de 1 na máscara. Se o valor de `regCount` for muito pequeno para o número de registros indicado pela máscara, os valores dos registros numerados mais altos serão truncados do conjunto. Se `regCount` for muito grande, os elementos não utilizados não `regBuffer` serão modificados.  
   
  Se um registro indisponível for indicado pela máscara, um valor indeterminado será retornado para esse registro.  
   
- O método `ICorDebugRegisterSet2::GetRegisters` é necessário para plataformas que têm mais de 64 registros. Por exemplo, IA64 tem 128 registros de uso geral e 128 registros de ponto flutuante, portanto, você precisa de mais de 64 bits na máscara de bits.  
+ O `ICorDebugRegisterSet2::GetRegisters` método é necessário para plataformas que têm mais de 64 registros. Por exemplo, IA64 tem 128 registros de uso geral e 128 registros de ponto flutuante, portanto, você precisa de mais de 64 bits na máscara de bits.  
   
- Se você não tiver mais de 64 registros, como é o caso em plataformas como o x86, o método `GetRegisters`, na verdade, converte os bytes na matriz de bytes de `mask` em um `ULONG64` e, em seguida, chama o método [ICorDebugRegisterSet:: GetRegisters](icordebugregisterset-getregisters-method.md) , que usa a máscara de `ULONG64`.  
+ Se você não tiver mais de 64 registros, como é o caso em plataformas como o x86, o `GetRegisters` método, na verdade, converte os bytes na matriz de `mask` bytes em um `ULONG64` e, em seguida, chama o método [ICorDebugRegisterSet:: GetRegisters](icordebugregisterset-getregisters-method.md) , que usa a `ULONG64` máscara.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugRegisterSet2](icordebugregisterset2-interface.md)
 - [Interface ICorDebugRegisterSet](icordebugregisterset-interface.md)

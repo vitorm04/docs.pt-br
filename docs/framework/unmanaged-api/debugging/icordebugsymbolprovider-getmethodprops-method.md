@@ -2,12 +2,12 @@
 title: 'Método ICorDebugSymbolProvider:: GetMethodProps'
 ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
-ms.openlocfilehash: 58642d0a9b1cfe1fd969f39fa7e5ab22a8dbfa05
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c9e73c4de7389405d9e4b643036709ff2dbb82e6
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791579"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379572"
 ---
 # <a name="icordebugsymbolprovidergetmethodprops-method"></a>Método ICorDebugSymbolProvider:: GetMethodProps
 Retorna informações sobre as propriedades do método, como o token de metadados do método e informações sobre seus parâmetros genéricos, considerando um endereço virtual relativo (RVA) nesse método.  
@@ -36,30 +36,30 @@ HRESULT GetMethodProps(
  fora Um ponteiro para o número de parâmetros genéricos associados a este método.  
   
  `cbSignature`  
- no O tamanho da matriz de `signature`. Consulte a seção Comentários.  
+ no O tamanho da `signature` matriz. Consulte a seção Comentários.  
   
  `pcbSignature`  
- fora Um ponteiro para o tamanho da matriz de `signature` retornada.  
+ fora Um ponteiro para o tamanho da matriz retornada `signature` .  
   
  `signature`  
  fora Um buffer que contém as assinaturas TypeSpec de todos os parâmetros genéricos.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter o tamanho necessário da matriz de `signature` do método, defina o argumento `cbSignature` como 0 e `signature` como **nulo**. Quando o método retornar, `pcbSignature` conterá o número de bytes necessários para a matriz `signature`.  
+ Para obter o tamanho necessário da matriz do método `signature` , defina o `cbSignature` argumento como 0 e `signature` como **nulo**. Quando o método retornar, `pcbSignature` conterá o número de bytes necessários para a `signature` matriz.  
   
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Método GetTypeProps](icordebugsymbolprovider-gettypeprops-method.md)
 - [Interface ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)

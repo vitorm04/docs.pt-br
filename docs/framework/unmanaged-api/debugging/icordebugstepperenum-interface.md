@@ -14,36 +14,36 @@ helpviewer_keywords:
 ms.assetid: 988718c1-1a4a-40f2-a04c-7d67e5cfe1e2
 topic_type:
 - apiref
-ms.openlocfilehash: aa0ff0ff7c8fe32f181fb86ee5b778ea618df3b2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c39c047cce97db7c98f1fad403bd16d0e6a2c0fe
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791699"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379450"
 ---
 # <a name="icordebugstepperenum-interface"></a>Interface ICorDebugStepperEnum
 Implementa métodos ICorDebugEnum e enumera matrizes ICorDebugStepper.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Next](icordebugstepperenum-next-method.md)|Obtém o número especificado de instâncias de `ICorDebugStepper` da enumeração, começando na posição atual.|  
+|[Método Next](icordebugstepperenum-next-method.md)|Obtém o número especificado de `ICorDebugStepper` instâncias da enumeração, começando na posição atual.|  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Depurando interfaces](debugging-interfaces.md)

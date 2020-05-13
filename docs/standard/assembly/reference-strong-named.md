@@ -1,5 +1,6 @@
 ---
-title: 'Como: Fazer referência a uma montagem com nome forte'
+title: Como referenciar um assembly de nome forte
+description: Este artigo mostra como fazer referência a tipos ou recursos em um assembly .NET de nome forte, seja em tempo de compilação ou em tempo de execução.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, compile-time references
@@ -11,42 +12,42 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: adda4ed2ab5c59e3518b8e724044529a79840ad0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e42c1b461da16d7000605b9b9321138bbfebd307
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156472"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379869"
 ---
-# <a name="how-to-reference-a-strong-named-assembly"></a>Como: Fazer referência a uma montagem com nome forte
+# <a name="how-to-reference-a-strong-named-assembly"></a>Como referenciar um assembly de nome forte
 O processo para referenciar tipos ou recursos em um assembly de nome forte é normalmente transparente. Você pode fazer a referência no tempo de compilação (vinculação inicial) ou no tempo de execução.  
   
-Uma referência de tempo de compilação ocorre quando você indica ao compilador que o conjunto a ser compilado faz referência explícita a outro conjunto. Quando você usa a referência no tempo de compilação, o compilador obtém automaticamente a chave pública do assembly com nome forte direcionado e o coloca na referência de assembly do assembly que está sendo compilado.
+Uma referência de tempo de compilação ocorre quando você indica ao compilador que o assembly a ser compilado explicitamente referencia outro assembly. Quando você usa a referência no tempo de compilação, o compilador obtém automaticamente a chave pública do assembly com nome forte direcionado e o coloca na referência de assembly do assembly que está sendo compilado.
   
 > [!NOTE]
 > Assembly de nome forte só pode usar tipos de outros assemblies de nome forte. Caso contrário, a segurança do assembly de nome forte estaria comprometida.  
   
-## <a name="make-a-compile-time-reference-to-a-strong-named-assembly"></a>Faça uma referência em tempo de compilação a uma montagem com nome forte  
+## <a name="make-a-compile-time-reference-to-a-strong-named-assembly"></a>Fazer uma referência de tempo de compilação a um assembly de nome forte  
 
 Em um prompt de comando, digite o comando a seguir:  
 
-\<*comando compilador*> **/referência:**\<*nome do conjunto*>  
+\<*comando* >  do compilador **/Reference:** \< *nome do assembly*>  
 
 Nesse comando, o *comando do compilador* é o comando do compilador para a linguagem que você está usando, e *nome do assembly* é o nome do assembly de nome forte que está sendo referenciado. Você também pode usar outras opções de compilador, como a opção **/t:library** para criar um assembly de biblioteca.  
 
-O exemplo a seguir cria um conjunto chamado *myAssembly.dll* que faz referência a um conjunto de nome forte chamado *myLibAssembly.dll* a partir de um módulo de código chamado *myAssembly.cs*.  
+O exemplo a seguir cria um assembly chamado *myAssembly. dll* que faz referência a um assembly de nome forte chamado *myLibAssembly. dll* de um módulo de código chamado *myAssembly.cs*.  
 
 ```cmd
 csc /t:library myAssembly.cs /reference:myLibAssembly.dll  
 ```  
 
-## <a name="make-a-run-time-reference-to-a-strong-named-assembly"></a>Faça uma referência em tempo de execução a uma montagem com nome forte  
+## <a name="make-a-run-time-reference-to-a-strong-named-assembly"></a>Fazer uma referência de tempo de execução para um assembly de nome forte  
   
-Quando você faz uma referência em tempo de execução a <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> um conjunto com nome forte, por exemplo, usando o método ou, você deve usar o nome de exibição do conjunto com nome forte referenciado. A sintaxe de um nome de exibição é a seguinte:  
+Quando você faz uma referência de tempo de execução para um assembly de nome forte, por exemplo, usando <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> método ou, você deve usar o nome de exibição do assembly de nome forte referenciado. A sintaxe de um nome de exibição é a seguinte:  
 
-\<*nome de*>**montagem,** \< *número de*>**versão,** \< *cultura,*>**,** \< *token de chave pública*>  
+\<*nome* > do assembly **,** \< *número* > de versão **,** \< *cultura* > **,** \< *token de chave pública*>  
 
-Por exemplo:   
+Por exemplo:  
 
 ```console
 myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33
@@ -73,7 +74,7 @@ Dim myDll As Assembly = _
 
 Você pode imprimir o formato hexadecimal da chave pública e do token de chave pública para um assembly específico usando o seguinte comando [Nome Forte (Sn.exe)](../../framework/tools/sn-exe-strong-name-tool.md):  
 
-**montagem \< sn-Tp** *assembly***>**  
+**SN-TP \< ** *assembly* do**>**  
 
 Se você tiver um arquivo de chave pública, use o comando a seguir (observe a diferença no caso da opção de linha de comando):  
 

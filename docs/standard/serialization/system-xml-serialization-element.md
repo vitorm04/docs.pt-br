@@ -1,17 +1,18 @@
 ---
 title: Elemento <system.xml.serialization>
+description: Este artigo descreve o <elemento System. xml. Serialization>, que é o elemento de nível superior para controlar a serialização de XML.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - system.xml.serialization element
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: 02027a238bc9a2f82963ea841584d2bb3c6446c6
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 1e66220004d561f937d03c506e6f30db4ccc635b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410540"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380122"
 ---
 # <a name="systemxmlserialization-element"></a>\<Elemento de> System. xml. Serialization
 
@@ -66,11 +67,11 @@ O exemplo de código a seguir ilustra como especificar o modo de serialização 
 </system.xml.serialization>
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
 - [Esquema do arquivo de configuração](../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<Elemento de> dateTimeSerialization](../../../docs/standard/serialization/datetimeserialization-element.md)
 - [\<Elemento de> schemaImporterExtensions](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [\<Adicionar> elemento para \<schemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [\<Adicionar> elemento para \< schemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)

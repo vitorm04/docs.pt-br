@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0ea0f30-e8d2-48b0-8477-e1a029ceb4dd
 topic_type:
 - apiref
-ms.openlocfilehash: 11d9c7393827b613d49e23972b4896bfe657a544
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 293d1a9cd93b5ce45105427e7df864ad8bfbe77a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138985"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379189"
 ---
 # <a name="icordebugstepperenumnext-method"></a>Método ICorDebugStepperEnum::Next
 Obtém o número especificado de instâncias de ICorDebugStepper da enumeração, começando na posição atual.  
@@ -38,19 +38,19 @@ HRESULT Next(
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- no O número de instâncias de `ICorDebugStepper` a serem recuperadas.  
+ no O número de `ICorDebugStepper` instâncias a serem recuperadas.  
   
  `steppers`  
- fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto `ICorDebugStepper`.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um `ICorDebugStepper` objeto.  
   
  `pceltFetched`  
- fora Aponta para o número de instâncias de `ICorDebugStepper` retornadas na verdade. Esse valor pode ser nulo se `celt` for um.  
+ fora Aponta para o número de `ICorDebugStepper` instâncias realmente retornadas. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 331ed465-a195-4359-8584-b82c6098b29b
 topic_type:
 - apiref
-ms.openlocfilehash: 8082b2a3654f1605f18f3b68f54464dc83c8e60a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3a4da6f958407c0b704ffb7372a77b7f022fc824
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133484"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379766"
 ---
 # <a name="icordebugthreadgetcurrentexception-method"></a>Método ICorDebugThread::GetCurrentException
 Obtém um ponteiro de interface para um objeto ICorDebugValue que representa uma exceção que está sendo lançada atualmente pelo código gerenciado.  
@@ -35,20 +35,20 @@ HRESULT GetCurrentException (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppExceptionObject`  
- fora Um ponteiro para o endereço de um objeto `ICorDebugValue` que representa a exceção que está sendo lançada atualmente pelo código gerenciado.  
+ fora Um ponteiro para o endereço de um `ICorDebugValue` objeto que representa a exceção que está sendo lançada atualmente pelo código gerenciado.  
   
 ## <a name="remarks"></a>Comentários  
- O objeto de exceção existirá a partir do momento em que a exceção é lançada até o final do bloco de `catch`. Uma avaliação de função, que é executada pelos métodos ICorDebugEval, limpará o objeto de exceção na instalação e o restaurará na conclusão.  
+ O objeto de exceção existirá a partir do momento em que a exceção é lançada até o final do `catch` bloco. Uma avaliação de função, que é executada pelos métodos ICorDebugEval, limpará o objeto de exceção na instalação e o restaurará na conclusão.  
   
- Exceções podem ser aninhadas (por exemplo, se uma exceção for lançada em um filtro ou em uma avaliação de função), portanto pode haver várias exceções pendentes em um único thread. `GetCurrentException` retorna a exceção mais recente.  
+ Exceções podem ser aninhadas (por exemplo, se uma exceção for lançada em um filtro ou em uma avaliação de função), portanto pode haver várias exceções pendentes em um único thread. `GetCurrentException`Retorna a exceção mais recente.  
   
  O tipo e o objeto de exceção podem ser alterados durante a vida útil da exceção. Por exemplo, após uma exceção do tipo x ser lançada, o Common Language Runtime (CLR) pode ficar sem memória e promovê-lo para uma exceção de memória insuficiente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
