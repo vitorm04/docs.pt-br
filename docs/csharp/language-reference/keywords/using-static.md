@@ -4,12 +4,12 @@ ms.date: 03/10/2017
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
-ms.openlocfilehash: 55847aceb9fdf032ba533b82ee59be53761fa2c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bffbc026e8f7937db91d42b7a06a5b7bba3bc2f8
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712943"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396148"
 ---
 # <a name="using-static-directive-c-reference"></a>Diretiva using static (Referência de C#)
 
@@ -47,12 +47,12 @@ O exemplo a seguir usa a diretiva `using static` para tornar os membros estátic
 
 [!code-csharp[using-static#3](~/samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
 
-No exemplo, a diretiva `using static` também poderia ter sido aplicada ao tipo <xref:System.Double>. Isso tornaria possível chamar o método <xref:System.Double.TryParse(System.String,System.Double@)> sem especificar um nome de tipo. No entanto, isso cria código menos legível, uma vez que se torna necessário verificar as instruções `using static` para determinar qual método `TryParse` do tipo numérico é chamado.
+No exemplo, a diretiva `using static` também poderia ter sido aplicada ao tipo <xref:System.Double>. Isso tornaria possível chamar o método <xref:System.Double.TryParse(System.String,System.Double@)> sem especificar um nome de tipo. No entanto, isso cria um código menos legível, pois torna-se necessário verificar as `using static` diretivas para determinar qual método de tipo numérico `TryParse` é chamado.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [usando diretiva](using-directive.md)
-- [C# Referência](../index.md)
+- [usando a diretiva](using-directive.md)
+- [Referência do C#](../index.md)
 - [Palavras-chave do C#](index.md)
 - [Usando namespaces](../../programming-guide/namespaces/using-namespaces.md)
 - [Namespaces](../../programming-guide/namespaces/index.md)

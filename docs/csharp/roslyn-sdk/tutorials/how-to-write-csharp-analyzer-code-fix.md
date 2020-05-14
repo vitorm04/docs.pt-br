@@ -3,12 +3,12 @@ title: 'Tutorial: escrever seu primeiro analisador e correção de código'
 description: Este tutorial fornece instruções passo a passo para criar um analisador e correção de código usando o SDK do .NET Compiler (APIs do Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: d6c3ddff288bf114e1c257ae77ebf3a419913990
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 23ebf4befc75e08592890d85f2dda51251f59cd6
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895445"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396276"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: escrever seu primeiro analisador e correção de código
 
@@ -235,7 +235,7 @@ Em seguida, formate a nova declaração de acordo com regras de formatação de 
 
 [!code-csharp[Format the new declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FormatLocal  "Format the new declaration")]
 
-Um novo namespace é necessário para esse código. Adicione a instrução `using` a seguir à parte superior do arquivo:
+Um novo namespace é necessário para esse código. Adicione a seguinte `using` diretiva à parte superior do arquivo:
 
 ```csharp
 using Microsoft.CodeAnalysis.Formatting;
@@ -497,7 +497,7 @@ Isso soa como muito código. Mas não é. Substitua a linha que declara e inicia
 
 [!code-csharp[Replace Var designations](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceVar "Replace a var designation with the explicit type")]
 
-Você precisará adicionar uma instrução `using` para usar o tipo <xref:Microsoft.CodeAnalysis.Simplification.Simplifier>:
+Você precisará adicionar uma `using` diretiva para usar o <xref:Microsoft.CodeAnalysis.Simplification.Simplifier> tipo:
 
 ```csharp
 using Microsoft.CodeAnalysis.Simplification;

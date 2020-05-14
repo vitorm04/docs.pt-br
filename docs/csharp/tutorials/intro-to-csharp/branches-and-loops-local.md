@@ -3,12 +3,12 @@ title: Tutorial Branches e loops – introdução ao C#
 description: Neste tutorial sobre branches e loops, você escreve código em C# para explorar a sintaxe de linguagem que dá suporte a branches e loops condicionais para execução repetida de instruções.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: d8c10a7462b7c27c5353aee6d957732a8d161015
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: d67cfe359634783bb542e9ac34df52a095b45c20
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135939"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396876"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Saiba mais sobre lógica condicional com instruções branch e loop
 
@@ -48,9 +48,9 @@ Digite `dotnet run` novamente. Como a resposta é inferior a 10, nada é impress
 > [!TIP]
 > À medida que explora C# (ou qualquer linguagem de programação), você cometerá erros ao escrever o código. O compilador encontrará e reportará esses erros. Verifique atentamente a saída do erro e o código que gerou o erro. O erro do compilador geralmente pode ajudá-lo a localizar o problema.
 
-Este primeiro exemplo mostra o poder dos tipos `if` e Booliano. Um *Booliano* é uma variável que pode ter um dos dois valores: `true` ou `false`. C# define um tipo especial, `bool` para variáveis Boolianas. A instrução `if` verifica o valor de um `bool`. Quando o valor é `true`, a instrução após `if` é executada. Caso contrário, é ignorada.
+Este primeiro exemplo mostra o poder dos tipos `if` e Booliano. Um *Booliano* é uma variável que pode ter um dos dois valores: `true` ou `false`. C# define um tipo especial, `bool` para variáveis Boolianas. A instrução `if` verifica o valor de um `bool`. Quando o valor é `true`, a instrução após `if` é executada. Caso contrário, ele será ignorado.
 
-Esse processo de verificação de condições e execução de instruções com base nessas condições é muito eficiente.
+Esse processo de verificação de condições e execução de instruções com base nessas condições é poderoso.
 
 ## <a name="make-if-and-else-work-together"></a>Faça if e else funcionam juntas
 
@@ -72,7 +72,7 @@ A instrução após a palavra-chave `else` é executada somente quando a condiç
 > A linguagem C# não considera recuos ou espaços em branco como significativos.
 > A instrução após a palavra-chave `if` ou `else` será executada com base na condição. Todos os exemplos neste tutorial seguem uma prática comum para recuar linhas com base no fluxo de controle de instruções.
 
-Como o recuo não é significativo, você precisa usar `{` e `}` para indicar quando você quer que mais de uma instrução faça parte do bloco executado condicionalmente. Os programadores em C# normalmente usam essas chaves em todas as cláusulas `if` e `else`. O exemplo a seguir é igual ao que você acabou de criar. Modifique o código acima para coincidir com o código a seguir:
+Como o recuo não é significativo, você precisa usar `{` e `}` para indicar quando você deseja que mais de uma instrução faça parte do bloco que é executado condicionalmente. Os programadores em C# normalmente usam essas chaves em todas as cláusulas `if` e `else`. O exemplo a seguir é o mesmo que você criou. Modifique o código acima para coincidir com o código a seguir:
 
 ```csharp
 int a = 5;
@@ -127,7 +127,7 @@ else
 
 Modifique os valores de `a`, `b` e `c` e alterne entre `&&` e `||` para explorar. Você obterá mais compreensão de como os operadores `&&` e `||` funcionam.
 
-Você terminou a primeira etapa. Antes de iniciar a próxima seção, vamos passar o código atual para um método separado. Isso facilita o começo do trabalho com um exemplo novo. Renomeie seu método `Main` como `ExploreIf` e escreva um novo método `Main` que chama `ExploreIf`. Quando você terminar, seu código deverá parecer com isto:
+Você terminou a primeira etapa. Antes de iniciar a próxima seção, vamos passar o código atual para um método separado. Isso facilita o começo do trabalho com um exemplo novo. Renomeie seu método `Main` como `ExploreIf` e escreva um novo método `Main` que chama `ExploreIf`. Quando você terminar, seu código deverá ter esta aparência:
 
 ```csharp
 using System;
@@ -187,11 +187,11 @@ Comente a chamada para `ExploreIf()`. Isso tornará a saída menos congestionada
 //ExploreIf();
 ```
 
-O `//` inicia um **comentário** em C#. Os comentários são qualquer texto que você queira manter em seu código-fonte, mas não queria executar como código. O compilador não gera qualquer código executável a partir dos comentários.
+O `//` inicia um **comentário** em C#. Os comentários são qualquer texto que você queira manter em seu código-fonte, mas não queria executar como código. O compilador não gera nenhum código executável de comentários.
 
 ## <a name="use-loops-to-repeat-operations"></a>Use loops para repetir operações
 
-Nesta seção, você usa **loops** repetir as instruções. Tente este código em seu método `Main`:
+Nesta seção, você usa **loops** para repetir instruções. Tente este código em seu método `Main`:
 
 ```csharp
 int counter = 0;
@@ -209,7 +209,7 @@ Há outro operador novo neste exemplo. O `++` após a variável `counter` é o o
 > [!IMPORTANT]
 > Verifique se a condição de loop `while` muda para false ao executar o código. Caso contrário, crie um **loop infinito**, para que seu programa nunca termine. Isso não é demonstrado neste exemplo, porque você tem que forçar o programa a encerrar usando **CTRL-C** ou outros meios.
 
-O loop `while` testa a condição antes de executar o código seguindo `while`. O loop `do` ... `while` executa o código primeiro e, em seguida, verifica a condição. O loop do while é mostrado no código a seguir:
+O loop `while` testa a condição antes de executar o código seguindo `while`. O loop `do` ... `while` executa o código primeiro e, em seguida, verifica a condição. O loop *do while* é mostrado no código a seguir:
 
 ```csharp
 int counter = 0;
@@ -233,24 +233,26 @@ for (int index = 0; index < 10; index++)
 }
 ```
 
-Ele faz o mesmo trabalho que o loop `while` e o loop `do` que você já usou. A instrução `for` tem três partes que controlam o modo como ela funciona.
+O código anterior faz o mesmo trabalho que o `while` loop e o `do` loop que você já usou. A instrução `for` tem três partes que controlam o modo como ela funciona.
 
-A primeira parte é o **inicializador de para**: `int index = 0;` declara `index` que é a variável de loop e define seu valor inicial `0`como.
+A primeira parte é o **inicializador de para**: `int index = 0;` declara que `index` é a variável de loop e define seu valor inicial como `0` .
 
 A parte intermediária é a **condição**for: `index < 10` declara que esse `for` loop continua a ser executado, desde que o valor do contador seja menor que 10.
 
-A parte final é o **para iterador**: `index++` especifica como modificar a variável de loop depois de executar o bloco `for` após a instrução. Aqui, ela especifica que `index` deve ser incrementado com 1 sempre que o bloco for executado.
+A parte final é o **para iterador**: `index++` especifica como modificar a variável de loop depois de executar o bloco após a `for` instrução. Aqui, ela especifica que `index` deve ser incrementado com 1 sempre que o bloco for executado.
 
-Experimente você mesmo. Tente o seguinte:
+Experimente por conta própria. Experimente cada uma das seguintes variações:
 
 - Altere o inicializador para iniciar em um valor diferente.
 - Altere a condição para parar em um valor diferente.
 
 Quando terminar, vamos escrever um código para usar o que você aprendeu.
 
+Há uma outra instrução de looping que não é abordada neste tutorial: a `foreach` instrução. A `foreach` instrução repete sua instrução para cada item em uma sequência de itens. Ele é usado com mais frequência com *coleções*e, portanto, é abordado no próximo tutorial.
+
 ## <a name="created-nested-loops"></a>Loops aninhados criados
 
-Um `while`loop `do` , `for` ou pode ser aninhado dentro de outro loop para criar uma matriz usando a combinação de cada item no loop externo com cada item no loop interno. Vamos fazer isso para criar um conjunto de pares alfanuméricos para representar linhas e colunas.
+Um `while` `do` loop,, ou `for` pode ser aninhado dentro de outro loop para criar uma matriz usando a combinação de cada item no loop externo com cada item no loop interno. Vamos fazer isso para criar um conjunto de pares alfanuméricos para representar linhas e colunas.
 
 Um `for` loop pode gerar as linhas:
 
@@ -298,7 +300,7 @@ Você concluiu o tutorial "branches e loops".
 
 Continue com o tutorial [Matrizes e coleções](arrays-and-collections.md) em seu próprio ambiente de desenvolvimento.
 
-Saiba mais sobre esses conceitos nestes tópicos:
+Você pode saber mais sobre esses conceitos nestes artigos:
 
 - [Instrução if e else](../../language-reference/keywords/if-else.md)
 - [Instrução while](../../language-reference/keywords/while.md)

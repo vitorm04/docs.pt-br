@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5ef94dd-dfee-49d3-a398-b110f8906dd8
 topic_type:
 - apiref
-ms.openlocfilehash: 09394acb07b8595f99d9ecc873eb0985cdd79316
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: db1721fed6414310556ceac493275e069a781ac8
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134590"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397138"
 ---
 # <a name="icordebugvalueenumnext-method"></a>Método ICorDebugValueEnum::Next
 Obtém o número especificado de instâncias "ICorDebugValue" da enumeração, começando na posição atual.  
@@ -38,21 +38,21 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- no O número de instâncias de `ICorDebugValue` a serem recuperadas.  
+ no O número de `ICorDebugValue` instâncias a serem recuperadas.  
   
  `values`  
- fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto `ICorDebugValue`.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um `ICorDebugValue` objeto.  
   
  `pceltFetched`  
- fora Aponta para o número de instâncias de `ICorDebugValue` retornadas na verdade. Esse valor pode ser nulo se `celt` for um.  
+ fora Aponta para o número de `ICorDebugValue` instâncias realmente retornadas. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também

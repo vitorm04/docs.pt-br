@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Pr
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: e291888bee25a9c87259560ca4b12635ee73c3c7
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: a3444071abae89780304a9687e486f3842283a33
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975401"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396238"
 ---
 # <a name="architectural-principles"></a>Princípios de arquitetura
 
@@ -22,9 +22,9 @@ Você deve projetar e criar soluções de software com a facilidade de manutenç
 
 ### <a name="separation-of-concerns"></a>Separação de interesses
 
-Um princípio norteador durante o desenvolvimento é o da **Separação de Interesses**. Esse princípio declara que o software deve ser separado de acordo com os tipos de trabalho que ele executa. Por exemplo, considere um aplicativo que inclua uma lógica para identificar itens importantes a serem exibidos ao usuário, e que formata esses itens de uma maneira específica para torná-los mais perceptíveis. O comportamento responsável por escolher quais itens devem ser formatados deve ser mantido separado do comportamento responsável por formatar os itens, pois esses são interesses separados que somente se relacionam coincidentemente um com o outro.
+Um princípio norteador durante o desenvolvimento é o da **Separação de Interesses**. Esse princípio declara que o software deve ser separado de acordo com os tipos de trabalho que ele executa. Por exemplo, considere um aplicativo que inclua uma lógica para identificar itens importantes a serem exibidos ao usuário, e que formata esses itens de uma maneira específica para torná-los mais perceptíveis. O comportamento responsável por escolher os itens a serem formatados deve ser mantido separado do comportamento responsável por formatar os itens, uma vez que esses comportamentos são questões separadas que são relacionadas apenas coincidentes entre si.
 
-Em termos de arquitetura, os aplicativos podem ser criados logicamente para seguir esse princípio, separando o comportamento principal dos negócios da lógica de interface do usuário e de infraestrutura. O ideal é que a lógica e as regras de negócio residam em um projeto separado, que não deve depender de outros projetos no aplicativo. Isso ajuda a garantir que o modelo de negócios seja fácil de ser testado e possa evoluir sem ter um acoplamento rígido com detalhes de implementação de nível inferior. A separação de interesses é uma consideração fundamental por trás do uso de camadas em arquiteturas de aplicativo.
+Em termos de arquitetura, os aplicativos podem ser logicamente criados para seguir esse princípio, separando o comportamento principal de negócios da infraestrutura e da lógica da interface do usuário. O ideal é que a lógica e as regras de negócio residam em um projeto separado, que não deve depender de outros projetos no aplicativo. Essa separação ajuda a garantir que o modelo de negócios seja fácil de testar e possa evoluir sem estar rigidamente acoplado a detalhes de implementação de baixo nível. A separação de interesses é uma consideração fundamental por trás do uso de camadas em arquiteturas de aplicativo.
 
 ### <a name="encapsulation"></a>Encapsulamento
 
@@ -34,7 +34,7 @@ Nas classes, o encapsulamento é obtido por meio da limitação do acesso extern
 
 ### <a name="dependency-inversion"></a>Inversão de dependência
 
-A direção da dependência dentro do aplicativo deve ser na direção de abstração, não os detalhes de implementação. A maioria dos aplicativos é escrita de modo que a dependência em tempo de compilação flua na direção da execução em runtime. Isso produz um grafo de dependência direta. Ou seja, se o módulo A chamar uma função no módulo B, que chama uma função no módulo C, em seguida, no momento da compilação, um dependerá de B, que dependerá de C, como mostra a Figura 4-1.
+A direção da dependência dentro do aplicativo deve ser na direção de abstração, não os detalhes de implementação. A maioria dos aplicativos é escrita de forma que os fluxos de dependência de tempo de compilação estejam na direção da execução do tempo de execução, produzindo um grafo de dependência direta. Ou seja, se o módulo A chamar uma função no módulo B, que chama uma função no módulo C, em seguida, no momento da compilação, um dependerá de B, que dependerá de C, como mostra a Figura 4-1.
 
 ![Grafo de dependência direta](./media/image4-1.png)
 
@@ -52,7 +52,7 @@ A **inversão de dependência** é uma parte fundamental da criação de aplicat
 
 **Métodos e classes devem exigir explicitamente os objetos de colaboração de que precisam para funcionarem corretamente.** Os construtores de classe oferecem uma oportunidade para que as classes identifiquem os itens necessários para que estejam em um estado válido e funcionem corretamente. Se você definir classes que podem ser construídas e chamadas, mas que só funcionarão corretamente se determinados componentes globais ou de infraestrutura estiverem em vigor, essas classes serão *desonestos* com seus clientes. O contrato do construtor informa o cliente de que ele precisa apenas dos itens especificados (possivelmente nada se a classe estiver usando apenas um construtor sem parâmetros), mas, em seguida, em runtime, acontece que o objeto realmente precisou de outra coisa.
 
-Seguindo o princípio da dependência explícita, os métodos e as classes estão sendo honestos com seus clientes sobre o que precisam para funcionar. Isso torna o código mais autodocumentado e os contratos de codificação mais amigáveis, pois os usuários confiarão que, desde que eles forneçam o que é necessário na forma de método ou de parâmetros do construtor, os objetos com os quais eles estão trabalhando se comportarão corretamente em runtime.
+Seguindo o princípio da dependência explícita, os métodos e as classes estão sendo honestos com seus clientes sobre o que precisam para funcionar. Seguir o princípio torna seu código mais autodocumentado e seus contratos de codificação mais amigáveis, já que os usuários vão confiar que, desde que forneçam o que é necessário na forma de parâmetros de método ou construtor, os objetos com os quais eles estão trabalhando se comportarão corretamente no tempo de execução.
 
 ### <a name="single-responsibility"></a>Responsabilidade única
 
@@ -60,13 +60,13 @@ O princípio da responsabilidade única se aplica ao design orientado a objeto, 
 
 Em um aplicativo monolítico, podemos aplicar o princípio da responsabilidade única em um alto nível às camadas do aplicativo. A responsabilidade de apresentação deve permanecer no projeto de interface do usuário, enquanto a responsabilidade de acesso a dados deve ser mantida em um projeto de infraestrutura. A lógica de negócios deve ser mantida no projeto de núcleo do aplicativo, no qual ela pode ser testada com facilidade e pode evoluir de maneira independente das outras responsabilidades.
 
-Quando esse princípio é aplicado à arquitetura do aplicativo e levado para seu ponto de extremidade lógico, você obtém os microsserviços. Um microsserviço específico deve ter uma única responsabilidade. Caso você precise estender o comportamento de um sistema, será melhor fazer isso adicionando outros microsserviços, em vez de pela adição de responsabilidade a um existente.
+Quando esse princípio é aplicado à arquitetura do aplicativo e levado ao seu ponto de extremidade lógico, você obtém os microserviços. Um microsserviço específico deve ter uma única responsabilidade. Caso você precise estender o comportamento de um sistema, será melhor fazer isso adicionando outros microsserviços, em vez de pela adição de responsabilidade a um existente.
 
 [Saiba mais sobre a arquitetura de microsserviços](https://aka.ms/MicroservicesEbook)
 
 ### <a name="dont-repeat-yourself-dry"></a>DRY (Don't Repeat Yourself)
 
-O aplicativo deve evitar especificar o comportamento relacionado a determinado conceito em vários locais, pois essa é uma fonte frequente de erros. Em algum momento, uma alteração nos requisitos exigirá a alteração desse comportamento. É provável que pelo menos uma instância do comportamento não seja atualizada e isso resultará em um comportamento inconsistente do sistema.
+O aplicativo deve evitar a especificação de um comportamento relacionado a um conceito específico em vários lugares, pois essa prática é uma fonte de erros frequente. Em algum momento, uma alteração nos requisitos exigirá a alteração desse comportamento. É provável que pelo menos uma instância do comportamento não seja atualizada, e o sistema se comportará de forma inconsistente.
 
 Em vez de duplicar a lógica, encapsule-a em um constructo de programação. Torne esse constructo a autoridade única sobre esse comportamento e imponha o uso desse novo constructo a qualquer outra parte do aplicativo que exija esse comportamento.
 
@@ -105,5 +105,5 @@ No mínimo, os aplicativos Web individuais devem tentar ser seu próprio context
 - [Contexto limitado](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
->[Anterior](choose-between-traditional-web-and-single-page-apps.md)
->[próximo](common-web-application-architectures.md)
+>[Anterior](choose-between-traditional-web-and-single-page-apps.md) 
+> [Avançar](common-web-application-architectures.md)

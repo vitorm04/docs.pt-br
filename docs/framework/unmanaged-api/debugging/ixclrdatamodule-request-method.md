@@ -1,5 +1,5 @@
 ---
-title: Método IXCLRDataModule::Request
+title: 'Método IXCLRDataModule:: Request'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::Request Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7d04e5630bd196ef534f72a0c3924019315f3774
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 44ee4fc7fc2368b65f6f2fffe6ac239beddc6293
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632222"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395263"
 ---
-# <a name="ixclrdatamodulerequest-method"></a>Método IXCLRDataModule::Request
+# <a name="ixclrdatamodulerequest-method"></a>Método IXCLRDataModule:: Request
 
-Solicitações para preencher o buffer fornecido com os dados do módulo.
+Solicitações para popular o buffer fornecido com os dados do módulo.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,30 +41,30 @@ HRESULT Request([in] ULONG32 reqCode,
 ## <a name="parameters"></a>Parâmetros
 
 `reqCode`\
-[in] Tipo a ser enviado de solicitação.
+no Tipo de solicitação a ser enviado.
 
 `inBufferSize`\
-[in] o tamanho do buffer de entrada a ser passado.
+[in] tamanho do buffer de entrada a ser passado.
 
 `inBuffer`\
-[in, size_is(inBufferSize)] Ponteiro de buffer para os dados brutos a serem enviados na solicitação.
+[in, size_is (InBufferSize)] Ponteiro de buffer para os dados brutos a serem enviados na solicitação.
 
 `outBufferSize`\
-[in] Tamanho do buffer de saída.
+no Tamanho do buffer de saída.
 
 `outBuffer`\
-[out, size_is(outBufferSize)] Ponteiro de buffer usado para armazenar a resposta da solicitação.
+[fora, size_is (OutBufferSize)] Ponteiro de buffer a ser usado para armazenar a resposta de solicitação.
 
 ## <a name="remarks"></a>Comentários
 
-O método fornecido é parte do `IXCLRDataModule` de interface e corresponde ao slot de 36 ª da tabela de método virtual.
+O método fornecido faz parte da `IXCLRDataModule` interface e corresponde ao slot 37th da tabela de métodos virtuais.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
-**Cabeçalho:** Nenhum **biblioteca:** Nenhum **versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Cabeçalho:** Nenhuma **biblioteca:** nenhuma **.NET Framework versões:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Depuração](index.md)
 - [Interface IXCLRDataModule](ixclrdatamodule-interface.md)

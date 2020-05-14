@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: b2f7007f-c446-4b18-aed1-a25cff8aee31
 topic_type:
 - apiref
-ms.openlocfilehash: e1044386bd6251132703c4e98a0cf2ed267d34e0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b8d2e49031e59db0527de3c848d7d390095797bf
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791145"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396786"
 ---
 # <a name="icordebugvalue-interface"></a>Interface ICorDebugValue
 Representa um valor no processo que está sendo depurado. O valor pode ser um valor de leitura ou de gravação.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
 |[Método CreateBreakpoint](icordebugvalue-createbreakpoint-method.md)|Este método não está implementado no momento.|  
-|[Método GetAddress](icordebugvalue-getaddress-method.md)|Obtém o endereço deste `ICorDebugValue` objeto, que está no processo de depuração.|  
+|[Método GetAddress](icordebugvalue-getaddress-method.md)|Obtém o endereço desse `ICorDebugValue` objeto, que está no processo de depuração.|  
 |[Método GetSize](icordebugvalue-getsize-method.md)|Obtém o tamanho, em bytes, deste `ICorDebugValue` objeto.|  
 |[Método GetType](icordebugvalue-gettype-method.md)|Obtém o tipo primitivo deste `ICorDebugValue` objeto.|  
   
@@ -41,14 +41,14 @@ Representa um valor no processo que está sendo depurado. O valor pode ser um va
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Veja também
 

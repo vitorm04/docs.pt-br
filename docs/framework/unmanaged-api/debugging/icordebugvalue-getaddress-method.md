@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a247c792-45e1-4538-9e1f-b46acca4a463
 topic_type:
 - apiref
-ms.openlocfilehash: 906ca2540e421953b3ce39300aa7b2376f789929
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 467ba53f90081f0c3499fb22acab96b5e380a3f4
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137096"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395839"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>Método ICorDebugValue::GetAddress
 Obtém o endereço desse objeto "ICorDebugValue", que está no processo de ser depurado.  
@@ -35,18 +35,18 @@ HRESULT GetAddress (
   
 ## <a name="parameters"></a>Parâmetros  
  `pAddress`  
- fora Ponteiro para um objeto `CORDB_ADDRESS` que especifica o endereço desse objeto de valor.  
+ fora Ponteiro para um `CORDB_ADDRESS` objeto que especifica o endereço desse objeto de valor.  
   
 ## <a name="remarks"></a>Comentários  
- Se o valor não estiver disponível, será retornado 0 (zero). Isso pode acontecer se o valor for pelo menos parcialmente em registros ou armazenado em um identificador de coletor de lixo (`GCHandle`).  
+ Se o valor não estiver disponível, será retornado 0 (zero). Isso pode acontecer se o valor for pelo menos parcialmente em registros ou armazenado em um identificador de coletor de lixo ( `GCHandle` ).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também

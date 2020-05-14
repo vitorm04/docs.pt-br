@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0fdeba3-c195-4ece-8caf-79b1f40025d2
 topic_type:
 - apiref
-ms.openlocfilehash: fc205e347fc39fd486d9b8a3fb256a5d29a980a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 83adea3d659eea6d4af9ae364aad18df67e69c03
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110061"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396614"
 ---
 # <a name="icordebugtypeenumnext-method"></a>Método ICorDebugTypeEnum::Next
-Obtém o número de instâncias "ICorDebugType" especificadas por `celt` da enumeração, começando na posição atual.  
+Obtém o número de instâncias "ICorDebugType" especificadas pelo `celt` da enumeração, começando na posição atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,21 +38,21 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- no O número de instâncias de `ICorDebugType` a serem recuperadas.  
+ no O número de `ICorDebugType` instâncias a serem recuperadas.  
   
  `values`  
- fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto `ICorDebugType`.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um `ICorDebugType` objeto.  
   
  `pceltFetched`  
- fora Aponta para o número de instâncias de `ICorDebugType` retornadas na verdade. Esse valor pode ser nulo se `celt` for um.  
+ fora Aponta para o número de `ICorDebugType` instâncias realmente retornadas. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também

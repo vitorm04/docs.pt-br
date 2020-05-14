@@ -1,5 +1,5 @@
 ---
-title: Método IXCLRDataProcess::EndEnumMethodInstancesByAddress
+title: 'Método IXCLRDataProcess:: EndEnumMethodInstancesByAddress'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EndEnumMethodInstancesByAddress Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 378095aa2b363f4003a5372b4158df27412655e1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 04ce8f44b0c9f532951666de7bfb9de475c14746
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757858"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395253"
 ---
-# <a name="ixclrdataprocessendenummethodinstancesbyaddress-method"></a>Método IXCLRDataProcess::EndEnumMethodInstancesByAddress
+# <a name="ixclrdataprocessendenummethodinstancesbyaddress-method"></a>Método IXCLRDataProcess:: EndEnumMethodInstancesByAddress
 
-Libera os recursos usados pelos iteradores internos usados durante a enumeração de instância.
+Libera os recursos usados por iteradores internos usados durante a enumeração da instância.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,20 +39,20 @@ HRESULT EndEnumMethodInstancesByAddress(
 ## <a name="parameters"></a>Parâmetros
 
 `handle`\
-[out] Um identificador para enumerar as instâncias de método.
+fora Um identificador para enumerar as instâncias de método.
 
 ## <a name="remarks"></a>Comentários
 
-O método fornecido é parte do `IXCLRDataProcess` de interface e corresponde ao slot da tabela de método virtual de 29.
+O método fornecido faz parte da `IXCLRDataProcess` interface e corresponde ao slot 30 da tabela de métodos virtuais.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Cabeçalho:** Nenhum  
-**Biblioteca:** Nenhum  
-**Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Cabeçalho:** None  
+**Biblioteca:** None  
+**.NET Framework versões:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Enumeração CLRDataSourceType](clrdatasourcetype-enumeration.md)
 - [Depuração](index.md)

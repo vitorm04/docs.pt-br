@@ -1,19 +1,19 @@
 ---
 title: Implementando a camada de persistência da infraestrutura com o Entity Framework Core
-description: .NET Microservices Architecture for Containerized .NET Applications | Explorar os detalhes de implementação para a camada de persistência da infra-estrutura, usando o Entity Framework Core.
+description: Arquitetura de microserviços .NET para aplicativos .NET em contêineres | Explore os detalhes de implementação da camada de persistência de infraestrutura, usando Entity Framework Core.
 ms.date: 01/30/2020
-ms.openlocfilehash: 7ab3be0d6a5affda478f7ec8f6c356571e304759
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: c91980504b0f9de859c6d211f3a1f47435b2d3cc
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805485"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396251"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementar a camada de persistência de infraestrutura com o Entity Framework Core
 
 Ao usar bancos de dados relacionais, como o SQL Server, o Oracle ou o PostgreSQL, uma abordagem recomendada é implementar a camada de persistência com base no EF (Entity Framework). O EF é compatível com LINQ e fornece objetos fortemente tipados para o modelo, bem como uma persistência simplificada no banco de dados.
 
-O Entity Framework tem uma longa história de participação no .NET Framework. Ao usar o .NET Core, você também deve usar o Entity Framework Core, que é executado no Windows ou no Linux da mesma maneira que o .NET Core. O EF Core é uma reescrita completa do Entity Framework que é implementado com uma pegada muito menor e melhorias importantes no desempenho.
+O Entity Framework tem uma longa história de participação no .NET Framework. Ao usar o .NET Core, você também deve usar o Entity Framework Core, que é executado no Windows ou no Linux da mesma maneira que o .NET Core. EF Core é uma reescrita completa de Entity Framework implementada com uma superfície muito menor e melhorias importantes no desempenho.
 
 ## <a name="introduction-to-entity-framework-core"></a>Introdução ao Entity Framework Core
 
@@ -23,16 +23,16 @@ Como uma introdução ao EF Core já está disponível na documentação da Micr
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- **Núcleo de Estruturas de Entidades** \
+- **Entity Framework Core** \
   [https://docs.microsoft.com/ef/core/](/ef/core/)
 
-- **Começando com ASP.NET Núcleo Core e Entity Framework Core usando o Visual Studio** \
+- **Introdução ao ASP.NET Core e Entity Framework Core usando o Visual Studio** \
   [https://docs.microsoft.com/aspnet/core/data/ef-mvc/](/aspnet/core/data/ef-mvc/)
 
 - **Classe DbContext** \
   [https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext](xref:Microsoft.EntityFrameworkCore.DbContext)
 
-- **Compare EF Core & EF6.x** \
+- **Comparar EF Core & EF6. x** \
   [https://docs.microsoft.com/ef/efcore-and-ef6/index](/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Infraestrutura no Entity Framework Core da perspectiva do DDD
@@ -78,7 +78,7 @@ public class Order : Entity
 }
 ```
 
-A `OrderItems` propriedade só pode ser acessada apenas como leitura. `IReadOnlyCollection<OrderItem>` Esse tipo é somente leitura, portanto, ele está protegido contra as atualizações externas regulares.
+A `OrderItems` propriedade só pode ser acessada como somente leitura usando `IReadOnlyCollection<OrderItem>` . Esse tipo é somente leitura, portanto, ele está protegido contra as atualizações externas regulares.
 
 O EF Core fornece uma maneira de mapear o modelo de domínio para o banco de dados físico sem "contaminar" o modelo de domínio. Trata-se de puro código POCO do .NET, pois a ação de mapeamento é implementada na camada de persistência. Nessa ação de mapeamento, você precisa configurar o mapeamento dos campos para o banco de dados. No exemplo a seguir do método `OnModelCreating` de `OrderingContext` e da classe `OrderEntityTypeConfiguration`, a chamada para `SetPropertyAccessMode` informa ao EF Core para acessar a propriedade `OrderItems` por meio de seu campo.
 
@@ -110,14 +110,14 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 }
 ```
 
-Quando você usa campos em `OrderItem` vez de propriedades, a `List<OrderItem>` entidade é persistida como se tivesse uma propriedade. No entanto, ela expõe um único acessador, o método `AddOrderItem`, para adicionar novos itens ao pedido. Como resultado, o comportamento e os dados ficarão vinculados e serão consistentes em todos os códigos de aplicativo que usarem o modelo de domínio.
+Quando você usa campos em vez de propriedades, a `OrderItem` entidade é persistida como se tivesse uma `List<OrderItem>` propriedade. No entanto, ela expõe um único acessador, o método `AddOrderItem`, para adicionar novos itens ao pedido. Como resultado, o comportamento e os dados ficarão vinculados e serão consistentes em todos os códigos de aplicativo que usarem o modelo de domínio.
 
 ## <a name="implement-custom-repositories-with-entity-framework-core"></a>Implementar repositórios personalizados com o Entity Framework Core
 
 No nível da implementação, um repositório é simplesmente uma classe com o código de persistência de dados, coordenada por uma unidade de trabalho (DBContext no EF Core) ao executar atualizações, como mostra a seguinte classe:
 
 ```csharp
-// using statements...
+// using directives...
 namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositories
 {
     public class BuyerRepository : IBuyerRepository
@@ -168,17 +168,17 @@ No entanto, os métodos de consulta reais para obter os dados a serem enviados �
 
 ### <a name="using-a-custom-repository-versus-using-ef-dbcontext-directly"></a>Usando um repositório personalizado em vez de usar o DbContext EF diretamente
 
-A classe Entity Framework DbContext é baseada nos padrões de Unidade de Trabalho e Repositório e pode ser usada diretamente do seu código, como a partir de um controlador MVC ASP.NET. Os padrões de Unidade de Trabalho e Repositório resultam no código mais simples, como no microserviço de catálogo CRUD em eShopOnContainers. Nos casos em que você deseja o código mais simples possível, é possível usar diretamente a classe DbContext, como muitos desenvolvedores fazem.
+A classe DbContext Entity Framework é baseada na unidade de padrões de trabalho e de repositório e pode ser usada diretamente do seu código, como de um controlador MVC ASP.NET Core. A unidade de padrões de trabalho e de repositório resulta no código mais simples, como no microserviço de catálogo CRUD em eShopOnContainers. Nos casos em que você deseja o código mais simples possível, é possível usar diretamente a classe DbContext, como muitos desenvolvedores fazem.
 
-No entanto, a implementação de repositórios personalizados oferece vários benefícios ao implementar microsserviços ou aplicativos mais complexos. Os padrões de Unidade de Trabalho e Repositório destinam-se a encapsular a camada de persistência da infra-estrutura para que ela seja dissociada das camadas de aplicativo e modelo de domínio. A implementação desses padrões pode facilitar o uso de repositórios fictícios para simulação de acesso ao banco de dados.
+No entanto, a implementação de repositórios personalizados oferece vários benefícios ao implementar microsserviços ou aplicativos mais complexos. A unidade de padrões de trabalho e de repositório destina-se a encapsular a camada de persistência de infraestrutura para que ela seja dissociada das camadas do aplicativo e do modelo de domínio. A implementação desses padrões pode facilitar o uso de repositórios fictícios para simulação de acesso ao banco de dados.
 
-Na Figura 7-18, você pode ver as diferenças entre não usar repositórios (usando diretamente o EF DbContext) versus usar repositórios, o que torna mais fácil zombar desses repositórios.
+Na Figura 7-18, você pode ver as diferenças entre não usar repositórios (diretamente usando o EF DbContext) versus usar repositórios, o que torna mais fácil simular esses repositórios.
 
-![Diagrama mostrando os componentes e o fluxo de dados nos dois repositórios.](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
+![Diagrama mostrando os componentes e Dataflow nos dois repositórios.](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
 
 **Figura 7-18**. Usando repositórios personalizados em vez de um DbContext simples
 
-A Figura 7-18 mostra que o uso de um repositório personalizado adiciona uma camada de abstração que pode ser usada para facilitar o teste zombando do repositório. Existem várias alternativas para simulação. Você pode simular apenas repositórios ou simular toda a unidade de trabalho. Geralmente, simular apenas os repositórios já é suficiente e a complexidade de abstrair e simular toda a unidade de trabalho, normalmente, não é necessária.
+A Figura 7-18 mostra que o uso de um repositório personalizado adiciona uma camada de abstração que pode ser usada para facilitar o teste, simulando o repositório. Existem várias alternativas para simulação. Você pode simular apenas repositórios ou simular toda a unidade de trabalho. Geralmente, simular apenas os repositórios já é suficiente e a complexidade de abstrair e simular toda a unidade de trabalho, normalmente, não é necessária.
 
 Mais adiante, quando nos concentramos na camada de aplicativo, você verá como funciona a injeção de dependência no ASP.NET Core e como ela é implementada ao usar repositórios.
 
@@ -219,7 +219,7 @@ O modo de criação de instância do DbContext não deve ser configurado como Se
 
 ## <a name="the-repository-instance-lifetime-in-your-ioc-container"></a>O tempo de vida da instância de repositório no contêiner de IoC
 
-Da mesma forma, a vida útil do repositório deve ser geralmente definida como escopo (InstancePerLifetimeScope em Autofac). Ele também pode ser transitório (InstancePerDependency no Autofac), mas o serviço será mais eficiente em relação à memória ao usar o tempo de vida no escopo.
+De forma semelhante, o tempo de vida do repositório normalmente deve ser definido como com escopo (InstancePerLifetimeScope em Autofac). Ele também pode ser transitório (InstancePerDependency no Autofac), mas o serviço será mais eficiente em relação à memória ao usar o tempo de vida no escopo.
 
 ```csharp
 // Registering a Repository in Autofac IoC container
@@ -228,22 +228,22 @@ builder.RegisterType<OrderRepository>()
     .InstancePerLifetimeScope();
 ```
 
-O uso da vida útil de singleton para o repositório pode causar sérios problemas de concorrência quando seu DbContext estiver definido como escopo (InstancePerLifetimeScope) vida útil (as vidas padrão de um DBContext).
+Usar o tempo de vida singleton para o repositório pode causar sérios problemas de simultaneidade quando o DbContext é definido como tempo de vida do InstancePerLifetimeScope (escopo) (os tempos de vida padrão de um DBContext).
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- **Implementação do Repositório e da Unidade de Padrões de Trabalho em um aplicativo MVC ASP.NET** \
+- **Implementando o repositório e os padrões de unidade de trabalho em um aplicativo MVC ASP.NET** \
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
-- **Jonathan Allen. Estratégias de implementação para o padrão de repositório com quadro de entidades, dapper e cadeia** \
+- **Jonathan Allen. Estratégias de implementação para o padrão de repositório com Entity Framework, Dapper e Chain** \
   <https://www.infoq.com/articles/repository-implementation-strategies>
 
-- **Cesar de la Torre. Comparando ASP.NET vida útil do serviço de contêineres Core IoC com os escopos de instância de contêiner Autofac IoC** \
+- **Cesar de la Torre. Comparando ASP.NET Core tempos de vida do serviço de contêiner IoC com escopos de instância de contêiner Autofac IoC** \
   <https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/>
 
 ## <a name="table-mapping"></a>Mapeamento de tabela
 
-O mapeamento de tabela identifica os dados de tabela a serem consultados e salvos no banco de dados. Você já viu como as entidades de domínio (por exemplo, um domínio de produto ou de pedido) podem ser usadas para gerar um esquema de banco de dados relacionado. O EF foi projetado rigidamente de acordo com o conceito de *convenções*. Convenções abordam questões como "Qual será o nome de uma mesa?" ou "Qual propriedade é a chave principal?" As convenções são tipicamente baseadas em nomes convencionais. Por exemplo, é típico que a chave primária `Id`seja uma propriedade que termine com .
+O mapeamento de tabela identifica os dados de tabela a serem consultados e salvos no banco de dados. Você já viu como as entidades de domínio (por exemplo, um domínio de produto ou de pedido) podem ser usadas para gerar um esquema de banco de dados relacionado. O EF foi projetado rigidamente de acordo com o conceito de *convenções*. As convenções abordam perguntas como "qual será o nome de uma tabela?" ou "qual propriedade é a chave primária?" As convenções normalmente são baseadas em nomes convencionais. Por exemplo, é comum que a chave primária seja uma propriedade que termina com `Id` .
 
 Por convenção, cada entidade será configurada para ser mapeada para uma tabela com o mesmo nome que a propriedade `DbSet<TEntity>` que expõe a entidade no contexto derivado. Se nenhum valor de `DbSet<TEntity>` for fornecido para a entidade especificada, o nome da classe será usado.
 
@@ -339,7 +339,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 }
 ```
 
-Você pode definir todos os mapeamentos `OnModelCreating` de API fluentes dentro do mesmo método, mas é aconselhável particionar esse código e ter várias classes de configuração, uma por entidade, como mostrado no exemplo. Especialmente para modelos grandes, é aconselhável ter classes de configuração separadas para configurar diferentes tipos de entidades.
+Você pode definir todos os mapeamentos de API fluente dentro do mesmo `OnModelCreating` método, mas é aconselhável particionar esse código e ter várias classes de configuração, uma por entidade, conforme mostrado no exemplo. Especialmente para modelos grandes, é aconselhável ter classes de configuração separadas para configurar tipos de entidade diferentes.
 
 O código no exemplo mostra algumas declarações e mapeamentos explícitos. No entanto, as convenções do EF Core fazem muitos desses mapeamentos automaticamente, portanto, o código real necessário para o seu caso poderá ser menor.
 
@@ -357,7 +357,7 @@ O algoritmo Hi/Lo descreve um mecanismo para obter um lote de IDs exclusivas de 
 
 - Ele gera um identificador legível por pessoas, ao contrário das técnicas que usam GUIDs.
 
-O EF Core suporta `UseHiLo` [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) com o método, como mostrado no exemplo anterior.
+EF Core dá suporte a [Hilo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) com o `UseHiLo` método, conforme mostrado no exemplo anterior.
 
 ### <a name="map-fields-instead-of-properties"></a>Mapear campos em vez de propriedades
 
@@ -422,7 +422,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-A seguinte especificação carrega uma única entidade de cesta dada a identidade da cesta ou o ID do comprador a quem a cesta pertence. Ele vai [carregar ansiosamente](/ef/core/querying/related-data) `Items` a coleção da cesta.
+A especificação a seguir carrega uma única entidade de cesta dada a ID da cesta ou a ID do comprador ao qual a cesta pertence. Ele carregará a coleção da cesta de forma [adiantada](/ef/core/querying/related-data) `Items` .
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION
@@ -470,20 +470,20 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 Além de encapsular a lógica de filtragem, a especificação pode especificar a forma dos dados a serem retornados, incluindo quais propriedades devem ser populadas.
 
-Embora não recomendemos `IQueryable` voltar de um repositório, é perfeitamente bom usá-los dentro do repositório para construir um conjunto de resultados. Você pode ver essa abordagem usada no `IQueryable` método Lista acima, que usa expressões intermediárias para construir a lista de inclui das ofertas antes de executar a consulta com os critérios da especificação na última linha.
+Embora não seja recomendável retornar `IQueryable` de um repositório, é perfeitamente preciso usá-los dentro do repositório para criar um conjunto de resultados. Você pode ver essa abordagem usada no método List acima, que usa expressões intermediárias `IQueryable` para criar a lista de inclusões da consulta antes de executar a consulta com os critérios da especificação na última linha.
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- **Mapeamento de tabelas** \
+- **Mapeamento de tabela** \
   [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)
 
-- **Use hilo para gerar chaves com o Entity Framework Core** \
+- **Use HiLo para gerar chaves com Entity Framework Core** \
   <https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/>
 
-- **Campos de Apoio** \
+- **Campos de backup** \
   [https://docs.microsoft.com/ef/core/modeling/backing-field](/ef/core/modeling/backing-field)
 
-- **Steve Smith. Coleções encapsuladas no Núcleo-Quadro de Entidades** \
+- **Steve Smith. Coleções encapsuladas no Entity Framework Core** \
   <https://ardalis.com/encapsulated-collections-in-entity-framework-core>
 
 - **Propriedades da sombra** \
@@ -493,5 +493,5 @@ Embora não recomendemos `IQueryable` voltar de um repositório, é perfeitament
   <https://deviq.com/specification-pattern/>
 
 > [!div class="step-by-step"]
-> [Próximo](infrastructure-persistence-layer-design.md)
-> [anterior](nosql-database-persistence-infrastructure.md)
+> [Anterior](infrastructure-persistence-layer-design.md) 
+>  [Avançar](nosql-database-persistence-infrastructure.md)

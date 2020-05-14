@@ -2,12 +2,12 @@
 title: Introdução ao aplicativo de referência do eShopOnContainers
 description: Apresentando o aplicativo de referência de microserviços nativos do eShopOnContainers Cloud para ASP.NET Core e o Azure.
 ms.date: 06/30/2019
-ms.openlocfilehash: 8d4ad982716a07613ebbef6668afab69d5a8b4f6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b97b62268db1d9990f762d9769233ad72551c226
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895532"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395394"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>Introdução ao aplicativo de referência do eShopOnContainers
 
@@ -50,7 +50,7 @@ O aplicativo também tem os seguintes requisitos não funcionais:
 
 O aplicativo eShopOnContainers pode ser acessado de clientes Web ou móveis que acessam o aplicativo via HTTPS direcionando o aplicativo do servidor MVC ASP.NET Core ou um gateway de API apropriado. Os gateways de API oferecem várias vantagens, como desacoplar serviços de back-end de clientes front-end individuais e fornecer maior segurança. O aplicativo também usa um padrão relacionado conhecido como back-ends-para-Fronts (BFF), que recomenda a criação de gateways de API separados para cada cliente front-end. A arquitetura de referência demonstra a divisão dos gateways de API com base em se a solicitação é proveniente de um cliente Web ou móvel.
 
-A funcionalidade do aplicativo é dividida em vários microserviços distintos. Há serviços responsáveis por autenticação e identidade, listando itens do catálogo de produtos, gerenciando cestas de compras de usuários e colocando pedidos. Cada um desses serviços separados tem seu próprio armazenamento persistente. Observe que não há nenhum repositório de dados mestre único com o qual todos os serviços interagem. Em vez disso, a coordenação e a comunicação entre os serviços são feitas de acordo com a necessidade e com o uso de um barramento de mensagem.
+A funcionalidade do aplicativo é dividida em vários microserviços distintos. Há serviços responsáveis por autenticação e identidade, listando itens do catálogo de produtos, gerenciando cestas de compras de usuários e colocando pedidos. Cada um desses serviços separados tem seu próprio armazenamento persistente. Não há nenhum repositório de dados mestre único com o qual todos os serviços interagem. Em vez disso, a coordenação e a comunicação entre os serviços são feitas de acordo com a necessidade e com o uso de um barramento de mensagem.
 
 Cada um dos diferentes microservices é projetado de forma diferente, com base em seus requisitos individuais. Isso significa que sua pilha de tecnologia pode diferir, embora todas sejam compiladas usando o .NET Core e projetadas para a nuvem. Os serviços mais simples fornecem acesso básico de criação-leitura-atualização-exclusão (CRUD) aos armazenamentos de dados subjacentes, enquanto os serviços mais avançados usam abordagens e padrões de design orientados a domínio para gerenciar a complexidade dos negócios.
 
@@ -73,5 +73,5 @@ O código é organizado para dar suporte aos diferentes microserviços e, em cad
 Este livro se concentra em aplicativos nativos de nuvem criados usando a tecnologia do Azure. Para saber mais sobre as práticas recomendadas de microserviço e como arquitetar aplicativos baseados em microserviço, leia o livro complementar, [microservices .net: arquitetura para aplicativos .net em contêineres](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook).
 
 >[!div class="step-by-step"]
->[Anterior](candidate-apps.md)
->[próximo](map-eshoponcontainers-azure-services.md)
+>[Anterior](candidate-apps.md) 
+> [Avançar](map-eshoponcontainers-azure-services.md)

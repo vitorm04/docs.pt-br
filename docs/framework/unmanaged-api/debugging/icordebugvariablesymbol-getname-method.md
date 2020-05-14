@@ -1,16 +1,16 @@
 ---
-title: ICorDebugVariableSymbol::Método GetName
+title: 'Método ICorDebugVariableSymbol:: GetName'
 ms.date: 03/30/2017
 ms.assetid: c922b7d4-44e5-45e4-aef3-cc9c35a0be80
-ms.openlocfilehash: abc0e368f259df1a3542b0fc8e7fbfd7e06cf6eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea414a39e140c74df736764dbbb1bb3934bda78f
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178448"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397123"
 ---
-# <a name="icordebugvariablesymbolgetname-method"></a>ICorDebugVariableSymbol::Método GetName
-Recebe o nome de uma variável.  
+# <a name="icordebugvariablesymbolgetname-method"></a>Método ICorDebugVariableSymbol:: GetName
+Obtém o nome de uma variável.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -22,12 +22,12 @@ HRESULT GetName(
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cchName`  
- [em] O número de `szName` caracteres no buffer.  
+ no O número de caracteres no `szName` buffer.  
   
  `pcchName`  
- [fora] Um ponteiro para o número de `szName` caracteres realmente escrito no buffer.  
+ fora Um ponteiro para o número de caracteres realmente gravados no `szName` buffer.  
   
  `szName`  
  Um ponteiro para uma matriz de caracteres que contém o nome da variável.  
@@ -35,18 +35,18 @@ HRESULT GetName(
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
-> Este método está disponível apenas com .NET Native.  
+> Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Interface ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md)
 - [Depurando interfaces](debugging-interfaces.md)

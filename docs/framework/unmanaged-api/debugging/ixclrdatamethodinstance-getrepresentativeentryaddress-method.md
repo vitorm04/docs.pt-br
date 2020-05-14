@@ -1,5 +1,5 @@
 ---
-title: Método IXCLRDataMethodInstance::GetRepresentativeEntryAddress
+title: 'Método IXCLRDataMethodInstance:: GetRepresentativeEntryAddress'
 ms.date: 02/01/2019
 api.name:
 - IXCLRDataMethodInstance::GetRepresentativeEntryAddress
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 5c79e916a06e796fc87b57eb949cccda77b8a9bd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d9f9e16d243c0f3b45ac24776caea5bb9c32dcc1
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744656"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395745"
 ---
-# <a name="ixclrdatamethodinstancegetrepresentativeentryaddress-method"></a>Método IXCLRDataMethodInstance::GetRepresentativeEntryAddress
+# <a name="ixclrdatamethodinstancegetrepresentativeentryaddress-method"></a>Método IXCLRDataMethodInstance:: GetRepresentativeEntryAddress
 
-Obtém o endereço do ponto de entrada mais representativo para a compilação nativa de todos os pontos de entrada possíveis para um método.
+Obtém o endereço de ponto de entrada mais representativo para a compilação nativa de todos os pontos de entrada possíveis para um método.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,20 +39,20 @@ HRESULT GetRepresentativeEntryAddress(
 ## <a name="parameters"></a>Parâmetros
 
 `addr`\
-[out] O endereço do ponto de entrada nativo mais representativo para o método.
+fora O endereço do ponto de entrada nativo mais representativo para o método.
 
 ## <a name="remarks"></a>Comentários
 
-O método fornecido faz parte de [ `IXCLRDataMethodInstance` interface](ixclrdatamethodinstance-interface.md) e corresponde ao slot de 19 da tabela de método virtual.
+O método fornecido faz parte da [ `IXCLRDataMethodInstance` interface](ixclrdatamethodinstance-interface.md) e corresponde ao slot 20 da tabela de métodos virtuais.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Cabeçalho:** Nenhum  
-**Biblioteca:** Nenhum  
-**Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Cabeçalho:** None  
+**Biblioteca:** None  
+**.NET Framework versões:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Depuração](index.md)
 - [Interface IXCLRDataMethodInstance](ixclrdatamethodinstance-interface.md)

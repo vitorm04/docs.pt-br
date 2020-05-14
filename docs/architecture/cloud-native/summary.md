@@ -2,12 +2,12 @@
 title: Resumo
 description: Um resumo das principais conclusões da arquitetura de aplicativos .NET nativos da nuvem para o guia do Azure/livro eletrônico.
 ms.date: 04/29/2020
-ms.openlocfilehash: 97f20771aae73ed88d2dadefa7ba89d64eb62fcd
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 8cad8df1f69e159caf88d3ee119278dff8726385
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82899692"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395317"
 ---
 # <a name="summary"></a>Resumo
 
@@ -17,11 +17,11 @@ Em resumo, aqui estão as conclusões importantes deste guia:
 
 - A **CNCF ( [nuvem Native Computing Foundation](https://www.cncf.io/) )** é um consórcio de código aberto influente de mais de 300 corporações principais. É responsável por conduzir a adoção de computação nativa de nuvem em pilhas de tecnologia e nuvem.
 
-- As **diretrizes de CNCF** recomendam que os aplicativos nativos de nuvem adotem seis pilares importantes, como mostra a Figura 12-1:
+- As **diretrizes de CNCF** recomendam que os aplicativos nativos de nuvem adotem seis pilares importantes, como mostra a Figura 11-1:
 
   ![Pilares básicos nativos da nuvem](./media/cloud-native-foundational-pillars.png)
 
-  **Figura 12-1**. Pilares básicos nativos da nuvem
+  **Figura 11-1**. Pilares básicos nativos da nuvem
 
 - Esses pilares nativos de nuvem incluem:
   - A nuvem e seu modelo de serviço subjacente
@@ -45,7 +45,7 @@ Em resumo, aqui estão as conclusões importantes deste guia:
 
 - A **resiliência** é a capacidade do seu sistema de reagir à falha e ainda continuar funcionando. Os sistemas nativos de nuvem adotam a arquitetura distribuída onde a falha é inevitável. Os aplicativos devem ser construídos para responder de forma elegante à falha e retornar rapidamente a um estado totalmente funcional.
 
-- As **malhas de serviço** são uma camada de infraestrutura configurável com recursos internos para lidar com a comunicação do serviço e com outros desafios abrangentes. Eles descombinam responsabilidades de seu código comercial. Essas responsabilidades se movem para um proxy de serviço. Conhecido como o `Sidecar pattern`, o proxy é implantado em um processo separado para fornecer isolamento do seu código comercial.
+- As **malhas de serviço** são uma camada de infraestrutura configurável com recursos internos para lidar com a comunicação do serviço e com outros desafios abrangentes. Eles descombinam responsabilidades de seu código comercial. Essas responsabilidades se movem para um proxy de serviço. Conhecido como o `Sidecar pattern` , o proxy é implantado em um processo separado para fornecer isolamento do seu código comercial.
 
 - A **Observação** é uma consideração de design importante para aplicativos nativos de nuvem. À medida que os serviços são distribuídos em um cluster de nós, o registro em log centralizado, o monitoramento e os alertas tornam-se obrigatórios. Azure Monitor é uma coleção de ferramentas baseadas em nuvem projetadas para fornecer visibilidade do estado do seu sistema.
 

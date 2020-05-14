@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-ms.openlocfilehash: 6484832e8e737b9a0d0b3eaf3ede4078729f7a4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c1b18f24fd30b5f6d5e85633fc0c25839aba6df
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178432"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396416"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>Método ICoreClrDebugTarget::EnumProcesses
 Enumera os processos que estão sendo executados em um computador remoto.  
@@ -36,35 +36,35 @@ HRESULT EnumProcesses (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pcProcs`  
- [fora] O número de processos `ppProcs`retornados em . Este valor pode ser 0 (zero).  
+ fora O número de processos retornados em `ppProcs` . Esse valor pode ser 0 (zero).  
   
  `ppProcs`  
- [fora] Um conjunto de estruturas [CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md) que representam os processos em execução no computador remoto.  
+ fora Uma matriz de estruturas [CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md) que representam os processos em execução no computador remoto.  
   
 ## <a name="return-value"></a>Valor retornado  
  S_OK  
- Sucesso.  
+ Êxito.  
   
  E_OUTOFMEMORY  
- Não é possível `ppProcs`alocar memória suficiente para .  
+ Não é possível alocar memória suficiente para `ppProcs` .  
   
- E_FAIL (ou outros códigos de retorno E_)  
+ E_FAIL (ou outros códigos de retorno de E_)  
  Outras falhas.  
   
 ## <a name="remarks"></a>Comentários  
- Para liberar a memória alocada por este método, ligue para o [método ICoreClrDebugTarget:::FreeMemory](icoreclrdebugtarget-freememory-method.md) method.  
+ Para liberar a memória que foi alocada por esse método, chame o método [ICoreClrDebugTarget:: freememory](icoreclrdebugtarget-freememory-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** CoreClrRemoteDebuggingInterfaces.h  
+ **Cabeçalho:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Biblioteca:** mscordbi_macx86.dll  
+ **Biblioteca:** mscordbi_macx86. dll  
   
- **.NET Framework Versões:** 3.5 SP1  
+ **Versões do .NET Framework:** 3,5 SP1  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Interface ICoreClrDebugTarget](icoreclrdebugtarget-interface.md)

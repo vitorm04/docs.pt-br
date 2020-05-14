@@ -16,30 +16,30 @@ helpviewer_keywords:
 ms.assetid: 76f2bf3b-759f-4eed-bce7-119415b25915
 topic_type:
 - apiref
-ms.openlocfilehash: c347346c9157fea843527c662e26ffcfba22ace4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: caf6a24207be98be9afb10be2bd027b51405fa3b
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790961"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396548"
 ---
 # <a name="icordebugvariablehome-interface"></a>Interface ICorDebugVariableHome
 Representa uma variável local ou um argumento de uma função.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
 |[Método GetArgumentIndex](icordebugvariablehome-getargumentindex-method.md)|Obtém o índice de um argumento de função.|  
-|[Método GetCode](icordebugvariablehome-getcode-method.md)|Obtém a instância "ICorDebugCode" que contém este objeto de `ICorDebugVariableHome`.|  
+|[Método GetCode](icordebugvariablehome-getcode-method.md)|Obtém a instância "ICorDebugCode" que contém este `ICorDebugVariableHome` objeto.|  
 |[Método GetLiveRange](icordebugvariablehome-getliverange-method.md)|Obtém o intervalo nativo no qual essa variável está ativa.|  
 |[Método GetLocationType](icordebugvariablehome-getlocationtype-method.md)|Obtém o tipo do local nativo da variável.|  
 |[Método GetOffset](icordebugvariablehome-getoffset-method.md)|Obtém o deslocamento do registro base de uma variável.|  
-|[Método GetRegister](icordebugvariablehome-getregister-method.md)|Obtém o registro que contém uma variável com um tipo de local de `VLT_REGISTER`e o registro base para uma variável com um tipo de local de `VLT_REGISTER_RELATIVE`.|  
+|[Método GetRegister](icordebugvariablehome-getregister-method.md)|Obtém o registro que contém uma variável com um tipo de local de `VLT_REGISTER` e o registro base para uma variável com um tipo de local de `VLT_REGISTER_RELATIVE` .|  
 |[Método GetSlotIndex](icordebugvariablehome-getslotindex-method.md)|Obtém o índice de slot gerenciado de uma variável local.|  
   
 ## <a name="example"></a>Exemplo  
- O fragmento de código a seguir usa o objeto [ICorDebugCode4](icordebugcode4-interface.md) chamado `pCode4`.  
+ O fragmento de código a seguir usa o objeto [ICorDebugCode4](icordebugcode4-interface.md) chamado `pCode4` .  
   
 ```cpp  
 ICorDebugCode4 *pCode4 = NULL;  
@@ -80,14 +80,14 @@ for (int i = 0; i < celtFetched; i++)
 }  
 ```  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Veja também
 

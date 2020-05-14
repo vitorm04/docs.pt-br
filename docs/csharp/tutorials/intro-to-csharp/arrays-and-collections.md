@@ -3,18 +3,18 @@ title: Trabalhar com coleções – Introdução ao tutorial do C#
 description: Aprenda C# explorando a Coleção de lista neste tutorial.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 554a4601157a7d4b873c22a46ee72b6601fc36d7
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c99f5582702120db238de1206de42d964837cdbd
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635659"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396887"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Saiba como gerenciar coleções de dados usando o tipo de lista genérico
 
 Este tutorial de introdução fornece uma introdução à linguagem C# e os conceitos básicos da classe <xref:System.Collections.Generic.List%601>.
 
-Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tutorial .NET [Hello World em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local no Windows, Linux ou macOS. Uma visão geral de comandos que você usará está em [Familiarizar-se com as ferramentas de desenvolvimento](local-environment.md), com links para obter mais detalhes.
+Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tutorial do .NET [Olá, mundo em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local no Windows, Linux ou MacOS. Uma visão geral de comandos que você usará está em [Familiarizar-se com as ferramentas de desenvolvimento](local-environment.md), com links para obter mais detalhes.
 
 ## <a name="a-basic-list-example"></a>Um exemplo de lista básica
 
@@ -86,7 +86,7 @@ Salve o arquivo e digite `dotnet run` novamente para ver os resultados.
 
 ## <a name="search-and-sort-lists"></a>Pesquisar e classificar listas
 
-Nossos exemplos usam listas relativamente pequenas, mas seus aplicativos podem criar listas com muitos outros elementos, chegando, às vezes, a milhares. Para localizar elementos nessas coleções maiores, pesquise por itens diferentes na lista. O método <xref:System.Collections.Generic.List%601.IndexOf%2A> procura um item e retorna o índice do item. Adicione este código à parte inferior de seu método `Main`:
+Nossos exemplos usam listas relativamente pequenas, mas seus aplicativos podem criar listas com muitos outros elementos, chegando, às vezes, a milhares. Para localizar elementos nessas coleções maiores, pesquise por itens diferentes na lista. O método <xref:System.Collections.Generic.List%601.IndexOf%2A> procura um item e retorna o índice do item. Se o item não estiver na lista, `IndexOf` retornará `-1` . Adicione este código à parte inferior de seu método `Main`:
 
 ```csharp
 var index = names.IndexOf("Felipe");
@@ -111,7 +111,7 @@ else
 }
 ```
 
-Os itens em sua lista também podem ser classificados. O método <xref:System.Collections.Generic.List%601.Sort%2A> classifica todos os itens na lista na ordem normal (em ordem alfabética, no caso de cadeias de caracteres). Adicione este código à parte inferior de nosso método `Main`:
+Os itens em sua lista também podem ser classificados. O <xref:System.Collections.Generic.List%601.Sort%2A> método classifica todos os itens na lista em sua ordem normal (em ordem alfabética para cadeias de caracteres). Adicione este código à parte inferior de nosso método `Main`:
 
 ```csharp
 names.Sort();
@@ -123,7 +123,7 @@ foreach (var name in names)
 
 Salve o arquivo e digite `dotnet run` para experimentar a versão mais recente.
 
-Antes de iniciar a próxima seção, vamos passar o código atual para um método separado. Isso facilita o começo do trabalho com um exemplo novo. Renomeie seu método `Main` como `WorkingWithStrings` e escreva um novo método `Main` que chama `WorkingWithStrings`. Quando você terminar, seu código deverá parecer com isto:
+Antes de iniciar a próxima seção, vamos passar o código atual para um método separado. Isso facilita o começo do trabalho com um exemplo novo. Renomeie seu método `Main` como `WorkingWithStrings` e escreva um novo método `Main` que chama `WorkingWithStrings`. Quando você terminar, seu código deverá ter esta aparência:
 
 ```csharp
 using System;
@@ -230,4 +230,4 @@ Com cada iteração do loop, você está pegando os últimos dois inteiros na li
 
 Parabéns, você concluiu o tutorial de lista. Continue com o tutorial [Introdução às classes](introduction-to-classes.md) em seu próprio ambiente de desenvolvimento.
 
-Você pode aprender mais `List` sobre como trabalhar com o tipo no artigo do [guia .NET](../../../standard/index.yml) sobre [coleções](../../../standard/collections/index.md). Você também aprenderá muitos outros tipos de coleção.
+Você pode aprender mais sobre como trabalhar com o `List` tipo no artigo [guia .net](../../../standard/index.yml) em [coleções](../../../standard/collections/index.md). Você também aprenderá muitos outros tipos de coleção.

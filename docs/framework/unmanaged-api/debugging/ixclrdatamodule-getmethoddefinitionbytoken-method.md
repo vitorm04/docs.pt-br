@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataModule::GetMethodDefinitionByToken Method
+title: 'Método IXCLRDataModule:: GetMethodDefinitionByToken'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::GetMethodDefinitionByToken Method
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 294c5340caf2217f9337d654a11a63a43d46febd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c70920205b27376d453bdd0a13223c6a5569075b
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176663"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395289"
 ---
-# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLRDataModule::GetMethodDefinitionByToken Method
+# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>Método IXCLRDataModule:: GetMethodDefinitionByToken
 
 Obtém a definição do método correspondente a um determinado token de metadados.
 
@@ -37,26 +37,26 @@ HRESULT GetMethodDefinitionByToken(
 );
 ```
 
-## <a name="parameters"></a>parâmetros
+## <a name="parameters"></a>Parâmetros
 
 `token`\
-[em] O token do método.
+no O token do método.
 
 `methodDefinition`\
-[fora] A definição do método.
+fora A definição do método.
 
 ## <a name="remarks"></a>Comentários
 
-O método fornecido faz `IXCLRDataModule` parte da interface e corresponde ao 25º slot da tabela de métodos virtuais.
+O método fornecido faz parte da `IXCLRDataModule` interface e corresponde ao slot 26 da tabela de métodos virtuais.
 
 ## <a name="requirements"></a>Requisitos
 
 **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Cabeçalho:** Nenhum  
-**Biblioteca:** Nenhum  
-**.NET Framework Versions:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Cabeçalho:** None  
+**Biblioteca:** None  
+**.NET Framework versões:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Depuração](index.md)
 - [Interface IXCLRDataModule](ixclrdatamodule-interface.md)

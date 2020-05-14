@@ -4,12 +4,12 @@ description: Saiba mais sobre indexadores C# e como implementar propriedades ind
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 8e583b8a7cedab61ea6fdd56587608907610b6b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e9b1cb18157982f068f1c1e4546e637f2bd707cb
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79145678"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394693"
 ---
 # <a name="indexers"></a>Indexadores
 
@@ -313,7 +313,7 @@ public class HistoricalWeatherData
 
 Este exemplo cria um indexador que mapeia dados meteorológicos de dois argumentos diferentes: uma cidade (representada por uma `string`) e uma data (representada por uma `DateTime`). O armazenamento interno usa duas classes `Dictionary` para representar o dicionário bidimensional. A API pública não representa mais o armazenamento subjacente. Em vez disso, os recursos de linguagem dos indexadores permite que você crie uma interface pública que representa a sua abstração, mesmo que o armazenamento subjacente deva usar diferentes tipos principais de coleção.
 
-Há duas partes desse código que podem não ser familiares para alguns desenvolvedores. Essas duas instruções `using`:
+Há duas partes desse código que podem não ser familiares para alguns desenvolvedores. Essas duas `using` diretivas:
 
 ```csharp
 using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>;
@@ -323,10 +323,10 @@ using CityDataMeasurements = System.Collections.Generic.Dictionary<string, Syste
 criam um *alias* para um tipo genérico construído. Essas instruções habilitam o código a usar, mais adiante, os nomes `DateMeasurements` e `CityDateMeasurements` mais descritivos, em vez da construção genérica de `Dictionary<DateTime, Measurements>` e `Dictionary<string, Dictionary<DateTime, Measurements> >`.
 Esse constructo exige o uso de nomes de tipo totalmente qualificados no lado direito do sinal `=`.
 
-A segunda técnica é para remover as partes de hora de qualquer objeto `DateTime` usado para indexar na coleção. .NET não inclui um tipo somente de data.
+A segunda técnica é para remover as partes de hora de qualquer objeto `DateTime` usado para indexar na coleção. O .NET não inclui um tipo somente de data.
 Os desenvolvedores usam o tipo `DateTime`, mas usam a propriedade `Date` para garantir que qualquer objeto `DateTime` daquele dia sejam iguais.
 
 ## <a name="summing-up"></a>Resumindo
 
 Você deve criar indexadores sempre que tiver um elemento semelhante a uma propriedade em sua classe, em que essa propriedade representa não um único valor, mas uma coleção de valores em que cada item individual é identificado por um conjunto de argumentos. Esses argumentos podem identificar exclusivamente qual item da coleção deve ser referenciado.
-Os indexadores estendem o conceito de [propriedades,](properties.md)onde um membro é tratado como um item de dados de fora da classe, mas como um método no interior. Os indexadores permitem que os argumentos localizem um único item em uma propriedade que representa um conjunto de itens.
+Os indexadores estendem o conceito de [Propriedades](properties.md), em que um membro é tratado como um item de dados de fora da classe, mas como um método no interior. Os indexadores permitem que os argumentos localizem um único item em uma propriedade que representa um conjunto de itens.

@@ -14,31 +14,31 @@ helpviewer_keywords:
 ms.assetid: 87c4fcb2-7703-4a2e-afb6-42973381b960
 topic_type:
 - apiref
-ms.openlocfilehash: c4a24d879ebd9e8813ea0ac4597818569f4ae6fa
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1bd2f537cfa6a27c24ba91ea7caa29dc9e71a74e
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790722"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396319"
 ---
 # <a name="icorpublish-interface"></a>Interface ICorPublish
 O serve como interface geral para publicar informações sobre processos e informações sobre os domínios de aplicativo nesses processos.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
 |[Método EnumProcesses](icorpublish-enumprocesses-method.md)|Obtém uma instância de [ICorPublishProcessEnum](icorpublishprocessenum-interface.md) que contém os processos gerenciados em execução neste computador.|  
 |[Método GetProcess](icorpublish-getprocess-method.md)|Obtém uma instância de [ICorPublishProcess](icorpublishprocess-interface.md) que representa o processo com o identificador especificado.|  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Veja também
 

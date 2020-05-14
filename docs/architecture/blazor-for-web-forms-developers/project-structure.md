@@ -1,27 +1,27 @@
 ---
-title: Estrutura do projeto para aplicativos Blazor
-description: Saiba como as estruturas de projetos de ASP.NET Web Forms e projetos Blazor se comparam.
+title: Estrutura do projeto para aplicativos mais Incrivelmenteos
+description: Saiba como as estruturas de projeto dos projetos ASP.NET Web Forms e mais incrivelmente comparam.
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 2c383e86ff22f5a3460476998992b66e9417cc11
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e622663bedce13c93b8d72f5a699d076e8139b7
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401574"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394775"
 ---
-# <a name="project-structure-for-blazor-apps"></a>Estrutura do projeto para aplicativos Blazor
+# <a name="project-structure-for-blazor-apps"></a>Estrutura do projeto para aplicativos mais Incrivelmenteos
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Apesar de suas diferenças significativas na estrutura do projeto, ASP.NET Web Forms e Blazor compartilham muitos conceitos semelhantes. Aqui, vamos olhar para a estrutura de um projeto Blazor e compará-lo com um projeto ASP.NET Web Forms.
+Apesar das diferenças significativas na estrutura do projeto, o ASP.NET Web Forms e o mais grande compartilhamento são muitos conceitos semelhantes. Aqui, vamos examinar a estrutura de um projeto mais claro e compará-lo a um projeto ASP.NET Web Forms.
 
-Para criar seu primeiro aplicativo Blazor, siga as instruções no [Blazor iniciando](/aspnet/core/blazor/get-started)os passos . Você pode seguir as instruções para criar um aplicativo Blazor Server ou um aplicativo Blazor WebAssembly hospedado em ASP.NET Core. Com exceção da lógica específica do modelo de hospedagem, a maior parte do código em ambos os projetos é a mesma.
+Para criar seu primeiro aplicativo mais incrivelmente, siga as instruções nas [etapas de introdução](/aspnet/core/blazor/get-started)do mais ou mais. Você pode seguir as instruções para criar um aplicativo de servidor mais incrivelmente ou um aplicativo Webassembly mais incrivelmente hospedado no ASP.NET Core. Exceto para a lógica específica do modelo de hospedagem, a maior parte do código em ambos os projetos é a mesma.
 
 ## <a name="project-file"></a>Arquivo de projeto
 
-Os aplicativos Blazor Server são projetos .NET Core. O arquivo de projeto para o aplicativo Blazor Server é o mais simples possível:
+Os aplicativos de servidor de mais incrivelmente são projetos .NET Core. O arquivo de projeto para o aplicativo de servidor mais incrivelmente é tão simples quanto pode ser:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
@@ -33,7 +33,7 @@ Os aplicativos Blazor Server são projetos .NET Core. O arquivo de projeto para 
 </Project>
 ```
 
-O arquivo de projeto de um aplicativo Blazor WebAssembly parece um pouco mais envolvido (números exatos de versão podem variar):
+O arquivo de projeto para um aplicativo Webassembly mais complicado parece um pouco mais envolvido (números de versão exatas podem variar):
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
@@ -57,11 +57,11 @@ O arquivo de projeto de um aplicativo Blazor WebAssembly parece um pouco mais en
 </Project>
 ```
 
-O Blazor WebAssembly projeta o padrão .NET em vez do .NET Core porque eles são executados no navegador em um tempo de execução .NET baseado no WebAssembly. Você não pode instalar o .NET em um navegador da Web como pode em um servidor ou máquina de desenvolvedor. Consequentemente, o projeto faz referência à estrutura blazor utilizando referências individuais de pacotes.
+Os projetos Webassembly de mais alto-alvo .NET Standard em vez do .NET Core porque eles são executados no navegador em um tempo de execução .NET baseado em Webassembly. Você não pode instalar o .NET em um navegador da Web como você pode em um computador de servidor ou de desenvolvedor. Consequentemente, o projeto faz referência à estrutura mais Incrivelmentea usando referências de pacote individuais.
 
-Em comparação, um projeto padrão ASP.NET Web Forms inclui quase 300 linhas de XML em seu arquivo *.csproj,* a maioria das quais está listando explicitamente os vários arquivos de código e conteúdo no projeto. Muitas das simplificações nos projetos baseados em .NET Core e .NET Standard vêm das `Microsoft.NET.Sdk.Web` metas e propriedades padrão importadas por meio de referência ao SDK, muitas vezes referido simplesmente como Web SDK. O Web SDK inclui curingas e outras conveniências que simplificam a inclusão de arquivos de código e conteúdo no projeto. Você não precisa listar os arquivos explicitamente. Ao direcionar o .NET Core, o Web SDK também adiciona referências de estrutura aos frameworks compartilhados .NET Core e ASP.NET Core. As estruturas são visíveis do nó **Dependencies** > **Frameworks** na janela **Solution Explorer.** As estruturas compartilhadas são coleções de conjuntos que foram instalados na máquina ao instalar o .NET Core.
+Por comparação, um projeto ASP.NET Web Forms padrão inclui quase 300 linhas de XML em seu arquivo *. csproj* , a maior parte deles está listando explicitamente os vários arquivos de código e conteúdo no projeto. Muitas das simplificações dos projetos baseados no .NET Core e no .NET Standard são provenientes dos destinos e das propriedades padrão importadas referenciando o `Microsoft.NET.Sdk.Web` SDK, geralmente conhecido como simplesmente o SDK da Web. O SDK da Web inclui curingas e outras conveniências que simplificam a inclusão de código e arquivos de conteúdo no projeto. Você não precisa listar os arquivos explicitamente. Ao direcionar o .NET Core, o Web SDK também adiciona referências de estrutura às estruturas compartilhadas do .NET Core e do ASP.NET Core. As estruturas são visíveis no nó de estruturas de **dependências**  >  **Frameworks** na janela **Gerenciador de soluções** . As estruturas compartilhadas são coleções de assemblies que foram instalados no computador durante a instalação do .NET Core.
 
-Embora sejam suportadas, referências individuais de montagem são menos comuns em projetos do .NET Core. A maioria das dependências do projeto são tratadas como referências de pacote NuGet. Você só precisa fazer referência a dependências de pacotes de nível superior em projetos .NET Core. Dependências transitivas são incluídas automaticamente. Em vez de usar o arquivo *packages.config* comumente encontrado em ASP.NET projetos da Web Forms `<PackageReference>` para referenciar pacotes, as referências do pacote são adicionadas ao arquivo do projeto usando o elemento.
+Embora eles tenham suporte, as referências de assembly individuais são menos comuns em projetos do .NET Core. A maioria das dependências do projeto é tratada como referências de pacote NuGet. Você só precisa referenciar as dependências de pacote de nível superior em projetos do .NET Core. Dependências transitivas são incluídas automaticamente. Em vez de usar o arquivo *Packages. config* normalmente encontrado em ASP.NET Web Forms projetos para referenciar pacotes, as referências de pacote são adicionadas ao arquivo de projeto usando o `<PackageReference>` elemento.
 
 ```xml
 <ItemGroup>
@@ -71,7 +71,7 @@ Embora sejam suportadas, referências individuais de montagem são menos comuns 
 
 ## <a name="entry-point"></a>Ponto de entrada
 
-O ponto de entrada do aplicativo Blazor Server é definido no arquivo *Program.cs,* como você veria em um aplicativo console. Quando o aplicativo é executado, ele cria e executa uma instância de host da Web usando padrões específicos para aplicativos web. O host web gerencia o ciclo de vida do aplicativo Blazor Server e configura serviços de nível host. Exemplos desses serviços são configuração, registro, injeção de dependência e servidor HTTP. Este código é principalmente caldeira e muitas vezes é deixado inalterado.
+O ponto de entrada do aplicativo de servidor mais incrivelmente é definido no arquivo *Program.cs* , como você veria em um aplicativo de console. Quando o aplicativo é executado, ele cria e executa uma instância de host Web usando padrões específicos para aplicativos Web. O host da Web gerencia o ciclo de vida do aplicativo de servidor mais novo e configura os serviços de nível de host. Exemplos desses serviços são configuração, registro em log, injeção de dependência e o servidor HTTP. Esse código é basicamente clichê e, muitas vezes, permanece inalterado.
 
 ```csharp
 public class Program
@@ -90,17 +90,17 @@ public class Program
 }
 ```
 
-Os aplicativos Blazor WebAssembly também definem um ponto de entrada no *Program.cs*. O código parece um pouco diferente. O código é semelhante na forma de configurar o host do aplicativo para fornecer os mesmos serviços de nível de host para o aplicativo. No entanto, o host do aplicativo WebAssembly não configura um servidor HTTP porque ele é executado diretamente no navegador.
+Os aplicativos Webassembly mais incrivelmente também definem um ponto de entrada em *Program.cs*. O código parece um pouco diferente. O código é semelhante, pois está configurando o host de aplicativo para fornecer os mesmos serviços de nível de host para o aplicativo. No entanto, o host do aplicativo Webassembly não configura um servidor HTTP porque ele é executado diretamente no navegador.
 
-Os aplicativos Blazor têm uma `Startup` classe em vez de um arquivo *Global.asax* para definir a lógica de inicialização do aplicativo. A `Startup` classe é usada para configurar o aplicativo e quaisquer serviços específicos do aplicativo. No aplicativo Blazor Server, a `Startup` classe é usada para configurar o ponto final para a conexão em tempo real usada pelo Blazor entre os navegadores clientes e o servidor. No aplicativo Blazor WebAssembly, a `Startup` classe define os componentes raiz para o aplicativo e onde eles devem ser renderizados. Vamos dar uma olhada mais `Startup` profunda na classe na seção [de inicialização](./app-startup.md) do App.
+Os aplicativos mais poseriais têm uma `Startup` classe em vez de um arquivo *global. asax* para definir a lógica de inicialização para o aplicativo. A `Startup` classe é usada para configurar o aplicativo e quaisquer serviços específicos do aplicativo. No aplicativo de servidor mais grande, a `Startup` classe é usada para configurar o ponto de extremidade para a conexão em tempo real usada pelo mais alto nível entre os navegadores do cliente e o servidor. No aplicativo Webassembly mais incrivelmente, a `Startup` classe define os componentes raiz para o aplicativo e onde eles devem ser renderizados. Vamos dar uma olhada mais detalhada na `Startup` classe na seção de [inicialização do aplicativo](./app-startup.md) .
 
 ## <a name="static-files"></a>Arquivos estáticos
 
-Ao contrário ASP.NET projetos web forms, nem todos os arquivos em um projeto Blazor podem ser solicitados como arquivos estáticos. Apenas os arquivos na pasta *wwwroot* são endereçados à Web. Esta pasta é referida à "raiz web" do aplicativo. Qualquer coisa fora da raiz da Web do aplicativo *não pode ser* endereçada pela Web. Essa configuração fornece um nível adicional de segurança que impede a exposição acidental de arquivos de projeto pela Web.
+Ao contrário dos projetos do ASP.NET Web Forms, nem todos os arquivos em um projeto mais incrivelmente podem ser solicitados como arquivos estáticos. Somente os arquivos na pasta *wwwroot* são endereçáveis da Web. Essa pasta é referida na "raiz da Web" do aplicativo. Qualquer coisa fora da raiz da Web do aplicativo *não é* endereçável da Web. Essa configuração fornece um nível adicional de segurança que impede a exposição acidental de arquivos de projeto na Web.
 
 ## <a name="configuration"></a>Configuração
 
-A configuração em ASP.NET aplicativos web Forms é normalmente manuseada usando um ou mais arquivos *web.config.* Os aplicativos Blazor normalmente não têm arquivos *web.config.* Se o fizerem, o arquivo só será usado para configurar configurações específicas do IIS quando hospedado no IIS. Em vez disso, os aplicativos Blazor Server usam as abstrações de configuração ASP.NET Core (os aplicativos Blazor WebAssembly não suportam atualmente as mesmas abstrações de configuração, mas isso pode ser um recurso adicionado no futuro). Por exemplo, o aplicativo Padrão Blazor Server armazena algumas configurações em *appsettings.json*.
+A configuração no ASP.NET Web Forms aplicativos normalmente é manipulada usando um ou mais arquivos *Web. config* . Os aplicativos mais incrivelmente não normalmente têm arquivos *Web. config* . Se isso for feito, o arquivo será usado apenas para definir configurações específicas do IIS quando hospedado no IIS. Em vez disso, aplicativos de servidor mais poseriais usam as abstrações de configuração de ASP.NET Core (aplicativos Webassembly de maior destaque atualmente não dão suporte às mesmas abstrações de configuração, mas que podem ser um recurso adicionado no futuro). Por exemplo, o aplicativo de servidor padrão de mais incrivelmente armazena algumas configurações em *appSettings. JSON*.
 
 ```json
 {
@@ -115,15 +115,15 @@ A configuração em ASP.NET aplicativos web Forms é normalmente manuseada usand
 }
 ```
 
-Aprenderemos mais sobre configuração em projetos ASP.NET Core na seção [Configuração.](./config.md)
+Aprenderemos mais sobre a configuração em projetos ASP.NET Core na seção de [configuração](./config.md) .
 
-## <a name="razor-components"></a>Componentes de navalha
+## <a name="razor-components"></a>Componentes do Razor
 
-A maioria dos arquivos em projetos Blazor são *arquivos .razor.* Razor é uma linguagem templating baseada em HTML e C# que é usada para gerar dinamicamente a ui web. Os arquivos *.razor* definem componentes que compõem a ui do aplicativo. Na maioria das vezes, os componentes são idênticos tanto para os aplicativos Blazor Server quanto Blazor WebAssembly. Os componentes em Blazor são análogos aos controles do usuário em ASP.NET Formulários da Web.
+A maioria dos arquivos em projetos mais podestas são arquivos *. Razor* . O Razor é uma linguagem de modelagem baseada em HTML e em C# que é usada para gerar dinamicamente a interface do usuário da Web. Os arquivos *. Razor* definem componentes que compõem a interface do usuário do aplicativo. Para a maior parte, os componentes são idênticos tanto para os aplicativos do mais grande servidor quanto para o Webassembly. Os componentes do mais incrivelmente são análogos aos controles de usuário no ASP.NET Web Forms.
 
-Cada arquivo de componente Razor é compilado em uma classe .NET quando o projeto é construído. A classe gerada captura o estado do componente, renderizando lógica, métodos de ciclo de vida, manipuladores de eventos e outras lógicas. Vamos analisar os componentes de autoria dos componentes da [ui reutilizável do Edifício com](./components.md) a seção Blazor.
+Cada arquivo de componente do Razor é compilado em uma classe do .NET quando o projeto é compilado. A classe gerada captura o estado do componente, a lógica de renderização, os métodos de ciclo de vida, os manipuladores de eventos e outras lógicas. Veremos os componentes de criação na seção [criando componentes de interface do usuário reutilizáveis com mais capacidade](./components.md) .
 
-Os arquivos *_Imports.razor* não são arquivos de componentes do Razor. Em vez disso, eles definem um conjunto de diretivas razor para importar em outros arquivos *.razor* dentro da mesma pasta e em suas subpastas. Por exemplo, um arquivo *_Imports.razor* é `using` uma maneira convencional de adicionar instruções para espaços de nome comumente usados:
+Os arquivos *_Imports. Razor* não são arquivos de componente do Razor. Em vez disso, eles definem um conjunto de diretivas do Razor para importar para outros arquivos *. Razor* dentro da mesma pasta e em suas subpastas. Por exemplo, um arquivo *_Imports. Razor* é uma maneira convencional de adicionar `using` diretivas para namespaces comumente usados:
 
 ```razor
 @using System.Net.Http
@@ -137,40 +137,40 @@ Os arquivos *_Imports.razor* não são arquivos de componentes do Razor. Em vez 
 @using BlazorApp1.Shared
 ```
 
-## <a name="pages"></a>Pages (Páginas)
+## <a name="pages"></a>Páginas
 
-Onde estão as páginas dos aplicativos Blazor? O Blazor não define uma extensão de arquivo separada para páginas endereçadas, como os arquivos *.aspx* em ASP.NET aplicativos Web Forms. Em vez disso, as páginas são definidas atribuindo rotas aos componentes. Uma rota é tipicamente `@page` atribuída usando a diretiva Razor. Por exemplo, `Counter` o componente de autoria no arquivo *Páginas/Counter.razor* define a seguinte rota:
+Onde estão as páginas nos aplicativos mais incrivelmente? O mais incrivelmente não define uma extensão de arquivo separada para páginas endereçáveis, como os arquivos *. aspx* em ASP.NET Web Forms aplicativos. Em vez disso, as páginas são definidas por meio da atribuição de rotas a componentes. Uma rota é normalmente atribuída usando a `@page` diretiva Razor. Por exemplo, o `Counter` componente criado no arquivo *pages/Counter. Razor* define a seguinte rota:
 
 ```razor
 @page "/counter"
 ```
 
-O roteamento em Blazor é tratado do lado do cliente, não do servidor. À medida que o usuário navega no navegador, o Blazor intercepta a navegação e, em seguida, renderiza o componente com a rota correspondente.
+O roteamento no mais alto é tratado no lado do cliente, não no servidor. À medida que o usuário navega no navegador, o mais incrivelmente intercepta a navegação e, em seguida, renderiza o componente com a rota correspondente.
 
-No momento, as rotas de componentes não são inferidas pelo local de arquivo do componente como se estivessem com páginas *.aspx.* Esse recurso pode ser adicionado no futuro. Cada rota deve ser especificada explicitamente no componente. Armazenar componentes rotáveis em uma pasta *Páginas* não tem significado especial e é puramente uma convenção.
+As rotas de componentes não são inferidas no momento pelo local do arquivo do componente como estão com páginas *. aspx* . Esse recurso pode ser adicionado no futuro. Cada rota deve ser especificada explicitamente no componente. O armazenamento de componentes roteáveis em uma pasta de *páginas* não tem significado especial e é puramente uma convenção.
 
-Vamos olhar com mais detalhes no roteamento em Blazor nas [páginas, roteamento e](./pages-routing-layouts.md) seção de layouts.
+Veremos mais detalhadamente no roteamento do, na seção [páginas, roteamento e layouts](./pages-routing-layouts.md) .
 
 ## <a name="layout"></a>Layout
 
-Em ASP.NET aplicativos web forms, o layout de página comum é manipulado usando*páginas-mestre (Site.Master).* Nos aplicativos Blazor, o layout da página é manipulado usando componentes de layout *(Compartilhado/MainLayout.razor*). Os componentes do layout serão discutidos com mais detalhes na seção [Página, roteamento e layouts.](./pages-routing-layouts.md)
+No ASP.NET Web Forms aplicativos, o layout de página comum é manipulado usando páginas mestras (*site. Master*). Em aplicativos mais Incrivelmenteos, o layout da página é manipulado usando componentes de layout (*Shared/MainLayout. Razor*). Os componentes de layout serão discutidos em mais detalhes na seção [página, roteamento e layouts](./pages-routing-layouts.md) .
 
-## <a name="bootstrap-blazor"></a>Bootstrap Blazor
+## <a name="bootstrap-blazor"></a>Mais incrivelmente
 
-Para bootstrap Blazor, o aplicativo deve:
+Para a inicialização mais incrivelmente, o aplicativo deve:
 
-- Especifique onde na página o componente raiz *(App.Razor)* deve ser renderizado.
-- Adicione o script de estrutura Blazor correspondente.
+- Especifique o local na página em que o componente raiz (*app. Razor*) deve ser renderizado.
+- Adicione o script de estrutura de mais incrivelmente correspondente.
 
-No aplicativo Blazor Server, a página de host do componente raiz é definida no arquivo *_Host.cshtml.* Este arquivo define uma página de navalha, não um componente. As páginas de barbear usam a sintaxe Razor para definir uma página endereçada ao servidor, muito parecida com uma página *.aspx.* O `Html.RenderComponentAsync<TComponent>(RenderMode)` método é usado para definir onde um componente de nível raiz deve ser renderizado. A `RenderMode` opção indica a forma como o componente deve ser renderizado. A tabela a seguir `RenderMode` descreve as opções suportadas.
+No aplicativo de servidor mais novo, a página host do componente raiz é definida no arquivo *_Host. cshtml* . Esse arquivo define uma página Razor, não um componente. Razor Pages usar sintaxe Razor para definir uma página endereçável do servidor, muito parecida com uma página *. aspx* . O `Html.RenderComponentAsync<TComponent>(RenderMode)` método é usado para definir onde um componente de nível raiz deve ser renderizado. A `RenderMode` opção indica a maneira como o componente deve ser renderizado. A tabela a seguir descreve as opções com suporte `RenderMode` .
 
 |Opção                        |Descrição       |
 |------------------------------|------------------|
-|`RenderMode.Server`           |Renderizado interativamente uma vez que uma conexão com o navegador é estabelecida|
-|`RenderMode.ServerPrerendered`|Primeiro pré-renderizado e, em seguida, renderizado interativamente|
+|`RenderMode.Server`           |Renderizado interativamente quando uma conexão com o navegador é estabelecida|
+|`RenderMode.ServerPrerendered`|Primeiro renderizado e, em seguida, renderizado interativamente|
 |`RenderMode.Static`           |Renderizado como conteúdo estático|
 
-A referência de script a *_framework/blazor.server.js* estabelece a conexão em tempo real com o servidor e, em seguida, lida com todas as interações do usuário e atualizações de IA.
+A referência de script para *_framework/blazor.Server.js* estabelece a conexão em tempo real com o servidor e, em seguida, lida com todas as interações do usuário e as atualizações da interface de usuário.
 
 ```razor
 @page "/"
@@ -197,7 +197,7 @@ A referência de script a *_framework/blazor.server.js* estabelece a conexão em
 </html>
 ```
 
-No aplicativo Blazor WebAssembly, a página host é um arquivo HTML estático simples *wwwroot/index.html*. O `<app>` elemento é usado para indicar onde o componente raiz deve ser renderizado.
+No aplicativo Webassembly mais novo, a página host é um arquivo HTML estático simples em *wwwroot/index.html*. O `<app>` elemento é usado para indicar onde o componente raiz deve ser renderizado.
 
 ```html
 <!DOCTYPE html>
@@ -218,7 +218,7 @@ No aplicativo Blazor WebAssembly, a página host é um arquivo HTML estático si
 </html>
 ```
 
-O componente específico a renderizar é `Startup.Configure` configurado no método do aplicativo com um seletor CSS correspondente indicando onde o componente deve ser renderizado.
+O componente específico a ser renderizado é configurado no método do aplicativo `Startup.Configure` com um seletor CSS correspondente, indicando onde o componente deve ser renderizado.
 
 ```csharp
 public class Startup
@@ -236,19 +236,19 @@ public class Startup
 
 ## <a name="build-output"></a>Saída do build
 
-Quando um projeto Blazor é construído, todos os arquivos de componente e código Razor são compilados em um único conjunto. Ao contrário ASP.NET projetos web forms, Blazor não suporta compilação em tempo de execução da lógica da IU.
+Quando um projeto mais elaborado é criado, todos os arquivos de componente e código do Razor são compilados em um único assembly. Diferente do ASP.NET Web Forms projetos, o mais claro não dá suporte à compilação em tempo de execução da lógica da interface do usuário.
 
 ## <a name="run-the-app"></a>Executar o aplicativo
 
-Para executar o aplicativo Blazor Server, pressione `F5` no Visual Studio. Os aplicativos Blazor não suportam compilação em tempo de execução. Para ver os resultados das alterações de marcação de código e componente, reconstrua e reinicie o aplicativo com o depurador conectado. Se você for executado sem`Ctrl+F5`o depurador conectado (), o Visual Studio assistirá para alterações de arquivo e reiniciará o aplicativo à medida que as alterações forem feitas. Você atualiza manualmente o navegador à medida que as alterações são feitas.
+Para executar o aplicativo de servidor mais incrivelmente, pressione `F5` no Visual Studio. Aplicativos mais incrivelmenteos não dão suporte à compilação em tempo de execução. Para ver os resultados das alterações de marcação de código e de componente, recompile e reinicie o aplicativo com o depurador anexado. Se você executar sem o depurador anexado ( `Ctrl+F5` ), o Visual Studio inspecionará as alterações de arquivo e reiniciará o aplicativo conforme as alterações forem feitas. Você atualiza manualmente o navegador conforme as alterações são feitas.
 
-Para executar o aplicativo Blazor WebAssembly, escolha uma das seguintes abordagens:
+Para executar o aplicativo Webassembly mais incrivelmente, escolha uma das seguintes abordagens:
 
 - Execute o projeto do cliente diretamente usando o servidor de desenvolvimento.
-- Execute o projeto do servidor ao hospedar o aplicativo com ASP.NET Core.
+- Execute o projeto de servidor ao hospedar o aplicativo com ASP.NET Core.
 
-Os aplicativos Blazor WebAssembly não suportam depuração usando o Visual Studio. Para executar o `Ctrl+F5` aplicativo, `F5`use em vez de . Em vez disso, você pode depurar aplicativos Blazor WebAssembly diretamente no navegador. Consulte [Debug ASP.NET Core Blazor](/aspnet/core/blazor/debug) para obter detalhes.
+Aplicativos Webassembly de mais de-estúdio não dão suporte à depuração usando o Visual Studio. Para executar o aplicativo, use `Ctrl+F5` em vez de `F5` . Em vez disso, você pode depurar aplicativos Webassembly mais incrivelmente diretamente no navegador. Consulte [depurar ASP.NET Core mais incrivelmente](/aspnet/core/blazor/debug) para obter detalhes.
 
 >[!div class="step-by-step"]
->[Próximo](hosting-models.md)
->[anterior](app-startup.md)
+>[Anterior](hosting-models.md) 
+> [Avançar](app-startup.md)

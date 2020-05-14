@@ -2,12 +2,12 @@
 title: Usando o Async para acessar arquivos (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: e6b0370049d9b9315de6a72d0e84c080aac12481
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8e0a62c2263ed3fd11eb4accb54978ef439ac010
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595539"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396957"
 ---
 # <a name="using-async-for-file-access-c"></a>Usando o Async para acessar arquivos (C#)
 Você pode usar o recurso async para acessar arquivos. Usando o recurso async, você pode chamar os métodos assíncronos sem usar retornos de chamada ou dividir seu código em vários métodos ou expressões lambda. Para tornar síncrono um código assíncrono, basta chamar um método assíncrono em vez de um método síncrono e adicionar algumas palavras-chave ao código.  
@@ -27,7 +27,7 @@ Você pode usar o recurso async para acessar arquivos. Usando o recurso async, v
 ## <a name="running-the-examples"></a>Executando os exemplos  
  Para executar os exemplos neste tópico, você pode criar um **Aplicativo WPF** ou um **Aplicativo do Windows Forms** e, em seguida, adicionar um **Botão**. No evento `Click` do botão, adicione uma chamada para o primeiro método em cada exemplo.  
   
- Nos exemplos a seguir, inclua as seguintes instruções `using`.  
+ Nos exemplos a seguir, inclua as seguintes `using` diretivas.  
   
 ```csharp  
 using System;  
@@ -174,8 +174,8 @@ public async Task ProcessWriteMultAsync()
   
  Ao usar os métodos <xref:System.IO.Stream.WriteAsync%2A> e <xref:System.IO.Stream.ReadAsync%2A>, você pode especificar um <xref:System.Threading.CancellationToken>, que pode ser usado para cancelar o fluxo intermediário da operação. Para obter mais informações, consulte [Ajuste fino de seu aplicativo assíncrono (C#)](./fine-tuning-your-async-application.md) e [Cancelamento em threads gerenciados](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Programação Assíncrona com assincronia e espera (C#)](./index.md)
+- [Programação assíncrona com Async e Await (C#)](./index.md)
 - [Tipos de retorno assíncronos (C#)](./async-return-types.md)
-- [Fluxo de Controle em Programas de Sincronização (C#)](./control-flow-in-async-programs.md)
+- [Fluxo de controle em programas assíncronos (C#)](./control-flow-in-async-programs.md)

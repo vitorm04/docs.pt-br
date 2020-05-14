@@ -1,5 +1,5 @@
 ---
-title: Método IXCLRDataModule::GetVersionId
+title: 'Método IXCLRDataModule:: getversionid'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::GetVersionId Method
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 5bd84f784ea92e7b2ce2465e64972dc84e16a16c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff8ccf42d1131fb15d7473ae12ecefde9d55177f
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744696"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395286"
 ---
-# <a name="ixclrdatamodulegetversionid-method"></a>Método IXCLRDataModule::GetVersionId
+# <a name="ixclrdatamodulegetversionid-method"></a>Método IXCLRDataModule:: getversionid
 
 Obtém o identificador de versão do módulo.
 
@@ -39,20 +39,20 @@ HRESULT GetVersionId(
 ## <a name="parameters"></a>Parâmetros
 
 `vid`\
-[out] Identificador de versão do módulo.
+fora O identificador de versão do módulo.
 
 ## <a name="remarks"></a>Comentários
 
-O método fornecido é parte do `IXCLRDataModule` de interface e corresponde ao slot 40th da tabela de método virtual.
+O método fornecido faz parte da `IXCLRDataModule` interface e corresponde ao slot 41 ª da tabela de métodos virtuais.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Cabeçalho:** Nenhum  
-**Biblioteca:** Nenhum  
-**Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Cabeçalho:** None  
+**Biblioteca:** None  
+**.NET Framework versões:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Depuração](index.md)
 - [Interface IXCLRDataModule](ixclrdatamodule-interface.md)

@@ -2,12 +2,12 @@
 title: 'Método ICorDebugVariableSymbol:: SetValue'
 ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
-ms.openlocfilehash: fe6b63e4c0706dd69478753b3512f606e73bee7c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 38afd355938ec1beb1dbfd33de36116d25b07b4e
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790848"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397070"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a>Método ICorDebugVariableSymbol:: SetValue
 Atribui o valor de uma matriz de bytes a uma variável.  
@@ -39,7 +39,7 @@ HRESULT SetValue(
  no O contexto de thread usado para gravar o valor.  
   
  `cbValue`  
- no O tamanho em bytes do buffer de `pValue`.  
+ no O tamanho em bytes do `pValue` buffer.  
   
  `pValue`  
  no O buffer que contém o valor a ser definido.  
@@ -49,14 +49,14 @@ HRESULT SetValue(
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Veja também
 

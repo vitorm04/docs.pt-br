@@ -3,20 +3,20 @@ title: Visão geral da ferramenta svcutil do WCF
 description: Uma visão geral da ferramenta Microsoft WCF dotnet-svcutil que adiciona funcionalidade a projetos do .NET Core e ASP.NET Core, semelhante à ferramenta WCF svcutil para projetos do .NET Framework.
 author: mlacouture
 ms.date: 02/22/2019
-ms.openlocfilehash: 1f500c9355112183a135c2b639807c7cd62fbbfc
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: fde42f7d040fba91f51ce6faa58282ed0206a853
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021260"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396214"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Ferramenta dotnet-svcutil do WCF para .NET Core
 
-A ferramenta **dotnet-svcutil** da Windows Communication Foundation (WCF) é uma ferramenta .NET que recupera metadados de um serviço web em um local de rede ou de um arquivo WSDL, e gera uma classe WCF contendo métodos de proxy do cliente que acessam as operações de serviço web.
+A ferramenta **dotnet-SvcUtil** do Windows Communication Foundation (WCF) é uma ferramenta .NET que recupera metadados de um serviço Web em um local de rede ou de um arquivo WSDL e gera uma classe WCF que contém métodos de proxy de cliente que acessam as operações de serviço Web.
 
 Semelhante à ferramenta [** Metadados de Modelo de Serviço - svcutil **](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para projetos .NET Framework, o **dotnet-svcutil** é uma ferramenta de linha de comando para gerar uma referência de serviço Web compatível com projetos .NET Core e .NET Standard.
 
-A ferramenta **dotnet-svcutil** é uma opção alternativa ao provedor de serviços conectados [**WCF Web Service Reference**](wcf-web-service-reference-guide.md) Visual Studio, que foi enviado pela primeira vez com o Visual Studio 2017 versão 15.5. A ferramenta **dotnet-svcutil** como uma ferramenta .NET, está disponível em plataforma sinuosa no Linux, macOS e Windows.
+A ferramenta **dotnet-SvcUtil** é uma opção alternativa para o provedor de serviços conectados do Visual Studio de [**referência do serviço Web WCF**](wcf-web-service-reference-guide.md) que foi fornecido pela primeira vez com o Visual Studio 2017 versão 15,5. A ferramenta **dotnet-SvcUtil** como uma ferramenta .net, está disponível entre plataformas no Linux, no MacOS e no Windows.
 
 > [!IMPORTANT]
 > Você só deve fazer referência a serviços de uma fonte confiável. A adição de referências de uma fonte não confiável pode comprometer a segurança.
@@ -27,7 +27,7 @@ A ferramenta **dotnet-svcutil** é uma opção alternativa ao provedor de servi�
 
 # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) ou versões posteriores
+- [SDK do .NET Core 2,1](https://dotnet.microsoft.com/download) ou versões posteriores
 - Seu editor de código favorito
 
 # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
@@ -61,7 +61,7 @@ Em uma janela de comandos do Windows, macOS ou Linux, execute as seguintes etapa
     cd HelloSvcutil
     ```
 
-2. Crie um novo projeto web C# [`dotnet new`](../tools/dotnet-new.md) nesse diretório usando o comando da seguinte forma:
+2. Crie um novo projeto Web C# nesse diretório usando o [`dotnet new`](../tools/dotnet-new.md) comando da seguinte maneira:
 
     ```dotnetcli
     dotnet new web
@@ -75,7 +75,7 @@ Em uma janela de comandos do Windows, macOS ou Linux, execute as seguintes etapa
     ```
 
     # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
-    Abra `HelloSvcutil.csproj` o arquivo de projeto `Project` em seu editor, edite o elemento e adicione o [ `dotnet-svcutil` pacote NuGet](https://nuget.org/packages/dotnet-svcutil) como referência de ferramenta CLI, usando o seguinte código:
+    Abra o `HelloSvcutil.csproj` arquivo de projeto no editor, edite o `Project` elemento e adicione o [ `dotnet-svcutil` pacote NuGet](https://nuget.org/packages/dotnet-svcutil) como uma referência de ferramenta da CLI, usando o seguinte código:
 
     ```xml
     <ItemGroup>
@@ -107,11 +107,11 @@ Em uma janela de comandos do Windows, macOS ou Linux, execute as seguintes etapa
 
     ---
 
-O arquivo gerado é salvo como _HelloSvcutil/ServiceReference/Reference.cs_. A ferramenta _dotnet-svcutil_ também adiciona ao projeto os pacotes WCF apropriados exigidos pelo código proxy como referências do pacote.
+O arquivo gerado é salvo como _HelloSvcutil/ServiceReference/Reference.cs_. A ferramenta _dotnet-SvcUtil_ também adiciona ao projeto os pacotes apropriados do WCF exigidos pelo código de proxy como referências de pacote.
 
 ## <a name="using-the-service-reference"></a>Usar a referência de serviço
 
-1. Restaurar os pacotes WCF usando o [`dotnet restore`](../tools/dotnet-restore.md) comando da seguinte forma:
+1. Restaure os pacotes do WCF usando o [`dotnet restore`](../tools/dotnet-restore.md) comando da seguinte maneira:
 
     ```dotnetcli
     dotnet restore
@@ -119,7 +119,7 @@ O arquivo gerado é salvo como _HelloSvcutil/ServiceReference/Reference.cs_. A f
 
 2. Localize o nome da classe do cliente e a operação que você deseja usar. `Reference.cs` conterá uma classe que herda de `System.ServiceModel.ClientBase`, com métodos que podem ser usados para chamar operações no serviço. Neste exemplo, você deseja chamar a operação _Hello_ do serviço _SayHello_. `ServiceReference.SayHelloClient` é o nome da classe do cliente e tem um método chamado `HelloAsync` que pode ser usado para chamar a operação.
 
-3. Abra o arquivo `Startup.cs` em seu editor e adicione uma instrução using para o namespace de referência de serviço na parte superior:
+3. Abra o `Startup.cs` arquivo no editor e adicione uma `using` diretiva para o namespace de referência de serviço na parte superior:
 
     ```csharp
     using ServiceReference;
@@ -145,7 +145,7 @@ O arquivo gerado é salvo como _HelloSvcutil/ServiceReference/Reference.cs_. A f
 
     ```
 
-5. Execute o aplicativo [`dotnet run`](../tools/dotnet-run.md) usando o comando da seguinte forma:
+5. Execute o aplicativo usando o [`dotnet run`](../tools/dotnet-run.md) comando da seguinte maneira:
 
     ```dotnetcli
     dotnet run
