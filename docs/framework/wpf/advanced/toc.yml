@@ -463,8 +463,7 @@
           href: localization-attributes-and-comments.md
         - name: Visão geral dos recursos bidirecionais no WPF
           href: bidirectional-features-in-wpf-overview.md
-        - name: Tópicos explicativos
-          href: globalization-and-localization-how-to-topics.md
+        - name: Instruções
           items:
             - name: Localizar um aplicativo
               href: how-to-localize-an-application.md
@@ -472,7 +471,7 @@
               href: how-to-use-automatic-layout-to-create-a-button.md
             - name: Usar uma grade para layout automático
               href: how-to-use-a-grid-for-automatic-layout.md
-            - name: Usar um ResourceDictionary para gerenciar recursos da cadeia de caracteres localizáveis
+            - name: Usar um ResourceDictionary para gerenciar recursos
               href: how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md
             - name: Usar recursos em aplicativos localizáveis
               href: how-to-use-resources-in-localizable-applications.md
