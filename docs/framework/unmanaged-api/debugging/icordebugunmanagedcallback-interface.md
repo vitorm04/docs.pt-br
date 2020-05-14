@@ -14,36 +14,36 @@ helpviewer_keywords:
 ms.assetid: bc71cbca-7d73-40e5-84dd-2109fade3c2a
 topic_type:
 - apiref
-ms.openlocfilehash: fdd2fee11e9353c3aa3faee2b137597e4ba47801
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: dd5baa282d15d121b62b4dc4dd41bcf9ff393570
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791178"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395876"
 ---
-# <a name="icordebugunmanagedcallback-interface"></a><span data-ttu-id="efd94-102">Interface ICorDebugUnmanagedCallback</span><span class="sxs-lookup"><span data-stu-id="efd94-102">ICorDebugUnmanagedCallback Interface</span></span>
-<span data-ttu-id="efd94-103">Fornece notificação de eventos nativos que não estão diretamente relacionados ao Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="efd94-103">Provides notification of native events that are not directly related to the common language runtime (CLR).</span></span>  
+# <a name="icordebugunmanagedcallback-interface"></a><span data-ttu-id="50e64-102">Interface ICorDebugUnmanagedCallback</span><span class="sxs-lookup"><span data-stu-id="50e64-102">ICorDebugUnmanagedCallback Interface</span></span>
+<span data-ttu-id="50e64-103">Fornece notificação de eventos nativos que não estão diretamente relacionados ao Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="50e64-103">Provides notification of native events that are not directly related to the common language runtime (CLR).</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="efd94-104">{1&gt;Métodos&lt;1}</span><span class="sxs-lookup"><span data-stu-id="efd94-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="50e64-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="50e64-104">Methods</span></span>  
   
-|<span data-ttu-id="efd94-105">Método</span><span class="sxs-lookup"><span data-stu-id="efd94-105">Method</span></span>|<span data-ttu-id="efd94-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="efd94-106">Description</span></span>|  
+|<span data-ttu-id="50e64-105">Método</span><span class="sxs-lookup"><span data-stu-id="50e64-105">Method</span></span>|<span data-ttu-id="50e64-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="50e64-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="efd94-107">Método DebugEvent</span><span class="sxs-lookup"><span data-stu-id="efd94-107">DebugEvent Method</span></span>](icordebugunmanagedcallback-debugevent-method.md)|<span data-ttu-id="efd94-108">Notifica o depurador de que um evento nativo foi acionado.</span><span class="sxs-lookup"><span data-stu-id="efd94-108">Notifies the debugger that a native event has been fired.</span></span>|  
+|[<span data-ttu-id="50e64-107">Método DebugEvent</span><span class="sxs-lookup"><span data-stu-id="50e64-107">DebugEvent Method</span></span>](icordebugunmanagedcallback-debugevent-method.md)|<span data-ttu-id="50e64-108">Notifica o depurador de que um evento nativo foi acionado.</span><span class="sxs-lookup"><span data-stu-id="50e64-108">Notifies the debugger that a native event has been fired.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="efd94-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="efd94-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="50e64-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="50e64-109">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="efd94-110">Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.</span><span class="sxs-lookup"><span data-stu-id="efd94-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="50e64-110">Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.</span><span class="sxs-lookup"><span data-stu-id="50e64-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="efd94-111">Requisitos do</span><span class="sxs-lookup"><span data-stu-id="efd94-111">Requirements</span></span>  
- <span data-ttu-id="efd94-112">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="efd94-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="50e64-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="50e64-111">Requirements</span></span>  
+ <span data-ttu-id="50e64-112">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="50e64-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="efd94-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="efd94-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="50e64-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="50e64-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="efd94-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="efd94-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="50e64-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="50e64-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="efd94-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="efd94-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="50e64-115">**.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="50e64-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="efd94-116">Veja também</span><span class="sxs-lookup"><span data-stu-id="efd94-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="50e64-116">Veja também</span><span class="sxs-lookup"><span data-stu-id="50e64-116">See also</span></span>
 
-- [<span data-ttu-id="efd94-117">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="efd94-117">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="50e64-117">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="50e64-117">Debugging Interfaces</span></span>](debugging-interfaces.md)

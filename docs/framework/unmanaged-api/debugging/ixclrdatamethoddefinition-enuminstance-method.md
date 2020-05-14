@@ -15,20 +15,20 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: b6393d7fa4853c230203521e665bbe89d7b228e2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 72560de9777b2d826418e63b4a4fcccf1e4fa8b9
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790436"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396475"
 ---
-# <a name="ixclrdatamethoddefinitionenuminstance-method"></a><span data-ttu-id="82757-102">Método IXCLRDataMethodDefinition:: EnumInstance</span><span class="sxs-lookup"><span data-stu-id="82757-102">IXCLRDataMethodDefinition::EnumInstance Method</span></span>
+# <a name="ixclrdatamethoddefinitionenuminstance-method"></a><span data-ttu-id="de3ad-102">Método IXCLRDataMethodDefinition:: EnumInstance</span><span class="sxs-lookup"><span data-stu-id="de3ad-102">IXCLRDataMethodDefinition::EnumInstance Method</span></span>
 
-<span data-ttu-id="82757-103">Enumera as instâncias desta definição de método.</span><span class="sxs-lookup"><span data-stu-id="82757-103">Enumerates the instances of this method definition.</span></span>
+<span data-ttu-id="de3ad-103">Enumera as instâncias desta definição de método.</span><span class="sxs-lookup"><span data-stu-id="de3ad-103">Enumerates the instances of this method definition.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="82757-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="82757-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="de3ad-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="de3ad-104">Syntax</span></span>
 
 ```cpp
 HRESULT EnumInstance(
@@ -37,28 +37,28 @@ HRESULT EnumInstance(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="82757-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="82757-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="de3ad-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="de3ad-105">Parameters</span></span>
 
 `handle`\
-<span data-ttu-id="82757-106">[entrada, saída] Um identificador para enumerar as instâncias.</span><span class="sxs-lookup"><span data-stu-id="82757-106">[in, out] A handle for enumerating the instances.</span></span>
+<span data-ttu-id="de3ad-106">[entrada, saída] Um identificador para enumerar as instâncias.</span><span class="sxs-lookup"><span data-stu-id="de3ad-106">[in, out] A handle for enumerating the instances.</span></span>
 
 `instance`\
-<span data-ttu-id="82757-107">fora A instância enumerada.</span><span class="sxs-lookup"><span data-stu-id="82757-107">[out] The enumerated instance.</span></span>
+<span data-ttu-id="de3ad-107">fora A instância enumerada.</span><span class="sxs-lookup"><span data-stu-id="de3ad-107">[out] The enumerated instance.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="82757-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="82757-108">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="de3ad-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="de3ad-108">Remarks</span></span>
 
-<span data-ttu-id="82757-109">O método fornecido faz parte da interface de `IXCLRDataMethodDefinition` e corresponde ao quarto slot da tabela de métodos virtuais.</span><span class="sxs-lookup"><span data-stu-id="82757-109">The provided method is part of the `IXCLRDataMethodDefinition` interface and corresponds to the fourth slot of the virtual method table.</span></span>
+<span data-ttu-id="de3ad-109">O método fornecido faz parte da `IXCLRDataMethodDefinition` interface e corresponde ao quarto slot da tabela de métodos virtuais.</span><span class="sxs-lookup"><span data-stu-id="de3ad-109">The provided method is part of the `IXCLRDataMethodDefinition` interface and corresponds to the 6th slot of the virtual method table.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="82757-110">Requisitos do</span><span class="sxs-lookup"><span data-stu-id="82757-110">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="de3ad-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="de3ad-110">Requirements</span></span>
 
-<span data-ttu-id="82757-111">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="82757-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="82757-112">**Cabeçalho:** None</span><span class="sxs-lookup"><span data-stu-id="82757-112">**Header:** None</span></span>  
-<span data-ttu-id="82757-113">**Biblioteca:** None</span><span class="sxs-lookup"><span data-stu-id="82757-113">**Library:** None</span></span>  
-<span data-ttu-id="82757-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="82757-114">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+<span data-ttu-id="de3ad-111">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="de3ad-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="de3ad-112">**Cabeçalho:** None</span><span class="sxs-lookup"><span data-stu-id="de3ad-112">**Header:** None</span></span>  
+<span data-ttu-id="de3ad-113">**Biblioteca:** None</span><span class="sxs-lookup"><span data-stu-id="de3ad-113">**Library:** None</span></span>  
+<span data-ttu-id="de3ad-114">**.NET Framework versões:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="de3ad-114">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="82757-115">Veja também</span><span class="sxs-lookup"><span data-stu-id="82757-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de3ad-115">Veja também</span><span class="sxs-lookup"><span data-stu-id="de3ad-115">See also</span></span>
 
-- [<span data-ttu-id="82757-116">Enumeração CLRDataSourceType</span><span class="sxs-lookup"><span data-stu-id="82757-116">CLRDataSourceType Enumeration</span></span>](clrdatasourcetype-enumeration.md)
-- [<span data-ttu-id="82757-117">Depuração</span><span class="sxs-lookup"><span data-stu-id="82757-117">Debugging</span></span>](index.md)
-- [<span data-ttu-id="82757-118">Interface IXCLRDataMethodDefinition</span><span class="sxs-lookup"><span data-stu-id="82757-118">IXCLRDataMethodDefinition Interface</span></span>](ixclrdatamethoddefinition-interface.md)
-- [<span data-ttu-id="82757-119">Interface IXCLRDataMethodInstance</span><span class="sxs-lookup"><span data-stu-id="82757-119">IXCLRDataMethodInstance Interface</span></span>](ixclrdatamethodinstance-interface.md)
+- [<span data-ttu-id="de3ad-116">Enumeração CLRDataSourceType</span><span class="sxs-lookup"><span data-stu-id="de3ad-116">CLRDataSourceType Enumeration</span></span>](clrdatasourcetype-enumeration.md)
+- [<span data-ttu-id="de3ad-117">Depuração</span><span class="sxs-lookup"><span data-stu-id="de3ad-117">Debugging</span></span>](index.md)
+- [<span data-ttu-id="de3ad-118">Interface IXCLRDataMethodDefinition</span><span class="sxs-lookup"><span data-stu-id="de3ad-118">IXCLRDataMethodDefinition Interface</span></span>](ixclrdatamethoddefinition-interface.md)
+- [<span data-ttu-id="de3ad-119">Interface IXCLRDataMethodInstance</span><span class="sxs-lookup"><span data-stu-id="de3ad-119">IXCLRDataMethodInstance Interface</span></span>](ixclrdatamethodinstance-interface.md)
