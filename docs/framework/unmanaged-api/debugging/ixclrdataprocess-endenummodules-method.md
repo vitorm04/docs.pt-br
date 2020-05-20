@@ -1,5 +1,5 @@
 ---
-title: Método IXCLRDataProcess::EndEnumModules
+title: 'Método IXCLRDataProcess:: EndEnumModules'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EndEnumModules Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: de30384b4c12c4fcac3eafe580484685f8a43fa4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a7a23e53f5c2bc7d643046830cf335fec780f11
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775421"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420827"
 ---
-# <a name="ixclrdataprocessendenummodules-method"></a>Método IXCLRDataProcess::EndEnumModules
+# <a name="ixclrdataprocessendenummodules-method"></a>Método IXCLRDataProcess:: EndEnumModules
 
-Libera os recursos usados pelos iteradores internos usados durante a enumeração de módulo.
+Libera os recursos usados por iteradores internos usados durante a enumeração do módulo.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,18 +39,18 @@ HRESULT EndEnumModules(
 ## <a name="parameters"></a>Parâmetros
 
 `handle`\
-[out] Um identificador para enumerar os módulos.
+fora Um identificador para enumerar os módulos.
 
 ## <a name="remarks"></a>Comentários
 
-O método fornecido é parte do `IXCLRDataProcess` de interface e corresponde ao slot de 26 da tabela de método virtual.
+O método fornecido faz parte da `IXCLRDataProcess` interface e corresponde ao slot 26 da tabela de métodos virtuais.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
-**Cabeçalho:** Nenhum **biblioteca:** Nenhum **versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
+**Cabeçalho:** Nenhuma **biblioteca:** nenhuma **.NET Framework versões:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Depuração](index.md)
 - [Interface IXCLRDataProcess](ixclrdataprocess-interface.md)

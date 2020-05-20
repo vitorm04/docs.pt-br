@@ -1,5 +1,5 @@
 ---
-title: Método IXCLRDataProcess::EnumModule
+title: 'Método IXCLRDataProcess:: EnumModule'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EnumModule Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 40ab90a3218d4309cda709004a191e9440fe505d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5caadcfe091393a8ff79106d57a50a532c349829
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769578"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420767"
 ---
-# <a name="ixclrdataprocessenummodule-method"></a>Método IXCLRDataProcess::EnumModule
+# <a name="ixclrdataprocessenummodule-method"></a>Método IXCLRDataProcess:: EnumModule
 
-Enumera os módulos deste processo.
+Enumera os módulos desse processo.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,23 +40,23 @@ HRESULT EnumModule(
 ## <a name="parameters"></a>Parâmetros
 
 `handle`\
-[no, out] Um identificador para enumerar os módulos.
+[entrada, saída] Um identificador para enumerar os módulos.
 
 `mod`\
-[out] O módulo enumerado.
+fora O módulo enumerado.
 
 ## <a name="remarks"></a>Comentários
 
-O método fornecido é parte do `IXCLRDataProcess` de interface e corresponde a 25 de slot da tabela de método virtual.
+O método fornecido faz parte da `IXCLRDataProcess` interface e corresponde ao 25º slot da tabela de métodos virtuais.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Cabeçalho:** Nenhum  
-**Biblioteca:** Nenhum  
-**Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
+**Cabeçalho:** None  
+**Biblioteca:** None  
+**.NET Framework versões:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Enumeração CLRDataSourceType](clrdatasourcetype-enumeration.md)
 - [Depuração](index.md)

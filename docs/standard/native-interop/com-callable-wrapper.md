@@ -1,5 +1,6 @@
 ---
 title: COM Callable Wrapper
+description: Quando um cliente COM chama um objeto .NET, o CLR cria o objeto gerenciado e um COM Callable Wrapper para ele. Os clientes COM chamam o wrapper para o objeto.
 ms.date: 10/23/2018
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-ms.openlocfilehash: 6f2f4055a95dbcea8d7872b5c5fa3ccede8c2c8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c42ea0b5ba4cb01304ceae4ba2d2fc91b629a9b3
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400375"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420520"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper
 

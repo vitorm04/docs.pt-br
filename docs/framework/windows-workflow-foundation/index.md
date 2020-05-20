@@ -1,22 +1,23 @@
 ---
 title: Windows Workflow Foundation
+description: Este artigo contém recursos que descrevem o modelo de programação, as amostras e as ferramentas do Windows Workflow Foundation.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WF [WF]
 - Windows Workflow Foundation [WF]
 ms.assetid: 9a23ea6b-d600-483e-89cd-8889cfec5f66
-ms.openlocfilehash: 159af9941e8e44defbdd01ed3c128c8327836f7a
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 177c9edbd25b003129079ee4d758e79841420d54
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141992"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419480"
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
 Esta seção descreve o modelo de programação, as amostras e as ferramentas do Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Guia da documentação do Windows Workflow](guide-to-the-documentation.md)  
+ [Guie a documentação de fluxo de trabalho do Windows](guide-to-the-documentation.md)  
  Um conjunto de tópicos sugeridos para leitura, dependendo da sua familiaridade (inicial ou boa) e dos requisitos.  
   
  [Novidades no Windows Workflow Foundation](whats-new.md)  

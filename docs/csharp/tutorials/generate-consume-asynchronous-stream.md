@@ -4,18 +4,18 @@ description: Este tutorial avançado mostra como gerar e consumir fluxos assínc
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 03254e5208a048469f4753d632de7b0d451cde40
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: fd9fed3469d18c919102640df7bb501b116f5e0e
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200100"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420364"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Tutorial: gerar e consumir fluxos assíncronos usando C# 8,0 e .NET Core 3,0
 
 O C# 8,0 introduz **fluxos assíncronos**, que modelam uma fonte de transmissão de dados. Os fluxos de dados geralmente recuperam ou geram elementos de forma assíncrona. Os fluxos assíncronos dependem de novas interfaces introduzidas no .NET Standard 2,1. Essas interfaces têm suporte no .NET Core 3,0 e posterior. Eles fornecem um modelo de programação natural para fontes de dados de streaming assíncronas.
 
-Neste tutorial, você aprenderá a:
+Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
 >
@@ -42,7 +42,7 @@ Este tutorial pressupõe que você esteja familiarizado com o C# e .NET, incluin
 
 ## <a name="run-the-starter-application"></a>Executar o aplicativo inicial
 
-Você pode obter o código para o aplicativo inicial usado neste tutorial do repositório [dotnet/docs](https://github.com/dotnet/docs) na pasta [Csharp/tutoriais/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) .
+Você pode obter o código para o aplicativo inicial usado neste tutorial do repositório [dotnet/docs](https://github.com/dotnet/docs) na pasta [Csharp/tutoriais/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) .
 
 O aplicativo inicial é um aplicativo de console que usa a interface [GitHub GraphQL](https://developer.github.com/v4/) para recuperar os problemas recentes gravados no repositório [dotnet/docs](https://github.com/dotnet/docs). Comece observando o código a seguir para o método `Main` do aplicativo inicial:
 
@@ -64,7 +64,7 @@ Vamos nos concentrar no algoritmo de paginação e na estrutura assíncrona do c
 
 Após a recuperação e a restauração de uma página de resultados, `runPagedQueryAsync` informa o andamento e verifica o cancelamento. Se o cancelamento tiver sido solicitado, `runPagedQueryAsync` gerará um <xref:System.OperationCanceledException>.
 
-Há vários elementos nesse código que podem ser melhorados. Acima de tudo, `runPagedQueryAsync` deve alocar armazenamento para todos os problemas retornados. Este exemplo é interrompido em 250 problemas porque recuperar todos os problemas exigiria muito mais memória para armazenar todos os problemas recuperados. Os protocolos para dar suporte a relatórios de progresso e cancelamento tornam o algoritmo mais difícil de entender em sua primeira leitura. Mais tipos e APIs estão envolvidos. Você deve rastrear as comunicações por meio <xref:System.Threading.CancellationTokenSource> do e seu <xref:System.Threading.CancellationToken> associado para entender onde o cancelamento é solicitado e onde ele é concedido.
+Há vários elementos nesse código que podem ser melhorados. Acima de tudo, `runPagedQueryAsync` deve alocar armazenamento para todos os problemas retornados. Este exemplo é interrompido em 250 problemas porque recuperar todos os problemas exigiria muito mais memória para armazenar todos os problemas recuperados. Os protocolos para dar suporte a relatórios de progresso e cancelamento tornam o algoritmo mais difícil de entender em sua primeira leitura. Mais tipos e APIs estão envolvidos. Você deve rastrear as comunicações por meio do <xref:System.Threading.CancellationTokenSource> e seu associado <xref:System.Threading.CancellationToken> para entender onde o cancelamento é solicitado e onde ele é concedido.
 
 ## <a name="async-streams-provide-a-better-way"></a>Os fluxos assíncronos fornecem uma melhor maneira
 
@@ -112,7 +112,7 @@ Substitua o código pelo seguinte loop `await foreach`:
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateAsyncStream" :::
 
-A nova interface <xref:System.Collections.Generic.IAsyncEnumerator%601> deriva de <xref:System.IAsyncDisposable>. Isso significa que o loop anterior descartará o fluxo de forma assíncrona quando o loop for concluído. Você pode imaginar que o loop é semelhante ao seguinte código:
+A nova interface <xref:System.Collections.Generic.IAsyncEnumerator%601> deriva de <xref:System.IAsyncDisposable> . Isso significa que o loop anterior descartará o fluxo de forma assíncrona quando o loop for concluído. Você pode imaginar que o loop é semelhante ao seguinte código:
 
 ```csharp
 int num = 0;
@@ -134,17 +134,17 @@ try
 
 Por padrão, os elementos de fluxo são processados no contexto capturado. Se você quiser desabilitar a captura do contexto, use o <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> método de extensão. Para obter mais informações sobre contextos de sincronização e como capturar o contexto atual, consulte o artigo sobre como [consumir o padrão assíncrono baseado em tarefa](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
-Os fluxos assíncronos dão suporte ao cancelamento usando o `async` mesmo protocolo que outros métodos. Você modificaria a assinatura do método de iterador assíncrono da seguinte maneira para dar suporte ao cancelamento:
+Os fluxos assíncronos dão suporte ao cancelamento usando o mesmo protocolo que outros `async` métodos. Você modificaria a assinatura do método de iterador assíncrono da seguinte maneira para dar suporte ao cancelamento:
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetGenerateWithCancellation" :::
 
-O <xref:System.Runtime.CompilerServices.EnumeratorCancellationAttribute?dipslayProperty=nameWithType> atributo faz com que o compilador gere código para <xref:System.Collections.Generic.IAsyncEnumerator%601> o que torna o token passado `GetAsyncEnumerator` para visível para o corpo do iterador assíncrono como esse argumento. Dentro `runQueryAsync`do, você pode examinar o estado do token e cancelar mais trabalho, se solicitado.
+O <xref:System.Runtime.CompilerServices.EnumeratorCancellationAttribute?dipslayProperty=nameWithType> atributo faz com que o compilador gere código para o <xref:System.Collections.Generic.IAsyncEnumerator%601> que torna o token passado para `GetAsyncEnumerator` visível para o corpo do iterador assíncrono como esse argumento. Dentro `runQueryAsync` do, você pode examinar o estado do token e cancelar mais trabalho, se solicitado.
 
-Você usa outro método de extensão <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.WithCancellation%2A>,, para passar o token de cancelamento para o fluxo assíncrono. Você modificaria o loop enumerando os problemas da seguinte maneira:
+Você usa outro método de extensão, <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.WithCancellation%2A> , para passar o token de cancelamento para o fluxo assíncrono. Você modificaria o loop enumerando os problemas da seguinte maneira:
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateWithCancellation" :::
 
-Você pode obter o código para o tutorial concluído do repositório [dotnet/docs](https://github.com/dotnet/docs) na pasta [Csharp/tutoriais/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) .
+Você pode obter o código para o tutorial concluído do repositório [dotnet/docs](https://github.com/dotnet/docs) na pasta [Csharp/tutoriais/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) .
 
 ## <a name="run-the-finished-application"></a>Executar o aplicativo finalizado
 

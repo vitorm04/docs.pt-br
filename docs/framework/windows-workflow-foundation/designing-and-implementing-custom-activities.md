@@ -1,13 +1,14 @@
 ---
 title: Criando e implementando atividades personalizadas
+description: Este artigo fornece recursos para a criação de atividades personalizadas no Workflow Foundation criando atividades compostas ou criando novos tipos de atividade.
 ms.date: 03/30/2017
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
-ms.openlocfilehash: b0d04572c65fd4e3e0ae96241217c9ae9aa0e2c5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9c184bff9518bb5581f3bf4cd408db224736192b
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915356"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419987"
 ---
 # <a name="designing-and-implementing-custom-activities"></a>Criando e implementando atividades personalizadas
 As atividades personalizadas no [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] são criadas montando atividades fornecida pelo sistema em atividades compostas ou criando novos tipos que derivam de <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> ou <xref:System.Activities.NativeActivity>. Esta seção descreve como criar atividades personalizadas com um dos métodos.  
@@ -28,8 +29,8 @@ As atividades personalizadas no [!INCLUDE[netfx_current_long](../../../includes/
  [Configurando a atividade de validação](configuring-activity-validation.md)  
  Descreve como a validação de atividade pode ser usada para identificar e relatar erros na configuração de uma atividade antes de sua execução.  
   
- [Criando uma atividade em tempo de execução](creating-an-activity-at-runtime-with-dynamicactivity.md)  
- Discute como criar atividades em tempo de execução usando <xref:System.Activities.DynamicActivity>.  
+ [Criando uma atividade em runtime](creating-an-activity-at-runtime-with-dynamicactivity.md)  
+ Discute como criar atividades em runtime usando <xref:System.Activities.DynamicActivity>.  
   
  [Propriedades de execução de fluxo de trabalho](workflow-execution-properties.md)  
  Descreve como usar as propriedades de execução do fluxo de trabalho para adicionar propriedades específicas de contexto ao ambiente de uma atividade  

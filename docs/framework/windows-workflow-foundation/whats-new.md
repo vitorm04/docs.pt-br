@@ -1,23 +1,24 @@
 ---
 title: Novidades no Windows Foundation Workflow
+description: Saiba mais sobre as alterações de Windows Workflow Foundation no .NET Framework 4. Os fluxos de trabalho são mais fáceis de criar, executar e manter.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-ms.openlocfilehash: 8f79c6d2a564571f8b753f322a79e91a01b1cf2f
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: b25b71a61f8a96d59c79e780d9fe5cd03abfa299
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142011"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419337"
 ---
 # <a name="whats-new-in-windows-workflow-foundation"></a>Novidades no Windows Foundation Workflow
 
 Windows Workflow Foundation (WF) no .NET Framework 4 altera vários paradigmas de desenvolvimento de versões anteriores. Fluxos de trabalho agora são mais fáceis de criar, executar e manter, e implementam um host da nova funcionalidade. Para obter mais informações sobre como migrar aplicativos .NET 3,0 e .NET 3,5 Workflow para usar a versão mais recente, consulte [diretrizes de migração](migration-guidance.md).  
   
 ## <a name="workflow-activity-model"></a>Modelo de atividade de fluxo de trabalho  
- A atividade agora é a unidade base da criação de um fluxo de trabalho, em vez de usar as classes <xref:System.Workflow.Activities.SequentialWorkflowActivity> ou <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. A classe <xref:System.Activities.Activity> fornece a abstração básica do comportamento de fluxo de trabalho. Os autores de atividade podem implementar o <xref:System.Activities.CodeActivity> para a funcionalidade básica de atividade personalizada ou <xref:System.Activities.NativeActivity> para a funcionalidade de atividade personalizada que usa a largura do runtime. <xref:System.Activities.Activity> é uma classe usada por autores de atividade para expressar novos comportamentos de forma declarativa em termos de outros objetos <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>ou <xref:System.Activities.DynamicActivity>, se eles são desenvolvidos de forma personalizada ou incluídos na [biblioteca de atividades interna](net-framework-4-5-built-in-activity-library.md).  
+ A atividade agora é a unidade base da criação de um fluxo de trabalho, em vez de usar as classes <xref:System.Workflow.Activities.SequentialWorkflowActivity> ou <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. A classe <xref:System.Activities.Activity> fornece a abstração básica do comportamento de fluxo de trabalho. Os autores de atividade podem implementar o <xref:System.Activities.CodeActivity> para a funcionalidade básica de atividade personalizada ou <xref:System.Activities.NativeActivity> para a funcionalidade de atividade personalizada que usa a largura do runtime. <xref:System.Activities.Activity>é uma classe usada por autores de atividade para expressar novos comportamentos declarativamente em termos de <xref:System.Activities.NativeActivity> outros <xref:System.Activities.CodeActivity> objetos,, <xref:System.Activities.AsyncCodeActivity> ou <xref:System.Activities.DynamicActivity> , se eles são desenvolvidos de forma personalizada ou incluídos na [biblioteca de atividades interna](net-framework-4-5-built-in-activity-library.md).  
   
 ## <a name="rich-composite-activity-options"></a>Opções de atividades compostas avançadas  
  <xref:System.Activities.Statements.Flowchart> é uma nova atividade avançada de fluxo de controle que permite que os autores modelem loops arbitrários e ramificação condicional. <xref:System.Activities.Statements.Flowchart> fornece um modelo de programação orientada para evento que anteriormente somente podia ser implementada com <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. Fluxos de trabalho de procedimentos aproveitam as novas atividades de controle de fluxo que modelam estruturas tradicionais de controle de fluxo, como <xref:System.Activities.Statements.TryCatch> e <xref:System.Activities.Statements.Switch%601>.  

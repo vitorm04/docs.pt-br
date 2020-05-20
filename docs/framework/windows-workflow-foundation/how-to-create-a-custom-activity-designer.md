@@ -1,21 +1,22 @@
 ---
-title: 'Como: criar um designer personalizado de atividades'
+title: 'Como: Criar um designer personalizado de atividades'
+description: Este artigo descreve como criar um designer de atividade personalizada do Workflow Foundation que tem uma zona de destino onde uma atividade arbitrária pode ser colocada.
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 3c326508744f2aa2b34f5ee574cc9ec1e2863cf6
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: 015efd1e482e2b531d28b9caec411c76116c9653
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306356"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419779"
 ---
-# <a name="how-to-create-a-custom-activity-designer"></a>Como: criar um designer personalizado de atividades
+# <a name="how-to-create-a-custom-activity-designer"></a>Como: Criar um designer personalizado de atividades
 
 Designers personalizados de atividade são normalmente implementados de modo que as atividades passível de composição sejam associados com outras atividades cujos os designers podem ser ignorados sobre a superfície de design com eles. Essa funcionalidade requer que um designer de atividade personalizado forneça uma "área de destino" onde uma atividade arbitrária pode ser colocada e também o meio de gerenciar a coleção resultante de elementos na superfície de design. Este tópico descreve como criar um designer personalizado de atividade que contém uma área para arrastar e soltar e como criar um designer personalizado de atividade que fornece a funcionalidade de edição necessária gerenciar a coleção de elementos de designer.
 
 Designers personalizados de atividade normalmente herdam de <xref:System.Activities.Presentation.ActivityDesigner> que é tem como padrão o tipo base do designer de atividade para todas as atividades sem um designer específico. Este tipo fornece a experiência em tempo de design de interagir com a grade de propriedade e configurar aspectos básicos como gerenciar cores e ícones.
 
-<xref:System.Activities.Presentation.ActivityDesigner> usa dois controles auxiliar, <xref:System.Activities.Presentation.WorkflowItemPresenter> e <xref:System.Activities.Presentation.WorkflowItemsPresenter> para tornar mais fácil desenvolver designer personalizadas de atividade. Manipular a funcionalidade comum como arrastar e soltar de elementos filho, de exclusão, de seleção, e a adição desses elementos filho. O <xref:System.Activities.Presentation.WorkflowItemPresenter> permite um único elemento de interface do usuário filho dentro, fornecendo a "área de destino" <xref:System.Activities.Presentation.WorkflowItemsPresenter> , enquanto o pode fornecer suporte a vários elementos de interface do usuário, incluindo funcionalidades adicionais como ordenação, movimentação, exclusão e adição de elementos filho.
+<xref:System.Activities.Presentation.ActivityDesigner> usa dois controles auxiliar, <xref:System.Activities.Presentation.WorkflowItemPresenter> e <xref:System.Activities.Presentation.WorkflowItemsPresenter> para tornar mais fácil desenvolver designer personalizadas de atividade. Manipular a funcionalidade comum como arrastar e soltar de elementos filho, de exclusão, de seleção, e a adição desses elementos filho. O <xref:System.Activities.Presentation.WorkflowItemPresenter> permite um único elemento de interface do usuário filho dentro, fornecendo a "área de destino", enquanto o <xref:System.Activities.Presentation.WorkflowItemsPresenter> pode fornecer suporte a vários elementos de interface do usuário, incluindo funcionalidades adicionais como ordenação, movimentação, exclusão e adição de elementos filho.
 
 A outra parte importante da história que precisa de realce na implementação de um designer de atividade personalizado se refere à maneira como as edições visuais são ligadas usando a ligação de dados do WPF à instância armazenada na memória do que estamos editando no designer. Isso é feito pela árvore modelo de item, que também é responsável para ativar a notificação de alteração e o rastreamento de eventos como alterações nos estados.
 
@@ -29,15 +30,15 @@ Este tópico descreve dois procedimentos.
 
 1. Inicie o Visual Studio 2010.
 
-2. No menu **arquivo** , aponte para **novo**e, em seguida, selecione **projeto...** .
+2. No menu **arquivo** , aponte para **novo**e, em seguida, selecione **projeto...**.
 
-     A caixa de diálogo **Novo Projeto** é aberta.
+     A caixa de diálogo **Novo Projeto** será aberta.
 
 3. No painel **modelos instalados** , selecione **Windows** na categoria idioma preferencial.
 
 4. No painel **modelos** , selecione **aplicativo WPF**.
 
-5. Na caixa **nome** , digite `UsingWorkflowItemPresenter`.
+5. Na caixa **nome** , digite `UsingWorkflowItemPresenter` .
 
 6. Na caixa **local** , insira o diretório no qual você deseja salvar o projeto ou clique em **procurar** para navegar até ele.
 
@@ -49,7 +50,7 @@ Este tópico descreve dois procedimentos.
 
 10. Clique com o botão direito do mouse no projeto UsingWorkflowItemPresenter em **Gerenciador de soluções**, selecione **Adicionar**e **novo item...** para abrir a caixa de diálogo **Adicionar novo item** e selecione a categoria **WPF** na seção **modelos instalados** à esquerda.
 
-11. Selecione o modelo **janela (WPF)** , nomeie- `RehostingWFDesigner`o e clique em **Adicionar**.
+11. Selecione o modelo **janela (WPF)** , nomeie-o `RehostingWFDesigner` e clique em **Adicionar**.
 
 12. Abra o arquivo *RehostingWFDesigner. XAML* e cole o código a seguir nele para definir a interface do usuário para o aplicativo:
 
@@ -170,7 +171,7 @@ Este tópico descreve dois procedimentos.
 
 18. Clique com o botão direito do mouse no projeto UsingWorkflowItemPresenter em **Gerenciador de soluções**, selecione **Adicionar**e **novo item...** para abrir a caixa de diálogo **Adicionar novo item** e selecionar a categoria de **fluxo de trabalho** , selecione a seção **modelos instalados** à esquerda.
 
-19. Selecione o modelo do **Designer de atividade** , `SimpleNativeDesigner`nomeie-o e clique em **Adicionar**.
+19. Selecione o modelo do **Designer de atividade** , nomeie-o `SimpleNativeDesigner` e clique em **Adicionar**.
 
 20. Abra o arquivo *SimpleNativeDesigner. XAML* e cole o código a seguir nele. Observe <xref:System.Activities.Presentation.ActivityDesigner> usa esse código como seu elemento raiz e mostra como associar é usado para integrar <xref:System.Activities.Presentation.WorkflowItemPresenter> no designer para que um tipo filho pode ser exibido no designer composto de atividade.
 
@@ -213,9 +214,9 @@ Este tópico descreve dois procedimentos.
 
 21. Clique com o botão direito do mouse no projeto UsingWorkflowItemPresenter em **Gerenciador de soluções**, selecione **Adicionar**e **novo item...** para abrir a caixa de diálogo **Adicionar novo item** e selecionar a categoria de **fluxo de trabalho** , selecione a seção **modelos instalados** à esquerda.
 
-22. Selecione o modelo de **atividade de código** , `SimpleNativeActivity`nomeie-o e clique em **Adicionar**.
+22. Selecione o modelo de **atividade de código** , nomeie-o `SimpleNativeActivity` e clique em **Adicionar**.
 
-23. Implemente `SimpleNativeActivity` a classe inserindo o seguinte código no arquivo *SimpleNativeActivity.cs* :
+23. Implemente a `SimpleNativeActivity` classe inserindo o seguinte código no arquivo *SimpleNativeActivity.cs* :
 
     ```csharp
     using System.Activities;
@@ -250,7 +251,7 @@ Este tópico descreve dois procedimentos.
 
 ### <a name="to-create-a-custom-activity-designer-using-workflowitemspresenter"></a>Para criar um designer personalizado de atividade que usa WorkflowItemsPresenter
 
-1. O procedimento para o segundo designer de atividade personalizado é o paralelo do primeiro com algumas modificações, o primeiro deles é nomear o segundo aplicativo `UsingWorkflowItemsPresenter`. Também este aplicativo não define uma nova atividade personalizado.
+1. O procedimento para o segundo designer de atividade personalizado é o paralelo do primeiro com algumas modificações, o primeiro deles é nomear o segundo aplicativo `UsingWorkflowItemsPresenter` . Também este aplicativo não define uma nova atividade personalizado.
 
 2. As principais diferenças estão contidas nos arquivos *CustomParallelDesigner. XAML* e *RehostingWFDesigner.XAML.cs* . Este é o código do arquivo *CustomParallelDesigner. XAML* que define a interface do usuário:
 
@@ -343,11 +344,11 @@ Este tópico descreve dois procedimentos.
     }
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Activities.Presentation.ActivityDesigner>
 - <xref:System.Activities.Presentation.WorkflowItemPresenter>
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
 - <xref:System.Activities.Presentation.WorkflowViewElement>
 - <xref:System.Activities.Presentation.Model.ModelItem>
-- [Personalizando a experiência de design de fluxo de trabalho](customizing-the-workflow-design-experience.md)
+- [Personalizando a experiência design de fluxo de trabalho](customizing-the-workflow-design-experience.md)

@@ -1,22 +1,23 @@
 ---
-title: 'Como: criar um fluxo de trabalho da máquina de estado'
+title: Como criar um fluxo de trabalho de máquina de estado
+description: Este artigo cria um fluxo de trabalho que usa atividades internas, como a atividade StateMachine e atividades personalizadas.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: e93f84f0bacf7ac205294c12c55afcab8d7319b7
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8a9342c07c15d65df0310c0cb35b4b2c6f2ba686
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989820"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419649"
 ---
-# <a name="how-to-create-a-state-machine-workflow"></a>Como: criar um fluxo de trabalho da máquina de estado
-Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico percorre a criação de um fluxo de trabalho que usa atividades internas, como a atividade de <xref:System.Activities.Statements.StateMachine>, e as atividades personalizadas do [anterior: Crie uma atividade](how-to-create-an-activity.md) tópico. O fluxo de trabalho modela um jogo de palpite de número.  
+# <a name="how-to-create-a-state-machine-workflow"></a>Como criar um fluxo de trabalho de máquina de estado
+Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico percorre a criação de um fluxo de trabalho que usa atividades internas, como a <xref:System.Activities.Statements.StateMachine> atividade, e as atividades personalizadas do tópico [como criar uma atividade](how-to-create-an-activity.md) anterior. O fluxo de trabalho modela um jogo de palpite de número.  
   
 > [!NOTE]
-> Cada tópico do tutorial de Introdução depende dos tópicos anteriores. Para concluir este tópico, você deve primeiro concluir [como: Crie uma](how-to-create-an-activity.md)de atividade.  
+> Cada tópico do tutorial de Introdução depende dos tópicos anteriores. Para concluir este tópico, você deve primeiro concluir [como: criar uma atividade](how-to-create-an-activity.md).  
   
 > [!NOTE]
 > Para baixar uma versão completa do tutorial, consulte [Windows Workflow Foundation (WF45) – introdução tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -25,7 +26,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 1. Clique com o botão direito do mouse em **NumberGuessWorkflowActivities** em **Gerenciador de soluções** e selecione **Adicionar**, **novo item**.  
   
-2. No nó **itens comuns** **instalados**, selecione fluxo de **trabalho**. Selecione **atividade** na lista **fluxo de trabalho** .  
+2. No nó **itens comuns** **instalados**, selecione fluxo de **trabalho**. Selecione **Atividade** na lista **Fluxo de Trabalho**.  
   
 3. Digite `StateMachineNumberGuessWorkflow` na caixa **nome** e clique em **Adicionar**.  
   
@@ -37,41 +38,41 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 2. Clique em **argumentos** no lado inferior esquerdo do designer de fluxo de trabalho para exibir o painel **argumentos** .  
   
-3. Clique em **criar argumento**.  
+3. Clique em **Criar Argumento**.  
   
-4. Digite `MaxNumber` na caixa **nome** , selecione **em na** lista suspensa **direção** , selecione **Int32** na lista suspensa **tipo de argumento** e, em seguida, pressione ENTER para salvar o argumento.  
+4. Digite na `MaxNumber` caixa **nome** , selecione **em na** lista suspensa **direção** , selecione **Int32** na lista suspensa tipo de **argumento** e pressione ENTER para salvar o argumento...  
   
-5. Clique em **criar argumento**.  
+5. Clique em **Criar Argumento**.  
   
-6. Digite `Turns` na caixa **nome** que está abaixo do argumento de `MaxNumber` adicionado recentemente, selecione **fora** na lista suspensa **direção** , selecione **Int32** na lista suspensa tipo de **argumento** e pressione Enter.  
+6. Digite `Turns` na caixa de **nome** que está abaixo do argumento recém-adicionado `MaxNumber` , selecione **fora** na lista suspensa **direção** , selecione **Int32** na lista suspensa tipo de **argumento** e, em seguida, pressione Enter.  
   
-7. Clique em **argumentos** no lado inferior esquerdo do designer de atividade para fechar o painel **argumentos** .  
+7. Clique em **Argumentos** no lado inferior esquerdo do designer de atividade para fechar o painel **Argumentos**.  
   
 8. Clique em **variáveis** no lado inferior esquerdo do designer de fluxo de trabalho para exibir o painel **variáveis** .  
   
-9. Clique em **criar variável**.  
+9. Clique em **Criar Variável**.  
   
     > [!TIP]
-    > Se nenhuma caixa **criar variável** for exibida, clique na atividade <xref:System.Activities.Statements.StateMachine> na superfície do designer de fluxo de trabalho para selecioná-la.  
+    > Se nenhuma caixa **criar variável** for exibida, clique na <xref:System.Activities.Statements.StateMachine> atividade na superfície do designer de fluxo de trabalho para selecioná-la.  
   
 10. Digite `Guess` na caixa **nome** , selecione **Int32** na lista suspensa **tipo de variável** e pressione ENTER para salvar a variável.  
   
-11. Clique em **criar variável**.  
+11. Clique em **Criar Variável**.  
   
 12. Digite `Target` na caixa **nome** , selecione **Int32** na lista suspensa **tipo de variável** e pressione ENTER para salvar a variável.  
   
-13. Clique em **variáveis** no lado inferior esquerdo do designer de atividade para fechar o painel **variáveis** .  
+13. Clique em **Variáveis** no lado inferior esquerdo do designer de atividade para fechar o painel **Variáveis**.  
   
 ### <a name="to-add-the-workflow-activities"></a>Para adicionar as atividades de fluxo de trabalho  
   
-1. Clique em **State1** para selecioná-lo. Na **janela Propriedades**, altere o **DisplayName** para `Initialize Target`.  
+1. Clique em **State1** para selecioná-lo. Na **janela Propriedades**, altere o **DisplayName** para `Initialize Target` .  
   
     > [!TIP]
     > Se a **janela Propriedades** não for exibida, selecione **janela Propriedades** no menu **Exibir** .  
   
 2. Clique duas vezes no estado de destino de **inicialização** renomeado recentemente no designer de fluxo de trabalho para expandi-lo.  
   
-3. Arraste uma atividade **atribuir** da seção **primitivas** da caixa de **ferramentas** e solte-a na seção **entrada** do estado. Digite `Target` na caixa **para** e a expressão a seguir na caixa **Inserir uma C# expressão** ou **Inserir uma expressão VB** .  
+3. Arraste uma atividade **atribuir** da seção **primitivas** da caixa de **ferramentas** e solte-a na seção **entrada** do estado. Digite `Target` na caixa **para** e a expressão a seguir na caixa **Inserir uma expressão C#** ou **Inserir uma expressão VB** .  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -82,13 +83,13 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
     ```  
   
     > [!TIP]
-    > Se a janela **caixa de ferramentas** não for exibida, selecione caixa de **ferramentas** no menu **Exibir** .  
+    > Se a janela da **Caixa de Ferramentas** não abrir, selecione **Caixa de Ferramentas** no menu **Exibir**.  
   
 4. Retorne à exibição de máquina de estado geral no designer de fluxo de trabalho clicando em **StateMachine** na exibição de navegação estrutural na parte superior do designer de fluxo de trabalho.  
   
 5. Arraste uma atividade de **estado** da seção **máquina de estado** da **caixa de ferramentas** para o designer de fluxo de trabalho e passe o mouse sobre o estado de destino de **inicialização** . Observe que quatro triângulos aparecerão em torno do estado de **inicialização de destino** quando o novo estado estiver sobre ele. Descarte o novo estado no triângulo imediatamente abaixo do estado de **inicialização de destino** . Isso coloca o novo estado no fluxo de trabalho e cria uma transição do estado de **destino de inicialização** para o novo estado.  
   
-6. Clique em **State1** para selecioná-lo, altere o **DisplayName** para `Enter Guess`e clique duas vezes no estado no designer de fluxo de trabalho para expandi-lo.  
+6. Clique em **State1** para selecioná-lo, altere o **DisplayName** para `Enter Guess` e clique duas vezes no estado no designer de fluxo de trabalho para expandi-lo.  
   
 7. Arraste uma atividade **WriteLine** da seção **primitivas** da caixa de **ferramentas** e solte-a na seção **entrada** do estado.  
   
@@ -104,7 +105,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 9. Arraste uma atividade **assign** da seção **primitivas** da caixa de **ferramentas** e solte na seção **sair** do estado.  
   
-10. Digite `Turns` na caixa **para** e `Turns + 1` na caixa **Inserir uma C# expressão** ou **Inserir uma expressão VB** .  
+10. Digite `Turns` na caixa **para** e `Turns + 1` na caixa **Inserir uma expressão C#** ou **Inserir uma expressão VB** .  
   
 11. Retorne à exibição de máquina de estado geral no designer de fluxo de trabalho clicando em **StateMachine** na exibição de navegação estrutural na parte superior do designer de fluxo de trabalho.  
   
@@ -131,7 +132,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
 18. Retorne à exibição de máquina de estado geral no designer de fluxo de trabalho clicando em **StateMachine** na exibição de navegação estrutural na parte superior do designer de fluxo de trabalho.  
   
     > [!NOTE]
-    > Uma transição ocorre quando o evento de gatilho é recebido e o <xref:System.Activities.Statements.Transition.Condition%2A>, se houver, é avaliado como `True`. Para essa transição, se o `Guess` do usuário corresponder ao `Target`gerado aleatoriamente, o controle passará para o **FinalState** e o fluxo de trabalho será concluído.  
+    > Uma transição ocorre quando o evento de gatilho é recebido e o <xref:System.Activities.Statements.Transition.Condition%2A>, se houver, é avaliado como `True`. Para essa transição, se o usuário `Guess` corresponder ao gerado aleatoriamente `Target` , o controle passará para o **FinalState** e o fluxo de trabalho será concluído.  
   
 19. Dependendo se a estimativa está correta, o fluxo de trabalho deve fazer a transição para o **FinalState** ou de volta para o estado de **adivinhação Enter** para outra tentativa. Ambas as transições compartilham o mesmo gatilho de aguardando que a adivinhação do usuário seja recebida por meio da atividade **ReadInt** . Isso é chamado de uma transição compartilhada. Para criar uma transição compartilhada, clique no círculo que indica o início da transição de **adivinhação correta** e arraste-a para o estado desejado. Nesse caso, a transição é uma transição automática, portanto, arraste o ponto inicial da transição de **adivinhação correta** e solte-a de volta na parte inferior do estado de **adivinhação Enter** . Depois de criar a transição, selecione-a no designer de fluxo de trabalho e defina sua propriedade **DisplayName** como **adivinhar incorreta**.  
   
@@ -185,14 +186,14 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 1. Pressione CTRL+SHIFT+B para criar a solução.  
   
-     Para obter instruções sobre como executar o fluxo de trabalho, consulte o próximo tópico, [como: Execute um](how-to-run-a-workflow.md)de fluxo de trabalho. Se você já tiver concluído o [como: Execute um fluxo de trabalho](how-to-run-a-workflow.md) etapa com um estilo diferente de fluxo de trabalho e deseja executá-lo usando o fluxo de trabalho da máquina de estado nesta etapa, pule para a seção [para compilar e executar o aplicativo](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) de [como: Execute um de fluxo de trabalho.](how-to-run-a-workflow.md)  
+     Para obter instruções sobre como executar o fluxo de trabalho, consulte o próximo tópico [como: executar um fluxo de trabalho](how-to-run-a-workflow.md). Se você já tiver concluído a etapa [como executar um fluxo de trabalho](how-to-run-a-workflow.md) com um estilo diferente de fluxo de trabalho e desejar executá-lo usando o fluxo de trabalho da máquina de estado nesta etapa, pule para a seção [para criar e executar o aplicativo](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) de [como executar um fluxo de trabalho](how-to-run-a-workflow.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
 - [Programação do Windows Workflow Foundation](programming.md)
 - [Criando fluxos de trabalho](designing-workflows.md)
 - [Tutorial de Introdução](getting-started-tutorial.md)
-- [Como: Criar uma atividade](how-to-create-an-activity.md)
-- [Como: Executar um de fluxo de trabalho](how-to-run-a-workflow.md)
+- [Como criar uma atividade](how-to-create-an-activity.md)
+- [Como executar um fluxo de trabalho](how-to-run-a-workflow.md)

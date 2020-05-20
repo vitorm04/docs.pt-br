@@ -1,23 +1,24 @@
 ---
 title: Fluxos de trabalho do fluxograma
+description: Este artigo descreve a atividade FlowChart, que normalmente é usada para implementar fluxos de trabalho não sequenciais no Workflow Foundation.
 ms.date: 03/30/2017
 ms.assetid: b0a3475c-d22f-49eb-8912-973c960aebf5
-ms.openlocfilehash: b84b0de34f8869d9775fe0694e74c340cc16a6b3
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: ce0661653a1d50b3f7264246b810faabbd12bf5f
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249058"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419909"
 ---
 # <a name="flowchart-workflows"></a>Fluxos de trabalho do fluxograma
 
 Um fluxograma é um paradigma conhecido para criar programas. A atividade do fluxograma é normalmente usada para implementar fluxos de trabalho não-sequenciais, mas pode ser usada para fluxos de trabalho sequenciais se nenhum nó de `FlowDecision` é usado.
 
-## <a name="flowchart-workflow-structure"></a>Estrutura do fluxo de trabalho do fluxo gramado
+## <a name="flowchart-workflow-structure"></a>Estrutura de fluxo de trabalho de fluxograma
 
  Uma atividade do fluxograma é uma atividade que contém uma coleção de atividades a ser executadas.  Os fluxogramas também contêm os elementos de controle de fluxo como <xref:System.Activities.Statements.FlowDecision> e <xref:System.Activities.Statements.FlowSwitch%601> que a execução direta entre atividades contidas base nos valores das variáveis.
 
-## <a name="types-of-flow-nodes"></a>Tipos de nódulos de fluxo
+## <a name="types-of-flow-nodes"></a>Tipos de nós de fluxo
 
  Os diferentes tipos de elementos são usados dependendo do tipo de controle de fluxo necessária quando o elemento é executado. Os tipos de elementos fluxograma incluem:
 
@@ -29,7 +30,7 @@ Um fluxograma é um paradigma conhecido para criar programas. A atividade do flu
 
 Cada link tem uma propriedade de `Action` que define <xref:System.Activities.ActivityAction> que pode ser usado para executar atividades filhos, e uma ou mais propriedades de `Next` que definem que elemento ou elementos a executar quando o elemento atual concluir a execução.
 
-### <a name="creating-a-basic-activity-sequence-with-a-flowstep-node"></a>Criando uma seqüência de atividade básica com um nó FlowStep
+### <a name="creating-a-basic-activity-sequence-with-a-flowstep-node"></a>Criando uma sequência de atividade básica com um nó FlowStep
 
 Para modelar uma sequência básica em duas atividades que executam por sua vez, o elemento de `FlowStep` é usado. No exemplo a seguir, dois elementos de `FlowStep` são usados para executar em ordem duas atividades.
 
@@ -80,7 +81,7 @@ Para modelar um nó condicional de fluxo em um fluxo de trabalho do fluxograma (
 </Flowchart>
 ```
 
-### <a name="creating-an-exclusive-switch-with-a-flowswitch-node"></a>Criando um switch exclusivo com um nó FlowSwitch
+### <a name="creating-an-exclusive-switch-with-a-flowswitch-node"></a>Criando um comutador exclusivo com um nó FlowSwitch
 
 Para modelar um fluxograma na qual o caminho selecionado é exclusivo com base em um valor correspondente, o nó de <xref:System.Activities.Statements.FlowSwitch%601> é usado. A propriedade de <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> é definida como <xref:System.Activities.Activity%601> com um parâmetro de tipo de <xref:System.Object> que define o valor para coincidir com opções. A propriedade de <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> define um dicionário de chaves e objetos de <xref:System.Activities.Statements.FlowNode> a correspondência com a expressão condicional, e um conjunto de objetos de <xref:System.Activities.Statements.FlowNode> que definem como a execução deve fluxo se os casos dados correspondem a expressão condicional. <xref:System.Activities.Statements.FlowSwitch%601> também define uma propriedade de <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> que define como a execução deve fluxo se nenhum caso corresponde a expressão da condição. O exemplo a seguir demonstra como definir um fluxo de trabalho que usa um elemento de <xref:System.Activities.Statements.FlowSwitch%601> .
 

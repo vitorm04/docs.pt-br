@@ -1,5 +1,6 @@
 ---
 title: Nomes de classes, structs e interfaces
+description: Use estas diretrizes para nomear classes, estruturas e interfaces como parte das diretrizes para criar bibliotecas que estendem e interajam com bibliotecas .NET.
 ms.date: 10/22/2008
 helpviewer_keywords:
 - type names, guidelines
@@ -12,42 +13,42 @@ helpviewer_keywords:
 - interfaces [.NET Framework], names
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-ms.openlocfilehash: 2c528348c0e84037a80df9797c56f03b51c73adc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e7eee414c5bf5c69f63543ef240e50a4d2d948a3
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400592"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419077"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Nomes de classes, structs e interfaces
-As diretrizes de nomeação que seguem aplicam-se à nomeação geral do tipo.
+As diretrizes de nomenclatura a seguir se aplicam à nomenclatura de tipo geral.
 
- ✔️ DO nome classes e structs com nomes de nomes ou frases de nomes, usando PascalCasing.
+ ✔️ as classes de nome e structs com frases substantivas ou substantivo, usando PascalCasing.
 
- Isso distingue nomes de tipos de métodos, que são nomeados com frases verbais.
+ Isso distingue nomes de tipos de métodos, que são nomeados com frases de verbo.
 
- ✔️ do nome DO interfaces com frases adjetivas, ou ocasionalmente com nomes de nomes ou nomes de nomes.
+ ✔️ as interfaces de nome com frases de adjetivo ou ocasionalmente com substantivos ou frases de substantivo.
 
- Substantivos e frases substantivas devem ser usados raramente e podem indicar que o tipo deve ser uma classe abstrata, e não uma interface.
+ As frases de substantivo e substantivo devem ser usadas raramente e podem indicar que o tipo deve ser uma classe abstrata, e não uma interface.
 
- ❌NÃO dê aos nomes de classe um prefixo (por exemplo, "C").
+ ❌Não dê aos nomes de classe um prefixo (por exemplo, "C").
 
- ✔️ CONSIDEREm acabar com o nome de classes derivadas com o nome da classe base.
+ ✔️ Considere encerrar o nome de classes derivadas com o nome da classe base.
 
- Isso é muito legível e explica a relação claramente. Alguns exemplos disso em `ArgumentOutOfRangeException`código são: , `Exception`que `SerializableAttribute`é uma espécie `Attribute`de , e , que é uma espécie de . No entanto, é importante usar o juízo razoável na aplicação desta diretriz; por exemplo, `Button` a classe `Control` é um `Control` tipo de evento, embora não apareça em seu nome.
+ Isso é muito legível e explica a relação claramente. Alguns exemplos disso no código são: `ArgumentOutOfRangeException` , que é um tipo de `Exception` , e `SerializableAttribute` , que é um tipo de `Attribute` . No entanto, é importante usar o julgamento razoável na aplicação dessa diretriz; por exemplo, a `Button` classe é um tipo de `Control` evento, embora `Control` não apareça em seu nome.
 
- ✔️ NOMES de interface de prefixo DO com a letra I, para indicar que o tipo é uma interface.
+ ✔️ os nomes de interface de prefixo com a letra I, para indicar que o tipo é uma interface.
 
- Por exemplo, `IComponent` (unsante `ICustomAttributeProvider` descritivo), `IPersistable` (frase de nome de unisstan) e (adjetivo) são nomes de interface apropriados. Como acontece com outros nomes de tipos, evite abreviaturas.
+ Por exemplo, `IComponent` (substantivo descritivo), `ICustomAttributeProvider` (frase de substantivo) e `IPersistable` (adjetivo) são nomes de interface apropriados. Assim como ocorre com outros nomes de tipo, evite abreviações.
 
- ✔️ DO certifique-se de que os nomes diferem apenas pelo prefixo "I" no nome da interface quando você estiver definindo um par de interface de classe onde a classe é uma implementação padrão da interface.
+ ✔️ garantir que os nomes diferem somente pelo prefixo "I" no nome da interface quando você estiver definindo um par de interface – classe em que a classe é uma implementação padrão da interface.
 
-## <a name="names-of-generic-type-parameters"></a>Nomes de parâmetros de tipo genéricos
- Os genéricos foram adicionados ao .NET Framework 2.0. O recurso introduziu um novo tipo de identificador chamado *parâmetro de tipo*.
+## <a name="names-of-generic-type-parameters"></a>Nomes de parâmetros de tipo genérico
+ Os genéricos foram adicionados ao .NET Framework 2,0. O recurso introduziu um novo tipo de identificador chamado *parâmetro de tipo*.
 
- ✔️ do nome do parâmetros genéricos de tipo com nomes descritivos, a menos que um nome de uma única letra seja completamente auto-explicativo e um nome descritivo não agregaria valor.
+ ✔️ os parâmetros de tipo genérico de nome com nomes descritivos, a menos que um nome de letra única seja totalmente auto-explicativo e um nome descritivo não adicione valor.
 
- ✔️ CONSIDEREM usar `T` como nome de parâmetro de tipo para tipos com um parâmetro de tipo de letra única.
+ ✔️ Considere usar `T` como o nome do parâmetro de tipo para tipos com um parâmetro de tipo de letra única.
 
 ```csharp
 public int IComparer<T> { ... }
@@ -55,7 +56,7 @@ public delegate bool Predicate<T>(T item);
 public struct Nullable<T> where T:struct { ... }
 ```
 
- ✔️ nomes de parâmetro de tipo `T`descritivo do prefixo DO com .
+ ✔️ os nomes de parâmetro de tipo descritivo de prefixo com `T` .
 
 ```csharp
 public interface ISessionChannel<TSession> where TSession : ISession {
@@ -63,43 +64,43 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 }
 ```
 
- ✔️ CONSIDEREM indicar restrições colocadas em um parâmetro de tipo em nome do parâmetro.
+ ✔️ CONSIDERAR a indicação de restrições colocadas em um parâmetro de tipo no nome do parâmetro.
 
- Por exemplo, um parâmetro `ISession` constrangido pode ser chamado `TSession`de .
+ Por exemplo, um parâmetro restrito a `ISession` pode ser chamado `TSession` .
 
-## <a name="names-of-common-types"></a>Nomes de Tipos Comuns
- ✔️ DO siga as diretrizes descritas na tabela a seguir ao nomear tipos derivados ou implementar certos tipos de framework .NET.
+## <a name="names-of-common-types"></a>Nomes de tipos comuns
+ ✔️ Siga as diretrizes descritas na tabela a seguir ao nomear tipos derivados ou implementando determinados tipos de .NET Framework.
 
-|Tipo de base|Diretriz do tipo derivado/implementante|
+|Tipo base|Diretriz de tipo derivado/implementando|
 |---------------|------------------------------------------|
-|`System.Attribute`|✔️ DO adicionam o sufixo "Atributo" a nomes de classes de atributos personalizados.|
-|`System.Delegate`|✔️ DO adicione o sufixo "EventHandler" aos nomes dos delegados que são usados em eventos.<br /><br /> ✔️ DO adicione o sufixo "Callback" aos nomes de delegados que não sejam os usados como manipuladores de eventos.<br /><br /> ❌NÃO adicione o sufixo "Delegado" a um delegado.|
-|`System.EventArgs`|✔️ DO adicione o sufixo "EventArgs".|
-|`System.Enum`|❌NÃO derivar desta classe; use a palavra-chave suportada pelo seu idioma; por exemplo, em C#, use a `enum` palavra-chave.<br /><br /> ❌NÃO adicione o sufixo "Enum" ou "Flag".|
-|`System.Exception`|✔️ DO adicione o sufixo "Exceção".|
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|✔️ DO adicione o sufixo "Dicionário". Note `IDictionary` que é um tipo específico de coleção, mas esta diretriz tem precedência sobre as diretrizes de coleta mais gerais que se segue.|
-|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|✔️ DO adicione o sufixo "Collection".|
-|`System.IO.Stream`|✔️ DO adicione o sufixo "Stream".|
-|`CodeAccessPermission IPermission`|✔️ DO adicione o sufixo "Permissão".|
+|`System.Attribute`|✔️ Adicionar o sufixo "Attribute" aos nomes das classes de atributo personalizadas.|
+|`System.Delegate`|✔️ Adicionar o sufixo "EventHandler" aos nomes de delegados que são usados em eventos.<br /><br /> ✔️ Adicionar o sufixo "callback" a nomes de delegados diferentes daqueles usados como manipuladores de eventos.<br /><br /> ❌Não adicione o sufixo "delegate" a um delegado.|
+|`System.EventArgs`|✔️ Adicionar o sufixo "EventArgs".|
+|`System.Enum`|❌Não Derive dessa classe; em vez disso, use a palavra-chave com suporte no seu idioma; por exemplo, em C#, use a `enum` palavra-chave.<br /><br /> ❌Não adicione o sufixo "enum" ou "Flag".|
+|`System.Exception`|✔️ Adicionar o sufixo "Exception".|
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|✔️ Adicionar o sufixo "Dictionary". Observe que `IDictionary` é um tipo específico de coleção, mas essa diretriz tem precedência sobre a diretriz de coleções mais gerais a seguir.|
+|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|✔️ Adicionar o sufixo "coleção".|
+|`System.IO.Stream`|✔️ Adicionar o sufixo "Stream".|
+|`CodeAccessPermission IPermission`|✔️ Adicionar o sufixo "permissão".|
 
-## <a name="naming-enumerations"></a>Nomeando Enumerações
- Os nomes dos tipos de enumeração (também chamados enums) em geral devem seguir as regras padrão de nomeação de tipo (PascalCasing, etc.). No entanto, existem diretrizes adicionais que se aplicam especificamente aos enums.
+## <a name="naming-enumerations"></a>Enumerações de nomenclatura
+ Os nomes dos tipos de enumeração (também chamados de enums) em geral devem seguir as regras de nomenclatura de tipo padrão (PascalCasing, etc.). No entanto, há diretrizes adicionais que se aplicam especificamente a enums.
 
- ✔️ USO de um nome de tipo singular para uma enumeração, a menos que seus valores sejam campos de bits.
+ ✔️ usar um nome de tipo singular para uma enumeração, a menos que seus valores sejam campos de bits.
 
- ✔️ DO use um nome de tipo plural para uma enumeração com campos de bit como valores, também chamado de enum bandeiras.
+ ✔️ usar um nome de tipo plural para uma enumeração com campos de bits como valores, também chamados de sinalizadores Enum.
 
- ❌NÃO use um sufixo "Enum" em nomes do tipo enum.
+ ❌Não use um sufixo "enum" em nomes de tipos de enumeração.
 
- ❌NÃO use sufixos "Bandeiras" ou "Bandeiras" em nomes de tipo enum.
+ ❌Não use os sufixos "Flag" ou "Flags" em nomes de tipo de enumeração.
 
- ❌NÃO use um prefixo em nomes de valorde enumeração (por exemplo, "ad" para enums ADO, "rtf" para enums de texto rico, etc.).
+ ❌Não use um prefixo em nomes de valores de enumeração (por exemplo, "AD" para enums ADO, "RTF" para enums de Rich Text, etc.).
 
  *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
+- [Diretrizes de design de estrutura](../../../docs/standard/design-guidelines/index.md)
 - [Diretrizes de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

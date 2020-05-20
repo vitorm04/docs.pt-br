@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 03751fa3758c239cb9eea5fe826dff66c1c1605b
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f04ff902743c91147a6f056bca3292ee47952bbd
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249572"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420546"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Componentes de independência de linguagem e componentes independentes da linguagem
 
@@ -31,7 +31,7 @@ Neste artigo:
 
   * [Tipos e assinaturas de membro de tipo](#types-and-type-member-signatures)
 
-  * [Convenções de nomeação](#naming-conventions)
+  * [Convenções de nomenclatura](#naming-conventions)
 
   * [Conversão de tipo](#type-conversion)
 
@@ -168,7 +168,7 @@ Enumerações | [Enumerações](#enumerations) | Campos estáticos de literais d
 Eventos | [Eventos](#events) | Os métodos que implementam um evento deverão ser marcados como `SpecialName` nos metadados. |29
 Eventos | [Eventos](#events) | A acessibilidade de um evento e de seus acessadores deverá ser idêntica. |30
 Eventos | [Eventos](#events) | Os métodos `add` e `remove` de um evento deverão estar presentes ou ausentes. |31
-Eventos | [Eventos](#events) | Os `add` `remove` métodos e métodos para um evento devem cada um tomar um parâmetro cujo tipo define o tipo do evento e que deve ser derivado do [Sistema.Delegado](xref:System.Delegate). |32
+Eventos | [Eventos](#events) | Os `add` `remove` métodos e para um evento devem receber um parâmetro cujo tipo define o tipo do evento e que deve ser derivado de [System. delegate](xref:System.Delegate). |32
 Eventos | [Eventos](#events) | Os eventos deverão respeitar um padrão de nomenclatura específico. O atributo SpecialName mencionado na regra 29 da CLS deverá ser ignorado em comparações de nome apropriadas e respeitar as regras do identificador.  |33
 Exceções | [Exceções](#exceptions) | Os atributos acionados deverão ser do tipo [System.Exception](xref:System.Exception) ou de um tipo herdado dele. Mesmo assim, os métodos compatíveis com CLS não precisam bloquear a propagação de outros tipos de exceção. | 40
 Geral | [Regras de conformidade com CLS](#cls-compliance-rules) | As regras CLS só se aplicam a essas partes de um tipo acessíveis ou visíveis fora do assembly de definição. | 1
@@ -184,14 +184,14 @@ Interfaces | [Interfaces](#interfaces) | As interfaces compatíveis com CLS não
 Membros | [Membros de tipo em geral](#type-members-in-general) | Campos e métodos estáticos globais não são compatíveis com CLS. | 36
 Membros | -- | O valor de um estático literal é especificado por meio do uso de metadados de inicialização do campo. Um literal compatível com CLS deve ter um valor especificado em metadados de inicialização de campo que sejam exatamente do mesmo tipo que o literal (ou do tipo subjacente, se esse literal for um `enum`). | 13
 Membros | [Membros de tipo em geral](#type-members-in-general) | A restrição vararg não faz parte da CLS e a única convenção de chamada com suporte pela CLS é a convenção de chamada gerenciada padrão. | 15
-Convenções de nomenclatura | [Convenções de nomeação](#naming-conventions) | Os assemblies deverão seguir o Anexo 7 do Relatório Técnico 15 do Padrão Unicode 3.0 que controla o conjunto de caracteres permitidos para iniciar e serem incluídos em identificadores, disponíveis online em [Formulários de Normalização de Unicode](https://www.unicode.org/unicode/reports/tr15/tr15-18.html). Os identificadores deverão estar no formato canônico definido pelo Formulário C de Normalização de Unicode. Para fins de CLS, dois identificadores serão iguais se os mapeamentos em minúsculas (conforme especificado pelos mapeamentos em minúsculas um para um, insensíveis a localidade Unicode) forem os mesmos. Ou seja, para dois identificadores serem considerados diferentes na CLS, eles deverão ser diferentes além de apenas maiúsculas e minúsculas. No entanto, para substituir uma definição herdada, a CLI exige que a codificação precisa da declaração original seja usada. | 4
-Sobrecarga | [Convenções de nomeação](#naming-conventions) | Todos os nomes introduzidos em um escopo compatível com CLS deverão ser independentes e distintos do tipo, exceto quando os nomes forem idênticos e resolvidos por meio da sobrecarga. Ou seja, embora o CTS permita que um tipo single use o mesmo nome para um método e um campo, a CLS não permite. | 5
-Sobrecarga | [Convenções de nomeação](#naming-conventions) | Campos e tipos aninhados deverão ser diferenciados apenas por comparação de identificador, mesmo que o CTS permita que assinaturas diferentes sejam distinguidas. Métodos, propriedades e eventos com o mesmo nome (por comparação de identificador) deverão ser diferentes além apenas do tipo de retorno, exceto conforme especificado na Regra 39 da CLS | 6
+Convenções de nomenclatura | [Convenções de nomenclatura](#naming-conventions) | Os assemblies deverão seguir o Anexo 7 do Relatório Técnico 15 do Padrão Unicode 3.0 que controla o conjunto de caracteres permitidos para iniciar e serem incluídos em identificadores, disponíveis online em [Formulários de Normalização de Unicode](https://www.unicode.org/unicode/reports/tr15/tr15-18.html). Os identificadores deverão estar no formato canônico definido pelo Formulário C de Normalização de Unicode. Para fins de CLS, dois identificadores serão iguais se os mapeamentos em minúsculas (conforme especificado pelos mapeamentos em minúsculas um para um, insensíveis a localidade Unicode) forem os mesmos. Ou seja, para dois identificadores serem considerados diferentes na CLS, eles deverão ser diferentes além de apenas maiúsculas e minúsculas. No entanto, para substituir uma definição herdada, a CLI exige que a codificação precisa da declaração original seja usada. | 4
+Sobrecarga | [Convenções de nomenclatura](#naming-conventions) | Todos os nomes introduzidos em um escopo compatível com CLS deverão ser independentes e distintos do tipo, exceto quando os nomes forem idênticos e resolvidos por meio da sobrecarga. Ou seja, embora o CTS permita que um tipo single use o mesmo nome para um método e um campo, a CLS não permite. | 5
+Sobrecarga | [Convenções de nomenclatura](#naming-conventions) | Campos e tipos aninhados deverão ser diferenciados apenas por comparação de identificador, mesmo que o CTS permita que assinaturas diferentes sejam distinguidas. Métodos, propriedades e eventos com o mesmo nome (por comparação de identificador) deverão ser diferentes além apenas do tipo de retorno, exceto conforme especificado na Regra 39 da CLS | 6
 Sobrecarga | [Sobrecargas](#overloads) | Somente propriedades e métodos podem ser sobrecarregados. | 37
 Sobrecarga | [Sobrecargas](#overloads) |As propriedades e os métodos só podem ser sobrecarregados com base no número e nos tipos de seus parâmetros, exceto os operadores de conversão chamados `op_Implicit` e `op_Explicit`, que também podem ser sobrecarregados com base no tipo de retorno. | 38
 Sobrecarga | -- | Se dois ou mais métodos em conformidade com CLS declarados em um tipo tiverem o mesmo nome e, para um conjunto específico de instanciações de tipo, tiverem os mesmos tipos de parâmetro e retorno, esses métodos deverão ser semanticamente equivalentes nessas instanciações de tipo. | 48
 Propriedades | [Propriedades](#properties) | Os métodos que implementam os métodos getter e setter de uma propriedade deverão ser marcados como `SpecialName` nos metadados. | 24
-Propriedades | [Propriedades](#properties) | Os acessórios de uma propriedade devem ser todos estáticos, todos são virtuais, ou todos serão exemplo. | 26
+Propriedades | [Propriedades](#properties) | Os acessadores de uma propriedade serão todos estáticos, todos serão virtuais ou todas as instâncias. | 26
 Propriedades | [Propriedades](#properties) | O tipo de uma propriedade deverá ser o tipo de retorno do getter e o tipo do último argumento do setter. Os tipos dos parâmetros da propriedade deverão ser os tipos dos parâmetros do getter e os tipos de todos os parâmetros, menos o parâmetro final do setter. Todos esses tipos deverão ser compatíveis com CLS e não deverão ser ponteiros gerenciados (ou seja, não deverão ser passados por referência). | 27
 Propriedades | [Propriedades](#properties) | As propriedades deverão seguir um padrão de nomenclatura específico. O atributo `SpecialName` mencionado na regra 24 da CLS deverá ser ignorado em comparações de nome apropriadas e respeitar as regras do identificador. Uma propriedade deverá ter um método getter, um método setter ou ambos. | 28
 Conversão de tipos | [Conversão de tipo](#type-conversion) | Se op_Implicit ou op_Explicit for fornecido, um meio alternativo de coerção deverá ser fornecido. | 39
@@ -317,14 +317,14 @@ O [Common Type System](common-type-system.md) do .NET inclui vários tipos inter
 
 Tipo em conformidade com CLS | Descrição
 ------------------ | -----------
-[Byte](xref:System.Byte) | Inteiro sem sinal de 8 bits
+[Minuciosa](xref:System.Byte) | Inteiro sem sinal de 8 bits
 [Int16](xref:System.Int16) | Inteiro com sinal de 16 bits
 [Int32](xref:System.Int32) | Inteiro com sinal de 32 bits
 [Int64](xref:System.Int64) | Inteiro com sinal de 64 bits
-[Single](xref:System.Single) | Valor do ponto flutuante de precisão simples
-[Duplo](xref:System.Double) | Valor de ponto flutuante de precisão dupla
+[Exclusivo](xref:System.Single) | Valor do ponto flutuante de precisão simples
+[Clique](xref:System.Double) | Valor de ponto flutuante de precisão dupla
 [Boolean](xref:System.Boolean) | tipo de valor verdadeiro ou falso
-[Char](xref:System.Char) | unidade de código codificado UTF-16
+[º](xref:System.Char) | unidade de código codificado UTF-16
 [Decimal](xref:System.Decimal) | Número decimal de ponto não flutuante
 [IntPtr](xref:System.IntPtr) | Ponteiro ou identificador de um tamanho definido por plataforma
 [Cadeia de caracteres](xref:System.String) | Coleção de zero, um ou mais objetos Char
@@ -333,7 +333,7 @@ Os tipos intrínsecos listados na tabela a seguir não são compatíveis com CLS
 
 Tipo não compatível | Descrição | Alternativa em conformidade com CLS
 ------------------ | ----------- | -------------------------
-[Sbyte](xref:System.SByte) | Tipo de dados inteiro com sinal de 8 bits | [Int16](xref:System.Int16)
+[SByte](xref:System.SByte) | Tipo de dados inteiro com sinal de 8 bits | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | Inteiro sem sinal de 16 bits | [Int32](xref:System.Int32)
 [UInt32](xref:System.UInt32) | Inteiro sem sinal de 32 bits | [Int64](xref:System.Int64)
 [UInt64](xref:System.UInt64) | Inteiro sem sinal de 64 bits | [Int64](xref:System.Int64) (pode estourar), [BigInteger](xref:System.Numerics.BigInteger), ou[Double](xref:System.Double)
@@ -341,7 +341,7 @@ Tipo não compatível | Descrição | Alternativa em conformidade com CLS
 
 A biblioteca de classes .NET Framework ou qualquer outra biblioteca de classes pode incluir outros tipos que não sejam compatíveis com CLS; por exemplo:
 
-* Tipos de valor demarcado. O exemplo de C# a seguir cria uma classe que tem uma propriedade pública do tipo `int`* named `Value`. Como um `int`* é um tipo de valor demarcado, o compilador o sinaliza como sem conformidade com CLS.
+* Tipos de valor demarcado. O exemplo do C# a seguir cria uma classe que tem uma propriedade pública do tipo `int*` chamada `Value`. Como um `int*` é um tipo de valor demarcado, o compilador o sinaliza como incompatível com CLS.
 
 ```csharp
 using System;
@@ -2052,7 +2052,7 @@ Os construtores em classes compatíveis com CLS e em estruturas devem seguir est
 
 As propriedades em tipos em conformidade com CLS devem seguir estas regras:
 
-* Uma propriedade deve ter um setter, um getter ou ambos. Em uma montagem, estes são implementados como métodos especiais, o que significa `get` \_que eles aparecerão como métodos separados (o getter é chamado *de nome de propriedade* e o setter é `set` \_nome de *propriedade*) marcado como `SpecialName` nos metadados da montagem. Os compiladores do C# aplicam automaticamente essa regra, sem a necessidade de aplicar o atributo <xref:System.CLSCompliantAttribute>.
+* Uma propriedade deve ter um setter, um getter ou ambos. Em um assembly, eles são implementados como métodos especiais, o que significa que eles serão exibidos como métodos separados (o getter é chamado de `get` \_ *PropertyName* e o setter é `set` \_ *PropertyName*) marcado como `SpecialName` nos metadados do assembly. Os compiladores do C# aplicam automaticamente essa regra, sem a necessidade de aplicar o atributo <xref:System.CLSCompliantAttribute>.
 
 * Um tipo de propriedade é o tipo de retorno do getter da propriedade e o último argumento do setter. Esses tipos devem estar em conformidade com CLS e os argumentos não podem ser atribuídos à propriedade por referência (ou seja, não podem ser ponteiros gerenciados).
 
@@ -2066,7 +2066,7 @@ Um evento é definido por seu nome e tipo. O tipo de evento é um delegado que �
 
 * Um método para remover um manipulador de eventos, chamado `remove`_*EventName*. Por exemplo, o método de remoção para o evento `DbConnection.StateChange` é chamado `remove_StateChange`.
 
-* Um método para indicar que o evento `raise` \_ocorreu, chamado *EventName*.
+* Um método para indicar que o evento ocorreu, chamado `raise` \_ *EventName*.
 
 > [!NOTE]
 > A maioria das regras da Common Language Specification em relação a eventos é implementada por compiladores de linguagem e é transparente para desenvolvedores de componente.
@@ -2566,11 +2566,11 @@ O construtor ou as propriedades de um atributo compatível com CLS podem expor s
 
 * [Boolean](xref:System.Boolean)
 
-* [Byte](xref:System.Byte)
+* [Minuciosa](xref:System.Byte)
 
-* [Char](xref:System.Char)
+* [º](xref:System.Char)
 
-* [Duplo](xref:System.Double)
+* [Clique](xref:System.Double)
 
 * [Int16](xref:System.Int16)
 
@@ -2578,7 +2578,7 @@ O construtor ou as propriedades de um atributo compatível com CLS podem expor s
 
 * [Int64](xref:System.Int64)
 
-* [Single](xref:System.Single)
+* [Exclusivo](xref:System.Single)
 
 * [Cadeia de caracteres](xref:System.String)
 
