@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 7a6b0b15de4295506ff03b8566c06010b918566c
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: ab8d801f3cdcfbeb6de20146754b26e3713d7dd6
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158379"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702486"
 ---
 ### <a name="winforms-methods-now-throw-argumentnullexception"></a>Os métodos WinForms agora lançam ArgumentNullException
 
-Alguns métodos de Windows Forms agora geram um <xref:System.ArgumentNullException> para argumentos nulos, onde anteriormente <xref:System.NullReferenceException>eles lançavam um.
+Alguns métodos de Windows Forms agora geram um <xref:System.ArgumentNullException> para argumentos nulos, onde anteriormente eles lançavam um <xref:System.NullReferenceException> .
 
 #### <a name="change-description"></a>Descrição da alteração
 
@@ -23,7 +23,7 @@ Lançar um <xref:System.ArgumentNullException> está em conformidade com o compo
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Se você chamar qualquer um desses métodos e o seu código atualmente capturar um <xref:System.NullReferenceException> para argumentos nulos, pegue <xref:System.ArgumentNullException> um em vez disso. Além disso, considere atualizar o código para evitar a passagem de argumentos nulos para os métodos listados.
+Se você chamar qualquer um desses métodos e o seu código atualmente capturar um <xref:System.NullReferenceException> para argumentos nulos, pegue um <xref:System.ArgumentNullException> em vez disso. Além disso, considere atualizar o código para evitar a passagem de argumentos nulos para os métodos listados.
 
 #### <a name="category"></a>Categoria
 
@@ -45,11 +45,11 @@ A partir do .NET 5,0 Preview 1:
 A partir do .NET 5,0 Preview 2:
 
 - <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl.ApplyCellStyleToEditingControl(System.Windows.Forms.DataGridViewCellStyle)?displayProperty=nameWithType>
-- <xref:System.Windows.Forms.RichTextBox.LoadFile(System.IO.Stream,System.Windows.Forms.RichTextBoxStreamType)?displayProperty=nameWithType>(somente para <xref:System.IO.Stream> o parâmetro)
+- <xref:System.Windows.Forms.RichTextBox.LoadFile(System.IO.Stream,System.Windows.Forms.RichTextBoxStreamType)?displayProperty=nameWithType>(somente para o <xref:System.IO.Stream> parâmetro)
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Windows.Forms.Control.ControlCollection.#ctor(System.Windows.Forms.Control)`
 - `M:System.Windows.Forms.TabControl.GetToolTipText(System.Object)`

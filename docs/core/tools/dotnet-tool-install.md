@@ -1,21 +1,21 @@
 ---
 title: Comando dotnet tool install
-description: O comando dotnet tool install instala a ferramenta .NET Core especificada na máquina.
+description: O comando dotnet ferramenta de instalação instala a ferramenta .NET Core especificada em seu computador.
 ms.date: 02/14/2020
-ms.openlocfilehash: 723d25caa6009288dbb55d55f173b04d7b983450
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 067f90124833da537370a36934ff212aba7577f3
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463358"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702820"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
-**Este artigo se aplica a:** ✔️ .NET Core 2.1 SDK e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
-`dotnet tool install`- Instala a [ferramenta .NET Core](global-tools.md) especificada na sua máquina.
+`dotnet tool install`-Instala a [ferramenta .NET Core](global-tools.md) especificada em seu computador.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -40,34 +40,34 @@ dotnet tool install -h|--help
 
 ## <a name="description"></a>Descrição
 
-O `dotnet tool install` comando fornece uma maneira de você instalar ferramentas .NET Core em sua máquina. Para usar o comando, você especifica uma das seguintes opções de instalação:
+O `dotnet tool install` comando fornece uma maneira de instalar as ferramentas do .NET Core em seu computador. Para usar o comando, especifique uma das seguintes opções de instalação:
 
-* Para instalar uma ferramenta global no `--global` local padrão, use a opção.
-* Para instalar uma ferramenta global em `--tool-path` um local personalizado, use a opção.
-* Para instalar uma ferramenta local, `--global` `--tool-path` omita as opções e opções.
+* Para instalar uma ferramenta global no local padrão, use a `--global` opção.
+* Para instalar uma ferramenta global em um local personalizado, use a `--tool-path` opção.
+* Para instalar uma ferramenta local, omita as `--global` `--tool-path` Opções e.
 
-**As ferramentas locais estão disponíveis a partir do .NET Core SDK 3.0.**
+**As ferramentas locais estão disponíveis a partir do SDK do .NET Core 3,0.**
 
-As ferramentas globais são instaladas nos seguintes `-g` `--global` diretórios por padrão quando você especifica a opção ou opção:
+As ferramentas globais são instaladas nos diretórios a seguir por padrão, quando você especifica a `-g` `--global` opção ou:
 
 | Sistema operacional          | Caminho                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-As ferramentas locais são adicionadas a um arquivo *tool-manifest.json* em um diretório *.config* sob o diretório atual. Se um arquivo manifesto ainda não existir, crie-o executando o seguinte comando:
+As ferramentas locais são adicionadas a um arquivo *dotnet-Tools. JSON* em um diretório *. config* no diretório atual. Se um arquivo de manifesto ainda não existir, crie-o executando o seguinte comando:
 
 ```dotnetcli
 dotnet new tool-manifest
 ```
 
-Para obter mais informações, consulte [Instalar uma ferramenta local](global-tools.md#install-a-local-tool).
+Para obter mais informações, consulte [instalar uma ferramenta local](global-tools.md#install-a-local-tool).
 
 ## <a name="arguments"></a>Argumentos
 
 - **`PACKAGE_NAME`**
 
-  Nome/ID do pacote NuGet que contém a ferramenta .NET Core a ser instalado.
+  Nome/ID do pacote NuGet que contém a ferramenta .NET Core a ser instalada.
 
 ## <a name="options"></a>Opções
 
@@ -107,15 +107,15 @@ Para obter mais informações, consulte [Instalar uma ferramenta local](global-t
 
 - **`dotnet tool install -g dotnetsay`**
 
-  Instala [dotnetsay](https://www.nuget.org/packages/dotnetsay/) como uma ferramenta global no local padrão.
+  Instala o [dotnetsay](https://www.nuget.org/packages/dotnetsay/) como uma ferramenta global no local padrão.
 
 - **`dotnet tool install dotnetsay --tool-path c:\global-tools`**
 
-  Instala [dotnetsay](https://www.nuget.org/packages/dotnetsay/) como uma ferramenta global em um diretório específico do Windows.
+  Instala o [dotnetsay](https://www.nuget.org/packages/dotnetsay/) como uma ferramenta global em um diretório específico do Windows.
 
 - **`dotnet tool install dotnetsay --tool-path ~/bin`**
 
-  Instala [dotnetsay](https://www.nuget.org/packages/dotnetsay/) como uma ferramenta global em um diretório específico do Linux/macOS.
+  Instala o [dotnetsay](https://www.nuget.org/packages/dotnetsay/) como uma ferramenta global em um diretório específico do linux/MacOS.
 
 - **`dotnet tool install -g dotnetsay --version 2.0.0`**
 
@@ -123,10 +123,10 @@ Para obter mais informações, consulte [Instalar uma ferramenta local](global-t
 
 - **`dotnet tool install dotnetsay`**
 
-  Instala [dotnetsay](https://www.nuget.org/packages/dotnetsay/) como uma ferramenta local para o diretório atual.
+  Instala o [dotnetsay](https://www.nuget.org/packages/dotnetsay/) como uma ferramenta local para o diretório atual.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [.NET Core ferramentas](global-tools.md)
-- [Tutorial: Instale e use uma ferramenta global .NET Core usando o .NET Core CLI](global-tools-how-to-use.md)
-- [Tutorial: Instale e use uma ferramenta local .NET Core usando o .NET Core CLI](local-tools-how-to-use.md)
+- [Ferramentas do .NET Core](global-tools.md)
+- [Tutorial: instalar e usar uma ferramenta global do .NET Core usando o CLI do .NET Core](global-tools-how-to-use.md)
+- [Tutorial: instalar e usar uma ferramenta local do .NET Core usando o CLI do .NET Core](local-tools-how-to-use.md)

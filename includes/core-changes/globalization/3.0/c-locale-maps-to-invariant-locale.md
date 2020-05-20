@@ -1,37 +1,39 @@
 ---
-ms.openlocfilehash: d35de48dd22003c851cf5dba9e8517ec48b9217b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0551fa086644497c631cd9b6d7058398ff9ccfa
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74567778"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702314"
 ---
-### <a name="c-locale-maps-to-the-invariant-locale"></a>Mapas locais "C" para o local invariante
+### <a name="c-locale-maps-to-the-invariant-locale"></a>A localidade "C" é mapeada para a localidade invariável
 
-O .NET Core 2.2 e as versões anteriores dependem do comportamento padrão da UTI, que mapeia o local "C" para o local en_US_POSIX. O local en_US_POSIX tem um comportamento de colagem indesejável, porque não suporta comparações de seqüências insensíveis a casos. Como algumas distribuições Linux definiram o local "C" como o local padrão, os usuários estavam experimentando um comportamento inesperado.
+O .NET Core 2,2 e versões anteriores dependem do comportamento padrão do ICU, que mapeia a localidade "C" para a localidade en_US_POSIX. A localidade en_US_POSIX tem um comportamento de agrupamento indesejável, pois não oferece suporte a comparações de cadeias de caracteres que não diferenciam maiúsculas de minúscula Como algumas distribuições do Linux definem a localidade "C" como a localidade padrão, os usuários estão apresentando um comportamento inesperado.
 
 #### <a name="change-description"></a>Descrição da alteração
 
-Começando com o .NET Core 3.0, o mapeamento local "C" foi alterado para usar o local Invariant em vez de en_US_POSIX. O mapeamento "C" para Invariant também é aplicado ao Windows para obter consistência.
+A partir do .NET Core 3,0, o mapeamento de localidade "C" foi alterado para usar a localidade invariável em vez de en_US_POSIX. A localidade "C" para mapeamento invariável também é aplicada ao Windows para fins de consistência.
 
-O mapeamento de "C" para en_US_POSIX cultura causou confusão no cliente, porque en_US_POSIX não suporta operações de cadeias de classificação/pesquisa insensíveis. Como o local "C" é usado como local padrão em algumas das distros do Linux, os clientes experimentaram esse comportamento indesejado nesses sistemas operacionais.
+O mapeamento de "C" para en_US_POSIX cultura causou confusão do cliente, porque en_US_POSIX não dá suporte a operações de cadeia de caracteres de classificação/pesquisa de maiúsculas e minúsculas. Como a localidade "C" é usada como uma localidade padrão em alguns dos distribuições do Linux, os clientes tiveram esse comportamento indesejado nesses sistemas operacionais.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
 3.0
 
-### <a name="recommended-action"></a>Ação recomendada
+#### <a name="recommended-action"></a>Ação recomendada
 
-Nada específico mais do que a consciência desta mudança. Essa alteração afeta apenas os aplicativos que usam o mapeamento local "C".
+Nada mais específico do que a conscientização dessa alteração. Essa alteração afeta apenas os aplicativos que usam o mapeamento de localidade "C".
 
-### <a name="category"></a>Categoria
+#### <a name="category"></a>Categoria
 
 Globalização
 
-### <a name="affected-apis"></a>APIs afetadas
+#### <a name="affected-apis"></a>APIs afetadas
 
-Todas as APIs de colagem e cultura são afetadas por essa mudança.
+Todas as APIs de agrupamento e cultura são afetadas por essa alteração.
 
 <!--
+
+#### Affected APIs
 
 -->

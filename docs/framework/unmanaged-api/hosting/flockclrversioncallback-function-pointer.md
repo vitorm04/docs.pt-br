@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98a4762d-9ad2-45bd-9d03-39064a028b44
 topic_type:
 - apiref
-ms.openlocfilehash: f1ad414c30788801e14a33e98a0893e2a0f58d0c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: af42de820b2d835e8ea137a2643a51678e382ff0
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136512"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617276"
 ---
 # <a name="flockclrversioncallback-function-pointer"></a>Ponteiro de função FLockClrVersionCallback
 Aponta para uma função que o Common Language Runtime (CLR) chama para indicar que a inicialização foi iniciada ou concluída.  
@@ -36,15 +36,15 @@ typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );
  Essa função é implementada pelo host.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** MSCorWks. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Função LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)
-- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Função LockClrVersion](lockclrversion-function.md)
+- [Funções de hospedagem CLR reprovadas](deprecated-clr-hosting-functions.md)

@@ -1,24 +1,29 @@
 ---
-title: Mudanças de quebra da globalização
-description: Lista as mudanças de quebra na globalização no .NET Core.
+title: Alterações significativas de globalização
+description: Lista as alterações significativas na globalização no .NET Core.
 ms.date: 04/07/2020
-ms.openlocfilehash: 1436f9e2ec540b0f8b1e710b25c2115646d4e5b4
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 0c3367cb3515c6f473f53be6062b54f2e836b8c5
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888157"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702322"
 ---
-# <a name="globalization-breaking-changes"></a>Mudanças de quebra da globalização
+# <a name="globalization-breaking-changes"></a>Alterações significativas de globalização
 
-As seguintes alterações de quebra estão documentadas nesta página:
+As seguintes alterações significativas estão documentadas nesta página:
 
-| Mudança de ruptura | Versão introduzida |
+| Alteração significativa | Versão introduzida |
 | - | :-: |
-| [StringInfo e TextElementEnumerator agora estão compatíveis com uax29](#stringinfo-and-textelementenumerator-are-now-uax29-compliant) | 5.0 |
-| [Mapas locais "C" para o local invariante](#c-locale-maps-to-the-invariant-locale) | 3.0 |
+| [APIs de globalização usam bibliotecas ICU no Windows](#globalization-apis-use-icu-libraries-on-windows) | 5.0 |
+| [StringInfo e TextElementEnumerator agora são compatíveis com UAX29](#stringinfo-and-textelementenumerator-are-now-uax29-compliant) | 5.0 |
+| [A localidade "C" é mapeada para a localidade invariável](#c-locale-maps-to-the-invariant-locale) | 3.0 |
 
-## <a name="net-50"></a>.NET 5.0
+## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [icu-globalization-api](../../../includes/core-changes/globalization/5.0/icu-globalization-api.md)]
+
+***
 
 [!INCLUDE [uax29-compliant-grapheme-enumeration](../../../includes/core-changes/globalization/5.0/uax29-compliant-grapheme-enumeration.md)]
 
