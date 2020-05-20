@@ -1,17 +1,15 @@
 ---
 title: Como aproveitar contêineres e orquestradores
 description: Aproveitando contêineres do Docker e orquestradores kubernetes no Azure
-ms.date: 04/13/2020
-ms.openlocfilehash: 64c6c0666398d9ccbc87efad18017bf278568fc4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 5d0b7f41caecb3422a4416514de2fdd54e94539a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895545"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613873"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Como aproveitar contêineres e orquestradores
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Contêineres e orquestradores são projetados para resolver problemas comuns a abordagens de implantação monolítica.
 
@@ -19,7 +17,7 @@ Contêineres e orquestradores são projetados para resolver problemas comuns a a
 
 Tradicionalmente, a maioria dos aplicativos foi implantada como uma única unidade. Esses aplicativos são chamados de monolíticos. Essa abordagem geral de implantação de aplicativos como unidades únicas, mesmo se eles são compostos por vários módulos ou assemblies, é conhecida como arquitetura monolítica, como mostra a Figura 3-1.
 
-![Arquitetura monolítica.](./media/monolithic-architecture.png)
+![Arquitetura monolítica.](./media/monolithic-design.png)
 
 **Figura 3-1**. Arquitetura monolítica.
 
@@ -57,8 +55,9 @@ Os contêineres são imutáveis. Depois de definir um contêiner, você pode rec
 
 Os contêineres são imutáveis. Depois de definir um contêiner, você pode recriá-lo e executá-lo exatamente da mesma maneira. Essa imutabilidade se presta ao design baseado em componentes. Se algumas partes de um aplicativo evoluem de forma diferente do que outras, por que reimplantar todo o aplicativo quando você pode simplesmente implantar as partes que mudam com mais frequência? Diferentes recursos e preocupações abrangentes de um aplicativo podem ser divididos em unidades separadas. A Figura 3-2 mostra como um aplicativo monolítico pode aproveitar os contêineres e os microserviços delegando determinados recursos ou funcionalidades. A funcionalidade restante no aplicativo também foi contida em contêineres.
 
-![Dividir um aplicativo monolítico para usar os microserviços no back-end. ](./media/breaking-up-monolith-with-backend-microservices.png)
- **Figura 3-2**. Dividir um aplicativo monolítico para usar os microserviços no back-end.
+![Dividir um aplicativo monolítico para usar os microserviços no back-end.](./media/cloud-native-design.png)
+
+**Figura 3-2**. Decompondo um aplicativo monolítico para abraçar os microserviços.
 
 Cada serviço nativo de nuvem é criado e implantado em um contêiner separado. Cada uma pode ser atualizada conforme necessário. Serviços individuais podem ser hospedados em nós com recursos apropriados para cada serviço. O ambiente em que cada serviço é executado é imutável, compartilhado entre ambientes de desenvolvimento, teste e produção e com controle de versão com facilidade. O acoplamento entre diferentes áreas do aplicativo ocorre explicitamente como chamadas ou mensagens entre serviços, não as dependências de tempo de compilação dentro do monolítico. Você também pode escolher a tecnologia que melhor suites um determinado recurso sem a necessidade de alterações no restante do aplicativo.
 
@@ -111,7 +110,7 @@ O kubernetes dá suporte à configuração declarativa e imperativa. A abordagem
 
 Os comandos imperativos são ótimos para aprendizado e experimentação interativa. No entanto, você desejará criar declarativamente arquivos de manifesto kubernetes para adotar uma infraestrutura como abordagem de código, fornecendo implantações confiáveis e reproduzíveis. O arquivo de manifesto se torna um artefato de projeto e é usado em seu pipeline de CI/CD para automatizar implantações de kubernetes.
 
-Se você já tiver configurado o cluster usando comandos imperativos, poderá exportar um manifesto declarativo `kubectl get svc SERVICENAME -o yaml > service.yaml`usando o. Esse comando produz um manifesto semelhante a um mostrado abaixo:
+Se você já tiver configurado o cluster usando comandos imperativos, poderá exportar um manifesto declarativo usando o `kubectl get svc SERVICENAME -o yaml > service.yaml` . Esse comando produz um manifesto semelhante a um mostrado abaixo:
 
 ```yaml
 apiVersion: v1
@@ -139,7 +138,7 @@ status:
   loadBalancer: {}
 ```
 
-Ao usar a configuração declarativa, você pode visualizar as alterações que serão feitas antes de confirmá- `kubectl diff -f FOLDERNAME` las usando a pasta em que os arquivos de configuração estão localizados. Quando tiver certeza de que deseja aplicar as alterações, execute `kubectl apply -f FOLDERNAME`. Adicionar `-R` para processar recursivamente uma hierarquia de pastas.
+Ao usar a configuração declarativa, você pode visualizar as alterações que serão feitas antes de confirmá-las usando `kubectl diff -f FOLDERNAME` a pasta em que os arquivos de configuração estão localizados. Quando tiver certeza de que deseja aplicar as alterações, execute `kubectl apply -f FOLDERNAME` . Adicionar `-R` para processar recursivamente uma hierarquia de pastas.
 
 Você também pode usar a configuração declarativa com outros recursos do kubernetes, um dos quais sendo implantações. As implantações declarativas ajudam a gerenciar versões, atualizações e dimensionamento. Eles instruem o controlador de implantação kubernetes sobre como implantar novas alterações, escalar horizontalmente a carga ou reverter para uma revisão anterior. Se um cluster estiver instável, uma implantação declarativa retornará automaticamente o cluster de volta para um estado desejado. Por exemplo, se um nó deve falhar, o mecanismo de implantação reimplantará uma substituição para atingir o estado desejado
 
@@ -176,12 +175,12 @@ O que é o Minikube? O projeto Minikube diz "Minikube implementa um cluster kube
 - DNS
 - NodePorts
 - ConfigMaps e segredos
-- Painéis
+- Dashboards
 - Tempos de execução de contêiner: Docker, RKT, CRI-O e em contêineres
 - Habilitando o CNI (interface de rede de contêiner)
 - Entrada
 
-Depois de instalar o Minikube, você pode começar rapidamente a usá- `minikube start` lo executando o comando, que baixa uma imagem e inicia o cluster kubernetes local. Depois que o cluster é iniciado, você interage com ele usando os comandos `kubectl` padrão do kubernetes.
+Depois de instalar o Minikube, você pode começar rapidamente a usá-lo executando o `minikube start` comando, que baixa uma imagem e inicia o cluster kubernetes local. Depois que o cluster é iniciado, você interage com ele usando os comandos padrão do kubernetes `kubectl` .
 
 ### <a name="docker-desktop"></a>Docker Desktop
 
@@ -204,26 +203,26 @@ O Visual Studio dá suporte ao desenvolvimento do Docker para aplicativos basead
 Quando essa opção é selecionada, o projeto é criado com um `Dockerfile` em sua raiz, que pode ser usado para criar e hospedar o aplicativo em um contêiner do Docker. Um exemplo de Dockerfile é mostrado na Figura 3 -6. git
 
 ```docker
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-stretch-slim AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0-stretch AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["WebApplication3/WebApplication3.csproj", "WebApplication3/"]
-RUN dotnet restore "WebApplication3/WebApplication3.csproj"
+COPY ["eShopWeb/eShopWeb.csproj", "eShopWeb/"]
+RUN dotnet restore "eShopWeb/eShopWeb.csproj"
 COPY . .
-WORKDIR "/src/WebApplication3"
-RUN dotnet build "WebApplication3.csproj" -c Release -o /app
+WORKDIR "/src/eShopWeb"
+RUN dotnet build "eShopWeb.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "WebApplication3.csproj" -c Release -o /app
+RUN dotnet publish "eShopWeb.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "WebApplication3.dll"]
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "eShopWeb.dll"]
 ```
 
 **Figura 3-6**. Dockerfile gerado pelo Visual Studio
@@ -236,13 +235,17 @@ O comportamento padrão quando o aplicativo é executado é configurado para usa
 
 Além do desenvolvimento local, o [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) fornece uma maneira conveniente para vários desenvolvedores trabalharem com suas próprias configurações de kubernetes no Azure. Como você pode ver na Figura 3-7, você também pode executar o aplicativo em Azure Dev Spaces.
 
-Além disso, a qualquer momento você pode adicionar o suporte do Docker a um aplicativo ASP.NET Core existente. No Gerenciador de soluções do Visual Studio, clique com o botão direito do mouse no projeto e **adicione** > **suporte ao Docker**, conforme mostrado na Figura 3-8.
+Além disso, a qualquer momento você pode adicionar o suporte do Docker a um aplicativo ASP.NET Core existente. No Gerenciador de soluções do Visual Studio, clique com o botão direito do mouse no projeto e **adicione**  >  **suporte ao Docker**, conforme mostrado na Figura 3-8.
+
+![Adicionar suporte ao Docker ao Visual Studio](./media/visual-studio-add-docker-support.png)
 
 **Figura 3-8**. Adicionando suporte ao Docker ao Visual Studio
 
 Você também pode adicionar suporte à orquestração de contêiner, também mostrada na Figura 3-8. Por padrão, o orquestrador usa kubernetes e Helm. Depois de escolher o orquestrador, um `azds.yaml` arquivo é adicionado à raiz do projeto e uma `charts` pasta é adicionada contendo os gráficos Helm usados para configurar e implantar o aplicativo no kubernetes. A Figura 3-9 mostra os arquivos resultantes em um novo projeto.
 
 Você também pode adicionar suporte à orquestração de contêiner, também mostrada na Figura 3-8. Por padrão, o orquestrador usa kubernetes e Helm. Depois de escolher o orquestrador, um `azds.yaml` arquivo é adicionado à raiz do projeto e uma `charts` pasta é adicionada contendo os gráficos Helm usados para configurar e implantar o aplicativo no kubernetes. A Figura 3-9 mostra os arquivos resultantes em um novo projeto.
+
+![Adicionar suporte ao Orchestrator no Visual Studio](./media/visual-studio-add-orchestrator-support.png)
 
 **Figura 3-9**. Adicionando suporte de orquestração ao Visual Studio
 
@@ -253,5 +256,5 @@ Há várias extensões disponíveis para Visual Studio Code que dão suporte ao 
 A Microsoft fornece o [Docker para a extensão de Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker). Essa extensão simplifica o processo de adição de suporte a contêineres a aplicativos. Ele aplica Scaffold arquivos necessários, cria imagens do Docker e permite que você depure seu aplicativo dentro de um contêiner. A extensão apresenta um Visual Explorer que torna mais fácil executar ações em contêineres e imagens como iniciar, parar, inspecionar, remover e muito mais. A extensão também dá suporte a Docker Compose permitindo que você gerencie vários contêineres em execução como uma única unidade.
 
 >[!div class="step-by-step"]
->[Anterior](scale-applications.md)
->[próximo](leverage-serverless-functions.md)
+>[Anterior](scale-applications.md) 
+> [Avançar](leverage-serverless-functions.md)

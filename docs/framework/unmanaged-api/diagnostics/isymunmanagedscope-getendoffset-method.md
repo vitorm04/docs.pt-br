@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d0b15c9-8059-435f-9fce-346a08b9bd36
 topic_type:
 - apiref
-ms.openlocfilehash: 25a8188e3ab62c095355b72b3e63e767a6768114
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4d6bd239a15bd196f840007af120cb062499f4c9
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446362"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614845"
 ---
 # <a name="isymunmanagedscopegetendoffset-method"></a>Método ISymUnmanagedScope::GetEndOffset
 Obtém o deslocamento de fim deste escopo.  
@@ -34,15 +34,15 @@ HRESULT GetEndOffset(
   
 ## <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- fora Um ponteiro para uma `ULONG32` que recebe o deslocamento final.  
+ fora Um ponteiro para um `ULONG32` que recebe o deslocamento final.  
   
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [Método GetStartOffset](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getstartoffset-method.md)
+- [Interface ISymUnmanagedScope](isymunmanagedscope-interface.md)
+- [Método GetStartOffset](isymunmanagedscope-getstartoffset-method.md)

@@ -1,24 +1,22 @@
 ---
 title: Como mapear o eShopOnContainers para os Serviços do Azure
 description: Mapeamento de eShopOnContainers para serviços do Azure, como o serviço kubernetes do Azure, o gateway de API e o barramento de serviço do Azure.
-ms.date: 04/20/2020
-ms.openlocfilehash: 26fce71ba71f7da643b669396ab59affe592649a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 271707404f7fb51aec59c6f682ddaefd0bac82cc
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895508"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613831"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Como mapear o eShopOnContainers para os Serviços do Azure
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Embora não seja necessário, o Azure é bem adequado para dar suporte ao eShopOnContainers porque o projeto foi criado para ser um aplicativo nativo de nuvem. O aplicativo é criado com o .NET Core, para que possa ser executado em contêineres do Linux ou do Windows, dependendo do host do Docker. O aplicativo é composto por vários microserviços autônomos, cada um com seus próprios dados. Os diferentes microserviços demonstram abordagens diferentes, desde operações CRUD simples a padrões DDD e CQRS mais complexos. Os microserviços se comunicam com clientes via HTTP e uns com os outros por meio de comunicação baseada em mensagem. O aplicativo também dá suporte a várias plataformas para clientes, já que ele adota o HTTP como um protocolo de comunicação padrão e inclui aplicativos móveis ASP.NET Core e Xamarin que são executados em plataformas Android, iOS e Windows.
 
 A arquitetura do aplicativo é mostrada na Figura 2-5. À esquerda estão os aplicativos cliente, divididos em tipos móveis, da Web tradicional e de SPA (aplicativo de página única) da Web. À direita estão os componentes do lado do servidor que compõem o sistema, cada um deles pode ser hospedado em contêineres e clusters kubernetes do Docker. O aplicativo Web tradicional é fornecido pela plataforma de ASP.NET Core aplicativos MVC mostrados em amarelo. Esse aplicativo e os aplicativos de SPA móveis e da Web se comunicam com os microserviços individuais por meio de um ou mais gateways de API. Os gateways de API seguem o padrão de "back-ends para front-ends" (BFF), o que significa que cada gateway é projetado para dar suporte a um determinado cliente front-end. Os microserviços individuais são listados à direita dos gateways de API e incluem a lógica de negócios e algum tipo de armazenamento de persistência. Os diferentes serviços fazem uso de bancos de dados SQL Server, instâncias de cache Redis e armazenamentos MongoDB/CosmosDB. Na extrema direita, está o barramento de evento do sistema, que é usado para a comunicação entre os microserviços.
 
-![arquitetura](./media/eshoponcontainers-architecture.png)
-eShopOnContainers**Figura 2-5**. A arquitetura eShopOnContainers.
+![Arquitetura eShopOnContainers ](./media/eshoponcontainers-architecture.png)
+ **Figura 2-5**. A arquitetura eShopOnContainers.
 
 Todos os componentes do lado do servidor dessa arquitetura são mapeados facilmente para os serviços do Azure.
 
@@ -65,5 +63,5 @@ O aplicativo usa eventos para comunicar alterações entre diferentes serviços.
 Depois de implantado em produção, o aplicativo eShopOnContainers seria capaz de aproveitar vários serviços do Azure disponíveis para melhorar sua resiliência. O aplicativo publica verificações de integridade, que podem ser integradas com Application Insights para fornecer relatórios e alertas com base na disponibilidade do aplicativo. Os recursos do Azure também fornecem logs de diagnóstico que podem ser usados para identificar e corrigir erros e problemas de desempenho. Os logs de recursos fornecem informações detalhadas sobre quando e como os diferentes recursos do Azure são usados pelo aplicativo. Você aprenderá mais sobre os recursos de resiliência nativa de nuvem no [capítulo 6](resiliency.md).
 
 >[!div class="step-by-step"]
->[Anterior](introduce-eshoponcontainers-reference-app.md)
->[próximo](deploy-eshoponcontainers-azure.md)
+>[Anterior](introduce-eshoponcontainers-reference-app.md) 
+> [Avançar](deploy-eshoponcontainers-azure.md)

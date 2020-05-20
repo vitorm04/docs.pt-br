@@ -1,45 +1,47 @@
 ---
 title: Resiliência nativa de nuvem
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Resiliência nativa na nuvem
-ms.date: 06/30/2019
-ms.openlocfilehash: 427405d95534c4467ab519c2188fe88e2f18e2b2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+author: robvet
+ms.date: 05/13/2020
+ms.openlocfilehash: f3aa89e3ae21b13a31f65013b59636b3f931553c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781081"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613766"
 ---
 # <a name="cloud-native-resiliency"></a>Resiliência nativa de nuvem
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+A resiliência é a capacidade do seu sistema de reagir à falha e ainda continuar funcionando. Não está prestes a evitar falhas, mas aceitando falhas e construindo seus serviços nativos de nuvem para responder a ela. Você deseja retornar a um estado totalmente funcional o mais rápido possível.
 
-A resiliência é a capacidade do seu sistema de reagir à falha e ainda continuar funcionando. Não está prestes a evitar falhas. Mas trata-se de aceitar que a falha seja inevitável em sistemas baseados em nuvem e criando seu aplicativo para responder a ele. O objetivo final da resiliência é retornar o aplicativo para um estado totalmente funcional após uma falha.
-
-Ao contrário dos aplicativos monolíticos tradicionais, onde tudo é executado juntos em um único processo, os sistemas nativos de nuvem adotam a arquitetura distribuída, conforme mostrado na Figura 6-1:
+Ao contrário dos aplicativos monolíticos tradicionais, onde tudo é executado juntos em um único processo, os sistemas nativos de nuvem adotam uma arquitetura distribuída, como mostrado na Figura 6-1:
 
 ![Ambiente nativo de nuvem distribuída](./media/distributed-cloud-native-environment.png)
 
 **Figura 6-1.** Ambiente nativo de nuvem distribuída
 
-Na figura anterior, observe como cada cliente, microserviço e [serviço de backup](https://12factor.net/backing-services) baseado em nuvem é executado como um processo separado, em execução em diferentes servidores, todas comunicando-se por meio de chamadas baseadas em rede.
+Na figura anterior, cada microserviço e [serviço de backup](https://12factor.net/backing-services) baseado em nuvem é executado em um processo separado, na infraestrutura de servidor, comunicando-se por meio de chamadas baseadas em rede.
 
-Então, o que poderia dar errado?
+Operando nesse ambiente, um serviço deve ser sensível a muitos desafios diferentes:
 
-- [Latência de rede](https://www.techopedia.com/definition/8553/network-latency)inesperada.
-- [Falhas transitórias](https://docs.microsoft.com/azure/architecture/best-practices/transient-faults) (erros de conectividade de rede temporários).
+- Latência de rede inesperada-o tempo para uma solicitação de serviço viajar para o receptor e vice-versa.
+
+- [Falhas transitórias](https://docs.microsoft.com/azure/architecture/best-practices/transient-faults) -erros de conectividade de rede de curta duração.
+
 - Bloqueio por uma operação síncrona de execução longa.
+
 - Um processo de host que falhou e está sendo reiniciado ou movido.
+
 - Um microserviço sobrecarregado que não pode responder por um curto período de tempo.
-- Uma operação DevOps em andamento, como uma operação de atualização ou de dimensionamento.
-- Uma operação de orquestrador, como mover um serviço de um nó para outro.
-- Falhas de hardware do hardware de mercadoria.
 
-Ao implantar serviços distribuídos em infraestrutura baseada em nuvem, os fatores da lista anterior se tornam muito reais e você deve arquitetar e desenvolver de maneira defensiva para lidar com eles.
+- Uma operação de orquestrador em andamento, como uma atualização sem interrupção ou movendo um serviço de um nó para outro.
 
-Em um sistema distribuído de pequena escala, a falha será menos frequente, mas, à medida que o sistema for expandido e reduzido, você poderá esperar mais desses problemas até um ponto em que a falha parcial se tornará uma operação normal.
+- Falhas de hardware.
 
-Portanto, seu aplicativo e sua infraestrutura devem ser resilientes. Nas seções a seguir, exploraremos técnicas defensivas que você pode adicionar ao seu aplicativo e recursos de nuvem internos que você pode aproveitar para ajudar a verificar a experiência do usuário na prova de marcadores.
+As plataformas de nuvem podem detectar e atenuar muitos desses problemas de infraestrutura. Ele pode reiniciar, escalar horizontalmente e até mesmo redistribuir seu serviço para um nó diferente.  No entanto, para aproveitar ao máximo essa proteção interna, você deve projetar seus serviços para reagir a ele e prosperar nesse ambiente dinâmico.
+
+Nas seções a seguir, exploraremos técnicas defensivas que o serviço e os recursos de nuvem gerenciados podem aproveitar para minimizar o tempo de inatividade e a interrupção.
 
 >[!div class="step-by-step"]
->[Anterior](elastic-search-in-azure.md)
->[Próximo](application-resiliency-patterns.md)
+>[Anterior](elastic-search-in-azure.md) 
+> [Avançar](application-resiliency-patterns.md)

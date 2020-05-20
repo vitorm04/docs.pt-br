@@ -2,17 +2,15 @@
 title: Comunicação entre serviços
 description: Saiba como os microserviços nativos de nuvem de back-end se comunicam com outros microserviços de back-end.
 author: robvet
-ms.date: 09/09/2019
-ms.openlocfilehash: 556617a9e2df5a4d9ff9adb9d19e714ca94930ea
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: dec06cc28ac177381b882f9e441e19e5c51bd5ad
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895502"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613701"
 ---
 # <a name="service-to-service-communication"></a>Comunicação entre serviços
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Mudando do cliente front-end, agora resolvemos que os microserviços de back-end se comunicam entre si.
 
@@ -50,7 +48,7 @@ A execução de uma solicitação infrequente que faz uma única chamada HTTP di
 
 **Figura 4-9**. Encadeando consultas HTTP
 
-Certamente, você pode imaginar o risco no design mostrado na imagem anterior. O que acontece se \#a etapa 3 falhar? Ou a \#etapa 8 falha? Como você se recupera? E se a \#etapa 6 estiver lenta porque o serviço subjacente está ocupado? Como você continua? Mesmo que tudo funcione corretamente, considere a latência que essa chamada incorreria, que é a soma da latência de cada etapa.
+Certamente, você pode imaginar o risco no design mostrado na imagem anterior. O que acontece se a etapa \# 3 falhar? Ou a etapa \# 8 falha? Como você se recupera? E se \# a etapa 6 estiver lenta porque o serviço subjacente está ocupado? Como você continua? Mesmo que tudo funcione corretamente, considere a latência que essa chamada incorreria, que é a soma da latência de cada etapa.
 
 O grande grau de acoplamento na imagem anterior sugere que os serviços não foram modelados de forma ideal. Seria cabe a equipe a revisitar seu design.
 
@@ -166,7 +164,7 @@ Com eventos, mudamos da tecnologia de enfileiramento para *Tópicos*. Um [tópic
 
 **Figura 4-16**. Arquitetura do tópico
 
-Na figura anterior, os editores enviam mensagens para o tópico. No final, os assinantes recebem mensagens de assinaturas. No meio, o tópico encaminha mensagens para assinaturas com base em um conjunto de *regras*, mostrado em caixas azuis escuras. As regras atuam como um filtro que encaminha mensagens específicas para uma assinatura. Aqui, um evento "CreateOrder" seria enviado à assinatura \#1 e à assinatura \#3, mas não à assinatura \#2. Um evento "OrderCompleted" seria enviado para a assinatura \#2 e a \#assinatura 3.
+Na figura anterior, os editores enviam mensagens para o tópico. No final, os assinantes recebem mensagens de assinaturas. No meio, o tópico encaminha mensagens para assinaturas com base em um conjunto de *regras*, mostrado em caixas azuis escuras. As regras atuam como um filtro que encaminha mensagens específicas para uma assinatura. Aqui, um evento "CreateOrder" seria enviado à assinatura \# 1 e à assinatura \# 3, mas não à assinatura \# 2. Um evento "OrderCompleted" seria enviado para a assinatura \# 2 e a assinatura \# 3.
 
 A nuvem do Azure dá suporte a dois serviços de tópico diferentes: tópicos do barramento de serviço do Azure e EventGrid do Azure.
 
@@ -231,5 +229,5 @@ Em vez de ler do mesmo recurso, cada grupo de consumidores lê em um subconjunto
 Para aplicativos nativos de nuvem que devem transmitir um grande número de eventos, o Hub de eventos do Azure pode ser uma solução robusta e acessível.
 
 >[!div class="step-by-step"]
->[Anterior](front-end-communication.md)
->[próximo](grpc.md)
+>[Anterior](front-end-communication.md) 
+> [Avançar](grpc.md)

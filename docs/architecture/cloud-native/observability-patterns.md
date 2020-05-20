@@ -1,17 +1,15 @@
 ---
 title: Padrões de observabilidade
 description: Padrões de observação para aplicativos nativos de nuvem
-ms.date: 02/05/2020
-ms.openlocfilehash: a821235835b4553760b19887d500a29ca75e133e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: db6a56358923025cbcca9478908474227e5da96d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448497"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613805"
 ---
 # <a name="observability-patterns"></a>Padrões de observabilidade
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Assim como os padrões foram desenvolvidos para auxiliar no layout do código em aplicativos, há padrões para aplicativos operacionais de maneira confiável. Três padrões úteis na manutenção de aplicativos surgiram: **log**, **monitoramento**e **alertas**.
 
@@ -21,20 +19,20 @@ Não importa o cuidado que estamos, os aplicativos quase sempre se comportam de 
 
 ### <a name="challenges-when-logging-with-cloud-native-applications"></a>Desafios ao registrar em log com aplicativos nativos de nuvem
 
-Em aplicativos tradicionais, os arquivos de log normalmente são armazenados no computador local. Na verdade, em sistemas operacionais semelhantes ao Unix, há uma estrutura de pastas definida para manter todos os logs, normalmente em `/var/log`.
+Em aplicativos tradicionais, os arquivos de log normalmente são armazenados no computador local. Na verdade, em sistemas operacionais semelhantes ao Unix, há uma estrutura de pastas definida para manter todos os logs, normalmente sob `/var/log` .
 
-![registro em log em um arquivo em um aplicativo monolítico.](./media/single-monolith-logging.png)
-**figura 7-1**. Registro em log em um arquivo em um aplicativo monolítico.
+![Registro em log em um arquivo em um aplicativo monolítico. ](./media/single-monolith-logging.png)
+ **Figura 7-1**. Registro em log em um arquivo em um aplicativo monolítico.
 
 A utilidade de fazer logon em um arquivo simples em um único computador é amplamente reduzida em um ambiente de nuvem. Os aplicativos que produzem logs podem não ter acesso ao disco local ou o disco local pode ser altamente transitório, pois os contêineres são embaralhados em relação a computadores físicos. Até mesmo o dimensionamento simples dos aplicativos monolíticos em vários nós pode tornar difícil localizar o arquivo de log apropriado baseado em arquivo.
 
-![registro em log em arquivos em um aplicativo monolítico dimensionado.](./media/multiple-node-monolith-logging.png)
-**figura 7-2**. Registrando em log em arquivos em um aplicativo monolítico dimensionado.
+![Registrando em log em arquivos em um aplicativo monolítico dimensionado. ](./media/multiple-node-monolith-logging.png)
+ **Figura 7-2**. Registrando em log em arquivos em um aplicativo monolítico dimensionado.
 
 Aplicativos nativos de nuvem desenvolvidos usando uma arquitetura de microservices também apresentam alguns desafios para agentes baseados em arquivo. As solicitações de usuário agora podem abranger vários serviços que são executados em computadores diferentes e podem incluir funções sem servidor e não têm acesso a um sistema de arquivos local. Seria muito desafiador correlacionar os logs de um usuário ou uma sessão entre esses vários serviços e máquinas.
 
-![registro em log em arquivos locais em um aplicativo de microserviços.](./media/local-log-file-per-service.png)
-**figura 7-3**. Registrando em log em arquivos locais em um aplicativo de microserviços.
+![Registrando em log em arquivos locais em um aplicativo de microserviços. ](./media/local-log-file-per-service.png)
+ **Figura 7-3**. Registrando em log em arquivos locais em um aplicativo de microserviços.
 
 Por fim, o número de usuários em alguns aplicativos nativos de nuvem é alto. Imagine que cada usuário gere uma centena de linhas de mensagens de log ao fazer logon em um aplicativo. Em isolamento, isso é gerenciável, mas multiplique mais de 100.000 usuários e o volume de logs se torna grande o suficiente para que as ferramentas especializadas sejam necessárias para dar suporte ao uso efetivo dos logs.
 
@@ -57,8 +55,8 @@ Devido aos desafios associados ao uso de logs baseados em arquivo em aplicativos
 
 Também é útil seguir algumas práticas padrão ao criar logs que abrangem muitos serviços. Por exemplo, a geração de uma [ID de correlação](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) no início de uma interação demorada e, em seguida, o registro em cada mensagem relacionada a essa interação, facilita a pesquisa de todas as mensagens relacionadas. Só é necessário localizar uma única mensagem e extrair a ID de correlação para localizar todas as mensagens relacionadas. Outro exemplo é garantir que o formato de log seja o mesmo para todos os serviços, seja qual for o idioma ou a biblioteca de log que ele usa. Essa padronização torna muito mais fácil a leitura de logs. A Figura 7-4 demonstra como uma arquitetura de microserviços pode aproveitar o registro em log centralizado como parte de seu fluxo de trabalho.
 
-Os logs de ![de várias fontes são incluídos em um repositório de log centralizado.](./media/centralized-logging.png)
-**figura 7-4**. Os logs de várias fontes são incluídos em um repositório de logs centralizado.
+![Os logs de várias fontes são incluídos em um repositório de logs centralizado. ](./media/centralized-logging.png)
+ **Figura 7-4**. Os logs de várias fontes são incluídos em um repositório de logs centralizado.
 
 ## <a name="challenges-with-detecting-and-responding-to-potential-app-health-issues"></a>Desafios para detectar e responder a possíveis problemas de integridade do aplicativo
 
@@ -101,5 +99,5 @@ Normalmente, no entanto, um único erro 500 não é suficiente para determinar s
 Um dos padrões mais prejudiciais no alerta é acionar muitos alertas para que os seres humanos investiguem. Os proprietários de serviço se tornarão rapidamente dessensibilizamos a erros que foram previamente investigados e considerados benignos. Em seguida, quando ocorrerem erros verdadeiros, eles serão perdidos no ruído de centenas de falsos positivos. O Parable do [rapaz que chorei Wolf](https://en.wikipedia.org/wiki/The_Boy_Who_Cried_Wolf) é frequentemente dito a crianças para avisá-los dessa grande perigo. É importante garantir que os alertas que são acionados sejam indícios de um problema real.
 
 >[!div class="step-by-step"]
->[Anterior](monitoring-health.md)
->[Próximo](logging-with-elastic-stack.md)
+>[Anterior](monitoring-health.md) 
+> [Avançar](logging-with-elastic-stack.md)

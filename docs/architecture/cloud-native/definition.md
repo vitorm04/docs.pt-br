@@ -2,21 +2,19 @@
 title: Como definir o que é nativo de nuvem
 description: Saiba mais sobre os pilares básicos que fornecem o Fundação para sistemas nativos de nuvem
 author: robvet
-ms.date: 08/20/2019
-ms.openlocfilehash: 33977ff736fc5cbfcf86ed6479e8d0b927b87a63
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: e8b07fe7758d90f6ba97b81d0efa9d2fb5058d49
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895611"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614156"
 ---
 # <a name="defining-cloud-native"></a>Definindo a nuvem nativa
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+Pare o que está fazendo e o texto dez de seus colegas. Peça que eles definam o termo "nuvem nativa". Boa chance de você obter dez respostas diferentes.
 
-Pare o que está fazendo e o texto dez de seus colegas. Peça que eles definam o termo "nuvem nativa". Boa chance de você obter oito respostas diferentes.
-
-A nuvem nativa está prestes a mudar a maneira como pensamos em construir sistemas de negócios críticos.
+A nuvem nativa está prestes a mudar a maneira como você imagina a construção de sistemas comerciais críticos.
 
 Os sistemas nativos de nuvem são projetados para adotar alteração rápida, grande escala e resiliência.
 
@@ -72,7 +70,7 @@ Como você criaria um aplicativo nativo de nuvem? Como seria a aparência de sua
 
 Uma metodologia amplamente aceita para construir aplicativos baseados em nuvem é o [aplicativo de doze fatores](https://12factor.net/). Ele descreve um conjunto de princípios e práticas que os desenvolvedores seguem para construir aplicativos otimizados para ambientes de nuvem modernos. A atenção especial é dada à portabilidade entre ambientes e automação declarativa.
 
-Embora seja aplicável a qualquer aplicativo baseado na Web, muitos profissionais consideram isso como uma base sólida para a criação de aplicativos nativos de nuvem. Os sistemas criados com base nesses princípios podem implantar e dimensionar rapidamente e adicionar recursos para reagir rapidamente às mudanças no mercado.
+Embora seja aplicável a qualquer aplicativo baseado na Web, muitos profissionais consideram doze fatores como uma base sólida para a criação de aplicativos nativos de nuvem. Os sistemas criados com base nesses princípios podem implantar e dimensionar rapidamente e adicionar recursos para reagir rapidamente às mudanças no mercado.
 
 A tabela a seguir destaca a metodologia de doze fatores:
 
@@ -88,10 +86,10 @@ A tabela a seguir destaca a metodologia de doze fatores:
 | 8 | Simultaneidade | Os serviços são expandidos em um grande número de pequenos processos idênticos (cópias), em oposição à expansão de uma única instância grande no computador mais potente disponível. |
 | 9 | Disposability | As instâncias de serviço devem ser descartáveis, favorecer as inicializações rápidas para aumentar as oportunidades de escalabilidade e os desligamentos normais para deixar o sistema em um estado correto. Os contêineres do Docker junto com um orquestrador atendem inerentemente a esse requisito. |
 | 10 | Paridade de desenvolvimento/prod | Mantenha os ambientes em todo o ciclo de vida do aplicativo o mais semelhante possível, evitando atalhos dispendiosos. Aqui, a adoção de contêineres pode contribuir muito promovendo o mesmo ambiente de execução. |
-| 11 | Registrando em log | Tratar logs gerados por microservices como fluxos de eventos. Processe-os com um agregador de eventos e propague os dados para ferramentas de gerenciamento de log/mineração de dados como Azure Monitor ou Splunk e eventualmente arquivamento de longo prazo. |
+| 11 | Registro em log | Tratar logs gerados por microservices como fluxos de eventos. Processe-os com um agregador de eventos e propague os dados para ferramentas de gerenciamento de log/mineração de dados como Azure Monitor ou Splunk e eventualmente arquivamento de longo prazo. |
 | 12 | Processos de administração | Execute tarefas administrativas/de gerenciamento como processos únicos. As tarefas podem incluir a limpeza de dados e a obtenção de análises para um relatório. As ferramentas que executam essas tarefas devem ser invocadas no ambiente de produção, mas separadamente do aplicativo. |
 
-No livro, [além do aplicativo de doze fatores](https://content.pivotal.io/blog/beyond-the-twelve-factor-app), o autor Kevin Hoffman detalha cada um dos 12 fatores originais (escritos em 2011). Além disso, o livro fornece três fatores adicionais que refletem o design de aplicativos de nuvem moderno de hoje.
+No livro, [além do aplicativo de doze fatores](https://content.pivotal.io/blog/beyond-the-twelve-factor-app), o autor Kevin Hoffman detalha cada um dos 12 fatores originais (escritos em 2011). Além disso, ele aborda três fatores adicionais que refletem o design de aplicativos de nuvem moderno de hoje.
 
 |    |  Novo fator | Explicação  |
 | :-------- | :-------- | :-------- |
@@ -155,7 +153,7 @@ A Figura 1-4 contrasta uma abordagem de aplicativo monolítico com uma abordagem
 
 Observe como os microserviços promovem o princípio "uma base de código, um aplicativo" do [aplicativo de doze fatores](https://12factor.net/), discutido anteriormente no capítulo.
 
-> *O \#fator 1 especifica "uma única base de código para cada microserviço, armazenado em seu próprio repositório. Acompanhado com o controle de versão, ele pode ser implantado em vários ambientes. "*
+> *\#O fator 1 especifica "uma única base de código para cada microserviço, armazenado em seu próprio repositório. Acompanhado com o controle de versão, ele pode ser implantado em vários ambientes. "*
 
 ### <a name="why-microservices"></a>Por que os microsserviços?
 
@@ -197,7 +195,7 @@ Observe como cada contêiner mantém seu próprio conjunto de dependências e te
 
 Observe como o modelo de contêiner adota o princípio de "dependências" do [aplicativo de doze fatores](https://12factor.net/).
 
-> *O \#fator 2 especifica que "cada microserviço isola e empacota suas próprias dependências, adotando as alterações sem afetar o sistema inteiro".*
+> *O fator \# 2 especifica que "cada microserviço isola e empacota suas próprias dependências, adotando as alterações sem afetar o sistema inteiro".*
 
 Contêineres dão suporte a cargas de trabalho do Linux e do Windows. A nuvem do Azure adota as duas opções. Curiosamente, é Linux, não Windows Server, que se tornou o sistema operacional mais popular no Azure.
 
@@ -227,7 +225,7 @@ A tabela a seguir descreve as tarefas de orquestração comuns.
 | :-------- | :-------- |
 | Agendamento | Provisione automaticamente instâncias de contêiner.|
 | Afinidade/antiafinidade | Provisione contêineres próximos ou distantes uns dos outros, ajudando a disponibilidade e o desempenho. |
-| Monitoramento da integridade | Detectar e corrigir automaticamente as falhas.|
+| Monitoramento de integridade | Detectar e corrigir automaticamente as falhas.|
 | Failover | Reprovisionar automaticamente a instância com falha para computadores íntegros.|
 | Scaling | Adicione ou remova automaticamente a instância de contêiner para atender à demanda.|
 | Rede | Gerenciar uma sobreposição de rede para comunicação de contêiner.|
@@ -236,9 +234,9 @@ A tabela a seguir descreve as tarefas de orquestração comuns.
 
 Observe como os orquestradores adotam os princípios de Disposability e simultaneidade do [aplicativo de doze fatores](https://12factor.net/), discutido anteriormente no capítulo.
 
-> *O \#fator 9 especifica que "as instâncias de serviço devem ser descartáveis, favorecendo as inicializações rápidas para aumentar as oportunidades de escalabilidade e os desligamentos normais para deixar o sistema em um estado correto. Os contêineres do Docker junto com um orquestrador atendem inerentemente a esse requisito. "*
+> *O fator \# 9 especifica que "as instâncias de serviço devem ser descartáveis, favorecendo as inicializações rápidas para aumentar as oportunidades de escalabilidade e os desligamentos normais para deixar o sistema em um estado correto. Os contêineres do Docker junto com um orquestrador atendem inerentemente a esse requisito. "*
 
-> *O \#fator 8 especifica que "os serviços se expandem por um grande número de pequenos processos idênticos (cópias), em oposição à expansão de uma única instância grande no computador mais potente disponível".*
+> *\#O fator 8 especifica que "os serviços se expandem por um grande número de pequenos processos idênticos (cópias), em oposição à expansão de uma única instância grande no computador mais potente disponível".*
 
 Embora existam vários orquestradores de contêiner, [kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) se tornou o padrão de fato para o mundo nativo da nuvem. É uma plataforma portátil, extensível e de software livre para gerenciar cargas de trabalho em contêineres.
 
@@ -258,7 +256,7 @@ Os sistemas nativos de nuvem dependem de vários recursos auxiliares diferentes,
 
 Os serviços de backup promovem o princípio "sem estado" do [aplicativo de doze fatores](https://12factor.net/), discutido anteriormente no capítulo.
 
->*O \#fator 6* especifica que, "cada microserviço deve ser executado em seu próprio processo, isolado de outros serviços em execução. Externaize o estado necessário para um serviço de backup, como um cache distribuído ou armazenamento de dados. "
+>O *fator \# 6* especifica que, "cada microserviço deve ser executado em seu próprio processo, isolado de outros serviços em execução. Externaize o estado necessário para um serviço de backup, como um cache distribuído ou armazenamento de dados. "
 
 Você pode hospedar seus próprios serviços de backup, mas, em seguida, você será responsável por licenciar, provisionar e gerenciar esses recursos.
 
@@ -268,9 +266,9 @@ Os sistemas nativos de nuvem favorecem serviços de backup gerenciados de fornec
 
 Uma prática recomendada é tratar um serviço de backup como um *recurso anexado*, vinculado dinamicamente a um Microservice com informações (uma URL e credenciais) armazenadas em uma configuração externa. Este guia é escrito no aplicativo de [doze fatores](https://12factor.net/), discutido anteriormente no capítulo.
 
->*O \#fator 4* especifica que os serviços de backup "devem ser expostos por meio de uma URL endereçável. Isso desacopla o recurso do aplicativo, permitindo que ele seja intercambiável. "
+>O *fator \# 4* especifica que os serviços de backup "devem ser expostos por meio de uma URL endereçável. Isso desacopla o recurso do aplicativo, permitindo que ele seja intercambiável. "
 
->*O \#fator 3* especifica que "as informações de configuração são movidas do microserviço e externas por meio de uma ferramenta de gerenciamento de configuração fora do código".
+>O *fator \# 3* especifica que "as informações de configuração são movidas do microserviço e externas por meio de uma ferramenta de gerenciamento de configuração fora do código".
 
 Com esse padrão, um serviço de backup pode ser anexado e desanexado sem alterações de código. Você pode promover um microserviço de QA para um ambiente de preparo. Você atualiza a configuração de microserviço para apontar para os serviços de backup em preparo e injetar as configurações em seu contêiner por meio de uma variável de ambiente.
 
@@ -298,7 +296,7 @@ No artigo, [o que é infraestrutura como código](https://docs.microsoft.com/azu
 
 O [aplicativo de doze fatores](https://12factor.net/), discutido anteriormente, chama para etapas separadas ao transformar o código concluído em um aplicativo em execução.
 
-> *O \#fator 5* especifica que "cada versão deve impor uma separação estrita nos estágios de Build, versão e execução. Cada um deve ser marcado com uma ID exclusiva e dar suporte à capacidade de reverter. "
+> O *fator \# 5* especifica que "cada versão deve impor uma separação estrita nos estágios de Build, versão e execução. Cada um deve ser marcado com uma ID exclusiva e dar suporte à capacidade de reverter. "
 
 Os sistemas de CI/CD modernos ajudam a atender a esse princípio. Eles fornecem etapas de implantação separadas e ajudam a garantir o código consistente e de qualidade que está prontamente disponível para os usuários.
 
@@ -340,5 +338,5 @@ Você define seu pipeline no código em um arquivo YAML junto com o restante do 
 O serviço de Azure Pipelines dá suporte à maioria dos provedores git e pode gerar pipelines de implantação para aplicativos escritos nas plataformas Linux, macOS ou Windows. Ele inclui suporte para Java, .NET, JavaScript, Python, PHP, go, XCode e C++.
 
 >[!div class="step-by-step"]
->[Anterior](introduction.md)
->[próximo](candidate-apps.md)
+>[Anterior](introduction.md) 
+> [Avançar](candidate-apps.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8e3dd32-6a44-4371-9a74-f417b11998c8
 topic_type:
 - apiref
-ms.openlocfilehash: bc1b65de026a674a3dff183050a5a205fd7052c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c695aa80ea3bf90a29ce7c5d11eda7fae5fe7b2d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428000"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614806"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>Método ISymUnmanagedWriter::DefineParameter
 Define um único parâmetro no método atual. O tipo de parâmetro é obtido da posição do parâmetro (sequência) na assinatura do método.  
@@ -65,9 +65,9 @@ HRESULT DefineParameter(
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [Interface ISymUnmanagedWriter](isymunmanagedwriter-interface.md)

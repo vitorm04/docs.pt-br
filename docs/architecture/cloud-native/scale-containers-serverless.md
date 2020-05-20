@@ -1,13 +1,13 @@
 ---
 title: Escala de contêineres e aplicativos sem servidor
 description: Dimensionamento de aplicativos nativos de nuvem com o serviço kubernetes do Azure para atender à demanda do usuário.
-ms.date: 04/13/2020
-ms.openlocfilehash: b4580e6994611ad394bbaa2d5bb07f64c2798569
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: a5e1e8df785fd08901d9be41c0a06db35e09296b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199918"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613714"
 ---
 # <a name="scaling-containers-and-serverless-applications"></a>Escala de contêineres e aplicativos sem servidor
 
@@ -44,5 +44,5 @@ Azure Functions escalar horizontalmente automaticamente sob demanda. Os recursos
 Embora o plano de consumo padrão forneça uma solução econômica e escalonável para a maioria dos aplicativos, a opção Premium permite que os desenvolvedores tenham flexibilidade para requisitos de Azure Functions personalizados. A atualização para o plano Premium fornece controle sobre os tamanhos de instância, instâncias pré-configuradas (para evitar atrasos de inicialização a frio) e VMs dedicadas.
 
 >[!div class="step-by-step"]
->[Anterior](deploy-containers-azure.md)
->[próximo](other-deployment-options.md)
+>[Anterior](deploy-containers-azure.md) 
+> [Avançar](other-deployment-options.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64d9b80e-b883-4539-89c7-03573185a1eb
 topic_type:
 - apiref
-ms.openlocfilehash: 8a4d205586921b377147eeab80754e1a0d9e52b0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 39b0c065a324f2b3939467901739f995bc9abbad
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427847"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614754"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>Método ISymUnmanagedWriter::SetSymAttribute
 Define um atributo personalizado com base no seu nome. Esses atributos são mantidos no repositório de símbolos, ao contrário dos atributos personalizados de metadados.  
@@ -43,7 +43,7 @@ HRESULT SetSymAttribute(
  no Um ponteiro para um `WCHAR` que contém o nome do atributo.  
   
  `cData`  
- no Um `ULONG32` que indica o tamanho da matriz de `data`.  
+ no Um `ULONG32` que indica o tamanho da `data` matriz.  
   
  `data`  
  no O valor do atributo.  
@@ -51,9 +51,9 @@ HRESULT SetSymAttribute(
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [Interface ISymUnmanagedWriter](isymunmanagedwriter-interface.md)

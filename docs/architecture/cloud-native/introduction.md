@@ -2,17 +2,15 @@
 title: Introdução aos aplicativos nativos de nuvem
 description: Saiba mais sobre a computação nativa na nuvem
 author: robvet
-ms.date: 08/26/2019
-ms.openlocfilehash: e1f7683b6f3722bb91e611f199f2e9ce2bbefc63
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 6ec02a1388d6e0f26cdaa1f728f23a22ba52d735
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895530"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613935"
 ---
 # <a name="introduction-to-cloud-native-applications"></a>Introdução aos aplicativos nativos de nuvem
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Outro dia, no escritório, trabalhando em "a próxima grande coisa".
 
@@ -22,7 +20,7 @@ Mas, desta vez, ele é diferente: inicialização, patrimônio e muita contribui
 
 A menção da tecnologia de nuvem e de ponta leva você pela borda.
 
-Avance algumas semanas e agora você é um novo funcionário em uma sessão de design que arquiteta um aplicativo de comércio eletrônico principal. Você vai competir com outros sites de comércio eletrônico líderes.
+Avance algumas semanas e agora você é um novo funcionário em uma sessão de design que arquiteta um aplicativo de comércio eletrônico principal. Você vai competir com os principais sites de comércio eletrônico.
 
 Como você vai compilá-lo?
 
@@ -46,12 +44,12 @@ Nem todos são ruins. Os monolíticos oferecem algumas vantagens distintas. Por 
 
 Muitos aplicativos bem-sucedidos que existem hoje foram criados como monolíticos. O aplicativo é um problema e continua a evoluir, iterar após a iteração, adicionar cada vez mais funcionalidade.
 
-Em algum momento, no entanto, você começa a se sentir desconfortável. Você se encontra perdendo o controle do aplicativo. Com o passar do tempo, a sensação se torna mais intensa e você eventualmente insere um estado conhecido como o **ciclo do medo**.
+Em algum momento, no entanto, você começa a se sentir desconfortável. Você se encontra perdendo o controle do aplicativo. Com o passar do tempo, a sensação se torna mais intensa e, eventualmente, você insere um estado conhecido como `Fear Cycle` .
 
 - O aplicativo tornou-se tão complicado que nenhuma pessoa a entende.
 - Você teme fazer alterações – cada alteração tem efeitos colaterais indesejados e dispendiosos.
 - Novos recursos/correções se tornam complicados, demorados e caros de implementar.
-- Cada versão tão pequena quanto pode ser necessária uma implantação completa de todo o aplicativo.
+- Cada versão é a menor possível e requer uma implantação completa de todo o aplicativo.
 - Um componente instável pode travar todo o sistema.
 - Novas tecnologias e estruturas não são uma opção.
 - É difícil implementar metodologias de entrega ágil.
@@ -64,22 +62,22 @@ Muitas organizações solucionaram o ciclo de medo monolítico adotando uma abor
 
 **Figura 1-2**. Design nativo de nuvem
 
-Observe como o aplicativo é decomposto em um conjunto de microserviços isolados pequenos. Cada serviço é independente e encapsula seu próprio código, dados e dependências. Cada um é implantado em um contêiner de software e gerenciado por um orquestrador de contêiner. Em vez de um banco de dados relacional grande, cada serviço possui o próprio armazenamento de dados, o tipo que varia de acordo com as necessidades de data. Observe como alguns serviços dependem de um banco de dados relacional, mas outros em bancos de dados NoSQL. Um serviço armazena seu estado em um cache distribuído. Observe como todo o tráfego é encaminhado por meio de um serviço de gateway de API que é responsável por rotear o tráfego para os serviços de back-end principais e impor muitas preocupações abrangentes. O mais importante é que o aplicativo aproveita totalmente os recursos de escalabilidade e resiliência encontrados nas plataformas de nuvem modernas.
+Observe como o aplicativo é decomposto em um conjunto de microserviços isolados pequenos. Cada serviço é independente e encapsula seu próprio código, dados e dependências. Cada um é implantado em um contêiner de software e gerenciado por um orquestrador de contêiner. Em vez de um banco de dados relacional grande, cada serviço possui o próprio armazenamento de dados, o tipo que varia de acordo com as necessidades de data. Observe como alguns serviços dependem de um banco de dados relacional, mas outros em bancos de dados NoSQL. Um serviço armazena seu estado em um cache distribuído. Observe como todo o tráfego é encaminhado por meio de um serviço de gateway de API que é responsável por direcionar o tráfego para os serviços de back-end principais e impor muitas preocupações abrangentes. O mais importante é que o aplicativo aproveita totalmente os recursos de escalabilidade, disponibilidade e resiliência encontrados nas plataformas de nuvem modernas.
 
 ### <a name="cloud-native-computing"></a>Computação nativa de nuvem
 
-Hmm... Acabamos de usar o termo "*nuvem Native*". Primeiro, você pensa que pode ser "o que significa exatamente isso?" Outro setor efeito criado por fornecedores de software para comercializar mais coisas? "
+Hmm... Acabamos de usar o termo _nativo da nuvem_. Seu primeiro pensamento pode ser "o que significa exatamente isso?" Outro setor efeito criado por fornecedores de software para comercializar mais coisas? "
 
 Felizmente, é muito diferente e, felizmente, esse livro ajudará a convencê-lo.
 
 Dentro de pouco tempo, a nuvem nativa tornou-se uma tendência de condução no setor de software. É uma nova maneira de pensar na criação de sistemas grandes e complexos, uma abordagem que aproveita ao máximo as práticas modernas de desenvolvimento de software, tecnologias e infraestrutura de nuvem. A abordagem altera a maneira como você projeta, implementa, implanta e operacionalize os sistemas.
 
-Ao contrário da atenção contínua que impulsiona nosso setor, a nuvem nativa é "*para o real*". Considere a CNCF ( [nuvem Native Computing Foundation](https://www.cncf.io/) ), um consórcio de mais de 300 grandes corporações com um compromisso de tornar a computação nativa em nuvem onipresente em várias pilhas de nuvem e tecnologia. Como um dos grupos de código-fonte aberto mais influentes, ele hospeda muitos dos projetos de software livre que mais crescem no GitHub. Eles incluem projetos como [kubernetes](https://kubernetes.io/), [Prometheus](https://prometheus.io/), [Helm](https://helm.sh/), [Envoy](https://www.envoyproxy.io/)e [gRPC](https://grpc.io/).
+Ao contrário da atenção contínua que impulsiona nosso setor, a nuvem nativa é _para o-real_. Considere a CNCF ( [nuvem Native Computing Foundation](https://www.cncf.io/) ), um consórcio de mais de 300 grandes corporações com um compromisso de tornar a computação nativa em nuvem onipresente em várias pilhas de nuvem e tecnologia. Como um dos grupos de código-fonte aberto mais influentes, ele hospeda muitos dos projetos de software livre que mais crescem no GitHub. Eles incluem projetos como [kubernetes](https://kubernetes.io/), [Prometheus](https://prometheus.io/), [Helm](https://helm.sh/), [Envoy](https://www.envoyproxy.io/)e [gRPC](https://grpc.io/).
 
-O CNCF promove um ecossistema de software livre e neutralidade de fornecedor. Após esse cliente potencial, apresentamos princípios, padrões e práticas recomendadas de nuvem nativas que são independentes de tecnologia. Ao mesmo tempo, discutiremos os serviços e a infraestrutura disponíveis no Microsoft Azure Cloud para construir sistemas nativos de nuvem.
+O CNCF promove um ecossistema de software livre e neutralidade de fornecedor. Após esse cliente potencial, este livro apresenta princípios nativos de nuvem, padrões e práticas recomendadas que são independentes de tecnologia. Ao mesmo tempo, discutiremos os serviços e a infraestrutura disponíveis no Microsoft Azure Cloud para construir sistemas nativos de nuvem.
 
 Então, o que é exatamente a nuvem nativa? Volte, relaxe e deixe-nos ajudá-lo a explorar esse novo mundo.
 
 >[!div class="step-by-step"]
->[Anterior](index.md)
->[próximo](definition.md)
+>[Anterior](index.md) 
+> [Avançar](definition.md)

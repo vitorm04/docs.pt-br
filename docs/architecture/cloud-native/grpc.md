@@ -2,17 +2,15 @@
 title: gRPC
 description: Saiba mais sobre o gRPC, sua função em aplicativos nativos de nuvem e como ele difere da comunicação HTTP RESTful.
 author: robvet
-ms.date: 03/31/2020
-ms.openlocfilehash: 01dd4c934f0b39041ea377691067edf4dbe20378
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: f34b267d7f5c6b4e593841c80df44d1ccbde95ae
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895562"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614039"
 ---
 # <a name="grpc"></a>gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Até agora neste livro, nos concentramos na comunicação [baseada em REST](https://docs.microsoft.com/azure/architecture/best-practices/api-design) . Vimos que REST é um estilo de arquitetura flexível que define operações baseadas em CRUD contra recursos de entidade. Os clientes interagem com recursos no HTTP com um modelo de comunicação de solicitação/resposta. Embora o REST seja amplamente implementado, uma tecnologia de comunicação mais nova, gRPC, ganhou uma enorme impulso na Comunidade nativa de nuvem.
 
@@ -39,9 +37,9 @@ o gRPC é leve e tem alto desempenho. Pode ser até 8x mais rápido que a serial
 
 ## <a name="protocol-buffers"></a>Buffers de protocolo
 
-o gRPC adota uma tecnologia de código aberto chamada [buffers de protocolo](https://developers.google.com/protocol-buffers/docs/overview). Eles fornecem um formato de serialização altamente eficiente e com neutralidade de plataforma para serializar mensagens estruturadas que os serviços enviam entre si. Usando uma IDL (linguagem de definição de interface) de plataforma cruzada, os desenvolvedores definem um contrato de serviço para cada microserviço. O contrato, implementado como um arquivo baseado em `.proto` texto, descreve os métodos, as entradas e as saídas de cada serviço. O mesmo arquivo de contrato pode ser usado para clientes e serviços gRPC criados em diferentes plataformas de desenvolvimento.
+o gRPC adota uma tecnologia de código aberto chamada [buffers de protocolo](https://developers.google.com/protocol-buffers/docs/overview). Eles fornecem um formato de serialização altamente eficiente e com neutralidade de plataforma para serializar mensagens estruturadas que os serviços enviam entre si. Usando uma IDL (linguagem de definição de interface) de plataforma cruzada, os desenvolvedores definem um contrato de serviço para cada microserviço. O contrato, implementado como um arquivo baseado em texto `.proto` , descreve os métodos, as entradas e as saídas de cada serviço. O mesmo arquivo de contrato pode ser usado para clientes e serviços gRPC criados em diferentes plataformas de desenvolvimento.
 
-Usando o arquivo proto, o compilador Protobuf, `protoc`, gera o código de cliente e de serviço para sua plataforma de destino. O código inclui os seguintes componentes:
+Usando o arquivo proto, o compilador Protobuf, `protoc` , gera o código de cliente e de serviço para sua plataforma de destino. O código inclui os seguintes componentes:
 
 - Objetos fortemente tipados, compartilhados pelo cliente e serviço, que representam as operações de serviço e os elementos de dados de uma mensagem.
 - Uma classe base fortemente tipada com o direcionamento de rede necessário que o serviço gRPC remoto pode herdar e estender.
@@ -114,5 +112,5 @@ Embora possamos nos esforçarmos para desassociar os microserviços com padrões
 Olhando para o futuro, o gRPC continuará a obter força para sistemas nativos de nuvem. Os benefícios de desempenho e a facilidade de desenvolvimento são atraentes. No entanto, o REST provavelmente estará por muito tempo. Ele é Excel para APIs expostas publicamente e por motivos de compatibilidade com versões anteriores.
 
 >[!div class="step-by-step"]
->[Anterior](service-to-service-communication.md)
->[próximo](service-mesh-communication-infrastructure.md)
+>[Anterior](service-to-service-communication.md) 
+> [Avançar](service-mesh-communication-infrastructure.md)

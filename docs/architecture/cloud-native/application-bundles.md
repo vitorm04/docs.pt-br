@@ -1,17 +1,15 @@
 ---
 title: Pacotes de aplicativos nativos de nuvem
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Pacotes de aplicativos nativos de nuvem
-ms.date: 05/12/2020
-ms.openlocfilehash: c16a9cba1fe31e025532ba98d644114a319bb9de
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: fc6ee96078650dccd2ebeb3e65a0a00c4e05ecdb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395484"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614338"
 ---
 # <a name="cloud-native-application-bundles"></a>Pacotes de aplicativos nativos de nuvem
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Uma importante propriedade dos aplicativos nativos de nuvem é que eles aproveitam os recursos da nuvem para acelerar o desenvolvimento. Esse design geralmente significa que um aplicativo completo usa diferentes tipos de tecnologias. Os aplicativos podem ser enviados em contêineres do Docker, alguns serviços podem usar Azure Functions, enquanto outras partes podem ser executadas diretamente em máquinas virtuais alocadas em servidores de grande metal com aceleração de GPU de hardware. Dois aplicativos nativos de nuvem são os mesmos, portanto, é difícil fornecer um único mecanismo para enviá-los.
 

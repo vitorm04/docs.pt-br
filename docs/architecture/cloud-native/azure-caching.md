@@ -1,18 +1,16 @@
 ---
-title: Caching em um aplicativo nativo de nuvem
+title: Cache em um aplicativo nativo de nuvem
 description: Saiba mais sobre estratégias de cache em um aplicativo nativo de nuvem.
 author: robvet
-ms.date: 01/22/2020
-ms.openlocfilehash: 2da61a01fc53233d1934df813fcba3b91a495c43
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 05/17/2020
+ms.openlocfilehash: a109db59d7b2005ea97922eef07ae4869e4894a7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794964"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614286"
 ---
 # <a name="caching-in-a-cloud-native-app"></a>Caching em um aplicativo nativo de nuvem
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Os benefícios do cache são bem compreendidos. A técnica funciona copiando temporariamente os dados acessados com frequência de um armazenamento de dados de back-end para o *armazenamento rápido* localizado mais próximo do aplicativo. O cache é geralmente implementado onde...
 
@@ -32,15 +30,15 @@ Também considere o cache para evitar cálculos repetitivos. Se uma operação t
 
 ## <a name="caching-architecture"></a>Arquitetura de cache
 
-Aplicativos nativos de nuvem normalmente implementam uma arquitetura de cache distribuído. O cache é hospedado como um [serviço de backup](./definition.md#backing-services)baseado em nuvem, separado dos microservices. A Figura 5-20 mostra a arquitetura.
+Aplicativos nativos de nuvem normalmente implementam uma arquitetura de cache distribuído. O cache é hospedado como um [serviço de backup](./definition.md#backing-services)baseado em nuvem, separado dos microservices. A Figura 5-15 mostra a arquitetura.
 
 ![Caching em um aplicativo nativo de nuvem](media/caching-in-a-cloud-native-app.png)
 
-**Figura 5-19**: Caching em um aplicativo nativo de nuvem
+**Figura 5-15**: Caching em um aplicativo nativo de nuvem
 
 Na figura anterior, observe como o cache é independente e compartilhado pelos microservices. Nesse cenário, o cache é invocado pelo [Gateway de API](./front-end-communication.md). Conforme discutido no capítulo 4, o gateway serve como um front-end para todas as solicitações de entrada. O cache distribuído aumenta a capacidade de resposta do sistema retornando dados armazenados em cache sempre que possível. Além disso, separar o cache dos serviços permite que o cache seja escalado verticalmente ou horizontalmente de forma independente para atender às demandas de tráfego aumentadas.
 
-A figura apresenta um padrão de cache comum conhecido como [padrão de reserva de cache](https://docs.microsoft.com/azure/architecture/patterns/cache-aside). Para uma solicitação de entrada, primeiro você consulta o cache (etapa \#1) para obter uma resposta. Se for encontrado, os dados serão retornados imediatamente. Se os dados não existirem no cache (conhecido como [erro de cache](https://www.techopedia.com/definition/6308/cache-miss)), eles são recuperados de um banco de dados local em um serviço downstream (etapa \#2). Em seguida, ele é gravado no cache para solicitações futuras (etapa \#3) e retornado ao chamador. Deve-se ter cuidado para remover periodicamente os dados armazenados em cache para que o sistema permaneça em tempo hábil e consistente.
+A figura anterior apresenta um padrão de cache comum conhecido como [padrão de reserva de cache](https://docs.microsoft.com/azure/architecture/patterns/cache-aside). Para uma solicitação de entrada, primeiro você consulta o cache (etapa \# 1) para obter uma resposta. Se for encontrado, os dados serão retornados imediatamente. Se os dados não existirem no cache (conhecido como um [erro de cache](https://www.techopedia.com/definition/6308/cache-miss)), eles são recuperados de um banco de dados local em um serviço downstream (etapa \# 2). Em seguida, ele é gravado no cache para solicitações futuras (etapa \# 3) e retornado ao chamador. Deve-se ter cuidado para remover periodicamente os dados armazenados em cache para que o sistema permaneça em tempo hábil e consistente.
 
 À medida que um cache compartilhado cresce, pode-se provar benéfico para particionar seus dados em vários nós. Isso pode ajudar a minimizar a contenção e melhorar a escalabilidade. Muitos serviços de cache oferecem suporte à capacidade de adicionar e remover nós dinamicamente e reequilibrar dados entre partições. Essa abordagem geralmente envolve clustering. O clustering expõe uma coleção de nós federados como um cache único e contínuo. Internamente, no entanto, os dados são dispersos entre os nós após uma estratégia de distribuição predefinida que equilibra a carga uniformemente.
 
@@ -62,5 +60,5 @@ Para cenários avançados, uma cópia dos dados armazenados em cache pode ser [p
 O cache Redis do Azure está disponível em várias configurações predefinidas e tipos de preço.  A [camada Premium](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-premium-tier-intro) apresenta muitos recursos de nível empresarial, como clustering, persistência de dados, replicação geográfica e isolamento de rede virtual.
 
 >[!div class="step-by-step"]
->[Anterior](relational-vs-nosql-data.md)
->[Próximo](elastic-search-in-azure.md)
+>[Anterior](relational-vs-nosql-data.md) 
+> [Avançar](elastic-search-in-azure.md)

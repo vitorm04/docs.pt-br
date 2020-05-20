@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb203853-6a6d-4027-b9e9-603a7f28b9d3
 topic_type:
 - apiref
-ms.openlocfilehash: 1fcb885b6e19457065c2ca9971f068b42f97147d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 950fb3b9c51ae2c9470b5aadd31c877d7aa6b6f6
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448349"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615053"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>Método ISymUnmanagedReader::GetDocument
 Localiza um documento. O idioma do documento, o fornecedor e o tipo são opcionais.  
@@ -55,9 +55,9 @@ HRESULT GetDocument (
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [Interface ISymUnmanagedReader](isymunmanagedreader-interface.md)

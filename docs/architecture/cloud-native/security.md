@@ -1,17 +1,15 @@
 ---
 title: Segurança
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Segurança
-ms.date: 06/30/2019
-ms.openlocfilehash: 848255de70038798417a558543d0b1ea8cff1e37
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 05/13/2020
+ms.openlocfilehash: 9afbc2c960fdd16721e1d3aa7fd01d5c0c1fe2f9
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184767"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613662"
 ---
 # <a name="security"></a>Segurança
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Não é um dia em que a notícia não contém alguma história sobre uma empresa que está sendo invadida ou, de alguma forma, está perdendo os dados dos clientes. Até mesmo os países não estão imunes aos problemas criados por tratar a segurança como uma prioridade. Durante anos, as empresas trataram da segurança dos dados do cliente e, de fato, de suas redes inteiras como algo de "bom para ter". Os servidores Windows foram deixados sem patches, as versões anteriores do PHP eram mantidas em execução e os bancos de dados MongoDB deixaram de ser abertos para o mundo.
 
@@ -24,5 +22,5 @@ Também houve um aumento na legislação que exige determinadas proteções de d
 Em suma, a segurança é um negócio sério.
 
 >[!div class="step-by-step"]
->[Anterior](identity-server.md)
->[Próximo](azure-security.md)
+>[Anterior](identity-server.md) 
+> [Avançar](azure-security.md)

@@ -2,16 +2,14 @@
 title: Como implantar contêineres no Azure
 description: Implantando contêineres no Azure com o registro de contêiner do Azure, o serviço kubernetes do Azure e o Azure Dev Spaces.
 ms.date: 04/13/2020
-ms.openlocfilehash: 57a4739d39b8ad022d699d54255f56f16d305440
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: ba2854323ee0f1394a3cff0dd3756cb3c7c32d5b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895596"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614143"
 ---
 # <a name="deploying-containers-in-azure"></a>Como implantar contêineres no Azure
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Discutimos os contêineres neste capítulo e no capítulo 1. Vimos que os contêineres fornecem muitos benefícios para aplicativos nativos de nuvem, incluindo portabilidade. Na nuvem do Azure, você pode implantar os mesmos serviços em contêineres em ambientes de preparo e produção. O Azure fornece várias opções para hospedar essas cargas de trabalho em contêineres:
 
@@ -25,7 +23,7 @@ Ao colocar um microserviço em contêiner, você primeiro cria um contêiner de 
 
 Depois de criadas, as imagens de contêiner são armazenadas em registros de contêiner. Eles permitem que você crie, armazene e gerencie imagens de contêiner. Há vários registros disponíveis, públicos e privados. O ACR (registro de contêiner do Azure) é um serviço de registro de contêiner totalmente gerenciado na nuvem do Azure. Ele persiste suas imagens dentro da rede do Azure, reduzindo o tempo para implantá-las nos hosts de contêiner do Azure. Você também pode protegê-los usando os mesmos procedimentos de segurança e identidade que você usa para outros recursos do Azure.
 
-Você cria um registro de contêiner do Azure usando as ferramentas [portal do Azure](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal), [CLI do Azure](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli)ou [PowerShell](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell). A criação de um registro no Azure é simples. Ele requer uma assinatura do Azure, um grupo de recursos e um nome exclusivo. A Figura 3-11 mostra as opções básicas para a criação de um registro, que será `registryname.azurecr.io`hospedado em.
+Você cria um registro de contêiner do Azure usando as ferramentas [portal do Azure](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal), [CLI do Azure](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli)ou [PowerShell](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell). A criação de um registro no Azure é simples. Ele requer uma assinatura do Azure, um grupo de recursos e um nome exclusivo. A Figura 3-11 mostra as opções básicas para a criação de um registro, que será hospedado em `registryname.azurecr.io` .
 
 ![Criar um registro de contêiner](./media/create-container-registry.png)
 
@@ -59,7 +57,7 @@ Como prática recomendada, os desenvolvedores não devem enviar por push as imag
 
 ## <a name="acr-tasks"></a>Tarefas do ACR
 
-[As tarefas ACR](https://docs.microsoft.com/azure/container-registry/container-registry-tasks-overview) são um conjunto de recursos disponíveis no registro de contêiner do Azure. Ele estende seu [ciclo de desenvolvimento de loop interno](https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow) criando e gerenciando imagens de contêiner na nuvem do Azure. Em vez de invocar `docker build` um `docker push` e localmente em seu computador de desenvolvimento, eles são automaticamente tratados por tarefas de ACR na nuvem.
+[As tarefas ACR](https://docs.microsoft.com/azure/container-registry/container-registry-tasks-overview) são um conjunto de recursos disponíveis no registro de contêiner do Azure. Ele estende seu [ciclo de desenvolvimento de loop interno](https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow) criando e gerenciando imagens de contêiner na nuvem do Azure. Em vez de invocar um `docker build` e `docker push` localmente em seu computador de desenvolvimento, eles são automaticamente tratados por tarefas de ACR na nuvem.
 
 O comando AZ CLI a seguir cria uma imagem de contêiner e a envia para o ACR:
 
@@ -96,7 +94,7 @@ Essas informações são suficientes para começar. Como parte do processo de cr
 - Autenticação
 - Rede
 - Monitoramento
-- Marcas
+- Marcações
 
 Este [Guia de início rápido orienta a implantação de um cluster AKs usando o portal do Azure](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
 
@@ -124,11 +122,11 @@ Todas essas etapas podem ser executadas usando o CLI do Azure e novas `azds` fer
 az aks use-dev-spaces -g my-aks-resource-group -n MyAKSCluster
 ```
 
-Em seguida, você pode usar `azds prep` o comando para gerar os ativos necessários do Docker e do gráfico Helm para executar o aplicativo. Em seguida, você executa seu código no `azds up`AKs usando. Na primeira vez que você executar esse comando, o gráfico Helm será instalado. Os contêineres serão criados e implantados de acordo com suas instruções. Essa tarefa pode levar alguns minutos na primeira vez em que for executada. No entanto, depois de fazer alterações, você pode se conectar ao seu próprio espaço `azds space select` de desenvolvimento filho usando e, em seguida, implantar e depurar suas atualizações em seu espaço de desenvolvimento filho isolado. Depois que o seu espaço de desenvolvimento estiver em funcionamento, você poderá enviar atualizações para ele emitindo o comando `azds up` novamente ou pode usar as ferramentas internas no Visual Studio ou Visual Studio Code. Com VS Code, você usa a paleta de comandos para se conectar ao seu espaço de desenvolvimento. A Figura 3-12 mostra como iniciar seu aplicativo Web usando o Azure Dev Spaces no Visual Studio.
+Em seguida, você pode usar o `azds prep` comando para gerar os ativos necessários do Docker e do gráfico Helm para executar o aplicativo. Em seguida, você executa seu código no AKS usando `azds up` . Na primeira vez que você executar esse comando, o gráfico Helm será instalado. Os contêineres serão criados e implantados de acordo com suas instruções. Essa tarefa pode levar alguns minutos na primeira vez em que for executada. No entanto, depois de fazer alterações, você pode se conectar ao seu próprio espaço de desenvolvimento filho usando `azds space select` e, em seguida, implantar e depurar suas atualizações em seu espaço de desenvolvimento filho isolado. Depois que o seu espaço de desenvolvimento estiver em funcionamento, você poderá enviar atualizações para ele emitindo o `azds up` comando novamente ou pode usar as ferramentas internas no Visual Studio ou Visual Studio Code. Com VS Code, você usa a paleta de comandos para se conectar ao seu espaço de desenvolvimento. A Figura 3-12 mostra como iniciar seu aplicativo Web usando o Azure Dev Spaces no Visual Studio.
 
-![Conecte-se a Azure dev Spaces no](./media/azure-dev-spaces-visual-studio-launchsettings.png)
-Visual Studio**Figura 3-12**. Conectar-se a Azure Dev Spaces no Visual Studio
+![Conecte-se a Azure Dev Spaces no Visual Studio ](./media/azure-dev-spaces-visual-studio-launchsettings.png)
+ **Figura 3-12**. Conectar-se a Azure Dev Spaces no Visual Studio
 
 >[!div class="step-by-step"]
->[Anterior](combine-containers-serverless-approaches.md)
->[próximo](scale-containers-serverless.md)
+>[Anterior](combine-containers-serverless-approaches.md) 
+> [Avançar](scale-containers-serverless.md)

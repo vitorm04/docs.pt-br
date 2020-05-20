@@ -2,19 +2,19 @@
 title: Arquitetando aplicativos .NET nativos de nuvem para o Azure
 description: Um guia para a criação de aplicativos nativos de nuvem que aproveitam contêineres, microservices e recursos sem servidor do Azure.
 author: ardalis
-ms.date: 04/23/2020
-ms.openlocfilehash: 24d5c75fc5d2e5623892e8f83daea52553d13765
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 05/13/2020
+ms.openlocfilehash: 1607c1bbcc9bbb3c9fe19840a2827aa5ea083728
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507384"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613987"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Arquitetando aplicativos .NET nativos de nuvem para o Azure
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 ![imagem da capa](./media/cover.png)
+
+**Edição v. 1.0**
 
 PUBLICADO POR
 
@@ -26,7 +26,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright &copy; 2019 da Microsoft Corporation
+Copyright &copy; 2020 da Microsoft Corporation
 
 Todos os direitos reservados. Nenhuma parte do conteúdo deste guia pode ser reproduzida ou transmitida de nenhuma forma nem por nenhum meio sem a permissão por escrito do publicador.
 
@@ -58,11 +58,13 @@ Participantes e revisores:
 >
 > **Cecil Phillip**, defensora da nuvem sênior, Microsoft
 
-Saiba mais sobre o eShopOnContainers
-
 Editores:
 
 > **Maira Wenzel**, gerente de programas, equipe do .net, Microsoft
+
+## <a name="version"></a>Versão
+
+Este guia foi escrito para abranger a versão **3,1 do .NET Core** junto com muitas atualizações adicionais relacionadas à mesma "onda" de tecnologias (isto é, Azure e tecnologias de terceiros adicionais) que coincidem no tempo com a versão 3,1 do .NET Core.
 
 ## <a name="who-should-use-this-guide"></a>Quem deve usar este guia
 
@@ -83,6 +85,10 @@ Este guia começa definindo a nuvem nativa e introduzindo um aplicativo de refer
 - DevOps
 
 Este guia está disponível em formato PDF e online. Fique à vontade para encaminhar este documento ou links para sua versão online para sua equipe para ajudar a garantir uma compreensão comum desses tópicos. A maioria desses tópicos se beneficia de uma compreensão consistente dos princípios e padrões subjacentes, bem como das compensações envolvidas em decisões relacionadas a esses tópicos. Nosso objetivo com este documento é equipar equipes e seus líderes com as informações de que precisam para tomar decisões bem informadas sobre a arquitetura, o desenvolvimento e a hospedagem dos seus aplicativos.
+
+## <a name="send-your-feedback"></a>Envie seus comentários
+
+Este livro e exemplos relacionados estão em constante evolução, para que seus comentários sejam bem-vindos! Se você tiver comentários sobre como esse livro pode ser melhorado, use a seção de comentários na parte inferior de qualquer página criada com base nos [problemas do GitHub](https://github.com/dotnet/docs/issues).
 
 >[!div class="step-by-step"]
 >[Avançar](introduction.md)

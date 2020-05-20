@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a8074f1-facc-4a3f-bb9b-d6574fc2fc74
 topic_type:
 - apiref
-ms.openlocfilehash: 9e8139a822c877e70731e18ae5a75b83e6b7578e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 031e9d9434bc655ba8947a2bb6aba56a150e9002
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448962"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614455"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>Método ISymUnmanagedMethod::GetParameters
 Obtém os parâmetros para este método. Os parâmetros são retornados na ordem em que são definidos dentro da assinatura do método.  
@@ -37,7 +37,7 @@ HRESULT GetParameters(
   
 ## <a name="parameters"></a>Parâmetros  
  `cParams`  
- no O tamanho da matriz de `params`.  
+ no O tamanho da `params` matriz.  
   
  `pcParams`  
  no Um ponteiro para um `ULONG32` que recebe o tamanho do buffer necessário para conter os parâmetros.  
@@ -48,9 +48,9 @@ HRESULT GetParameters(
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [Interface ISymUnmanagedMethod](isymunmanagedmethod-interface.md)

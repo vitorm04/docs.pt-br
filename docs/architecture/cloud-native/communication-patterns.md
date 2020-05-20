@@ -2,17 +2,15 @@
 title: Padrões de comunicação nativos de nuvem
 description: Saiba mais sobre as principais preocupações de comunicação do serviço em aplicativos nativos de nuvem
 author: robvet
-ms.date: 08/31/2019
-ms.openlocfilehash: b3edc0817fb76ad99a1344b17d600eb747187f86
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 3d678df44b5fef68427846e59f446b7408795625
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895627"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614208"
 ---
 # <a name="cloud-native-communication-patterns"></a>Padrões de comunicação nativos de nuvem
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Ao construir um sistema nativo de nuvem, a comunicação se torna uma decisão de design significativa. Como um aplicativo cliente front-end se comunica com um microserviço de back-end? Como os microserviços de back-end se comunicam entre si? Quais são os princípios, padrões e práticas recomendadas a serem considerados ao implementar a comunicação em aplicativos nativos de nuvem?
 
@@ -49,5 +47,5 @@ Os [microserviços do Book .net: arquitetura para aplicativos .net em contêiner
 Neste capítulo, primeiro abordaremos a comunicação entre os aplicativos de front-end e os microserviços de back-end. Em seguida, veremos que os microserviços de back-end se comunicam entre si. Exploraremos a tecnologia de comunicação para cima e gRPC. Por fim, examinaremos os novos padrões de comunicação inovadores usando a tecnologia de malha de serviço. Também veremos como a nuvem do Azure fornece diferentes tipos de *serviços de backup* para dar suporte à comunicação nativa de nuvem.
 
 >[!div class="step-by-step"]
->[Anterior](other-deployment-options.md)
->[próximo](front-end-communication.md)
+>[Anterior](other-deployment-options.md) 
+> [Avançar](front-end-communication.md)

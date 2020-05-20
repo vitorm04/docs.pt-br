@@ -1,17 +1,15 @@
 ---
 title: Outras opções de implantação de contêiner
 description: Outras opções de implantação de contêiner usando o Azure
-ms.date: 04/13/2020
-ms.openlocfilehash: 3cae771b3877215a7fc91afd4f406fdfc9ff2771
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: acb022e3d4fd4862c592fa571894e1b8ce17f465
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199996"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613753"
 ---
 # <a name="other-container-deployment-options"></a>Outras opções de implantação de contêiner
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Além do AKS (serviço kubernetes do Azure), você também pode implantar contêineres no serviço Azure App para contêineres e instâncias de contêiner do Azure.
 
@@ -64,5 +62,5 @@ As instâncias de contêiner do Azure oferecem a maneira mais rápida de executa
 - [Implantar instância de contêiner do ACR](https://docs.microsoft.com/azure/container-instances/container-instances-using-azure-container-registry#deploy-with-azure-portal)
 
 >[!div class="step-by-step"]
->[Anterior](scale-containers-serverless.md)
->[próximo](communication-patterns.md)
+>[Anterior](scale-containers-serverless.md) 
+> [Avançar](communication-patterns.md)

@@ -1,47 +1,56 @@
 ---
 title: Padrões de resiliência de aplicativo
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Padrões de resiliência do aplicativo
-ms.date: 06/30/2019
-ms.openlocfilehash: 6805603f349578655b2535c7346af368c5ce1841
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+author: robvet
+ms.date: 05/13/2020
+ms.openlocfilehash: bb72e47704c833a2ce86f103a66b0414ce3a37ff
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199684"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614312"
 ---
 # <a name="application-resiliency-patterns"></a>Padrões de resiliência de aplicativo
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+A primeira linha de defesa é a resiliência do aplicativo.
 
-A primeira linha de defesa é a resiliência de aplicativo habilitada para software.
+Embora você possa investir um tempo considerável escrevendo sua própria estrutura de resiliência, esses produtos já existem. O [Polly](http://www.thepollyproject.org/) é uma biblioteca abrangente de resiliência do .net e tratamento transitório de falhas que permite aos desenvolvedores expressar políticas de resiliência de uma maneira fluente e thread-safe. O Polly tem como alvo aplicativos criados com o .NET Framework ou o .NET Core. A tabela a seguir descreve os recursos de resiliência, chamados `policies` , disponíveis na biblioteca Polly. Eles podem ser aplicados individualmente ou agrupados juntos.
 
-Embora você possa investir um tempo considerável escrevendo sua própria estrutura de resiliência, esses produtos já existem. Por exemplo, [Polly](http://www.thepollyproject.org/) é uma biblioteca abrangente de resiliência do .net e de tratamento de falhas transitórias que permite aos desenvolvedores expressar políticas de resiliência de uma maneira fluente e thread-safe. O Polly tem como alvo aplicativos criados com o .NET Framework completo ou o .NET Core. A Figura 6-2 mostra as políticas de resiliência (ou seja, a funcionalidade) disponíveis na biblioteca Polly. Essas políticas podem ser aplicadas individualmente ou combinadas em conjunto.
+| Política | Experiência |
+| :-------- | :-------- |
+| Tentar novamente | Configura operações de repetição em operações designadas. |
+| Disjuntor | Bloqueia as operações solicitadas por um período predefinido quando as falhas excedem um limite configurado |
+| Tempo limite | Limita o limite da duração para a qual um chamador pode aguardar uma resposta. |
+| Bulkhead | Restringe ações ao pool de recursos de tamanho fixo para evitar chamadas com falha de um recurso congestionamento. |
+| Cache | Armazena respostas automaticamente. |
+| Fallback | Define o comportamento estruturado após uma falha. |
 
-![Estrutura Polly](./media/polly-resiliency-framework.png)
+Observe como, na figura anterior, as políticas de resiliência se aplicam a mensagens de solicitação, sejam provenientes de um cliente externo ou serviço de back-end. O objetivo é compensar a solicitação de um serviço que pode estar momentaneamente indisponível. Essas interrupções de curta duração normalmente se manifestam com os códigos de status HTTP mostrados na tabela a seguir.
 
-**Figura 6-2**. Recursos da estrutura de resiliência do Polly
-
-Observe como, na figura anterior, as políticas de resiliência se aplicam a mensagens de solicitação, sejam provenientes de um cliente externo ou outro serviço de back-end. O objetivo é compensar a solicitação de um serviço que pode estar momentaneamente indisponível. Essas interrupções curtas normalmente se manifestam com os códigos de status HTTP mostrados na Figura 6-3.
-
-![Códigos de status HTTP para tentar novamente](./media/http-status-codes.png)
-
-**Figura 6-3**. Códigos de status HTTP para tentar novamente
+| Código de status HTTP| Causa |
+| :-------- | :-------- |
+| 404 | Não encontrado |
+| 408 | Tempo limite da solicitação |
+| 429 | Muitas solicitações (você provavelmente foi limitado) |
+| 502 | Gateway inválido |
+| 503 | Serviço não disponível |
+| 504 | Tempo limite do gateway |
 
 Pergunta: você tentaria novamente um código de status HTTP de 403-Proibido? Não. Aqui, o sistema está funcionando corretamente, mas informando ao chamador que eles não estão autorizados a executar a operação solicitada. Deve-se ter cuidado para repetir apenas as operações causadas por falhas.
 
-Como recomendado no capítulo 1, os desenvolvedores da Microsoft que constroem aplicativos nativos de nuvem devem ter como destino o .NET Core. A versão 2,1 introduziu a biblioteca [HTTPClientFactory](https://www.stevejgordon.co.uk/introduction-to-httpclientfactory-aspnetcore) para criar instâncias de cliente http para interagir com recursos baseados em URL. Substituindo a classe HTTPClient original, a classe Factory dá suporte a muitos recursos avançados, um dos quais é uma [integração total](../microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md) com a biblioteca de resiliência Polly. Com ele, você pode definir facilmente políticas de resiliência na classe de inicialização do aplicativo para lidar com falhas parciais e problemas de conectividade.
+Como recomendado no capítulo 1, os desenvolvedores da Microsoft que constroem aplicativos nativos de nuvem devem visar a plataforma .NET Core. A versão 2,1 introduziu a biblioteca [HTTPClientFactory](https://www.stevejgordon.co.uk/introduction-to-httpclientfactory-aspnetcore) para criar instâncias de cliente http para interagir com recursos baseados em URL. Substituindo a classe HTTPClient original, a classe Factory dá suporte a muitos recursos avançados, um dos quais é uma [integração total](../microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md) com a biblioteca de resiliência Polly. Com ele, você pode definir facilmente políticas de resiliência na classe de inicialização do aplicativo para lidar com falhas parciais e problemas de conectividade.
 
 Em seguida, vamos expandir em padrões de repetição e de disjuntor.
 
 ### <a name="retry-pattern"></a>Padrão de repetição
 
-Em um ambiente de nuvem nativa distribuída, as chamadas para serviços e recursos de nuvem podem falhar devido a falhas transitórias (de curta duração), que normalmente se corrigem após um breve período de tempo. A implementação de uma estratégia de repetição ajuda um serviço nativo de nuvem a lidar com esses cenários.
+Em um ambiente de nuvem nativa distribuída, as chamadas para serviços e recursos de nuvem podem falhar devido a falhas transitórias (de curta duração), que normalmente se corrigem após um breve período de tempo. A implementação de uma estratégia de repetição ajuda um serviço nativo de nuvem a mitigar esses cenários.
 
-O [padrão de repetição](https://docs.microsoft.com/azure/architecture/patterns/retry) permite que um serviço Repita uma operação de solicitação com falha a um número (configurável) de vezes com um tempo de espera crescente exponencialmente. A Figura 6-4 mostra uma nova tentativa em ação.
+O [padrão de repetição](https://docs.microsoft.com/azure/architecture/patterns/retry) permite que um serviço Repita uma operação de solicitação com falha a um número (configurável) de vezes com um tempo de espera crescente exponencialmente. A Figura 6-2 mostra uma nova tentativa em ação.
 
 ![Padrão de repetição em ação](./media/retry-pattern.png)
 
-**Figura 6-4**. Padrão de repetição em ação
+**Figura 6-2**. Padrão de repetição em ação
 
 Na figura anterior, um padrão de repetição foi implementado para uma operação de solicitação. Ele está configurado para permitir até quatro repetições antes de falhar com um intervalo de retirada (tempo de espera) a partir de dois segundos, o que exponencialmente dobra para cada tentativa subsequente.
 
@@ -49,6 +58,7 @@ Na figura anterior, um padrão de repetição foi implementado para uma operaç�
 - A segunda invocação também falha e retorna um código de status HTTP de 500. O aplicativo agora dobra o intervalo de retirada para quatro segundos e tenta novamente a chamada.
 - Por fim, a terceira chamada é realizada com sucesso.
 - Nesse cenário, a operação de repetição teria tentado até quatro repetições enquanto dobra a duração da retirada antes de falhar a chamada.
+- Houve falha na quarta tentativa de repetição, uma política de fallback seria invocada para lidar normalmente com o problema.
 
 É importante aumentar o período de retirada antes de tentar novamente a chamada para permitir que o tempo do serviço seja autocorrigido. É uma prática recomendada implementar uma retirada exponencialmente crescente (duplicando o período em cada repetição) para permitir o tempo de correção adequado.
 
@@ -60,18 +70,22 @@ Para piorar as coisas, a execução de operações contínuas de repetição em 
 
 Nessas situações, seria preferível para a operação falhar imediatamente e tentar invocar o serviço apenas se for provável que tenha êxito.
 
-O [padrão de disjuntor](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker) pode impedir que um aplicativo tente executar repetidamente uma operação que provavelmente falhará. Ele também monitora o aplicativo com uma chamada de avaliação periódica para determinar se a falha foi resolvida. A Figura 6-5 mostra o padrão de disjuntor em ação.
+O [padrão de disjuntor](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker) pode impedir que um aplicativo tente executar repetidamente uma operação que provavelmente falhará. Após um número predefinido de chamadas com falha, ele bloqueia todo o tráfego para o serviço. Periodicamente, ele permitirá uma chamada de avaliação para determinar se a falha foi resolvida. A Figura 6-3 mostra o padrão de disjuntor em ação.
 
 ![Padrão de disjuntor em ação](./media/circuit-breaker-pattern.png)
 
-**Figura 6-5**. Padrão de disjuntor em ação
+**Figura 6-3**. Padrão de disjuntor em ação
 
-Na figura anterior, um padrão de disjuntor foi adicionado ao padrão de nova tentativa original. Observe como após 10 solicitações com falha, os separadores de circuito são abertos e não permite mais chamadas para o serviço. O valor CheckCircuit, definido como 30 segundos, especifica a frequência com que a biblioteca permite que uma solicitação prossiga para o serviço. Se essa chamada for realizada com sucesso, o circuito será fechado e o serviço estará novamente disponível para o tráfego.
+Na figura anterior, um padrão de disjuntor foi adicionado ao padrão de nova tentativa original. Observe como após 100 solicitações com falha, os separadores de circuito são abertos e não permite mais chamadas para o serviço. O valor CheckCircuit, definido como 30 segundos, especifica a frequência com que a biblioteca permite que uma solicitação prossiga para o serviço. Se essa chamada for realizada com sucesso, o circuito será fechado e o serviço estará novamente disponível para o tráfego.
 
-Tenha em mente que a intenção do padrão de disjuntor é *diferente* daquela do padrão de repetição. O padrão de repetição permite que um aplicativo Repita uma operação na expectativa de que ele terá sucesso. O padrão de disjuntor impede que um aplicativo faça uma operação que provavelmente falhará. Geralmente, um aplicativo *combinará* esses dois padrões usando o padrão de repetição para invocar uma operação por meio de um disjuntor. No entanto, a lógica de repetição deve ser sensível a quaisquer exceções retornadas pelo disjuntor e abandonar tentativas de repetição se o disjuntor indicar que uma falha não é transitória.
+Tenha em mente que a intenção do padrão de disjuntor é *diferente* daquela do padrão de repetição. O padrão de repetição permite que um aplicativo Repita uma operação na expectativa de que ele terá sucesso. O padrão de disjuntor impede que um aplicativo faça uma operação que provavelmente falhará. Normalmente, um aplicativo irá *combinar* esses dois padrões usando o padrão de repetição para invocar uma operação por meio de um disjuntor.
+
+## <a name="testing-for-resiliency"></a>Teste de resiliência
+
+O teste de resiliência nem sempre pode ser feito da mesma maneira que você testa a funcionalidade do aplicativo (executando testes de unidade, testes de integração e assim por diante). Em vez disso, deve-se testar a execução da carga de trabalho de ponta a ponta sob condições de falha intermitentes. Por exemplo: injetar falhas ao travar processos, certificados expirados, tornar os serviços dependentes indisponíveis etc. Estruturas como o [caos – o macaco](https://github.com/Netflix/chaosmonkey) pode ser usado para esses testes de caos.
 
 A resiliência do aplicativo é necessária para lidar com operações solicitadas problemáticas. Mas, é apenas metade da história. Em seguida, abordamos os recursos de resiliência disponíveis na nuvem do Azure.
 
 >[!div class="step-by-step"]
->[Anterior](resiliency.md)
->[próximo](infrastructure-resiliency-azure.md)
+>[Anterior](resiliency.md) 
+> [Avançar](infrastructure-resiliency-azure.md)

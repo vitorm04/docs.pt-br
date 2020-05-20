@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 843c904a-8176-4d8f-bd47-b4d4c29f4c5c
 topic_type:
 - apiref
-ms.openlocfilehash: 94d1aa5bba87e8ca11b58bdf89a697e1ccf500b1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 674089f8a1076342a2479c64e253b7dda53ade87
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428029"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615196"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>Método ISymUnmanagedWriter::DefineGlobalVariable
 Define uma única variável global.  
@@ -47,7 +47,7 @@ HRESULT DefineGlobalVariable(
  no Os atributos da variável global.  
   
  `cSig`  
- no Um `ULONG32` que indica o tamanho, em caracteres, do buffer de `signature`.  
+ no Um `ULONG32` que indica o tamanho, em caracteres, do `signature` buffer.  
   
  `signature`  
  no A assinatura de variável global.  
@@ -67,11 +67,11 @@ HRESULT DefineGlobalVariable(
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [Método DefineLocalVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
-- [Método DefineGlobalVariable2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)
+- [Interface ISymUnmanagedWriter](isymunmanagedwriter-interface.md)
+- [Método DefineLocalVariable](isymunmanagedwriter-definelocalvariable-method.md)
+- [Método DefineGlobalVariable2](isymunmanagedwriter2-defineglobalvariable2-method.md)

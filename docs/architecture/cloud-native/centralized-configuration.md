@@ -1,17 +1,15 @@
 ---
 title: Configuração centralizada
 description: Centralizando a configuração para aplicativos nativos de nuvem usando o Azure App Configuration e o cofre AzureKey.
-ms.date: 04/19/2020
-ms.openlocfilehash: 53bdc03370b04af4d830fe7abbd8aebad81e9650
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: d389d29dcdb1db5162d95370d181ab5a85d72dc8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895648"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614221"
 ---
 # <a name="centralized-configuration"></a>Configuração centralizada
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Ao contrário de um aplicativo monolítico no qual tudo é executado em uma única instância, um aplicativo nativo de nuvem consiste em serviços independentes distribuídos entre máquinas virtuais, contêineres e regiões geográficas. O gerenciamento de definições de configuração para dezenas de serviços interdependentes pode ser desafiador. Cópias duplicadas de definições de configuração em locais diferentes são propensas a erros e são difíceis de gerenciar. A configuração centralizada é um requisito crítico para aplicativos nativos de nuvem distribuída.
 
@@ -68,5 +66,5 @@ O aplicativo eShopOnContainers inclui arquivos de configurações de aplicativo 
 - [Espaços de Desenvolvimento do Azure](https://docs.microsoft.com/azure/dev-spaces/about)
 
 >[!div class="step-by-step"]
->[Anterior](deploy-eshoponcontainers-azure.md)
->[próximo](scale-applications.md)
+>[Anterior](deploy-eshoponcontainers-azure.md) 
+> [Avançar](scale-applications.md)

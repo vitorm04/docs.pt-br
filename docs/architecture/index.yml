@@ -1,55 +1,61 @@
 ### YamlMime:Landing
-title: Documentação de arquitetura de aplicativo .NET
-summary: Aprenda a criar aplicativos .NET prontos para produção ou migrar aplicativos existentes para a nuvem.
+title: Documentação da arquitetura de aplicativos .NET
+summary: Saiba como criar aplicativos .NET prontos para produção ou migrar aplicativos existentes para a nuvem.
 metadata:
-  title: Documentação de arquitetura de aplicativo .NET
-  description: Aprenda as práticas recomendadas para arquitetar, construir e migrar aplicativos .NET.
+  title: Documentação da arquitetura de aplicativos .NET
+  description: Conheça as práticas recomendadas para arquitetar, criar e migrar aplicativos .NET.
   ms.topic: landing-page
   ms.date: 03/19/2020
-  ms.openlocfilehash: 6e3573416191603e1e166979f955eaae6b74022c
-  ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+  ms.openlocfilehash: ff3b842d33ea3fd5d9cbed5b39b2757933c1a616
+  ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 03/24/2020
-  ms.locfileid: "80228592"
+  ms.lasthandoff: 05/19/2020
+  ms.locfileid: "83613636"
 landingContent:
 - title: Desenvolver aplicativos ASP.NET Core
   linkLists:
   - linkListType: concept
     links:
-    - text: Arquiteto saqueie aplicativos web modernos com ASP.NET Core e Azure
+    - text: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure
       url: modern-web-apps-azure/index.md
-    - text: Blazor para desenvolvedores de Formulários web ASP.NET (Preview)
+    - text: Mais incrivelmente para desenvolvedores de Web Forms ASP.NET (versão prévia)
       url: blazor-for-web-forms-developers/index.md
     - text: ASP.NET Core gRPC para desenvolvedores do WCF
       url: grpc-for-wcf-developers/index.md
-- title: Desenvolver aplicativos .NET nativos na nuvem para o Azure
+- title: Desenvolver aplicativos .NET nativos de nuvem para o Azure
   linkLists:
   - linkListType: concept
     links:
-    - text: Arquiteturando aplicativos .NET nativos em nuvem para Azure (Preview)
+    - text: Como projetar aplicativos .NET nativos de nuvem para o Azure
       url: cloud-native/index.md
     - text: 'Aplicativos sem servidor: Arquitetura, padrões e implementação no Azure'
       url: serverless/index.md
-    - text: '.NET Microservices: Arquitetura para aplicativos .NET contêiner'
+    - text: 'Microsserviços do .NET: Arquitetura para aplicativos .NET em contêineres'
       url: microservices/index.md
   - linkListType: learn
     links:
-    - text: Tutorial do Hello World Microservice
+    - text: Tutorial de microserviço Olá, Mundo
       url: https://dotnet.microsoft.com/learn/aspnet/microservice-tutorial/intro
 - title: Migrar aplicativos .NET para o Azure
   linkLists:
   - linkListType: concept
     links:
-    - text: Modernize os aplicativos .NET existentes com contêineres de nuvem e Windows do Azure
+    - text: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure
       url: modernize-with-azure-containers/index.md
-    - text: Migre seu aplicativo .NET para o Azure
+    - text: Migrar seu aplicativo .NET para o Azure
       url: https://dotnet.microsoft.com/apps/cloud/migrate-to-azure
-- title: Entenda DevOps para .NET
+- title: Entender o DevOps para .NET
   linkLists:
   - linkListType: concept
     links:
     - text: Ciclo de vida de aplicativo Docker em contêiner com plataforma e ferramentas da Microsoft
       url: containerized-lifecycle/index.md
-    - text: ASP.NET Core DevOps com Azure
+    - text: ASP.NET Core DevOps com o Azure
       url: /aspnet/core/azure/devops/
+- title: Modernizar aplicativos da área de trabalho
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Modernizar aplicativos de área de trabalho no Windows 10 com .NET Core 3.1
+      url: modernize-desktop/index.md

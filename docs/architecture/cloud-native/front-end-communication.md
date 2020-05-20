@@ -2,17 +2,15 @@
 title: Comunicação front-end de cliente
 description: Saiba como os clientes front-end se comunicam com sistemas nativos de nuvem
 author: robvet
-ms.date: 09/08/2019
-ms.openlocfilehash: 89f13ea1c9ecbe92e959ae63a4c21bf7775f8943
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 97421e9b90b19c720b1ab0ff8dd1e5f029cba5e4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895570"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614052"
 ---
 # <a name="front-end-client-communication"></a>Comunicação front-end de cliente
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Em um sistema nativo de nuvem, os clientes front-end (aplicativos móveis, Web e de área de trabalho) exigem um canal de comunicação para interagir com microserviços de back-end independentes.  
 
@@ -163,5 +161,5 @@ Outra vantagem do serviço Signalr do Azure é a implementação de serviços na
 O serviço de sinalizador do Azure integra-se perfeitamente a outros serviços do Azure, como o banco de dados SQL do Azure, o barramento de serviço ou o cache Redis, abrindo muitas possibilidades para seus aplicativos nativos de nuvem.
 
 >[!div class="step-by-step"]
->[Anterior](communication-patterns.md)
->[próximo](service-to-service-communication.md)
+>[Anterior](communication-patterns.md) 
+> [Avançar](service-to-service-communication.md)

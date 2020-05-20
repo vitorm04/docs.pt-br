@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 275ef87b-0b53-49f9-af6b-58506335dc06
 topic_type:
 - apiref
-ms.openlocfilehash: 9aace77c4b3549c033433d4c305b07daa1f7a8c1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9a490299c24f44b59da682f714f4b696fde3cba5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449000"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614507"
 ---
 # <a name="isymunmanagedencupdateupdatemethodlines-method"></a>Método ISymUnmanagedENCUpdate::UpdateMethodLines
 Permite atualizar as informações de linha de um método que não foi recompilado, mas cujas linhas foram movidas de forma independente. Um Delta para cada instrução é permitido.  
@@ -39,10 +39,10 @@ HRESULT UpdateMethodLines(
  no Os metadados do token do método.  
   
  `pDeltas`  
- no Uma matriz de valores `INT32` que indica deltas para cada ponto de sequência no método.  
+ no Uma matriz de `INT32` valores que indica deltas para cada ponto de sequência no método.  
   
  `cDeltas`  
- no Um `ULONG` que contém o tamanho do parâmetro `pDeltas`.  
+ no Um `ULONG` valor que contém o tamanho do `pDeltas` parâmetro.  
   
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
@@ -50,6 +50,6 @@ HRESULT UpdateMethodLines(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ISymUnmanagedENCUpdate](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [Interface ISymUnmanagedENCUpdate](isymunmanagedencupdate-interface.md)

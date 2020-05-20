@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 657bf91d-005a-4ea4-9298-04d1291c0bc3
 topic_type:
 - apiref
-ms.openlocfilehash: 43f32ac85bebc12d0a9253205aae3f1de0dc9e5b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 84b2f1226c84713483499c7ff777838058cb0f95
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433968"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615105"
 ---
 # <a name="isymunmanagednamespacegetname-method"></a>Método ISymUnmanagedNamespace::GetName
 Obtém o nome deste namespace.  
@@ -37,7 +37,7 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parâmetros  
  `cchName`  
- no Um `ULONG32` que indica o tamanho do buffer de `szName`.  
+ no Um `ULONG32` que indica o tamanho do `szName` buffer.  
   
  `pcchName`  
  fora Um ponteiro para um `ULONG32` que recebe o tamanho, em caracteres, do buffer necessário para conter o nome do namespace, incluindo a terminação nula.  
@@ -48,9 +48,9 @@ HRESULT GetName(
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [Interface ISymUnmanagedNamespace](isymunmanagednamespace-interface.md)

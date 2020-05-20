@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c6639418-e9f2-4a99-8ce2-ec9876e0bc79
 topic_type:
 - apiref
-ms.openlocfilehash: cea18fefa2d356cbb5857db5133b1086c38ac6ff
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 084f3ae12d906f5e80fdb86e65b09d2371fd246b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449171"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614585"
 ---
 # <a name="isymunmanageddocumentgetlanguage-method"></a>Método ISymUnmanagedDocument::GetLanguage
 Obtém o identificador de idioma deste documento  
@@ -39,6 +39,6 @@ HRESULT GetLanguage(
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [Interface ISymUnmanagedDocument](isymunmanageddocument-interface.md)

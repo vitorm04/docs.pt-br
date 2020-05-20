@@ -2,17 +2,15 @@
 title: Infraestrutura de comunicação de malha de serviço
 description: Saiba mais sobre como as tecnologias de malha de serviço simplificam a comunicação de microserviço nativa na nuvem
 author: robvet
-ms.date: 03/03/2020
-ms.openlocfilehash: 89bc4d307d725e7e31e020ef156c4c5967dd2a1c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 1b11024cd029433c756812850e2665b7836a13d3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199934"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613675"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Infraestrutura de comunicação de malha de serviço
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Ao longo deste capítulo, exploramos os desafios da comunicação de microserviço. Dissemos que as equipes de desenvolvimento precisam ser sensíveis à forma como os serviços de back-end se comunicam entre si. Idealmente, quanto menos comunicação entre serviços, melhor. No entanto, evitar nem sempre é possível, pois os serviços de back-end muitas vezes dependem uns dos outros para concluir as operações.
 
@@ -73,5 +71,5 @@ Em seguida, mudamos para os dados distribuídos em sistemas nativos de nuvem e o
 - [Criando serviços gRPCs com o .NET Video](https://channel9.msdn.com/Shows/The-Cloud-Native-Show/Building-Microservices-with-gRPC-and-NET)
 
 >[!div class="step-by-step"]
->[Anterior](grpc.md)
->[próximo](distributed-data.md)
+>[Anterior](grpc.md) 
+> [Avançar](distributed-data.md)

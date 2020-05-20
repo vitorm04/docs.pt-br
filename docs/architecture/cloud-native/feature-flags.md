@@ -1,17 +1,16 @@
 ---
-title: Sinalizadores de recurso
+title: Sinalizadores de recursos
 description: Implementar sinalizadores de recurso em aplicativos nativos de nuvem utilizando Azure App config
-ms.date: 05/03/2020
-ms.openlocfilehash: 72e1bfe777854a74fcac926811caf97e59986146
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+author: robvet
+ms.date: 05/13/2020
+ms.openlocfilehash: 607bd14a415a25b382f550e697542cf749a21772
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83398305"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614065"
 ---
-# <a name="feature-flags"></a>Sinalizadores de recurso
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="feature-flags"></a>Sinalizadores de recursos
 
 No capítulo 1, afirmamos que a nuvem nativa é muito sobre velocidade e agilidade. Os usuários esperam uma rápida capacidade de resposta, recursos inovadores e zero tempo de inatividade. `Feature flags`é uma técnica de implantação moderna que ajuda a aumentar a agilidade para aplicativos nativos de nuvem. Eles permitem que você implante novos recursos em um ambiente de produção, mas restrinja sua disponibilidade. Com o movimento de um comutador, você pode ativar um novo recurso para usuários específicos sem reiniciar o aplicativo ou implantar um novo código. Eles separam o lançamento dos novos recursos da implantação de código.
 

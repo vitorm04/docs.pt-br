@@ -1,17 +1,15 @@
 ---
 title: Como registrar em log com a pilha elástica
 description: Registro em log usando Stack elástico, Logstash e Kibana
-ms.date: 02/05/2020
-ms.openlocfilehash: 6863c66b63854fe3ecaabe2919beded2926ea64c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: e886141fa691b75b882b5d67eae4ceb242e8089f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448900"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613844"
 ---
 # <a name="logging-with-elastic-stack"></a>Como registrar em log com a pilha elástica
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Há muitas boas ferramentas de registro em log centralizadas e elas variam de acordo com as ferramentas gratuitas de software livre, até opções mais caras. Em muitos casos, as ferramentas gratuitas são tão boas ou melhores do que as ofertas pagas. Uma dessas ferramentas é uma combinação de três componentes de código-fonte aberto: pesquisa elástica, Logstash e Kibana.
 
@@ -30,8 +28,8 @@ KUBE_ENABLE_NODE_LOGGING=true
 
 Isso instalará o Elasticsearch no cluster e o destino enviando todos os logs de cluster para ele.
 
-![um exemplo de um painel Kibana que mostra os resultados de uma consulta em relação a logs ingeridos de kubernetes](./media/kibana-dashboard.png)
-**figura 7-6**. Um exemplo de um painel de Kibana que mostra os resultados de uma consulta em relação aos logs que são ingeridos do kubernetes
+![Um exemplo de um painel de Kibana mostrando os resultados de uma consulta em relação a logs ingeridos da ](./media/kibana-dashboard.png)
+ **figura kubernetes 7-6**. Um exemplo de um painel de Kibana que mostra os resultados de uma consulta em relação aos logs que são ingeridos do kubernetes
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>Quais são as vantagens da pilha elástica?
 
@@ -81,7 +79,7 @@ A pesquisa elástica é um mecanismo de pesquisa poderoso que pode indexar logs 
 
 As mensagens de log que foram criadas para conter parâmetros ou que tiveram parâmetros divididos por meio deles por meio do processamento de Logstash podem ser consultadas diretamente à medida que Elasticsearch preserva essas informações.
 
-Uma consulta que pesquisa as 10 principais páginas visitadas por `jill@example.com`, aparece na Figura 7-9.
+Uma consulta que pesquisa as 10 principais páginas visitadas por `jill@example.com` , aparece na figura 7-9.
 
 ```
 "query": {
@@ -118,5 +116,5 @@ Outra opção é uma [oferta Elk como serviço anunciada recentemente](https://d
 - [Instalar pilha elástica no Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)
 
 >[!div class="step-by-step"]
->[Anterior](observability-patterns.md)
->[Próximo](monitoring-azure-kubernetes.md)
+>[Anterior](observability-patterns.md) 
+> [Avançar](monitoring-azure-kubernetes.md)

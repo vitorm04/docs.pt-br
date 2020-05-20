@@ -14,27 +14,27 @@ helpviewer_keywords:
 ms.assetid: d42bea4e-5848-4e43-a883-69af7a313ce9
 topic_type:
 - apiref
-ms.openlocfilehash: 26f76f94d9b2d82240150a852d2bfc3ae10b97c2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3bcb642ac62fb00780a4fda7aaeebaabb386db33
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448353"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615066"
 ---
 # <a name="isymunmanagednamespace-interface"></a>Interface ISymUnmanagedNamespace
 Representa um namespace.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetName](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|Obtém o nome deste namespace.|  
-|[Método GetNamespaces](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|Obtém os filhos deste namespace.|  
-|[Método GetVariables](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|Retorna todas as variáveis definidas no escopo global dentro deste namespace.|  
+|[Método GetName](isymunmanagednamespace-getname-method.md)|Obtém o nome deste namespace.|  
+|[Método GetNamespaces](isymunmanagednamespace-getnamespaces-method.md)|Obtém os filhos deste namespace.|  
+|[Método GetVariables](isymunmanagednamespace-getvariables-method.md)|Retorna todas as variáveis definidas no escopo global dentro deste namespace.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interfaces do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Interfaces de armazenamento de símbolo de diagnóstico](diagnostics-symbol-store-interfaces.md)

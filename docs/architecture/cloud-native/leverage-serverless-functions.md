@@ -1,17 +1,15 @@
 ---
 title: Como aproveitar funções sem servidor
 description: Aproveitamento e Azure Functions sem servidor em aplicativos nativos de nuvem
-ms.date: 04/13/2020
-ms.openlocfilehash: 176499e3cd0349cd689b9d13d1c237a6343d13f3
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 53a0fdd29630b2a4368f3aa37ddfc5f93df10a24
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199736"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613857"
 ---
 # <a name="leveraging-serverless-functions"></a>Como aproveitar funções sem servidor
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 No espectro do gerenciamento de máquinas físicas para aproveitar os recursos de nuvem, as vidas sem servidor no final extremo. Sua única responsabilidade é seu código, e você só paga quando seu código é executado. Azure Functions fornece uma maneira de criar recursos sem servidor em seus aplicativos nativos de nuvem.
 
@@ -54,8 +52,8 @@ Provisionamento e dimensionamento de soluções sem servidor sob demanda. Quando
 
 A Figura 3-10 mostra um padrão de inicialização a frio. Observe as etapas adicionais necessárias quando o aplicativo está frio.
 
-![Inativo versus a](./media/cold-start-warm-start.png)
-**Figura**de início quente 3-10. Início frio versus início quente.
+![Inativo versus a figura de início quente ](./media/cold-start-warm-start.png)
+ **3-10**. Início frio versus início quente.
 
 Para evitar que o frio seja totalmente iniciado, você pode mudar de um [plano de consumo para um plano dedicado](https://azure.microsoft.com/blog/understanding-serverless-cold-start/). Você também pode configurar uma ou mais [instâncias pré-configuradas](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances) com a atualização do plano Premium. Nesses casos, quando você precisa adicionar outra instância, ela já está ativa e pronta para uso. Essas opções podem ajudar a mitigar o problema de inicialização a frio associado à computação sem servidor.
 
@@ -64,5 +62,5 @@ Os provedores de nuvem cobram por servidor com base no tempo de execução de co
 Por fim, aproveitar Azure Functions para tarefas de aplicativo adiciona complexidade. É prudente primeiro arquitetar seu aplicativo com um design modular e menos rígido. Em seguida, identifique se há benefícios sem servidor que justifiquem a complexidade adicional.
 
 >[!div class="step-by-step"]
->[Anterior](leverage-containers-orchestrators.md)
->[próximo](combine-containers-serverless-approaches.md)
+>[Anterior](leverage-containers-orchestrators.md) 
+> [Avançar](combine-containers-serverless-approaches.md)

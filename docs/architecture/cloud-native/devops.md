@@ -1,17 +1,15 @@
 ---
 title: DevOps
 description: Considerações sobre o DevOps para aplicativos nativos de nuvem
-ms.date: 05/12/2020
-ms.openlocfilehash: 498ce64c3a387433862142826059b4f7e513ec7b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: ce814595245d49e409e780cb0f63c436299c2e4e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395805"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614105"
 ---
 # <a name="devops"></a>DevOps
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 A mantra favorita dos consultores de software é responder "depende" de qualquer pergunta apresentada. Não é porque os consultores de software estão boass de não tomar uma posição. É porque não há uma resposta verdadeira para qualquer pergunta no software. Não há nenhum direito absoluto e errado, mas sim um equilíbrio entre os opostos.
 
