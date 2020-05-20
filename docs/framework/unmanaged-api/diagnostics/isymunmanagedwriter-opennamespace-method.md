@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 426f4e4f-e60d-4ad1-b546-a10e3c55c283
 topic_type:
 - apiref
-ms.openlocfilehash: acbd49de7362d9c05a609a2d870af100637e10ab
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ab248c6a624fbed1a6783383566be093c449ff97
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427909"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609879"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>Método ISymUnmanagedWriter::OpenNamespace
 Abre um novo namespace. Chame esse método antes de definir métodos ou variáveis que ocupem um namespace. Os namespaces podem ser aninhados.  
@@ -39,10 +39,10 @@ HRESULT OpenNamespace(
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [Método CloseNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)
+- [Interface ISymUnmanagedWriter](isymunmanagedwriter-interface.md)
+- [Método CloseNamespace](isymunmanagedwriter-closenamespace-method.md)

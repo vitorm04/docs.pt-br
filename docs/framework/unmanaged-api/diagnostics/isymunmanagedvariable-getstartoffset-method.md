@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63021fc1-9c2d-4788-811f-fe8ca077206a
 topic_type:
 - apiref
-ms.openlocfilehash: 38c4819a375cdd94ee31c2744871c600d8de0b40
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f2996349fd2bf1765a3de5b67d3296a25b1eaa5e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446007"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610360"
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>Método ISymUnmanagedVariable::GetStartOffset
 Obtém o deslocamento inicial dessa variável dentro de seu pai. Se essa for uma variável local dentro de um escopo, o deslocamento de início se enquadrará dentro dos deslocamentos definidos para o escopo.  
@@ -34,7 +34,7 @@ HRESULT GetStartOffset(
   
 ## <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- fora Um ponteiro para uma `ULONG32` que recebe o deslocamento de início.  
+ fora Um ponteiro para um `ULONG32` que recebe o deslocamento de início.  
   
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
@@ -42,7 +42,7 @@ HRESULT GetStartOffset(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [Método GetEndOffset](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)
+- [Interface ISymUnmanagedVariable](isymunmanagedvariable-interface.md)
+- [Método GetEndOffset](isymunmanagedvariable-getendoffset-method.md)

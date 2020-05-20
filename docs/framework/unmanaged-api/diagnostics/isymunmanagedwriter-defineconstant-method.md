@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e986986-2223-4d5f-b040-85d716146924
 topic_type:
 - apiref
-ms.openlocfilehash: c8d0145b9dffe1c0ff6ed3281c90f3bcec082ab8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 200e68abb3f176c267045bf2a5e7e35d18400519
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428067"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610087"
 ---
 # <a name="isymunmanagedwriterdefineconstant-method"></a>Método ISymUnmanagedWriter::DefineConstant
 Define um nome para um valor constante.  
@@ -43,7 +43,7 @@ HRESULT DefineConstant(
  no O valor da constante.  
   
  `cSig`  
- no O tamanho da matriz de `signature`.  
+ no O tamanho da `signature` matriz.  
   
  `signature`  
  no A assinatura de tipo para a constante.  
@@ -51,10 +51,10 @@ HRESULT DefineConstant(
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [Método DefineConstant2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineconstant2-method.md)
+- [Interface ISymUnmanagedWriter](isymunmanagedwriter-interface.md)
+- [Método DefineConstant2](isymunmanagedwriter2-defineconstant2-method.md)

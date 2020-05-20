@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fb90cb7f-af88-45e8-a99f-80a0bbddb08b
 topic_type:
 - apiref
-ms.openlocfilehash: 7b13ca9884516e95e0bb922efc5bc1a845344e38
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d2d16ab0a29fadd3a64d906a64fc46c422e01c45
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427926"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610035"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a>Método ISymUnmanagedWriter::OpenMethod
 Abre um método no qual as informações de símbolo são emitidas. O método fornecido torna-se o método atual para chamadas para definir pontos de sequência, parâmetros e escopos léxicos. Há um escopo lexical implícito em todo o método. Reabrir um método que foi fechado anteriormente apaga todos os símbolos definidos anteriormente para esse método. Pode haver apenas um método Open por vez.  
@@ -42,8 +42,8 @@ HRESULT OpenMethod(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [Método CloseMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)
-- [Método OpenMethod2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-openmethod2-method.md)
+- [Interface ISymUnmanagedWriter](isymunmanagedwriter-interface.md)
+- [Método CloseMethod](isymunmanagedwriter-closemethod-method.md)
+- [Método OpenMethod2](isymunmanagedwriter3-openmethod2-method.md)

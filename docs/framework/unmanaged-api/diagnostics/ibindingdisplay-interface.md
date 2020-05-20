@@ -14,32 +14,32 @@ helpviewer_keywords:
 ms.assetid: 3367166f-31fe-43d0-8107-2e786f984e50
 topic_type:
 - apiref
-ms.openlocfilehash: ce8129c2a6cc29717743f255c0aac86a0836fa31
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e1b8cf3e8d78c8ef4715467760805cc50975d014
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448474"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442131"
 ---
 # <a name="ibindingdisplay-interface"></a>Interface IBindingDisplay
 Fornece métodos que exibem informações de associação atuais sobre o aplicativo em execução.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetCurrentDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|Retorna as informações de exibição da Associação atual.|  
-|[Método InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|Inicializa o objeto `IBindingDisplay`.|  
+|[Método GetCurrentDisplay](ibindingdisplay-getcurrentdisplay-method.md)|Retorna as informações de exibição da Associação atual.|  
+|[Método InitializeForProcess](ibindingdisplay-initializeforprocess-method.md)|Inicializa o objeto `IBindingDisplay`.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** BindingDisplay. h  
   
  **Biblioteca:** BindingDisplay. idl  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interfaces do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Interfaces de armazenamento de símbolo de diagnóstico](diagnostics-symbol-store-interfaces.md)

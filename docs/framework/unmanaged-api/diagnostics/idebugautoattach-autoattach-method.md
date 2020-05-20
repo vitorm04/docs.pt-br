@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3cf3bd9c-7d88-4afa-a476-94cdc7609aa6
 topic_type:
 - apiref
-ms.openlocfilehash: 766aeb31436101babeab31b615a1c633578bfcc5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: aae03b0dc76639c50f4615d41eef73990226b5f7
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445528"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442118"
 ---
 # <a name="idebugautoattachautoattach-method"></a>Método IDebugAutoAttach::AutoAttach
 Executa a anexação automática do depurador invocado pelo servidor.  
@@ -40,13 +40,13 @@ HRESULT AutoAttach
   
 ## <a name="parameters"></a>Parâmetros  
  `guidPort`  
- no Sempre definido como `GUID_NULL`.  
+ no Sempre definido como `GUID_NULL` .  
   
  `dwPid`  
- no ID do processo, normalmente recuperada com a função `GetCurrentProcessId`.  
+ no ID do processo, normalmente recuperada com a `GetCurrentProcessId` função.  
   
  `dwProgramType`  
- no Tipo de programa: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`ou `AUTOATTACH_PROGRAM_UNKNOWN`.  
+ no Tipo de programa: `AUTOATTACH_PROGRAM_WIN32` , `AUTOATTACH_PROGRAM_COMPLUS` ou `AUTOATTACH_PROGRAM_UNKNOWN` .  
   
  `dwProgramId`  
  no ID do programa.  
@@ -57,9 +57,9 @@ HRESULT AutoAttach
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** DbgAutoAttach. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IDebugAutoAttach](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
+- [Interface IDebugAutoAttach](idebugautoattach-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78c1ba28-a410-4360-805c-23a95408964a
 topic_type:
 - apiref
-ms.openlocfilehash: 2939d9cf3991a9e0b8f93bb301925b1092eca50e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a3ec0af33f3f1201ce2f6b62291dfc67696fecab
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446040"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610438"
 ---
 # <a name="isymunmanagedvariablegetsignature-method"></a>Método ISymUnmanagedVariable::GetSignature
 Obtém a assinatura dessa variável.  
@@ -37,7 +37,7 @@ HRESULT GetSignature(
   
 ## <a name="parameters"></a>Parâmetros  
  `cSig`  
- no O comprimento do buffer apontado pelo parâmetro `sig`.  
+ no O comprimento do buffer apontado pelo `sig` parâmetro.  
   
  `pcSig`  
  fora Um ponteiro para um `ULONG32` que recebe o tamanho, em caracteres, do buffer necessário para conter a assinatura.  
@@ -48,9 +48,9 @@ HRESULT GetSignature(
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [Interface ISymUnmanagedVariable](isymunmanagedvariable-interface.md)

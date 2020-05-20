@@ -2,18 +2,18 @@
 title: Comando dotnet new
 description: O comando dotnet new cria novos projetos .NET Core com base no modelo especificado.
 ms.date: 04/10/2020
-ms.openlocfilehash: 9a68baafa7ac3e6ad2fdc8f1c6e8621d6e15f1ff
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 1544f519f2a5f6a1a6e042c1db720eff45f5d98c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506851"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442235"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 2,0 e versões posteriores
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
 `dotnet new` – Cria um novo projeto, arquivo de configuração ou solução com base no modelo especificado.
 
@@ -21,7 +21,7 @@ ms.locfileid: "82506851"
 
 ```dotnetcli
 dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install {PATH|NUGET_ID}]
-    [-lang|--language {C#|F#|VB}] [-n|--name <OUTPUT_NAME>]
+    [-lang|--language {"C#"|"F#"|VB}] [-n|--name <OUTPUT_NAME>]
     [--nuget-source <SOURCE>] [-o|--output <OUTPUT_DIRECTORY>]
     [-u|--uninstall] [--update-apply] [--update-check] [Template options]
 
@@ -48,14 +48,14 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 
   Você pode executar `dotnet new --list` ou `dotnet new -l` para ver uma lista de todos os modelos instalados. Se o `TEMPLATE` valor não for uma correspondência exata no texto na coluna **modelos** ou **nome curto** da tabela retornada, uma correspondência de subcadeia de caracteres será executada nessas duas colunas.
 
-  A partir do SDK do .NET Core 3,0, a CLI procura modelos em NuGet.org quando você invoca `dotnet new` o comando nas seguintes condições:
+  A partir do SDK do .NET Core 3,0, a CLI procura modelos em NuGet.org quando você invoca o `dotnet new` comando nas seguintes condições:
 
-  - Se a CLI não encontrar uma correspondência de modelo ao invocar `dotnet new`, nem mesmo parcial.
+  - Se a CLI não encontrar uma correspondência de modelo ao invocar `dotnet new` , nem mesmo parcial.
   - Se houver uma versão mais recente do modelo disponível. Nesse caso, o projeto ou artefato é criado, mas a CLI avisa sobre uma versão atualizada do modelo.
 
   A tabela a seguir mostra os modelos que vêm pré-instalados com o SDK do .NET Core. O idioma padrão do modelo é mostrado entre parênteses. Clique no link nome curto para ver as opções de modelo específicas.
 
-| Modelos                                    | Nome curto                      | Linguagem     | Marcas                                  | Incluída |
+| Modelos                                    | Nome curto                      | Linguagem     | Marcações                                  | Incluída |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | Aplicativo do Console                          | [MMC](#console)             | [C#], F#, VB | Comum/Console                        | 1.0        |
 | Biblioteca de classes                                | [classlib](#classlib)           | [C#], F#, VB | Comum/Library                        | 1.0        |
@@ -71,21 +71,21 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 | Item de Teste do NUnit 3                            | `nunit-test`                    | [C#], F#, VB | Teste/NUnit                            | 2.2        |
 | Projeto de Teste xUnit                           | [xUnit](#test)                  | [C#], F#, VB | Teste/xUnit                            | 1.0        |
 | Componente Razor                              | `razorcomponent`                | [C#]         | Web/ASP.NET                           | 3.0        |
-| Página do Razor                                   | [Web](#page)                   | [C#]         | Web/ASP.NET                           | 2,0        |
-| Importações de Exibição do MVC                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2,0        |
-| MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2,0        |
+| Página do Razor                                   | [Web](#page)                   | [C#]         | Web/ASP.NET                           | 2.0        |
+| Importações de Exibição do MVC                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
+| MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
 | Aplicativo de servidor mais incrivelmente                            | [blazorserver](#blazorserver)   | [C#]         | Web/mais e mais                            | 3.0        |
 | ASP.NET Core Vazio                           | [site](#web)                     | [C#], F#     | Web/Vazio                             | 1.0        |
 | Aplicativo Web ASP.NET Core (Modelo-Exibição-Controlador) | [MVC](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
 | Aplicativo Web ASP.NET Core                         | [webapp, Razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2,2, 2,0   |
-| ASP.NET Core com Angular                    | [angular](#spa)                 | [C#]         | Web/MVC/SPA                           | 2,0        |
-| ASP.NET Core com React.js                   | [reagir](#spa)                   | [C#]         | Web/MVC/SPA                           | 2,0        |
-| ASP.NET Core com React.js e Redux         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2,0        |
+| ASP.NET Core com Angular                    | [angular](#spa)                 | [C#]         | Web/MVC/SPA                           | 2.0        |
+| ASP.NET Core com React.js                   | [reagir](#spa)                   | [C#]         | Web/MVC/SPA                           | 2.0        |
+| ASP.NET Core com React.js e Redux         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2.0        |
 | Biblioteca de Classes do Razor                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/Biblioteca/Biblioteca de Classes do Razor | 2.1        |
 | API Web do ASP.NET Core                         | [webAPI](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
 | ASP.NET Core serviço gRPC                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
 | arquivo dotnet gitignore                        | `gitignore`                     |              | Config                                | 3.0        |
-| Arquivo global.json                             | [globaljson](#globaljson)       |              | Config                                | 2,0        |
+| Arquivo global.json                             | [globaljson](#globaljson)       |              | Config                                | 2.0        |
 | Configuração do NuGet                                 | `nugetconfig`                   |              | Config                                | 1.0        |
 | Arquivo de manifesto da ferramenta local dotnet              | `tool-manifest`                 |              | Config                                | 3.0        |
 | Configuração da Web                                   | `webconfig`                     |              | Config                                | 1.0        |
@@ -104,11 +104,11 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 
 - **`-h|--help`**
 
-  Imprime uma ajuda para o comando. Ele pode ser invocado para `dotnet new` o próprio comando ou para qualquer modelo. Por exemplo, `dotnet new mvc --help`.
+  Imprime uma ajuda para o comando. Ele pode ser invocado para o `dotnet new` próprio comando ou para qualquer modelo. Por exemplo, `dotnet new mvc --help`.
 
 - **`-i|--install <PATH|NUGET_ID>`**
 
-  Instala um pacote de modelos do `PATH` ou `NUGET_ID` fornecido. Se você deseja instalar uma versão de pré-lançamento de um pacote de modelo, é necessário especificar a versão no formato `<package-name>::<package-version>`. Por padrão, `dotnet new` o \* passa para a versão, que representa a versão de pacote estável mais recente. Veja um exemplo na seção [exemplos](#examples) .
+  Instala um pacote de modelos do `PATH` ou `NUGET_ID` fornecido. Se você deseja instalar uma versão de pré-lançamento de um pacote de modelo, é necessário especificar a versão no formato `<package-name>::<package-version>`. Por padrão, `dotnet new` \* o passa para a versão, que representa a versão de pacote estável mais recente. Veja um exemplo na seção [exemplos](#examples) .
   
   Se uma versão do modelo já tiver sido instalada quando você executar esse comando, o modelo será atualizado para a versão especificada ou para a versão estável mais recente se nenhuma versão tiver sido especificada.
 
@@ -139,11 +139,11 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 
 - **`--type <TYPE>`**
 
-  Filtra modelos com base em tipos disponíveis. Os valores predefinidos são `project`, `item`e `other`.
+  Filtra modelos com base em tipos disponíveis. Os valores predefinidos são `project` , `item` e `other` .
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
-  Desinstala um pacote de modelos no `PATH` ou `NUGET_ID` fornecido. Quando o `<PATH|NUGET_ID>` valor não for especificado, todos os pacotes de modelos instalados atualmente e seus modelos associados serão exibidos. Ao especificar `NUGET_ID`, não inclua o número de versão.
+  Desinstala um pacote de modelos no `PATH` ou `NUGET_ID` fornecido. Quando o `<PATH|NUGET_ID>` valor não for especificado, todos os pacotes de modelos instalados atualmente e seus modelos associados serão exibidos. Ao especificar `NUGET_ID` , não inclua o número de versão.
 
   Se você não especificar um parâmetro para essa opção, o comando listará os modelos instalados e os detalhes sobre eles.
 
@@ -178,7 +178,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  Define a `LangVersion` Propriedade no arquivo de projeto criado. Por exemplo, use `--langVersion 7.3` para usar C# 7.3. Sem suporte para F#. Disponível desde o SDK do .NET Core 2,2.
+  Define a `LangVersion` propriedade no arquivo de projeto criado. Por exemplo, use `--langVersion 7.3` para usar C# 7.3. Sem suporte para F#. Disponível desde o SDK do .NET Core 2,2.
 
   Para obter uma lista de versões padrão do C#, consulte [padrões](../../csharp/language-reference/configure-language-version.md#defaults).
 
@@ -196,7 +196,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  Define a `LangVersion` Propriedade no arquivo de projeto criado. Por exemplo, use `--langVersion 7.3` para usar C# 7.3. Sem suporte para F#. Disponível desde o SDK do .NET Core 2,2.
+  Define a `LangVersion` propriedade no arquivo de projeto criado. Por exemplo, use `--langVersion 7.3` para usar C# 7.3. Sem suporte para F#. Disponível desde o SDK do .NET Core 2,2.
 
   Para obter uma lista de versões padrão do C#, consulte [padrões](../../csharp/language-reference/configure-language-version.md#defaults).
 
@@ -214,7 +214,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  Define a `LangVersion` Propriedade no arquivo de projeto criado. Por exemplo, use `--langVersion 7.3` para usar C# 7.3.
+  Define a `LangVersion` propriedade no arquivo de projeto criado. Por exemplo, use `--langVersion 7.3` para usar C# 7.3.
 
   Para obter uma lista de versões padrão do C#, consulte [padrões](../../csharp/language-reference/configure-language-version.md#defaults).
 
@@ -228,7 +228,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  Define a `LangVersion` Propriedade no arquivo de projeto criado. Por exemplo, use `--langVersion 7.3` para usar C# 7.3.
+  Define a `LangVersion` propriedade no arquivo de projeto criado. Por exemplo, use `--langVersion 7.3` para usar C# 7.3.
 
   Para obter uma lista de versões padrão do C#, consulte [padrões](../../csharp/language-reference/configure-language-version.md#defaults).
 
@@ -381,7 +381,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`--no-https`**
 
-  Desativa o HTTPS. Essa opção só se aplica `Individual`se `IndividualB2C`, `SingleOrg`, ou `MultiOrg` não estiverem sendo usados `--auth`para.
+  Desativa o HTTPS. Essa opção só se aplica se `Individual` , `IndividualB2C` , `SingleOrg` ou `MultiOrg` não estiverem sendo usados para `--auth` .
 
 - **`-uld|--use-local-db`**
 
@@ -532,7 +532,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`--no-https`**
 
-  Desativa o HTTPS. Essa opção se aplica somente se a `None`autenticação for.
+  Desativa o HTTPS. Essa opção se aplica somente se a autenticação for `None` .
 
 - **`-uld|--use-local-db`**
 
@@ -629,7 +629,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`-r|--org-read-access`**
 
-  Permite que este aplicativo Leia o acesso ao diretório. Aplica-se `SingleOrg` somente à autenticação.
+  Permite que este aplicativo Leia o acesso ao diretório. Aplica-se somente à `SingleOrg` autenticação.
 
 - **`--exclude-launch-settings`**
 
@@ -637,11 +637,11 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`--no-https`**
 
-  Desativa o HTTPS. `app.UseHsts` e `app.UseHttpsRedirection` não são adicionados ao `Startup.Configure`. Essa opção só se aplica `IndividualB2C` se `SingleOrg` ou não estiver sendo usada para autenticação.
+  Desativa o HTTPS. `app.UseHsts` e `app.UseHttpsRedirection` não são adicionados ao `Startup.Configure`. Essa opção só se aplica se `IndividualB2C` ou `SingleOrg` não estiver sendo usada para autenticação.
 
 - **`-uld|--use-local-db`**
 
-  Especifica LocalDB deve ser usado em vez do SQLite. Aplica-se `IndividualB2C` somente à autenticação.
+  Especifica LocalDB deve ser usado em vez do SQLite. Aplica-se somente à `IndividualB2C` autenticação.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -680,7 +680,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 - Crie um projeto de aplicativo de console F# no diretório atual:
 
   ```dotnetcli
-  dotnet new console -lang F#
+  dotnet new console -lang "F#"
   ```
 
 - Crie um projeto de biblioteca de classe .NET Standard no diretório especificado:

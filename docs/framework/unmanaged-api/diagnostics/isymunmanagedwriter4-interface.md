@@ -2,12 +2,12 @@
 title: Interface ISymUnmanagedWriter4
 ms.date: 03/30/2017
 ms.assetid: 4af5e8c0-987d-405e-b934-8b9e70fcae6e
-ms.openlocfilehash: a656777461c50b5a1593917278eb54abda982dc2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: eaf2e8e60d9812ab6a31fb3b9050cbaae0f1a9d7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134564"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609463"
 ---
 # <a name="isymunmanagedwriter4-interface"></a>Interface ISymUnmanagedWriter4
 Interface ISymUnmanagedWriter4.  
@@ -23,12 +23,12 @@ Interface ISymUnmanagedWriter4.
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetDebugInfoWithPadding](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-getdebuginfowithpadding-method.md)|O funciona da mesma forma que o [método GetDebugInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) , exceto que a cadeia de caracteres do caminho é preenchida com zeros após o caractere nulo de terminação para tornar os dados da cadeia de caracteres um tamanho fixo de `MAX_PATH`. O preenchimento só será fornecido se o comprimento da cadeia de caracteres do caminho for menor que `MAX_PATH`.<br /><br /> Isso facilita a gravação de ferramentas que diferenciam arquivos PE.|  
+|[Método GetDebugInfoWithPadding](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-getdebuginfowithpadding-method.md)|O funciona da mesma forma que o [método GetDebugInfo](isymunmanagedwriter-getdebuginfo-method.md) , exceto pelo fato de que a cadeia de caracteres de caminho é preenchida com zeros após o caractere nulo de terminação para tornar os dados da cadeia de caracteres um tamanho fixo `MAX_PATH` . O preenchimento só será fornecido se o comprimento da cadeia de caracteres do caminho for menor que `MAX_PATH` .<br /><br /> Isso facilita a gravação de ferramentas que diferenciam arquivos PE.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interfaces do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [Interface ISymUnmanagedWriter3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [Interfaces de armazenamento de símbolo de diagnóstico](diagnostics-symbol-store-interfaces.md)
+- [Interface ISymUnmanagedWriter3](isymunmanagedwriter3-interface.md)

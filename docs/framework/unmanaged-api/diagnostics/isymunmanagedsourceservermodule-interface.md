@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: a19b23bd-2061-476e-b67d-252f57404f8b
 topic_type:
 - apiref
-ms.openlocfilehash: 9eac87d7627f502b13d805b8c5656e01ac578e7f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d90a55b53ba00540137e44fc190790c4710903e3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446200"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610789"
 ---
 # <a name="isymunmanagedsourceservermodule-interface"></a>Interface ISymUnmanagedSourceServerModule
-Fornece dados do servidor de origem para um módulo. Obtenha essa interface chamando `QueryInterface` em um objeto que implementa a interface [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) .  
+Fornece dados do servidor de origem para um módulo. Obtenha essa interface chamando `QueryInterface` em um objeto que implementa a interface [ISymUnmanagedReader](isymunmanagedreader-interface.md) .  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetSourceServerData](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-getsourceserverdata-method.md)|Retorna os dados do servidor de origem para o módulo.|  
+|[Método GetSourceServerData](isymunmanagedsourceservermodule-getsourceserverdata-method.md)|Retorna os dados do servidor de origem para o módulo.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interfaces do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Interfaces de armazenamento de símbolo de diagnóstico](diagnostics-symbol-store-interfaces.md)

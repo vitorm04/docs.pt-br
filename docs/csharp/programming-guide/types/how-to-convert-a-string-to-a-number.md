@@ -1,5 +1,5 @@
 ---
-title: Como converter uma seqüência de string sem um número - C# Guia de Programação
+title: Como converter uma cadeia de caracteres em um guia de programação de um número C#
 ms.date: 02/11/2019
 helpviewer_keywords:
 - conversions [C#]
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 54a4562a5cc493fc287bdf2f6bcf9723557f2a05
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1d4a0f36292acafad409bf666f861b7637cd644
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157033"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442196"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Como converter uma string para um número (C# Programming Guide)
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Como converter uma cadeia de caracteres em um número (guia de programação C#)
 
-Você pode converter uma [string](../../language-reference/builtin-types/reference-types.md) para `Parse` `TryParse` um número chamando o ou`int` `long`método `double`encontrado nos vários tipos numéricos (, , etc.), ou usando métodos na <xref:System.Convert?displayProperty=nameWithType> classe.  
+Você pode converter uma [cadeia de caracteres](../../language-reference/builtin-types/reference-types.md) em um número chamando `Parse` o `TryParse` método ou encontrado nos vários tipos numéricos ( `int` ,, `long` `double` , etc.) ou usando métodos na <xref:System.Convert?displayProperty=nameWithType> classe.  
   
- Se você tiver uma string, é um pouco `TryParse` mais eficiente [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)e `Parse` simples chamar um [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)método (por exemplo, ) ou método (por exemplo, ).  Usar um método <xref:System.Convert> é mais útil para objetos gerais que implementam <xref:System.IConvertible>.  
+ Se você tiver uma cadeia de caracteres, será um pouco mais eficiente e simples chamar um `TryParse` método (por exemplo, [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A) ) ou `Parse` método (por exemplo, [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A) ).  Usar um método <xref:System.Convert> é mais útil para objetos gerais que implementam <xref:System.IConvertible>.  
   
- É possível usar métodos `Parse` ou `TryParse` no tipo numérico que se espera que a cadeia de caracteres contenha, como o tipo <xref:System.Int32?displayProperty=nameWithType>.  O método <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> usa <xref:System.Int32.Parse%2A> internamente.  O `Parse` método retorna o número convertido; o `TryParse` método <xref:System.Boolean> retorna um valor que indica se a conversão foi bem sucedida e retorna o número convertido em um [ `out` parâmetro](../../language-reference/keywords/out.md). Se a seqüência não `Parse` estiver em um `TryParse` formato `false`válido, lança uma exceção, enquanto retorna . Ao chamar um método `Parse`, você sempre deve usar o tratamento de exceções para capturar um <xref:System.FormatException> no caso da operação de análise falhar.  
+ É possível usar métodos `Parse` ou `TryParse` no tipo numérico que se espera que a cadeia de caracteres contenha, como o tipo <xref:System.Int32?displayProperty=nameWithType>.  O método <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> usa <xref:System.Int32.Parse%2A> internamente.  O `Parse` método retorna o número convertido; o `TryParse` método retorna um <xref:System.Boolean> valor que indica se a conversão foi bem-sucedida e retorna o número convertido em um [ `out` parâmetro](../../language-reference/keywords/out.md). Se a cadeia de caracteres não estiver em um formato válido, o `Parse` lançará uma exceção, enquanto `TryParse` retorna `false` . Ao chamar um método `Parse`, você sempre deve usar o tratamento de exceções para capturar um <xref:System.FormatException> no caso da operação de análise falhar.  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Como chamar os métodos Parse e TryParse
 
@@ -50,7 +50,7 @@ A tabela a seguir lista alguns dos métodos da classe <xref:System.Convert> que 
 |`uint`|<xref:System.Convert.ToUInt32%28System.String%29>|  
 |`ulong`|<xref:System.Convert.ToUInt64%28System.String%29>|  
   
- O exemplo a <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> seguir chama o método de converter uma seqüência de entrada em um [int](../../language-reference/builtin-types/integral-numeric-types.md). O exemplo captura as duas exceções mais comuns <xref:System.FormatException> <xref:System.OverflowException>que podem ser lançadas por este método, e . Se o número resultante puder ser incrementado sem exceder <xref:System.Int32.MaxValue?displayProperty=nameWithType>, o exemplo adicionará 1 ao resultado e exibirá a saída.  
+ O exemplo a seguir chama o <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> método para converter uma cadeia de caracteres de entrada em um [int](../../language-reference/builtin-types/integral-numeric-types.md). O exemplo captura as duas exceções mais comuns que podem ser geradas por esse método <xref:System.FormatException> e <xref:System.OverflowException> . Se o número resultante puder ser incrementado sem exceder <xref:System.Int32.MaxValue?displayProperty=nameWithType>, o exemplo adicionará 1 ao resultado e exibirá a saída.  
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   
@@ -58,4 +58,4 @@ A tabela a seguir lista alguns dos métodos da classe <xref:System.Convert> que 
 
 - [Tipos](./index.md)
 - [Como determinar se uma cadeia de caracteres representa um valor numérico](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
-- [Amostra: Utilitário de Formatação do WinForms do .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
+- [Amostra: Utilitário de Formatação do WinForms do .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)

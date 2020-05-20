@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9634e995-d46d-4397-ab66-cc5781d11e4e
 topic_type:
 - apiref
-ms.openlocfilehash: a1e83e4b8cb6603029f3b42b1a3b9ba4810c9039
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fb3b89d25b4c2e23c3980b167db4279246c4d27b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438004"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609294"
 ---
 # <a name="symlinedelta-structure"></a>Estrutura SYMLINEDELTA
 Fornece informações para o manipulador de símbolos sobre métodos que foram movidos como resultado de edições.  
@@ -36,14 +36,14 @@ typedef struct _SYMLINEDELTA
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`mdMethod`|O token de metadados do método.|  
 |`delta`|O número de linhas que o método foi movido.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Estruturas de repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [Estruturas de armazenamento de símbolo de diagnóstico](diagnostics-symbol-store-structures.md)

@@ -2,12 +2,12 @@
 title: Método ISymUnmanagedWriter5::OpenMapTokensToSourceSpans
 ms.date: 03/30/2017
 ms.assetid: 93ad2517-b0dc-464c-8688-a58a30eda18d
-ms.openlocfilehash: 004e1ddae8a6c0262846422a2eeb4314a4c82f65
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 82b46ea315009b65254735d44e355154b83b22e2
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121606"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609489"
 ---
 # <a name="isymunmanagedwriter5openmaptokenstosourcespans-method"></a>Método ISymUnmanagedWriter5::OpenMapTokensToSourceSpans
 Abra uma seção especial de dados personalizados para emitir informações de mapeamento de extensão de token para origem no. Abrir esta seção quando um método já estiver aberto, ou vice-versa, é um erro.  
@@ -24,6 +24,6 @@ HRESULT OpenMapTokensToSourceSpans();
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ISymUnmanagedWriter5](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-interface.md)
+- [Interface ISymUnmanagedWriter5](isymunmanagedwriter5-interface.md)

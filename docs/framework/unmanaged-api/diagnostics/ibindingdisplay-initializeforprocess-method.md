@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 59417acb-4e59-46ad-acfe-d827e6ab6078
 topic_type:
 - apiref
-ms.openlocfilehash: bb796a12868cc3e44394ab493f7838dc48ab4dc5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8645878132359b6218cd62b1ff707208de53704b
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448488"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442144"
 ---
 # <a name="ibindingdisplayinitializeforprocess-method"></a>Método IBindingDisplay::InitializeForProcess
-Inicializa o objeto [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) .  
+Inicializa o objeto [IBindingDisplay](ibindingdisplay-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,17 +38,17 @@ HRESULT InitializeForProcess (
  no O identificador do processo.  
   
 ## <a name="remarks"></a>Comentários  
- O depurador chama o método `InitializeForProcess` no momento da criação para inicializar a exibição de associação. `InitializeForProcess` deve ser chamado no momento da criação antes que qualquer outro método em `IBindingDisplay` seja chamado.  
+ O depurador chama o `InitializeForProcess` método no momento da criação para inicializar a exibição da associação. `InitializeForProcess`deve ser chamado no momento da criação antes que qualquer outro método em `IBindingDisplay` seja chamado.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** BindingDisplay. h  
   
  **Biblioteca:** BindingDisplay. idl  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)
+- [Interface IBindingDisplay](ibindingdisplay-interface.md)

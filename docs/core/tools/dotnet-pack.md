@@ -2,18 +2,18 @@
 title: Comando dotnet pack
 description: O comando dotnet pack cria pacotes NuGet para seu projeto .NET Core.
 ms.date: 04/28/2020
-ms.openlocfilehash: 26a8581f55a8dc9e61aa52e62ed94c73eefd3e03
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 00cda2c52a12a7a3aef5f61291120f522536131d
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595748"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442222"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
 **Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
 `dotnet pack` – Empacota o código em um pacote NuGet.
 
@@ -37,7 +37,7 @@ O comando `dotnet pack` compila o projeto e cria pacotes NuGet. O resultado dess
 Se você quiser gerar um pacote que contém os símbolos de depuração, terá duas opções disponíveis:
 
 - `--include-symbols`-Ele cria o pacote de símbolos.
-- `--include-source`-Ele cria o pacote de símbolos com `src` uma pasta dentro de contendo os arquivos de origem.
+- `--include-source`-Ele cria o pacote de símbolos com uma `src` pasta dentro de contendo os arquivos de origem.
 
 As dependências do NuGet do projeto empacotado são adicionadas ao arquivo *.nuspec* para que possam ser resolvidas apropriadamente quando o pacote for instalado. As referências de projeto a projeto não são empacotadas dentro do projeto. No momento, você precisa ter um pacote por projeto se tiver dependências de projeto a projeto.
 
@@ -64,13 +64,13 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
 
 `PROJECT | SOLUTION`
 
-  O projeto ou a solução a ser empacotada. É um caminho para um [arquivo csproj](csproj.md), um arquivo de solução ou um diretório. Se não for especificado, o comando pesquisará o diretório atual em busca de um arquivo de projeto ou de solução.
+  O projeto ou a solução a ser empacotada. É um caminho para um [arquivo csproj](csproj.md), arquivo vbproj, arquivo fsproj, um arquivo de solução ou para um diretório. Se não for especificado, o comando pesquisará o diretório atual em busca de um arquivo de projeto ou de solução.
 
 ## <a name="options"></a>Opções
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  Define a configuração da compilação. O padrão para a maioria dos `Debug`projetos é, mas você pode substituir as definições de configuração de compilação em seu projeto.
+  Define a configuração da compilação. O padrão para a maioria dos projetos é `Debug` , mas você pode substituir as definições de configuração de compilação em seu projeto.
 
 - **`--force`**
 
@@ -184,7 +184,7 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
   dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```
 
-  Para obter informações sobre como usar `NuspecFile`o `NuspecBasePath`, o `NuspecProperties`e o, consulte os seguintes recursos:
+  Para obter informações sobre como usar `NuspecFile` `NuspecBasePath` `NuspecProperties` o, o e o, consulte os seguintes recursos:
   
   - [Empacotamento usando um .nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [Pontos de extensão avançados para criar pacote personalizado](https://docs.microsoft.com/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)

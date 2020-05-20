@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: d4cc51ac-c1d6-41b9-ab8e-ef0073f13241
 topic_type:
 - apiref
-ms.openlocfilehash: 64e9d5e4bf43c8dac39850dafcd58a547191fc99
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8eb1e7baf950e978bd921be20769810619658bc3
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445514"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442105"
 ---
 # <a name="idebugautoattach-interface"></a>Interface IDebugAutoAttach
 Define a interface para anexação automática do depurador invocado pelo servidor.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método AutoAttach](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Executa a anexação automática do depurador invocado pelo servidor.|  
+|[Método AutoAttach](idebugautoattach-autoattach-method.md)|Executa a anexação automática do depurador invocado pelo servidor.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** DbgAutoAttach. idl  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interfaces do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Interfaces de armazenamento de símbolo de diagnóstico](diagnostics-symbol-store-interfaces.md)

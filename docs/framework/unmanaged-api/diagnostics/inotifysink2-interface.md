@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: c1018789-4206-455d-aacc-2d876fc0d0bb
 topic_type:
 - apiref
-ms.openlocfilehash: af50c82974b779b901135795f37e3bd4c8b8c156
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c7afe074afb9b38d6fefa1192799120dbb50b403
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440974"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442053"
 ---
 # <a name="inotifysink2-interface"></a>Interface INotifySink2
 Declara métodos para notificação de coletor.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|É invocado ao inserir uma chamada.|  
-|[Método OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|É invocado ao sair de uma chamada.|  
-|[Método OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|É invocado quando uma chamada está fora.|  
-|[Método OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|É invocado quando uma chamada retorna.|  
+|[Método OnSyncCallEnter](inotifysink2-onsynccallenter-method.md)|É invocado ao inserir uma chamada.|  
+|[Método OnSyncCallExit](inotifysink2-onsynccallexit-method.md)|É invocado ao sair de uma chamada.|  
+|[Método OnSyncCallOut](inotifysink2-onsynccallout-method.md)|É invocado quando uma chamada está fora.|  
+|[Método OnSyncCallReturn](inotifysink2-onsynccallreturn-method.md)|É invocado quando uma chamada retorna.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** ProtocolNotify2. idl  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [Interface INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [Interfaces do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Interface INotifyConnection2](inotifyconnection2-interface.md)
+- [Interface INotifySource2](inotifysource2-interface.md)
+- [Interfaces de armazenamento de símbolo de diagnóstico](diagnostics-symbol-store-interfaces.md)

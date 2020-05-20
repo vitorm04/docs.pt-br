@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7f74d9c5-1377-4958-b842-6306d611cbd5
 topic_type:
 - apiref
-ms.openlocfilehash: b29e66a4e124f6d593fc0c8aed9a63fcc660f8df
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7a4ffc0c417ae839e5c97ffe6884bc3230a603b7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428096"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610100"
 ---
 # <a name="isymunmanagedwriterclosenamespace-method"></a>Método ISymUnmanagedWriter::CloseNamespace
 Fecha o namespace aberto mais recentemente.  
@@ -37,7 +37,7 @@ HRESULT CloseNamespace();
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [Método OpenNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-opennamespace-method.md)
+- [Interface ISymUnmanagedWriter](isymunmanagedwriter-interface.md)
+- [Método OpenNamespace](isymunmanagedwriter-opennamespace-method.md)
