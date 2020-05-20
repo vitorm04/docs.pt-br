@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 78c1ba28-a410-4360-805c-23a95408964a
 topic_type:
 - apiref
-ms.openlocfilehash: 2939d9cf3991a9e0b8f93bb301925b1092eca50e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a3ec0af33f3f1201ce2f6b62291dfc67696fecab
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446040"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610438"
 ---
-# <a name="isymunmanagedvariablegetsignature-method"></a><span data-ttu-id="f2cdb-102">Método ISymUnmanagedVariable::GetSignature</span><span class="sxs-lookup"><span data-stu-id="f2cdb-102">ISymUnmanagedVariable::GetSignature Method</span></span>
-<span data-ttu-id="f2cdb-103">Obtém a assinatura dessa variável.</span><span class="sxs-lookup"><span data-stu-id="f2cdb-103">Gets the signature of this variable.</span></span>  
+# <a name="isymunmanagedvariablegetsignature-method"></a><span data-ttu-id="49463-102">Método ISymUnmanagedVariable::GetSignature</span><span class="sxs-lookup"><span data-stu-id="49463-102">ISymUnmanagedVariable::GetSignature Method</span></span>
+<span data-ttu-id="49463-103">Obtém a assinatura dessa variável.</span><span class="sxs-lookup"><span data-stu-id="49463-103">Gets the signature of this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f2cdb-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f2cdb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="49463-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="49463-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSignature(  
@@ -35,22 +35,22 @@ HRESULT GetSignature(
         length_is(*pcSig)] BYTE sig[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f2cdb-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="f2cdb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="49463-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="49463-105">Parameters</span></span>  
  `cSig`  
- <span data-ttu-id="f2cdb-106">no O comprimento do buffer apontado pelo parâmetro `sig`.</span><span class="sxs-lookup"><span data-stu-id="f2cdb-106">[in] The length of the buffer pointed to by the `sig` parameter.</span></span>  
+ <span data-ttu-id="49463-106">no O comprimento do buffer apontado pelo `sig` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="49463-106">[in] The length of the buffer pointed to by the `sig` parameter.</span></span>  
   
  `pcSig`  
- <span data-ttu-id="f2cdb-107">fora Um ponteiro para um `ULONG32` que recebe o tamanho, em caracteres, do buffer necessário para conter a assinatura.</span><span class="sxs-lookup"><span data-stu-id="f2cdb-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
+ <span data-ttu-id="49463-107">fora Um ponteiro para um `ULONG32` que recebe o tamanho, em caracteres, do buffer necessário para conter a assinatura.</span><span class="sxs-lookup"><span data-stu-id="49463-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
   
  `sig`  
- <span data-ttu-id="f2cdb-108">fora O buffer que armazena a assinatura.</span><span class="sxs-lookup"><span data-stu-id="f2cdb-108">[out] The buffer that stores the signature.</span></span>  
+ <span data-ttu-id="49463-108">fora O buffer que armazena a assinatura.</span><span class="sxs-lookup"><span data-stu-id="49463-108">[out] The buffer that stores the signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f2cdb-109">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="f2cdb-109">Return Value</span></span>  
- <span data-ttu-id="f2cdb-110">S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="f2cdb-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="49463-109">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="49463-109">Return Value</span></span>  
+ <span data-ttu-id="49463-110">S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="49463-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f2cdb-111">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="f2cdb-111">Requirements</span></span>  
- <span data-ttu-id="f2cdb-112">**Cabeçalho:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="f2cdb-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="49463-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="49463-111">Requirements</span></span>  
+ <span data-ttu-id="49463-112">**Cabeçalho:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="49463-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f2cdb-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f2cdb-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="49463-113">Confira também</span><span class="sxs-lookup"><span data-stu-id="49463-113">See also</span></span>
 
-- [<span data-ttu-id="f2cdb-114">Interface ISymUnmanagedVariable</span><span class="sxs-lookup"><span data-stu-id="f2cdb-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="49463-114">Interface ISymUnmanagedVariable</span><span class="sxs-lookup"><span data-stu-id="49463-114">ISymUnmanagedVariable Interface</span></span>](isymunmanagedvariable-interface.md)

@@ -14,27 +14,27 @@ helpviewer_keywords:
 ms.assetid: 30817373-0a21-49c1-a0c4-8e8daeecb8db
 topic_type:
 - apiref
-ms.openlocfilehash: d7371361b074454e8aa359c49b964193c12f3034
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 308c501e17446719067d2dc0580d698c1770bf53
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446153"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610659"
 ---
-# <a name="isymunmanagedsymbolsearchinfo-interface"></a><span data-ttu-id="7663f-102">Interface ISymUnmanagedSymbolSearchInfo</span><span class="sxs-lookup"><span data-stu-id="7663f-102">ISymUnmanagedSymbolSearchInfo Interface</span></span>
-<span data-ttu-id="7663f-103">Fornece métodos que obtêm informações sobre o caminho de pesquisa.</span><span class="sxs-lookup"><span data-stu-id="7663f-103">Provides methods that get information about the search path.</span></span> <span data-ttu-id="7663f-104">Obtenha essa interface chamando `QueryInterface` em um objeto que implementa a interface [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="7663f-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
+# <a name="isymunmanagedsymbolsearchinfo-interface"></a><span data-ttu-id="e014a-102">Interface ISymUnmanagedSymbolSearchInfo</span><span class="sxs-lookup"><span data-stu-id="e014a-102">ISymUnmanagedSymbolSearchInfo Interface</span></span>
+<span data-ttu-id="e014a-103">Fornece métodos que obtêm informações sobre o caminho de pesquisa.</span><span class="sxs-lookup"><span data-stu-id="e014a-103">Provides methods that get information about the search path.</span></span> <span data-ttu-id="e014a-104">Obtenha essa interface chamando `QueryInterface` em um objeto que implementa a interface [ISymUnmanagedReader](isymunmanagedreader-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="e014a-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="7663f-105">{1&gt;Métodos&lt;1}</span><span class="sxs-lookup"><span data-stu-id="7663f-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="e014a-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="e014a-105">Methods</span></span>  
   
-|<span data-ttu-id="7663f-106">Método</span><span class="sxs-lookup"><span data-stu-id="7663f-106">Method</span></span>|<span data-ttu-id="7663f-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="7663f-107">Description</span></span>|  
+|<span data-ttu-id="e014a-106">Método</span><span class="sxs-lookup"><span data-stu-id="e014a-106">Method</span></span>|<span data-ttu-id="e014a-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="e014a-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="7663f-108">Método GetHRESULT</span><span class="sxs-lookup"><span data-stu-id="7663f-108">GetHRESULT Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-gethresult-method.md)|<span data-ttu-id="7663f-109">Obtém o HRESULT.</span><span class="sxs-lookup"><span data-stu-id="7663f-109">Gets the HRESULT.</span></span>|  
-|[<span data-ttu-id="7663f-110">Método GetSearchPath</span><span class="sxs-lookup"><span data-stu-id="7663f-110">GetSearchPath Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-getsearchpath-method.md)|<span data-ttu-id="7663f-111">Obtém o caminho de pesquisa.</span><span class="sxs-lookup"><span data-stu-id="7663f-111">Gets the search path.</span></span>|  
-|[<span data-ttu-id="7663f-112">Método GetSearchPathLength</span><span class="sxs-lookup"><span data-stu-id="7663f-112">GetSearchPathLength Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md)|<span data-ttu-id="7663f-113">Obtém o comprimento do caminho de pesquisa.</span><span class="sxs-lookup"><span data-stu-id="7663f-113">Gets the search path length.</span></span>|  
+|[<span data-ttu-id="e014a-108">Método GetHRESULT</span><span class="sxs-lookup"><span data-stu-id="e014a-108">GetHRESULT Method</span></span>](isymunmanagedsymbolsearchinfo-gethresult-method.md)|<span data-ttu-id="e014a-109">Obtém o HRESULT.</span><span class="sxs-lookup"><span data-stu-id="e014a-109">Gets the HRESULT.</span></span>|  
+|[<span data-ttu-id="e014a-110">Método GetSearchPath</span><span class="sxs-lookup"><span data-stu-id="e014a-110">GetSearchPath Method</span></span>](isymunmanagedsymbolsearchinfo-getsearchpath-method.md)|<span data-ttu-id="e014a-111">Obtém o caminho de pesquisa.</span><span class="sxs-lookup"><span data-stu-id="e014a-111">Gets the search path.</span></span>|  
+|[<span data-ttu-id="e014a-112">Método GetSearchPathLength</span><span class="sxs-lookup"><span data-stu-id="e014a-112">GetSearchPathLength Method</span></span>](isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md)|<span data-ttu-id="e014a-113">Obtém o comprimento do caminho de pesquisa.</span><span class="sxs-lookup"><span data-stu-id="e014a-113">Gets the search path length.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="7663f-114">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="7663f-114">Requirements</span></span>  
- <span data-ttu-id="7663f-115">**Cabeçalho:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="7663f-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e014a-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e014a-114">Requirements</span></span>  
+ <span data-ttu-id="e014a-115">**Cabeçalho:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="e014a-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7663f-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7663f-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e014a-116">Confira também</span><span class="sxs-lookup"><span data-stu-id="e014a-116">See also</span></span>
 
-- [<span data-ttu-id="7663f-117">Interfaces do repositório de símbolos de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="7663f-117">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="e014a-117">Interfaces de armazenamento de símbolo de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="e014a-117">Diagnostics Symbol Store Interfaces</span></span>](diagnostics-symbol-store-interfaces.md)
