@@ -1,13 +1,14 @@
 ---
 title: Visão geral de fluxo de trabalho do Windows
+description: Este artigo descreve os fluxos de trabalho do Workflow Foundation, que são modelos que descrevem processos do mundo real.
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: ada5ec75d130c9c518c5129db6c12b61c3acbf45
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ec1a00b37abe2cb842735fb98e1c113a97943758
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802525"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421469"
 ---
 # <a name="windows-workflow-overview"></a>Visão geral de fluxo de trabalho do Windows
 Um fluxo de trabalho é um conjunto de unidades elementas chamadas *atividades* que são armazenadas como um modelo que descreve um processo real. Fluxos de trabalho fornecem uma maneira de descrever a ordem de relações de execução e dependentes entre partes de trabalho ou longo tempo. Este trabalho passa pelo modelo do início ao final, e as atividades podem ser executadas por pessoas ou funções do sistema.  
@@ -23,9 +24,9 @@ Um fluxo de trabalho é um conjunto de unidades elementas chamadas *atividades* 
   
  Cada uma dessas classes envolve o runtime de atividade de núcleo representado como <xref:System.Activities.ActivityInstance> responsável pela atividade de execução. Pode haver vários objetos de <xref:System.Activities.ActivityInstance> dentro de um domínio de aplicativo executando simultaneamente.  
   
- Cada um dos três objetos de precedência de interação host é criado de uma árvore de atividades conhecido como um programa de fluxo de trabalho. Usando esses tipos ou um host personalizado que encapsula <xref:System.Activities.ActivityInstance>, os fluxos de trabalho podem ser executados dentro de qualquer processo do Windows, incluindo aplicativos de console, aplicativos baseados em formulários, serviços do Windows, sites da ASP.NET e serviços do Windows Communication Foundation (WCF).  
+ Cada um dos três objetos de precedência de interação host é criado de uma árvore de atividades conhecido como um programa de fluxo de trabalho. Usando esses tipos ou um host personalizado que encapsula <xref:System.Activities.ActivityInstance> , os fluxos de trabalho podem ser executados dentro de qualquer processo do Windows, incluindo aplicativos de console, aplicativos baseados em formulários, serviços do Windows, sites da ASP.net e serviços do Windows Communication Foundation (WCF).  
   
- ![Componentes de fluxo de trabalho no processo de host](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
+ ![Componentes de fluxo de trabalho no processo do host](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 Componentes de fluxo de trabalho no processo do host  
   
 ## <a name="interaction-between-workflow-components"></a>Interação entre componentes de fluxo de trabalho  
@@ -41,6 +42,6 @@ Componentes de fluxo de trabalho no processo do host
   
 - Uma atividade personalizada que derive da classe abstrata de <xref:System.Activities.CodeActivity> . <xref:System.Activities.CodeActivity> pode acessar os recursos de tempo de execução (como o rastreamento e as propriedades) que usam <xref:System.Activities.CodeActivityContext> que está disponível como um parâmetro do método de <xref:System.Activities.CodeActivity.Execute%2A> . Para obter mais informações sobre esses recursos de tempo de execução, consulte rastreamento de [fluxo de trabalho e](workflow-tracking-and-tracing.md) [Propriedades de execução de fluxo](workflow-execution-properties.md)de trabalho.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [BizTalk Server 2006 ou WF? Escolhendo a ferramenta de fluxo de trabalho certa para seu projeto](https://docs.microsoft.com/previous-versions/dotnet/articles/cc303238(v=msdn.10))

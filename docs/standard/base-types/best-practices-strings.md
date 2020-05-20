@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: e633b6c1d03a3d1cd70e277395da10f70f315f16
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 0fb7ec8d9de8fae7a0443984511e538d38d93c7a
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523968"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441000"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Práticas recomendadas para o uso de cadeias de caracteres no .NET
 
@@ -99,7 +99,7 @@ Além disso, comparações de cadeia de caracteres usando versões diferentes do
 
 Um critério envolve o uso das convenções da cultura atual ao comparar cadeias de caracteres. As comparações que se baseiam na cultura atual usam a localidade ou a cultura atual do thread. Se a cultura não for definida pelo usuário, o padrão será a configuração na janela **Opções Regionais** no Painel de Controle. Você deve sempre usar comparações que se baseiam na cultura atual quando os dados forem linguisticamente relevantes e quando eles refletirem a interação do usuário que leva em conta a cultura.
 
-No entanto, o comportamento da comparação e do uso de maiúsculas e minúsculas no .NET muda quando a cultura muda. Isso acontece quando um aplicativo é executado em um computador que tem uma cultura diferente do computador em que o aplicativo foi desenvolvido ou quando o thread em execução muda sua cultura. Esse comportamento é intencional, mas permanece não óbvio para muitos desenvolvedores. O exemplo a seguir ilustra diferenças na ordem de classificação entre as culturas inglesa ("en-US") e sueca ("sv-SE"). Observe que as palavras "ångström", "Windows" e "Visual Studio" aparecem em posições diferentes nas matrizes de cadeias de caracteres classificadas.
+No entanto, o comportamento da comparação e do uso de maiúsculas e minúsculas no .NET muda quando a cultura muda. Isso acontece quando um aplicativo é executado em um computador que tem uma cultura diferente do computador em que o aplicativo foi desenvolvido ou quando o thread em execução muda sua cultura. Esse comportamento é intencional, mas permanece não óbvio para muitos desenvolvedores. O exemplo a seguir ilustra as diferenças na ordem de classificação entre as culturas do inglês americano ("en-US") e de sueco ("SV-SE"). Observe que as palavras "ångström", "Windows" e "Visual Studio" aparecem em posições diferentes nas matrizes de cadeias de caracteres classificadas.
 
 [!code-csharp[Conceptual.Strings.BestPractices#3](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/comparison1.cs#3)]
 [!code-vb[Conceptual.Strings.BestPractices#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison1.vb#3)]
@@ -119,24 +119,24 @@ Em qualquer caso, é recomendável que você chame uma sobrecarga que tenha um p
 
 Bugs sutis e não tão sutis podem surgir quando dados de cadeias de caracteres não linguísticas são interpretados linguisticamente ou quando os dados da cadeia de caracteres de uma cultura específica são interpretados usando as convenções de outra cultura. O exemplo canônico é o problema do I turco.
 
-Para quase todos os alfabetos latinos, incluindo o inglês americano, o personagem "i" (\u0069) é a versão minúscula do personagem "I" (\u0049). Essa regra de maiúsculas e minúsculas rapidamente se torna o padrão para alguém programando em tal cultura. No entanto, o alfabeto turco ("tr-TR") inclui um caractere "I com um ponto", "İ" (\u0130), que é a versão maiúscula de "i". O turco também inclui um caractere minúsculo "i sem um ponto", "ı" (\u0131), que em maiúscula é “I”. Esse comportamento também ocorre na cultura azerbaijana ("az").
+Para quase todos os alfabetos latinos, incluindo inglês americano, o caractere "i" (\u0069) é a versão em minúsculas do caractere "I" (\u0049). Essa regra de maiúsculas e minúsculas rapidamente se torna o padrão para alguém programando em tal cultura. No entanto, o alfabeto turco ("tr-TR") inclui um caractere "I com um ponto", "İ" (\u0130), que é a versão maiúscula de "i". O turco também inclui um caractere minúsculo "i sem um ponto", "ı" (\u0131), que em maiúscula é “I”. Esse comportamento também ocorre na cultura azerbaijana ("az").
 
 Portanto, as suposições feitas sobre a colocação do "i" em maiúscula ou do "I" em minúscula não são válidas entre todas as culturas. Se você usar as sobrecargas padrão para rotinas de comparação de cadeias de caracteres, elas estarão sujeitas à variação entre culturas. Se os dados a serem comparados são forem linguísticos, o uso das sobrecargas padrão pode gerar resultados indesejáveis, como a tentativa a seguir de realizar uma comparação que não diferencia maiúsculas de minúsculas das cadeias de caracteres “file” e “FILE” ilustra.
 
 [!code-csharp[Conceptual.Strings.BestPractices#11](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#11)]
 [!code-vb[Conceptual.Strings.BestPractices#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#11)]
 
-Essa comparação pode causar problemas significativos se a cultura for usada inadvertidamente nas configurações sensíveis à segurança, como no exemplo a seguir. Um método chamado `IsFileURI("file:")` `true` como retorna se a cultura atual `false` é inglês dos EUA, mas se a cultura atual é turca. Assim, em sistemas turcos, alguém poderia driblar as medidas de segurança que bloqueiam o acesso a URIs que não diferenciam maiúsculas de minúsculas que começam com “FILE:”.
+Essa comparação pode causar problemas significativos se a cultura for usada inadvertidamente nas configurações sensíveis à segurança, como no exemplo a seguir. Uma chamada de método como `IsFileURI("file:")` retorna `true` se a cultura atual for o inglês dos EUA, mas `false` se a cultura atual for turco. Assim, em sistemas turcos, alguém poderia driblar as medidas de segurança que bloqueiam o acesso a URIs que não diferenciam maiúsculas de minúsculas que começam com “FILE:”.
 
 [!code-csharp[Conceptual.Strings.BestPractices#12](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#12)]
 [!code-vb[Conceptual.Strings.BestPractices#12](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#12)]
 
-Neste caso, porque "file:" deve ser interpretado como um identificador não linguístico e insensível à cultura, o código deve ser escrito como mostrado no exemplo a seguir:
+Nesse caso, como "file:" deve ser interpretado como um identificador não-linguístico, que não diferencia a cultura, o código deverá ser escrito conforme mostrado no exemplo a seguir:
 
 [!code-csharp[Conceptual.Strings.BestPractices#13](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#13)]
 [!code-vb[Conceptual.Strings.BestPractices#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#13)]
 
-### <a name="ordinal-string-operations"></a>Operações de cordas ordinais
+### <a name="ordinal-string-operations"></a>Operações de cadeia de caracteres ordinal
 
 Especificar o valor <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> ou <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> em uma chamada de método significa uma comparação não linguística em que os recursos de linguagens naturais são ignorados. Os métodos que são invocados com esses valores de <xref:System.StringComparison> baseiam as decisões de operação da cadeia de caracteres em comparações de byte simples em vez de no uso de maiúsculas e minúsculas ou tabelas de equivalência que são parametrizadas pela cultura. Na maioria dos casos, essa abordagem se adapta melhor à interpretação pretendida de cadeias de caracteres, enquanto torna o código mais rápido e confiável.
 
@@ -147,12 +147,12 @@ As cadeias de caracteres no .NET podem conter caracteres nulos inseridos. Uma da
 > [!IMPORTANT]
 > Embora os métodos de comparação de cadeia de caracteres ignorem caracteres nulos inseridos, os métodos de pesquisa de cadeia de caracteres, como <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> e <xref:System.String.StartsWith%2A?displayProperty=nameWithType>, não o fazem.
 
-O exemplo a seguir executa uma comparação sensível à cultura da string "Aa" com uma seqüência semelhante que contém vários caracteres nulos incorporados entre "A" e "a", e mostra como as duas cordas são consideradas iguais:
+O exemplo a seguir executa uma comparação sensível à cultura da cadeia de caracteres "AA" com uma cadeia de caracteres semelhante que contém vários caracteres nulos inseridos entre "A" e "a" e mostra como as duas cadeias são consideradas iguais:
 
 [!code-csharp[Conceptual.Strings.BestPractices#19](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls1.cs#19)]
  [!code-vb[Conceptual.Strings.BestPractices#19](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls1.vb#19)]
 
-No entanto, as strings não são consideradas iguais quando você usa comparação ordinal, como mostra o exemplo a seguir:
+No entanto, as cadeias de caracteres não são consideradas iguais quando você usa a comparação ordinal, como mostra o exemplo a seguir:
   
 [!code-csharp[Conceptual.Strings.BestPractices#20](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls2.cs#20)]
 [!code-vb[Conceptual.Strings.BestPractices#20](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls2.vb#20)]
@@ -176,7 +176,7 @@ Essas comparações ainda são muito rápidas.
 
 A semântica ordinal é o padrão para sobrecargas de <xref:System.String.Equals%2A?displayProperty=nameWithType> que não incluem um argumento <xref:System.StringComparison> (incluindo o operador de igualdade). Em qualquer caso, é recomendável que você chame uma sobrecarga que tenha um parâmetro <xref:System.StringComparison>.
 
-### <a name="string-operations-that-use-the-invariant-culture"></a>operações de corda que usam a cultura invariante
+### <a name="string-operations-that-use-the-invariant-culture"></a>operações de cadeia de caracteres que usam a cultura invariável
 
 As comparações com a cultura invariável usam a propriedade <xref:System.Globalization.CultureInfo.CompareInfo%2A> retornada pela propriedade estática <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Esse comportamento é o mesmo em todos os sistemas, ele converte qualquer caractere fora de seu intervalo no que ele acredita que sejam caracteres invariáveis equivalentes. Essa política pode ser útil para manter um conjunto de comportamentos de cadeia de caracteres entre culturas, mas geralmente fornece resultados inesperados.
 
@@ -197,16 +197,16 @@ De forma geral, a cultura invariável tem muito poucas propriedades que a tornam
 
 ## <a name="choosing-a-stringcomparison-member-for-your-method-call"></a>Escolha de um membro StringComparison para a chamada de método
 
-A tabela a seguir descreve o mapeamento do <xref:System.StringComparison> contexto das cordas semânticas para um membro de enumeração:
+A tabela a seguir descreve o mapeamento do contexto da cadeia de caracteres semântica para um <xref:System.StringComparison> membro de enumeração:
 
 |Dados|Comportamento|System.StringComparison correspondente<br /><br /> value|
 |----------|--------------|-----------------------------------------------------|
 |Identificadores internos que diferenciam maiúsculas de minúsculas.<br /><br /> Identificadores que diferenciam maiúsculas e minúsculas nos padrões como XML e HTTP.<br /><br /> Configurações relacionadas à segurança que diferenciam maiúsculas de minúsculas.|Um identificador não linguístico, em que bytes correspondem exatamente.|<xref:System.StringComparison.Ordinal>|
 |Identificadores internos que não diferenciam maiúsculas de minúsculas.<br /><br /> Identificadores que não diferenciam maiúsculas e minúsculas em padrões como XML e HTTP.<br /><br /> Caminhos de arquivo.<br /><br /> Chaves do Registro e valores.<br /><br /> Variáveis de ambiente.<br /><br /> Identificadores de recurso (por exemplo, nomes de identificador).<br /><br /> Configurações relacionadas à segurança que não diferenciam maiúsculas de minúsculas.|Um identificador não linguístico, em que as maiúsculas e minúsculas são irrelevantes; especialmente, dados armazenados na maioria dos serviços de sistema do Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|
-|Alguns dados persistentes, linguisticamente relevantes.<br /><br /> Exibição de dados linguísticos que requer uma ordem de classificação fixa.|Dados independentes de cultura que ainda são linguisticamente relevantes.|<xref:System.StringComparison.InvariantCulture><br /><br /> -ou-<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
-|Dados exibidos para o usuário.<br /><br /> A maioria das entradas do usuário.|Dados que exigem os costumes linguísticos locais.|<xref:System.StringComparison.CurrentCulture><br /><br /> -ou-<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
+|Alguns dados persistentes, linguisticamente relevantes.<br /><br /> Exibição de dados linguísticos que requer uma ordem de classificação fixa.|Dados independentes de cultura que ainda são linguisticamente relevantes.|<xref:System.StringComparison.InvariantCulture><br /><br /> – ou –<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
+|Dados exibidos para o usuário.<br /><br /> A maioria das entradas do usuário.|Dados que exigem os costumes linguísticos locais.|<xref:System.StringComparison.CurrentCulture><br /><br /> – ou –<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
 
-## <a name="common-string-comparison-methods-in-net"></a>Métodos comuns de comparação de strings em .NET
+## <a name="common-string-comparison-methods-in-net"></a>Métodos comuns de comparação de cadeia de caracteres no .NET
 
 As seções a seguir descrevem os métodos que são mais comumente usados para a comparação de cadeias de caracteres.
 
@@ -295,7 +295,7 @@ Se esses dados forem mantidos e movidos entre as culturas e a classificação fo
 [!code-csharp[Conceptual.Strings.BestPractices#9](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#9)]
 [!code-vb[Conceptual.Strings.BestPractices#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#9)]
 
-### <a name="collections-example-hashtable-constructor"></a>Exemplo de coleções: Construtor hashtable
+### <a name="collections-example-hashtable-constructor"></a>Exemplo de coleções: Construtor de Hashtable
 
 As cadeias de caracteres de hash fornecem um segundo exemplo de uma operação que é afetada pela maneira como as cadeias de caracteres são comparadas.
 
@@ -317,18 +317,20 @@ Para especificar explicitamente que uma cadeia de caracteres deve ser formatada 
 
 - Ao usar os métodos <xref:System.String.Format%2A?displayProperty=nameWithType> e `ToString`, chame uma sobrecarga que tenha um parâmetro `provider`, tal como <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> ou <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, e passe a ela a propriedade <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>, a propriedade <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType> ou uma instância de <xref:System.Globalization.CultureInfo> que represente a cultura desejada.
 
-- Para concatenação de cadeias de caracteres, não permita que o compilador execute nenhuma conversão implícita. Em vez disso, execute uma conversão explícita, chamando uma sobrecarga `ToString` que tenha um parâmetro `provider`. Por exemplo, o compilador usa implicitamente a cultura atual ao converter um valor de <xref:System.Double> em uma cadeia de caracteres no código C# a seguir:
+- Para concatenação de cadeias de caracteres, não permita que o compilador execute nenhuma conversão implícita. Em vez disso, execute uma conversão explícita, chamando uma sobrecarga `ToString` que tenha um parâmetro `provider`. Por exemplo, o compilador usa implicitamente a cultura atual ao converter um <xref:System.Double> valor em uma cadeia de caracteres no código a seguir:
 
-  [!code-csharp[Implicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#1)]
+  [!code-csharp[Implicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#1)]
+  [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#1)]
 
-  Em vez disso, você pode especificar explicitamente a cultura cujas convenções de formatação são usadas na conversão ao chamar o método <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType>, assim como o código C# a seguir faz:
+  Em vez disso, você pode especificar explicitamente a cultura cujas convenções de formatação são usadas na conversão chamando o <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> método, como o código a seguir:
 
-  [!code-csharp[Explicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#2)]
+  [!code-csharp[Explicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#2)]
+  [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#2)]
 
 - Para a interpolação de cadeia de caracteres, em vez de atribuir uma cadeia de caracteres interpolada a uma instância de <xref:System.String>, atribua-a a um <xref:System.FormattableString>. Em seguida, você pode chamar o respectivo método <xref:System.FormattableString.ToString?displayProperty=nameWithType> para produzir uma cadeia de caracteres de resultado que reflete as convenções da cultura atual, ou então pode chamar o método <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> para produzir uma cadeia de caracteres de resultado que reflete as convenções de uma cultura específica. Você também pode passar a cadeia de caracteres formatável para o método <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> estático para produzir uma cadeia de caracteres de resultado que reflete as convenções da cultura invariável. O exemplo a seguir ilustra esta abordagem. (A saída do exemplo reflete uma cultura atual de en-US.)
 
-  [!code-csharp[String interpolation](~/samples/snippets/standard/base-types/string-practices/cs/formattable.cs)]
-  [!code-vb[String interpolation](~/samples/snippets/standard/base-types/string-practices/vb/formattable.vb)]
+  [!code-csharp[String interpolation](./snippets/best-practices-strings/csharp/formattable/Program.cs)]
+  [!code-vb[String interpolation](./snippets/best-practices-strings/vb/formattable/Program.vb)]
 
 Você pode manter os dados que não são de cadeias de caracteres como dados binários ou como dados formatados. Se optar por salvá-los como dados formatados, você deverá chamar uma sobrecarga de método de formatação que inclua um parâmetro `provider` e passar para ele a propriedade <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. A cultura invariável fornece um formato consistente para os dados formatados que é independente da cultura e do computador. Em contraste, dados persistentes que são formatados usando culturas diferentes da cultura invariável têm várias limitações:
 
@@ -341,7 +343,7 @@ O exemplo a seguir ilustra a portabilidade limitada resultante do uso da formata
 [!code-csharp[Conceptual.Strings.BestPractices#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/persistence.cs#21)]
 [!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
 
-No entanto, <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> se <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> você substituir <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> a <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>propriedade por nas chamadas para e , os dados de data e hora persistidos são restaurados com sucesso, como mostra a seguinte saída:
+No entanto, se você substituir a <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> Propriedade por <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> nas chamadas para <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> e <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> , os dados persistentes de data e hora serão restaurados com êxito, como mostra a seguinte saída:
 
 ```console
 06.05.1758 21:26

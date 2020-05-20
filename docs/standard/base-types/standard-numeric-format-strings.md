@@ -16,12 +16,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: 9b0c784a1c7b6b428636a1a4c99ec8e2bb76a9e0
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 93f93574e6a3c24fc03a2cbc6c7d0f11f4fe61f6
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242706"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83440870"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadeias de caracteres de formato numérico padrão
 
@@ -47,13 +47,13 @@ As cadeias de caractere de formato numérico padrão têm suporte de:
 - [Cadeias de caracteres interpoladas](../../csharp/language-reference/tokens/interpolated.md) em C# e Visual Basic, que fornecem uma sintaxe simplificada quando comparada a cadeias de caracteres de formato composto.
 
 > [!TIP]
-> Baixe o **Utilitário de Formatação**, um aplicativo do Windows Forms do .NET Core que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado. O código-fonte está disponível para o [C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) e o [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb).
+> Baixe o **Utilitário de Formatação**, um aplicativo do Windows Forms do .NET Core que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado. O código-fonte está disponível para o [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) e o [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
-<a name="table"></a>A tabela a seguir descreve os especificadores de formato numérico padrão e exibe a saída de amostra produzida por cada especificador de formato. Consulte a seção [Notas](#NotesStandardFormatting) para obter informações adicionais sobre como usar cadeias de caracteres de formato numérico padrão e a seção [Exemplo](#example) para obter uma ilustração abrangente de seu uso.
+<a name="table"></a>A tabela a seguir descreve os especificadores de formato numérico padrão e exibe a saída de exemplo produzida por cada especificador de formato. Consulte a seção [Notas](#NotesStandardFormatting) para obter informações adicionais sobre como usar cadeias de caracteres de formato numérico padrão e a seção [Exemplo](#example) para obter uma ilustração abrangente de seu uso.
 
-|Especificador de formato|Nome|Descrição|Exemplos|
+|Especificador de formato|Name|Descrição|Exemplos|
 |----------------------|----------|-----------------|--------------|
-|"C" ou "c"|Moeda|Resultado: um valor de moeda.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais.<br /><br /> Especificador de precisão padrão: definido por <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [especificador de formato de moeda ("C")](#CFormatString).|123.456 ("C", en-US) \\-> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US)\\-> ($123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
+|"C" ou "c"|Moeda|Resultado: um valor de moeda.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais.<br /><br /> Especificador de precisão padrão: definido por <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [especificador de formato de moeda ("C")](#CFormatString).|123,456 ("C", en-US)-> \\ $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123,456 ("C3", en-US)-> ( \\ $123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
 |"D" ou "d"|Decimal|Resultado: dígitos inteiros com sinal negativo opcional.<br /><br /> Compatível com: somente tipos integrais.<br /><br /> Especificador de precisão: número mínimo de dígitos.<br /><br /> Especificador de precisão padrão: número mínimo de dígitos necessários.<br /><br /> Para saber mais: [especificador de formato decimal ("D")](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
 |"E" ou "e"|Exponencial (científica)|Resultado: notação Exponencial.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais.<br /><br /> Especificador de precisão padrão: 6.<br /><br /> Para saber mais: [especificador de formato exponencial ("E")](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|
 |"F" ou "f"|Ponto fixo|Resultado: dígitos integrais e decimais com sinal negativo opcional.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais.<br /><br /> Especificador de precisão padrão: definido por <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [especificador de formato de ponto fixo ("F")](#FFormatString).|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|
@@ -115,7 +115,7 @@ A cadeia de caracteres de resultado é afetada pelas informações de formataç�
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A>|Define a cadeia de caracteres que separa grupos de números integrais.|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A>|Define o número de dígitos inteiros que aparecem em um grupo.|
 
-O exemplo a <xref:System.Double> seguir formata um valor com o especificador de formato de moeda:
+O exemplo a seguir formata um <xref:System.Double> valor com o especificador de formato de moeda:
 
 [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
 [!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
@@ -163,7 +163,7 @@ A cadeia de caracteres de resultado é afetada pelas informações de formataç�
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define a cadeia de caracteres que separa o dígito integral dos dígitos decimais no coeficiente.|
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|Define a cadeia de caracteres que indica que um expoente é positivo.|
 
-O exemplo a <xref:System.Double> seguir formata um valor com o especificador de formato exponencial:
+O exemplo a seguir formata um <xref:System.Double> valor com o especificador de formato exponencial:
 
 [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
 [!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
@@ -187,7 +187,7 @@ A cadeia de caracteres de resultado é afetada pelas informações de formataç�
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define a cadeia de caracteres que separa dígitos integrais de dígitos decimais.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|Define o número padrão de dígitos decimais. Esse valor pode ser substituído usando-se o especificador de precisão.|
 
-O exemplo a <xref:System.Double> seguir <xref:System.Int32> formata um e um valor com o especificador de formato de ponto fixo:
+O exemplo a seguir formata um <xref:System.Double> e um <xref:System.Int32> valor com o especificador de formato de ponto fixo:
 
 [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
 [!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
@@ -208,7 +208,7 @@ O especificador de formato geral ("G") converte um número para a notação mais
 |<xref:System.Int32> ou <xref:System.UInt32>|10 dígitos|
 |<xref:System.Int64>|19 dígitos|
 |<xref:System.UInt64>|20 dígitos|
-|<xref:System.Numerics.BigInteger>|Ilimitado (o mesmo que ["R"](#RFormatString))|
+|<xref:System.Numerics.BigInteger>|Ilimitado (igual a ["R"](#RFormatString))|
 |<xref:System.Single>|7 dígitos|
 |<xref:System.Double>|15 dígitos|
 |<xref:System.Decimal>|29 dígitos|
@@ -234,7 +234,7 @@ A cadeia de caracteres de resultado é afetada pelas informações de formataç�
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define a cadeia de caracteres que separa dígitos integrais de dígitos decimais.|
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|Define a cadeia de caracteres que indica que um expoente é positivo.|
 
-O exemplo a seguir formata valores de ponto flutuante variados com o especificador de formato geral:
+O exemplo a seguir formata valores de ponto flutuante asvariados com o especificador de formato geral:
 
 [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
 [!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
@@ -259,7 +259,7 @@ A cadeia de caracteres de resultado é afetada pelas informações de formataç�
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define a cadeia de caracteres que separa dígitos decimais e integrais.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|Define o número padrão de dígitos decimais. Esse valor pode ser substituído usando um especificador de precisão.|
 
-O exemplo a seguir formata valores de ponto flutuante variados com o especificador de formato de número:
+O exemplo a seguir formata valores de ponto flutuante classificados com o especificador de formato de número:
 
 [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
 [!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
@@ -286,7 +286,7 @@ A tabela a seguir lista as propriedades <xref:System.Globalization.NumberFormatI
 |<xref:System.Globalization.NumberFormatInfo.PercentGroupSeparator%2A>|Define a cadeia de caracteres que separa grupos de números integrais.|
 |<xref:System.Globalization.NumberFormatInfo.PercentGroupSizes%2A>|Define o número de dígitos inteiros que aparecem em um grupo.|
 
-O exemplo a seguir formata valores de ponto flutuante com o especificador de formato percentual:
+O exemplo a seguir formata valores de ponto flutuante com o especificador de formato de porcentagem:
 
 [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
 [!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
@@ -322,7 +322,7 @@ O exemplo a seguir formata um valor <xref:System.Numerics.BigInteger> com o espe
 > [!IMPORTANT]
 > Em alguns casos, os valores <xref:System.Double> formatados com a cadeia de caracteres de formato numérico padrão "R" não realizam a viagem de ida e volta se forem compilados usando as opções `/platform:x64` ou `/platform:anycpu` e executados em sistemas de 64 bits. Para saber mais, consulte o seguinte parágrafo.
 
-Para solucionar o problema de valores <xref:System.Double> formatados com a cadeia de caracteres no formato numérico padrão "R" que não conseguem realizar a viagem de ida e volta se forem compilados usando as opções `/platform:x64` ou `/platform:anycpu` e executados em sistemas de 64 bits, formate os valores <xref:System.Double> usando a cadeia de caracteres de formato numérico padrão "G17". O exemplo a seguir usa a <xref:System.Double> string de formato "R" com um valor que não faz ida e volta com sucesso, e também usa a string de formato "G17" para fazer uma viagem de ida e volta com sucesso no valor original:
+Para solucionar o problema de valores <xref:System.Double> formatados com a cadeia de caracteres no formato numérico padrão "R" que não conseguem realizar a viagem de ida e volta se forem compilados usando as opções `/platform:x64` ou `/platform:anycpu` e executados em sistemas de 64 bits, formate os valores <xref:System.Double> usando a cadeia de caracteres de formato numérico padrão "G17". O exemplo a seguir usa a cadeia de caracteres de formato "R" com um <xref:System.Double> valor que não faz a viagem de ida e volta com êxito e também usa a cadeia de caracteres de formato "G17" para fazer uma viagem de ida e volta com êxito ao valor original:
 
 [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
 [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]
@@ -384,9 +384,9 @@ O exemplo a seguir formata um inteiro e um valor numérico de ponto flutuante us
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Globalization.NumberFormatInfo>
-- [Strings de formato numérico personalizados](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Cadeias de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)
 - [Formatar tipos](../../../docs/standard/base-types/formatting-types.md)
 - [Como: Preencher um número com zeros à esquerda](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
 - [Formatação composta](../../../docs/standard/base-types/composite-formatting.md)
-- [Amostra: Utilitário de Formatação do WinForms do .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
-- [Amostra: Utilitário de Formatação do WinForms do .NET Core (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)
+- [Amostra: Utilitário de Formatação do WinForms do .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [Amostra: Utilitário de Formatação do WinForms do .NET Core (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)

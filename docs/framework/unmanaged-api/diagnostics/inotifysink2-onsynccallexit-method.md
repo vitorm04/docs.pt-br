@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9d7600e-a8f5-443a-96de-67d26e130f2d
 topic_type:
 - apiref
-ms.openlocfilehash: 03b8afc1276dae6244bcf12bd0bc78c2fa5380bb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f81ef3f5959e279b3fbbd94d6c5e8a2d86a38e7f
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448687"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442014"
 ---
 # <a name="inotifysink2onsynccallexit-method"></a>Método INotifySink2::OnSyncCallExit
 É invocado ao sair de uma chamada.  
@@ -38,7 +38,7 @@ HRESULT OnSyncCallExit
   
 ## <a name="parameters"></a>Parâmetros  
  `in_CallID`  
- no ID da chamada sendo encerrada. Consulte [estrutura de CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ no ID da chamada sendo encerrada. Consulte [estrutura de CALL_ID](call-id-structure.md).  
   
  `out_ppBuffer`  
  fora Buffer de chamadas.  
@@ -49,11 +49,11 @@ HRESULT OnSyncCallExit
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** ProtocolNotify2. idl  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [Interface INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [Interface INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [Interface INotifySink2](inotifysink2-interface.md)
+- [Interface INotifySource2](inotifysource2-interface.md)
+- [Interface INotifyConnection2](inotifyconnection2-interface.md)

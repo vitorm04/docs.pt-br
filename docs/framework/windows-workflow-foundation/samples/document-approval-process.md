@@ -1,13 +1,14 @@
 ---
 title: Processo de aprovação de documento
+description: Este exemplo demonstra muitos recursos de Windows Workflow Foundation e Windows Communication Foundation em um cenário de processo de aprovação de documentos.
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: cee43aff991f9482de7b3172174eb0e786ec1fe6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 18b4f978e9234daf22395f0d2f6f0889d0edf966
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710841"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421404"
 ---
 # <a name="document-approval-process"></a>Processo de aprovação de documento
 
@@ -18,7 +19,7 @@ Este exemplo demonstra o uso de muitos recursos Windows Workflow Foundation (WF)
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`
 
@@ -26,7 +27,7 @@ Este exemplo demonstra o uso de muitos recursos Windows Workflow Foundation (WF)
 
 O gráfico a seguir demonstra o fluxo de trabalho do processo de aprovação de documentos:
 
-![Um fluxo de trabalho do processo de aprovação de documento](./media/document-approval-process/document-approval-process.jpg)
+![Um fluxo de trabalho do processo de aprovação do documento](./media/document-approval-process/document-approval-process.jpg)
 
 Da perspectiva de cliente, o processo de aprovação funciona como segue:
 
@@ -90,7 +91,7 @@ Do ponto de vista de aplicativo do gerenciador de aprovação, o processo de apr
 
 2. Para criar a solução, pressione CTRL+SHIFT+B.
 
-3. Para executar a solução, inicie o aplicativo Gerenciador de aprovação clicando com o botão direito do mouse no projeto de aprovação no **Gerenciador de soluções** e clicando em **depurar**->**Iniciar** nova instância no menu do botão direito do mouse.
+3. Para executar a solução, inicie o aplicativo Gerenciador de aprovação clicando com o botão direito do mouse no projeto de aprovação no **Gerenciador de soluções** e clicando em **depurar** -> **Iniciar** nova instância no menu do clique com o botão direito do mouse.
 
     Espera para que a saída do gerenciador deixem-no saber que estão prontas.
 
@@ -140,7 +141,7 @@ Do ponto de vista de aplicativo do gerenciador de aprovação, o processo de apr
 
 6. No cliente de `UserType1` , selecione o único tipo de aprovação do menu suspenso e digite um nome e um conteúdo do documento. Clique em **solicitar aprovação**.
 
-7. Os clientes de `UserType2` , um documento aguardando a aprovação aparece. Selecione-o e pressione **aprovar**, o documento é passado para o cliente do `UserType3`.
+7. Os clientes de `UserType2` , um documento aguardando a aprovação aparece. Selecione-o e pressione **aprovar**, o documento é passado para o `UserType3` cliente.
 
     Se o documento é certo pela primeira quorum de `UserType2` , o documento é passado para o cliente de `UserType3` .
 

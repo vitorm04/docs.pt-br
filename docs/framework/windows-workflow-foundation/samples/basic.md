@@ -1,15 +1,16 @@
 ---
 title: Básico – WF
+description: Este artigo refere-se a exemplos que demonstram a funcionalidade básica de Windows Workflow Foundation, como atividades internas e personalizadas.
 ms.date: 03/30/2017
 ms.assetid: 84a315b6-3f96-4959-8306-49be37936a23
-ms.openlocfilehash: 5e7084a405dce0f57cb4ef391415b69041b6de6e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2f5ba92b6bb2718773f6ae965596ff175f92cbfc
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716769"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421365"
 ---
-# <a name="basic"></a>Basic
+# <a name="basic"></a>Básico
 Esta seção fornece exemplos que demonstram a funcionalidade básica do Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
@@ -28,5 +29,5 @@ Esta seção fornece exemplos que demonstram a funcionalidade básica do Windows
  [Execução](execution.md)  
  Contém exemplos que demonstram executar fluxos de trabalho.
   
- [Acompanhamento](tracking.md)  
+ [Controle alterações](tracking.md)  
  Contém exemplos que demonstram o rastreamento de fluxo de trabalho.

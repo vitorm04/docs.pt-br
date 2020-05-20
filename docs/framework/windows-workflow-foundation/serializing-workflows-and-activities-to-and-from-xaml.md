@@ -1,13 +1,14 @@
 ---
 title: Serializando fluxos de trabalho e atividades para e do XAML
+description: Este artigo é uma visão geral de como serializar definições de fluxo de trabalho e trabalhar com definições de fluxo de trabalhos XAML no Workflow Foundation.
 ms.date: 03/30/2017
 ms.assetid: 37685b32-24e3-4d72-88d8-45d5fcc49ec2
-ms.openlocfilehash: c18afa7232adabc4f1c4e17fde993064b9189e39
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 168dbc9a36cfa80c15fddc7481e986d1ce383adb
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671902"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421339"
 ---
 # <a name="serialize-workflows-and-activities-to-and-from-xaml"></a>Serializar fluxos de trabalho e atividades de e para XAML
 
@@ -66,7 +67,7 @@ O exemplo a seguir representa o fluxo de trabalho serializado.
 </Activity>
 ```
 
-Para carregar um fluxo de trabalho serializado, <xref:System.Activities.XamlIntegration.ActivityXamlServices> use o <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> método. Isso utiliza a definição de fluxo de trabalho serializado e retorna um <xref:System.Activities.DynamicActivity> que representa a definição de fluxo de trabalho. Observe que o XAML não é desserializado até que <xref:System.Activities.Activity.CacheMetadata%2A> seja chamado no corpo do <xref:System.Activities.DynamicActivity> durante o processo de validação. Se a validação não for chamada explicitamente, ela será executada quando o fluxo de trabalho for invocado. Se a definição de fluxo de trabalho XAML for inválida, uma exceção <xref:System.ArgumentException> será gerada. Todas as exceções geradas de <xref:System.Activities.Activity.CacheMetadata%2A> escapam da chamada para <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> e devem ser tratadas pelo chamador. No exemplo a seguir, o fluxo de trabalho serializado do exemplo anterior é carregado e é chamado usando <xref:System.Activities.WorkflowInvoker>.
+Para carregar um fluxo de trabalho serializado, use o <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> método. Isso utiliza a definição de fluxo de trabalho serializado e retorna um <xref:System.Activities.DynamicActivity> que representa a definição de fluxo de trabalho. Observe que o XAML não é desserializado até que <xref:System.Activities.Activity.CacheMetadata%2A> seja chamado no corpo do <xref:System.Activities.DynamicActivity> durante o processo de validação. Se a validação não for chamada explicitamente, ela será executada quando o fluxo de trabalho for invocado. Se a definição de fluxo de trabalho XAML for inválida, uma exceção <xref:System.ArgumentException> será gerada. Todas as exceções geradas de <xref:System.Activities.Activity.CacheMetadata%2A> escapam da chamada para <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> e devem ser tratadas pelo chamador. No exemplo a seguir, o fluxo de trabalho serializado do exemplo anterior é carregado e é chamado usando <xref:System.Activities.WorkflowInvoker>.
 
 [!code-csharp[CFX_WorkflowApplicationExample#43](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#43)]
 
@@ -76,9 +77,9 @@ Quando esse fluxo de trabalho é chamado, a seguinte saída é exibida no consol
 **40**
 
 > [!NOTE]
-> Para obter mais informações sobre como invocar fluxos de trabalho com argumentos de entrada e saída, consulte [usando WorkflowInvoker e WorkflowApplication](using-workflowinvoker-and-workflowapplication.md) e <xref:System.Activities.WorkflowInvoker.Invoke%2A>.
+> Para obter mais informações sobre como invocar fluxos de trabalho com argumentos de entrada e saída, consulte [usando WorkflowInvoker e WorkflowApplication](using-workflowinvoker-and-workflowapplication.md) e <xref:System.Activities.WorkflowInvoker.Invoke%2A> .
 
-Se o fluxo de trabalho C# serializado contiver expressões <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> , então uma <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> instância com `true` sua propriedade definida como deve ser passada como <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>um parâmetro para <xref:System.NotSupportedException> , caso contrário, uma será lançada com uma mensagem semelhante para o seguinte: **O tipo de atividade de expressão ' CSharpvalue ' 1 ' requer compilação para ser executado.  Verifique se o fluxo de trabalho foi compilado.**
+Se o fluxo de trabalho serializado contiver expressões C#, uma <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> instância com sua <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> propriedade definida como `true` deve ser passada como um parâmetro para <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType> , caso contrário, uma <xref:System.NotSupportedException> será lançada com uma mensagem semelhante à seguinte: o **tipo de atividade de expressão ' csharpvalue ' 1 ' requer compilação para ser executado.  Verifique se o fluxo de trabalho foi compilado.**
 
 ```csharp
 ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
@@ -89,8 +90,8 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;
 ```
 
-Para obter mais informações, consulte [ C# expressões](csharp-expressions.md).
+Para obter mais informações, consulte [expressões C#](csharp-expressions.md).
 
-Uma definição de fluxo de trabalho serializada também pode <xref:System.Activities.ActivityBuilder> ser carregada em uma <xref:System.Activities.XamlIntegration.ActivityXamlServices> instância usando o <xref:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderReader%2A> método. Depois que um fluxo de trabalho serializado é <xref:System.Activities.ActivityBuilder> carregado em uma instância, ele pode ser inspecionado e modificado. Isso é útil para autores do designer do fluxo de trabalho personalizado e fornece um mecanismo para salvar e recarregar definições de fluxo de trabalho durante o processo de design. No exemplo a seguir, a definição do fluxo de trabalho serializado do exemplo anterior é carregada e suas propriedades são inspecionadas.
+Uma definição de fluxo de trabalho serializada também pode ser carregada em uma <xref:System.Activities.ActivityBuilder> instância usando o <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderReader%2A> método. Depois que um fluxo de trabalho serializado é carregado em uma <xref:System.Activities.ActivityBuilder> instância, ele pode ser inspecionado e modificado. Isso é útil para autores do designer do fluxo de trabalho personalizado e fornece um mecanismo para salvar e recarregar definições de fluxo de trabalho durante o processo de design. No exemplo a seguir, a definição do fluxo de trabalho serializado do exemplo anterior é carregada e suas propriedades são inspecionadas.
 
 [!code-csharp[CFX_WorkflowApplicationExample#44](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#44)]

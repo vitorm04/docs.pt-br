@@ -1,13 +1,14 @@
 ---
 title: Documentação de exemplo do Windows Workflow (WF)
+description: Você pode baixar exemplos de fluxo de trabalho do Windows para saber mais sobre os vários aspectos de Windows Workflow Foundation, incluindo exemplos de aplicativos, básicos e cenários.
 ms.date: 09/24/2018
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
-ms.openlocfilehash: 24858d1b8d904bb32b2cee01d8ed5d710f97b15f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ba2ac23947737480d32f7447ca08cb4d8035a890
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715969"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421378"
 ---
 # <a name="windows-workflow-wf-samples"></a>Fluxo de trabalho (WF) Exemplos do Windows
 

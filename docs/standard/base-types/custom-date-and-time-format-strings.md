@@ -14,25 +14,25 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 32b3c9de708d22ba4150c5f01ef79d74d5824e27
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: ae2711aac8bd864e623efe18e698c8de75a3ac32
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242992"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83440987"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora personalizado
 
 Uma cadeia de caracteres de formato de data e hora define a representação de texto de um valor <xref:System.DateTime> ou <xref:System.DateTimeOffset> que é resultante de uma operação de formatação. Ela também pode definir a representação de um valor de data e hora necessário em uma operação de análise para converter com êxito a cadeia de caracteres para uma data e hora. Uma cadeia de caracteres de formato personalizado consiste em um ou mais especificadores de formato de data e hora personalizado. Qualquer cadeia de caracteres que não é uma [cadeia de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) é interpretada como uma cadeia de caracteres de formato de data e hora personalizado.
 
 > [!TIP]
-> Baixe o **Utilitário de Formatação**, um aplicativo do Windows Forms do .NET Core que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado. O código-fonte está disponível para o [C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) e o [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb).
+> Baixe o **Utilitário de Formatação**, um aplicativo do Windows Forms do .NET Core que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado. O código-fonte está disponível para o [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) e o [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
 As cadeias de caracteres de formato de data e hora personalizado podem ser usadas tanto com valores <xref:System.DateTime> quanto <xref:System.DateTimeOffset>.
 
 [!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 
-<a name="table"></a>Nas operações de formatação, as seqüências `ToString` personalizadas de formato de data e hora podem ser usadas com o método de uma instância de data e hora ou com um método que suporte a formatação composta. O exemplo a seguir ilustra ambos os usos.
+<a name="table"></a>Em operações de formatação, cadeias de caracteres de formato de data e hora personalizadas podem ser usadas com o `ToString` método de uma instância de data e hora ou com um método que dá suporte à formatação composta. O exemplo a seguir ilustra ambos os usos.
 
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#17](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandformatting1.cs#17)]
 [!code-vb[Formatting.DateAndTime.Custom#17](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandformatting1.vb#17)]
@@ -51,29 +51,29 @@ A tabela a seguir descreve os especificadores de formato de data e hora padrão 
 |"ddd"|O nome abreviado do dia da semana.<br /><br /> Mais informações: [Especificador de formato personalizado "ddd"](#dddSpecifier).|2009-06-15T13:45:30 -> Mon (en-US)<br /><br /> 2009-06-15T13:45:30 -> Пн (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> lun. (fr-FR)|
 |"dddd"|O nome completo do dia da semana.<br /><br /> Mais informações: [Especificador de formato personalizado "dddd"](#ddddSpecifier).|2009-06-15T13:45:30 -> Monday (en-US)<br /><br /> 2009-06-15T13:45:30 -> понедельник (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> lundi (fr-FR)|
 |"f"|Os décimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [Especificador de formato personalizado "F"](#fSpecifier).|2009-06-15T13:45:30.6170000 -> 6<br /><br /> 2009-06-15T13:45:30.05 -> 0|
-|"ff"|Os centésimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [O especificador de formato personalizado "ff".](#ffSpecifier)|2009-06-15T13:45:30.6170000 -> 61<br /><br /> 2009-06-15T13:45:30.0050000 -> 00|
+|"ff"|Os centésimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [o especificador de formato personalizado "FF"](#ffSpecifier).|2009-06-15T13:45:30.6170000 -> 61<br /><br /> 2009-06-15T13:45:30.0050000 -> 00|
 |"fff"|Os milissegundos em um valor de data e hora.<br /><br /> Mais informações: [Especificador de formato personalizado "fff"](#fffSpecifier).|6/15/2009 13:45:30.617 -> 617<br /><br /> 6/15/2009 13:45:30.0005 -> 000|
-|"ffff"|Os décimos de milésimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [O especificador de formato personalizado "ffff".](#ffffSpecifier)|2009-06-15T13:45:30.6175000 -> 6175<br /><br /> 2009-06-15T13:45:30.0000500  -> 0000|
+|"ffff"|Os décimos de milésimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [o especificador de formato personalizado "ffff"](#ffffSpecifier).|2009-06-15T13:45:30.6175000 -> 6175<br /><br /> 2009-06-15T13:45:30.0000500  -> 0000|
 |"fffff"|Os centésimos de milésimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [Especificador de formato personalizado "fffff"](#fffffSpecifier).|2009-06-15T13:45:30.6175400 -> 61754<br /><br /> 6/15/2009 13:45:30.000005 -> 00000|
-|"ffffff"|Os milionésimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [O especificador de formato personalizado "ffffff".](#ffffffSpecifier)|2009-06-15T13:45:30.6175420 -> 617542<br /><br /> 2009-06-15T13:45:30.0000005 -> 000000|
-|"fffffff"|Os décimos de milionésimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [O especificador de formato personalizado "fffffff"](#fffffffSpecifier).|2009-06-15T13:45:30.6175425 -> 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -> 0001150|
-|"F"|Se diferente de zero, os décimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [O especificador de formato personalizado "F"](#F_Specifier).|2009-06-15T13:45:30.6170000 -> 6<br /><br /> 2009-06-15T13:45:30.0500000 -> (nenhuma saída)|
+|"ffffff"|Os milionésimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [o especificador de formato personalizado "FFFFFF"](#ffffffSpecifier).|2009-06-15T13:45:30.6175420 -> 617542<br /><br /> 2009-06-15T13:45:30.0000005 -> 000000|
+|"fffffff"|Os décimos de milionésimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [o especificador de formato personalizado "fffffff"](#fffffffSpecifier).|2009-06-15T13:45:30.6175425 -> 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -> 0001150|
+|"F"|Se diferente de zero, os décimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [o especificador de formato personalizado "F"](#F_Specifier).|2009-06-15T13:45:30.6170000 -> 6<br /><br /> 2009-06-15T13:45:30.0500000 -> (nenhuma saída)|
 |"FF"|Se diferente de zero, os centésimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [Especificador de formato personalizado "FF"](#FF_Specifier).|2009-06-15T13:45:30.6170000 -> 61<br /><br /> 2009-06-15T13:45:30.0050000 -> (nenhuma saída)|
-|"FFF"|Se diferente de zero, os milissegundos em um valor de data e hora.<br /><br /> Mais informações: [O especificador de formato personalizado "FFF".](#FFF_Specifier)|2009-06-15T13:45:30.6170000 -> 617<br /><br /> 2009-06-15T13:45:30.0005000 -> (nenhuma saída)|
+|"FFF"|Se diferente de zero, os milissegundos em um valor de data e hora.<br /><br /> Mais informações: [o especificador de formato personalizado "fff"](#FFF_Specifier).|2009-06-15T13:45:30.6170000 -> 617<br /><br /> 2009-06-15T13:45:30.0005000 -> (nenhuma saída)|
 |"FFFF"|Se diferente de zero, os décimos de milésimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [Especificador de formato personalizado "FFFF"](#FFFF_Specifier).|2009-06-15T13:45:30.5275000 -> 5275<br /><br /> 2009-06-15T13:45:30.0000500 -> (nenhuma saída)|
-|"FFFFF"|Se diferente de zero, os centésimos de milésimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [O especificador de formato personalizado "FFFFF".](#FFFFF_Specifier)|2009-06-15T13:45:30.6175400 -> 61754<br /><br /> 2009-06-15T13:45:30.0000050 -> (nenhuma saída)|
+|"FFFFF"|Se diferente de zero, os centésimos de milésimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [o especificador de formato personalizado "fffff"](#FFFFF_Specifier).|2009-06-15T13:45:30.6175400 -> 61754<br /><br /> 2009-06-15T13:45:30.0000050 -> (nenhuma saída)|
 |"FFFFFF"|Se diferente de zero, os milionésimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [Especificador de formato personalizado "FFFFFF"](#FFFFFF_Specifier).|2009-06-15T13:45:30.6175420 -> 617542<br /><br /> 2009-06-15T13:45:30.0000005 -> (nenhuma saída)|
 |"FFFFFFF"|Se diferente de zero, os décimos de milionésimos de segundo em um valor de data e hora.<br /><br /> Mais informações: [Especificador de formato personalizado "FFFFFFF"](#FFFFFFF_Specifier).|2009-06-15T13:45:30.6175425 -> 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -> 000115|
 |"g", "gg"|O período ou a era.<br /><br /> Mais informações: [Especificador de formato personalizado "g" ou "gg"](#gSpecifier).|2009-06-15T13:45:30.6170000 -> A.D.|
-|"h"|A hora, usando um relógio de 12 horas de 1 a 12.<br /><br /> Mais informações: [O especificador de formato personalizado "h".](#hSpecifier)|2009-06-15T01:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 1|
-|"hh"|A hora, usando um relógio de 12 horas de 01 a 12.<br /><br /> Mais informações: [O especificador de formato personalizado "hh".](#hhSpecifier)|2009-06-15T01:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 01|
+|"h"|A hora, usando um relógio de 12 horas de 1 a 12.<br /><br /> Mais informações: [o especificador de formato personalizado "h"](#hSpecifier).|2009-06-15T01:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 1|
+|"hh"|A hora, usando um relógio de 12 horas de 01 a 12.<br /><br /> Mais informações: [o especificador de formato personalizado "HH"](#hhSpecifier).|2009-06-15T01:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 01|
 |"H"|A hora, usando um relógio de 24 horas de 0 a 23.<br /><br /> Mais informações: [Especificador de formato personalizado "H"](#H_Specifier).|2009-06-15T01:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 13|
 |"HH"|A hora, usando um relógio de 24 horas de 00 a 23.<br /><br /> Mais informações: [Especificador de formato personalizado "HH"](#HH_Specifier).|2009-06-15T01:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 13|
 |"K"|Informações de fuso horário.<br /><br /> Mais informações: [Especificador de formato personalizado "K"](#KSpecifier).|Com valores de <xref:System.DateTime>:<br /><br /> 2009-06-15T13:45:30, Tipo não especificado -><br /><br /> 2009-06-15T13:45:30, Tipo Utc -> Z<br /><br /> 2009-06-15T13:45:30, Tipo local -> -07:00 (depende das configurações do computador local)<br /><br /> Com valores de <xref:System.DateTimeOffset>:<br /><br /> 2009-06-15T01:45:30-07:00 --> -07:00<br /><br /> 2009-06-15T08:45:30+00:00 --> +00:00|
-|"m"|O minuto, de 0 a 59.<br /><br /> Mais informações: [O especificador de formato personalizado "m".](#mSpecifier)|2009-06-15T01:09:30 -> 9<br /><br /> 2009-06-15T13:29:30 -> 29|
+|"m"|O minuto, de 0 a 59.<br /><br /> Mais informações: [o especificador de formato personalizado "m"](#mSpecifier).|2009-06-15T01:09:30 -> 9<br /><br /> 2009-06-15T13:29:30 -> 29|
 |"mm"|O minuto, de 00 a 59.<br /><br /> Mais informações: [Especificador de formato personalizado "MM"](#mmSpecifier).|2009-06-15T01:09:30 -> 09<br /><br /> 2009-06-15T01:45:30 -> 45|
 |“M”|O mês, de 1 a 12.<br /><br /> Mais informações: [Especificador de formato personalizado "M"](#M_Specifier).|2009-06-15T13:45:30 -> 6|
-|"MM"|O mês, de 01 a 12.<br /><br /> Mais informações: [O especificador de formato personalizado "MM".](#MM_Specifier)|2009-06-15T13:45:30 -> 06|
+|"MM"|O mês, de 01 a 12.<br /><br /> Mais informações: [o especificador de formato personalizado "mm"](#MM_Specifier).|2009-06-15T13:45:30 -> 06|
 |"MMM"|O nome do mês abreviado.<br /><br /> Mais informações: [Especificador de formato personalizado "MMM"](#MMM_Specifier).|2009-06-15T13:45:30 -> Jun (en-US)<br /><br /> 2009-06-15T13:45:30 -> juin (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> Jun (zu-ZA)|
 |"MMMM"|O nome completo do mês.<br /><br /> Mais informações: [Especificador de formato personalizado "MMMM"](#MMMM_Specifier).|2009-06-15T13:45:30 -> June (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> uJuni (zu-ZA)|
 |"s"|O segundo, de 0 a 59.<br /><br /> Mais informações: [Especificador de formato personalizado "s"](#sSpecifier).|2009-06-15T13:45:09 -> 9|
@@ -89,8 +89,8 @@ A tabela a seguir descreve os especificadores de formato de data e hora padrão 
 |"zz"|Diferença de horas em relação ao UTC, com um zero à esquerda para um valor de dígito único.<br /><br /> Mais informações: [Especificador de formato personalizado "zz"](#zzSpecifier).|2009-06-15T13:45:30-07:00 -> -07|
 |"zzz"|Diferença de horas e minutos em relação ao UTC.<br /><br /> Mais informações: [Especificador de formato personalizado "zzz"](#zzzSpecifier).|2009-06-15T13:45:30-07:00 -> -07:00|
 |":"|O separador de hora.<br /><br /> Mais informações: [Especificador de formato personalizado ":"](#timeSeparator).|2009-06-15T13:45:30 -> : (en-US)<br /><br /> 2009-06-15T13:45:30 -> . (it-IT)<br /><br /> 2009-06-15T13:45:30 -> : (ja-JP)|
-|"/"|O separador de data.<br /><br /> Mais informações: [O especificador de formato personalizado "/"](#dateSeparator).|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|
-|"*string*"<br /><br /> '*string*'|Delimitador de cadeia de caracteres literal.<br /><br /> Para saber mais: [Literais de cadeia de caracteres](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
+|"/"|O separador de data.<br /><br /> Mais informações: [o especificador de formato personalizado "/"](#dateSeparator).|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|
+|"*String*"<br /><br /> '*cadeia de caracteres*'|Delimitador de cadeia de caracteres literal.<br /><br /> Para saber mais: [Literais de cadeia de caracteres](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
 |%|Define o caractere seguinte como um especificador de formato personalizado.<br /><br /> Mais informações:[Usar especificadores de formato personalizado simples](#UsingSingleSpecifiers).|2009-06-15T13:45:30 (%h) -> 1|
 |&#92;|O caractere de escape.<br /><br /> Para saber mais: [Literais de cadeia de caracteres](#Literals) e [Como usar o caractere de escape](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|
 |Qualquer outro caractere|O caractere é copiado, inalterado, para a cadeia de caracteres de resultado.<br /><br /> Para saber mais: [Literais de cadeia de caracteres](#Literals).|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
@@ -158,7 +158,7 @@ O exemplo a seguir inclui o especificador de formato personalizado "f" em uma ca
 
 [Voltar à tabela](#table)
 
-## <a name="the-ff-custom-format-specifier"></a><a name="ffSpecifier"></a>O especificador de formato personalizado "ff"
+## <a name="the-ff-custom-format-specifier"></a><a name="ffSpecifier"></a>O especificador de formato personalizado "FF"
 
 O especificador de formato personalizado "ff" representa os dois dígitos mais significativos da fração de segundos, ou seja, ele representa os centésimos de segundo em um valor de data e hora.
 
@@ -196,7 +196,7 @@ Embora seja possível exibir os centésimos de milésimos de um componente de se
 
 [Voltar à tabela](#table)
 
-## <a name="the-ffffff-custom-format-specifier"></a><a name="ffffffSpecifier"></a>O especificador de formato personalizado "ffffff"
+## <a name="the-ffffff-custom-format-specifier"></a><a name="ffffffSpecifier"></a>O especificador de formato personalizado "FFFFFF"
 
 O especificador de formato personalizado "ffffff" representa os seis dígitos mais significativos da fração de segundos, ou seja, ele representa os milionésimos de um segundo em um valor de data e hora.
 
@@ -281,7 +281,7 @@ Embora seja possível exibir os décimos de milionésimos de um componente de se
 
 [Voltar à tabela](#table)
 
-## <a name="the-g-or-gg-custom-format-specifier"></a><a name="gSpecifier"></a>O especificador de formato personalizado "g" ou "gg"
+## <a name="the-g-or-gg-custom-format-specifier"></a><a name="gSpecifier"></a>O especificador de formato personalizado "g" ou "GG"
 
 Os especificadores de formato personalizado "g" ou "gg" (mais qualquer número de especificadores "g" adicionais) representam o período ou a era, como A.D. A operação de formatação ignora esse especificador quando a data a ser formatada não tem uma cadeia de caracteres de era ou período associada.
 
@@ -307,7 +307,7 @@ O exemplo a seguir inclui o especificador de formato personalizado "h" em uma ca
 
 [Voltar à tabela](#table)
 
-## <a name="the-hh-custom-format-specifier"></a><a name="hhSpecifier"></a>O especificador de formato personalizado "hh"
+## <a name="the-hh-custom-format-specifier"></a><a name="hhSpecifier"></a>O especificador de formato personalizado "HH"
 
 O especificador de formato personalizado "hh" (mais qualquer número de especificadores "h" adicionais) representa a hora como um número de 01 a 12, ou seja, a hora é representada por um relógio de 12 horas que conta todas as horas desde a meia-noite ou o meio-dia. Uma hora específica após a meia-noite é indistinguível da mesma hora depois do meio-dia. A hora não é arredondada e uma hora de dígito único é formatada com um zero à esquerda. Por exemplo, considerando a hora 5:43 da manhã ou da tarde, este especificador de formato exibe “05".
 
@@ -446,7 +446,7 @@ O exemplo a seguir inclui o especificador de formato personalizado "s" em uma ca
 
 [Voltar à tabela](#table)
 
-## <a name="the-ss-custom-format-specifier"></a><a name="ssSpecifier"></a>O especificador de formato personalizado "ss"
+## <a name="the-ss-custom-format-specifier"></a><a name="ssSpecifier"></a>O especificador de formato personalizado "SS"
 
 O especificador de formato personalizado "ss" (mais qualquer número de especificadores "s" adicionais) representa os segundos como um número de 00 a 59. O resultado representa os segundos inteiros decorridos desde o último minuto. Um segundo de dígito único é formatado com um zero à esquerda.
 
@@ -496,7 +496,7 @@ O exemplo a seguir inclui o especificador de formato personalizado "y" em uma ca
 
 [Voltar à tabela](#table)
 
-## <a name="the-yy-custom-format-specifier"></a><a name="yySpecifier"></a>O especificador de formato personalizado "yy"
+## <a name="the-yy-custom-format-specifier"></a><a name="yySpecifier"></a>O especificador de formato personalizado "AA"
 
 O especificador de formato personalizado "yy" representa o ano como um número de dois dígitos. Se o ano tiver mais que dois dígitos, somente os dois dígitos de ordem baixa aparecerão no resultado. Se o ano de dois dígitos tiver menos de dois dígitos significativos, o número será preenchido com zeros à esquerda para produzir dois dígitos.
 
@@ -526,7 +526,7 @@ O exemplo a seguir inclui o especificador de formato personalizado "yyy" em uma 
 
 [Voltar à tabela](#table)
 
-## <a name="the-yyyy-custom-format-specifier"></a><a name="yyyySpecifier"></a>O especificador de formato personalizado "yyyy"
+## <a name="the-yyyy-custom-format-specifier"></a><a name="yyyySpecifier"></a>O especificador de formato personalizado "aaaa"
 
 O especificador de formato personalizado "yyyy" representa o ano com, no mínimo, quatro dígitos. Se o ano tem mais de quatro dígitos significativos, eles são incluídos na cadeia de caracteres de resultado. Se o ano possui menos de quatro dígitos, o número é preenchido com zeros à esquerda para produzir quatro dígitos.
 
@@ -585,7 +585,7 @@ O exemplo a seguir inclui o especificador de formato personalizado "zz" em uma c
 
 [Voltar à tabela](#table)
 
-## <a name="the-zzz-custom-format-specifier"></a><a name="zzzSpecifier"></a>O especificador de formato personalizado "zzz"
+## <a name="the-zzz-custom-format-specifier"></a><a name="zzzSpecifier"></a>O especificador de formato personalizado "ZZZ"
 
 Com valores <xref:System.DateTime>, o especificador de formato personalizado "zzz" representa a diferença com sinal do fuso horário do sistema operacional local em relação ao UTC em horas e minutos. Ele não reflete o valor de uma instância da propriedade <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>. Por esse motivo, o especificador de formato "zzz" não é recomendado para uso com valores <xref:System.DateTime>.
 
@@ -600,7 +600,7 @@ O exemplo a seguir inclui o especificador de formato personalizado "zzz" em uma 
 
 [Voltar à tabela](#table)
 
-## <a name="the--custom-format-specifier"></a><a name="timeSeparator"></a>O especificador de formato personalizado":"
+## <a name="the--custom-format-specifier"></a><a name="timeSeparator"></a>O especificador de formato personalizado ":"
 O especificador de formato personalizado ":" representa o separador de hora, o qual é usado para diferenciar horas, minutos e segundos. O separador de hora localizado apropriado é recuperado da propriedade <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> da cultura atual ou especificada.
 
 > [!NOTE]
@@ -621,7 +621,7 @@ Se o especificador de formato "/" for usado sem outros especificadores de format
 
 [Voltar à tabela](#table)
 
-## <a name="character-literals"></a><a name="Literals"></a>Literals de caráter
+## <a name="character-literals"></a><a name="Literals"></a>Literais de caracteres
 
 Os seguintes caracteres de uma cadeia de caracteres de formato de data e hora personalizado são reservados e sempre são interpretados como caracteres formatação ou, no caso de ", ', / e \\, como caracteres especiais.
 
@@ -641,7 +641,7 @@ O exemplo a seguir inclui os caracteres literais "PST" (que indicam a Hora Padr�
 
 Há duas maneiras de indicar que os caracteres devem ser interpretados como caracteres literais e não como caracteres reservados, para que possam ser incluídos em uma cadeia de caracteres de resultado ou analisados com êxito em uma cadeia de caracteres de entrada:
 
-- Com o escape de cada caractere reservado. Para obter mais informações, consulte [Usando o caractere de fuga](#escape).
+- Com o escape de cada caractere reservado. Para obter mais informações, consulte [usando o caractere de escape](#escape).
 
 O exemplo a seguir inclui os caracteres literais "pst" (que indicam a Hora Padrão do Pacífico) para representar o fuso horário local em uma cadeia de caracteres de formato. Como "s" e "t" são cadeias de caracteres de formato personalizado, ambos os caracteres devem ter um escape para serem interpretados como caracteres literais.
 
@@ -655,7 +655,7 @@ O exemplo a seguir inclui os caracteres literais "pst" (que indicam a Hora Padr�
 
 ## <a name="notes"></a>Observações
 
-### <a name="using-single-custom-format-specifiers"></a><a name="UsingSingleSpecifiers"></a>Usando especificadores de formato personalizado único
+### <a name="using-single-custom-format-specifiers"></a><a name="UsingSingleSpecifiers"></a>Usando especificadores de formato único personalizado
 
 Uma cadeia de caracteres de formato de data e hora personalizado consiste em dois ou mais caracteres. Os métodos de formatação de data e hora interpretam qualquer cadeia de um único caractere como uma cadeia de caracteres de formato de data e hora padrão. Quando não reconhecem o caractere como um especificador de formato válido, eles geram uma <xref:System.FormatException>. Por exemplo, uma cadeia de caracteres de formato que consiste somente no especificador "h" é interpretada como uma cadeia de caracteres de formato padrão de data e hora. No entanto, nesse caso específico, uma exceção é gerada porque não há nenhum especificador "h" de formato padrão de data e hora.
 
@@ -666,7 +666,7 @@ Por exemplo, "`%h"` é interpretada como uma cadeia de caracteres de formato de 
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#16](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/literal1.cs#16)]
 [!code-vb[Formatting.DateAndTime.Custom#16](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/literal1.vb#16)]
 
-### <a name="using-the-escape-character"></a><a name="escape"></a>Usando o caractere escape
+### <a name="using-the-escape-character"></a><a name="escape"></a>Usando o caractere de escape
 
 Os caracteres "d", "f", "F", "g", "h", "H", "K", "m", "M", "s", "t", "y", "z", ":" ou "/" em uma cadeia de caracteres de formato são interpretados como especificadores de formato personalizados em vez de caracteres literais. Para impedir que um caractere seja interpretado como um especificador de formato, você pode precedê-lo com uma barra invertida (\\), que é o caractere de escape. O caractere de escape significa que o próximo caractere é um literal de caractere que deve ser incluído inalterado na cadeia de caracteres de resultado.
 
@@ -697,6 +697,6 @@ A cadeia de caracteres de resultado produzida por muitos dos especificadores de 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
 - [Formatar tipos](../../../docs/standard/base-types/formatting-types.md)
-- [Strings padrão de data e formato de hora](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Amostra: Utilitário de Formatação do WinForms do .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
-- [Amostra: Utilitário de Formatação do WinForms do .NET Core (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)
+- [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Amostra: Utilitário de Formatação do WinForms do .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [Amostra: Utilitário de Formatação do WinForms do .NET Core (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)

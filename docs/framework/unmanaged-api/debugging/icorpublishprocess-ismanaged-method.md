@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06b1f7cc-acdf-47a6-9d53-d9dec2424152
 topic_type:
 - apiref
-ms.openlocfilehash: 68931ba16ea1f8f61176c6d6ed8300e762b61690
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3eec84624866b2be7068d7875cd650828c283fd2
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790535"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421092"
 ---
 # <a name="icorpublishprocessismanaged-method"></a>Método ICorPublishProcess::IsManaged
 Obtém um valor que indica se o processo referenciado por este [ICorPublishProcess](icorpublishprocess-interface.md) é conhecido por ter código gerenciado.  
@@ -35,19 +35,19 @@ HRESULT IsManaged (
   
 ## <a name="parameters"></a>Parâmetros  
  `pbManaged`  
- fora Um ponteiro para um valor booliano que indica se o processo tem código gerenciado. O valor será `true` se o processo tiver código gerenciado; caso contrário, `false`.  
+ fora Um ponteiro para um valor booliano que indica se o processo tem código gerenciado. O valor é `true` se o processo tiver código gerenciado; caso contrário, `false` .  
   
 ## <a name="remarks"></a>Comentários  
- Como a versão atual do `ICorPublishProcess` permite o acesso apenas a processos que têm código gerenciado, `IsManaged` sempre retorna `true`.  
+ Como a versão atual do `ICorPublishProcess` permite acesso apenas a processos que têm código gerenciado, o `IsManaged` sempre retorna `true` .  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Veja também
 

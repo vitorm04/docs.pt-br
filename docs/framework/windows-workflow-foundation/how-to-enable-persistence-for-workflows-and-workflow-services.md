@@ -1,13 +1,14 @@
 ---
 title: 'Como: Ativar persistência para fluxos de trabalho e serviços de fluxo de trabalho'
+description: Saiba como configurar o repositório de instância de fluxo de trabalho SQL para habilitar a persistência para fluxos de trabalho e serviços de fluxo de trabalho programaticamente e usando um arquivo de configuração.
 ms.date: 03/30/2017
 ms.assetid: 2b1c8bf3-9866-45a4-b06d-ee562393e503
-ms.openlocfilehash: 5d0eeb8ad40f2f4f3349ab48487316014a561a1b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 31fe6e3f06989e9a42254747565342cf97e4b9f1
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460885"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421508"
 ---
 # <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>Como: Ativar persistência para fluxos de trabalho e serviços de fluxo de trabalho
 
@@ -15,7 +16,7 @@ Este tópico descreve como ativar persistência para fluxos de trabalho e servi�
 
 ## <a name="enable-persistence-for-workflows"></a>Ativar persistência para fluxos de trabalho
 
-Você pode associar um repositório de instância com um **WorkflowApplication** usando a propriedade <xref:System.Activities.WorkflowApplication.InstanceStore%2A> da classe <xref:System.Activities.WorkflowApplication>. O método de <xref:System.Activities.WorkflowApplication.Persist%2A> salva ou persiste um fluxo de trabalho no armazenamento de instância associada ao aplicativo. O método de <xref:System.Activities.WorkflowApplication.Unload%2A> persiste um fluxo de trabalho no armazenamento de instância e então descarrega a instância de memória. O método **Load** carrega um fluxo de trabalho na memória usando os dados de fluxo de trabalho armazenados no repositório de persistência da instância.
+Você pode associar um repositório de instância com um **WorkflowApplication** usando a <xref:System.Activities.WorkflowApplication.InstanceStore%2A> propriedade da <xref:System.Activities.WorkflowApplication> classe. O método de <xref:System.Activities.WorkflowApplication.Persist%2A> salva ou persiste um fluxo de trabalho no armazenamento de instância associada ao aplicativo. O método de <xref:System.Activities.WorkflowApplication.Unload%2A> persiste um fluxo de trabalho no armazenamento de instância e então descarrega a instância de memória. O método **Load** carrega um fluxo de trabalho na memória usando os dados de fluxo de trabalho armazenados no repositório de persistência da instância.
 
 O método **Persist** executa as seguintes etapas:
 
@@ -37,7 +38,7 @@ Os métodos **Persist** e **Unload** serão bloqueados enquanto um fluxo de trab
 
 ## <a name="enable-persistence-for-workflow-services-in-code"></a>Ativar persistência para serviços de fluxo de trabalho no código
 
-O membro **DurableInstancingOptions** da classe <xref:System.ServiceModel.WorkflowServiceHost> tem uma propriedade chamada **InstanceStore** que você pode usar para associar um repositório de instância ao **WorkflowServiceHost**.
+O membro **DurableInstancingOptions** da <xref:System.ServiceModel.WorkflowServiceHost> classe tem uma propriedade chamada **InstanceStore** que você pode usar para associar um repositório de instância ao **WorkflowServiceHost**.
 
 ```csharp
 // wsh is an instance of WorkflowServiceHost class

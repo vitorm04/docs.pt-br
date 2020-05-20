@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bd6ccde5-d578-48d8-abed-b474fbd48d13
 topic_type:
 - apiref
-ms.openlocfilehash: 97f0d81c389ffd0bd8a69df2ca39322d726f98bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89be772ee3d8a6fc5acb74d5ebe6d3c691764f89
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176624"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441949"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>Método ISymENCUnmanagedMethod::GetDocumentsForMethod
-Obtém os documentos que este método tem linhas dentro  
+Obtém os documentos em que este método tem linhas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,22 +34,22 @@ HRESULT GetDocumentsForMethod(
     [in, size_is(cDocs)] ISymUnmanagedDocument* documents[]);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cDocs`  
- [em] O comprimento do tampão `pcDocs`apontado por .  
+ no O comprimento do buffer apontado por `pcDocs` .  
   
  `pcDocs`  
- [fora] Um ponteiro `ULONG32` para um que recebe o tamanho, em caracteres, do buffer necessário para conter os documentos.  
+ fora Um ponteiro para um `ULONG32` que recebe o tamanho, em caracteres, do buffer necessário para conter os documentos.  
   
  `documents`  
- [em] O buffer que contém os documentos.  
+ no O buffer que contém os documentos.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK se o método for bem sucedido; caso contrário, um código de erro.  
+ S_OK se o método tiver sucesso; caso contrário, um código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl, CorSym.h  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface ISymENCUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [Interface ISymENCUnmanagedMethod](isymencunmanagedmethod-interface.md)

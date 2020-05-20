@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: 6f7f400c51ded0b98c0c2286cb6f90bbd77e47d7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5ac38005410ae6ed9c2f4160e926987791ad604
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178392"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421209"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>Método ICorPublishAppDomainEnum::Next
-Obtém o número especificado de domínios de aplicativos que existem atualmente no processo, começando na posição atual.  
+Obtém o número especificado de domínios de aplicativo que existem atualmente no processo, começando na posição atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,25 +36,25 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `celt`  
- [em] O número de elementos a serem recuperados.  
+ no O número de elementos a serem recuperados.  
   
  `objects`  
- [fora] Um ponteiro para a matriz de objetos [ICorPublishAppDomain](icorpublishappdomain-interface.md) recuperados, cada um dos quais representa um domínio de aplicativo.  
+ fora Um ponteiro para a matriz de objetos [ICorPublishAppDomain](icorpublishappdomain-interface.md) recuperados, cada um representando um domínio de aplicativo.  
   
  `pceltFetched`  
- [fora] Ponteiro para o número de domínios do aplicativo realmente retornado. Este valor pode `celt` ser nulo se for um.  
+ fora Aponta para o número de domínios de aplicativo realmente retornados. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** CorPub.idl, CorPub.h  
+ **Cabeçalho:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Interface ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md)

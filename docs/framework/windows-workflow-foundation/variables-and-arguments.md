@@ -1,18 +1,19 @@
 ---
 title: Variáveis e argumentos
+description: Este artigo descreve variáveis, que representam o armazenamento de dados e argumentos, que representam o fluxo de dados de/para uma atividade no Workflow Foundation.
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: f975f46a1858d204d12588f7570b7ea5a365e650
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 47b8a7bddc8c3a9a8427bcb3e93760a63e5fa976
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182694"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421300"
 ---
 # <a name="variables-and-arguments"></a>Variáveis e argumentos
-No Windows Workflow Foundation (WF), as variáveis representam o armazenamento de dados e argumentos representam o fluxo de dados dentro e fora de uma atividade. Uma atividade tem um conjunto de argumentos e compõem a assinatura de atividade. Além disso, uma atividade pode manter uma lista de variáveis para que um desenvolvedor pode adicionar ou remover variáveis durante o design de um fluxo de trabalho. Um argumento é associado usando uma expressão que retorna um valor.  
+No Windows Workflow Foundation (WF), as variáveis representam o armazenamento de dados e os argumentos representam o fluxo de dados para dentro e fora de uma atividade. Uma atividade tem um conjunto de argumentos e compõem a assinatura de atividade. Além disso, uma atividade pode manter uma lista de variáveis para que um desenvolvedor pode adicionar ou remover variáveis durante o design de um fluxo de trabalho. Um argumento é associado usando uma expressão que retorna um valor.  
   
-## <a name="variables"></a>variáveis  
+## <a name="variables"></a>Variáveis  
  As variáveis são local de armazenamento de dados. As variáveis são declaradas como parte da definição de um fluxo de trabalho. Variáveis têm em valores em runtime e esses valores são armazenados como parte do estado de uma instância de fluxo de trabalho. Uma definição variável especifica o tipo de variável e opcionalmente, o nome. O código a seguir mostra como declarar uma variável, atribui um valor que usa uma atividade de <xref:System.Activities.Statements.Assign%601> , e o exibe em seu valor para o console usando uma atividade de <xref:System.Activities.Statements.WriteLine> .  
   
 ```csharp  
@@ -67,7 +68,7 @@ Variable<string> var = new Variable<string>
   
 2. Quando <xref:System.Activities.InOutArgument%601.Set%2A> é chamado, o runtime define o valor imediatamente.  
   
-3. Os argumentos podem opcionalmente ter seu <xref:System.Activities.Argument.EvaluationOrder%2A> especificado. <xref:System.Activities.Argument.EvaluationOrder%2A> é um valor com base zero que especifica a ordem em que o argumento é avaliado. Por padrão, a ordem de classificação de argumento é especificado e não é igual ao valor de <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> . Definir <xref:System.Activities.Argument.EvaluationOrder%2A> para um valor maior ou igual a zero para especificar uma ordem de classificação para esse argumento. O Windows Workflow Foundation avalia argumentos com uma ordem de avaliação especificada em ordem crescente. Observe que os argumentos com uma ordem não-especificada de avaliação são avaliados antes que esses especificado com uma ordem de classificação.  
+3. Os argumentos podem opcionalmente ter seu <xref:System.Activities.Argument.EvaluationOrder%2A> especificado. <xref:System.Activities.Argument.EvaluationOrder%2A> é um valor com base zero que especifica a ordem em que o argumento é avaliado. Por padrão, a ordem de classificação de argumento é especificado e não é igual ao valor de <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> . Definir <xref:System.Activities.Argument.EvaluationOrder%2A> para um valor maior ou igual a zero para especificar uma ordem de classificação para esse argumento. Windows Workflow Foundation avalia argumentos com uma ordem de avaliação especificada em ordem crescente. Observe que os argumentos com uma ordem não-especificada de avaliação são avaliados antes que esses especificado com uma ordem de classificação.  
   
  Um autor de atividade pode usar um mecanismo fortemente tipado para expor seus argumentos. Isso é feito declarando propriedades do tipo <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601>, e <xref:System.Activities.InOutArgument%601>. Isso permite que um autor de atividade estabeleça um contrato específico sobre os dados que vão e fora de uma atividade.  
   
@@ -141,4 +142,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- Para obter mais informações sobre como trabalhar com argumentos, variáveis e expressões em código, consulte [Autoring Workflows, Activities and Expressions Using Imperative Code](authoring-workflows-activities-and-expressions-using-imperative-code.md) and [Required Arguments and Overload Groups](required-arguments-and-overload-groups.md).
+ Para obter mais informações sobre como trabalhar com argumentos, variáveis e expressões no código, consulte criação de fluxos de trabalho [, atividades e expressões usando código imperativo](authoring-workflows-activities-and-expressions-using-imperative-code.md) e [argumentos necessários e grupos de sobrecarga](required-arguments-and-overload-groups.md).

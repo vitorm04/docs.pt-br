@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bc881b3-e2ce-48a7-ad69-17eaaa304120
 topic_type:
 - apiref
-ms.openlocfilehash: 52e1fc20fbe1d8709c21cacde926cf8bebb49425
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 543bd208e5492460435663c32f276472a763f613
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449206"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441091"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>Método ISymUnmanagedDocument::GetCheckSum
 Obtém a soma de verificação.  
@@ -36,7 +36,7 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>Parâmetros  
  `cData`  
- no O comprimento do buffer fornecido pelo parâmetro `data`  
+ no O comprimento do buffer fornecido pelo `data` parâmetro  
   
  `pcData`  
  fora O tamanho e o comprimento da soma de verificação, em bytes.  
@@ -47,6 +47,6 @@ HRESULT GetCheckSum(
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso; caso contrário, um código de erro.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [Interface ISymUnmanagedDocument](isymunmanageddocument-interface.md)
