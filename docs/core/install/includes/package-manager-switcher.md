@@ -1,14 +1,15 @@
 ---
-ms.openlocfilehash: f9eac406b96e682793b784ca76593885d95365dd
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: e304c54422581a997e4fec7d854bf5d2ee96241f
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82844510"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420299"
 ---
 
 > [!div class="op_single_selector"]
 >
+> - [Ubuntu 20, 4-x64](../linux-package-manager-ubuntu-2004.md)
 > - [Ubuntu 19,10-x64](../linux-package-manager-ubuntu-1910.md)
 > - [Ubuntu 19, 4-x64](../linux-package-manager-ubuntu-1904.md)
 > - [Ubuntu 18, 4-x64](../linux-package-manager-ubuntu-1804.md)
@@ -27,4 +28,4 @@ ms.locfileid: "82844510"
 > - [SLES 15-x64](../linux-package-manager-sles15.md)
 > - [SLES 12-x64](../linux-package-manager-sles12.md)
 
-<span data-ttu-id="9f7f6-118">_As instalações do Gerenciador de pacotes têm suporte apenas na arquitetura **x64** _.</span><span class="sxs-lookup"><span data-stu-id="9f7f6-118">_Package manager installs are only supported on the **x64** architecture_.</span></span> <span data-ttu-id="9f7f6-119">Outras arquiteturas, como o **ARM**, devem [instalar manualmente o SDK do .NET Core](../sdk.md?pivots=os-linux#download-and-manually-install) ou [instalar manualmente o tempo de execução do .NET Core](../runtime.md?pivots=os-linux#download-and-manually-install).</span><span class="sxs-lookup"><span data-stu-id="9f7f6-119">Other architectures, such as **ARM**, must [manually install the .NET Core SDK](../sdk.md?pivots=os-linux#download-and-manually-install) or [manually install the .NET Core Runtime](../runtime.md?pivots=os-linux#download-and-manually-install).</span></span> <span data-ttu-id="9f7f6-120">Para obter mais informações, consulte [dependências e requisitos do .NET Core](../dependencies.md).</span><span class="sxs-lookup"><span data-stu-id="9f7f6-120">For more information, see [.NET Core dependencies and requirements](../dependencies.md).</span></span>
+<span data-ttu-id="7ecee-119">_As instalações do Gerenciador de pacotes têm suporte apenas na arquitetura **x64** _.</span><span class="sxs-lookup"><span data-stu-id="7ecee-119">_Package manager installs are only supported on the **x64** architecture_.</span></span> <span data-ttu-id="7ecee-120">Outras arquiteturas, como o **ARM**, devem [instalar manualmente o SDK do .NET Core](../sdk.md?pivots=os-linux#download-and-manually-install) ou [instalar manualmente o tempo de execução do .NET Core](../runtime.md?pivots=os-linux#download-and-manually-install).</span><span class="sxs-lookup"><span data-stu-id="7ecee-120">Other architectures, such as **ARM**, must [manually install the .NET Core SDK](../sdk.md?pivots=os-linux#download-and-manually-install) or [manually install the .NET Core Runtime](../runtime.md?pivots=os-linux#download-and-manually-install).</span></span> <span data-ttu-id="7ecee-121">Para obter mais informações, consulte [dependências e requisitos do .NET Core](../dependencies.md).</span><span class="sxs-lookup"><span data-stu-id="7ecee-121">For more information, see [.NET Core dependencies and requirements](../dependencies.md).</span></span>
