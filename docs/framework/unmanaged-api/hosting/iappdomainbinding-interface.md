@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 368881ab-c4ea-4731-bf22-c596aac7c66c
 topic_type:
 - apiref
-ms.openlocfilehash: cf4fa9c5ec35391a0e772e25112f305bfa6e1564
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6f368f4288f8203067c1f9ff350ce0f3389f514
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126897"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617083"
 ---
 # <a name="iappdomainbinding-interface"></a>Interface IAppDomainBinding
 Fornece um método que é chamado pelo Common Language Runtime (CLR) para notificar o aplicativo host de que um domínio de aplicativo foi criado.  
@@ -28,17 +28,17 @@ Fornece um método que é chamado pelo Common Language Runtime (CLR) para notifi
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método OnAppDomain](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Chamado pelo Common Language Runtime (CLR) para notificar o host de que um domínio de aplicativo foi criado.|  
+|[Método OnAppDomain](iappdomainbinding-onappdomain-method.md)|Chamado pelo Common Language Runtime (CLR) para notificar o host de que um domínio de aplicativo foi criado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaces de hospedagem](hosting-interfaces.md)

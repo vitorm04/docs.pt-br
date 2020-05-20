@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5aef6808-5aac-4b2f-a2c7-fee1575c55ed
 topic_type:
 - apiref
-ms.openlocfilehash: 6becc44b061ff2baac63437b6a72375d1c3735b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e7cb1c2070e760258e548d2f45e3b6ed11e046c4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131157"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616314"
 ---
 # <a name="eclroperation-enumeration"></a>Enumeração EClrOperation
 Descreve o conjunto de operações para as quais um host pode aplicar ações de política.  
@@ -42,7 +42,7 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`OPR_AppDomainRudeUnload`|O host pode especificar ações de política a serem executadas quando um <xref:System.AppDomain> for descarregado em uma maneira não normal (rude).|  
+|`OPR_AppDomainRudeUnload`|O host pode especificar ações de política a serem executadas quando um <xref:System.AppDomain> for descarregado em um modo não normal (rude).|  
 |`OPR_AppDomainUnload`|O host pode especificar ações de política a serem executadas quando um <xref:System.AppDomain> for descarregado.|  
 |`OPR_FinalizerRun`|O host pode especificar ações de política a serem executadas quando os finalizadores forem executados.|  
 |`OPR_ProcessExit`|O host pode especificar ações de política a serem executadas quando o processo for encerrado.|  
@@ -53,25 +53,25 @@ typedef enum {
 ## <a name="remarks"></a>Comentários  
  A infraestrutura de confiabilidade do Common Language Runtime (CLR) distingue entre anulações e falhas de alocação de recursos que ocorrem em regiões críticas de código e aquelas que ocorrem em regiões não críticas de código. Essa distinção foi projetada para permitir que os hosts definam políticas diferentes dependendo de onde ocorrer uma falha no código.  
   
- Uma *região crítica de código* é qualquer espaço em que o CLR não possa garantir que a anulação de uma tarefa ou a falha de concluir uma solicitação de recursos afetará apenas a tarefa atual. Por exemplo, se uma tarefa estiver mantendo um bloqueio e receber um HRESULT que indica falha ao fazer uma solicitação de alocação de memória, é insuficiente simplesmente anular essa tarefa para garantir a estabilidade do <xref:System.AppDomain>, porque a <xref:System.AppDomain> pode conter outras tarefas aguardando o mesmo bloqueio. Para abandonar, a tarefa atual pode fazer com que essas outras tarefas parem de responder. Nesse caso, o host precisa da capacidade de descarregar todo o <xref:System.AppDomain> em vez de arriscar a potencial instabilidade.  
+ Uma *região crítica de código* é qualquer espaço em que o CLR não possa garantir que a anulação de uma tarefa ou a falha de concluir uma solicitação de recursos afetará apenas a tarefa atual. Por exemplo, se uma tarefa estiver mantendo um bloqueio e receber um HRESULT que indica falha ao fazer uma solicitação de alocação de memória, é insuficiente simplesmente anular essa tarefa para garantir a estabilidade do <xref:System.AppDomain> , pois o <xref:System.AppDomain> pode conter outras tarefas aguardando o mesmo bloqueio. Para abandonar, a tarefa atual pode fazer com que essas outras tarefas parem de responder. Nesse caso, o host precisa da capacidade de descarregar todo o <xref:System.AppDomain> risco em potencial de instabilidade.  
   
  Uma *região não-crítica de código*, por outro lado, é uma região em que o CLR pode garantir que uma anulação ou uma falha afete apenas a tarefa sobre a qual o erro ocorre.  
   
  O CLR também distingue entre anulações normais e não normais (rudes). Em geral, uma anulação normal ou regular faz cada esforço para executar rotinas de manipulação de exceção e finalizadores antes de abortar uma tarefa, enquanto uma anulação rude não faz nenhuma garantia.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Enumeração EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
-- [Enumeração EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
-- [Interface ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [Interface IHostPolicyManager](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
-- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Enumeração EClrFailure](eclrfailure-enumeration.md)
+- [Enumeração EPolicyAction](epolicyaction-enumeration.md)
+- [Interface ICLRPolicyManager](iclrpolicymanager-interface.md)
+- [Interface IHostPolicyManager](ihostpolicymanager-interface.md)
+- [Hospedando enumerações](hosting-enumerations.md)

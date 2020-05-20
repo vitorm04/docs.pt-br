@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0d7e49b-2394-4ae0-8820-1b64cae0cfe8
 topic_type:
 - apiref
-ms.openlocfilehash: da14d159b1933112e95a9a8973b2fad62f25288f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b3c5fc4731029561129609601b8e0635f6a9516c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126860"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617029"
 ---
 # <a name="icatalogservices-interface"></a>Interface ICatalogServices
 Fornece métodos para catalogar serviços.  
@@ -30,9 +30,9 @@ Fornece métodos para catalogar serviços.
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Autodone](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-autodone-method.md)|Reservado apenas para uso interno.|  
-|[Método NotAutodone](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|Reservado apenas para uso interno.|  
+|[Método Autodone](icatalogservices-autodone-method.md)|Reservado apenas para uso interno.|  
+|[Método NotAutodone](icatalogservices-notautodone-method.md)|Reservado apenas para uso interno.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaces de hospedagem](hosting-interfaces.md)

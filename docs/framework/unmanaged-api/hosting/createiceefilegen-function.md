@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e36e1fd8-8456-4359-bdc3-3ec1765f041f
 topic_type:
 - apiref
-ms.openlocfilehash: de27851b4afc3eccad46531848c68723bff346d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 294b82efd66704014aab1b73171afe9165f17664
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136830"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616444"
 ---
 # <a name="createiceefilegen-function"></a>Função CreateICeeFileGen
-Cria um objeto [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) .  
+Cria um objeto [ICeeFileGen](iceefilegen-class.md) .  
   
  Essa função foi preterida no .NET Framework 4.  
   
@@ -38,25 +38,25 @@ HRESULT CreateICeeFileGen (
   
 ## <a name="parameters"></a>Parâmetros  
  `ceeFileGen`  
- fora Um ponteiro para o endereço de um novo objeto `ICeeFileGen`.  
+ fora Um ponteiro para o endereço de um novo `ICeeFileGen` objeto.  
   
 ## <a name="return-value"></a>Valor retornado  
  Esse método retorna códigos de erro COM padrão.  
   
 ## <a name="remarks"></a>Comentários  
- O objeto `ICeeFileGen` é usado para criar arquivos PE (executáveis portáteis) Common Language Runtime (CLR).  
+ O `ICeeFileGen` objeto é usado para criar Common Language Runtime (CLR) arquivos executáveis portáteis (PE).  
   
- Chame a função [DestroyICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md) para destruir o objeto `ICeeFileGen` quando terminar.  
+ Chame a função [DestroyICeeFileGen](destroyiceefilegen-function.md) para destruir o `ICeeFileGen` objeto quando terminar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** ICeeFileGen. h  
   
  **Biblioteca:** MSCorPE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funções de hospedagem CLR reprovadas](deprecated-clr-hosting-functions.md)

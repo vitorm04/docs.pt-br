@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a13ec8a6-8e18-4acb-8054-77f5b1a0e0b9
 topic_type:
 - apiref
-ms.openlocfilehash: b24f8ed4f5e2c6e0022f5599f2ab8c44a30a561a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 969d74933e908674225684a2e77d5c4804b86122
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129270"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615638"
 ---
 # <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a>Método ICLRErrorReportingManager::GetBucketParametersForCurrentException
 Obtém o Bucket do Watson para a exceção atual no thread de chamada.  
@@ -37,17 +37,17 @@ HRESULT GetBucketParametersForCurrentException(
   
 ## <a name="parameters"></a>Parâmetros  
  `pParams`  
- fora Um ponteiro para uma estrutura [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) que contém dados de erro para a exceção.  
+ fora Um ponteiro para uma estrutura [BucketParameters](bucketparameters-structure.md) que contém dados de erro para a exceção.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [Interface ICLRErrorReportingManager](iclrerrorreportingmanager-interface.md)

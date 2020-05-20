@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 58ba42c0-4857-43bf-a039-73a4dc6544c2
 topic_type:
 - apiref
-ms.openlocfilehash: 7fbe0cf3e93d75749fa3f463f3f97dbd1bfe27a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ecd618ecf08836ea5e38ce738f97fc91ee6426f4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176533"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616804"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>Função ClrCreateManagedInstance
 Cria uma instância do tipo gerenciado especificado.  
   
- Esta função foi depreciada no Quadro .NET 4. Use a ativação COM para criar uma instância do tipo gerenciado ou usar a hospedagem (consulte [Interfaces de hospedagem CLR adicionadas no .NET Framework 4 e 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).  
+ Essa função foi preterida no .NET Framework 4. Use a ativação COM para criar uma instância do tipo gerenciado ou use a hospedagem (consulte [interfaces de hospedagem do CLR adicionadas no .NET Framework 4 e 4,5](clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,29 +40,29 @@ STDAPI ClrCreateManagedInstance (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pTypeName`  
- [em] Um ponteiro para o nome do tipo de ocorrência que está sendo solicitado.  
+ no Um ponteiro para o nome do tipo de instância que está sendo solicitado.  
   
  `riid`  
- [em] O `IID` tipo de ocorrência que está sendo solicitado.  
+ no O `IID` do tipo de instância que está sendo solicitado.  
   
  `ppObject`  
- [fora] Um ponteiro para um ponteiro para uma instância do tipo gerenciado que foi solicitado pelo chamador.  
+ fora Um ponteiro para um ponteiro para uma instância do tipo gerenciado que foi solicitado pelo chamador.  
   
 ## <a name="remarks"></a>Comentários  
- O tempo de execução do idioma comum já deve ser carregado em um processo. Por exemplo, ele pode ser carregado usando uma chamada para a `ClrCreateManagedInstance` função [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) antes que a função seja chamada. Se o tempo de execução não estiver carregado, `ClrCreateManagedInstance` primeiro tente carregar v1.0.3705 do tempo de execução. Se isso falhar, ele tentará carregar a versão mais recente do tempo de execução.  
+ O Common Language Runtime já deve estar carregado em um processo. Por exemplo, ele pode ser carregado usando uma chamada para a função [CorBindToRuntimeEx](corbindtoruntimeex-function.md) antes que a `ClrCreateManagedInstance` função seja chamada. Se o tempo de execução não for carregado, o `ClrCreateManagedInstance` primeiro tentará carregar v 1.0.3705 do tempo de execução. Se isso falhar, ele tentará carregar a versão mais recente do tempo de execução.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Mscoree.dll  
+ **Biblioteca:** MSCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Funções de hospedagem CLR reprovadas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
-- [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [Funções de hospedagem CLR reprovadas](deprecated-clr-hosting-functions.md)
+- [Hospedagem](index.md)

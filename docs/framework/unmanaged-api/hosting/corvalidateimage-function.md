@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 3a6da0e845fa50d090cdf0808b211a5806c40961
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8841fab0517353849ef99594bcbd03dda772c766
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178211"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616496"
 ---
 # <a name="_corvalidateimage-function"></a>Função _CorValidateImage
-Valida imagens gerenciadas do módulo e notifica o carregador do sistema operacional depois de carregado.  
+Valida as imagens de módulo gerenciado e notifica o carregador do sistema operacional depois que elas tiverem sido carregadas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,53 +33,53 @@ STDAPI _CorValidateImage (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ImageBase`  
- [em] Um ponteiro para o local de partida da imagem para validar como código gerenciado. A imagem já deve ser carregada na memória.  
+ no Um ponteiro para o local inicial da imagem a ser validada como código gerenciado. A imagem já deve estar carregada na memória.  
   
  `FileName`  
- [em] O nome do arquivo da imagem.  
+ no O nome do arquivo da imagem.  
   
 ## <a name="return-value"></a>Valor retornado  
- Esta função retorna `E_INVALIDARG`os `E_OUTOFMEMORY` `E_UNEXPECTED`valores `E_FAIL`padrão, e , bem como os seguintes valores.  
+ Essa função retorna os valores padrão `E_INVALIDARG` , `E_OUTOFMEMORY` , `E_UNEXPECTED` e `E_FAIL` , bem como os valores a seguir.  
   
 |Valor retornado|Descrição|  
 |------------------|-----------------|  
-|`STATUS_INVALID_IMAGE_FORMAT`|A imagem é inválida. Este valor tem o HRESULT 0xC0000007BL.|  
-|`STATUS_SUCCESS`|A imagem é válida. Este valor tem o HRESULT 0x0000000L.|  
+|`STATUS_INVALID_IMAGE_FORMAT`|A imagem é inválida. Esse valor tem o HRESULT 0xC000007BL.|  
+|`STATUS_SUCCESS`|A imagem é válida. Esse valor tem o HRESULT 0x00000000l.|  
   
 ## <a name="remarks"></a>Comentários  
- Nas versões Windows XP e posteriores, o carregador do sistema operacional verifica os módulos gerenciados examinando o bit Com Dscriptor Directory no cabeçalho coff (formato de arquivo de objeto comum). Um bit definido indica um módulo gerenciado. Se o carregador detectar um módulo gerenciado, ele carregará MsCorEE.dll e chamadas, `_CorValidateImage`o que executa as seguintes ações:  
+ No Windows XP e versões posteriores, o carregador do sistema operacional verifica módulos gerenciados examinando o bit do diretório do descritor COM no cabeçalho COFF (Common Object File Format). Um bit definido indica um módulo gerenciado. Se o carregador detectar um módulo gerenciado, ele carregará o MsCorEE. dll e `_CorValidateImage` as chamadas, que executarão as seguintes ações:  
   
 - Confirma que a imagem é um módulo gerenciado válido.  
   
-- Altera o ponto de entrada na imagem para um ponto de entrada no tempo de execução do idioma comum (CLR).  
+- Altera o ponto de entrada na imagem para um ponto de entrada no Common Language Runtime (CLR).  
   
-- Para versões de 64 bits do Windows, modifica a imagem que está na memória, transformando-a do formato PE32 para PE32+.  
+- Para versões de 64 bits do Windows, o modifica a imagem que está na memória transformando-a de PE32 para PE32 + Format.  
   
-- Retorna ao carregador quando as imagens do módulo gerenciado forem carregadas.  
+- Retorna ao carregador quando as imagens de módulo gerenciado são carregadas.  
   
- Para imagens executáveis, o carregador do sistema operacional então chama a função [_CorExeMain,](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) independentemente do ponto de entrada especificado no executável. Para imagens de montagem DLL, o carregador chama a função [_CorDllMain.](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)  
+ Para imagens executáveis, o carregador do sistema operacional chama a função [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) , independentemente do ponto de entrada especificado no executável. Para imagens de assembly de DLL, o carregador chama a função [_CorDllMain](cordllmain-function.md) .  
   
  `_CorExeMain`ou `_CorDllMain` executa as seguintes ações:  
   
-- Inicializa a CLR.  
+- Inicializa o CLR.  
   
-- Localiza o ponto de entrada gerenciado a partir do cabeçalho CLR da montagem.  
+- Localiza o ponto de entrada gerenciado do cabeçalho CLR do assembly.  
   
-- Começa a execução.  
+- Inicia a execução.  
   
- O carregador chama a função [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) quando as imagens do módulo gerenciadas são descarregadas. No entanto, essa função não realiza nenhuma ação; ele só retorna.  
+ O carregador chama a função [_CorImageUnloading](corimageunloading-function.md) quando as imagens de módulo gerenciado são descarregadas. No entanto, essa função não executa nenhuma ação; Ele apenas retorna.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Funções estáticas globais de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [Funções estáticas globais de metadados](../metadata/metadata-global-static-functions.md)

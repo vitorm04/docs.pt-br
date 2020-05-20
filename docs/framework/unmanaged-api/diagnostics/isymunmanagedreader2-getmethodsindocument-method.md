@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7ae84d6-81e8-4cb7-a1f9-d48b6cde5d79
 topic_type:
 - apiref
-ms.openlocfilehash: 70c1d87ae32fb70f8d9f6e32b527394022459526
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 68a0f9ec8793d465a6fa3b1cb6936eddd7be4c8f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446438"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615404"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>Método ISymUnmanagedReader2::GetMethodsInDocument
 Obtém todos os métodos que têm informações de linha no documento fornecido.  
@@ -41,7 +41,7 @@ HRESULT GetMethodsInDocument(
  no Um ponteiro para o documento.  
   
  `cMethod`  
- no Um `ULONG32` que indica o tamanho da matriz de `pRetVal`.  
+ no Um `ULONG32` que indica o tamanho da `pRetVal` matriz.  
   
  `pcMethod`  
  fora Um ponteiro para um `ULONG32` que recebe o tamanho do buffer necessário para conter os métodos.  
@@ -55,6 +55,6 @@ HRESULT GetMethodsInDocument(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ISymUnmanagedReader2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [Interface ISymUnmanagedReader2](isymunmanagedreader2-interface.md)

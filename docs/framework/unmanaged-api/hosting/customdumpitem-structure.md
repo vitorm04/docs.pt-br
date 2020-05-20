@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: fd9085ff-7beb-4c38-97f0-037cd8ba4f65
 topic_type:
 - apiref
-ms.openlocfilehash: 154beef9398029f31dcb4d081019b9f292238af4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c77a332593ba470d2e29b87cba182a770d5db7e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176468"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616431"
 ---
 # <a name="customdumpitem-structure"></a>Estrutura CustomDumpItem
-Descreve um item a ser adicionado a um dump personalizado no relatório de erros.  
+Descreve um item a ser adicionado a um despejo personalizado no relatório de erros.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,21 +39,21 @@ struct {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`itemKind`|Um [valor ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) que indica o tipo de item a ser adicionado.|  
-|`pReserved`|Não usado no momento. Todos os itens adicionados à união não devem ser maiores do que o tamanho do ponteiro. Se `struct` for necessário, você deve alocá-lo separadamente e apontá-lo.|  
+|`itemKind`|Um valor [ECustomDumpItemKind](ecustomdumpitemkind-enumeration.md) que indica o tipo de item a ser adicionado.|  
+|`pReserved`|Não usado no momento. Os itens adicionados à União não devem ser maiores do que o tamanho do ponteiro. Se `struct` for necessário, você deverá alocá-lo separadamente e apontar para ele.|  
   
 ## <a name="remarks"></a>Comentários  
- [ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) leva um parâmetro `CustomDumpItem`do tipo .  
+ [ICLRErrorReportingManager:: BeginCustomDump](iclrerrorreportingmanager-begincustomdump-method.md) usa um parâmetro do tipo `CustomDumpItem` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.idl  
+ **Cabeçalho:** MSCorEE. idl  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Estruturas de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Estruturas de hospedagem](hosting-structures.md)

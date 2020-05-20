@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 17c45f15-8c44-44da-b070-f902077b36e4
 topic_type:
 - apiref
-ms.openlocfilehash: bf932b63973f93c56883f099ddaadd9d1519f337
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0acd31d85504688427cace0222a657885035c537
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446335"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615378"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>Método ISymUnmanagedScope::GetLocals
 Obtém as variáveis locais definidas nesse escopo.  
@@ -37,7 +37,7 @@ HRESULT GetLocals(
   
 ## <a name="parameters"></a>Parâmetros  
  `cLocals`  
- no Um `ULONG32` que indica o tamanho da matriz de `locals`.  
+ no Um `ULONG32` que indica o tamanho da `locals` matriz.  
   
  `pcLocals`  
  fora Um ponteiro para um `ULONG32` que recebe o tamanho do buffer necessário para conter as variáveis locais.  
@@ -48,9 +48,9 @@ HRESULT GetLocals(
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [Interface ISymUnmanagedScope](isymunmanagedscope-interface.md)

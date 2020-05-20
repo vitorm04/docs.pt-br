@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dc1e2235-e721-4cb2-a0b8-6b0c030d7bab
 topic_type:
 - apiref
-ms.openlocfilehash: 4eb878b61b72378bc6870af7f2cd09f0b6943b13
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ff7e7b299d185b8db263d2076c1e075b87b487fc
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136496"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616392"
 ---
 # <a name="destroyiceefilegen-function"></a>Função DestroyICeeFileGen
-Destrói um objeto [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) .  
+Destrói um objeto [ICeeFileGen](iceefilegen-class.md) .  
   
  Essa função foi preterida no .NET Framework 4.  
   
@@ -38,23 +38,23 @@ HRESULT DestroyICeeFileGen (
   
 ## <a name="parameters"></a>Parâmetros  
  `ceeFileGen`  
- no O objeto `ICeeFileGen` a ser destruído.  
+ no O `ICeeFileGen` objeto a ser destruído.  
   
 ## <a name="return-value"></a>Valor retornado  
  Esse método retorna códigos de erro COM padrão.  
   
 ## <a name="remarks"></a>Comentários  
- `DestroyICeeFileGen` destrói o objeto `ICeeFileGen` criado pela função [CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) .  
+ `DestroyICeeFileGen`destrói o `ICeeFileGen` objeto criado pela função [CreateICeeFileGen](createiceefilegen-function.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** ICeeFileGen. h  
   
  **Biblioteca:** MSCorPE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funções de hospedagem CLR reprovadas](deprecated-clr-hosting-functions.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7963c87-6ec5-49b3-a5cd-e0fe0c43f9b4
 topic_type:
 - apiref
-ms.openlocfilehash: 512dd4055a0aad8498db6ef2241c9363aecee9c7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 95ae081d61200e4fd020609a4d23783f265d2cc6
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446294"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615352"
 ---
 # <a name="isymunmanagedscopegetparent-method"></a>Método ISymUnmanagedScope::GetParent
 Obtém o escopo pai deste escopo.  
@@ -34,15 +34,15 @@ HRESULT GetParent(
   
 ## <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- fora Um ponteiro para a interface [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) retornada.  
+ fora Um ponteiro para a interface [ISymUnmanagedScope](isymunmanagedscope-interface.md) retornada.  
   
 ## <a name="return-value"></a>Valor retornado  
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [Método GetChildren](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getchildren-method.md)
+- [Interface ISymUnmanagedScope](isymunmanagedscope-interface.md)
+- [Método GetChildren](isymunmanagedscope-getchildren-method.md)

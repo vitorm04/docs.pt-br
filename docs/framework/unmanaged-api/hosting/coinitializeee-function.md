@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7e42a928-5068-4ba6-b8c3-806551a01fa8
 topic_type:
 - apiref
-ms.openlocfilehash: 9e90772ae8c3e6be5744fcccc9901123df871831
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 57508a2df3a49c39d25347f2a3038442c37278da
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131935"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616756"
 ---
 # <a name="coinitializeee-function"></a>Função CoInitializeEE
-Garante que o mecanismo de execução de Common Language Runtime seja carregado em um processo. Essa função foi preterida no .NET Framework 4. Em vez disso, use o método [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) .  
+Garante que o mecanismo de execução de Common Language Runtime seja carregado em um processo. Essa função foi preterida no .NET Framework 4. Em vez disso, use o método [ICLRRuntimeHost:: Start](iclrruntimehost-start-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,7 +35,7 @@ HRESULT CoInitializeEE (
   
 ## <a name="parameters"></a>Parâmetros  
  `fFlags`  
- no Uma das constantes de enumeração [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) .  
+ no Uma das constantes de enumeração [COINITIEE](../metadata/coinitiee-enumeration.md) .  
   
 ## <a name="return-value"></a>Valor retornado  
  Esse método retorna códigos de erro COM padrão, conforme definido em Winerror. h, e os valores na tabela a seguir.  
@@ -50,14 +50,14 @@ HRESULT CoInitializeEE (
  Esse método carregará o mecanismo de execução se ele não tiver sido carregado anteriormente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Funções estáticas globais de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [Funções estáticas globais de metadados](../metadata/metadata-global-static-functions.md)

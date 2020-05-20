@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 40123b30-a589-46b3-95d3-af7b2b0baa05
 topic_type:
 - apiref
-ms.openlocfilehash: b30f6f5ce22290dc3750cef0171349ec5ff2f76a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: abba19600616cad8ba3377ae2ebb23459449d2a0
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126745"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615976"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromstream-method"></a>Método ICLRAssemblyIdentityManager::GetBindingIdentityFromStream
 Obtém os dados de identidade do assembly canônico para o assembly no fluxo especificado.  
@@ -47,14 +47,14 @@ HRESULT GetBindingIdentityFromStream (
  fora Um buffer que contém os dados de identidade do assembly opaco.  
   
  `pcchBufferSize`  
- [entrada, saída] O tamanho de `pwzBuffer`.  
+ [entrada, saída] O tamanho de `pwzBuffer` .  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|O método retornou com êxito.|  
-|E_INVALIDARG|O `pStream` fornecido é nulo.|  
+|S_OK|O método foi retornado com êxito.|  
+|E_INVALIDARG|O fornecido `pStream` é nulo.|  
 |ERROR_INSUFFICIENT_BUFFER|O tamanho de `pwzBuffer` é muito pequeno.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
@@ -63,15 +63,15 @@ HRESULT GetBindingIdentityFromStream (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o CLR não poderá mais ser usado no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [Interface ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [Interface ICLRAssemblyIdentityManager](iclrassemblyidentitymanager-interface.md)
+- [Interface ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)

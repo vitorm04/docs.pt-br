@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d231044e-2b53-4836-93f9-8117ff0e5c3a
 topic_type:
 - apiref
-ms.openlocfilehash: 302db0d029b3811d151473323a7a60bd16a00ec1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 63b07dda2293d3e05bd3c8fcdc45f20a498ea54c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131234"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616301"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>Enumeração EClrUnhandledException
 Descreve as opções disponíveis para gerenciar exceções que não são manipuladas no código do usuário.  
@@ -41,22 +41,22 @@ typedef enum {
 |`eHostDeterminedPolicy`|Especifica que o Common Language Runtime (CLR) ignora exceções sem tratamento e permite que o host determine qualquer ação adicional.|  
   
 ## <a name="remarks"></a>Comentários  
- Para especificar que o CLR se comporte como versões anteriores, use o membro `eHostDeterminedPolicy`.  
+ Para especificar que o CLR se comporte como versões anteriores, use o `eHostDeterminedPolicy` membro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Enumeração EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
-- [Enumeração EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
-- [Interface ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [Método SetUnhandledExceptionPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md)
-- [Interface IHostPolicyManager](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
-- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Enumeração EClrFailure](eclrfailure-enumeration.md)
+- [Enumeração EClrOperation](eclroperation-enumeration.md)
+- [Interface ICLRPolicyManager](iclrpolicymanager-interface.md)
+- [Método SetUnhandledExceptionPolicy](iclrpolicymanager-setunhandledexceptionpolicy-method.md)
+- [Interface IHostPolicyManager](ihostpolicymanager-interface.md)
+- [Hospedando enumerações](hosting-enumerations.md)

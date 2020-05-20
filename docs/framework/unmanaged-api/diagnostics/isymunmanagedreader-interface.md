@@ -14,42 +14,42 @@ helpviewer_keywords:
 ms.assetid: aa3cc15d-058e-4e6f-b03e-39569646ba47
 topic_type:
 - apiref
-ms.openlocfilehash: 7ae978f5d2c9f7e90f4549c15a3935b441eabf04
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b372021fcda39d9973d96a9c39e93e38617887a6
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434002"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615456"
 ---
 # <a name="isymunmanagedreader-interface"></a>Interface ISymUnmanagedReader
 Representa um leitor de símbolo que fornece acesso a documentos, métodos e variáveis em um repositório de símbolos.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getdocument-method.md)|Localiza um documento.|  
-|[Método GetDocuments](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getdocuments-method.md)|Retorna uma matriz de todos os documentos definidos no repositório de símbolos.|  
-|[Método GetDocumentVersion](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getdocumentversion-method.md)|Obtém a versão especificada do documento especificado.|  
-|[Método GetGlobalVariables](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getglobalvariables-method.md)|Retorna todas as variáveis globais.|  
-|[Método GetMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getmethod-method.md)|Obtém um método de leitor de símbolo, dado um token de método.|  
-|[Método GetMethodByVersion](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getmethodbyversion-method.md)|Obtém um método de leitor de símbolo, dado um token de método e um número de versão de edição e cópia.|  
-|[Método GetMethodFromDocumentPosition](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getmethodfromdocumentposition-method.md)|Retorna o método que contém o ponto de interrupção na posição especificada em um documento.|  
-|[Método GetMethodsFromDocumentPosition](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getmethodsfromdocumentposition-method.md)|Retorna uma matriz de métodos, cada um contendo o ponto de interrupção na posição especificada em um documento.|  
-|[Método GetMethodVersion](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getmethodversion-method.md)|Obtém a versão do método.|  
-|[Método GetNamespaces](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getnamespaces-method.md)|Obtém os namespaces definidos no escopo global dentro deste armazenamento de símbolos.|  
-|[Método GetSymAttribute](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getsymattribute-method.md)|Obtém um atributo personalizado com base no seu nome.|  
-|[Método GetSymbolStoreFileName](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getsymbolstorefilename-method.md)|Fornece o nome de arquivo em disco do repositório de símbolos.|  
-|[Método GetUserEntryPoint](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getuserentrypoint-method.md)|Retorna o método que foi especificado como o ponto de entrada do usuário para o módulo, se houver.|  
-|[Método GetVariables](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getvariables-method.md)|Retornar uma variável não local, dado seu pai e nome.|  
-|[Método Initialize](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-initialize-method.md)|Inicializa o leitor de símbolos com a interface de importador de metadados à qual esse leitor será associado, juntamente com o nome de arquivo do módulo.|  
-|[Método ReplaceSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md)|Substitui o repositório de símbolos existente por um repositório de símbolos delta.|  
-|[Método UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)|Atualiza o repositório de símbolos existente com um repositório de símbolos delta.|  
+|[Método GetDocument](isymunmanagedreader-getdocument-method.md)|Localiza um documento.|  
+|[Método GetDocuments](isymunmanagedreader-getdocuments-method.md)|Retorna uma matriz de todos os documentos definidos no repositório de símbolos.|  
+|[Método GetDocumentVersion](isymunmanagedreader-getdocumentversion-method.md)|Obtém a versão especificada do documento especificado.|  
+|[Método GetGlobalVariables](isymunmanagedreader-getglobalvariables-method.md)|Retorna todas as variáveis globais.|  
+|[Método GetMethod](isymunmanagedreader-getmethod-method.md)|Obtém um método de leitor de símbolo, dado um token de método.|  
+|[Método GetMethodByVersion](isymunmanagedreader-getmethodbyversion-method.md)|Obtém um método de leitor de símbolo, dado um token de método e um número de versão de edição e cópia.|  
+|[Método GetMethodFromDocumentPosition](isymunmanagedreader-getmethodfromdocumentposition-method.md)|Retorna o método que contém o ponto de interrupção na posição especificada em um documento.|  
+|[Método GetMethodsFromDocumentPosition](isymunmanagedreader-getmethodsfromdocumentposition-method.md)|Retorna uma matriz de métodos, cada um contendo o ponto de interrupção na posição especificada em um documento.|  
+|[Método GetMethodVersion](isymunmanagedreader-getmethodversion-method.md)|Obtém a versão do método.|  
+|[Método GetNamespaces](isymunmanagedreader-getnamespaces-method.md)|Obtém os namespaces definidos no escopo global dentro deste armazenamento de símbolos.|  
+|[Método GetSymAttribute](isymunmanagedreader-getsymattribute-method.md)|Obtém um atributo personalizado com base no seu nome.|  
+|[Método GetSymbolStoreFileName](isymunmanagedreader-getsymbolstorefilename-method.md)|Fornece o nome de arquivo em disco do repositório de símbolos.|  
+|[Método GetUserEntryPoint](isymunmanagedreader-getuserentrypoint-method.md)|Retorna o método que foi especificado como o ponto de entrada do usuário para o módulo, se houver.|  
+|[Método GetVariables](isymunmanagedreader-getvariables-method.md)|Retornar uma variável não local, dado seu pai e nome.|  
+|[Método Initialize](isymunmanagedreader-initialize-method.md)|Inicializa o leitor de símbolos com a interface de importador de metadados à qual esse leitor será associado, juntamente com o nome de arquivo do módulo.|  
+|[Método ReplaceSymbolStore](isymunmanagedreader-replacesymbolstore-method.md)|Substitui o repositório de símbolos existente por um repositório de símbolos delta.|  
+|[Método UpdateSymbolStore](isymunmanagedreader-updatesymbolstore-method.md)|Atualiza o repositório de símbolos existente com um repositório de símbolos delta.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interfaces do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [Interface ISymUnmanagedReader2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [Interfaces de armazenamento de símbolo de diagnóstico](diagnostics-symbol-store-interfaces.md)
+- [Interface ISymUnmanagedReader2](isymunmanagedreader2-interface.md)

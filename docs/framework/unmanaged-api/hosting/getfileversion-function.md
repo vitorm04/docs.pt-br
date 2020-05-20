@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-ms.openlocfilehash: f3b51c1b376fa9c664de53aa76ec724ca305ae6a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dd004a44b20d48dafc72711ac23abcb55739224
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178172"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617194"
 ---
 # <a name="getfileversion-function"></a>Função GetFileVersion
-Obtém as informações da versão de tempo de execução do idioma comum (CLR) do arquivo especificado, usando o buffer especificado.  
+Obtém as informações de versão do Common Language Runtime (CLR) do arquivo especificado, usando o buffer especificado.  
   
- Esta função foi depreciada no Quadro .NET 4.  
+ Essa função foi preterida no .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,26 +37,26 @@ HRESULT GetFileVersion (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `szFilename`  
- [em] O caminho do arquivo a ser examinado.  
+ no O caminho do arquivo a ser examinado.  
   
  `szBuffer`  
- [dentro, fora] O buffer alocado para as informações da versão que são retornadas.  
+ [entrada, saída] O buffer alocado para as informações de versão que são retornadas.  
   
  `cchBuffer`  
- [em] O tamanho, em caracteres largos, de `szBuffer`.  
+ no O tamanho, em caracteres largos, de `szBuffer` .  
   
  `dwLength`  
- [fora] O tamanho, em bytes, `szBuffer`do devolvido.  
+ fora O tamanho, em bytes, do retornado `szBuffer` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Funções de hospedagem CLR reprovadas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funções de hospedagem CLR reprovadas](deprecated-clr-hosting-functions.md)

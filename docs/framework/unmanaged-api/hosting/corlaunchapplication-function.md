@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71f362a9-8fe2-47ce-9302-05a645cf3d7d
 topic_type:
 - apiref
-ms.openlocfilehash: e01698d2d8491b2496bb664c13dca97964cd1481
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 031bfc3d7fcd9f1f04e616e460cb3201813eae55
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136939"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616548"
 ---
 # <a name="corlaunchapplication-function"></a>Função CorLaunchApplication
 Inicia o aplicativo no caminho de rede especificado, usando os manifestos especificados e outros dados de aplicativo.  
@@ -43,7 +43,7 @@ HRESULT CorLaunchApplication (
   
 ## <a name="parameters"></a>Parâmetros  
  `dwClickOnceHost`  
- no Um valor da enumeração [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) que especifica o tipo de host que está iniciando o aplicativo.  
+ no Um valor da enumeração [HOST_TYPE](host-type-enumeration.md) que especifica o tipo de host que está iniciando o aplicativo.  
   
  `pwzAppFullName`  
  no O nome completo do aplicativo que está sendo iniciado.  
@@ -64,14 +64,14 @@ HRESULT CorLaunchApplication (
  fora Um ponteiro para informações sobre o processo no qual o aplicativo foi carregado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funções de hospedagem CLR reprovadas](deprecated-clr-hosting-functions.md)
