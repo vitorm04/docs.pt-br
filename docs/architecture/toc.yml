@@ -15,12 +15,12 @@
       href: microservices/
     - name: 'Aplicativos sem servidor: Arquitetura, padrões e implementação no Azure'
       href: serverless/
+    - name: Como projetar aplicativos .NET nativos de nuvem para o Azure
+      href: cloud-native/
     - name: Modernizar aplicativos de área de trabalho no Windows 10 com .NET Core 3.1
       href: modernize-desktop/
 - name: Visualizar e-books
   expanded: true
   items:
-    - name: Como projetar aplicativos .NET nativos de nuvem para o Azure
-      href: cloud-native/
     - name: Blazor para desenvolvedores do ASP.NET Web Forms
       href: blazor-for-web-forms-developers/
