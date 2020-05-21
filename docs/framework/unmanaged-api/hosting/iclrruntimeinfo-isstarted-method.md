@@ -13,17 +13,17 @@ helpviewer_keywords:
 - IsStarted method [.NET Framework hosting]
 - ICLRRuntimeInfo::IsStarted method [.NET Framework hosting]
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
-ms.openlocfilehash: 34590744407b25d7d53c06c452fff5bac2a95246
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 85a7adddf395e07297c8fb6ceab4aa81e0aaf012
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136379"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762195"
 ---
-# <a name="iclrruntimeinfoisstarted-method"></a><span data-ttu-id="58160-102">Método ICLRRuntimeInfo::IsStarted</span><span class="sxs-lookup"><span data-stu-id="58160-102">ICLRRuntimeInfo::IsStarted Method</span></span>
-<span data-ttu-id="58160-103">Indica se o tempo de execução foi iniciado (ou seja, se o [Método ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) foi chamado e teve êxito).</span><span class="sxs-lookup"><span data-stu-id="58160-103">Indicates whether the runtime has been started (that is, whether the [ICLRRuntimeHost::Start method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) has been called and has succeeded).</span></span>  
+# <a name="iclrruntimeinfoisstarted-method"></a><span data-ttu-id="9f4c6-102">Método ICLRRuntimeInfo::IsStarted</span><span class="sxs-lookup"><span data-stu-id="9f4c6-102">ICLRRuntimeInfo::IsStarted Method</span></span>
+<span data-ttu-id="9f4c6-103">Indica se o tempo de execução foi iniciado (ou seja, se o [Método ICLRRuntimeHost:: Start](iclrruntimehost-start-method.md) foi chamado e teve êxito).</span><span class="sxs-lookup"><span data-stu-id="9f4c6-103">Indicates whether the runtime has been started (that is, whether the [ICLRRuntimeHost::Start method](iclrruntimehost-start-method.md) has been called and has succeeded).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="58160-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="58160-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9f4c6-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9f4c6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsStarted(  
@@ -31,35 +31,35 @@ HRESULT IsStarted(
         [out] DWORD    *pdwStartupFlags);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="58160-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="58160-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9f4c6-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="9f4c6-105">Parameters</span></span>  
  `pbStarted`  
- <span data-ttu-id="58160-106">[fora] `true` se esse tempo de execução for iniciado; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="58160-106">[out] `true` if this runtime is started; otherwise, `false`.</span></span>  
+ <span data-ttu-id="9f4c6-106">[fora] `true` Se esse tempo de execução for iniciado; caso contrário, `false` .</span><span class="sxs-lookup"><span data-stu-id="9f4c6-106">[out] `true` if this runtime is started; otherwise, `false`.</span></span>  
   
  `pdwStartupFlags`  
- <span data-ttu-id="58160-107">fora Retorna os sinalizadores que foram usados para iniciar o tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="58160-107">[out] Returns the flags that were used to start the runtime.</span></span>  
+ <span data-ttu-id="9f4c6-107">fora Retorna os sinalizadores que foram usados para iniciar o tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="9f4c6-107">[out] Returns the flags that were used to start the runtime.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="58160-108">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="58160-108">Return Value</span></span>  
- <span data-ttu-id="58160-109">Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.</span><span class="sxs-lookup"><span data-stu-id="58160-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9f4c6-108">Valor Retornado</span><span class="sxs-lookup"><span data-stu-id="9f4c6-108">Return Value</span></span>  
+ <span data-ttu-id="9f4c6-109">Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.</span><span class="sxs-lookup"><span data-stu-id="9f4c6-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="58160-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="58160-110">HRESULT</span></span>|<span data-ttu-id="58160-111">Descrição</span><span class="sxs-lookup"><span data-stu-id="58160-111">Description</span></span>|  
+|<span data-ttu-id="9f4c6-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9f4c6-110">HRESULT</span></span>|<span data-ttu-id="9f4c6-111">Description</span><span class="sxs-lookup"><span data-stu-id="9f4c6-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="58160-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="58160-112">S_OK</span></span>|<span data-ttu-id="58160-113">O método foi concluído com êxito.</span><span class="sxs-lookup"><span data-stu-id="58160-113">The method completed successfully.</span></span>|  
-|<span data-ttu-id="58160-114">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="58160-114">E_NOTIMPL</span></span>|<span data-ttu-id="58160-115">A versão Common Language Runtime (CLR) é anterior à versão do CLR no .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="58160-115">The common language runtime (CLR) version is earlier than the CLR version in the .NET Framework 4.</span></span>|  
+|<span data-ttu-id="9f4c6-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="9f4c6-112">S_OK</span></span>|<span data-ttu-id="9f4c6-113">O método foi concluído com êxito.</span><span class="sxs-lookup"><span data-stu-id="9f4c6-113">The method completed successfully.</span></span>|  
+|<span data-ttu-id="9f4c6-114">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="9f4c6-114">E_NOTIMPL</span></span>|<span data-ttu-id="9f4c6-115">A versão Common Language Runtime (CLR) é anterior à versão do CLR no .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="9f4c6-115">The common language runtime (CLR) version is earlier than the CLR version in the .NET Framework 4.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="58160-116">Comentários</span><span class="sxs-lookup"><span data-stu-id="58160-116">Remarks</span></span>  
- <span data-ttu-id="58160-117">Esse método não funciona com versões do CLR anteriores à versão do CLR no .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="58160-117">This method does not work with CLR versions earlier than the CLR version in the .NET Framework 4.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9f4c6-116">Comentários</span><span class="sxs-lookup"><span data-stu-id="9f4c6-116">Remarks</span></span>  
+ <span data-ttu-id="9f4c6-117">Esse método não funciona com versões do CLR anteriores à versão do CLR no .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="9f4c6-117">This method does not work with CLR versions earlier than the CLR version in the .NET Framework 4.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="58160-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="58160-118">Requirements</span></span>  
- <span data-ttu-id="58160-119">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="58160-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f4c6-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9f4c6-118">Requirements</span></span>  
+ <span data-ttu-id="9f4c6-119">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9f4c6-119">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="58160-120">**Cabeçalho:** MetaHost. h</span><span class="sxs-lookup"><span data-stu-id="58160-120">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="9f4c6-120">**Cabeçalho:** MetaHost. h</span><span class="sxs-lookup"><span data-stu-id="9f4c6-120">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="58160-121">**Biblioteca:** Incluído como um recurso em MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="58160-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9f4c6-121">**Biblioteca:** Incluído como um recurso em MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="9f4c6-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="58160-122">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="58160-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="9f4c6-122">**.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f4c6-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="58160-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="58160-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9f4c6-123">Veja também</span><span class="sxs-lookup"><span data-stu-id="9f4c6-123">See also</span></span>
 
-- [<span data-ttu-id="58160-124">Interface ICLRRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="58160-124">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="58160-125">Hospedagem de Interfaces</span><span class="sxs-lookup"><span data-stu-id="58160-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="58160-126">Hospedagem</span><span class="sxs-lookup"><span data-stu-id="58160-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="9f4c6-124">Interface ICLRRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="9f4c6-124">ICLRRuntimeInfo Interface</span></span>](iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="9f4c6-125">Interfaces de hospedagem</span><span class="sxs-lookup"><span data-stu-id="9f4c6-125">Hosting Interfaces</span></span>](hosting-interfaces.md)
+- [<span data-ttu-id="9f4c6-126">Hospedagem</span><span class="sxs-lookup"><span data-stu-id="9f4c6-126">Hosting</span></span>](index.md)
