@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d1562cb76f37b6cc2aeb6fe2f7c17c393e169e84
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 78678b4b352bb063d1521e9aee3492c0cee059b8
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158458"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83720975"
 ---
 ### <a name="invalidasynchronousstateexception-moved-to-another-assembly"></a>InvalidAsynchronousStateException movido para outro assembly
 
@@ -22,7 +22,7 @@ A partir do .NET Core 3,0, ele é encontrado no assembly *System. ComponentModel
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Essa alteração afeta apenas os aplicativos que usam a reflexão para <xref:System.ComponentModel.InvalidAsynchronousStateException> carregar o chamando um método como <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> ou uma sobrecarga de <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> que assume que o tipo está em um assembly específico. Se esse for o caso, atualize o assembly referenciado na chamada de método para refletir o novo local do assembly do tipo.
+Essa alteração afeta apenas os aplicativos que usam a reflexão para carregar o <xref:System.ComponentModel.InvalidAsynchronousStateException> chamando um método como <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> ou uma sobrecarga de <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> que assume que o tipo está em um assembly específico. Se esse for o caso, atualize o assembly referenciado na chamada de método para refletir o novo local do assembly do tipo.
 
 #### <a name="category"></a>Categoria
 
@@ -34,7 +34,7 @@ Nenhum.
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis
 

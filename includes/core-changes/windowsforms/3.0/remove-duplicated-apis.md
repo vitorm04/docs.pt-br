@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: 0be59258df10aa13920551f011d68bc8efe20b93
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 3dfacadb5127319d4ce27f367803637cfb1ed00f
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888094"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721660"
 ---
-### <a name="duplicated-apis-removed-from-windows-forms"></a>APIs duplicadas removidas dos formulários do Windows
+### <a name="duplicated-apis-removed-from-windows-forms"></a>APIs duplicadas removidas do Windows Forms
 
-Uma série de APIs acidentalmente <xref:System.Windows.Forms?displayProperty=fullName> duplicadas no namespace a partir do .NET Core 3.0 Preview 4 foram removidas no .NET Core 3.0 RC1.
+Várias APIs duplicadas acidentalmente no <xref:System.Windows.Forms?displayProperty=fullName> namespace a partir do .net core 3,0 Preview 4 foram removidas no .net core 3,0 RC1.
 
 #### <a name="change-description"></a>Descrição da alteração
 
-.NET Core 3.0 Preview 4 inadvertidamente duplicava <xref:System.Windows.Forms?displayProperty=fullName> uma série de tipos <xref:System.ComponentModel.Design?displayProperty=fullName> no namespace que já existiam no namespace. A partir do .NET Core 3.0 RC1, esses tipos duplicados não estão mais disponíveis. A tabela a seguir mostra listas do tipo original e seu tipo duplicado:
+O .NET Core 3,0 Preview 4 duplicava inadvertidamente um número de tipos no <xref:System.Windows.Forms?displayProperty=fullName> namespace que já existia no <xref:System.ComponentModel.Design?displayProperty=fullName> namespace. A partir do .NET Core 3,0 RC1, esses tipos duplicados não estão mais disponíveis. A tabela a seguir mostra como lista o tipo original e seu tipo duplicado:
 
 > [!div class="mx-tdCol2BreakAll"]
 > |Tipo original|Tipo duplicado|
@@ -25,11 +25,11 @@ Uma série de APIs acidentalmente <xref:System.Windows.Forms?displayProperty=ful
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0 RC1
+RC1 3,0
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Atualize o código para fazer referência ao tipo original, conforme mostrado na coluna **de tipo Original** da tabela.
+Atualize o código para referenciar o tipo original, conforme mostrado na coluna **tipo original** da tabela.
 
 #### <a name="category"></a>Categoria
 
@@ -41,7 +41,7 @@ Windows Forms
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis.
 

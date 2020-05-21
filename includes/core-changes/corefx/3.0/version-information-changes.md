@@ -1,22 +1,22 @@
 ---
-ms.openlocfilehash: 1580c8c8b7bdad91656f494537230293dbaaf93b
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: bb264e406c6604c3606e564d99018eda0f9e8d89
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021609"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721028"
 ---
-### <a name="apis-that-report-version-now-report-product-and-not-file-version"></a>APIs que relatam versão agora relatam produto e não versão de arquivo
+### <a name="apis-that-report-version-now-report-product-and-not-file-version"></a>As APIs que relatam versão agora relatam produto e não versão de arquivo
 
 Muitas das APIs que retornam versões no .NET Core agora retornam a versão do produto em vez da versão do arquivo.
 
 #### <a name="change-description"></a>Descrição da alteração
 
-Em .NET Core 2.2 e versões anteriores, métodos como <xref:System.Environment.Version?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType>e a caixa de diálogo propriedades de arquivo para conjuntos .NET Core refletem a versão do arquivo. A partir do .NET Core 3.0, eles refletem a versão do produto.
+No .NET Core 2,2 e em versões anteriores, métodos como <xref:System.Environment.Version?displayProperty=nameWithType> , <xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType> e a caixa de diálogo Propriedades do arquivo para assemblies do .NET Core refletem a versão do arquivo. A partir do .NET Core 3,0, eles refletem a versão do produto.
 
-A figura a seguir ilustra a diferença nas informações da versão para o conjunto *System.Runtime.dll* para .NET Core 2.2 (à esquerda) e .NET Core 3.0 (à direita) como exibido pela caixa de diálogo propriedades do arquivo **Windows Explorer.**
+A figura a seguir ilustra a diferença nas informações de versão do assembly *System. Runtime. dll* para .net Core 2,2 (à esquerda) e do .net Core 3,0 (à direita), conforme exibido pela caixa de diálogo Propriedades de arquivo do **Windows Explorer** .
 
-![Diferença nas informações da versão do produto](~/docs/images/core-changes/corefx/version-information-changes/file-details.png)
+![Diferença nas informações de versão do produto](~/docs/images/core-changes/corefx/version-information-changes/file-details.png)
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -24,11 +24,11 @@ A figura a seguir ilustra a diferença nas informações da versão para o conju
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Nenhum. Essa mudança deve tornar a detecção de versão intuitiva em vez de obtusa.
+Nenhum. Essa alteração deve tornar a detecção de versão intuitiva, em vez de obtuso.
 
 #### <a name="category"></a>Categoria
 
-Bibliotecas Core .NET
+Bibliotecas principais do .NET
 
 #### <a name="affected-apis"></a>APIs afetadas
 
@@ -37,7 +37,7 @@ Bibliotecas Core .NET
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `P:System.Environment.Version`
 - `P:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription`

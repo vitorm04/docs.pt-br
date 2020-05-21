@@ -1,28 +1,28 @@
 ---
-ms.openlocfilehash: 75baa4f23eae838defafd3ce9b3907a187982a18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 97e38685777c7c418c0ccd91f4c433501ecf3aaa
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937062"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721064"
 ---
-### <a name="enablevisualstylevalidation-compatibility-switch-not-supported"></a>Ativaro switch de compatibilidade DoVisualStyleValidation não suportado
+### <a name="enablevisualstylevalidation-compatibility-switch-not-supported"></a>Não há suporte para a opção de compatibilidade EnableVisualStyleValidation
 
-O `Switch.System.Windows.Forms.EnableVisualStyleValidation` switch de compatibilidade não é suportado no Windows Forms no .NET Core 3.0.
+`Switch.System.Windows.Forms.EnableVisualStyleValidation`Não há suporte para a opção de compatibilidade em Windows Forms no .NET Core 3,0.
 
 #### <a name="change-description"></a>Descrição da alteração
 
-No .NET Framework, o `Switch.System.Windows.Forms.EnableVisualStyleValidation` switch de compatibilidade permitiu que um aplicativo optasse por não validar os estilos visuais fornecidos de forma numérica.
+No .NET Framework, a `Switch.System.Windows.Forms.EnableVisualStyleValidation` opção de compatibilidade permitia que um aplicativo recusasse a validação de estilos visuais fornecidos em um formato numérico.
 
-No .NET Core, o `Switch.System.Windows.Forms.EnableVisualStyleValidation` switch não é suportado.
+No .NET Core, `Switch.System.Windows.Forms.EnableVisualStyleValidation` não há suporte para a opção.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0 Visualização 9
+3,0 Preview 9
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Remova o interruptor. O switch não é suportado e nenhuma funcionalidade alternativa está disponível.
+Remova a opção. Não há suporte para a opção e nenhuma funcionalidade alternativa está disponível.
 
 #### <a name="category"></a>Categoria
 
@@ -34,7 +34,7 @@ Windows Forms
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis
 

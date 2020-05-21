@@ -1,24 +1,24 @@
 ---
-ms.openlocfilehash: 645df8080abd21e4db95903a301a36b79a698858
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 11c04441dcec260f0bfb90f6ed2b919b1545b382
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888093"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721426"
 ---
 ### <a name="modernization-of-the-folderbrowserdialog"></a>Modernização do FolderBrowserDialog
 
-O <xref:System.Windows.Forms.FolderBrowserDialog> controle foi alterado nos aplicativos do Windows Forms para .NET Core.
+O <xref:System.Windows.Forms.FolderBrowserDialog> controle foi alterado em aplicativos Windows Forms para .NET Core.
 
 #### <a name="change-description"></a>Descrição da alteração
 
-No .NET Framework, os formulários do <xref:System.Windows.Forms.FolderBrowserDialog> Windows usam a seguinte caixa de diálogo para o controle:
+Na .NET Framework, o Windows Forms usa a caixa de diálogo a seguir para o <xref:System.Windows.Forms.FolderBrowserDialog> controle:
 
-![O FolderBrowserControl no Framework .NET](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-framework.png)
+![O FolderBrowserDialogControl no .NET Framework](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-framework.png)
 
-No .NET Core 3.0, o Windows Forms faz com que os usuários de um novo controle baseado em COM tenha sido introduzido no Windows Vista:
+No .NET Core 3,0, Windows Forms usuários um controle baseado em COM mais recente que foi introduzido no Windows Vista:
 
-![O FolderBrowserControl no Núcleo .NET](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-core.png)
+![O FolderBrowserDialogControl no .NET Core](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-core.png)
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -28,7 +28,7 @@ No .NET Core 3.0, o Windows Forms faz com que os usuários de um novo controle b
 
 A caixa de diálogo será atualizada automaticamente.
 
-Se desejar manter a caixa de <xref:System.Windows.Forms.FolderBrowserDialog.AutoUpgradeEnabled?displayProperty=nameWithType> diálogo `false` original, defina a propriedade antes de mostrar a caixa de diálogo, conforme ilustrado pelo seguinte fragmento de código:
+Se você quiser manter a caixa de diálogo original, defina a <xref:System.Windows.Forms.FolderBrowserDialog.AutoUpgradeEnabled?displayProperty=nameWithType> propriedade como `false` antes de mostrar a caixa de diálogo, conforme ilustrado pelo fragmento de código a seguir:
 
 ```csharp
 var dialog = new FolderBrowserDialog();
@@ -46,7 +46,7 @@ Windows Forms
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `T:System.Windows.Forms.FolderBrowserDialog`
 

@@ -1,48 +1,48 @@
 ---
-ms.openlocfilehash: 8790637c31d503455eb8ba722cca827c2a24b7c9
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: a4476fbff572c004632153e5a98812c241efca57
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021470"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721161"
 ---
-### <a name="openssl-versions-on-macos"></a>Versões openSSL no macOS
+### <a name="openssl-versions-on-macos"></a>Versões do OpenSSL no macOS
 
-O .NET Core 3.0 e os tempos de execução posteriores no macOS agora preferem versões OpenSSL <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> <xref:System.Security.Cryptography.ECDsaOpenSsl>1.1.x para as versões OpenSSL 1.0.x para <xref:System.Security.Cryptography.RSAOpenSsl>os <xref:System.Security.Cryptography.SafeEvpPKeyHandle> <xref:System.Security.Cryptography.AesCcm>tipos , <xref:System.Security.Cryptography.AesGcm>, <xref:System.Security.Cryptography.DSAOpenSsl>, e,
+Os tempos de execução do .NET Core 3,0 e posteriores no MacOS agora preferem as versões do OpenSSL 1.1. x às versões do OpenSSL 1.0. x para os <xref:System.Security.Cryptography.AesCcm> <xref:System.Security.Cryptography.AesGcm> tipos,, <xref:System.Security.Cryptography.DSAOpenSsl> , <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> ,, <xref:System.Security.Cryptography.ECDsaOpenSsl> <xref:System.Security.Cryptography.RSAOpenSsl> e <xref:System.Security.Cryptography.SafeEvpPKeyHandle> .
 
-O tempo de execução do .NET Core 2.1 agora suporta versões OpenSSL 1.1.x, mas ainda prefere versões OpenSSL 1.0.x.
+O tempo de execução do .NET Core 2,1 agora dá suporte às versões do OpenSSL 1.1. x, mas ainda prefere as versões do OpenSSL 1.0. x.
 
 #### <a name="change-description"></a>Descrição da alteração
 
-Anteriormente, o tempo de execução do .NET Core usava versões OpenSSL 1.0.x no macOS para tipos que interagem com o OpenSSL. A versão mais recente do OpenSSL 1.0.x, OpenSSL 1.0.2, está agora sem suporte. Para manter os tipos que usam OpenSSL em versões suportadas do OpenSSL, o .NET Core 3.0 e os runtimes posteriores agora usam versões mais recentes do OpenSSL no macOS.
+Anteriormente, o tempo de execução do .NET Core usava as versões do OpenSSL 1.0. x no macOS para tipos que interagem com o OpenSSL. A versão mais recente do OpenSSL 1.0. x, OpenSSL 1.0.2, agora está sem suporte. Para manter os tipos que usam o OpenSSL nas versões com suporte do OpenSSL, os tempos de execução do .NET Core 3,0 e posteriores agora usam versões mais recentes do OpenSSL no macOS.
 
-Com essa mudança, o comportamento dos tempos de execução do .NET Core no macOS é o seguinte:
+Com essa alteração, o comportamento dos tempos de execução do .NET Core no macOS é o seguinte:
 
-- O .NET Core 3.0 e os runtimes posteriores da versão usam o OpenSSL 1.1.x, se disponível, e recuam para o OpenSSL 1.0.x apenas se não houver nenhuma versão 1.1.x disponível.
+- Os tempos de execução do .NET Core 3,0 e versões posteriores usam o OpenSSL 1.1. x, se disponível, e retornarão ao OpenSSL 1.0. x somente se não houver nenhuma versão 1.1. x disponível.
 
-  Para os chamadores que usam os tipos de interop OpenSSL <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> com P/Invokes personalizados, siga as orientações nas observações. Seu aplicativo pode falhar se você <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion> não verificar o valor.
+  Para chamadores que usam os tipos de interoperabilidade OpenSSL com P/Invokes personalizados, siga as orientações em <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> comentários. Seu aplicativo poderá falhar se você não verificar o <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion> valor.
 
-- O tempo de execução do .NET Core 2.1 usa openssl 1.0.x, se disponível, e volta para openSSL 1.1.x se não houver nenhuma versão 1.0.x disponível.
+- O tempo de execução do .NET Core 2,1 usa o OpenSSL 1.0. x, se estiver disponível, e voltará ao OpenSSL 1.1. x se não houver nenhuma versão 1.0. x disponível.
 
-  O tempo de execução 2.1 prefere a versão <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> anterior do OpenSSL porque a propriedade não existe no .NET Core 2.1, de modo que a versão OpenSSL não pode ser determinada de forma confiável no tempo de execução.
+  O tempo de execução 2,1 prefere a versão anterior do OpenSSL porque a <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> propriedade não existe no .NET Core 2,1, portanto, a versão do OpenSSL não pode ser determinada de forma confiável no tempo de execução.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-- .NET Núcleo 2.1.16
-- .NET Núcleo 3.0.3
-- .NET Núcleo 3.1.2
+- 2.1.16 do .NET Core
+- 3.0.3 do .NET Core
+- 3.1.2 do .NET Core
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-- Desinstale a versão 1.0.2 do OpenSSL se não for mais necessária.
+- Desinstale o OpenSSL versão 1.0.2 se ele não for mais necessário.
 
-- Instale o OpenSSL 1.1.x <xref:System.Security.Cryptography.DSAOpenSsl>se <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> <xref:System.Security.Cryptography.ECDsaOpenSsl>você <xref:System.Security.Cryptography.RSAOpenSsl>usar <xref:System.Security.Cryptography.SafeEvpPKeyHandle> os <xref:System.Security.Cryptography.AesCcm>tipos , <xref:System.Security.Cryptography.AesGcm>, , ou , ou.
+- Instale o OpenSSL 1.1. x se você usar <xref:System.Security.Cryptography.AesCcm> os <xref:System.Security.Cryptography.AesGcm> tipos,,,,, <xref:System.Security.Cryptography.DSAOpenSsl> <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> <xref:System.Security.Cryptography.ECDsaOpenSsl> <xref:System.Security.Cryptography.RSAOpenSsl> ou <xref:System.Security.Cryptography.SafeEvpPKeyHandle> .
 
-- Se você usar os tipos de interop OpenSSL com P/Invokes personalizados, siga as orientações nas <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> observações.
+- Se você usar os tipos de interoperabilidade OpenSSL com P/Invokes personalizados, siga as orientações em <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> comentários.
 
 #### <a name="category"></a>Categoria
 
-Bibliotecas Core .NET
+Bibliotecas principais do .NET
 
 #### <a name="affected-apis"></a>APIs afetadas
 
@@ -56,7 +56,7 @@ Bibliotecas Core .NET
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `T:System.Security.Cryptography.AesCcm``
 - `T:System.Security.Cryptography.AesGcm`

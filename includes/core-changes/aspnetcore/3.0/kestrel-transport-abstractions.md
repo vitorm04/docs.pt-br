@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: f95c3916f4da8164cf927344f60f2845f04ddc5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb23418816abcae125106c93b339a546aa9bc2ee
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72393930"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721168"
 ---
-### <a name="kestrel-transport-abstractions-removed-and-made-public"></a>Kestrel: Abstrações de transporte removidas e divulgadas
+### <a name="kestrel-transport-abstractions-removed-and-made-public"></a>Kestrel: abstrações de transporte removidas e tornadas públicas
 
-Como parte do afastamento das APIs "pubternais", as APIs da camada de `Microsoft.AspNetCore.Connections.Abstractions` transporte Kestrel são expostas como uma interface pública na biblioteca.
+Como parte da afastamento das APIs "pubternal", as APIs da camada de transporte do Kestrel são expostas como uma interface pública na `Microsoft.AspNetCore.Connections.Abstractions` biblioteca.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -17,17 +17,17 @@ Como parte do afastamento das APIs "pubternais", as APIs da camada de `Microsoft
 #### <a name="old-behavior"></a>Comportamento antigo
 
 - Abstrações relacionadas ao transporte estavam disponíveis na `Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions` biblioteca.
-- A `ListenOptions.NoDelay` propriedade estava disponível.
+- A `ListenOptions.NoDelay` Propriedade estava disponível.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-- A `IConnectionListener` interface foi `Microsoft.AspNetCore.Connections.Abstractions` introduzida na biblioteca para expor `...Transport.Abstractions` a funcionalidade mais usada da biblioteca.
-- O `NoDelay` agora está disponível`LibuvTransportOptions` `SocketTransportOptions`em opções de transporte (e ).
-- `SchedulingMode`não está mais disponível.
+- A `IConnectionListener` interface foi introduzida na `Microsoft.AspNetCore.Connections.Abstractions` biblioteca para expor a funcionalidade mais usada da `...Transport.Abstractions` biblioteca.
+- O `NoDelay` agora está disponível em opções de transporte ( `LibuvTransportOptions` e `SocketTransportOptions` ).
+- `SchedulingMode`Não está mais disponível.
 
-#### <a name="reason-for-change"></a>Motivo da mudança
+#### <a name="reason-for-change"></a>Motivo da alteração
 
-ASP.NET Core 3.0 se afastou das APIs "pubternais".
+ASP.NET Core 3,0 foi afastado das APIs "pubternal".
 
 #### <a name="recommended-action"></a>Ação recomendada
 
@@ -41,7 +41,7 @@ Nenhum
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 Not detectable via API analysis
 

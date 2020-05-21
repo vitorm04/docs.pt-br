@@ -1,22 +1,22 @@
 ---
-ms.openlocfilehash: 9520f8c6b6671917f5694bc602293a00e2dab82d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8c8e87c885c99d28aa9a7a5d5a2b48c80d40d7db
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74568245"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721407"
 ---
-### <a name="ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes"></a>ZipArchiveEntry não lida mais com arquivos com tamanhos de entrada inconsistentes
+### <a name="ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes"></a>O ZipArchiveEntry não lida mais com os arquivos mortos com tamanhos de entrada inconsistentes
 
-Arquivos zip listam tamanho compactado e tamanho descompactado no diretório central e no cabeçalho local.  Os dados de entrada em si também indicam seu tamanho.  No .NET Core 2.2 e nas versões anteriores, esses valores nunca foram verificados quanto à consistência. Começando com .NET Core 3.0, eles agora são.
+Os arquivos zip listam Tamanho compactado e Tamanho descompactado no diretório central e no cabeçalho local.  Os próprios dados de entrada também indicam seu tamanho.  No .NET Core 2,2 e versões anteriores, esses valores nunca foram verificados quanto à consistência. A partir do .NET Core 3,0, eles agora são.
 
 #### <a name="change-description"></a>Descrição da alteração
 
-No .NET Core 2.2 <xref:System.IO.Compression.ZipArchiveEntry.Open?displayProperty=nameWithType> e versões anteriores, o cabeçalho local discorda do cabeçalho central do arquivo zip. Os dados são descompactados até que o fim do fluxo compactado seja atingido, mesmo que seu comprimento exceda o tamanho do arquivo não compactado listado no diretório central/cabeçalho local.
+No .NET Core 2,2 e versões anteriores, <xref:System.IO.Compression.ZipArchiveEntry.Open?displayProperty=nameWithType> o é bem sucedido mesmo que o cabeçalho local desconcorde com o cabeçalho central do arquivo zip. Os dados são descompactados até que o final do fluxo compactado seja atingido, mesmo que seu comprimento exceda o tamanho do arquivo descompactado listado no cabeçalho do diretório central/local.
 
-A partir do .NET Core <xref:System.IO.Compression.ZipArchiveEntry.Open?displayProperty=nameWithType> 3.0, o método verifica se o cabeçalho local e o cabeçalho central concordam com tamanhos compactados e não compactados de uma entrada.  Caso isso não o faça, o método lança um <xref:System.IO.InvalidDataException> cabeçalho local do arquivo e/ou tamanhos de lista de descritores de dados que discordam do diretório central do arquivo zip. Ao ler uma entrada, os dados descompactados são truncados para o tamanho do arquivo não compactado listado no cabeçalho.
+A partir do .NET Core 3,0, o <xref:System.IO.Compression.ZipArchiveEntry.Open?displayProperty=nameWithType> método verifica se o cabeçalho local e o cabeçalho central concordam em tamanhos compactados e não compactados de uma entrada.  Se não tiverem, o método lançará um <xref:System.IO.InvalidDataException> se o cabeçalho local do arquivo e/ou os tamanhos da lista do descritor de dados que discordarem com o diretório central do arquivo zip. Ao ler uma entrada, os dados descompactados são truncados para o tamanho de arquivo descompactado listado no cabeçalho.
 
-Essa alteração foi feita <xref:System.IO.Compression.ZipArchiveEntry> para garantir que um representasse corretamente o tamanho de seus dados e que apenas essa quantidade de dados fosse lida.
+Essa alteração foi feita para garantir que um <xref:System.IO.Compression.ZipArchiveEntry> represente corretamente o tamanho de seus dados e que apenas essa quantidade de dados seja lida.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -24,7 +24,7 @@ Essa alteração foi feita <xref:System.IO.Compression.ZipArchiveEntry> para gar
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Reempacote qualquer arquivo zip que exiba esses problemas.
+Empacote novamente qualquer arquivo zip que exiba esses problemas.
 
 #### <a name="category"></a>Categoria
 
@@ -39,7 +39,7 @@ CoreFx
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 `M:System.IO.Compression.ZipArchiveEntry.Open`
 `Overload:System.IO.Compression.ZipFileExtensions.ExtractToDirectory%2A`

@@ -1,28 +1,28 @@
 ---
-ms.openlocfilehash: 3eab49acd3eaa5b6d5802af5f4e6f0fe2699ee97
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c980b0c0be9f4d6a529baa0743dec9ac16ca0d7f
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937063"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721639"
 ---
-### <a name="uselegacyimages-compatibility-switch-not-supported"></a>O switch de compatibilidade UseLegacyImages não é suportado
+### <a name="uselegacyimages-compatibility-switch-not-supported"></a>Não há suporte para a opção de compatibilidade UseLegacyImages
 
-O `Switch.System.Windows.Forms.UseLegacyImages` switch de compatibilidade, que foi introduzido no .NET Framework 4.8, não é suportado no Windows Forms no .NET Core 3.0.
+A `Switch.System.Windows.Forms.UseLegacyImages` opção de compatibilidade, que foi introduzida no .NET Framework 4,8, não tem suporte no Windows Forms no .NET Core 3,0.
 
 #### <a name="change-description"></a>Descrição da alteração
 
-Começando com o .NET Framework `Switch.System.Windows.Forms.UseLegacyImages` 4.8, o switch de compatibilidade abordou possíveis problemas de dimensionamento de imagem em cenários clickOnce em ambientes de DPI elevados. Quando definido `true`para , o switch permite que o usuário restaure o dimensionamento de imagem legado em displays de DPI elevadocuja escala está definida como superior a 100%. Para obter mais informações, consulte [.NET Framework 4.8 Release Notes](https://github.com/microsoft/dotnet/blob/master/releases/net48/dotnet48-changes.md#clickonce) on GitHub.
+A partir do .NET Framework 4,8, a `Switch.System.Windows.Forms.UseLegacyImages` opção de compatibilidade resolveu possíveis problemas de dimensionamento de imagem em cenários de ClickOnce em ambientes de DPI alto. Quando definido como `true` , a opção permite que o usuário restaure o dimensionamento de imagem herdado em monitores de DPI alto cuja escala seja definida como maior que 100%. Para obter mais informações, consulte as [notas de versão do .NET Framework 4,8](https://github.com/microsoft/dotnet/blob/master/releases/net48/dotnet48-changes.md#clickonce) no github.
 
-No .NET Core, o `Switch.System.Windows.Forms.UseLegacyImages` switch não é suportado.
+No .NET Core, `Switch.System.Windows.Forms.UseLegacyImages` não há suporte para a opção.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0 Visualização 9
+3,0 Preview 9
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Remova o interruptor. O switch não é suportado e nenhuma funcionalidade alternativa está disponível.
+Remova a opção. Não há suporte para a opção e nenhuma funcionalidade alternativa está disponível.
 
 #### <a name="category"></a>Categoria
 
@@ -34,7 +34,7 @@ Windows Forms
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis
 
