@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a846238-df4e-4060-ba3b-5173f6a51e85
 topic_type:
 - apiref
-ms.openlocfilehash: e0183ed0f1556afb660ead042dd0d26a63ef75dd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7f972bcfedd028d85debbbd60968a57c4d64ee0c
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133224"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760313"
 ---
 # <a name="icorthreadpoolcorsetmaxthreads-method"></a>Método ICorThreadpool::CorSetMaxThreads
 Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.  
@@ -35,14 +35,14 @@ HRESULT CorSetMaxThreads (
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorThreadpool](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+- [Interface ICorThreadpool](icorthreadpool-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1bdde382-f8ba-4cc8-94b2-d1ac919c585e
 topic_type:
 - apiref
-ms.openlocfilehash: a3a2d1827774ddedc00eb849f64256e3f425b3fa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4e5856fbcda83c1dd30559c6f59f63495faea78d
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127721"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762338"
 ---
 # <a name="icorruntimehostcreatedomainex-method"></a>Método ICorRuntimeHost::CreateDomainEx
-Cria um domínio de aplicativo. O chamador recebe um ponteiro de interface, do tipo <xref:System._AppDomain>, para uma instância do tipo <xref:System.AppDomain?displayProperty=nameWithType>. Esse método permite que o chamador passe uma instância de IAppDomainSetup para configurar recursos adicionais da instância de <xref:System._AppDomain> retornada.  
+Cria um domínio de aplicativo. O chamador recebe um ponteiro de interface, do tipo <xref:System._AppDomain> , para uma instância do tipo <xref:System.AppDomain?displayProperty=nameWithType> . Esse método permite que o chamador passe uma instância de IAppDomainSetup para configurar recursos adicionais da <xref:System._AppDomain> instância retornada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,28 +41,28 @@ HRESULT CreateDomainEx (
  no Um parâmetro opcional usado para fornecer um nome amigável ao domínio. Esse nome amigável pode ser exibido em interfaces do usuário, como depuradores, para identificar o domínio.  
   
  `pSetup`  
- no Um ponteiro de interface opcional do tipo `IAppDomainSetup`, obtido por uma chamada para o método [ICorRuntimeHost:: CreateDomainSetup](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md) .  
+ no Um ponteiro de interface opcional do tipo `IAppDomainSetup` , obtido por uma chamada para o método [ICorRuntimeHost:: CreateDomainSetup](icorruntimehost-createdomainsetup-method.md) .  
   
  `pIdentityArray`  
- no Uma matriz opcional de ponteiros para `IIdentity` instâncias que representam evidências mapeadas pela política de segurança para estabelecer um conjunto de permissões. Um objeto `IIdentity` pode ser obtido chamando o método [CreateEvidence](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md) .  
+ no Uma matriz opcional de ponteiros para `IIdentity` instâncias que representam evidências mapeadas pela política de segurança para estabelecer um conjunto de permissões. Um `IIdentity` objeto pode ser obtido chamando o método [CreateEvidence](icorruntimehost-createevidence-method.md) .  
   
  `pAppDomain`  
- fora Um ponteiro de interface do tipo <xref:System._AppDomain> para uma instância de <xref:System.AppDomain?displayProperty=nameWithType> que pode ser usada para controlar ainda mais o domínio.  
+ fora Um ponteiro de interface do tipo <xref:System._AppDomain> para uma instância do <xref:System.AppDomain?displayProperty=nameWithType> que pode ser usado para controlar ainda mais o domínio.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
-|HRESULT|Descrição|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|A operação foi bem-sucedida.|  
 |S_FALSE|Falha ao concluir a operação.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o Common Language Runtime (CLR) não será mais utilizável no processo. As chamadas subsequentes para qualquer API de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o Common Language Runtime (CLR) não poderá mais ser usado no processo. As chamadas subsequentes para qualquer API de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
   
 ## <a name="remarks"></a>Comentários  
- `CreateDomainEx` estende os recursos do [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) permitindo que o chamador passe uma instância `IAppDomainSetup` com valores de propriedade para configurar o domínio do aplicativo.  
+ `CreateDomainEx`estende os recursos do [CreateDomain](icorruntimehost-createdomain-method.md) permitindo que o chamador passe em uma `IAppDomainSetup` instância com valores de propriedade para configurar o domínio do aplicativo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
@@ -70,10 +70,10 @@ HRESULT CreateDomainEx (
   
  **Versão do .NET Framework:** 1,0, 1,1  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - <xref:System.IAppDomainSetup?displayProperty=nameWithType>
-- [Método CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)
-- [Interface ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [Método CreateDomain](icorruntimehost-createdomain-method.md)
+- [Interface ICorRuntimeHost](icorruntimehost-interface.md)

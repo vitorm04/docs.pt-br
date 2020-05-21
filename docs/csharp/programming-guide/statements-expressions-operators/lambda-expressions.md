@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 6fd2dab09fe97aa4af87d82e2d23664c4347c8b3
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: b86fe4fd91b395498926512650490f8d3a0383a1
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82101989"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761831"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Expressões lambda (Guia de Programação em C#)
 
@@ -33,19 +33,19 @@ Uma *expressão lambda* é uma expressão de uma das duas seguintes formas:
 
 Use o [operador de declaração lambda `=>`](../../language-reference/operators/lambda-operator.md) para separar a lista de parâmetros de lambda do corpo. Para criar uma expressão lambda, especifique os parâmetros de entrada (se houver) no lado esquerdo do operador lambda e uma expressão ou um bloco de instrução do outro lado.
 
-Qualquer expressão lambda pode ser convertida para um tipo [delegado](../../language-reference/builtin-types/reference-types.md#the-delegate-type). O tipo delegado no qual uma expressão lambda pode ser convertida é definido pelos tipos de parâmetros e pelo valor retornado. Se uma expressão lambda não retornar um valor, ela poderá ser convertida em um dos tipos delegados `Action`; caso contrário, ela poderá ser convertida em um dos tipos delegados `Func`. Por exemplo, uma expressão lambda que tem dois parâmetros e não retorna nenhum valor pode ser convertida em um delegado <xref:System.Action%602>. Uma expressão lambda que tem um parâmetro e retorna um valor pode ser convertida em um delegado <xref:System.Func%602>. No seguinte exemplo, a expressão lambda `x => x * x`, que especifica um parâmetro chamado `x` e retorna o valor de `x` quadrado, é atribuída a uma variável de um tipo delegado:
+Qualquer expressão lambda pode ser convertida para um tipo [delegado](../../language-reference/builtin-types/reference-types.md#the-delegate-type). O tipo delegado no qual uma expressão lambda pode ser convertida é definido pelos tipos de parâmetros e pelo valor retornado. Se uma expressão lambda não retornar um valor, ela poderá ser convertida em um dos tipos delegados `Action`; caso contrário, ela poderá ser convertida em um dos tipos delegados `Func`. Por exemplo, uma expressão lambda que tem dois parâmetros e não retorna nenhum valor pode ser convertida em um delegado <xref:System.Action%602>. Uma expressão lambda que tem um parâmetro e retorna um valor pode ser convertida em um delegado <xref:System.Func%602>. No exemplo a seguir, a expressão lambda `x => x * x` , que especifica um parâmetro denominado `x` e retorna o valor de `x` quadrado, é atribuída a uma variável de um tipo delegado:
 
 [!code-csharp-interactive[lambda is delegate](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Delegate)]
 
-As lambdas de expressão também podem ser convertidas aos tipos [de árvore de expressão,](../concepts/expression-trees/index.md) como mostra o exemplo a seguir:
+As lambdas de expressão também podem ser convertidas para os tipos de [árvore de expressão](../concepts/expression-trees/index.md) , como mostra o exemplo a seguir:
 
 [!code-csharp-interactive[lambda is expression tree](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#ExpressionTree)]
 
-Use expressões lambda em qualquer código que exija instâncias de tipos delegados ou árvores de expressão, por exemplo, como um argumento ao método <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> para passar o código que deve ser executado em segundo plano. Você também pode usar expressões lambda quando escrever [LINQ em C#](../../linq/index.md), como o exemplo a seguir mostra:
+Use expressões lambda em qualquer código que exija instâncias de tipos delegados ou árvores de expressão, por exemplo, como um argumento ao método <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> para passar o código que deve ser executado em segundo plano. Você também pode usar expressões lambda ao escrever [LINQ em C#](../../linq/index.md), como mostra o exemplo a seguir:
 
 [!code-csharp-interactive[lambda is argument in LINQ](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
-Quando você usa a sintaxe baseada em método para chamar o método <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> na classe <xref:System.Linq.Enumerable?displayProperty=nameWithType>, por exemplo, no LINQ to Objects e no LINQ to XML, o parâmetro é um tipo delegado <xref:System.Func%602?displayProperty=nameWithType>. Quando você <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> chama o <xref:System.Linq.Queryable?displayProperty=nameWithType> método na classe, por exemplo, em LINQ para SQL, o tipo de parâmetro é um tipo [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>)de árvore de expressão . Em ambos os casos, você pode usar a mesma expressão lambda para especificar o valor do parâmetro. Isso faz com que as duas chamadas `Select` pareçam semelhantes, embora, na verdade, o tipo de objetos criado dos lambdas seja diferente.
+Quando você usa a sintaxe baseada em método para chamar o método <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> na classe <xref:System.Linq.Enumerable?displayProperty=nameWithType>, por exemplo, no LINQ to Objects e no LINQ to XML, o parâmetro é um tipo delegado <xref:System.Func%602?displayProperty=nameWithType>. Quando você chama o <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> método na <xref:System.Linq.Queryable?displayProperty=nameWithType> classe, por exemplo, em LINQ to SQL, o tipo de parâmetro é um tipo de árvore de expressão [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>) . Em ambos os casos, você pode usar a mesma expressão lambda para especificar o valor do parâmetro. Isso faz com que as duas chamadas `Select` pareçam semelhantes, embora, na verdade, o tipo de objetos criado dos lambdas seja diferente.
   
 ## <a name="expression-lambdas"></a>Lambdas de expressão
 
@@ -137,7 +137,7 @@ public partial class Form1 : Form
 }
 ```
 
-Para obter mais informações sobre como criar e usar métodos assíncronos, consulte [Programação Assíncrona com assincronia e aguarde](../concepts/async/index.md).
+Para obter mais informações sobre como criar e usar métodos assíncronos, consulte [programação assíncrona com Async e Await](../concepts/async/index.md).
 
 ## <a name="lambda-expressions-and-tuples"></a>Expressões lambda e tuplas
 
@@ -147,7 +147,7 @@ Você pode definir uma tupla, colocando entre parênteses uma lista delimitada p
 
 [!code-csharp-interactive[lambda and tuples](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasAndTuples.cs#WithoutComponentName)]
 
-Normalmente, os campos de uma `Item1`tuplo são chamados, `Item2`etc. Você pode, no entanto, definir uma tupla com componentes nomeados, como o exemplo a seguir faz.
+Normalmente, os campos de uma tupla são nomeados `Item1` , `Item2` etc. No entanto, você pode definir uma tupla com componentes nomeados, como faz o exemplo a seguir.
 
 [!code-csharp-interactive[lambda and named tuples](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasAndTuples.cs#WithComponentName)]
 
@@ -225,12 +225,11 @@ Para obter mais informações, confira a seção [Expressões de função anôni
 
 [Expressões lambda, eventos e delegados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) em [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [LINQ (Consulta Integrada à Linguagem)](../concepts/linq/index.md)
-- [Árvores de Expressão](../concepts/expression-trees/index.md)
+- [Árvores de expressão](../concepts/expression-trees/index.md)
 - [Funções locais vs. expressões lambda](../classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)
-- [Expressões lambda tipadas implicitamente](../../implicitly-typed-lambda-expressions.md)
 - [Exemplos de C# do Visual Studio 2008 (veja os arquivos de exemplo de consultas LINQ e programa XQuery)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [Expressões lambda recursivas](https://docs.microsoft.com/archive/blogs/madst/recursive-lambda-expressions)

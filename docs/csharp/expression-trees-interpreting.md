@@ -4,12 +4,12 @@ description: Aprenda como escrever código para examinar a estrutura de um árvo
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 1283d7d957c72558652b96cb428efd0f071f0184
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5734e1be6b59bfe3eae97f29d1bd91e7e3a3623f
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146002"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761857"
 ---
 # <a name="interpreting-expressions"></a>Interpretando Expressões
 
@@ -51,7 +51,7 @@ Vamos começar com o exemplo de adição da introdução desta seção.
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-> Não estou usando `var` para declarar essa árvore de expressão, pois isso não é possível porque o lado direito da atribuição é de um tipo implícito. Para entender isso mais profundamente, leia [isto](implicitly-typed-lambda-expressions.md).
+> Não estou usando `var` para declarar essa árvore de expressão, pois isso não é possível porque o lado direito da atribuição é de um tipo implícito.
 
 O nó raiz é um `LambdaExpression`. Para obter o código interessante no lado direito do operador `=>`, você precisa encontrar um dos filhos de `LambdaExpression`. Faremos isso com todas as expressões nesta seção. O nó pai nos ajudar a localizar o tipo de retorno do `LambdaExpression`.
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c66f3ac5-6489-484a-9bed-c31b711cee01
 topic_type:
 - apiref
-ms.openlocfilehash: c450d83669a3bc548c15ed5800dc73438b9a84a6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ccad76e1c8a49222d4f527f8b7b18d4e40ff8cae
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127688"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760401"
 ---
 # <a name="icorruntimehoststart-method"></a>Método ICorRuntimeHost::Start
 Inicia o Common Language Runtime (CLR).  
@@ -33,7 +33,7 @@ HRESULT Start ();
   
 ## <a name="return-value"></a>Valor retornado  
   
-|HRESULT|Descrição|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|A operação foi bem-sucedida.|  
 |S_FALSE|Falha ao concluir a operação.|  
@@ -41,10 +41,10 @@ HRESULT Start ();
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
   
 ## <a name="remarks"></a>Comentários  
- Normalmente, não é necessário chamar o método `Start`, porque o CLR inicia automaticamente na primeira solicitação para executar código gerenciado.  
+ Normalmente, não é necessário chamar o `Start` método, porque o CLR inicia automaticamente na primeira solicitação para executar código gerenciado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
@@ -52,6 +52,6 @@ HRESULT Start ();
   
  **Versões do .NET Framework:** 1,0, 1,1  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [Interface ICorRuntimeHost](icorruntimehost-interface.md)

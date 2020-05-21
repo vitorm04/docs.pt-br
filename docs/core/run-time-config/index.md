@@ -2,12 +2,12 @@
 title: Opções de configuração de tempo de execução
 description: Saiba como configurar aplicativos .NET Core usando as definições de configuração de tempo de execução.
 ms.date: 01/21/2020
-ms.openlocfilehash: d49707b93e272f0e527ff536a80140ec98e5c1a8
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 68690689fd4f936e3af76ab647f0b58d8ec6ca27
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506773"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761948"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>Definições de configuração de tempo de execução do .NET Core
 
@@ -20,7 +20,7 @@ O .NET Core dá suporte ao uso de arquivos de configuração e variáveis de amb
 > [!NOTE]
 > Esta documentação é um trabalho em andamento. Se você observar que as informações apresentadas aqui estão incompletas ou imprecisas, [abra um problema](https://github.com/dotnet/docs/issues) para nos informar sobre ela ou [envie uma solicitação de pull](https://github.com/dotnet/docs/pulls) para resolver o problema. Para obter informações sobre como enviar solicitações pull para o repositório dotnet/docs, consulte o [Guia do colaborador](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute).
 
-O .NET Core fornece os seguintes mecanismos para configurar o comportamento do aplicativo de tempo de execução:
+O .NET Core fornece os seguintes mecanismos para configurar o comportamento do aplicativo em tempo de execução:
 
 - O [arquivo runtimeconfig. JSON](#runtimeconfigjson)
 
@@ -28,7 +28,10 @@ O .NET Core fornece os seguintes mecanismos para configurar o comportamento do a
 
 - [Variáveis de ambiente](#environment-variables)
 
-Alguns valores de configuração também podem ser definidos programaticamente <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> chamando o método.
+> [!TIP]
+> A configuração de uma opção de tempo de execução usando uma variável de ambiente aplica a configuração a todos os aplicativos .NET Core. A configuração de uma opção de tempo de execução no arquivo *runtimeconfig. JSON* ou do projeto aplica a configuração somente a esse aplicativo.
+
+Alguns valores de configuração também podem ser definidos programaticamente chamando o <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> método.
 
 Os artigos nesta seção da documentação são organizados por categoria, por exemplo, [depuração](debugging-profiling.md) e coleta de [lixo](garbage-collector.md). Quando aplicável, as opções de configuração são mostradas para arquivos *runtimeconfig. JSON* , propriedades do MSBuild, variáveis de ambiente e, para os arquivos de referência cruzada, *app. config* para projetos .NET Framework.
 
@@ -106,13 +109,13 @@ Aqui está um exemplo de arquivo de projeto no estilo SDK com propriedades do MS
 </Project>
 ```
 
-As propriedades do MSBuild para configurar o comportamento de tempo de execução são indicadas nos artigos individuais para cada área, por exemplo, [coleta de lixo](garbage-collector.md).
+As propriedades do MSBuild para configurar o comportamento de tempo de execução são indicadas nos artigos individuais para cada área, por exemplo, [coleta de lixo](garbage-collector.md). Eles também estão listados na seção de [configuração de tempo de execução](../project-sdk/msbuild-props.md#run-time-configuration-properties) da referência de propriedades do MSBuild para projetos em estilo SDK.
 
 ## <a name="environment-variables"></a>Variáveis de ambiente
 
-As variáveis de ambiente podem ser usadas para fornecer algumas informações de configuração de tempo de execução. Os botões de configuração especificados como variáveis de ambiente geralmente têm o prefixo **COMPlus_**.
+As variáveis de ambiente podem ser usadas para fornecer algumas informações de configuração de tempo de execução. A configuração de uma opção de tempo de execução usando uma variável de ambiente aplica a configuração a todos os aplicativos .NET Core. Os botões de configuração especificados como variáveis de ambiente geralmente têm o prefixo **COMPlus_**.
 
-Você pode definir variáveis de ambiente no painel de controle do Windows, na linha de comando ou programaticamente <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> chamando o método em sistemas baseados no Windows e no UNIX.
+Você pode definir variáveis de ambiente no painel de controle do Windows, na linha de comando ou programaticamente chamando o <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> método em sistemas baseados no Windows e no UNIX.
 
 Os exemplos a seguir mostram como definir uma variável de ambiente na linha de comando:
 

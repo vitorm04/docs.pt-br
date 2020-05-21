@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1f1e3239-438e-4be9-a3bb-7d0722d3a76d
 topic_type:
 - apiref
-ms.openlocfilehash: c5d6cfa3826667514eb70f9bb0df118d9ba0d07c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8b6593ad995872f0e0014b1e8bcd8a4b576bbeaf
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127813"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762416"
 ---
 # <a name="icorconfigurationadddebuggerspecialthread-method"></a>Método ICorConfiguration::AddDebuggerSpecialThread
 Indica aos serviços de depuração que um thread específico deve ter permissão para continuar a execução enquanto o depurador tem um aplicativo interrompido durante cenários de depuração gerenciados ou não gerenciados.  
@@ -41,14 +41,14 @@ HRESULT AddDebuggerSpecialThread (
  O thread especificado não terá permissão para executar código gerenciado ou inserir o tempo de execução de qualquer forma. Um exemplo desse thread seria um thread em processo para dar suporte a depuradores de script herdados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
+- [Interface ICorConfiguration](icorconfiguration-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c21dab60-fb65-47d9-8a94-7fd47ca53b48
 topic_type:
 - apiref
-ms.openlocfilehash: 217874e625604613e67170a118a7bc3616e02c4d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aa1ce70311cd4ef0204c1c31efee8bd7b313c81d
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139652"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762325"
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>Método ICorRuntimeHost::CreateDomainSetup
-Obtém um ponteiro de interface do tipo IAppDomainSetup para uma instância de <xref:System.AppDomainSetup?displayProperty=nameWithType>. `IAppDomainSetup` fornece métodos para configurar aspectos de um domínio de aplicativo antes de sua criação.  
+Obtém um ponteiro de interface do tipo IAppDomainSetup para uma <xref:System.AppDomainSetup?displayProperty=nameWithType> instância. `IAppDomainSetup`fornece métodos para configurar aspectos de um domínio de aplicativo antes de sua criação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,22 +35,22 @@ HRESULT CreateDomainSetup (
   
 ## <a name="parameters"></a>Parâmetros  
  `pAppDomainSetup`  
- fora Um ponteiro de interface para uma instância de <xref:System.AppDomainSetup?displayProperty=nameWithType>. Esse parâmetro é digitado como `IUnknown`, de modo que os chamadores geralmente devem chamar `QueryInterface` nesse ponteiro para obter um ponteiro de interface do tipo `IAppDomainSetup`.  
+ fora Um ponteiro de interface para uma <xref:System.AppDomainSetup?displayProperty=nameWithType> instância. Esse parâmetro é digitado como `IUnknown` , de modo que os chamadores geralmente devem chamar `QueryInterface` esse ponteiro para obter um ponteiro de interface do tipo `IAppDomainSetup` .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
-|HRESULT|Descrição|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|A operação foi bem-sucedida.|  
 |S_FALSE|Falha ao concluir a operação.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o Common Language Runtime (CLR) não será mais utilizável no processo. As chamadas subsequentes para qualquer API de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o Common Language Runtime (CLR) não poderá mais ser usado no processo. As chamadas subsequentes para qualquer API de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
   
 ## <a name="remarks"></a>Comentários  
- O ponteiro retornado desse método normalmente é passado como um parâmetro para o método [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) .  
+ O ponteiro retornado desse método normalmente é passado como um parâmetro para o método [CreateDomainEx](icorruntimehost-createdomainex-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
@@ -58,10 +58,10 @@ HRESULT CreateDomainSetup (
   
  **Versão do .NET Framework:** 1,0, 1,1  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - <xref:System.AppDomainSetup>
 - <xref:System.IAppDomainSetup?displayProperty=nameWithType>
-- [Interface ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [Interface ICorRuntimeHost](icorruntimehost-interface.md)

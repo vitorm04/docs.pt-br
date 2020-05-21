@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d56ef25-30f1-4499-8a1f-76e7654ec614
 topic_type:
 - apiref
-ms.openlocfilehash: 17afd0922930bc6db122e8dc07125dcafd483cf5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bd48b9167a803da6e27c8d8ebc3a2b13508ff5c9
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133302"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760311"
 ---
 # <a name="icorthreadpoolcorcreatetimer-method"></a>Método ICorThreadpool::CorCreateTimer
 Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.  
@@ -39,14 +39,14 @@ HRESULT CorCreateTimer (
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorThreadpool](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+- [Interface ICorThreadpool](icorthreadpool-interface.md)

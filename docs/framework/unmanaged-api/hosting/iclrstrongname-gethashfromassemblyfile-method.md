@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b67ea03-d474-4605-acaa-57455790250c
 topic_type:
 - apiref
-ms.openlocfilehash: 8131a9838cc958405ca23c75c702db5ec65a41c8
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 007de0365bf70b1f4a9a9e0f01807e7fdac19f54
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901189"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762143"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfile-method"></a>Método ICLRStrongName::GetHashFromAssemblyFile
 Obtém um hash do arquivo do assembly especificado, usando o algoritmo de hash especificado.  
@@ -48,24 +48,24 @@ HRESULT GetHashFromAssemblyFile (
  fora O buffer de hash retornado.  
   
  `cchHash`  
- no O tamanho máximo solicitado de `pbHash`.  
+ no O tamanho máximo solicitado de `pbHash` .  
   
  `pchHash`  
- fora O tamanho retornado, em bytes, de `pbHash`.  
+ fora O tamanho retornado, em bytes, de `pbHash` .  
   
-## <a name="return-value"></a>Valor de retorno  
- `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
+## <a name="return-value"></a>Valor Retornado  
+ `S_OK`Se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Veja também
 
-- [Método GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
-- [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Método GetHashFromAssemblyFileW](iclrstrongname-gethashfromassemblyfilew-method.md)
+- [Interface ICLRStrongName](iclrstrongname-interface.md)

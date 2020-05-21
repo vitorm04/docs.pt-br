@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe07a05b-f6d6-44b5-ab01-b9a6eb15c350
 topic_type:
 - apiref
-ms.openlocfilehash: 36eacedfb83c1248fc252091872bcfeecdbcd874
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 079164d15141983711e976e0209cc22c818d9cd9
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139499"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760414"
 ---
 # <a name="icorruntimehostnextdomain-method"></a>Método ICorRuntimeHost::NextDomain
 Obtém um ponteiro de interface para o próximo domínio na enumeração.  
@@ -36,22 +36,22 @@ HRESULT NextDomain (
   
 ## <a name="parameters"></a>Parâmetros  
  `hEnum`  
- no O enumerador que foi obtido por meio de uma chamada para [EnumDomains](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md).  
+ no O enumerador que foi obtido por meio de uma chamada para [EnumDomains](icorruntimehost-enumdomains-method.md).  
   
  `pAppDomain`  
- fora Um ponteiro de interface para o tipo de <xref:System._AppDomain?displayProperty=nameWithType> que representa o próximo domínio na enumeração, ou NULL, se não houver mais domínios.  
+ fora Um ponteiro de interface para o <xref:System._AppDomain?displayProperty=nameWithType> tipo que representa o próximo domínio na enumeração, ou NULL, se não houver mais domínios.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
-|HRESULT|Descrição|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|A operação foi bem-sucedida.|  
 |S_FALSE|A operação não foi concluída ou não há mais domínios na enumeração.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o Common Language Runtime (CLR) não será mais utilizável no processo. As chamadas subsequentes para qualquer API de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o Common Language Runtime (CLR) não poderá mais ser usado no processo. As chamadas subsequentes para qualquer API de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
@@ -59,8 +59,8 @@ HRESULT NextDomain (
   
  **Versões do .NET Framework:** 1,0, 1,1  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [Interface ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [Interface ICorRuntimeHost](icorruntimehost-interface.md)

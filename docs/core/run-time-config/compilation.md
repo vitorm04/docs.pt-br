@@ -3,12 +3,12 @@ title: Definições de configuração de compilação
 description: Saiba mais sobre as configurações de tempo de execução que configuram como o compilador JIT funciona para aplicativos .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 4db20ee6d36fe3d3d66f473644b70c02d4e02cb3
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: cfcf9b5fc8d11a4ae35ab9b152f32133cd6930bf
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506838"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762000"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>Opções de configuração de tempo de execução para compilação
 
@@ -98,7 +98,7 @@ Arquivo de projeto:
 - Configura se o compilador JIT usa o JIT rápido em métodos que contêm loops.
 - Habilitar o JIT rápido para loops pode melhorar o desempenho de inicialização. No entanto, loops de longa execução podem ficar presos em código menos otimizado por longos períodos.
 - Se a opção [JIT rápida](#quick-jit) estiver desabilitada, essa configuração não terá efeito.
-- Padrão: desabilitado`false`().
+- Se você omitir essa configuração, o JIT rápido não será usado para métodos que contenham loops. Isso é equivalente a definir o valor como `false` .
 
 | | Nome da configuração | Valores |
 | - | - | - |
@@ -136,7 +136,7 @@ Arquivo de projeto:
 
 - Configura se o tempo de execução do .NET Core usa código pré-compilado para imagens com dados ReadyToRun disponíveis. Desabilitar essa opção força o tempo de execução para o código de estrutura JIT-compile.
 - Para obter mais informações, consulte [ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images).
-- Padrão: habilitado (`1`).
+- Se você omitir essa configuração, o .NET usará os dados do ReadyToRun quando ele estiver disponível. Isso é equivalente a definir o valor como `1` .
 
 | | Nome da configuração | Valores |
 | - | - | - |

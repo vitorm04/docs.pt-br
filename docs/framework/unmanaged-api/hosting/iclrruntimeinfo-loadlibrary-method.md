@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4517ada3-4417-4ac5-a150-73da7a87c686
 topic_type:
 - apiref
-ms.openlocfilehash: 8c72f58bb65bd862b0625bfa0398b26bad0197e9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 09c80c3a56d86943ebe00e5222bb5452ab44e150
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192080"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762169"
 ---
 # <a name="iclrruntimeinfoloadlibrary-method"></a>Método ICLRRuntimeInfo::LoadLibrary
-Carrega uma biblioteca de .NET Framework do Common Language Runtime (CLR) representado por uma interface [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) .  
+Carrega uma biblioteca de .NET Framework do Common Language Runtime (CLR) representado por uma interface [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) .  
   
- Esse método substitui a função [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) .  
+ Esse método substitui a função [LoadLibraryShim](loadlibraryshim-function.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,10 +42,10 @@ HRESULT LoadLibrary(
  `phndModule`  
  fora Um identificador para o assembly carregado.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
-|HRESULT|Descrição|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|O método foi concluído com êxito.|  
 |E_POINTER|`pwzDllName` ou `phndModule` é nulo.|  
@@ -55,16 +55,16 @@ HRESULT LoadLibrary(
  Esse método carrega somente DLLs incluídas no pacote redistribuível .NET Framework. Ele não pode carregar assemblies gerados pelo usuário.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [Interface ICLRRuntimeInfo](iclrruntimeinfo-interface.md)
+- [Interfaces de hospedagem](hosting-interfaces.md)
+- [Hospedagem](index.md)
