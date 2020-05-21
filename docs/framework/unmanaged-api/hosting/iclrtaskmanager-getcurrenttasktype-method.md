@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b0d9259-dbe2-45bb-b34d-990f60c73424
 topic_type:
 - apiref
-ms.openlocfilehash: 848255d44ce8637182f18288d30151a3f0df0912
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2bf1b8b10aded8e61b9bceab0ee02b1d7c0b752a
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092161"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762806"
 ---
 # <a name="iclrtaskmanagergetcurrenttasktype-method"></a>Método ICLRTaskManager::GetCurrentTaskType
 Obtém o tipo da tarefa que está sendo executada no momento.  
@@ -35,17 +35,17 @@ HRESULT GetCurrentTaskType(
   
 ## <a name="parameters"></a>Parâmetros  
  `pTaskType`  
- fora Um ponteiro para um valor da enumeração [ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md) que indica o tipo de tarefa em execução no momento.  
+ fora Um ponteiro para um valor da enumeração [ETaskType](etasktype-enumeration.md) que indica o tipo de tarefa em execução no momento.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [Interface ICLRTaskManager](iclrtaskmanager-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1968f0b-2675-4dc2-8507-46164e1df154
 topic_type:
 - apiref
-ms.openlocfilehash: 8151531e470b149012b2dd4fca918c8937f13918
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f32381dc40a744157e46780e59b83efd63e58dcb
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133347"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762637"
 ---
 # <a name="icorruntimehostswitchoutlogicalthreadstate-method"></a>Método ICorRuntimeHost::SwitchOutLogicalThreadState
 Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.  
@@ -38,7 +38,7 @@ HRESULT SwitchOutLogicalThreadState(
  fora Cookie que indica a fibra que está sendo desativada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
@@ -46,6 +46,6 @@ HRESULT SwitchOutLogicalThreadState(
   
  **Versão do .NET Framework:** 1,0, 1,1  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [Interface ICorRuntimeHost](icorruntimehost-interface.md)
