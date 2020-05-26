@@ -740,18 +740,6 @@
                                   href: programming-guide/concepts/linq/intermediate-materialization.md
                                 - name: Encadear operadores de consulta padrão juntamente
                                   href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
-                            - name: 'Tutorial: encadear consultas'
-                              items:
-                                - name: Execução adiada e avaliação lenta em LINQ to XML
-                                  href: programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
-                                - name: Exemplo de execução adiada
-                                  href: programming-guide/concepts/linq/deferred-execution-example.md
-                                - name: Encadear o exemplo de consultas
-                                  href: programming-guide/concepts/linq/chaining-queries-example.md
-                                - name: Materialização intermediária
-                                  href: programming-guide/concepts/linq/intermediate-materialization.md
-                                - name: Encadear operadores de consulta padrão juntamente
-                                  href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
                             - name: 'Tutorial: manipular conteúdo em um documento WordprocessingML'
                               items:
                                 - name: Formato de documentos de WordprocessingML
