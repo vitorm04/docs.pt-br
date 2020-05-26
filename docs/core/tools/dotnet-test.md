@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
 ms.date: 04/29/2020
-ms.openlocfilehash: ef71e48daa7c4a6f33961d05a2f3def122087b0e
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 22b27007d26c98cff40733ef8d449ce334f87848
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975427"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802687"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -45,13 +45,13 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-Onde `Microsoft.NET.Test.Sdk` é o host de teste `xunit` , é a estrutura de teste. E `xunit.runner.visualstudio` é um adaptador de teste, que permite que a estrutura xUnit funcione com o host de teste.
+Onde `Microsoft.NET.Test.Sdk` é o host de teste, `xunit` é a estrutura de teste. E `xunit.runner.visualstudio` é um adaptador de teste, que permite que a estrutura xUnit funcione com o host de teste.
 
 ### <a name="implicit-restore"></a>Restauração implícita
 
 [!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 - **`PROJECT | SOLUTION | DIRECTORY | DLL`**
 
@@ -70,7 +70,7 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste `xunit` , é a estrutura de tes
 
 - **`--blame`**
 
-  Executa os testes no modo blame. Essa opção é útil para isolar testes problemáticos que causam falha no host de teste. Quando uma falha é detectada, ela cria um arquivo de `TestResults/<Guid>/<Guid>_Sequence.xml` sequência no que captura a ordem dos testes que foram executados antes da falha.
+  Executa os testes no modo blame. Essa opção é útil para isolar testes problemáticos que causam falha no host de teste. Quando uma falha é detectada, ela cria um arquivo de sequência no `TestResults/<Guid>/<Guid>_Sequence.xml` que captura a ordem dos testes que foram executados antes da falha.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -82,7 +82,7 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste `xunit` , é a estrutura de tes
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  Habilita o modo de diagnóstico para a plataforma de teste e grava mensagens de diagnóstico no arquivo especificado e nos arquivos ao lado dele. O processo que está registrando as mensagens determina quais arquivos são criados, como `*.host_<date>.txt` para o log do host de `*.datacollector_<date>.txt` teste e para o log do coletor de dados.
+  Habilita o modo de diagnóstico para a plataforma de teste e grava mensagens de diagnóstico no arquivo especificado e nos arquivos ao lado dele. O processo que está registrando as mensagens determina quais arquivos são criados, como `*.host_<date>.txt` para o log do host de teste e `*.datacollector_<date>.txt` para o log do coletor de dados.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -102,7 +102,7 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste `xunit` , é a estrutura de tes
 
 - **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
-  Especifica um agente para resultados do teste. Ao contrário do MSBuild, o teste dotnet não aceita abreviações `-l "console;v=d"` : `-l "console;verbosity=detailed"`em vez de usar.
+  Especifica um agente para resultados do teste. Ao contrário do MSBuild, o teste dotnet não aceita abreviações: em vez de `-l "console;v=d"` usar `-l "console;verbosity=detailed"` .
 
 - **`--no-build`**
 
@@ -118,7 +118,7 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste `xunit` , é a estrutura de tes
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Diretório no qual encontram-se os binários para execução. Se não for especificado, o caminho padrão será `./bin/<configuration>/<framework>/`.  Para projetos com várias estruturas de destino (por meio `TargetFrameworks` da propriedade), também é necessário definir `--framework` quando você especifica essa opção. `dotnet test`sempre execute testes do diretório de saída. Você pode usar <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> para consumir ativos de teste no diretório de saída.
+  Diretório no qual encontram-se os binários para execução. Se não for especificado, o caminho padrão será `./bin/<configuration>/<framework>/`.  Para projetos com várias estruturas de destino (por meio da `TargetFrameworks` Propriedade), também é necessário definir `--framework` quando você especifica essa opção. `dotnet test`sempre executa testes do diretório de saída. Você pode usar <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> para consumir ativos de teste no diretório de saída.
 
 - **`-r|--results-directory <PATH>`**
 
@@ -130,7 +130,7 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste `xunit` , é a estrutura de tes
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  O arquivo `.runsettings` a ser usado para executar os testes. Observe que o `TargetPlatform` elemento (x86 | x64) não tem nenhum efeito `dotnet test`para. Para executar testes direcionados para x86, instale a versão x86 do .NET Core. O bit de bits do *dotnet. exe* que está no caminho é o que será usado para executar testes. Para saber mais, consulte os recursos a seguir:
+  O arquivo `.runsettings` a ser usado para executar os testes. Observe que o `TargetPlatform` elemento (x86 | x64) não tem nenhum efeito para `dotnet test` . Para executar testes direcionados para x86, instale a versão x86 do .NET Core. O bit de bits do *dotnet. exe* que está no caminho é o que será usado para executar testes. Para saber mais, consulte os recursos a seguir:
 
   - [Configurar testes de unidade usando um arquivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
   - [Configurar uma execução de teste](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
@@ -220,7 +220,7 @@ Inclua expressões em parênteses ao usar operadores condicionais (por exemplo, 
 
 Para obter mais informações e exemplos sobre como usar a filtragem de teste de unidade seletivo, confira [Executando testes de unidade seletivos](../testing/selective-unit-tests.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Estruturas e destinos](../../standard/frameworks.md)
 - [Catálogo do Identificador de Runtime do .NET Core](../rid-catalog.md)
