@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 18485a27-cae3-4c6a-baa8-f7df601122d5
 topic_type:
 - apiref
-ms.openlocfilehash: 107644270dbc9b14912dac9b97fc716aaeba7f4f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c50c109dc786a0749cca1543d10b7d172e03f0b1
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133213"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805345"
 ---
 # <a name="icorthreadpool-interface"></a>Interface ICorThreadpool
 Fornece métodos para acessar o pool de threads.  
@@ -31,27 +31,27 @@ Fornece métodos para acessar o pool de threads.
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método CorRegisterWaitForSingleObject](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corregisterwaitforsingleobject-method.md)|Reservado apenas para uso interno.|  
-|[Método CorUnregisterWait](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corunregisterwait-method.md)|Reservado apenas para uso interno.|  
-|[Método CorQueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md)|Reservado apenas para uso interno.|  
-|[Método CorCreateTimer](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcreatetimer-method.md)|Reservado apenas para uso interno.|  
-|[Método CorChangeTimer](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corchangetimer-method.md)|Reservado apenas para uso interno.|  
-|[Método CorDeleteTimer](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-cordeletetimer-method.md)|Reservado apenas para uso interno.|  
-|[Método CorBindIoCompletionCallback](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corbindiocompletioncallback-method.md)|Reservado apenas para uso interno.|  
-|[Método CorCallOrQueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcallorqueueuserworkitem-method.md)|Reservado apenas para uso interno.|  
-|[Método CorSetMaxThreads](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corsetmaxthreads-method.md)|Reservado apenas para uso interno.|  
-|[Método CorGetMaxThreads](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetmaxthreads-method.md)|Reservado apenas para uso interno.|  
-|[Método CorGetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetavailablethreads-method.md)|Reservado apenas para uso interno.|  
+|[Método CorRegisterWaitForSingleObject](icorthreadpool-corregisterwaitforsingleobject-method.md)|Reservado apenas para uso interno.|  
+|[Método CorUnregisterWait](icorthreadpool-corunregisterwait-method.md)|Reservado apenas para uso interno.|  
+|[Método CorQueueUserWorkItem](icorthreadpool-corqueueuserworkitem-method.md)|Reservado apenas para uso interno.|  
+|[Método CorCreateTimer](icorthreadpool-corcreatetimer-method.md)|Reservado apenas para uso interno.|  
+|[Método CorChangeTimer](icorthreadpool-corchangetimer-method.md)|Reservado apenas para uso interno.|  
+|[Método CorDeleteTimer](icorthreadpool-cordeletetimer-method.md)|Reservado apenas para uso interno.|  
+|[Método CorBindIoCompletionCallback](icorthreadpool-corbindiocompletioncallback-method.md)|Reservado apenas para uso interno.|  
+|[Método CorCallOrQueueUserWorkItem](icorthreadpool-corcallorqueueuserworkitem-method.md)|Reservado apenas para uso interno.|  
+|[Método CorSetMaxThreads](icorthreadpool-corsetmaxthreads-method.md)|Reservado apenas para uso interno.|  
+|[Método CorGetMaxThreads](icorthreadpool-corgetmaxthreads-method.md)|Reservado apenas para uso interno.|  
+|[Método CorGetAvailableThreads](icorthreadpool-corgetavailablethreads-method.md)|Reservado apenas para uso interno.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaces de hospedagem](hosting-interfaces.md)

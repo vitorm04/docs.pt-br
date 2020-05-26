@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc7d9448-3186-494d-9f0d-ea39717e9a82
 topic_type:
 - apiref
-ms.openlocfilehash: e20ea6addc1ae3f99b4b3d65f532e0128ac160b3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ac73c462aa210927f0665cae161fd7f3e17a0cdb
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134968"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805306"
 ---
 # <a name="igchostcollect-method"></a>Método IGCHost::Collect
 Força a ocorrência de uma coleção para a geração determinada, independentemente do estado da coleta de lixo atual.  
@@ -38,14 +38,14 @@ HRESULT Collect (
  no A geração na qual executar a coleta de lixo. Um valor de-1 indica que todas as gerações passarão por uma coleta de lixo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** GCHost. idl, GCHost. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IGCHost](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+- [Interface IGCHost](igchost-interface.md)

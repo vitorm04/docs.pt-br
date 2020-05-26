@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 826baa9b-9218-4736-a509-7ab193b125a0
 topic_type:
 - apiref
-ms.openlocfilehash: 36eeb7ed4f80979ef2edb930e65963a1db0c894f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4a7a2da58e197749d492f24c7a12134508efef57
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134900"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805229"
 ---
 # <a name="igchostgetthreadstats-method"></a>Método IGCHost::GetThreadStats
 Obtém as estatísticas por thread para a coleta de lixo.  
@@ -39,17 +39,17 @@ HRESULT GetThreadStats (
  no Um ponteiro para um cookie de fibra que especifica o thread para o qual recuperar as estatísticas.  
   
  `pStats`  
- [entrada, saída] Um ponteiro para uma estrutura [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) que contém as estatísticas de coleta de lixo para o thread especificado.  
+ [entrada, saída] Um ponteiro para uma estrutura de [COR_GC_THREAD_STATS](cor-gc-thread-stats-structure.md) que contém as estatísticas de coleta de lixo para o thread especificado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** GCHost. idl, GCHost. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IGCHost](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+- [Interface IGCHost](igchost-interface.md)

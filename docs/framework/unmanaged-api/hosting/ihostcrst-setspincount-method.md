@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 863fc8ce-9b8a-477e-8dd8-75c8544bb43a
 topic_type:
 - apiref
-ms.openlocfilehash: a8642235cda359b849c49a35ab565397402c37d2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2436809f35d5c46416f48987cc92feb51d291a6a
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130508"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804878"
 ---
 # <a name="ihostcrstsetspincount-method"></a>Método IHostCrst::SetSpinCount
-Define a contagem de rotação para a instância de [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) atual.  
+Define a contagem de rotação para a instância de [IHostCrst](ihostcrst-interface.md) atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,13 +35,13 @@ HRESULT SetSpinCount (
   
 ## <a name="parameters"></a>Parâmetros  
  `dwSpinCount`  
- no A nova contagem de rotação para a instância de `IHostCrst` atual.  
+ no A nova contagem de rotação para a `IHostCrst` instância atual.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`SetSpinCount` retornado com êxito.|  
+|S_OK|`SetSpinCount`retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -49,21 +49,21 @@ HRESULT SetSpinCount (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- Em sistemas com vários processadores, se a seção crítica representada pela instância de `IHostCrst` atual não estiver disponível, um thread de chamada será girado `dwSpinCount` vezes antes de chamar [IHostSemaphore:: Wait](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md) em um semáforo associado à seção crítica. Se a seção crítica for liberada durante a operação de rotação, o thread de chamada evitará a operação de espera.  
+ Em sistemas com vários processadores, se a seção crítica representada pela instância atual `IHostCrst` não estiver disponível, um thread de chamada girará os `dwSpinCount` tempos antes de chamar [IHostSemaphore:: Wait](ihostsemaphore-wait-method.md) em um semáforo associado à seção crítica. Se a seção crítica for liberada durante a operação de rotação, o thread de chamada evitará a operação de espera.  
   
- O uso de `dwSpinCount` é idêntico ao uso do parâmetro do mesmo nome na função de `InitializeCriticalSectionAndSpinCount` do Win32.  
+ O uso de `dwSpinCount` é idêntico ao uso do parâmetro de mesmo nome na função do Win32 `InitializeCriticalSectionAndSpinCount` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [Interface IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
-- [Interface IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [Interface ICLRSyncManager](iclrsyncmanager-interface.md)
+- [Interface IHostCrst](ihostcrst-interface.md)
+- [Interface IHostSyncManager](ihostsyncmanager-interface.md)

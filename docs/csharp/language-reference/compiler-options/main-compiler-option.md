@@ -8,12 +8,12 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 6c842abc1423e7ee0d98b71392e02410c6cf9172
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7d3cfce474023907eda0bc40b692e4bbb65ffb96
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602729"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802839"
 ---
 # <a name="-main-c-compiler-options"></a>-main (opções do compilador C#)
 Esta opção especifica a classe que contém o ponto de entrada para o programa, se mais de uma classe contiver um método **Main**.  
@@ -44,6 +44,17 @@ Esta opção especifica a classe que contém o ponto de entrada para o programa,
   
      Para definir programaticamente essa opção do compilador, confira <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.  
   
+### <a name="to-set-this-compiler-option-by-manually-editing-the-csproj-file"></a>Para definir essa opção de compilador editando manualmente o arquivo. csproj
+  
+Você pode definir essa opção editando o arquivo. csproj e adicionando um elemento `StartupObject` dentro da `PropertyGroup` seção. Por exemplo:
+
+```
+  <PropertyGroup>
+    ...
+    <StartupObject>MyApplication.Core.Program</StartupObject>
+  </PropertyGroup>
+```
+
 ## <a name="example"></a>Exemplo  
  Compile `t2.cs` e `t3.cs`, especificando que o método **Main** será encontrado em `Test2`:  
   
@@ -53,5 +64,5 @@ csc t2.cs t3.cs -main:Test2
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

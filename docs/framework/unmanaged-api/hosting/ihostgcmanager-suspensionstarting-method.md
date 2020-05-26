@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c381f524-94cf-4fa2-9298-50f847a03431
 topic_type:
 - apiref
-ms.openlocfilehash: bf1b830f55110c00356527bc9caa41dfd94ae377
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f2b4028c78daf266e4ffecd86e6b0b30b9607d5b
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130462"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804810"
 ---
 # <a name="ihostgcmanagersuspensionstarting-method"></a>Método IHostGCManager::SuspensionStarting
 Notifica o host que o Common Language Runtime (CLR) está suspendendo a execução de tarefas, para executar uma coleta de lixo.  
@@ -35,7 +35,7 @@ HRESULT SuspensionStarting ();
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`SuspensionStarting` retornado com êxito.|  
+|S_OK|`SuspensionStarting`retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -46,21 +46,21 @@ HRESULT SuspensionStarting ();
  O CLR chama `SuspensionStarting` para informar ao host que a coleta de lixo está ocorrendo.  
   
 > [!IMPORTANT]
-> Não reagende esta tarefa. O host deve reagendar uma tarefa quando [ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-threadisblockingforsuspension-method.md) é chamado.  
+> Não reagende esta tarefa. O host deve reagendar uma tarefa quando [ThreadIsBlockingForSuspension](ihostgcmanager-threadisblockingforsuspension-method.md) é chamado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [Interface ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [Interface IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [Interface IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
-- [Interface IHostGCManager](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)
+- [Interface ICLRTask](iclrtask-interface.md)
+- [Interface ICLRTaskManager](iclrtaskmanager-interface.md)
+- [Interface IHostTask](ihosttask-interface.md)
+- [Interface IHostTaskManager](ihosttaskmanager-interface.md)
+- [Interface IHostGCManager](ihostgcmanager-interface.md)

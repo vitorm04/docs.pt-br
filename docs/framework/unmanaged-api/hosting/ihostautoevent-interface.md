@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6c1d15c1-a80a-4ee9-b1e4-6e859db6575a
 topic_type:
 - apiref
-ms.openlocfilehash: 2b191243ea03adcfecaadbd3a5871e1773b28bb1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a24939ac0b0808546ef3615fae4909c6c3cf8a2e
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124457"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804990"
 ---
 # <a name="ihostautoevent-interface"></a>Interface IHostAutoEvent
 Fornece uma representação da implementação do host de um evento de redefinição automática.  
@@ -28,21 +28,21 @@ Fornece uma representação da implementação do host de um evento de redefini�
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Set](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Define a instância de `IHostAutoEvent` atual como um estado sinalizado.|  
-|[Método Wait](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Faz com que a instância atual de `IHostAutoEvent` aguarde até que o evento seja propriedade ou um período de tempo especificado decorre.|  
+|[Método Set](ihostautoevent-set-method.md)|Define a `IHostAutoEvent` instância atual para um estado sinalizado.|  
+|[Método Wait](ihostautoevent-wait-method.md)|Faz com que a `IHostAutoEvent` instância atual aguarde até que o evento seja propriedade ou um período de tempo especificado decorre.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [Interface IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [Interface IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
-- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interface ICLRSyncManager](iclrsyncmanager-interface.md)
+- [Interface IHostManualEvent](ihostmanualevent-interface.md)
+- [Interface IHostSyncManager](ihostsyncmanager-interface.md)
+- [Interfaces de hospedagem](hosting-interfaces.md)

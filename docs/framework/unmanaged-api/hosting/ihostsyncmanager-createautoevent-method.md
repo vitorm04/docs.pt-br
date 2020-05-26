@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3153643e-cf5c-4b44-8e0e-c2b22cb08208
 topic_type:
 - apiref
-ms.openlocfilehash: b3778e12dd96d4f4653633252e13469601c4879d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ba221beaa0edce49e75f75edddaee72e1beb9747
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139444"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803496"
 ---
 # <a name="ihostsyncmanagercreateautoevent-method"></a>Método IHostSyncManager::CreateAutoEvent
 Cria um objeto de evento de redefinição automática.  
@@ -35,13 +35,13 @@ HRESULT CreateAutoEvent (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppEvent`  
- fora Um ponteiro para o endereço de uma instância de [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) implementada pelo host ou NULL se o objeto de evento não pôde ser criado.  
+ fora Um ponteiro para o endereço de uma instância de [IHostAutoEvent](ihostautoevent-interface.md) implementada pelo host ou NULL se o objeto de evento não pôde ser criado.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`CreateAutoEvent` retornado com êxito.|  
+|S_OK|`CreateAutoEvent`retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -50,20 +50,20 @@ HRESULT CreateAutoEvent (
 |E_OUTOFMEMORY|Não havia memória suficiente disponível para criar o objeto de evento solicitado.|  
   
 ## <a name="remarks"></a>Comentários  
- `CreateAutoEvent` cria um objeto de evento automático cujo estado é alterado automaticamente para não sinalizado após o lançamento do thread em espera. Esse método espelha a função de `CreateEvent` do Win32 com um valor de `false` especificado para o parâmetro `bManualReset`  
+ `CreateAutoEvent`Cria um objeto de evento automático cujo estado é alterado automaticamente para não sinalizado após o lançamento do thread em espera. Esse método espelha a função do Win32 `CreateEvent` com um valor de `false` especificado para o `bManualReset` parâmetro  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [Interface IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [Interface IHostControl](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
-- [Interface IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [Interface ICLRSyncManager](iclrsyncmanager-interface.md)
+- [Interface IHostAutoEvent](ihostautoevent-interface.md)
+- [Interface IHostControl](ihostcontrol-interface.md)
+- [Interface IHostSyncManager](ihostsyncmanager-interface.md)
