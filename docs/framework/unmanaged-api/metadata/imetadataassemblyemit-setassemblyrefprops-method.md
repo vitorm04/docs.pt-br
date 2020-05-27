@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 70a32bf3-9051-4f96-ae87-11356d06a073
 topic_type:
 - apiref
-ms.openlocfilehash: 6ad6bbb8a4c69f575bbeba3a297c46e049a97325
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb381a872cbeb787da0c6920f2cdeef434fb33ea
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176039"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008086"
 ---
-# <a name="imetadataassemblyemitsetassemblyrefprops-method"></a><span data-ttu-id="da5f7-102">Método IMetaDataAssemblyEmit::SetAssemblyRefProps</span><span class="sxs-lookup"><span data-stu-id="da5f7-102">IMetaDataAssemblyEmit::SetAssemblyRefProps Method</span></span>
-<span data-ttu-id="da5f7-103">Modifica a estrutura `AssemblyRef` de metadados especificada.</span><span class="sxs-lookup"><span data-stu-id="da5f7-103">Modifies the specified `AssemblyRef` metadata structure.</span></span>  
+# <a name="imetadataassemblyemitsetassemblyrefprops-method"></a><span data-ttu-id="ede84-102">Método IMetaDataAssemblyEmit::SetAssemblyRefProps</span><span class="sxs-lookup"><span data-stu-id="ede84-102">IMetaDataAssemblyEmit::SetAssemblyRefProps Method</span></span>
+<span data-ttu-id="ede84-103">Modifica a estrutura de `AssemblyRef` metadados especificada.</span><span class="sxs-lookup"><span data-stu-id="ede84-103">Modifies the specified `AssemblyRef` metadata structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="da5f7-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="da5f7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ede84-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ede84-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetAssemblyRefProps (  
@@ -40,43 +40,43 @@ HRESULT SetAssemblyRefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="da5f7-105">parâmetros</span><span class="sxs-lookup"><span data-stu-id="da5f7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ede84-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ede84-105">Parameters</span></span>  
  `ar`  
- <span data-ttu-id="da5f7-106">[em] O token de metadados `AssemblyRef` que especifica a estrutura de metadados a ser modificada.</span><span class="sxs-lookup"><span data-stu-id="da5f7-106">[in] The metadata token that specifies the `AssemblyRef` metadata structure to be modified.</span></span>  
+ <span data-ttu-id="ede84-106">no O token de metadados que especifica a `AssemblyRef` estrutura de metadados a ser modificada.</span><span class="sxs-lookup"><span data-stu-id="ede84-106">[in] The metadata token that specifies the `AssemblyRef` metadata structure to be modified.</span></span>  
   
  `pbPublicKeyOrToken`  
- <span data-ttu-id="da5f7-107">[em] A chave pública do editor da montagem referenciada.</span><span class="sxs-lookup"><span data-stu-id="da5f7-107">[in] The public key of the publisher of the referenced assembly.</span></span>  
+ <span data-ttu-id="ede84-107">no A chave pública do Publicador do assembly referenciado.</span><span class="sxs-lookup"><span data-stu-id="ede84-107">[in] The public key of the publisher of the referenced assembly.</span></span>  
   
  `cbPublicKeyOrToken`  
- <span data-ttu-id="da5f7-108">[em] O tamanho em bytes de `pbPublicKeyOrToken`.</span><span class="sxs-lookup"><span data-stu-id="da5f7-108">[in] The size in bytes of `pbPublicKeyOrToken`.</span></span>  
+ <span data-ttu-id="ede84-108">no O tamanho em bytes de `pbPublicKeyOrToken` .</span><span class="sxs-lookup"><span data-stu-id="ede84-108">[in] The size in bytes of `pbPublicKeyOrToken`.</span></span>  
   
  `szName`  
- <span data-ttu-id="da5f7-109">[em] O nome de texto de leitura humana da assembléia.</span><span class="sxs-lookup"><span data-stu-id="da5f7-109">[in] The human-readable text name of the assembly.</span></span>  
+ <span data-ttu-id="ede84-109">no O nome de texto legível por humanos do assembly.</span><span class="sxs-lookup"><span data-stu-id="ede84-109">[in] The human-readable text name of the assembly.</span></span>  
   
  `pMetaData`  
- <span data-ttu-id="da5f7-110">[em] Um ponteiro para uma instância ASSEMBLYMETADATA que contém as informações de versão, plataforma e local para o conjunto.</span><span class="sxs-lookup"><span data-stu-id="da5f7-110">[in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.</span></span>  
+ <span data-ttu-id="ede84-110">no Um ponteiro para uma instância ASSEMBLYMETADATA que contém a versão, a plataforma e as informações de localidade para o assembly.</span><span class="sxs-lookup"><span data-stu-id="ede84-110">[in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.</span></span>  
   
  `pbHashValue`  
- <span data-ttu-id="da5f7-111">[em] Um ponteiro para os dados de hash associados à montagem.</span><span class="sxs-lookup"><span data-stu-id="da5f7-111">[in] A pointer to the hash data associated with the assembly.</span></span>  
+ <span data-ttu-id="ede84-111">no Um ponteiro para os dados de hash associados ao assembly.</span><span class="sxs-lookup"><span data-stu-id="ede84-111">[in] A pointer to the hash data associated with the assembly.</span></span>  
   
  `cbHashValue`  
- <span data-ttu-id="da5f7-112">[em] O tamanho em bytes de `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="da5f7-112">[in] The size in bytes of `pbHashValue`.</span></span>  
+ <span data-ttu-id="ede84-112">no O tamanho em bytes de `pbHashValue` .</span><span class="sxs-lookup"><span data-stu-id="ede84-112">[in] The size in bytes of `pbHashValue`.</span></span>  
   
  `dwAssemblyRefFlags`  
- <span data-ttu-id="da5f7-113">[em] Uma combinação bitwise dos valores [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) que especificam atributos do conjunto referenciado.</span><span class="sxs-lookup"><span data-stu-id="da5f7-113">[in] A bitwise combination of [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) values that specify attributes of the referenced assembly.</span></span>  
+ <span data-ttu-id="ede84-113">no Uma combinação de bits de valores [AssemblyRefFlags](assemblyrefflags-enumeration.md) que especifica atributos do assembly referenciado.</span><span class="sxs-lookup"><span data-stu-id="ede84-113">[in] A bitwise combination of [AssemblyRefFlags](assemblyrefflags-enumeration.md) values that specify attributes of the referenced assembly.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="da5f7-114">Comentários</span><span class="sxs-lookup"><span data-stu-id="da5f7-114">Remarks</span></span>  
- <span data-ttu-id="da5f7-115">Para criar `AssemblyRef` uma estrutura de metadados, use o método [IMetaDataAssemblyEmit::DefineAssemblyRef.](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)</span><span class="sxs-lookup"><span data-stu-id="da5f7-115">To create an `AssemblyRef` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ede84-114">Comentários</span><span class="sxs-lookup"><span data-stu-id="ede84-114">Remarks</span></span>  
+ <span data-ttu-id="ede84-115">Para criar uma `AssemblyRef` estrutura de metadados, use o método [IMetaDataAssemblyEmit::D efineassemblyref](imetadataassemblyemit-defineassemblyref-method.md) .</span><span class="sxs-lookup"><span data-stu-id="ede84-115">To create an `AssemblyRef` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssemblyRef](imetadataassemblyemit-defineassemblyref-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="da5f7-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="da5f7-116">Requirements</span></span>  
- <span data-ttu-id="da5f7-117">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="da5f7-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ede84-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ede84-116">Requirements</span></span>  
+ <span data-ttu-id="ede84-117">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ede84-117">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="da5f7-118">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="da5f7-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ede84-118">**Cabeçalho:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="ede84-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="da5f7-119">**Biblioteca:** Usado como recurso em MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="da5f7-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ede84-119">**Biblioteca:** Usado como um recurso em MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="ede84-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="da5f7-120">**.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="da5f7-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ede84-120">**.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ede84-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="da5f7-121">Confira também</span><span class="sxs-lookup"><span data-stu-id="da5f7-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ede84-121">Confira também</span><span class="sxs-lookup"><span data-stu-id="ede84-121">See also</span></span>
 
-- [<span data-ttu-id="da5f7-122">Interface IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="da5f7-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="ede84-122">Interface IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="ede84-122">IMetaDataAssemblyEmit Interface</span></span>](imetadataassemblyemit-interface.md)
