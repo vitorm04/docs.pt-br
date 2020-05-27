@@ -14,34 +14,34 @@ helpviewer_keywords:
 ms.assetid: e79456b1-045b-4a84-9714-2ea560ff75ea
 topic_type:
 - apiref
-ms.openlocfilehash: 90f7899beea204ea53a587200807ccd807cd6c11
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c9cc545f0b3fbe20ef6eb2a72aadf8d6b4374867
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426144"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008229"
 ---
-# <a name="ihostfilter-interface"></a><span data-ttu-id="cae07-102">Interface IHostFilter</span><span class="sxs-lookup"><span data-stu-id="cae07-102">IHostFilter Interface</span></span>
-<span data-ttu-id="cae07-103">Fornece um método para indicar que um token especificado será processado.</span><span class="sxs-lookup"><span data-stu-id="cae07-103">Provides a method to indicate that a specified token will be processed.</span></span>  
+# <a name="ihostfilter-interface"></a><span data-ttu-id="c679e-102">Interface IHostFilter</span><span class="sxs-lookup"><span data-stu-id="c679e-102">IHostFilter Interface</span></span>
+<span data-ttu-id="c679e-103">Fornece um método para indicar que um token especificado será processado.</span><span class="sxs-lookup"><span data-stu-id="c679e-103">Provides a method to indicate that a specified token will be processed.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="cae07-104">A interface de `IHostFilter` deve ser implementada pelo cliente.</span><span class="sxs-lookup"><span data-stu-id="cae07-104">The `IHostFilter` interface must be implemented by the client.</span></span>  
+> <span data-ttu-id="c679e-104">A `IHostFilter` interface deve ser implementada pelo cliente.</span><span class="sxs-lookup"><span data-stu-id="c679e-104">The `IHostFilter` interface must be implemented by the client.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="cae07-105">{1&gt;Métodos&lt;1}</span><span class="sxs-lookup"><span data-stu-id="cae07-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="c679e-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="c679e-105">Methods</span></span>  
   
-|<span data-ttu-id="cae07-106">Método</span><span class="sxs-lookup"><span data-stu-id="cae07-106">Method</span></span>|<span data-ttu-id="cae07-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="cae07-107">Description</span></span>|  
+|<span data-ttu-id="c679e-106">Método</span><span class="sxs-lookup"><span data-stu-id="c679e-106">Method</span></span>|<span data-ttu-id="c679e-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="c679e-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="cae07-108">Método MarkToken</span><span class="sxs-lookup"><span data-stu-id="cae07-108">MarkToken Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|<span data-ttu-id="cae07-109">Indica que o token de metadados especificado será processado.</span><span class="sxs-lookup"><span data-stu-id="cae07-109">Indicates that the specified metadata token will be processed.</span></span>|  
+|[<span data-ttu-id="c679e-108">Método MarkToken</span><span class="sxs-lookup"><span data-stu-id="c679e-108">MarkToken Method</span></span>](ihostfilter-marktoken-method.md)|<span data-ttu-id="c679e-109">Indica que o token de metadados especificado será processado.</span><span class="sxs-lookup"><span data-stu-id="c679e-109">Indicates that the specified metadata token will be processed.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="cae07-110">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="cae07-110">Requirements</span></span>  
- <span data-ttu-id="cae07-111">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cae07-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c679e-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c679e-110">Requirements</span></span>  
+ <span data-ttu-id="c679e-111">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c679e-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cae07-112">**Cabeçalho:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="cae07-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c679e-112">**Cabeçalho:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="c679e-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="cae07-113">**Biblioteca:** Usado como um recurso em MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="cae07-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c679e-113">**Biblioteca:** Usado como um recurso em MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="c679e-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="cae07-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cae07-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c679e-114">**.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c679e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cae07-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cae07-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c679e-115">Confira também</span><span class="sxs-lookup"><span data-stu-id="c679e-115">See also</span></span>
 
-- [<span data-ttu-id="cae07-116">Interfaces de metadados</span><span class="sxs-lookup"><span data-stu-id="cae07-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="c679e-116">Interfaces de metadados</span><span class="sxs-lookup"><span data-stu-id="c679e-116">Metadata Interfaces</span></span>](metadata-interfaces.md)
