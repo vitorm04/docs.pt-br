@@ -4,50 +4,56 @@ description: Siga os tutoriais para aprender como criar aplicativos e biblioteca
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 84784787465bec43cc460d34ca84e4baa5a15d7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9fb87180bb001a7f54d93c6e95631562103c49e8
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77625928"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840917"
 ---
-# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Aprenda as ferramentas .NET Core e o .NET Core SDK explorando esses tutoriais
+# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Aprenda sobre o .NET Core e as ferramentas de SDK do .NET Core explorando estes tutoriais
 
 Os tutoriais a seguir estão disponíveis para aprender mais sobre o .NET Core.
 
-## <a name="create-applications-with-visual-studio"></a>Crie aplicativos com o Visual Studio
+## <a name="use-visual-studio"></a>Usar o Virtual Studio
 
-- [Crie um aplicativo de console Hello World](with-visual-studio.md)
-- [Depurar seu aplicativo Hello World](debugging-with-visual-studio.md)
-- [Publique seu aplicativo Hello World](publishing-with-visual-studio.md)
-- [Construa uma biblioteca de classes](library-with-visual-studio.md)
-- [Teste uma biblioteca de classes](testing-library-with-visual-studio.md)
-- [Consumir uma biblioteca de classes](consuming-library-with-visual-studio.md)
-- [Azure Cosmos DB: Comece com a API SQL e o .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [Criar um aplicativo de console](with-visual-studio.md)
+- [Criar um aplicativo de console F #](../../fsharp/get-started/get-started-visual-studio.md)
+- [Depurar um aplicativo](debugging-with-visual-studio.md)
+- [Publicar um aplicativo](publishing-with-visual-studio.md)
+- [Criar uma biblioteca de classes](library-with-visual-studio.md)
+- [Teste de unidade em uma biblioteca de classes](testing-library-with-visual-studio.md)
+- [Usar uma biblioteca de classes](consuming-library-with-visual-studio.md)
+- [Instalar e usar um pacote](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
+- [Criar e publicar um pacote](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
 
-## <a name="build-applications-with-visual-studio-code"></a>Construir aplicativos com o Visual Studio Code
+## <a name="use-visual-studio-code"></a>Usar o Visual Studio Code
 
-- [Comece com C# e Visual Studio Code](with-visual-studio-code.md)
-- [Introdução ao .NET Core no macOS](using-on-macos.md)
+Escolha estes tutoriais se quiser usar Visual Studio Code ou algum outro editor de código. Todos usam a CLI para tarefas de desenvolvimento do .NET Core; portanto, todos podem ser usados com qualquer editor de código.
 
-## <a name="build-applications-with-visual-studio-for-mac"></a>Construa aplicativos com o Visual Studio para Mac
+- [Criar um aplicativo de console](with-visual-studio-code.md)
+- [Criar um aplicativo de console e publicá-lo](cli-create-console-app.md)
+- [Criar um aplicativo de console F #](../../fsharp/get-started/get-started-vscode.md)
+- [Criar uma biblioteca e teste de unidade it-macOS](using-on-macos.md)
+- [Instalar e usar um pacote](/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli)
+- [Criar e publicar um pacote](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
 
-- [Introdução ao .NET Core no macOS, usando o Visual Studio para Mac](using-on-mac-vs.md)
-- [Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac](using-on-mac-vs-full-solution.md)
+## <a name="use-visual-studio-for-mac"></a>Usar o Visual Studio para Mac
 
-## <a name="build-applications-with-the-net-core-cli"></a>Criar aplicativos com o .NET Core CLI
+- [Criar um aplicativo de console](using-on-mac-vs.md)
+- [Criar uma biblioteca e um teste de unidade](using-on-mac-vs-full-solution.md)
+- [Instalar e usar um pacote](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
-- [Comece com o .NET Core no Windows/Linux/macOS usando o .NET Core CLI](cli-create-console-app.md)
-- [Organização e teste de projetos com o .NET Core CLI](testing-with-cli.md)
-- [Get started with F#](../../fsharp/get-started/get-started-command-line.md) (Introdução ao F#)
+## <a name="advanced-topics"></a>Tópicos avançados
 
-## <a name="other"></a>Outros
-
-- [Teste de unidade no .NET Core usando dotnet test](../testing/unit-testing-with-dotnet-test.md)
-- [Teste de unidade com o MSTest e .NET Core](../testing/unit-testing-with-mstest.md)
-- [Desenvolver bibliotecas com as ferramentas de plataforma cruzada](libraries.md)
-- [Hospedando o .NET Core com base no código nativo](netcore-hosting.md)
+- [Como criar bibliotecas](libraries.md)
+- [Teste de unidade de um aplicativo com xUnit](testing-with-cli.md)
+- [Teste de unidade usando C#/VB/F # com NUnit/xUnit/MSTest](../testing/index.md)
+- [Teste de unidade ao vivo com o Visual Studio](/visualstudio/test/live-unit-testing-start)
 - [Criar modelos para a CLI](cli-templates-create-item-template.md)
-- [Crie e use ferramentas para a CLI](../tools/global-tools-how-to-create.md)
+- [Criar e usar ferramentas para a CLI](../tools/global-tools-how-to-create.md)
+- [Criar um aplicativo com plug-ins](creating-app-with-plugin-support.md)
+
+## <a name="create-web-apps"></a>Criar aplicativos Web
 
 Para ver tutoriais sobre como desenvolver aplicativos Web do ASP.NET Core, consulte a [documentação do ASP.NET Core](/aspnet/core/).

@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Saiba como restaurar as dependências e ferramentas específicas de projeto com o comando dotnet restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: cc8f374468ba95baccf058ac0b0a0175672cdf01
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 29f81b09a01e689d3f6d86c16b1f134c9fe6b6a0
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158301"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840930"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -42,14 +42,14 @@ O comando `dotnet restore` usa o NuGet para restaurar as dependências e ferrame
 - [`dotnet publish`](dotnet-publish.md)
 - [`dotnet pack`](dotnet-pack.md)
 
-Às vezes, pode ser inconveniente executar a restauração implícita do NuGet com estes comandos. Por exemplo, alguns sistemas automatizados, como os sistemas de compilação, precisam chamar o `dotnet restore` explicitamente para controlar o momento em que a restauração ocorre para que possam controlar o uso de rede. Para evitar a restauração implícita do NuGet, você pode usar `--no-restore` o sinalizador com qualquer um desses comandos para desabilitar a restauração implícita.
+Às vezes, pode ser inconveniente executar a restauração implícita do NuGet com estes comandos. Por exemplo, alguns sistemas automatizados, como os sistemas de compilação, precisam chamar o `dotnet restore` explicitamente para controlar o momento em que a restauração ocorre para que possam controlar o uso de rede. Para evitar a restauração implícita do NuGet, você pode usar o `--no-restore` sinalizador com qualquer um desses comandos para desabilitar a restauração implícita.
 
 ### <a name="specify-feeds"></a>Especificar feeds
 
 Para restaurar as dependências, o NuGet precisa dos feeds nos quais os pacotes estão localizados. Os feeds são geralmente fornecidos por meio do arquivo de configuração *nuget.config*. Um arquivo de configuração padrão é fornecido quando o SDK do .NET Core é instalado. Para especificar Feeds adicionais, siga um destes procedimentos:
 
 - Crie seu próprio arquivo *NuGet. config* no diretório do projeto. Para obter mais informações, consulte [as configurações comuns do NuGet e as](/nuget/consume-packages/configuring-nuget-behavior) diferenças de [NuGet. config](#nugetconfig-differences) mais adiante neste artigo.
-- Use `dotnet nuget` comandos como [`dotnet nuget add source`](dotnet-nuget-add-source.md).
+- Use `dotnet nuget` comandos como [`dotnet nuget add source`](dotnet-nuget-add-source.md) .
 
 Você pode substituir os feeds *NuGet. config* pela `-s` opção.
 
@@ -143,7 +143,7 @@ Há três configurações específicas que são ignoradas por `dotnet restore`:
 
 - **`-s|--source <SOURCE>`**
 
-  Especifica uma origem de pacote NuGet a ser usada durante a operação de restauração. Essa configuração substitui todas as fontes especificadas nos arquivos *nuget.config*. Diversas fontes podem ser fornecidas especificando essa opção várias vezes.
+  Especifica o URI da origem do pacote NuGet a ser usado durante a operação de restauração. Essa configuração substitui todas as fontes especificadas nos arquivos *nuget.config*. Diversas fontes podem ser fornecidas especificando essa opção várias vezes.
 
 - **`--use-lockfile`**
 
@@ -161,7 +161,7 @@ Há três configurações específicas que são ignoradas por `dotnet restore`:
   dotnet restore
   ```
 
-- Restaure as dependências e as `app1` ferramentas do projeto encontradas no caminho fornecido:
+- Restaure as dependências e as ferramentas do `app1` projeto encontradas no caminho fornecido:
 
   ```dotnetcli
   dotnet restore ~/projects/app1/app1.csproj

@@ -3,12 +3,12 @@ title: Arquitetando aplicativos .NET nativos de nuvem para o Azure
 description: Um guia para a criação de aplicativos nativos de nuvem que aproveitam contêineres, microservices e recursos sem servidor do Azure.
 author: ardalis
 ms.date: 05/13/2020
-ms.openlocfilehash: 1607c1bbcc9bbb3c9fe19840a2827aa5ea083728
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 196671468e56147f714078d1671f44af21bcf327
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613987"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840878"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Arquitetando aplicativos .NET nativos de nuvem para o Azure
 
@@ -34,7 +34,7 @@ Este livro é fornecido “no estado em que se encontra” e expressa os pontos 
 
  Alguns exemplos aqui representados são fornecidos somente para fins de ilustração e são fictícios. Nenhuma associação ou conexão real é intencional ou deve ser inferida.
 
-A Microsoft e as marcas listadas em https://www.microsoft.com na página da Web "Marcas" são marcas comerciais do grupo de empresas Microsoft.
+A Microsoft e as marcas registradas listadas na [https://www.microsoft.com](https://www.microsoft.com) página da Web "marcas registradas" são marcas comerciais do grupo de empresas Microsoft.
 
 Mac e macOS são marcas comerciais da Apple Inc.
 
