@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: d6775263e6f1afb227aa263b01d60f5181da74f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c203716d9bb8298c934a999a496793c294949ddb
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093504"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007748"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumentos de linha de comando (Guia de Programação em C#)
 
@@ -20,11 +20,14 @@ Você pode enviar argumentos para o método `Main` definindo o método de uma da
 [!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]
 
 > [!NOTE]
-> Para habilitar argumentos de `Main` linha de comando no método em um `Main` aplicativo Do Windows Forms, você deve modificar manualmente a assinatura do *program.cs*. O código gerado pelo Designer de Formulários do Windows cria um `Main` sem um parâmetro de entrada. Você também pode usar <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> ou <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> para acessar os argumentos de linha de comando de qualquer ponto em um console ou um aplicativo do Windows.
+> Para habilitar argumentos de linha de comando no `Main` método em um aplicativo Windows Forms, você deve modificar manualmente a assinatura do `Main` em *Program.cs*. O código gerado pelo Designer de Formulários do Windows cria um `Main` sem um parâmetro de entrada. Você também pode usar <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> ou <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> para acessar os argumentos de linha de comando de qualquer ponto em um console ou um aplicativo do Windows.
 
 O parâmetro do método `Main` é uma matriz <xref:System.String> que representa os argumentos de linha de comando. Geralmente você determina se os argumentos existem testando a propriedade `Length`, por exemplo:
 
 [!code-csharp[csProgGuideMain#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#4)]
+
+> [!TIP]
+> A `args` matriz não pode ser nula. Portanto, é seguro acessar a `Length` Propriedade sem verificação nula.
 
 Você também pode converter os argumentos de cadeia de caracteres em tipos numéricos, usando a classe <xref:System.Convert> ou o método `Parse`. Por exemplo, a instrução a seguir converte o `string` em um número `long` usando o método <xref:System.Int64.Parse%2A>:
 
@@ -52,7 +55,7 @@ O exemplo a seguir mostra como usar argumentos de linha de comando em um aplicat
 
 Para compilar e executar o aplicativo em um prompt de comando, siga estas etapas:
 
-1. Cole o seguinte código em qualquer editor de texto e, em seguida, salve o arquivo como um arquivo de texto com o nome *Factorial.cs*.
+1. Cole o código a seguir em qualquer editor de texto e, em seguida, salve o arquivo como um arquivo de texto com o nome *factorial.cs*.
 
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]
 
@@ -62,7 +65,7 @@ Para compilar e executar o aplicativo em um prompt de comando, siga estas etapas
   
      `csc Factorial.cs`  
   
-     Se o aplicativo não tiver erros de compilação, um arquivo executável chamado *Factorial.exe* será criado.
+     Se seu aplicativo não tiver erros de compilação, um arquivo executável chamado *fatorial. exe* será criado.
   
 4. Digite o seguinte comando para calcular o fatorial de 3:
   
@@ -76,8 +79,8 @@ Para compilar e executar o aplicativo em um prompt de comando, siga estas etapas
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Environment?displayProperty=nameWithType>
-- [C# Guia de Programação](../index.md)
-- [Main() e argumentos de linha de comando](index.md)
+- [Guia de programação C#](../index.md)
+- [Argumentos Main () e de linha de comando](index.md)
 - [Como exibir argumentos de linha de comando](how-to-display-command-line-arguments.md)
-- [Valores retornados de Main()](main-return-values.md)
+- [Valores de retorno de Main()](main-return-values.md)
 - [Classes](../classes-and-structs/classes.md)
