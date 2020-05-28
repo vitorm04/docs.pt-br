@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Saiba mais sobre os SDKs do projeto .NET Core.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: 88ec1bf2c4917c69b80b997d090219097694d2bc
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 67dede3caabd2967adca22e7563376c761829655
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206056"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144233"
 ---
 # <a name="net-core-project-sdks"></a>SDKs do projeto do .NET Core
 
@@ -21,8 +21,8 @@ Os seguintes SDKs estão disponíveis para o .NET Core:
 
 | ID | Descrição | Repositório|
 | - | - | - |
-| `Microsoft.NET.Sdk` | O SDK do .NET Core | https://github.com/dotnet/sdk |
-| `Microsoft.NET.Sdk.Web` | O [SDK Web](/aspnet/core/razor-pages/web-sdk) do .NET Core | https://github.com/aspnet/websdk |
+| `Microsoft.NET.Sdk` | O SDK do .NET Core | <https://github.com/dotnet/sdk> |
+| `Microsoft.NET.Sdk.Web` | O [SDK Web](/aspnet/core/razor-pages/web-sdk) do .NET Core | <https://github.com/aspnet/websdk> |
 | `Microsoft.NET.Sdk.Razor` | O SDK do .NET Core do [Razor](/aspnet/core/razor-pages/sdk) |
 | `Microsoft.NET.Sdk.Worker` | O SDK do serviço de trabalho do .NET Core |
 | `Microsoft.NET.Sdk.WindowsDesktop` | O SDK do .NET Core WinForms e WPF |
@@ -174,7 +174,7 @@ Para consumir um destino personalizado em seu projeto, adicione um `PackageRefer
 
 Você pode configurar como usar o destino personalizado. Como é um destino do MSBuild, ele pode depender de um determinado destino, executado após outro destino ou ser invocado manualmente usando o `dotnet msbuild -t:<target-name>` comando. No entanto, para proporcionar uma melhor experiência do usuário, você pode combinar ferramentas por projeto e destinos personalizados. Nesse cenário, a ferramenta por projeto aceita todos os parâmetros necessários e converte-os na [`dotnet msbuild`](../tools/dotnet-msbuild.md) invocação necessária que executa o destino. Veja um exemplo desse tipo de sinergia no repositório [Exemplos do MVP Summit 2016 Hackathon](https://github.com/dotnet/MVPSummitHackathon2016) do projeto [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Instalar o .NET Core](../install/index.md)
 - [Como usar SDKs de projeto do MSBuild](/visualstudio/msbuild/how-to-use-project-sdk)

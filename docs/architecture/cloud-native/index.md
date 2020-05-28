@@ -3,12 +3,12 @@ title: Arquitetando aplicativos .NET nativos de nuvem para o Azure
 description: Um guia para a criação de aplicativos nativos de nuvem que aproveitam contêineres, microservices e recursos sem servidor do Azure.
 author: ardalis
 ms.date: 05/13/2020
-ms.openlocfilehash: 196671468e56147f714078d1671f44af21bcf327
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: b315f097b1584bd93f694c10f36ee7524d7e020a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840878"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144377"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Arquitetando aplicativos .NET nativos de nuvem para o Azure
 
@@ -34,7 +34,7 @@ Este livro é fornecido “no estado em que se encontra” e expressa os pontos 
 
  Alguns exemplos aqui representados são fornecidos somente para fins de ilustração e são fictícios. Nenhuma associação ou conexão real é intencional ou deve ser inferida.
 
-A Microsoft e as marcas registradas listadas na [https://www.microsoft.com](https://www.microsoft.com) página da Web "marcas registradas" são marcas comerciais do grupo de empresas Microsoft.
+A Microsoft e as marcas listadas em <https://www.microsoft.com> na página da Web "Marcas" são marcas comerciais do grupo de empresas Microsoft.
 
 Mac e macOS são marcas comerciais da Apple Inc.
 
@@ -44,7 +44,7 @@ Todas as outras marcas e logotipos são propriedade de seus respectivos propriet
 
 Autores:
 
-> **Rob Vettor**, arquiteto de sistema de nuvem principal/arquiteto de IP- [thinkingincloudnative.com](http://thinkingincloudnative.com/about/), Microsoft
+> **Rob Vettor**, arquiteto de sistema de nuvem principal/arquiteto de IP- [thinkingincloudnative.com](https://thinkingincloudnative.com/about/), Microsoft
 >
 > **Steve "ardalis" Smith**, arquiteto de software e instrutor- [Ardalis.com](https://ardalis.com)
 

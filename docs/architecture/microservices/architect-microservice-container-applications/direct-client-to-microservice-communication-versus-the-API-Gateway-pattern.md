@@ -2,12 +2,12 @@
 title: Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 description: Entenda as diferenças e os usos do padrão de gateway de API e da comunicação direta de cliente com microsserviço.
 ms.date: 01/07/2019
-ms.openlocfilehash: 47e9a383c1fcb6c9fec38cb376b60a4ab839077d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c2f3bd32396b45a6209550f5b7a07c88795ccc0
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401721"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144325"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 
@@ -17,7 +17,7 @@ Em uma arquitetura de microsserviços, cada microsserviço expõe um conjunto de
 
 Uma abordagem possível é usar uma arquitetura de comunicação direta de cliente com microsserviço. Nessa abordagem, um aplicativo cliente pode fazer solicitações diretamente para alguns dos microsserviços, conforme mostra a Figura 4-12.
 
-![Diagrama mostrando arquitetura de comunicação cliente-microserviço.](./media/direct-client-to-microservice-communication.png)
+![Diagrama mostrando a arquitetura de comunicação de cliente para microserviço.](./media/direct-client-to-microservice-communication.png)
 
 **Figura 4-12**. Usando uma arquitetura de comunicação direta de cliente com microsserviço
 
@@ -39,7 +39,7 @@ Interagir com vários microsserviços para criar uma única tela de interface do
 
 Implementar preocupações relativas a segurança e abrangentes, como segurança e autorização em cada microsserviço, pode exigir um esforço significativo de desenvolvimento. Uma abordagem possível é ter esses serviços no host do Docker ou no cluster interno para restringir o acesso direto a eles do lado de fora e implementar esses interesses paralelos em um local centralizado, como um Gateway de API.
 
-- *Como os aplicativos clientes podem se comunicar com serviços que usam protocolos não-amigáveis à Internet?*
+- *Como os aplicativos cliente podem se comunicar com serviços que usam protocolos não amigáveis para a Internet?*
 
 Protocolos usados no lado do servidor (como AMQP ou protocolos binários) geralmente não são compatíveis com aplicativos cliente. Portanto, as solicitações devem ser executadas por meio de protocolos como HTTP/HTTPS e convertidas em outros protocolos posteriormente. Uma abordagem *man-in-the-middle* pode ajudar nessa situação.
 
@@ -59,21 +59,21 @@ Portanto, ter um nível intermediário ou indireto (Gateway) pode ser muito conv
 
 - **Problemas de segurança**: sem um gateway, todos os microsserviços precisam ser expostos ao "mundo externo", tornando a superfície de ataque maior do que se você ocultar microsserviços internos que não são usados ​​diretamente pelos aplicativos cliente. Quanto menor a superfície de ataque, mais segura sua aplicação pode ser.
 
-- **Preocupações transversais**: Cada microserviço publicado publicamente deve lidar com preocupações como autorização, SSL, etc. Em muitas situações, essas preocupações poderiam ser tratadas em um único nível para que os microsserviços internos sejam simplificados.
+- **Preocupações**abrangentes: cada microserviço publicado publicamente deve lidar com questões como autorização, SSL, etc. Em muitas situações, essas questões podem ser tratadas em uma única camada para que os microserviços internos sejam simplificados.
 
 ## <a name="what-is-the-api-gateway-pattern"></a>Por que o padrão de Gateway de API?
 
-Quando você projeta e cria aplicativos grandes ou complexos baseado em microsserviço com vários aplicativos cliente, uma boa abordagem a considerar pode ser um [Gateway de API](https://microservices.io/patterns/apigateway.html). Esse é um serviço que fornece um único ponto de entrada para determinados grupos de microsserviços. É semelhante ao [padrão fachada](https://en.wikipedia.org/wiki/Facade_pattern) do design orientado a objetos, mas neste caso, é parte de um sistema distribuído. O padrão de Gateway de API às vezes também é conhecido como [BFF](https://samnewman.io/patterns/architectural/bff/) ("back-end para front-end"), porque ele é criado pensando nas necessidades do aplicativo cliente.
+Quando você projeta e cria aplicativos grandes ou complexos baseado em microsserviço com vários aplicativos cliente, uma boa abordagem a considerar pode ser um [Gateway de API](https://microservices.io/patterns/apigateway.html). Esse é um serviço que fornece um único ponto de entrada para determinados grupos de microsserviços. É semelhante ao [padrão fachada](https://en.wikipedia.org/wiki/Facade_pattern) do design orientado a objeto, mas, nesse caso, faz parte de um sistema distribuído. O padrão de Gateway de API às vezes também é conhecido como [BFF](https://samnewman.io/patterns/architectural/bff/) ("back-end para front-end"), porque ele é criado pensando nas necessidades do aplicativo cliente.
 
 Portanto, o gateway da API fica entre os aplicativos cliente e os microsserviços. Ele atua como um proxy reverso, encaminhando as solicitações de clientes para serviços. Ele também pode fornecer outros recursos paralelos, como autenticação, terminação SSL e cache.
 
 A Figura 4-13 mostra como um Gateway de API personalizado pode se encaixar em uma arquitetura simplificada baseada em microsserviço com apenas alguns microsserviços.
 
-![Diagrama mostrando um Gateway de API implementado como um serviço personalizado.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/custom-service-api-gateway.png)
+![Diagrama que mostra um gateway de API implementado como um serviço personalizado.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/custom-service-api-gateway.png)
 
 **Figura 4-13**. Uso de um Gateway de API implementado como um serviço personalizado
 
-Os aplicativos se conectam a um único ponto final, o API Gateway, configurado para encaminhar solicitações a microsserviços individuais. Neste exemplo, o Gateway de API deve ser implementado como um serviço de WebHost ASP.NET Core personalizado em execução como um contêiner.
+Os aplicativos se conectam a um único ponto de extremidade, o gateway de API, que é configurado para encaminhar solicitações a microserviços individuais. Neste exemplo, o Gateway de API deve ser implementado como um serviço de WebHost ASP.NET Core personalizado em execução como um contêiner.
 
 É importante destacar que, neste diagrama, você usa um único serviço personalizado de Gateway de API, voltado para vários aplicativos cliente diferentes. Esse fato pode ser um risco importante, pois seu serviço de Gateway de API estará crescendo e em evolução com base em vários requisitos diferentes dos aplicativos cliente. Eventualmente, ele será inflado devido a essas necessidades diferentes e efetivamente pode ser muito semelhante a um aplicativo monolítico ou serviço monolítico. É por isso que é muito recomendável dividir o Gateway de API em vários serviços ou vários Gateways de API menores, um por tipo de fator forma de aplicativo cliente, por exemplo.
 
@@ -81,13 +81,13 @@ Os aplicativos se conectam a um único ponto final, o API Gateway, configurado p
 
 Portanto, os Gateways de API devem ser segregados com base nos limites de negócios e nos aplicativos cliente, e não agir como um agregador único para todos os microsserviços internos.
 
-Ao dividir a camada do Gateway de API em vários Gateways de API, se o aplicativo tiver vários aplicativos cliente, isso poderá ser um fator fundamental ao identificar os vários tipos de Gateways de API, de modo que você possa ter uma fachada distinta para as necessidades de cada aplicativo cliente. Este caso é um padrão chamado "Backend for Frontend"[(BFF),](https://samnewman.io/patterns/architectural/bff/)onde cada Gateway aPI pode fornecer uma API diferente adaptada para cada tipo de aplicativo cliente, possivelmente até mesmo com base no fator de forma do cliente, implementando um código adaptador específico que por baixo chama vários microsserviços internos, como mostrado na imagem a seguir:
+Ao dividir a camada do Gateway de API em vários Gateways de API, se o aplicativo tiver vários aplicativos cliente, isso poderá ser um fator fundamental ao identificar os vários tipos de Gateways de API, de modo que você possa ter uma fachada distinta para as necessidades de cada aplicativo cliente. Esse caso é um padrão chamado "back-end para front-end" ([BFF](https://samnewman.io/patterns/architectural/bff/)), em que cada gateway de API pode fornecer uma API diferente adaptada para cada tipo de aplicativo cliente, possivelmente mesmo com base no fator forma de cliente implementando um código de adaptador específico que, sob a chamada de vários microserviços internos, conforme mostrado na imagem a seguir:
 
-![Diagrama mostrando vários Gateways de API personalizados.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/multiple-custom-api-gateways.png)
+![Diagrama mostrando vários gateways de API personalizados.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/multiple-custom-api-gateways.png)
 
 **Figura 4-13.1**. Uso de mostrando vários Gateways de API personalizados
 
-A Figura 4-13.1 mostra gateways api que são segregados por tipo de cliente; um para clientes móveis e outro para clientes web. Um aplicativo Web tradicional se conecta a um microsserviço MVC que usa o Gateway de API Web. O exemplo mostra uma arquitetura simplificada com vários Gateways de API de grão fino. Nesse caso, os limites identificados para cada Gateway de API são baseados puramente no padrão [BFF](https://samnewman.io/patterns/architectural/bff/) ("Back-end para Front-end"), portanto, baseados apenas na API necessária por aplicativo cliente. Porém, em aplicativos maiores, você deve ir além e criar Gateways de API adicionais com base nos limites de negócios como um segundo fator de design.
+Figura 4-13.1 mostra os gateways de API que são separados por tipo de cliente; um para clientes móveis e outro para clientes Web. Um aplicativo Web tradicional se conecta a um microsserviço MVC que usa o Gateway de API Web. O exemplo ilustra uma arquitetura simplificada com vários gateways de API refinados. Nesse caso, os limites identificados para cada Gateway de API são baseados puramente no padrão [BFF](https://samnewman.io/patterns/architectural/bff/) ("Back-end para Front-end"), portanto, baseados apenas na API necessária por aplicativo cliente. Porém, em aplicativos maiores, você deve ir além e criar Gateways de API adicionais com base nos limites de negócios como um segundo fator de design.
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>Principais recursos do padrão de Gateway de API
 
@@ -128,11 +128,11 @@ Pode haver muitos outros interesses paralelos oferecidos pelos produtos de Gatew
 
 O [Gerenciamento de API do Azure](https://azure.microsoft.com/services/api-management/) (conforme mostrado na Figura 4-14) não apenas soluciona as necessidades do Gateway de API, mas também fornece funcionalidades como coleta de insights das APIs. Se você estiver usando uma solução de gerenciamento de API, um Gateway de API será apenas um componente nessa solução completa de gerenciamento de API.
 
-![Diagrama mostrando como usar o Gerenciamento de API do Azure como seu gateway de API.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/api-gateway-azure-api-management.png)
+![Diagrama mostrando como usar o gerenciamento de API do Azure como seu gateway de API.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/api-gateway-azure-api-management.png)
 
 **Figura 4-14**. Usando o Gerenciamento de API do Azure para o Gateway de API
 
-O Azure API Management resolve as necessidades do Gateway e do Gerenciamento da API, como registro, segurança, medição, etc. Neste caso, ao usar um produto como o Azure API Management, o fato de que você pode ter um único Gateway De PiON não é tão arriscado porque esses tipos de Gateways aPI são "mais finos", o que significa que você não implementa código C# personalizado que pode evoluir para um componente monolítico.
+O gerenciamento de API do Azure resolve o gateway de API e as necessidades de gerenciamento, como log, segurança, medição, etc. Nesse caso, ao usar um produto como o gerenciamento de API do Azure, o fato de que você pode ter um único gateway de API não é tão arriscado, pois esses tipos de gateways de API são "mais finos", o que significa que você não implementa código C# personalizado que poderia evoluir em direção a um componente monolítico.
 
 Os produtos de Gateway de API costumam atuar como um proxy reverso para comunicação de entrada, em que você também pode filtrar as APIs dos microsserviços internos e aplicar a autorização para as APIs publicadas nessa camada única.
 
@@ -146,7 +146,7 @@ Neste guia e no aplicativo de exemplo de referência (eShopOnContainers), a arqu
 
 O [Ocelot](https://github.com/ThreeMammals/Ocelot) é um Gateway de API leve, recomendado para abordagens mais simples. O Ocelot é um Gateway de API baseado no .NET Core de Software Livre, feito especialmente para a arquitetura de microsserviços que precisa de pontos de entrada unificados no sistema. Ele é leve, rápido, escalonável e fornece roteamento e autenticação entre muitos outros recursos.
 
-A principal razão para escolher o Ocelot para o [aplicativo de referência eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) é porque o Ocelot é um Gateway de API leve .NET Core que você pode implantar no mesmo ambiente de implantação de aplicativos onde você está implantando seus microserviços/contêineres, como um Host Docker, Kubernetes, etc. E como é baseado no .NET Core, é multiplataforma que permite implantar no Linux ou Windows.
+O principal motivo para escolher Ocelot para o [aplicativo de referência eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) é porque o Ocelot é um gateway de API leve do .NET Core que pode ser implantado no mesmo ambiente de implantação de aplicativos em que você está implantando seus microserviços/contêineres, como um host do Docker, kubernetes, etc. E, como ele é baseado no .NET Core, ele é multiplataforma que permite que você implante no Linux ou no Windows.
 
 Os diagramas anteriores que mostram os Gateways de API personalizados em execução nos contêineres correspondem precisamente ao modo como você também pode executar o Ocelot em um contêiner e em um aplicativo baseado em microsserviço.
 
@@ -170,27 +170,27 @@ Após as seções iniciais de explicação sobre arquitetura e padrões, as pró
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Chris Richardson. Padrão: Gateway de API / Backend para Front-End** \
+- **Chris Richardson. Padrão: gateway de API/backend para front-end** \
   <https://microservices.io/patterns/apigateway.html>
 
 - **Padrão de gateway de API** \
   <https://docs.microsoft.com/azure/architecture/microservices/gateway>
 
-- **Agregação e padrão de composição** \
+- **Padrão de agregação e composição** \
   <https://microservices.io/patterns/data/api-composition.html>
 
 - **Gerenciamento de API do Azure** \
   <https://azure.microsoft.com/services/api-management/>
 
-- **Udi Dahan. Composição Orientada ao Serviço** \
-  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
+- **Udi Dahan. Composição orientada por serviço** \
+  <https://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Clemens Vasters. Mensagens e Microserviços na GOTO 2016 (vídeo)** \
+- **Grandes Clemenss. Mensagens e microserviços em GOTO 2016 (vídeo)** \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **Resumo sobre o Gateway de API** (série de tutoriais do Gateway de API do ASP.NET Core) \
   <https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html>
 
 >[!div class="step-by-step"]
->[Próximo](identify-microservice-domain-model-boundaries.md)
->[anterior](communication-in-microservice-architecture.md)
+>[Anterior](identify-microservice-domain-model-boundaries.md) 
+> [Avançar](communication-in-microservice-architecture.md)

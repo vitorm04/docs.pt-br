@@ -2,12 +2,12 @@
 title: Comunicação assíncrona baseada em mensagens
 description: Arquitetura de Microsserviços do .NET para Aplicativos .NET em Contêineres | A comunicação assíncrona baseada em mensagens é um conceito essencial na arquitetura de microsserviços, porque ela é a melhor maneira de manter microsserviços independentes uns dos outros, estando também simultaneamente sincronizados no fim das contas.
 ms.date: 09/20/2018
-ms.openlocfilehash: 84eaf70178cce91a86dae8a55badb0b4ddd6a7c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 476e42ccb39374c2bb50f22e41f60c10c563dc66
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73454238"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144338"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicação assíncrona baseada em mensagens
 
@@ -53,7 +53,7 @@ Conforme observado anteriormente na seção [Desafios e soluções para o gerenc
 
 Um ponto importante é que você pode querer comunicar-se com vários microsserviços inscritos para o mesmo evento. Para fazer isso, você pode usar mensagens de publicação/assinatura com base em comunicação controlada por evento, conforme mostra a Figura 4-19. Esse mecanismo de publicação/assinatura não é exclusivo da arquitetura de microsserviço. Ele é semelhante à maneira como [Contextos Limitados](https://martinfowler.com/bliki/BoundedContext.html) no DDD devem se comunicar ou à maneira como você propaga atualizações do banco de dados de gravação para o banco de dados de leitura no padrão de arquitetura de [CQRS (Segregação de Responsabilidade de Comando e Consulta)](https://martinfowler.com/bliki/CQRS.html). A meta é ter consistência eventual entre várias fontes de dados em seu sistema distribuído.
 
-![Diagrama mostrando comunicações assíncronas orientadas a eventos.](./media/asynchronous-message-based-communication/asynchronous-event-driven-communication.png)
+![Diagrama mostrando comunicações assíncronas controladas por eventos.](./media/asynchronous-message-based-communication/asynchronous-event-driven-communication.png)
 
 **Figura 4-19**. Comunicação de mensagem controlada por evento assíncrono
 
@@ -83,16 +83,16 @@ Tópicos adicionais a serem considerados ao usar comunicação assíncrona são 
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Mensagens orientadas a eventos** \
+- **Mensagens controladas por evento** \
   <https://soapatterns.org/design_patterns/event_driven_messaging>
 
-- **Publicar/inscrever canal** \
+- **Canal de publicação/assinatura** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **Udi Dahan. CQRS esclarecido** \
-  <http://udidahan.com/2009/12/09/clarified-cqrs/>
+  <https://udidahan.com/2009/12/09/clarified-cqrs/>
 
-- **Segregação de Responsabilidade de Comando e Consulta (CQRS)** \
+- **Separação das Operações de Comando e de Consulta (CQRS)** \
   <https://docs.microsoft.com/azure/architecture/patterns/cqrs>
 
 - **Comunicação entre contextos limitados** \
@@ -101,9 +101,9 @@ Tópicos adicionais a serem considerados ao usar comunicação assíncrona são 
 - **Consistência eventual** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Jimmy Bogard. Refatoração para a resiliência: Avaliando o acoplamento** \
+- **Jimmy Bogard. Refatoração em relação à resiliência: avaliando o acoplamento** \
   <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]
-> [Próximo](communication-in-microservice-architecture.md)
-> [anterior](maintain-microservice-apis.md)
+> [Anterior](communication-in-microservice-architecture.md) 
+>  [Avançar](maintain-microservice-apis.md)

@@ -4,18 +4,18 @@ description: Descubra como implantar um aplicativo do .NET para Apache Spark no 
 ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6b8dbe395a5db9631433a5821f5ef2b9ade556f6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: edb876921030f5034d03c821051457ca111855f8
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895690"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144754"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Tutorial: implantar um aplicativo .NET para Apache Spark no Azure HDInsight
 
 Este tutorial ensina como implantar seu .NET para Apache Spark aplicativo na nuvem por meio de um cluster do Azure HDInsight. O HDInsight facilita a criação e a configuração de um cluster Spark no Azure, pois os clusters do Spark no HDInsight são compatíveis com o armazenamento do Azure e Azure Data Lake Storage.
 
-Neste tutorial, você aprende a:
+Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
 >
@@ -57,19 +57,19 @@ Antes de começar, execute as seguintes tarefas:
 
 3. Em **Noções básicas**, forneça os seguintes valores:
 
-    |Propriedade  |Descrição  |
+    |Property  |Descrição  |
     |---------|---------|
     |Subscription  | Na lista suspensa, escolha uma das suas assinaturas ativas do Azure. |
-    |Resource group | Especifique se deseja criar um novo grupo de recursos ou usar um existente. Um grupo de recursos é um contêiner que mantém os recursos relacionados a uma solução do Azure. |
+    |Grupo de recursos | Especifique se deseja criar um novo grupo de recursos ou usar um existente. Um grupo de recursos é um contêiner que mantém os recursos relacionados a uma solução do Azure. |
     |Nome do cluster | Dê um nome para seu cluster HDInsight Spark.|
-    |Local   | Selecione um local para o grupo de recursos. O modelo usa esse local para criar o cluster, bem como para o armazenamento de cluster padrão. |
+    |Location   | Selecione um local para o grupo de recursos. O modelo usa esse local para criar o cluster, bem como para o armazenamento de cluster padrão. |
     |Tipo de cluster| Selecione **Spark** como o tipo de cluster.|
     |Versão do cluster|Este campo será preenchido automaticamente com a versão padrão depois que o tipo de cluster tiver sido selecionado. Selecione uma versão 2,3 ou 2,4 do Spark.|
     |Nome de usuário de logon do cluster| Insira o nome de logon do usuário do cluster.  O nome padrão é *admin*. |
     |Senha de logon do cluster| Insira qualquer senha de logon. |
     |Nome de usuário do Secure Shell (SSH)| Insira um Nome de Usuário SSH. Por padrão, essa conta tem a mesma senha que a conta de*nome de usuário de logon do cluster*. |
 
-4. Selecione **Avançar: >>de armazenamento** para continuar na página **armazenamento** . Em **Armazenamento**, forneça os seguintes valores:
+4. Selecione **Avançar: Armazenamento >>** para continuar para a página **Armazenamento**. Em **Armazenamento**, forneça os seguintes valores:
 
     |Propriedade  |Descrição  |
     |---------|---------|
@@ -148,11 +148,11 @@ Depois que o cluster estiver em execução e você carregou seus arquivos no Azu
 
 2. Selecione **+ Enviar novo** e forneça os seguintes valores:
 
-   |Propriedade  |Descrição  |
+   |Property  |Descrição  |
    |---------|---------|
    | Tipo de script |Personalizado|
    | Nome | Instalar trabalho|
-   | URI do script Bash |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> Para confirmar esse URI, clique com o botão direito do mouse em install-worker.sh em Gerenciador de Armazenamento do Azure e selecione Propriedades. |
+   | URI do script Bash |`https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh` </br> Para confirmar esse URI, clique com o botão direito do mouse em install-worker.sh em Gerenciador de Armazenamento do Azure e selecione Propriedades. |
    | Tipo(s) de nó| Trabalho|
    | Parâmetros | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
 
