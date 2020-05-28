@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-ms.openlocfilehash: 9d505b917c343c40c7fa2a7aecf3466578ae0a8d
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: da830aaaced179fed642340c33e7b7c37b350aa3
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936635"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006552"
 ---
-# <a name="runtime_info_flags-enumeration"></a><span data-ttu-id="d6545-102">Enumeração RUNTIME_INFO_FLAGS</span><span class="sxs-lookup"><span data-stu-id="d6545-102">RUNTIME_INFO_FLAGS Enumeration</span></span>
-<span data-ttu-id="d6545-103">Contém valores que indicam quais informações sobre o Common Language Runtime (CLR) devem ser retornadas.</span><span class="sxs-lookup"><span data-stu-id="d6545-103">Contains values that indicate what information about the common language runtime (CLR) should be returned.</span></span>  
+# <a name="runtime_info_flags-enumeration"></a><span data-ttu-id="35ff3-102">Enumeração RUNTIME_INFO_FLAGS</span><span class="sxs-lookup"><span data-stu-id="35ff3-102">RUNTIME_INFO_FLAGS Enumeration</span></span>
+<span data-ttu-id="35ff3-103">Contém valores que indicam quais informações sobre o Common Language Runtime (CLR) devem ser retornadas.</span><span class="sxs-lookup"><span data-stu-id="35ff3-103">Contains values that indicate what information about the common language runtime (CLR) should be returned.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d6545-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d6545-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="35ff3-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="35ff3-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -41,37 +41,37 @@ typedef enum {
 } RUNTIME_INFO_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d6545-105">Membros</span><span class="sxs-lookup"><span data-stu-id="d6545-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="35ff3-105">Membros</span><span class="sxs-lookup"><span data-stu-id="35ff3-105">Members</span></span>  
   
-|<span data-ttu-id="d6545-106">{1&gt;Membro&lt;1}</span><span class="sxs-lookup"><span data-stu-id="d6545-106">Member</span></span>|<span data-ttu-id="d6545-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="d6545-107">Description</span></span>|  
+|<span data-ttu-id="35ff3-106">Membro</span><span class="sxs-lookup"><span data-stu-id="35ff3-106">Member</span></span>|<span data-ttu-id="35ff3-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="35ff3-107">Description</span></span>|  
 |------------|-----------------|  
-|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|<span data-ttu-id="d6545-108">Indica que as informações de diretório não devem ser incluídas.</span><span class="sxs-lookup"><span data-stu-id="d6545-108">Indicates that directory information should not be included.</span></span>|  
-|`RUNTIME_INFO_DONT_RETURN_VERSION`|<span data-ttu-id="d6545-109">Indica que as informações de versão não devem ser incluídas.</span><span class="sxs-lookup"><span data-stu-id="d6545-109">Indicates that version information should not be included.</span></span>|  
-|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|<span data-ttu-id="d6545-110">Indica que uma caixa de diálogo de erro não deve ser exibida após a falha.</span><span class="sxs-lookup"><span data-stu-id="d6545-110">Indicates that an error dialog box should not be shown upon failure.</span></span>|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|<span data-ttu-id="d6545-111">Indica que os efeitos da chamada da função [SetError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) com o sinalizador SEM_FAILCRITICALERRORS devem ser substituídos.</span><span class="sxs-lookup"><span data-stu-id="d6545-111">Indicates that the effects of calling the [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) function with the SEM_FAILCRITICALERRORS flag should be overridden.</span></span> <span data-ttu-id="d6545-112">Ou seja, uma caixa de diálogo de instalação deve ser mostrada após a falha, em vez de ser suprimida.</span><span class="sxs-lookup"><span data-stu-id="d6545-112">That is, an installation dialog box should be shown upon failure, instead of being suppressed.</span></span>|  
-|`RUNTIME_INFO_REQUEST_AMD64`|<span data-ttu-id="d6545-113">Indica uma solicitação de informações sobre uma versão compatível com AMD-64 do tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="d6545-113">Indicates a request for information about an AMD-64-compatible version of the runtime.</span></span>|  
-|`RUNTIME_INFO_REQUEST_IA64`|<span data-ttu-id="d6545-114">Indica uma solicitação de informações sobre uma versão compatível com IA-64 do tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="d6545-114">Indicates a request for information about an IA-64-compatible version of the runtime.</span></span>|  
-|`RUNTIME_INFO_REQUEST_X86`|<span data-ttu-id="d6545-115">Indica uma solicitação de informações sobre uma versão compatível com x86 do tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="d6545-115">Indicates a request for information about an x86-compatible version of the runtime.</span></span>|  
-|`RUNTIME_INFO_UPGRADE_VERSION`|<span data-ttu-id="d6545-116">Indica que as informações de atualização de versão devem ser incluídas.</span><span class="sxs-lookup"><span data-stu-id="d6545-116">Indicates that version upgrade information should be included.</span></span>|  
+|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|<span data-ttu-id="35ff3-108">Indica que as informações de diretório não devem ser incluídas.</span><span class="sxs-lookup"><span data-stu-id="35ff3-108">Indicates that directory information should not be included.</span></span>|  
+|`RUNTIME_INFO_DONT_RETURN_VERSION`|<span data-ttu-id="35ff3-109">Indica que as informações de versão não devem ser incluídas.</span><span class="sxs-lookup"><span data-stu-id="35ff3-109">Indicates that version information should not be included.</span></span>|  
+|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|<span data-ttu-id="35ff3-110">Indica que uma caixa de diálogo de erro não deve ser exibida após a falha.</span><span class="sxs-lookup"><span data-stu-id="35ff3-110">Indicates that an error dialog box should not be shown upon failure.</span></span>|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|<span data-ttu-id="35ff3-111">Indica que os efeitos da chamada da função [SetError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) com o sinalizador SEM_FAILCRITICALERRORS devem ser substituídos.</span><span class="sxs-lookup"><span data-stu-id="35ff3-111">Indicates that the effects of calling the [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) function with the SEM_FAILCRITICALERRORS flag should be overridden.</span></span> <span data-ttu-id="35ff3-112">Ou seja, uma caixa de diálogo de instalação deve ser mostrada após a falha, em vez de ser suprimida.</span><span class="sxs-lookup"><span data-stu-id="35ff3-112">That is, an installation dialog box should be shown upon failure, instead of being suppressed.</span></span>|  
+|`RUNTIME_INFO_REQUEST_AMD64`|<span data-ttu-id="35ff3-113">Indica uma solicitação de informações sobre uma versão compatível com AMD-64 do tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="35ff3-113">Indicates a request for information about an AMD-64-compatible version of the runtime.</span></span>|  
+|`RUNTIME_INFO_REQUEST_IA64`|<span data-ttu-id="35ff3-114">Indica uma solicitação de informações sobre uma versão compatível com IA-64 do tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="35ff3-114">Indicates a request for information about an IA-64-compatible version of the runtime.</span></span>|  
+|`RUNTIME_INFO_REQUEST_X86`|<span data-ttu-id="35ff3-115">Indica uma solicitação de informações sobre uma versão compatível com x86 do tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="35ff3-115">Indicates a request for information about an x86-compatible version of the runtime.</span></span>|  
+|`RUNTIME_INFO_UPGRADE_VERSION`|<span data-ttu-id="35ff3-116">Indica que as informações de atualização de versão devem ser incluídas.</span><span class="sxs-lookup"><span data-stu-id="35ff3-116">Indicates that version upgrade information should be included.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d6545-117">Comentários</span><span class="sxs-lookup"><span data-stu-id="d6545-117">Remarks</span></span>  
- <span data-ttu-id="d6545-118">Os seguintes sinalizadores de arquitetura de plataforma podem ser especificados apenas um de cada vez e não podem ser combinados:</span><span class="sxs-lookup"><span data-stu-id="d6545-118">The following platform architecture flags can be specified only one at a time and cannot be combined:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="35ff3-117">Comentários</span><span class="sxs-lookup"><span data-stu-id="35ff3-117">Remarks</span></span>  
+ <span data-ttu-id="35ff3-118">Os seguintes sinalizadores de arquitetura de plataforma podem ser especificados apenas um de cada vez e não podem ser combinados:</span><span class="sxs-lookup"><span data-stu-id="35ff3-118">The following platform architecture flags can be specified only one at a time and cannot be combined:</span></span>  
   
-- <span data-ttu-id="d6545-119">RUNTIME_INFO_REQUEST_IA64</span><span class="sxs-lookup"><span data-stu-id="d6545-119">RUNTIME_INFO_REQUEST_IA64</span></span>  
+- <span data-ttu-id="35ff3-119">RUNTIME_INFO_REQUEST_IA64</span><span class="sxs-lookup"><span data-stu-id="35ff3-119">RUNTIME_INFO_REQUEST_IA64</span></span>  
   
-- <span data-ttu-id="d6545-120">RUNTIME_INFO_REQUEST_AMD64</span><span class="sxs-lookup"><span data-stu-id="d6545-120">RUNTIME_INFO_REQUEST_AMD64</span></span>  
+- <span data-ttu-id="35ff3-120">RUNTIME_INFO_REQUEST_AMD64</span><span class="sxs-lookup"><span data-stu-id="35ff3-120">RUNTIME_INFO_REQUEST_AMD64</span></span>  
   
-- <span data-ttu-id="d6545-121">RUNTIME_INFO_REQUEST_X86</span><span class="sxs-lookup"><span data-stu-id="d6545-121">RUNTIME_INFO_REQUEST_X86</span></span>  
+- <span data-ttu-id="35ff3-121">RUNTIME_INFO_REQUEST_X86</span><span class="sxs-lookup"><span data-stu-id="35ff3-121">RUNTIME_INFO_REQUEST_X86</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d6545-122">Requisitos do</span><span class="sxs-lookup"><span data-stu-id="d6545-122">Requirements</span></span>  
- <span data-ttu-id="d6545-123">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d6545-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="35ff3-122">Requisitos</span><span class="sxs-lookup"><span data-stu-id="35ff3-122">Requirements</span></span>  
+ <span data-ttu-id="35ff3-123">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="35ff3-123">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d6545-124">**Cabeçalho:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="d6545-124">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="35ff3-124">**Cabeçalho:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="35ff3-124">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d6545-125">**Biblioteca:** MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="d6545-125">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="35ff3-125">**Biblioteca:** MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="35ff3-125">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d6545-126">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d6545-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="35ff3-126">**.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="35ff3-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6545-127">Veja também</span><span class="sxs-lookup"><span data-stu-id="d6545-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="35ff3-127">Confira também</span><span class="sxs-lookup"><span data-stu-id="35ff3-127">See also</span></span>
 
-- [<span data-ttu-id="d6545-128">Enumerações de hospedagem</span><span class="sxs-lookup"><span data-stu-id="d6545-128">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="35ff3-128">Hospedando enumerações</span><span class="sxs-lookup"><span data-stu-id="35ff3-128">Hosting Enumerations</span></span>](hosting-enumerations.md)

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: d9568cf6-7f98-4cd6-ab36-0a2bd509afcc
 topic_type:
 - apiref
-ms.openlocfilehash: 7becace679b62a635d8231c3d42213f247f44190
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d11fefe220fdb00457cc48a6cd166673350be049
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444170"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006019"
 ---
-# <a name="ceesectionrelocextra-union"></a><span data-ttu-id="5b45d-102">CeeSectionRelocExtra União</span><span class="sxs-lookup"><span data-stu-id="5b45d-102">CeeSectionRelocExtra Union</span></span>
-<span data-ttu-id="5b45d-103">Representa um deslocamento de endereço que é usado pela interface [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) para realocar uma seção.</span><span class="sxs-lookup"><span data-stu-id="5b45d-103">Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section.</span></span>  
+# <a name="ceesectionrelocextra-union"></a><span data-ttu-id="adc94-102">CeeSectionRelocExtra União</span><span class="sxs-lookup"><span data-stu-id="adc94-102">CeeSectionRelocExtra Union</span></span>
+<span data-ttu-id="adc94-103">Representa um deslocamento de endereço que é usado pela interface [ICeeGen](iceegen-interface.md) para realocar uma seção.</span><span class="sxs-lookup"><span data-stu-id="adc94-103">Represents an address offset that is used by the [ICeeGen](iceegen-interface.md) interface to relocate a section.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5b45d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5b45d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="adc94-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="adc94-104">Syntax</span></span>  
   
 ```cpp  
 typedef union  {  
@@ -32,21 +32,21 @@ typedef union  {
 } CeeSectionRelocExtra;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5b45d-105">Membros</span><span class="sxs-lookup"><span data-stu-id="5b45d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="adc94-105">Membros</span><span class="sxs-lookup"><span data-stu-id="adc94-105">Members</span></span>  
   
-|<span data-ttu-id="5b45d-106">{1&gt;Membro&lt;1}</span><span class="sxs-lookup"><span data-stu-id="5b45d-106">Member</span></span>|<span data-ttu-id="5b45d-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="5b45d-107">Description</span></span>|  
+|<span data-ttu-id="adc94-106">Membro</span><span class="sxs-lookup"><span data-stu-id="adc94-106">Member</span></span>|<span data-ttu-id="adc94-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="adc94-107">Description</span></span>|  
 |------------|-----------------|  
-|`highAdj`|<span data-ttu-id="5b45d-108">O ajuste de endereço superior para a seção.</span><span class="sxs-lookup"><span data-stu-id="5b45d-108">The upper address adjustment for the section.</span></span>|  
+|`highAdj`|<span data-ttu-id="adc94-108">O ajuste de endereço superior para a seção.</span><span class="sxs-lookup"><span data-stu-id="adc94-108">The upper address adjustment for the section.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5b45d-109">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="5b45d-109">Requirements</span></span>  
- <span data-ttu-id="5b45d-110">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5b45d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="adc94-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="adc94-109">Requirements</span></span>  
+ <span data-ttu-id="adc94-110">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="adc94-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5b45d-111">**Cabeçalho:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="5b45d-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="adc94-111">**Cabeçalho:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="adc94-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5b45d-112">**Biblioteca:** Incluído como um recurso em MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="5b45d-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="adc94-112">**Biblioteca:** Incluído como um recurso em MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="adc94-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5b45d-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5b45d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="adc94-113">**.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="adc94-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b45d-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5b45d-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="adc94-114">Confira também</span><span class="sxs-lookup"><span data-stu-id="adc94-114">See also</span></span>
 
-- [<span data-ttu-id="5b45d-115">Uniões de metadados</span><span class="sxs-lookup"><span data-stu-id="5b45d-115">Metadata Unions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)
+- [<span data-ttu-id="adc94-115">Uniões de metadados</span><span class="sxs-lookup"><span data-stu-id="adc94-115">Metadata Unions</span></span>](metadata-unions.md)

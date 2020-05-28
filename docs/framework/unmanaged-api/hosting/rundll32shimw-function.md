@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 9ea07b57-96e2-44df-8711-8fe6c119087f
 topic_type:
 - apiref
-ms.openlocfilehash: e661bd82ecf6d804e852cca4a4478084edf303c5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90304eb94e6f53d3132c97f5ababdc45f6053d7c
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141502"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006565"
 ---
-# <a name="rundll32shimw-function"></a><span data-ttu-id="04912-102">Função RunDll32ShimW</span><span class="sxs-lookup"><span data-stu-id="04912-102">RunDll32ShimW Function</span></span>
-<span data-ttu-id="04912-103">Executa o comando especificado.</span><span class="sxs-lookup"><span data-stu-id="04912-103">Executes the specified command.</span></span>  
+# <a name="rundll32shimw-function"></a><span data-ttu-id="61f9a-102">Função RunDll32ShimW</span><span class="sxs-lookup"><span data-stu-id="61f9a-102">RunDll32ShimW Function</span></span>
+<span data-ttu-id="61f9a-103">Executa o comando especificado.</span><span class="sxs-lookup"><span data-stu-id="61f9a-103">Executes the specified command.</span></span>  
   
- <span data-ttu-id="04912-104">Essa função foi preterida no .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="04912-104">This function has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="61f9a-104">Essa função foi preterida no .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="61f9a-104">This function has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="04912-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="04912-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="61f9a-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="61f9a-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT RunDll32ShimW (  
@@ -37,28 +37,28 @@ HRESULT RunDll32ShimW (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="04912-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="04912-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="61f9a-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="61f9a-106">Parameters</span></span>  
  `hwnd`  
- <span data-ttu-id="04912-107">no Um identificador para uma janela na qual a saída do comando será exibida.</span><span class="sxs-lookup"><span data-stu-id="04912-107">[in] A handle to a window in which the command output will be displayed.</span></span>  
+ <span data-ttu-id="61f9a-107">no Um identificador para uma janela na qual a saída do comando será exibida.</span><span class="sxs-lookup"><span data-stu-id="61f9a-107">[in] A handle to a window in which the command output will be displayed.</span></span>  
   
  `hinst`  
- <span data-ttu-id="04912-108">no Um identificador para a biblioteca que contém o comando.</span><span class="sxs-lookup"><span data-stu-id="04912-108">[in] A handle to the library that contains the command.</span></span>  
+ <span data-ttu-id="61f9a-108">no Um identificador para a biblioteca que contém o comando.</span><span class="sxs-lookup"><span data-stu-id="61f9a-108">[in] A handle to the library that contains the command.</span></span>  
   
  `lpszCmdLine`  
- <span data-ttu-id="04912-109">no Uma cadeia de caracteres que especifica o comando a ser executado.</span><span class="sxs-lookup"><span data-stu-id="04912-109">[in] A string that specifies the command to be executed.</span></span>  
+ <span data-ttu-id="61f9a-109">no Uma cadeia de caracteres que especifica o comando a ser executado.</span><span class="sxs-lookup"><span data-stu-id="61f9a-109">[in] A string that specifies the command to be executed.</span></span>  
   
  `nCmdShow`  
- <span data-ttu-id="04912-110">no Um inteiro que especifica o modo de exibição para a janela de saída.</span><span class="sxs-lookup"><span data-stu-id="04912-110">[in] An integer that specifies the display mode for the output window.</span></span>  
+ <span data-ttu-id="61f9a-110">no Um inteiro que especifica o modo de exibição para a janela de saída.</span><span class="sxs-lookup"><span data-stu-id="61f9a-110">[in] An integer that specifies the display mode for the output window.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="04912-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="04912-111">Requirements</span></span>  
- <span data-ttu-id="04912-112">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="04912-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="61f9a-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="61f9a-111">Requirements</span></span>  
+ <span data-ttu-id="61f9a-112">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="61f9a-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="04912-113">**Cabeçalho:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="04912-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="61f9a-113">**Cabeçalho:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="61f9a-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="04912-114">**Biblioteca:** MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="04912-114">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="61f9a-114">**Biblioteca:** MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="61f9a-114">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="04912-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="04912-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="61f9a-115">**.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="61f9a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="04912-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="04912-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="61f9a-116">Confira também</span><span class="sxs-lookup"><span data-stu-id="61f9a-116">See also</span></span>
 
-- [<span data-ttu-id="04912-117">Funções de hospedagem CLR preteridas</span><span class="sxs-lookup"><span data-stu-id="04912-117">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="61f9a-117">Funções de hospedagem CLR reprovadas</span><span class="sxs-lookup"><span data-stu-id="61f9a-117">Deprecated CLR Hosting Functions</span></span>](deprecated-clr-hosting-functions.md)
