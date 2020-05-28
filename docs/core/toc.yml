@@ -81,59 +81,95 @@
   href: compatibility/
 - name: Tutoriais
   items:
-    - name: Visão geral
+    - name: Usar o Virtual Studio
+      items:
+        - name: Criar um aplicativo do console
+          href: tutorials/with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Depurar um aplicativo
+          href: tutorials/debugging-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Publicar um aplicativo
+          href: tutorials/publishing-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Criar uma biblioteca
+          href: tutorials/library-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Fazer teste de unidade de uma biblioteca
+          href: tutorials/testing-library-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Usar uma biblioteca
+          href: tutorials/consuming-library-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Teste de unidade ao vivo
+          href: /visualstudio/test/live-unit-testing-start
+        - name: Instalar e usar um pacote
+          href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
+          displayName: 'tutorials, visual studio, vs'
+        - name: Criar e publicar um pacote
+          href: /nuget/quickstart/create-and-publish-a-package-using-visual-studio
+          displayName: 'tutorials, visual studio, vs'
+    - name: Usar o Visual Studio Code
+      items:
+        - name: Criar um aplicativo do console
+          href: tutorials/with-visual-studio-code.md
+          displayName: 'tutorials, visual studio code, vs code, cli'
+        - name: Criar um aplicativo de console e publicá-lo
+          href: tutorials/cli-create-console-app.md
+          displayName: 'tutorials, cli'
+        - name: Criar uma biblioteca e fazer teste de unidade dela – macOS
+          href: tutorials/using-on-macos.md
+          displayName: 'tutorials, visual studio code, vs code, cli'
+        - name: Instalar e usar um pacote
+          href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
+          displayName: 'tutorials, cli'
+        - name: Criar e publicar um pacote
+          href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
+          displayName: tutorials
+    - name: Usar o Visual Studio para Mac
+      items:
+        - name: Criar um aplicativo do console
+          href: tutorials/using-on-mac-vs.md
+          displayName: tutorials
+        - name: Criar uma biblioteca e fazer teste de unidade dela
+          href: tutorials/using-on-mac-vs-full-solution.md
+          displayName: tutorials
+        - name: Instalar e usar um pacote
+          href: /nuget/quickstart/install-and-use-a-package-in-visual-studio-mac
+          displayName: tutorials
+    - name: Tópicos avançados
+      items:
+        - name: Fazer teste de unidade de um aplicativo com xUnit
+          href: tutorials/testing-with-cli.md
+          displayName: 'tutorials, cli'
+        - name: Como criar bibliotecas
+          href: tutorials/libraries.md
+        - name: Criar modelos para a CLI
+          items:
+            - name: 1 – Criar um modelo de item
+              href: tutorials/cli-templates-create-item-template.md
+              displayName: 'tutorials, cli'
+            - name: 2 – Criar um modelo de projeto
+              href: tutorials/cli-templates-create-project-template.md
+              displayName: 'tutorials, cli'
+            - name: 3 – Criar um pacote de modelo
+              href: tutorials/cli-templates-create-template-pack.md
+              displayName: 'tutorials, cli'
+        - name: Criar ferramentas para a CLI
+          items:
+            - name: 1 – Criar uma ferramenta
+              displayName: 'tools, tutorials, cli'
+              href: tools/global-tools-how-to-create.md
+            - name: 2 – Usar uma ferramenta global
+              displayName: 'tools, tutorials, cli'
+              href: tools/global-tools-how-to-use.md
+            - name: 3 – Usar uma ferramenta local
+              href: tools/local-tools-how-to-use.md
+              displayName: 'tools, tutorials, cli'
+        - name: Criar um aplicativo com plug-ins
+          href: tutorials/creating-app-with-plugin-support.md
+    - name: Mais tutoriais
       href: tutorials/index.md
-    - name: Introdução ao .NET Core usando o Visual Studio
-      href: tutorials/with-visual-studio.md
-    - name: Introdução ao .NET Core usando o Visual Studio Code
-      href: tutorials/with-visual-studio-code.md
-    - name: 'Introdução ao .NET Core, usando as ferramentas da CLI'
-      href: tutorials/cli-create-console-app.md
-    - name: Introdução ao .NET Core usando o Visual Studio Code no macOS
-      href: tutorials/using-on-macos.md
-    - name: Introdução ao .NET Core usando o Visual Studio para Mac
-      href: tutorials/using-on-mac-vs.md
-    - name: Depurar um aplicativo usando o Visual Studio
-      href: tutorials/debugging-with-visual-studio.md
-    - name: Publicar um aplicativo no Visual Studio
-      href: tutorials/publishing-with-visual-studio.md
-    - name: Criar uma biblioteca .NET Standard no Visual Studio
-      href: tutorials/library-with-visual-studio.md
-    - name: Testar uma biblioteca .NET Standard no Visual Studio
-      href: tutorials/testing-library-with-visual-studio.md
-    - name: Consumir uma biblioteca .NET Standard no Visual Studio
-      href: tutorials/consuming-library-with-visual-studio.md
-    - name: Compilar uma solução completa do .NET Core no macOS
-      href: tutorials/using-on-mac-vs-full-solution.md
-    - name: Organizar e testar projetos com a CLI do .NET Core
-      href: tutorials/testing-with-cli.md
-    - name: Desenvolver bibliotecas com ferramentas multiplataforma
-      href: tutorials/libraries.md
-    - name: Criar um aplicativo .NET Core com plugins
-      href: tutorials/creating-app-with-plugin-support.md
-    - name: Desenvolver aplicativos ASP.NET Core
-      href: tutorials/aspnet-core.md
-    - name: Como hospedar o .NET Core por meio de código nativo
-      href: tutorials/netcore-hosting.md
-    - name: Criar modelos para a CLI
-      items:
-        - name: 1 – Criar um modelo de item
-          href: tutorials/cli-templates-create-item-template.md
-        - name: 2 – Criar um modelo de projeto
-          href: tutorials/cli-templates-create-project-template.md
-        - name: 3 – Criar um pacote de modelo
-          href: tutorials/cli-templates-create-template-pack.md
-    - name: Criar ferramentas para a CLI
-      items:
-        - name: 1 – Criar uma ferramenta
-          displayName: 'tools, tutorials'
-          href: tools/global-tools-how-to-create.md
-        - name: 2 – Usar uma ferramenta global
-          displayName: 'tools, tutorials'
-          href: tools/global-tools-how-to-use.md
-        - name: 3 – Usar uma ferramenta local
-          href: tools/local-tools-how-to-use.md
-          displayName: 'tools, tutorials'
 - name: SDKs do projeto
   items:
     - name: Visão geral
@@ -441,6 +477,8 @@
   href: distribution-packaging.md
 - name: Expor componentes do .NET Core ao COM
   href: native-interop/expose-components-to-com.md
+- name: Como hospedar o .NET Core por meio de código nativo
+  href: tutorials/netcore-hosting.md
 - name: 'Pacotes, metapacotes e estruturas'
   href: packages.md
 - name: Integração contínua
