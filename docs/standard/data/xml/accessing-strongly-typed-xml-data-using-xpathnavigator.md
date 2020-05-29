@@ -6,15 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: e6ec30e3c7c2318b199122cd63c7f56584707a98
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: afbfd516ef25eff94a9eed841f313892007c58a1
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78158045"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202346"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Acessando dados fortemente tipados XML usando XPathNavigator
-Como uma instância do modelo de dados XPath 2,0, a classe de <xref:System.Xml.XPath.XPathNavigator> pode conter dados fortemente tipados que mapeiam a Common Language Runtime (CLR) tipos. De acordo com o modelo de dados XPath 2,0, somente os elementos e atributos podem conter dados fortemente tipados. A classe de <xref:System.Xml.XPath.XPathNavigator> fornece mecanismos para acessar dados em um objeto de <xref:System.Xml.XPath.XPathDocument> ou de <xref:System.Xml.XmlDocument> como dados fortemente tipados bem como mecanismos para converter de um tipo de dados para outro.  
+Como uma instância do modelo de dados XPath 2,0, a <xref:System.Xml.XPath.XPathNavigator> classe pode conter dados fortemente tipados que mapeiam para tipos Common Language Runtime (CLR). De acordo com o modelo de dados XPath 2,0, somente elementos e atributos podem conter dados fortemente tipados. A <xref:System.Xml.XPath.XPathNavigator> classe fornece mecanismos para acessar dados dentro de <xref:System.Xml.XPath.XPathDocument> um <xref:System.Xml.XmlDocument> objeto ou como dados fortemente tipados, bem como mecanismos para conversão de um tipo de dados para outro.  
   
 ## <a name="type-information-exposed-by-xpathnavigator"></a>Informações de tipo expostos por XPathNavigator  
  XML 1,0 dados é tecnicamente sem tipo, a menos que processado com um DTD, o esquema de linguagem de definição de esquema XML (XSD), ou outro mecanismo. Há um número de categorias das informações que podem ser associadas com um elemento XML ou um atributo.  

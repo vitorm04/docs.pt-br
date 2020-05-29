@@ -3,12 +3,12 @@ title: Acessando dados XML usando XPathNavigator
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
-ms.openlocfilehash: c8466e78458d344a872aac7cdebc155342b13e0f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8cba6e106623169f5575684162bf3be383563275
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711162"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202316"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>Acessando dados XML usando XPathNavigator
 A classe de <xref:System.Xml.XPath.XPathNavigator> fornece métodos para navegar, nós dados XML do extrair e para acessar dados fortemente tipados XML em um objeto de <xref:System.Xml.XPath.XPathDocument> ou de <xref:System.Xml.XmlDocument> .  
@@ -24,7 +24,7 @@ A classe de <xref:System.Xml.XPath.XPathNavigator> fornece métodos para navegar
  Descreve os vários métodos de extrair dados XML de um objeto de <xref:System.Xml.XPath.XPathDocument> ou de <xref:System.Xml.XmlDocument> .  
   
  [Acessando dados fortemente tipados XML usando XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)  
- Descreve acessar dados fortemente tipados XML em um objeto de <xref:System.Xml.XPath.XPathDocument> ou de <xref:System.Xml.XmlDocument> usando a classe de <xref:System.Xml.XPath.XPathNavigator> .  
+ Descreve o acesso a dados XML fortemente tipados em um <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> objeto ou usando a <xref:System.Xml.XPath.XPathNavigator> classe.  
   
  [Funções definidas pelo usuário e variáveis](../../../../docs/standard/data/xml/user-defined-functions-and-variables.md)  
  Descreve implementar uma classe personalizada de <xref:System.Xml.Xsl.XsltContext> junto com as interfaces <xref:System.Xml.Xsl.IXsltContextFunction> e <xref:System.Xml.Xsl.IXsltContextVariable> que suportam funções e variáveis de extensão.  

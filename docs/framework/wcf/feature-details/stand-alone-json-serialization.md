@@ -2,12 +2,12 @@
 title: Serialização JSON autônoma usando DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 259d5da544262b5cae08e1be9e8ea6e077d5b947
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 6bd075405a3bca0cc64dda90225526096b6fa8e3
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144923"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202398"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>Serialização JSON autônoma usando DataContractJsonSerializer
 
@@ -189,7 +189,7 @@ Tipos de "elemento", como <xref:System.Xml.Linq.XElement> , são serializados co
 
 #### <a name="preserving-type-information"></a>Preservando informações de tipo
 
-Como mencionado anteriormente, o polimorfismo tem suporte em JSON com algumas limitações. O JavaScript é uma linguagem de tipo fraco e a identidade de tipos normalmente não é um problema. No entanto, ao usar o JSON para se comunicar entre um sistema fortemente tipado (.NET) e um sistema de tipo fraco (JavaScript), é útil preservar a identidade do tipo. Por exemplo, tipos com nomes de contrato de dados "Square" e "Circle" derivam de um tipo com um nome de contrato de dados de "Shape". Se "Circle" for enviado do .NET para o JavaScript e, posteriormente, for retornado a um método .NET que espera "Shape", será útil para o lado do .NET saber que o objeto em questão foi originalmente um "Circle". caso contrário, qualquer informação específica ao tipo derivado (por exemplo, "RADIUS" de dados "de raio" em "Circle") poderá ser perdida.
+Como mencionado anteriormente, o polimorfismo tem suporte em JSON com algumas limitações. O JavaScript é uma linguagem de tipo fraco e a identidade de tipos normalmente não é um problema. No entanto, ao usar o JSON para se comunicar entre um sistema com rigidez de tipos (.NET) e um sistema de tipo fraco (JavaScript), é útil preservar a identidade do tipo. Por exemplo, tipos com nomes de contrato de dados "Square" e "Circle" derivam de um tipo com um nome de contrato de dados de "Shape". Se "Circle" for enviado do .NET para o JavaScript e, posteriormente, for retornado a um método .NET que espera "Shape", será útil para o lado do .NET saber que o objeto em questão foi originalmente um "Circle". caso contrário, qualquer informação específica ao tipo derivado (por exemplo, "RADIUS" de dados "de raio" em "Circle") poderá ser perdida.
 
 Para preservar a identidade do tipo, ao serializar tipos complexos para JSON, é possível adicionar uma "dica de tipo", e o desserializador reconhece a dica e age adequadamente. A "dica de tipo" é um par de chave/valor JSON com o nome de chave " \_ \_ Type" (dois sublinhados seguidos da palavra "Type"). O valor é uma cadeia de caracteres JSON no formato "datacontractname: DataContractNamespace" (algo até o primeiro dois pontos é o nome). Usando o exemplo anterior, "Circle" pode ser serializado da seguinte maneira.
 
@@ -293,6 +293,6 @@ Ao serializar tipos de dicionário, o objeto JSON que contém os membros de "cha
 
 O serializador XML-codifica nomes de chave que não são nomes XML válidos. Por exemplo, um membro de dados com o nome "123" teria um nome codificado, como " \_ x0031 \_ \_ x0032 \_ \_ x0033 \_ " porque "123" é um nome de elemento XML inválido (começa com um dígito). Uma situação semelhante pode surgir com alguns conjuntos de caracteres internacionais não válidos em nomes XML. Para obter uma explicação desse efeito de XML no processamento JSON, consulte [mapeamento entre JSON e XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Suporte para JSON e outros formatos de transferência de dados](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

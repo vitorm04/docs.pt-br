@@ -3,17 +3,18 @@ title: Introdução ao C# – tutoriais interativos
 description: Aprenda C# em seu navegador e comece a trabalhar com seu próprio ambiente de desenvolvimento
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: c9fc8dadac373445a5bb132b25ab25676c5230c7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 965fa9dba559b967d3d1ce8d661cd08235c59f70
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007696"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202429"
 ---
 # <a name="introduction-to-c"></a>Introdução ao C\#
 
 Bem-vindo aos tutoriais de introdução ao C#. Essas lições começam com código interativo que você pode executar em seu navegador. Você pode aprender as noções básicas do C# na [série de vídeos do c# 101](https://aka.ms/dotnet3-csharp) antes de iniciar essas lições interativas.
 
+<!--markdownlint-disable MD034 -->
 > [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
 As primeiras lições explicam os conceitos de C# usando pequenos snippets de código. Você aprenderá os conceitos básicos da sintaxe de C# e como trabalhar com tipos de dados como cadeias de caracteres, números e valores boolianos. É tudo interativo e você começará a gravar e executar o código em questão de minutos. Estas primeiras lições não exigem conhecimento prévio de programação ou da linguagem C#.
@@ -27,7 +28,7 @@ Você pode experimentar esses tutoriais em ambientes diferentes. Os conceitos qu
 
 Todos os tutoriais de introdução posteriores à lição Olá, Mundo estão disponíveis por meio da experiência de navegador online ou [em seu próprio ambiente de desenvolvimento local](local-environment.md). No final de cada tutorial, você decidirá se deseja continuar com a próxima lição online ou no próprio computador. Há links para ajudar você a configurar seu ambiente e continuar com o próximo tutorial no computador.
 
-## <a name="hello-world"></a>[Hello world](hello-world.yml)
+## <a name="hello-world"></a>[Olá, mundo](hello-world.yml)
 
 No tutorial [Olá, Mundo](hello-world.yml), você criará o programa C# mais básico. Você explorará o tipo `string` e como trabalhar com texto. Você também pode usar o caminho em [Microsoft Learn](https://docs.microsoft.com/learn/paths/csharp-first-steps/) ou [Jupyter no fichário](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb).
 

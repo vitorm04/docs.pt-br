@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-ms.openlocfilehash: 1770eb08055fd244bd0f220fed6d1641c35174fd
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: ea42cbfe7427e026f5e3339af5f5a2ceec17dad3
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794345"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202198"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>Modificar dados XML usando XPathNavigator
 A classe <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métodos usados para modificar nós e valores em um documento XML. Para usar esses métodos, o objeto <xref:System.Xml.XPath.XPathNavigator> deve ser editável, ou seja, sua propriedade <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> deve ser `true`.  
@@ -28,7 +28,7 @@ A classe <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métodos 
   
 |<xref:System.Xml.XPath.XPathNodeType>|Dados alterados|  
 |---------------------------------------------------------------------------------------------------------------------------------------------|------------------|  
-|<xref:System.Xml.XPath.XPathNodeType.Root>|Não há suporte.|  
+|<xref:System.Xml.XPath.XPathNodeType.Root>|Sem suporte.|  
 |<xref:System.Xml.XPath.XPathNodeType.Element>|O conteúdo do elemento.|  
 |<xref:System.Xml.XPath.XPathNodeType.Attribute>|O valor do atributo.|  
 |<xref:System.Xml.XPath.XPathNodeType.Text>|O conteúdo do texto.|  
@@ -104,7 +104,7 @@ navigator.SetTypedValue(DateTime.Now);
  [!code-xml[XPathXMLExamples#3](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
   
 #### <a name="the-effects-of-editing-strongly-typed-xml-data"></a>Os efeitos de editar dados XML fortemente tipados  
- A classe <xref:System.Xml.XPath.XPathNavigator> usa o Esquema XML do W3C como base para a descrição de XML fortemente tipado. Elementos e atributos podem ser anotados com informações de tipo com base na validação em relação a um documento de Esquema XML do W3C. Os elementos que podem conter outros elementos ou atributos são chamados de tipos complexos, enquanto os que podem conter apenas texto são chamados de tipos simples.  
+ A <xref:System.Xml.XPath.XPathNavigator> classe usa o esquema XML W3C como base para descrever o XML com rigidez de tipos. Elementos e atributos podem ser anotados com informações de tipo com base na validação em relação a um documento de Esquema XML do W3C. Os elementos que podem conter outros elementos ou atributos são chamados de tipos complexos, enquanto os que podem conter apenas texto são chamados de tipos simples.  
   
 > [!NOTE]
 > Os atributos podem ter apenas tipos simples.  
@@ -246,7 +246,7 @@ Console.WriteLine(navigator.OuterXml);
 ## <a name="saving-an-xml-document"></a>Salvando um documento XML  
  Salvar as alterações feitas em um objeto <xref:System.Xml.XmlDocument> como resultado dos métodos de edição descritos neste tópico é realizado usando os métodos da classe <xref:System.Xml.XmlDocument>. Para saber mais sobre como salvar as alterações feitas em um objeto <xref:System.Xml.XmlDocument>, confira [Salvar e gravar um documento](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

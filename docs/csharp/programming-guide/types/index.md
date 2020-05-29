@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: ca499f9762f52126720159fb7c22660b1001895c
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: fa0aa09b591f9b91a82113343a3655b2240ef490
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802927"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201208"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guia de Programação em C#)
 
@@ -165,7 +165,7 @@ stringList.Add("String example");
 stringList.Add(4);
 ```
 
-O uso do parâmetro de tipo possibilita a reutilização da mesma classe para conter qualquer tipo de elemento sem precisar converter cada elemento em [objeto](../../language-reference/builtin-types/reference-types.md). As classes de coleção genéricas são chamadas de *coleções fortemente tipadas* porque o compilador sabe o tipo específico dos elementos da coleção e pode gerar um erro em tempo de compilação se, por exemplo, você tentar adicionar um inteiro ao objeto `stringList` no exemplo anterior. Para obter mais informações, consulte [Genéricos](../generics/index.md).
+O uso do parâmetro de tipo possibilita a reutilização da mesma classe para conter qualquer tipo de elemento sem precisar converter cada elemento em [objeto](../../language-reference/builtin-types/reference-types.md). As classes de coleção genéricas são chamadas de coleções com rigidez de *tipos* porque o compilador sabe o tipo específico dos elementos da coleção e pode gerar um erro no tempo de compilação se, por exemplo, você tentar adicionar um inteiro ao `stringList` objeto no exemplo anterior. Para obter mais informações, consulte [Genéricos](../generics/index.md).
 
 ## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>Tipos implícitos, tipos anônimos e tipos de valor anulável
 
@@ -199,7 +199,7 @@ Para obter mais informações, consulte estes tópicos:
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Referência do C#](../../language-reference/index.md)
 - [Guia de programação C#](../index.md)
