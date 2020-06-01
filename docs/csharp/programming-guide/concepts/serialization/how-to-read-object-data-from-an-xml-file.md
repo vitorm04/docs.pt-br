@@ -2,12 +2,12 @@
 title: Como ler dados de objeto de um arquivo XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 18428cbe2f2d3b9434a77ee4d063ceabbba6bcb8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2365d1260d3f6e239f294b2af3399c2fb659575
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167812"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241871"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Como ler dados de objeto de um arquivo XML (C#)
 Este exemplo lê dados de objeto que foram previamente gravados em um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -43,7 +43,7 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
-Substitua o nome de arquivo "c:\temp\SerializationOverview.xml" pelo nome do arquivo que contém os dados serializados. Para obter mais informações sobre como serializar dados, consulte [Como gravar dados de objeto em um arquivo XML (C#)](./how-to-write-object-data-to-an-xml-file.md).
+Substitua o nome de arquivo "c:\temp\SerializationOverview.xml" pelo nome do arquivo que contém os dados serializados. Para obter mais informações sobre a serialização de dados, consulte [como gravar dados de objeto em um arquivo XML (C#)](./how-to-write-object-data-to-an-xml-file.md).
   
  A classe deve ter um construtor público sem parâmetros.  
   
@@ -58,12 +58,12 @@ Substitua o nome de arquivo "c:\temp\SerializationOverview.xml" pelo nome do arq
   
 - O arquivo não existe (<xref:System.IO.IOException>).  
   
-## <a name="net-framework-security"></a>Segurança do .NET Framework  
+## <a name="net-security"></a>Segurança do .NET  
  Sempre verifique as entradas e nunca desserialize dados de uma fonte não confiável. O objeto recriado é executado em um computador local com as permissões do código que o desserializou. Verifique todas as entradas antes de usar os dados no seu aplicativo.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.IO.StreamWriter>
 - [Como gravar dados de objeto em um arquivo XML (C#)](./how-to-write-object-data-to-an-xml-file.md)
 - [Serialização (C#)](./index.md)
-- [C# Guia de Programação](../../index.md)
+- [Guia de programação C#](../../index.md)

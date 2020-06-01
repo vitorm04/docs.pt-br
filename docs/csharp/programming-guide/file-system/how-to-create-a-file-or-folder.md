@@ -1,5 +1,5 @@
 ---
-title: Como criar um arquivo ou pasta - C# Guia de Programação
+title: Como criar um arquivo ou pasta-guia de programação C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders [C#]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: cdcc0a375aa1eca29c024d1e0c9008f337d0c772
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5efe3b7dc600645488816d6f931df57fc236efc9
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167551"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241637"
 ---
-# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Como criar um arquivo ou pasta (C# Guia de Programação)
+# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Como criar um arquivo ou uma pasta (guia de programação C#)
 Você pode criar uma pasta no seu computador, criar uma subpasta, criar um arquivo na subpasta e gravar dados no arquivo programaticamente.  
   
 ## <a name="example"></a>Exemplo  
@@ -62,13 +62,13 @@ Você pode criar uma pasta no seu computador, criar uma subpasta, criar um arqui
   
 - O nome da pasta contém apenas dois-pontos, “:” (classe <xref:System.IO.PathTooLongException>).  
   
-## <a name="net-framework-security"></a>Segurança do .NET Framework  
+## <a name="net-security"></a>Segurança do .NET  
  Uma instância da classe <xref:System.Security.SecurityException> poderá ser gerada em situações de confiança parcial.  
   
- Se você não tiver permissão para criar a pasta, o exemplo gerará uma instância da classe <xref:System.UnauthorizedAccessException>.  
+ Se você não tiver permissão para criar a pasta, o exemplo lançará uma instância da <xref:System.UnauthorizedAccessException> classe.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Sistema de arquivos e o Registro (Guia de Programação em C#)](./index.md)

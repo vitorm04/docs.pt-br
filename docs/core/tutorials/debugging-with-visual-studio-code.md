@@ -2,12 +2,12 @@
 title: Depurar um aplicativo de console do .NET Core com o Visual Studio Code
 description: Saiba como depurar um aplicativo de console do .NET Core com o Visual Studio Code.
 ms.date: 05/26/2020
-ms.openlocfilehash: eaeb97f54442006d2f0e29483a68dc3de89b5778
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 82b2798397d702aa2a50c04bf6e4d569b97e3666
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202585"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241507"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Depurar um aplicativo de console do .NET Core usando Visual Studio Code
 
@@ -29,7 +29,13 @@ Na configuração de depuração, um programa é compilado com informações de 
 
 Um ponto de interrupção interrompe temporariamente a execução do aplicativo *antes* de a linha com o ponto de interrupção ser executada.
 
-1. No *Program.cs*, defina um *ponto de interrupção* na linha que exibe o nome, a data e a hora clicando na margem esquerda da janela de código. A margem esquerda está à esquerda dos números de linha. Outra maneira de definir um ponto de interrupção é colocando o cursor na linha de código e, em seguida, pressionando <kbd>F9</kbd>.
+1. Abra o Visual Studio Code.
+
+1. Abra a pasta do projeto *HelloWorld* que você criou em [criar um aplicativo de console do .net Core no Visual Studio Code](with-visual-studio-code.md).
+
+1. Abra o arquivo *Program.cs* .
+
+1. Defina um *ponto de interrupção* na linha que exibe o nome, a data e a hora clicando na margem esquerda da janela de código. A margem esquerda está à esquerda dos números de linha. Outra maneira de definir um ponto de interrupção é colocando o cursor na linha de código e, em seguida, pressionando <kbd>F9</kbd>.
 
    Como mostra a imagem a seguir, Visual Studio Code indica a linha na qual o ponto de interrupção é definido, exibindo um ponto vermelho na margem esquerda.
 
@@ -215,10 +221,7 @@ dotnet run --configuration Release
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Neste tutorial, você usou Visual Studio Code ferramentas de depuração. Para saber como publicar uma versão implantável do aplicativo, consulte [publicar seu aplicativo](cli-create-console-app.md#publish-your-app).
-
-<!--In the next tutorial, you publish a deployable version of the app.
+Neste tutorial, você usou Visual Studio Code ferramentas de depuração. No próximo tutorial, você publica uma versão implantável do aplicativo.
 
 > [!div class="nextstepaction"]
-> [Publish a .NET Core console application with Visual Studio Code](publishing-with-visual-studio-code.md)
--->
+> [Publicar um aplicativo de console do .NET Core com o Visual Studio Code](publishing-with-visual-studio-code.md)

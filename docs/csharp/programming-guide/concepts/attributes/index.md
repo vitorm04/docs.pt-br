@@ -1,12 +1,12 @@
 ---
 title: Atributos (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 0379bb76cf18ff836bd14aafb9cb97c30aee8ec7
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 358285a39f72ad3ddf1b265e20b443308375d074
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645481"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241572"
 ---
 # <a name="attributes-c"></a>Atributos (C#)
 
@@ -41,7 +41,7 @@ Alguns atributos podem ser especificados mais de uma vez para uma determinada en
 [!code-csharp[Using the conditional attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
-> Por convenção, todos os nomes de atributo terminam com a palavra "Atributo" para distingui-los de outros itens nas bibliotecas do .NET. No entanto, você não precisa especificar o sufixo de atributo ao usar atributos no código. Por exemplo, `[DllImport]` é equivalente a `[DllImportAttribute]`, mas `DllImportAttribute` é o nome real do atributo na Biblioteca de Classes .NET Framework.
+> Por convenção, todos os nomes de atributo terminam com a palavra "Atributo" para distingui-los de outros itens nas bibliotecas do .NET. No entanto, você não precisa especificar o sufixo de atributo ao usar atributos no código. Por exemplo, `[DllImport]` é equivalente a `[DllImportAttribute]` , mas `DllImportAttribute` é o nome real do atributo na biblioteca de classes do .net.
 
 ### <a name="attribute-parameters"></a>Parâmetros de atributo
 
@@ -119,13 +119,13 @@ Para obter mais informações, consulte:
 
 - [Criando atributos personalizados (C#)](creating-custom-attributes.md)  
 - [Acessando atributos usando reflexão (C#)](accessing-attributes-by-using-reflection.md)  
-- [Como criar uma união C/C++ usando atributos (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Como criar uma União C/C++ usando atributos (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Atributos comuns (C#)](../../../language-reference/attributes/global.md)  
 - [Informações do chamador (C#)](../../../language-reference/attributes/caller-information.md)  
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [C# Guia de Programação](../../index.md)
+- [Guia de programação C#](../../index.md)
 - [Reflexão (C#)](../reflection.md)
 - [Atributos](../../../../standard/attributes/index.md)
 - [Usando atributos em C #](../../../tutorials/attributes.md)

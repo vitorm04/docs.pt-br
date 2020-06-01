@@ -1,19 +1,19 @@
 ---
-title: Como determinar se uma string representa um valor numérico - C# Guia de Programação
+title: Como determinar se uma cadeia de caracteres representa um valor numérico – guia de programação C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - numeric strings [C#]
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 15a21a6298f8f0a57e0189554246202b220dd259
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 37437460ea4c6ca216f2844d63af3688ccc984c6
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157059"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241715"
 ---
-# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Como determinar se uma string representa um valor numérico (Guia de Programação C#)
+# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Como determinar se uma cadeia de caracteres representa um valor numérico (guia de programação C#)
 Para determinar se uma cadeia de caracteres é uma representação válida de um tipo numérico especificado, use o método estático `TryParse` implementado por todos os tipos numéricos primitivos e também por tipos como <xref:System.DateTime> e <xref:System.Net.IPAddress>. O exemplo a seguir mostra como determinar se "108" é um [int](../../language-reference/builtin-types/integral-numeric-types.md) válido.  
   
 ```csharp  
@@ -35,13 +35,13 @@ bool result = int.TryParse(s, out i); //i now = 108
 ## <a name="robust-programming"></a>Programação robusta  
  Os tipos numéricos primitivos também implementam o método estático `Parse`, que lançará uma exceção se a cadeia de caracteres não for um número válido. Geralmente, `TryParse` é mais eficiente, pois retornará false apenas se o número não for válido.  
   
-## <a name="net-framework-security"></a>Segurança do .NET Framework  
+## <a name="net-security"></a>Segurança do .NET  
  Sempre use os métodos `TryParse` ou `Parse` para validar entradas de usuário em controles como caixas de texto e caixas de combinação.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Como converter uma matriz de bytes em um int](../types/how-to-convert-a-byte-array-to-an-int.md)
 - [Como converter uma cadeia de caracteres em um número](../types/how-to-convert-a-string-to-a-number.md)
 - [Como converter entre cadeias de caracteres hexadecimais e tipos numéricos](../types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
-- [Parsing Numeric Strings](../../../standard/base-types/parsing-numeric.md)
+- [Analisar cadeias de caracteres numéricas](../../../standard/base-types/parsing-numeric.md)
 - [Formatar tipos](../../../standard/base-types/formatting-types.md)

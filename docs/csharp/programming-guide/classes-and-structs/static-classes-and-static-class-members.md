@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 7add512b262afbabe996f752c083566a2c394dfd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f5e355d66d9b022a037d53e1241e76282852888e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705425"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241455"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Classes static e membros de classes static (Guia de Programação em C#)
 
@@ -23,7 +23,7 @@ Uma classe [static](../../language-reference/keywords/static.md) é basicamente 
 UtilityClass.MethodA();  
 ```  
   
- Uma classe estática pode ser usada como um contêiner conveniente para conjuntos de métodos que operam apenas em parâmetros de entrada e não precisam obter ou definir campos de instância internos. Por exemplo, na biblioteca de classes .NET Framework, a classe estática <xref:System.Math?displayProperty=nameWithType> contém métodos que executam operações matemáticas, sem a necessidade de armazenar ou recuperar dados que são exclusivos de uma determinada instância da classe <xref:System.Math>. Ou seja, você aplica os membros da classe especificando o nome de classe e o nome do método, conforme mostrado no exemplo a seguir.  
+ Uma classe estática pode ser usada como um contêiner conveniente para conjuntos de métodos que operam apenas em parâmetros de entrada e não precisam obter ou definir campos de instância internos. Por exemplo, na biblioteca de classes do .NET, a <xref:System.Math?displayProperty=nameWithType> classe estática contém métodos que executam operações matemáticas, sem nenhum requisito para armazenar ou recuperar dados que sejam exclusivos de uma instância específica da <xref:System.Math> classe. Ou seja, você aplica os membros da classe especificando o nome de classe e o nome do método, conforme mostrado no exemplo a seguir.  
   
 ```csharp  
 double dub = -3.14;  
@@ -37,7 +37,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 // 3  
 ```  
   
- Como é o caso com todos os tipos de classe, as informações de tipo de uma classe estática são carregadas pelo CLR (Common Language Runtime) do .NET Framework quando o programa que faz referência à classe é carregado. O programa não pode especificar exatamente quando a classe é carregada. No entanto, é garantido que ela será carregada e terá seus campos inicializados e seu construtor estático chamado antes que a classe seja referenciada pela primeira vez em seu programa. Um construtor estático é chamado apenas uma vez e uma classe estática permanece na memória pelo tempo de vida do domínio do aplicativo em que seu programa reside.  
+ Como é o caso com todos os tipos de classe, as informações de tipo de uma classe estática são carregadas pelo tempo de execução do .NET quando o programa que faz referência à classe é carregado. O programa não pode especificar exatamente quando a classe é carregada. No entanto, é garantido que ela será carregada e terá seus campos inicializados e seu construtor estático chamado antes que a classe seja referenciada pela primeira vez em seu programa. Um construtor estático é chamado apenas uma vez e uma classe estática permanece na memória pelo tempo de vida do domínio do aplicativo em que seu programa reside.  
   
 > [!NOTE]
 > Para criar uma classe não estática que permite que apenas uma instância de si mesma seja criada, consulte [Implementando singleton no C#](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29).  
@@ -88,11 +88,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 
 Para saber mais, confira [Classes estáticas](~/_csharplang/spec/classes.md#static-classes) e [Membros estáticos e de instância](~/_csharplang/spec/classes.md#static-and-instance-members) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [C# Guia de Programação](../index.md)
-- [Estático](../../language-reference/keywords/static.md)
-- [Classes](./classes.md)
-- [class](../../language-reference/keywords/class.md)
+- [Guia de programação C#](../index.md)
+- [static](../../language-reference/keywords/static.md)
+- [Classe](./classes.md)
+- [classes](../../language-reference/keywords/class.md)
 - [Construtores estáticos](./static-constructors.md)
 - [Construtores de instância](./instance-constructors.md)

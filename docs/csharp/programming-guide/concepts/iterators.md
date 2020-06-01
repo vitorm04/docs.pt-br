@@ -2,12 +2,12 @@
 title: Iterar em coleções em C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: aceedd11466c75cedad3c67224c3a5595b4cabfa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 15b77fd11c0ff606119425ec7aae8e7127315e82
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626264"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240688"
 ---
 # <a name="iterators-c"></a>Iteradores (C#)
 
@@ -324,11 +324,11 @@ public class Stack<T> : IEnumerable<T>
 
 Um iterador pode ocorrer como um método ou como um acessador `get`. Um iterador não pode ocorrer em um evento, um construtor de instância, um construtor estático ou um finalizador estático.
 
-Uma conversão implícita deve existir do `yield return` tipo de expressão `IEnumerable<T>` na declaração para o argumento de tipo para o devolvido pelo ativador.
+Uma conversão implícita deve existir a partir do tipo de expressão na `yield return` instrução para o argumento de tipo para o `IEnumerable<T>` retornado pelo iterador.
 
 Em C#, um método iterador não pode ter os parâmetros `in`, `ref` nem `out`.
 
-Em C#, `yield` não é uma palavra reservada e tem `return` um `break` significado especial apenas quando é usada antes de uma ou palavra-chave.
+No C#, `yield` não é uma palavra reservada e tem um significado especial apenas quando ela é usada antes de uma `return` `break` palavra-chave ou.
 
 ## <a name="technical-implementation"></a>Implementação Técnica
 
@@ -350,15 +350,15 @@ Os iteradores permitem que você mantenha a simplicidade de um loop `foreach` qu
 
 - Modificar a sequência de lista após a primeira iteração de loop `foreach`.
 
-- Evitar o carregamento completo de uma grande lista antes da primeira iteração de um loop `foreach`. Um exemplo é uma busca paginada para carregar um lote de linhas da tabela. Outro exemplo é o método <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, que implementa os iteradores dentro do .NET Framework.
+- Evitar o carregamento completo de uma grande lista antes da primeira iteração de um loop `foreach`. Um exemplo é uma busca paginada para carregar um lote de linhas da tabela. Outro exemplo é o <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> método, que implementa iteradores no .net.
 
 - Encapsular a criação da lista no iterador. No método iterador, você pode criar a lista e, em seguida, gerar cada resultado em um loop.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [foreach, in](../../language-reference/keywords/foreach-in.md)
-- [Rendimento](../../language-reference/keywords/yield.md)
-- [Usando foreach com Arrays](../arrays/using-foreach-with-arrays.md)
+- [yield](../../language-reference/keywords/yield.md)
+- [Usar foreach com matrizes](../arrays/using-foreach-with-arrays.md)
 - [Genéricos](../generics/index.md)

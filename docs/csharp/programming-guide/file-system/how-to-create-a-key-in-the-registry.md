@@ -1,19 +1,19 @@
 ---
-title: Como criar uma chave no registro - Guia de Programação C#
+title: Como criar uma chave no registro-guia de programação C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: 16974db950a3a460416cfb917147439707e1d007
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e340083ffca118337dc9a53bdf20808cd1b15cb
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635438"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241624"
 ---
-# <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>Como criar uma chave no registro (Guia de Programação C#)
+# <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>Como criar uma chave no registro (guia de programação C#)
 Este exemplo adiciona o par de valores, "Name" e "Isabella", ao Registro do usuário atual, sob a chave "Names".  
   
 ## <a name="example"></a>Exemplo  
@@ -48,16 +48,16 @@ key.Close();
   
 - A chave do Registro é somente leitura.  
   
-## <a name="net-framework-security"></a>Segurança do .NET Framework  
+## <a name="net-security"></a>Segurança do .NET  
  É mais seguro gravar dados na pasta do usuário — `Microsoft.Win32.Registry.CurrentUser` — em vez de no computador local — `Microsoft.Win32.Registry.LocalMachine`.  
   
  Ao criar um valor de Registro, é necessário decidir o que fazer se esse valor já existir. Outro processo, talvez um mal-intencionado, pode já ter criado o valor e tem acesso a ele. Ao colocar dados no valor de Registro, os dados estarão disponíveis para o outro processo. Para impedir isso, use o método `Overload:Microsoft.Win32.RegistryKey.GetValue`. método. Ele retornará null se a chave ainda não existir.  
   
  Não é seguro armazenar segredos, como senhas, no Registro como texto sem formatação, mesmo se a chave do Registro estiver protegida por ACL (listas de controle de acesso).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Sistema de arquivos e o Registro (Guia de Programação em C#)](./index.md)
 - [Ler, gravar e excluir do Registro com C#](https://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)

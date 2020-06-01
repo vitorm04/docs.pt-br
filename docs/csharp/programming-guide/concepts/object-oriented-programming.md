@@ -2,12 +2,12 @@
 title: Programação orientada a objeto (C#)
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 541d1a2581a3241f35fc8478040c007b6581e3b2
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 98dd5147ab54375ec851ccd9b981a68098a53270
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396682"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241884"
 ---
 # <a name="object-oriented-programming-c"></a>Programação orientada a objeto (C#)
 
@@ -124,7 +124,7 @@ Na maioria dos casos, você declara um método dentro de uma definição de clas
 Para obter mais informações, consulte:
 
 - [Métodos](../classes-and-structs/methods.md)
-- [Métodos de extensão](../classes-and-structs/extension-methods.md)
+- [Métodos de Extensão](../classes-and-structs/extension-methods.md)
 
 #### <a name="constructors"></a>Construtores
 
@@ -146,9 +146,9 @@ Para saber mais, veja [Construtores](../classes-and-structs/constructors.md).
 
 #### <a name="finalizers"></a>Finalizadores
 
-Um finalizador é usado para destruir instâncias de classes. No .NET Framework, o coletor de lixo gerencia automaticamente a alocação e a liberação de memória para os objetos gerenciados em seu aplicativo. No entanto, talvez ainda seja necessário usar os finalizadores para limpar recursos não gerenciados que seu aplicativo criar. Pode haver apenas um finalizador para uma classe.
+Um finalizador é usado para destruir instâncias de classes. No .NET, o coletor de lixo gerencia automaticamente a alocação e o lançamento da memória para os objetos gerenciados em seu aplicativo. No entanto, talvez ainda seja necessário usar os finalizadores para limpar recursos não gerenciados que seu aplicativo criar. Pode haver apenas um finalizador para uma classe.
 
-Para obter mais informações sobre os finalizadores e a coleta de lixo no .NET Framework, consulte [Coleta de lixo](../../../standard/garbage-collection/index.md).
+Para obter mais informações sobre finalizadores e coleta de lixo no .NET, consulte [coleta de lixo](../../../standard/garbage-collection/index.md).
 
 #### <a name="events"></a>Eventos
 
@@ -186,7 +186,7 @@ Os modificadores de acesso a seguir estão disponíveis:
 
 | Modificador de C# | Definição |
 |--|--|
-| [públicos](../../language-reference/keywords/public.md) | O tipo ou membro pode ser acessado por qualquer outro código no mesmo assembly ou em outro assembly que faz referência a ele. |
+| [público](../../language-reference/keywords/public.md) | O tipo ou membro pode ser acessado por qualquer outro código no mesmo assembly ou em outro assembly que faz referência a ele. |
 | [particulares](../../language-reference/keywords/private.md) | O tipo ou membro pode ser acessado somente pelo código na mesma classe. |
 | [protegidos](../../language-reference/keywords/protected.md) | O tipo ou membro pode ser acessado somente pelo código na mesma classe ou em uma classe derivada. |
 | [interno](../../language-reference/keywords/internal.md) | O tipo ou membro pode ser acessado por qualquer código no mesmo assembly, mas não de outro assembly. |
@@ -298,7 +298,7 @@ public abstract class B { }
 Para obter mais informações, consulte:
 
 - [sealed](../../language-reference/keywords/sealed.md)
-- [abstract](../../language-reference/keywords/abstract.md)
+- [resume](../../language-reference/keywords/abstract.md)
 
 ### <a name="overriding-members"></a>Substituindo membros
 
@@ -308,9 +308,9 @@ Os seguintes modificadores são usados para controlar como as propriedades e mé
 
 | Modificador de C# | Definição |
 |--|--|
-| [virtuaisLUNs](../../language-reference/keywords/virtual.md) | Permite que um membro de classe seja substituído em uma classe derivada. |
-| [override](../../language-reference/keywords/override.md) | Substitui um membro virtual (substituível) definido na classe base. |
-| [abstract](../../language-reference/keywords/abstract.md) | Requer que um membro de classe seja substituído na classe derivada. |
+| [virtual](../../language-reference/keywords/virtual.md) | Permite que um membro de classe seja substituído em uma classe derivada. |
+| [substituição](../../language-reference/keywords/override.md) | Substitui um membro virtual (substituível) definido na classe base. |
+| [resume](../../language-reference/keywords/abstract.md) | Requer que um membro de classe seja substituído na classe derivada. |
 | [Modificador new](../../language-reference/keywords/new-modifier.md) | Oculta um membro herdado de uma classe base |
 
 ## <a name="interfaces"></a>Interfaces
@@ -342,7 +342,7 @@ Para obter mais informações, consulte o artigo guia de programação em [inter
 
 ## <a name="generics"></a>Genéricos
 
-Classes, estruturas, interfaces e métodos do .NET Framework podem incluir *parâmetros de tipo* que definem tipos de objetos que podem armazenar ou usar. O exemplo mais comum dos genéricos é uma coleção, em que você pode especificar o tipo dos objeto a serem armazenados em uma coleção.
+Classes, estruturas, interfaces e métodos no .NET podem incluir *parâmetros de tipo* que definem tipos de objetos que eles podem armazenar ou usar. O exemplo mais comum dos genéricos é uma coleção, em que você pode especificar o tipo dos objeto a serem armazenados em uma coleção.
 
 Para definir uma classe genérica:
 
@@ -400,6 +400,6 @@ class SampleClass
 
 Para obter mais informações, consulte o artigo guia de programação em [delegados](../delegates/index.md) e o artigo referência de idioma na palavra-chave [delegate](../../language-reference/builtin-types/reference-types.md) .
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Guia de programação C#](../index.md)

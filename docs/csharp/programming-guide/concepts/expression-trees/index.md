@@ -2,19 +2,19 @@
 title: Árvores de expressão (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: f425ab38bf7bb54814fe777b7cb02180d022a8af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c260e649e7bd285a6bd07b5a1cd7fc1a7f75b82a
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79169630"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241546"
 ---
 # <a name="expression-trees-c"></a>Árvores de expressão (C#)
 Árvores de expressão representam código em uma estrutura de dados de árvore, onde cada nó é, por exemplo, uma expressão, uma chamada de método ou uma operação binária como `x < y`.  
   
- Você pode compilar e executar código representado por árvores de expressão. Isso permite a modificação dinâmica de código executável, a execução de consultas LINQ em vários bancos de dados e a criação de consultas dinâmicas. Para obter mais informações sobre árvores de expressão no LINQ, consulte [Como usar árvores de expressão para construir consultas dinâmicas (C#)](./how-to-use-expression-trees-to-build-dynamic-queries.md).
+ Você pode compilar e executar código representado por árvores de expressão. Isso permite a modificação dinâmica de código executável, a execução de consultas LINQ em vários bancos de dados e a criação de consultas dinâmicas. Para obter mais informações sobre árvores de expressão no LINQ, consulte [como usar árvores de expressão para criar consultas dinâmicas (C#)](./how-to-use-expression-trees-to-build-dynamic-queries.md).
   
- Árvores de expressão também são usadas no runtime de linguagem dinâmica (DLR) para fornecer interoperabilidade entre linguagens dinâmicas e o .NET Framework e permitir que gravadores compiladores emitam árvores de expressão em vez de Microsoft intermediate language (MSIL). Para obter mais informações sobre o DLR, consulte [Visão geral do Dynamic Language Runtime](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).  
+ As árvores de expressão também são usadas no DLR (tempo de execução de linguagem dinâmica) para fornecer interoperabilidade entre linguagens dinâmicas e .NET e para permitir que os escritores de compilador emitam árvores de expressão em vez da MSIL (Microsoft Intermediate Language). Para obter mais informações sobre o DLR, consulte [Visão geral do Dynamic Language Runtime](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).  
   
  Você pode fazer o compilador C# ou do Visual Basic criar uma árvore de expressões para você com base em uma expressão lambda anônima ou criar árvores de expressão manualmente usando o namespace <xref:System.Linq.Expressions>.  
   
@@ -118,7 +118,7 @@ Console.WriteLine("Decomposed expression: {0} => {1} {2} {3}",
 ```  
   
 ## <a name="immutability-of-expression-trees"></a>Imutabilidade das árvores de expressão  
- Árvores de expressão devem ser imutáveis. Isso significa que se você deseja modificar uma árvore de expressão, deverá criar uma nova árvore de expressão, copiando a existente e substituindo seus nós. Você pode usar um visitantes de árvore expressão para percorrer a árvore de expressão existente. Para obter mais informações, consulte [Como modificar árvores de expressão (C#)](./how-to-modify-expression-trees.md).
+ Árvores de expressão devem ser imutáveis. Isso significa que se você deseja modificar uma árvore de expressão, deverá criar uma nova árvore de expressão, copiando a existente e substituindo seus nós. Você pode usar um visitantes de árvore expressão para percorrer a árvore de expressão existente. Para obter mais informações, consulte [como modificar árvores de expressão (C#)](./how-to-modify-expression-trees.md).
   
 ## <a name="compiling-expression-trees"></a>Compilando árvores de expressão  
  O tipo <xref:System.Linq.Expressions.Expression%601> fornece o método <xref:System.Linq.Expressions.Expression%601.Compile%2A> que compila o código representado por uma árvore de expressão para um delegado executável.  
@@ -145,13 +145,13 @@ Console.WriteLine(expr.Compile()(4));
 // Also prints True.  
 ```  
   
- Para obter mais informações, consulte [Como executar árvores de expressão (C#)](./how-to-execute-expression-trees.md).
+ Para obter mais informações, consulte [como executar árvores de expressão (C#)](./how-to-execute-expression-trees.md).
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Linq.Expressions>
 - [Como executar árvores de expressão (C#)](./how-to-execute-expression-trees.md)
 - [Como modificar árvores de expressão (C#)](./how-to-modify-expression-trees.md)
-- [Expressões Lambda](../../statements-expressions-operators/lambda-expressions.md)
-- [Visão geral do tempo de execução do idioma dinâmico](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
+- [Expressões lambda](../../statements-expressions-operators/lambda-expressions.md)
+- [Visão geral do tempo de execução de linguagem dinâmica](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [Conceitos de programação (C#)](../index.md)
