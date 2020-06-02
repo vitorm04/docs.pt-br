@@ -12,12 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-ms.openlocfilehash: 2d8b22063a184773928e5bc072f51a9f7d5d45ba
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: aeb39f32c97424646b85b26ed9c4ed0e350d196b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396984"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287604"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Limpando recursos não gerenciados
 
@@ -27,7 +27,7 @@ Se seus tipos usam recursos não gerenciados, você deve fazer o seguinte:
 
 - Implementar o [padrão de descarte](implementing-dispose.md). Isso exige que você forneça uma <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementação para habilitar a versão determinística de recursos não gerenciados. Um consumidor de seu tipo chama <xref:System.IDisposable.Dispose%2A> quando o objeto (e os recursos que ele usa) não são mais necessários. O método <xref:System.IDisposable.Dispose%2A> libera imediatamente os recursos não gerenciados.
 
-- Caso um consumidor de seu tipo se esqueça de chamar <xref:System.IDisposable.Dispose%2A> , forneça uma maneira para que seus recursos não gerenciados sejam liberados. Há duas maneiras de fazer isso:
+- Caso um consumidor de seu tipo se esqueça de chamar <xref:System.IDisposable.Dispose%2A> , forneça uma maneira para que seus recursos não gerenciados sejam liberados. Existem duas maneiras de fazer isso:
 
   - Usar um identificador seguro para encapsular o recurso não gerenciado. Essa é a técnica recomendada. Os identificadores seguros são derivados da <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> classe abstrata e incluem um <xref:System.Object.Finalize%2A> método robusto. Ao usar um identificador seguro, você simplesmente implementa a interface <xref:System.IDisposable> e chama o método <xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> do seu identificador seguro em sua implementação do <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>. O finalizador do identificador seguro é chamado automaticamente pelo coletor de lixo quando seu método <xref:System.IDisposable.Dispose%2A> não é chamado.
 
@@ -44,11 +44,11 @@ Os consumidores do seu tipo poderão então chamar sua implementação de <xref:
 
 A [implementação de um método Dispose](implementing-dispose.md) descreve como implementar o padrão Dispose para liberar recursos não gerenciados.
 
-[Usando objetos que implementam `IDisposable` ](../../../docs/standard/garbage-collection/using-objects.md) Descreve como os consumidores de um tipo garantem que sua <xref:System.IDisposable.Dispose%2A> implementação seja chamada. É recomendável usar a `using` instrução C# (ou Visual Basic `Using` ) para fazer isso.
+[Usando objetos que implementam `IDisposable` ](using-objects.md) Descreve como os consumidores de um tipo garantem que sua <xref:System.IDisposable.Dispose%2A> implementação seja chamada. É recomendável usar a `using` instrução C# (ou Visual Basic `Using` ) para fazer isso.
 
 ## <a name="reference"></a>Referência
 
-| Tipo/membro | Descrição |
+| Tipo/membro | Description |
 |--|--|
 | <xref:System.IDisposable?displayProperty=nameWithType> | Define o método <xref:System.IDisposable.Dispose%2A> para liberar recursos não gerenciados. |
 | <xref:System.Object.Finalize%2A?displayProperty=nameWithType> | Cuida da finalização de objetos quando os recursos não gerenciados não são liberados pelo método <xref:System.IDisposable.Dispose%2A>. |

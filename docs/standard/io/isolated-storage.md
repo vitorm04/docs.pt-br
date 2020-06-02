@@ -18,18 +18,18 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: ed784bafda2aed829f2e97d7e7e8b2716c48c7ba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f98af970c8827623298fb43cd0653bdaafb20dd3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75706576"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278876"
 ---
 # <a name="isolated-storage"></a>Armazenamentos isolado
 <a name="top"></a> Para aplicativos desktop, o armazenamento isolado é um mecanismo de armazenamento de dados que proporciona isolamento e segurança ao definir formas padronizadas de associar código a dados salvos. A padronização também fornece outros benefícios. Os administradores podem usar as ferramentas desenvolvidas para manipular armazenamentos isolados para configurar espaço de armazenamento de arquivos, definir políticas de segurança e excluir dados não utilizados. Com armazenamentos isolados, seu código não precisa mais de caminhos exclusivos para especificar locais seguros na sistema de arquivos e os dados são protegidos de outros aplicativos que só têm acesso a armazenamentos isolados. Informações embutidas em código que indicam onde a área de armazenamento de um aplicativo se encontra são desnecessárias.
 
 > [!IMPORTANT]
-> O armazenamento isolado não está disponível para aplicativos do Windows 8.x Store. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API do Windows Runtime para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.
+> O armazenamento isolado não está disponível para aplicativos da loja do Windows 8. x. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API do Windows Runtime para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.
 
 Este tópico contém as seguintes seções:
 
@@ -47,7 +47,7 @@ Este tópico contém as seguintes seções:
 
 - [Cenários para armazenamento isolado](#scenarios_for_isolated_storage)
 
-- [Tópicos Relacionados](#related_topics)
+- [Tópicos relacionados](#related_topics)
 
 - [Referência](#reference)
 
@@ -113,10 +113,10 @@ O uso permitido especificado por <xref:System.Security.Permissions.IsolatedStora
 
 |Sistema operacional|Localização no sistema de arquivos|
 |----------------------|-----------------------------|
-|Windows 2000, Windows XP, Windows Server 2003 (atualização do Windows NT 4.0)|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMROOT>\Perfis\\<usuário\>\Application Data<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMROOT>\Perfis\\<usuário\>\Configurações Locais\Application Data|
-|Windows 2000 – Instalação limpa (e atualizações do Windows 98 e Windows NT 3.51)|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuário\>\Application Data<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuário\>\Configurações Locais\Application Data|
-|Windows XP, Windows Server 2003 – Instalação limpa (e atualizações do Windows 2000 e Windows 98)|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuário\>\Application Data<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuário\>\Configurações Locais\Application Data|
-|Windows 8, Windows 7, Windows Server 2008, Windows Vista|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMDRIVE>\Users\\<usuário\>\AppData\Roaming<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMDRIVE>\Users\\<usuário\>\AppData\Local|
+|Windows 2000, Windows XP, Windows Server 2003 (atualização do Windows NT 4.0)|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMROOT>\Profiles \\<o usuário \> \Application Data<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMROOT>\Profiles \\<usuário \> \Local Settings\Application Data|
+|Windows 2000 – Instalação limpa (e atualizações do Windows 98 e Windows NT 3.51)|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings \\<o usuário \> \Application Data<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings \\<usuário \> \Local Settings\Application Data|
+|Windows XP, Windows Server 2003 – Instalação limpa (e atualizações do Windows 2000 e Windows 98)|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings \\<o usuário \> \Application Data<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings \\<usuário \> \Local Settings\Application Data|
+|Windows 8, Windows 7, Windows Server 2008, Windows Vista|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMDRIVE>\Users \\<usuário \> \AppData\Roaming<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMDRIVE>\Users \\<usuário \> \AppData\Local|
 
 <a name="isolated_storage_tasks"></a>
 
@@ -160,20 +160,20 @@ Muitos aplicativos usam bancos de dados para armazenar e isolar os dados. Nesse 
 
 <a name="related_topics"></a>
 
-## <a name="related-topics"></a>Tópicos Relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 |Title|Descrição|
 |-----------|-----------------|
-|[Tipos de isolamento](../../../docs/standard/io/types-of-isolation.md)|Descreve os diferentes tipos de isolamento.|
-|[Como obter repositórios para o armazenamento isolado](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Fornece um exemplo de uso da classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> para obter um armazenamento isolado por usuário e assembly.|
-|[Como enumerar repositórios para o armazenamento isolado](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|Mostra como usar o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> para calcular o tamanho de todo o armazenamento isolado para o usuário.|
-|[Como excluir repositórios no armazenamento isolado](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|Mostra como usar o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> de duas maneiras diferentes para excluir repositórios isolados.|
-|[Como antecipar condições de espaço insuficiente com o armazenamento isolado](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|Mostra como a medir o espaço restante em um armazenamento isolado.|
-|[Como criar arquivos e diretórios no armazenamento isolado](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|Fornece alguns exemplos de criação de arquivos e diretórios em um repositório isolado.|
-|[Como localizar arquivos e diretórios existentes no armazenamento isolado](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|Demonstra como ler a estrutura de diretórios e arquivos no armazenamento isolado.|
-|[Como ler e gravar em arquivos no armazenamento isolado](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|Fornece um exemplo de gravação de uma cadeia de caracteres em um arquivo de armazenamento isolado, seguida por sua leitura de volta.|
-|[Como excluir arquivos e diretórios no armazenamento isolado](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|Demonstra como excluir arquivos e diretórios isolados.|
-|[Arquivo e I/O do fluxo](../../../docs/standard/io/index.md)|Explica como você pode executar acesso síncrono e assíncrono a fluxos de dados e arquivos.|
+|[Tipos de isolamento](types-of-isolation.md)|Descreve os diferentes tipos de isolamento.|
+|[Como: Obter repositórios para o armazenamento isolado](how-to-obtain-stores-for-isolated-storage.md)|Fornece um exemplo de uso da classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> para obter um armazenamento isolado por usuário e assembly.|
+|[Como: Enumerar repositórios para o armazenamento isolado](how-to-enumerate-stores-for-isolated-storage.md)|Mostra como usar o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> para calcular o tamanho de todo o armazenamento isolado para o usuário.|
+|[Como: Excluir repositórios no armazenamento isolado](how-to-delete-stores-in-isolated-storage.md)|Mostra como usar o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> de duas maneiras diferentes para excluir repositórios isolados.|
+|[Como: Prever condições de espaço insuficiente com o armazenamento isolado](how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|Mostra como a medir o espaço restante em um armazenamento isolado.|
+|[Como: Criar arquivos e diretórios no armazenamento isolado](how-to-create-files-and-directories-in-isolated-storage.md)|Fornece alguns exemplos de criação de arquivos e diretórios em um repositório isolado.|
+|[Como: Localizar arquivos e diretórios existentes no armazenamento isolado](how-to-find-existing-files-and-directories-in-isolated-storage.md)|Demonstra como ler a estrutura de diretórios e arquivos no armazenamento isolado.|
+|[Como: Ler e gravar em arquivos no armazenamento isolado](how-to-read-and-write-to-files-in-isolated-storage.md)|Fornece um exemplo de gravação de uma cadeia de caracteres em um arquivo de armazenamento isolado, seguida por sua leitura de volta.|
+|[Como: Excluir arquivos e diretórios no armazenamento isolado](how-to-delete-files-and-directories-in-isolated-storage.md)|Demonstra como excluir arquivos e diretórios isolados.|
+|[Arquivo e e/s de fluxo](index.md)|Explica como você pode executar acesso síncrono e assíncrono a fluxos de dados e arquivos.|
 
 <a name="reference"></a>
 
