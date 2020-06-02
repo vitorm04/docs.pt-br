@@ -112,9 +112,9 @@
         - name: Depurar um aplicativo
           href: tutorials/debugging-with-visual-studio-code.md
           displayName: 'tutorials, visual studio code, vs code'
-        - name: Criar um aplicativo de console e publicá-lo
-          href: tutorials/cli-create-console-app.md
-          displayName: 'tutorials, cli'
+        - name: Publicar um aplicativo
+          href: tutorials/publishing-with-visual-studio-code.md
+          displayName: 'tutorials, visual studio, vs'
         - name: Criar uma biblioteca e fazer teste de unidade dela – macOS
           href: tutorials/using-on-macos.md
           displayName: 'tutorials, visual studio code, vs code, cli'
