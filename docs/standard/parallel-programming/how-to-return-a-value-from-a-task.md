@@ -1,5 +1,5 @@
 ---
-title: Como retornar um valor de uma tarefa
+title: 'Como: Retornar um valor de uma tarefa'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to return a value
 ms.assetid: c4bc0f44-eba2-4e96-9e03-1cc787461e61
-ms.openlocfilehash: 495f68114bfe960b8182be4ab76b72043b2d0cc7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 144d004d697b84a011cedafc7d07b679ef8852c3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141665"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288141"
 ---
-# <a name="how-to-return-a-value-from-a-task"></a>Como retornar um valor de uma tarefa
+# <a name="how-to-return-a-value-from-a-task"></a>Como: Retornar um valor de uma tarefa
 Este exemplo mostra como usar o tipo <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> para retornar um valor da propriedade <xref:System.Threading.Tasks.Task%601.Result%2A>. Isso requer que o diretório C:\Usuários\Público\Imagens\Imagens de Exemplo\ exista e contenha arquivos.  
   
 ## <a name="example"></a>Exemplo  
@@ -24,9 +24,9 @@ Este exemplo mostra como usar o tipo <xref:System.Threading.Tasks.Task%601?displ
   
  A propriedade <xref:System.Threading.Tasks.Task%601.Result%2A> bloqueia o thread de chamada até que a tarefa seja concluída.  
   
- Para ver como passar o resultado de um <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> para uma tarefa de continuação, confira [Encadeamento de tarefas usando tarefas de continuação](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).  
+ Para ver como passar o resultado de um <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> para uma tarefa de continuação, confira [Encadeamento de tarefas usando tarefas de continuação](chaining-tasks-by-using-continuation-tasks.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Programação Assíncrona baseada em tarefas](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
-- [Expressões lambda em PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [Programação assíncrona baseada em tarefas](task-based-asynchronous-programming.md)
+- [Expressões lambda em PLINQ e TPL](lambda-expressions-in-plinq-and-tpl.md)

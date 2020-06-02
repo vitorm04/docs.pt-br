@@ -6,12 +6,12 @@ helpviewer_keywords:
 - encryption [.NET Framework], creating cryptographic schemes
 - cryptography [.NET Framework], creating cryptographic schemes
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
-ms.openlocfilehash: 00fff5f346633a9682d75cf6a3be7e8e7d5db7e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1478873c1c2dc73ca31c9078e39a3902966bf674
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706286"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288414"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Criando um esquema criptográfico
 Os componentes de criptografia do .NET Framework podem ser combinados para criar esquemas diferentes para criptografar e descriptografar dados.  
@@ -32,4 +32,4 @@ Os componentes de criptografia do .NET Framework podem ser combinados para criar
   
 ## <a name="see-also"></a>Veja também
 
-- [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)
+- [Serviços de Criptografia](cryptographic-services.md)

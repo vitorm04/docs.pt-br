@@ -1,5 +1,5 @@
 ---
-title: <param> - Guia de programação C#
+title: <param> -Guia de programação C#
 ms.date: 07/20/2015
 f1_keywords:
 - param
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <param> C# XML tag
 - param C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: d16070a82531519dd276b2ea999623017769d716
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 396ed716c246091a674268020261069f36dd2be8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789766"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287318"
 ---
-# <a name="param-c-programming-guide"></a>\<param> (guia de programação C#)
+# <a name="param-c-programming-guide"></a>\<param>(Guia de programação C#)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,7 +23,7 @@ ms.locfileid: "76789766"
 <param name="name">description</param>
 ```
 
-## <a name="parameters"></a>parâmetros
+## <a name="parameters"></a>Parâmetros
 
 - `name`
 
@@ -35,11 +35,11 @@ ms.locfileid: "76789766"
 
 ## <a name="remarks"></a>Comentários
 
-A marca \<param> deve ser usada no comentário para uma declaração de método para descrever um dos parâmetros do método. Para documentar vários parâmetros, use várias marcas \<param>.
+A `<param>` marca deve ser usada no comentário para uma declaração de método para descrever um dos parâmetros para o método. Para documentar vários parâmetros, use várias `<param>` marcas.
 
-O texto da marca \<param> será exibido no IntelliSense, o Pesquisador de Objetos e no relatório Web de comentários sobre código.
+O texto da `<param>` marca é exibido no IntelliSense, no Pesquisador de objetos e no relatório da Web de comentários de código.
 
-Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação para um arquivo.
+Compile com [-Doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.
 
 ## <a name="example"></a>Exemplo
 

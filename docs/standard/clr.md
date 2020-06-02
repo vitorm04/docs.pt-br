@@ -16,12 +16,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6f9ad8aafc37039b55ae3bf6eb743e07ad8e2235
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 74421f79c18f32e121d51c47f3eb32f3c2ed71fd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74884404"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289240"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Visão geral do CLR (Common Language Runtime)
 
@@ -42,7 +42,7 @@ Como parte de seus metadados, todos os componentes gerenciados transportam infor
 
 Compiladores de linguagens e ferramentas expõem a funcionalidade do runtime da maneira como seriam úteis e intuitivas para desenvolvedores. Isso significa que alguns recursos do runtime devem ser mais perceptíveis em um ambiente do que em outro. Como você usa o runtime depende de quais compiladores de linguagem ou ferramentas você usa. Por exemplo, se for um desenvolvedor do Visual Basic, você poderá observar que, com o Common Language Runtime, a linguagem do Visual Basic tem mais recursos orientados a objeto do que antes. O runtime oferece os seguintes benefícios:
 
-- Melhorias de desempenho.
+- Aprimoramentos no desempenho.
 
 - A possibilidade de usar facilmente componentes desenvolvidos em outras linguagens.
 
@@ -58,11 +58,11 @@ Compiladores de linguagens e ferramentas expõem a funcionalidade do runtime da 
 
 - Coleta de lixo.
 
-- Uso de delegados em vez de ponteiros de função para maior segurança e segurança de tipos. Para saber mais sobre representantes, veja [Common Type System](../../docs/standard/base-types/common-type-system.md).
+- Uso de delegados em vez de ponteiros de função para maior segurança e segurança de tipos. Para saber mais sobre representantes, veja [Common Type System](base-types/common-type-system.md).
 
 ## <a name="clr-versions"></a>Versões do CLR
 
-O número da versão .NET Framework não corresponde necessariamente ao número de versão da CLR que inclui. Para obter uma lista de versões do .NET Framework e suas versões CLR [correspondentes, consulte versões e dependências do .NET Framework](../framework/migration-guide/versions-and-dependencies.md). As versões do .NET Core têm uma única versão do produto, ou seja, não há uma versão CLR separada. Para obter uma lista de versões do .NET Core, consulte [Download .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
+O número de versão de .NET Framework não corresponde necessariamente ao número de versão do CLR que ele inclui. Para obter uma lista de versões de .NET Framework e suas versões correspondentes do CLR, consulte [.NET Framework versões e dependências](../framework/migration-guide/versions-and-dependencies.md). As versões do .NET Core têm uma única versão do produto, ou seja, não há nenhuma versão CLR separada. Para obter uma lista das versões do .NET Core, consulte [baixar o .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -70,5 +70,5 @@ O número da versão .NET Framework não corresponde necessariamente ao número 
 |-----------|-----------------|
 |[Processo de execução gerenciada](managed-execution-process.md)|Descreve as etapas obrigatórias para usufruir o Common Language Runtime.|
 |[Gerenciamento automático de memória](automatic-memory-management.md)|Descreve como o coletor de lixo aloca e libera memória.|
-|[Visão geral do Quadro .NET](../framework/get-started/overview.md)|Descreve os conceitos-chave do .NET Framework, como Common Type System, interoperabilidade entre linguagens, execução gerenciada, domínios de aplicativos e assemblies.|
-|[Common Type System](./base-types/common-type-system.md)|Descreve como os tipos são declarados, usados e gerenciados no runtime para dar suporte à integração entre linguagens.|
+|[Visão geral do .NET Framework](../framework/get-started/overview.md)|Descreve os conceitos-chave do .NET Framework, como Common Type System, interoperabilidade entre linguagens, execução gerenciada, domínios de aplicativos e assemblies.|
+|[Sistema de tipos comum](./base-types/common-type-system.md)|Descreve como os tipos são declarados, usados e gerenciados no runtime para dar suporte à integração entre linguagens.|

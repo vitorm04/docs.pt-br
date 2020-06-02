@@ -1,5 +1,5 @@
 ---
-title: <para> - Guia de programação C#
+title: <para> -Guia de programação C#
 ms.date: 07/20/2015
 f1_keywords:
 - <para>
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: b2740370106ce5b2812acbea212354ebea1f0e34
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d1fe81b1752d066c6b2e1ffe27f0c43fc4068edf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793416"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287292"
 ---
-# <a name="para-c-programming-guide"></a>\<para> (guia de programação C#)
+# <a name="para-c-programming-guide"></a>\<para>(Guia de programação C#)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,7 +23,7 @@ ms.locfileid: "76793416"
 <para>content</para>
 ```
 
-## <a name="parameters"></a>parâmetros
+## <a name="parameters"></a>Parâmetros
 
 - `content`
 
@@ -31,15 +31,15 @@ ms.locfileid: "76793416"
 
 ## <a name="remarks"></a>Comentários
 
-A \<tag para> é para uso dentro de uma tag, como [ \<>de resumo, ](./summary.md) [ \<observações>, ](./remarks.md)ou [ \<retorna>, ](./returns.md)e permite adicionar estrutura ao texto.
+A `<para>` marca é para uso dentro de uma marca, como [\<summary>](./summary.md) , [\<remarks>](./remarks.md) ou [\<returns>](./returns.md) , e permite que você adicione a estrutura ao texto.
 
-Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação para um arquivo.
+Compile com [-Doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.
 
 ## <a name="example"></a>Exemplo
 
-Veja [ \<resumo>](./summary.md) para um \<exemplo de uso de para>.
+Consulte [\<summary>](./summary.md) para obter um exemplo de como usar `<para>` .
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação em C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

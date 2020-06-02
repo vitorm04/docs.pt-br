@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f878f73497b83aaf31f2ba3b23cca1f685867b3e
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: c2d28abacd34736764b69be750a850a0f2e8db85
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095262"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288375"
 ---
 # <a name="net-framework-cryptography-model"></a>Modelo de Criptografia do .NET Framework
 
@@ -21,17 +21,17 @@ O .NET Framework fornece implementações de muitos algoritmos criptográficos p
 
 O sistema de segurança .NET Framework implementa um padrão extensível de herança de classe derivada. A hierarquia é a seguinte:
 
-- Classe de tipo de algoritmo, como <xref:System.Security.Cryptography.SymmetricAlgorithm>, <xref:System.Security.Cryptography.AsymmetricAlgorithm> ou <xref:System.Security.Cryptography.HashAlgorithm>. Esse nível é abstrato.
+- Classe de tipo de algoritmo, <xref:System.Security.Cryptography.SymmetricAlgorithm> como <xref:System.Security.Cryptography.AsymmetricAlgorithm> ou <xref:System.Security.Cryptography.HashAlgorithm> . Esse nível é abstrato.
 
-- Classe de algoritmo que herda de uma classe de tipo de algoritmo; por exemplo, <xref:System.Security.Cryptography.Aes>, <xref:System.Security.Cryptography.RC2>ou <xref:System.Security.Cryptography.ECDiffieHellman>. Esse nível é abstrato.
+- Classe de algoritmo que herda de uma classe de tipo de algoritmo; por exemplo, <xref:System.Security.Cryptography.Aes> , <xref:System.Security.Cryptography.RC2> ou <xref:System.Security.Cryptography.ECDiffieHellman> . Esse nível é abstrato.
 
-- Implementação de uma classe de algoritmo que herda de uma classe de algoritmo; por exemplo, <xref:System.Security.Cryptography.AesManaged>, <xref:System.Security.Cryptography.RC2CryptoServiceProvider>ou <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Esse nível é totalmente implementado.
+- Implementação de uma classe de algoritmo que herda de uma classe de algoritmo; por exemplo, <xref:System.Security.Cryptography.AesManaged> , <xref:System.Security.Cryptography.RC2CryptoServiceProvider> ou <xref:System.Security.Cryptography.ECDiffieHellmanCng> . Esse nível é totalmente implementado.
 
-Usando esse padrão de classes derivadas, é fácil adicionar um novo algoritmo ou uma nova implementação de um algoritmo existente. Por exemplo, para criar um novo algoritmo Public-Key, você herdará da classe <xref:System.Security.Cryptography.AsymmetricAlgorithm>. Para criar uma nova implementação de um algoritmo específico, você deve criar uma classe derivada não abstrata desse algoritmo.
+Usando esse padrão de classes derivadas, é fácil adicionar um novo algoritmo ou uma nova implementação de um algoritmo existente. Por exemplo, para criar um novo algoritmo Public-Key, você herdaria da <xref:System.Security.Cryptography.AsymmetricAlgorithm> classe. Para criar uma nova implementação de um algoritmo específico, você deve criar uma classe derivada não abstrata desse algoritmo.
 
 ## <a name="how-algorithms-are-implemented-in-the-net-framework"></a>Como os algoritmos são implementados no .NET Framework
 
-Como um exemplo das diferentes implementações disponíveis para um algoritmo, considere algoritmos simétricos. A base para todos os algoritmos simétricos é <xref:System.Security.Cryptography.SymmetricAlgorithm>, que é herdada pelos seguintes algoritmos:
+Como um exemplo das diferentes implementações disponíveis para um algoritmo, considere algoritmos simétricos. A base para todos os algoritmos simétricos é <xref:System.Security.Cryptography.SymmetricAlgorithm> , que é herdada pelos seguintes algoritmos:
 
 * <xref:System.Security.Cryptography.Aes>
 * <xref:System.Security.Cryptography.DES>
@@ -39,17 +39,17 @@ Como um exemplo das diferentes implementações disponíveis para um algoritmo, 
 * <xref:System.Security.Cryptography.Rijndael>
 * <xref:System.Security.Cryptography.TripleDES>
 
-<xref:System.Security.Cryptography.Aes> é herdado por duas classes: <xref:System.Security.Cryptography.AesCryptoServiceProvider> e <xref:System.Security.Cryptography.AesManaged>. A classe <xref:System.Security.Cryptography.AesCryptoServiceProvider> é um wrapper em relação à implementação da CAPI (API de criptografia do Windows) do AES, enquanto a classe <xref:System.Security.Cryptography.AesManaged> é totalmente escrita em código gerenciado. Também há um terceiro tipo de implementação, CNG (Cryptography Next Generation), além das implementações gerenciadas e CAPI. Um exemplo de um algoritmo CNG é <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Os algoritmos CNG estão disponíveis no Windows Vista e versões posteriores.
+<xref:System.Security.Cryptography.Aes>é herdado por duas classes: <xref:System.Security.Cryptography.AesCryptoServiceProvider> e <xref:System.Security.Cryptography.AesManaged> . A <xref:System.Security.Cryptography.AesCryptoServiceProvider> classe é um wrapper em relação à implementação da capi (API de criptografia do Windows) do AES, enquanto a <xref:System.Security.Cryptography.AesManaged> classe é inteiramente escrita em código gerenciado. Também há um terceiro tipo de implementação, CNG (Cryptography Next Generation), além das implementações gerenciadas e CAPI. Um exemplo de um algoritmo CNG é <xref:System.Security.Cryptography.ECDiffieHellmanCng> . Os algoritmos CNG estão disponíveis no Windows Vista e versões posteriores.
 
 Você pode escolher qual implementação é a melhor para você. As implementações gerenciadas estão disponíveis em todas as plataformas que dão suporte a .NET Framework. As implementações de CAPI estão disponíveis em sistemas operacionais mais antigos e não são mais desenvolvidas. A CNG é a implementação mais recente em que o novo desenvolvimento ocorrerá. No entanto, as implementações gerenciadas não são certificadas pelo FIPS (Federal Information Processing Standards) e podem ser mais lentas do que as classes de wrapper.
 
 ## <a name="stream-design"></a>Design de fluxo
 
-O Common Language Runtime usa um design orientado a fluxo para implementar algoritmos simétricos e algoritmos de hash. O núcleo desse design é a classe <xref:System.Security.Cryptography.CryptoStream>, que deriva da classe <xref:System.IO.Stream>. Os objetos criptográficos baseados em fluxo dão suporte a uma única interface padrão (`CryptoStream`) para lidar com a parte de transferência de dados do objeto. Como todos os objetos são criados em uma interface padrão, você pode encadear vários objetos (como um objeto de hash seguido por um objeto de criptografia) e pode executar várias operações nos dados sem precisar de armazenamento intermediário para ele. O modelo de streaming também permite que você crie objetos de objetos menores. Por exemplo, um algoritmo combinado de criptografia e hash pode ser exibido como um único objeto de fluxo, embora esse objeto possa ser criado a partir de um conjunto de objetos de fluxo.
+O Common Language Runtime usa um design orientado a fluxo para implementar algoritmos simétricos e algoritmos de hash. O núcleo desse design é a <xref:System.Security.Cryptography.CryptoStream> classe, que deriva da <xref:System.IO.Stream> classe. Os objetos criptográficos baseados em fluxo dão suporte a uma única interface padrão ( `CryptoStream` ) para manipular a parte de transferência de dados do objeto. Como todos os objetos são criados em uma interface padrão, você pode encadear vários objetos (como um objeto de hash seguido por um objeto de criptografia) e pode executar várias operações nos dados sem precisar de armazenamento intermediário para ele. O modelo de streaming também permite que você crie objetos de objetos menores. Por exemplo, um algoritmo combinado de criptografia e hash pode ser exibido como um único objeto de fluxo, embora esse objeto possa ser criado a partir de um conjunto de objetos de fluxo.
 
 ## <a name="cryptographic-configuration"></a>Configuração criptográfica
 
-A configuração criptográfica permite que você resolva uma implementação específica de um algoritmo para um nome de algoritmo, permitindo a extensibilidade das classes de criptografia de .NET Framework. Você pode adicionar sua própria implementação de hardware ou software de um algoritmo e mapear a implementação para o nome do algoritmo de sua escolha. Se um algoritmo não for especificado no arquivo de configuração, as configurações padrão serão usadas. Para obter mais informações sobre a configuração de criptografia, consulte [Configurando classes de criptografia](../../../docs/framework/configure-apps/configure-cryptography-classes.md).
+A configuração criptográfica permite que você resolva uma implementação específica de um algoritmo para um nome de algoritmo, permitindo a extensibilidade das classes de criptografia de .NET Framework. Você pode adicionar sua própria implementação de hardware ou software de um algoritmo e mapear a implementação para o nome do algoritmo de sua escolha. Se um algoritmo não for especificado no arquivo de configuração, as configurações padrão serão usadas. Para obter mais informações sobre a configuração de criptografia, consulte [Configurando classes de criptografia](../../framework/configure-apps/configure-cryptography-classes.md).
 
 ## <a name="choosing-an-algorithm"></a>Escolhendo um algoritmo
 
@@ -73,7 +73,7 @@ Aqui está uma lista de algoritmos recomendados por aplicativo:
 - Gerando uma chave a partir de uma senha:
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)
+- [Serviços de Criptografia](cryptographic-services.md)
 - [Protocolos de criptografia, algoritmos e código-fonte aplicados em C, de Bruce Schneier](https://www.schneier.com/books/applied_cryptography/)

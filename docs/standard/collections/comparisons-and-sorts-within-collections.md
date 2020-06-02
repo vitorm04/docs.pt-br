@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: 8e4530063f14211688e5ef2d2ec4ed7e4834cdf1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cb9dd3e8af570251b8bcd2e450e686ad69ab78c4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212961"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287972"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Comparações e classificações dentro de coleções
 
@@ -51,7 +51,7 @@ O comparador padrão baseia-se em pelo menos um dos objetos que estão sendo com
 
 Para fornecer comparações explícitas, alguns métodos aceitam uma implementação de **IComparer** como um parâmetro. Por exemplo, o método <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> aceita uma implementação <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType>.
 
-A configuração de cultura atual do sistema pode afetar as comparações e as classificações dentro de uma coleção. Por padrão, as comparações e classificações nas classes **Collections** levam em conta a cultura. Para ignorar a configuração de cultura e assim obter comparação consistente e classificar os resultados, use o <xref:System.Globalization.CultureInfo.InvariantCulture%2A> com sobrecargas de membros que aceitam uma <xref:System.Globalization.CultureInfo>. Para obter mais informações, consulte [Executando operações de cadeia de caracteres que não levam em conta a cultura em coleções](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) e [Executando operações de cadeia de caracteres que não levam em conta a cultura em matrizes](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md).
+A configuração de cultura atual do sistema pode afetar as comparações e as classificações dentro de uma coleção. Por padrão, as comparações e classificações nas classes **Collections** levam em conta a cultura. Para ignorar a configuração de cultura e assim obter comparação consistente e classificar os resultados, use o <xref:System.Globalization.CultureInfo.InvariantCulture%2A> com sobrecargas de membros que aceitam uma <xref:System.Globalization.CultureInfo>. Para obter mais informações, consulte [Executando operações de cadeia de caracteres que não levam em conta a cultura em coleções](../globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) e [Executando operações de cadeia de caracteres que não levam em conta a cultura em matrizes](../globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md).
 
 <a name="BKMK_Equalityandsortexample"></a>
 ## <a name="equality-and-sort-example"></a>Exemplo de igualdade e classificação

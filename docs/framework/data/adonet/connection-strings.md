@@ -1,13 +1,14 @@
 ---
 title: Cadeias de Conexão
+description: Saiba mais sobre cadeias de conexão em ADO.NET, que contêm informações de inicialização passadas como um parâmetro de um provedor de dados para uma fonte de dados.
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 3f56a487121757706ef6b4dfd11fcd761657431a
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: baa6599a532746895cbb3920f2c623dd4c2be864
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202275"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287019"
 ---
 # <a name="connection-strings-in-adonet"></a>Cadeias de caracteres de conexão no ADO.NET
 
