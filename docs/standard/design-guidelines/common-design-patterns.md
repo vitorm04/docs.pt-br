@@ -6,18 +6,18 @@ helpviewer_keywords:
 - design patterns in class libraries
 - class library design guidelines [.NET Framework], design patterns
 ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
-ms.openlocfilehash: 2c51b1c9bc970d6ff143fa5986eade4a8b69f25a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9b9525a7597f7df6c9a554b51160a99f0e06232c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709498"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290961"
 ---
 # <a name="common-design-patterns"></a>Padrões comuns de Design
 Há vários livros sobre padrões de software, linguagens de padrão e antipadrões que abordam o assunto muito amplo dos padrões. Portanto, este capítulo fornece diretrizes e discussões relacionadas a um conjunto muito limitado de padrões que são usados com frequência no design das APIs de .NET Framework.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Propriedades de dependência](../../../docs/standard/design-guidelines/dependency-properties.md)  
+ [Propriedades de dependência](dependency-properties.md)  
  [Padrão de descarte](../garbage-collection/implementing-dispose.md)  
  *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
@@ -25,4 +25,4 @@ Há vários livros sobre padrões de software, linguagens de padrão e antipadr�
   
 ## <a name="see-also"></a>Veja também
 
-- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
+- [Diretrizes de design de estrutura](index.md)

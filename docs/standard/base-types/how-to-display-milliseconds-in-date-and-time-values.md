@@ -1,5 +1,5 @@
 ---
-title: Como exibir milissegundos em valores de data e hora
+title: 'Como: Exibir milissegundos em valores de data e hora'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: 36d99753503d9ba4b1bde4143c86ba184674e53e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4c63e7e67d388b000954f3a53281f95b0f2522b9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74960400"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290494"
 ---
-# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Como exibir milissegundos em valores de data e hora
+# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Como: Exibir milissegundos em valores de data e hora
 Os métodos padrão de formatação de data e hora, como <xref:System.DateTime.ToString?displayProperty=nameWithType>, incluem as horas, minutos e segundos de um valor temporal, mas excluem seu componente de milissegundos. Este tópico mostra como incluir um componente de milissegundos de uma data e hora em cadeias de caracteres de data e hora formatadas.  
   
 ### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>Para exibir o componente de milissegundos de um valor DateTime  
@@ -47,9 +47,9 @@ Os métodos padrão de formatação de data e hora, como <xref:System.DateTime.T
  [!code-vb[Formatting.HowTo.Millisecond#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Millisecond/vb/Millisecond.vb#3)]  
   
 > [!NOTE]
-> É possível exibir unidades fracionárias muito pequenas de um segundo, como dez milésimos de segundo ou centésimos de milésimos de segundo. No entanto, esses valores podem não ser significativos. A precisão dos valores de data e hora depende da resolução do relação ao relógio do sistema. Nos sistemas operacionais Windows NT 3.5 e Windows Vista, a resolução do relógio é de aproximadamente 10-15 milissegundos.  
+> É possível exibir unidades fracionárias muito pequenas de um segundo, como dez milésimos de segundo ou centésimos de milésimos de segundo. No entanto, esses valores podem não ser significativos. A precisão dos valores de data e hora depende da resolução do relação ao relógio do sistema. No Windows NT 3,5 e versões posteriores e sistemas operacionais Windows Vista, a resolução do relógio é de aproximadamente 10-15 milissegundos.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Globalization.DateTimeFormatInfo>
-- [Strings personalizadas de formato de data e hora](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Cadeias de caracteres de formato de data e hora personalizadas](custom-date-and-time-format-strings.md)

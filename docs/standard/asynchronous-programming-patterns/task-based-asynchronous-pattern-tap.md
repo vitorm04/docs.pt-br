@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-ms.openlocfilehash: 89c486618729c334bf74f0a1f4f9dd1b3cee8b0e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4a08c8a72116ea509f559e412c5f270f3471bf1c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78158162"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276433"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Padrão assíncrono baseado em tarefa (TAP)
 O TAP (Padrão Assíncrono Baseado em Tarefa) baseia-se nos tipos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> no namespace <xref:System.Threading.Tasks?displayProperty=nameWithType>, os quais são usados para representar operações assíncronas arbitrárias. O TAP é o padrão de design assíncrono recomendado para novos desenvolvimentos.  
@@ -30,9 +30,9 @@ O TAP usa um único método para representar o início e a conclusão de uma ope
   
  Os parâmetros de um método TAP devem corresponder aos parâmetros de suas contrapartes síncronas e devem ser fornecidos na mesma ordem.  No entanto, os parâmetros `out` e `ref` são isentos dessa regra e devem ser evitados inteiramente. Quaisquer dados retornados por um parâmetro `out` ou `ref` deve, em vez disso, ser retornado como parte do `TResult` retornado por <xref:System.Threading.Tasks.Task%601> e deve usar uma tupla ou uma estrutura de dados personalizada para acomodar diversos valores. Considere também adicionar um parâmetro <xref:System.Threading.CancellationToken> mesmo se a contraparte síncrona do método TAP não oferece nenhum.
 
- Os métodos que são dedicados exclusivamente à criação, ao tratamento ou à combinação de tarefas (onde a intenção assíncrona do método está clara no nome do método ou no nome do tipo ao qual o método pertence) não precisam seguir esse padrão de nomenclatura; esses métodos são geralmente denominados *combinadores*. Os exemplos de combinadores incluem <xref:System.Threading.Tasks.Task.WhenAll%2A> e <xref:System.Threading.Tasks.Task.WhenAny%2A> e são discutidos na seção [Usando os combinadores baseados em tarefas internos](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators) do artigo [Consumindo o padrão assíncrono baseado em tarefa](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).  
+ Os métodos que são dedicados exclusivamente à criação, ao tratamento ou à combinação de tarefas (onde a intenção assíncrona do método está clara no nome do método ou no nome do tipo ao qual o método pertence) não precisam seguir esse padrão de nomenclatura; esses métodos são geralmente denominados *combinadores*. Os exemplos de combinadores incluem <xref:System.Threading.Tasks.Task.WhenAll%2A> e <xref:System.Threading.Tasks.Task.WhenAny%2A> e são discutidos na seção [Usando os combinadores baseados em tarefas internos](consuming-the-task-based-asynchronous-pattern.md#combinators) do artigo [Consumindo o padrão assíncrono baseado em tarefa](consuming-the-task-based-asynchronous-pattern.md).  
   
- Para obter exemplos de como a sintaxe do TAP difere da sintaxe usada em padrões de programação assíncronos herdados, como APM (Asynchronous Programming Model) e EAP (Event-based Asynchronous Pattern), confira [Padrões de programação assíncrona ](../../../docs/standard/asynchronous-programming-patterns/index.md).  
+ Para obter exemplos de como a sintaxe do TAP difere da sintaxe usada em padrões de programação assíncronos herdados, como APM (Asynchronous Programming Model) e EAP (Event-based Asynchronous Pattern), confira [Padrões de programação assíncrona ](index.md).  
   
 ## <a name="initiating-an-asynchronous-operation"></a>Como iniciar uma operação assíncrona  
  Um método assíncrono baseado no TAP pode fazer uma pequena quantidade de trabalho de forma síncrona, como validar argumentos e iniciar a operação assíncrona, antes de retornar a tarefa resultante. O trabalho síncrono deve ser mantido no mínimo possível para que o método assíncrono possa retornar rapidamente. Os motivos para um retorno rápido incluem:  
@@ -92,7 +92,7 @@ O TAP usa um único método para representar o início e a conclusão de uma ope
   
  Se as implementações de TAP fornecem sobrecargas que aceitam um parâmetro de `progress`, elas deverão permitir que o argumento seja `null`, caso em que nenhum progresso será relatado. As implementações de TAP devem relatar o progresso para o objeto <xref:System.Progress%601> de forma síncrona, o que permite que o método assíncrono forneça rapidamente o progresso e permita que o consumidor de progresso determine como e onde melhor manipular as informações. Por exemplo, a instância de progresso poderia optar por controlar retornos de chamada e gerar eventos em um contexto de sincronização capturado.  
   
-## <a name="iprogresst-implementations"></a>IProgress\<T> implementações  
+## <a name="iprogresst-implementations"></a>\<T>Implementações de IProgress  
  O .NET Framework 4.5 fornece uma implementação única de <xref:System.IProgress%601>: <xref:System.Progress%601>. A classe <xref:System.Progress%601> é declarada da seguinte forma:  
   
 ```csharp  
@@ -191,7 +191,7 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
   
 |Title|Descrição|  
 |-----------|-----------------|  
-|[Padrões de programação assíncrona](../../../docs/standard/asynchronous-programming-patterns/index.md)|Apresenta os três padrões para execução de operações assíncronas: TAP (Padrão Assíncrono Baseado em Tarefas), APM (Modelo de Programação Assíncrona) e EAP (Padrão Assíncrono Baseado em Eventos).|  
-|[Implementando o padrão assíncrono baseado em tarefa](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|Descreve como implementar o TAP de três formas: usando os compiladores C# e Visual Basic no Visual Studio, manualmente ou por meio de uma combinação de compilador com o método manual.|  
-|[Consumindo o padrão assíncrono baseado em tarefa](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|Descreve como você pode usar tarefas e retornos de chamada para implementar a espera sem causar bloqueios.|  
-|[Interoperabilidade com outros tipos e padrões assíncronos](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)|Descreve como usar o TAP (Padrão Assíncrono Baseado em Tarefas) para implementar o APM (Modelo de Programação Assíncrona) e o EAP (Padrão Assíncrono Baseado em Eventos).|
+|[Padrões de programação assíncrona](index.md)|Apresenta os três padrões para execução de operações assíncronas: TAP (Padrão Assíncrono Baseado em Tarefas), APM (Modelo de Programação Assíncrona) e EAP (Padrão Assíncrono Baseado em Eventos).|  
+|[Implementando o padrão assíncrono baseado em tarefa](implementing-the-task-based-asynchronous-pattern.md)|Descreve como implementar o TAP de três formas: usando os compiladores C# e Visual Basic no Visual Studio, manualmente ou por meio de uma combinação de compilador com o método manual.|  
+|[Consumindo o padrão assíncrono baseado em tarefa](consuming-the-task-based-asynchronous-pattern.md)|Descreve como você pode usar tarefas e retornos de chamada para implementar a espera sem causar bloqueios.|  
+|[Interoperabilidade com outros tipos e padrões assíncronos](interop-with-other-asynchronous-patterns-and-types.md)|Descreve como usar o TAP (Padrão Assíncrono Baseado em Tarefas) para implementar o APM (Modelo de Programação Assíncrona) e o EAP (Padrão Assíncrono Baseado em Eventos).|

@@ -1,5 +1,5 @@
 ---
-title: Como usar pipes nomeados para comunicação entre processos em uma rede
+title: 'Como: Usar pipes nomeados para comunicação entre processos na rede'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - impersonation [.NET Framework], named pipes
 - full duplex communication [.NET Framework], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
-ms.openlocfilehash: 71f3a8d38b46993762b2673ea5fe735d8d54d351
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bebfd136245fd7b577ffcd71954f46ca82bfc72d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75706628"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291741"
 ---
-# <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Como usar pipes nomeados para comunicação entre processos em uma rede
+# <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Como: Usar pipes nomeados para comunicação entre processos na rede
 Os pipes nomeados fornecem a comunicação entre processos entre um servidor de pipe e um ou mais clientes pipe. Eles oferecem mais funcionalidades do que pipes anônimos, que fornecem comunicação entre processos em um computador local. Pipes nomeados oferecem suporte à comunicação full-duplex em uma rede e em várias instâncias do servidor, comunicação por mensagens e representação do cliente, o que permite que processos de conexão usem seus próprios conjuntos de permissões em servidores remotos.  
   
  Para implementar os pipes nomeados, use as classes <xref:System.IO.Pipes.NamedPipeServerStream> e <xref:System.IO.Pipes.NamedPipeClientStream>.  
@@ -43,9 +43,9 @@ Os pipes nomeados fornecem a comunicação entre processos entre um servidor de 
 ## <a name="robust-programming"></a>Programação robusta  
  Os processos de cliente e servidor neste exemplo devem ser executados no mesmo computador, para que o nome do servidor fornecido para o objeto <xref:System.IO.Pipes.NamedPipeClientStream> seja `"."`. Se os processos do cliente e do servidor fossem realizados em computadores separados, `"."` seria substituído pelo nome de rede do computador que executa o processo do servidor.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Security.Principal.TokenImpersonationLevel>
 - <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>
-- [Pipes](../../../docs/standard/io/pipe-operations.md)
-- [Como usar pipes anônimos para comunicação entre processos locais](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
+- [Pipes](pipe-operations.md)
+- [Como: Usar pipes anônimos para comunicação entre processos locais](how-to-use-anonymous-pipes-for-local-interprocess-communication.md)

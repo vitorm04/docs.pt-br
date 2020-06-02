@@ -1,5 +1,5 @@
 ---
-title: Como usar pipes anônimos para comunicação entre processos locais
+title: 'Como: Usar pipes anônimos para comunicação entre processos locais'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - one-way communication [.NET Framework]
 - local computer communication [.NET Framework], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: ea4aee60d090a56eb0cf3f2a81c1b05c04806d4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9962471697888041e98e38dd5f7feaecc306894d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77627988"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291780"
 ---
-# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Como usar pipes anônimos para comunicação entre processos locais
+# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Como: Usar pipes anônimos para comunicação entre processos locais
 Os pipes anônimos fornecem comunicação entre processos em um computador local. Eles oferecem menos funcionalidades que pipes nomeados, mas também exigem menos sobrecarga. Você pode usar pipes anônimos para facilitar a comunicação entre processos em um computador local. Você não pode usar pipes anônimos para comunicações através de uma rede.  
   
  Para implementar pipes anônimos, use as classes <xref:System.IO.Pipes.AnonymousPipeServerStream> e <xref:System.IO.Pipes.AnonymousPipeClientStream>.  
@@ -45,7 +45,7 @@ Os pipes anônimos fornecem comunicação entre processos em um computador local
  [!code-csharp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cs/Program.cs#01)]
  [!code-vb[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/vb/program.vb#01)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Pipes](../../../docs/standard/io/pipe-operations.md)
-- [Como usar pipes nomeados para comunicação entre processos em uma rede](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [Pipes](pipe-operations.md)
+- [Como: Usar pipes nomeados para comunicação entre processos na rede](how-to-use-named-pipes-for-network-interprocess-communication.md)

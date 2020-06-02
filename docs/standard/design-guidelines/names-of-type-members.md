@@ -12,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: 81c837bd045992043208a59f6ee16803c1d6eb3c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 87cf793229cfc7d8d0547af935369a3febee41a3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744181"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290182"
 ---
 # <a name="names-of-type-members"></a>Nomes de membros de tipo
 Tipos são compostos de membros: métodos, propriedades, eventos, construtores e campos. As seções a seguir descrevem as diretrizes de nomenclatura de membros de tipo.
@@ -40,7 +40,7 @@ public class String {
 
  ✔️ as propriedades de nome usando um substantivo, uma frase de substantivo ou um adjetivo.
 
- ❌ não tem propriedades que correspondam ao nome dos métodos "Get", como no exemplo a seguir:
+ ❌Não têm propriedades que correspondam ao nome dos métodos "Get", como no exemplo a seguir:
 
  `public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`
 
@@ -48,7 +48,7 @@ public class String {
 
  ✔️ as propriedades da coleção de nomes com uma frase plural que descreve os itens na coleção em vez de usar uma frase singular seguida de "List" ou "Collection".
 
- ✔️ as propriedades booleanas de nome com uma frase afirmativo (`CanSeek` em vez de `CantSeek`). Opcionalmente, você também pode prefixar propriedades booleanas com "is", "Can" ou "tem", mas apenas onde ele agrega valor.
+ ✔️ as propriedades booleanas de nome com uma frase afirmativo ( `CanSeek` em vez de `CantSeek` ). Opcionalmente, você também pode prefixar propriedades booleanas com "is", "Can" ou "tem", mas apenas onde ele agrega valor.
 
  ✔️ Considere atribuir uma propriedade com o mesmo nome que o seu tipo.
 
@@ -72,26 +72,26 @@ public class Control {
 
  Por exemplo, um evento de fechamento gerado antes de uma janela ser fechada seria chamado de `Closing`, e um gerado após a janela ser fechada seria chamado de `Closed`.
 
- ❌ não use prefixos ou "Before" ou "After" para indicar pré e pós-eventos. Use os tempos verbais Pretérito e Presente conforme descrito.
+ ❌Não use prefixos "Before" ou "After" ou as pós-correções para indicar pré e eventos Post. Use os tempos verbais Pretérito e Presente conforme descrito.
 
  ✔️ manipuladores de eventos de nome (delegados usados como tipos de eventos) com o sufixo "EventHandler", conforme mostrado no exemplo a seguir:
 
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`
 
- ✔️ Use dois parâmetros chamados `sender` e `e` em manipuladores de eventos.
+ ✔️ usar dois parâmetros chamados `sender` e `e` em manipuladores de eventos.
 
  O parâmetro do remetente representa o objeto que acionou o evento. O parâmetro do remetente normalmente é do tipo `object`, mesmo se for possível empregar um tipo mais específico.
 
  ✔️ classes de argumento de evento de nome com o sufixo "EventArgs".
 
 ## <a name="names-of-fields"></a>Nomes de campos
- As diretrizes de nomenclatura de campo se aplicam a campos públicos e protegidos estáticos. Campos particulares e internos não são cobertos pelas diretrizes, e campos de instância pública ou protegida não são permitidos pelas [diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md).
+ As diretrizes de nomenclatura de campo se aplicam a campos públicos e protegidos estáticos. Campos particulares e internos não são cobertos pelas diretrizes, e campos de instância pública ou protegida não são permitidos pelas [diretrizes de design de membro](member.md).
 
  ✔️ Use PascalCasing em nomes de campo.
 
  ✔️ os campos de nome usando um substantivo, uma frase de substantivo ou um adjetivo.
 
- ❌ não use um prefixo para nomes de campo.
+ ❌Não use um prefixo para nomes de campo.
 
  Por exemplo, não use "g_" ou "s_" para indicar campos estáticos.
 
@@ -99,7 +99,7 @@ public class Control {
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
-- [Diretrizes de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Diretrizes de design de estrutura](index.md)
+- [Diretrizes de nomenclatura](naming-guidelines.md)

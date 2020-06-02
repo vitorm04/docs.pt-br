@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: 8ae4b4b9938f72f4f4fc011e180cd69440ec3dd9
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 13334f6425c47e45d729d606d99602a99f35d8e6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201751"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286152"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Consultando o serviço de dados (WCF Data Services)
 
@@ -67,7 +67,7 @@ Para obter mais informações, consulte [Considerações sobre LINQ](linq-consid
 
 ## <a name="adding-query-options"></a>Adicionando opções de consulta
 
-As consultas do serviço de dados oferecem suporte a todas as opções de consulta fornecidas pelo WCF Data Services. Chame o método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> para acrescentar opções de consulta a uma instância <xref:System.Data.Services.Client.DataServiceQuery%601>. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> retorna uma nova instância <xref:System.Data.Services.Client.DataServiceQuery%601>, que equivale à consulta original, mas com o novo conjunto de opções de consulta. A consulta a seguir, quando executada, retorna `Orders`, que são filtrados pelo valor `Freight` e ordenados por `OrderID`, em ordem decrescente:
+As consultas do serviço de dados dão suporte a todas as opções de consulta fornecidas pelo WCF Data Services. Chame o método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> para acrescentar opções de consulta a uma instância <xref:System.Data.Services.Client.DataServiceQuery%601>. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> retorna uma nova instância <xref:System.Data.Services.Client.DataServiceQuery%601>, que equivale à consulta original, mas com o novo conjunto de opções de consulta. A consulta a seguir, quando executada, retorna `Orders`, que são filtrados pelo valor `Freight` e ordenados por `OrderID`, em ordem decrescente:
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionsspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionsspecific)]
