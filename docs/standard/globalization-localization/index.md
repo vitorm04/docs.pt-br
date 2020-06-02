@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-ms.openlocfilehash: c5c601d18d92d9b57781bc8a09f26f0bc3a9216a
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 10d07a02a7ff744a87b920fd97df24b076c22cc3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842004"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288284"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalizando e localizando aplicativos do .NET
 
@@ -26,7 +26,7 @@ O desenvolvimento de um aplicativo que possa ser usado em todo o mundo, incluind
 
 Esta etapa envolve a criação e a codificação de um aplicativo que seja independente de cultura e idioma, bem como que ofereça suporte a interfaces de usuário localizadas e dados regionais para todos os usuários. Ela envolve a tomada de decisões de design e de programação que não sejam baseadas em suposições para culturas específicas. Mesmo quando um aplicativo globalizado não está localizado, ele foi criado e escrito para que possa ser localizado posteriormente em um ou mais idiomas com relativa facilidade.
 
-[Revisão de possibilidade de localização](localizability-review.md)
+[Revisão de localização](localizability-review.md)
 
 Essa etapa envolve a verificação do código e do design de um aplicativo para garantir que ele possa ser facilmente localizado e para identificar potenciais obstáculos à localização, bem como verificar se o código executável do aplicativo está separado de seus recursos. Se a fase de globalização foi eficaz, a análise de capacidade de localização confirmará as opções de design e codificação feitas durante a globalização. O estágio de localizabilidade também pode identificar todos os problemas restantes para que o código-fonte do aplicativo não precise ser modificado durante o estágio de localização.
 
@@ -54,7 +54,7 @@ Discute o primeiro estágio da criação de um aplicativo pronto para o mundo, o
 
 Descreve como a globalização [do .NET usa componentes internacionais para Unicode (ICU)](http://site.icu-project.org/home).
 
-[Revisão de possibilidade de localização](localizability-review.md)
+[Revisão de localização](localizability-review.md)
 
 Discute o segundo estágio da criação de um aplicativo localizado, o que envolve a identificação de obstáculos potenciais à localização.
 
@@ -62,7 +62,7 @@ Discute o segundo estágio da criação de um aplicativo localizado, o que envol
 
 Discute o estágio final da criação de um aplicativo localizado, o que envolve a personalização da interface de usuário de um aplicativo para regiões ou culturas específicas.
 
-[Operações de cadeia de caracteres que não diferenciam culturas](culture-insensitive-string-operations.md)
+[Operações de cadeia de caracteres sem detecção de cultura](culture-insensitive-string-operations.md)
 
 Descreve como usar métodos e classes do .NET sensíveis a culturas por padrão para obter resultados sem diferenciação de cultura.
 
@@ -84,10 +84,10 @@ Descreve as práticas recomendadas a serem seguidas para globalização, localiz
 
    Contém classes que representam ASCII, ANSI, Unicode e outras codificações de caracteres.
 
-- [Resgen. exe (gerador de arquivo de recursos)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
+- [Resgen. exe (gerador de arquivo de recursos)](../../framework/tools/resgen-exe-resource-file-generator.md)
 
    Descreve como usar Resgen.exe para converter arquivos .txt e XML (.resx) para arquivos .resources binários do Common Language Runtime.
 
-- [Winres. exe (editor de recursos Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)
+- [Winres. exe (editor de recursos Windows Forms)](../../framework/tools/winres-exe-windows-forms-resource-editor.md)
 
    Descreve como usar Winres.exe para localizar formulários do Windows Forms.

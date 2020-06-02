@@ -1,5 +1,5 @@
 ---
-title: Como extrair um protocolo e um número de porta de uma URL
+title: 'Como: extrair um protocolo e um número da porta de uma URL'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-ms.openlocfilehash: f2704e3fb5ceb68609a475d52e11030177ad760b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 48f2bf5c0d9af0a3fc286561ba978f86d1f11ac8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138728"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290481"
 ---
-# <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Como extrair um protocolo e um número de porta de uma URL
+# <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Como: extrair um protocolo e um número da porta de uma URL
 O exemplo a seguir extrai um protocolo e um número da porta de uma URL.  
   
 ## <a name="example"></a>Exemplo  
@@ -47,6 +47,6 @@ O exemplo a seguir extrai um protocolo e um número da porta de uma URL.
  [!code-csharp[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/example2.cs#2)]
  [!code-vb[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/example2.vb#2)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)
+- [Expressões regulares do .NET](regular-expressions.md)

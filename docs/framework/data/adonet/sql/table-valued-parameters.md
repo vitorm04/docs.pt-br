@@ -1,16 +1,17 @@
 ---
 title: Parâmetros com valor de tabela
+description: Saiba como realizar marshaling de várias linhas de dados de um aplicativo cliente para SQL Server usando parâmetros com valor de tabela.
 ms.date: 10/12/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: b968c599cf061fbd03b7ba8fb19470f6ace11a55
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 7b1f0a6c416f660f06cea099197ba136f84407f9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202167"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286191"
 ---
 # <a name="table-valued-parameters"></a>Parâmetros com valor de tabela
 Os parâmetros com valor de tabela fornecem uma maneira fácil de realizar marshaling em várias linhas de dados de um aplicativo cliente do SQL Server sem exigir várias viagens de ida e volta ou uma lógica especial do lado do servidor para processar os dados. Você pode usar parâmetros com valor de tabela para encapsular linhas de dados em um aplicativo cliente e enviar os dados para o servidor em um único comando parametrizado. As linhas de dados de entrada são armazenadas em uma variável de tabela, as quais você poderá operar usando o Transact-SQL.  
@@ -22,7 +23,7 @@ Os parâmetros com valor de tabela fornecem uma maneira fácil de realizar marsh
   
  Para obter mais informações sobre os parâmetros com valor de tabela, confira os recursos a seguir.  
   
-|Recurso|Descrição|  
+|Recurso|DESCRIÇÃO|  
 |--------------|-----------------|  
 |[Usar parâmetros com valor de tabela (Mecanismo de Banco de Dados)](/sql/relational-databases/tables/use-table-valued-parameters-database-engine)|Descreve como criar e usar parâmetros com valor de tabela.|  
 |[Tipos de tabela definidos pelo usuário](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|Descreve os tipos de tabela definidos pelo usuário usados para declarar parâmetros com valor de tabela.|  

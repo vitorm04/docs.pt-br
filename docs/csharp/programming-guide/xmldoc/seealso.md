@@ -1,5 +1,5 @@
 ---
-title: <seealso> - Guia de programação C#
+title: <seealso> -Guia de programação C#
 ms.date: 07/20/2015
 f1_keywords:
 - cref
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: e24d5910ab21f01aebb5a32ce7646cf56886a81a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b801ac1b5a0a59d97ccc35ec78930d99223e846
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093455"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287214"
 ---
-# <a name="seealso-c-programming-guide"></a>\<vejatambém> (guia de programação C#)
+# <a name="seealso-c-programming-guide"></a>\<seealso>(Guia de programação C#)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,25 +27,25 @@ ms.locfileid: "77093455"
 <seealso cref="member"/>
 ```
 
-## <a name="parameters"></a>parâmetros
+## <a name="parameters"></a>Parâmetros
 
 - cref = " `member`"
 
   Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual. O compilador verifica se o elemento de código fornecido existe e passa `member` para o nome de elemento no XML de saída.`member` deve ser exibido entre aspas duplas (" ").
 
-  Para obter informações sobre como criar uma referência de cref a um tipo genérico, consulte [o atributo cref](./cref-attribute.md).
+  Para obter informações sobre como criar uma referência cref para um tipo genérico, consulte [atributo cref](./cref-attribute.md).
 
 ## <a name="remarks"></a>Comentários
 
-A marca \<seealso > permite especificar o texto que você quer que seja exibido na seção Ver também. Consulte [ \<>](./see.md) para especificar um link de dentro do texto.
+A `<seealso>` marca permite especificar o texto que você pode querer que apareça em uma seção ver também. Use [\<see>](./see.md) para especificar um link de dentro do texto.
 
-Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação para um arquivo.
+Compile com [-Doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.
 
 ## <a name="example"></a>Exemplo
 
-Veja [ \<resumo>](./summary.md) para um \<exemplo de uso de seealso>.
+Consulte [\<summary>](./summary.md) para obter um exemplo de como usar \<seealso> .
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação em C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)
