@@ -14,73 +14,73 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-ms.openlocfilehash: 0df036b3336527f3cc0e48d9a7ec835ab9f1cf4a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 81fa5e4c503f26dc13758090f845fd8387287084
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706039"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277174"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Como assinar documento XML com assinaturas digitais
-Você pode usar as classes no namespace <xref:System.Security.Cryptography.Xml> para assinar um documento XML ou parte de um documento XML com uma assinatura digital.  As assinaturas digitais XML (XMLDSIG) permitem que você verifique se os dados não foram alterados após sua assinatura.  Para obter mais informações sobre o padrão XMLDSIG, consulte a [sintaxe e o processamento da assinatura XML](https://www.w3.org/TR/xmldsig-core/)de recomendação do World Wide Web CONSORTIUM (W3C).  
+Você pode usar as classes no <xref:System.Security.Cryptography.Xml> namespace para assinar um documento XML ou parte de um documento XML com uma assinatura digital.  As assinaturas digitais XML (XMLDSIG) permitem que você verifique se os dados não foram alterados após sua assinatura.  Para obter mais informações sobre o padrão XMLDSIG, consulte a [sintaxe e o processamento da assinatura XML](https://www.w3.org/TR/xmldsig-core/)de recomendação do World Wide Web CONSORTIUM (W3C).  
   
- O exemplo de código neste procedimento demonstra como assinar digitalmente um documento XML inteiro e anexar a assinatura ao documento em um elemento <`Signature`>.  O exemplo cria uma chave de assinatura RSA, adiciona a chave a um contêiner de chave segura e, em seguida, usa a chave para assinar digitalmente um documento XML.  A chave pode ser recuperada para verificar a assinatura digital XML ou pode ser usada para assinar outro documento XML.  
+ O exemplo de código neste procedimento demonstra como assinar digitalmente um documento XML inteiro e anexar a assinatura ao documento em um `Signature` elemento <>.  O exemplo cria uma chave de assinatura RSA, adiciona a chave a um contêiner de chave segura e, em seguida, usa a chave para assinar digitalmente um documento XML.  A chave pode ser recuperada para verificar a assinatura digital XML ou pode ser usada para assinar outro documento XML.  
   
- Para obter informações sobre como verificar uma assinatura digital XML que foi criada usando esse procedimento, consulte [como verificar as assinaturas digitais de documentos XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md).  
+ Para obter informações sobre como verificar uma assinatura digital XML que foi criada usando esse procedimento, consulte [como verificar as assinaturas digitais de documentos XML](how-to-verify-the-digital-signatures-of-xml-documents.md).  
   
 ### <a name="to-digitally-sign-an-xml-document"></a>Para assinar digitalmente um documento XML  
   
-1. Crie um objeto <xref:System.Security.Cryptography.CspParameters> e especifique o nome do contêiner de chave.  
+1. Crie um <xref:System.Security.Cryptography.CspParameters> objeto e especifique o nome do contêiner de chave.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#2)]
      [!code-vb[HowToSignXMLDocumentRSA#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#2)]  
   
-2. Gere uma chave assimétrica usando a classe <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  A chave é salva automaticamente no contêiner de chave quando você passa o objeto <xref:System.Security.Cryptography.CspParameters> para o construtor da classe <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  Essa chave será usada para assinar o documento XML.  
+2. Gere uma chave assimétrica usando a <xref:System.Security.Cryptography.RSACryptoServiceProvider> classe.  A chave é salva automaticamente no contêiner de chave quando você passa o <xref:System.Security.Cryptography.CspParameters> objeto para o construtor da <xref:System.Security.Cryptography.RSACryptoServiceProvider> classe.  Essa chave será usada para assinar o documento XML.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#3)]
      [!code-vb[HowToSignXMLDocumentRSA#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#3)]  
   
-3. Crie um objeto de <xref:System.Xml.XmlDocument> carregando um arquivo XML do disco.  O objeto <xref:System.Xml.XmlDocument> contém o elemento XML a ser criptografado.  
+3. Crie um <xref:System.Xml.XmlDocument> objeto carregando um arquivo XML do disco.  O <xref:System.Xml.XmlDocument> objeto contém o elemento XML a ser criptografado.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#4)]
      [!code-vb[HowToSignXMLDocumentRSA#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#4)]  
   
-4. Crie um novo objeto <xref:System.Security.Cryptography.Xml.SignedXml> e passe o objeto <xref:System.Xml.XmlDocument> para ele.  
+4. Crie um novo <xref:System.Security.Cryptography.Xml.SignedXml> objeto e passe o <xref:System.Xml.XmlDocument> objeto para ele.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#5)]
      [!code-vb[HowToSignXMLDocumentRSA#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#5)]  
   
-5. Adicione a chave RSA de assinatura ao objeto <xref:System.Security.Cryptography.Xml.SignedXml>.  
+5. Adicione a chave RSA de assinatura ao <xref:System.Security.Cryptography.Xml.SignedXml> objeto.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#6)]
      [!code-vb[HowToSignXMLDocumentRSA#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#6)]  
   
-6. Crie um objeto <xref:System.Security.Cryptography.Xml.Reference> que descreva o que assinar.  Para assinar todo o documento, defina a propriedade <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> como `""`.  
+6. Crie um <xref:System.Security.Cryptography.Xml.Reference> objeto que descreva o que assinar.  Para assinar todo o documento, defina a <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> propriedade como `""` .  
   
      [!code-csharp[HowToSignXMLDocumentRSA#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#7)]
      [!code-vb[HowToSignXMLDocumentRSA#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#7)]  
   
-7. Adicione um objeto <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> ao objeto <xref:System.Security.Cryptography.Xml.Reference>.  Uma transformação permite que o verificador represente os dados XML da maneira idêntica usada pelo signatário.  Os dados XML podem ser representados de maneiras diferentes, portanto, essa etapa é vital para a verificação.  
+7. Adicione um <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> objeto ao <xref:System.Security.Cryptography.Xml.Reference> objeto.  Uma transformação permite que o verificador represente os dados XML da maneira idêntica usada pelo signatário.  Os dados XML podem ser representados de maneiras diferentes, portanto, essa etapa é vital para a verificação.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#8)]
      [!code-vb[HowToSignXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#8)]  
   
-8. Adicione o objeto <xref:System.Security.Cryptography.Xml.Reference> ao objeto <xref:System.Security.Cryptography.Xml.SignedXml>.  
+8. Adicione o <xref:System.Security.Cryptography.Xml.Reference> objeto ao <xref:System.Security.Cryptography.Xml.SignedXml> objeto.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#9)]
      [!code-vb[HowToSignXMLDocumentRSA#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#9)]  
   
-9. Computar a assinatura chamando o método <xref:System.Security.Cryptography.Xml.SignedXml.ComputeSignature%2A>.  
+9. Computar a assinatura chamando o <xref:System.Security.Cryptography.Xml.SignedXml.ComputeSignature%2A> método.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#10)]
      [!code-vb[HowToSignXMLDocumentRSA#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#10)]  
   
-10. Recupere a representação XML da assinatura (um <`Signature`elemento >) e salve-a em um novo objeto <xref:System.Xml.XmlElement>.  
+10. Recupere a representação XML da assinatura (um <`Signature` elemento>) e salve-a em um novo <xref:System.Xml.XmlElement> objeto.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#11)]
      [!code-vb[HowToSignXMLDocumentRSA#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#11)]  
   
-11. Acrescente o elemento ao objeto <xref:System.Xml.XmlDocument>.  
+11. Acrescente o elemento ao <xref:System.Xml.XmlDocument> objeto.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#12)]
      [!code-vb[HowToSignXMLDocumentRSA#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#12)]  
@@ -91,7 +91,7 @@ Você pode usar as classes no namespace <xref:System.Security.Cryptography.Xml> 
      [!code-vb[HowToSignXMLDocumentRSA#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#13)]  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo pressupõe que um arquivo chamado `test.xml` exista no mesmo diretório que o programa compilado.  Você pode inserir o XML a seguir em um arquivo chamado `test.xml` e usá-lo com este exemplo.  
+ Este exemplo pressupõe que um arquivo chamado `test.xml` existe no mesmo diretório que o programa compilado.  Você pode inserir o XML a seguir em um arquivo chamado `test.xml` e usá-lo com este exemplo.  
   
 ```xml  
 <root>  
@@ -105,18 +105,18 @@ Você pode usar as classes no namespace <xref:System.Security.Cryptography.Xml> 
  [!code-csharp[HowToSignXMLDocumentRSA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#1)]
  [!code-vb[HowToSignXMLDocumentRSA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#1)]  
   
-## <a name="compiling-the-code"></a>Compilando o Código  
+## <a name="compiling-the-code"></a>Compilando o código  
   
-- Para compilar este exemplo, você precisa incluir uma referência a `System.Security.dll`.  
+- Para compilar este exemplo, você precisa incluir uma referência para `System.Security.dll` .  
   
-- Inclua os seguintes namespaces: <xref:System.Xml>, <xref:System.Security.Cryptography>e <xref:System.Security.Cryptography.Xml>.  
+- Inclua os seguintes namespaces: <xref:System.Xml> , <xref:System.Security.Cryptography> e <xref:System.Security.Cryptography.Xml> .  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
- Nunca armazene ou transfira a chave privada de um par de chaves assimétricas em texto não criptografado.  Para obter mais informações sobre chaves de criptografia simétrica e assimétrica, consulte [gerando chaves para criptografia e descriptografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
+ Nunca armazene ou transfira a chave privada de um par de chaves assimétricas em texto não criptografado.  Para obter mais informações sobre chaves de criptografia simétrica e assimétrica, consulte [gerando chaves para criptografia e descriptografia](generating-keys-for-encryption-and-decryption.md).  
   
- Nunca incorpore uma chave privada diretamente em seu código-fonte.  Chaves inseridas podem ser facilmente lidas de um assembly usando o [ILDASM. exe (desmontador Il)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) ou abrindo o assembly em um editor de texto como o bloco de notas.  
+ Nunca incorpore uma chave privada diretamente em seu código-fonte.  Chaves inseridas podem ser facilmente lidas de um assembly usando o [ILDASM. exe (desmontador Il)](../../framework/tools/ildasm-exe-il-disassembler.md) ou abrindo o assembly em um editor de texto como o bloco de notas.  
   
 ## <a name="see-also"></a>Veja também
 
 - <xref:System.Security.Cryptography.Xml>
-- [Como verificar as assinaturas digitais de documentos XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
+- [Como verificar as assinaturas digitais de documentos XML](how-to-verify-the-digital-signatures-of-xml-documents.md)

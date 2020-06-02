@@ -14,16 +14,16 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: ae2711aac8bd864e623efe18e698c8de75a3ac32
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 9aea3e9b52613add1ebc4cf7d9c0087088008d6e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440987"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278993"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora personalizado
 
-Uma cadeia de caracteres de formato de data e hora define a representação de texto de um valor <xref:System.DateTime> ou <xref:System.DateTimeOffset> que é resultante de uma operação de formatação. Ela também pode definir a representação de um valor de data e hora necessário em uma operação de análise para converter com êxito a cadeia de caracteres para uma data e hora. Uma cadeia de caracteres de formato personalizado consiste em um ou mais especificadores de formato de data e hora personalizado. Qualquer cadeia de caracteres que não é uma [cadeia de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) é interpretada como uma cadeia de caracteres de formato de data e hora personalizado.
+Uma cadeia de caracteres de formato de data e hora define a representação de texto de um valor <xref:System.DateTime> ou <xref:System.DateTimeOffset> que é resultante de uma operação de formatação. Ela também pode definir a representação de um valor de data e hora necessário em uma operação de análise para converter com êxito a cadeia de caracteres para uma data e hora. Uma cadeia de caracteres de formato personalizado consiste em um ou mais especificadores de formato de data e hora personalizado. Qualquer cadeia de caracteres que não é uma [cadeia de caracteres de formato de data e hora padrão](standard-date-and-time-format-strings.md) é interpretada como uma cadeia de caracteres de formato de data e hora personalizado.
 
 > [!TIP]
 > Baixe o **Utilitário de Formatação**, um aplicativo do Windows Forms do .NET Core que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado. O código-fonte está disponível para o [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) e o [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb).
@@ -44,7 +44,7 @@ Em operações de análise, as cadeias de caracteres de formato de data e hora p
 
 A tabela a seguir descreve os especificadores de formato de data e hora padrão e exibe uma cadeia de caracteres de resultado produzida por cada especificador de formato. Por padrão, as cadeias de caracteres de resultado refletem as convenções de formatação da cultura en-US. Se um determinado especificador de formato produz uma cadeia de caracteres de resultado localizada, o exemplo também observa a cultura à qual a cadeia de caracteres de resultado se aplica. Para obter informações adicionais sobre como usar cadeias de caracteres de formato data e hora personalizado, confira a seção [Observações](#notes).
 
-| Especificador de formato | Descrição | Exemplos |
+| Especificador de formato | Description | Exemplos |
 | ---------------------- | ----------------- | -------------- |
 |"d"|O dia do mês, de 1 a 31.<br /><br /> Mais informações: [Especificador de formato personalizado "d"](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"dd"|O dia do mês, de 01 a 31.<br /><br /> Mais informações: [Especificador de formato personalizado "dd"](#ddSpecifier).|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|
@@ -629,7 +629,7 @@ Os seguintes caracteres de uma cadeia de caracteres de formato de data e hora pe
 |-|-|-|-|-|
 |F|H|K|M|d|
 |f|g|h|m|s|
-|t|y|z|%|:|
+|t|a|z|%|:|
 |/|"|'|&#92;||
 
 Todos os outros caracteres sempre são interpretados como literais de caracteres e, em uma operação de formatação, são incluídos na cadeia de caracteres de resultado inalterada.  Em uma operação de análise, eles devem corresponder exatamente aos caracteres na cadeia de entrada; a comparação diferencia maiúsculas de minúsculas.
@@ -692,11 +692,11 @@ A formatação é influenciada pelas propriedades do objeto <xref:System.Globali
 
 A cadeia de caracteres de resultado produzida por muitos dos especificadores de formato de data e hora personalizado também depende das propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> atual. Seu aplicativo pode alterar o resultado produzido por alguns especificadores de formato personalizado de data e hora ao alterar a propriedade <xref:System.Globalization.DateTimeFormatInfo> correspondente. Por exemplo, o especificador de formato "ddd" adiciona um nome de dia da semana abreviado encontrado na matriz de cadeia de caracteres <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> à cadeia de caracteres de resultado. Da mesma forma, o especificador de formato "MMMM" adiciona um nome de mês completo encontrado na matriz de cadeias de caracteres <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A> à cadeia de caracteres de resultado.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
-- [Formatar tipos](../../../docs/standard/base-types/formatting-types.md)
-- [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Formatar tipos](formatting-types.md)
+- [Cadeias de caracteres de formato de data e hora padrão](standard-date-and-time-format-strings.md)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)

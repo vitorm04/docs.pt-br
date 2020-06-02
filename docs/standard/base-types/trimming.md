@@ -15,17 +15,17 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: bdbe267bb178e90c0008422e6543a23178c2c4d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0777ba7348d13697fd53f556ac69cba3f98d1e4d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159982"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290870"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Como cortar e remover caracteres das cadeias de caracteres no .NET
 Se estiver analisando as palavras individuais de uma sentença, você poderá encontrar palavras com espaços em branco em ambas as extremidades da palavra. Nessa situação, você pode usar um dos métodos de corte na classe **System.String** para remover qualquer número de espaços ou de outros caracteres de uma posição especificada na cadeia de caracteres. A tabela a seguir descreve os métodos de corte disponíveis.  
   
-|Nome do método|Use|  
+|Nome do método|Uso|  
 |-----------------|---------|  
 |<xref:System.String.Trim%2A?displayProperty=nameWithType>|Remove os espaços em branco ou caracteres especificados em uma matriz de caracteres do início e do final de uma cadeia de caracteres.|  
 |<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|Remove os caracteres especificados em uma matriz de caracteres do final de uma cadeia de caracteres.|  
@@ -49,7 +49,7 @@ Se estiver analisando as palavras individuais de uma sentença, você poderá en
 
  O método **String.TrimEnd** remove os caracteres do final de uma cadeia de caracteres, criando um novo objeto de cadeia de caracteres. Uma matriz de caracteres é passada para este método para especificar os caracteres a seres removidos. A ordem dos elementos na matriz de caracteres não afeta a operação de corte. O corte é interrompido quando um caractere não especificado na matriz é encontrado.  
   
- O exemplo a seguir remove as últimas letras de uma seqüência usando o método **TrimEnd.** Neste exemplo, as posições do caractere `'r'` e do caractere `'W'` estão invertidas para ilustrar que a ordem dos caracteres na matriz não importa. Observe que este código remove a última palavra de `MyString` mais uma parte da primeira.  
+ O exemplo a seguir remove as últimas letras de uma cadeia de caracteres usando o método **TrimEnd** . Neste exemplo, as posições do caractere `'r'` e do caractere `'W'` estão invertidas para ilustrar que a ordem dos caracteres na matriz não importa. Observe que este código remove a última palavra de `MyString` mais uma parte da primeira.  
   
  [!code-cpp[Conceptual.String.BasicOps#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#18)]
  [!code-csharp[Conceptual.String.BasicOps#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#18)]
@@ -94,6 +94,6 @@ Se estiver analisando as palavras individuais de uma sentença, você poderá en
  [!code-csharp[Conceptual.String.BasicOps#23](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/replace1.cs#23)]
  [!code-vb[Conceptual.String.BasicOps#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/replace1.vb#23)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Operações básicas de string](../../../docs/standard/base-types/basic-string-operations.md)
+- [Operações básicas de cadeia de caracteres](basic-string-operations.md)
