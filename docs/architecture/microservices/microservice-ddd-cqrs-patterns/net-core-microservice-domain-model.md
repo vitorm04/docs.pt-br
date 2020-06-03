@@ -2,23 +2,23 @@
 title: Implementando um modelo de domínio de microsserviço com o .NET Core
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Obtenha os detalhes de implementação de um modelo de domínio orientado a DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: 8aff06a2e37dc87e5ba4f556e9b808598ff3653a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0b42ecc2440faf5870b2d99e31d03cda00b21ce0
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144572"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306898"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementar um modelo de domínio de microsserviço com o .NET Core
 
-Na seção anterior, foram explicados os princípios de design fundamentais e os padrões para criar um modelo de domínio. Agora é hora de explorar possíveis maneiras de implementar o modelo de domínio usando o .NET Core (código C\# simples) e EF Core. Observe que seu modelo de domínio será composto apenas pelo seu código. Ele terá apenas os requisitos do modelo EF Core, mas não reais dependências do EF. Você não deve ter dependências rígidas nem referências ao EF Core ou qualquer outro ORM em seu modelo de domínio.
+Na seção anterior, foram explicados os princípios de design fundamentais e os padrões para criar um modelo de domínio. Agora é hora de explorar possíveis maneiras de implementar o modelo de domínio usando o .NET Core (código C\# simples) e EF Core. Seu modelo de domínio será composto simplesmente pelo seu código. Ele terá apenas os requisitos do modelo EF Core, mas não reais dependências do EF. Você não deve ter dependências rígidas nem referências ao EF Core ou qualquer outro ORM em seu modelo de domínio.
 
 ## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Estrutura do modelo de domínio em uma biblioteca .NET Standard personalizada
 
 A organização de pastas usada para o aplicativo de referência eShopOnContainers demonstra o modelo DDD para o aplicativo. Você pode considerar que uma organização de pastas diferente comunica mais claramente as escolhas de design feitas para o seu aplicativo. Como é possível ver na Figura 7-10, no modelo de domínio de ordenação, há duas agregações: a agregação de ordem e a agregação de comprador. Cada agregação é um grupo de entidades de domínio e objetos de valor, embora você possa ter uma agregação composta por uma única entidade de domínio (a raiz de agregação ou entidade raiz) também.
 
 :::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="Captura de tela do projeto de ordenação. Domain no Gerenciador de Soluções.":::
-A exibição do Gerenciador de Soluções do projeto Ordering.Domain, mostrando a pasta AggregatesModel que contém as pastas BuyerAggregate e OrderAggregate, cada uma contendo suas classes de entidade, arquivos-objeto de valor e assim por diante.
+O Gerenciador de Soluções exibição para o projeto de ordenação. domínio, mostrando a pasta AggregatesModel que contém as pastas BuyerAggregate e OrderAggregate, cada uma contendo suas classes de entidade, arquivos de objeto de valor e assim por diante.
 :::image-end:::
 
 **Figura 7-10**. Estrutura de modelo de domínio para o microsserviço de ordenação em eShopOnContainers
@@ -95,7 +95,7 @@ public class Order : Entity, IAggregateRoot
 }
 ```
 
-É importante observar que essa é uma entidade de domínio implementada como uma classe POCO. Ela não tem nenhuma dependência direta do Entity Framework Core nem qualquer outra estrutura de infraestrutura. Essa implementação é como deve ser em DDD, apenas código C\# implementando um modelo de domínio.
+É importante observar que essa é uma entidade de domínio implementada como uma classe POCO. Ela não tem nenhuma dependência direta do Entity Framework Core nem qualquer outra estrutura de infraestrutura. Essa implementação é como deve estar no DDD, apenas código C# que implementa um modelo de domínio.
 
 Além disso, a classe é decorada com uma interface denominada IAggregateRoot. Essa interface é uma interface vazia, às vezes chamada de uma *interface de marcador*, que é usada apenas para indicar que essa classe de entidade também é uma raiz de agregação.
 
@@ -154,7 +154,7 @@ Além disso, a nova operação OrderItem(params) também será controlada e exec
 
 Quando você usar o Entity Framework Core 1.1 ou posterior, uma entidade DDD pode ser melhor expressada porque ela permite [mapear para os campos](https://docs.microsoft.com/ef/core/modeling/backing-field) além das propriedades. Isso é útil ao proteger as coleções de entidades filho ou objetos de valor. Com esse aprimoramento, você pode usar os campos privados, em vez das propriedades, e pode implementar qualquer atualização à coleção de campo nos métodos públicos e fornecer acesso somente leitura por meio do método AsReadOnly.
 
-No DDD, você deseja atualizar a entidade somente por meio de métodos na entidade (ou no construtor) para controlar qualquer invariável e a consistência dos dados, portanto, as propriedades são definidas somente com um acessador get. As propriedades têm o respaldo de campos privados. Membros privados só pode ser acessados de dentro da classe. No entanto, há uma exceção: o EF Core precisa definir esses campos também (para poder retornar o objeto com os valores adequados).
+No DDD, você deseja atualizar a entidade somente por meio de métodos na entidade (ou do Construtor) para controlar qualquer invariável e a consistência dos dados, para que as propriedades sejam definidas somente com um acessador get. As propriedades têm o respaldo de campos privados. Membros privados só pode ser acessados de dentro da classe. No entanto, há uma exceção: o EF Core precisa definir esses campos também (para poder retornar o objeto com os valores adequados).
 
 ### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Mapear propriedades com apenas acessadores get para os campos na tabela de banco de dados
 

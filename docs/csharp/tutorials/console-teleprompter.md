@@ -82,7 +82,7 @@ using System.IO;
 
 A interface <xref:System.Collections.Generic.IEnumerable%601> é definida no namespace <xref:System.Collections.Generic>. A classe <xref:System.IO.File> é definida no namespace <xref:System.IO>.
 
-Esse método é um tipo especial de método C# chamado de *Método iterador*. Os métodos enumeradores retornam sequências que são avaliadas lentamente. Isso significa que cada item na sequência é gerado conforme a solicitação do código que está consumindo a sequência. Os métodos enumeradores são métodos que contêm uma [`yield return`](../language-reference/keywords/yield.md) ou mais instruções. O objeto retornado pelo método `ReadFrom` contém o código para gerar cada item na sequência. Neste exemplo, isso envolve a leitura da próxima linha de texto do arquivo de origem e o retorno dessa cadeia de caracteres. Toda vez que o código de chamada solicita o próximo item da sequência, o código lê a próxima linha de texto do arquivo e a retorna. Após a leitura completa do arquivo, a sequência indicará que não há mais itens.
+Esse método é um tipo especial de método C# chamado de *Método iterador*. Os métodos enumeradores retornam sequências que são avaliadas lentamente. Isso significa que cada item na sequência é gerado conforme a solicitação do código que está consumindo a sequência. Os métodos enumeradores são métodos que contêm uma ou mais [`yield return`](../language-reference/keywords/yield.md) instruções. O objeto retornado pelo método `ReadFrom` contém o código para gerar cada item na sequência. Neste exemplo, isso envolve a leitura da próxima linha de texto do arquivo de origem e o retorno dessa cadeia de caracteres. Toda vez que o código de chamada solicita o próximo item da sequência, o código lê a próxima linha de texto do arquivo e a retorna. Após a leitura completa do arquivo, a sequência indicará que não há mais itens.
 
 Há dois outros elementos da sintaxe em C# que podem ser novidade para você. A [`using`](../language-reference/keywords/using-statement.md) instrução neste método gerencia a limpeza de recursos. A variável inicializada na instrução `using` (`reader`, neste exemplo) deve implementar a interface <xref:System.IDisposable>. Essa interface define um único método, `Dispose`, que deve ser chamado quando o recurso for liberado. O compilador gera essa chamada quando a execução atingir a chave de fechamento da instrução `using`. O código gerado pelo compilador garante que o recurso seja liberado, mesmo se uma exceção for lançada do código no bloco definido pela instrução using.
 
@@ -184,7 +184,7 @@ Chame esse novo método em seu método `Main`:
 ShowTeleprompter().Wait();
 ```
 
-Aqui, em `Main`, o código aguarda de forma síncrona. Use o operador `await` em vez de esperar de forma síncrona sempre que possível. Mas, em um método de `Main` aplicativo de console, você não pode `await` usar o operador. Isso resultaria no encerramento do aplicativo antes da conclusão de todas as tarefas.
+Aqui, em `Main`, o código aguarda de forma síncrona. Use o operador `await` em vez de esperar de forma síncrona sempre que possível. Mas, em um método de aplicativo de console `Main` , você não pode usar o `await` operador. Isso resultaria no encerramento do aplicativo antes da conclusão de todas as tarefas.
 
 > [!NOTE]
 > Caso use o C# 7.1 ou posterior, você poderá criar aplicativos de console com o método [`async` `Main`](../whats-new/csharp-7-1.md#async-main).

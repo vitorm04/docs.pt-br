@@ -78,7 +78,7 @@ A linguagem C# foi projetada para que o controle de versão entre classes deriva
   
  Para obter mais exemplos de `new` e `override`, consulte [Quando usar as palavras-chave override e new](./knowing-when-to-use-override-and-new-keywords.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação C#](../index.md)
 - [Classes e structs](./index.md)

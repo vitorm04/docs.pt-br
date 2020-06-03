@@ -95,7 +95,7 @@ O exemplo a seguir demonstra um acessador `get` que é um iterador. No exemplo, 
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência do C#](../index.md)
 - [Guia de programação C#](../../programming-guide/index.md)

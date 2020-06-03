@@ -28,7 +28,7 @@ dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json <REPORT_
 dotnet migrate -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Este comando foi preterido. O `dotnet migrate` comando não está mais disponível a partir do SDK do .NET Core 3,0. Ele só pode migrar um projeto do .NET Core da versão prévia 2 para um projeto do .NET Core 1. x, que está sem suporte.
 

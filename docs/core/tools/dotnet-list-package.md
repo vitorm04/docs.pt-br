@@ -11,7 +11,7 @@ ms.locfileid: "81463657"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
-**Este artigo se aplica a:** ✔️ .NET Core 2.2 SDK e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,2 e versões posteriores
 
 ## <a name="name"></a>Nome
 

@@ -83,9 +83,9 @@ No caso de um <xref:System.IO.IOException>, é possível obter outras informaç�
 [!code-csharp[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/cs/io-exceptions.cs)]
 [!code-vb[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/vb/io-exceptions.vb)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Tratando e gerando exceções no .NET](../exceptions/index.md)
 - [Tratamento de exceções (biblioteca de paralelismo de tarefas)](../parallel-programming/exception-handling-task-parallel-library.md)
-- [Melhores práticas para exceções](../exceptions/best-practices-for-exceptions.md)
+- [Práticas recomendadas para exceções](../exceptions/best-practices-for-exceptions.md)
 - [Como usar exceções específicas em um bloco catch](../exceptions/how-to-use-specific-exceptions-in-a-catch-block.md)

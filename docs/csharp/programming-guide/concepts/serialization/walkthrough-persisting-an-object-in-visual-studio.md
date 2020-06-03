@@ -99,7 +99,7 @@ Em seguida, é necessário adicionar um código para serializar a classe em um a
 
 Neste ponto, você pode compilar e executar o aplicativo novamente. Na primeira vez em que ele é executado, observe que as taxas de juros começam em 7,5 e, em seguida, são alteradas para 7,1. Feche o aplicativo e execute-o novamente. Agora, o aplicativo imprime a mensagem indicando que ele leu o arquivo salvo e a taxa de juros é 7,1, mesmo antes do código que a altera.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Serialização (C#)](index.md)
 - [Guia de programação C#](../../index.md)

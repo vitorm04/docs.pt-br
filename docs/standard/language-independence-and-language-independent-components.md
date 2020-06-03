@@ -172,7 +172,7 @@ Todos os tipos exibidos em assinaturas de membro, incluindo um tipo de retorno d
 
 O [Common Type System](base-types/common-type-system.md) do .NET Framework inclui vários tipos internos que têm suporte direto do Common Language Runtime e são codificados especialmente nos metadados de um assembly. Desses tipos intrínsecos, os tipos listados na tabela a seguir estão em conformidade com CLS.
 
-|Tipo em conformidade com CLS|Description|
+|Tipo em conformidade com CLS|Descrição|
 |-------------------------|-----------------|
 |<xref:System.Byte>|Inteiro sem sinal de 8 bits|
 |<xref:System.Int16>|Inteiro com sinal de 16 bits|
@@ -188,7 +188,7 @@ O [Common Type System](base-types/common-type-system.md) do .NET Framework inclu
 
 Os tipos intrínsecos listados na tabela a seguir não são compatíveis com CLS.
 
-|Tipo não compatível|Description|Alternativa em conformidade com CLS|
+|Tipo não compatível|Descrição|Alternativa em conformidade com CLS|
 |-------------------------|-----------------|--------------------------------|
 |<xref:System.SByte>|Tipo de dados inteiro com sinal de 8 bits|<xref:System.Int16>|
 |<xref:System.TypedReference>|Ponteiro para um objeto e seu tipo de runtime|Nenhum|

@@ -2,12 +2,12 @@
 title: Criando um modelo de domínio de microsserviço
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Entenda os principais conceitos ao projetar um modelo de domínio orientado a DDD.
 ms.date: 01/30/2020
-ms.openlocfilehash: 234d6e518eac8de5b2f130b91adb32b6a24a7265
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: fe78e719570d5758b71531beab883e5c24a88dca
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144585"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306897"
 ---
 # <a name="design-a-microservice-domain-model"></a>Projetar um modelo de domínio de microsserviço
 
@@ -35,7 +35,7 @@ A Figura 7-8 mostra uma entidade de domínio que, além de implementar os atribu
 
 **Figura 7-8**. Exemplo de um projeto de entidade de domínio implementando dados e também comportamento
 
-Uma entidade de modelo de domínio implementa comportamentos por meio de métodos, ou seja, não é um modelo "anêmico". Obviamente, também é possível haver entidades que não implementam nenhuma lógica como parte da classe da entidade. Isso poderá ocorrer em entidades filhas dentro de uma agregação se a entidade filha não tiver nenhuma lógica especial porque a maioria da lógica está definida na raiz da agregação. Se houver um microsserviço complexo com muita lógica implementada em classes de serviço e não nas entidades de domínio, você poderá cair no modelo de domínio anêmico, que será explicado na próxima seção.
+Uma entidade de modelo de domínio implementa comportamentos por meio de métodos, ou seja, não é um modelo "anêmico". Obviamente, também é possível haver entidades que não implementam nenhuma lógica como parte da classe da entidade. Isso poderá ocorrer em entidades filhas dentro de uma agregação se a entidade filha não tiver nenhuma lógica especial porque a maioria da lógica está definida na raiz da agregação. Se você tiver um microserviço complexo que tenha uma lógica implementada nas classes de serviço em vez de nas entidades de domínio, poderá estar se enquadrando no modelo de domínio anêmico, explicado na seção a seguir.
 
 ### <a name="rich-domain-model-versus-anemic-domain-model"></a>Modelo de domínio avançado em comparação com o modelo de domínio anêmico
 
@@ -45,7 +45,7 @@ O sintoma básico de um modelo de domínio anêmico é que, à primeira vista, e
 
 É claro que, quando você usar um modelo de domínio anêmico, serão usados os modelos de dados de um conjunto de objetos de serviço (tradicionalmente chamado de *camada comercial*) que captura toda a lógica de negócios ou do domínio. A camada de negócios fica acima do modelo de dados e usa o modelo de dados apenas como dados.
 
-O modelo de domínio anêmico é apenas um design de estilo de procedimento. Os objetos da entidade anêmica não são objetos reais, porque eles não têm comportamento (métodos). Eles apenas mantêm as propriedades dos dados e, portanto, não são de design orientado a objeto. Ao colocar todo o comportamento nos objetos de serviço (na camada de negócios), basicamente, o resultado será um [código espaguete](https://en.wikipedia.org/wiki/Spaghetti_code) ou [scripts de transação](https://martinfowler.com/eaaCatalog/transactionScript.html) e, portanto, você perderá as vantagens que um modelo de domínio oferece.
+O modelo de domínio anêmico é apenas um design de estilo de procedimento. Os objetos da entidade anêmica não são objetos reais, porque eles não têm comportamento (métodos). Eles apenas mantêm as propriedades dos dados e, portanto, não são de design orientado a objeto. Ao colocar todo o comportamento em objetos de serviço (a camada de negócios), essencialmente você acaba com o [código espaguete](https://en.wikipedia.org/wiki/Spaghetti_code) ou com os [scripts de transação](https://martinfowler.com/eaaCatalog/transactionScript.html)e, portanto, perde as vantagens que um modelo de domínio fornece.
 
 De qualquer maneira, se o microsserviço ou o Contexto Limitado for muito simples (um serviço de CRUD), o modelo de domínio anêmico na forma de objetos de entidade apenas com as propriedades dos dados já poderá ser suficiente e talvez não compense implementar os padrões mais complexos de DDD. Nesse caso, ele será simplesmente um modelo de persistência, porque você criou uma entidade intencionalmente apenas com os dados para fins de CRUD.
 
@@ -72,7 +72,7 @@ Uma entidade requer uma identidade, mas há muitos objetos em um sistema que nã
 
 Algo que é uma entidade em um microsserviço pode não ser uma entidade em outro microsserviço, porque no segundo caso, o Contexto Limitado pode ter um significado diferente. Por exemplo, um endereço em um aplicativo de comércio eletrônico pode não ter uma identidade, já que ele pode representar apenas um grupo de atributos do perfil do cliente para uma pessoa ou empresa. Nesse caso, o endereço deve ser classificado como um objeto de valor. No entanto, em um aplicativo de uma empresa utilitária de energia elétrica, o endereço do cliente pode ser importante para o domínio de negócios. Portanto, o endereço precisa ter uma identidade para que o sistema de cobrança possa ser vinculado diretamente ao endereço. Nesse caso, o endereço deve ser classificado como uma entidade de domínio.
 
-Uma pessoa com um nome e um sobrenome geralmente é uma entidade, porque a pessoa tem uma identidade, mesmo se o nome e o sobrenome coincidirem com outro conjunto de valores, por exemplo, se esses nomes também se referirem a uma outra pessoa.
+Uma pessoa com um nome e sobrenome geralmente é uma entidade porque uma pessoa tem identidade, mesmo que o nome e sobrenome coincidam com outro conjunto de valores, como se esses nomes também se referirem a uma pessoa diferente.
 
 Os objetos de valor são difíceis de gerenciar em bancos de dados relacionais e ORMs como Entity Framework (EF), enquanto em bancos de dados orientados a documentos eles são mais fáceis de implementar e usar.
 
@@ -114,14 +114,14 @@ Na Figura 7-9, veja as agregações de exemplo, como a agregação de comprador,
 
 Um modelo de domínio de DDD é composto por agregações, uma agregação pode ter uma única entidade ou mais e pode incluir também objetos de valor. Observe que a agregação de comprador poderá ter entidades filhas adicionais, dependendo do domínio, como ocorre no microsserviço de pedidos no aplicativo eShopOnContainers de referência. A Figura 7-9 apenas ilustra um caso em que o comprador tem uma única entidade, como exemplo de uma agregação que contém somente uma raiz de agregação.
 
-Para manter a separação de agregações e manter limites claros entre elas, uma prática recomendada em um modelo de domínio de DDD é não permitir a navegação direta entre as agregações e ter apenas o campo de FK (chave estrangeira), como foi implementado no [Modelo de domínio do microsserviço de pedidos](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) no eShopOnContainers. A entidade de pedido tem apenas um campo FK para o comprador, mas não uma propriedade de navegação do EF Core, conforme é mostrado no código a seguir:
+Para manter a separação de agregações e manter limites claros entre elas, uma prática recomendada em um modelo de domínio de DDD é não permitir a navegação direta entre as agregações e ter apenas o campo de FK (chave estrangeira), como foi implementado no [Modelo de domínio do microsserviço de pedidos](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) no eShopOnContainers. A entidade Order tem apenas um campo de chave estrangeira para o comprador, mas não uma EF Core propriedade de navegação, conforme mostrado no código a seguir:
 
 ```csharp
 public class Order : Entity, IAggregateRoot
 {
     private DateTime _orderDate;
     public Address Address { get; private set; }
-    private int? _buyerId; //FK pointing to a different aggregate root
+    private int? _buyerId; // FK pointing to a different aggregate root
     public OrderStatus OrderStatus { get; private set; }
     private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;

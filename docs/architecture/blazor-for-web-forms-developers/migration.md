@@ -4,12 +4,12 @@ description: Saiba como abordar a migração de um aplicativo ASP.NET Web Forms 
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: b614572bd04d9ec694b0feb95173373591d5e117
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c70e4a4f57ddac97db4d58d9f876f7edc6aa6ce9
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144403"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306975"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Migrar do ASP.NET Web Forms para o mais incrivelmente
 
@@ -285,7 +285,7 @@ Para obter mais informações sobre agrupamento e minificação, consulte [ativo
 
 Uma página em um aplicativo Web Forms é um arquivo com a extensão *. aspx* . Uma página de Web Forms geralmente pode ser mapeada para um componente do mais incrivelmente. Um componente mais incrivelmente é criado em um arquivo com a extensão *. Razor* . Para o projeto eShop, cinco páginas são convertidas em uma página Razor.
 
-Por exemplo, a exibição de detalhes é composta de três arquivos na Web Forms projeto: *Details. aspx*, *Details.aspx.cs*e *Details.aspx.designer.cs*. Ao converter para mais incrivelmente, o code-behind e a marcação são combinados em *Details. Razor*. A compilação do Razor (equivalente ao que está nos arquivos *. designer.cs* ) é armazenada no diretório *obj* e não é, por padrão, visível no **Gerenciador de soluções**. A página Web Forms consiste na seguinte marcação:
+Por exemplo, a exibição de detalhes compreende três arquivos na Web Forms projeto: *Details. aspx*, *Details.aspx.cs*e *Details.aspx.designer.cs*. Ao converter para mais incrivelmente, o code-behind e a marcação são combinados em *Details. Razor*. A compilação do Razor (equivalente ao que está nos arquivos *. designer.cs* ) é armazenada no diretório *obj* e não é, por padrão, visível no **Gerenciador de soluções**. A página Web Forms consiste na seguinte marcação:
 
 ```aspx-csharp
 <%@ Page Title="Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="eShopLegacyWebForms.Catalog.Details" %>

@@ -5,12 +5,12 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: e2e25dcfff759d68087006b63544bf688798c029
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8134c0af55d74e57dcfce8c7174265b8c9902feb
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286074"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307066"
 ---
 # <a name="background-garbage-collection"></a>Coleta de lixo em segundo plano
 
@@ -39,11 +39,11 @@ A coleta de lixo do servidor em segundo plano funciona de modo semelhante à col
 
 A ilustração a seguir mostra a coleta de lixo da *estação de trabalho* em segundo plano executada em um thread separado e dedicado:
 
-![Coleta de lixo de estação de trabalho em segundo plano](./media/fundamentals/background-workstation-garbage-collection.png)
+![Coleta de lixo de estação de trabalho em segundo plano](media/fundamentals/background-workstation-garbage-collection.png)
 
 A ilustração a seguir mostra a coleta de lixo *do servidor* em segundo plano executada em threads separados e dedicados:
 
-![Coleta de lixo de servidor em segundo plano](./media/fundamentals/background-server-garbage-collection.png)
+![Coleta de lixo de servidor em segundo plano](media/fundamentals/background-server-garbage-collection.png)
 
 ## <a name="concurrent-garbage-collection"></a>Coleta de lixo simultânea
 
@@ -63,7 +63,7 @@ A coleta de lixo simultânea é executada em um thread dedicado. Por padrão, o 
 
 A ilustração a seguir mostra a coleta de lixo simultânea executada em um thread dedicado separado.
 
-![Threads de coleta de lixo simultâneos](./media/gc-concurrent.png)
+![Threads de coleta de lixo simultâneos](media/gc-concurrent.png)
 
 ## <a name="see-also"></a>Veja também
 

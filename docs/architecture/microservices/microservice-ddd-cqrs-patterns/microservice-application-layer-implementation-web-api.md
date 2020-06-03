@@ -2,12 +2,12 @@
 title: Implementando a camada de aplicativos de microsserviço usando a API Web
 description: Entenda a injeção de dependência e os padrões de mediador e seus detalhes de implementação na camada de aplicativo da API Web.
 ms.date: 01/30/2020
-ms.openlocfilehash: 3efa4939bb8762534af398d4e92361e81e668b85
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c6e82b610a528b688cb4334bdec01700abbd2a62
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144598"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306923"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementar a camada de aplicativos de microsserviço usando a API Web
 
@@ -18,14 +18,14 @@ Conforme mencionado anteriormente, a camada de aplicativo pode ser implementada 
 Por exemplo, o código da camada de aplicativo do microsserviço de ordenação é implementado diretamente como parte do projeto **Ordering.API** (um projeto da API Web ASP.NET Core), como mostrado na Figura 7-23.
 
 :::image type="complex" source="./media/microservice-application-layer-implementation-web-api/ordering-api-microservice.png" alt-text="Captura de tela do microserviço de classificação. API no Gerenciador de Soluções.":::
-A exibição do Gerenciador de Soluções do microsserviço Ordering.API, mostrando as subpastas na pasta Aplicativo: Comportamentos, Comandos, DomainEventHandlers, IntegrationEvents, Modelos, Consultas e Validações.
+O Gerenciador de Soluções exibição do microserviço de classificação. API, mostrando as subpastas na pasta do aplicativo: comportamentos, comandos, DomainEventHandlers, IntegrationEvents, modelos, consultas e validações.
 :::image-end:::
 
 **Figura 7-23**. A camada de aplicativo no projeto Ordering.API da API Web ASP.NET Core
 
 O ASP.NET Core inclui um [contêiner interno de IoC](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) simples (representado pela interface IServiceProvider) que é compatível com a injeção de construtor por padrão, e o ASP.NET disponibiliza alguns serviços por meio da DI (injeção de dependência). O ASP.NET Core usa o termo *serviço* para qualquer um dos tipos que você registra e que serão injetados pela DI. Você configura os serviços internos do contêiner no método ConfigureServices na classe Startup do seu aplicativo. As dependências são implementadas nos serviços que são necessários para um tipo e que você registra no contêiner de IoC.
 
-Normalmente, você deseja injetar dependências que implementam objetos de infraestrutura. Uma dependência muito comum a ser injetada é um repositório. Mas você poderá injetar qualquer outra dependência de infraestrutura que tiver. Para implementações mais simples, você injeta diretamente o objeto de padrão da Unidade de Trabalho (o objeto DbContext do EF), porque o DBContext também é a implementação dos objetos de persistência da sua infraestrutura.
+Normalmente, você deseja injetar dependências que implementam objetos de infraestrutura. Uma dependência típica para injetar é um repositório. Mas você poderá injetar qualquer outra dependência de infraestrutura que tiver. Para implementações mais simples, você injeta diretamente o objeto de padrão da Unidade de Trabalho (o objeto DbContext do EF), porque o DBContext também é a implementação dos objetos de persistência da sua infraestrutura.
 
 Veja no exemplo a seguir como o .NET Core está injetando os objetos de repositório necessários por meio do construtor. A classe é um manipulador de comando, o que será abordado na próxima seção.
 
@@ -433,7 +433,7 @@ O diagrama acima mostra um zoom da imagem 7-24: o controlador de ASP.NET Core en
 
 O motivo pelo qual o uso do padrão Mediador faz sentido é porque, em aplicativos empresariais, as solicitações de processamento podem ficar complicadas. Você almeja adicionar um número indefinido de interesses transversais como registro em log, validações, auditoria e segurança. Nesses casos, você pode confiar em um pipeline mediador (veja [Padrão mediador](https://en.wikipedia.org/wiki/Mediator_pattern)) para oferecer um meio para esses comportamentos adicionais ou interesses transversais.
 
-Um mediador é um objeto que encapsula o "como" desse processo: ele coordena a execução com base no estado, a maneira como um manipulador de comando é invocado ou a carga que você fornece ao manipulador. Com um componente mediador, você pode aplicar interesses transversais de uma forma centralizada e transparente, por meio da aplicação de decoradores (ou [comportamentos de pipeline](https://github.com/jbogard/MediatR/wiki/Behaviors) como [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)). Para obter mais informações, consulte o [Padrão decorador](https://en.wikipedia.org/wiki/Decorator_pattern).
+Um mediador é um objeto que encapsula o "como" desse processo: ele coordena a execução com base no estado, a maneira como um manipulador de comando é invocado ou a carga que você fornece ao manipulador. Com um componente do mediador, você pode aplicar preocupações abrangentes de forma centralizada e transparente aplicando decoradores (ou [comportamentos de pipeline](https://github.com/jbogard/MediatR/wiki/Behaviors) desde o [mediador 3](https://www.nuget.org/packages/MediatR/3.0.0)). Para obter mais informações, consulte o [Padrão decorador](https://en.wikipedia.org/wiki/Decorator_pattern).
 
 Os decoradores e comportamentos são semelhantes à [AOP (Programação orientada a aspectos)](https://en.wikipedia.org/wiki/Aspect-oriented_programming), aplicada somente a um pipeline de processo específico gerenciado pelo componente mediador. Os aspectos na AOP, que implementam interesses transversais, são aplicados com base em *construtores de aspecto* injetados em tempo de compilação ou com base na interceptação da chamada de objeto. Às vezes, essas duas abordagens de AOP típicas parecem funcionar "como mágica", porque não é fácil entender como a AOP faz seu trabalho. Ao lidar com problemas sérios ou bugs, pode ser difícil depurar a AOP. Por outro lado, esses decoradores/comportamentos são explícitos e aplicados apenas no contexto do mediador, assim, a depuração fica muito mais fácil e previsível.
 
@@ -477,7 +477,7 @@ Outra boa razão para usar o padrão Mediador foi explicada por Jimmy Bogard dur
 
 > Acho que vale a pena mencionar testes aqui – eles oferecem uma janela consistente e adequada sobre o comportamento do seu sistema. Solicitação-entrada, resposta. Descobrimos que o aspecto é bastante valioso na criação de testes com consistência.
 
-Primeiro, vamos dar uma olhada em um controlador WebAPI de exemplo onde você realmente usaria o objeto mediador. Se você não estiver usando o objeto mediador, precisará injetar todas as dependências para esse controlador, coisas como um objeto logger e outros. Portanto, o construtor ficaria muito complicado. Por outro lado, se você usasse o objeto mediador, o construtor do controlador poderia ser muito mais simples, com apenas algumas dependências em vez de muitas dependências, se você tivesse um por operação transversal, como no exemplo a seguir:
+Primeiro, vamos dar uma olhada em um controlador WebAPI de exemplo onde você realmente usaria o objeto mediador. Se você não estiver usando o objeto mediador, precisará injetar todas as dependências para esse controlador, coisas como um objeto logger e outros. Portanto, o Construtor seria complicado. Por outro lado, se você usasse o objeto mediador, o construtor do controlador poderia ser muito mais simples, com apenas algumas dependências em vez de muitas dependências, se você tivesse um por operação transversal, como no exemplo a seguir:
 
 ```csharp
 public class MyMicroserviceController : Controller
@@ -528,7 +528,7 @@ result = await _mediator.Send(requestCreateOrder);
 
 No entanto, esse caso também é um pouco mais avançado, pois também estamos implementando comandos idempotentes. O processo CreateOrderCommand deve ser idempotente, portanto, se a mesma mensagem vier duplicada pela rede, independentemente do motivo, como repetições, a mesma ordem de negócios será processada apenas uma vez.
 
-Isso é implementado pelo encapsulamento do comando empresarial (CreateOrderCommand, neste caso), inserindo-o em um IdentifiedCommand genérico que é controlado por uma ID de cada mensagem que chega por meio da rede e que deve ser idempotente.
+Isso é implementado encapsulando o comando de negócios (neste caso, CreateOrderCommand) e inserindo-o em um IdentifiedCommand genérico, que é acompanhado por uma ID de cada mensagem proveniente da rede que precisa ser idempotente.
 
 Veja no código abaixo que o IdentifiedCommand não passa de um DTO com uma ID, além do objeto do comando de negócios encapsulado.
 
@@ -590,9 +590,9 @@ public class IdentifiedCommandHandler<T, R> :
 }
 ```
 
-Como o IdentifiedCommand atua como um envelope de comando de negócios, quando o comando comercial precisa ser processado porque não é uma ID repetida, ele pega o comando comercial interno e o envia novamente para mediador, como na última parte do código mostrado acima durante `_mediator.Send(message.Command)` a execução, a partir do [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
+Como o IdentifiedCommand atua como um envelope de comando de negócios, quando o comando comercial precisa ser processado porque não é uma ID repetida, ele pega o comando comercial interno e o reenvia para mediador, como na última parte do código mostrado acima durante `_mediator.Send(message.Command)` a execução, do [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
 
-Ao fazer isso, ele vinculará e executará o manipulador do comando empresarial, o [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs), nesse caso, que está executando transações no banco de dados de Pedidos, conforme mostrado no código a seguir.
+Ao fazer isso, ele vinculará e executará o manipulador de comandos de negócios, nesse caso, o [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs), que está executando transações em relação ao banco de dados de ordenação, conforme mostrado no código a seguir.
 
 ```csharp
 // CreateOrderCommandHandler.cs

@@ -51,7 +51,7 @@ Os sites a seguir fornecem orientações e podem ajudar a encontrar respostas pa
 |URL|Descrição|
 |----------|----------------|
 |[Suporte da Microsoft](https://support.microsoft.com)|Fornece acesso a artigos da Base de Dados de Conhecimento (KB), downloads e atualizações, webcasts de suporte e outros serviços.|
-|[Perguntas sobre o Visual Studio](https://developercommunity.visualstudio.com)|Permite arquivar bugs ou fornecer sugestões à Microsoft sobre o .NET e o Visual Studio. Você também pode relatar um bug selecionando **Ajuda** > **Enviar Feedback** > **Reporte um Problema** no Visual Studio.|
+|[Perguntas sobre o Visual Studio](https://developercommunity.visualstudio.com)|Permite arquivar bugs ou fornecer sugestões à Microsoft sobre o .NET e o Visual Studio. Você também pode relatar um bug selecionando **ajuda**  >  **enviar comentários**  >  **relatando um problema** no Visual Studio.|
 
 ## <a name="third-party-resources"></a>Recursos de terceiros
 
@@ -61,7 +61,7 @@ Os sites a seguir fornecem orientações e podem ajudar a encontrar respostas pa
 |[vbCity](http://vbcity.com/)|Um site da comunidade para que pessoas aprendam e façam perguntas sobre Visual Basic e .NET.|
 |[Stack Overflow](https://stackoverflow.com/questions/tagged/vb.net)|O Stack Overflow é um site de perguntas e respostas para desenvolvedores.|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Introdução ao Visual Basic](../../visual-basic/getting-started/index.md)
 - [Fale conosco](/visualstudio/ide/feedback-options)

@@ -141,7 +141,7 @@ Use a propriedade `TargetFrameworks` para definir a lista de estruturas de desti
 </PropertyGroup>
 ```
 
-## <a name="dependencies"></a>dependências
+## <a name="dependencies"></a>dependencies
 
 > [!IMPORTANT]
 > Se a dependência for um **projeto** e não um pacote, o formato será diferente.
@@ -339,7 +339,7 @@ No MSBuild, todos os projetos são *portáteis* durante o build, mas podem ser p
 
 Para obter mais informações, consulte [SCD (implantações independentes)](../deploying/index.md#publish-self-contained).
 
-## <a name="tools"></a>ferramentas
+## <a name="tools"></a>tools
 
 ```json
 {
@@ -671,6 +671,6 @@ Para obter mais informações, consulte [Incluindo conteúdo em um pacote](/nuge
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de alto nível das alterações na CLI](cli-msbuild-architecture.md)

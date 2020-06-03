@@ -2,12 +2,12 @@
 title: Aplicando abordagens CQRS e CQS em um microsserviço DDD em eShopOnContainers
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Entenda como a CQRS é implementada no microsserviço de pedidos no eShopOnContainers.
 ms.date: 03/03/2020
-ms.openlocfilehash: 0fd38a93a1056cda4abd2f9f89ee9efc626985c8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 2916df596a6d0f887411f3ef0074aed395ef58ba
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144273"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306936"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Aplicar abordagens CQRS e CQS em um microsserviço DDD em eShopOnContainers
 
@@ -27,9 +27,9 @@ Como mostra a Figura 7-2 na seção anterior, este guia sugere o uso de padrões
 
 Para implementar o "lado das consultas", você pode escolher entre muitas abordagens, de seu ORM completo como EF Core, projeções do automapeamento, procedimentos armazenados, exibições, exibições materializadas ou um micro ORM.
 
-Neste guia e nos eShopOnContainers (principalmente o microsserviço de ordenação), escolhemos implementar consultas diretas usando um micro ORM como o [Dapper](https://github.com/StackExchange/dapper-dot-net). Isso permite a você implementar qualquer consulta com base em instruções SQL para obter o melhor desempenho, graças à estrutura leve com muito pouca sobrecarga.
+Neste guia e nos eShopOnContainers (principalmente o microsserviço de ordenação), escolhemos implementar consultas diretas usando um micro ORM como o [Dapper](https://github.com/StackExchange/dapper-dot-net). Isso permite que você implemente qualquer consulta baseada em instruções SQL para obter o melhor desempenho, graças a uma estrutura leve com pouca sobrecarga.
 
-Observe que, quando você usa essa abordagem, as atualizações em seu modelo que afetam como as entidades são persistentes em um Banco de Dados SQL também precisam de atualizações separadas em consultas SQL usadas pelo Dapper ou por quaisquer outras abordagens separadas (que não são do EF) para consultar.
+Quando você usa essa abordagem, todas as atualizações para seu modelo que afetam o modo como as entidades são persistidas em um banco de dados SQL também precisam de atualizações separadas para consultas SQL usadas por Dapper ou quaisquer outras abordagens separadas (não-EF) para consulta.
 
 ## <a name="cqrs-and-ddd-patterns-are-not-top-level-architectures"></a>Os padrões CQRS e DDD não são arquiteturas de nível superior
 

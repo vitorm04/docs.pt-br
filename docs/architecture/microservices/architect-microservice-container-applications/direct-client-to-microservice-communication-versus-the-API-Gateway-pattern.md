@@ -2,12 +2,12 @@
 title: Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 description: Entenda as diferenças e os usos do padrão de gateway de API e da comunicação direta de cliente com microsserviço.
 ms.date: 01/07/2019
-ms.openlocfilehash: 5c2f3bd32396b45a6209550f5b7a07c88795ccc0
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 089b6302132437e4bb733653b3edb401ff81a164
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144325"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306949"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 
@@ -53,13 +53,13 @@ Em uma arquitetura de microsserviços, os aplicativos cliente normalmente precis
 
 Portanto, ter um nível intermediário ou indireto (Gateway) pode ser muito conveniente para aplicativos baseados em microsserviço. Se você não tiver Gateways de API, os aplicativos do cliente deverão enviar solicitações diretamente aos microsserviços, o que causará problemas como os seguintes:
 
-- **Acoplamento**: sem o padrão de Gateway de API, os aplicativos cliente são acoplados aos microsserviços internos. Os aplicativos clientes precisam saber como as várias áreas do aplicativo são decompostas em microsserviços. Ao evoluir e refatorar os microsserviços internos, essas ações afetam muito a manutenção, pois causam alterações de falha nos aplicativos cliente devido à referência direta aos microsserviços internos desses aplicativos. Os aplicativos clientes precisam ser atualizados com frequência,o que dificulta a evolução da solução.
+- **Acoplamento**: sem o padrão de Gateway de API, os aplicativos cliente são acoplados aos microsserviços internos. Os aplicativos clientes precisam saber como as várias áreas do aplicativo são decompostas em microsserviços. Ao evoluir e refatorar os microserviços internos, essas ações impactam a manutenção porque causam alterações significativas nos aplicativos cliente devido à referência direta aos microserviços internos dos aplicativos cliente. Os aplicativos clientes precisam ser atualizados com frequência,o que dificulta a evolução da solução.
 
 - **Muitas viagens de ida e volta**: uma única página/tela no aplicativo cliente pode exigir diversas chamadas para vários serviços. Isso pode resultar em várias viagem de ida e volta na rede entre o cliente e o servidor, adicionando latência significativa. A agregação manipulada em um nível intermediário pode melhorar o desempenho e a experiência do usuário para o aplicativo cliente.
 
 - **Problemas de segurança**: sem um gateway, todos os microsserviços precisam ser expostos ao "mundo externo", tornando a superfície de ataque maior do que se você ocultar microsserviços internos que não são usados ​​diretamente pelos aplicativos cliente. Quanto menor a superfície de ataque, mais segura sua aplicação pode ser.
 
-- **Preocupações**abrangentes: cada microserviço publicado publicamente deve lidar com questões como autorização, SSL, etc. Em muitas situações, essas questões podem ser tratadas em uma única camada para que os microserviços internos sejam simplificados.
+- **Preocupações**abrangentes: cada microserviço publicado publicamente deve lidar com questões como autorização e SSL. Em muitas situações, esses interessas podem ser tratados em uma única camada para que os microsserviços internos sejam simplificados.
 
 ## <a name="what-is-the-api-gateway-pattern"></a>Por que o padrão de Gateway de API?
 
@@ -75,7 +75,7 @@ A Figura 4-13 mostra como um Gateway de API personalizado pode se encaixar em um
 
 Os aplicativos se conectam a um único ponto de extremidade, o gateway de API, que é configurado para encaminhar solicitações a microserviços individuais. Neste exemplo, o Gateway de API deve ser implementado como um serviço de WebHost ASP.NET Core personalizado em execução como um contêiner.
 
-É importante destacar que, neste diagrama, você usa um único serviço personalizado de Gateway de API, voltado para vários aplicativos cliente diferentes. Esse fato pode ser um risco importante, pois seu serviço de Gateway de API estará crescendo e em evolução com base em vários requisitos diferentes dos aplicativos cliente. Eventualmente, ele será inflado devido a essas necessidades diferentes e efetivamente pode ser muito semelhante a um aplicativo monolítico ou serviço monolítico. É por isso que é muito recomendável dividir o Gateway de API em vários serviços ou vários Gateways de API menores, um por tipo de fator forma de aplicativo cliente, por exemplo.
+É importante destacar que, neste diagrama, você usa um único serviço personalizado de Gateway de API, voltado para vários aplicativos cliente diferentes. Esse fato pode ser um risco importante, pois seu serviço de Gateway de API estará crescendo e em evolução com base em vários requisitos diferentes dos aplicativos cliente. Por fim, ele será inflado por causa dessas diferentes necessidades e efetivamente pode ser semelhante a um aplicativo monolítico ou serviço monolítico. É por isso que é muito recomendável dividir o Gateway de API em vários serviços ou vários Gateways de API menores, um por tipo de fator forma de aplicativo cliente, por exemplo.
 
 É necessário ter cuidado ao implementar o padrão de Gateway de API. Geralmente, não é recomendável ter um único Gateway de API para agregar todos os microsserviços internos do seu aplicativo. Em caso afirmativo, ele atua como um agregador ou orquestrador monolítico e viola a autonomia de microsserviço acoplando todos os microsserviços.
 
@@ -93,11 +93,11 @@ Figura 4-13.1 mostra os gateways de API que são separados por tipo de cliente; 
 
 Um Gateway de API pode oferecer vários recursos. Dependendo do produto, ele pode oferecer recursos mais avançados ou mais simples, no entanto, os recursos mais importantes e fundamentais para qualquer Gateway de API são os seguintes padrões de design:
 
-**Proxy reverso ou roteamento de gateway.** O Gateway de API oferece um proxy reverso para redirecionar ou encaminhar solicitações (roteamento da camada 7, geralmente solicitações HTTP) para os pontos de extremidade dos microsserviços internos. O gateway fornece um único ponto de extremidade ou URL para os aplicativos clientes e, em seguida, mapeia internamente as solicitações para um grupo de microsserviços internos. Essa funcionalidade de roteamento ajuda a desacoplar os aplicativos cliente dos microsserviços, mas também é muito conveniente na modernização de uma API monolítica colocando o Gateway de API entre a API monolítica e os aplicativos cliente. Assim, você pode adicionar novas APIs como novos microsserviços enquanto ainda usa a API monolítica herdada até que ela seja dividida em muitos microsserviços no futuro. Devido ao Gateway de API, os aplicativos cliente não notarão se as APIs em uso forem implementadas como microsserviços internos ou uma API monolítica. O mais importante é o fato que, ao evoluir e refatorar a API monolítica em microsserviços, graças ao roteamento do Gateway de API, os aplicativos cliente não serão afetados por nenhuma alteração de URI.
+**Proxy reverso ou roteamento de gateway.** O Gateway de API oferece um proxy reverso para redirecionar ou encaminhar solicitações (roteamento da camada 7, geralmente solicitações HTTP) para os pontos de extremidade dos microsserviços internos. O gateway fornece um único ponto de extremidade ou URL para os aplicativos clientes e, em seguida, mapeia internamente as solicitações para um grupo de microsserviços internos. Esse recurso de roteamento ajuda a desacoplar os aplicativos cliente dos microserviços, mas também é conveniente ao modernizar uma API monolítica posicionando o gateway de API entre a API monolítica e os aplicativos cliente, então você pode adicionar novas APIs como novos microserviços enquanto ainda usa a API monolítica herdada até que ela seja dividida em muitos microserviços no futuro. Devido ao Gateway de API, os aplicativos cliente não notarão se as APIs em uso forem implementadas como microsserviços internos ou uma API monolítica. O mais importante é o fato que, ao evoluir e refatorar a API monolítica em microsserviços, graças ao roteamento do Gateway de API, os aplicativos cliente não serão afetados por nenhuma alteração de URI.
 
 Para saber mais, confira [Padrão de roteamento do gateway](https://docs.microsoft.com/azure/architecture/patterns/gateway-routing).
 
-**Solicitações de agregação.** Como parte do padrão de gateway, é possível agregar várias solicitações de cliente (geralmente solicitações HTTP) direcionadas a vários microsserviços internos em uma única solicitação de cliente. Esse padrão é especialmente conveniente quando uma página/tela do cliente precisa de informações de vários microsserviços. Com essa abordagem, o aplicativo cliente envia uma única solicitação ao Gateway da API, que envia várias solicitações aos microsserviços internos e, em seguida, agrega os resultados e envia tudo de volta ao aplicativo cliente. O principal benefício e objetivo desse padrão de design é reduzir o caos entre os aplicativos cliente e a API de back-end, o que é especialmente importante para aplicativos remotos do datacenter em que os microsserviços residem, como aplicativos móveis ou solicitações provenientes de aplicativos SPA de Javascript em navegadores remotos do cliente. Para aplicativos Web comuns que executam as solicitações no ambiente do servidor (como um aplicativo Web ASP.NET Core MVC), esse padrão não é tão importante, já que a latência é muito menor do que em aplicativos cliente remotos.
+**Solicitações de agregação.** Como parte do padrão de gateway, é possível agregar várias solicitações de cliente (geralmente solicitações HTTP) direcionadas a vários microsserviços internos em uma única solicitação de cliente. Esse padrão é especialmente conveniente quando uma página/tela do cliente precisa de informações de vários microsserviços. Com essa abordagem, o aplicativo cliente envia uma única solicitação ao Gateway da API, que envia várias solicitações aos microsserviços internos e, em seguida, agrega os resultados e envia tudo de volta ao aplicativo cliente. O principal benefício e o objetivo desse padrão de design é reduzir a informação entre os aplicativos cliente e a API de back-end, que é especialmente importante para aplicativos remotos do datacenter em que os microserviços residem, como aplicativos móveis ou solicitações provenientes de aplicativos de SPA provenientes do JavaScript em navegadores remotos do cliente. Para aplicativos Web comuns que executam as solicitações no ambiente do servidor (como um aplicativo Web ASP.NET Core MVC), esse padrão não é tão importante, já que a latência é muito menor do que em aplicativos cliente remotos.
 
 Dependendo do produto do Gateway de API usado, ele poderá executar essa agregação. No entanto, em muitos casos, é mais flexível criar microsserviços de agregação no escopo do Gateway de API, de modo que você defina a agregação no código (ou seja, o código C#):
 
@@ -144,7 +144,7 @@ Neste guia e no aplicativo de exemplo de referência (eShopOnContainers), a arqu
 
 ### <a name="ocelot"></a>Ocelot
 
-O [Ocelot](https://github.com/ThreeMammals/Ocelot) é um Gateway de API leve, recomendado para abordagens mais simples. O Ocelot é um Gateway de API baseado no .NET Core de Software Livre, feito especialmente para a arquitetura de microsserviços que precisa de pontos de entrada unificados no sistema. Ele é leve, rápido, escalonável e fornece roteamento e autenticação entre muitos outros recursos.
+O [Ocelot](https://github.com/ThreeMammals/Ocelot) é um Gateway de API leve, recomendado para abordagens mais simples. O Ocelot é um gateway de API baseado em .NET Core de software livre, especialmente feito para arquiteturas de microserviços que precisam de pontos unificados de entrada em seus sistemas. É leve, rápido e escalonável e fornece roteamento e autenticação entre muitos outros recursos.
 
 O principal motivo para escolher Ocelot para o [aplicativo de referência eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) é porque o Ocelot é um gateway de API leve do .NET Core que pode ser implantado no mesmo ambiente de implantação de aplicativos em que você está implantando seus microserviços/contêineres, como um host do Docker, kubernetes, etc. E, como ele é baseado no .NET Core, ele é multiplataforma que permite que você implante no Linux ou no Windows.
 
@@ -188,7 +188,7 @@ Após as seções iniciais de explicação sobre arquitetura e padrões, as pró
 - **Grandes Clemenss. Mensagens e microserviços em GOTO 2016 (vídeo)** \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
-- **Resumo sobre o Gateway de API** (série de tutoriais do Gateway de API do ASP.NET Core) \
+- **Gateway de API em resumo** (ASP.NET Core série de tutoriais de gateway de API) \
   <https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html>
 
 >[!div class="step-by-step"]

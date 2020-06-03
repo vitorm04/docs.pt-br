@@ -63,10 +63,10 @@ class SampleClass
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Reflection>
-- [C# Guia de Programação](../../index.md)
+- [Guia de programação C#](../../index.md)
 - [Escrevendo atributos personalizados](../../../../standard/attributes/writing-custom-attributes.md)
 - [Reflexão (C#)](../reflection.md)
 - [Atributos (C#)](./index.md)

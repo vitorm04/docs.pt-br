@@ -1,5 +1,5 @@
 ---
-title: Como pesquisar strings (Guia C#)
+title: Como Pesquisar cadeias de caracteres (guia C#)
 ms.date: 02/21/2018
 helpviewer_keywords:
 - searching strings [C#]
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/11/2020
 ms.locfileid: "81121488"
 ---
-# <a name="how-to-search-strings"></a>Como pesquisar strings
+# <a name="how-to-search-strings"></a>Como Pesquisar cadeias de caracteres
 
 Você pode usar duas estratégias principais para pesquisar texto em cadeias de caracteres. Os métodos da classe <xref:System.String> pesquisam por um texto específico. Expressões regulares pesquisam por padrões no texto.
 
@@ -52,7 +52,7 @@ O padrão de pesquisa descreve o texto pelo qual procurar. A tabela a seguir des
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
   
 > [!TIP]
-> Os métodos `string` são geralmente melhores opções quando você está procurando por uma cadeia de caracteres exata. Expressões regulares são melhores quando você está procurando algum padrão em uma seqüência de origem.
+> Os métodos `string` são geralmente melhores opções quando você está procurando por uma cadeia de caracteres exata. As expressões regulares são melhores quando você está procurando por algum padrão em uma cadeia de caracteres de origem.
 
 ## <a name="does-a-string-follow-a-pattern"></a>Uma cadeia de caracteres segue um padrão?
 
@@ -72,14 +72,14 @@ O código a seguir usa expressões regulares para validar o formato de cada cade
 
 Este padrão de pesquisa único corresponde a várias cadeias de caracteres válidas. Expressões regulares são melhores para pesquisar por ou validar mediante um padrão, em vez de uma única cadeia de caracteres de texto.
 
-Você pode experimentar essas amostras olhando para o código em nosso [repositório GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](../../../samples/snippets/csharp/how-to/strings.zip).
+Você pode experimentar esses exemplos examinando o código em nosso [repositório GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](../../../samples/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../programming-guide/index.md)
+- [Guia de programação C#](../programming-guide/index.md)
 - [Cadeias de caracteres](../programming-guide/strings/index.md)
 - [LINQ e cadeias de caracteres](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [Expressões regulares do .NET Framework](../../standard/base-types/regular-expressions.md)
 - [Linguagem de expressões regulares – referência rápida](../../standard/base-types/regular-expression-language-quick-reference.md)
-- [Práticas recomendadas para usar strings em .NET](../../standard/base-types/best-practices-strings.md)
+- [Práticas recomendadas para usar cadeias de caracteres no .NET](../../standard/base-types/best-practices-strings.md)

@@ -53,7 +53,7 @@ Embora possa usar os métodos <xref:System.Threading.Tasks.Dataflow.DataflowBloc
  [!code-csharp[TPLDataflow_Palindromes#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#3)]
  [!code-vb[TPLDataflow_Palindromes#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#3)]  
   
-|Membro|Tipo|Description|  
+|Membro|Tipo|Descrição|  
 |------------|----------|-----------------|  
 |`downloadString`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Baixa o texto do catálogo na Web.|  
 |`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Separa o texto do catálogo em uma matriz de palavras.|  

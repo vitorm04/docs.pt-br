@@ -2,12 +2,12 @@
 title: Comunicação assíncrona baseada em mensagens
 description: Arquitetura de Microsserviços do .NET para Aplicativos .NET em Contêineres | A comunicação assíncrona baseada em mensagens é um conceito essencial na arquitetura de microsserviços, porque ela é a melhor maneira de manter microsserviços independentes uns dos outros, estando também simultaneamente sincronizados no fim das contas.
 ms.date: 09/20/2018
-ms.openlocfilehash: 476e42ccb39374c2bb50f22e41f60c10c563dc66
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: a8af94540a7906c474b9b784c28aa60ebae0a6e3
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144338"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306962"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicação assíncrona baseada em mensagens
 
@@ -35,7 +35,7 @@ Depois de começar a enviar comunicação baseada em mensagens (seja com comando
 
 **Figura 4-18**. Um único microsserviço recebendo uma mensagem assíncrona
 
-Observe que, quando os comandos provém de aplicativos cliente, eles podem ser implementados como comandos síncronos HTTP. Você deve usar comandos baseados em mensagens quando precisar de maior escalabilidade ou quando já estiver em um processo empresarial baseado em mensagem.
+Quando os comandos são provenientes de aplicativos cliente, eles podem ser implementados como comandos síncronos HTTP. Use comandos baseados em mensagem quando precisar de maior escalabilidade ou quando já estiver em um processo de negócios baseado em mensagem.
 
 ## <a name="multiple-receivers-message-based-communication"></a>Comunicação baseada em mensagens de vários destinatários
 
@@ -57,7 +57,7 @@ Um ponto importante é que você pode querer comunicar-se com vários microsserv
 
 **Figura 4-19**. Comunicação de mensagem controlada por evento assíncrono
 
-Na comunicação controlada por evento assíncrono, um microsserviço publica os eventos para um barramento de evento e muitos microsserviços podem assiná-lo para serem notificados e agirem sobre ele. Sua implementação determinará o protocolo a ser usado para comunicações controladas por eventos e baseadas em mensagem. O [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) pode ajudar a obter uma comunicação confiável na fila.
+Na comunicação assíncrona orientada por evento, um microserviço publica eventos em um barramento de evento e muitos microserviços podem assiná-lo, para ser notificado e agir sobre ele. Sua implementação determinará o protocolo a ser usado para comunicações controladas por eventos e baseadas em mensagem. O [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) pode ajudar a obter uma comunicação confiável na fila.
 
 Ao usar um barramento de evento, talvez você queira usar um nível de abstração (como uma interface de barramento de evento) com base em uma implementação relacionada em classes com o código usando a API de um agente de mensagens como [RabbitMQ](https://www.rabbitmq.com/) ou um barramento de serviço como [Barramento de Serviço do Azure com Tópicos](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Como alternativa, você talvez queira usar um barramento de serviço de nível superior, como NServiceBus, MassTransit ou Brighter para articular seu barramento de evento e sistema de publicação/assinatura.
 

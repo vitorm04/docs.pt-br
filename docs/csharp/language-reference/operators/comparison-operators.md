@@ -73,9 +73,9 @@ Se um tipo sobrecarregar um dos operadores `<` ou `>`, ele deverá sobrecarregar
 
 Para obter mais informações, consulte a seção [Operadores de teste de tipo e relacional](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) na [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Referência do C#](../index.md)
+- [Referência de C#](../index.md)
 - [Operadores do C#](index.md)
 - <xref:System.IComparable%601?displayProperty=nameWithType>
 - [Operadores de igualdade](equality-operators.md)
