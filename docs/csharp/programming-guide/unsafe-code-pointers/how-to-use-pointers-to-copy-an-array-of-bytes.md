@@ -1,18 +1,18 @@
 ---
-title: Como usar ponteiros para copiar uma matriz de bytes - C# Guia de Programação
+title: Como usar ponteiros para copiar uma matriz de bytes-guia de programação C#
 ms.date: 04/20/2018
 helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: 4929699c2d1e07b16d4694cff79f9b1394b1de38
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8c1afc06fb567a923d604ad53dc26f94178a8d60
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75698450"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397409"
 ---
-# <a name="how-to-use-pointers-to-copy-an-array-of-bytes-c-programming-guide"></a>Como usar ponteiros para copiar uma matriz de bytes (C# Programming Guide)
+# <a name="how-to-use-pointers-to-copy-an-array-of-bytes-c-programming-guide"></a>Como usar ponteiros para copiar uma matriz de bytes (guia de programação C#)
 
 O exemplo a seguir usa ponteiros para copiar bytes de uma matriz para outra.
 
@@ -22,11 +22,11 @@ Este exemplo acessa os elementos das duas matrizes usando índices em vez de um 
 
 ## <a name="example"></a>Exemplo
 
-[!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#8)]
+[!code-csharp[Struct with embedded inline array](snippets/FixedKeywordExamples.cs#8)]
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Código não seguro e ponteiros](index.md)
-- [-inseguro (C# Opções de compilador)](../../language-reference/compiler-options/unsafe-compiler-option.md)
+- [-Não seguro (opções do compilador C#)](../../language-reference/compiler-options/unsafe-compiler-option.md)
 - [Coleta de lixo](../../../standard/garbage-collection/index.md)
