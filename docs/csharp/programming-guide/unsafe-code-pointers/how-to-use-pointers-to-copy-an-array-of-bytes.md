@@ -1,32 +1,32 @@
 ---
-title: Como usar ponteiros para copiar uma matriz de bytes - C# Guia de Programação
+title: Como usar ponteiros para copiar uma matriz de bytes-guia de programação C#
 ms.date: 04/20/2018
 helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: 4929699c2d1e07b16d4694cff79f9b1394b1de38
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8c1afc06fb567a923d604ad53dc26f94178a8d60
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75698450"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397409"
 ---
-# <a name="how-to-use-pointers-to-copy-an-array-of-bytes-c-programming-guide"></a><span data-ttu-id="9ee48-102">Como usar ponteiros para copiar uma matriz de bytes (C# Programming Guide)</span><span class="sxs-lookup"><span data-stu-id="9ee48-102">How to use pointers to copy an array of bytes (C# Programming Guide)</span></span>
+# <a name="how-to-use-pointers-to-copy-an-array-of-bytes-c-programming-guide"></a><span data-ttu-id="fcb0a-102">Como usar ponteiros para copiar uma matriz de bytes (guia de programação C#)</span><span class="sxs-lookup"><span data-stu-id="fcb0a-102">How to use pointers to copy an array of bytes (C# Programming Guide)</span></span>
 
-<span data-ttu-id="9ee48-103">O exemplo a seguir usa ponteiros para copiar bytes de uma matriz para outra.</span><span class="sxs-lookup"><span data-stu-id="9ee48-103">The following example uses pointers to copy bytes from one array to another.</span></span>
+<span data-ttu-id="fcb0a-103">O exemplo a seguir usa ponteiros para copiar bytes de uma matriz para outra.</span><span class="sxs-lookup"><span data-stu-id="fcb0a-103">The following example uses pointers to copy bytes from one array to another.</span></span>
 
-<span data-ttu-id="9ee48-104">Este exemplo usa a palavra-chave [não seguro](../../language-reference/keywords/unsafe.md), que permite que você use ponteiros no método `Copy`.</span><span class="sxs-lookup"><span data-stu-id="9ee48-104">This example uses the [unsafe](../../language-reference/keywords/unsafe.md) keyword, which enables you to use pointers in the `Copy` method.</span></span> <span data-ttu-id="9ee48-105">A instrução [fixo](../../language-reference/keywords/fixed-statement.md) é usada para declarar ponteiros para as matrizes de origem e de destino.</span><span class="sxs-lookup"><span data-stu-id="9ee48-105">The [fixed](../../language-reference/keywords/fixed-statement.md) statement is used to declare pointers to the source and destination arrays.</span></span> <span data-ttu-id="9ee48-106">A instrução `fixed`*fixa* o local das matrizes de origem e de destino na memória para que elas não sejam movidas pela coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="9ee48-106">The `fixed` statement *pins* the location of the source and destination arrays in memory so that they will not be moved by garbage collection.</span></span> <span data-ttu-id="9ee48-107">Os blocos de memória para as matrizes não serão fixado quando o bloco `fixed` for concluído.</span><span class="sxs-lookup"><span data-stu-id="9ee48-107">The memory blocks for the arrays are unpinned when the `fixed` block is completed.</span></span> <span data-ttu-id="9ee48-108">Como o método `Copy` neste exemplo usa a palavra-chave `unsafe`, ele precisa ser compilado com a opção do compilador [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="9ee48-108">Because the `Copy` method in this example uses the `unsafe` keyword, it must be compiled with the [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) compiler option.</span></span>
+<span data-ttu-id="fcb0a-104">Este exemplo usa a palavra-chave [não seguro](../../language-reference/keywords/unsafe.md), que permite que você use ponteiros no método `Copy`.</span><span class="sxs-lookup"><span data-stu-id="fcb0a-104">This example uses the [unsafe](../../language-reference/keywords/unsafe.md) keyword, which enables you to use pointers in the `Copy` method.</span></span> <span data-ttu-id="fcb0a-105">A instrução [fixo](../../language-reference/keywords/fixed-statement.md) é usada para declarar ponteiros para as matrizes de origem e de destino.</span><span class="sxs-lookup"><span data-stu-id="fcb0a-105">The [fixed](../../language-reference/keywords/fixed-statement.md) statement is used to declare pointers to the source and destination arrays.</span></span> <span data-ttu-id="fcb0a-106">A instrução `fixed`*fixa* o local das matrizes de origem e de destino na memória para que elas não sejam movidas pela coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="fcb0a-106">The `fixed` statement *pins* the location of the source and destination arrays in memory so that they will not be moved by garbage collection.</span></span> <span data-ttu-id="fcb0a-107">Os blocos de memória para as matrizes não serão fixado quando o bloco `fixed` for concluído.</span><span class="sxs-lookup"><span data-stu-id="fcb0a-107">The memory blocks for the arrays are unpinned when the `fixed` block is completed.</span></span> <span data-ttu-id="fcb0a-108">Como o método `Copy` neste exemplo usa a palavra-chave `unsafe`, ele precisa ser compilado com a opção do compilador [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="fcb0a-108">Because the `Copy` method in this example uses the `unsafe` keyword, it must be compiled with the [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) compiler option.</span></span>
 
-<span data-ttu-id="9ee48-109">Este exemplo acessa os elementos das duas matrizes usando índices em vez de um segundo ponteiro não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="9ee48-109">This example accesses the elements of both arrays using indices rather than a second unmanaged pointer.</span></span> <span data-ttu-id="9ee48-110">A declaração dos ponteiros `pSource` e `pTarget` fixa as matrizes.</span><span class="sxs-lookup"><span data-stu-id="9ee48-110">The declaration of the `pSource` and `pTarget` pointers pins the arrays.</span></span> <span data-ttu-id="9ee48-111">Esse recurso está disponível começando com o C# 7.3.</span><span class="sxs-lookup"><span data-stu-id="9ee48-111">This feature is available starting with C# 7.3.</span></span>
+<span data-ttu-id="fcb0a-109">Este exemplo acessa os elementos das duas matrizes usando índices em vez de um segundo ponteiro não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="fcb0a-109">This example accesses the elements of both arrays using indices rather than a second unmanaged pointer.</span></span> <span data-ttu-id="fcb0a-110">A declaração dos ponteiros `pSource` e `pTarget` fixa as matrizes.</span><span class="sxs-lookup"><span data-stu-id="fcb0a-110">The declaration of the `pSource` and `pTarget` pointers pins the arrays.</span></span> <span data-ttu-id="fcb0a-111">Esse recurso está disponível começando com o C# 7.3.</span><span class="sxs-lookup"><span data-stu-id="fcb0a-111">This feature is available starting with C# 7.3.</span></span>
 
-## <a name="example"></a><span data-ttu-id="9ee48-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="9ee48-112">Example</span></span>
+## <a name="example"></a><span data-ttu-id="fcb0a-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="fcb0a-112">Example</span></span>
 
-[!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#8)]
+[!code-csharp[Struct with embedded inline array](snippets/FixedKeywordExamples.cs#8)]
 
-## <a name="see-also"></a><span data-ttu-id="9ee48-113">Confira também</span><span class="sxs-lookup"><span data-stu-id="9ee48-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fcb0a-113">Confira também</span><span class="sxs-lookup"><span data-stu-id="fcb0a-113">See also</span></span>
 
-- [<span data-ttu-id="9ee48-114">C# Guia de Programação</span><span class="sxs-lookup"><span data-stu-id="9ee48-114">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="9ee48-115">Código não seguro e ponteiros</span><span class="sxs-lookup"><span data-stu-id="9ee48-115">Unsafe Code and Pointers</span></span>](index.md)
-- [<span data-ttu-id="9ee48-116">-inseguro (C# Opções de compilador)</span><span class="sxs-lookup"><span data-stu-id="9ee48-116">-unsafe (C# Compiler Options)</span></span>](../../language-reference/compiler-options/unsafe-compiler-option.md)
-- [<span data-ttu-id="9ee48-117">Coleta de lixo</span><span class="sxs-lookup"><span data-stu-id="9ee48-117">Garbage Collection</span></span>](../../../standard/garbage-collection/index.md)
+- [<span data-ttu-id="fcb0a-114">Guia de programação C#</span><span class="sxs-lookup"><span data-stu-id="fcb0a-114">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="fcb0a-115">Código não seguro e ponteiros</span><span class="sxs-lookup"><span data-stu-id="fcb0a-115">Unsafe Code and Pointers</span></span>](index.md)
+- [<span data-ttu-id="fcb0a-116">-Não seguro (opções do compilador C#)</span><span class="sxs-lookup"><span data-stu-id="fcb0a-116">-unsafe (C# Compiler Options)</span></span>](../../language-reference/compiler-options/unsafe-compiler-option.md)
+- [<span data-ttu-id="fcb0a-117">Coleta de lixo</span><span class="sxs-lookup"><span data-stu-id="fcb0a-117">Garbage Collection</span></span>](../../../standard/garbage-collection/index.md)
