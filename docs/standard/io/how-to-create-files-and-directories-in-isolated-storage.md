@@ -14,12 +14,12 @@ helpviewer_keywords:
 - stores, creating files and directories
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
-ms.openlocfilehash: b74bf62dabe24765e07ffa6820cc1675122a9122
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d5e086e77ab6309fa0757ef32b620e0fdbc1f627
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288544"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413034"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Como: Criar arquivos e diretórios no armazenamento isolado
 Depois de obter um repositório isolado, você pode criar diretórios e arquivos para armazenar dados. Em um repositório, nomes de arquivo e diretório são especificados com relação à raiz do sistema de arquivos virtual.  
@@ -29,6 +29,8 @@ Depois de obter um repositório isolado, você pode criar diretórios e arquivos
  Para criar um arquivo, use o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile%2A?displayProperty=nameWithType>.  
   
  No sistema operacional Windows, nomes de arquivo de armazenamento isolado e de diretório diferenciam maiúsculas de minúsculas. Ou seja, se você criar um arquivo chamado `ThisFile.txt`, depois criar outro arquivo chamado `THISFILE.TXT`, somente um arquivo será criado. O nome do arquivo mantém sua capitalização original para fins de exibição.  
+
+ A criação do arquivo de armazenamento isolado gerará um <xref:System.IO.IsolatedStorage.IsolatedStorageException> se o caminho contiver um diretório que não existe.
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir ilustra como criar arquivos e diretórios em um repositório isolado.  
@@ -36,7 +38,7 @@ Depois de obter um repositório isolado, você pode criar diretórios e arquivos
  [!code-csharp[Conceptual.IsolatedStorage#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source.cs#1)]
  [!code-vb[Conceptual.IsolatedStorage#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>
