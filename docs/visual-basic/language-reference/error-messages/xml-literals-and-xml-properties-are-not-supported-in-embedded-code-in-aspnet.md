@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC31200
 ms.assetid: 053e8cba-8584-45cc-9fa0-43d122779772
-ms.openlocfilehash: edd8032e693c233a51248daa6ffdfc830b0648a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bda92b4244631f66142499a94be562854b35437e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662597"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406463"
 ---
-# <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a><span data-ttu-id="f0168-102">Literais e propriedades de XML não são suportados em código inserido dentro do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="f0168-102">XML literals and XML properties are not supported in embedded code within ASP.NET</span></span>
-<span data-ttu-id="f0168-103">Não há suporte para literais XML e propriedades XML no código inserido dentro do ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="f0168-103">XML literals and XML properties are not supported in embedded code within ASP.NET.</span></span> <span data-ttu-id="f0168-104">Para usar recursos XML, mova o código para code-behind.</span><span class="sxs-lookup"><span data-stu-id="f0168-104">To use XML features, move the code to code-behind.</span></span>  
+# <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a><span data-ttu-id="d9e7e-102">Literais e propriedades de XML não são suportados em código inserido dentro do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="d9e7e-102">XML literals and XML properties are not supported in embedded code within ASP.NET</span></span>
+<span data-ttu-id="d9e7e-103">Não há suporte para literais XML e propriedades XML no código inserido dentro de ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="d9e7e-103">XML literals and XML properties are not supported in embedded code within ASP.NET.</span></span> <span data-ttu-id="d9e7e-104">Para usar recursos XML, mova o código para code-behind.</span><span class="sxs-lookup"><span data-stu-id="d9e7e-104">To use XML features, move the code to code-behind.</span></span>  
   
- <span data-ttu-id="f0168-105">Um literal XML ou uma propriedade de eixo XML é definida no código inserido (`<%= =>`) em um arquivo do ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="f0168-105">An XML literal or XML axis property is defined within embedded code (`<%= =>`) in an ASP.NET file.</span></span>  
+ <span data-ttu-id="d9e7e-105">Uma propriedade XML literal ou XML Axis é definida no código inserido ( `<%= =>` ) em um arquivo ASP.net.</span><span class="sxs-lookup"><span data-stu-id="d9e7e-105">An XML literal or XML axis property is defined within embedded code (`<%= =>`) in an ASP.NET file.</span></span>  
   
- <span data-ttu-id="f0168-106">**ID do erro:** BC31200</span><span class="sxs-lookup"><span data-stu-id="f0168-106">**Error ID:** BC31200</span></span>  
+ <span data-ttu-id="d9e7e-106">**ID do erro:** BC31200</span><span class="sxs-lookup"><span data-stu-id="d9e7e-106">**Error ID:** BC31200</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f0168-107">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="f0168-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d9e7e-107">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="d9e7e-107">To correct this error</span></span>  
   
-- <span data-ttu-id="f0168-108">Mova o código que inclui a literal XML ou uma propriedade de eixo XML para um arquivo de code-behind do ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="f0168-108">Move the code that includes the XML literal or XML axis property to an ASP.NET code-behind file.</span></span>  
+- <span data-ttu-id="d9e7e-108">Mova o código que inclui o literal XML ou a propriedade de eixo XML para um arquivo code-behind ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="d9e7e-108">Move the code that includes the XML literal or XML axis property to an ASP.NET code-behind file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f0168-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f0168-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9e7e-109">Confira também</span><span class="sxs-lookup"><span data-stu-id="d9e7e-109">See also</span></span>
 
-- [<span data-ttu-id="f0168-110">Literais XML</span><span class="sxs-lookup"><span data-stu-id="f0168-110">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)
-- [<span data-ttu-id="f0168-111">Propriedades do Eixo XML</span><span class="sxs-lookup"><span data-stu-id="f0168-111">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/index.md)
-- [<span data-ttu-id="f0168-112">XML</span><span class="sxs-lookup"><span data-stu-id="f0168-112">XML</span></span>](../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [<span data-ttu-id="d9e7e-110">Literais XML</span><span class="sxs-lookup"><span data-stu-id="d9e7e-110">XML Literals</span></span>](../xml-literals/index.md)
+- [<span data-ttu-id="d9e7e-111">Propriedades do eixo XML</span><span class="sxs-lookup"><span data-stu-id="d9e7e-111">XML Axis Properties</span></span>](../xml-axis/index.md)
+- [<span data-ttu-id="d9e7e-112">XML</span><span class="sxs-lookup"><span data-stu-id="d9e7e-112">XML</span></span>](../../programming-guide/language-features/xml/index.md)

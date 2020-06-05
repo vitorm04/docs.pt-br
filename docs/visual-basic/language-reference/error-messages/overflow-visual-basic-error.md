@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30036
 ms.assetid: b2c83de9-a132-449a-870b-e7c409d4d7ee
-ms.openlocfilehash: f2d7a025fd18c5655caea4ae45477798425d9ece
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c11c78292301cf837ec8d4003b6434cd968abe16
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661776"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387342"
 ---
-# <a name="overflow-visual-basic-error"></a><span data-ttu-id="eb847-102">Estouro (erro do Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eb847-102">Overflow (Visual Basic Error)</span></span>
-<span data-ttu-id="eb847-103">Um literal representa um valor fora dos limites do tipo de dados ao qual ele está sendo atribuído.</span><span class="sxs-lookup"><span data-stu-id="eb847-103">A literal represents a value outside the limits of the data type to which it is being assigned.</span></span>  
+# <a name="overflow-visual-basic-error"></a><span data-ttu-id="0a008-102">Estouro (erro do Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a008-102">Overflow (Visual Basic Error)</span></span>
+<span data-ttu-id="0a008-103">Um literal representa um valor fora dos limites do tipo de dados ao qual está sendo atribuído.</span><span class="sxs-lookup"><span data-stu-id="0a008-103">A literal represents a value outside the limits of the data type to which it is being assigned.</span></span>  
   
- <span data-ttu-id="eb847-104">**ID do erro:** BC30036</span><span class="sxs-lookup"><span data-stu-id="eb847-104">**Error ID:** BC30036</span></span>  
+ <span data-ttu-id="0a008-104">**ID do erro:** BC30036</span><span class="sxs-lookup"><span data-stu-id="0a008-104">**Error ID:** BC30036</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="eb847-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="eb847-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0a008-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="0a008-105">To correct this error</span></span>  
   
-- <span data-ttu-id="eb847-106">Consulte o intervalo de valores para o tipo de dados e reescrever o literal de acordo com esse intervalo de destino.</span><span class="sxs-lookup"><span data-stu-id="eb847-106">Consult the value range for the target data type and rewrite the literal to conform to that range.</span></span>  
+- <span data-ttu-id="0a008-106">Consulte o intervalo de valores para o tipo de dados de destino e reescreva o literal para estar em conformidade com esse intervalo.</span><span class="sxs-lookup"><span data-stu-id="0a008-106">Consult the value range for the target data type and rewrite the literal to conform to that range.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb847-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="eb847-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a008-107">Confira também</span><span class="sxs-lookup"><span data-stu-id="0a008-107">See also</span></span>
 
-- [<span data-ttu-id="eb847-108">Tipos de Dados</span><span class="sxs-lookup"><span data-stu-id="eb847-108">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
+- [<span data-ttu-id="0a008-108">Tipos de dados</span><span class="sxs-lookup"><span data-stu-id="0a008-108">Data Types</span></span>](../data-types/index.md)
