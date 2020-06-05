@@ -1,23 +1,23 @@
 ---
-title: Argumento '<argumentname>' não pode ser convertido em um valor numérico
+title: O argumento '<argumentname>' não pode ser convertido em um valor numérico
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgumentNotNumeric1
 ms.assetid: 1901c4d4-abbe-462f-a450-5d907d485e94
-ms.openlocfilehash: f405bb7c207c3f98218d8d6ab896a3c7f1a91a99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60f8766b240de7dd3ba73cfe73f9718bf0cfae4c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666216"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411376"
 ---
-# <a name="argument-argumentname-cannot-be-converted-to-a-numeric-value"></a><span data-ttu-id="fc176-102">Argumento '\<argumentname >' não pode ser convertido em um valor numérico</span><span class="sxs-lookup"><span data-stu-id="fc176-102">Argument '\<argumentname>' cannot be converted to a numeric value</span></span>
-<span data-ttu-id="fc176-103">Uma conversão tentou converter uma variável, como uma cadeia de caracteres em um valor numérico.</span><span class="sxs-lookup"><span data-stu-id="fc176-103">A conversion attempted to convert a variable, such as a string, to a numeric value.</span></span>  
+# <a name="argument-argumentname-cannot-be-converted-to-a-numeric-value"></a><span data-ttu-id="dbd95-102">O argumento '\<argumentname>' não pode ser convertido em um valor numérico</span><span class="sxs-lookup"><span data-stu-id="dbd95-102">Argument '\<argumentname>' cannot be converted to a numeric value</span></span>
+<span data-ttu-id="dbd95-103">Uma conversão tentou converter uma variável, como uma cadeia de caracteres, em um valor numérico.</span><span class="sxs-lookup"><span data-stu-id="dbd95-103">A conversion attempted to convert a variable, such as a string, to a numeric value.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="fc176-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="fc176-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="dbd95-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="dbd95-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="fc176-105">Encontre uma conversão que é significativa.</span><span class="sxs-lookup"><span data-stu-id="fc176-105">Find a conversion that is meaningful.</span></span>  
+1. <span data-ttu-id="dbd95-105">Encontre uma conversão que seja significativa.</span><span class="sxs-lookup"><span data-stu-id="dbd95-105">Find a conversion that is meaningful.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fc176-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fc176-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dbd95-106">Confira também</span><span class="sxs-lookup"><span data-stu-id="dbd95-106">See also</span></span>
 
-- [<span data-ttu-id="fc176-107">Conversões de tipo no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fc176-107">Type Conversions in Visual Basic</span></span>](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [<span data-ttu-id="dbd95-107">Conversões de tipo no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="dbd95-107">Type Conversions in Visual Basic</span></span>](../programming-guide/language-features/data-types/type-conversions.md)
