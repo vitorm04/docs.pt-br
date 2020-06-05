@@ -4,12 +4,12 @@ description: Saiba mais sobre os tipos de tupla nomeadas e sem nome em C#
 ms.date: 05/15/2018
 ms.technology: csharp-fundamentals
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 9ce9e1d4395d1a75f36004384ec215c615cd9802
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 497f95811677c300e1fadad65eb495dced7f2da3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156903"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374610"
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla do C#
 
@@ -19,7 +19,7 @@ Neste artigo, você aprenderá as regras de linguagem que regem as tuplas no C# 
 
 > [!NOTE]
 > Os novos recursos de tuplas exigem os tipos <xref:System.ValueTuple>.
-> Você deve adicionar o [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/) pacote NuGet para usá-lo em plataformas que não incluem os tipos.
+> Você deve adicionar o pacote NuGet [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/) para usá-lo em plataformas que não incluem os tipos.
 >
 > Isso é semelhante a outros recursos de linguagem que dependem de tipos entregues no framework. Os exemplos incluem `async` e `await` que dependem da interface `INotifyCompletion`, além do LINQ que depende de `IEnumerable<T>`. No entanto, o mecanismo de entrega está mudando conforme o .NET se torna mais independente de plataforma. O .NET Framework pode não ser enviados sempre na mesma cadência que o compilador de linguagem. Quando novos recursos de linguagem dependerem de novos tipos, esses tipos estarão disponíveis como pacotes do NuGet quando os recursos de linguagem forem enviados. Conforme esses novos tipos são adicionados à API padrão do .NET e fornecidos como parte do framework, o requisito de pacote do NuGet será removido.
 
@@ -78,7 +78,7 @@ Para qualquer campo em que um nome explícito não for fornecido, será projetad
 
 Há duas condições nas quais os possíveis nomes de campos não são projetados no campo da tupla:
 
-1. Quando o possível nome é um nome de tupla reservado. Exemplos `Item3`incluem, `ToString`ou `Rest`.
+1. Quando o possível nome é um nome de tupla reservado. Os exemplos incluem `Item3` , `ToString` ou `Rest` .
 1. Quando o possível nome é uma duplicata de outro nome de campo de tupla, seja explícito ou implícito.
 
 Essas condições evitam a ambiguidade. Esses nomes causariam ambiguidade se fossem usados como nomes de campo em uma tupla. Nenhuma dessas condições causa erros de tempo de compilação. Em vez disso, os elementos sem nomes projetados não terão nomes semânticos projetados para eles.  Os exemplos a seguir demonstram essas condições:
@@ -252,7 +252,7 @@ public class Point
 
 Qualquer tipo de tupla pode ser desconstruído, conforme mostrado acima. Também é fácil habilitar a desconstrução em qualquer tipo definido pelo usuário (classes, structs ou até mesmo interfaces).
 
-O autor do tipo pode definir um ou mais métodos `Deconstruct` que atribuem valores a qualquer número de variáveis `out` que representam os elementos de dados que compõem o tipo. Por exemplo, o tipo `Person` a seguir define um método `Deconstruct` que desconstrói um objeto person nos elementos representando o nome e o sobrenome:
+O autor do tipo pode definir um ou mais `Deconstruct` métodos que atribuem valores a qualquer número de [ `out` variáveis](language-reference/keywords/out-parameter-modifier.md) que representam os elementos de dados que compõem o tipo. Por exemplo, o tipo `Person` a seguir define um método `Deconstruct` que desconstrói um objeto person nos elementos representando o nome e o sobrenome:
 
 [!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/person.cs#12_TypeWithDeconstructMethod "Type with a deconstruct method")]
 
@@ -284,13 +284,13 @@ if (("Althea", "Goodwin") == p)
 
 O método `Deconstruct` pôde converter o objeto`Person``p` em uma tupla que contém duas cadeias de caracteres, mas não é aplicável no contexto de testes de igualdade.
 
-## <a name="tuples-as-out-parameters"></a>Tuplas como parâmetros fora
+## <a name="tuples-as-out-parameters"></a>Parâmetros de tuplas como saída
 
-As tuplas podem ser usadas como parâmetros *de saída.* Não deve ser confundido com qualquer ambigüidade mencionada anteriormente na seção [Desconstrução.](#deconstruction) Em uma chamada de método, você só precisa descrever a forma da tupla:
+As tuplas podem ser usadas como [ `out` parâmetros](language-reference/keywords/out-parameter-modifier.md) por *conta própria*. Não deve ser confundido com nenhuma ambiguidade mencionada anteriormente na seção de [desconstrução](#deconstruction) . Em uma chamada de método, você só precisa descrever a forma da tupla:
 
 [!code-csharp[TuplesAsOutParameters](~/samples/snippets/csharp/tuples/program.cs#01_TupleAsOutVariable "Tuples as out parameters")]
 
-Alternativamente, você pode usar uma tupla [_sem nome_](#named-and-unnamed-tuples) e se referir aos seus campos como `Item1` e `Item2`:
+Como alternativa, você pode usar uma tupla [_sem nome_](#named-and-unnamed-tuples) e fazer referência a seus campos como `Item1` e `Item2` :
 
 ```csharp
 dict.TryGetValue(2, out (int, string) pair);
