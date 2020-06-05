@@ -1,23 +1,23 @@
 ---
-title: Introdução ao XML Literals no Visual Basic2
+title: Introdução aos literais XML no Visual Basic2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: 9f5c54574e51c537d9ea58d307afda10736d0d88
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 8b92d22727c50274d57a5e407a0ca42807de3a94
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266944"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397578"
 ---
-# <a name="introduction-to-xml-literals-in-visual-basic"></a><span data-ttu-id="71e26-102">Introdução a literais XML no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="71e26-102">Introduction to XML Literals in Visual Basic</span></span>
-<span data-ttu-id="71e26-103">Esta seção fornece informações sobre a criação de árvores XML no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="71e26-103">This section provides information about creating XML trees in Visual Basic.</span></span>  
+# <a name="introduction-to-xml-literals-in-visual-basic"></a><span data-ttu-id="fb42c-102">Introdução a literais XML no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fb42c-102">Introduction to XML Literals in Visual Basic</span></span>
+<span data-ttu-id="fb42c-103">Esta seção fornece informações sobre a criação de árvores XML no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fb42c-103">This section provides information about creating XML trees in Visual Basic.</span></span>  
   
- <span data-ttu-id="71e26-104">Para obter informações sobre como usar os resultados das consultas LINQ como conteúdo para uma árvore XML, consulte [Construção Funcional (LINQ para XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="71e26-104">For information about using the results of LINQ queries as the content for an XML tree, see [Functional Construction (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="fb42c-104">Para obter informações sobre como usar os resultados de consultas LINQ como o conteúdo de uma árvore XML, consulte [construção funcional (LINQ to XML) (Visual Basic)](functional-construction-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="fb42c-104">For information about using the results of LINQ queries as the content for an XML tree, see [Functional Construction (LINQ to XML) (Visual Basic)](functional-construction-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="71e26-105">Para obter mais informações sobre literais XML no Visual Basic, consulte [Visão geral de LINQ para XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="71e26-105">For more information on XML literals in Visual Basic, see [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="fb42c-105">Para obter mais informações sobre literais XML no Visual Basic, consulte [visão geral de LINQ to XML em Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="fb42c-105">For more information on XML literals in Visual Basic, see [Overview of LINQ to XML in Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md).</span></span>  
   
-## <a name="creating-xml-trees"></a><span data-ttu-id="71e26-106">Criando árvores XML</span><span class="sxs-lookup"><span data-stu-id="71e26-106">Creating XML Trees</span></span>  
- <span data-ttu-id="71e26-107">O exemplo a seguir mostra como criar <xref:System.Xml.Linq.XElement>, nesse caso `contacts`:</span><span class="sxs-lookup"><span data-stu-id="71e26-107">The following example shows how to create an <xref:System.Xml.Linq.XElement>, in this case `contacts`:</span></span>  
+## <a name="creating-xml-trees"></a><span data-ttu-id="fb42c-106">Criando árvores XML</span><span class="sxs-lookup"><span data-stu-id="fb42c-106">Creating XML Trees</span></span>  
+ <span data-ttu-id="fb42c-107">O exemplo a seguir mostra como criar <xref:System.Xml.Linq.XElement>, nesse caso `contacts`:</span><span class="sxs-lookup"><span data-stu-id="fb42c-107">The following example shows how to create an <xref:System.Xml.Linq.XElement>, in this case `contacts`:</span></span>  
   
 ```vb  
 Dim contacts As XElement = _  
@@ -35,42 +35,42 @@ Dim contacts As XElement = _
     </Contacts>  
 ```  
   
-### <a name="creating-an-xelement-with-simple-content"></a><span data-ttu-id="71e26-108">Criando um XElement com conteúdo simples</span><span class="sxs-lookup"><span data-stu-id="71e26-108">Creating an XElement with Simple Content</span></span>  
- <span data-ttu-id="71e26-109">Você pode criar <xref:System.Xml.Linq.XElement> que contém o conteúdo simples, como segue:</span><span class="sxs-lookup"><span data-stu-id="71e26-109">You can create an <xref:System.Xml.Linq.XElement> that contains simple content, as follows:</span></span>  
+### <a name="creating-an-xelement-with-simple-content"></a><span data-ttu-id="fb42c-108">Criando um XElement com conteúdo simples</span><span class="sxs-lookup"><span data-stu-id="fb42c-108">Creating an XElement with Simple Content</span></span>  
+ <span data-ttu-id="fb42c-109">Você pode criar <xref:System.Xml.Linq.XElement> que contém o conteúdo simples, como segue:</span><span class="sxs-lookup"><span data-stu-id="fb42c-109">You can create an <xref:System.Xml.Linq.XElement> that contains simple content, as follows:</span></span>  
   
 ```vb  
 Dim n as XElement = <Customer>Adventure Works</Customer>  
 Console.WriteLine(n)
 ```  
   
- <span data-ttu-id="71e26-110">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="71e26-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="fb42c-110">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="fb42c-110">This example produces the following output:</span></span>  
   
 ```xml  
 <Customer>Adventure Works</Customer>  
 ```  
   
-### <a name="creating-an-empty-element"></a><span data-ttu-id="71e26-111">Criando um elemento vazio</span><span class="sxs-lookup"><span data-stu-id="71e26-111">Creating an Empty Element</span></span>  
- <span data-ttu-id="71e26-112">Você pode criar <xref:System.Xml.Linq.XElement>vazia, como segue:</span><span class="sxs-lookup"><span data-stu-id="71e26-112">You can create an empty <xref:System.Xml.Linq.XElement>, as follows:</span></span>  
+### <a name="creating-an-empty-element"></a><span data-ttu-id="fb42c-111">Criando um elemento vazio</span><span class="sxs-lookup"><span data-stu-id="fb42c-111">Creating an Empty Element</span></span>  
+ <span data-ttu-id="fb42c-112">Você pode criar <xref:System.Xml.Linq.XElement>vazia, como segue:</span><span class="sxs-lookup"><span data-stu-id="fb42c-112">You can create an empty <xref:System.Xml.Linq.XElement>, as follows:</span></span>  
   
 ```vb  
 Dim n As XElement = <Customer/>  
 Console.WriteLine(n)  
 ```  
   
- <span data-ttu-id="71e26-113">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="71e26-113">This example produces the following output:</span></span>  
+ <span data-ttu-id="fb42c-113">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="fb42c-113">This example produces the following output:</span></span>  
   
 ```xml  
 <Customer />  
 ```  
   
-### <a name="using-embedded-expressions"></a><span data-ttu-id="71e26-114">Usando expressões inseridas</span><span class="sxs-lookup"><span data-stu-id="71e26-114">Using Embedded Expressions</span></span>  
- <span data-ttu-id="71e26-115">Um recurso importante de literais XML é que permitem expressões inseridas.</span><span class="sxs-lookup"><span data-stu-id="71e26-115">An important feature of XML literals is that they allow embedded expressions.</span></span> <span data-ttu-id="71e26-116">Expressões inseridas permite avaliar uma expressão e para inserir os resultados da expressão na árvore XML.</span><span class="sxs-lookup"><span data-stu-id="71e26-116">Embedded expressions enable you to evaluate an expression and insert the results of the expression into the XML tree.</span></span> <span data-ttu-id="71e26-117">Se a expressão avaliada como um tipo de <xref:System.Xml.Linq.XElement>, um elemento é inserido na árvore.</span><span class="sxs-lookup"><span data-stu-id="71e26-117">If the expression evaluates to a type of <xref:System.Xml.Linq.XElement>, an element is inserted into the tree.</span></span> <span data-ttu-id="71e26-118">Se a expressão avaliada como um tipo de <xref:System.Xml.Linq.XAttribute>, um atributo é inserido na árvore.</span><span class="sxs-lookup"><span data-stu-id="71e26-118">If the expression evaluates to a type of <xref:System.Xml.Linq.XAttribute>, an attribute is inserted into the tree.</span></span> <span data-ttu-id="71e26-119">Você pode inserir os elementos e atributos na árvore apenas onde são válidos.</span><span class="sxs-lookup"><span data-stu-id="71e26-119">You can insert elements and attributes into the tree only where they are valid.</span></span>  
+### <a name="using-embedded-expressions"></a><span data-ttu-id="fb42c-114">Usando expressões inseridas</span><span class="sxs-lookup"><span data-stu-id="fb42c-114">Using Embedded Expressions</span></span>  
+ <span data-ttu-id="fb42c-115">Um recurso importante de literais XML é que permitem expressões inseridas.</span><span class="sxs-lookup"><span data-stu-id="fb42c-115">An important feature of XML literals is that they allow embedded expressions.</span></span> <span data-ttu-id="fb42c-116">Expressões inseridas permite avaliar uma expressão e para inserir os resultados da expressão na árvore XML.</span><span class="sxs-lookup"><span data-stu-id="fb42c-116">Embedded expressions enable you to evaluate an expression and insert the results of the expression into the XML tree.</span></span> <span data-ttu-id="fb42c-117">Se a expressão avaliada como um tipo de <xref:System.Xml.Linq.XElement>, um elemento é inserido na árvore.</span><span class="sxs-lookup"><span data-stu-id="fb42c-117">If the expression evaluates to a type of <xref:System.Xml.Linq.XElement>, an element is inserted into the tree.</span></span> <span data-ttu-id="fb42c-118">Se a expressão avaliada como um tipo de <xref:System.Xml.Linq.XAttribute>, um atributo é inserido na árvore.</span><span class="sxs-lookup"><span data-stu-id="fb42c-118">If the expression evaluates to a type of <xref:System.Xml.Linq.XAttribute>, an attribute is inserted into the tree.</span></span> <span data-ttu-id="fb42c-119">Você pode inserir os elementos e atributos na árvore apenas onde são válidos.</span><span class="sxs-lookup"><span data-stu-id="fb42c-119">You can insert elements and attributes into the tree only where they are valid.</span></span>  
   
- <span data-ttu-id="71e26-120">É importante observar que apenas uma única expressão pode inserir em uma expressão inserida.</span><span class="sxs-lookup"><span data-stu-id="71e26-120">It is important to note that only a single expression can go into an embedded expression.</span></span> <span data-ttu-id="71e26-121">Você não pode inserir várias instruções.</span><span class="sxs-lookup"><span data-stu-id="71e26-121">You cannot embed multiple statements.</span></span> <span data-ttu-id="71e26-122">Se uma expressão ultrapassa de uma única linha, você deve usar o caractere de continuação de linha.</span><span class="sxs-lookup"><span data-stu-id="71e26-122">If an expression extends beyond a single line, you must use the line continuation character.</span></span>  
+ <span data-ttu-id="fb42c-120">É importante observar que apenas uma única expressão pode inserir em uma expressão inserida.</span><span class="sxs-lookup"><span data-stu-id="fb42c-120">It is important to note that only a single expression can go into an embedded expression.</span></span> <span data-ttu-id="fb42c-121">Você não pode inserir várias instruções.</span><span class="sxs-lookup"><span data-stu-id="fb42c-121">You cannot embed multiple statements.</span></span> <span data-ttu-id="fb42c-122">Se uma expressão ultrapassa de uma única linha, você deve usar o caractere de continuação de linha.</span><span class="sxs-lookup"><span data-stu-id="fb42c-122">If an expression extends beyond a single line, you must use the line continuation character.</span></span>  
   
- <span data-ttu-id="71e26-123">Se você usar uma expressão inserida para adicionar nós existentes (incluindo elementos) e atributos para uma nova árvore XML e os nós existentes já parented, os nós são clonados.</span><span class="sxs-lookup"><span data-stu-id="71e26-123">If you use an embedded expression to add existing nodes (including elements) and attributes to a new XML tree and if the existing nodes are already parented, the nodes are cloned.</span></span> <span data-ttu-id="71e26-124">Os nós recentemente clonados são anexados a nova árvore XML.</span><span class="sxs-lookup"><span data-stu-id="71e26-124">The newly cloned nodes are attached to the new XML tree.</span></span> <span data-ttu-id="71e26-125">Se os nós existentes não parented, os nós estão conectados somente para a nova árvore XML.</span><span class="sxs-lookup"><span data-stu-id="71e26-125">If the existing nodes are not parented, the nodes are simply attached to the new XML tree.</span></span> <span data-ttu-id="71e26-126">O último exemplo deste tópico demonstra isso.</span><span class="sxs-lookup"><span data-stu-id="71e26-126">The last example in this topic demonstrates this.</span></span>  
+ <span data-ttu-id="fb42c-123">Se você usar uma expressão inserida para adicionar nós existentes (incluindo elementos) e atributos para uma nova árvore XML e os nós existentes já parented, os nós são clonados.</span><span class="sxs-lookup"><span data-stu-id="fb42c-123">If you use an embedded expression to add existing nodes (including elements) and attributes to a new XML tree and if the existing nodes are already parented, the nodes are cloned.</span></span> <span data-ttu-id="fb42c-124">Os nós recentemente clonados são anexados a nova árvore XML.</span><span class="sxs-lookup"><span data-stu-id="fb42c-124">The newly cloned nodes are attached to the new XML tree.</span></span> <span data-ttu-id="fb42c-125">Se os nós existentes não parented, os nós estão conectados somente para a nova árvore XML.</span><span class="sxs-lookup"><span data-stu-id="fb42c-125">If the existing nodes are not parented, the nodes are simply attached to the new XML tree.</span></span> <span data-ttu-id="fb42c-126">O último exemplo deste tópico demonstra isso.</span><span class="sxs-lookup"><span data-stu-id="fb42c-126">The last example in this topic demonstrates this.</span></span>  
   
- <span data-ttu-id="71e26-127">O exemplo a seguir usa uma expressão inserida para inserir um elemento na árvore:</span><span class="sxs-lookup"><span data-stu-id="71e26-127">The following example uses an embedded expression to insert an element into the tree:</span></span>  
+ <span data-ttu-id="fb42c-127">O exemplo a seguir usa uma expressão inserida para inserir um elemento na árvore:</span><span class="sxs-lookup"><span data-stu-id="fb42c-127">The following example uses an embedded expression to insert an element into the tree:</span></span>  
   
 ```vb  
 xmlTree1 As XElement = _  
@@ -84,7 +84,7 @@ Dim xmlTree2 As XElement = _
 Console.WriteLine(xmlTree2)  
 ```  
   
- <span data-ttu-id="71e26-128">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="71e26-128">This example produces the following output:</span></span>  
+ <span data-ttu-id="fb42c-128">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="fb42c-128">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -92,8 +92,8 @@ Console.WriteLine(xmlTree2)
 </Root>  
 ```  
   
-### <a name="using-embedded-expressions-for-content"></a><span data-ttu-id="71e26-129">Usando expressões inseridas para o conteúdo</span><span class="sxs-lookup"><span data-stu-id="71e26-129">Using Embedded Expressions for Content</span></span>  
- <span data-ttu-id="71e26-130">Você pode usar uma expressão inserida para fornecer o conteúdo de um elemento:</span><span class="sxs-lookup"><span data-stu-id="71e26-130">You can use an embedded expression to supply the content of an element:</span></span>  
+### <a name="using-embedded-expressions-for-content"></a><span data-ttu-id="fb42c-129">Usando expressões inseridas para o conteúdo</span><span class="sxs-lookup"><span data-stu-id="fb42c-129">Using Embedded Expressions for Content</span></span>  
+ <span data-ttu-id="fb42c-130">Você pode usar uma expressão inserida para fornecer o conteúdo de um elemento:</span><span class="sxs-lookup"><span data-stu-id="fb42c-130">You can use an embedded expression to supply the content of an element:</span></span>  
   
 ```vb  
 Dim str As String  
@@ -102,14 +102,14 @@ Dim root As XElement = <Root><%= str %></Root>
 Console.WriteLine(root)  
 ```  
   
- <span data-ttu-id="71e26-131">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="71e26-131">This example produces the following output:</span></span>  
+ <span data-ttu-id="fb42c-131">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="fb42c-131">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>Some content</Root>  
 ```  
   
-### <a name="using-a-linq-query-in-an-embedded-expression"></a><span data-ttu-id="71e26-132">Usando uma consulta LINQ em uma expressão inserida</span><span class="sxs-lookup"><span data-stu-id="71e26-132">Using a LINQ Query in an Embedded Expression</span></span>  
- <span data-ttu-id="71e26-133">Você pode usar os resultados de uma consulta LINQ para o conteúdo de um elemento:</span><span class="sxs-lookup"><span data-stu-id="71e26-133">You can use the results of a LINQ query for the content of an element:</span></span>  
+### <a name="using-a-linq-query-in-an-embedded-expression"></a><span data-ttu-id="fb42c-132">Usando uma consulta LINQ em uma expressão inserida</span><span class="sxs-lookup"><span data-stu-id="fb42c-132">Using a LINQ Query in an Embedded Expression</span></span>  
+ <span data-ttu-id="fb42c-133">Você pode usar os resultados de uma consulta LINQ para o conteúdo de um elemento:</span><span class="sxs-lookup"><span data-stu-id="fb42c-133">You can use the results of a LINQ query for the content of an element:</span></span>  
   
 ```vb  
 Dim arr As Integer() = {1, 2, 3}  
@@ -122,7 +122,7 @@ Dim n As XElement = _
 Console.WriteLine(n)  
 ```  
   
- <span data-ttu-id="71e26-134">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="71e26-134">This example produces the following output:</span></span>  
+ <span data-ttu-id="fb42c-134">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="fb42c-134">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -132,8 +132,8 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="using-embedded-expressions-for-node-names"></a><span data-ttu-id="71e26-135">Usando expressões inseridas para nomes de nó</span><span class="sxs-lookup"><span data-stu-id="71e26-135">Using Embedded Expressions for Node Names</span></span>  
- <span data-ttu-id="71e26-136">Você também pode usar expressões inseridas para calcular nomes de atributo, valores de atributo, nomes de elemento, e valores de elemento:</span><span class="sxs-lookup"><span data-stu-id="71e26-136">You can also use embedded expressions to calculate attribute names, attribute values, element names, and element values:</span></span>  
+### <a name="using-embedded-expressions-for-node-names"></a><span data-ttu-id="fb42c-135">Usando expressões inseridas para nomes de nó</span><span class="sxs-lookup"><span data-stu-id="fb42c-135">Using Embedded Expressions for Node Names</span></span>  
+ <span data-ttu-id="fb42c-136">Você também pode usar expressões inseridas para calcular nomes de atributo, valores de atributo, nomes de elemento, e valores de elemento:</span><span class="sxs-lookup"><span data-stu-id="fb42c-136">You can also use embedded expressions to calculate attribute names, attribute values, element names, and element values:</span></span>  
   
 ```vb  
 Dim eleName As String = "ele"  
@@ -149,7 +149,7 @@ Dim n As XElement = _
 Console.WriteLine(n)  
 ```  
   
- <span data-ttu-id="71e26-137">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="71e26-137">This example produces the following output:</span></span>  
+ <span data-ttu-id="fb42c-137">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="fb42c-137">This example produces the following output:</span></span>  
   
 ```xml  
 <Root att="aValue">  
@@ -157,8 +157,8 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="cloning-vs-attaching"></a><span data-ttu-id="71e26-138">Clonagem em anexar</span><span class="sxs-lookup"><span data-stu-id="71e26-138">Cloning vs. Attaching</span></span>  
- <span data-ttu-id="71e26-139">Como mencionado anteriormente, se você usar uma expressão inserida para adicionar nós existentes (incluindo elementos) e atributos para uma nova árvore XML, se os nós existentes já parented, os nós é clonados e os nós recentemente clonados são anexados a nova árvore XML.</span><span class="sxs-lookup"><span data-stu-id="71e26-139">As mentioned earlier, if you use an embedded expression to add existing nodes (including elements) and attributes to a new XML tree, if the existing nodes are already parented, the nodes are cloned and the newly cloned nodes are attached to the new XML tree.</span></span> <span data-ttu-id="71e26-140">Se os nós existentes não parented, eles estão conectados somente para a nova árvore XML.</span><span class="sxs-lookup"><span data-stu-id="71e26-140">If the existing nodes are not parented, they are simply attached to the new XML tree.</span></span>  
+### <a name="cloning-vs-attaching"></a><span data-ttu-id="fb42c-138">Clonagem contra. anexação</span><span class="sxs-lookup"><span data-stu-id="fb42c-138">Cloning vs. Attaching</span></span>  
+ <span data-ttu-id="fb42c-139">Como mencionado anteriormente, se você usar uma expressão inserida para adicionar nós existentes (incluindo elementos) e atributos para uma nova árvore XML, se os nós existentes já parented, os nós é clonados e os nós recentemente clonados são anexados a nova árvore XML.</span><span class="sxs-lookup"><span data-stu-id="fb42c-139">As mentioned earlier, if you use an embedded expression to add existing nodes (including elements) and attributes to a new XML tree, if the existing nodes are already parented, the nodes are cloned and the newly cloned nodes are attached to the new XML tree.</span></span> <span data-ttu-id="fb42c-140">Se os nós existentes não parented, eles estão conectados somente para a nova árvore XML.</span><span class="sxs-lookup"><span data-stu-id="fb42c-140">If the existing nodes are not parented, they are simply attached to the new XML tree.</span></span>  
   
 ```vb  
 ' Create a tree with a child element.  
@@ -188,13 +188,13 @@ Console.WriteLine("Child2 was {0}", _
     "attached", "cloned"))  
 ```  
   
- <span data-ttu-id="71e26-141">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="71e26-141">This example produces the following output:</span></span>  
+ <span data-ttu-id="fb42c-141">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="fb42c-141">This example produces the following output:</span></span>  
   
 ```console  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="71e26-142">Confira também</span><span class="sxs-lookup"><span data-stu-id="71e26-142">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fb42c-142">Confira também</span><span class="sxs-lookup"><span data-stu-id="fb42c-142">See also</span></span>
 
-- [<span data-ttu-id="71e26-143">Criando árvores XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="71e26-143">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [<span data-ttu-id="fb42c-143">Criando árvores XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fb42c-143">Creating XML Trees (Visual Basic)</span></span>](creating-xml-trees.md)
