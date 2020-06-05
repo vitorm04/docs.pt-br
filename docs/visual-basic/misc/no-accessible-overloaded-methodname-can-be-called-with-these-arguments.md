@@ -1,26 +1,26 @@
 ---
-title: Não acessível '<methodname>' pode ser chamado com estes argumentos sem uma conversão redutora
+title: Nenhum '<methodname>' sobrecarregado acessível pode ser chamado com estes argumentos sem uma conversão redutora
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousMatch_NarrowingConversion1
 ms.assetid: 2fdbadb9-8ef1-404a-a2ed-ce5f5e55cfcb
-ms.openlocfilehash: 5c55a767b1ea61117940b9c6f2a741174297274a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d3e2d4864fb454a14e1614c3f278c7042ccf725
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944970"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84376606"
 ---
-# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a><span data-ttu-id="5dc74-102">Não acessível '\<methodname >' pode ser chamado com estes argumentos sem uma conversão redutora</span><span class="sxs-lookup"><span data-stu-id="5dc74-102">No accessible overloaded '\<methodname>' can be called with these arguments without a narrowing conversion</span></span>
-<span data-ttu-id="5dc74-103">Um método sobrecarregado foi chamado, mas nenhum método foi compatível com a lista de argumentos fornecidos sem uma conversão de estreitamento.</span><span class="sxs-lookup"><span data-stu-id="5dc74-103">An overloaded method was called, but no method was matched with the list of provided arguments without a narrowing conversion.</span></span>  
+# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a><span data-ttu-id="b7651-102">Nenhum '\<methodname>' sobrecarregado acessível pode ser chamado com estes argumentos sem uma conversão redutora</span><span class="sxs-lookup"><span data-stu-id="b7651-102">No accessible overloaded '\<methodname>' can be called with these arguments without a narrowing conversion</span></span>
+<span data-ttu-id="b7651-103">Um método sobrecarregado foi chamado, mas nenhum método foi correspondido com a lista de argumentos fornecidos sem uma conversão de restrição.</span><span class="sxs-lookup"><span data-stu-id="b7651-103">An overloaded method was called, but no method was matched with the list of provided arguments without a narrowing conversion.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="5dc74-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="5dc74-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="b7651-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="b7651-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="5dc74-105">Especifique `Option Strict Off`.</span><span class="sxs-lookup"><span data-stu-id="5dc74-105">Specify `Option Strict Off`.</span></span>  
+1. <span data-ttu-id="b7651-105">Especifique `Option Strict Off`.</span><span class="sxs-lookup"><span data-stu-id="b7651-105">Specify `Option Strict Off`.</span></span>  
   
-2. <span data-ttu-id="5dc74-106">Altere os argumentos para corresponder a uma das assinaturas do método sobrecarregado.</span><span class="sxs-lookup"><span data-stu-id="5dc74-106">Change the arguments to match one of the signatures of the overloaded method.</span></span>  
+2. <span data-ttu-id="b7651-106">Altere os argumentos para corresponder a uma das assinaturas do método sobrecarregado.</span><span class="sxs-lookup"><span data-stu-id="b7651-106">Change the arguments to match one of the signatures of the overloaded method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5dc74-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5dc74-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b7651-107">Confira também</span><span class="sxs-lookup"><span data-stu-id="b7651-107">See also</span></span>
 
-- [<span data-ttu-id="5dc74-108">Passando Argumentos por Valor e por Referência</span><span class="sxs-lookup"><span data-stu-id="5dc74-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
-- [<span data-ttu-id="5dc74-109">Conversões de Widening e Narrowing</span><span class="sxs-lookup"><span data-stu-id="5dc74-109">Widening and Narrowing Conversions</span></span>](../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [<span data-ttu-id="b7651-108">Passar argumentos por valor e por referência</span><span class="sxs-lookup"><span data-stu-id="b7651-108">Passing Arguments by Value and by Reference</span></span>](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [<span data-ttu-id="b7651-109">Conversões de Widening e Narrowing</span><span class="sxs-lookup"><span data-stu-id="b7651-109">Widening and Narrowing Conversions</span></span>](../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
