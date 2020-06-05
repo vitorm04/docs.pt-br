@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 2f2d42ae02a07a5e1b82cefd004f4d03b2a16dff
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 6e9a6975977588ba7692c925d7940cd2ec26671f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635390"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406684"
 ---
-# <a name="lock-statement-c-reference"></a><span data-ttu-id="ac8cf-103">instrução lock (referência em C#)</span><span class="sxs-lookup"><span data-stu-id="ac8cf-103">lock statement (C# reference)</span></span>
+# <a name="lock-statement-c-reference"></a><span data-ttu-id="551f1-103">instrução lock (referência em C#)</span><span class="sxs-lookup"><span data-stu-id="551f1-103">lock statement (C# reference)</span></span>
 
-<span data-ttu-id="ac8cf-104">A instrução `lock` obtém o bloqueio de exclusão mútua para um determinado objeto, executa um bloco de instruções e, em seguida, libera o bloqueio.</span><span class="sxs-lookup"><span data-stu-id="ac8cf-104">The `lock` statement acquires the mutual-exclusion lock for a given object, executes a statement block, and then releases the lock.</span></span> <span data-ttu-id="ac8cf-105">Embora um bloqueio seja mantido, o thread que mantém o bloqueio pode adquiri-lo novamente e liberá-lo.</span><span class="sxs-lookup"><span data-stu-id="ac8cf-105">While a lock is held, the thread that holds the lock can again acquire and release the lock.</span></span> <span data-ttu-id="ac8cf-106">Qualquer outro thread é impedido de adquirir o bloqueio e aguarda até que ele seja liberado.</span><span class="sxs-lookup"><span data-stu-id="ac8cf-106">Any other thread is blocked from acquiring the lock and waits until the lock is released.</span></span>
+<span data-ttu-id="551f1-104">A instrução `lock` obtém o bloqueio de exclusão mútua para um determinado objeto, executa um bloco de instruções e, em seguida, libera o bloqueio.</span><span class="sxs-lookup"><span data-stu-id="551f1-104">The `lock` statement acquires the mutual-exclusion lock for a given object, executes a statement block, and then releases the lock.</span></span> <span data-ttu-id="551f1-105">Embora um bloqueio seja mantido, o thread que mantém o bloqueio pode adquiri-lo novamente e liberá-lo.</span><span class="sxs-lookup"><span data-stu-id="551f1-105">While a lock is held, the thread that holds the lock can again acquire and release the lock.</span></span> <span data-ttu-id="551f1-106">Qualquer outro thread é impedido de adquirir o bloqueio e aguarda até que ele seja liberado.</span><span class="sxs-lookup"><span data-stu-id="551f1-106">Any other thread is blocked from acquiring the lock and waits until the lock is released.</span></span>
 
-<span data-ttu-id="ac8cf-107">A instrução `lock` está no formato</span><span class="sxs-lookup"><span data-stu-id="ac8cf-107">The `lock` statement is of the form</span></span>
+<span data-ttu-id="551f1-107">A instrução `lock` está no formato</span><span class="sxs-lookup"><span data-stu-id="551f1-107">The `lock` statement is of the form</span></span>
 
 ```csharp
 lock (x)
@@ -28,7 +28,7 @@ lock (x)
 }
 ```
 
-<span data-ttu-id="ac8cf-108">em que `x` é uma expressão de um [tipo de referência](reference-types.md).</span><span class="sxs-lookup"><span data-stu-id="ac8cf-108">where `x` is an expression of a [reference type](reference-types.md).</span></span> <span data-ttu-id="ac8cf-109">Ela é precisamente equivalente a</span><span class="sxs-lookup"><span data-stu-id="ac8cf-109">It's precisely equivalent to</span></span>
+<span data-ttu-id="551f1-108">em que `x` é uma expressão de um [tipo de referência](reference-types.md).</span><span class="sxs-lookup"><span data-stu-id="551f1-108">where `x` is an expression of a [reference type](reference-types.md).</span></span> <span data-ttu-id="551f1-109">Ela é precisamente equivalente a</span><span class="sxs-lookup"><span data-stu-id="551f1-109">It's precisely equivalent to</span></span>
 
 ```csharp
 object __lockObj = x;
@@ -44,35 +44,35 @@ finally
 }
 ```
 
-<span data-ttu-id="ac8cf-110">Como o código usa um bloco [try...finally](try-finally.md), o bloqueio será liberado mesmo se uma exceção for gerada dentro do corpo de uma instrução `lock`.</span><span class="sxs-lookup"><span data-stu-id="ac8cf-110">Since the code uses a [try...finally](try-finally.md) block, the lock is released even if an exception is thrown within the body of a `lock` statement.</span></span>
+<span data-ttu-id="551f1-110">Como o código usa um bloco [try...finally](try-finally.md), o bloqueio será liberado mesmo se uma exceção for gerada dentro do corpo de uma instrução `lock`.</span><span class="sxs-lookup"><span data-stu-id="551f1-110">Since the code uses a [try...finally](try-finally.md) block, the lock is released even if an exception is thrown within the body of a `lock` statement.</span></span>
 
-<span data-ttu-id="ac8cf-111">Não é possível usar o [operador await](../operators/await.md) no corpo de uma instrução `lock`.</span><span class="sxs-lookup"><span data-stu-id="ac8cf-111">You can't use the [await operator](../operators/await.md) in the body of a `lock` statement.</span></span>
+<span data-ttu-id="551f1-111">Não é possível usar o [operador await](../operators/await.md) no corpo de uma instrução `lock`.</span><span class="sxs-lookup"><span data-stu-id="551f1-111">You can't use the [await operator](../operators/await.md) in the body of a `lock` statement.</span></span>
 
-## <a name="guidelines"></a><span data-ttu-id="ac8cf-112">Diretrizes</span><span class="sxs-lookup"><span data-stu-id="ac8cf-112">Guidelines</span></span>
+## <a name="guidelines"></a><span data-ttu-id="551f1-112">Diretrizes</span><span class="sxs-lookup"><span data-stu-id="551f1-112">Guidelines</span></span>
 
-<span data-ttu-id="ac8cf-113">Ao sincronizar o acesso de thread com um recurso compartilhado, bloqueie uma instância de objeto dedicada (por exemplo, `private readonly object balanceLock = new object();`) ou outra instância que provavelmente não será usada como um objeto de bloqueio por partes não relacionadas do código.</span><span class="sxs-lookup"><span data-stu-id="ac8cf-113">When you synchronize thread access to a shared resource, lock on a dedicated object instance (for example, `private readonly object balanceLock = new object();`) or another instance that is unlikely to be used as a lock object by unrelated parts of the code.</span></span> <span data-ttu-id="ac8cf-114">Evite usar a mesma instância de objeto de bloqueio para diferentes recursos compartilhados, uma vez que ela poderia resultar em deadlock ou contenção de bloqueio.</span><span class="sxs-lookup"><span data-stu-id="ac8cf-114">Avoid using the same lock object instance for different shared resources, as it might result in deadlock or lock contention.</span></span> <span data-ttu-id="ac8cf-115">Especificamente, evite usar os seguintes itens como objetos de bloqueio:</span><span class="sxs-lookup"><span data-stu-id="ac8cf-115">In particular, avoid using the following as lock objects:</span></span>
+<span data-ttu-id="551f1-113">Ao sincronizar o acesso de thread com um recurso compartilhado, bloqueie uma instância de objeto dedicada (por exemplo, `private readonly object balanceLock = new object();`) ou outra instância que provavelmente não será usada como um objeto de bloqueio por partes não relacionadas do código.</span><span class="sxs-lookup"><span data-stu-id="551f1-113">When you synchronize thread access to a shared resource, lock on a dedicated object instance (for example, `private readonly object balanceLock = new object();`) or another instance that is unlikely to be used as a lock object by unrelated parts of the code.</span></span> <span data-ttu-id="551f1-114">Evite usar a mesma instância de objeto de bloqueio para diferentes recursos compartilhados, uma vez que ela poderia resultar em deadlock ou contenção de bloqueio.</span><span class="sxs-lookup"><span data-stu-id="551f1-114">Avoid using the same lock object instance for different shared resources, as it might result in deadlock or lock contention.</span></span> <span data-ttu-id="551f1-115">Especificamente, evite usar os seguintes itens como objetos de bloqueio:</span><span class="sxs-lookup"><span data-stu-id="551f1-115">In particular, avoid using the following as lock objects:</span></span>
 
-- <span data-ttu-id="ac8cf-116">`this`, uma vez que pode ser usado pelos chamadores como um bloqueio.</span><span class="sxs-lookup"><span data-stu-id="ac8cf-116">`this`, as it might be used by the callers as a lock.</span></span>
-- <span data-ttu-id="ac8cf-117">Instâncias <xref:System.Type>, pois podem ser obtidas pelo operador ou reflexão [typeof](../operators/type-testing-and-cast.md#typeof-operator).</span><span class="sxs-lookup"><span data-stu-id="ac8cf-117"><xref:System.Type> instances, as those might be obtained by the [typeof](../operators/type-testing-and-cast.md#typeof-operator) operator or reflection.</span></span>
-- <span data-ttu-id="ac8cf-118">Instâncias de cadeia de caracteres, incluindo literais de cadeia de caracteres, pois podem ser [internalizadas](/dotnet/api/system.string.intern#remarks).</span><span class="sxs-lookup"><span data-stu-id="ac8cf-118">string instances, including string literals, as those might be [interned](/dotnet/api/system.string.intern#remarks).</span></span>
+- <span data-ttu-id="551f1-116">`this`, uma vez que pode ser usado pelos chamadores como um bloqueio.</span><span class="sxs-lookup"><span data-stu-id="551f1-116">`this`, as it might be used by the callers as a lock.</span></span>
+- <span data-ttu-id="551f1-117">Instâncias <xref:System.Type>, pois podem ser obtidas pelo operador ou reflexão [typeof](../operators/type-testing-and-cast.md#typeof-operator).</span><span class="sxs-lookup"><span data-stu-id="551f1-117"><xref:System.Type> instances, as those might be obtained by the [typeof](../operators/type-testing-and-cast.md#typeof-operator) operator or reflection.</span></span>
+- <span data-ttu-id="551f1-118">Instâncias de cadeia de caracteres, incluindo literais de cadeia de caracteres, pois podem ser [internalizadas](/dotnet/api/system.string.intern#remarks).</span><span class="sxs-lookup"><span data-stu-id="551f1-118">string instances, including string literals, as those might be [interned](/dotnet/api/system.string.intern#remarks).</span></span>
 
-<span data-ttu-id="ac8cf-119">Segure uma trava pelo menor tempo possível para reduzir a contenção do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="ac8cf-119">Hold a lock for as short time as possible to reduce lock contention.</span></span>
+<span data-ttu-id="551f1-119">Mantenha um bloqueio por mais tempo possível para reduzir a contenção de bloqueio.</span><span class="sxs-lookup"><span data-stu-id="551f1-119">Hold a lock for as short time as possible to reduce lock contention.</span></span>
 
-## <a name="example"></a><span data-ttu-id="ac8cf-120">Exemplo</span><span class="sxs-lookup"><span data-stu-id="ac8cf-120">Example</span></span>
+## <a name="example"></a><span data-ttu-id="551f1-120">Exemplo</span><span class="sxs-lookup"><span data-stu-id="551f1-120">Example</span></span>
 
-<span data-ttu-id="ac8cf-121">O exemplo a seguir define uma classe `Account` que sincroniza o acesso com seu campo privado `balance` bloqueando uma instância `balanceLock` dedicada.</span><span class="sxs-lookup"><span data-stu-id="ac8cf-121">The following example defines an `Account` class that synchronizes access to its private `balance` field by locking on a dedicated `balanceLock` instance.</span></span> <span data-ttu-id="ac8cf-122">Usar a mesma instância para bloquear garante que o campo `balance` não pode ser atualizado simultaneamente por dois threads que tentam chamar os métodos `Debit` ou `Credit` simultaneamente.</span><span class="sxs-lookup"><span data-stu-id="ac8cf-122">Using the same instance for locking ensures that the `balance` field cannot be updated simultaneously by two threads attempting to call the `Debit` or `Credit` methods simultaneously.</span></span>
+<span data-ttu-id="551f1-121">O exemplo a seguir define uma classe `Account` que sincroniza o acesso com seu campo privado `balance` bloqueando uma instância `balanceLock` dedicada.</span><span class="sxs-lookup"><span data-stu-id="551f1-121">The following example defines an `Account` class that synchronizes access to its private `balance` field by locking on a dedicated `balanceLock` instance.</span></span> <span data-ttu-id="551f1-122">Usar a mesma instância para bloquear garante que o campo `balance` não pode ser atualizado simultaneamente por dois threads que tentam chamar os métodos `Debit` ou `Credit` simultaneamente.</span><span class="sxs-lookup"><span data-stu-id="551f1-122">Using the same instance for locking ensures that the `balance` field cannot be updated simultaneously by two threads attempting to call the `Debit` or `Credit` methods simultaneously.</span></span>
 
-[!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
+[!code-csharp[lock-statement-example](snippets/LockStatementExample.cs)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="ac8cf-123">especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="ac8cf-123">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="551f1-123">especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="551f1-123">C# language specification</span></span>
 
-<span data-ttu-id="ac8cf-124">Para saber mais, confira a seção [A instrução lock](~/_csharplang/spec/statements.md#the-lock-statement) na [especificação da linguagem C#](~/_csharplang/spec/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="ac8cf-124">For more information, see [The lock statement](~/_csharplang/spec/statements.md#the-lock-statement) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+<span data-ttu-id="551f1-124">Para saber mais, confira a seção [A instrução lock](~/_csharplang/spec/statements.md#the-lock-statement) na [especificação da linguagem C#](~/_csharplang/spec/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="551f1-124">For more information, see [The lock statement](~/_csharplang/spec/statements.md#the-lock-statement) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="ac8cf-125">Confira também</span><span class="sxs-lookup"><span data-stu-id="ac8cf-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="551f1-125">Confira também</span><span class="sxs-lookup"><span data-stu-id="551f1-125">See also</span></span>
 
-- [<span data-ttu-id="ac8cf-126">Referência do C#</span><span class="sxs-lookup"><span data-stu-id="ac8cf-126">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="ac8cf-127">Palavras-chave de C#</span><span class="sxs-lookup"><span data-stu-id="ac8cf-127">C# keywords</span></span>](index.md)
+- [<span data-ttu-id="551f1-126">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="551f1-126">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="551f1-127">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="551f1-127">C# keywords</span></span>](index.md)
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.SpinLock?displayProperty=nameWithType>
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>
-- [<span data-ttu-id="ac8cf-128">Visão geral dos primitivos de sincronização</span><span class="sxs-lookup"><span data-stu-id="ac8cf-128">Overview of synchronization primitives</span></span>](../../../standard/threading/overview-of-synchronization-primitives.md)
+- [<span data-ttu-id="551f1-128">Visão geral dos primitivos de sincronização</span><span class="sxs-lookup"><span data-stu-id="551f1-128">Overview of synchronization primitives</span></span>](../../../standard/threading/overview-of-synchronization-primitives.md)

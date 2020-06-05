@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: 54965f3796b6c5ef0e387cd354abcb5740476257
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c498675ab6ae616fb63d3d76ef60bcac7e247145
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321170"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406502"
 ---
-# <a name="xml-comment-exception-must-have-a-cref-attribute"></a><span data-ttu-id="58324-102">A exceção de comentário XML deve ter um atributo 'cref'</span><span class="sxs-lookup"><span data-stu-id="58324-102">XML comment exception must have a 'cref' attribute</span></span>
+# <a name="xml-comment-exception-must-have-a-cref-attribute"></a><span data-ttu-id="5906d-102">A exceção de comentário XML deve ter um atributo 'cref'</span><span class="sxs-lookup"><span data-stu-id="5906d-102">XML comment exception must have a 'cref' attribute</span></span>
 
-<span data-ttu-id="58324-103">A marca > \<exception fornece uma maneira de documentar as exceções que podem ser geradas por um método.</span><span class="sxs-lookup"><span data-stu-id="58324-103">The \<exception> tag provides a way to document the exceptions that may be thrown by a method.</span></span> <span data-ttu-id="58324-104">O atributo `cref` necessário designa o nome de um membro, que é verificado pelo gerador de documentação.</span><span class="sxs-lookup"><span data-stu-id="58324-104">The required `cref` attribute designates the name of a member, which is checked by the documentation generator.</span></span> <span data-ttu-id="58324-105">Se o membro existir, ele será convertido para o nome do elemento canônico no arquivo de documentação.</span><span class="sxs-lookup"><span data-stu-id="58324-105">If the member exists, it is translated to the canonical element name in the documentation file.</span></span>
+<span data-ttu-id="5906d-103">A \<exception> marca fornece uma maneira de documentar as exceções que podem ser geradas por um método.</span><span class="sxs-lookup"><span data-stu-id="5906d-103">The \<exception> tag provides a way to document the exceptions that may be thrown by a method.</span></span> <span data-ttu-id="5906d-104">O `cref` Atributo Required designa o nome de um membro, que é verificado pelo gerador de documentação.</span><span class="sxs-lookup"><span data-stu-id="5906d-104">The required `cref` attribute designates the name of a member, which is checked by the documentation generator.</span></span> <span data-ttu-id="5906d-105">Se o membro existir, ele será convertido para o nome do elemento canônico no arquivo de documentação.</span><span class="sxs-lookup"><span data-stu-id="5906d-105">If the member exists, it is translated to the canonical element name in the documentation file.</span></span>
 
-<span data-ttu-id="58324-106">**ID do erro:** BC42319</span><span class="sxs-lookup"><span data-stu-id="58324-106">**Error ID:** BC42319</span></span>
+<span data-ttu-id="5906d-106">**ID do erro:** BC42319</span><span class="sxs-lookup"><span data-stu-id="5906d-106">**Error ID:** BC42319</span></span>
 
-## <a name="to-correct-this-error"></a><span data-ttu-id="58324-107">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="58324-107">To correct this error</span></span>
+## <a name="to-correct-this-error"></a><span data-ttu-id="5906d-107">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="5906d-107">To correct this error</span></span>
 
-<span data-ttu-id="58324-108">Adicione o atributo `cref` à exceção da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="58324-108">Add the `cref` attribute to the exception as follows:</span></span>
+<span data-ttu-id="5906d-108">Adicione o `cref` atributo à exceção da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="5906d-108">Add the `cref` attribute to the exception as follows:</span></span>
 
 ```xml
 <exception cref="member">description</exception>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="58324-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="58324-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5906d-109">Confira também</span><span class="sxs-lookup"><span data-stu-id="5906d-109">See also</span></span>
 
-- [<span data-ttu-id="58324-110">\<exception></span><span class="sxs-lookup"><span data-stu-id="58324-110">\<exception></span></span>](../../../visual-basic/language-reference/xmldoc/exception.md)
-- [<span data-ttu-id="58324-111">Como criar documentação XML</span><span class="sxs-lookup"><span data-stu-id="58324-111">How to: Create XML Documentation</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
-- [<span data-ttu-id="58324-112">Marcações de Comentário XML</span><span class="sxs-lookup"><span data-stu-id="58324-112">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+- [\<exception>](../xmldoc/exception.md)
+- [<span data-ttu-id="5906d-110">Como criar documentação XML</span><span class="sxs-lookup"><span data-stu-id="5906d-110">How to: Create XML Documentation</span></span>](../../programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [<span data-ttu-id="5906d-111">Marcações de Comentário XML</span><span class="sxs-lookup"><span data-stu-id="5906d-111">XML Comment Tags</span></span>](../xmldoc/index.md)
