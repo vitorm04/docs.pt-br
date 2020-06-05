@@ -9,20 +9,20 @@ helpviewer_keywords:
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
 ms.openlocfilehash: 4b0cbaf9a7bfe2a9b1610811f4201253d219a6b2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0a798a7e9680e2d0a5a81a3eaa203870ea782883
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/03/2020
 ms.locfileid: "79154602"
 ---
-# <a name="specifiedpickupdirectory-element-network-settings"></a>\<elemento> de> pickup (configurações de rede) especificado
-Configura o diretório local para um servidor SMTP (Simple Mail Transport Protocol, protocolo de transporte de correio simples).  
+# <a name="specifiedpickupdirectory-element-network-settings"></a>Elemento \<specifiedPickupDirectory> (Configurações de Rede)
+Configura o diretório local para um servidor SMTP (Simple Mail Transport Protocol).  
   
-[**\<>de configuração**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de configurações de e-mail**](mailsettings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<mailSettings>**](mailsettings-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<smtp>**](smtp-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<especificadoPickupDiretório>**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<specifiedPickupDirectory>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ Configura o diretório local para um servidor SMTP (Simple Mail Transport Protoc
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|O diretório onde os aplicativos salvam o e-mail para posterior processamento pelo servidor SMTP.|  
+|`pickupDirectoryLocation`|O diretório em que os aplicativos salvam o email para processamento posterior pelo servidor SMTP.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum.  
@@ -48,13 +48,13 @@ Configura o diretório local para um servidor SMTP (Simple Mail Transport Protoc
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<smtp elemento> (configurações de rede)](smtp-element-network-settings.md)|Configura opções de envio de e-mails do Simple Mail Transport Protocol (SMTP).|  
+|[\<smtp>Elemento (configurações de rede)](smtp-element-network-settings.md)|Configura as opções de envio de email do protocolo SMTP.|  
   
 ## <a name="remarks"></a>Comentários  
- O `specifiedPickupDirectory` atributo define o diretório onde os aplicativos salvam mensagens de e-mail para serem processadas pelo servidor SMTP.  
+ O `specifiedPickupDirectory` atributo define o diretório em que os aplicativos salvam mensagens de email a serem processadas pelo servidor SMTP.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir especifica c:\emaildrop como o diretório de captação de e-mails.  
+ O exemplo a seguir especifica c:\maildrop como o diretório de recebimento de email.  
   
 ```xml  
 <configuration>  
