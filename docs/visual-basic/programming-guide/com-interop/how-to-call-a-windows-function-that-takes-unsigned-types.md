@@ -1,5 +1,5 @@
 ---
-title: Como chamar uma função do Windows que use tipos não assinados
+title: 'Como: Chamar uma função do Windows que use tipos não assinados'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,28 +14,28 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 790c680744e2100a40a7cea8b8cef80c68d586bb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f30b78a2f0c38f233796e18006c889438dce4c58
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348727"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396824"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a><span data-ttu-id="bf107-102">Como chamar uma função do Windows que use tipos não assinados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bf107-102">How to: Call a Windows Function that Takes Unsigned Types (Visual Basic)</span></span>
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a><span data-ttu-id="6d18a-102">Como chamar uma função do Windows que use tipos não assinados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6d18a-102">How to: Call a Windows Function that Takes Unsigned Types (Visual Basic)</span></span>
 
-<span data-ttu-id="bf107-103">Se você estiver consumindo uma classe, módulo ou estrutura que tem membros de tipos inteiros não assinados, poderá acessar esses membros com Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="bf107-103">If you are consuming a class, module, or structure that has members of unsigned integer types, you can access these members with Visual Basic.</span></span>
+<span data-ttu-id="6d18a-103">Se você estiver consumindo uma classe, módulo ou estrutura que tem membros de tipos inteiros não assinados, poderá acessar esses membros com Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="6d18a-103">If you are consuming a class, module, or structure that has members of unsigned integer types, you can access these members with Visual Basic.</span></span>
 
-## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a><span data-ttu-id="bf107-104">Para chamar uma função do Windows que usa um tipo sem sinal</span><span class="sxs-lookup"><span data-stu-id="bf107-104">To call a Windows function that takes an unsigned type</span></span>
+## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a><span data-ttu-id="6d18a-104">Para chamar uma função do Windows que usa um tipo sem sinal</span><span class="sxs-lookup"><span data-stu-id="6d18a-104">To call a Windows function that takes an unsigned type</span></span>
 
-1. <span data-ttu-id="bf107-105">Use uma [instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md) para informar Visual Basic qual biblioteca contém a função, qual nome está nessa biblioteca, qual é a sequência de chamada e como converter cadeias de caracteres ao chamá-la.</span><span class="sxs-lookup"><span data-stu-id="bf107-105">Use a [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) to tell Visual Basic which library holds the function, what its name is in that library, what its calling sequence is, and how to convert strings when calling it.</span></span>
+1. <span data-ttu-id="6d18a-105">Use uma [instrução Declare](../../language-reference/statements/declare-statement.md) para informar Visual Basic qual biblioteca contém a função, qual nome está nessa biblioteca, qual é a sequência de chamada e como converter cadeias de caracteres ao chamá-la.</span><span class="sxs-lookup"><span data-stu-id="6d18a-105">Use a [Declare Statement](../../language-reference/statements/declare-statement.md) to tell Visual Basic which library holds the function, what its name is in that library, what its calling sequence is, and how to convert strings when calling it.</span></span>
 
-2. <span data-ttu-id="bf107-106">Na instrução `Declare`, use `UInteger`, `ULong`, `UShort`ou `Byte` conforme apropriado para cada parâmetro com um tipo não assinado.</span><span class="sxs-lookup"><span data-stu-id="bf107-106">In the `Declare` statement, use `UInteger`, `ULong`, `UShort`, or `Byte` as appropriate for each parameter with an unsigned type.</span></span>
+2. <span data-ttu-id="6d18a-106">Na `Declare` instrução, use `UInteger` ,, `ULong` `UShort` ou `Byte` conforme apropriado para cada parâmetro com um tipo não assinado.</span><span class="sxs-lookup"><span data-stu-id="6d18a-106">In the `Declare` statement, use `UInteger`, `ULong`, `UShort`, or `Byte` as appropriate for each parameter with an unsigned type.</span></span>
 
-3. <span data-ttu-id="bf107-107">Consulte a documentação da função do Windows que você está chamando para localizar os nomes e valores das constantes que ele usa.</span><span class="sxs-lookup"><span data-stu-id="bf107-107">Consult the documentation for the Windows function you are calling to find the names and values of the constants it uses.</span></span> <span data-ttu-id="bf107-108">Muitos deles são definidos no arquivo WinUser. h.</span><span class="sxs-lookup"><span data-stu-id="bf107-108">Many of these are defined in the WinUser.h file.</span></span>
+3. <span data-ttu-id="6d18a-107">Consulte a documentação da função do Windows que você está chamando para localizar os nomes e valores das constantes que ele usa.</span><span class="sxs-lookup"><span data-stu-id="6d18a-107">Consult the documentation for the Windows function you are calling to find the names and values of the constants it uses.</span></span> <span data-ttu-id="6d18a-108">Muitos deles são definidos no arquivo WinUser. h.</span><span class="sxs-lookup"><span data-stu-id="6d18a-108">Many of these are defined in the WinUser.h file.</span></span>
 
-4. <span data-ttu-id="bf107-109">Declare as constantes necessárias no seu código.</span><span class="sxs-lookup"><span data-stu-id="bf107-109">Declare the necessary constants in your code.</span></span> <span data-ttu-id="bf107-110">Muitas constantes do Windows são valores não assinados de 32 bits e você deve declará-las `As UInteger`.</span><span class="sxs-lookup"><span data-stu-id="bf107-110">Many Windows constants are 32-bit unsigned values, and you should declare these `As UInteger`.</span></span>
+4. <span data-ttu-id="6d18a-109">Declare as constantes necessárias no seu código.</span><span class="sxs-lookup"><span data-stu-id="6d18a-109">Declare the necessary constants in your code.</span></span> <span data-ttu-id="6d18a-110">Muitas constantes do Windows são valores não assinados de 32 bits e você deve declará-los `As UInteger` .</span><span class="sxs-lookup"><span data-stu-id="6d18a-110">Many Windows constants are 32-bit unsigned values, and you should declare these `As UInteger`.</span></span>
 
-5. <span data-ttu-id="bf107-111">Chame a função da maneira normal.</span><span class="sxs-lookup"><span data-stu-id="bf107-111">Call the function in the normal way.</span></span> <span data-ttu-id="bf107-112">O exemplo a seguir chama a função do Windows `MessageBox`, que usa um argumento inteiro sem sinal.</span><span class="sxs-lookup"><span data-stu-id="bf107-112">The following example calls the Windows function `MessageBox`, which takes an unsigned integer argument.</span></span>
+5. <span data-ttu-id="6d18a-111">Chame a função da maneira normal.</span><span class="sxs-lookup"><span data-stu-id="6d18a-111">Call the function in the normal way.</span></span> <span data-ttu-id="6d18a-112">O exemplo a seguir chama a função do Windows `MessageBox` , que usa um argumento inteiro sem sinal.</span><span class="sxs-lookup"><span data-stu-id="6d18a-112">The following example calls the Windows function `MessageBox`, which takes an unsigned integer argument.</span></span>
 
     ```vb
     Public Class windowsMessage
@@ -60,7 +60,7 @@ ms.locfileid: "74348727"
     End Class
     ```
 
-     <span data-ttu-id="bf107-113">Você pode testar a função `messageThroughWindows` com o código a seguir.</span><span class="sxs-lookup"><span data-stu-id="bf107-113">You can test the function `messageThroughWindows` with the following code.</span></span>
+     <span data-ttu-id="6d18a-113">Você pode testar a função `messageThroughWindows` com o código a seguir.</span><span class="sxs-lookup"><span data-stu-id="6d18a-113">You can test the function `messageThroughWindows` with the following code.</span></span>
 
     ```vb
     Public Sub consumeWindowsMessage()
@@ -70,18 +70,18 @@ ms.locfileid: "74348727"
     ```
 
     > [!CAUTION]
-    > <span data-ttu-id="bf107-114">Os tipos de dados `UInteger`, `ULong`, `UShort`e `SByte` não fazem parte da [independência de linguagem e dos componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), portanto, o código em conformidade com CLS não pode consumir um componente que os utilize.</span><span class="sxs-lookup"><span data-stu-id="bf107-114">The `UInteger`, `ULong`, `UShort`, and `SByte` data types are not part of the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot consume a component that uses them.</span></span>
+    > <span data-ttu-id="6d18a-114">Os `UInteger` tipos de dados,, e `ULong` não fazem `UShort` `SByte` parte da [independência de linguagem e dos componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), portanto, o código em conformidade com CLS não pode consumir um componente que os utilize.</span><span class="sxs-lookup"><span data-stu-id="6d18a-114">The `UInteger`, `ULong`, `UShort`, and `SByte` data types are not part of the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot consume a component that uses them.</span></span>
 
     > [!IMPORTANT]
-    > <span data-ttu-id="bf107-115">Fazer uma chamada para código não gerenciado, como a API (interface de programação de aplicativo) do Windows, expõe seu código a possíveis riscos de segurança.</span><span class="sxs-lookup"><span data-stu-id="bf107-115">Making a call to unmanaged code, such as the Windows application programming interface (API), exposes your code to potential security risks.</span></span>
+    > <span data-ttu-id="6d18a-115">Fazer uma chamada para código não gerenciado, como a API (interface de programação de aplicativo) do Windows, expõe seu código a possíveis riscos de segurança.</span><span class="sxs-lookup"><span data-stu-id="6d18a-115">Making a call to unmanaged code, such as the Windows application programming interface (API), exposes your code to potential security risks.</span></span>
 
     > [!IMPORTANT]
-    > <span data-ttu-id="bf107-116">Chamar a API do Windows requer permissão de código não gerenciado, o que pode afetar sua execução em situações de confiança parcial.</span><span class="sxs-lookup"><span data-stu-id="bf107-116">Calling the Windows API requires unmanaged code permission, which might affect its execution in partial-trust situations.</span></span> <span data-ttu-id="bf107-117">Para obter mais informações, consulte <xref:System.Security.Permissions.SecurityPermission> e [permissões de acesso ao código](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="bf107-117">For more information, see <xref:System.Security.Permissions.SecurityPermission> and [Code Access Permissions](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).</span></span>
+    > <span data-ttu-id="6d18a-116">Chamar a API do Windows requer permissão de código não gerenciado, o que pode afetar sua execução em situações de confiança parcial.</span><span class="sxs-lookup"><span data-stu-id="6d18a-116">Calling the Windows API requires unmanaged code permission, which might affect its execution in partial-trust situations.</span></span> <span data-ttu-id="6d18a-117">Para obter mais informações, consulte <xref:System.Security.Permissions.SecurityPermission> e [permissões de acesso ao código](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="6d18a-117">For more information, see <xref:System.Security.Permissions.SecurityPermission> and [Code Access Permissions](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="bf107-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bf107-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6d18a-118">Confira também</span><span class="sxs-lookup"><span data-stu-id="6d18a-118">See also</span></span>
 
-- [<span data-ttu-id="bf107-119">Tipos de Dados</span><span class="sxs-lookup"><span data-stu-id="bf107-119">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
-- [<span data-ttu-id="bf107-120">Tipo de Dados Integer</span><span class="sxs-lookup"><span data-stu-id="bf107-120">Integer Data Type</span></span>](../../../visual-basic/language-reference/data-types/integer-data-type.md)
-- [<span data-ttu-id="bf107-121">Tipo de Dados UInteger</span><span class="sxs-lookup"><span data-stu-id="bf107-121">UInteger Data Type</span></span>](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)
-- [<span data-ttu-id="bf107-122">Instrução Declare</span><span class="sxs-lookup"><span data-stu-id="bf107-122">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [<span data-ttu-id="bf107-123">Instruções passo a passo: chamando APIs do Windows</span><span class="sxs-lookup"><span data-stu-id="bf107-123">Walkthrough: Calling Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+- [<span data-ttu-id="6d18a-119">Tipos de dados</span><span class="sxs-lookup"><span data-stu-id="6d18a-119">Data Types</span></span>](../../language-reference/data-types/index.md)
+- [<span data-ttu-id="6d18a-120">Tipo de Dados Integer</span><span class="sxs-lookup"><span data-stu-id="6d18a-120">Integer Data Type</span></span>](../../language-reference/data-types/integer-data-type.md)
+- [<span data-ttu-id="6d18a-121">Tipo de Dados UInteger</span><span class="sxs-lookup"><span data-stu-id="6d18a-121">UInteger Data Type</span></span>](../../language-reference/data-types/uinteger-data-type.md)
+- [<span data-ttu-id="6d18a-122">Instrução Declare</span><span class="sxs-lookup"><span data-stu-id="6d18a-122">Declare Statement</span></span>](../../language-reference/statements/declare-statement.md)
+- [<span data-ttu-id="6d18a-123">Passo a passo: Fazer chamadas de APIs do Windows</span><span class="sxs-lookup"><span data-stu-id="6d18a-123">Walkthrough: Calling Windows APIs</span></span>](walkthrough-calling-windows-apis.md)
