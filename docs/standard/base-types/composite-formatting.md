@@ -1,5 +1,6 @@
 ---
 title: Formatação de composição
+description: Saiba mais sobre a formatação composta do .NET, que usa como entrada uma lista de objetos e uma cadeia de caracteres de formato composto, contendo texto fixo com espaços reservados indexados.
 ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 2488a471af3e0dfc8ebf7dad1589c3c03ac15d86
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 36197b382c449a2570e1d5530f307c4e66b0d983
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289311"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447258"
 ---
 # <a name="composite-formatting"></a>Formatação de composição
 
@@ -157,7 +158,7 @@ O recurso de formatação de composição tem suporte de métodos como:
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Console.WriteLine%2A>
 - <xref:System.String.Format%2A?displayProperty=nameWithType>

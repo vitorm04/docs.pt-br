@@ -1,5 +1,6 @@
 ---
 title: 'Como: ler texto de um arquivo'
+description: Neste artigo, consulte exemplos de como ler texto de forma síncrona ou assíncrona de um arquivo de texto, usando a classe StreamReader no .NET para aplicativos da área de trabalho.
 ms.date: 01/03/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET Framework], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: c46ccaf70d4d1aec030fb61bd8b2924d986e19d1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cbdeab3e907b34b6658eef7228fa6567ae198b08
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291754"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447050"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Como: ler texto de um arquivo
 Os exemplos a seguir mostram como ler de forma síncrona e assíncrona o texto de um arquivo de texto usando o .NET para aplicativos de área de trabalho. Nos dois exemplos, ao criar uma instância da classe <xref:System.IO.StreamReader>, você fornece o caminho relativo ou absoluto para o arquivo.
@@ -43,7 +44,7 @@ O exemplo a seguir mostra uma operação de leitura síncrona em um aplicativo d
  [!code-csharp[TextFiles](../../../samples/snippets/csharp/VS_Snippets_Wpf/TextFiles/MainWindow.xaml.cs)]
  [!code-vb[TextFiles](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextFiles/MainWindow.xaml.vb)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IO.StreamReader>  
 - <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  

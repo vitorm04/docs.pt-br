@@ -1,5 +1,6 @@
 ---
 title: Programação assíncrona baseada em tarefas – .NET
+description: Neste artigo, saiba mais sobre a programação assíncrona baseada em tarefas por meio da TPL (biblioteca paralela de tarefas) no .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 188a80459fec021dc934597ea2f77ac7b4471b2d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f7cb42c8982cb6a704b39730a4f7aa0ce781d506
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285281"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446373"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programação assíncrona baseada em tarefas
 
@@ -95,7 +96,7 @@ Cada tarefa recebe um ID inteiro que a identifica exclusivamente em um domínio 
 
 A maioria das APIs que criam tarefas fornecem sobrecargas que aceitam um parâmetro <xref:System.Threading.Tasks.TaskCreationOptions>. Ao especificar uma dessas opções, você informa o agendador de tarefas como agendar a tarefa no pool de threads. A tabela a seguir lista as várias opções de criação de tarefas.
 
-|Valor do parâmetro <xref:System.Threading.Tasks.TaskCreationOptions>|Description|
+|Valor do parâmetro <xref:System.Threading.Tasks.TaskCreationOptions>|Descrição|
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|O padrão quando nenhuma opção é especificada. O agendador usa sua heurística padrão para agendar a tarefa.|
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Especifica que a tarefa deve ser agendada de modo que as tarefas criadas antes sejam mais propensas a ser executadas mais cedo, e as tarefas criadas posteriormente sejam mais propensas a ser executadas mais tarde.|
@@ -278,7 +279,7 @@ Se você deve herdar de <xref:System.Threading.Tasks.Task> ou <xref:System.Threa
 |[Tarefas filho anexadas e desanexadas](attached-and-detached-child-tasks.md)|Descreve a diferença entre tarefas filhas anexadas e desanexadas.|
 |[Cancelamento da tarefa](task-cancellation.md)|Descreve o suporte a cancelamento interno do objeto <xref:System.Threading.Tasks.Task>.|
 |[Tratamento de exceção](exception-handling-task-parallel-library.md)|Descreve como as exceções são manipuladas em threads simultâneos.|
-|[Como: usar Parallel. Invoke para executar operações paralelas](how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Descreve como usar o <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|
+|[Como: usar Parallel.Invoke para executar operações paralelas](how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Descreve como usar o <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|
 |[Como: Retornar um valor de uma tarefa](how-to-return-a-value-from-a-task.md)|Descreve como retornar valores de tarefas.|
 |[Como: Cancelar uma tarefa e seus filhos](how-to-cancel-a-task-and-its-children.md)|Descreve como cancelar tarefas.|
 |[Como: criar tarefas pré-computadas](how-to-create-pre-computed-tasks.md)|Descreve como usar o método <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> para recuperar os resultados das operações de download assíncronas armazenados em um cache.|
@@ -287,7 +288,7 @@ Se você deve herdar de <xref:System.Threading.Tasks.Task> ou <xref:System.Threa
 |[Paralelismo de dados](data-parallelism-task-parallel-library.md)|Descreve como usar <xref:System.Threading.Tasks.Parallel.For%2A> e <xref:System.Threading.Tasks.Parallel.ForEach%2A> para criar loops paralelos sobre dados.|
 |[Programação paralela](index.md)|Nó de nível superior para a programação paralela do .NET Framework.|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Programação paralela](index.md)
 - [Exemplos de programação paralela com o & do .NET Core .NET Standard](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)

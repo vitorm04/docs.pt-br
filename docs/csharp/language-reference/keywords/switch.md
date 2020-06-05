@@ -12,16 +12,16 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 49b3836f17e91ae8de10d68e97fd662aae80d1ff
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: a4e6f8e43c2ec8c867af9f78bd83b435b78c73d5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249312"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446757"
 ---
 # <a name="switch-c-reference"></a>switch (Referência em C#)
 
-Este artigo `switch` cobre a declaração. Para obter `switch` informações sobre a expressão (introduzida em C# 8.0), consulte o artigo sobre [ `switch` expressões](../operators/switch-expression.md) na seção [expressões e operadores.](../operators/index.md)
+Este artigo aborda a `switch` instrução. Para obter informações sobre a `switch` expressão (introduzida no C# 8,0), consulte o artigo sobre [ `switch` expressões](../operators/switch-expression.md) na seção [expressões e operadores](../operators/index.md) .
 
 `switch` é uma instrução de seleção que escolhe uma única *seção switch* para ser executada de uma lista de candidatas com base em uma correspondência de padrão com a *expressão de correspondência*.
 
@@ -46,10 +46,10 @@ A expressão de correspondência fornece o valor para corresponder aos padrões 
 No C# 6 e versões anteriores, a expressão de correspondência deve ser uma expressão que retorna um valor dos seguintes tipos:
 
 - um [char](../builtin-types/char.md).
-- uma [corda](../builtin-types/reference-types.md).
+- uma [cadeia de caracteres](../builtin-types/reference-types.md).
 - um [bool](../builtin-types/bool.md).
-- um valor [integral,](../builtin-types/integral-numeric-types.md) `int` como `long`um ou um .
-- um [valor enum.](../builtin-types/enum.md)
+- um valor [integral](../builtin-types/integral-numeric-types.md) , como um `int` ou um `long` .
+- um valor de [Enumeração](../builtin-types/enum.md) .
 
 Começando com o C# 7.0, a expressão de correspondência pode ser qualquer expressão não nula.
 
@@ -61,7 +61,7 @@ Uma instrução `switch` pode incluir qualquer número de seções switch e cada
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Apenas uma seção switch em uma instrução switch é executada. O C# não permite que a execução continue de uma seção switch para a próxima. Por causa disso, o seguinte código gera um erro de compilador, CS0163: "O controle não pode cair de uma etiqueta de caso (etiqueta\<de caso>) para outra."
+Apenas uma seção switch em uma instrução switch é executada. O C# não permite que a execução continue de uma seção switch para a próxima. Por isso, o código a seguir gera um erro do compilador, CS0163: "O controle não pode passar de um rótulo case (\<case label>) para outro".
 
 ```csharp
 switch (caseSwitch)
@@ -108,7 +108,7 @@ O case `default` especifica a seção switch a ser executada se a expressão de 
 
 O case `default` pode aparecer em qualquer ordem na instrução `switch`. Independentemente de sua ordem no código-fonte, ele é sempre avaliado por último, afinal os rótulos `case` foram avaliados.
 
-## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Correspondência de padrões com a instrução `switch`
+## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern"></a> Correspondência de padrões com a instrução `switch`
 
 Cada instrução `case` define um padrão que, se corresponde à expressão de correspondência, faz com que sua seção switch recipiente seja executada. Todas as versões do C# dão suporte ao padrão de constante. Começando com o C# 7.0, há suporte para os padrões restantes.
 
@@ -122,8 +122,8 @@ O padrão de constante testa se a expressão de correspondência é igual a uma 
 
 em que *constant* é o valor para testar. *constant* pode ser qualquer uma das expressões de constante a seguir:
 
-- Um [bool](../builtin-types/bool.md) literal: ou `true` `false`ou .
-- Qualquer constante [integral,](../builtin-types/integral-numeric-types.md) `int`como `long`um , `byte`a, ou um .
+- Um literal [bool](../builtin-types/bool.md) : `true` ou `false` .
+- Qualquer constante [integral](../builtin-types/integral-numeric-types.md) , como um `int` , um `long` ou um `byte` .
 - O nome de uma variável `const` declarada.
 - Uma constante de enumeração.
 - Um literal [char](../builtin-types/char.md).
@@ -201,8 +201,8 @@ Para obter mais informações, consulte [A instrução switch](~/_csharplang/spe
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [se-else](if-else.md)
-- [Correspondência de padrões](../../pattern-matching.md)
+- [if-else](if-else.md)
+- [Correspondência padrão](../../pattern-matching.md)

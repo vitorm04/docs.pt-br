@@ -3,12 +3,12 @@ title: Ferramenta de desinstalação
 description: Uma visão geral da ferramenta de desinstalação do .NET Core, uma ferramenta guiada que permite a limpeza controlada de SDKs e tempos de execução do .NET Core.
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: 1ad31cd42d8f8f87e3501b422fc4298c643e2067
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 4e70fd3438b582bd5a0d6a52d7e58ed5e07f8811
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144507"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446900"
 ---
 # <a name="net-core-uninstall-tool"></a>Ferramenta de Desinstalação do .NET Core
 
@@ -157,11 +157,11 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
   Remove todos os SDKs e tempos de execução do .NET Core.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   Remove somente os SDKs do .NET Core e os tempos de execução com uma versão menor do que a versão especificada. A versão especificada permanece instalada.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   Remove todos os SDKs e tempos de execução do .NET Core, exceto as versões especificadas.
 
@@ -227,11 +227,11 @@ Observações:
 
   Remove todos os SDKs e tempos de execução do .NET Core.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   Remove os SDKs do .NET Core e os tempos de execução abaixo da versão especificada. A versão especificada permanecerá.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   Remove SDKs e tempos de execução do .NET Core, exceto as versões especificadas.
 
@@ -337,11 +337,11 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
   Remove todos os SDKs e tempos de execução do .NET Core.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   Remove somente os SDKs do .NET Core e os tempos de execução com uma versão menor do que a versão especificada. A versão especificada permanece instalada.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   Remove todos os SDKs e tempos de execução do .NET Core, exceto as versões especificadas.
 
@@ -367,7 +367,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`--hosting-bundle`**
 
-  Remove somente os agrupamentos de hospedagem e de tempo de execução do .NET Core.
+  Remove somente os pacotes de hospedagem do .NET Core.
 
 * **`--major-minor <MAJOR_MINOR>`**
 
@@ -409,11 +409,11 @@ Observações:
 
   Remove todos os SDKs e tempos de execução do .NET Core.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   Remove os SDKs do .NET Core e os tempos de execução abaixo da versão especificada. A versão especificada permanecerá.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   Remove SDKs e tempos de execução do .NET Core, exceto as versões especificadas.
 

@@ -1,5 +1,6 @@
 ---
 title: Cadeias de caracteres de formato numérico personalizado
+description: Saiba como criar uma cadeia de caracteres de formato numérico personalizado para formatar dados numéricos no .NET. Uma cadeia de caracteres de formato numérico personalizado tem um ou mais especificadores numéricos personalizados.
 ms.date: 06/25/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: bc2ace5a068a49f19db55c6fcc3cfc7287b6f618
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: bd96766c7483a3de1a3c70d1efbe1aa91ea45fbc
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278954"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447232"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadeias de caracteres de formato numérico personalizado
 
@@ -37,16 +38,16 @@ As cadeias de caracteres de formato numérico personalizado têm suporte de algu
 |Especificador de formato|Nome|Descrição|Exemplos|
 |----------------------|----------|-----------------|--------------|
 |"0"|Espaço reservado de zero|Substitui o zero pelo dígito correspondente, se houver um presente. Caso contrário, o zero aparecerá na cadeia de caracteres de resultado.<br /><br /> Mais informações: [Especificador de formato personalizado "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 (en-US "0,00") -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
-|"#"|Espaço reservado de dígito|Substitui o símbolo "#" pelo dígito correspondente, se houver um presente. Caso contrário, nenhum dígito aparecerá na cadeia de caracteres de resultado.<br /><br /> Observe que nenhum dígito aparece na cadeia de caracteres de resultado se o dígito na cadeia de entrada correspondente for um 0 não significativo. Por exemplo, 0003 ("####") -> 3.<br /><br /> Mais informações: [Especificador de formato personalizado "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|
+|"#"|Espaço reservado de dígito|Substitui o símbolo "#" pelo dígito correspondente, se houver um presente. Caso contrário, nenhum dígito aparecerá na cadeia de caracteres de resultado.<br /><br /> Observe que nenhum dígito aparece na cadeia de caracteres de resultado se o dígito na cadeia de entrada correspondente for um 0 não significativo. Por exemplo, 0003 ("####") -> 3.<br /><br /> Mais informações: [o especificador personalizado "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|
 |"."|Ponto decimal|Determina a posição do separador decimal na cadeia de caracteres de resultado.<br /><br /> Mais informações: [o "." Especificador personalizado](#SpecifierPt).|0.45678 (en-US "0,00") -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
-|","|Separador de grupo e escala numérica|Funciona tanto como um separador de grupo quanto como um especificador de escala numérica. Como separador de grupo, insere um caractere separador de grupo localizado entre cada grupo. Como especificador de escala numérica, divide um número por 1000 para cada vírgula especificada.<br /><br /> Mais informações: [o especificador personalizado ","](#SpecifierTh).|Especificador de separador de grupo:<br /><br /> 2147483647 ("##,#", en-US) -> 2,147,483,647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> Especificador de escala:<br /><br /> 2147483647 ("#,#,,", en-US) -> 2,147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2.147|
+|","|Separador de grupo e escala numérica|Funciona tanto como um separador de grupo quanto como um especificador de escala numérica. Como separador de grupo, insere um caractere separador de grupo localizado entre cada grupo. Como especificador de escala numérica, divide um número por 1000 para cada vírgula especificada.<br /><br /> Mais informações: [Especificador de formato personalizado ","](#SpecifierTh).|Especificador de separador de grupo:<br /><br /> 2147483647 ("##,#", en-US) -> 2,147,483,647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> Especificador de escala:<br /><br /> 2147483647 ("#,#,,", en-US) -> 2,147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2.147|
 |"%"|Espaço reservado percentual|Multiplica um número por 100 e insere um símbolo percentual localizado na cadeia de caracteres de resultado.<br /><br /> Mais informações: [Especificador de formato personalizado "%"](#SpecifierPct).|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|
-|"‰"|Espaço reservado por milhar|Multiplica um número por 1000 e insere um símbolo de por milhar localizado na cadeia de caracteres de resultado.<br /><br /> Mais informações: [o especificador personalizado "‰"](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|
+|"‰"|Espaço reservado por milhar|Multiplica um número por 1000 e insere um símbolo de por milhar localizado na cadeia de caracteres de resultado.<br /><br /> Mais informações: [Especificador de formato personalizado "‰"](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "e0"<br /><br /> "e+0"<br /><br /> "e-0"|Notação exponencial|Se seguida por pelo menos um 0 (zero), formata o resultado usando notação exponencial. A caixa de “E” ou “e” indica a caixa do símbolo do expoente na cadeia de caracteres de resultado. O número de zero depois do caractere “E” ou “e” determina o número mínimo de dígitos do expoente. Um sinal de positivo (+) indica que um caractere de sinal sempre precede o expoente. Um sinal de negativo (-) indica que um caractere de sinal precede apenas expoentes negativos.<br /><br /> Mais informações: [Especificadores de formato personalizado "E" e "e"](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|
 |"\\"|Caractere de escape|Faz com que o próximo caractere seja interpretado como um literal em vez de como um especificador de formato personalizado.<br /><br /> Mais informações: [Caractere de escape "\\"](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|
 |'*cadeia de caracteres*'<br /><br /> "*String*"|Delimitador de cadeia de caracteres literal|Indica que os caracteres delimitados devem ser copiados para a cadeia de caracteres de resultado sem sofrerem alterações.<br/><br/>Para saber mais: [Literais de cadeia de caracteres](#character-literals).|68 ("# ' graus'") -> 68 graus<br /><br /> 68 ("# ' graus'") -> 68 graus|
 |;|Separador de seção|Define seções com cadeias de caracteres de formato separadas para números positivos, negativos e zero.<br /><br /> Mais informações: [Separador de seção ";"](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|
-|Outro|Todos os outros caracteres|O caractere é copiado, inalterado, para a cadeia de caracteres de resultado.<br/><br/>Para saber mais: [Literais de cadeia de caracteres](#character-literals).|68 ("# °") -> 68 °|
+|Outros|Todos os outros caracteres|O caractere é copiado, inalterado, para a cadeia de caracteres de resultado.<br/><br/>Para saber mais: [Literais de cadeia de caracteres](#character-literals).|68 ("# °") -> 68 °|
 
 As seções a seguir fornecem informações detalhadas sobre cada um dos especificadores de formato numérico personalizado.
 
@@ -205,7 +206,7 @@ O exemplo a seguir usa o caractere de escape para impedir que a operação de fo
 
 O ponto-e-vírgula (;) é um especificador de formato condicional que aplica formatação diferente a um número dependendo se o valor é positivo, negativo ou zero. Para produzir esse comportamento, uma cadeia de caracteres de formato personalizado pode conter até três seções separadas por ponto-e-vírgula. Essas seções são descritas na tabela a seguir.
 
-|Número de seções|Description|
+|Número de seções|Descrição|
 |------------------------|-----------------|
 |Uma seção|A cadeia de caracteres de formato aplica-se a todos os valores.|
 |Duas seções|A primeira seção aplica-se a valores positivos e zeros e a segunda seção aplica-se a valores negativos.<br /><br /> Se o número a ser formatado for negativo, mas se tornar zero após o arredondamento de acordo com o formato na segunda seção, então o zero resultante será formatado de acordo com a primeira seção.|
@@ -285,7 +286,7 @@ O exemplo a seguir demonstra duas cadeias de caracteres de formato numérico per
 
 [Voltar à tabela](#table)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>
 - [Formatar tipos](formatting-types.md)

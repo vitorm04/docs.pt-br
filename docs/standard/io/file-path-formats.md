@@ -1,5 +1,6 @@
 ---
 title: Formatos de caminho de arquivo em sistemas Windows
+description: Neste artigo, saiba mais sobre formatos de caminho de arquivo em sistemas Windows, como caminhos de DOS tradicionais, caminhos de dispositivo DOS e caminhos UNC (Convenção de nomenclatura universal).
 ms.date: 06/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2d3ede97b372dd8922a10a377f69155a12f88bda
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628040"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447128"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de caminho de arquivo em sistemas Windows
 
@@ -44,7 +45,7 @@ Se todos os três componentes estiverem presentes, o caminho será absoluto. Se 
 
 É possível determinar se um caminho de arquivo é totalmente qualificado (ou seja, se o caminho é independente do diretório atual e não se altera quando o diretório atual é alterado) chamando o método <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType>. Esse tipo de caminho poderá incluir segmentos de diretório relativo (`.` e `..`) e ainda ser totalmente qualificado se o caminho resolvido sempre apontar para o mesmo local.
 
-O exemplo a seguir ilustra a diferença entre caminhos absolutos e relativos. Ele assume que o diretório D:\FY2018\ existe e que você não definiu nenhum diretório atual para D:\ a partir do prompt de comando antes de executar o exemplo.
+O exemplo a seguir ilustra a diferença entre caminhos absolutos e relativos. Ele assume que o diretório D:\FY2018\ existe e que você não definiu nenhum diretório atual para D:\ no prompt de comando antes de executar o exemplo.
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
@@ -95,7 +96,7 @@ O caminho de dispositivo DOS tem os seguintes componentes:
 
    O primeiro segmento do caminho de dispositivo DOS depois do especificador de caminho do dispositivo identifica o volume ou a unidade. Por exemplo, `\\?\C:\` e `\\.\BootPartition\`.
 
-   Há um link específico para UNCs que é chamado, não surpreendentemente, `UNC`. Por exemplo: 
+   Há um link específico para UNCs que é chamado, não surpreendentemente, `UNC`. Por exemplo:
 
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
@@ -202,7 +203,7 @@ Ignorar a normalização e as verificações de tamanho do caminho é a única d
 
 Os caminhos que começam com `\\?\` ainda serão normalizados se você os passar explicitamente para a [função GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
 
-Você pode passar caminhos de mais do que `MAX_PATH` caracteres para [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) sem `\\?\`. Ele dá suporte caminhos de tamanho arbitrário, até o tamanho máximo da cadeia de caracteres que o Windows consegue tratar.
+Você pode passar caminhos com mais de `MAX_PATH` caracteres para [getfullpathname](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) sem `\\?\` . Ele dá suporte caminhos de tamanho arbitrário, até o tamanho máximo da cadeia de caracteres que o Windows consegue tratar.
 
 ## <a name="case-and-the-windows-file-system"></a>Maiúsculas, minúsculas e o sistema de arquivos do Windows
 

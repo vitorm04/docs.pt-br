@@ -1,5 +1,6 @@
 ---
 title: Diretrizes de nomenclatura
+description: Nesta visão geral, leia sobre as convenções de nomenclatura a serem usadas no desenvolvimento da estrutura. Acesse artigos que abordam a capitalização, nomenclatura geral e outras diretrizes.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-ms.openlocfilehash: 1b137be60f4c8c1c7cf1fa1f807841d4bc209089
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fbcf5ef5eb02a5e45b5c981b4247ffe1c9c2631b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290169"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447141"
 ---
 # <a name="naming-guidelines"></a>Diretrizes de nomenclatura
 Seguir um conjunto consistente de convenções de nomenclatura no desenvolvimento de uma estrutura pode ser uma grande contribuição para a usabilidade da estrutura. Ele permite que a estrutura seja usada por muitos desenvolvedores em projetos muito separados. Além da consistência do formulário, os nomes dos elementos da estrutura devem ser facilmente compreendidos e devem transmitir a função de cada elemento.  
@@ -38,6 +39,6 @@ Seguir um conjunto consistente de convenções de nomenclatura no desenvolviment
   
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Diretrizes de design de estrutura](index.md)

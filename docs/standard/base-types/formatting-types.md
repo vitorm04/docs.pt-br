@@ -1,5 +1,6 @@
 ---
 title: Tipos de formatação no .NET
+description: Saiba como formatar tipos no .NET. Entenda como usar ou substituir o método ToString. Saiba mais sobre a formatação sensível à cultura, composta e personalizada.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: e63a0962efb689a865436df771420e92319110b5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5d280b53d15bc674f325a726d69915d763aec34f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290533"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447076"
 ---
 # <a name="format-types-in-net"></a>Tipos de formato no .NET
 
@@ -101,7 +102,7 @@ A exibição do nome de um tipo é geralmente de uso limitado e não permite que
 
 No .NET, o `ToString` método de cada tipo de valor primitivo foi substituído para exibir o valor do objeto em vez de seu nome. A tabela a seguir mostra a substituição de cada tipo primitivo. Observe que a maioria dos métodos substituídos chama outra sobrecarga do método `ToString` e passa-a ao especificador de formato "G", que define o formato geral de seu tipo, além de um objeto <xref:System.IFormatProvider> que representa a cultura atual.
 
-|Tipo|Substituição de ToString|
+|Type|Substituição de ToString|
 |----------|-----------------------|
 |<xref:System.Boolean>|Retorna <xref:System.Boolean.TrueString?displayProperty=nameWithType> ou <xref:System.Boolean.FalseString?displayProperty=nameWithType>.|
 |<xref:System.Byte>|Chama `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor <xref:System.Byte> para a cultura atual.|
