@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC2004
 ms.assetid: 6bc0939c-e279-4875-a91c-f4076860b5b9
-ms.openlocfilehash: f8246c1d9d45f2e20cbecb83f61fe91de8a821d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11f5d6b034600ae4f669be86eea927a7ed5cc16f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661893"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413021"
 ---
-# <a name="out-of-memory-visual-basic-compiler-error"></a><span data-ttu-id="db2ea-102">Sem memória (erro do compilador do Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="db2ea-102">Out of memory (Visual Basic Compiler Error)</span></span>
-<span data-ttu-id="db2ea-103">Mais memória era necessária, que está disponível.</span><span class="sxs-lookup"><span data-stu-id="db2ea-103">More memory was required than is available.</span></span>  
+# <a name="out-of-memory-visual-basic-compiler-error"></a><span data-ttu-id="d0764-102">Sem memória (erro do compilador do Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d0764-102">Out of memory (Visual Basic Compiler Error)</span></span>
+<span data-ttu-id="d0764-103">Foi necessária mais memória do que a disponível.</span><span class="sxs-lookup"><span data-stu-id="d0764-103">More memory was required than is available.</span></span>  
   
- <span data-ttu-id="db2ea-104">**ID do erro:** BC2004</span><span class="sxs-lookup"><span data-stu-id="db2ea-104">**Error ID:** BC2004</span></span>  
+ <span data-ttu-id="d0764-104">**ID do erro:** BC2004</span><span class="sxs-lookup"><span data-stu-id="d0764-104">**Error ID:** BC2004</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="db2ea-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="db2ea-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d0764-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="d0764-105">To correct this error</span></span>  
   
-- <span data-ttu-id="db2ea-106">Feche os aplicativos desnecessários, documentos e arquivos de origem.</span><span class="sxs-lookup"><span data-stu-id="db2ea-106">Close unnecessary applications, documents and source files.</span></span>  
+- <span data-ttu-id="d0764-106">Feche aplicativos desnecessários, documentos e arquivos de origem.</span><span class="sxs-lookup"><span data-stu-id="d0764-106">Close unnecessary applications, documents and source files.</span></span>  
   
-- <span data-ttu-id="db2ea-107">Eliminar formulários e controles desnecessário, pois menos são carregados ao mesmo tempo</span><span class="sxs-lookup"><span data-stu-id="db2ea-107">Eliminate unnecessary controls and forms so fewer are loaded at one time</span></span>  
+- <span data-ttu-id="d0764-107">Elimine controles e formulários desnecessários para que menos sejam carregados ao mesmo tempo</span><span class="sxs-lookup"><span data-stu-id="d0764-107">Eliminate unnecessary controls and forms so fewer are loaded at one time</span></span>  
   
-- <span data-ttu-id="db2ea-108">Reduzir o número de `Public` variáveis.</span><span class="sxs-lookup"><span data-stu-id="db2ea-108">Reduce the number of `Public` variables.</span></span>  
+- <span data-ttu-id="d0764-108">Reduza o número de `Public` variáveis.</span><span class="sxs-lookup"><span data-stu-id="d0764-108">Reduce the number of `Public` variables.</span></span>  
   
-- <span data-ttu-id="db2ea-109">Verifique o espaço em disco disponível.</span><span class="sxs-lookup"><span data-stu-id="db2ea-109">Check available disk space.</span></span>  
+- <span data-ttu-id="d0764-109">Verifique o espaço em disco disponível.</span><span class="sxs-lookup"><span data-stu-id="d0764-109">Check available disk space.</span></span>  
   
-- <span data-ttu-id="db2ea-110">Aumente a RAM disponível ao instalar memória adicional ou realocar a memória.</span><span class="sxs-lookup"><span data-stu-id="db2ea-110">Increase the available RAM by installing additional memory or reallocating memory.</span></span>  
+- <span data-ttu-id="d0764-110">Aumente a RAM disponível instalando memória adicional ou realocando memória.</span><span class="sxs-lookup"><span data-stu-id="d0764-110">Increase the available RAM by installing additional memory or reallocating memory.</span></span>  
   
-- <span data-ttu-id="db2ea-111">Certifique-se de que a memória é liberada quando ele não for mais necessário.</span><span class="sxs-lookup"><span data-stu-id="db2ea-111">Make sure that memory is freed when it is no longer needed.</span></span>  
+- <span data-ttu-id="d0764-111">Certifique-se de que a memória seja liberada quando não for mais necessária.</span><span class="sxs-lookup"><span data-stu-id="d0764-111">Make sure that memory is freed when it is no longer needed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="db2ea-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="db2ea-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0764-112">Confira também</span><span class="sxs-lookup"><span data-stu-id="d0764-112">See also</span></span>
 
-- [<span data-ttu-id="db2ea-113">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="db2ea-113">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="d0764-113">Tipos de erro</span><span class="sxs-lookup"><span data-stu-id="d0764-113">Error Types</span></span>](../../programming-guide/language-features/error-types.md)
