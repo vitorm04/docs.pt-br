@@ -9,10 +9,10 @@ helpviewer_keywords:
 - serialization, XML Schema Definition tool
 ms.assetid: 3c03f855-f931-47ff-bbc6-50c0367a16e4
 ms.openlocfilehash: c88770403d4c2abfb5ce99f44ea1bec1f8337545
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84279770"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>A ferramenta de definição de esquema XML e a serialização XML
@@ -25,7 +25,7 @@ A ferramenta de definição de esquema XML ([XSD. exe)](xml-schema-definition-to
   
 Para obter mais informações sobre como usar a ferramenta, consulte [ferramenta de definição de esquema XML (XSD. exe)](xml-schema-definition-tool-xsd-exe.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Data.DataSet>
 - [Apresentando a serialização XML](introducing-xml-serialization.md)

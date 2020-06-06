@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69913041"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Como: Habilitar e desabilitar o redirecionamento automático de associação
@@ -24,18 +24,18 @@ Os redirecionamentos de associação automática são habilitados por padrão pa
 
 Se você tiver o Visual Studio 2017 versão 15,7 ou posterior, poderá desabilitar facilmente os redirecionamentos de associação gerados automaticamente nas páginas de propriedades do projeto.
 
-1. Clique com o botão direito do mouse no projeto no **Gerenciador de Soluções** e selecione **Propriedades**.
+1. Clique com o botão direito do mouse no projeto em **Gerenciador de soluções** e selecione **Propriedades**.
 
 2. Na página do **aplicativo** , desmarque a opção **gerar redirecionamentos de associação automaticamente** .
 
-3. Pressione **Ctrl**+**S** para salvar a alteração.
+3. Pressione **Ctrl** + **S** para salvar a alteração.
 
 ### <a name="disable-manually-in-the-project-file"></a>Desabilitar manualmente no arquivo de projeto
 
 1. Abra o arquivo de projeto para edição usando um dos seguintes métodos:
 
    - No Visual Studio, selecione o projeto em **Gerenciador de soluções**e, em seguida, escolha **abrir pasta no explorador de arquivos** no menu de atalho. No explorador de arquivos, localize o arquivo de projeto (. csproj ou. vbproj) e abra-o no bloco de notas.
-   - No Visual Studio, em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e escolha **descarregar projeto**. Clique com o botão direito do mouse no projeto descarregado e escolha **Editar [ProjectName. csproj]** .
+   - No Visual Studio, em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e escolha **descarregar projeto**. Clique com o botão direito do mouse no projeto descarregado e escolha **Editar [ProjectName. csproj]**.
 
 2. No arquivo de projeto, localize a seguinte entrada de propriedade:
 
@@ -56,9 +56,9 @@ Você pode habilitar redirecionamentos de associação automática em aplicativo
 1. Abra o arquivo de projeto para edição usando um dos seguintes métodos:
 
    - No Visual Studio, selecione o projeto em **Gerenciador de soluções**e, em seguida, escolha **abrir pasta no explorador de arquivos** no menu de atalho. No explorador de arquivos, localize o arquivo de projeto (. csproj ou. vbproj) e abra-o no bloco de notas.
-   - No Visual Studio, em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e escolha **descarregar projeto**. Clique com o botão direito do mouse no projeto descarregado e escolha **Editar [ProjectName. csproj]** .
+   - No Visual Studio, em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e escolha **descarregar projeto**. Clique com o botão direito do mouse no projeto descarregado e escolha **Editar [ProjectName. csproj]**.
 
-2. Adicione o seguinte elemento ao primeiro grupo de propriedades de configuração (sob \<a marca de > PropertyGroup):
+2. Adicione o seguinte elemento ao primeiro grupo de propriedades de configuração (sob a \<PropertyGroup> marca):
 
    ```xml
    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -99,7 +99,7 @@ Para adicionar redirecionamentos de associação a um arquivo **Web. config** :
 
    ![Diálogo de permissão de redirecionamento de associação](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [\<Elemento > bindingRedirect](./file-schema/runtime/bindingredirect-element.md)
+- [\<bindingRedirect>Elementos](./file-schema/runtime/bindingredirect-element.md)
 - [Redirecionando versões de assembly](redirect-assembly-versions.md)

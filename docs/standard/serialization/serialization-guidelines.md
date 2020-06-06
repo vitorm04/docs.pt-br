@@ -10,10 +10,10 @@ helpviewer_keywords:
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
 ms.openlocfilehash: eb11f0b8ddd34df7c6970c275d4b83cb95f59a53
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84287487"
 ---
 # <a name="serialization-guidelines"></a>Diretrizes de serialização
@@ -138,7 +138,7 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Usando contratos de dados](../../framework/wcf/feature-details/using-data-contracts.md)
 - [Serializador de contrato de dados](../../framework/wcf/feature-details/data-contract-serializer.md)

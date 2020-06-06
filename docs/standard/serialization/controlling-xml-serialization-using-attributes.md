@@ -17,10 +17,10 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
 ms.openlocfilehash: 79c5541b4c384e91fbec8c8f1b2130887e79a252
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84289675"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Controlando a serialização XML usando atributos
@@ -316,7 +316,7 @@ Por outro lado, se você quisesse serializar uma instância da classe, somente `
 
 Pode haver situações quando uma propriedade pública ou um campo não precisam ser serializados. Por exemplo, um campo ou propriedade podem ser usados para conter metadados. Nesses casos, aplicar o <xref:System.Xml.Serialization.XmlIgnoreAttribute> ao campo ou propriedade e o <xref:System.Xml.Serialization.XmlSerializer> o ignorarão.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Atributos que controlam a serialização de XML](attributes-that-control-xml-serialization.md)
 - [Atributos que controlam a serialização SOAP codificada](attributes-that-control-encoded-soap-serialization.md)

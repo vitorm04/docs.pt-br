@@ -5,10 +5,10 @@ helpviewer_keywords:
 - gcNoAffinitize element
 - <gcNoAffinitize> element
 ms.openlocfilehash: 16d6e5adefe2b632d7251669650058d7df7cea70
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84004732"
 ---
 # <a name="gcnoaffinitize-element"></a>Elemento \<GCNoAffinitize>
@@ -93,5 +93,5 @@ O exemplo a seguir não relacionar threads GC do servidor e limita o número de 
 - [Elemento GCHeapAffinitizeMask](gcheapaffinitizemask-element.md)
 - [Elemento GCHeapCount](gcheapcount-element.md)
 - [Conceitos básicos da coleta de lixo](../../../../standard/garbage-collection/fundamentals.md)
-- [Esquema de configurações de tempo de execução](index.md)
+- [Esquema de configurações do runtime](index.md)
 - [Esquema do arquivo de configuração](../index.md)
