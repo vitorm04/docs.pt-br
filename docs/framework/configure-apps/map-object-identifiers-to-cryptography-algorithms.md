@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
 ms.openlocfilehash: a5aebac2d392d4540581dfe7c7afff0819968ac0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69912536"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Mapeando identificadores de objeto para algoritmos de criptografia
@@ -38,9 +38,9 @@ As assinaturas digitais garantem que os dados não sejam adulterados quando envi
 </configuration>  
 ```  
   
- [ O\<elemento > oidEntry](./file-schema/cryptography/oidentry-element.md) contém dois atributos. O atributo **OID** é o número do identificador de objeto. O atributo **Name** é o valor do [ \<atributo Name do elemento > nameEntry](./file-schema/cryptography/nameentry-element.md). Deve haver um mapeamento de um nome de algoritmo para uma classe antes que um identificador de objeto possa ser mapeado para um nome simples.  
+ O [ \<oidEntry> elemento](./file-schema/cryptography/oidentry-element.md) contém dois atributos. O atributo **OID** é o número do identificador de objeto. O atributo **Name** é o valor do atributo **Name** do [ \<nameEntry> elemento](./file-schema/cryptography/nameentry-element.md). Deve haver um mapeamento de um nome de algoritmo para uma classe antes que um identificador de objeto possa ser mapeado para um nome simples.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Configurando classes de criptografia](configure-cryptography-classes.md)
-- [Serviços criptográficos](../../standard/security/cryptographic-services.md)
+- [Serviços de Criptografia](../../standard/security/cryptographic-services.md)

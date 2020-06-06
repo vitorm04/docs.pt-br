@@ -8,10 +8,10 @@ helpviewer_keywords:
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
 ms.openlocfilehash: c46c5cb6e01463723f0f2ce3873fb4a6ec0b4e60
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84278396"
 ---
 # <a name="schemaimporterextensions-element"></a>Elemento \<schemaImporterExtensions>
@@ -51,11 +51,11 @@ Contém tipos que são usados pelo <xref:System.Xml.Serialization.XmlSchemaImpor
 </system.xml.serialization>  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
-- [Esquema do arquivo de configuração](../../framework/configure-apps/file-schema/index.md)
+- [Esquema de arquivos de configuração](../../framework/configure-apps/file-schema/index.md)
 - [\<dateTimeSerialization>Elementos](datetimeserialization-element.md)
 - [\<add>Elemento para\<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)
 - [\<system.xml.serialization>Elementos](system-xml-serialization-element.md)

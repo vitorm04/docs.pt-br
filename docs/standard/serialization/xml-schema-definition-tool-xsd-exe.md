@@ -4,10 +4,10 @@ description: O gerador de serializador XML cria um assembly de serialização XM
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
 ms.openlocfilehash: 0275ecfebd427feb104013024654d4a0bc98748a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84288973"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Ferramenta de Definição de Esquema XML (Xsd.exe)
@@ -42,7 +42,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 
 ## <a name="general-options"></a>Opções gerais
 
-|Opção|Description|
+|Opção|Descrição|
 |------------|-----------------|
 |**/h \[\]**|Exibe sintaxe de comando e opções para a ferramenta.|
 |**/o \[ utputdir \] :**_diretório_|Especifica o diretório para arquivos de saída. Esse argumento pode aparecer somente uma vez. O padrão é o diretório atual.|
@@ -52,14 +52,14 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 ## <a name="xsd-file-options"></a>Opções de arquivo XSD
  Você deve especificar somente uma das seguintes opções para arquivos .xsd.
 
-|Opção|Description|
+|Opção|Descrição|
 |------------|-----------------|
 |**/c \[ Lasses\]**|Gera classes que correspondem ao esquema especificado. Para ler dados XML em um objeto, use o método <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType>.|
 |**/d \[ ados\]**|Gera uma classe derivada de <xref:System.Data.DataSet> que corresponde ao esquema especificado. Para ler dados XML na classe derivada, use o método <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType>.|
 
  Você também pode especificar qualquer uma das seguintes opções para arquivos .xsd.
 
-|Opção|Description|
+|Opção|Descrição|
 |------------|-----------------|
 |**/e \[ lementar \] :**_Element_|Especifica o elemento no esquema para o qual gerar código. Por padrão, todos os elementos são tipados. Você pode especificar esse argumento mais de uma vez.|
 |**/enableDataBinding**|Implementa a interface <xref:System.ComponentModel.INotifyPropertyChanged> em todos os tipos gerados para habilitar a associação de dados. A forma curta é `/edb`.|
@@ -74,7 +74,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 
 ## <a name="dll-and-exe-file-options"></a>Opções de arquivo DLL e EXE
 
-|Opção|Description|
+|Opção|Descrição|
 |------------|-----------------|
 |**/t \[ tipo \] :**_TypeName_|Especifica o nome do tipo para o qual criar um esquema. Você pode especificar vários argumentos de tipo. Se *typename* não especificar um namespace, o Xsd.exe corresponderá todos os tipos no assembly com o tipo especificado. Se *typename* especificar um namespace, somente esse tipo terá uma correspondência. Se *typename* terminar com um caractere de asterisco (\*), a ferramenta corresponderá todos os tipos que começam com a cadeia de caracteres antes do \*. Se você omitir a opção `/type`, o Xsd.exe gera esquemas para todos os tipos no assembly.|
 
@@ -130,7 +130,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 
 Você deve especificar somente uma das seguintes opções para o elemento `<generateSchemas>`.
 
-|Elemento|Description|
+|Elemento|Descrição|
 |-------------|-----------------|
 |\<assembly>|Especifica um assembly do qual gerar o esquema.|
 |\<type>|Especifica um tipo encontrado em um assembly para o qual gerar um esquema.|
@@ -149,7 +149,7 @@ Para gerar um arquivo de código, use o elemento `<generateClasses>`. O exemplo 
 
  As opções que você pode definir para o elemento `<generateClasses>` incluem o seguinte.
 
-|Elemento|Description|
+|Elemento|Descrição|
 |-------------|-----------------|
 |\<element>|Especifica um elemento no arquivo .xsd para o qual gerar código.|
 |\<schemaImporterExtensions>|Especifica um tipo derivado de uma classe <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>.|
@@ -174,7 +174,7 @@ A tabela a seguir mostra os atributos que também podem ser usados com o element
 
 As opções que você pode definir para o elemento `<generateDataSet>` incluem o seguinte.
 
-|Elemento|Description|
+|Elemento|Descrição|
 |-------------|-----------------|
 |\<schema>|Especifica um arquivo de esquema XML para o qual gerar um código. Vários arquivos de esquema XML podem ser especificados usando vários \<schema> elementos.|
 
@@ -229,7 +229,7 @@ O comando a seguir gera esquemas XML para todos os tipos no assembly `myAssembly
 xsd myAssembly.dll
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Data.DataSet>
 - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
