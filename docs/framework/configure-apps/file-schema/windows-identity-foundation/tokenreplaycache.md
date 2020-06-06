@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
 ms.openlocfilehash: 9f3a95fd0a39f199eaf13c7509aff22caa0e3b66
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70251778"
 ---
-# <a name="tokenreplaycache"></a><span data-ttu-id="eef53-101">\<tokenReplayCache></span><span class="sxs-lookup"><span data-stu-id="eef53-101">\<tokenReplayCache></span></span>
-<span data-ttu-id="eef53-102">Registra um cache de reprodução de token com um serviço ou uma coleção de manipulador de token de segurança.</span><span class="sxs-lookup"><span data-stu-id="eef53-102">Registers a token replay cache with a service or a security token handler collection.</span></span>  
+# \<tokenReplayCache>
+<span data-ttu-id="7518a-101">Registra um cache de reprodução de token com um serviço ou uma coleção de manipulador de token de segurança.</span><span class="sxs-lookup"><span data-stu-id="7518a-101">Registers a token replay cache with a service or a security token handler collection.</span></span>  
   
-<span data-ttu-id="eef53-103">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="eef53-103">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="eef53-104">&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)</span><span class="sxs-lookup"><span data-stu-id="eef53-104">&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)</span></span>\
-<span data-ttu-id="eef53-105">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identityConfiguration**](identityconfiguration.md)</span><span class="sxs-lookup"><span data-stu-id="eef53-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)</span></span>\
-<span data-ttu-id="eef53-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<caches >** ](caches.md)</span><span class="sxs-lookup"><span data-stu-id="eef53-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<caches>**](caches.md)</span></span>\
-<span data-ttu-id="eef53-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> tokenReplayCache**</span><span class="sxs-lookup"><span data-stu-id="eef53-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<tokenReplayCache>**</span></span>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<caches>**](caches.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<tokenReplayCache>**  
   
-## <a name="syntax"></a><span data-ttu-id="eef53-108">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="eef53-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7518a-102">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7518a-102">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -32,29 +32,29 @@ ms.locfileid: "70251778"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="eef53-109">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="eef53-109">Attributes and Elements</span></span>  
- <span data-ttu-id="eef53-110">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="eef53-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7518a-103">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="7518a-103">Attributes and Elements</span></span>  
+ <span data-ttu-id="7518a-104">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="7518a-104">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="eef53-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="eef53-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7518a-105">Atributos</span><span class="sxs-lookup"><span data-stu-id="7518a-105">Attributes</span></span>  
   
-|<span data-ttu-id="eef53-112">Atributo</span><span class="sxs-lookup"><span data-stu-id="eef53-112">Attribute</span></span>|<span data-ttu-id="eef53-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="eef53-113">Description</span></span>|  
+|<span data-ttu-id="7518a-106">Atributo</span><span class="sxs-lookup"><span data-stu-id="7518a-106">Attribute</span></span>|<span data-ttu-id="7518a-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="7518a-107">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="eef53-114">tipo</span><span class="sxs-lookup"><span data-stu-id="eef53-114">type</span></span>|<span data-ttu-id="eef53-115">Um tipo que deriva da <xref:System.IdentityModel.Tokens.TokenReplayCache> classe.</span><span class="sxs-lookup"><span data-stu-id="eef53-115">A type that derives from the <xref:System.IdentityModel.Tokens.TokenReplayCache> class.</span></span> <span data-ttu-id="eef53-116">Para obter mais informações sobre como especificar um personalizado `type`, consulte [referências de tipo personalizado].</span><span class="sxs-lookup"><span data-stu-id="eef53-116">For more information about how to specify a custom `type`, see [Custom Type References].</span></span>
+|<span data-ttu-id="7518a-108">type</span><span class="sxs-lookup"><span data-stu-id="7518a-108">type</span></span>|<span data-ttu-id="7518a-109">Um tipo que deriva da <xref:System.IdentityModel.Tokens.TokenReplayCache> classe.</span><span class="sxs-lookup"><span data-stu-id="7518a-109">A type that derives from the <xref:System.IdentityModel.Tokens.TokenReplayCache> class.</span></span> <span data-ttu-id="7518a-110">Para obter mais informações sobre como especificar um personalizado `type` , consulte [referências de tipo personalizado].</span><span class="sxs-lookup"><span data-stu-id="7518a-110">For more information about how to specify a custom `type`, see [Custom Type References].</span></span>
   
-### <a name="child-elements"></a><span data-ttu-id="eef53-117">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="eef53-117">Child Elements</span></span>  
- <span data-ttu-id="eef53-118">Nenhum</span><span class="sxs-lookup"><span data-stu-id="eef53-118">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7518a-111">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="7518a-111">Child Elements</span></span>  
+ <span data-ttu-id="7518a-112">Nenhum</span><span class="sxs-lookup"><span data-stu-id="7518a-112">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="eef53-119">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="eef53-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7518a-113">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="7518a-113">Parent Elements</span></span>  
   
-|<span data-ttu-id="eef53-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="eef53-120">Element</span></span>|<span data-ttu-id="eef53-121">Descrição</span><span class="sxs-lookup"><span data-stu-id="eef53-121">Description</span></span>|  
+|<span data-ttu-id="7518a-114">Elemento</span><span class="sxs-lookup"><span data-stu-id="7518a-114">Element</span></span>|<span data-ttu-id="7518a-115">Descrição</span><span class="sxs-lookup"><span data-stu-id="7518a-115">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="eef53-122">\<caches></span><span class="sxs-lookup"><span data-stu-id="eef53-122">\<caches></span></span>](caches.md)|<span data-ttu-id="eef53-123">Registra os caches usados por um serviço ou uma coleção de manipulador de token de segurança.</span><span class="sxs-lookup"><span data-stu-id="eef53-123">Registers the caches used by a service or a security token handler collection.</span></span>|  
+|[\<caches>](caches.md)|<span data-ttu-id="7518a-116">Registra os caches usados por um serviço ou uma coleção de manipulador de token de segurança.</span><span class="sxs-lookup"><span data-stu-id="7518a-116">Registers the caches used by a service or a security token handler collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="eef53-124">Comentários</span><span class="sxs-lookup"><span data-stu-id="eef53-124">Remarks</span></span>  
- <span data-ttu-id="eef53-125">O cache de reprodução de token é usado para detectar tokens reproduzidos.</span><span class="sxs-lookup"><span data-stu-id="eef53-125">The token replay cache is used to detect replayed tokens.</span></span> <span data-ttu-id="eef53-126">A detecção de reprodução de token é habilitada pelo elemento de [ \<> tokenReplayDetection](tokenreplaydetection.md) , que também especifica o tempo de expiração máximo para tokens.</span><span class="sxs-lookup"><span data-stu-id="eef53-126">Token replay detection is enabled by the [\<tokenReplayDetection>](tokenreplaydetection.md) element, which also specifies the maximum expiration time for tokens.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7518a-117">Comentários</span><span class="sxs-lookup"><span data-stu-id="7518a-117">Remarks</span></span>  
+ <span data-ttu-id="7518a-118">O cache de reprodução de token é usado para detectar tokens reproduzidos.</span><span class="sxs-lookup"><span data-stu-id="7518a-118">The token replay cache is used to detect replayed tokens.</span></span> <span data-ttu-id="7518a-119">A detecção de reprodução de token é habilitada pelo [\<tokenReplayDetection>](tokenreplaydetection.md) elemento, que também especifica o tempo de expiração máximo para tokens.</span><span class="sxs-lookup"><span data-stu-id="7518a-119">Token replay detection is enabled by the [\<tokenReplayDetection>](tokenreplaydetection.md) element, which also specifies the maximum expiration time for tokens.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="eef53-127">Exemplo</span><span class="sxs-lookup"><span data-stu-id="eef53-127">Example</span></span>  
- <span data-ttu-id="eef53-128">O XML a seguir mostra a configuração de um cache personalizado para detectar tokens reproduzidos.</span><span class="sxs-lookup"><span data-stu-id="eef53-128">The following XML shows the configuration of a custom cache for detecting replayed tokens.</span></span>  
+## <a name="example"></a><span data-ttu-id="7518a-120">Exemplo</span><span class="sxs-lookup"><span data-stu-id="7518a-120">Example</span></span>  
+ <span data-ttu-id="7518a-121">O XML a seguir mostra a configuração de um cache personalizado para detectar tokens reproduzidos.</span><span class="sxs-lookup"><span data-stu-id="7518a-121">The following XML shows the configuration of a custom cache for detecting replayed tokens.</span></span>  
   
 ```xml  
 <caches>  
@@ -63,7 +63,7 @@ ms.locfileid: "70251778"
 </caches>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="eef53-129">Consulte também</span><span class="sxs-lookup"><span data-stu-id="eef53-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7518a-122">Confira também</span><span class="sxs-lookup"><span data-stu-id="7518a-122">See also</span></span>
 
 - <xref:System.IdentityModel.Tokens.TokenReplayCache>
-- [<span data-ttu-id="eef53-130">\<tokenReplayDetection></span><span class="sxs-lookup"><span data-stu-id="eef53-130">\<tokenReplayDetection></span></span>](tokenreplaydetection.md)
+- [\<tokenReplayDetection>](tokenreplaydetection.md)

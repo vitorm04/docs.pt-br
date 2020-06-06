@@ -3,63 +3,63 @@ title: <issuerMetadata> de <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 1a85ca37-496d-4fa3-8d44-d6c9383d735c
 ms.openlocfilehash: fcdd66ecd162dff5be86a1d4ab1b196f50dbd445
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400348"
 ---
-# <a name="issuermetadata-of-issuedtokenparameters"></a><span data-ttu-id="86d5c-102">\<issuerMetadata > de \<issuedTokenParameters ></span><span class="sxs-lookup"><span data-stu-id="86d5c-102">\<issuerMetadata> of \<issuedTokenParameters></span></span>
+# <a name="issuermetadata-of-issuedtokenparameters"></a><span data-ttu-id="ada1d-102">\<issuerMetadata> de \<issuedTokenParameters></span><span class="sxs-lookup"><span data-stu-id="ada1d-102">\<issuerMetadata> of \<issuedTokenParameters></span></span>
 
-<span data-ttu-id="86d5c-103">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="86d5c-103">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="86d5c-104">&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="86d5c-104">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
-<span data-ttu-id="86d5c-105">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)</span><span class="sxs-lookup"><span data-stu-id="86d5c-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)</span></span>\
-<span data-ttu-id="86d5c-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de CustomBinding**](custombinding.md)</span><span class="sxs-lookup"><span data-stu-id="86d5c-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)</span></span>\
-<span data-ttu-id="86d5c-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**</span><span class="sxs-lookup"><span data-stu-id="86d5c-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**</span></span>\
-<span data-ttu-id="86d5c-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de segurança**](security-of-custombinding.md)</span><span class="sxs-lookup"><span data-stu-id="86d5c-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)</span></span>\
-<span data-ttu-id="86d5c-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> issuedTokenParameters**](issuedtokenparameters.md)</span><span class="sxs-lookup"><span data-stu-id="86d5c-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<issuedTokenParameters>**](issuedtokenparameters.md)</span></span>\
-<span data-ttu-id="86d5c-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> issuerMetadata**</span><span class="sxs-lookup"><span data-stu-id="86d5c-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuerMetadata>**</span></span>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<issuedTokenParameters>**](issuedtokenparameters.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuerMetadata>**  
   
-## <a name="syntax"></a><span data-ttu-id="86d5c-111">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="86d5c-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ada1d-103">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ada1d-103">Syntax</span></span>  
   
 ```xml  
 <issuerMetaData address="String" />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="86d5c-112">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="86d5c-112">Attributes and Elements</span></span>  
- <span data-ttu-id="86d5c-113">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="86d5c-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ada1d-104">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="ada1d-104">Attributes and Elements</span></span>  
+ <span data-ttu-id="ada1d-105">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="ada1d-105">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="86d5c-114">Atributos</span><span class="sxs-lookup"><span data-stu-id="86d5c-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="ada1d-106">Atributos</span><span class="sxs-lookup"><span data-stu-id="ada1d-106">Attributes</span></span>  
   
-|<span data-ttu-id="86d5c-115">Atributo</span><span class="sxs-lookup"><span data-stu-id="86d5c-115">Attribute</span></span>|<span data-ttu-id="86d5c-116">Descrição</span><span class="sxs-lookup"><span data-stu-id="86d5c-116">Description</span></span>|  
+|<span data-ttu-id="ada1d-107">Atributo</span><span class="sxs-lookup"><span data-stu-id="ada1d-107">Attribute</span></span>|<span data-ttu-id="ada1d-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="ada1d-108">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="86d5c-117">endereço</span><span class="sxs-lookup"><span data-stu-id="86d5c-117">address</span></span>|<span data-ttu-id="86d5c-118">Necessário.</span><span class="sxs-lookup"><span data-stu-id="86d5c-118">Required.</span></span> <span data-ttu-id="86d5c-119">Uma cadeia de caracteres que especifica o endereço do ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="86d5c-119">A string that specifies the address of the endpoint.</span></span> <span data-ttu-id="86d5c-120">O endereço deve ser um URI absoluto.</span><span class="sxs-lookup"><span data-stu-id="86d5c-120">The address must be an absolute URI.</span></span> <span data-ttu-id="86d5c-121">O valor padrão é uma cadeia de caracteres vazia.</span><span class="sxs-lookup"><span data-stu-id="86d5c-121">The default value is an empty string.</span></span>|  
+|<span data-ttu-id="ada1d-109">address</span><span class="sxs-lookup"><span data-stu-id="ada1d-109">address</span></span>|<span data-ttu-id="ada1d-110">Obrigatórios.</span><span class="sxs-lookup"><span data-stu-id="ada1d-110">Required.</span></span> <span data-ttu-id="ada1d-111">Uma cadeia de caracteres que especifica o endereço do ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="ada1d-111">A string that specifies the address of the endpoint.</span></span> <span data-ttu-id="ada1d-112">O endereço deve ser um URI absoluto.</span><span class="sxs-lookup"><span data-stu-id="ada1d-112">The address must be an absolute URI.</span></span> <span data-ttu-id="ada1d-113">O valor padrão é uma cadeia de caracteres vazia.</span><span class="sxs-lookup"><span data-stu-id="ada1d-113">The default value is an empty string.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="86d5c-122">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="86d5c-122">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="ada1d-114">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="ada1d-114">Child Elements</span></span>  
   
-|<span data-ttu-id="86d5c-123">Elemento</span><span class="sxs-lookup"><span data-stu-id="86d5c-123">Element</span></span>|<span data-ttu-id="86d5c-124">Descrição</span><span class="sxs-lookup"><span data-stu-id="86d5c-124">Description</span></span>|  
+|<span data-ttu-id="ada1d-115">Elemento</span><span class="sxs-lookup"><span data-stu-id="ada1d-115">Element</span></span>|<span data-ttu-id="ada1d-116">Descrição</span><span class="sxs-lookup"><span data-stu-id="ada1d-116">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="86d5c-125">\<headers></span><span class="sxs-lookup"><span data-stu-id="86d5c-125">\<headers></span></span>](headers-element.md)|<span data-ttu-id="86d5c-126">Uma coleção de cabeçalhos de endereço.</span><span class="sxs-lookup"><span data-stu-id="86d5c-126">A collection of address headers.</span></span>|  
-|[<span data-ttu-id="86d5c-127">\<identity></span><span class="sxs-lookup"><span data-stu-id="86d5c-127">\<identity></span></span>](identity.md)|<span data-ttu-id="86d5c-128">Uma identidade que permite a autenticação de um ponto de extremidade por outros pontos de extremidades que trocam mensagens com ele.</span><span class="sxs-lookup"><span data-stu-id="86d5c-128">An identity that enables the authentication of an endpoint by other endpoints exchanging messages with it.</span></span>|  
+|[\<headers>](headers-element.md)|<span data-ttu-id="ada1d-117">Uma coleção de cabeçalhos de endereço.</span><span class="sxs-lookup"><span data-stu-id="ada1d-117">A collection of address headers.</span></span>|  
+|[\<identity>](identity.md)|<span data-ttu-id="ada1d-118">Uma identidade que permite a autenticação de um ponto de extremidade por outros pontos de extremidades que trocam mensagens com ele.</span><span class="sxs-lookup"><span data-stu-id="ada1d-118">An identity that enables the authentication of an endpoint by other endpoints exchanging messages with it.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="86d5c-129">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="86d5c-129">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ada1d-119">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="ada1d-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="86d5c-130">Elemento</span><span class="sxs-lookup"><span data-stu-id="86d5c-130">Element</span></span>|<span data-ttu-id="86d5c-131">Descrição</span><span class="sxs-lookup"><span data-stu-id="86d5c-131">Description</span></span>|  
+|<span data-ttu-id="ada1d-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="ada1d-120">Element</span></span>|<span data-ttu-id="ada1d-121">Descrição</span><span class="sxs-lookup"><span data-stu-id="ada1d-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="86d5c-132">\<issuedTokenParameters></span><span class="sxs-lookup"><span data-stu-id="86d5c-132">\<issuedTokenParameters></span></span>](issuedtokenparameters.md)|<span data-ttu-id="86d5c-133">Especifica os parâmetros para um token de segurança emitido em um cenário de segurança federada.</span><span class="sxs-lookup"><span data-stu-id="86d5c-133">Specifies the parameters for an security token issued in a Federated security scenario.</span></span>|  
+|[\<issuedTokenParameters>](issuedtokenparameters.md)|<span data-ttu-id="ada1d-122">Especifica os parâmetros para um token de segurança emitido em um cenário de segurança federada.</span><span class="sxs-lookup"><span data-stu-id="ada1d-122">Specifies the parameters for an security token issued in a Federated security scenario.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="86d5c-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="86d5c-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ada1d-123">Confira também</span><span class="sxs-lookup"><span data-stu-id="ada1d-123">See also</span></span>
 
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [<span data-ttu-id="86d5c-135">Autenticação e identidade de serviço</span><span class="sxs-lookup"><span data-stu-id="86d5c-135">Service Identity and Authentication</span></span>](../../../wcf/feature-details/service-identity-and-authentication.md)
-- [<span data-ttu-id="86d5c-136">Federação e tokens emitidos</span><span class="sxs-lookup"><span data-stu-id="86d5c-136">Federation and Issued Tokens</span></span>](../../../wcf/feature-details/federation-and-issued-tokens.md)
-- [<span data-ttu-id="86d5c-137">Recursos de segurança com associações personalizadas</span><span class="sxs-lookup"><span data-stu-id="86d5c-137">Security Capabilities with Custom Bindings</span></span>](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [<span data-ttu-id="86d5c-138">Federação e tokens emitidos</span><span class="sxs-lookup"><span data-stu-id="86d5c-138">Federation and Issued Tokens</span></span>](../../../wcf/feature-details/federation-and-issued-tokens.md)
-- [<span data-ttu-id="86d5c-139">Associações</span><span class="sxs-lookup"><span data-stu-id="86d5c-139">Bindings</span></span>](../../../wcf/bindings.md)
-- [<span data-ttu-id="86d5c-140">Estendendo associações</span><span class="sxs-lookup"><span data-stu-id="86d5c-140">Extending Bindings</span></span>](../../../wcf/extending/extending-bindings.md)
-- [<span data-ttu-id="86d5c-141">Associações personalizadas</span><span class="sxs-lookup"><span data-stu-id="86d5c-141">Custom Bindings</span></span>](../../../wcf/extending/custom-bindings.md)
-- [<span data-ttu-id="86d5c-142">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="86d5c-142">\<customBinding></span></span>](custombinding.md)
-- [<span data-ttu-id="86d5c-143">Como: Criar uma associação personalizada usando o SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="86d5c-143">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [<span data-ttu-id="86d5c-144">Segurança de associação personalizada</span><span class="sxs-lookup"><span data-stu-id="86d5c-144">Custom Binding Security</span></span>](../../../wcf/samples/custom-binding-security.md)
+- [<span data-ttu-id="ada1d-124">Identidade e autenticação de serviço</span><span class="sxs-lookup"><span data-stu-id="ada1d-124">Service Identity and Authentication</span></span>](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [<span data-ttu-id="ada1d-125">Federação e tokens emitidos</span><span class="sxs-lookup"><span data-stu-id="ada1d-125">Federation and Issued Tokens</span></span>](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [<span data-ttu-id="ada1d-126">Recursos de segurança com associações personalizadas</span><span class="sxs-lookup"><span data-stu-id="ada1d-126">Security Capabilities with Custom Bindings</span></span>](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [<span data-ttu-id="ada1d-127">Federação e tokens emitidos</span><span class="sxs-lookup"><span data-stu-id="ada1d-127">Federation and Issued Tokens</span></span>](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [<span data-ttu-id="ada1d-128">Associações</span><span class="sxs-lookup"><span data-stu-id="ada1d-128">Bindings</span></span>](../../../wcf/bindings.md)
+- [<span data-ttu-id="ada1d-129">Estendendo associações</span><span class="sxs-lookup"><span data-stu-id="ada1d-129">Extending Bindings</span></span>](../../../wcf/extending/extending-bindings.md)
+- [<span data-ttu-id="ada1d-130">Associações personalizadas</span><span class="sxs-lookup"><span data-stu-id="ada1d-130">Custom Bindings</span></span>](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [<span data-ttu-id="ada1d-131">Como criar uma associação personalizada utilizando o SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="ada1d-131">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [<span data-ttu-id="ada1d-132">Segurança de associação personalizada</span><span class="sxs-lookup"><span data-stu-id="ada1d-132">Custom Binding Security</span></span>](../../../wcf/samples/custom-binding-security.md)

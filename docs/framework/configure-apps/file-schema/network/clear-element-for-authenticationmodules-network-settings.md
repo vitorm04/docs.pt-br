@@ -11,49 +11,49 @@ helpviewer_keywords:
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
 ms.openlocfilehash: e3abd1b4c76ebda885703ccf961d58657b582f19
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74087506"
 ---
-# <a name="clear-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="281e4-102">\<limpar > elemento para authenticationModules (configurações de rede)</span><span class="sxs-lookup"><span data-stu-id="281e4-102">\<clear> Element for authenticationModules (Network Settings)</span></span>
-<span data-ttu-id="281e4-103">Limpa todos os módulos de autenticação do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="281e4-103">Clears all authentication modules from the application.</span></span>  
+# <a name="clear-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="fe4b4-102">Elemento \<clear> para authenticationModules (Configurações de Rede)</span><span class="sxs-lookup"><span data-stu-id="fe4b4-102">\<clear> Element for authenticationModules (Network Settings)</span></span>
+<span data-ttu-id="fe4b4-103">Limpa todos os módulos de autenticação do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="fe4b4-103">Clears all authentication modules from the application.</span></span>  
 
-<span data-ttu-id="281e4-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="281e4-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="281e4-105">&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="281e4-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>\
-<span data-ttu-id="281e4-106">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="281e4-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModules>**](authenticationmodules-element-network-settings.md)</span></span>\
-<span data-ttu-id="281e4-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**desmarque >**</span><span class="sxs-lookup"><span data-stu-id="281e4-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**</span></span>
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModules>**](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
-## <a name="syntax"></a><span data-ttu-id="281e4-108">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="281e4-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fe4b4-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="fe4b4-104">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="281e4-109">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="281e4-109">Attributes and Elements</span></span>  
- <span data-ttu-id="281e4-110">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="281e4-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fe4b4-105">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="fe4b4-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="fe4b4-106">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="fe4b4-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="281e4-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="281e4-111">Attributes</span></span>  
- <span data-ttu-id="281e4-112">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="281e4-112">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="fe4b4-107">Atributos</span><span class="sxs-lookup"><span data-stu-id="fe4b4-107">Attributes</span></span>  
+ <span data-ttu-id="fe4b4-108">Nenhum.</span><span class="sxs-lookup"><span data-stu-id="fe4b4-108">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="281e4-113">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="281e4-113">Child Elements</span></span>  
- <span data-ttu-id="281e4-114">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="281e4-114">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="fe4b4-109">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="fe4b4-109">Child Elements</span></span>  
+ <span data-ttu-id="fe4b4-110">Nenhum.</span><span class="sxs-lookup"><span data-stu-id="fe4b4-110">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="281e4-115">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="281e4-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="fe4b4-111">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="fe4b4-111">Parent Elements</span></span>  
   
-|<span data-ttu-id="281e4-116">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="281e4-116">**Element**</span></span>|<span data-ttu-id="281e4-117">**Descrição**</span><span class="sxs-lookup"><span data-stu-id="281e4-117">**Description**</span></span>|  
+|<span data-ttu-id="fe4b4-112">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="fe4b4-112">**Element**</span></span>|<span data-ttu-id="fe4b4-113">**Descrição**</span><span class="sxs-lookup"><span data-stu-id="fe4b4-113">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="281e4-118">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="281e4-118">authenticationModules</span></span>](authenticationmodules-element-network-settings.md)|<span data-ttu-id="281e4-119">Especifica os módulos usados para autenticar solicitações de rede.</span><span class="sxs-lookup"><span data-stu-id="281e4-119">Specifies modules used to authenticate network requests.</span></span>|  
+|[<span data-ttu-id="fe4b4-114">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="fe4b4-114">authenticationModules</span></span>](authenticationmodules-element-network-settings.md)|<span data-ttu-id="fe4b4-115">Especifica os módulos usados para autenticar solicitações de rede.</span><span class="sxs-lookup"><span data-stu-id="fe4b4-115">Specifies modules used to authenticate network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="281e4-120">Comentários</span><span class="sxs-lookup"><span data-stu-id="281e4-120">Remarks</span></span>  
- <span data-ttu-id="281e4-121">O elemento `clear` remove todos os módulos de autenticação que foram definidos anteriormente no arquivo de configuração ou em um nível superior na hierarquia de configuração.</span><span class="sxs-lookup"><span data-stu-id="281e4-121">The `clear` element removes all authentication modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fe4b4-116">Comentários</span><span class="sxs-lookup"><span data-stu-id="fe4b4-116">Remarks</span></span>  
+ <span data-ttu-id="fe4b4-117">O `clear` elemento remove todos os módulos de autenticação que foram definidos anteriormente no arquivo de configuração ou em um nível superior na hierarquia de configuração.</span><span class="sxs-lookup"><span data-stu-id="fe4b4-117">The `clear` element removes all authentication modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="281e4-122">Arquivos de Configuração</span><span class="sxs-lookup"><span data-stu-id="281e4-122">Configuration Files</span></span>  
- <span data-ttu-id="281e4-123">Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).</span><span class="sxs-lookup"><span data-stu-id="281e4-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="fe4b4-118">Arquivos de configuração</span><span class="sxs-lookup"><span data-stu-id="fe4b4-118">Configuration Files</span></span>  
+ <span data-ttu-id="fe4b4-119">Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).</span><span class="sxs-lookup"><span data-stu-id="fe4b4-119">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="281e4-124">Exemplo</span><span class="sxs-lookup"><span data-stu-id="281e4-124">Example</span></span>  
- <span data-ttu-id="281e4-125">O exemplo a seguir remove todos os módulos de autenticação configurados.</span><span class="sxs-lookup"><span data-stu-id="281e4-125">The following example removes all configured authentication modules.</span></span>  
+## <a name="example"></a><span data-ttu-id="fe4b4-120">Exemplo</span><span class="sxs-lookup"><span data-stu-id="fe4b4-120">Example</span></span>  
+ <span data-ttu-id="fe4b4-121">O exemplo a seguir remove todos os módulos de autenticação configurados.</span><span class="sxs-lookup"><span data-stu-id="fe4b4-121">The following example removes all configured authentication modules.</span></span>  
   
 ```xml  
 <configuration>  
@@ -65,8 +65,8 @@ ms.locfileid: "74087506"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="281e4-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="281e4-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fe4b4-122">Confira também</span><span class="sxs-lookup"><span data-stu-id="fe4b4-122">See also</span></span>
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [<span data-ttu-id="281e4-127">Esquema de configurações de rede</span><span class="sxs-lookup"><span data-stu-id="281e4-127">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="fe4b4-123">Esquema de configurações de rede</span><span class="sxs-lookup"><span data-stu-id="fe4b4-123">Network Settings Schema</span></span>](index.md)
