@@ -8,10 +8,10 @@ helpviewer_keywords:
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
 ms.openlocfilehash: 667d59f7eb0d1c7682afcdda584cc5b0ca2da802
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84288921"
 ---
 # <a name="xmlserializer-element"></a>Elemento \<xmlSerializer>
@@ -41,7 +41,7 @@ Especifica se uma verificação adicional de progresso do <xref:System.Xml.Seria
   
 ### <a name="parent-elements"></a>Elementos pai  
   
-|Elemento|Description|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<system.xml.serialization>Elementos](system-xml-serialization-element.md)|Contém definições de configuração para as classes <xref:System.Xml.Serialization.XmlSerializer> e <xref:System.Xml.Serialization.XmlSchemaImporter>.|  
   
@@ -61,7 +61,7 @@ Especifica se uma verificação adicional de progresso do <xref:System.Xml.Seria
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [\<system.xml.serialization>Elementos](system-xml-serialization-element.md)

@@ -3,10 +3,10 @@ title: <Directives> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 ms.openlocfilehash: 0c6ebb8954e80f3f6dc6733f0e9d76094477689b
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84202377"
 ---
 # <a name="directives-element-net-native"></a>\<Directives> (.NET Nativo)
@@ -40,7 +40,7 @@ O elemento raiz em cada arquivo de diretivas de tempo de execução para .NET Na
   
  O `<Directives>` elemento pode conter zero ou um [\<Application>](application-element-net-native.md) elemento e zero, um ou mais [\<Library>](library-element-net-native.md) elementos.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência do arquivo de configuração das diretivas de runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de runtime](runtime-directive-elements.md)

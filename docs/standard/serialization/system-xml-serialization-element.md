@@ -8,10 +8,10 @@ helpviewer_keywords:
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
 ms.openlocfilehash: f69e80592e9321de64421b977a63b83d8be2ad9e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84289480"
 ---
 # <a name="systemxmlserialization-element"></a>Elemento \<system.xml.serialization>
@@ -67,11 +67,11 @@ O exemplo de código a seguir ilustra como especificar o modo de serialização 
 </system.xml.serialization>
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
-- [Esquema do arquivo de configuração](../../framework/configure-apps/file-schema/index.md)
+- [Esquema de arquivos de configuração](../../framework/configure-apps/file-schema/index.md)
 - [\<dateTimeSerialization>Elementos](datetimeserialization-element.md)
 - [\<schemaImporterExtensions>Elementos](schemaimporterextensions-element.md)
 - [\<add>Elemento para\<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)

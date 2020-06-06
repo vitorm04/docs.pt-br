@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
 ms.openlocfilehash: 0945629c1395917bc1cf825f2ba84d20afa99957
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71698204"
 ---
-# <a name="defaultproxy-element-network-settings"></a>Elemento \<defaultProxy > (configurações de rede)
+# <a name="defaultproxy-element-network-settings"></a>Elemento \<defaultProxy> (Configurações de Rede)
 Configura o servidor proxy HTTP (Hypertext Transfer Protocol).  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultProxy >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<defaultProxy>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,7 +35,7 @@ Configura o servidor proxy HTTP (Hypertext Transfer Protocol).
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
+ As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
   
@@ -49,10 +49,10 @@ Configura o servidor proxy HTTP (Hypertext Transfer Protocol).
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
 |[bypasslist](bypasslist-element-network-settings.md)|Fornece um conjunto de expressões regulares que descrevem endereços que não usam o proxy.|  
-|[module](module-element-network-settings.md)|Adiciona um novo módulo de proxy ao aplicativo.|  
-|[acionista](proxy-element-network-settings.md)|Define um servidor proxy.|  
+|[modulo](module-element-network-settings.md)|Adiciona um novo módulo de proxy ao aplicativo.|  
+|[proxy](proxy-element-network-settings.md)|Define um servidor proxy.|  
   
-### <a name="parent-elements"></a>Elementos Pai  
+### <a name="parent-elements"></a>Elementos pai  
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
@@ -61,12 +61,12 @@ Configura o servidor proxy HTTP (Hypertext Transfer Protocol).
 ## <a name="remarks"></a>Comentários  
  Se o elemento defaultProxy estiver vazio, as configurações de proxy do Internet Explorer serão usadas. Esse comportamento é diferente da versão 1,1 do .NET Framework.  
   
- Uma exceção é gerada se o elemento [Module](module-element-network-settings.md) especifica um tipo não público, o tipo não é derivado da classe <xref:System.Net.IWebProxy>, uma exceção do construtor sem parâmetros desse objeto ocorreu ou ocorreu uma exceção ao recuperar o proxy padrão especificado pelo sistema. A propriedade <xref:System.Exception.InnerException%2A> na exceção deve ter mais informações sobre a causa raiz do erro.  
+ Uma exceção é gerada se o elemento [Module](module-element-network-settings.md) especifica um tipo não público, o tipo não é derivado da <xref:System.Net.IWebProxy> classe, uma exceção do construtor sem parâmetros desse objeto ocorreu ou uma exceção ocorreu ao recuperar o proxy padrão especificado pelo sistema. A <xref:System.Exception.InnerException%2A> Propriedade na exceção deve ter mais informações sobre a causa raiz do erro.  
   
-## <a name="configuration-files"></a>Arquivos de Configuração  
+## <a name="configuration-files"></a>Arquivos de configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
-## <a name="example"></a>{1&gt;Exemplo&lt;1}  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir usa os padrões do proxy do Internet Explorer, especifica o endereço de proxy e ignora o proxy para acesso local e contoso.com.  
   
 ```xml  
@@ -86,7 +86,7 @@ Configura o servidor proxy HTTP (Hypertext Transfer Protocol).
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Esquema de configurações de rede](index.md)
