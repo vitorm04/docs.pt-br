@@ -8,17 +8,17 @@ helpviewer_keywords:
 - <clear> Element
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
 ms.openlocfilehash: 66abd7f057bc6d060e50a889a945281d07c97592
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155421"
 ---
-# <a name="clear-element-for-configsections"></a>\<elemento> \<clara para configuraçõesSeções>
+# <a name="clear-element-for-configsections"></a>Elemento \<clear> para \<configSections>
 
-Limpa todas as seções e grupos de seção previamente definidos.
+Limpa todas as seções e grupos de seções definidos anteriormente.
 
-&nbsp; &nbsp; &nbsp; &nbsp; ** \<** [** \<configuração>**](configuration-element.md) &nbsp; &nbsp;configSeções>>claras [** \<**](configsections-element-for-configuration.md)
+[**\<configuration>**](configuration-element.md) &nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md) &nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,13 +30,13 @@ Limpa todas as seções e grupos de seção previamente definidos.
 
 |           | Descrição |
 | --------- | ----------- |
-| **name**  | Atributo obrigatório.<br><br>Especifica o nome da seção ou do grupo de seção a ser removido. |
+| **name**  | Atributo obrigatório.<br><br>Especifica o nome da seção ou do grupo de seções a ser removido. |
 
 ## <a name="parent-element"></a>Elemento pai
 
 |     | Descrição |
 | --- | ----------- |
-| [** \<configSeções>** Elemento](configsections-element-for-configuration.md) | Contém seção de configuração e declarações de namespace. |
+| [**\<configSections>** Elementos](configsections-element-for-configuration.md) | Contém as declarações de namespace e seção de configuração. |
 
 ## <a name="child-elements"></a>Elementos filho
 
@@ -44,13 +44,13 @@ Nenhum
 
 ## <a name="remarks"></a>Comentários
 
-O elemento ** \<clear>** remove todas as seções e grupos de seção do seu aplicativo que foram definidos anteriormente no arquivo de configuração atual ou em um nível mais alto na hierarquia do arquivo de configuração.
+O **\<clear>** elemento remove todas as seções e grupos de seção do aplicativo que foram definidos anteriormente no arquivo de configuração atual ou em um nível superior na hierarquia do arquivo de configuração.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo define um arquivo de configuração da máquina ** \<** e um arquivo de configuração de aplicativo e mostra como usar o elemento clear>em um arquivo de configuração de aplicativo para limpar seções definidas anteriormente no arquivo de configuração da máquina.
+Este exemplo define um arquivo de configuração de computador e um arquivo de configuração de aplicativo e mostra como usar o **\<clear>** elemento em um arquivo de configuração de aplicativo para limpar as seções definidas anteriormente no arquivo de configuração de computador.
 
-O código de arquivo de configuração da máquina a seguir declara duas seções, ** \<sampleSection>** e ** \<outra>SampleSection **, que são lidas antes do arquivo de configuração do aplicativo:
+O código do arquivo de configuração do computador a seguir declara duas seções **\<sampleSection>** e **\<anotherSampleSection>** , que são lidas antes do arquivo de configuração do aplicativo:
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ O código de arquivo de configuração da máquina a seguir declara duas seçõe
 </configuration>
 ```
 
-O código de arquivo de configuração do aplicativo a seguir limpa todas as seções declaradas anteriormente. O aplicativo não pode usar ou recuperar configurações em qualquer uma das seções que foram declaradas no arquivo de configuração da máquina. No entanto, ele pode usar configurações de ** \<outra Seção>** porque vem depois do ** \<** elemento>claro.
+O código do arquivo de configuração de aplicativo a seguir limpa todas as seções declaradas anteriormente. O aplicativo não pode usar ou recuperar as configurações em nenhuma das seções que foram declaradas no arquivo de configuração da máquina. No entanto, ele pode usar configurações de **\<anotherSection>** porque vem após o **\<clear>** elemento.
 
 ```xml
 <!-- Application configuration file -->
@@ -85,8 +85,8 @@ O código de arquivo de configuração do aplicativo a seguir limpa todas as se�
 
 ## <a name="configuration-file"></a>Arquivo de configuração
 
-Esse elemento pode ser usado no arquivo de configuração do aplicativo, no arquivo de configuração da máquina *(Machine.config)* e nos arquivos *Web.config* que não estão no nível do diretório do aplicativo.
+Esse elemento pode ser usado no arquivo de configuração do aplicativo, no arquivo de configuração do computador (*Machine. config*) e nos arquivos *Web. config* que não estão no nível do diretório do aplicativo.
 
 ## <a name="see-also"></a>Confira também
 
-- [Esquema de arquivo de configuração para o Framework .NET](index.md)
+- [Esquema do arquivo de configuração para o .NET Framework](index.md)

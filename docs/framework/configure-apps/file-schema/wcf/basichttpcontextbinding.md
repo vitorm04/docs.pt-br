@@ -3,10 +3,10 @@ title: <basicHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
 ms.openlocfilehash: 78372970c7dc0f5a29e7fc9fdfc80aa443107b6d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84201172"
 ---
 # \<basicHttpContextBinding>
@@ -94,7 +94,7 @@ Especificar uma associação que fornece contexto para o <xref:System.ServiceMod
 ## <a name="remarks"></a>Comentários  
  Esse elemento de associação fornece um nível de proteção e um mecanismo de troca como parte do contexto para um `BasicHttpBinding` .  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.BasicHttpContextBinding>

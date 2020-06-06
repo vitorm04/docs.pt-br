@@ -7,10 +7,10 @@ helpviewer_keywords:
 - runtime settings schema
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 ms.openlocfilehash: d5af9f3299b48d431b43566c11610d745167b60b
-ms.sourcegitcommit: 0a798a7e9680e2d0a5a81a3eaa203870ea782883
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74431049"
 ---
 # <a name="run-time-settings-schema"></a>Esquema de configurações do runtime
@@ -138,6 +138,6 @@ As configurações de tempo de execução são usadas pelo Common Language Runti
 
 ## <a name="see-also"></a>Confira também
 
-- [Esquema do arquivo de configuração](../index.md)
+- [Esquema de arquivos de configuração](../index.md)
 - [Para desabilitar a coleta de lixo simultânea](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [Redirecionando versões de assembly](../../redirect-assembly-versions.md)

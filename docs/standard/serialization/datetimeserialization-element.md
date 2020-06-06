@@ -8,10 +8,10 @@ helpviewer_keywords:
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
 ms.openlocfilehash: a2684ab72c1fb109d711e333e01836d3399caf86
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84289636"
 ---
 # <a name="datetimeserialization-element"></a>Elemento \<dateTimeSerialization>
@@ -33,7 +33,7 @@ Determina o modo de serialização de objetos <xref:System.DateTime>.
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributos|Description|  
+|Atributos|Descrição|  
 |----------------|-----------------|  
 |`mode`|Opcional. Especifica o modo de serialização. Define como um dos valores de <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>. O padrão é **RoundTrip**.|  
   
@@ -51,12 +51,12 @@ Determina o modo de serialização de objetos <xref:System.DateTime>.
   
  Na versão 2,0 e versões posteriores do .NET Framework que têm essa propriedade definida como de **ida e volta**, os <xref:System.DateTime> objetos são examinados para determinar se estão no fuso horário local, UTC ou não especificado. Os objetos <xref:System.DateTime> são então serializados de modo que essas informações sejam preservadas. Esse é o comportamento padrão recomendado para todos os novos aplicativos que não se comunicam com versões antigas do framework.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.DateTime>
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
-- [Esquema do arquivo de configuração](../../framework/configure-apps/file-schema/index.md)
+- [Esquema de arquivos de configuração](../../framework/configure-apps/file-schema/index.md)
 - [\<schemaImporterExtensions>Elementos](schemaimporterextensions-element.md)
 - [\<add>Elemento para\<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)
 - [\<system.xml.serialization>Elementos](system-xml-serialization-element.md)

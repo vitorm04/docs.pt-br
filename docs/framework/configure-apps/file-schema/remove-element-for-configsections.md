@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 ms.openlocfilehash: 6991e3f73ac180fc690ec48e1a0d15f40c915733
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154524"
 ---
-# <a name="remove-element-for-configsections"></a>\<remover> \<elemento para configuraçõesSeções>
+# <a name="remove-element-for-configsections"></a>Elemento \<remove> para \<configSections>
 
-Remove uma seção ou grupo de seção predefinido.
+Remove uma seção ou um grupo de seções predefinido.
 
-[**\<>de configuração**](configuration-element.md)\
-&nbsp;&nbsp;[**\<configSeções>**](configsections-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<remover>**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,13 +32,13 @@ Remove uma seção ou grupo de seção predefinido.
 
 |           | Descrição |
 | --------- | ----------- |
-| **name**  | Atributo obrigatório.<br><br>Especifica o nome da seção ou do grupo de seção a ser removido. |
+| **name**  | Atributo obrigatório.<br><br>Especifica o nome da seção ou do grupo de seções a ser removido. |
 
 ## <a name="parent-element"></a>Elemento pai
 
 |     | Descrição |
 | --- | ----------- |
-| [** \<configSeções>** Elemento](configsections-element-for-configuration.md) | Contém seção de configuração e declarações de namespace. |
+| [**\<configSections>** Elementos](configsections-element-for-configuration.md) | Contém as declarações de namespace e seção de configuração. |
 
 ## <a name="child-elements"></a>Elementos filho
 
@@ -46,13 +46,13 @@ Nenhum
 
 ## <a name="remarks"></a>Comentários
 
-Você pode ** \<** usar o elemento remove>para remover seções e grupos de seção do seu aplicativo que foram definidos em um nível mais alto na hierarquia do arquivo de configuração.
+Você pode usar o **\<remove>** elemento para remover seções e grupos de seções do seu aplicativo que foram definidos em um nível superior na hierarquia do arquivo de configuração.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir ** \<** mostra como usar o elemento remove>em um arquivo de configuração de aplicativo para remover uma seção previamente definida no arquivo de configuração da máquina.
+O exemplo a seguir mostra como usar o **\<remove>** elemento em um arquivo de configuração de aplicativo para remover uma seção definida anteriormente no arquivo de configuração da máquina.
 
-O código de arquivo de configuração da máquina a seguir declara a amostra da ** \<seçãoSection>**:
+O código do arquivo de configuração do computador a seguir declara a seção **\<sampleSection>** :
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ O código de arquivo de configuração da máquina a seguir declara a amostra da
 </configuration>
 ```
 
-O código de arquivo de configuração do aplicativo a seguir remove a ** \<seção sampleSection>.** Após a remoção, o aplicativo não pode recuperar as configurações em ** \<sampleSes>**.
+O código do arquivo de configuração de aplicativo a seguir remove a **\<sampleSection>** seção. Após a remoção, o aplicativo não pode recuperar as configurações no **\<sampleSection>** .
 
 ```xml
 <!-- Application configuration file -->
@@ -80,8 +80,8 @@ O código de arquivo de configuração do aplicativo a seguir remove a ** \<seç
 
 ## <a name="configuration-file"></a>Arquivo de configuração
 
-Esse elemento pode ser usado no arquivo de configuração do aplicativo, no arquivo de configuração da máquina *(Machine.config)* e nos arquivos *Web.config* que não estão no nível do diretório do aplicativo.
+Esse elemento pode ser usado no arquivo de configuração do aplicativo, no arquivo de configuração do computador (*Machine. config*) e nos arquivos *Web. config* que não estão no nível do diretório do aplicativo.
 
 ## <a name="see-also"></a>Confira também
 
-- [Esquema de arquivo de configuração para o Framework .NET](index.md)
+- [Esquema do arquivo de configuração para o .NET Framework](index.md)
