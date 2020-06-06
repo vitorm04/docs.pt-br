@@ -6,62 +6,62 @@ helpviewer_keywords:
 - PreferComInsteadOfManagedRemoting element
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 ms.openlocfilehash: 1376df4efd56734f2b8da9bd76033afcce8a285b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77452247"
 ---
-# <a name="prefercominsteadofmanagedremoting-element"></a><span data-ttu-id="b680c-102">\<elemento de > PreferComInsteadOfManagedRemoting</span><span class="sxs-lookup"><span data-stu-id="b680c-102">\<PreferComInsteadOfManagedRemoting> Element</span></span>
-<span data-ttu-id="b680c-103">Especifica se o tempo de execução usará a interoperabilidade COM em vez de comunicação remota para todas as chamadas entre limites de domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b680c-103">Specifies whether the runtime will use COM interop instead of remoting for all calls across application domain boundaries.</span></span>  
+# <a name="prefercominsteadofmanagedremoting-element"></a><span data-ttu-id="22344-102">Elemento \<PreferComInsteadOfManagedRemoting></span><span class="sxs-lookup"><span data-stu-id="22344-102">\<PreferComInsteadOfManagedRemoting> Element</span></span>
+<span data-ttu-id="22344-103">Especifica se o tempo de execução usará a interoperabilidade COM em vez de comunicação remota para todas as chamadas entre limites de domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="22344-103">Specifies whether the runtime will use COM interop instead of remoting for all calls across application domain boundaries.</span></span>  
   
-<span data-ttu-id="b680c-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="b680c-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="b680c-105">> &nbsp;de [ **\<de tempo de execução**](runtime-element.md) do &nbsp;</span><span class="sxs-lookup"><span data-stu-id="b680c-105">&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)</span></span>\
-<span data-ttu-id="b680c-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<PreferComInsteadOfManagedRemoting >**</span><span class="sxs-lookup"><span data-stu-id="b680c-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<PreferComInsteadOfManagedRemoting>**</span></span>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<PreferComInsteadOfManagedRemoting>**  
   
-## <a name="syntax"></a><span data-ttu-id="b680c-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b680c-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="22344-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="22344-104">Syntax</span></span>  
   
 ```xml  
 <PreferComInsteadOfManagedRemoting enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="b680c-108">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="b680c-108">Attributes and Elements</span></span>  
- <span data-ttu-id="b680c-109">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="b680c-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="22344-105">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="22344-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="22344-106">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="22344-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="b680c-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="b680c-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="22344-107">Atributos</span><span class="sxs-lookup"><span data-stu-id="22344-107">Attributes</span></span>  
   
-|<span data-ttu-id="b680c-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="b680c-111">Attribute</span></span>|<span data-ttu-id="b680c-112">DESCRIÇÃO</span><span class="sxs-lookup"><span data-stu-id="b680c-112">Description</span></span>|  
+|<span data-ttu-id="22344-108">Atributo</span><span class="sxs-lookup"><span data-stu-id="22344-108">Attribute</span></span>|<span data-ttu-id="22344-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="22344-109">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="b680c-113">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="b680c-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="b680c-114">Indica se o tempo de execução usará a interoperabilidade COM em vez da comunicação remota entre os limites do domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b680c-114">Indicates whether the runtime will use COM interop instead of remoting across application domain boundaries.</span></span>|  
+|`enabled`|<span data-ttu-id="22344-110">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="22344-110">Required attribute.</span></span><br /><br /> <span data-ttu-id="22344-111">Indica se o tempo de execução usará a interoperabilidade COM em vez da comunicação remota entre os limites do domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="22344-111">Indicates whether the runtime will use COM interop instead of remoting across application domain boundaries.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="b680c-115">Atributo habilitado</span><span class="sxs-lookup"><span data-stu-id="b680c-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="22344-112">Atributo habilitado</span><span class="sxs-lookup"><span data-stu-id="22344-112">enabled Attribute</span></span>  
   
-|<span data-ttu-id="b680c-116">Valor</span><span class="sxs-lookup"><span data-stu-id="b680c-116">Value</span></span>|<span data-ttu-id="b680c-117">DESCRIÇÃO</span><span class="sxs-lookup"><span data-stu-id="b680c-117">Description</span></span>|  
+|<span data-ttu-id="22344-113">Valor</span><span class="sxs-lookup"><span data-stu-id="22344-113">Value</span></span>|<span data-ttu-id="22344-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="22344-114">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="b680c-118">O tempo de execução usará a comunicação remota entre os limites do domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b680c-118">The runtime will use remoting across application domain boundaries.</span></span> <span data-ttu-id="b680c-119">Esse é o padrão.</span><span class="sxs-lookup"><span data-stu-id="b680c-119">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="b680c-120">O tempo de execução usará a interoperabilidade COM entre limites de domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b680c-120">The runtime will use COM interop across application domain boundaries.</span></span>|  
+|`false`|<span data-ttu-id="22344-115">O tempo de execução usará a comunicação remota entre os limites do domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="22344-115">The runtime will use remoting across application domain boundaries.</span></span> <span data-ttu-id="22344-116">Este é o padrão.</span><span class="sxs-lookup"><span data-stu-id="22344-116">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="22344-117">O tempo de execução usará a interoperabilidade COM entre limites de domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="22344-117">The runtime will use COM interop across application domain boundaries.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="b680c-121">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="b680c-121">Child Elements</span></span>  
- <span data-ttu-id="b680c-122">Nenhum.</span><span class="sxs-lookup"><span data-stu-id="b680c-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="22344-118">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="22344-118">Child Elements</span></span>  
+ <span data-ttu-id="22344-119">Nenhum.</span><span class="sxs-lookup"><span data-stu-id="22344-119">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="b680c-123">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="b680c-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="22344-120">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="22344-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="b680c-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="b680c-124">Element</span></span>|<span data-ttu-id="b680c-125">DESCRIÇÃO</span><span class="sxs-lookup"><span data-stu-id="b680c-125">Description</span></span>|  
+|<span data-ttu-id="22344-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="22344-121">Element</span></span>|<span data-ttu-id="22344-122">Descrição</span><span class="sxs-lookup"><span data-stu-id="22344-122">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="b680c-126">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b680c-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="b680c-127">Contém informações sobre associação do assembly e coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="b680c-127">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="22344-123">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="22344-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="22344-124">Contém informações sobre associação do assembly e coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="22344-124">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b680c-128">Comentários</span><span class="sxs-lookup"><span data-stu-id="b680c-128">Remarks</span></span>  
- <span data-ttu-id="b680c-129">Quando você define o atributo `enabled` como `true`, o tempo de execução se comporta da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="b680c-129">When you set the `enabled` attribute to `true`, the runtime behaves as follows:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="22344-125">Comentários</span><span class="sxs-lookup"><span data-stu-id="22344-125">Remarks</span></span>  
+ <span data-ttu-id="22344-126">Quando você define o `enabled` atributo como `true` , o tempo de execução se comporta da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="22344-126">When you set the `enabled` attribute to `true`, the runtime behaves as follows:</span></span>  
   
-- <span data-ttu-id="b680c-130">O tempo de execução não chama [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) para uma interface [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) quando uma interface [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) entra no domínio por meio de uma interface com.</span><span class="sxs-lookup"><span data-stu-id="b680c-130">The runtime does not call [IUnknown::QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) for an [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) interface when an [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) interface enters the domain through a COM interface.</span></span> <span data-ttu-id="b680c-131">Em vez disso, ele constrói um RCW ( [Runtime Callable Wrapper](../../../../standard/native-interop/runtime-callable-wrapper.md) ) em volta do objeto.</span><span class="sxs-lookup"><span data-stu-id="b680c-131">Instead, it constructs a [Runtime Callable Wrapper](../../../../standard/native-interop/runtime-callable-wrapper.md) (RCW) around the object.</span></span>  
+- <span data-ttu-id="22344-127">O tempo de execução não chama [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) para uma interface [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) quando uma interface [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) entra no domínio por meio de uma interface com.</span><span class="sxs-lookup"><span data-stu-id="22344-127">The runtime does not call [IUnknown::QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) for an [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) interface when an [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) interface enters the domain through a COM interface.</span></span> <span data-ttu-id="22344-128">Em vez disso, ele constrói um RCW ( [Runtime Callable Wrapper](../../../../standard/native-interop/runtime-callable-wrapper.md) ) em volta do objeto.</span><span class="sxs-lookup"><span data-stu-id="22344-128">Instead, it constructs a [Runtime Callable Wrapper](../../../../standard/native-interop/runtime-callable-wrapper.md) (RCW) around the object.</span></span>  
   
-- <span data-ttu-id="b680c-132">O tempo de execução retorna E_NOINTERFACE quando recebe uma chamada de `QueryInterface` para uma interface [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) para qualquer CCW ( [com callable wrapper](../../../../standard/native-interop/com-callable-wrapper.md) ) criado nesse domínio.</span><span class="sxs-lookup"><span data-stu-id="b680c-132">The runtime returns E_NOINTERFACE when it receives a `QueryInterface` call for an [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) interface for any [COM Callable Wrapper](../../../../standard/native-interop/com-callable-wrapper.md) (CCW) that has been created in this domain.</span></span>  
+- <span data-ttu-id="22344-129">O tempo de execução retorna E_NOINTERFACE quando recebe uma `QueryInterface` chamada para uma interface [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) para qualquer CCW ( [com callable wrapper](../../../../standard/native-interop/com-callable-wrapper.md) ) criado nesse domínio.</span><span class="sxs-lookup"><span data-stu-id="22344-129">The runtime returns E_NOINTERFACE when it receives a `QueryInterface` call for an [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) interface for any [COM Callable Wrapper](../../../../standard/native-interop/com-callable-wrapper.md) (CCW) that has been created in this domain.</span></span>  
   
- <span data-ttu-id="b680c-133">Esses dois comportamentos garantem que todas as chamadas sobre interfaces COM entre objetos gerenciados entre os limites de domínio do aplicativo usem a interoperabilidade com e COM em vez de comunicação remota.</span><span class="sxs-lookup"><span data-stu-id="b680c-133">These two behaviors ensure that all calls over COM interfaces between managed objects across application domain boundaries use COM and COM interop instead of remoting.</span></span>  
+ <span data-ttu-id="22344-130">Esses dois comportamentos garantem que todas as chamadas sobre interfaces COM entre objetos gerenciados entre os limites de domínio do aplicativo usem a interoperabilidade com e COM em vez de comunicação remota.</span><span class="sxs-lookup"><span data-stu-id="22344-130">These two behaviors ensure that all calls over COM interfaces between managed objects across application domain boundaries use COM and COM interop instead of remoting.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b680c-134">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b680c-134">Example</span></span>  
- <span data-ttu-id="b680c-135">O exemplo a seguir mostra como especificar que o tempo de execução deve usar a interoperabilidade COM entre limites de isolamento:</span><span class="sxs-lookup"><span data-stu-id="b680c-135">The following example shows how to specify that the runtime should use COM interop across isolation boundaries:</span></span>  
+## <a name="example"></a><span data-ttu-id="22344-131">Exemplo</span><span class="sxs-lookup"><span data-stu-id="22344-131">Example</span></span>  
+ <span data-ttu-id="22344-132">O exemplo a seguir mostra como especificar que o tempo de execução deve usar a interoperabilidade COM entre limites de isolamento:</span><span class="sxs-lookup"><span data-stu-id="22344-132">The following example shows how to specify that the runtime should use COM interop across isolation boundaries:</span></span>  
   
 ```xml  
 <configuration>  
@@ -71,7 +71,7 @@ ms.locfileid: "77452247"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b680c-136">Confira também</span><span class="sxs-lookup"><span data-stu-id="b680c-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="22344-133">Confira também</span><span class="sxs-lookup"><span data-stu-id="22344-133">See also</span></span>
 
-- [<span data-ttu-id="b680c-137">Esquema de configurações do runtime</span><span class="sxs-lookup"><span data-stu-id="b680c-137">Runtime Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="b680c-138">Esquema de arquivos de configuração</span><span class="sxs-lookup"><span data-stu-id="b680c-138">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="22344-134">Esquema de configurações do runtime</span><span class="sxs-lookup"><span data-stu-id="22344-134">Runtime Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="22344-135">Esquema do arquivo de configuração</span><span class="sxs-lookup"><span data-stu-id="22344-135">Configuration File Schema</span></span>](../index.md)
