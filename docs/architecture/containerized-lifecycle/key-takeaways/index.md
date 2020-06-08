@@ -2,12 +2,12 @@
 title: Principais aspectos a serem lembrados
 description: Revise os principais aspectos a serem lembrados do guia.
 ms.date: 04/20/2020
-ms.openlocfilehash: 2aa0b3a9ca59a55a7493b86647f334f4438eaa3e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 51662c52ce0917aa89b86151cf7cab5f13f846e6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447011"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502776"
 ---
 # <a name="key-takeaways"></a>Principais aspectos a serem lembrados
 
@@ -23,4 +23,5 @@ ms.locfileid: "84447011"
 
 - O Azure DevOps Services simplifica bastante o seu ambiente de DevOps com a implantação para ambientes do Docker nos pipelines CI/CD. Essa instrução se aplica a ambientes simples do Docker, bem como a orquestradores avançados de microsserviço e contêineres baseados no Azure.
 
-> [!div class="step-by-step"][previous](.. /run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+> [!div class="step-by-step"]
+> [anterior](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
