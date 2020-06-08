@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c8ba42d2-d9fa-43cb-bbc0-f33e1e592cb6
 topic_type:
 - apiref
-ms.openlocfilehash: af1c3d599c5280e584ffb842c96c70a7c3d4ed08
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0916b6382bb9352616d85e21f423301dc6aa9fa9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436882"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490842"
 ---
-# <a name="imetadataimportgetscopeprops-method"></a><span data-ttu-id="87475-102">Método IMetaDataImport::GetScopeProps</span><span class="sxs-lookup"><span data-stu-id="87475-102">IMetaDataImport::GetScopeProps Method</span></span>
-<span data-ttu-id="87475-103">Obtém o nome e, opcionalmente, o identificador de versão do assembly ou módulo no escopo de metadados atual.</span><span class="sxs-lookup"><span data-stu-id="87475-103">Gets the name and optionally the version identifier of the assembly or module in the current metadata scope.</span></span>  
+# <a name="imetadataimportgetscopeprops-method"></a><span data-ttu-id="10d63-102">Método IMetaDataImport::GetScopeProps</span><span class="sxs-lookup"><span data-stu-id="10d63-102">IMetaDataImport::GetScopeProps Method</span></span>
+<span data-ttu-id="10d63-103">Obtém o nome e, opcionalmente, o identificador de versão do assembly ou módulo no escopo de metadados atual.</span><span class="sxs-lookup"><span data-stu-id="10d63-103">Gets the name and optionally the version identifier of the assembly or module in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="87475-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="87475-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10d63-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="10d63-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetScopeProps (  
@@ -36,32 +36,32 @@ HRESULT GetScopeProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="87475-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="87475-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="10d63-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="10d63-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="87475-106">fora Um buffer para o assembly ou o nome do módulo.</span><span class="sxs-lookup"><span data-stu-id="87475-106">[out] A buffer for the assembly or module name.</span></span>  
+ <span data-ttu-id="10d63-106">fora Um buffer para o assembly ou o nome do módulo.</span><span class="sxs-lookup"><span data-stu-id="10d63-106">[out] A buffer for the assembly or module name.</span></span>  
   
  `cchName`  
- <span data-ttu-id="87475-107">no O tamanho em caracteres largos de `szName`.</span><span class="sxs-lookup"><span data-stu-id="87475-107">[in] The size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="10d63-107">no O tamanho em caracteres largos de `szName` .</span><span class="sxs-lookup"><span data-stu-id="10d63-107">[in] The size in wide characters of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="87475-108">fora O número de caracteres largos retornados em `szName`.</span><span class="sxs-lookup"><span data-stu-id="87475-108">[out] The number of wide characters returned in `szName`.</span></span>  
+ <span data-ttu-id="10d63-108">fora O número de caracteres largos retornados em `szName` .</span><span class="sxs-lookup"><span data-stu-id="10d63-108">[out] The number of wide characters returned in `szName`.</span></span>  
   
  `pmvid`  
- <span data-ttu-id="87475-109">[saída, opcional] Um ponteiro para um GUID que identifica exclusivamente a versão do assembly ou módulo.</span><span class="sxs-lookup"><span data-stu-id="87475-109">[out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.</span></span>  
+ <span data-ttu-id="10d63-109">[saída, opcional] Um ponteiro para um GUID que identifica exclusivamente a versão do assembly ou módulo.</span><span class="sxs-lookup"><span data-stu-id="10d63-109">[out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="87475-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="87475-110">Remarks</span></span>  
- <span data-ttu-id="87475-111">O método [IMetaDataEmit:: SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) é usado para definir essas propriedades.</span><span class="sxs-lookup"><span data-stu-id="87475-111">The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="10d63-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="10d63-110">Remarks</span></span>  
+ <span data-ttu-id="10d63-111">O método [IMetaDataEmit:: SetModuleProps](imetadataemit-setmoduleprops-method.md) é usado para definir essas propriedades.</span><span class="sxs-lookup"><span data-stu-id="10d63-111">The [IMetaDataEmit::SetModuleProps](imetadataemit-setmoduleprops-method.md) method is used to set these properties.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="87475-112">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="87475-112">Requirements</span></span>  
- <span data-ttu-id="87475-113">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="87475-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="10d63-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="10d63-112">Requirements</span></span>  
+ <span data-ttu-id="10d63-113">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="10d63-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="87475-114">**Cabeçalho:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="87475-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="10d63-114">**Cabeçalho:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="10d63-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="87475-115">**Biblioteca:** Incluído como um recurso em MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="87475-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="10d63-115">**Biblioteca:** Incluído como um recurso em MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="10d63-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="87475-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87475-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="10d63-116">**.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10d63-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="87475-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="87475-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10d63-117">Confira também</span><span class="sxs-lookup"><span data-stu-id="10d63-117">See also</span></span>
 
-- [<span data-ttu-id="87475-118">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="87475-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="87475-119">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="87475-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="10d63-118">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="10d63-118">IMetaDataImport Interface</span></span>](imetadataimport-interface.md)
+- [<span data-ttu-id="10d63-119">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="10d63-119">IMetaDataImport2 Interface</span></span>](imetadataimport2-interface.md)

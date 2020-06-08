@@ -15,41 +15,41 @@ helpviewer_keywords:
 ms.assetid: 67e8209d-a0ca-4118-a6e6-c1ee0abc2221
 topic_type:
 - apiref
-ms.openlocfilehash: b83be5e79c533e7e5a2468a12a0793d300700428
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: df172edb97a82ae3bf2d46c8be6ea05d5445a09a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866631"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500423"
 ---
-# <a name="icorprofilercallbackassemblyloadstarted-method"></a><span data-ttu-id="57f33-102">Método ICorProfilerCallback::AssemblyLoadStarted</span><span class="sxs-lookup"><span data-stu-id="57f33-102">ICorProfilerCallback::AssemblyLoadStarted Method</span></span>
-<span data-ttu-id="57f33-103">Notifica o criador de perfil de que um assembly está sendo carregado.</span><span class="sxs-lookup"><span data-stu-id="57f33-103">Notifies the profiler that an assembly is being loaded.</span></span>  
+# <a name="icorprofilercallbackassemblyloadstarted-method"></a><span data-ttu-id="473ef-102">Método ICorProfilerCallback::AssemblyLoadStarted</span><span class="sxs-lookup"><span data-stu-id="473ef-102">ICorProfilerCallback::AssemblyLoadStarted Method</span></span>
+<span data-ttu-id="473ef-103">Notifica o criador de perfil de que um assembly está sendo carregado.</span><span class="sxs-lookup"><span data-stu-id="473ef-103">Notifies the profiler that an assembly is being loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="57f33-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="57f33-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="473ef-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="473ef-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT AssemblyLoadStarted(  
     [in] AssemblyID assemblyId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="57f33-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="57f33-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="473ef-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="473ef-105">Parameters</span></span>
 
 - `assemblyId`
 
-  <span data-ttu-id="57f33-106">\[em] identifica o assembly que está sendo carregado.</span><span class="sxs-lookup"><span data-stu-id="57f33-106">\[in] Identifies the assembly that is being loaded.</span></span>
+  <span data-ttu-id="473ef-106">\[in] identifica o assembly que está sendo carregado.</span><span class="sxs-lookup"><span data-stu-id="473ef-106">\[in] Identifies the assembly that is being loaded.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="57f33-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="57f33-107">Remarks</span></span>  
- <span data-ttu-id="57f33-108">O valor de `assemblyId` não é válido para uma solicitação de informações até que o método [ICorProfilerCallback:: AssemblyLoadFinished](icorprofilercallback-assemblyloadfinished-method.md) seja chamado.</span><span class="sxs-lookup"><span data-stu-id="57f33-108">The value of `assemblyId` is not valid for an information request until the [ICorProfilerCallback::AssemblyLoadFinished](icorprofilercallback-assemblyloadfinished-method.md) method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="473ef-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="473ef-107">Remarks</span></span>  
+ <span data-ttu-id="473ef-108">O valor de `assemblyId` não é válido para uma solicitação de informações até que o método [ICorProfilerCallback:: AssemblyLoadFinished](icorprofilercallback-assemblyloadfinished-method.md) seja chamado.</span><span class="sxs-lookup"><span data-stu-id="473ef-108">The value of `assemblyId` is not valid for an information request until the [ICorProfilerCallback::AssemblyLoadFinished](icorprofilercallback-assemblyloadfinished-method.md) method is called.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="57f33-109">Requisitos do</span><span class="sxs-lookup"><span data-stu-id="57f33-109">Requirements</span></span>  
- <span data-ttu-id="57f33-110">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="57f33-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="473ef-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="473ef-109">Requirements</span></span>  
+ <span data-ttu-id="473ef-110">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="473ef-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="57f33-111">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="57f33-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="473ef-111">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="473ef-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="57f33-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="57f33-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="473ef-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="473ef-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="57f33-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="57f33-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="473ef-113">**.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="473ef-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="57f33-114">Veja também</span><span class="sxs-lookup"><span data-stu-id="57f33-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="473ef-114">Confira também</span><span class="sxs-lookup"><span data-stu-id="473ef-114">See also</span></span>
 
-- [<span data-ttu-id="57f33-115">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="57f33-115">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
+- [<span data-ttu-id="473ef-115">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="473ef-115">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)

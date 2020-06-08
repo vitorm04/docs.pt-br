@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 52794819-0a59-4bb1-a265-0f158cd5cd65
 topic_type:
 - apiref
-ms.openlocfilehash: 0851ac33a2bac4fcf727cf09e5225f6b83481b50
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 722a1e0adea41a13ca25829c53372c29187b80bd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866666"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500462"
 ---
-# <a name="icorprofilercallbackappdomainshutdownfinished-method"></a><span data-ttu-id="3f3d8-102">Método ICorProfilerCallback::AppDomainShutdownFinished</span><span class="sxs-lookup"><span data-stu-id="3f3d8-102">ICorProfilerCallback::AppDomainShutdownFinished Method</span></span>
-<span data-ttu-id="3f3d8-103">Notifica o criador de perfil de que um domínio de aplicativo foi descarregado de um processo.</span><span class="sxs-lookup"><span data-stu-id="3f3d8-103">Notifies the profiler that an application domain has been unloaded from a process.</span></span>  
+# <a name="icorprofilercallbackappdomainshutdownfinished-method"></a><span data-ttu-id="98f62-102">Método ICorProfilerCallback::AppDomainShutdownFinished</span><span class="sxs-lookup"><span data-stu-id="98f62-102">ICorProfilerCallback::AppDomainShutdownFinished Method</span></span>
+<span data-ttu-id="98f62-103">Notifica o criador de perfil de que um domínio de aplicativo foi descarregado de um processo.</span><span class="sxs-lookup"><span data-stu-id="98f62-103">Notifies the profiler that an application domain has been unloaded from a process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3f3d8-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3f3d8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="98f62-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="98f62-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT AppDomainShutdownFinished(  
@@ -33,30 +33,30 @@ HRESULT AppDomainShutdownFinished(
     [in] HRESULT     hrStatus);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3f3d8-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="3f3d8-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="98f62-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="98f62-105">Parameters</span></span>
 
 - `appDomainId`
 
-  <span data-ttu-id="3f3d8-106">\[em] identifica o domínio no qual os assemblies do aplicativo são armazenados.</span><span class="sxs-lookup"><span data-stu-id="3f3d8-106">\[in] Identifies the domain in which the application's assemblies are stored.</span></span>
+  <span data-ttu-id="98f62-106">\[in] identifica o domínio no qual os assemblies do aplicativo são armazenados.</span><span class="sxs-lookup"><span data-stu-id="98f62-106">\[in] Identifies the domain in which the application's assemblies are stored.</span></span>
 
 - `hrStatus`
 
-  <span data-ttu-id="3f3d8-107">\[em] um HRESULT que indica se o domínio do aplicativo foi descarregado com êxito.</span><span class="sxs-lookup"><span data-stu-id="3f3d8-107">\[in] An HRESULT that indicates whether the application domain was unloaded successfully.</span></span>
+  <span data-ttu-id="98f62-107">\[in] um HRESULT que indica se o domínio do aplicativo foi descarregado com êxito.</span><span class="sxs-lookup"><span data-stu-id="98f62-107">\[in] An HRESULT that indicates whether the application domain was unloaded successfully.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="3f3d8-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="3f3d8-108">Remarks</span></span>  
- <span data-ttu-id="3f3d8-109">O valor de `appDomainId` não é válido para uma solicitação de informações depois que o método [ICorProfilerCallback:: AppDomainShutdownStarted](icorprofilercallback-appdomainshutdownstarted-method.md) retorna.</span><span class="sxs-lookup"><span data-stu-id="3f3d8-109">The value of `appDomainId` is not valid for an information request after the [ICorProfilerCallback::AppDomainShutdownStarted](icorprofilercallback-appdomainshutdownstarted-method.md) method returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="98f62-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="98f62-108">Remarks</span></span>  
+ <span data-ttu-id="98f62-109">O valor de `appDomainId` não é válido para uma solicitação de informações depois que o método [ICorProfilerCallback:: AppDomainShutdownStarted](icorprofilercallback-appdomainshutdownstarted-method.md) retorna.</span><span class="sxs-lookup"><span data-stu-id="98f62-109">The value of `appDomainId` is not valid for an information request after the [ICorProfilerCallback::AppDomainShutdownStarted](icorprofilercallback-appdomainshutdownstarted-method.md) method returns.</span></span>  
   
- <span data-ttu-id="3f3d8-110">Algumas partes do descarregamento do domínio do aplicativo podem continuar após o retorno de chamada `AppDomainCreationFinished`.</span><span class="sxs-lookup"><span data-stu-id="3f3d8-110">Some parts of unloading the application domain might continue after the `AppDomainCreationFinished` callback.</span></span> <span data-ttu-id="3f3d8-111">Uma falha HRESULT no `hrStatus` indica uma falha.</span><span class="sxs-lookup"><span data-stu-id="3f3d8-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="3f3d8-112">No entanto, um HRESULT de êxito em `hrStatus` indica apenas que a primeira parte do descarregamento do domínio do aplicativo foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="3f3d8-112">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the application domain has succeeded.</span></span>  
+ <span data-ttu-id="98f62-110">Algumas partes do descarregamento do domínio do aplicativo podem continuar após o `AppDomainCreationFinished` retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="98f62-110">Some parts of unloading the application domain might continue after the `AppDomainCreationFinished` callback.</span></span> <span data-ttu-id="98f62-111">Um HRESULT de falha em `hrStatus` indica uma falha.</span><span class="sxs-lookup"><span data-stu-id="98f62-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="98f62-112">No entanto, um HRESULT de êxito em `hrStatus` indica apenas que a primeira parte do descarregamento do domínio do aplicativo foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="98f62-112">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the application domain has succeeded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3f3d8-113">Requisitos do</span><span class="sxs-lookup"><span data-stu-id="3f3d8-113">Requirements</span></span>  
- <span data-ttu-id="3f3d8-114">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3f3d8-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="98f62-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="98f62-113">Requirements</span></span>  
+ <span data-ttu-id="98f62-114">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="98f62-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3f3d8-115">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="3f3d8-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="98f62-115">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="98f62-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="3f3d8-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3f3d8-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="98f62-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="98f62-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3f3d8-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f3d8-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="98f62-117">**.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="98f62-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3f3d8-118">Veja também</span><span class="sxs-lookup"><span data-stu-id="3f3d8-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="98f62-118">Confira também</span><span class="sxs-lookup"><span data-stu-id="98f62-118">See also</span></span>
 
-- [<span data-ttu-id="3f3d8-119">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="3f3d8-119">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
+- [<span data-ttu-id="98f62-119">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="98f62-119">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
