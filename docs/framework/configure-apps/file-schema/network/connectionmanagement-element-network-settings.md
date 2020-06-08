@@ -1,5 +1,6 @@
 ---
 title: Elemento <connectionManagement> (Configurações de Rede)
+description: O <connectionManagement> elemento de configurações de rede especifica o número máximo de conexões a um host de rede no .NET Framework.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: 9f1e382bbbaad2cb95e2c33bbbdfb4c505378c9e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4ceec06fb0e21bfae67038efe0ce758d3d5b708f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154888"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504609"
 ---
 # <a name="connectionmanagement-element-network-settings"></a>Elemento \<connectionManagement> (Configurações de Rede)
 Especifica o número máximo de conexões com um host de rede.  
