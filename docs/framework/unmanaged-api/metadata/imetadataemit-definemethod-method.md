@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e2102c5-48b7-4c0e-b805-7e2b5e156e3d
 topic_type:
 - apiref
-ms.openlocfilehash: 514f227e3c0c385f61090079d2f5214dac9b3924
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: fbf6ce8c8c9628b08872058a794fb0e005764ab1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004524"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501294"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>Método IMetaDataEmit::DefineMethod
 Cria uma definição para um método ou função global com a assinatura especificada e retorna um token para essa definição de método.  
@@ -81,7 +81,7 @@ HRESULT DefineMethod (
  Você não deve definir métodos duplicados. Ou seja, você não deve chamar `DefineMethod` com um conjunto duplicado de valores nos `td` `wzName` parâmetros, e `pvSig` . (Esses três parâmetros definem exclusivamente o método.). No entanto, você pode usar um triplo duplicado que, para uma das definições de método, defina o `mdPrivateScope` bit no `dwMethodFlags` parâmetro. (O `mdPrivateScope` bit significa que o compilador não emitirá uma referência a essa definição de método.)  
   
 ## <a name="method-implementation-information"></a>Informações de implementação do método  
- As informações sobre a implementação do método geralmente não são conhecidas no momento em que o método é declarado. Portanto, você não precisa passar valores nos `ulCodeRVA` `dwImplFlags` parâmetros e ao chamar `DefineMethod` . Os valores podem ser fornecidos posteriormente por meio de [IMetaDataEmit:: SetMethodImplFlags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md) ou [IMetaDataEmit:: SetRVA](imetadataemit-setrva-method.md), conforme apropriado.  
+ As informações sobre a implementação do método geralmente não são conhecidas no momento em que o método é declarado. Portanto, você não precisa passar valores nos `ulCodeRVA` `dwImplFlags` parâmetros e ao chamar `DefineMethod` . Os valores podem ser fornecidos posteriormente por meio de [IMetaDataEmit:: SetMethodImplFlags](imetadataemit-setmethodimplflags-method.md) ou [IMetaDataEmit:: SetRVA](imetadataemit-setrva-method.md), conforme apropriado.  
   
  Em algumas situações, como a invocação de plataforma (PInvoke) ou cenários de interoperabilidade COM, o corpo do método não será fornecido e `ulCodeRVA` deverá ser definido como zero. Nessas situações, o método não deve ser marcado como abstrato, pois o tempo de execução localizará a implementação.  
   
