@@ -1,5 +1,6 @@
 ---
 title: Configuração de proxy
+description: Saiba mais sobre como configurar servidores proxy adaptáveis e estáticos. A configuração de proxy controla como um servidor proxy trata as solicitações do cliente para recursos.
 ms.date: 06/18/2018
 helpviewer_keywords:
 - Networking
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 1fbfe25b90e810ff96924a2341582ff3f5ee5e5d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d1c8b69223ab470d505d9f8007bc01b29fdc66b8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047353"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502204"
 ---
 # <a name="proxy-configuration"></a>Configuração de proxy
 Um servidor proxy manipula as solicitações de clientes para recursos. Um proxy pode retornar um recurso solicitado do seu cache ou encaminhar a solicitação para o servidor na qual o recurso reside. Proxies podem melhorar o desempenho da rede, reduzindo o número de solicitações enviadas a servidores remotos. Proxies também podem ser usados para restringir o acesso aos recursos.  
@@ -28,7 +29,7 @@ Um servidor proxy manipula as solicitações de clientes para recursos. Um proxy
   
  Alterações no ambiente de rede podem exigir que o sistema use um novo conjunto de proxies. Se uma conexão de rede ficar inoperante ou uma nova conexão de rede for inicializada, o sistema deve descobrir a origem correta do script de configuração no novo ambiente e executar o novo script.  
   
- Você pode `usesystemdefault` usar o [`<proxy>`](../configure-apps/file-schema/network/proxy-element-network-settings.md) atributo do elemento em seu arquivo de configuração. O atributo `usesystemdefault` controla se as configurações de proxy estático (endereço de proxy, lista de ignoráveis e ignorar no local) devem ser lidas das configurações de proxy do Internet Explorer para o usuário. Se esse valor for definido como `true`, as configurações de proxy estático do Internet Explorer serão usadas. Se esse valor for `false` ou não estiver definido, as configurações de proxy estático poderão ser especificadas na configuração e substituirão as configurações de proxy do Internet Explorer. Esse valor também deve ser definido como `false` ou não estar definido para que proxies adaptáveis sejam habilitados.  
+ Você pode usar o `usesystemdefault` atributo do [`<proxy>`](../configure-apps/file-schema/network/proxy-element-network-settings.md) elemento em seu arquivo de configuração. O atributo `usesystemdefault` controla se as configurações de proxy estático (endereço de proxy, lista de ignoráveis e ignorar no local) devem ser lidas das configurações de proxy do Internet Explorer para o usuário. Se esse valor for definido como `true`, as configurações de proxy estático do Internet Explorer serão usadas. Se esse valor for `false` ou não estiver definido, as configurações de proxy estático poderão ser especificadas na configuração e substituirão as configurações de proxy do Internet Explorer. Esse valor também deve ser definido como `false` ou não estar definido para que proxies adaptáveis sejam habilitados.  
   
  O exemplo a seguir mostra uma configuração de proxy adaptável típica.  
   

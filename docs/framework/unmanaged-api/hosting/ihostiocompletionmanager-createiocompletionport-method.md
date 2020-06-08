@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 907a2b43-68db-44a7-acac-89e792e7bb3c
 topic_type:
 - apiref
-ms.openlocfilehash: 2b679a9ea427d53d67474a196b5b3ae2c698ea5e
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 240712296254e02f4d268a00e1c15ef34f4519f1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804785"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501530"
 ---
 # <a name="ihostiocompletionmanagercreateiocompletionport-method"></a>Método IHostIoCompletionManager::CreateIoCompletionPort
 Solicita que o host crie uma nova porta de conclusão de e/s.  
@@ -50,7 +50,7 @@ HRESULT CreateIoCompletionPort (
 |E_OUTOFMEMORY|Não havia memória suficiente disponível para alocar o recurso solicitado.|  
   
 ## <a name="remarks"></a>Comentários  
- O CLR chama o `CreateIoCompletionPort` método para solicitar que o host crie uma nova porta de conclusão de e/s. Ele associa as operações de e/s a essa porta por meio de uma chamada para o método [IHostIoCompletionManager:: bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) . O host relata o status de volta para o CLR chamando [ICLRIoCompletionManager:: OnComplete](iclriocompletionmanager-oncomplete-method.md).  
+ O CLR chama o `CreateIoCompletionPort` método para solicitar que o host crie uma nova porta de conclusão de e/s. Ele associa as operações de e/s a essa porta por meio de uma chamada para o método [IHostIoCompletionManager:: bind](ihostiocompletionmanager-bind-method.md) . O host relata o status de volta para o CLR chamando [ICLRIoCompletionManager:: OnComplete](iclriocompletionmanager-oncomplete-method.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  

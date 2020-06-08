@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a945d439-3b34-4aa4-b575-8413dd7806ce
 topic_type:
 - apiref
-ms.openlocfilehash: 4e7e76a4a3ab291ee97ad0912e3d6224cdf96fba
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 09b4a06892cdc450eed9dead503a990b6f19804e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804483"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501502"
 ---
 # <a name="ihostmemorymanager-interface"></a>Interface IHostMemoryManager
 Fornece métodos que permitem que o Common Language Runtime (CLR) faça solicitações de memória virtual por meio do host, em vez de usar as funções de memória virtual Win32 padrão.  
@@ -29,7 +29,7 @@ Fornece métodos que permitem que o Common Language Runtime (CLR) faça solicita
 |Método|Descrição|  
 |------------|-----------------|  
 |[Método AcquiredVirtualAddressSpace](ihostmemorymanager-acquiredvirtualaddressspace-method.md)|Notifica o host de que o Common Language Runtime (CLR) adquiriu a memória especificada do sistema operacional.|  
-|[Método CreateMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)|Obtém um ponteiro de interface para uma instância de [IHostMAlloc](ihostmalloc-interface.md) que é usada para solicitar alocações de memória de um heap criado pelo host.|  
+|[Método CreateMAlloc](ihostmemorymanager-createmalloc-method.md)|Obtém um ponteiro de interface para uma instância de [IHostMAlloc](ihostmalloc-interface.md) que é usada para solicitar alocações de memória de um heap criado pelo host.|  
 |[Método GetMemoryLoad](ihostmemorymanager-getmemoryload-method.md)|Obtém a quantidade de memória física que está sendo usada no momento, conforme relatado pelo host.|  
 |[Método NeedsVirtualAddressSpace](ihostmemorymanager-needsvirtualaddressspace-method.md)|Notifica o host que o CLR vai tentar usar a memória especificada.|  
 |[Método RegisterMemoryNotificationCallback](ihostmemorymanager-registermemorynotificationcallback-method.md)|Registra um ponteiro para uma função de retorno de chamada que o host chama para notificar o CLR sobre a carga de memória atual no computador.|  

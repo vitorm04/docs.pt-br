@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7dd94c6-335b-46ff-9dfe-505056db5673
 topic_type:
 - apiref
-ms.openlocfilehash: ec8a24251ac4f0701b1adab19829078270229ced
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2facc63023a20dd6aaac64d7d036324c31658bc8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004589"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501307"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>Método IMetaDataEmit::DefineImportMember
 Cria uma referência ao membro especificado de um tipo ou módulo que é definido fora do escopo atual e define um token para essa referência.  
@@ -70,7 +70,7 @@ HRESULT DefineImportMember (
   
  Em geral, antes de usar o `DefineImportMember` método, você deve criar, no escopo atual, uma referência de tipo ou referência de módulo para a classe pai, a interface ou o módulo do membro de destino. O token de metadados para essa referência é passado no `tkParent` argumento. Você não precisará criar uma referência para o pai do membro de destino se ele for resolvido posteriormente pelo compilador ou vinculador. Para resumir:  
   
-- Se o membro de destino for um campo ou método, use o método [IMetaDataEmit::D efinetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) ou [IMetaDataEmit::D efineimporttype](imetadataemit-defineimporttype-method.md) para criar uma referência de tipo, no escopo atual, para a classe pai ou a interface pai do membro.  
+- Se o membro de destino for um campo ou método, use o método [IMetaDataEmit::D efinetyperefbyname](imetadataemit-definetyperefbyname-method.md) ou [IMetaDataEmit::D efineimporttype](imetadataemit-defineimporttype-method.md) para criar uma referência de tipo, no escopo atual, para a classe pai ou a interface pai do membro.  
   
 - Se o membro de destino for uma variável global ou uma função global (ou seja, não for um membro de uma classe ou interface), use o método [IMetaDataEmit::D efinemoduleref](imetadataemit-definemoduleref-method.md) para criar uma referência de módulo, no escopo atual, para o módulo pai do membro.  
   

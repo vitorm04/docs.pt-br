@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-ms.openlocfilehash: 90675d9be71342efa903767abbf63102b40a2c35
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 095872f8d4bd4f7d3351b8b3e3f8f8445b615cd8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804682"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501528"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>Interface IHostIoCompletionManager
 Fornece métodos que permitem que o Common Language Runtime (CLR) interaja com portas de conclusão de e/s fornecidas pelo host.  
@@ -36,7 +36,7 @@ Fornece métodos que permitem que o Common Language Runtime (CLR) interaja com p
 |[Método GetMaxThreads](ihostiocompletionmanager-getmaxthreads-method.md)|Obtém o número máximo de threads que o host pode alocar para solicitações de e/s de serviço.|  
 |[Método GetMinThreads](ihostiocompletionmanager-getminthreads-method.md)|Obtém o número mínimo de threads que o host fornece para atender solicitações de e/s.|  
 |[Método InitializeHostOverlapped](ihostiocompletionmanager-initializehostoverlapped-method.md)|Fornece ao host uma oportunidade de inicializar quaisquer dados personalizados sobre uma solicitação de e/s.|  
-|[Método SetCLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setclriocompletionmanager-method.md)|Fornece ao host um ponteiro de interface para uma instância [ICLRIoCompletionManager](iclriocompletionmanager-interface.md) implementada pelo CLR.|  
+|[Método SetCLRIoCompletionManager](ihostiocompletionmanager-setclriocompletionmanager-method.md)|Fornece ao host um ponteiro de interface para uma instância [ICLRIoCompletionManager](iclriocompletionmanager-interface.md) implementada pelo CLR.|  
 |[Método SetMaxThreads](ihostiocompletionmanager-setmaxthreads-method.md)|Define o número máximo de threads que o host aloca para atender às solicitações de e/s.|  
 |[Método SetMinThreads](ihostiocompletionmanager-setminthreads-method.md)|Define o número mínimo de threads que o host deve alocar para a conclusão de e/s.|  
   
