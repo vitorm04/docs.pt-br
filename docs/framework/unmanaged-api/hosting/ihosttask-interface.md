@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a71dbbd5-64b8-47eb-9f03-8e8c85fbe2bc
 topic_type:
 - apiref
-ms.openlocfilehash: f8f476f681764a46700dd5ec83c8f9b2739f18f6
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 1b7209a36f8e9d6f02bd4cc1882adeef8af30c3d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842472"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503910"
 ---
 # <a name="ihosttask-interface"></a>Interface IHostTask
 Fornece métodos que permitem que o Common Language Runtime (CLR) se comunique com o host para gerenciar tarefas.  
@@ -30,8 +30,8 @@ Fornece métodos que permitem que o Common Language Runtime (CLR) se comunique c
 |------------|-----------------|  
 |[Método Alert](ihosttask-alert-method.md)|Solicita que o host ative a tarefa representada pela instância atual `IHostTask` , para que a tarefa possa ser anulada.|  
 |[Método GetPriority](ihosttask-getpriority-method.md)|Obtém o nível de prioridade do thread da tarefa representada pela `IHostTask` instância atual.|  
-|[Método Join](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md)|Bloqueia a tarefa de chamada até que a tarefa representada pela `IHostTask` instância atual seja concluída, o intervalo de tempo especificado decorre ou [IHostTask:: Alert](ihosttask-alert-method.md) seja chamado.|  
-|[Método SetCLRTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md)|Associa uma instância de [interface ICLRTask](iclrtask-interface.md) à `IHostTask` instância atual.|  
+|[Método Join](ihosttask-join-method.md)|Bloqueia a tarefa de chamada até que a tarefa representada pela `IHostTask` instância atual seja concluída, o intervalo de tempo especificado decorre ou [IHostTask:: Alert](ihosttask-alert-method.md) seja chamado.|  
+|[Método SetCLRTask](ihosttask-setclrtask-method.md)|Associa uma instância de [interface ICLRTask](iclrtask-interface.md) à `IHostTask` instância atual.|  
 |[Método SetPriority](ihosttask-setpriority-method.md)|Solicita que o host ajuste o nível de prioridade de thread para a tarefa representada pela `IHostTask` instância atual.|  
 |[Método de início](ihosttask-start-method.md)|Solicita que o host mova a tarefa representada pela instância atual `IHostTask` de um estado suspenso para um estado ativo, no qual o código pode ser executado.|  
   
@@ -47,7 +47,7 @@ Fornece métodos que permitem que o Common Language Runtime (CLR) se comunique c
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRTask](iclrtask-interface.md)
 - [Interface ICLRTaskManager](iclrtaskmanager-interface.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: a4e6f8e43c2ec8c867af9f78bd83b435b78c73d5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9335399be2d4909a02fecbf2959c6f5608664732
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446757"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493663"
 ---
 # <a name="switch-c-reference"></a>switch (Referência em C#)
 
@@ -86,7 +86,7 @@ A execução da lista de instruções na seção switch com um rótulo case que 
 
 Cada rótulo case especifica um padrão a ser comparado com a expressão de correspondência (a variável `caseSwitch` nos exemplos anteriores). Se eles corresponderem, o controle será transferido para a seção switch que contém o **primeiro** rótulo case correspondente. Se nenhum padrão de rótulo de caso corresponder à expressão de correspondência, o controle será transferido para a seção com o rótulo de caso `default`, se existir algum. Se não houver nenhum case `default`, nenhuma declaração em qualquer seção switch será executada e o controle será transferido para fora da instrução `switch`.
 
-Para obter informações sobre a instrução `switch` e a correspondência de padrões, consulte a seção [Correspondência de padrões com a instrução `switch`](#pattern).
+Para obter informações sobre a instrução `switch` e a correspondência de padrões, consulte a seção [Correspondência de padrões com a instrução `switch`](#pattern-matching with-the-switch-statement).
 
 Como o C# 6 dá suporte apenas ao padrão de constante e não permite a repetição de valores de constantes, os rótulos case definem valores mutuamente exclusivos e apenas um padrão pode corresponder à expressão de correspondência. Como resultado, a ordem na qual as instruções `case` aparecem não é importante.
 
@@ -100,7 +100,7 @@ Você pode corrigir esse problema e eliminar o aviso do compilador em uma das du
 
 - Alterando a ordem das seções switch.
 
-- Usando uma [cláusula where](#when) no rótulo `case`.
+- Usando uma [cláusula where](#the-case-statement-and-the-when-clause) no rótulo `case`.
 
 ## <a name="the-default-case"></a>O case `default`
 
@@ -108,7 +108,7 @@ O case `default` especifica a seção switch a ser executada se a expressão de 
 
 O case `default` pode aparecer em qualquer ordem na instrução `switch`. Independentemente de sua ordem no código-fonte, ele é sempre avaliado por último, afinal os rótulos `case` foram avaliados.
 
-## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern"></a> Correspondência de padrões com a instrução `switch`
+## <a name="pattern-matching-with-the-switch-statement"></a> Correspondência de padrões com a instrução `switch`
 
 Cada instrução `case` define um padrão que, se corresponde à expressão de correspondência, faz com que sua seção switch recipiente seja executada. Todas as versões do C# dão suporte ao padrão de constante. Começando com o C# 7.0, há suporte para os padrões restantes.
 
@@ -185,7 +185,7 @@ Sem a correspondência de padrões, esse código pode ser escrito da seguinte ma
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="the-case-statement-and-the-when-clause"></a><a name="when" /> A instrução `case` e a cláusula `when`
+## <a name="the-case-statement-and-the-when-clause"></a>A instrução `case` e a cláusula `when`
 
 A partir do C# 7.0, como as instruções case não precisam ser mutuamente exclusivas, você pode usar a adição de uma cláusula `when` para especificar uma condição adicional que precisa ser atendida para que a instrução case seja avaliada como true. A cláusula `when` pode ser qualquer expressão que retorna um valor booliano.
 

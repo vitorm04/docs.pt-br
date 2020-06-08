@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb8c14f7-d461-43d1-8b47-adb6723b9b93
 topic_type:
 - apiref
-ms.openlocfilehash: 33b3044c7b5237e586fdb993a16b6144c271782c
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 517e0ae7fb5d5151f94f82d9146ebbf40bad2ef9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007709"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503855"
 ---
 # <a name="mdainfo-structure"></a>Estrutura MDAInfo
 Fornece detalhes sobre o `Event_MDAFired` evento, que dispara a criação de um MDA (Assistente de depuração gerenciada).  
@@ -45,7 +45,7 @@ typedef struct _MDAInfo {
   
  O tempo de execução executa as seguintes etapas quando um evento que dispara a criação de um MDA é acionado:  
   
-- Se o host não tiver registrado uma instância de [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) chamando [ICLROnEventManager:: RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) para ser notificado de um `Event_MDAFired` evento, o tempo de execução continuará com seu comportamento padrão não hospedado.  
+- Se o host não tiver registrado uma instância de [IActionOnCLREvent](iactiononclrevent-interface.md) chamando [ICLROnEventManager:: RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) para ser notificado de um `Event_MDAFired` evento, o tempo de execução continuará com seu comportamento padrão não hospedado.  
   
 - Se o host tiver registrado um manipulador para esse evento, o tempo de execução verificará se um depurador está anexado ao processo. Se for, o tempo de execução será interrompido no depurador. Quando o depurador continuar, ele chamará o host. Se nenhum depurador estiver anexado, o tempo de execução chamará `IActionOnCLREvent::OnEvent` e passará um ponteiro para uma `MDAInfo` instância como o `data` parâmetro.  
   
