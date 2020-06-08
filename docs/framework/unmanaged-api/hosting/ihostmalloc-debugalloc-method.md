@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bfbc527-bea2-43ce-b041-69186f4440dd
 topic_type:
 - apiref
-ms.openlocfilehash: 8475362ede5ea28009d5abc54c286d6f2a6fed0f
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 3f85e7c7fd54079ddce37f739a3a7bc0fa830d31
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804630"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493286"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>Método IHostMAlloc::DebugAlloc
 Solicita que o host aloque a quantidade especificada de memória do heap, além de controlar onde a memória foi alocada.  
@@ -66,7 +66,7 @@ HRESULT DebugAlloc (
 |E_OUTOFMEMORY|Não havia memória suficiente disponível para concluir a solicitação de alocação.|  
   
 ## <a name="remarks"></a>Comentários  
- O CLR Obtém um ponteiro de interface para uma instância [IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) chamando o método [IHostMemoryManager:: CreateMAlloc](ihostmemorymanager-createmalloc-method.md) . `DebugAlloc`permite que o tempo de execução Obtenha informações de arquivo de código para uso durante a depuração.  
+ O CLR Obtém um ponteiro de interface para uma instância [IHostMAlloc](ihostmalloc-interface.md) chamando o método [IHostMemoryManager:: CreateMAlloc](ihostmemorymanager-createmalloc-method.md) . `DebugAlloc`permite que o tempo de execução Obtenha informações de arquivo de código para uso durante a depuração.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6f1e389f-ed99-4d6a-a0ba-72d7d869a01d
 topic_type:
 - apiref
-ms.openlocfilehash: a15c912cdf0eef1b8f131e8425ad9b5b01289982
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6b37fcfc04e3ec880c67f102ec12d7f3e4b06a43
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006721"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493156"
 ---
 # <a name="metahost_config_flags-enumeration"></a>Enumeração METAHOST_CONFIG_FLAGS
-Descreve os possíveis sinalizadores retornados no `pdwConfigFlags` parâmetro do método [ICLRMetaHostPolicy:: GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) , indicando a presença e a configuração do `useLegacyV2RuntimeActivationPolicy` atributo no [ \<startup> elemento](../../configure-apps/file-schema/startup/startup-element.md) do arquivo de configuração.  
+Descreve os possíveis sinalizadores retornados no `pdwConfigFlags` parâmetro do método [ICLRMetaHostPolicy:: GetRequestedRuntime](iclrmetahostpolicy-getrequestedruntime-method.md) , indicando a presença e a configuração do `useLegacyV2RuntimeActivationPolicy` atributo no [ \<startup> elemento](../../configure-apps/file-schema/startup/startup-element.md) do arquivo de configuração.  
   
 ## <a name="syntax"></a>Sintaxe  
   
