@@ -1,5 +1,6 @@
 ---
 title: Limpando recursos não gerenciados
+description: Veja como limpar recursos não gerenciados não tratados pelo coletor de lixo do .NET, como arquivos, Windows, & conexões de rede ou de banco de dados.
 ms.date: 05/13/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-ms.openlocfilehash: aeb39f32c97424646b85b26ed9c4ed0e350d196b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 07a8d754f1fc2612ae53407fa1b12a1eab7e38f2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287604"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599822"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Limpando recursos não gerenciados
 
@@ -48,7 +49,7 @@ A [implementação de um método Dispose](implementing-dispose.md) descreve como
 
 ## <a name="reference"></a>Referência
 
-| Tipo/membro | Description |
+| Tipo/membro | Descrição |
 |--|--|
 | <xref:System.IDisposable?displayProperty=nameWithType> | Define o método <xref:System.IDisposable.Dispose%2A> para liberar recursos não gerenciados. |
 | <xref:System.Object.Finalize%2A?displayProperty=nameWithType> | Cuida da finalização de objetos quando os recursos não gerenciados não são liberados pelo método <xref:System.IDisposable.Dispose%2A>. |

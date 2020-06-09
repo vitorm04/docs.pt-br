@@ -1,27 +1,27 @@
 ---
-title: 'Como: fazer a autenticação com um nome de usuário e senha'
+title: Como fazer a autenticação com um nome de usuário e senha
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 33205f9e12fcee53f2f29b63b836ea0cbc792025
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e8dc9177afc590a6467855decfa8450b37c6fc77
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834731"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601277"
 ---
-# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Como: fazer a autenticação com um nome de usuário e senha
+# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Como fazer a autenticação com um nome de usuário e senha
 
-Este tópico demonstra como habilitar um serviço de Windows Communication Foundation (WCF) para autenticar um cliente com um nome de usuário e senha de domínio do Windows. Ele pressupõe que você tenha um serviço WCF em funcionamento e hospedado internamente. Para obter um exemplo de como criar um serviço WCF auto-hospedado básico, consulte [introdução tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md). Este tópico pressupõe que o serviço esteja configurado no código. Se você quiser ver um exemplo de configuração de um serviço semelhante usando um arquivo de configuração, consulte [Message Security User Name](../samples/message-security-user-name.md).
+Este tópico demonstra como habilitar um serviço de Windows Communication Foundation (WCF) para autenticar um cliente com um nome de usuário e senha de domínio do Windows. Ele pressupõe que você tenha um serviço WCF em funcionamento e hospedado internamente. Para obter um exemplo de como criar um serviço WCF auto-hospedado básico, consulte [introdução tutorial](../getting-started-tutorial.md). Este tópico pressupõe que o serviço esteja configurado no código. Se você quiser ver um exemplo de configuração de um serviço semelhante usando um arquivo de configuração, consulte [Message Security User Name](../samples/message-security-user-name.md).
 
-Para configurar um serviço para autenticar seus clientes usando o nome de usuário e as senhas do domínio do Windows, use o <xref:System.ServiceModel.WSHttpBinding> e defina sua propriedade `Security.Mode` como `Message`. Além disso, você deve especificar um certificado X509 que será usado para criptografar o nome de usuário e a senha à medida que eles forem enviados do cliente para o serviço.
+Para configurar um serviço para autenticar seus clientes usando o nome de usuário e as senhas do domínio do Windows, use o <xref:System.ServiceModel.WSHttpBinding> e defina sua `Security.Mode` propriedade como `Message` . Além disso, você deve especificar um certificado X509 que será usado para criptografar o nome de usuário e a senha à medida que eles forem enviados do cliente para o serviço.
 
 No cliente do, você deve solicitar o nome de usuário e a senha e especificar as credenciais do usuário no proxy do cliente WCF.
 
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Para configurar um serviço WCF para autenticar usando o nome de usuário e a senha do domínio do Windows
 
-1. Crie uma instância do <xref:System.ServiceModel.WSHttpBinding>, defina o modo de segurança da associação como <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>, defina o `ClientCredentialType` da associação como <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType> e adicione um ponto de extremidade de serviço usando a associação configurada ao host de serviço, conforme mostrado no código a seguir :
+1. Crie uma instância do <xref:System.ServiceModel.WSHttpBinding> , defina o modo de segurança da associação como <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType> , defina o `ClientCredentialType` da associação como <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType> e adicione um ponto de extremidade de serviço usando a associação configurada ao host de serviço, conforme mostrado no código a seguir:
 
     ```csharp
     // ...
@@ -40,7 +40,7 @@ No cliente do, você deve solicitar o nome de usuário e a senha e especificar a
     // ...
     ```
 
-    Você pode usar seu próprio certificado, basta modificar o código para se referir ao seu certificado. Para obter mais informações sobre como criar e usar certificados, consulte [trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Verifique se o certificado está no repositório de certificados pessoas confiáveis para o computador local. Você pode fazer isso executando MMC. exe e selecionando o **arquivo**, **Adicionar/remover snap-in...** item de menu. Na caixa de diálogo **Adicionar ou remover snap-ins** , selecione o **snap-in certificados** e clique em **Adicionar**. Na caixa de diálogo snap-in de certificados, selecione **conta de computador**. Por padrão, o certificado gerado do exemplo de nome de usuário de segurança de mensagem estará localizado na pasta pessoal/certificados.  Ele será listado como "localhost" na coluna emitido para na janela do MMC. Arraste e solte o certificado na pasta **pessoas confiáveis** . Isso permitirá que o WCF trate o certificado como um certificado confiável ao executar a autenticação.
+    Você pode usar seu próprio certificado, basta modificar o código para se referir ao seu certificado. Para obter mais informações sobre como criar e usar certificados, consulte [trabalhando com certificados](working-with-certificates.md). Verifique se o certificado está no repositório de certificados pessoas confiáveis para o computador local. Você pode fazer isso executando MMC. exe e selecionando o **arquivo**, **Adicionar/remover snap-in...** item de menu. Na caixa de diálogo **Adicionar ou remover snap-ins** , selecione o **snap-in certificados** e clique em **Adicionar**. Na caixa de diálogo snap-in de certificados, selecione **conta de computador**. Por padrão, o certificado gerado do exemplo de nome de usuário de segurança de mensagem estará localizado na pasta pessoal/certificados.  Ele será listado como "localhost" na coluna emitido para na janela do MMC. Arraste e solte o certificado na pasta **pessoas confiáveis** . Isso permitirá que o WCF trate o certificado como um certificado confiável ao executar a autenticação.
 
 ## <a name="to-call-the-service-passing-username-and-password"></a>Para chamar o nome de usuário e a senha do serviço
 

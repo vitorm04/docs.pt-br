@@ -1,5 +1,6 @@
 ---
 title: Comparando cadeias de caracteres em .NET
+description: Leia sobre métodos para comparar cadeias de caracteres no .NET. Saiba mais sobre os métodos Compare, CompareOrdinal, CompareTo, StartsWith, EndsWith, Equals, IndexOf, & LastIndexOf.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-ms.openlocfilehash: 7997f3098265b76f8fe2ef4fc7ab0e17f6e81d69
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5ed73d18341c3b9c6e61e12fdf322b9a67affd4a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289324"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602187"
 ---
 # <a name="comparing-strings-in-net"></a>Comparando cadeias de caracteres em .NET
 O .NET fornece vários métodos para comparar os valores de cadeias de caracteres. A tabela a seguir lista e descreve os métodos de comparação de valores.  
@@ -148,7 +149,7 @@ O .NET fornece vários métodos para comparar os valores de cadeias de caractere
   
  Os dois métodos são úteis quando usados em conjunto com o método **String.Remove**. Você pode usar tanto o método **IndexOf** quanto o **LastIndexOf** para recuperar a posição de um caractere e, em seguida, fornecer essa posição para o método **Remove** para remover um caractere ou uma palavra que começa com esse caractere.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Operações básicas de cadeia de caracteres](basic-string-operations.md)
 - [Executando operações de cadeia de caracteres que não levam em conta a cultura](../globalization-localization/performing-culture-insensitive-string-operations.md)

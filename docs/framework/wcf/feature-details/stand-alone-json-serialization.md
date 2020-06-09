@@ -2,12 +2,12 @@
 title: Serialização JSON autônoma usando DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 6bd075405a3bca0cc64dda90225526096b6fa8e3
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 5561cddb22a02fdae9f792b1d1ec71d01c4fc916
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202398"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600900"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>Serialização JSON autônoma usando DataContractJsonSerializer
 
@@ -18,9 +18,9 @@ O JSON (JavaScript Object Notation) é um formato de dados projetado especificam
 
 Esse formato também pode ser usado ao criar serviços AJAX sem integração com ASP.NET-nesse caso, XML é o padrão, mas JSON pode ser escolhido.
 
-Por fim, se você precisar de suporte a JSON, mas não estiver criando um serviço AJAX, o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> tornará possível serializar diretamente objetos .net em dados JSON e desserializar esses dados de volta em instâncias de tipos .net. Para obter uma descrição de como fazer isso, consulte [como serializar e desserializar dados JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).
+Por fim, se você precisar de suporte a JSON, mas não estiver criando um serviço AJAX, o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> tornará possível serializar diretamente objetos .net em dados JSON e desserializar esses dados de volta em instâncias de tipos .net. Para obter uma descrição de como fazer isso, consulte [como serializar e desserializar dados JSON](how-to-serialize-and-deserialize-json-data.md).
 
-Ao trabalhar com JSON, os mesmos tipos .NET têm suporte, com algumas exceções, assim como têm suporte no <xref:System.Runtime.Serialization.DataContractSerializer> . Para obter uma lista dos tipos com suporte, consulte [tipos com suporte no serializador de contrato de dados](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Isso inclui a maioria dos tipos primitivos, a maioria dos tipos de matriz e coleção, bem como tipos complexos que usam o <xref:System.Runtime.Serialization.DataContractAttribute> e o <xref:System.Runtime.Serialization.DataMemberAttribute> .
+Ao trabalhar com JSON, os mesmos tipos .NET têm suporte, com algumas exceções, assim como têm suporte no <xref:System.Runtime.Serialization.DataContractSerializer> . Para obter uma lista dos tipos com suporte, consulte [tipos com suporte no serializador de contrato de dados](types-supported-by-the-data-contract-serializer.md). Isso inclui a maioria dos tipos primitivos, a maioria dos tipos de matriz e coleção, bem como tipos complexos que usam o <xref:System.Runtime.Serialization.DataContractAttribute> e o <xref:System.Runtime.Serialization.DataMemberAttribute> .
 
 ## <a name="mapping-net-types-to-json-types"></a>Mapeando tipos .NET para tipos JSON
 
@@ -30,23 +30,23 @@ A tabela a seguir mostra a correspondência entre tipos .NET e tipos JSON/JavaSc
 |----------------|----------------------|-----------|
 |Todos os tipos numéricos, por exemplo <xref:System.Int32> , <xref:System.Decimal> ou<xref:System.Double>|Número|Valores especiais, como `Double.NaN` , `Double.PositiveInfinity` e `Double.NegativeInfinity` não têm suporte e resultam em JSON inválido.|
 |<xref:System.Enum>|Número|Consulte "enumerações e JSON", mais adiante neste tópico.|
-|<xref:System.Boolean>|Booliano|--|
-|<xref:System.String>, <xref:System.Char>|Cadeia de caracteres|--|
-|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|Cadeia de caracteres|O formato desses tipos em JSON é o mesmo que em XML (essencialmente, TimeSpan no formato de duração ISO 8601, GUID no formato "12345678-ABCD-ABCD-ABCD-1234567890AB" e URI em seu formulário de cadeia de caracteres natural, como " http://www.example.com "). Para obter informações precisas, consulte [referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|
-|<xref:System.Xml.XmlQualifiedName>|Cadeia de caracteres|O formato é "nome: namespace" (qualquer coisa antes do primeiro dois-pontos é o nome). O nome ou o namespace pode estar ausente. Se não houver nenhum namespace, os dois pontos também poderão ser omitidos.|
-|<xref:System.Array> do tipo <xref:System.Byte>|Matriz de números|Cada número representa o valor de um byte.|
+|<xref:System.Boolean>|Boolean|--|
+|<xref:System.String>, <xref:System.Char>|String|--|
+|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|O formato desses tipos em JSON é o mesmo que em XML (essencialmente, TimeSpan no formato de duração ISO 8601, GUID no formato "12345678-ABCD-ABCD-ABCD-1234567890AB" e URI em seu formulário de cadeia de caracteres natural, como " http://www.example.com "). Para obter informações precisas, consulte [referência de esquema de contrato de dados](data-contract-schema-reference.md).|
+|<xref:System.Xml.XmlQualifiedName>|String|O formato é "nome: namespace" (qualquer coisa antes do primeiro dois-pontos é o nome). O nome ou o namespace pode estar ausente. Se não houver nenhum namespace, os dois pontos também poderão ser omitidos.|
+|<xref:System.Array>do tipo<xref:System.Byte>|Matriz de números|Cada número representa o valor de um byte.|
 |<xref:System.DateTime>|DateTime ou cadeia de caracteres|Confira datas/horas e JSON mais adiante neste tópico.|
 |<xref:System.DateTimeOffset>|Tipo complexo|Confira datas/horas e JSON mais adiante neste tópico.|
-|Tipos XML e ADO.NET ( <xref:System.Xml.XmlElement> ,<br /><br /> <xref:System.Xml.Linq.XElement>. Matrizes de <xref:System.Xml.XmlNode> ,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|Cadeia de caracteres|Consulte a seção tipos de XML e JSON deste tópico.|
+|Tipos XML e ADO.NET ( <xref:System.Xml.XmlElement> ,<br /><br /> <xref:System.Xml.Linq.XElement>. Matrizes de <xref:System.Xml.XmlNode> ,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|String|Consulte a seção tipos de XML e JSON deste tópico.|
 |<xref:System.DBNull>|Tipo complexo vazio|--|
 |Coleções, dicionários e matrizes|Array|Consulte a seção coleções, dicionários e matrizes deste tópico.|
 |Tipos complexos (com o <xref:System.Runtime.Serialization.DataContractAttribute> ou <xref:System.SerializableAttribute> aplicado)|Tipo complexo|Os membros de dados tornam-se membros do tipo complexo do JavaScript.|
 |Tipos complexos que implementam a <xref:System.Runtime.Serialization.ISerializable> interface)|Tipo complexo|O mesmo que outros tipos complexos, mas <xref:System.Runtime.Serialization.ISerializable> não há suporte para alguns tipos – consulte a parte de suporte de ISerializable da seção informações avançadas deste tópico.|
-|`Null`valor para qualquer tipo|Nulo|Também há suporte para tipos de valores anuláveis e mapear para JSON da mesma forma que os tipos de valor não anuláveis.|
+|`Null`valor para qualquer tipo|Null|Também há suporte para tipos de valores anuláveis e mapear para JSON da mesma forma que os tipos de valor não anuláveis.|
 
 ### <a name="enumerations-and-json"></a>Enumerações e JSON
 
-Os valores de membro de enumeração são tratados como números em JSON, que é diferente de como eles são tratados em contratos de dados, onde eles são incluídos como nomes de membros. Para obter mais informações sobre o tratamento de contrato de dados, consulte [tipos de enumeração em contratos de dados](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).
+Os valores de membro de enumeração são tratados como números em JSON, que é diferente de como eles são tratados em contratos de dados, onde eles são incluídos como nomes de membros. Para obter mais informações sobre o tratamento de contrato de dados, consulte [tipos de enumeração em contratos de dados](enumeration-types-in-data-contracts.md).
 
 - Por exemplo, se você tiver `public enum Color {red, green, blue, yellow, pink}` , a serialização `yellow` produzirá o número 3 e não a cadeia de caracteres "amarelo".
 
@@ -87,11 +87,11 @@ Todas as coleções, dicionários e matrizes são representadas em JSON como mat
 
 - Se você quiser trabalhar com o JSON diretamente (acessando chaves e valores dinamicamente, sem definir previamente um contrato rígido), terá várias opções:
 
-  - Considere usar o exemplo de [SERIALIZAÇÃO JSON (Ajax) de tipo fraco](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md) .
+  - Considere usar o exemplo de [SERIALIZAÇÃO JSON (Ajax) de tipo fraco](../samples/weakly-typed-json-serialization-sample.md) .
 
   - Considere usar os <xref:System.Runtime.Serialization.ISerializable> construtores de interface e desserialização-esses dois mecanismos permitem acessar pares de chave/valor JSON na serialização e desserialização, respectivamente, mas não funcionam em cenários de confiança parcial.
 
-  - Considere trabalhar com o [mapeamento entre JSON e XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md) em vez de usar um serializador.
+  - Considere trabalhar com o [mapeamento entre JSON e XML](mapping-between-json-and-xml.md) em vez de usar um serializador.
 
   - *Polimorfismo* no contexto de serialização refere-se à capacidade de serializar um tipo derivado em que seu tipo base é esperado. Há regras especiais específicas de JSON ao usar coleções polimorficamente, quando, por exemplo, atribuir uma coleção a um <xref:System.Object> . Esse problema é discutido mais detalhadamente na seção informações avançadas, mais adiante neste tópico.
 
@@ -113,13 +113,13 @@ Informações de tipo podem ser perdidas ao desserializar um tipo derivado se o 
 
 Ao desserializar em um tipo de interface, o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> desserializa como se o tipo declarado fosse Object.
 
-Ao trabalhar com seus próprios tipos base e derivados, usar o <xref:System.Runtime.Serialization.KnownTypeAttribute> , <xref:System.ServiceModel.ServiceKnownTypeAttribute> ou um mecanismo equivalente normalmente é necessário. Por exemplo, se você tiver uma operação que tenha um `Animal` valor de retorno e, na verdade, retornar uma instância de `Cat` (derivada de `Animal` ), deverá aplicar o <xref:System.Runtime.Serialization.KnownTypeAttribute> , ao `Animal` tipo ou à <xref:System.ServiceModel.ServiceKnownTypeAttribute> operação e especificar o `Cat` tipo nesses atributos. Para obter mais informações, consulte [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).
+Ao trabalhar com seus próprios tipos base e derivados, usar o <xref:System.Runtime.Serialization.KnownTypeAttribute> , <xref:System.ServiceModel.ServiceKnownTypeAttribute> ou um mecanismo equivalente normalmente é necessário. Por exemplo, se você tiver uma operação que tenha um `Animal` valor de retorno e, na verdade, retornar uma instância de `Cat` (derivada de `Animal` ), deverá aplicar o <xref:System.Runtime.Serialization.KnownTypeAttribute> , ao `Animal` tipo ou à <xref:System.ServiceModel.ServiceKnownTypeAttribute> operação e especificar o `Cat` tipo nesses atributos. Para obter mais informações, consulte [tipos conhecidos de contrato de dados](data-contract-known-types.md).
 
 Para obter detalhes de como a serialização polimórfica funciona e uma discussão sobre algumas das limitações que devem ser respeitadas ao usá-la, consulte a seção informações avançadas mais adiante neste tópico.
 
 ### <a name="versioning"></a>Controle de versão
 
-Os recursos de controle de versão do contrato de dados, incluindo a <xref:System.Runtime.Serialization.IExtensibleDataObject> interface, têm suporte total em JSON. Além disso, na maioria dos casos, é possível desserializar um tipo em um formato (por exemplo, XML) e, em seguida, serializá-lo em outro formato (por exemplo, JSON) e ainda preservar os dados no <xref:System.Runtime.Serialization.IExtensibleDataObject> . Para obter mais informações, consulte [Contratos de dados compatíveis por encaminhamento](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Lembre-se de que JSON não é ordenado, portanto, qualquer informação de pedido é perdida. Além disso, o JSON não dá suporte a vários pares de chave/valor com o mesmo nome de chave. Por fim, todas as operações em <xref:System.Runtime.Serialization.IExtensibleDataObject> são inerentemente polimórficas – que é o tipo derivado atribuído a <xref:System.Object> , o tipo base para todos os tipos.
+Os recursos de controle de versão do contrato de dados, incluindo a <xref:System.Runtime.Serialization.IExtensibleDataObject> interface, têm suporte total em JSON. Além disso, na maioria dos casos, é possível desserializar um tipo em um formato (por exemplo, XML) e, em seguida, serializá-lo em outro formato (por exemplo, JSON) e ainda preservar os dados no <xref:System.Runtime.Serialization.IExtensibleDataObject> . Para obter mais informações, consulte [Contratos de dados compatíveis por encaminhamento](forward-compatible-data-contracts.md). Lembre-se de que JSON não é ordenado, portanto, qualquer informação de pedido é perdida. Além disso, o JSON não dá suporte a vários pares de chave/valor com o mesmo nome de chave. Por fim, todas as operações em <xref:System.Runtime.Serialization.IExtensibleDataObject> são inerentemente polimórficas – que é o tipo derivado atribuído a <xref:System.Object> , o tipo base para todos os tipos.
 
 ## <a name="json-in-urls"></a>JSON em URLs
 
@@ -179,7 +179,7 @@ A conversão só ocorrerá se os caracteres "/" tiverem escape (ou seja, o JSON 
 
 #### <a name="ixmlserializable-types-including-xelement-and-dataset"></a>Tipos IXmlSerializable, incluindo XElement e DataSet
 
-<xref:System.Runtime.Serialization.ISerializable>os tipos subdividam em "tipos de conteúdo", "tipos de conjunto de conjuntos" e "tipos de elemento". Para obter definições desses tipos, consulte [tipos XML e ADO.net em contratos de dados](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).
+<xref:System.Runtime.Serialization.ISerializable>os tipos subdividam em "tipos de conteúdo", "tipos de conjunto de conjuntos" e "tipos de elemento". Para obter definições desses tipos, consulte [tipos XML e ADO.net em contratos de dados](xml-and-ado-net-types-in-data-contracts.md).
 
 Os tipos "content" e "DataSet" são serializados semelhante aos <xref:System.Array> objetos de <xref:System.Xml.XmlNode> discutidos na seção anterior. Eles são encapsulados em um elemento cujo nome e namespace correspondem ao nome do contrato de dados e ao namespace do tipo em questão.
 
@@ -261,7 +261,7 @@ Se o `Shape` tipo base também contivesse um membro de dados chamado " `radius` 
 
 #### <a name="known-types-and-configuration"></a>Tipos e configurações conhecidos
 
-Todos os mecanismos de tipo conhecidos usados pelo <xref:System.Runtime.Serialization.DataContractSerializer> também têm suporte da mesma forma pelo <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> . Ambos os serializadores lêem o mesmo elemento de configuração, [\<dataContractSerializer>](../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md) no [\<system.runtime.serialization>](../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md) , para descobrir tipos conhecidos adicionados por meio de um arquivo de configuração.
+Todos os mecanismos de tipo conhecidos usados pelo <xref:System.Runtime.Serialization.DataContractSerializer> também têm suporte da mesma forma pelo <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> . Ambos os serializadores lêem o mesmo elemento de configuração, [\<dataContractSerializer>](../../configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md) no [\<system.runtime.serialization>](../../configure-apps/file-schema/wcf/system-runtime-serialization.md) , para descobrir tipos conhecidos adicionados por meio de um arquivo de configuração.
 
 #### <a name="collections-assigned-to-object"></a>Coleções atribuídas ao objeto
 
@@ -291,8 +291,8 @@ Ao serializar tipos de dicionário, o objeto JSON que contém os membros de "cha
 
 ### <a name="valid-json-key-names"></a>Nomes de chave JSON válidos
 
-O serializador XML-codifica nomes de chave que não são nomes XML válidos. Por exemplo, um membro de dados com o nome "123" teria um nome codificado, como " \_ x0031 \_ \_ x0032 \_ \_ x0033 \_ " porque "123" é um nome de elemento XML inválido (começa com um dígito). Uma situação semelhante pode surgir com alguns conjuntos de caracteres internacionais não válidos em nomes XML. Para obter uma explicação desse efeito de XML no processamento JSON, consulte [mapeamento entre JSON e XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).
+O serializador XML-codifica nomes de chave que não são nomes XML válidos. Por exemplo, um membro de dados com o nome "123" teria um nome codificado, como " \_ x0031 \_ \_ x0032 \_ \_ x0033 \_ " porque "123" é um nome de elemento XML inválido (começa com um dígito). Uma situação semelhante pode surgir com alguns conjuntos de caracteres internacionais não válidos em nomes XML. Para obter uma explicação desse efeito de XML no processamento JSON, consulte [mapeamento entre JSON e XML](mapping-between-json-and-xml.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Suporte para JSON e outros formatos de transferência de dados](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+- [Suporte para JSON e outros formatos de transferência de dados](support-for-json-and-other-data-transfer-formats.md)

@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 1b6ec6a7275408d4a8061c0de92cdf6e82dd533a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 85349e1e1c4eca4dd3ef7980f48350a4145fca24
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288037"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599861"
 ---
 # <a name="character-encoding-in-net"></a>Codificação de caracteres no .NET
 
@@ -250,7 +250,7 @@ Considere as `string` instâncias "a", "á". "á" e " `👩🏽‍🚒` ". Se se
 
 * O string "á" tem a mesma aparência de "á", mas é representado por dois valores escalares e contém duas `char` instâncias.
 
-  * `U+0065 LATIN SMALL LETTER A`
+  * `U+0061 LATIN SMALL LETTER A`
   * `U+0301 COMBINING ACUTE ACCENT`
 
 * Por fim, o string " `👩🏽‍🚒` " é representado por quatro valores escalares e contém sete `char` instâncias.
@@ -384,7 +384,7 @@ string asString = encoding.GetString(utf8Bytes); // will throw if 'utf8Bytes' is
 
 Para obter informações sobre como usar as `Encoding` classes internas, consulte [como usar classes de codificação de caracteres no .net](character-encoding.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.String>
 - <xref:System.Char>

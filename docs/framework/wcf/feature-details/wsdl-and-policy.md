@@ -2,12 +2,12 @@
 title: WSDL e política
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: b032f91999695d848f20fac5009047dcc2e20451
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 201920a8ebf639c74acfb20b2e990c8bbc0c5b55
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144676"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600095"
 ---
 # <a name="wsdl-and-policy"></a>WSDL e política
 Este tópico aborda os detalhes de implementação Windows Communication Foundation (WCF) WSDL 1,1, WS-Policy e WS-PolicyAttachment, bem como declarações adicionais de WS-Policy e extensões WSDL 1,1 introduzidas pelo WCF.  
@@ -74,6 +74,6 @@ Este tópico aborda os detalhes de implementação Windows Communication Foundat
   
 ## <a name="see-also"></a>Consulte também
 
-- [Publicação personalizada de WSDL](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [Como exportar o WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Como importar WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Publicação personalizada de WSDL](../samples/custom-wsdl-publication.md)
+- [Como exportar o WSDL personalizado](../extending/how-to-export-custom-wsdl.md)
+- [Como importar WSDL personalizado](../extending/how-to-import-custom-wsdl.md)
