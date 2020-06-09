@@ -2,21 +2,21 @@
 title: System.ServiceModel.CommunicationObjectAborted
 ms.date: 03/30/2017
 ms.assetid: 8a76eaf3-41a2-4ec2-adeb-c6bbce6ed8bf
-ms.openlocfilehash: ed0a95a691364eb1feaaba26d782da372c6336b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48cb973486ca7b4269026b7a8ca62a20bfa07ffd
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968240"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601745"
 ---
-# <a name="systemservicemodelcommunicationobjectaborted"></a><span data-ttu-id="4c899-102">System.ServiceModel.CommunicationObjectAborted</span><span class="sxs-lookup"><span data-stu-id="4c899-102">System.ServiceModel.CommunicationObjectAborted</span></span>
-<span data-ttu-id="4c899-103">System.ServiceModel.CommunicationObjectAborted</span><span class="sxs-lookup"><span data-stu-id="4c899-103">System.ServiceModel.CommunicationObjectAborted</span></span>  
+# <a name="systemservicemodelcommunicationobjectaborted"></a><span data-ttu-id="c36ea-102">System.ServiceModel.CommunicationObjectAborted</span><span class="sxs-lookup"><span data-stu-id="c36ea-102">System.ServiceModel.CommunicationObjectAborted</span></span>
+<span data-ttu-id="c36ea-103">System.ServiceModel.CommunicationObjectAborted</span><span class="sxs-lookup"><span data-stu-id="c36ea-103">System.ServiceModel.CommunicationObjectAborted</span></span>  
   
-## <a name="description"></a><span data-ttu-id="4c899-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="4c899-104">Description</span></span>  
- <span data-ttu-id="4c899-105">Um objeto de comunicação foi anulado.</span><span class="sxs-lookup"><span data-stu-id="4c899-105">A communication object was aborted.</span></span>  
+## <a name="description"></a><span data-ttu-id="c36ea-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="c36ea-104">Description</span></span>  
+ <span data-ttu-id="c36ea-105">Um objeto de comunicação foi anulado.</span><span class="sxs-lookup"><span data-stu-id="c36ea-105">A communication object was aborted.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4c899-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4c899-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c36ea-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c36ea-106">See also</span></span>
 
-- [<span data-ttu-id="4c899-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="4c899-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="4c899-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="4c899-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="4c899-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="4c899-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="c36ea-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="c36ea-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="c36ea-108">Utilizando o rastreamento para solucionar problemas em seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="c36ea-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="c36ea-109">Administração e diagnóstico</span><span class="sxs-lookup"><span data-stu-id="c36ea-109">Administration and Diagnostics</span></span>](../index.md)
