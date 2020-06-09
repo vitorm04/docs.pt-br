@@ -50,7 +50,7 @@ HRESULT GetString (
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Interface IMetaDataTables](imetadatatables-interface.md)
 - [Interface IMetaDataTables2](imetadatatables2-interface.md)
