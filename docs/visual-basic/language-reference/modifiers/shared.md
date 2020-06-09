@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: 000cc13bc6e80914e9a21b6ee60e91127809ee08
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: d8c9879ea2f62bfbeaa378d0aaee806623ea1c55
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307079"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579106"
 ---
 # <a name="shared-visual-basic"></a>Compartilhado (Visual Basic)
 
@@ -26,13 +26,13 @@ Especifica que um ou mais elementos de programação declarados estão associado
 
 O compartilhamento de um membro de uma classe ou estrutura torna-o disponível para cada instância, em vez de *não compartilhado*, em que cada instância mantém sua própria cópia. Isso é útil, por exemplo, se o valor de uma variável se aplicar a todo o aplicativo. Se você declarar essa variável como sendo `Shared` , todas as instâncias acessarão o mesmo local de armazenamento e, se uma instância alterar o valor da variável, todas as instâncias acessarão o valor atualizado.
 
-O compartilhamento não altera o nível de acesso de um membro. Por exemplo, um membro de classe pode ser compartilhado e privado (acessível somente de dentro da classe), ou não compartilhado e público. Para obter mais informações, consulte [níveis de acesso em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+O compartilhamento não altera o nível de acesso de um membro. Por exemplo, um membro de classe pode ser compartilhado e privado (acessível somente de dentro da classe), ou não compartilhado e público. Para obter mais informações, consulte [níveis de acesso em Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
 ## <a name="rules"></a>Regras
 
 - **Contexto de declaração.** Você pode usar `Shared` somente no nível do módulo. Isso significa que o contexto de declaração de um `Shared` elemento deve ser uma classe ou estrutura e não pode ser um arquivo de origem, namespace ou procedimento.
 
-- **Modificadores combinados.** Você não pode especificar `Shared` junto com [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable, NotOverridable](../../../visual-basic/language-reference/modifiers/overridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)ou [static](../../../visual-basic/language-reference/modifiers/static.md) na mesma declaração. [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+- **Modificadores combinados.** Você não pode especificar `Shared` junto com [Overrides](overrides.md), [Overridable, NotOverridable](overridable.md), [MustOverride](mustoverride.md)ou [static](static.md) na mesma declaração. [NotOverridable](notoverridable.md)
 
 - **Acess.** Você acessa um elemento compartilhado qualificando-o com seu nome de classe ou estrutura, não com o nome da variável de uma instância específica de sua classe ou estrutura. Você não precisa nem criar uma instância de uma classe ou estrutura para acessar seus membros compartilhados.
 
@@ -42,7 +42,7 @@ O compartilhamento não altera o nível de acesso de um membro. Por exemplo, um 
      If Double.IsNaN(result) Then Console.WriteLine("Result is mathematically undefined.")
      ```
 
-- **Compartilhamento implícito.** Você não pode usar o `Shared` modificador em uma [instrução const](../../../visual-basic/language-reference/statements/const-statement.md), mas as constantes são compartilhadas implicitamente. Da mesma forma, você não pode declarar um membro de um módulo ou uma interface para ser `Shared` , mas eles são compartilhados implicitamente.
+- **Compartilhamento implícito.** Você não pode usar o `Shared` modificador em uma [instrução const](../statements/const-statement.md), mas as constantes são compartilhadas implicitamente. Da mesma forma, você não pode declarar um membro de um módulo ou uma interface para ser `Shared` , mas eles são compartilhados implicitamente.
 
 ## <a name="behavior"></a>Comportamento
 
@@ -93,10 +93,10 @@ O `Shared` modificador pode ser usado nesses contextos:
 - [Instrução Property](../statements/property-statement.md)
 - [Instrução Sub](../statements/sub-statement.md)
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Sombras](shadows.md)
-- [Auto-estática](static.md)
+- [Estático](static.md)
 - [Tempo de vida no Visual Basic](../../programming-guide/language-features/declared-elements/lifetime.md)
 - [Procedimentos](../../programming-guide/language-features/procedures/index.md)
 - [Estruturas](../../programming-guide/language-features/data-types/structures.md)
