@@ -1,5 +1,6 @@
 ---
 title: Armadilhas em potencial em dados e paralelismo da tarefa
+description: Saiba mais sobre as possíveis armadilhas em paralelismo de dados e tarefas, pois o paralelismo adiciona complexidade que não é encontrada em código sequencial.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel programming, pitfalls
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
-ms.openlocfilehash: 00b4c89440223d229a06b0192032c9abcf931d58
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 05d934b80e60a8630db5b70e16a07c014598487a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291689"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599757"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Armadilhas em potencial em dados e paralelismo da tarefa
 Em muitos casos, o <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> podem melhorar consideravelmente o desempenho em comparação com consultas sequenciais comuns. No entanto, o trabalho de paralelizar o loop apresenta complexidade que pode levar a problemas que, em código sequencial, não são tão comuns ou não são encontrados. Este tópico lista algumas práticas a serem evitadas ao escrever loops paralelos.  
@@ -78,7 +79,7 @@ Em muitos casos, o <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=
  [!code-csharp[TPL_Pitfalls#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#03)]
  [!code-vb[TPL_Pitfalls#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#03)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Programação paralela](index.md)
 - [Armadilhas em potencial com PLINQ](potential-pitfalls-with-plinq.md)
