@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 1882feee4e8071f1d32fb59ab02519c6e6fe2684
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: d0253202b0fad9a452507ed4296bc4a09b78e569
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84143557"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597300"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hospedagem no serviço de ativação do processo do Windows
 O Serviço de Ativação de Processos do Windows (WAS) gerencia a ativação e a vida útil dos processos de trabalho que contêm aplicativos que hospedam os serviços do Windows Communication Foundation (WCF). O modelo de processo WAS generaliza o modelo de processo IIS 6.0 para o servidor HTTP ao remover a dependência do HTTP. Isso permite que os serviços WCF usem protocolos HTTP e não HTTP, como net. TCP, em um ambiente de hospedagem que ofereça suporte à ativação baseada em mensagem e ofereça a capacidade de hospedar um grande número de aplicativos em um determinado computador.  
   
- Para obter mais informações sobre como criar um serviço WCF que é executado no ambiente de hospedagem WAS, consulte [como hospedar um serviço WCF no was](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Para obter mais informações sobre como criar um serviço WCF que é executado no ambiente de hospedagem WAS, consulte [como hospedar um serviço WCF no was](how-to-host-a-wcf-service-in-was.md).  
   
  O modelo de processo WAS fornece vários recursos que permitem que os aplicativos sejam hospedados de forma mais robusta, mais gerenciável e que usa recursos com eficiência:  
   
@@ -50,8 +50,8 @@ O [Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfab
   
 ## <a name="see-also"></a>Consulte também
 
-- [Arquitetura de ativação do WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
-- [Configurar o WAS para uso com o WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Como instalar e configurar os componentes de ativação do WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [Como hospedar um serviço do WCF no WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Arquitetura de ativação do WAS](was-activation-architecture.md)
+- [Configurar o WAS para uso com o WCF](configuring-the-wpa--service-for-use-with-wcf.md)
+- [Como instalar e configurar os componentes de ativação do WCF](how-to-install-and-configure-wcf-activation-components.md)
+- [Como hospedar um serviço do WCF no WAS](how-to-host-a-wcf-service-in-was.md)
 - [Recursos de hospedagem do Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

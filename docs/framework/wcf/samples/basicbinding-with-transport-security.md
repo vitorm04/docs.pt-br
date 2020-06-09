@@ -2,16 +2,16 @@
 title: BasicBinding com segurança de transporte
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-ms.openlocfilehash: adf245d29ca57d919957276dfc54d82a0f45373b
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 822a7dcb20c6559a70ba77719b6e7a62633bb31c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144871"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575661"
 ---
 # <a name="basicbinding-with-transport-security"></a>BasicBinding com segurança de transporte
 
-Este exemplo demonstra o uso de segurança de transporte SSL com a associação básica. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.
+Este exemplo demonstra o uso de segurança de transporte SSL com a associação básica. Este exemplo é baseado no [introdução](getting-started-sample.md) que implementa um serviço de calculadora.
 
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.
@@ -29,7 +29,7 @@ Por padrão, a associação básica dá suporte à comunicação HTTP. O exemplo
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
 
-O código do programa no exemplo é idêntico ao do serviço de [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) . A definição de associação e definição de ponto de extremidade nas configurações do arquivo de configuração são modificadas para habilitar a comunicação segura, conforme mostrado na seguinte configuração de exemplo.
+O código do programa no exemplo é idêntico ao do serviço de [introdução](getting-started-sample.md) . A definição de associação e definição de ponto de extremidade nas configurações do arquivo de configuração são modificadas para habilitar a comunicação segura, conforme mostrado na seguinte configuração de exemplo.
 
 ```xml
 <system.serviceModel>
@@ -83,10 +83,10 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+2. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-3. Verifique se você executou as [instruções de instalação do certificado do servidor serviços de informações da Internet (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).
+3. Verifique se você executou as [instruções de instalação do certificado do servidor serviços de informações da Internet (IIS)](iis-server-certificate-installation-instructions.md).
 
-4. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+4. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).
 
-5. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+5. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).
