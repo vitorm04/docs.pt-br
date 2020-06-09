@@ -2,21 +2,21 @@
 title: System.ServiceModel.Diagnostics.DiagnosticsFailedMessageTrace
 ms.date: 03/30/2017
 ms.assetid: 8c1de25c-7e1e-4986-9c32-fc47a604f373
-ms.openlocfilehash: dbe9c52b5ab6729df296c6d30e5310786f88cc95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4599a144ad5b87c5b4ffc87b31271da34d7c98e7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795610"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601784"
 ---
-# <a name="systemservicemodeldiagnosticsdiagnosticsfailedmessagetrace"></a><span data-ttu-id="98c8f-102">System.ServiceModel.Diagnostics.DiagnosticsFailedMessageTrace</span><span class="sxs-lookup"><span data-stu-id="98c8f-102">System.ServiceModel.Diagnostics.DiagnosticsFailedMessageTrace</span></span>
-<span data-ttu-id="98c8f-103">System.ServiceModel.Diagnostics.DiagnosticsFailedMessageTrace</span><span class="sxs-lookup"><span data-stu-id="98c8f-103">System.ServiceModel.Diagnostics.DiagnosticsFailedMessageTrace</span></span>  
+# <a name="systemservicemodeldiagnosticsdiagnosticsfailedmessagetrace"></a><span data-ttu-id="02050-102">System.ServiceModel.Diagnostics.DiagnosticsFailedMessageTrace</span><span class="sxs-lookup"><span data-stu-id="02050-102">System.ServiceModel.Diagnostics.DiagnosticsFailedMessageTrace</span></span>
+<span data-ttu-id="02050-103">System.ServiceModel.Diagnostics.DiagnosticsFailedMessageTrace</span><span class="sxs-lookup"><span data-stu-id="02050-103">System.ServiceModel.Diagnostics.DiagnosticsFailedMessageTrace</span></span>  
   
-## <a name="description"></a><span data-ttu-id="98c8f-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="98c8f-104">Description</span></span>  
- <span data-ttu-id="98c8f-105">Falha ao rastrear uma mensagem.</span><span class="sxs-lookup"><span data-stu-id="98c8f-105">Failed to trace a message.</span></span>  
+## <a name="description"></a><span data-ttu-id="02050-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="02050-104">Description</span></span>  
+ <span data-ttu-id="02050-105">Falha ao rastrear uma mensagem.</span><span class="sxs-lookup"><span data-stu-id="02050-105">Failed to trace a message.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="98c8f-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="98c8f-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="02050-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="02050-106">See also</span></span>
 
-- [<span data-ttu-id="98c8f-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="98c8f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="98c8f-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="98c8f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="98c8f-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="98c8f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="02050-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="02050-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="02050-108">Utilizando o rastreamento para solucionar problemas em seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="02050-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="02050-109">Administração e diagnóstico</span><span class="sxs-lookup"><span data-stu-id="02050-109">Administration and Diagnostics</span></span>](../index.md)

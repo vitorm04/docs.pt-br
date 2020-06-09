@@ -2,27 +2,27 @@
 title: Conceitos de segurança
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
-ms.openlocfilehash: 8da822c6a4d55ee916bc1e0243bc8b2f9a5742fb
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3818a1a1449a4a8b6df548541c1aebce968a0b78
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76730824"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595161"
 ---
-# <a name="security-concepts"></a><span data-ttu-id="17852-102">Conceitos de segurança</span><span class="sxs-lookup"><span data-stu-id="17852-102">Security Concepts</span></span>
-<span data-ttu-id="17852-103">Esta seção explica brevemente os conceitos associados à segurança do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="17852-103">This section briefly explains the concepts associated with Windows Communication Foundation (WCF) security.</span></span>  
+# <a name="security-concepts"></a><span data-ttu-id="305ee-102">Conceitos de segurança</span><span class="sxs-lookup"><span data-stu-id="305ee-102">Security Concepts</span></span>
+<span data-ttu-id="305ee-103">Esta seção explica brevemente os conceitos associados à segurança do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="305ee-103">This section briefly explains the concepts associated with Windows Communication Foundation (WCF) security.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="17852-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="17852-104">In This Section</span></span>  
- [<span data-ttu-id="17852-105">Conceitos de segurança utilizados no WCF</span><span class="sxs-lookup"><span data-stu-id="17852-105">Security Concepts Used in WCF</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
- <span data-ttu-id="17852-106">Uma visão geral de alto nível dos conceitos usados em implementações de segurança.</span><span class="sxs-lookup"><span data-stu-id="17852-106">A high-level overview of concepts used in security implementations.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="305ee-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="305ee-104">In This Section</span></span>  
+ [<span data-ttu-id="305ee-105">Conceitos de segurança utilizados no WCF</span><span class="sxs-lookup"><span data-stu-id="305ee-105">Security Concepts Used in WCF</span></span>](security-concepts-used-in-wcf.md)  
+ <span data-ttu-id="305ee-106">Uma visão geral de alto nível dos conceitos usados em implementações de segurança.</span><span class="sxs-lookup"><span data-stu-id="305ee-106">A high-level overview of concepts used in security implementations.</span></span>  
   
- [<span data-ttu-id="17852-107">Segurança de aplicativos distribuídos</span><span class="sxs-lookup"><span data-stu-id="17852-107">Distributed Application Security</span></span>](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- <span data-ttu-id="17852-108">Uma visão geral de como o WCF fornece segurança na topografia do aplicativo distribuído.</span><span class="sxs-lookup"><span data-stu-id="17852-108">An overview of how WCF provides security in distributed application topography.</span></span>  
+ [<span data-ttu-id="305ee-107">Segurança de aplicativos distribuídos</span><span class="sxs-lookup"><span data-stu-id="305ee-107">Distributed Application Security</span></span>](distributed-application-security.md)  
+ <span data-ttu-id="305ee-108">Uma visão geral de como o WCF fornece segurança na topografia do aplicativo distribuído.</span><span class="sxs-lookup"><span data-stu-id="305ee-108">An overview of how WCF provides security in distributed application topography.</span></span>  
   
- [<span data-ttu-id="17852-109">Terminologia de segurança</span><span class="sxs-lookup"><span data-stu-id="17852-109">Security Terminology</span></span>](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
- <span data-ttu-id="17852-110">Um glossário de termos usados ao discutir a segurança do WCF.</span><span class="sxs-lookup"><span data-stu-id="17852-110">A glossary of terms used when discussing WCF security.</span></span>  
+ [<span data-ttu-id="305ee-109">Terminologia de segurança</span><span class="sxs-lookup"><span data-stu-id="305ee-109">Security Terminology</span></span>](wcf-security-terminology.md)  
+ <span data-ttu-id="305ee-110">Um glossário de termos usados ao discutir a segurança do WCF.</span><span class="sxs-lookup"><span data-stu-id="305ee-110">A glossary of terms used when discussing WCF security.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="17852-111">Referência</span><span class="sxs-lookup"><span data-stu-id="17852-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="305ee-111">Referência</span><span class="sxs-lookup"><span data-stu-id="305ee-111">Reference</span></span>  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -33,11 +33,11 @@ ms.locfileid: "76730824"
   
  <xref:System.Security>  
   
-## <a name="related-sections"></a><span data-ttu-id="17852-112">Seções Relacionadas</span><span class="sxs-lookup"><span data-stu-id="17852-112">Related Sections</span></span>  
- [<span data-ttu-id="17852-113">Estendendo a segurança</span><span class="sxs-lookup"><span data-stu-id="17852-113">Extending Security</span></span>](../../../../docs/framework/wcf/extending/extending-security.md)  
+## <a name="related-sections"></a><span data-ttu-id="305ee-112">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="305ee-112">Related Sections</span></span>  
+ [<span data-ttu-id="305ee-113">Estendendo a segurança</span><span class="sxs-lookup"><span data-stu-id="305ee-113">Extending Security</span></span>](../extending/extending-security.md)  
   
-## <a name="see-also"></a><span data-ttu-id="17852-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="17852-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="305ee-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="305ee-114">See also</span></span>
 
-- [<span data-ttu-id="17852-115">Segurança</span><span class="sxs-lookup"><span data-stu-id="17852-115">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)
-- [<span data-ttu-id="17852-116">Visão geral de segurança</span><span class="sxs-lookup"><span data-stu-id="17852-116">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- <span data-ttu-id="17852-117">[Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span><span class="sxs-lookup"><span data-stu-id="17852-117">[Security Model for Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span></span>
+- [<span data-ttu-id="305ee-115">Segurança</span><span class="sxs-lookup"><span data-stu-id="305ee-115">Security</span></span>](security.md)
+- [<span data-ttu-id="305ee-116">Visão geral de segurança</span><span class="sxs-lookup"><span data-stu-id="305ee-116">Security Overview</span></span>](security-overview.md)
+- <span data-ttu-id="305ee-117">[Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span><span class="sxs-lookup"><span data-stu-id="305ee-117">[Security Model for Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span></span>

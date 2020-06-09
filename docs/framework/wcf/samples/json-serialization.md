@@ -1,24 +1,24 @@
 ---
-title: Amostra de DataContractJsonSerializer
+title: Exemplo de DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 3c2c4747-7510-4bdf-b4fe-64f98428ef4a
-ms.openlocfilehash: d3456582d73640f1802c17d7f29f4931a6f920b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4aa0ee679ae424251000b14abfbacf0590a6ccd3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144624"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592015"
 ---
-# <a name="datacontractjsonserializer-sample"></a><span data-ttu-id="625e7-102">Amostra de DataContractJsonSerializer</span><span class="sxs-lookup"><span data-stu-id="625e7-102">DataContractJsonSerializer sample</span></span>
+# <a name="datacontractjsonserializer-sample"></a><span data-ttu-id="1dd83-102">Exemplo de DataContractJsonSerializer</span><span class="sxs-lookup"><span data-stu-id="1dd83-102">DataContractJsonSerializer sample</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="625e7-103">Esta amostra <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>é para.</span><span class="sxs-lookup"><span data-stu-id="625e7-103">This sample is for <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span> <span data-ttu-id="625e7-104">Para a maioria dos cenários que envolvem serialização e desserialização do JSON, recomendamos as APIs no [namespace System.Text.Json](../../../standard/serialization/system-text-json-overview.md).</span><span class="sxs-lookup"><span data-stu-id="625e7-104">For most scenarios that involve serializing and deserializing JSON, we recommend the APIs in the [System.Text.Json namespace](../../../standard/serialization/system-text-json-overview.md).</span></span>
+> <span data-ttu-id="1dd83-103">Este exemplo é para <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> .</span><span class="sxs-lookup"><span data-stu-id="1dd83-103">This sample is for <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span> <span data-ttu-id="1dd83-104">Para a maioria dos cenários que envolvem a serialização e desserialização do JSON, recomendamos as APIs no [namespace System. Text. JSON](../../../standard/serialization/system-text-json-overview.md).</span><span class="sxs-lookup"><span data-stu-id="1dd83-104">For most scenarios that involve serializing and deserializing JSON, we recommend the APIs in the [System.Text.Json namespace](../../../standard/serialization/system-text-json-overview.md).</span></span>
 
-<span data-ttu-id="625e7-105">O <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> dá suporte aos mesmos tipos que o <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="625e7-105"><xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> supports the same types as <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span> <span data-ttu-id="625e7-106">O formato de dados JSON é especialmente útil ao escrever aplicativos Web de estilo AJAX (Asynchronous JavaScript and XML).</span><span class="sxs-lookup"><span data-stu-id="625e7-106">The JSON data format is especially useful when writing Asynchronous JavaScript and XML (AJAX)-style Web applications.</span></span> <span data-ttu-id="625e7-107">O suporte a AJAX no Windows Communication Foundation (WCF) é otimizado para uso com ASP.NET AJAX através do controle ScriptManager.</span><span class="sxs-lookup"><span data-stu-id="625e7-107">AJAX support in Windows Communication Foundation (WCF) is optimized for use with ASP.NET AJAX through the ScriptManager control.</span></span> <span data-ttu-id="625e7-108">Para exemplos de como usar o Windows Communication Foundation (WCF) com ASP.NET AJAX, consulte as [amostras AJAX](ajax.md).</span><span class="sxs-lookup"><span data-stu-id="625e7-108">For examples of how to use Windows Communication Foundation (WCF) with ASP.NET AJAX, see the [AJAX Samples](ajax.md).</span></span>  
+<span data-ttu-id="1dd83-105">O <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> dá suporte aos mesmos tipos que o <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="1dd83-105"><xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> supports the same types as <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span> <span data-ttu-id="1dd83-106">O formato de dados JSON é especialmente útil ao escrever aplicativos Web de estilo AJAX (Asynchronous JavaScript and XML).</span><span class="sxs-lookup"><span data-stu-id="1dd83-106">The JSON data format is especially useful when writing Asynchronous JavaScript and XML (AJAX)-style Web applications.</span></span> <span data-ttu-id="1dd83-107">O suporte ao AJAX no Windows Communication Foundation (WCF) é otimizado para uso com o ASP.NET AJAX por meio do controle ScriptManager.</span><span class="sxs-lookup"><span data-stu-id="1dd83-107">AJAX support in Windows Communication Foundation (WCF) is optimized for use with ASP.NET AJAX through the ScriptManager control.</span></span> <span data-ttu-id="1dd83-108">Para obter exemplos de como usar o Windows Communication Foundation (WCF) com o ASP.NET AJAX, consulte os [exemplos do AJAX](ajax.md).</span><span class="sxs-lookup"><span data-stu-id="1dd83-108">For examples of how to use Windows Communication Foundation (WCF) with ASP.NET AJAX, see the [AJAX Samples](ajax.md).</span></span>  
   
-<span data-ttu-id="625e7-109">Os procedimentos de instalação e as instruções de compilação para esse exemplo estão localizadas no final deste tópico.</span><span class="sxs-lookup"><span data-stu-id="625e7-109">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+<span data-ttu-id="1dd83-109">Os procedimentos de instalação e as instruções de compilação para esse exemplo estão localizadas no final deste tópico.</span><span class="sxs-lookup"><span data-stu-id="1dd83-109">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
-<span data-ttu-id="625e7-110">Este exemplo usa um contrato de dados `Person` para demonstrar a serialização e a desserialização.</span><span class="sxs-lookup"><span data-stu-id="625e7-110">The sample uses a `Person` data contract to demonstrate serialization and deserialization.</span></span>  
+<span data-ttu-id="1dd83-110">Este exemplo usa um contrato de dados `Person` para demonstrar a serialização e a desserialização.</span><span class="sxs-lookup"><span data-stu-id="1dd83-110">The sample uses a `Person` data contract to demonstrate serialization and deserialization.</span></span>  
 
 ```csharp
 [DataContract]
@@ -32,7 +32,7 @@ class Person
 }
 ```
 
- <span data-ttu-id="625e7-111">Para serializar uma instância do tipo `Person` para JSON, crie primeiro o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> e use o método `WriteObject` para gravar dados JSON em um fluxo.</span><span class="sxs-lookup"><span data-stu-id="625e7-111">To serialize an instance of the `Person` type to JSON, create the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> first and use the `WriteObject` method to write JSON data to a stream.</span></span>  
+ <span data-ttu-id="1dd83-111">Para serializar uma instância do tipo `Person` para JSON, crie primeiro o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> e use o método `WriteObject` para gravar dados JSON em um fluxo.</span><span class="sxs-lookup"><span data-stu-id="1dd83-111">To serialize an instance of the `Person` type to JSON, create the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> first and use the `WriteObject` method to write JSON data to a stream.</span></span>  
 
 ```csharp
 Person p = new Person();
@@ -42,31 +42,31 @@ DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));
 ser.WriteObject(stream1, p);
 ```
 
- <span data-ttu-id="625e7-112">O fluxo de memória contém dados JSON válidos.</span><span class="sxs-lookup"><span data-stu-id="625e7-112">The memory stream contains valid JSON data.</span></span>
+ <span data-ttu-id="1dd83-112">O fluxo de memória contém dados JSON válidos.</span><span class="sxs-lookup"><span data-stu-id="1dd83-112">The memory stream contains valid JSON data.</span></span>
   
 ```json  
 {"age":42,"name":"John"}  
 ```  
   
- <span data-ttu-id="625e7-113">O exemplo demonstra a desserialização de dados JSON em um objeto.</span><span class="sxs-lookup"><span data-stu-id="625e7-113">The sample demonstrates deserializing from JSON data into an object.</span></span> <span data-ttu-id="625e7-114">Em seguida, você volta o fluxo e chama `ReadObject`.</span><span class="sxs-lookup"><span data-stu-id="625e7-114">You then rewind the stream and call `ReadObject`.</span></span>  
+ <span data-ttu-id="1dd83-113">O exemplo demonstra a desserialização de dados JSON em um objeto.</span><span class="sxs-lookup"><span data-stu-id="1dd83-113">The sample demonstrates deserializing from JSON data into an object.</span></span> <span data-ttu-id="1dd83-114">Em seguida, você volta o fluxo e chama `ReadObject`.</span><span class="sxs-lookup"><span data-stu-id="1dd83-114">You then rewind the stream and call `ReadObject`.</span></span>  
 
 ```csharp
 Person p2 = (Person)ser.ReadObject(stream1);
 ```
 
- <span data-ttu-id="625e7-115">Examinar o objeto `p2` revela que os dados JSON foram desserializados corretamente.</span><span class="sxs-lookup"><span data-stu-id="625e7-115">Examining the `p2` object reveals that the JSON data has been deserialized correctly.</span></span>  
+ <span data-ttu-id="1dd83-115">Examinar o objeto `p2` revela que os dados JSON foram desserializados corretamente.</span><span class="sxs-lookup"><span data-stu-id="1dd83-115">Examining the `p2` object reveals that the JSON data has been deserialized correctly.</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="625e7-116">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="625e7-116">The samples may already be installed on your machine.</span></span> <span data-ttu-id="625e7-117">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="625e7-117">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="1dd83-116">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="1dd83-116">The samples may already be installed on your machine.</span></span> <span data-ttu-id="1dd83-117">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="1dd83-117">Check for the following (default) directory before continuing.</span></span>  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> <span data-ttu-id="625e7-118">Se esse diretório não existir, vá para [a Windows Communication Foundation (WCF) e para o Windows Workflow Foundation (WF) Amostras para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Amostras e amostras da [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (Windows Communication Foundation).</span><span class="sxs-lookup"><span data-stu-id="625e7-118">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="625e7-119">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="625e7-119">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="1dd83-118">Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos.</span><span class="sxs-lookup"><span data-stu-id="1dd83-118">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="1dd83-119">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="1dd83-119">This sample is located in the following directory.</span></span>  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\JsonSerialization`  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="625e7-120">Para configurar, compilar e executar o exemplo</span><span class="sxs-lookup"><span data-stu-id="625e7-120">To set up, build and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="1dd83-120">Para configurar, compilar e executar o exemplo</span><span class="sxs-lookup"><span data-stu-id="1dd83-120">To set up, build and run the sample</span></span>  
   
-1. <span data-ttu-id="625e7-121">Construa a solução JsonSerialization.sln conforme descrito na [Construção do Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="625e7-121">Build the solution JsonSerialization.sln as described in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+1. <span data-ttu-id="1dd83-121">Crie a solução JsonSerialization. sln, conforme descrito em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="1dd83-121">Build the solution JsonSerialization.sln as described in [Building the Windows Communication Foundation Samples](building-the-samples.md).</span></span>  
   
-2. <span data-ttu-id="625e7-122">Execute o aplicativo de console resultante.</span><span class="sxs-lookup"><span data-stu-id="625e7-122">Run the resulting console application.</span></span>  
+2. <span data-ttu-id="1dd83-122">Execute o aplicativo de console resultante.</span><span class="sxs-lookup"><span data-stu-id="1dd83-122">Run the resulting console application.</span></span>  
