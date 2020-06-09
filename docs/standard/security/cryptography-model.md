@@ -1,17 +1,18 @@
 ---
 title: Modelo de Criptografia do .NET Framework
+description: Examine as implementações de algoritmos de criptografia usuais no .NET. Aprenda o modelo de criptografia extensível de herança de objeto, design de fluxo & configuração.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: c2d28abacd34736764b69be750a850a0f2e8db85
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 11af4c15c8b291df898a3c2416faa15875eab70b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288375"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596313"
 ---
 # <a name="net-framework-cryptography-model"></a>Modelo de Criptografia do .NET Framework
 
@@ -73,7 +74,7 @@ Aqui está uma lista de algoritmos recomendados por aplicativo:
 - Gerando uma chave a partir de uma senha:
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Serviços de Criptografia](cryptographic-services.md)
 - [Protocolos de criptografia, algoritmos e código-fonte aplicados em C, de Bruce Schneier](https://www.schneier.com/books/applied_cryptography/)

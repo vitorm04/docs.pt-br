@@ -3,12 +3,12 @@ title: Ferramenta de desinstalação
 description: Uma visão geral da ferramenta de desinstalação do .NET Core, uma ferramenta guiada que permite a limpeza controlada de SDKs e tempos de execução do .NET Core.
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: 4e70fd3438b582bd5a0d6a52d7e58ed5e07f8811
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dcfa12a3ec5fe0e8a29c5897ee4c71bfc7352eda
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446900"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590793"
 ---
 # <a name="net-core-uninstall-tool"></a>Ferramenta de Desinstalação do .NET Core
 
@@ -27,7 +27,7 @@ Devido a essas limitações, a ferramenta pode não ser capaz de desinstalar tod
 
 ## <a name="install-the-tool"></a>Instalar a ferramenta
 
-Você pode baixar a ferramenta de desinstalação do .NET Core [aqui](https://aka.ms/dotnet-core-uninstall-tool) e encontrar o código-fonte no repositório do GitHub [dotnet/CLI-Lab](https://github.com/dotnet/cli-lab) .
+Você pode baixar a ferramenta de desinstalação do .NET Core na [página de versões da ferramenta](https://aka.ms/dotnet-core-uninstall-tool) e encontrar o código-fonte no repositório do GitHub [dotnet/CLI-Lab](https://github.com/dotnet/cli-lab) .
 
 > [!NOTE]
 > A ferramenta requer elevação para desinstalar SDKs e tempos de execução do .NET Core. Portanto, ele deve ser instalado em um diretório protegido contra gravação, como *c:\Arquivos de programas* no Windows ou */usr/local/bin* no MacOS. Consulte também [acesso elevado para comandos dotnet](../tools/elevated-access.md). Para obter mais informações, consulte as [instruções detalhadas de instalação](https://aka.ms/dotnet-core-uninstall-tool).
@@ -518,7 +518,7 @@ Em alguns casos, você não precisa mais do `NuGetFallbackFolder` e pode desejar
 
 1. Abra **Adicionar ou remover programas**.
 2. Pesquise por `Microsoft .NET Core SDK Uninstall Tool`.
-3. Selecionar **Desinstalar**.
+3. Selecione **Desinstalar**.
 
 ## <a name="macos"></a>[macOS](#tab/macos)
 

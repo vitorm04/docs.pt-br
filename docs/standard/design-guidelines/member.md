@@ -1,5 +1,6 @@
 ---
 title: Diretrizes de design de membro
+description: Aprenda as diretrizes de design de membro no .NET. Os membros incluem métodos, propriedades, eventos, construtores e campos.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-ms.openlocfilehash: c323e7edd752a1f003bd3f5d81689aca0eaefd20
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a1f0c1d74e8bffa7cfef975c7dafb9fd01479470
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288986"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594485"
 ---
 # <a name="member-design-guidelines"></a>Diretrizes de design de membro
 Métodos, propriedades, eventos, construtores e campos são chamados coletivamente de membros. Os membros são, em última instância, o meio pelo qual a funcionalidade de estrutura é exposta aos usuários finais de uma estrutura.  
@@ -35,6 +36,6 @@ Métodos, propriedades, eventos, construtores e campos são chamados coletivamen
   
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Diretrizes de design de estrutura](index.md)
