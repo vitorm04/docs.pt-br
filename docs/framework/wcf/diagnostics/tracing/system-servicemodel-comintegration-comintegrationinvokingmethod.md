@@ -2,21 +2,21 @@
 title: System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod
 ms.date: 03/30/2017
 ms.assetid: dea076f0-1c05-40af-a329-c3e3f7a805c1
-ms.openlocfilehash: d743ca5f7bc471ee1b00e7f47504e5cf49ffc634
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e7d797d9672a34c60ffaa3921921526da730a22
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939263"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84588231"
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationinvokingmethod"></a><span data-ttu-id="29bc9-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod</span><span class="sxs-lookup"><span data-stu-id="29bc9-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod</span></span>
-<span data-ttu-id="29bc9-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod</span><span class="sxs-lookup"><span data-stu-id="29bc9-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationinvokingmethod"></a><span data-ttu-id="010ca-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod</span><span class="sxs-lookup"><span data-stu-id="010ca-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod</span></span>
+<span data-ttu-id="010ca-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod</span><span class="sxs-lookup"><span data-stu-id="010ca-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod</span></span>  
   
-## <a name="description"></a><span data-ttu-id="29bc9-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="29bc9-104">Description</span></span>  
- <span data-ttu-id="29bc9-105">ComPlus: Método de invocação.</span><span class="sxs-lookup"><span data-stu-id="29bc9-105">ComPlus: Invoking method.</span></span>  
+## <a name="description"></a><span data-ttu-id="010ca-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="010ca-104">Description</span></span>  
+ <span data-ttu-id="010ca-105">ComPlus: método de invocação.</span><span class="sxs-lookup"><span data-stu-id="010ca-105">ComPlus: Invoking method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="29bc9-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="29bc9-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="010ca-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="010ca-106">See also</span></span>
 
-- [<span data-ttu-id="29bc9-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="29bc9-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="29bc9-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="29bc9-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="29bc9-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="29bc9-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="010ca-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="010ca-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="010ca-108">Utilizando o rastreamento para solucionar problemas em seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="010ca-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="010ca-109">Administração e diagnóstico</span><span class="sxs-lookup"><span data-stu-id="010ca-109">Administration and Diagnostics</span></span>](../index.md)
