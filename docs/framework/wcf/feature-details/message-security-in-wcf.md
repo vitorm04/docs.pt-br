@@ -2,16 +2,16 @@
 title: Segurança de mensagem no WCF
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 32f6659f6ac744ab7af07c23e7e26ea1124d020c
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 6875339df327371a79bc9b9072aca2df0bc7d3f6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212064"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602655"
 ---
 # <a name="message-security-in-wcf"></a>Segurança de mensagem no WCF
 
-O Windows Communication Foundation (WCF) tem dois modos principais para fornecer segurança (`Transport` e `Message`) e um terceiro modo (`TransportWithMessageCredential`) que combina os dois. Este tópico discute a segurança da mensagem e os motivos para usá-la.
+O Windows Communication Foundation (WCF) tem dois modos principais para fornecer segurança ( `Transport` e `Message` ) e um terceiro modo ( `TransportWithMessageCredential` ) que combina os dois. Este tópico discute a segurança da mensagem e os motivos para usá-la.
 
 ## <a name="what-is-message-security"></a>O que é segurança de mensagem?
 
@@ -29,7 +29,7 @@ Na segurança em nível de mensagem, todas as informações de segurança são e
 
 - Suporte para vários transportes. Você pode enviar mensagens seguras por vários transportes diferentes, como pipes nomeados e TCP, sem precisar contar com o protocolo de segurança. Com a segurança em nível de transporte, todas as informações de segurança são delimitadas a uma única conexão de transporte específica e não estão disponíveis no próprio conteúdo da mensagem. A segurança da mensagem torna a mensagem segura, independentemente de qual transporte você usa para transmitir a mensagem, e o contexto de segurança é diretamente inserido dentro da mensagem.
 
-- Suporte para um amplo conjunto de credenciais e declarações. A segurança da mensagem é baseada na especificação WS-Security, que fornece uma estrutura extensível capaz de transmitir qualquer tipo de declaração dentro da mensagem SOAP. Diferentemente da segurança de transporte, o conjunto de mecanismos de autenticação, ou declarações, que você pode usar não é limitado pelos recursos de transporte. A segurança de mensagens do WCF inclui vários tipos de transmissão de solicitação e autenticação e pode ser estendida para dar suporte a tipos adicionais, conforme necessário. Por esses motivos, por exemplo, um cenário de credenciais federadas não é possível sem a segurança da mensagem. Para obter mais informações sobre cenários de Federação compatíveis com o WCF, consulte [Federação e tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).
+- Suporte para um amplo conjunto de credenciais e declarações. A segurança da mensagem é baseada na especificação WS-Security, que fornece uma estrutura extensível capaz de transmitir qualquer tipo de declaração dentro da mensagem SOAP. Diferentemente da segurança de transporte, o conjunto de mecanismos de autenticação, ou declarações, que você pode usar não é limitado pelos recursos de transporte. A segurança de mensagens do WCF inclui vários tipos de transmissão de solicitação e autenticação e pode ser estendida para dar suporte a tipos adicionais, conforme necessário. Por esses motivos, por exemplo, um cenário de credenciais federadas não é possível sem a segurança da mensagem. Para obter mais informações sobre cenários de Federação compatíveis com o WCF, consulte [Federação e tokens emitidos](federation-and-issued-tokens.md).
 
 ## <a name="how-message-and-transport-security-compare"></a>Como a segurança de mensagens e transporte é comparada
 
@@ -63,9 +63,9 @@ A segurança da mensagem tem as seguintes desvantagens:
 
 - Requer a implementação de mecanismos de segurança em nível XML e suporte para especificação WS-Security. Isso pode afetar a interoperabilidade.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [Como usar a segurança do transporte e as credenciais de mensagem](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [Protegendo serviços e clientes](securing-services-and-clients.md)
+- [Segurança de transporte](transport-security.md)
+- [Como utilizar credenciais de mensagem e segurança de transporte](how-to-use-transport-security-and-message-credentials.md)
 - [Práticas e padrões da Microsoft, capítulo 3: Implementando o transporte e a segurança da camada de mensagens](https://docs.microsoft.com/previous-versions/msp-n-p/ff647370(v=pandp.10))

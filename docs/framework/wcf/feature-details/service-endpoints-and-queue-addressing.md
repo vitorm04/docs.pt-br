@@ -2,17 +2,17 @@
 title: Pontos de extremidade de serviço e endereçamento de fila
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 8b323993a698dac219e0f2be43e9b508a19065dd
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: a17e680732cd257fbdfd95eb09df8c53f5894400
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202419"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600381"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Pontos de extremidade de serviço e endereçamento de fila
 Este tópico discute como os clientes atendem aos serviços que lêem de filas e como os pontos de extremidade de serviço são mapeados para filas. Como lembrete, a ilustração a seguir mostra a implantação do aplicativo em fila do WCF (Windows Communication Foundation clássico).  
   
- ![Diagrama de aplicativos enfileirados](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-figura")  
+ ![Diagrama de aplicativos enfileirados](media/distributed-queue-figure.jpg "Distributed-Queue-figura")  
   
  Para que o cliente envie a mensagem para o serviço, o cliente endereça a mensagem para a fila de destino. Para que o serviço leia mensagens da fila, ele define seu endereço de escuta para a fila de destino. O endereçamento no WCF é Uniform Resource Identifier (URI) com base nos nomes de fila do MSMQ (serviço de enfileiramento de mensagens) não são baseados em URI. Portanto, é essencial entender como endereçar filas criadas no MSMQ usando o WCF.  
   
@@ -46,7 +46,7 @@ Este tópico discute como os clientes atendem aos serviços que lêem de filas e
   
  O endereço da fila é usado como o URI de escuta pelo ouvinte para ler mensagens. Em outras palavras, o endereço da fila é equivalente à porta de escuta do soquete TCP.  
   
- Um ponto de extremidade que lê de uma fila deve especificar o endereço da fila usando o mesmo esquema especificado anteriormente ao abrir o ServiceHost. Para obter exemplos, consulte [Associação net MSMQ](../../../../docs/framework/wcf/samples/net-msmq-binding.md).  
+ Um ponto de extremidade que lê de uma fila deve especificar o endereço da fila usando o mesmo esquema especificado anteriormente ao abrir o ServiceHost. Para obter exemplos, consulte [Associação net MSMQ](../samples/net-msmq-binding.md).  
   
 ### <a name="multiple-contracts-in-a-queue"></a>Vários contratos em uma fila  
  As mensagens em uma fila podem implementar contratos diferentes. Nesse caso, é essencial que uma das seguintes opções seja verdadeira para ler e processar todas as mensagens com êxito:  
@@ -89,7 +89,7 @@ Este tópico discute como os clientes atendem aos serviços que lêem de filas e
   
  NET. MSMQ://localhost/[Private/] \<*custom-dead-letter-queue-name*> .  
   
- Um serviço WCF verifica se todas as mensagens recebidas foram endereçadas para a fila específica em que está escutando. Se a fila de destino da mensagem não corresponder à fila em que foi encontrada, o serviço não processará a mensagem. Esse é um problema que os serviços que escutam em uma fila de mensagens mortas devem resolver porque qualquer mensagem na fila de mensagens mortas foi destinada a ser entregue em outro lugar. Para ler mensagens de uma fila de mensagem mortas ou de uma fila suspeita, um `ServiceBehavior` com o <xref:System.ServiceModel.AddressFilterMode.Any> parâmetro deve ser usado. Para obter um exemplo, consulte [filas de mensagens mortas](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
+ Um serviço WCF verifica se todas as mensagens recebidas foram endereçadas para a fila específica em que está escutando. Se a fila de destino da mensagem não corresponder à fila em que foi encontrada, o serviço não processará a mensagem. Esse é um problema que os serviços que escutam em uma fila de mensagens mortas devem resolver porque qualquer mensagem na fila de mensagens mortas foi destinada a ser entregue em outro lugar. Para ler mensagens de uma fila de mensagem mortas ou de uma fila suspeita, um `ServiceBehavior` com o <xref:System.ServiceModel.AddressFilterMode.Any> parâmetro deve ser usado. Para obter um exemplo, consulte [filas de mensagens mortas](../samples/dead-letter-queues.md).  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding e endereçamento de serviço  
  O `MsmqIntegrationBinding` é usado para comunicação com aplicativos MSMQ tradicionais. Para facilitar a interoperação com um aplicativo MSMQ existente, o WCF dá suporte apenas ao endereçamento de nome de formato. Portanto, as mensagens enviadas usando essa associação devem estar de acordo com o esquema de URI:  
@@ -104,6 +104,6 @@ Este tópico discute como os clientes atendem aos serviços que lêem de filas e
   
  Observe que você não pode usar net. MSMQ://endereçamento com `MsmqIntegrationBinding` . Como o `MsmqIntegrationBinding` dá suporte ao endereçamento de nome de formato MSMQ de forma livre, você pode usar um serviço WCF que usa essa associação para usar recursos de lista de distribuição e multicast no MSMQ. Uma exceção é especificar `CustomDeadLetterQueue` ao usar o `MsmqIntegrationBinding` . Ele deve estar no formato net. MSMQ://, semelhante a como ele é especificado usando o `NetMsmqBinding` .  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Hospedagem na Web de um aplicativo na fila](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+- [Hospedagem na Web de um aplicativo na fila](web-hosting-a-queued-application.md)

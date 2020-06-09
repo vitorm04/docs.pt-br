@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: 2746c608fb47b94446c5d7e10748ba185d555e7f
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: c5efd921d3826ef814bf45d6895255981101d992
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202324"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592951"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Como proteger pontos de extremidade de metadados
 
@@ -22,7 +22,7 @@ Este tópico percorre as etapas para criar um ponto de extremidade protegido por
 
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>Para criar um ponto de extremidade de obtenção de metadados de HTTPS seguro no código
 
-1. Configure uma porta com um certificado X. 509 apropriado. O certificado deve vir de uma autoridade confiável e deve ter um uso pretendido de "autorização de serviço". Você deve usar a ferramenta HttpCfg. exe para anexar o certificado à porta. Consulte [como: configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).
+1. Configure uma porta com um certificado X. 509 apropriado. O certificado deve vir de uma autoridade confiável e deve ter um uso pretendido de "autorização de serviço". Você deve usar a ferramenta HttpCfg. exe para anexar o certificado à porta. Consulte [como: configurar uma porta com um certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md).
 
     > [!IMPORTANT]
     > O assunto do certificado ou seu DNS (sistema de nomes de domínio) deve corresponder ao nome do computador. Isso é essencial porque uma das primeiras etapas que o mecanismo HTTPS executa é verificar se o certificado é emitido para o mesmo Uniform Resource Identifier (URI) que o endereço no qual ele é invocado.
@@ -40,21 +40,21 @@ Este tópico percorre as etapas para criar um ponto de extremidade protegido por
 
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-configuration"></a>Para criar um ponto de extremidade de obtenção de metadados de HTTPS seguro na configuração
 
-1. Adicione um [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento ao [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento do arquivo de configuração para seu serviço.
+1. Adicione um [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) elemento ao [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) elemento do arquivo de configuração para seu serviço.
 
-2. Adicione um [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) elemento ao [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento.
+2. Adicione um [\<serviceBehaviors>](../../configure-apps/file-schema/wcf/servicebehaviors.md) elemento ao [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) elemento.
 
-3. Adicione um [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento ao `<serviceBehaviors>` elemento.
+3. Adicione um [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento ao `<serviceBehaviors>` elemento.
 
 4. Defina o `name` atributo do `<behavior>` elemento para um valor apropriado. O atributo `name` é necessário. O exemplo a seguir usa o valor `mySvcBehavior` .
 
-5. Adicione um [\<serviceMetadata>](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) ao `<behavior>` elemento.
+5. Adicione um [\<serviceMetadata>](../../configure-apps/file-schema/wcf/servicemetadata.md) ao `<behavior>` elemento.
 
 6. Defina o atributo `httpsGetEnabled` do elemento `<serviceMetadata>` como `true`.
 
 7. Defina o `httpsGetUrl` atributo do `<serviceMetadata>` elemento para um valor apropriado. Observe que, se você especificar um endereço absoluto, a URL deverá começar com o esquema `https://` . Se você especificar um endereço relativo, deverá fornecer um endereço base HTTPS para seu host de serviço. Se essa propriedade não for definida, o endereço padrão será "", ou diretamente no endereço base HTTPS para o serviço.
 
-8. Para usar o comportamento com um serviço, defina o `behaviorConfiguration` atributo do [\<service>](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento como o valor do atributo Name do elemento Behavior. O código de configuração a seguir mostra um exemplo completo.
+8. Para usar o comportamento com um serviço, defina o `behaviorConfiguration` atributo do [\<service>](../../configure-apps/file-schema/wcf/service.md) elemento como o valor do atributo Name do elemento Behavior. O código de configuração a seguir mostra um exemplo completo.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -95,12 +95,12 @@ O exemplo de código usa os seguintes namespaces:
 
 - <xref:System.ServiceModel.Description?displayProperty=nameWithType>
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [Como configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Considerações de segurança com metadados](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Como configurar uma porta com um certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Trabalhando com certificados](working-with-certificates.md)
+- [Considerações de segurança com metadados](security-considerations-with-metadata.md)
+- [Protegendo serviços e clientes](securing-services-and-clients.md)
