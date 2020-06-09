@@ -1,16 +1,17 @@
 ---
 title: Tarefas comuns de E/S
+description: Saiba como executar tarefas de arquivo comuns & tarefas comuns de diretório usando classes & métodos no namespace System.IO no .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-ms.openlocfilehash: 9474d6c0340583e285a6dc47933c602f799f121d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4b97b4e464622e482a9ef45e143865ee82e6b5d4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287410"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598600"
 ---
 # <a name="common-io-tasks"></a>Tarefas comuns de E/S
 O namespace <xref:System.IO> fornece várias classes que permitem que várias ações, como leitura e gravação, sejam realizadas em arquivos, diretórios e fluxos. Para obter mais informações, consulte [arquivo e fluxo de e/s](index.md).  
@@ -51,7 +52,7 @@ O namespace <xref:System.IO> fornece várias classes que permitem que várias a�
 |Descobrir o tamanho de um diretório|Classe <xref:System.IO.Directory?displayProperty=nameWithType>|  
 |Determinar se um diretório existe|Método <xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Arquivo e e/s de fluxo](index.md)
 - [Compor fluxos](composing-streams.md)
