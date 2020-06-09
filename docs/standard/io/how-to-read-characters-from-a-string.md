@@ -1,5 +1,6 @@
 ---
 title: 'Como: ler caracteres de uma cadeia de caracteres'
+description: Saiba como ler caracteres de uma cadeia de caracteres no .NET. Veja exemplos de leitura de caracteres de forma síncrona e assíncrona.
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-ms.openlocfilehash: 6d32e9c5f89dba7590958bae6cc0489f104cd19a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 40ff144e0899f3560805a31fa76f391afaeccd67
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291767"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594836"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>Como: ler caracteres de uma cadeia de caracteres
 Os exemplos de código a seguir mostram como ler caracteres de forma síncrona ou assíncrona de uma cadeia de caracteres.  
@@ -35,7 +36,7 @@ Os exemplos de código a seguir mostram como ler caracteres de forma síncrona o
  [!code-csharp[Conceptual.StringReader#2](../../../samples/snippets/csharp/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.cs)]
  [!code-vb[Conceptual.StringReader#2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.vb)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.IO.StringReader>  
 - <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  

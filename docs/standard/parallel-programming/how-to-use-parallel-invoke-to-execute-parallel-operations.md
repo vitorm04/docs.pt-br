@@ -1,5 +1,6 @@
 ---
 title: 'Como: usar Parallel.Invoke para executar operações paralelas'
+description: Consulte como usar o método Parallel. Invoke na TPL (biblioteca paralela de tarefas), que faz operações paralelas em uma fonte de dados compartilhada no .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - task parallelism in .NET
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
-ms.openlocfilehash: 2b353fb8cb5e04ee4cab6b49f55539ecb40fab4f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 084ade48b1406d23a11eb311739525f35ac973df
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290792"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596339"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Como: usar Parallel.Invoke para executar operações paralelas
 
@@ -36,7 +37,7 @@ Este exemplo paraleliza as operações, não os dados. Como uma abordagem altern
 
 Copie e cole o exemplo inteiro em um projeto do Microsoft Visual Studio e pressione **F5**.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Programação paralela](index.md)
 - [Como: Cancelar uma tarefa e seus filhos](how-to-cancel-a-task-and-its-children.md)
