@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-ms.openlocfilehash: db6bca8728789879f9bfea40904bfc80352d1dbe
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 9239e8bd9b85986d41006c4b2a21b6f2304e8275
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144910"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601225"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>Como publicar metadados utilizando código para um serviço
 Este é um dos dois tópicos de instruções que abordam a publicação de metadados para um serviço Windows Communication Foundation (WCF). Há duas maneiras de especificar como um serviço deve publicar metadados, usando um arquivo de configuração e usando código. Este tópico mostra como publicar metadados para um serviço usando um código.  
   
 > [!CAUTION]
-> Este tópico mostra como publicar metadados de maneira não segura. Qualquer cliente pode recuperar os metadados do serviço. Se você precisar que seu serviço publique metadados de maneira segura. consulte [ponto de extremidade de metadados seguro personalizado](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
+> Este tópico mostra como publicar metadados de maneira não segura. Qualquer cliente pode recuperar os metadados do serviço. Se você precisar que seu serviço publique metadados de maneira segura. consulte [ponto de extremidade de metadados seguro personalizado](../samples/custom-secure-metadata-endpoint.md).  
   
- Para obter mais informações sobre como publicar metadados em um arquivo de configuração, consulte [como: publicar metadados para um serviço usando um arquivo de configuração](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md). A publicação de metadados permite que os clientes recuperem os metadados usando uma solicitação WS-Transfer GET ou uma solicitação HTTP/GET usando a `?wsdl` cadeia de caracteres de consulta. Para ter certeza de que o código está funcionando, você deve criar um serviço WCF básico. Um serviço auto-hospedado básico é fornecido no código a seguir.  
+ Para obter mais informações sobre como publicar metadados em um arquivo de configuração, consulte [como: publicar metadados para um serviço usando um arquivo de configuração](how-to-publish-metadata-for-a-service-using-a-configuration-file.md). A publicação de metadados permite que os clientes recuperem os metadados usando uma solicitação WS-Transfer GET ou uma solicitação HTTP/GET usando a `?wsdl` cadeia de caracteres de consulta. Para ter certeza de que o código está funcionando, você deve criar um serviço WCF básico. Um serviço auto-hospedado básico é fornecido no código a seguir.  
   
  [!code-csharp[htPublishMetadataCode#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#0)]
  [!code-vb[htPublishMetadataCode#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#0)]  
@@ -69,7 +69,7 @@ Este é um dos dois tópicos de instruções que abordam a publicação de metad
      [!code-vb[htPublishMetadataCode#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#9)]  
   
     > [!NOTE]
-    > Se você não adicionar nenhum ponto de extremidade ao serviço, o runtime adicionará pontos de extremidade padrão para você. Neste exemplo, como o serviço tem um <xref:System.ServiceModel.Description.ServiceMetadataBehavior> definido como `true` , o serviço tem metadados de publicação habilitados. Para obter mais informações sobre pontos de extremidade padrão, consulte [configuração simplificada](../../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    > Se você não adicionar nenhum ponto de extremidade ao serviço, o runtime adicionará pontos de extremidade padrão para você. Neste exemplo, como o serviço tem um <xref:System.ServiceModel.Description.ServiceMetadataBehavior> definido como `true` , o serviço tem metadados de publicação habilitados. Para obter mais informações sobre pontos de extremidade padrão, consulte [configuração simplificada](../simplified-configuration.md) e [configuração simplificada para serviços WCF](../samples/simplified-configuration-for-wcf-services.md).  
   
 9. Abra o host de serviço e aguarde as chamadas de entrada. Quando o usuário pressionar ENTER, feche o host de serviço.  
   
@@ -88,8 +88,8 @@ Este é um dos dois tópicos de instruções que abordam a publicação de metad
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como hospedar um serviço do WCF em um aplicativo gerenciado](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [Auto-hospedagem](../../../../docs/framework/wcf/samples/self-host.md)
-- [Visão geral da arquitetura de metadados](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
-- [Utilizando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Como publicar metadados para um serviço usando um arquivo de configuração](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Como hospedar um serviço do WCF em um aplicativo gerenciado](../how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Self-Host](../samples/self-host.md)
+- [Visão geral da arquitetura de metadados](metadata-architecture-overview.md)
+- [Utilizando metadados](using-metadata.md)
+- [Como publicar metadados para um serviço usando um arquivo de configuração](how-to-publish-metadata-for-a-service-using-a-configuration-file.md)

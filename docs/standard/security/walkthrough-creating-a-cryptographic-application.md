@@ -1,5 +1,6 @@
 ---
 title: 'Instruções passo a passo: criando um aplicativo criptográfico'
+description: Percorra a criação de um aplicativo criptográfico. Saiba como criptografar e descriptografar o conteúdo em um aplicativo Windows Forms.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - cryptography [NET Framework], cryptographic application example
 - cryptography [NET Framework], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 246028566c59e5c8a77b26a21729d3f143d38d07
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 72116227fbec2435d428ad2bbdb4cc74e5c3663f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289701"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602174"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Instruções passo a passo: criando um aplicativo criptográfico
 Este tutorial demonstra como criptografar e descriptografar conteúdo. Os exemplos de código são projetados para um aplicativo Windows Forms. Este aplicativo não demonstra cenários do mundo real, como o uso de cartões inteligentes. Em vez disso, ele demonstra os conceitos básicos de criptografia e descriptografia.  
@@ -208,6 +209,6 @@ Este tutorial demonstra como criptografar e descriptografar conteúdo. Os exempl
   
 2. Clique no `Decrypt File` botão e selecione o arquivo que acabou de ser criptografado. Isso será bem-sucedido porque você tem o par de chaves completo a ser descriptografado.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Serviços de Criptografia](cryptographic-services.md)
