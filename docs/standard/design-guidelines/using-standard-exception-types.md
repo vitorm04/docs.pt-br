@@ -1,5 +1,6 @@
 ---
 title: Usar tipos de exceção padrão
+description: Leia sobre os tipos de exceção padrão no .NET. Saiba mais sobre o SystemException, o ApplicationException, o ArgumentException, o COMException e muito mais.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - exceptions, catching
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-ms.openlocfilehash: b8e05f22a66fabeab28cc83a074471df29aae218
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f95529eabd87d9ec7c379b9f790e039e1192ac53
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291351"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663051"
 ---
 # <a name="using-standard-exception-types"></a>Usar tipos de exceção padrão
 Esta seção descreve as exceções padrão fornecidas pela estrutura e os detalhes de seu uso. A lista não é, de maneira alguma, completa. Consulte a documentação de referência do .NET Framework para uso de outros tipos de exceção de estrutura.
@@ -62,7 +63,7 @@ Esta seção descreve as exceções padrão fornecidas pela estrutura e os detal
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Diretrizes de design de estrutura](index.md)
 - [Diretrizes de design para exceções](exceptions.md)

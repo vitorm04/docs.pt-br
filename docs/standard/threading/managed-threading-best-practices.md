@@ -1,5 +1,6 @@
 ---
 title: Práticas recomendadas de threading gerenciado
+description: Conheça as práticas recomendadas de Threading gerenciadas no .NET. Trabalhe com situações difíceis, como a coordenação de vários threads ou a manipulação de threads de bloqueio.
 ms.date: 10/15/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: 30d746d739654ecad2b485b9d69cfe300caca2ff
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fa0af1461ba568583127316934b9d55577dd4c5a
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291182"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662817"
 ---
 # <a name="managed-threading-best-practices"></a>Práticas recomendadas de threading gerenciado
 O multithreading requer programação cuidadosa. Para a maioria das tarefas, você pode reduzir a complexidade ao enfileirar solicitações para a execução por parte de threads de pool. Este tópico aborda situações mais difíceis, como coordenar o trabalho de vários threads ou manipular threads que bloqueiam.  
@@ -172,7 +173,7 @@ Use a <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> prop
   
 - Evite fornecer métodos estáticos que alteram o estado estático. Em cenários de servidor comuns, o estado estático é compartilhado entre as solicitações, que significa que vários threads podem executar esse código ao mesmo tempo. Isso abre a possibilidade de bugs de threading. Considere usar um padrão de design que encapsule dados em instâncias que não sejam compartilhadas entre solicitações. Além disso, se os dados estáticos forem sincronizados, chamadas entre os métodos estáticos que alteram o estado podem resultar em deadlocks ou em sincronização redundante, afetando negativamente o desempenho.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Threading](index.md)
 - [Threads e threading](threads-and-threading.md)

@@ -1,5 +1,6 @@
 ---
 title: Agrupando construtores em expressões regulares
+description: Aprenda a usar construções de agrupamento no .NET. As construções de agrupamento delineam subexpressãos de uma expressão regular e capturam subcadeias de caracteres de uma cadeia de entrada.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 5be98a5a213592b169bee430d84c4fc3a1d5fcef
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d737e5758ee7a940aeea3ded9a7937d687393116
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290520"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662622"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Agrupando construtores em expressões regulares
 As construções de agrupamento delineiam as subexpressões de uma expressão regular e capturam a subcadeia de caracteres de uma cadeia de caracteres de entrada. Você pode usar construções de agrupamento para fazer isto:  
@@ -207,7 +208,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
   
  No exemplo, o mecanismo da expressão regular avalia a cadeia de caracteres de entrada "\<abc><mno\<xyz>>", conforme mostra a tabela a seguir.  
   
-|Etapa|Padrão|Resultado|  
+|Etapa|Padrão|Result|  
 |----------|-------------|------------|  
 |1|`^`|Começa a correspondência no início da cadeia de caracteres de entrada|  
 |2|`[^<>]*`|Procura caracteres que não sejam sinais de menor e maior antes do sinal de menor e não encontra correspondências.|  
@@ -452,7 +453,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
   
  O segundo grupo de captura corresponde a cada palavra da frase. O primeiro grupo de captura corresponde a cada palavra com a pontuação e o espaço em branco que a segue. O objeto <xref:System.Text.RegularExpressions.Group>, cujo índice é 2, fornece informações sobre o texto correspondente ao segundo grupo de captura. O conjunto completo de palavras capturadas pelo grupo de captura está disponível no objeto <xref:System.Text.RegularExpressions.CaptureCollection>, retornado pela propriedade <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Linguagem de expressões regulares – referência rápida](regular-expression-language-quick-reference.md)
 - [Retrocesso](backtracking-in-regular-expressions.md)

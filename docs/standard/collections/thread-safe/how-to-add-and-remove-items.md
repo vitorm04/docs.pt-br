@@ -1,5 +1,6 @@
 ---
 title: Como adicionar e remover itens de um ConcurrentDictionary
+description: Leia um exemplo de como adicionar, recuperar, atualizar e remover itens da classe de coleção ConcurrentDictionary<TKey, TValue> no .NET.
 ms.date: 05/04/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-ms.openlocfilehash: 6c093e907e43f9f2b978624a986dfe5d8a49869f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 827eb9db984289929c591046a4713419c9587312
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287894"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662856"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Como adicionar e remover itens de um ConcurrentDictionary
 
@@ -48,7 +49,7 @@ Além disso, embora todos os métodos de <xref:System.Collections.Concurrent.Con
 
 Portanto, não há garantia de que os dados retornados pelo <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> são os mesmos dados que foram criados pelo thread `valueFactory` . Uma sequência semelhante de eventos pode ocorrer quando <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> é chamado.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Coleções com segurança de thread](index.md)

@@ -1,5 +1,6 @@
 ---
 title: 'Como: Usar pipes nomeados para comunicação entre processos na rede'
+description: Veja dois exemplos de uso de pipes nomeados para comunicação entre processos entre um servidor de pipe e um ou mais clientes de pipe em uma rede.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - impersonation [.NET Framework], named pipes
 - full duplex communication [.NET Framework], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
-ms.openlocfilehash: bebfd136245fd7b577ffcd71954f46ca82bfc72d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a529d1d44a903df36099a59e07f4582554d230f2
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291741"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662557"
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Como: Usar pipes nomeados para comunicação entre processos na rede
 Os pipes nomeados fornecem a comunicação entre processos entre um servidor de pipe e um ou mais clientes pipe. Eles oferecem mais funcionalidades do que pipes anônimos, que fornecem comunicação entre processos em um computador local. Pipes nomeados oferecem suporte à comunicação full-duplex em uma rede e em várias instâncias do servidor, comunicação por mensagens e representação do cliente, o que permite que processos de conexão usem seus próprios conjuntos de permissões em servidores remotos.  
@@ -43,7 +44,7 @@ Os pipes nomeados fornecem a comunicação entre processos entre um servidor de 
 ## <a name="robust-programming"></a>Programação robusta  
  Os processos de cliente e servidor neste exemplo devem ser executados no mesmo computador, para que o nome do servidor fornecido para o objeto <xref:System.IO.Pipes.NamedPipeClientStream> seja `"."`. Se os processos do cliente e do servidor fossem realizados em computadores separados, `"."` seria substituído pelo nome de rede do computador que executa o processo do servidor.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Security.Principal.TokenImpersonationLevel>
 - <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>

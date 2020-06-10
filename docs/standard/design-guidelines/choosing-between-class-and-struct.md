@@ -1,5 +1,6 @@
 ---
 title: Escolher entre Classe e Struct
+description: Saiba como decidir se deseja criar um tipo como uma classe ou criar um tipo como uma estrutura. Entenda como tipos de referência e tipos de valor diferem no .NET.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: 4b4a619214fe6ba49f21a88cd132dcb3f2704608
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9d757e77292c1226fbe2328cce082033ae8f7003
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280355"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662596"
 ---
 # <a name="choosing-between-class-and-struct"></a>Escolher entre Classe e Struct
 Uma das decisões básicas de design que cada designer de estrutura enfrenta é se deve criar um tipo como uma classe (um tipo de referência) ou como uma struct (um tipo de valor). Uma boa compreensão das diferenças no comportamento dos tipos de referência e dos tipos de valor é crucial para fazer essa escolha.
@@ -52,7 +53,7 @@ Uma das decisões básicas de design que cada designer de estrutura enfrenta é 
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Diretrizes de design de tipo](type.md)
 - [Diretrizes de design de estrutura](index.md)

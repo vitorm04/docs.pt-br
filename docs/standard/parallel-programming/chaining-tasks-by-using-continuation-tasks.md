@@ -1,5 +1,6 @@
 ---
 title: Encadeando tarefas com tarefas de continuação
+description: Aprenda a encadear a tarefa usando tarefas de continuação no .NET. Uma tarefa de continuação é uma tarefa assíncrona que é invocada por outra tarefa.
 ms.date: 02/11/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: c6952b4b341a76e15d9699a06cd64ae7b6b4f047
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 90317f3db5bcf2371494e14a1ca1dd16d049e0bd
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285606"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662466"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Encadeando tarefas com tarefas de continuação
 Na programação assíncrona, é comum para uma operação assíncrona, após a conclusão, invocar uma segunda operação e passar dados para ela. Tradicionalmente, continuações foram feitas usando os métodos de retorno de chamada. Na Biblioteca de Tarefas Paralelas, a mesma funcionalidade é fornecida pelas *tarefas de continuação*. Uma tarefa de continuação (também conhecida como uma continuação) é uma tarefa assíncrona invocada por outra tarefa, que é conhecida como a *antecessora*, quando a antecessora termina.  
@@ -150,6 +151,6 @@ Na programação assíncrona, é comum para uma operação assíncrona, após a 
   
 - Se a continuação for uma tarefa filha anexada que foi criada usando a opção <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType>, suas exceções serão propagadas pelo pai para o thread de chamada, como será o caso em qualquer outra filha anexada. Para obter mais informações, consulte [Tarefas filho anexadas e desanexadas](attached-and-detached-child-tasks.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Biblioteca de tarefas paralelas (TPL)](task-parallel-library-tpl.md)

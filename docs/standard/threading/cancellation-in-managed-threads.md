@@ -1,5 +1,6 @@
 ---
 title: Cancelamento em threads gerenciados
+description: Entenda o cancelamento em threads gerenciados. Saiba mais sobre tokens de cancelamento no cancelamento cooperativo de operações síncronas ou de execução longa.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: e56d0f71afdc9281271b7d15316a133e7c720bd0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9af4a64e50eff65023d5ed5bda868af2f8323a96
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277876"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662830"
 ---
 # <a name="cancellation-in-managed-threads"></a>Cancelamento em threads gerenciados
 A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para cancelamento cooperativo de operações assíncronas ou síncronas de longa execução. Este modelo é baseado em um objeto leve chamado token de cancelamento. O objeto que invoca uma ou mais operações canceláveis, por exemplo criando novos tópicos ou tarefas, passa o token para cada operação. As operações individuais podem, por sua vez, passar cópias do token para outras operações. Posteriormente, o objeto que criou o token pode usá-lo para solicitar que as operações parem o que estão fazendo. Somente o objeto solicitante pode emitir a solicitação de cancelamento, e cada ouvinte é responsável por perceber a solicitação e respondê-la de forma apropriada e oportuna.  
@@ -52,7 +53,7 @@ A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para canc
 ## <a name="cancellation-types"></a>Tipos de cancelamento  
  A estrutura de cancelamento é implementada como um conjunto de tipos relacionados, que estão listados na tabela a seguir.  
   
-|Nome do tipo|Description|  
+|Nome do tipo|Descrição|  
 |---------------|-----------------|  
 |<xref:System.Threading.CancellationTokenSource>|O objeto que cria um token de cancelamento, e também emite o pedido de cancelamento para todas as cópias desse token.|  
 |<xref:System.Threading.CancellationToken>|O tipo de valor leve passado a um ou mais ouvintes, normalmente como um parâmetro de método. Os ouvintes monitoram o valor da propriedade `IsCancellationRequested` do token por sondagem, retorno de chamada ou identificador de espera.|  
@@ -146,6 +147,6 @@ A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para canc
   
  <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> são exemplos de classes que seguem essas diretrizes. Para obter mais informações, consulte [cancelamento de tarefas](../parallel-programming/task-cancellation.md) e [como: cancelar uma consulta PLINQ](../parallel-programming/how-to-cancel-a-plinq-query.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Noções básicas sobre Threading gerenciado](managed-threading-basics.md)

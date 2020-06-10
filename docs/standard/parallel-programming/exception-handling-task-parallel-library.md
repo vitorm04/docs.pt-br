@@ -1,5 +1,6 @@
 ---
 title: Tratamento de exceções (biblioteca de paralelismo de tarefas)
+description: Explore a manipulação de exceção usando a TPL (biblioteca paralela de tarefas) no .NET. Consulte exceções de agregação aninhadas, exceções internas, exceções de tarefas não observadas, & mais.
 ms.date: 04/20/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-ms.openlocfilehash: 674abcfe4477e14295f131e766a48422779391de
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f1c1a994f4b3a8df0556a0190bc4eacb63f2921e
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290039"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662531"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Tratamento de exceções (biblioteca de paralelismo de tarefas)
 
@@ -102,6 +103,6 @@ Use uma [`try-catch`](../../csharp/language-reference/keywords/try-catch.md) ins
 
 Em alguns cenários, como ao hospedar plug-ins não confiáveis, exceções benignas podem ser comuns, e pode ser muito difícil observar todas manualmente. Nesses casos, você pode lidar com o evento <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType>. A instância do <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType> que é passada para seu manipulador pode ser usada para evitar que a exceção não observada seja propagada de volta para o thread de junção.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Biblioteca de tarefas paralelas (TPL)](task-parallel-library-tpl.md)

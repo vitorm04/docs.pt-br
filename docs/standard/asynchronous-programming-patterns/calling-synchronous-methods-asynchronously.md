@@ -1,5 +1,6 @@
 ---
 title: Chamando métodos síncronos de forma assíncrona
+description: Saiba como chamar métodos síncronos de forma assíncrona no .NET, usando os métodos BeginInvoke e EndInvoke.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-ms.openlocfilehash: 6a3dd83fe9d3fc48f66a0bb6bef333e4ff399108
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ff2d30c00e7b6becb0c3ff910d825c2e9d6f78e3
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289896"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662635"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Chamando métodos síncronos de forma assíncrona
 
@@ -109,7 +110,7 @@ Os exemplos de código neste tópico demonstram quatro formas comuns de usar `Be
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]
  [!code-vb[AsyncDelegateExamples#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/callback.vb#5)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Delegate>
 - [EAP (Padrão Assíncrono baseado em Evento)](event-based-asynchronous-pattern-eap.md)

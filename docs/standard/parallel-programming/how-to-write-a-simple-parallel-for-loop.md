@@ -1,5 +1,6 @@
 ---
 title: 'Como: Escrever um loop Parallel.For simples'
+description: Aprenda a escrever loops Parallel. for no .NET no qual você não precisa cancelar o loop, interromper iterações de loop ou manter qualquer estado de thread local.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-ms.openlocfilehash: b18e110b86389dd5d28bbc370e207aaaf7571aaf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8307f2205653fbd213d824acffc405ee97580166
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290727"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662687"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Como: Escrever um loop Parallel.For simples
 
@@ -68,7 +69,7 @@ As chamadas síncronas para recursos compartilhados, como o Console ou o Sistema
 
 Copie e cole esse código em um projeto do Visual Studio.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.Tasks.Parallel.For%2A>
 - <xref:System.Threading.Tasks.Parallel.ForEach%2A>

@@ -1,5 +1,6 @@
 ---
 title: Covariância e contravariância em genéricos
+description: Saiba mais sobre covariância, que permite usar um tipo mais derivado e contravariância, que permite que você use um tipo menos derivado, em genéricos .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: b11b5fc93d9b7289e62d6abc9d3ca19027a107c5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 12de1554bb6e33b69d0d2bba24001e7e4c2d8a65
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287552"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663038"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covariância e contravariância em genéricos
  Covariância e contravariância são termos que fazem referência à capacidade de usar um tipo mais derivado (mais específico) ou menos derivado (menos específico) do que o especificado originalmente. Os parâmetros de tipo genéricos oferecem suporte a covariância e contravariância para fornecer maior flexibilidade na atribuição e no uso de tipos genéricos. Quando você se refere a um sistema de tipos, a covariância, contravariância e invariância possuem as definições a seguir. Os exemplos assumem uma classe base chamada `Base` e uma classe derivada chamada `Derived`.  
@@ -144,7 +145,7 @@ ms.locfileid: "84287552"
 ## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Lista de tipos de interfaces e delegados genéricos variantes
  No .NET Framework 4, os tipos de interface e de delegado a seguir têm parâmetros de tipo covariantes e/ou contravariantes.  
   
-|Tipo|Parâmetros de tipo covariantes|Parâmetros de tipo contravariantes|  
+|Type|Parâmetros de tipo covariantes|Parâmetros de tipo contravariantes|  
 |----------|-------------------------------|-----------------------------------|  
 |<xref:System.Action%601> em <xref:System.Action%6016>||Sim|  
 |<xref:System.Comparison%601>||Sim|  
@@ -162,7 +163,7 @@ ms.locfileid: "84287552"
 |<xref:System.Linq.IOrderedQueryable%601>|Sim||  
 |<xref:System.Linq.IQueryable%601>|Sim||  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Covariância e contravariância (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [Covariância e contravariância (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)

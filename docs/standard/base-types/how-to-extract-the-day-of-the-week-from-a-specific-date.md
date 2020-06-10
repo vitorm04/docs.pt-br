@@ -1,5 +1,6 @@
 ---
 title: 'Como: Extrair o dia da semana de uma data específica'
+description: Saiba como determinar o dia ordinal da semana para uma determinada data no .NET. Saiba como exibir o nome do dia da semana localizado para uma determinada data.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-ms.openlocfilehash: 128ff4887601431f75981f13b51a11469e65d65c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fa0eb6c36b88594543d08680af104b5408c295f9
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290468"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662609"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Como: Extrair o dia da semana de uma data específica
 O .NET Framework facilita a verificação da posição numérica do dia da semana em uma determinada data e a exibição do nome do dia localizado em uma determinada data. O valor enumerado que indica o dia da semana correspondente a uma determinada data está disponível na propriedade <xref:System.DateTime.DayOfWeek%2A> ou <xref:System.DateTimeOffset.DayOfWeek%2A>. Em contrapartida, para recuperar o nome do dia da semana é necessário realizar uma operação de formatação que pode ser executada com a chamada de um método de formatação, como o método `ToString` ou <xref:System.String.Format%2A?displayProperty=nameWithType> de valor de data e hora. Este tópico mostra como executar essas operações de formatação.  
@@ -98,7 +99,7 @@ O .NET Framework facilita a verificação da posição numérica do dia da seman
  [!code-csharp[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/Howto1.cs#8)]
  [!code-vb[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/Howto1.vb#8)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Cadeias de caracteres de formato de data e hora padrão](standard-date-and-time-format-strings.md)
 - [Cadeias de caracteres de formato de data e hora personalizadas](custom-date-and-time-format-strings.md)

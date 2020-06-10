@@ -1,16 +1,17 @@
 ---
 title: Parallel Programming in .NET (Programação paralela no .NET)
+description: Saiba mais sobre a programação paralela no .NET. Use um tempo de execução .NET, tipos de biblioteca de classes e ferramentas de diagnóstico para simplificar o desenvolvimento do .NET.
 ms.date: 09/12/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-ms.openlocfilehash: 7adc37374876ebe4dd47e30afa06b5199f34dad5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 02087cf58720388c64d8aba5424db0b54828219a
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290688"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84661959"
 ---
 # <a name="parallel-programming-in-net"></a>Parallel Programming in .NET (Programação paralela no .NET)
 
@@ -35,7 +36,7 @@ A ilustração a seguir oferece uma visão geral de alto nível da arquitetura d
 |[Expressões lambda em PLINQ e TPL](lambda-expressions-in-plinq-and-tpl.md)|Fornece uma visão geral das expressões lambda em C# e Visual Basic e mostra como elas são usadas em PLINQ e na Biblioteca Paralela de Tarefas.|
 |[Para leitura adicional](for-further-reading-parallel-programming.md)|Fornece links para informações adicionais e recursos de exemplo para a programação paralela no .NET.|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral assíncrona](../async.md)
 - [Threading gerenciado](../threading/index.md)

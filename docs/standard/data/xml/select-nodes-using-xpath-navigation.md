@@ -1,17 +1,18 @@
 ---
 title: Selecionar nós usando a navegação XPath
+description: Saiba como selecionar nós XML no .NET. Use os métodos Modelo de Objeto do Documento (DOM), permitindo que você use a navegação XPath para consultar informações do DOM.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-ms.openlocfilehash: 85f3ae9ec9f3b4d0949a893dd1e59fbbda139066
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: aa8b6d93e25d974a0e1b53ae8be9868f6bf64be6
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291455"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662505"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>Selecionar nós usando a navegação XPath
 O DOM (Document Object Model) XML contém métodos que permitem que você use a navegação da linguagem XPath para consultar informações no DOM. Você pode usar a linguagem XPath para localizar um único nó específico ou todos os nós que correspondam a alguns critérios.  
@@ -160,6 +161,6 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
 </bookstore>  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

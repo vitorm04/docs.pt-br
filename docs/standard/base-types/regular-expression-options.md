@@ -1,5 +1,6 @@
 ---
 title: Opções de expressões regulares
+description: Saiba como usar as opções de expressão regular no .NET, como correspondência que não diferencia maiúsculas de minúsculas, modo multilinha e modo da direita para a esquerda.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: 8c742c855234bfd9653bb57036c41e7ccce66295
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 268e05c2212539b030ccc3c7195f618bb3afa707
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289285"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662869"
 ---
 # <a name="regular-expression-options"></a>Opções de expressões regulares
 
@@ -375,6 +376,6 @@ O exemplo a seguir é idêntico ao anterior, exceto que o método estático <xre
 [!code-csharp[Conceptual.Regex.Language.Options#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#15)]
 [!code-vb[Conceptual.Regex.Language.Options#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#15)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Linguagem de expressões regulares – referência rápida](regular-expression-language-quick-reference.md)

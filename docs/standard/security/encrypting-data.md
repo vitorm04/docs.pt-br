@@ -1,5 +1,6 @@
 ---
 title: Criptografando dados
+description: Saiba como criptografar dados no .NET. Você pode usar a criptografia simétrica em fluxos ou pode usar a criptografia assimétrica em um pequeno número de bytes.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 3230836b93ea191e5de27717a918038f2f8dead6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6cebdecd461f28f8228ebb8440dbff218dc211db
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288349"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662518"
 ---
 # <a name="encrypting-data"></a>Criptografando dados
 A criptografia simétrica e a criptografia assimétrica são executadas usando processos diferentes. A criptografia simétrica é executada em fluxos e, portanto, é útil para criptografar grandes quantidades de dados. A criptografia assimétrica é executada em um pequeno número de bytes e, portanto, é útil apenas para pequenas quantidades de dados.  
@@ -260,7 +261,7 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Gerando chaves para criptografia e descriptografia](generating-keys-for-encryption-and-decryption.md)
 - [Descriptografando dados](decrypting-data.md)
