@@ -2,12 +2,12 @@
 title: Como usar um Moniker de serviço com contratos de intercâmbio de metadados
 ms.date: 03/30/2017
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
-ms.openlocfilehash: 8894fdc4fd085b9d55a8fc25043e5258c306024c
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 04a940a6e8f010e5cd851684c5fc62bab2a1a034
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84143472"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601160"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Como usar um Moniker de serviço com contratos de intercâmbio de metadados
 Depois de desenvolver alguns novos serviços WCF, você pode decidir que deseja ser capaz de chamar esses serviços de um script ou de um aplicativo Visual Basic 6,0. Um método seria gerar um assembly de cliente WCF, registrar o assembly com COM, instalar o assembly no GAC e, em seguida, fazer referência aos tipos COM do seu código Visual Basic. Ao distribuir o aplicativo, você também precisará distribuir o assembly do cliente WCF. O usuário precisará registrar o assembly do cliente WCF com com e colocá-lo no GAC. A interoperabilidade COM do WCF também permite que você faça as mesmas chamadas de serviço sem depender de um assembly de cliente WCF. O moniker do WCF permite chamar qualquer serviço WCF de qualquer linguagem compatível COM COM (Visual Basic, VBScript, Visual Basic for Applications (VBA) e assim por diante), especificando um URI de ponto de extremidade de intercâmbio de metadados (MEX) que o moniker do serviço usa para extrair informações de tipo sobre o serviço. Este tópico descreve como chamar o Introdução exemplo do WCF usando um moniker do WCF que especifica um ponto de extremidade MEX.  
@@ -34,12 +34,12 @@ Depois de desenvolver alguns novos serviços WCF, você pode decidir que deseja 
 3. Execute o aplicativo Visual Basic ou o script.  
   
     > [!NOTE]
-    > O serviço que você está chamando deve expor um ponto de extremidade MEX para que o moniker possa ler os metadados do serviço. Para obter mais informações, consulte [como: publicar metadados para um serviço usando um arquivo de configuração](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
+    > O serviço que você está chamando deve expor um ponto de extremidade MEX para que o moniker possa ler os metadados do serviço. Para obter mais informações, consulte [como: publicar metadados para um serviço usando um arquivo de configuração](how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
   
     > [!NOTE]
     > Se o moniker estiver malformado ou se o serviço estiver indisponível, a chamada para retornará `GetObject` um erro dizendo "sintaxe inválida".  Se você receber esse erro, verifique se o moniker que você está usando está correto e se o serviço está disponível.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como usar o Moniker de serviço do Windows Communication Foundation sem registro](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
-- [Como usar um Moniker de serviço com contratos WSDL](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)
+- [Como usar o Moniker de serviço do Windows Communication Foundation sem registro](use-the-wcf-service-moniker-without-registration.md)
+- [Como usar um Moniker de serviço com contratos WSDL](how-to-use-a-service-moniker-with-wsdl-contracts.md)

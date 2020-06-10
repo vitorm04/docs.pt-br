@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: 698a5134683341fedf2a37f7d6383770e14c232c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: dbd51abbc30b1010f7c4f206aad9a773eca0a714
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964799"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593172"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Como hospedar um serviço WCF em um serviço Windows gerenciado
 
@@ -18,7 +18,7 @@ Este tópico descreve as etapas básicas necessárias para criar um serviço de 
 
 Os serviços Windows podem ser gerenciados com o Microsoft.ManagementConsole.SnapIn no MMC (Console de Gerenciamento Microsoft) e podem ser configurados para início automático quando o sistema for inicializado. Essa opção de hospedagem consiste em registrar o domínio do aplicativo (AppDomain) que hospeda um serviço WCF como um serviço gerenciado do Windows para que o tempo de vida do processo do serviço seja controlado pelo SCM (Gerenciador de controle de serviço) para serviços do Windows.
 
-O código do serviço inclui uma implementação de serviço do contrato do serviço, de uma classe do serviço Windows e de uma classe de instalador. A classe de implementação de serviço, `CalculatorService`, é um serviço WCF. O `CalculatorWindowsService` é um serviço Windows. Para qualificar-se como um serviço Windows, a classe herda de `ServiceBase` e implementa os métodos `OnStart` e `OnStop`. Em `OnStart`, um <xref:System.ServiceModel.ServiceHost> é criado para o tipo `CalculatorService` e é aberto. Em `OnStop`, o serviço é interrompido e descartado. O host também é responsável por fornecer um endereço básico ao host de serviço, que foi configurado nas configurações do aplicativo. A classe de instalador, que herda de <xref:System.Configuration.Install.Installer>, permite que o programa seja instalado como um serviço Windows pela ferramenta Installutil.exe.
+O código do serviço inclui uma implementação de serviço do contrato do serviço, de uma classe do serviço Windows e de uma classe de instalador. A classe de implementação de serviço, `CalculatorService` , é um serviço WCF. O `CalculatorWindowsService` é um serviço Windows. Para qualificar-se como um serviço Windows, a classe herda de `ServiceBase` e implementa os métodos `OnStart` e `OnStop`. Em `OnStart`, um <xref:System.ServiceModel.ServiceHost> é criado para o tipo `CalculatorService` e é aberto. Em `OnStop`, o serviço é interrompido e descartado. O host também é responsável por fornecer um endereço básico ao host de serviço, que foi configurado nas configurações do aplicativo. A classe de instalador, que herda de <xref:System.Configuration.Install.Installer>, permite que o programa seja instalado como um serviço Windows pela ferramenta Installutil.exe.
 
 ## <a name="construct-the-service-and-provide-the-hosting-code"></a>Construir o serviço e fornecer o código de hospedagem
 
@@ -26,7 +26,7 @@ O código do serviço inclui uma implementação de serviço do contrato do serv
 
 2. Renomeie Program.cs como Service.cs.
 
-3. Altere o namespace para `Microsoft.ServiceModel.Samples`.
+3. Altere o namespace para `Microsoft.ServiceModel.Samples` .
 
 4. Adicione referências aos assemblies a seguir:
 
@@ -112,7 +112,7 @@ O código do serviço inclui uma implementação de serviço do contrato do serv
 
      Clique com o botão direito do mouse no arquivo app. config na **Gerenciador de soluções** e selecione **Propriedades**. Em **copiar para diretório de saída** , selecione **copiar se mais recente**.
 
-     Este exemplo especifica explicitamente pontos de extremidade no arquivo de configuração. Se você não adicionar nenhum ponto de extremidade ao serviço, o runtime adicionará pontos de extremidade padrão para você. Neste exemplo, como o serviço tem <xref:System.ServiceModel.Description.ServiceMetadataBehavior> definido como `true`, seu serviço também possui metadados de publicação habilitados. Para obter mais informações sobre pontos de extremidade, associações e comportamentos padrão, confira [Configuração simplificada](../../../../docs/framework/wcf/simplified-configuration.md) e [Configuração simplificada para serviços WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+     Este exemplo especifica explicitamente pontos de extremidade no arquivo de configuração. Se você não adicionar nenhum ponto de extremidade ao serviço, o runtime adicionará pontos de extremidade padrão para você. Neste exemplo, como o serviço tem <xref:System.ServiceModel.Description.ServiceMetadataBehavior> definido como `true`, seu serviço também possui metadados de publicação habilitados. Para obter mais informações sobre pontos de extremidade, associações e comportamentos padrão, confira [Configuração simplificada](../simplified-configuration.md) e [Configuração simplificada para serviços WCF](../samples/simplified-configuration-for-wcf-services.md).
 
 ## <a name="install-and-run-the-service"></a>Instalar e executar o serviço
 
@@ -133,9 +133,9 @@ A seguir está uma lista completa do código usado por este tópico:
 
 Como a opção de "auto-hospedagem", o ambiente de hospedagem de serviços Windows requer que algum código de hospedagem seja criado como parte do aplicativo. O serviço é implementado como um aplicativo de console e contém seu próprio código de hospedagem. Em outros ambientes de hospedagem, como o WAS (Serviço de Ativação de Processos do Windows), hospedado no IIS, não é necessário que os desenvolvedores criem código de hospedagem.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Configuração simplificada](../../../../docs/framework/wcf/simplified-configuration.md)
-- [Hospedagem em um aplicativo gerenciado](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)
-- [Hospedando serviços](../../../../docs/framework/wcf/hosting-services.md)
-- [Recursos de hospedagem do Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Configuração simplificada](../simplified-configuration.md)
+- [Hospedagem em um aplicativo gerenciado](hosting-in-a-managed-application.md)
+- [Hospedando serviços](../hosting-services.md)
+- [Recursos de hospedagem do Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

@@ -2,12 +2,12 @@
 title: Instalando o Enfileiramento de Mensagens (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 8ecbd07adfb6bfb4e9898f9b8508809480d17e16
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 1bf79ed5dbcb9f2ace903260cc440e77df3aef09
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921096"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592288"
 ---
 # <a name="installing-message-queuing-msmq"></a>Instalando o Enfileiramento de Mensagens (MSMQ)
 Os procedimentos a seguir mostram como instalar o Enfileiramento de Mensagens 4.0 e o Enfileiramento de Mensagens 3.0.  
@@ -31,7 +31,7 @@ Os procedimentos a seguir mostram como instalar o Enfileiramento de Mensagens 4.
   
 #### <a name="to-install-message-queuing-40-on-windows-7-or-windows-vista"></a>Para instalar o Enfileiramento de Mensagens 4.0 no Windows 7 ou no Windows Vista  
   
-1. Abra **Painel de Controle**.  
+1. Abra o **Painel de Controle**.  
   
 2. Clique em **programas** e, em **programas e recursos**, clique em **ativar e desativar recursos do Windows**.  
   
@@ -47,7 +47,7 @@ Os procedimentos a seguir mostram como instalar o Enfileiramento de Mensagens 4.
   
 #### <a name="to-install-message-queuing-30-on-windows-xp-and-windows-server-2003"></a>Para instalar o Enfileiramento de Mensagens 3.0 no Windows XP e no Windows Server 2003  
   
-1. Abra **Painel de Controle**.  
+1. Abra o **Painel de Controle**.  
   
 2. Clique em **Adicionar remover programas** e, em seguida, clique em **adicionar componentes do Windows**.  
   
@@ -62,6 +62,6 @@ Os procedimentos a seguir mostram como instalar o Enfileiramento de Mensagens 4.
   
 6. Se for solicitado que você reinicie o computador, clique em **OK** para concluir a instalação.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Instruções de configuração](../../../../docs/framework/wcf/samples/set-up-instructions.md)
+- [Instruções de configuração](set-up-instructions.md)

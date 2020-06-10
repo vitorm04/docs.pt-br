@@ -2,15 +2,15 @@
 title: Segurança de transporte WS
 ms.date: 03/30/2017
 ms.assetid: 33a20358-5e1b-458a-a6a9-15753bc7b99b
-ms.openlocfilehash: 5a911323ff3766f2e28a9916a349ba88e583a9c5
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: d0f357ddcfc355bac8eeb86d57641add0013a052
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84143635"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596391"
 ---
 # <a name="ws-transport-security"></a>Segurança de transporte WS
-Este exemplo demonstra o uso de segurança de transporte SSL com a <xref:System.ServiceModel.WSHttpBinding> associação. Por padrão, a `wsHttpBinding` associação fornece comunicação http. Quando configurado para segurança de transporte, a associação dá suporte à comunicação HTTPS. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. O `wsHttpBinding` é especificado e configurado nos arquivos de configuração do aplicativo para o cliente e o serviço.  
+Este exemplo demonstra o uso de segurança de transporte SSL com a <xref:System.ServiceModel.WSHttpBinding> associação. Por padrão, a `wsHttpBinding` associação fornece comunicação http. Quando configurado para segurança de transporte, a associação dá suporte à comunicação HTTPS. Este exemplo é baseado no [introdução](getting-started-sample.md) que implementa um serviço de calculadora. O `wsHttpBinding` é especificado e configurado nos arquivos de configuração do aplicativo para o cliente e o serviço.  
   
 > [!NOTE]
 > Os procedimentos de instalação e as instruções de compilação para esse exemplo estão localizadas no final deste tópico.  
@@ -24,7 +24,7 @@ Este exemplo demonstra o uso de segurança de transporte SSL com a <xref:System.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\wsTransportSecurity`  
   
- O código do programa no exemplo é idêntico ao do serviço de [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) . Você deve criar um certificado e atribuí-lo usando o assistente de certificado do servidor Web antes de compilar e executar o exemplo. A definição do ponto de extremidade e a definição de associação nas configurações do arquivo de configuração habilitam o `Transport` modo de segurança, conforme mostrado no exemplo de configuração a seguir para o cliente.  
+ O código do programa no exemplo é idêntico ao do serviço de [introdução](getting-started-sample.md) . Você deve criar um certificado e atribuí-lo usando o assistente de certificado do servidor Web antes de compilar e executar o exemplo. A definição do ponto de extremidade e a definição de associação nas configurações do arquivo de configuração habilitam o `Transport` modo de segurança, conforme mostrado no exemplo de configuração a seguir para o cliente.  
   
 ```xml  
 <system.serviceModel>  
@@ -77,10 +77,10 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3. Verifique se você executou as [instruções de instalação do certificado do servidor serviços de informações da Internet (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
+3. Verifique se você executou as [instruções de instalação do certificado do servidor serviços de informações da Internet (IIS)](iis-server-certificate-installation-instructions.md).  
   
-4. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).  
   
-5. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).  
