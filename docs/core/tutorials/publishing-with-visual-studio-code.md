@@ -1,15 +1,15 @@
 ---
-title: Publicar um aplicativo de Olá, Mundo do .NET Core com Visual Studio Code
+title: Publicar um aplicativo de console do .NET Core usando Visual Studio Code
 description: A publicação cria o conjunto de arquivos necessários para executar um aplicativo .NET Core.
-ms.date: 05/28/2020
-ms.openlocfilehash: b49b12bf41e3ea7be8dbc459eb7d9b1fbef25790
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.date: 06/08/2020
+ms.openlocfilehash: 442d08c9b016407327ba30db0aae78b5cf6b6fe3
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84246678"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701444"
 ---
-# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio-code"></a>Tutorial: publicar um aplicativo de console do .NET Core com o Visual Studio Code
+# <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: publicar um aplicativo de console do .NET Core usando Visual Studio Code
 
 Este tutorial mostra como publicar um aplicativo de console para que outros usuários possam executá-lo. A publicação cria o conjunto de arquivos necessários para executar um aplicativo. Para implantar os arquivos, copie-os para o computador de destino.
 
@@ -21,7 +21,7 @@ O CLI do .NET Core é usado para publicar o aplicativo, para que você possa seg
 
 ## <a name="publish-the-app"></a>Publicar o aplicativo
 
-1. Abra o Visual Studio Code.
+1. Inicie o Visual Studio Code.
 
 1. Abra a pasta do projeto *HelloWorld* que você criou em [criar um aplicativo de console do .net Core no Visual Studio Code](with-visual-studio-code.md).
 
@@ -29,7 +29,7 @@ O CLI do .NET Core é usado para publicar o aplicativo, para que você possa seg
 
    O terminal é aberto na pasta *HelloWorld* .
 
-1. Execute o seguinte comando:
+1. Execute o comando a seguir:
 
    ```dotnetcli
    dotnet publish --configuration Release
@@ -71,7 +71,7 @@ Nas etapas a seguir, você examinará os arquivos criados pelo processo de publi
 
       Esta é a versão de [implantação dependente de estrutura](../deploying/deploy-with-cli.md#framework-dependent-deployment) do aplicativo. Para executar essa biblioteca de vínculo dinâmico, digite `dotnet HelloWorld.dll` em um prompt de comando. Esse método de execução do aplicativo funciona em qualquer plataforma que tenha o tempo de execução do .NET Core instalado.
 
-   * *HelloWorld. exe* (*HelloWorld* no Linux, não criado no MacOS).
+   * *HelloWorld.exe* (*HelloWorld* no Linux, não criado no MacOS).
 
       Esta é a versão [executável dependente de estrutura](../deploying/deploy-with-cli.md#framework-dependent-executable) do aplicativo. O arquivo é específico do sistema operacional.
 
@@ -85,7 +85,7 @@ Nas etapas a seguir, você examinará os arquivos criados pelo processo de publi
 
 ## <a name="run-the-published-app"></a>Executar o aplicativo publicado
 
-1. No **Gerenciador**, clique com o botão direito do mouse na pasta de *publicação* (ou <kbd>Ctrl</kbd>+ clique em MacOS) e selecione **abrir no terminal**.
+1. No **Gerenciador**, clique com o botão direito do mouse na pasta de *publicação* (<kbd>Ctrl</kbd>-clique em MacOS) e selecione **abrir no terminal**.
 
    :::image type="content" source="media/publishing-with-visual-studio-code/open-in-terminal.png" alt-text="Menu de contexto mostrando abrir no terminal":::
 
@@ -109,10 +109,7 @@ Nas etapas a seguir, você examinará os arquivos criados pelo processo de publi
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Neste tutorial, você publicou um aplicativo de console. Para saber como criar bibliotecas, consulte [desenvolver bibliotecas com o CLI do .NET Core](libraries.md).
-
-<!--In the next tutorial, you create a class library.
+Neste tutorial, você publicou um aplicativo de console. No próximo tutorial, você criará uma biblioteca de classes.
 
 > [!div class="nextstepaction"]
-> [Create a .NET Standard library in Visual Studio](library-with-visual-studio.md)
--->
+> [Criar uma biblioteca de .NET Standard no Visual Studio para Mac](library-with-visual-studio-mac.md)

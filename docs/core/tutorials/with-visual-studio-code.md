@@ -1,17 +1,17 @@
 ---
-title: Criar um aplicativo de console com o .NET Core usando Visual Studio Code
+title: Criar um aplicativo de console do .NET Core usando Visual Studio Code
 description: Saiba como criar um aplicativo de console do .NET Core usando Visual Studio Code e o CLI do .NET Core.
 ms.date: 05/22/2020
-ms.openlocfilehash: 673c4a639a2cab26261b7cdafd5d8e20acfafb94
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6d8f9adb2f77dbfd2d1cf54c80f1cdea582b1d96
+ms.sourcegitcommit: f6350c2c542e6edd52d7e9d6667b96d85d810e67
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201695"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84717504"
 ---
-# <a name="tutorial-create-a-console-application-with-net-core-using-visual-studio-code"></a>Tutorial: criar um aplicativo de console com o .NET Core usando Visual Studio Code
+# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: criar um aplicativo de console do .NET Core usando Visual Studio Code
 
-Este tutorial mostra como criar e executar um aplicativo de console do .NET Core usando Visual Studio Code e o CLI do .NET Core. Tarefas de projeto, como criar, compilar e executar um projeto, são feitas usando a CLI, para que você possa seguir este tutorial com um editor de código diferente e executar comandos em um terminal, se preferir.
+Este tutorial mostra como criar e executar um aplicativo de console do .NET Core usando Visual Studio Code e o CLI do .NET Core. Tarefas de projeto, como criar, compilar e executar um projeto, são feitas usando o CLI do .NET Core. Você pode seguir este tutorial com um editor de código diferente e executar comandos em um terminal, se preferir.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -20,25 +20,29 @@ Este tutorial mostra como criar e executar um aplicativo de console do .NET Core
 
 ## <a name="create-the-app"></a>Criar o aplicativo
 
-1. Abra o Visual Studio Code.
+Crie um projeto de aplicativo de console do .NET Core chamado "HelloWorld".
 
-1. Criar um projeto.
+1. Inicie o Visual Studio Code.
 
-   1. Selecione **arquivo**  >  **abrir pasta** / **abrir...** no menu principal, crie uma pasta *HelloWorld* e clique em **Selecionar pasta** / **abrir**.
+1. Selecione **arquivo**  >  **abrir pasta** (**arquivo**  >  **aberto...** no MacOS) no menu principal.
 
-      O nome da pasta torna-se o nome do projeto e o nome do namespace por padrão. Você adicionará código posteriormente no tutorial que assume que o namespace do projeto é `HelloWorld` .
+1. Na caixa de diálogo **abrir pasta** , crie uma pasta *HelloWorld* e clique em **Selecionar pasta** (**aberta** no MacOS).
 
-   1. Abra o **terminal** no Visual Studio Code selecionando **Exibir**  >  **terminal** no menu principal.
+   O nome da pasta torna-se o nome do projeto e o nome do namespace por padrão. Você adicionará código posteriormente no tutorial que assume que o namespace do projeto é `HelloWorld` .
 
-      O **terminal** é aberto com o prompt de comando na pasta *HelloWorld* .
+1. Abra o **terminal** no Visual Studio Code selecionando **Exibir**  >  **terminal** no menu principal.
 
-   1. No **terminal**, digite o seguinte comando:
+   O **terminal** é aberto com o prompt de comando na pasta *HelloWorld* .
 
-      ```dotnetcli
-      dotnet new console
-      ```
+1. No **terminal**, digite o seguinte comando:
 
-O modelo de aplicativo de console para .NET Core define uma classe, `Program` , com um único método, `Main` , que usa uma <xref:System.String> matriz como um argumento. O arquivo *Program.cs* tem o seguinte código:
+   ```dotnetcli
+   dotnet new console
+   ```
+
+O modelo cria um simples aplicativo “Olá, Mundo”. Ele chama o <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> método para exibir "Olá, mundo!" na janela do console.
+
+O código de modelo define uma classe, `Program` , com um único método, `Main` , que usa uma <xref:System.String> matriz como um argumento:
 
 ```csharp
 using System;
@@ -56,8 +60,6 @@ namespace HelloWorld
 ```
 
 `Main` é o ponto de entrada do aplicativo, o método que é chamado automaticamente pelo runtime quando ele inicia o aplicativo. Quaisquer argumentos de linha de comando fornecidos quando o aplicativo for iniciado estão disponíveis na matriz *args*.
-
-O modelo cria um aplicativo simples que chama o <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> método para exibir "Olá, mundo!" na janela do console.
 
 ## <a name="run-the-app"></a>Executar o aplicativo
 
@@ -85,11 +87,11 @@ Aprimore o aplicativo para solicitar ao usuário seu nome e exibi-lo junto com a
 
    ![Prompt para ativos ausentes](media/with-visual-studio-code/missing-assets.png)
 
-1. Substitua o conteúdo do `Main` método em *Program.cs*, que atualmente é apenas a linha que chama `Console.WriteLine` , com o seguinte código:
+1. Substitua o conteúdo do `Main` método em *Program.cs*, que é a linha que chama `Console.WriteLine` , com o seguinte código:
 
-   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="1":::
 
-   Esse código exibe "Qual é o seu nome?" na janela do console e aguarda até que o usuário insira uma cadeia de caracteres seguida pela tecla **Enter** . Ele armazena essa cadeia de caracteres em uma variável chamada `name` . Ele também recupera o valor da propriedade <xref:System.DateTime.Now?displayProperty=nameWithType>, que contém a hora local atual e o atribui a uma variável chamada `date`. Por fim, ele exibe esses valores na janela do console.
+   Esse código exibe "Qual é o seu nome?" na janela do console e aguarda até que o usuário insira uma cadeia de caracteres seguida pela tecla <kbd>Enter</kbd> . Ele armazena essa cadeia de caracteres em uma variável chamada `name` . Ele também recupera o valor da propriedade <xref:System.DateTime.Now?displayProperty=nameWithType>, que contém a hora local atual e o atribui a uma variável chamada `date`. Por fim, ele exibe esses valores na janela do console.
 
    O `\n` representa um caractere de nova linha.
 
@@ -106,7 +108,7 @@ Aprimore o aplicativo para solicitar ao usuário seu nome e exibi-lo junto com a
    dotnet run
    ```
 
-1. Responda ao prompt digitando um nome e pressionando a tecla **Enter** .
+1. Responda ao prompt digitando um nome e pressionando a tecla <kbd>Enter</kbd> .
 
    :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="Janela do terminal com saída de programa modificada":::
 
@@ -118,7 +120,7 @@ Aprimore o aplicativo para solicitar ao usuário seu nome e exibi-lo junto com a
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Neste tutorial, você criou um aplicativo .NET Core. No próximo tutorial, você depurará o aplicativo.
+Neste tutorial, você criou um aplicativo de console do .NET Core. No próximo tutorial, você depurará o aplicativo.
 
 > [!div class="nextstepaction"]
 > [Depurar um aplicativo de console do .NET Core usando Visual Studio Code](debugging-with-visual-studio-code.md)

@@ -1,15 +1,15 @@
 ---
-title: Testar um .NET Standard biblioteca de classes com o .NET Core no Visual Studio Code
+title: Testar um .NET Standard biblioteca de classes com o .NET Core usando Visual Studio Code
 description: Crie um projeto de teste de unidade para uma biblioteca de classes do .NET Core. Verifique se uma biblioteca de classes do .NET Core funciona corretamente com testes de unidade.
-ms.date: 05/29/2020
-ms.openlocfilehash: be227453bd441028cc6ce348c00fad944140238f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 06/08/2020
+ms.openlocfilehash: a61fd952eea2dec0d5a9f351d3f3d01c738e8fad
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292185"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701027"
 ---
-# <a name="tutorial-test-a-net-standard-library-with-net-core-in-visual-studio-code"></a>Tutorial: testar uma biblioteca de .NET Standard com o .NET Core no Visual Studio Code
+# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>Tutorial: testar uma biblioteca de classes .NET Standard com o .NET Core usando Visual Studio Code
 
 Este tutorial mostra como automatizar o teste de unidade adicionando um projeto de teste a uma solução.
 
@@ -19,7 +19,9 @@ Este tutorial mostra como automatizar o teste de unidade adicionando um projeto 
 
 ## <a name="create-a-unit-test-project"></a>Crie um projeto de teste de unidade
 
-1. Abra o Visual Studio Code.
+As unidade de teste fornecem testes de software automatizados durante o desenvolvimento e a publicação. A estrutura de teste que você usa neste tutorial é MSTest. [MSTest](https://github.com/Microsoft/testfx-docs) é uma das três estruturas de teste que você pode escolher. Os outros são [xUnit](https://xunit.net/) e [NUnit](https://nunit.org/).
+
+1. Inicie o Visual Studio Code.
 
 1. Abra a `ClassLibraryProjects` solução que você criou em [criar uma .net Standard biblioteca no Visual Studio](library-with-visual-studio.md).
 
@@ -55,16 +57,17 @@ Este tutorial mostra como automatizar o teste de unidade adicionando um projeto 
 
    Cada método marcado com [[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) em uma classe de teste marcada com [[TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) é executado automaticamente quando o teste de unidade é executado.
 
-   > [!NOTE]
-   > MSTest é uma das três estruturas de teste que você pode escolher. Os outros são xUnit e nUnit.
-
 1. Adicione o projeto de teste à solução.
 
    ```dotnetcli
    dotnet sln add StringLibraryTest/StringLibraryTest.csproj
    ```
 
-1. Crie uma referência de projeto para o projeto de biblioteca de classes executando o seguinte comando:
+## <a name="add-a-project-reference"></a>Adicionar uma referência ao projeto
+
+Para que o projeto de teste funcione com a `StringLibrary` classe, adicione uma referência no `StringLibraryTest` projeto ao `StringLibrary` projeto.
+
+1. Execute o comando a seguir:
 
    ```dotnetcli
    dotnet add StringLibraryTest/StringLibraryTest.csproj reference StringLibrary/StringLibrary.csproj
@@ -89,7 +92,7 @@ Ao testar o método `StringLibrary.StartsWithUpper`, você quer fornecer um núm
 
 Como o método de biblioteca lida com cadeias de caracteres, você também deseja certificar-se de que ele manipula com êxito uma [cadeia de caracteres vazia ( `String.Empty` )](xref:System.String.Empty) e uma `null` cadeia de caracteres. Uma cadeia de caracteres vazia é aquela que não tem caracteres e cujo número <xref:System.String.Length> é 0. Uma `null` cadeia de caracteres é aquela que não foi inicializada. Você pode chamar `StartsWithUpper` diretamente como um método estático e passar um único <xref:System.String> argumento. Ou você pode chamar `StartsWithUpper` como um método de extensão em uma `string` variável atribuída a `null` .
 
-Você definirá três métodos, cada um deles chamará um <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> método repetidamente para cada elemento em uma matriz de cadeia de caracteres. Como o método de teste falha assim que encontra a primeira falha, você chamará uma sobrecarga de método que permite passar uma cadeia de caracteres que indica o valor da cadeia de caracteres usado na chamada do método.
+Você definirá três métodos, cada um deles chamará um <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> método para cada elemento em uma matriz de cadeia de caracteres. Você chamará uma sobrecarga de método que permite especificar uma mensagem de erro a ser exibida em caso de falha de teste. A mensagem identifica a cadeia de caracteres que causou a falha.
 
 Para criar os métodos de teste:
 
@@ -122,7 +125,7 @@ Para criar os métodos de teste:
 
 ## <a name="handle-test-failures"></a>Lidar com falhas de teste
 
-Se você estiver fazendo o TDD (desenvolvimento controlado por teste), você escreverá testes primeiro e eles falharão na primeira vez em que forem executados. Em seguida, você adiciona código ao aplicativo que torna o teste com sucesso. Nesse caso, você criou o teste depois de gravar o código do aplicativo que ele valida, para que você não tenha visto o teste falhar. Para validar que um teste falha quando você espera que ele falhe, adicione um valor inválido para a entrada de teste.
+Se você estiver fazendo o TDD (desenvolvimento controlado por teste), você escreverá testes primeiro e eles falharão na primeira vez em que forem executados. Em seguida, você adiciona código ao aplicativo que torna o teste com sucesso. Para este tutorial, você criou o teste depois de gravar o código do aplicativo que ele valida, para que você não tenha visto o teste falhar. Para validar que um teste falha quando você espera que ele falhe, adicione um valor inválido para a entrada de teste.
 
 1. Modifique a matriz `words` no método `TestDoesNotStartWithUpper` para incluir a cadeia de caracteres “Error”.
 
@@ -137,7 +140,7 @@ Se você estiver fazendo o TDD (desenvolvimento controlado por teste), você esc
    dotnet test StringLibraryTest/StringLibraryTest.csproj
    ```
 
-   A saída do terminal mostra que um teste falha e fornece uma mensagem de erro para o teste com falha.
+   A saída do terminal mostra que um teste falha e fornece uma mensagem de erro para o teste com falha: "Assert. IsFalse falhou. Esperado para 'Error': false, real: True". Devido à falha, nenhuma cadeia de caracteres na matriz após o "erro" foi testada.
 
    ```
    Starting test execution, please wait...
@@ -157,11 +160,11 @@ Se você estiver fazendo o TDD (desenvolvimento controlado por teste), você esc
    Total time: 1.7825 Seconds
    ```
 
-1. Desfaça as modificações feitas na etapa 1 e remova a cadeia de caracteres "Error". Execute novamente o teste e os testes são aprovados.
+1. Remova a cadeia de caracteres "Error" que você adicionou na etapa 1. Execute novamente o teste e os testes são aprovados.
 
 ## <a name="test-the-release-version-of-the-library"></a>Testar a versão de lançamento da biblioteca
 
-Agora que todos os testes passaram ao executar a versão de depuração da biblioteca, execute o testa um tempo adicional em relação à compilação da versão da biblioteca. Vários fatores, incluindo as otimizações do compilador, podem produzir um comportamento diferente entre as compilações de Depuração e Lançamento.
+Agora que todos os testes passaram durante a execução da compilação de depuração da biblioteca, execute o testa um tempo adicional em relação à compilação da versão da biblioteca. Vários fatores, incluindo as otimizações do compilador, podem produzir um comportamento diferente entre as compilações de Depuração e Lançamento.
 
 1. Execute os testes com a configuração de Build de versão:
 
@@ -173,7 +176,7 @@ Agora que todos os testes passaram ao executar a versão de depuração da bibli
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Teste de unidade no .NET Core e no .NET Standard](../testing/index.md)
+* [Teste de unidade no .NET Core e no .NET Standard](../testing/index.md)
 
 ## <a name="next-steps"></a>Próximas etapas
 

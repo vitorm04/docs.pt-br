@@ -1,21 +1,19 @@
 ---
-title: Publicar seu aplicativo .NET Core Olá, Mundo com o Visual Studio
-description: A publicação cria o conjunto de arquivos necessários para executar seu aplicativo .NET Core.
-author: BillWagner
-ms.author: wiwagn
-ms.date: 05/20/2020
+title: Publicar um aplicativo de console do .NET Core usando o Visual Studio
+description: A publicação cria o conjunto de arquivos necessários para executar um aplicativo .NET Core.
+ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 745fb2af332afa278c78ec9baeea7230fe725c02
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 44646a307d230db395b55b9dec5acfd168605940
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241482"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701278"
 ---
-# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio"></a>Tutorial: publicar um aplicativo de console do .NET Core com o Visual Studio
+# <a name="tutorial-publish-a-net-core-console-application-using-visual-studio"></a>Tutorial: publicar um aplicativo de console do .NET Core usando o Visual Studio
 
 Este tutorial mostra como publicar um aplicativo de console para que outros usuários possam executá-lo. A publicação cria o conjunto de arquivos necessários para executar seu aplicativo. Para implantar os arquivos, copie-os para o computador de destino.
 
@@ -25,7 +23,11 @@ Este tutorial mostra como publicar um aplicativo de console para que outros usu�
 
 ## <a name="publish-the-app"></a>Publicar o aplicativo
 
-1. Certifique-se de que o Visual Studio esteja compilando a versão de lançamento de seu aplicativo. Se necessário, altere a configuração de build na barra de ferramentas de **Depuração** para **Lançamento**.
+1. Inicie o Visual Studio.
+
+1. Abra o projeto *HelloWorld* que você criou em [criar um aplicativo de console .NET Core no Visual Studio](with-visual-studio.md).
+
+1. Verifique se o Visual Studio está usando a configuração de Build de versão. Se necessário, altere a configuração de build na barra de ferramentas de **Depuração** para **Lançamento**.
 
    ![Barra de ferramentas do Visual Studio com build de versão selecionado](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
@@ -47,7 +49,7 @@ Este tutorial mostra como publicar um aplicativo de console para que outros usu�
 
 ## <a name="inspect-the-files"></a>Inspecionar os arquivos
 
-O processo de publicação cria uma implantação dependente de estrutura, que é um tipo de implantação em que o aplicativo publicado é executado no computador que tem o tempo de execução do .NET Core instalado. Os usuários podem executar o aplicativo publicado clicando duas vezes no executável ou emitindo o `dotnet HelloWorld.dll` comando de um prompt de comando.
+Por padrão, o processo de publicação cria uma implantação dependente de estrutura, que é um tipo de implantação em que o aplicativo publicado é executado no computador que tem o tempo de execução do .NET Core instalado. Os usuários podem executar o aplicativo publicado clicando duas vezes no executável ou emitindo o `dotnet HelloWorld.dll` comando de um prompt de comando.
 
 Nas etapas a seguir, você examinará os arquivos criados pelo processo de publicação.
 
@@ -67,7 +69,7 @@ Nas etapas a seguir, você examinará os arquivos criados pelo processo de publi
 
       Esta é a versão de [implantação dependente de estrutura](../deploying/deploy-with-cli.md#framework-dependent-deployment) do aplicativo. Para executar essa biblioteca de vínculo dinâmico, digite `dotnet HelloWorld.dll` em um prompt de comando. Esse método de execução do aplicativo funciona em qualquer plataforma que tenha o tempo de execução do .NET Core instalado.
 
-   * *HelloWorld. exe*
+   * *HelloWorld.exe*
 
       Esta é a versão [executável dependente de estrutura](../deploying/deploy-with-cli.md#framework-dependent-executable) do aplicativo. Para executá-lo, insira `HelloWorld.exe` em um prompt de comando. O arquivo é específico do sistema operacional.
 
@@ -83,7 +85,7 @@ Nas etapas a seguir, você examinará os arquivos criados pelo processo de publi
 
 1. Em **Gerenciador de soluções**, clique com o botão direito do mouse na pasta de *publicação* e selecione **Copiar caminho completo**.
 
-1. Abra um prompt de comando e navegue até a pasta de *publicação* . Insira `cd` e cole o caminho completo. Por exemplo:
+1. Abra um prompt de comando e navegue até a pasta de *publicação* . Para fazer isso, insira `cd` e cole o caminho completo. Por exemplo:
 
    ```
    cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\

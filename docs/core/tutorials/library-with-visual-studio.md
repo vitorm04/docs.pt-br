@@ -1,26 +1,23 @@
 ---
-title: Criar uma biblioteca de classes de .NET Standard no Visual Studio
+title: Criar uma biblioteca de classes de .NET Standard usando o Visual Studio
 description: Saiba como criar uma biblioteca de classes de .NET Standard usando o Visual Studio.
-ms.date: 05/21/2020
+ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 7d64ca32bdbe20f949ae575bc4c3f9bbb594fffd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ef9c62b0378e1064d8cfd90a8c59aed74ea312b2
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283618"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701559"
 ---
-# <a name="tutorial-create-a-net-standard-library-in-visual-studio"></a>Tutorial: criar uma biblioteca de .NET Standard no Visual Studio
-
-Uma *biblioteca de classes* define tipos e métodos que são chamados por um aplicativo. Uma biblioteca de classes que tem como alvo .NET Standard 2,0 permite que sua biblioteca seja chamada por qualquer implementação do .NET que dê suporte a essa versão do .NET Standard. Quando você finaliza sua biblioteca de classes, pode decidir se deseja distribuí-la como um componente de terceiros ou se quer incluí-la como um componente agrupado com um ou mais aplicativos.
-
-> [!NOTE]
-> Para obter uma lista de versões de .NET Standard e as plataformas às quais eles dão suporte, consulte [.net Standard](../../standard/net-standard.md).
+# <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>Tutorial: criar uma biblioteca de .NET Standard usando o Visual Studio
 
 Neste tutorial, você cria uma biblioteca de utilitário simples que contém um único método de manipulação de cadeia de caracteres. Implemente-o como um [método de extensão](../../csharp/programming-guide/classes-and-structs/extension-methods.md) para que você possa chamá-lo como se fosse um membro da <xref:System.String> classe.
+
+Uma *biblioteca de classes* define tipos e métodos que são chamados por um aplicativo. Uma biblioteca de classes que tem como alvo .NET Standard 2,0 permite que sua biblioteca seja chamada por qualquer implementação do .NET que dê suporte a essa versão do .NET Standard. Ao concluir a biblioteca de classes, você pode distribuí-la como um componente de terceiros ou como um componente agrupado com um ou mais aplicativos.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -28,13 +25,13 @@ Neste tutorial, você cria uma biblioteca de utilitário simples que contém um 
 
   Para obter mais informações, consulte a seção [instalar com o Visual Studio](../install/sdk.md?pivots=os-windows#install-with-visual-studio) no artigo [instalar o SDK do .NET Core](../install/sdk.md?pivots=os-windows) .
 
-## <a name="create-a-visual-studio-solution"></a>Criar uma solução do Visual Studio
+## <a name="create-a-solution"></a>Criar uma solução
 
 Comece criando uma solução em branco para colocar o projeto de biblioteca de classes no. Uma solução do Visual Studio serve como um contêiner para um ou mais projetos. Você adicionará mais projetos relacionados à mesma solução.
 
 Para criar a solução em branco:
 
-1. Abra o Visual Studio.
+1. Inicie o Visual Studio.
 
 2. Na janela iniciar, escolha **criar um novo projeto**.
 
@@ -75,7 +72,7 @@ Para criar a solução em branco:
 
 ## <a name="add-a-console-app-to-the-solution"></a>Adicionar um aplicativo de console à solução
 
-Use a biblioteca de classes em um aplicativo de console que solicita que o usuário insira uma cadeia de caracteres e relate se a cadeia de caracteres começa com um caractere maiúsculo.
+Adicione um aplicativo de console que usa a biblioteca de classes. O aplicativo solicitará que o usuário insira uma cadeia de caracteres e relate se a cadeia de caracteres começa com um caractere maiúsculo.
 
 1. Adicione um novo aplicativo de console .NET Core chamado "ShowCase" à solução.
 
@@ -87,18 +84,6 @@ Use a biblioteca de classes em um aplicativo de console que solicita que o usuá
 
    1. Na página **configurar seu novo projeto** , insira **Showcase** na caixa **nome do projeto** . Em seguida, escolha **Criar**.
 
-1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto **ShowCase** e selecione **Definir como Projeto de Inicialização** no menu de contexto.
-
-   ![Menu de contexto do projeto do Visual Studio para definir o projeto de inicialização](media/library-with-visual-studio/set-startup-project-context-menu.png)
-
-1. Inicialmente, o novo projeto de aplicativo de console não tem acesso à biblioteca de classes. Para permitir que ele chame métodos na biblioteca de classes, crie uma referência de projeto para o projeto de biblioteca de classes. Em **Gerenciador de soluções**, clique com o botão direito do mouse no `ShowCase` nó **dependências** do projeto e selecione **Adicionar referência de projeto**.
-
-   ![Adicionar menu de contexto de referência no Visual Studio](media/library-with-visual-studio/add-reference-context-menu.png)
-
-1. Na caixa de diálogo **Gerenciador de referências** , selecione o projeto **StringLibrary** e selecione **OK**.
-
-   ![Caixa de diálogo Gerenciador de referências com StringLibrary selecionado](media/library-with-visual-studio/manage-project-references.png)
-
 1. Na janela de código do arquivo *Program.cs* ou *Program. vb* , substitua todo o código pelo código a seguir.
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
@@ -106,19 +91,42 @@ Use a biblioteca de classes em um aplicativo de console que solicita que o usuá
 
    O código usa a variável `row` ​​para manter uma contagem do número de linhas de dados gravadas na janela do console. Sempre que for maior ou igual a 25, o código limpará a janela do console e exibirá uma mensagem para o usuário.
 
-   O programa solicita que o usuário insira uma cadeia de caracteres. Ele indica se a cadeia de caracteres começa com um caractere maiúsculo. Se o usuário pressionar a tecla Enter sem inserir uma cadeia de caracteres, o aplicativo será encerrado e a janela do console será fechada.
+   O programa solicita que o usuário insira uma cadeia de caracteres. Ele indica se a cadeia de caracteres começa com um caractere maiúsculo. Se o usuário pressionar a tecla <kbd>Enter</kbd> sem inserir uma cadeia de caracteres, o aplicativo será encerrado e a janela do console será fechada.
 
-1. Se necessário, altere a barra de ferramentas para compilar a versão de **Depuração** do projeto `ShowCase`. Compile e execute o programa selecionando a seta verde no botão **ShowCase**.
+## <a name="add-a-project-reference"></a>Adicionar uma referência ao projeto
+
+Inicialmente, o novo projeto de aplicativo de console não tem acesso à biblioteca de classes. Para permitir que ele chame métodos na biblioteca de classes, crie uma referência de projeto para o projeto de biblioteca de classes.
+
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no `ShowCase` nó **dependências** do projeto e selecione **Adicionar referência de projeto**.
+
+   ![Adicionar menu de contexto de referência no Visual Studio](media/library-with-visual-studio/add-reference-context-menu.png)
+
+1. Na caixa de diálogo **Gerenciador de referências** , selecione o projeto **StringLibrary** e selecione **OK**.
+
+   ![Caixa de diálogo Gerenciador de referências com StringLibrary selecionado](media/library-with-visual-studio/manage-project-references.png)
+
+## <a name="run-the-app"></a>Executar o aplicativo
+
+1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto **ShowCase** e selecione **Definir como Projeto de Inicialização** no menu de contexto.
+
+   ![Menu de contexto do projeto do Visual Studio para definir o projeto de inicialização](media/library-with-visual-studio/set-startup-project-context-menu.png)
+
+1. Pressione <kbd>Shift</kbd> + <kbd>F5</kbd> para compilar e executar o programa sem depuração.
 
    ![Barra de ferramentas do projeto do Visual Studio mostrando botão de depuração](media/library-with-visual-studio/visual-studio-project-toolbar.png)
 
-1. Experimente o programa digitando cadeias de caracteres e pressionando **Enter**e pressione **Enter** para sair.
+1. Experimente o programa digitando cadeias de caracteres e pressionando <kbd>Enter</kbd>e pressione <kbd>Enter</kbd> para sair.
 
    :::image type="content" source="media/library-with-visual-studio/run-showcase.png" alt-text="Janela do console com o ShowCase em execução":::
+
+## <a name="additional-resources"></a>Recursos adicionais
+
+* [Desenvolver bibliotecas com o CLI do .NET Core](libraries.md)
+* [.Net Standard versões e plataformas às quais eles dão suporte](../../standard/net-standard.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 
 Neste tutorial, você criou uma solução, adicionou um projeto de biblioteca e adicionou um projeto de aplicativo de console que usa a biblioteca do. No próximo tutorial, você adicionará um projeto de teste de unidade à solução.
 
 > [!div class="nextstepaction"]
-> [Testar uma biblioteca de .NET Standard com o .NET Core no Visual Studio](testing-library-with-visual-studio.md)
+> [Testar uma biblioteca de .NET Standard com o .NET Core usando o Visual Studio](testing-library-with-visual-studio.md)

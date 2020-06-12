@@ -1,13 +1,13 @@
 ---
-title: Depurar um aplicativo de console do .NET Core com o Visual Studio Code
-description: Saiba como depurar um aplicativo de console do .NET Core com o Visual Studio Code.
+title: Depurar um aplicativo de console do .NET Core usando Visual Studio Code
+description: Saiba como depurar um aplicativo de console do .NET Core usando Visual Studio Code.
 ms.date: 05/26/2020
-ms.openlocfilehash: 82b2798397d702aa2a50c04bf6e4d569b97e3666
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 40e9b114df1bd12fb05bfb773781d6009d087a06
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241507"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84702121"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Depurar um aplicativo de console do .NET Core usando Visual Studio Code
 
@@ -19,25 +19,25 @@ Este tutorial apresenta as ferramentas de depuração disponíveis no Visual Stu
 
 ## <a name="use-debug-build-configuration"></a>Usar configuração de compilação de depuração
 
-*Depuração* e *versão* são duas das configurações de compilação do .NET Core. Você usa a configuração de compilação de depuração para depuração e a configuração de versão para a distribuição de versão final.
+*Debug* e *Release* são as configurações de compilação internas do .NET Core. Você usa a configuração de compilação de depuração para depuração e a configuração de versão para a distribuição de versão final.
 
 Na configuração de depuração, um programa é compilado com informações de depuração simbólicas completas e sem otimização. A otimização complica a depuração, porque a relação entre o código fonte e as instruções geradas é mais complexa. A configuração de versão de um programa não tem informações de depuração simbólicas e é totalmente otimizada.
 
- Por padrão, Visual Studio Code usa a configuração de compilação de depuração, portanto, você não precisa alterá-la antes da depuração.
+Por padrão, Visual Studio Code configurações de inicialização usam a configuração de compilação de depuração, portanto, você não precisa alterá-la antes da depuração.
+
+1. Inicie o Visual Studio Code.
+
+1. Abra a pasta do projeto que você criou em [criar um aplicativo de console do .NET Core no Visual Studio Code](with-visual-studio-code.md).
 
 ## <a name="set-a-breakpoint"></a>Definir um ponto de interrupção
 
-Um ponto de interrupção interrompe temporariamente a execução do aplicativo *antes* de a linha com o ponto de interrupção ser executada.
-
-1. Abra o Visual Studio Code.
-
-1. Abra a pasta do projeto *HelloWorld* que você criou em [criar um aplicativo de console do .net Core no Visual Studio Code](with-visual-studio-code.md).
+Um *ponto de interrupção* interrompe temporariamente a execução do aplicativo antes de a linha com o ponto de interrupção ser executada.
 
 1. Abra o arquivo *Program.cs* .
 
-1. Defina um *ponto de interrupção* na linha que exibe o nome, a data e a hora clicando na margem esquerda da janela de código. A margem esquerda está à esquerda dos números de linha. Outra maneira de definir um ponto de interrupção é colocando o cursor na linha de código e, em seguida, pressionando <kbd>F9</kbd>.
+1. Defina um *ponto de interrupção* na linha que exibe o nome, a data e a hora clicando na margem esquerda da janela de código. A margem esquerda está à esquerda dos números de linha. Outras maneiras de definir um ponto de interrupção são pressionando <kbd>F9</kbd> ou selecionando **executar**  >  **alternância de ponto de interrupção** no menu enquanto a linha de código está selecionada.
 
-   Como mostra a imagem a seguir, Visual Studio Code indica a linha na qual o ponto de interrupção é definido, exibindo um ponto vermelho na margem esquerda.
+   Visual Studio Code indica a linha na qual o ponto de interrupção é definido exibindo um ponto vermelho na margem esquerda.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/breakpoint-set.png" alt-text="Conjunto de pontos de interrupção":::
 
@@ -45,7 +45,7 @@ Um ponto de interrupção interrompe temporariamente a execução do aplicativo 
 
 O ponto de interrupção está localizado após uma `Console.ReadLine` chamada de método. O **console de depuração** não aceita a entrada de terminal para um programa em execução. Para lidar com a entrada de terminal durante a depuração, você pode usar o terminal integrado (um dos Visual Studio Code Windows) ou um terminal externo. Para este tutorial, você usa o terminal integrado.
 
-1. Abra *. vscode/Launch. JSON*.
+1. Abra *. vscode/launch.jsem*.
 
 1. Altere a `console` configuração para `integratedTerminal` .
 
@@ -69,7 +69,7 @@ O ponto de interrupção está localizado após uma `Console.ReadLine` chamada d
 
    :::image type="content" source="media/debugging-with-visual-studio-code/select-debug-pane.png" alt-text="Abrir a guia Depurar no Visual Studio Code":::
 
-1. Inicie a depuração selecionando a seta verde na parte superior do painel, ao lado de **inicialização do .NET Core (console)**.  Outra maneira de iniciar a depuração é pressionar <kbd>F5</kbd>.
+1. Selecione a seta verde na parte superior do painel, ao lado de **inicialização do .NET Core (console)**. Outra maneira de iniciar o programa no modo de depuração é escolhendo **executar**  >  **Iniciar Depuração** no menu.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/start-debugging.png" alt-text="Iniciar Depuração":::
 
@@ -83,7 +83,7 @@ O ponto de interrupção está localizado após uma `Console.ReadLine` chamada d
 
    :::image type="content" source="media/debugging-with-visual-studio-code/breakpoint-hit.png" alt-text="Impacto de ponto de interrupção, mostrando locais":::
 
-## <a name="change-variable-values"></a>Alterar valores de variáveis
+## <a name="use-the-debug-console"></a>Usar o console de depuração
 
 A janela do **console de depuração** permite interagir com o aplicativo que você está depurando. Você pode alterar o valor de variáveis para ver como ele afeta seu programa.
 
@@ -113,7 +113,7 @@ A janela do **console de depuração** permite interagir com o aplicativo que vo
 
 O programa exibe a cadeia de caracteres que o usuário insere. O que acontecerá se o usuário não inserir nada? Você pode testá-lo com um recurso de depuração útil chamado de *ponto de interrupção condicional*.
 
-1. Clique com o botão direito do mouse (<kbd>Ctrl</kbd>+ clique em MacOS) no ponto vermelho que representa o pontos de interrupção. No menu de contexto, selecione **Editar ponto de interrupção** para abrir uma caixa de diálogo que permite inserir uma expressão condicional.
+1. Clique com o botão direito do mouse em (<kbd>Ctrl</kbd>-clique em MacOS) no ponto vermelho que representa os pontos de interrupção. No menu de contexto, selecione **Editar ponto de interrupção** para abrir uma caixa de diálogo que permite inserir uma expressão condicional.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/breakpoint-context-menu.png" alt-text="Menu de contexto do ponto de interrupção":::
 
@@ -127,7 +127,7 @@ O programa exibe a cadeia de caracteres que o usuário insere. O que acontecerá
 
    Cada vez que o ponto de interrupção for atingido, o depurador chamará o `String.IsNullOrEmpty(name)` método e interromperá essa linha somente se a chamada do método retornar `true` .
 
-   Em vez de uma expressão condicional, você pode especificar uma *contagem de ocorrências*, que interrompe a execução do programa antes que uma instrução seja executada um número especificado de vezes ou uma *condição de filtro*, que interrompe a execução do programa com base nesses atributos como um identificador de thread, um nome de processo ou um nome de thread.
+   Em vez de uma expressão condicional, você pode especificar uma *contagem de ocorrências*, que interrompe a execução do programa antes que uma instrução seja executada um número especificado de vezes. Outra opção é especificar uma *condição de filtro*, que interrompe a execução do programa com base nesses atributos como um identificador de thread, um nome de processo ou um nome de thread.
 
 1. Inicie o programa com a depuração pressionando <kbd>F5</kbd>.
 
@@ -149,7 +149,7 @@ O programa exibe a cadeia de caracteres que o usuário insere. O que acontecerá
 
 1. Selecione a guia **terminal** e pressione qualquer tecla para sair do programa e parar a depuração.
 
-1. Desmarque o ponto de interrupção clicando no pontos na margem esquerda da janela de código. Outra maneira de limpar um ponto de interrupção é pressionando <kbd>F9</kbd> enquanto a linha de código é selecionada.
+1. Desmarque o ponto de interrupção clicando no pontos na margem esquerda da janela de código. Outras maneiras de limpar um ponto de interrupção são pressionando <kbd>F9</kbd> ou escolhendo **executar > alternar ponto de interrupção** no menu enquanto a linha de código está selecionada.
 
 1. Se você receber um aviso de que a condição de ponto de interrupção será perdida, selecione **remover ponto de interrupção**.
 
@@ -165,17 +165,17 @@ Visual Studio Code também permite que você percorra linha por linha por meio d
 
    Neste ponto, a janela **variáveis** mostra que a `args` matriz está vazia e `name` `date` tem valores padrão.
 
-1. Selecione **a etapa into** ou pressione <kbd>F11</kbd>.
+1. Selecione **executar**  >  **etapa em** ou pressione <kbd>F11</kbd>.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/step-into.png" alt-text="Botão de depuração":::
 
    Visual Studio Code realça a próxima linha.
 
-1. Selecione **a etapa into** ou pressione <kbd>F11</kbd>.
+1. Selecione **executar**  >  **etapa em** ou pressione <kbd>F11</kbd>.
 
    Visual Studio Code executa o `Console.WriteLine` para o prompt de nome e realça a próxima linha de execução. A próxima linha é o `Console.ReadLine` para o `name` . A janela **variáveis** é inalterada e a guia **terminal** mostra o "Qual é seu nome?" aviso.
 
-1. Selecione **a etapa into** ou pressione <kbd>F11</kbd>.
+1. Selecione **executar**  >  **etapa em** ou pressione <kbd>F11</kbd>.
 
    O Visual Studio realça a `name` atribuição de variável. A janela **variáveis** mostra que `name` ainda é `null` .
 
@@ -183,19 +183,19 @@ Visual Studio Code também permite que você percorra linha por linha por meio d
 
    A guia **terminal** pode não exibir a cadeia de caracteres que você inserir enquanto estiver inserindo, mas o <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> método capturará sua entrada.
 
-1. Selecione **a etapa into** ou pressione <kbd>F11</kbd>.
+1. Selecione **executar**  >  **etapa em** ou pressione <kbd>F11</kbd>.
 
    Visual Studio Code realça a `date` atribuição de variável. A janela **variáveis** mostra o valor retornado pela chamada para o <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> método. A guia **terminal** exibe a cadeia de caracteres que você inseriu no prompt.
 
-1. Selecione **a etapa into** ou pressione <kbd>F11</kbd>.
+1. Selecione **executar**  >  **etapa em** ou pressione <kbd>F11</kbd>.
 
    A janela **variáveis** mostra o valor da `date` variável após a atribuição da <xref:System.DateTime.Now?displayProperty=nameWithType> propriedade.
 
-1. Selecione **a etapa into** ou pressione <kbd>F11</kbd>.
+1. Selecione **executar**  >  **etapa em** ou pressione <kbd>F11</kbd>.
 
    Visual Studio Code chama o <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType> método. A janela do console exibe a cadeia de caracteres formatada.
 
-1. Selecione **sair** ou pressione <kbd>Shift</kbd> + <kbd>F11</kbd>.
+1. Selecione **executar**  >  **etapa para sair** ou pressione <kbd>Shift</kbd> + <kbd>F11</kbd>.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/step-out.png" alt-text="Botão de depuração":::
 
@@ -205,7 +205,7 @@ Visual Studio Code também permite que você percorra linha por linha por meio d
 
 1. Pressione qualquer tecla para sair do programa.
 
-## <a name="select-release-build-configuration"></a>Selecionar configuração da compilação de versão
+## <a name="use-release-build-configuration"></a>Usar a configuração de Build de versão
 
 Depois de testar a versão de depuração do seu aplicativo, você também deve compilar e testar a versão de lançamento. A versão de lançamento incorpora otimizações de compilador que podem afetar o comportamento de um aplicativo. Por exemplo, as otimizações do compilador que são projetadas para melhorar o desempenho podem criar condições de corrida em aplicativos multissegmentados.
 
