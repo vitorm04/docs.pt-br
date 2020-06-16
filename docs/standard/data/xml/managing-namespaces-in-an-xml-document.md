@@ -1,14 +1,15 @@
 ---
 title: Gerenciando namespaces em um documento XML
+description: Saiba como gerenciar namespaces em um documento XML. Namespaces XML e nomes de elementos e atributos em um documento XML com o URIs personalizado e predefinido.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: b60e773183bd008c99022946a2ec53932234fe23
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3a3abd2e932b1afecab85e285b0e2c42eb1eb20f
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289142"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769256"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Gerenciando namespaces em um documento XML
 Namespaces XML e nomes de elementos e atributos em um documento XML com o URIs personalizado e predefinido. Para criar essas associações, você define prefixos para URIs de namespace e usa os prefixos para qualificar nomes de atributo e elemento nos dados XML. Namespaces impedem conflitos de nomes de elementos e atributos e permitem que elementos e atributos de mesmo nome sejam tratados e validados de maneira diferente.  
@@ -68,7 +69,7 @@ Namespaces XML e nomes de elementos e atributos em um documento XML com o URIs p
   
  Aqui estão algumas das tarefas de gerenciamento e de pesquisa podem ser executadas com a classe <xref:System.Xml.XmlNamespaceManager>. Para saber mais e exemplos, siga os links para a página de referência para cada método ou propriedade.  
   
-|Para|Uso|  
+|Para|Use|  
 |--------|---------|  
 |Adicionar um namespace|Método <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>|  
 |Remover um namespace|Método <xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>|  

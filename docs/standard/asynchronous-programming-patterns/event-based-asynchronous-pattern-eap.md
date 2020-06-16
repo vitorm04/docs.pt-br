@@ -1,5 +1,6 @@
 ---
 title: Padrão assíncrono baseado em evento (EAP)
+description: Consulte links para artigos sobre o padrão assíncrono baseado em evento (EAP) no .NET, como implementação, práticas recomendadas, implementação de um cliente EAP e muito mais.
 ms.date: 07/23/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-ms.openlocfilehash: 604e7a944579a284004817009b06c11b268d5daf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 03b4d914d72b96b882c774565654c022b145b5f2
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289428"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768866"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Padrão assíncrono baseado em evento (EAP)
 

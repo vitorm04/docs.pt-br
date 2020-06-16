@@ -1,5 +1,6 @@
 ---
 title: Sincronizando dados para multithreading
+description: Saiba como sincronizar dados para multithreading no .NET. Escolha estratégias como regiões de código sincronizado, sincronização manual ou contextos sincronizados.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 7f064738472a65ce89f17efc4d7ea00ac98280d0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4d528c54816961caa251ce054abf2c6cf07e9d01
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291091"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769100"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizando dados para multithreading
 
@@ -32,9 +33,9 @@ O .NET fornece várias estratégias para sincronizar o acesso à instância e ao
   
 |Categoria|Campos globais|Campos estáticos|Métodos estáticos|Campos de instância|Métodos de instância|Blocos de código específico|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
-|Sem sincronização|Não|Não|Não|Não|Não|Não|  
-|Contexto sincronizado|Não|Não|Não|Sim|Sim|Não|  
-|Regiões de código sincronizadas|Não|Não|Somente se marcado|Não|Somente se marcado|Somente se marcado|  
+|Sem sincronização|No|Não|Não|Não|Não|Não|  
+|Contexto sincronizado|No|Não|Não|Sim|Sim|No|  
+|Regiões de código sincronizadas|No|Não|Somente se marcado|No|Somente se marcado|Somente se marcado|  
 |Sincronização manual|Manual|Manual|Manual|Manual|Manual|Manual|  
   
 ## <a name="no-synchronization"></a>Sem sincronização  

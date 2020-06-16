@@ -1,5 +1,6 @@
 ---
 title: Visão geral da CLR (Common Language Runtime) – .NET Framework
+description: Introdução ao Common Language Runtime (CLR), o ambiente de tempo de execução do .NET. O CLR executa o código e fornece serviços para facilitar o processo de desenvolvimento.
 ms.date: 04/02/2019
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: 74421f79c18f32e121d51c47f3eb32f3c2ed71fd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ef455ac1c49c1f457d0fa432db91b5375c045840
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289240"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769204"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Visão geral do CLR (Common Language Runtime)
 
@@ -42,7 +43,7 @@ Como parte de seus metadados, todos os componentes gerenciados transportam infor
 
 Compiladores de linguagens e ferramentas expõem a funcionalidade do runtime da maneira como seriam úteis e intuitivas para desenvolvedores. Isso significa que alguns recursos do runtime devem ser mais perceptíveis em um ambiente do que em outro. Como você usa o runtime depende de quais compiladores de linguagem ou ferramentas você usa. Por exemplo, se for um desenvolvedor do Visual Basic, você poderá observar que, com o Common Language Runtime, a linguagem do Visual Basic tem mais recursos orientados a objeto do que antes. O runtime oferece os seguintes benefícios:
 
-- Aprimoramentos no desempenho.
+- Melhorias de desempenho.
 
 - A possibilidade de usar facilmente componentes desenvolvidos em outras linguagens.
 

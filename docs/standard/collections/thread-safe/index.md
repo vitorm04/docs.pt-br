@@ -1,16 +1,17 @@
 ---
 title: Coleções thread-safe
+description: Introdução às coleções com segurança de thread usando o namespace System. Collections. decurrent no .NET, que inclui classes de coleção com segurança de threads e escalonáveis.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-ms.openlocfilehash: 7af59cf0fdbe8d5c7d7d586b4b86992ae1dc7601
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3a252124ade4c43961c06697367bbc4ca5d0c9cb
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290364"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768580"
 ---
 # <a name="thread-safe-collections"></a>Coleções thread-safe
 O .NET Framework 4 introduz o namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType>, que inclui várias classes de coleção que são tanto thread-safe quanto escalonáveis. Vários threads podem adicionar ou remover itens dessas coleções de modo seguro e eficiente sem a necessidade de sincronização adicional no código do usuário. Ao escrever um novo código, use as classes de coleção simultâneas sempre que vários threads forem ser gravados simultaneamente nas coleções. Se estiver lendo apenas de uma coleção compartilhada, você poderá usar as classes no namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. É recomendável não usar as classes da coleção 1.0, a menos que você precise ter como destino o runtime do .NET Framework 1.1 ou anterior.  

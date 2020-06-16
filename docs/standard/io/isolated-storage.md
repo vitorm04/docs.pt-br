@@ -1,5 +1,6 @@
 ---
 title: Armazenamentos isolado
+description: Explore o armazenamento isolado, que é um mecanismo de armazenamento de dados que fornece isolamento & segurança definindo maneiras padronizadas de associar código a dados salvos.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: f98af970c8827623298fb43cd0653bdaafb20dd3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 30ed8314d8045a599207cb0195474fdfde41760d
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278876"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768931"
 ---
 # <a name="isolated-storage"></a>Armazenamentos isolado
 <a name="top"></a> Para aplicativos desktop, o armazenamento isolado é um mecanismo de armazenamento de dados que proporciona isolamento e segurança ao definir formas padronizadas de associar código a dados salvos. A padronização também fornece outros benefícios. Os administradores podem usar as ferramentas desenvolvidas para manipular armazenamentos isolados para configurar espaço de armazenamento de arquivos, definir políticas de segurança e excluir dados não utilizados. Com armazenamentos isolados, seu código não precisa mais de caminhos exclusivos para especificar locais seguros na sistema de arquivos e os dados são protegidos de outros aplicativos que só têm acesso a armazenamentos isolados. Informações embutidas em código que indicam onde a área de armazenamento de um aplicativo se encontra são desnecessárias.

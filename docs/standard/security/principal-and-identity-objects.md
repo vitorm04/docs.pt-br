@@ -1,5 +1,6 @@
 ---
 title: Objetos Principal e Identity
+description: Leia sobre objetos de identidade, que representam usuários no .NET. Leia também sobre objetos de entidade de segurança, que encapsulam um objeto de identidade & uma função.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - WindowsPrincipal objects
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
-ms.openlocfilehash: cece51370fb269121e776e865275cd464c1af095
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5fd3f1c80f22c1ebe7b2c10653ee137f00321de8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291221"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768840"
 ---
 # <a name="principal-and-identity-objects"></a>Objetos Principal e Identity
 O código gerenciado pode descobrir a identidade ou a função de uma entidade de segurança por meio de um <xref:System.Security.Principal.IPrincipal> objeto, que contém uma referência a um <xref:System.Security.Principal.IIdentity> objeto. Pode ser útil comparar objetos de identidade e de entidade de segurança com conceitos familiares, como contas de usuário e de grupo. Na maioria dos ambientes de rede, as contas de usuário representam pessoas ou programas, enquanto as contas de grupo representam determinadas categorias de usuários e os direitos que eles possuem. Da mesma forma, os objetos de identidade .NET Framework representam usuários, enquanto as funções representam associações e contextos de segurança. Na .NET Framework, o objeto principal encapsula tanto um objeto de identidade quanto uma função. .NET Framework aplicativos concedem direitos à entidade de segurança com base em sua identidade ou, mais comumente, sua associação de função.  

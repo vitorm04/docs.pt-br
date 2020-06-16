@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 199245aa0017d9232e3c9889c7845c3b9ec9877b
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: b4f6457c4fab8549b3efec2e25f7c23213698414
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144741"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767774"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: detectar objetos usando ONNX no ML.NET
 
@@ -94,7 +94,7 @@ Agora que você tem um entendimento geral do que é o ONNX e de como o Tiny YOLO
     - Escolha "nuget.org" como a fonte do pacote, selecione a guia Browse, procure por **Microsoft.ML**.
     - Selecione o botão **Instalar**.
     - Selecione o botão **OK** na caixa de diálogo **Visualizar Alterações** e selecione o botão **Aceito** na caixa de diálogo **Aceitação da Licença**, se concordar com o termos de licença para os pacotes listados.
-    - Repita essas etapas para **Microsoft.ML.ImageAnalytics** e **Microsoft.ML.OnnxTransformer**.
+    - Repita essas etapas para **Microsoft. ml. ImageAnalytics**, **Microsoft. ml. OnnxTransformer** e **Microsoft. ml. OnnxRuntime**.
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>Prepare seus dados e um modelo pré-treinado
 

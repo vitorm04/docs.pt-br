@@ -1,5 +1,6 @@
 ---
 title: Diretrizes de design de estrutura
+description: Consulte Diretrizes de design de estrutura para criar bibliotecas que estendem e interajam com o .NET, para garantir a consistência da API e a facilidade de uso.
 titleSuffix: ''
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-ms.openlocfilehash: 5a4edca70844a2b2a3972381b34efe85664f353d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 17998adb1d18579f6763a80a82944e742e284e4e
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276030"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769061"
 ---
 # <a name="framework-design-guidelines"></a>Diretrizes de design de estrutura
 Esta seção fornece diretrizes para a criação de bibliotecas que estendem e interagem com o .NET Framework. O objetivo é ajudar os designers de biblioteca a garantir a consistência da API e a facilidade de uso, fornecendo um modelo de programação unificado que é independente da linguagem de programação usada para desenvolvimento. Recomendamos que você siga essas diretrizes de design ao desenvolver classes e componentes que estendam o .NET Framework. O design de biblioteca inconsistente afeta negativamente a produtividade do desenvolvedor e não incentiva a adoção.  

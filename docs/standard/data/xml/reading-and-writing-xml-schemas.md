@@ -1,5 +1,6 @@
 ---
 title: Lendo e gravando esquemas XML
+description: Ler e gravar esquemas XSD (linguagem de definição de esquema XML) a partir de arquivos ou outras fontes no .NET, usando a API de SOM do esquema de objetos.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
-ms.openlocfilehash: bf1078d52f5e9056da6b28acc8dd2fc257eb3636
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 874b0bdb0e13d545cfff4c813881f1398a8f9487
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291247"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767657"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>Lendo e gravando esquemas XML
 A API do SOM (Schema Object Model) pode ser usada para ler e gravar esquemas XSD de arquivos ou de outras origens e criar esquemas XML na memória usando as classes no namespace <xref:System.Xml.Schema?displayProperty=nameWithType> que mapeiam para as estruturas definidas na Recomendação de esquema XML do W3C (World Wide Web Consortium).  

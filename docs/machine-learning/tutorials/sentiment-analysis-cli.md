@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 06/03/2020
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: 64190546157bc9386314a3080c5364fd854d7704
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: aab59463daad30748277602b9ab1d8ca2f3fa1f5
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602213"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767670"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analisar sentimentos com a CLI do ML.NET
 
@@ -94,8 +94,6 @@ Usaremos um conjunto de dados existente usado para um cenário de 'análise de s
     - o **tempo de exploração/treinamento direcionado** para o experimento é de **10 segundos**
 
     Você verá a saída da CLI, semelhante a:
-
-    <!-- markdownlint-disable MD023 MD025 -->
 
     ![Classificação da CLI do ML.NET no PowerShell](./media/mlnet-cli/mlnet-classification-powershell.gif)
 
@@ -225,7 +223,7 @@ Neste tutorial, você aprendeu a:
 > - Entenda o código C# gerado para executar o modelo (o código para usar em seu aplicativo de usuário final)
 > - Explore o código C# gerado que foi usado para treinar o modelo de "melhor qualidade" (para fins de conquista)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Automatizar o treinamento de modelos com a CLI do ML.NET](../automate-training-with-cli.md)
 - [Tutorial: executando modelos do ML.NET em aplicativos Web ASP.NET Core escalonáveis e webapis](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)

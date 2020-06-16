@@ -1,5 +1,6 @@
 ---
 title: 'Passo a passo: criar um pipeline de fluxo de dados'
+description: Crie um pipeline de Dataflow, que é uma série de componentes ou blocos de fluxo de os. Um bloco de fluxo de tipos faz uma determinada tarefa para contribuir com uma meta maior.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-ms.openlocfilehash: cfe3296815dc344b0d9d1f7bad1ab4a130380e2b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7fe12b63b04d403334e4b64a421b105550467ca4
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284605"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767865"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Passo a passo: criar um pipeline de fluxo de dados
 Embora possa usar os métodos <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> para receber mensagens dos blocos de origem, você também pode conectar blocos de mensagens para formar um *pipeline de fluxo de dados*. Um pipeline de fluxo de dados é uma série de componentes, ou *blocos de fluxo de dados*, e cada uma série executa uma tarefa específica que contribui para um objetivo maior. Todos os blocos de fluxo de dados em um pipeline de fluxo de dados realizam trabalhos ao receber uma mensagem de outro bloco de fluxo de dados. Como analogia, podemos usar uma linha de montagem de automóveis. À medida que os veículos passam por ela, uma estação monta a carroceria, a seguinte instala o motor e assim por diante. Como a linha de montagem permite que vários veículos sejam montados ao mesmo tempo, seu desempenho é superior se comparado com a montagem de um veículo completo por vez.
@@ -53,7 +54,7 @@ Embora possa usar os métodos <xref:System.Threading.Tasks.Dataflow.DataflowBloc
  [!code-csharp[TPLDataflow_Palindromes#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#3)]
  [!code-vb[TPLDataflow_Palindromes#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#3)]  
   
-|Membro|Tipo|Descrição|  
+|Membro|Tipo|Description|  
 |------------|----------|-----------------|  
 |`downloadString`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Baixa o texto do catálogo na Web.|  
 |`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Separa o texto do catálogo em uma matriz de palavras.|  

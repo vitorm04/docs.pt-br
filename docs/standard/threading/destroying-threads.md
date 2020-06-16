@@ -1,5 +1,6 @@
 ---
 title: Destruindo threads
+description: Conheça suas opções quando precisar destruir um thread no .NET, como o cancelamento de cooperação ou o método Thread. Abort. Aprenda a lidar com a ThreadAbortException.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET Framework], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: 9f69773ec19008ebafd28a68e4e2007b6f9bb979
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: baf9289413de0e99533f121eb2a404ff0d873511
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279809"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768502"
 ---
 # <a name="destroying-threads"></a>Destruindo threads
 

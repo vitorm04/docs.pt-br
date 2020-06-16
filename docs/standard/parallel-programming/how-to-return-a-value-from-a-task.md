@@ -1,5 +1,6 @@
 ---
 title: 'Como: Retornar um valor de uma tarefa'
+description: Consulte como usar o tipo System. Threading. Tasks. Task <TResult> para retornar um valor da propriedade Result no .net.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to return a value
 ms.assetid: c4bc0f44-eba2-4e96-9e03-1cc787461e61
-ms.openlocfilehash: 144d004d697b84a011cedafc7d07b679ef8852c3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 051cef7cac654e4369ec1486884876004370ba0b
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288141"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767969"
 ---
 # <a name="how-to-return-a-value-from-a-task"></a>Como: Retornar um valor de uma tarefa
 Este exemplo mostra como usar o tipo <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> para retornar um valor da propriedade <xref:System.Threading.Tasks.Task%601.Result%2A>. Isso requer que o diretório C:\Usuários\Público\Imagens\Imagens de Exemplo\ exista e contenha arquivos.  

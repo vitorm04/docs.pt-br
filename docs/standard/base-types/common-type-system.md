@@ -1,6 +1,6 @@
 ---
 title: Common Type System
-description: Saiba mais sobre o Type System no .NET.
+description: Explore o sistema de tipos no .NET. Leia sobre os tipos no .NET (tipos de valor ou tipos de referência), definição de tipo, membros de tipo e características de membro de tipo.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: a1aa244d470402823fc22e12cb5e32bbbdcd87fe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: db0ecd59f122228d33b74be6dec51371413d68b3
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289337"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767826"
 ---
 # <a name="common-type-system"></a>Common Type System
 
@@ -306,6 +306,6 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 ## <a name="see-also"></a>Veja também
 
-- [Navegador de API do .NET](/dotnet/api)
+- [Navegador da API .NET](/dotnet/api)
 - [Common Language Runtime](../clr.md)
 - [Conversão de tipo no .NET](type-conversion.md)

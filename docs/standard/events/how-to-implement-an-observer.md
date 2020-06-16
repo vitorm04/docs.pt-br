@@ -1,5 +1,6 @@
 ---
 title: Como implementar um observador
+description: Implemente um observador no .NET. O padrão de design observador requer uma divisão entre um observador, que se registra para notificações e um provedor.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - observers [.NET Framework], observer design pattern
 - observer design pattern [.NET Framework], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: 969b83bcd11159509a2cc1ed843836679ffd1705
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 43236ead15be0777f4284ba553a2f2f5e09d0a73
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289714"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768989"
 ---
 # <a name="how-to-implement-an-observer"></a>Como implementar um observador
 O padrão de design do observador exige uma divisão entre um observador, que registra as notificações, e um provedor, que monitora os dados e envia notificações e um ou mais observadores. Este tópico discute como criar um observador. Um tópico relacionado, [Como implementar um provedor](how-to-implement-a-provider.md), descreve como criar um provedor.  

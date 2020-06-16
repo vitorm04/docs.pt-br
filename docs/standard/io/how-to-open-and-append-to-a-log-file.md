@@ -1,5 +1,6 @@
 ---
 title: 'Como: abrir e anexar a um arquivo de log'
+description: Abra e acrescente a um arquivo de log usando as classes StreamWriter e StreamReader no .NET, que gravam caracteres e lêem caracteres de fluxos.
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET Framework], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-ms.openlocfilehash: 025c35344b9262e1f2fa6da87b68e46e21a54222
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a66dadd24cc327824e91df733f11a23112cd384a
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291819"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769165"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Como: abrir e anexar a um arquivo de log
 <xref:System.IO.StreamWriter> e <xref:System.IO.StreamReader> gravam caracteres e leem caracteres de fluxos. O exemplo de código a seguir abre o arquivo *log.txt* para a entrada ou cria o arquivo caso ele ainda não exista e acrescenta informações de log ao final do arquivo. Em seguida, o exemplo grava o conteúdo do arquivo na saída padrão para exibição.

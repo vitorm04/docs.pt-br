@@ -1,16 +1,17 @@
 ---
 title: Quando usar uma coleção thread-safe
+description: Saiba quando usar uma coleção thread-safe no .NET. Há cinco tipos de coleção que são especialmente projetados para dar suporte a operações de adição & de multithread.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: e2c5d612abb824c93c611514a836c811e6e65efe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cea9c038896d07d526874e2ae4c33e479eaa3963
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288869"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769126"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Quando usar uma coleção thread-safe
 O .NET Framework 4 apresenta cinco novos tipos de coleção especialmente projetados para dar suporte a operações multithread de adição e remoção. Para obter o acesso thread-safe, esses novos tipos usam vários tipos de mecanismos de sincronização de bloqueio e sem bloqueio. A sincronização adiciona sobrecarga a uma operação. A quantidade de sobrecarga depende do tipo de sincronização usado, os tipos de operações que são executadas e outros fatores, como o número de threads que estão tentando acessar a coleção simultaneamente.  
