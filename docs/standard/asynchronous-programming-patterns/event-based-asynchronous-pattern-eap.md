@@ -1,5 +1,6 @@
 ---
 title: Padrão assíncrono baseado em evento (EAP)
+description: Consulte links para artigos sobre o padrão assíncrono baseado em evento (EAP) no .NET, como implementação, práticas recomendadas, implementação de um cliente EAP e muito mais.
 ms.date: 07/23/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,64 +8,64 @@ helpviewer_keywords:
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-ms.openlocfilehash: 604e7a944579a284004817009b06c11b268d5daf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 03b4d914d72b96b882c774565654c022b145b5f2
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289428"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768866"
 ---
-# <a name="event-based-asynchronous-pattern-eap"></a><span data-ttu-id="892d8-102">Padrão assíncrono baseado em evento (EAP)</span><span class="sxs-lookup"><span data-stu-id="892d8-102">Event-based Asynchronous Pattern (EAP)</span></span>
+# <a name="event-based-asynchronous-pattern-eap"></a><span data-ttu-id="89731-103">Padrão assíncrono baseado em evento (EAP)</span><span class="sxs-lookup"><span data-stu-id="89731-103">Event-based Asynchronous Pattern (EAP)</span></span>
 
-<span data-ttu-id="892d8-103">Há várias maneiras de expor recursos assíncronos para o código cliente.</span><span class="sxs-lookup"><span data-stu-id="892d8-103">There are a number of ways to expose asynchronous features to client code.</span></span> <span data-ttu-id="892d8-104">O Padrão Assíncrono baseado em evento prescreve uma maneira de as classes apresentarem comportamento assíncrono.</span><span class="sxs-lookup"><span data-stu-id="892d8-104">The Event-based Asynchronous Pattern prescribes one way for classes to present asynchronous behavior.</span></span>  
+<span data-ttu-id="89731-104">Há várias maneiras de expor recursos assíncronos para o código cliente.</span><span class="sxs-lookup"><span data-stu-id="89731-104">There are a number of ways to expose asynchronous features to client code.</span></span> <span data-ttu-id="89731-105">O Padrão Assíncrono baseado em evento prescreve uma maneira de as classes apresentarem comportamento assíncrono.</span><span class="sxs-lookup"><span data-stu-id="89731-105">The Event-based Asynchronous Pattern prescribes one way for classes to present asynchronous behavior.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="892d8-105">A partir do .NET Framework 4, a Biblioteca de Paralelismo de Tarefas fornece um novo modelo de programação paralela e assíncrona.</span><span class="sxs-lookup"><span data-stu-id="892d8-105">Starting with the .NET Framework 4, the Task Parallel Library provides a new model for asynchronous and parallel programming.</span></span> <span data-ttu-id="892d8-106">Para obter mais informações, veja [Biblioteca de tarefas paralelas (TPL)](../parallel-programming/task-parallel-library-tpl.md) e [Padrão assíncrono baseado em tarefa (TAP)](task-based-asynchronous-pattern-tap.md).</span><span class="sxs-lookup"><span data-stu-id="892d8-106">For more information, see [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md) and [Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md).</span></span>
+> <span data-ttu-id="89731-106">A partir do .NET Framework 4, a Biblioteca de Paralelismo de Tarefas fornece um novo modelo de programação paralela e assíncrona.</span><span class="sxs-lookup"><span data-stu-id="89731-106">Starting with the .NET Framework 4, the Task Parallel Library provides a new model for asynchronous and parallel programming.</span></span> <span data-ttu-id="89731-107">Para obter mais informações, veja [Biblioteca de tarefas paralelas (TPL)](../parallel-programming/task-parallel-library-tpl.md) e [Padrão assíncrono baseado em tarefa (TAP)](task-based-asynchronous-pattern-tap.md).</span><span class="sxs-lookup"><span data-stu-id="89731-107">For more information, see [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md) and [Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md).</span></span>
   
-## <a name="in-this-section"></a><span data-ttu-id="892d8-107">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="892d8-107">In This Section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="89731-108">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="89731-108">In This Section</span></span>
 
- [<span data-ttu-id="892d8-108">Visão geral do padrão assíncrono baseado em evento</span><span class="sxs-lookup"><span data-stu-id="892d8-108">Event-based Asynchronous Pattern Overview</span></span>](event-based-asynchronous-pattern-overview.md)  
- <span data-ttu-id="892d8-109">Descreve como o Padrão Assíncrono Baseado em Evento disponibiliza as vantagens de aplicativos de vários threads enquanto oculta muitos problemas complexos inerentes ao design com vários threads.</span><span class="sxs-lookup"><span data-stu-id="892d8-109">Describes how the Event-based Asynchronous Pattern makes available the advantages of multithreaded applications while hiding many of the complex issues inherent in multithreaded design.</span></span>  
+ [<span data-ttu-id="89731-109">Visão geral do padrão assíncrono baseado em evento</span><span class="sxs-lookup"><span data-stu-id="89731-109">Event-based Asynchronous Pattern Overview</span></span>](event-based-asynchronous-pattern-overview.md)  
+ <span data-ttu-id="89731-110">Descreve como o Padrão Assíncrono Baseado em Evento disponibiliza as vantagens de aplicativos de vários threads enquanto oculta muitos problemas complexos inerentes ao design com vários threads.</span><span class="sxs-lookup"><span data-stu-id="89731-110">Describes how the Event-based Asynchronous Pattern makes available the advantages of multithreaded applications while hiding many of the complex issues inherent in multithreaded design.</span></span>  
   
- [<span data-ttu-id="892d8-110">Implementando o Padrão Assíncrono baseado em Evento</span><span class="sxs-lookup"><span data-stu-id="892d8-110">Implementing the Event-based Asynchronous Pattern</span></span>](implementing-the-event-based-asynchronous-pattern.md)  
- <span data-ttu-id="892d8-111">Descreve a maneira padronizada de empacotar uma classe com recursos assíncronos.</span><span class="sxs-lookup"><span data-stu-id="892d8-111">Describes the standardized way to package a class that has asynchronous features.</span></span>  
+ [<span data-ttu-id="89731-111">Implementando o Padrão Assíncrono baseado em Evento</span><span class="sxs-lookup"><span data-stu-id="89731-111">Implementing the Event-based Asynchronous Pattern</span></span>](implementing-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="89731-112">Descreve a maneira padronizada de empacotar uma classe com recursos assíncronos.</span><span class="sxs-lookup"><span data-stu-id="89731-112">Describes the standardized way to package a class that has asynchronous features.</span></span>  
   
- [<span data-ttu-id="892d8-112">Práticas recomendadas para a implementação do padrão assíncrono baseado em evento</span><span class="sxs-lookup"><span data-stu-id="892d8-112">Best Practices for Implementing the Event-based Asynchronous Pattern</span></span>](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
- <span data-ttu-id="892d8-113">Descreve as exigências para expor recursos assíncronos de acordo com o Padrão Assíncrono Baseado em Evento.</span><span class="sxs-lookup"><span data-stu-id="892d8-113">Describes the requirements for exposing asynchronous features according to the Event-based Asynchronous Pattern.</span></span>  
+ [<span data-ttu-id="89731-113">Práticas recomendadas para a implementação do padrão assíncrono baseado em evento</span><span class="sxs-lookup"><span data-stu-id="89731-113">Best Practices for Implementing the Event-based Asynchronous Pattern</span></span>](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="89731-114">Descreve as exigências para expor recursos assíncronos de acordo com o Padrão Assíncrono Baseado em Evento.</span><span class="sxs-lookup"><span data-stu-id="89731-114">Describes the requirements for exposing asynchronous features according to the Event-based Asynchronous Pattern.</span></span>  
   
- [<span data-ttu-id="892d8-114">Decidindo quando implementar o padrão assíncrono baseado em evento</span><span class="sxs-lookup"><span data-stu-id="892d8-114">Deciding When to Implement the Event-based Asynchronous Pattern</span></span>](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
- <span data-ttu-id="892d8-115">Descreve como determinar quando você deve optar por implementar o Padrão assíncrono baseado em evento, em vez do padrão <xref:System.IAsyncResult> representado pelo [APM (Modelo de programação assíncrona)](asynchronous-programming-model-apm.md)</span><span class="sxs-lookup"><span data-stu-id="892d8-115">Describes how to determine when you should choose to implement the Event-based Asynchronous Pattern instead of the <xref:System.IAsyncResult> pattern represented by the [Asynchronous Programming Model (APM)](asynchronous-programming-model-apm.md)</span></span>
+ [<span data-ttu-id="89731-115">Decidindo quando implementar o padrão assíncrono baseado em evento</span><span class="sxs-lookup"><span data-stu-id="89731-115">Deciding When to Implement the Event-based Asynchronous Pattern</span></span>](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="89731-116">Descreve como determinar quando você deve optar por implementar o Padrão assíncrono baseado em evento, em vez do padrão <xref:System.IAsyncResult> representado pelo [APM (Modelo de programação assíncrona)](asynchronous-programming-model-apm.md)</span><span class="sxs-lookup"><span data-stu-id="89731-116">Describes how to determine when you should choose to implement the Event-based Asynchronous Pattern instead of the <xref:System.IAsyncResult> pattern represented by the [Asynchronous Programming Model (APM)](asynchronous-programming-model-apm.md)</span></span>
   
- [<span data-ttu-id="892d8-116">Como implementar um componente compatível com o padrão assíncrono baseado em evento</span><span class="sxs-lookup"><span data-stu-id="892d8-116">How to: Implement a Component That Supports the Event-based Asynchronous Pattern</span></span>](component-that-supports-the-event-based-asynchronous-pattern.md)  
- <span data-ttu-id="892d8-117">Descreve como criar um componente que implemente o Padrão assíncrono baseado em evento.</span><span class="sxs-lookup"><span data-stu-id="892d8-117">Describes how to create a component that implements the Event-based Asynchronous Pattern.</span></span> <span data-ttu-id="892d8-118">É implementado usando classes do auxiliar do namespace <xref:System.ComponentModel?displayProperty=nameWithType>, o que garante que o componente funcione corretamente em qualquer modelo de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="892d8-118">It is implemented using helper classes from the <xref:System.ComponentModel?displayProperty=nameWithType> namespace, which ensures that the component works correctly under any application model.</span></span>  
+ [<span data-ttu-id="89731-117">Como implementar um componente compatível com o padrão assíncrono baseado em evento</span><span class="sxs-lookup"><span data-stu-id="89731-117">How to: Implement a Component That Supports the Event-based Asynchronous Pattern</span></span>](component-that-supports-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="89731-118">Descreve como criar um componente que implemente o Padrão assíncrono baseado em evento.</span><span class="sxs-lookup"><span data-stu-id="89731-118">Describes how to create a component that implements the Event-based Asynchronous Pattern.</span></span> <span data-ttu-id="89731-119">É implementado usando classes do auxiliar do namespace <xref:System.ComponentModel?displayProperty=nameWithType>, o que garante que o componente funcione corretamente em qualquer modelo de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="89731-119">It is implemented using helper classes from the <xref:System.ComponentModel?displayProperty=nameWithType> namespace, which ensures that the component works correctly under any application model.</span></span>  
 
- [<span data-ttu-id="892d8-119">Como implementar um cliente do Padrão Assíncrono baseado em Evento</span><span class="sxs-lookup"><span data-stu-id="892d8-119">How to: Implement a Client of the Event-based Asynchronous Pattern</span></span>](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
- <span data-ttu-id="892d8-120">Descreve como criar um cliente que usa um componente que implemente o Padrão assíncrono baseado em evento.</span><span class="sxs-lookup"><span data-stu-id="892d8-120">Describes how to create a client that uses a component that implements the Event-based Asynchronous Pattern.</span></span>
+ [<span data-ttu-id="89731-120">Como implementar um cliente do Padrão Assíncrono baseado em Evento</span><span class="sxs-lookup"><span data-stu-id="89731-120">How to: Implement a Client of the Event-based Asynchronous Pattern</span></span>](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="89731-121">Descreve como criar um cliente que usa um componente que implemente o Padrão assíncrono baseado em evento.</span><span class="sxs-lookup"><span data-stu-id="89731-121">Describes how to create a client that uses a component that implements the Event-based Asynchronous Pattern.</span></span>
   
- [<span data-ttu-id="892d8-121">Como usar componentes compatíveis com o padrão assíncrono baseado em evento</span><span class="sxs-lookup"><span data-stu-id="892d8-121">How to: Use Components That Support the Event-based Asynchronous Pattern</span></span>](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
- <span data-ttu-id="892d8-122">Descreve como usar um componente com suporte ao Padrão Assíncrono Baseado em Evento.</span><span class="sxs-lookup"><span data-stu-id="892d8-122">Describes how to use a component that supports the Event-based Asynchronous Pattern.</span></span>  
+ [<span data-ttu-id="89731-122">Como usar componentes compatíveis com o padrão assíncrono baseado em evento</span><span class="sxs-lookup"><span data-stu-id="89731-122">How to: Use Components That Support the Event-based Asynchronous Pattern</span></span>](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="89731-123">Descreve como usar um componente com suporte ao Padrão Assíncrono Baseado em Evento.</span><span class="sxs-lookup"><span data-stu-id="89731-123">Describes how to use a component that supports the Event-based Asynchronous Pattern.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="892d8-123">Referência</span><span class="sxs-lookup"><span data-stu-id="892d8-123">Reference</span></span>
+## <a name="reference"></a><span data-ttu-id="89731-124">Referência</span><span class="sxs-lookup"><span data-stu-id="89731-124">Reference</span></span>
 
  <xref:System.ComponentModel.AsyncOperation>  
- <span data-ttu-id="892d8-124">Descreve a classe <xref:System.ComponentModel.AsyncOperation> e tem links a todos os seus membros.</span><span class="sxs-lookup"><span data-stu-id="892d8-124">Describes the <xref:System.ComponentModel.AsyncOperation> class and has links to all its members.</span></span>  
+ <span data-ttu-id="89731-125">Descreve a classe <xref:System.ComponentModel.AsyncOperation> e tem links a todos os seus membros.</span><span class="sxs-lookup"><span data-stu-id="89731-125">Describes the <xref:System.ComponentModel.AsyncOperation> class and has links to all its members.</span></span>  
   
  <xref:System.ComponentModel.AsyncOperationManager>  
- <span data-ttu-id="892d8-125">Descreve a classe <xref:System.ComponentModel.AsyncOperationManager> e tem links a todos os seus membros.</span><span class="sxs-lookup"><span data-stu-id="892d8-125">Describes the <xref:System.ComponentModel.AsyncOperationManager> class and has links to all its members.</span></span>  
+ <span data-ttu-id="89731-126">Descreve a classe <xref:System.ComponentModel.AsyncOperationManager> e tem links a todos os seus membros.</span><span class="sxs-lookup"><span data-stu-id="89731-126">Describes the <xref:System.ComponentModel.AsyncOperationManager> class and has links to all its members.</span></span>  
   
  <xref:System.ComponentModel.BackgroundWorker>  
- <span data-ttu-id="892d8-126">Descreve o componente <xref:System.ComponentModel.BackgroundWorker> e tem links a todos os seus membros.</span><span class="sxs-lookup"><span data-stu-id="892d8-126">Describes the <xref:System.ComponentModel.BackgroundWorker> component and has links to all its members.</span></span>  
+ <span data-ttu-id="89731-127">Descreve o componente <xref:System.ComponentModel.BackgroundWorker> e tem links a todos os seus membros.</span><span class="sxs-lookup"><span data-stu-id="89731-127">Describes the <xref:System.ComponentModel.BackgroundWorker> component and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="892d8-127">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="892d8-127">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="89731-128">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="89731-128">Related Sections</span></span>
 
- [<span data-ttu-id="892d8-128">Biblioteca de tarefas paralelas (TPL)</span><span class="sxs-lookup"><span data-stu-id="892d8-128">Task Parallel Library (TPL)</span></span>](../parallel-programming/task-parallel-library-tpl.md)  
- <span data-ttu-id="892d8-129">Descreve um modelo de programação para operações paralelas e assíncronas.</span><span class="sxs-lookup"><span data-stu-id="892d8-129">Describes a programming model for asynchronous and parallel operations.</span></span>  
+ [<span data-ttu-id="89731-129">Biblioteca de tarefas paralelas (TPL)</span><span class="sxs-lookup"><span data-stu-id="89731-129">Task Parallel Library (TPL)</span></span>](../parallel-programming/task-parallel-library-tpl.md)  
+ <span data-ttu-id="89731-130">Descreve um modelo de programação para operações paralelas e assíncronas.</span><span class="sxs-lookup"><span data-stu-id="89731-130">Describes a programming model for asynchronous and parallel operations.</span></span>  
   
- [<span data-ttu-id="892d8-130">Threading</span><span class="sxs-lookup"><span data-stu-id="892d8-130">Threading</span></span>](../threading/index.md)  
- <span data-ttu-id="892d8-131">Descreve recursos de multithreading no .NET.</span><span class="sxs-lookup"><span data-stu-id="892d8-131">Describes multithreading features in .NET.</span></span>  
+ [<span data-ttu-id="89731-131">Threading</span><span class="sxs-lookup"><span data-stu-id="89731-131">Threading</span></span>](../threading/index.md)  
+ <span data-ttu-id="89731-132">Descreve recursos de multithreading no .NET.</span><span class="sxs-lookup"><span data-stu-id="89731-132">Describes multithreading features in .NET.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="892d8-132">Veja também</span><span class="sxs-lookup"><span data-stu-id="892d8-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="89731-133">Veja também</span><span class="sxs-lookup"><span data-stu-id="89731-133">See also</span></span>
 
-- [<span data-ttu-id="892d8-133">Práticas recomendadas de Threading gerenciado</span><span class="sxs-lookup"><span data-stu-id="892d8-133">Managed Threading Best Practices</span></span>](../threading/managed-threading-best-practices.md)
-- [<span data-ttu-id="892d8-134">Eventos</span><span class="sxs-lookup"><span data-stu-id="892d8-134">Events</span></span>](../events/index.md)
-- [<span data-ttu-id="892d8-135">Padrões de design de programação assíncrona</span><span class="sxs-lookup"><span data-stu-id="892d8-135">Asynchronous Programming Design Patterns</span></span>](index.md)
+- [<span data-ttu-id="89731-134">Práticas recomendadas de Threading gerenciado</span><span class="sxs-lookup"><span data-stu-id="89731-134">Managed Threading Best Practices</span></span>](../threading/managed-threading-best-practices.md)
+- [<span data-ttu-id="89731-135">Eventos</span><span class="sxs-lookup"><span data-stu-id="89731-135">Events</span></span>](../events/index.md)
+- [<span data-ttu-id="89731-136">Padrões de design de programação assíncrona</span><span class="sxs-lookup"><span data-stu-id="89731-136">Asynchronous Programming Design Patterns</span></span>](index.md)
