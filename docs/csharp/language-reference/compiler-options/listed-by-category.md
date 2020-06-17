@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: ffa5372678362e47eb59d8b041da55c79bf8475d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1e78b920eb6a1eae870a425b91711ac9d87b6530
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447037"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811674"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opções do compilador de C# listadas por categoria
 
@@ -37,7 +37,7 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 |[-preferreduilang](preferreduilang-compiler-option.md)|Especifique uma linguagem para a saída do compilador.|
 |[-refout](refout-compiler-option.md)|Gere um assembly de referência além de um assembly principal.|
 |[-refonly](refonly-compiler-option.md)|Gere um assembly de referência em vez de um assembly principal.|
-|[-destino](target-compiler-option.md)|Especifica o formato do arquivo de saída usando uma das cinco opções: [-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md) ou [-target:winmdobj](target-winmdobj-compiler-option.md).|
+|[-target](target-compiler-option.md)|Especifica o formato do arquivo de saída usando uma das cinco opções: [-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md) ou [-target:winmdobj](target-winmdobj-compiler-option.md).|
 |ModuleName\<string>|Especificar o nome do módulo de origem|
 
 ## <a name="net-framework-assemblies"></a>Assemblies do .NET Framework
@@ -62,12 +62,12 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 |Opção|Finalidade|
 |------------|-------------|
 |[-bugreport](bugreport-compiler-option.md)|Cria um arquivo que contém informações que tornam mais fácil relatar um bug.|
-|[-verificado](checked-compiler-option.md)|Especifica se o aritmético inteiro que estoura os limites do tipo de dados causará uma exceção em tempo de execução.|
+|[-checked](checked-compiler-option.md)|Especifica se o aritmético inteiro que estoura os limites do tipo de dados causará uma exceção em tempo de execução.|
 |[-Depurar](debug-compiler-option.md)|Instrua o compilador a emitir informações de depuração.|
 |[-errorreport](errorreport-compiler-option.md)|Define o comportamento de relatório de erros.|
 |[-fullpaths](fullpaths-compiler-option.md)|Especifica o caminho absoluto para o arquivo na saída do compilador.|
 |[-nowarn](nowarn-compiler-option.md)|Suprime a geração de avisos especificados do compilador.|
-|[– permite valor nulo](nullable-compiler-option.md)|Especifica a opção de contexto anulável.|
+|[-nullable](nullable-compiler-option.md)|Especifica a opção de contexto anulável.|
 |[-warn](warn-compiler-option.md)|Define o nível de aviso.|
 |[-warnaserror](warnaserror-compiler-option.md)|Promove avisos a erros.|
 |regras\<file>|Especifique um arquivo de conjunto de regras que desabilita o diagnóstico específico.|
@@ -99,7 +99,7 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 |[-ajuda](help-compiler-option.md)|Lista as opções de compilador para stdout.|
 |[-highentropyva](highentropyva-compiler-option.md)|Especifica que o arquivo executável dá suporte a uma ASLR (Address Space Layout Randomization).|
 |[-langversion](langversion-compiler-option.md)|Especificar a versão da linguagem: padrão, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 ou mais recente |
-|[-principal](main-compiler-option.md)|Especifica a localização do método **Principal**.|
+|[-main](main-compiler-option.md)|Especifica a localização do método **Principal**.|
 |[-noconfig](noconfig-compiler-option.md)|Instrui o compilador a não compilar com o csc.rsp.|
 |[-nologo](nologo-compiler-option.md)|Suprime as informações da faixa do compilador.|
 |[-recurse](recurse-compiler-option.md)|Pesquisa em subdiretórios arquivos de código-fonte a serem compilados.|
@@ -107,7 +107,7 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 |[-unsafe](unsafe-compiler-option.md)|Habilita a compilação de código que usa a palavra-chave [unsafe](../keywords/unsafe.md).|
 |[-utf8output](utf8output-compiler-option.md)|Exibe a saída do compilador usando a codificação UTF-8.|
 |-parallel[+&#124;-]|Especifica se deve o build simultâneo deve ser usado (+).|
-|-checksumalgorithm:\<alg>|Especifique o algoritmo para calcular a soma de verificação do arquivo de origem armazenada no PDB.  Os valores com suporte são: SHA1 (padrão) ou SHA256.<br>Em razão de problemas de colisão com SHA1, a Microsoft recomenda SHA256.|
+|-checksumalgorithm:\<alg>|Especifique o algoritmo para calcular a soma de verificação do arquivo de origem armazenada no PDB.  Os valores com suporte são: SHA256 (padrão) ou SHA1.<br>Em razão de problemas de colisão com SHA1, a Microsoft recomenda SHA256.|
 
 ## <a name="obsolete-options"></a>Opções obsoletas
 

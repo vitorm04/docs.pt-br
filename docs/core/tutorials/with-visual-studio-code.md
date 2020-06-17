@@ -2,12 +2,12 @@
 title: Criar um aplicativo de console do .NET Core usando Visual Studio Code
 description: Saiba como criar um aplicativo de console do .NET Core usando Visual Studio Code e o CLI do .NET Core.
 ms.date: 05/22/2020
-ms.openlocfilehash: 6d8f9adb2f77dbfd2d1cf54c80f1cdea582b1d96
-ms.sourcegitcommit: f6350c2c542e6edd52d7e9d6667b96d85d810e67
+ms.openlocfilehash: 466a1353b574711a73570428569b58eab7ad8135
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84717504"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811694"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: criar um aplicativo de console do .NET Core usando Visual Studio Code
 
@@ -89,7 +89,7 @@ Aprimore o aplicativo para solicitar ao usuário seu nome e exibi-lo junto com a
 
 1. Substitua o conteúdo do `Main` método em *Program.cs*, que é a linha que chama `Console.WriteLine` , com o seguinte código:
 
-   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="1":::
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
    Esse código exibe "Qual é o seu nome?" na janela do console e aguarda até que o usuário insira uma cadeia de caracteres seguida pela tecla <kbd>Enter</kbd> . Ele armazena essa cadeia de caracteres em uma variável chamada `name` . Ele também recupera o valor da propriedade <xref:System.DateTime.Now?displayProperty=nameWithType>, que contém a hora local atual e o atribui a uma variável chamada `date`. Por fim, ele exibe esses valores na janela do console.
 

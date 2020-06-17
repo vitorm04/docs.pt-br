@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 5db2797870b6c2e1998f17f1d8e4df8aa3f95c9e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 0f9c0f053e531a44640084a35dc5d8e844ee0b46
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241403"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803185"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Métodos de extensão (Guia de Programação em C#)
 
@@ -54,7 +54,7 @@ Em geral, você provavelmente estará chamando métodos de extensão muito mais 
 using System.Linq;
 ```
 
-(Você também pode precisar adicionar uma referência a System. Core. dll.) Você observará que os operadores de consulta padrão agora aparecem no IntelliSense como métodos adicionais disponíveis para a maioria dos <xref:System.Collections.Generic.IEnumerable%601> tipos.
+(Você também pode precisar adicionar uma referência a System.Core.dll.) Você observará que os operadores de consulta padrão agora aparecem no IntelliSense como métodos adicionais disponíveis para a maioria dos <xref:System.Collections.Generic.IEnumerable%601> tipos.
 
 ## <a name="binding-extension-methods-at-compile-time"></a>Associando Métodos de Extensão no Momento da Compilação
 
@@ -80,7 +80,7 @@ No passado, era comum criar "classes de coleção" que implementavam a <xref:Sys
 
 Ao usar uma arquitetura de cebola ou outro design de aplicativo em camadas, é comum ter um conjunto de entidades de domínio ou Transferência de Dados objetos que podem ser usados para se comunicar entre os limites do aplicativo. Esses objetos geralmente não contêm nenhuma funcionalidade ou apenas funcionalidade mínima que se aplica a todas as camadas do aplicativo. Os métodos de extensão podem ser usados para adicionar funcionalidade específica a cada camada de aplicativo sem carregar o objeto com métodos não necessários ou desejados em outras camadas.
 
-```aspx-csharp
+```csharp
 public class DomainEntity
 {
     public int Id { get; set; }
@@ -116,7 +116,7 @@ Se você implementar métodos de extensão para um determinado tipo, lembre-se d
 
 Para uma biblioteca de classes que você implemente, não use métodos de extensão para evitar incrementar o número de versão de um assembly. Se você quiser adicionar uma funcionalidade significativa a uma biblioteca para a qual você possui o código-fonte, siga as diretrizes do .NET para o controle de versão do assembly. Para obter mais informações, consulte [Controle de versão do assembly](../../../standard/assembly/versioning.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Guia de programação C#](../index.md)
 - [Exemplos de programação paralela (incluem vários métodos de extensão de exemplo)](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)

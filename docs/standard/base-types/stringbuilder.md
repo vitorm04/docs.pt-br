@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: b10d1c4579f10ca4fb84797ee67342825aaa9c32
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 83d4b9327b55c511e2a46486e519e3cd0c77b1a3
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662934"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803224"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Uso da classe StringBuilder no .NET
 O objeto <xref:System.String> é imutável. Sempre que usa um dos métodos na classe <xref:System.String?displayProperty=nameWithType>, você cria um novo objeto de cadeia de caracteres na memória, o que requer uma nova alocação de espaço para esse novo objeto. Em situações em que você precisa realizar repetidas modificações em uma cadeia de caracteres, a sobrecarga associada à criação de um novo objeto <xref:System.String> pode ser dispendiosa. A classe <xref:System.Text.StringBuilder?displayProperty=nameWithType> pode ser usada quando você deseja modificar uma cadeia de caracteres sem criar um novo objeto. Por exemplo, o uso da classe <xref:System.Text.StringBuilder> pode melhorar o desempenho ao concatenar várias cadeias de caracteres em um loop.  
@@ -61,13 +61,13 @@ O objeto <xref:System.String> é imutável. Sempre que usa um dos métodos na cl
 ## <a name="modifying-the-stringbuilder-string"></a>Modificando a cadeia de caracteres do StringBuilder  
  A tabela a seguir lista os métodos que você pode usar para modificar o conteúdo de um **StringBuilder**.  
   
-|Nome do método|Uso|  
+|Nome do método|Use|  
 |-----------------|---------|  
 |<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>|Acrescenta informações ao final do **StringBuilder** atual.|  
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|Substitui um especificador de formato transmitido em uma cadeia de caracteres com texto formatado.|  
 |<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|Insere uma cadeia de caracteres ou um objeto no índice especificado do **StringBuilder** atual.|  
 |<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Remove um número especificado de caracteres do **StringBuilder** atual.|  
-|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Substitui um caractere especificado em um índice especificado.|  
+|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Substitui todas as ocorrências de um caractere ou cadeia de caracteres especificada no **StringBuilder** atual por outro caractere ou cadeia de caracteres especificada.|  
   
 ### <a name="append"></a>Acrescentar  
  O método **Append** pode ser usado para adicionar texto ou uma representação de cadeia de caracteres de um objeto ao final de uma cadeia de caracteres representada pelo **StringBuilder** atual. O exemplo a seguir inicializa um **StringBuilder** para "Hello World" e, em seguida, acrescenta algum texto ao final do objeto. Espaço é alocado automaticamente conforme necessário.  

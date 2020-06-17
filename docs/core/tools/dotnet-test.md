@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
 ms.date: 04/29/2020
-ms.openlocfilehash: cbe9e7cce1722efb808c68ee49bb9012be6dcff7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 911d10917c2262c0bd32ef30d48da0f85ac39a39
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594446"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803163"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -90,7 +90,7 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste, `xunit` é a estrutura de test
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Força o uso de `dotnet` ou .NET Framework host de teste para os binários de teste. Essa opção determina apenas o tipo de host a ser usado. A versão real do Framework a ser usada é determinada pelo *runtimeconfig. JSON* do projeto de teste. Quando não especificado, o [atributo de assembly TargetFramework](/dotnet/api/system.runtime.versioning.targetframeworkattribute) é usado para determinar o tipo de host. Quando esse atributo é removido do *. dll*, o host de .NET Framework é usado.
+  Força o uso de `dotnet` ou .NET Framework host de teste para os binários de teste. Essa opção determina apenas o tipo de host a ser usado. A versão real do Framework a ser usada é determinada pelo *runtimeconfig.jsno* projeto de teste. Quando não especificado, o [atributo de assembly TargetFramework](/dotnet/api/system.runtime.versioning.targetframeworkattribute) é usado para determinar o tipo de host. Quando esse atributo é removido do *. dll*, o host de .NET Framework é usado.
 
 - **`--filter <EXPRESSION>`**
 
@@ -134,7 +134,7 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste, `xunit` é a estrutura de test
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  O arquivo `.runsettings` a ser usado para executar os testes. O `TargetPlatform` elemento (x86 | x64) não tem nenhum efeito para `dotnet test` . Para executar testes direcionados para x86, instale a versão x86 do .NET Core. O bit de bits do *dotnet. exe* que está no caminho é o que será usado para executar testes. Para saber mais, consulte os recursos a seguir:
+  O arquivo `.runsettings` a ser usado para executar os testes. O `TargetPlatform` elemento (x86 | x64) não tem nenhum efeito para `dotnet test` . Para executar testes direcionados para x86, instale a versão x86 do .NET Core. O bit de bits do *dotnet.exe* que está no caminho é o que será usado para executar testes. Para saber mais, consulte os recursos a seguir:
 
   - [Configurar testes de unidade usando um arquivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
   - [Configurar uma execução de teste](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
@@ -175,7 +175,7 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste, `xunit` é a estrutura de test
   dotnet test --logger trx
   ```
 
-- Execute os testes no projeto no diretório atual e gere um arquivo de cobertura de código (depois de instalar o [coverlet](https://github.com/tonerdo/coverlet/blob/master/README.md)):
+- Execute os testes no projeto no diretório atual e gere um arquivo de cobertura de código (depois de instalar a integração de coletores [coverlet](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/VSTestIntegration.md) ):
 
   ```dotnetcli
   dotnet test --collect:"XPlat Code Coverage"
@@ -237,7 +237,7 @@ Inclua expressões em parênteses ao usar operadores condicionais (por exemplo, 
 
 Para obter mais informações e exemplos sobre como usar a filtragem de teste de unidade seletivo, confira [Executando testes de unidade seletivos](../testing/selective-unit-tests.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Estruturas e destinos](../../standard/frameworks.md)
 - [Catálogo do Identificador de Runtime do .NET Core](../rid-catalog.md)

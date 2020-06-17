@@ -2,15 +2,15 @@
 title: ASP.NET Core alterações significativas
 titleSuffix: ''
 description: Lista as alterações significativas em ASP.NET Core.
-ms.date: 04/29/2020
+ms.date: 06/11/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 2e89a14c948365da1e7a04fc8d5ca4008842f8d8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a6ddf97f907a1cba57e51d6fd516d1f94272f725
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446959"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803282"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core alterações significativas
 
@@ -21,7 +21,7 @@ As seguintes alterações significativas estão documentadas nesta página:
 - [APIs antifalsificação obsoletas, CORS, diagnóstico, MVC e roteamento removidas](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [Autenticação: Google + substituição](#authentication-google-deprecated-and-replaced)
 - [Autenticação: Propriedade HttpContext. Authentication removida](#authentication-httpcontextauthentication-property-removed)
-- [Autenticação: tipos Newtonsoft. JSON substituídos](#authentication-newtonsoftjson-types-replaced)
+- [Autenticação: Newtonsoft.Jsem tipos substituídos](#authentication-newtonsoftjson-types-replaced)
 - [Autenticação: assinatura OAuthHandler ExchangeCodeAsync alterada](#authentication-oauthhandler-exchangecodeasync-signature-changed)
 - [Autorização: sobrecarga de addautoria movida para um assembly diferente](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [Autorização: IAllowAnonymous removido de AuthorizationFilterContext. Filters](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
@@ -50,7 +50,9 @@ As seguintes alterações significativas estão documentadas nesta página:
 - [Identidade: o SignInAsync gera uma exceção para a identidade não autenticada](#identity-signinasync-throws-exception-for-unauthenticated-identity)
 - [Identity: o Construtor SignInManager aceita o novo parâmetro](#identity-signinmanager-constructor-accepts-new-parameter)
 - [Identidade: a interface do usuário usa o recurso de ativos da Web estáticos](#identity-ui-uses-static-web-assets-feature)
+- [Kestrel: alterações de configuração em tempo de execução detectadas por padrão](#kestrel-configuration-changes-at-run-time-detected-by-default)
 - [Kestrel: adaptadores de conexão removidos](#kestrel-connection-adapters-removed)
+- [Kestrel: versões do protocolo TLS com suporte padrão alteradas](#kestrel-default-supported-tls-protocol-versions-changed)
 - [Kestrel: assembly HTTPS vazio removido](#kestrel-empty-https-assembly-removed)
 - [Kestrel: Solicitar cabeçalhos de trailer movidos para nova coleção](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel: alterações na camada de abstração de transporte](#kestrel-transport-abstractions-removed-and-made-public)
@@ -98,7 +100,14 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 ***
 
-[!INCLUDE [Localization: "Pubternal" APIs removed](~/includes/core-changes/aspnetcore/5.0/localization-pubternal-apis-removed.md)]
+[!INCLUDE[Kestrel: Configuration changes at run time detected by default](~/includes/core-changes/aspnetcore/5.0/kestrel-configuration-changes-at-run-time-detected-by-default.md)]
+
+***
+[!INCLUDE[Kestrel: Default supported TLS protocol versions changed](~/includes/core-changes/aspnetcore/5.0/kestrel-default-supported-tls-protocol-versions-changed.md)]
+
+***
+
+[!INCLUDE[Localization: "Pubternal" APIs removed](~/includes/core-changes/aspnetcore/5.0/localization-pubternal-apis-removed.md)]
 
 ***
 
