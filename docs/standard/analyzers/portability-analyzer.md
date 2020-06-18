@@ -4,12 +4,12 @@ description: Saiba como usar a ferramenta .NET Portability Analyzer para avaliar
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 7fe5aafe1ad8bf87883ebe27f2aa4fb102a01e45
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d2a9551565e9ef0a2ed76960c869829fc2e86a1f
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501788"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903604"
 ---
 # <a name="the-net-portability-analyzer"></a>O .NET Portability Analyzer
 
@@ -32,9 +32,6 @@ Para começar a usar o Analisador de Portabilidade do .NET no Visual Studio, pri
 ![Captura de tela do analisador de portabilidade.](./media/portability-analyzer/portability-screenshot.png)
 
 Também é possível usar o aplicativo de console ApiPort, baixando-o do [repositório ApiPort](https://aka.ms/apiportdownload). É possível usar a opção de comando `listTargets` para exibir a lista de destino disponível e escolher as plataformas de destino especificando a opção de comando `-t` ou `--target`.
-
-> [!IMPORTANT]
-> Se não houver nenhum resultado ao executar a ferramenta, os destinos padrão poderão não estar disponíveis. Se você encontrar esse nome, certifique-se de adicionar destinos explícitos.
 
 ### <a name="solution-wide-view"></a>Visão ampla da solução
 

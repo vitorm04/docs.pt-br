@@ -4,12 +4,12 @@ description: Saiba mais sobre o que as distribuições do Linux dão suporte à 
 author: thraka
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: fbb057825395d4e024f99e1abbd1a6e65ba1dce7
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: e668ad733481c2d9b73994b6344b38768f5851fe
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768347"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903370"
 ---
 # <a name="install-net-core-on-linux"></a>Instalar o .NET Core no Linux
 
@@ -78,6 +78,8 @@ A tabela a seguir é uma lista de versões do .NET Core com suporte no momento e
 | ✔️ [9](linux-debian.md#debian-9-)       | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
 | ❌ [8](linux-debian.md#debian-8-)       | ✔️ 2,1        | ❌3,1        | ❌visualização de 5,0 |
 
+Para obter mais informações, consulte [instalar o .NET Core no Debian](linux-debian.md).
+
 ## <a name="fedora"></a>Fedora
 
 Fedora usa DNF como seu Gerenciador de pacotes.
@@ -113,6 +115,8 @@ A tabela a seguir é uma lista de versões do .NET Core com suporte no momento n
 |----------------------------|---------------|---------------|----------------|
 | ✔️ [15](linux-opensuse.md#opensuse-15-)     | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
 
+Para obter mais informações, consulte [instalar o .NET Core em openSUSE](linux-opensuse.md).
+
 ## <a name="red-hat"></a>Red Hat
 
 Red Hat Enterprise Linux (RHEL) usa yum (RHEL 7) e DNF (RHEL 8) como o Gerenciador de pacotes.
@@ -128,6 +132,8 @@ A tabela a seguir é uma lista de versões do .NET Core com suporte no momento n
 | ✔️ [8](linux-rhel.md#rhel-8-) | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
 | ✔️ [7](linux-rhel.md#rhel-7-) | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
 
+Para obter mais informações, consulte [instalar o .NET Core no RHEL](linux-rhel.md).
+
 ## <a name="sles"></a>SLES
 
 O SLES usa zypper como o Gerenciador de pacotes.
@@ -142,6 +148,8 @@ A tabela a seguir é uma lista de versões do .NET Core com suporte no momento n
 |------------------------|---------------|---------------|----------------|
 | ✔️ [15](linux-sles.md#sles-15-)     | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
 | ✔️ [12 SP2](linux-sles.md#sles-12-) | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
+
+Para obter mais informações, consulte [instalar o .NET Core no SLES](linux-sles.md).
 
 ## <a name="ubuntu"></a>Ubuntu
 
