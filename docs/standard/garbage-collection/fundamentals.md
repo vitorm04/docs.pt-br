@@ -11,12 +11,12 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: d59f368f21964c07d371df604f0728fa6ca8ac00
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 438188b6d694bdeab772c43ef92e5621c68facff
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307027"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990217"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Noções básicas da coleta de lixo
 
@@ -60,7 +60,7 @@ A lista a seguir resume conceitos importantes de memória do CLR.
 
 - Você pode ficar sem memória se não houver espaço de endereço virtual suficiente para reservar ou espaço físico para confirmar.
 
-  O arquivo de paginação é usado mesmo se a pressão de memória física (ou seja, a demanda de memória física) estiver baixa. Na primeira vez que a pressão de memória física é alta, o sistema operacional deve liberar espaço na memória física para armazenar dados e faz backup de alguns dos dados que estão na memória física para o arquivo de paginação. Esses dados não são paginados até que seja necessário, portanto, é possível encontrar paginação em situações em que a pressão da memória física está baixa.
+  O arquivo de paginação é usado mesmo se a pressão de memória física (ou seja, a demanda de memória física) estiver baixa. Na primeira vez em que a pressão de memória física é alta, o sistema operacional deve liberar espaço na memória física para armazenar dados e faz backup de alguns dos dados que estão na memória física para o arquivo de paginação. Esses dados não são paginados até que seja necessário, portanto, é possível encontrar paginação em situações em que a pressão da memória física está baixa.
   
 ### <a name="memory-allocation"></a>Alocação de memória
 
@@ -212,7 +212,7 @@ Você também deve fornecer uma maneira para que seus recursos não gerenciados 
 
 Para obter mais informações sobre como limpar recursos não gerenciados, consulte [limpar recursos não gerenciados](unmanaged.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Coleta de lixo de estação de trabalho ou de servidor](workstation-server-gc.md)
 - [Coleta de lixo em segundo plano](background-gc.md)

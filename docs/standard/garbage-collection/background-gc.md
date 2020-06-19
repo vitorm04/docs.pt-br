@@ -5,12 +5,12 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: 8134c0af55d74e57dcfce8c7174265b8c9902feb
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 780503288d3474cd99a595bdbd52c3a5abba5308
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307066"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990233"
 ---
 # <a name="background-garbage-collection"></a>Coleta de lixo em segundo plano
 
@@ -57,7 +57,7 @@ A ilustração a seguir mostra a coleta de lixo *do servidor* em segundo plano e
 
 Na coleta de lixo da estação de trabalho ou do servidor, você pode [habilitar a coleta de lixo simultânea](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md), o que permite que os threads sejam executados simultaneamente com um thread dedicado que executa a coleta de lixo para a maior parte da duração da coleção. Essa opção afeta apenas as coletas de lixo na geração 2; as gerações 0 e 1 são sempre não simultâneas porque elas são concluídas rapidamente.
 
-A coleta de lixo simultânea permite que aplicativos interativos sejam mais responsivos minimizando a pausa para uma coleta. Na maioria das vezes, a execução dos threads gerenciados pode continuar enquanto o thread de coleta de lixo simultânea estiver em execução. Isso resulta em pausas menores enquanto uma coleta de lixo estiver em execução.
+A coleta de lixo simultânea permite que aplicativos interativos sejam mais responsivos minimizando a pausa para uma coleta. Na maioria das vezes, a execução dos threads gerenciados pode continuar enquanto o thread de coleta de lixo simultânea estiver em execução. Esse design resulta em pausas mais curtas enquanto uma coleta de lixo está ocorrendo.
 
 A coleta de lixo simultânea é executada em um thread dedicado. Por padrão, o CLR executa a coleta de lixo da estação de trabalho com a coleta de lixo simultânea habilitada em computadores com processador único e com vários processadores.
 
@@ -65,7 +65,7 @@ A ilustração a seguir mostra a coleta de lixo simultânea executada em um thre
 
 ![Threads de coleta de lixo simultâneos](media/gc-concurrent.png)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Coleta de lixo de estação de trabalho ou de servidor](workstation-server-gc.md)
 - [Opções de configuração de tempo de execução para coleta de lixo](../../core/run-time-config/garbage-collector.md)

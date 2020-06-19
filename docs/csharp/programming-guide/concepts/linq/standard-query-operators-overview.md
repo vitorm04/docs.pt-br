@@ -2,17 +2,17 @@
 title: Visão geral de operadores de consulta padrão (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 2327ed84734e4f4ad826e02ed4e30b8784a59716
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 095a0b7a7a8265f235d28a4634ea82cdcd7a60c0
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287409"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990015"
 ---
 # <a name="standard-query-operators-overview-c"></a>Visão geral de operadores de consulta padrão (C#)
 Os *operadores de consulta padrão* são os métodos que formam o padrão LINQ. A maioria desses métodos opera em sequências; neste contexto, uma sequência é um objeto cujo tipo implementa a interface <xref:System.Collections.Generic.IEnumerable%601> ou a interface <xref:System.Linq.IQueryable%601>. Os operadores de consulta padrão fornecem recursos de consulta incluindo filtragem, projeção, agregação, classificação e muito mais.  
   
- Há dois conjuntos de operadores de consulta padrão LINQ, um que opera em objetos do tipo <xref:System.Collections.Generic.IEnumerable%601> e o outro que opera em objetos do tipo <xref:System.Linq.IQueryable%601>. Os métodos que compõem a cada conjunto são os membros estáticos das classes <xref:System.Linq.Enumerable> e <xref:System.Linq.Queryable>, respectivamente. Eles são definidos como *métodos de extensão* do tipo nos quais operam. Os métodos de extensão podem ser chamados usando a sintaxe do método estático ou a sintaxe do método de instância.  
+ Há dois conjuntos de operadores de consulta padrão do LINQ: um que opera em objetos do tipo <xref:System.Collections.Generic.IEnumerable%601> , outro que opera em objetos do tipo <xref:System.Linq.IQueryable%601> . Os métodos que compõem a cada conjunto são os membros estáticos das classes <xref:System.Linq.Enumerable> e <xref:System.Linq.Queryable>, respectivamente. Eles são definidos como *métodos de extensão* do tipo nos quais operam. Os métodos de extensão podem ser chamados usando a sintaxe do método estático ou a sintaxe do método de instância.  
   
  Além disso, vários métodos de operador de consulta padrão operam em tipos diferentes daqueles baseados em <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Linq.IQueryable%601>. O tipo <xref:System.Linq.Enumerable> define dois métodos tais que ambos operam em objetos do tipo <xref:System.Collections.IEnumerable>. Esses métodos, <xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29> e <xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29>, permitem que você habilite uma coleção sem parâmetros ou não genérica, a ser consultada no padrão LINQ. Eles fazem isso criando uma coleção fortemente tipada de objetos. A classe <xref:System.Linq.Queryable> define dois métodos semelhantes, <xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29> e <xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29>, que operam em objetos do tipo <xref:System.Linq.Queryable>.  
   
@@ -20,7 +20,7 @@ Os *operadores de consulta padrão* são os métodos que formam o padrão LINQ. 
   
  Para métodos que operam em coleções na memória, ou seja, os métodos que se estendem <xref:System.Collections.Generic.IEnumerable%601> , o objeto Enumerable retornado captura os argumentos que foram passados para o método. Quando esse objeto é enumerado, a lógica do operador de consulta é empregada e os resultados da consulta são retornados.  
   
- Por outro lado, os métodos que estendem <xref:System.Linq.IQueryable%601> não implementam nenhum comportamento de consulta, mas criam uma árvore de expressão que representa a consulta a ser executada. O processamento de consulta é tratado pelo objeto <xref:System.Linq.IQueryable%601> de origem.  
+ Por outro lado, os métodos que se estendem <xref:System.Linq.IQueryable%601> não implementam nenhum comportamento de consulta. Eles criam uma árvore de expressão que representa a consulta a ser executada. O processamento de consulta é tratado pelo objeto <xref:System.Linq.IQueryable%601> de origem.  
   
  Chamadas para métodos de consulta podem ser encadeadas em uma consulta, o que permite que consultas se tornem arbitrariamente complexas.  
   
@@ -73,7 +73,7 @@ foreach (var obj in query)
  Você pode aumentar o conjunto de operadores de consulta padrão criando métodos específicos de domínio apropriados para o domínio ou tecnologia de destino. Você também pode substituir os operadores de consulta padrão por suas próprias implementações que fornecem serviços adicionais, como avaliação remota, conversão de consulta e otimização. Para ver um exemplo, consulte <xref:System.Linq.Enumerable.AsEnumerable%2A>.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- Os links a seguir levam você a tópicos que fornecem informações adicionais sobre os vários operadores de consulta padrão com base na funcionalidade.  
+ Os links a seguir levam você a artigos que fornecem informações adicionais sobre os vários operadores de consulta padrão com base na funcionalidade.  
   
  [Classificando dados (C#)](./sorting-data.md)  
   
@@ -103,7 +103,7 @@ foreach (var obj in query)
   
  [Operações de agregação (C#)](./aggregation-operations.md)  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>

@@ -1,17 +1,17 @@
 ---
-title: Ordenar testes de unidade
+title: Solicitar testes de unidade
 description: Saiba como solicitar testes de unidade com o .NET Core.
 author: IEvangelist
 ms.date: 05/18/2020
 zone_pivot_groups: unit-testing-framework-set-one
-ms.openlocfilehash: ce0d01c924075ffcc9ad49ef8aca49222c10c921
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 3400ae440a828054624d67c14807ee72783e466a
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83704555"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989261"
 ---
-# <a name="order-unit-tests"></a>Ordenar testes de unidade
+# <a name="order-unit-tests"></a>Solicitar testes de unidade
 
 Ocasionalmente, talvez você queira que os testes de unidade sejam executados em uma ordem específica. O ideal é que a ordem em que os testes de unidade sejam executados _não_ seja importante, e é uma [prática recomendada](unit-testing-best-practices.md) evitar a ordenação de testes de unidade. Independentemente disso, pode ser necessário fazer isso. Nesse caso, este artigo demonstra como ordenar execuções de teste.
 
@@ -84,4 +84,4 @@ Para ordenar os testes explicitamente, o NUnit fornece um [`OrderAttribute`](htt
 ## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="nextstepaction"]
-> [Melhores práticas de teste de unidade](unit-testing-best-practices.md)
+> [Cobertura de código de teste de unidade](unit-testing-code-coverage.md)

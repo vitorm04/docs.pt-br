@@ -14,17 +14,18 @@ helpviewer_keywords:
 - stores, creating files and directories
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
-ms.openlocfilehash: d5e086e77ab6309fa0757ef32b620e0fdbc1f627
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b9ae108d9416bb834fc230fde1e62b929c21eb20
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413034"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990170"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Como: Criar arquivos e diretórios no armazenamento isolado
+
 Depois de obter um repositório isolado, você pode criar diretórios e arquivos para armazenar dados. Em um repositório, nomes de arquivo e diretório são especificados com relação à raiz do sistema de arquivos virtual.  
   
- Para criar um diretório, use o método de instância <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=nameWithType>. Se você especificar um subdiretório de um diretório que não existe, os dois diretórios serão criados. Se você especificar um diretório que já existe, o método retornará sem criar um diretório, e nenhuma exceção será lançada. No entanto, se você especificar um nome de diretório que contém caracteres inválidos, uma exceção <xref:System.IO.IsolatedStorage.IsolatedStorageException> será lançada.  
+ Para criar um diretório, use o método de instância <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=nameWithType>. Se você especificar um subdiretório de um diretório que não exista, ambos os diretórios serão criados. Se você especificar um diretório que já existe, o método retornará sem criar um diretório, e nenhuma exceção será lançada. No entanto, se você especificar um nome de diretório que contém caracteres inválidos, uma exceção <xref:System.IO.IsolatedStorage.IsolatedStorageException> será lançada.  
   
  Para criar um arquivo, use o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile%2A?displayProperty=nameWithType>.  
   

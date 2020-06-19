@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: d8c9879ea2f62bfbeaa378d0aaee806623ea1c55
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b51c88e1af3a720912af8ba6aaf8ae4016af9cfa
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579106"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990194"
 ---
 # <a name="shared-visual-basic"></a>Compartilhado (Visual Basic)
 
@@ -24,7 +24,7 @@ Especifica que um ou mais elementos de programação declarados estão associado
 
 ## <a name="when-to-use-shared"></a>Quando usar compartilhado
 
-O compartilhamento de um membro de uma classe ou estrutura torna-o disponível para cada instância, em vez de *não compartilhado*, em que cada instância mantém sua própria cópia. Isso é útil, por exemplo, se o valor de uma variável se aplicar a todo o aplicativo. Se você declarar essa variável como sendo `Shared` , todas as instâncias acessarão o mesmo local de armazenamento e, se uma instância alterar o valor da variável, todas as instâncias acessarão o valor atualizado.
+O compartilhamento de um membro de uma classe ou estrutura torna-o disponível para cada instância, em vez de *não compartilhado*, em que cada instância mantém sua própria cópia. O compartilhamento é útil, por exemplo, se o valor de uma variável se aplicar a todo o aplicativo. Se você declarar essa variável como sendo `Shared` , todas as instâncias acessarão o mesmo local de armazenamento e, se uma instância alterar o valor da variável, todas as instâncias acessarão o valor atualizado.
 
 O compartilhamento não altera o nível de acesso de um membro. Por exemplo, um membro de classe pode ser compartilhado e privado (acessível somente de dentro da classe), ou não compartilhado e público. Para obter mais informações, consulte [níveis de acesso em Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
@@ -50,7 +50,7 @@ O compartilhamento não altera o nível de acesso de um membro. Por exemplo, um 
 
 - **Acessando por meio de uma variável de instância.** É possível acessar um elemento compartilhado qualificando-o com o nome de uma variável que contém uma instância específica de sua classe ou estrutura. Embora isso normalmente funcione conforme o esperado, o compilador gera uma mensagem de aviso e faz o acesso por meio do nome da classe ou da estrutura em vez da variável.
 
-- **Acessando por meio de uma expressão de instância.** Se você acessar um elemento compartilhado por meio de uma expressão que retorna uma instância de sua classe ou estrutura, o compilador fará o acesso por meio do nome da classe ou da estrutura em vez de avaliar a expressão. Isso produzirá resultados inesperados se você pretende que a expressão execute outras ações, bem como o retorno da instância. O exemplo a seguir ilustra isto.
+- **Acessando por meio de uma expressão de instância.** Se você acessar um elemento compartilhado por meio de uma expressão que retorna uma instância de sua classe ou estrutura, o compilador fará o acesso por meio do nome da classe ou da estrutura em vez de avaliar a expressão. Esse acesso produz resultados inesperados se você pretendia que a expressão execute outras ações, bem como o retorno da instância. O exemplo a seguir ilustra essa situação.
   
     ```vb
     Sub Main()
@@ -93,7 +93,7 @@ O `Shared` modificador pode ser usado nesses contextos:
 - [Instrução Property](../statements/property-statement.md)
 - [Instrução Sub](../statements/sub-statement.md)
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Sombras](shadows.md)
 - [Estático](static.md)

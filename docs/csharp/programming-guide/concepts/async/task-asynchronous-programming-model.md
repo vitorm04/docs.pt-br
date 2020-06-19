@@ -2,12 +2,12 @@
 title: O modelo TAP (programação assíncrona de tarefa) com async e await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: d575a369a3c9766938e3996c527e27539e3e62e2
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 90bee745a393ac35ac968e9f4f6b6c83ad8fbb46
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241949"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990073"
 ---
 # <a name="task-asynchronous-programming-model"></a>Modelo de programação assíncrona de tarefa
 
@@ -40,7 +40,7 @@ A abordagem baseada em assincronia adiciona o equivalente de uma transmissão au
 
 As palavras-chave [async](../../../language-reference/keywords/async.md) e [await](../../../language-reference/operators/await.md) em C# são a parte central da programação assíncrona. Usando essas duas palavras-chave, você pode usar recursos no .NET Framework, no .NET Core ou no Windows Runtime para criar um método assíncrono quase tão fácil quanto criar um método síncrono. Os métodos assíncronos que você define usando a palavra-chave `async` são chamados de *métodos assíncronos*.
 
-O exemplo a seguir mostra um método assíncrono. Quase tudo no código deve ser completamente familiar para você.
+O exemplo a seguir mostra um método assíncrono. Quase tudo no código deve parecer familiar para você.
 
 O arquivo de exemplo completo do WPF (Windows Presentation Foundation) pode ser encontrado no final deste tópico. Você também pode baixar o exemplo de [Exemplo de assincronia: exemplo de "Programação assíncrona com Async e Await"](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/).
 
@@ -170,8 +170,8 @@ Um método assíncrono normalmente contém uma ou mais ocorrências de um `await
 
 `async` e `await` são palavras-chave contextuais. Para obter mais informações e exemplos, consulte os seguintes tópicos:
 
-- [async](../../../language-reference/keywords/async.md)
-- [expressões](../../../language-reference/operators/await.md)
+- [Async](../../../language-reference/keywords/async.md)
+- [await](../../../language-reference/operators/await.md)
 
 ## <a name="return-types-and-parameters"></a><a name="BKMK_ReturnTypesandParameters"></a>Tipos de retorno e parâmetros
 
@@ -234,7 +234,7 @@ As APIs assíncronas na programação do Windows Runtime têm um dos seguintes t
 
 ## <a name="naming-convention"></a><a name="BKMK_NamingConvention"></a>Convenção de nomenclatura
 
-Por convenção, os métodos que geralmente retornam tipos awaitable (por exemplo, `Task`, `Task<T>`, `ValueTask` e `ValueTask<T>`) devem ter nomes que terminam com "Async". Os métodos que iniciam uma operação assíncrona, mas não retornam um tipo aguardável não devem ter nomes que terminam com "Async", mas podem começar com "Begin", "Start" ou algum outro verbo que indique que esse método não retorna nem gera o resultado da operação.
+Por convenção, os métodos que retornam tipos comumente awaitable (por exemplo,,,, `Task` `Task<T>` `ValueTask` `ValueTask<T>` ) devem ter nomes que terminem com "Async". Os métodos que iniciam uma operação assíncrona, mas não retornam um tipo aguardável não devem ter nomes que terminam com "Async", mas podem começar com "Begin", "Start" ou algum outro verbo que indique que esse método não retorna nem gera o resultado da operação.
 
 É possível ignorar a convenção quando um evento, uma classe base ou um contrato de interface sugere um nome diferente. Por exemplo, você não deve renomear manipuladores de eventos comuns, como `Button1_Click` .
 
@@ -261,9 +261,9 @@ O código a seguir é o arquivo *MainWindow.XAML.cs* do aplicativo WPF que este 
 
 [!code-csharp[async](~/samples/snippets/standard/async/async-and-await/cs/MainWindow.xaml.cs)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [async](../../../language-reference/keywords/async.md)
-- [expressões](../../../language-reference/operators/await.md)
+- [Async](../../../language-reference/keywords/async.md)
+- [await](../../../language-reference/operators/await.md)
 - [Programação assíncrona](../../../async.md)
 - [Visão geral da assincronia](../../../../standard/async.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: a266cfd5996aca7b7a6b297b0775526cf38b8f64
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 62fc531a8064a8a5cb144a89aa9975b3199db976
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241416"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990109"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizadores (Guia de Programação em C#)
 Os finalizadores (que também são chamados de **destruidores**) são usados para executar qualquer limpeza final necessária, quando uma instância da classe está sendo coletada pelo coletor de lixo.  
@@ -52,24 +52,24 @@ protected override void Finalize()
 }  
 ```  
   
- Isso significa que o método `Finalize` é chamado de forma recursiva para todas as instâncias da cadeia de herança, da mais derivada à menos derivada.  
+ Esse design significa que o `Finalize` método é chamado recursivamente para todas as instâncias na cadeia de herança, do mais derivado para o menos derivado.  
   
 > [!NOTE]
 > Finalizadores vazios não devem ser usados. Quando uma classe contém um finalizador, uma entrada é criada na fila `Finalize`. Quando o finalizador é chamado, o coletor de lixo é invocado para processar a fila. Um finalizador vazio apenas resulta na perda de desempenho desnecessária.  
   
- O programador não tem controle sobre quando o finalizador é chamado porque isso é determinado pelo coletor de lixo. O coletor de lixo procura objetos que não estão mais sendo usados pelo aplicativo. Se considerar um objeto qualificado para finalização, ele chamará o finalizador (se houver) e recuperará a memória usada para armazenar o objeto.
+ O programador não tem controle sobre quando o finalizador é chamado; o coletor de lixo decide quando chamá-lo. O coletor de lixo procura objetos que não estão mais sendo usados pelo aplicativo. Se considerar um objeto qualificado para finalização, ele chamará o finalizador (se houver) e recuperará a memória usada para armazenar o objeto.
 
  Em aplicativos .NET Framework (mas não em aplicativos .NET Core), os finalizadores também são chamados quando o programa é encerrado.
   
- É possível forçar a coleta de lixo chamando <xref:System.GC.Collect%2A>, mas na maioria das vezes, isso deve ser evitado porque pode criar problemas de desempenho.  
+ É possível forçar a coleta de lixo chamando <xref:System.GC.Collect%2A> , mas, na maioria das vezes, essa chamada deve ser evitada, pois ela pode criar problemas de desempenho.  
   
 ## <a name="using-finalizers-to-release-resources"></a>Usar finalizadores para liberar recursos  
- Em geral, o C# não demanda tanto gerenciamento de memória quanto é necessário quando você desenvolve usando uma linguagem que não tem como destino um runtime com coleta de lixo. Isso ocorre porque o coletor de lixo do .NET gerencia implicitamente a alocação e a liberação da memória para seus objetos. No entanto, quando o aplicativo encapsula recursos não gerenciados, como Windows, arquivos e conexões de rede, você deve usar os finalizadores para liberar esses recursos. Quando o objeto está qualificado para finalização, o coletor de lixo executa o método `Finalize` do objeto.
+ Em geral, o C# não exige tanto gerenciamento de memória por parte do desenvolvedor como linguagens que não têm como alvo um tempo de execução com coleta de lixo. Isso ocorre porque o coletor de lixo do .NET gerencia implicitamente a alocação e a liberação da memória para seus objetos. No entanto, quando o aplicativo encapsula recursos não gerenciados, como Windows, arquivos e conexões de rede, você deve usar os finalizadores para liberar esses recursos. Quando o objeto está qualificado para finalização, o coletor de lixo executa o método `Finalize` do objeto.
   
 ## <a name="explicit-release-of-resources"></a>Liberação explícita de recursos  
- Se seu aplicativo estiver usando um recurso externo caro, também será recomendável fornecer uma maneira de liberar explicitamente o recurso antes que o coletor de lixo libere o objeto. Você faz isso implementando um método `Dispose` da interface <xref:System.IDisposable> que executa a limpeza necessária para o objeto. Isso pode melhorar consideravelmente o desempenho do aplicativo. Mesmo com esse controle explícito sobre os recursos, o finalizador se tornará uma proteção usada para limpar os recursos se a chamada para o método `Dispose` falhar.  
+ Se seu aplicativo estiver usando um recurso externo caro, também será recomendável fornecer uma maneira de liberar explicitamente o recurso antes que o coletor de lixo libere o objeto. Para liberar o recurso, implemente um `Dispose` método da <xref:System.IDisposable> interface que executa a limpeza necessária para o objeto. Isso pode melhorar consideravelmente o desempenho do aplicativo. Mesmo com esse controle explícito sobre os recursos, o finalizador torna-se uma proteção para limpar os recursos se a chamada para o `Dispose` método falhar.  
   
- Para obter mais detalhes sobre limpeza de recursos, consulte os seguintes tópicos:  
+ Para obter mais informações sobre como limpar recursos, consulte os seguintes artigos:  
   
 - [Limpando recursos não gerenciados](../../../standard/garbage-collection/unmanaged.md)  
   
@@ -86,7 +86,7 @@ protected override void Finalize()
 
 Para obter mais informações, confira a seção [Destruidores](~/_csharplang/spec/classes.md#destructors) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction).
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IDisposable>
 - [Guia de programação C#](../index.md)

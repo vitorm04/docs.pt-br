@@ -2,12 +2,12 @@
 title: Criando interfaces genéricas variantes (C#)
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: 27760fd73c8c40fc108106b87b2102ab5e07263c
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: a8e3e010c0e5d5490aee35603cad4fd6c1dc29e0
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241377"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990052"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Criando interfaces genéricas variantes (C#)
 
@@ -144,9 +144,9 @@ interface ICovariant<out T> { }
 
 ### <a name="avoiding-ambiguity"></a>Evitando ambiguidade
 
-Ao implementar interfaces genéricas variantes, a variância, às vezes, pode levar à ambiguidade. Isso deve ser evitado.
+Ao implementar interfaces genéricas variantes, a variância, às vezes, pode levar à ambiguidade. Essa ambiguidade deve ser evitada.
 
-Por exemplo, se você implementar explicitamente a mesma interface genérica variante com parâmetros de tipo genérico diferentes em uma classe, isso poderá criar ambiguidade. O compilador não produzirá um erro nesse caso, mas não está especificado qual implementação de interface será escolhida em runtime. Isso poderá causar bugs sutis no seu código. Considere o exemplo de código a seguir.
+Por exemplo, se você implementar explicitamente a mesma interface genérica variante com parâmetros de tipo genérico diferentes em uma classe, isso poderá criar ambiguidade. O compilador não produz um erro nesse caso, mas não é especificado qual implementação de interface será escolhida em tempo de execução. Essa ambiguidade pode levar a bugs sutis em seu código. Considere o exemplo de código a seguir.
 
 ```csharp
 // Simple class hierarchy.
@@ -190,7 +190,7 @@ class Program
 
 Neste exemplo, não está especificado como o método `pets.GetEnumerator` escolherá entre `Cat` e `Dog`. Isso poderá causar problemas em seu código.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Variância em interfaces genéricas (C#)](./variance-in-generic-interfaces.md)
 - [Usando variação para delegados genéricos Func e Action (C#)](./using-variance-for-func-and-action-generic-delegates.md)

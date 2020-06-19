@@ -2,12 +2,12 @@
 title: Variação em delegados (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: d41c0d3d54df96031fc7989e0fdc78e9f358a40a
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 7370813179040f54e65adf3b568a1fd914223f1d
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241338"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990034"
 ---
 # <a name="variance-in-delegates-c"></a>Variação em delegados (C#)
 O .NET Framework 3.5 introduziu o suporte a variação para assinaturas de método correspondentes com tipos de delegados em todos os delegados do C#. Isso significa que você pode atribuir a delegados não apenas os métodos que têm assinaturas correspondentes, mas também métodos que retornam tipos mais derivados (covariância) ou que aceitam parâmetros que têm tipos menos derivados (contravariância) do que o especificado pelo tipo de delegado. Isso inclui delegados genéricos e não genéricos.  
@@ -158,7 +158,8 @@ dvariant("test");
 ```  
   
 ### <a name="combining-variant-generic-delegates"></a>Combinando delegados genéricos variantes  
- Você não deve combinar delegados variantes. O método <xref:System.Delegate.Combine%2A> não dá suporte à conversão de delegados variantes e espera que os delegados sejam exatamente do mesmo tipo. Isso pode levar a uma exceção de tempo de execução quando você combina delegados usando o método <xref:System.Delegate.Combine%2A> ou o operador `+`, conforme mostrado no exemplo de código a seguir.  
+
+Não combine delegados de variante. O método <xref:System.Delegate.Combine%2A> não dá suporte à conversão de delegados variantes e espera que os delegados sejam exatamente do mesmo tipo. Isso pode levar a uma exceção de tempo de execução quando você combina delegados usando o método <xref:System.Delegate.Combine%2A> ou o operador `+`, conforme mostrado no exemplo de código a seguir.  
   
 ```csharp  
 Action<object> actObj = x => Console.WriteLine("object: {0}", x);  
@@ -197,7 +198,7 @@ public static void Test()
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Genéricos](../../../../standard/generics/index.md)
 - [Usando variação para delegados genéricos Func e Action (C#)](./using-variance-for-func-and-action-generic-delegates.md)

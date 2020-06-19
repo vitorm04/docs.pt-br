@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nullable compiler option [C#]
 - /nullable compiler option [C#]
 - -nullable compiler option [C#]
-ms.openlocfilehash: a68255dba18a022784cd4aaf0027c371893c577b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7454bb316507c3aaea208094127552712421dff6
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84449809"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990132"
 ---
 # <a name="-nullable-c-compiler-options"></a>-Nullable (opções do compilador C#)
 
@@ -48,7 +48,7 @@ A invocação de métodos anotados com os seguintes atributos também afetará a
 
 ### <a name="to-set-this-compiler-option-in-a-project"></a>Para definir essa opção de compilador em um projeto
 
-Edite o *. csproj* para adicionar a `<Nullable>` marca em uma `Project/PropertyGroup` hierarquia:
+Edite o arquivo *. csproj* para adicionar a `<Nullable>` marca em uma `Project/PropertyGroup` hierarquia:
 
 ```xml
 <Project Sdk="...">
