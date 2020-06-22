@@ -29,6 +29,8 @@ items:
             href: install/linux.md
           - name: Ubuntu
             href: install/linux-ubuntu.md
+          - name: Alpine
+            href: install/linux-alpine.md
           - name: CentOS
             href: install/linux-centos.md
           - name: Debian
@@ -403,25 +405,25 @@ items:
         href: testing/unit-testing-best-practices.md
       - name: xUnit
         items:
-          - name: 'Teste de unidade C#'
+          - name: Teste de unidade C#
             href: testing/unit-testing-with-dotnet-test.md
-          - name: 'Teste de unidade F#'
+          - name: Teste de unidade F#
             href: testing/unit-testing-fsharp-with-dotnet-test.md
           - name: Teste de unidade VB
             href: testing/unit-testing-visual-basic-with-dotnet-test.md
       - name: NUnit
         items:
-          - name: 'Teste de unidade C#'
+          - name: Teste de unidade C#
             href: testing/unit-testing-with-nunit.md
-          - name: 'Teste de unidade F#'
+          - name: Teste de unidade F#
             href: testing/unit-testing-fsharp-with-nunit.md
           - name: Teste de unidade VB
             href: testing/unit-testing-visual-basic-with-nunit.md
       - name: MSTest
         items:
-          - name: 'Teste de unidade C#'
+          - name: Teste de unidade C#
             href: testing/unit-testing-with-mstest.md
-          - name: 'Teste de unidade F#'
+          - name: Teste de unidade F#
             href: testing/unit-testing-fsharp-with-mstest.md
           - name: Teste de unidade VB
             href: testing/unit-testing-visual-basic-with-mstest.md
@@ -429,6 +431,8 @@ items:
         href: testing/selective-unit-tests.md
       - name: Solicitar testes de unidade
         href: testing/order-unit-tests.md
+      - name: Cobertura de código de testes de unidades
+        href: testing/unit-testing-code-coverage.md
       - name: Saída publicada de teste de unidade
         href: testing/unit-testing-published-output.md
       - name: Teste de unidade ao vivo de projetos do .NET Core com o Visual Studio
