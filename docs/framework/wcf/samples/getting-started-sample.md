@@ -1,5 +1,6 @@
 ---
 title: Exemplo de introdução
+description: Saiba como implementar um serviço típico e um cliente típico usando o WCF. Este exemplo é a base para todos os outros exemplos de tecnologia básica.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: fc4a7e9acb15f77140732638b2982dd4a9dae9ce
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b23be1b33f227154b916429c063ec4106229bb3c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575180"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246227"
 ---
 # <a name="getting-started-sample"></a>Exemplo de introdução
 
@@ -32,7 +33,7 @@ O exemplo a Introdução demonstra como implementar um serviço típico e um cli
 
 O serviço descreve as operações que ele realiza em um contrato de serviço que ele expõe publicamente como metadados. O serviço também contém o código para implementar as operações.
 
-O cliente contém uma definição do contrato de serviço e uma classe de proxy para acessar o serviço. O código do proxy é gerado a partir dos metadados de serviço usando a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).
+O cliente contém uma definição do contrato de serviço e uma classe de proxy para acessar o serviço. O código do proxy é gerado a partir dos metadados de serviço usando a [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).
 
 No Windows Vista, o serviço está hospedado no WAS (serviço de ativação do Windows). No Windows XP e no Windows Server 2003, ele é hospedado por Serviços de Informações da Internet (IIS) e ASP.NET. Hospedar um serviço no IIS ou WAS permite que o serviço seja ativado automaticamente quando é acessado pela primeira vez.
 
@@ -123,7 +124,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
-O serviço expõe um ponto de extremidade para se comunicar com o serviço, definido usando um arquivo de configuração (Web. config), conforme mostrado na seguinte configuração de exemplo.
+O serviço expõe um ponto de extremidade para se comunicar com o serviço, definido usando um arquivo de configuração (Web.config), conforme mostrado na seguinte configuração de exemplo.
 
 ```xaml
 <services>
@@ -174,7 +175,7 @@ A estrutura não expõe metadados por padrão. Como tal, o serviço ativa o <xre
 </system.serviceModel>
 ```
 
-O cliente se comunica usando um determinado tipo de contrato usando uma classe de cliente que é gerada pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Esse cliente gerado está contido no arquivo generatedClient.cs ou generatedClient. vb. Esse utilitário recupera metadados para um determinado serviço e gera um cliente para ser usado pelo aplicativo cliente para se comunicar usando um determinado tipo de contrato. O serviço hospedado deve estar disponível para gerar o código do cliente, pois o serviço é usado para recuperar os metadados atualizados.
+O cliente se comunica usando um determinado tipo de contrato usando uma classe de cliente que é gerada pela [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Esse cliente gerado está contido no arquivo generatedClient.cs ou generatedClient. vb. Esse utilitário recupera metadados para um determinado serviço e gera um cliente para ser usado pelo aplicativo cliente para se comunicar usando um determinado tipo de contrato. O serviço hospedado deve estar disponível para gerar o código do cliente, pois o serviço é usado para recuperar os metadados atualizados.
 
  Execute o seguinte comando no prompt de comando do SDK no diretório do cliente para gerar o proxy de tipo:
 
@@ -186,7 +187,7 @@ Para gerar o cliente no Visual Basic Digite o seguinte no prompt de comando do S
 
 `Svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb`
 
-Usando o cliente gerado, o cliente pode acessar um determinado ponto de extremidade de serviço Configurando o endereço e a associação apropriados. Assim como o serviço, o cliente usa um arquivo de configuração (App. config) para especificar o ponto de extremidade com o qual deseja se comunicar. A configuração de ponto de extremidade do cliente consiste em um endereço absoluto para o ponto de extremidade de serviço, a associação e o contrato, conforme mostrado no exemplo a seguir.
+Usando o cliente gerado, o cliente pode acessar um determinado ponto de extremidade de serviço Configurando o endereço e a associação apropriados. Assim como o serviço, o cliente usa um arquivo de configuração (App.config) para especificar o ponto de extremidade com o qual deseja se comunicar. A configuração de ponto de extremidade do cliente consiste em um endereço absoluto para o ponto de extremidade de serviço, a associação e o contrato, conforme mostrado no exemplo a seguir.
 
 ```xaml
 <client>
@@ -283,7 +284,7 @@ O exemplo a Introdução mostra a maneira padrão de criar um serviço e um clie
 
 3. Para executar o exemplo em uma configuração de computador único ou entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Como hospedar um serviço do WCF em um aplicativo gerenciado](../how-to-host-a-wcf-service-in-a-managed-application.md)
 - [Como hospedar um serviço WCF no IIS](../feature-details/how-to-host-a-wcf-service-in-iis.md)

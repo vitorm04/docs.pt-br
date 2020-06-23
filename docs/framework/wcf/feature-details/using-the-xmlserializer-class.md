@@ -1,5 +1,6 @@
 ---
 title: Usando a classe XmlSerializer
+description: Saiba mais sobre o XmlSerializer, que o WCF usa para serializar os dados em seu aplicativo em XML que é transmitido entre clientes e serviços.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 2ef2d0eefb571f64040fabd16fd65fdfde7a626d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f7473de3f34ba543b4fabfe93167ea267f16dda5
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600199"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246370"
 ---
 # <a name="using-the-xmlserializer-class"></a>Usando a classe XmlSerializer
 
@@ -40,7 +41,7 @@ O <xref:System.Runtime.Serialization.DataContractSerializer> , usado junto com o
 
 O WCF também dá suporte à <xref:System.Xml.Serialization.XmlSerializer> classe. A <xref:System.Xml.Serialization.XmlSerializer> classe não é exclusiva para o WCF. É o mesmo mecanismo de serialização que o ASP.NET Web Services usa. A <xref:System.Xml.Serialization.XmlSerializer> classe dá suporte a um conjunto muito mais estreito de tipos do que a <xref:System.Runtime.Serialization.DataContractSerializer> classe, mas permite muito mais controle sobre o XML resultante e dá suporte a muito mais do padrão XSD (linguagem de definição de esquema XML). Ele também não requer nenhum atributo declarativo nos tipos serializáveis. Para obter mais informações, consulte o tópico serialização de XML na documentação do .NET Framework. A <xref:System.Xml.Serialization.XmlSerializer> classe não oferece suporte a tipos de contrato de dados.
 
-Ao usar svcutil. exe ou o recurso de **Adicionar referência de serviço** no Visual Studio para gerar o código do cliente para um serviço de terceiros ou para acessar um esquema de terceiros, um serializador apropriado é selecionado automaticamente para você. Se o esquema não for compatível com o <xref:System.Runtime.Serialization.DataContractSerializer> , o <xref:System.Xml.Serialization.XmlSerializer> será selecionado.
+Ao usar Svcutil.exe ou o recurso de **Adicionar referência de serviço** no Visual Studio para gerar o código do cliente para um serviço de terceiros ou para acessar um esquema de terceiros, um serializador apropriado é selecionado automaticamente para você. Se o esquema não for compatível com o <xref:System.Runtime.Serialization.DataContractSerializer> , o <xref:System.Xml.Serialization.XmlSerializer> será selecionado.
 
 ## <a name="manually-switching-to-the-xmlserializer"></a>Alternando manualmente para o XmlSerializer
 
@@ -73,7 +74,7 @@ Embora a <xref:System.Runtime.Serialization.DataContractSerializer> classe seja 
 
 O serializador usado para o serviço é parte integrante do contrato e não pode ser alterado selecionando-se uma associação diferente ou alterando outras definições de configuração.
 
-Outras considerações de segurança importantes se aplicam à <xref:System.Xml.Serialization.XmlSerializer> classe. Primeiro, é altamente recomendável que qualquer aplicativo WCF que use a <xref:System.Xml.Serialization.XmlSerializer> classe seja assinado com uma chave que seja protegida contra divulgação. Essa recomendação se aplica quando um comutador manual para o <xref:System.Xml.Serialization.XmlSerializer> é executado e quando um comutador automático é executado (por svcutil. exe, Adicionar referência de serviço ou uma ferramenta semelhante). Isso ocorre porque o <xref:System.Xml.Serialization.XmlSerializer> mecanismo de serialização dá suporte ao carregamento de *assemblies de serialização gerados previamente* , contanto que eles sejam assinados com a mesma chave que o aplicativo. Um aplicativo não assinado é completamente desprotegido da possibilidade de um assembly mal-intencionado corresponder ao nome esperado do assembly de serialização gerado previamente que está sendo colocado na pasta do aplicativo ou no cache de assembly global. É claro que um invasor deve primeiro obter acesso de gravação a um desses dois locais para tentar essa ação.
+Outras considerações de segurança importantes se aplicam à <xref:System.Xml.Serialization.XmlSerializer> classe. Primeiro, é altamente recomendável que qualquer aplicativo WCF que use a <xref:System.Xml.Serialization.XmlSerializer> classe seja assinado com uma chave que seja protegida contra divulgação. Essa recomendação se aplica quando um comutador manual para o <xref:System.Xml.Serialization.XmlSerializer> é executado e quando um comutador automático é executado (por Svcutil.exe, Adicionar referência de serviço ou uma ferramenta semelhante). Isso ocorre porque o <xref:System.Xml.Serialization.XmlSerializer> mecanismo de serialização dá suporte ao carregamento de *assemblies de serialização gerados previamente* , contanto que eles sejam assinados com a mesma chave que o aplicativo. Um aplicativo não assinado é completamente desprotegido da possibilidade de um assembly mal-intencionado corresponder ao nome esperado do assembly de serialização gerado previamente que está sendo colocado na pasta do aplicativo ou no cache de assembly global. É claro que um invasor deve primeiro obter acesso de gravação a um desses dois locais para tentar essa ação.
 
 Outra ameaça que existe sempre que você usa <xref:System.Xml.Serialization.XmlSerializer> está relacionada ao acesso de gravação à pasta temporária do sistema. O <xref:System.Xml.Serialization.XmlSerializer> mecanismo de serialização cria e usa *assemblies de serialização* temporários nessa pasta. Você deve estar ciente de que qualquer processo com acesso de gravação para a pasta temporária pode substituir esses assemblies de serialização por código mal-intencionado.
 
@@ -173,9 +174,9 @@ Ao importar um esquema gerado a partir de `IXmlSerializable` tipos, há algumas 
 
 - O esquema gerado pode ser um esquema de contrato de dados válido, conforme descrito em [referência de esquema de contrato de dados](data-contract-schema-reference.md). Nesse caso, o esquema pode ser importado como de costume e os tipos de contrato de dados regulares são gerados.
 
-- O esquema gerado pode não ser um esquema de contrato de dados válido. Por exemplo, o método de provedor de esquema pode gerar um esquema que envolve atributos XML que não têm suporte no modelo de contrato de dados. Nesse caso, você pode importar o esquema como `IXmlSerializable` tipos. Esse modo de importação não está ativado por padrão, mas pode ser facilmente habilitado – por exemplo, com a `/importXmlTypes` opção de linha de comando para a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Isso é descrito em detalhes no [esquema de importação para gerar classes](importing-schema-to-generate-classes.md). Observe que você deve trabalhar diretamente com o XML para suas instâncias de tipo. Você também pode considerar o uso de uma tecnologia de serialização diferente que dá suporte a um grande intervalo de esquema – consulte o tópico sobre como usar o `XmlSerializer` .
+- O esquema gerado pode não ser um esquema de contrato de dados válido. Por exemplo, o método de provedor de esquema pode gerar um esquema que envolve atributos XML que não têm suporte no modelo de contrato de dados. Nesse caso, você pode importar o esquema como `IXmlSerializable` tipos. Esse modo de importação não está ativado por padrão, mas pode ser facilmente habilitado – por exemplo, com a `/importXmlTypes` opção de linha de comando para a [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Isso é descrito em detalhes no [esquema de importação para gerar classes](importing-schema-to-generate-classes.md). Observe que você deve trabalhar diretamente com o XML para suas instâncias de tipo. Você também pode considerar o uso de uma tecnologia de serialização diferente que dá suporte a um grande intervalo de esquema – consulte o tópico sobre como usar o `XmlSerializer` .
 
-- Talvez você queira reutilizar os `IXmlSerializable` tipos existentes no proxy em vez de gerar novos. Nesse caso, o recurso de tipos referenciados descrito no tópico importando o esquema para gerar tipos pode ser usado para indicar o tipo a ser reutilizado. Isso corresponde ao uso da `/reference` opção em svcutil. exe, que especifica o assembly que contém os tipos a serem reutilizados.
+- Talvez você queira reutilizar os `IXmlSerializable` tipos existentes no proxy em vez de gerar novos. Nesse caso, o recurso de tipos referenciados descrito no tópico importando o esquema para gerar tipos pode ser usado para indicar o tipo a ser reutilizado. Isso corresponde ao uso da `/reference` opção on svcutil.exe, que especifica o assembly que contém os tipos a serem reutilizados.
 
 ### <a name="xmlserializer-legacy-behavior"></a>Comportamento herdado XmlSerializer
 
@@ -218,7 +219,7 @@ Como alternativa à configuração acima, você pode usar a seguinte configuraç
 > [!NOTE]
 > A `<xmlSerializer useLegacySerializerGeneration="true"/>` opção funciona apenas em um computador que executa o .NET Framework 4,5 ou versão posterior. A `appSettings` abordagem acima funciona em todas as versões de .NET Framework.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.DataContractFormatAttribute>
 - <xref:System.Runtime.Serialization.DataContractSerializer>

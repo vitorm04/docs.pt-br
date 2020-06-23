@@ -1,5 +1,6 @@
 ---
 title: Recuperando informações de instalação de um domínio de aplicativo
+description: Recupere as informações de configuração de um domínio de aplicativo no .NET usando a classe System. AppDomain ou o objeto AppDomainSetup.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - retrieving setup information
 - application domains, retrieving setup information
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
-ms.openlocfilehash: 4d06a8a3ccfa35af283323478ee44a7da63d896d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 06bf6b5901736b87852492f48a9d8972490b8304
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119742"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903461"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>Recuperando informações de instalação de um domínio de aplicativo
 Cada instância de um domínio do aplicativo consiste em propriedades e informações de <xref:System.AppDomainSetup>. Você pode recuperar as informações de configuração de um domínio de aplicativo usando a classe <xref:System.AppDomain?displayProperty=nameWithType>. Essa classe fornece vários membros que recuperam informações de configuração sobre um domínio do aplicativo.  
@@ -34,7 +35,7 @@ Cada instância de um domínio do aplicativo consiste em propriedades e informa�
  [!code-csharp[AppDomain_Setup#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AppDomain_Setup/CS/source3.cs#3)]
  [!code-vb[AppDomain_Setup#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source3.vb#3)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)
-- [Uso de domínios do aplicativo](use.md)
+- [Usando domínios do aplicativo](use.md)

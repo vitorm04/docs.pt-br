@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 30ed8314d8045a599207cb0195474fdfde41760d
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4ce32c766e7a454c1294eb38266a84602cf8e241
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768931"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245629"
 ---
 # <a name="isolated-storage"></a>Armazenamentos isolado
 <a name="top"></a> Para aplicativos desktop, o armazenamento isolado é um mecanismo de armazenamento de dados que proporciona isolamento e segurança ao definir formas padronizadas de associar código a dados salvos. A padronização também fornece outros benefícios. Os administradores podem usar as ferramentas desenvolvidas para manipular armazenamentos isolados para configurar espaço de armazenamento de arquivos, definir políticas de segurança e excluir dados não utilizados. Com armazenamentos isolados, seu código não precisa mais de caminhos exclusivos para especificar locais seguros na sistema de arquivos e os dados são protegidos de outros aplicativos que só têm acesso a armazenamentos isolados. Informações embutidas em código que indicam onde a área de armazenamento de um aplicativo se encontra são desnecessárias.
@@ -105,6 +105,97 @@ O uso permitido especificado por <xref:System.Security.Permissions.IsolatedStora
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser>|Igual a `AssemblyIsolationByUser`, mas o armazenamento é salvo em um local que irá transitar se os perfis de usuário móvel estiverem ativados e as cotas não forem aplicadas.|O mesmo que em `AssemblyIsolationByUser`, mas sem as cotas, o risco de um ataque de negação de serviço aumenta.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser>|Isolamento por usuário. Normalmente, apenas ferramentas administrativas ou de depuração usam esse nível de permissão.|O acesso com essa permissão permite que o código exiba ou exclua qualquer um dos arquivos ou diretórios de armazenamento isolados do usuário (independentemente do isolamento do assembly). Riscos incluem, mas não estão limitados a, vazamento de informações e perda de dados.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.UnrestrictedIsolatedStorage>|Isolamento por todos os usuários, domínios e assemblies. Normalmente, apenas ferramentas administrativas ou de depuração usam esse nível de permissão.|Esta permissão cria o potencial de um comprometimento total de todos os repositórios isolados para todos os usuários.|
+
+## <a name="safety-of-isolated-storage-components-with-regard-to-untrusted-data"></a>Segurança de componentes de armazenamento isolado com relação a dados não confiáveis
+
+__Esta seção se aplica às seguintes estruturas:__
+
+- .NET Framework (todas as versões)
+- .NET Core 2.1 +
+- .NET 5.0 +
+
+O .NET Framework e o .NET Core oferecem [armazenamento isolado](/dotnet/standard/io/isolated-storage) como um mecanismo para manter dados para um usuário, um aplicativo ou um componente. Esse é um componente herdado projetado principalmente para cenários de segurança de acesso a código preteridos.
+
+Várias APIs e ferramentas de armazenamento isolado podem ser usadas para ler dados entre limites de confiança. Por exemplo, a leitura de dados de um escopo em todo o computador pode agregar dados de outras contas de usuário possivelmente menos confiáveis no computador. Os componentes ou aplicativos que lêem os escopos de armazenamento isolado em toda a máquina devem estar cientes das consequências de ler esses dados.
+
+### <a name="security-sensitive-apis-which-can-read-from-the-machine-wide-scope"></a>APIs sensíveis à segurança que podem ser lidas no escopo de todo o computador
+
+Componentes ou aplicativos que chamam qualquer uma das seguintes APIs lidas do escopo de todo o computador:
+
+ * [IsolatedStorageFile. GetEnumerator](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getenumerator), passando um escopo que inclui o sinalizador IsolatedStorageScope. Machine
+ * [IsolatedStorageFile. GetMachineStoreForApplication](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforapplication)
+ * [IsolatedStorageFile. GetMachineStoreForAssembly](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforassembly)
+ * [IsolatedStorageFile. GetMachineStoreForDomain](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestorefordomain)
+ * [IsolatedStorageFile. GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore), passando um escopo que inclui o sinalizador IsolatedStorageScope. Machine
+ * [IsolatedStorageFile. Remove](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove), passando um escopo que inclui o `IsolatedStorageScope.Machine` sinalizador
+
+A [ferramenta de armazenamento isolado](/dotnet/framework/tools/storeadm-exe-isolated-storage-tool) `storeadm.exe` será afetada se for chamada com a `/machine` opção, conforme mostrado no código a seguir:
+
+```txt
+storeadm.exe /machine [any-other-switches]
+```
+
+A ferramenta de armazenamento isolado é fornecida como parte do Visual Studio e do SDK do .NET Framework.
+
+Se o aplicativo não envolver chamadas para as APIs anteriores, ou se o fluxo de trabalho não envolve a chamada `storeadm.exe` dessa maneira, este documento não se aplica.
+
+### <a name="impact-in-multi-user-environments"></a>Impacto em ambientes de vários usuários
+
+Conforme mencionado anteriormente, o impacto de segurança dessas APIs resulta de dados gravados de um ambiente de confiança é lido de um ambiente de confiança diferente. O armazenamento isolado geralmente usa um dos três locais para ler e gravar dados:
+
+1. `%LOCALAPPDATA%\IsolatedStorage\`: Por exemplo, `C:\Users\<username>\AppData\Local\IsolatedStorage\` para `User` escopo.
+2. `%APPDATA%\IsolatedStorage\`: Por exemplo, `C:\Users\<username>\AppData\Roaming\IsolatedStorage\` para `User|Roaming` escopo.
+3. `%PROGRAMDATA%\IsolatedStorage\`: Por exemplo, `C:\ProgramData\IsolatedStorage\` para `Machine` escopo.
+
+Os dois primeiros locais são isolados por usuário. O Windows garante que diferentes contas de usuário no mesmo computador não possam acessar as pastas de perfil de usuário. Duas contas de usuário diferentes que usam `User` os `User|Roaming` repositórios ou não verão os dados uns dos outros e não poderão interferir nos dados uns dos outros.
+
+O terceiro local é compartilhado entre todas as contas de usuário no computador. Contas diferentes podem ler e gravar nesse local e são capazes de ver os dados uns dos outros.
+
+Os caminhos anteriores podem ser diferentes com base na versão do Windows em uso.
+
+Agora, considere um sistema de vários usuários com dois usuários registrados _Mallory_ e _Bob_. O Mallory tem a capacidade de acessar seu diretório de perfil de usuário `C:\Users\Mallory\` e pode acessar o local de armazenamento em todo o computador compartilhado `C:\ProgramData\IsolatedStorage\` . Ela não pode acessar o diretório de perfil de usuário de Bob `C:\Users\Bob\` .
+
+Se Mallory quiser atacar Bob, ela poderá gravar dados no local de armazenamento em todo o computador e, em seguida, tentar influenciar Bob na leitura do repositório de todo o computador. Quando Bob executa um aplicativo que lê esse armazenamento, esse aplicativo funcionará nos dados Mallory colocados ali, mas de dentro do contexto da conta de usuário de Bob. O restante deste documento contemplates vários vetores de ataque e quais etapas os aplicativos podem fazer para minimizar seus riscos a esses ataques.
+
+__Observação:__ Para que tal ataque ocorra, o Mallory requer:
+
+* Uma conta de usuário no computador.
+* A capacidade de inserir um arquivo em um local conhecido no sistema de arquivos.
+* O conhecimento que Bob irá, em algum momento, executar um aplicativo que tenta ler esses dados.
+
+Esses não são vetores de ameaça que se aplicam a ambientes de desktop de usuário único padrão como PCs domésticos ou estações de trabalho de um funcionário corporativo.
+
+#### <a name="elevation-of-privilege"></a>Elevação de privilégio
+
+Um ataque __de elevação de privilégio__ ocorre quando o aplicativo de Bob lê o arquivo de Mallory e tenta automaticamente executar alguma ação com base no conteúdo dessa carga. Considere um aplicativo que leia o conteúdo de um script de inicialização do repositório de todo o computador e passe esse conteúdo para `Process.Start` . Se o Mallory puder fazer um script mal-intencionado dentro da loja de todo o computador, quando Bob iniciar seu aplicativo:
+
+* Seu aplicativo analisa e inicia o script mal-intencionado do Mallory _no contexto do perfil de usuário de Bob_.
+* Mallory acessa a conta do Bob no computador local.
+
+#### <a name="denial-of-service"></a>Negação de serviço
+
+Um ataque __de negação de serviço__ ocorre quando o aplicativo de Bob lê o arquivo do Mallory e falha ou para de funcionar corretamente. Considere novamente o aplicativo mencionado anteriormente, que tenta analisar um script de inicialização do repositório de todo o computador. Se Mallory puder posicionar um arquivo com conteúdo malformado dentro da loja de todo o computador, ela poderá:
+
+* Fazer com que o aplicativo de Bob lance uma exceção no início do caminho de inicialização.
+* Impedir que o aplicativo seja iniciado com êxito devido à exceção.
+
+Ela negou, em seguida, Bob a capacidade de iniciar o aplicativo em sua própria conta de usuário.
+
+#### <a name="information-disclosure"></a>Divulgação de informações confidenciais
+
+Um ataque de __divulgação de informações__ ocorre quando o Mallory pode enganar Bob em revelar o conteúdo de um arquivo ao qual o Mallory normalmente não tem acesso. Considere que Bob tem um arquivo secreto *C:\Users\Bob\secret.txt* que o Mallory deseja ler. Ela sabe o caminho para esse arquivo, mas ela não pode lê-lo porque o Windows proíbe a obtenção de acesso ao diretório de perfil do usuário de Bob.
+
+Em vez disso, o Mallory coloca um link físico no repositório de todo o computador. Esse é um tipo especial de arquivo que não contém nenhum conteúdo, em vez disso, aponta para outro arquivo no disco. A tentativa de ler o arquivo de link físico lerá o conteúdo do arquivo de destino pelo link. Depois de criar o link físico, o Mallory ainda não pode ler o conteúdo do arquivo porque ele não tem acesso ao destino ( `C:\Users\Bob\secret.txt` ) do link. No entanto _, Bob tem_ acesso a esse arquivo.
+
+Quando o aplicativo de Bob lê da loja em todo o computador, ele agora lê inadvertidamente o conteúdo de seu `secret.txt` arquivo, como se o próprio arquivo estivesse presente no repositório de todo o computador. Quando o aplicativo de Bob é encerrado, se tentar salvar o arquivo novamente no repositório de todo o computador, ele acabará colocando uma cópia real do arquivo no diretório * C:\ProgramData\IsolatedStorage \* . Como esse diretório é legível por qualquer usuário no computador, o Mallory agora pode ler o conteúdo do arquivo.
+
+### <a name="best-practices-to-defend-against-these-attacks"></a>Práticas recomendadas para a proteção contra esses ataques
+
+__Importante:__ Se o seu ambiente tiver vários usuários mutuamente não confiáveis, __não__ chame a API `IsolatedStorageFile.GetEnumerator(IsolatedStorageScope.Machine)` nem invoque a ferramenta `storeadm.exe /machine /list` . Ambos pressupõem que eles estão operando em dados confiáveis. Se um invasor puder propagar uma carga mal-intencionada na loja de todo o computador, essa carga poderá levar a uma elevação de ataque de privilégio sob o contexto do usuário que executa esses comandos.
+
+Se estiver operando em um ambiente de vários usuários, reconsidere o uso de recursos de armazenamento isolado que se destinam ao escopo da _máquina_ . Se um aplicativo precisar ler dados de um local em todo o computador, prefira ler os dados de um local que são graváveis somente por contas de administrador. O `%PROGRAMFILES%` diretório e o `HKLM` hive do registro são exemplos de locais que são graváveis somente por administradores e legíveis por todos. Portanto, os dados lidos desses locais são considerados confiáveis.
+
+Se um aplicativo precisar usar o escopo da _máquina_ em um ambiente de vários usuários, valide o conteúdo de qualquer arquivo que você ler do repositório de todo o computador. Se o aplicativo desserializar grafos de objeto desses arquivos, considere usar serializadores mais seguros como `XmlSerializer` em vez de serializadores perigosos como `BinaryFormatter` ou `NetDataContractSerializer` . Tenha cuidado com grafos de objeto profundamente aninhados ou grafos de objetos que executam a alocação de recursos com base no conteúdo do arquivo.
 
 <a name="isolated_storage_locations"></a>
 

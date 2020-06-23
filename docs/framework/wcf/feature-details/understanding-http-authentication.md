@@ -1,13 +1,14 @@
 ---
 title: Noções básicas de autenticação HTTP
+description: Examine esta introdução à autenticação HTTP no WCF, incluindo esquemas de autenticação HTTP e escolhendo um esquema de autenticação.
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: a31c9f96185364c59dca1ff26251a30f5d7a88bc
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 761ab7a92aa26ce1437eefa360e5b46df179e32d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595083"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246513"
 ---
 # <a name="understanding-http-authentication"></a>Noções básicas de autenticação HTTP
 A autenticação é o processo de identificar se um cliente está qualificado para acessar um recurso. O protocolo HTTP dá suporte à autenticação como um meio de negociar o acesso a um recurso seguro.  
@@ -17,7 +18,7 @@ A autenticação é o processo de identificar se um cliente está qualificado pa
 ## <a name="http-authentication-schemes"></a>Esquemas de autenticação HTTP  
  O servidor pode especificar vários esquemas de autenticação para o cliente escolher. A tabela a seguir descreve alguns dos esquemas de autenticação geralmente encontrados em aplicativos do Windows.  
   
-|Esquema de Autenticação|Descrição|  
+|Esquema de Autenticação|Description|  
 |---------------------------|-----------------|  
 |Anônima|Uma solicitação anônima não contém nenhuma informação de autenticação. Isso é equivalente a conceder acesso de todos ao recurso a todos.|  
 |Basic|A autenticação básica envia uma cadeia de caracteres codificada em base64 que contém um nome de usuário e senha para o cliente. Base64 não é uma forma de criptografia e deve ser considerado o mesmo que enviar o nome de usuário e a senha em texto não criptografado. Se um recurso precisar ser protegido, considere fortemente usar um esquema de autenticação diferente da autenticação básica.|  
@@ -35,7 +36,7 @@ A autenticação é o processo de identificar se um cliente está qualificado pa
   
 - Um servidor não deve apresentar (nos cabeçalhos WWW-Authentication) qualquer esquema que não esteja preparado para aceitar ou que não proteja adequadamente o recurso protegido. Os clientes são livres para escolher entre qualquer um dos esquemas de autenticação que o servidor apresenta. Alguns clientes assumem como padrão um esquema de autenticação fraco ou o primeiro esquema de autenticação na lista do servidor.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de segurança de transporte](transport-security-overview.md)
 - [Usando a representação com segurança de transporte](using-impersonation-with-transport-security.md)

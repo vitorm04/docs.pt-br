@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 4243599f44749e7b38ebe78ca88b8ec2a9390650
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 8a85614e441ba6e5782cbbbf5fe12432c053a101
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249715"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244147"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Novidades na acessibilidade do .NET Framework
 
@@ -78,7 +78,7 @@ O .NET Framework 4.8 inclui novos recursos de acessibilidade nas seguintes área
 
 - [Designer de fluxo de trabalho do WF (Windows Workflow Foundation)](#wf48)
 
-<a name="winforms48" />
+<a name="winforms48"></a>
 
 ### <a name="windows-forms"></a>Windows Forms
 
@@ -169,7 +169,7 @@ A figura a seguir mostrará a dica de ferramenta quando o usuário selecionar um
 
 ![Captura de tela da dica de ferramenta quando o usuário navega para o botão com o teclado.](./media/whats-new-in-accessibility/select-tooltip-with-keyboard.png)
 
-<a name="wpf48" />
+<a name="wpf48"></a>
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
@@ -305,7 +305,7 @@ Valores automáticos serão fornecidos apenas se o aplicativo for destinado ao .
 </configuration>
 ```
 
-<a name="wf48" />
+<a name="wf48"></a>
 
 ### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Designer de fluxo de trabalho do WF (Windows Workflow Foundation)
 
@@ -709,4 +709,4 @@ As alterações de acessibilidade no Designer de Fluxo de Trabalho incluem as se
 
 ## <a name="see-also"></a>Veja também
 
-- [Novidades no .NET Framework](index.md)
+- [O que há de novo na .NET Framework](index.md)

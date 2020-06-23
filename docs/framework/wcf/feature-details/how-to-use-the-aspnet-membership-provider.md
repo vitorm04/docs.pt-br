@@ -1,17 +1,18 @@
 ---
 title: Como utilizar o provedor de associação do ASP.NET
+description: Saiba como o provedor de associação do ASP.NET dá suporte a sites que permitem que os usuários criem um nome de usuário e senha para acesso sem ter uma conta de domínio do Windows.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 840e4a5d365f2adbaf335c1061a580665a39824d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6d527993dcf1fc5d5cd39bf22c3e772baf60e62f
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595317"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246721"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Como utilizar o provedor de associação do ASP.NET
 
@@ -28,7 +29,7 @@ Os desenvolvedores de Windows Communication Foundation (WCF) podem aproveitar es
 
 ### <a name="to-configure-the-membership-provider"></a>Para configurar o provedor de associação
 
-1. No arquivo Web. config, no `system.web` elemento < >, crie um `membership` elemento < >.
+1. No arquivo Web.config, no `system.web` elemento <>, crie um `membership` elemento <>.
 
 2. No `<membership>` elemento, crie um `<providers>` elemento.
 
@@ -156,7 +157,7 @@ O código a seguir mostra a configuração de um serviço que usa o recurso asso
 </configuration>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Como utilizar o provedor de função do ASP.NET com um serviço](how-to-use-the-aspnet-role-provider-with-a-service.md)
 - [Provedor de função e associação](../samples/membership-and-role-provider.md)

@@ -1,17 +1,18 @@
 ---
 title: Detalhes de funcionalidades do WCF
+description: Aprenda em detalhes sobre o controle extensivo que o WCF oferece nas funções de mensagens de um aplicativo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - features [WCF]
 - WCF, features
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
-ms.openlocfilehash: 80728cd5f677617e8727e9f8c4b0c4b85767975c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 308a32c73d33a4da2fd841ca7c330a42deb7d324
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596884"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246630"
 ---
 # <a name="wcf-feature-details"></a>Detalhes de funcionalidades do WCF
 O Windows Communication Foundation (WCF) permite um controle extensivo sobre as funções de mensagens de um aplicativo. Os tópicos nesta seção fornecem detalhes sobre os recursos disponíveis. Para obter mais informações sobre programação básica, consulte [programação básica do WCF](../basic-wcf-programming.md).  

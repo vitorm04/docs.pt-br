@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 43e896bfe267299d3b0cb12a8f71e42fe2c87a88
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 184c9f61fd8456b22e8ecb262c131793160b49b0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280784"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244004"
 ---
 # <a name="delegates-and-lambdas"></a>Delegados e lambdas
 
@@ -108,7 +108,7 @@ public class Program
 
 Como você pode ver, o corpo do delegado é apenas um conjunto de expressões, como aconteceria com qualquer outro delegado. Mas, em vez de ser uma definição separada, apresentamos o _ad hoc_ em nossa chamada para o <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> método.
 
-No entanto, mesmo com essa abordagem, ainda há muito código que podemos descartar. É aí que as *expressões lambda* entram em cena. As expressões lambda ou apenas "lambdas" para abreviar foram introduzidas em C# 3,0 como um dos principais blocos de construção da LINQ (linguagem integrada de consulta). Elas são apenas uma sintaxe mais conveniente para usar delegados. Eles declaram uma assinatura e um corpo de método, mas não têm uma identidade formal própria, a menos que sejam atribuídos a um delegado. Ao contrário dos representantes, elas podem ser atribuídas diretamente como o lado esquerdo do registro de eventos ou em várias cláusulas e métodos LINQ.
+No entanto, mesmo com essa abordagem, ainda há muito código que podemos descartar. É aí que as *expressões lambda* entram em cena. As expressões lambda ou apenas "lambdas" para abreviar foram introduzidas em C# 3,0 como um dos principais blocos de construção da LINQ (linguagem integrada de consulta). Elas são apenas uma sintaxe mais conveniente para usar delegados. Eles declaram uma assinatura e um corpo de método, mas não têm uma identidade formal própria, a menos que sejam atribuídos a um delegado. Ao contrário dos delegados, eles podem ser diretamente atribuídos como o lado direito do registro de evento ou em várias cláusulas e métodos LINQ.
 
 Como uma expressão lambda é apenas outra maneira de especificar um delegado, nós podemos reescrever o exemplo acima para usar uma expressão lambda em vez de um delegado anônimo.
 

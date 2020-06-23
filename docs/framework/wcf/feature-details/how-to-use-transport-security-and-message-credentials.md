@@ -1,5 +1,6 @@
 ---
 title: Como utilizar credenciais de mensagem e segurança de transporte
+description: Saiba como implementar a segurança de transporte com credenciais de mensagem, que oferece o melhor dos modos de segurança de transporte e de mensagens no WCF.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: f49c0eb46141081b91100a5ae1869cbcf556e353
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f632a4389eafc155cedcae94707c9418b6696f2c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579378"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246643"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Como utilizar credenciais de mensagem e segurança de transporte
 A proteção de um serviço com as credenciais de transporte e de mensagem usa o melhor dos modos de segurança de transporte e de mensagem no Windows Communication Foundation (WCF). Em Sum, a segurança da camada de transporte fornece integridade e confidencialidade, enquanto a segurança da camada de mensagens fornece uma variedade de credenciais que não são possíveis com mecanismos de segurança de transporte estritos. Este tópico mostra as etapas básicas para implementar o transporte com credenciais de mensagem usando as <xref:System.ServiceModel.WSHttpBinding> <xref:System.ServiceModel.NetTcpBinding> associações e. Para obter mais informações sobre como definir o modo de segurança, consulte [como: definir o modo de segurança](../how-to-set-the-security-mode.md).  
@@ -25,7 +26,7 @@ A proteção de um serviço com as credenciais de transporte e de mensagem usa o
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>Para usar o WSHttpBinding com um certificado para segurança de transporte (no código)  
   
-1. Use a ferramenta HttpCfg. exe para associar um certificado SSL a uma porta no computador. Para obter mais informações, consulte [como: configurar uma porta com um certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md).  
+1. Use a ferramenta HttpCfg.exe para associar um certificado SSL a uma porta no computador. Para obter mais informações, consulte [como: configurar uma porta com um certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 2. Crie uma instância da <xref:System.ServiceModel.WSHttpBinding> classe e defina a <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> propriedade como <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential> .  
   
@@ -160,7 +161,7 @@ A proteção de um serviço com as credenciais de transporte e de mensagem usa o
     </bindings>  
     ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Como definir o modo de segurança](../how-to-set-the-security-mode.md)
 - [Protegendo serviços](../securing-services.md)

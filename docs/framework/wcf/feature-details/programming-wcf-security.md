@@ -1,5 +1,6 @@
 ---
 title: Programação de segurança do WCF
+description: Saiba como criar um aplicativo WCF seguro, incluindo autenticação, confidencialidade e integridade.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 2b3c96e91c0d6f01fa30b3b617449e7d4a148933
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8e77c667dd8904c10bbab88e1413690677cef53b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596767"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244979"
 ---
 # <a name="programming-wcf-security"></a>Programação de segurança do WCF
 Este tópico descreve as tarefas de programação fundamentais usadas para criar um aplicativo de Windows Communication Foundation de segurança (WCF). Este tópico aborda somente autenticação, confidencialidade e integridade, coletivamente conhecido como *segurança de transferência*. Este tópico não abrange a autorização (o controle de acesso a recursos ou serviços); para obter informações sobre autorização, consulte [Authorization](authorization-in-wcf.md).  
@@ -102,7 +103,7 @@ Este tópico descreve as tarefas de programação fundamentais usadas para criar
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Programação básica do WCF](../basic-wcf-programming.md)
 - [Cenários comuns de segurança](common-security-scenarios.md)

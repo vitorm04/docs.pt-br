@@ -1,13 +1,14 @@
 ---
 title: 'Codificador de mensagem personalizado: Codificador de texto personalizado'
+description: Use este exemplo para implementar um codificador de mensagem de texto personalizado usando o WCF. Esse codificador dá suporte a todas as codificações de caracteres com suporte da plataforma para interoperabilidade.
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: b60fa2a84520ad208d435a0c9284c19b5de8e989
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 88ddc79e6cc1df654aea851cedb0e60c6fbcd017
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600601"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246266"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Codificador de mensagem personalizado: Codificador de texto personalizado
 
@@ -214,14 +215,14 @@ CustomBinding binding = new CustomBinding(bindingElements);
 
 Qualquer tipo derivado de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> é responsável por atualizar a versão da Associação SOAP no documento WSDL gerado para o serviço. Isso é feito implementando o `ExportEndpoint` método na <xref:System.ServiceModel.Description.IWsdlExportExtension> interface e, em seguida, modificando o WSDL gerado. Neste exemplo, o `CustomTextMessageBindingElement` usa a lógica de exportação WSDL do `TextMessageEncodingBindingElement` .
 
-Para este exemplo, a configuração do cliente é configurar mão. Você não pode usar svcutil. exe para gerar a configuração do cliente porque o `CustomTextMessageBindingElement` não exporta uma declaração de política para descrever seu comportamento. Em geral, você deve implementar a <xref:System.ServiceModel.Description.IPolicyExportExtension> interface em um elemento de associação personalizado para exportar uma declaração de política personalizada que descreve o comportamento ou a funcionalidade implementada pelo elemento de associação. Para obter um exemplo de como exportar uma declaração de política para um elemento de associação personalizado, consulte o exemplo [Transport: UDP](transport-udp.md) .
+Para este exemplo, a configuração do cliente é configurar mão. Você não pode usar Svcutil.exe para gerar a configuração do cliente porque o `CustomTextMessageBindingElement` não exporta uma declaração de política para descrever seu comportamento. Em geral, você deve implementar a <xref:System.ServiceModel.Description.IPolicyExportExtension> interface em um elemento de associação personalizado para exportar uma declaração de política personalizada que descreve o comportamento ou a funcionalidade implementada pelo elemento de associação. Para obter um exemplo de como exportar uma declaração de política para um elemento de associação personalizado, consulte o exemplo [Transport: UDP](transport-udp.md) .
 
 ## <a name="message-encoding-binding-configuration-handler"></a>Manipulador de configuração de associação de codificação de mensagens
 A seção anterior mostra como usar o codificador de mensagem de texto personalizado programaticamente. O `CustomTextMessageEncodingBindingSection` implementa um manipulador de configuração que permite que você especifique o uso de um codificador de mensagem de texto personalizado dentro de um arquivo de configuração. A `CustomTextMessageEncodingBindingSection` classe deriva da <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> classe. A `BindingElementType` propriedade informa o sistema de configuração do tipo de elemento de associação a ser criado para esta seção.
 
 Todas as configurações definidas pelo `CustomTextMessageBindingElement` são expostas como as propriedades no `CustomTextMessageEncodingBindingSection` . O <xref:System.Configuration.ConfigurationPropertyAttribute> ajuda no mapeamento dos atributos do elemento de configuração para as propriedades e a definição de valores padrão se o atributo não estiver definido. Depois que os valores da configuração são carregados e aplicados às propriedades do tipo, o <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> método é chamado, o que converte as propriedades em uma instância concreta de um elemento de associação.
 
-Esse manipulador de configuração é mapeado para a representação a seguir no app. config ou Web. config para o serviço ou cliente.
+Esse manipulador de configuração é mapeado para a representação a seguir no App.config ou Web.config para o serviço ou cliente.
 
 ```xml
 <customTextMessageEncoding encoding="utf-8" contentType="text/xml" messageVersion="Soap11Addressing1" />

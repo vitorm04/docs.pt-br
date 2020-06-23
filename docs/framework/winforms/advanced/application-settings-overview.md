@@ -8,22 +8,23 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: 369495322328350bc06827b87598160469d864bb
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 72a15736fd21d1d626f88e728d70b7dd7ee6768f
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307053"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990176"
 ---
 # <a name="application-settings-overview"></a>Visão geral sobre configurações do aplicativo
-Este tópico discute como criar e armazenar dados de configuração em nome de seu aplicativo e seus usuários.
+
+Este artigo discute como criar e armazenar dados de configurações em nome do seu aplicativo e de seus usuários.
 
  O recurso Configurações de Aplicativo dos Windows Forms facilita a criação, o repositório e a manutenção de aplicativos personalizados e preferências do usuário no computador cliente. Com as configurações de aplicativo dos Windows Forms, você pode armazenar não apenas dados do aplicativo, como cadeias de conexão de banco de dados, mas também dados específicos do usuário, como as preferências de aplicativo do usuário. Usando o Visual Studio ou um código gerenciado personalizado, você pode criar novas configurações, lê-las do disco e gravá-las nele, associá-las a propriedades em seus formulários e validar os dados das configurações antes de carregar e salvar.
 
  As configurações do aplicativo permitem que os desenvolvedores Salvem o estado em seu aplicativo usando muito pouco código personalizado e é uma substituição das propriedades dinâmicas nas versões anteriores do .NET Framework. As configurações de aplicativo contêm muitas melhorias com relação às propriedades dinâmicas, que são somente leitura, têm associação tardia e exigem mais programação personalizada. As classes de propriedade dinâmica foram mantidas no .NET Framework 2,0, mas são apenas classes de shell que encapsulam de forma fina as classes de configurações do aplicativo.
 
 ## <a name="what-are-application-settings"></a>O que são as configurações de aplicativo?
- Seus aplicativos dos Windows Forms frequentemente exigirão dados que são críticos para a execução do aplicativo, mas que você não quer incluir diretamente no código do aplicativo. Se seu aplicativo usar um serviço Web ou um servidor de banco de dados, convém armazenar essas informações em um arquivo separado para que você possa alterá-las no futuro sem recompilação. Da mesma forma, seus aplicativos podem exigir o armazenamento de dados que são específicos ao usuário atual. A maioria dos aplicativos, por exemplo, tem preferências do usuário que personalizam a aparência e o comportamento do aplicativo.
+ Seus aplicativos de Windows Forms geralmente exigirão dados críticos para a execução do aplicativo, mas que você não deseja incluir diretamente no código do aplicativo. Se seu aplicativo usar um serviço Web ou um servidor de banco de dados, talvez você queira armazenar essas informações em um arquivo separado, para que você possa alterá-las no futuro sem recompilar. Da mesma forma, seus aplicativos podem exigir o armazenamento de dados que são específicos ao usuário atual. A maioria dos aplicativos, por exemplo, tem preferências do usuário que personalizam a aparência e o comportamento do aplicativo.
 
  As configurações de aplicativo abordam essas duas necessidades fornecendo uma maneira fácil de armazenar configurações de escopo do aplicativo e de escopo do usuário no computador cliente. Usando o Visual Studio ou um editor de código, você define uma configuração para uma determinada propriedade especificando seu nome, tipo de dados e escopo (aplicativo ou usuário). Você pode até mesmo colocar configurações relacionadas em grupos nomeados para facilitar o uso e a legibilidade. Uma vez definidas, essas configurações são mantidas e lidas na memória automaticamente em tempo de execução. Uma arquitetura conectável permite que o mecanismo de persistência seja alterado, mas, por padrão, o sistema de arquivos local é usado.
 

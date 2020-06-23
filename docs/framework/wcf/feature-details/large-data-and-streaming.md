@@ -1,13 +1,14 @@
 ---
 title: Dados grandes e streaming
+description: Saiba mais sobre as considerações sobre a comunicação baseada em XML do WCF, codificadores e dados de streaming, incluindo a transferência de dados binários.
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 21993f230b19a76020807e1f17bd6256f2ee0b1c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2eb57e2f57bebb2e765ea798b3dff27e0187e8c7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586319"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246578"
 ---
 # <a name="large-data-and-streaming"></a>Dados grandes e streaming
 
@@ -66,7 +67,7 @@ O Windows Communication Foundation (WCF) é uma infraestrutura de comunicação 
   
  Cada uma das associações padrão inclui um codificador pré-configurado, por meio do qual as associações com o prefixo Net* usam o codificador binário (incluindo a classe <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>) enquanto as classes <xref:System.ServiceModel.BasicHttpBinding> e <xref:System.ServiceModel.WSHttpBinding> usam o codificador de mensagem de texto (por meio da classe <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>) por padrão.  
   
-|Elemento de associação do codificador|Descrição|  
+|Elemento de associação do codificador|Description|  
 |-----------------------------|-----------------|  
 |<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|O codificador de mensagem de texto é o codificador padrão para todas as associações baseadas em HTTP e é a escolha apropriada para todas as associações personalizadas onde a interoperabilidade é a maior preocupação. Esse codificador lê e grava mensagens de texto SOAP 1.1/SOAP 1.2 padrão sem tratamento especial para dados binários. Se a <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> propriedade de uma mensagem for definida como <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType> , o invólucro de envelope SOAP será omitido da saída e somente o conteúdo do corpo da mensagem será serializado.|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|O codificador de mensagem MTOM é um codificador de texto que implementa o tratamento especial de dados binários e, por padrão, não é usado em nenhuma associação padrão porque é estritamente um utilitário de otimização caso a caso. Se a mensagem contiver dados binários que excedam um limite onde a codificação MTOM gere um benefício, os dados serão exteriorizados em uma parte MIME seguindo o envelope de mensagem. Consulte Habilitando o MTOM mais adiante nesta seção.|  
@@ -239,6 +240,6 @@ public class UploadStreamMessage
 > [!NOTE]
 > A decisão de usar transferência em buffer ou em streaming é uma decisão local do ponto de extremidade. Para transportes HTTP, o modo de transferência não se propaga para uma conexão ou para servidores proxy e outros intermediários. A definição do modo de transferência não é refletida na descrição da interface de serviço. Depois de gerar um cliente WCF para um serviço, você deve editar o arquivo de configuração para serviços destinados a serem usados com transferências transmitidas para definir o modo. Para transportes TCP e pipe nomeado, o modo de transferência é propagado como uma declaração de política.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Como habilitar transmissão](how-to-enable-streaming.md)

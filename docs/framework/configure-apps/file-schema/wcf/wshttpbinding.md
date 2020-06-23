@@ -1,15 +1,16 @@
 ---
 title: <wsHttpBinding>
+description: Define uma associação HTTP segura, confiável e interoperável adequada para contratos de serviço não duplex, que implementa mensagens WS-Reliable e WS-Security.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-ms.openlocfilehash: a71ad2a2279eabbcf917df58d7bedec0e728f9e5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d603f699145622cb1b70ecf99ea542572e841eac
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140397"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243978"
 ---
 # \<wsHttpBinding>
 Define uma associação segura, confiável e interoperável adequada para contratos de serviço não duplex. A associação implementa as seguintes especificações: WS-Reliable Messaging for fiabilidade e WS-Security para segurança e autenticação de mensagens. O transporte é HTTP e a codificação de mensagem é codificação de texto/XML.  
@@ -19,7 +20,7 @@ Define uma associação segura, confiável e interoperável adequada para contra
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<wsHttpBinding>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <wsHttpBinding>
@@ -84,7 +85,7 @@ Define uma associação segura, confiável e interoperável adequada para contra
   
 ### <a name="child-elements"></a>Elementos filho  
   
-|Elemento|Descrição|  
+|Elemento|Description|  
 |-------------|-----------------|  
 |[\<security>](security-of-wshttpbinding.md)|Define as configurações de segurança para a associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.WSHttpSecurityElement> .|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições sobre a complexidade de mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> .|  
@@ -92,7 +93,7 @@ Define uma associação segura, confiável e interoperável adequada para contra
   
 ### <a name="parent-elements"></a>Elementos pai  
   
-|Elemento|Descrição|  
+|Elemento|Description|  
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   

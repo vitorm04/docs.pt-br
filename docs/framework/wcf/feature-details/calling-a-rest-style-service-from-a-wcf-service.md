@@ -1,13 +1,14 @@
 ---
 title: Chamando um serviço REST-style de um serviço do WCF
+description: Saiba como fazer com que um serviço WCF use o contexto certo com um serviço estilo REST criando um escopo e chamando o serviço estilo REST desse escopo.
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-ms.openlocfilehash: eaa5d08faa335740124fcf698b22d2d324cd2c54
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 15f468923cf55feb85e7aeca1a2cc5e38050d665
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576480"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245291"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Chamando um serviço REST-style de um serviço do WCF
 
@@ -241,7 +242,7 @@ public class CallingRESTSample
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Como criar um serviço Web HTTP WCF básico](how-to-create-a-basic-wcf-web-http-service.md)
 - [Modelo de objeto de programação HTTP Web do WCF](wcf-web-http-programming-object-model.md)

@@ -1,16 +1,17 @@
 ---
 title: Compartilhamento de porta Net.TCP
+description: Saiba mais sobre um protocolo baseado em TCP para comunicação de alto desempenho e o serviço que permite que as portas sejam compartilhadas entre vários processos de usuário no WCF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: d9c6caa546d9f31f4e68b850dc1b1e750da2e93c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a9579c588906f509dd835d3c9b25571495d147e0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598756"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245239"
 ---
 # <a name="nettcp-port-sharing"></a>Compartilhamento de porta Net.TCP
 O Windows Communication Foundation (WCF) fornece um novo protocolo de rede baseado em TCP (net. TCP://) para comunicação de alto desempenho. O WCF também apresenta um novo componente do sistema, o serviço de compartilhamento de porta Net. TCP que permite que as portas net. TCP sejam compartilhadas entre vários processos de usuário.  
@@ -20,9 +21,9 @@ O Windows Communication Foundation (WCF) fornece um novo protocolo de rede basea
   
  O uso de números de porta para distinguir entre aplicativos apresentou problemas de segurança. Os firewalls geralmente são configurados para bloquear o tráfego TCP em todas as portas, exceto por alguns pontos de entrada conhecidos, de modo que a implantação de um aplicativo que usa uma porta não padrão é geralmente complicada ou até mesmo impossível devido à presença de firewalls corporativos e pessoais. Aplicativos que podem se comunicar por portas padrão e conhecidas que já são permitidas, reduzir a superfície de ataque externa. Muitos aplicativos de rede usam o protocolo HTTP porque a maioria dos firewalls são configurados por padrão para permitir o tráfego na porta TCP 80.  
   
- O HTTP. O modelo SYS no qual o tráfego para muitos aplicativos HTTP diferentes é multiplexado em uma única porta TCP se tornou padrão na plataforma Windows. Isso fornece um ponto comum de controle para administradores de firewall, permitindo que os desenvolvedores de aplicativos minimizem o custo de implantação da criação de novos aplicativos que podem fazer uso da rede.  
+ O modelo de HTTP.SYS no qual o tráfego para muitos aplicativos HTTP diferentes é multiplexado em uma única porta TCP se tornou padrão na plataforma Windows. Isso fornece um ponto comum de controle para administradores de firewall, permitindo que os desenvolvedores de aplicativos minimizem o custo de implantação da criação de novos aplicativos que podem fazer uso da rede.  
   
- A capacidade de compartilhar portas em vários aplicativos HTTP tem sido um recurso do Serviços de Informações da Internet (IIS). No entanto, era apenas com a introdução do HTTP. SYS (o ouvinte de protocolo HTTP no modo kernel) com o IIS 6,0 que essa infraestrutura foi totalmente generalizada. Na verdade, HTTP. O SYS permite que processos de usuário arbitrários compartilhem as portas TCP dedicadas ao tráfego HTTP. Esse recurso permite que muitos aplicativos HTTP coexistam na mesma máquina física em processos isolados e separados enquanto compartilham a infraestrutura de rede necessária para enviar e receber tráfego pela porta TCP 80. O serviço de compartilhamento de porta Net. TCP permite o mesmo tipo de compartilhamento de porta para aplicativos net. TCP.  
+ A capacidade de compartilhar portas em vários aplicativos HTTP tem sido um recurso do Serviços de Informações da Internet (IIS). No entanto, apenas com a introdução do HTTP.SYS (o ouvinte do protocolo HTTP no modo kernel) com o IIS 6,0 que essa infraestrutura estava totalmente generalizada. Na verdade, HTTP.SYS permite que processos de usuário arbitrários compartilhem as portas TCP dedicadas ao tráfego HTTP. Esse recurso permite que muitos aplicativos HTTP coexistam na mesma máquina física em processos isolados e separados enquanto compartilham a infraestrutura de rede necessária para enviar e receber tráfego pela porta TCP 80. O serviço de compartilhamento de porta Net. TCP permite o mesmo tipo de compartilhamento de porta para aplicativos net. TCP.  
   
 ## <a name="port-sharing-architecture"></a>Arquitetura de compartilhamento de porta  
  A arquitetura de compartilhamento de porta no WCF tem três componentes principais:  
@@ -48,7 +49,7 @@ O Windows Communication Foundation (WCF) fornece um novo protocolo de rede basea
 ## <a name="security-implications-of-port-sharing"></a>Implicações de segurança do compartilhamento de porta  
  Embora o serviço de compartilhamento de porta Net. TCP forneça uma camada de processamento entre aplicativos e a rede, os aplicativos que usam o compartilhamento de porta ainda devem ser protegidos como se estivessem ouvindo diretamente na rede. Especificamente, os aplicativos que usam o compartilhamento de porta devem avaliar os privilégios de processo sob os quais eles são executados. Considere executar seu aplicativo usando a conta de serviço de rede interna, que é executada com o conjunto mínimo de privilégios de processo necessários para a comunicação de rede.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Configurando o serviço de compartilhamento de porta Net.TCP](configuring-the-net-tcp-port-sharing-service.md)
 - [Hosting](hosting.md)

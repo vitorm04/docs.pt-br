@@ -1,5 +1,6 @@
 ---
 title: Tipos de coleção em contratos de dados
+description: Saiba mais sobre como o modelo de contrato de dados trata as coleções no .NET Framework e como o WCF dá suporte à serialização de dados para tipos de coleção.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: a10b7c5295407cfbb36446581a4b75670e37bc6a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 83acf1f74bf3cb117f3f94743eda32d3f2cc4b82
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579742"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245174"
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipos de coleção em contratos de dados
 
@@ -255,7 +256,7 @@ Para escolher os tipos de coleção a serem gerados, passe uma lista de tipos de
 Quando tipos genéricos estão sendo referenciados, eles devem ser genéricos totalmente abertos ou genéricos totalmente fechados.
 
 > [!NOTE]
-> Ao usar a ferramenta svcutil. exe, essa referência pode ser realizada usando a opção de linha de comando **/collectionType** (forma abreviada: **/CT**). Tenha em mente que você também deve especificar o assembly para os tipos de coleção referenciados usando a opção **/Reference** (forma abreviada: **/r**). Se o tipo for genérico, ele deverá ser seguido por uma aspa posterior e o número de parâmetros genéricos. A aspa de fundo ( \` ) não deve ser confundida com o caractere de aspa simples ('). Você pode especificar vários tipos de coleção referenciados usando a opção **/collectionType** mais de uma vez.
+> Ao usar a ferramenta de Svcutil.exe, essa referência pode ser realizada usando a opção de linha de comando **/collectionType** (forma abreviada: **/CT**). Tenha em mente que você também deve especificar o assembly para os tipos de coleção referenciados usando a opção **/Reference** (forma abreviada: **/r**). Se o tipo for genérico, ele deverá ser seguido por uma aspa posterior e o número de parâmetros genéricos. A aspa de fundo ( \` ) não deve ser confundida com o caractere de aspa simples ('). Você pode especificar vários tipos de coleção referenciados usando a opção **/collectionType** mais de uma vez.
 
 Por exemplo, para fazer com que todas as listas sejam importadas como genéricas <xref:System.Collections.Generic.List%601> .
 

@@ -1,5 +1,6 @@
 ---
 title: Utilizando contratos de mensagem
+description: Saiba como usar os atributos de contrato de mensagem para criar um contrato de mensagem especificando a estrutura de uma mensagem SOAP em WFC.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 1b102b97c62df0bb8b031ded0f9165a11f8a8911
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0a75298b50df74ddf15904af43a0eb62c5ba8496
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600264"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244706"
 ---
 # <a name="using-message-contracts"></a>Utilizando contratos de mensagem
 Normalmente, ao criar aplicativos Windows Communication Foundation (WCF), os desenvolvedores pagam atentamente com as estruturas de dados e problemas de serialização e não precisam se preocupar com a estrutura das mensagens nas quais os dados são transmitidos. Para esses aplicativos, a criação de contratos de dados para os parâmetros ou valores de retorno é simples. (Para obter mais informações, consulte [especificando transferência de dados em contratos de serviço](specifying-data-transfer-in-service-contracts.md).)  
@@ -447,7 +448,7 @@ public class OperationDetails
   
  Se você desejar receber o objeto de mensagem como a propriedade `Result` e ter valores retornados como propriedades nesse objeto, use a opção de comando `/messageContract`. Isso gera uma assinatura que retorna a mensagem de resposta como a propriedade `Result` no objeto <xref:System.EventArgs>. Todos os valores de retorno internos são propriedades do objeto da mensagem de resposta.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Usando contratos de dados](using-data-contracts.md)
 - [Serviços de design e implantação](../designing-and-implementing-services.md)

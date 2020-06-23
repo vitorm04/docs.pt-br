@@ -1,5 +1,6 @@
 ---
 title: Delegação e representação com o WCF
+description: Saiba mais sobre os métodos de representação e delegação que o WCF usa para restringir o acesso do cliente aos recursos de um domínio de serviço.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: e491925fdbe8d44df8e0c64b563eb92569453e35
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7f8d3695a36a43ca6bf796b141c07f6d2d088354
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599250"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245070"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegação e representação com o WCF
 A *representação* é uma técnica comum que os serviços usam para restringir o acesso do cliente aos recursos de um domínio de serviço. Os recursos de domínio de serviço podem ser recursos de máquina, como arquivos locais (representação) ou um recurso em outra máquina, como um compartilhamento de arquivos (delegação). Para um aplicativo de exemplo, consulte [personificando o cliente](../samples/impersonating-the-client.md). Para obter um exemplo de como usar a representação, consulte [como: representar um cliente em um serviço](../how-to-impersonate-a-client-on-a-service.md).  
@@ -118,8 +119,8 @@ A *representação* é uma técnica comum que os serviços usam para restringir 
 |Identificação|n/d|n/d|Identificação|  
 |Representação|Sim|n/d|Representação|  
 |Representação|Não|n/d|Identificação|  
-|Delegação|Sim|Sim|Delegação|  
-|Delegação|Sim|Não|Representação|  
+|Delegação|Yes|Yes|Delegação|  
+|Delegação|Yes|No|Representação|  
 |Delegação|Não|n/d|Identificação|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Nível de representação obtido de credenciais de nome de usuário e representação de token em cache  
@@ -127,16 +128,16 @@ A *representação* é uma técnica comum que os serviços usam para restringir 
   
 |`AllowedImpersonationLevel`|O serviço tem`SeImpersonatePrivilege`|O serviço e o cliente são capazes de delegação|Token em cache`ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|n/d|Sim|Sim|Delegação|  
-|n/d|Sim|Não|Representação|  
+|n/d|Yes|Yes|Delegação|  
+|n/d|Yes|No|Representação|  
 |n/d|Não|n/d|Identificação|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>Nível de representação obtido da representação baseada em S4U  
   
 |O serviço tem`SeTcbPrivilege`|O serviço tem`SeImpersonatePrivilege`|O serviço e o cliente são capazes de delegação|Token em cache`ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Sim|Sim|n/d|Representação|  
-|Sim|Não|n/d|Identificação|  
+|Yes|Sim|n/d|Representação|  
+|Yes|Não|n/d|Identificação|  
 |Não|n/d|n/d|Identificação|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>Mapeando um certificado de cliente para uma conta do Windows  
@@ -179,9 +180,9 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 |Nível de representação|O serviço pode executar a delegação entre processos|O serviço pode executar a delegação entre computadores|  
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|Não|Não|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|Sim|Não|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|Sim|Sim|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|No|Não|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|Sim|No|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|Sim|Yes|  
   
  O exemplo de código a seguir demonstra como usar a delegação.  
   
@@ -201,7 +202,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
  Para obter instruções mais detalhadas sobre como configurar a delegação restrita, consulte [transição de protocolo Kerberos e delegação restrita](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10)).
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>

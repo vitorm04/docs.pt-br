@@ -1,13 +1,14 @@
 ---
 title: Inspetores de mensagem
+description: Saiba como implementar e configurar os inspetores de mensagem de serviço e cliente WCF, que fornecem um mecanismo de validação de mensagens.
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 1a5519e815a6714e087a77c69e943a3a8c65db68
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 20abb655a58f9dce4a967ade9b51db90eed2375b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585072"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246201"
 ---
 # <a name="message-inspectors"></a>Inspetores de mensagem
 Este exemplo demonstra como implementar e configurar os inspetores de mensagem de cliente e serviço.  

@@ -1,5 +1,6 @@
 ---
 title: Usando contratos de dados
+description: Saiba mais sobre um contrato de dados, que define, para cada parâmetro ou tipo de retorno, quais dados são serializados para serem trocados entre um cliente e servidor WCF.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: 0d11b48d3021bf0d92d74ab67bc18c2bdd2bdd0e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 80ea2a8bd67c627fbe11ee07e640704c1a41ef7b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594992"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244719"
 ---
 # <a name="using-data-contracts"></a>Usando contratos de dados
 Um *contrato de dados* é um contrato formal entre um serviço e um cliente que descreve de forma abstrata os dados a serem trocados. Ou seja, para se comunicar, o cliente e o serviço não precisam compartilhar os mesmos tipos, apenas os mesmos contratos de dados. Um contrato de dados define precisamente, para cada parâmetro ou tipo de retorno, quais dados são serializados (convertidos em XML) para serem trocados.  
@@ -66,7 +67,7 @@ Um *contrato de dados* é um contrato formal entre um serviço e um cliente que 
   
  Para obter um exemplo de código completo de um serviço WCF que define um contrato de dados, consulte o exemplo de [contrato de dados básico](../samples/basic-data-contract.md) .  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>

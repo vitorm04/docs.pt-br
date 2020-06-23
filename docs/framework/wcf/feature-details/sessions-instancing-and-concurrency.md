@@ -1,13 +1,14 @@
 ---
 title: Sessões,instanciação e simultaneidade
+description: Saiba mais sobre sessões, instanciação e simultaneidade, como usá-las e as interações entre elas em WFC.
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 070e9ed25e2c0cce1309fb27e3f6a02bb01f3d2c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 41eef5a962c702eebd6b9a34607b542ec6bbd97b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600316"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246539"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sessões,instanciação e simultaneidade
 Uma *sessão* é uma correlação de todas as mensagens enviadas entre dois pontos de extremidade. A *instanciação* refere-se ao controle do tempo de vida de objetos de serviço definidos pelo usuário e seus <xref:System.ServiceModel.InstanceContext> objetos relacionados. *Simultaneidade* é o termo dado ao controle do número de threads em execução em um <xref:System.ServiceModel.InstanceContext> ao mesmo tempo.  
@@ -107,7 +108,7 @@ public class CalculatorService : ICalculatorConcurrency
 |PerSession|-Comportamento com o canal de sessão: uma sessão e <xref:System.ServiceModel.InstanceContext> para cada canal.<br />-Comportamento com canal sem sessão: uma exceção é lançada.|-Comportamento com o canal de sessão: uma sessão e <xref:System.ServiceModel.InstanceContext> para cada canal.<br />-Comportamento com canal sem sessão: um <xref:System.ServiceModel.InstanceContext> para cada chamada.|-Comportamento com o canal de sessão: uma exceção é lançada.<br />-Comportamento com canal sem sessão: um <xref:System.ServiceModel.InstanceContext> para cada chamada.|  
 |Single|-Comportamento com o canal de sessão: uma sessão e outra <xref:System.ServiceModel.InstanceContext> para todas as chamadas.<br />-Comportamento com canal sem sessão: uma exceção é lançada.|-Comportamento com o canal de sessão: uma sessão e <xref:System.ServiceModel.InstanceContext> para o singleton criado ou especificado pelo usuário.<br />-Comportamento com canal sem sessão: um <xref:System.ServiceModel.InstanceContext> para o singleton criado ou especificado pelo usuário.|-Comportamento com o canal de sessão: uma exceção é lançada.<br />-Comportamento com canal sem sessão: um <xref:System.ServiceModel.InstanceContext> para cada singleton criado ou para o singleton especificado pelo usuário.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Usando sessões](../using-sessions.md)
 - [Como criar um serviço que requer sessões](how-to-create-a-service-that-requires-sessions.md)

@@ -1,15 +1,16 @@
 ---
 title: Tipos com suporte fornecido pelo serializador de contrato de dados
+description: Consulte a lista completa de tipos que o serializador de contrato de dados WCF dá suporte para serialização e desserialização.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: 15c3cda8329682fcbaa36609647ec49de7eb3c37
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ef9d2e61ab7121c97bd474bb151fee32907b1dac
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595096"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246526"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Tipos com suporte fornecido pelo serializador de contrato de dados
 
@@ -70,7 +71,7 @@ As regras a seguir também se aplicam a tipos com suporte no serializador de con
 
 - O <xref:System.DBNull> tipo é tratado de forma especial. É um tipo singleton e, após a desserialização, o desserializador respeita a restrição singleton e aponta todas as `DBNull` referências para a instância singleton. Como `DBNull` é um tipo serializável, ele exige <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> permissão.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Tipos de XML e ADO.NET em contratos de dados](xml-and-ado-net-types-in-data-contracts.md)
 - [Usando contratos de dados](using-data-contracts.md)

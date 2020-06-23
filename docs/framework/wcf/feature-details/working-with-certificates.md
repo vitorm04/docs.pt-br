@@ -1,5 +1,6 @@
 ---
 title: Trabalhando com certificados
+description: Saiba mais sobre os recursos de certificado digital X. 509 e como usá-los no WCF. Os recursos neste artigo podem explicar ainda mais esses conceitos.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: e61437efd87c30758c36d642bb9269ad2966c951
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8090e84b33e2a6f442d387c7012e6ccdc2900dd1
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600108"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246396"
 ---
 # <a name="working-with-certificates"></a>Trabalhando com certificados
 
@@ -188,7 +189,7 @@ Ao usar o .NET Framework 3,5 ou versões posteriores, o WCF garante que o certif
 
 Na primeira versão do WCF, o mapeamento é feito sem consulta à política de domínio. Portanto, é possível que aplicativos mais antigos que funcionavam ao serem executados na primeira versão falhem se o mapeamento for habilitado e o certificado X.509 não atender a política de domínio.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>
