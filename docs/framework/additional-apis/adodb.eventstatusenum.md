@@ -1,5 +1,6 @@
 ---
 title: Enumeração EventStatus (adodb)
+description: Obtenha informações sobre a enumeração EventStatus no .NET. Essa enumeração está no namespace ADODB e no assembly ADODB (na biblioteca adodb.dll).
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,33 +10,33 @@ api_location:
 - adodb.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 1eddac7f9b813ea76e8347deb6f4bd7548abe504
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7effa55efb104c9203e7051ef998b03ff3315e93
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706189"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989837"
 ---
-# <a name="eventstatus-enumeration"></a><span data-ttu-id="e9c4b-102">Enumeração EventStatus</span><span class="sxs-lookup"><span data-stu-id="e9c4b-102">EventStatus Enumeration</span></span>
+# <a name="eventstatus-enumeration"></a><span data-ttu-id="29761-104">Enumeração EventStatus</span><span class="sxs-lookup"><span data-stu-id="29761-104">EventStatus Enumeration</span></span>
 
 ```csharp
 [GuidAttribute("00000530-0000-0010-8000-00AA006D2EA4")]
 public enum EventStatusEnum
 ```
 
-## <a name="members"></a><span data-ttu-id="e9c4b-103">Membros</span><span class="sxs-lookup"><span data-stu-id="e9c4b-103">Members</span></span>
+## <a name="members"></a><span data-ttu-id="29761-105">Membros</span><span class="sxs-lookup"><span data-stu-id="29761-105">Members</span></span>
 
-| <span data-ttu-id="e9c4b-104">Nome do membro</span><span class="sxs-lookup"><span data-stu-id="e9c4b-104">Member name</span></span>  | <span data-ttu-id="e9c4b-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="e9c4b-105">Description</span></span>  |
+| <span data-ttu-id="29761-106">Nome do membro</span><span class="sxs-lookup"><span data-stu-id="29761-106">Member name</span></span>  | <span data-ttu-id="29761-107">Description</span><span class="sxs-lookup"><span data-stu-id="29761-107">Description</span></span>  |
 |---|---|
-|<span data-ttu-id="e9c4b-106">adStatusOK</span><span class="sxs-lookup"><span data-stu-id="e9c4b-106">adStatusOK</span></span>  |   |
-|<span data-ttu-id="e9c4b-107">adStatusErrorsOccurred</span><span class="sxs-lookup"><span data-stu-id="e9c4b-107">adStatusErrorsOccurred</span></span>  |   |
-|<span data-ttu-id="e9c4b-108">adStatusCantDeny</span><span class="sxs-lookup"><span data-stu-id="e9c4b-108">adStatusCantDeny</span></span>  |   |
-|<span data-ttu-id="e9c4b-109">adRsnUndoUpdate</span><span class="sxs-lookup"><span data-stu-id="e9c4b-109">adRsnUndoUpdate</span></span>  |   |
-|<span data-ttu-id="e9c4b-110">adStatusCancel</span><span class="sxs-lookup"><span data-stu-id="e9c4b-110">adStatusCancel</span></span>  |   |
-|<span data-ttu-id="e9c4b-111">adStatusUnwantedEvent</span><span class="sxs-lookup"><span data-stu-id="e9c4b-111">adStatusUnwantedEvent</span></span>  |   |
+|<span data-ttu-id="29761-108">adStatusOK</span><span class="sxs-lookup"><span data-stu-id="29761-108">adStatusOK</span></span>  |   |
+|<span data-ttu-id="29761-109">adStatusErrorsOccurred</span><span class="sxs-lookup"><span data-stu-id="29761-109">adStatusErrorsOccurred</span></span>  |   |
+|<span data-ttu-id="29761-110">adStatusCantDeny</span><span class="sxs-lookup"><span data-stu-id="29761-110">adStatusCantDeny</span></span>  |   |
+|<span data-ttu-id="29761-111">adRsnUndoUpdate</span><span class="sxs-lookup"><span data-stu-id="29761-111">adRsnUndoUpdate</span></span>  |   |
+|<span data-ttu-id="29761-112">adStatusCancel</span><span class="sxs-lookup"><span data-stu-id="29761-112">adStatusCancel</span></span>  |   |
+|<span data-ttu-id="29761-113">adStatusUnwantedEvent</span><span class="sxs-lookup"><span data-stu-id="29761-113">adStatusUnwantedEvent</span></span>  |   |
 
-## <a name="requirements"></a><span data-ttu-id="e9c4b-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e9c4b-112">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="29761-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="29761-114">Requirements</span></span>
 
-<span data-ttu-id="e9c4b-113">**Namespace:** `adodb`</span><span class="sxs-lookup"><span data-stu-id="e9c4b-113">**Namespace:** `adodb`</span></span>
+<span data-ttu-id="29761-115">**Namespace:** `adodb`</span><span class="sxs-lookup"><span data-stu-id="29761-115">**Namespace:** `adodb`</span></span>
 
-<span data-ttu-id="e9c4b-114">**Assembly:** adodb (em ADODB.)</span><span class="sxs-lookup"><span data-stu-id="e9c4b-114">**Assembly:** adodb (in adodb.dll)</span></span>
+<span data-ttu-id="29761-116">**Assembly:** ADODB (no adodb.dll)</span><span class="sxs-lookup"><span data-stu-id="29761-116">**Assembly:** adodb (in adodb.dll)</span></span>
