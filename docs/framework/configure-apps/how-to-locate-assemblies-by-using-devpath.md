@@ -1,5 +1,6 @@
 ---
 title: 'Como: Localizar assemblies usando DEVPATH'
+description: Teste se um assembly compartilhado funciona corretamente com muitos aplicativos no .NET usando um arquivo de configuração de computador XML e a variável de ambiente DEVPATH.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DEVPATH
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-ms.openlocfilehash: 6fa864f814d6a9ce04f2bce92c61cd0075ab5145
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 50b61eedddabd660b1834565a61738f460ae9ff9
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69912995"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105373"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>Como: Localizar assemblies usando DEVPATH
 Os desenvolvedores podem querer ter certeza de que um assembly compartilhado que está compilando funciona corretamente com vários aplicativos. Em vez de colocar continuamente o assembly no cache de assembly global durante o ciclo de desenvolvimento, o desenvolvedor pode criar uma variável de ambiente DEVPATH que aponta para o diretório de saída da compilação para o assembly.  
@@ -43,6 +44,6 @@ Os desenvolvedores podem querer ter certeza de que um assembly compartilhado que
 > [!NOTE]
 > Use essa configuração somente no momento do desenvolvimento. O tempo de execução não verifica as versões em assemblies de nome forte encontrados no DEVPATH. Ele simplesmente usa o primeiro assembly que encontra.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Configurando aplicativos usando arquivos de configuração ](index.md)

@@ -1,16 +1,17 @@
 ---
 title: Segurança de transporte com autenticação do Windows
+description: Examine este cenário, que mostra um cliente/serviço WCF protegido pela segurança do Windows. Neste exemplo, um serviço de intranet exibe informações de recursos humanos.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 6703da4f97cba38ee0dc334d3010ca509d1fb3ef
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b6134d4cbdff0c1adea704a7f3aaff7e40fd75ec
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598691"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244758"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Segurança de transporte com autenticação do Windows
 O cenário a seguir mostra um cliente Windows Communication Foundation (WCF) e um serviço protegido pela segurança do Windows. Para obter mais informações sobre programação, consulte [como proteger um serviço com credenciais do Windows](../how-to-secure-a-service-with-windows-credentials.md).  
@@ -21,12 +22,12 @@ O cenário a seguir mostra um cliente Windows Communication Foundation (WCF) e u
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|Modo de segurança|Transport|  
+|Modo de segurança|Transporte|  
 |Interoperabilidade|Somente WCF|  
 |Autenticação (servidor)<br /><br /> Autenticação (cliente)|Sim (usando a autenticação integrada do Windows)<br /><br /> Sim (usando a autenticação integrada do Windows)|  
-|Integridade|Sim|  
-|Confidencialidade|Sim|  
-|Transport|Virtual. Protocol|  
+|Integridade|Yes|  
+|Confidencialidade|Yes|  
+|Transporte|Virtual. Protocol|  
 |Associação|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Serviço  
@@ -117,7 +118,7 @@ O cenário a seguir mostra um cliente Windows Communication Foundation (WCF) e u
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de segurança](security-overview.md)
 - [Como proteger um serviço com credenciais Windows](../how-to-secure-a-service-with-windows-credentials.md)

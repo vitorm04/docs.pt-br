@@ -1,5 +1,6 @@
 ---
 title: 'Como: Criar uma política de editor'
+description: Saiba como os fornecedores de assembly podem criar um arquivo de política de Publicador com um assembly atualizado no .NET, para estipular que os aplicativos devem usar a versão mais recente.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 7c36f6126f0d779a43a22fc11e647ba2d3b03a30
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 23e9d8144ec5742e0371d566b7af59dc9dd30c9b
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81646056"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105407"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Como: Criar uma política de editor
 
@@ -49,7 +50,7 @@ Para saber como especificar uma base de código, consulte [especificando o local
 
 ## <a name="creating-the-publisher-policy-assembly"></a>Criando o assembly de política do Publicador
 
-Use o [vinculador de assembly (al. exe)](../tools/al-exe-assembly-linker.md) para criar o assembly de política do Publicador.
+Use o [vinculador de assembly (Al.exe)](../tools/al-exe-assembly-linker.md) para criar o assembly de política do Publicador.
 
 #### <a name="to-create-a-publisher-policy-assembly"></a>Para criar um assembly de política do Publicador
 
@@ -65,7 +66,7 @@ Neste comando:
 
 - O `publisherPolicyAssemblyFile` argumento é o nome do assembly de política do Publicador que resulta desse comando. O nome do arquivo de assembly deve seguir o formato:
 
-  ' Policy. majorNumber. minorNumber. mainAssemblyName. dll '
+  'policy.majorNumber.minorNumber.mainAssemblyName.dll '
 
 - O `keyPairFile` argumento é o nome do arquivo que contém o par de chaves. Você deve assinar o assembly e o assembly da política do Publicador com o mesmo par de chaves.
 
@@ -88,7 +89,7 @@ Outra consequência é que o vinculador da versão 2,0 não pode ser usado para 
 
 ## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Adicionando o assembly de política do Publicador ao cache de assembly global
 
-Use a [ferramenta global assembly cache (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md) para adicionar o assembly de política do Publicador ao cache de assembly global.
+Use a [ferramenta global assembly cache (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) para adicionar o assembly de política do Publicador ao cache de assembly global.
 
 ### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Para adicionar o assembly de política do Publicador ao cache de assembly global
 
@@ -107,7 +108,7 @@ gacutil /i policy.1.0.myAssembly.dll
 > [!IMPORTANT]
 > O assembly de política do Publicador não pode ser adicionado ao cache de assembly global, a menos que o arquivo de política original do Publicador especificado no `/link` argumento esteja localizado no mesmo diretório que o assembly.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Programação com assemblies](../../standard/assembly/index.md)
 - [Como o runtime localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)

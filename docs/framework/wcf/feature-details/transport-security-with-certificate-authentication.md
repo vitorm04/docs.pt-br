@@ -1,15 +1,16 @@
 ---
 title: Segurança de transporte com autenticação de certificado
+description: Saiba mais sobre como o WFC usa certificados para autenticação de servidor e cliente ao usar a segurança de transporte.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 47322cbcddf9f33101bbfbeaa07a3fab74b9d26a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3da1202a5ad3b953470b50dd5924b2ab45f301eb
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576012"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244772"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Segurança de transporte com autenticação de certificado
 
@@ -23,16 +24,16 @@ Este artigo discute o uso de certificados X. 509 para autenticação de servidor
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|Modo de segurança|Transport|  
+|Modo de segurança|Transporte|  
 |Interoperabilidade|Com serviços e clientes de serviços Web existentes.|  
 |Autenticação (servidor)<br /><br /> Autenticação (cliente)|Sim (usando um certificado SSL)<br /><br /> Sim (usando um certificado X. 509)|  
-|Integridade dos Dados|Sim|  
-|Confidencialidade dos dados|Sim|  
-|Transport|HTTPS|  
+|Integridade dos Dados|Yes|  
+|Confidencialidade dos dados|Yes|  
+|Transporte|HTTPS|  
 |Associação|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>Configurar o serviço  
- Como o serviço nesse cenário é hospedado no IIS, ele é configurado com um arquivo Web. config. O Web. config a seguir mostra como configurar o <xref:System.ServiceModel.WSHttpBinding> para usar a segurança de transporte e as credenciais de cliente X. 509.  
+ Como o serviço nesse cenário é hospedado no IIS, ele é configurado com um arquivo de web.config. O web.config a seguir mostra como configurar o <xref:System.ServiceModel.WSHttpBinding> para usar a segurança de transporte e as credenciais de cliente X. 509.  
   
 ```xml  
 <configuration>  
@@ -63,7 +64,7 @@ Este artigo discute o uso de certificados X. 509 para autenticação de servidor
 ```  
   
 ## <a name="configure-the-client"></a>Configurar o cliente  
- O cliente pode ser configurado no código ou em um arquivo app. config. O exemplo a seguir mostra como configurar o cliente no código.  
+ O cliente pode ser configurado no código ou em um arquivo de app.config. O exemplo a seguir mostra como configurar o cliente no código.  
   
 ```csharp
 // Create the binding.  
@@ -97,7 +98,7 @@ Console.WriteLine(cc.Add(100, 1111));
 cc.Close();  
 ```  
   
- Como alternativa, você pode configurar o cliente em um arquivo app. config, conforme mostrado no exemplo a seguir:  
+ Como alternativa, você pode configurar o cliente em um arquivo de App.config, conforme mostrado no exemplo a seguir:  
   
 ```xml  
 <configuration>  
@@ -138,7 +139,7 @@ cc.Close();
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de segurança](security-overview.md)
 - [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

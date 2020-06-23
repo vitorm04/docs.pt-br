@@ -1,16 +1,17 @@
 ---
 title: Como chamar operações de serviço do WCF de maneira assíncrona
+description: Saiba como criar um cliente WCF que pode acessar uma operação de serviço de forma assíncrona usando o modelo de chamada assíncrona controlado por evento.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 400ed8e5ee8b236e9d0f843f27b7c2112ec28861
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: aa31f64473111800f4cd01907a0446c94f368456
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601251"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247228"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Como chamar operações de serviço do WCF de maneira assíncrona
 
@@ -23,7 +24,7 @@ Este artigo aborda como um cliente pode acessar uma operação de serviço de fo
   
 #### <a name="to-call-wcf-service-operations-asynchronously"></a>Para chamar operações do serviço WCF de forma assíncrona  
   
-1. Execute a ferramenta [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) com as `/async` Opções de comando e `/tcv:Version35` , conforme mostrado no comando a seguir.  
+1. Execute a ferramenta [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) com as `/async` Opções de comando e e `/tcv:Version35` em conjunto, conforme mostrado no comando a seguir.  
   
     ```console
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a /tcv:Version35  
@@ -64,6 +65,6 @@ Este artigo aborda como um cliente pode acessar uma operação de serviço de fo
  [!code-csharp[EventAsync#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#6)]
  [!code-vb[EventAsync#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#6)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Como implementar uma operação de serviço assíncrona](../how-to-implement-an-asynchronous-service-operation.md)

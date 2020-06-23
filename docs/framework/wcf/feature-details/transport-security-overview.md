@@ -1,16 +1,17 @@
 ---
 title: Visão geral de segurança de transporte
+description: Saiba mais sobre os principais mecanismos de segurança de transporte nas associações fornecidas pelo sistema do WCF. Esses mecanismos de segurança dependem da associação e do transporte usados.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 5c6b6389122b32ed8db701020a8c13ba17225867
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6302a949e8d0a041446b75dd3769b8ba2d1fc2b5
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585669"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244823"
 ---
 # <a name="transport-security-overview"></a>Visão geral de segurança de transporte
 Os mecanismos de segurança de transporte no Windows Communication Foundation (WCF) dependem da associação e do transporte que estão sendo usados. Por exemplo, ao usar a <xref:System.ServiceModel.WSHttpBinding> classe, o transporte é http e o mecanismo primário para proteger o transporte é protocolo SSL (SSL) por http, normalmente chamado de HTTPS. Este tópico discute os principais mecanismos de segurança de transporte usados nas associações fornecidas pelo sistema do WCF.  
@@ -62,7 +63,7 @@ Os mecanismos de segurança de transporte no Windows Communication Foundation (W
  Isso permite que o servidor use NTLM para autenticação se o protocolo Kerberos falhar. Para obter mais informações sobre como configurar o IIS no IIS 6,0, consulte [forçando a autenticação NTLM](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786486(v=ws.10)). Para o IIS 7,0, a autenticação do Windows inclui a autenticação NTLM. Para obter mais informações, consulte [Configurando certificados de servidor no IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- A <xref:System.ServiceModel.WSHttpBinding> classe foi projetada para interoperação com serviços que implementam especificações WS-*. A segurança de transporte para essa associação é protocolo SSL (SSL) sobre HTTP ou HTTPS. Para criar um aplicativo WCF que usa SSL, use o IIS para hospedar o aplicativo. Como alternativa, se você estiver criando um aplicativo auto-hospedado, use a ferramenta HttpCfg. exe para associar um certificado X. 509 a uma porta específica em um computador. O número da porta é especificado como parte do aplicativo WCF como um endereço de ponto de extremidade. Ao usar o modo de transporte, o endereço do ponto de extremidade deve incluir o protocolo HTTPS ou uma exceção será lançada em tempo de execução. Para obter mais informações, consulte [segurança de transporte http](http-transport-security.md).  
+ A <xref:System.ServiceModel.WSHttpBinding> classe foi projetada para interoperação com serviços que implementam especificações WS-*. A segurança de transporte para essa associação é protocolo SSL (SSL) sobre HTTP ou HTTPS. Para criar um aplicativo WCF que usa SSL, use o IIS para hospedar o aplicativo. Como alternativa, se você estiver criando um aplicativo auto-hospedado, use a ferramenta HttpCfg.exe para associar um certificado X. 509 a uma porta específica em um computador. O número da porta é especificado como parte do aplicativo WCF como um endereço de ponto de extremidade. Ao usar o modo de transporte, o endereço do ponto de extremidade deve incluir o protocolo HTTPS ou uma exceção será lançada em tempo de execução. Para obter mais informações, consulte [segurança de transporte http](http-transport-security.md).  
   
  Para autenticação de cliente, defina a <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> propriedade da <xref:System.ServiceModel.HttpTransportSecurity> classe como um dos <xref:System.ServiceModel.HttpClientCredentialType> valores de enumeração. Os valores de enumeração são idênticos aos tipos de credencial do cliente para <xref:System.ServiceModel.BasicHttpBinding> e são projetados para serem hospedados com os serviços do IIS.  
   
@@ -120,6 +121,6 @@ Os mecanismos de segurança de transporte no Windows Communication Foundation (W
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding e NetMsmqBinding  
  Para obter uma discussão completa sobre segurança de transporte com o serviço de enfileiramento de mensagens (anteriormente chamado de MSMQ), consulte [protegendo mensagens usando a segurança de transporte](securing-messages-using-transport-security.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Programação de segurança do WCF](programming-wcf-security.md)

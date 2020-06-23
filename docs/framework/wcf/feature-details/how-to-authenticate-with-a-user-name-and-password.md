@@ -1,15 +1,16 @@
 ---
 title: Como fazer a autenticação com um nome de usuário e senha
+description: Saiba como habilitar um serviço WCF para autenticar um cliente usando um nome de usuário e uma senha de domínio do Windows, com o código de exemplo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: e8dc9177afc590a6467855decfa8450b37c6fc77
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1f938f8041b2577b3705266948f29b42f23a6fd7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601277"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247241"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Como fazer a autenticação com um nome de usuário e senha
 
@@ -32,7 +33,7 @@ No cliente do, você deve solicitar o nome de usuário e a senha e especificar a
     // ...
     ```
 
-2. Especifique o certificado do servidor usado para criptografar as informações de nome de usuário e senha enviadas pela conexão. Esse código deve seguir imediatamente o código acima. O exemplo a seguir usa o certificado criado pelo arquivo setup. bat do exemplo de [nome de usuário de segurança de mensagem](../samples/message-security-user-name.md) :
+2. Especifique o certificado do servidor usado para criptografar as informações de nome de usuário e senha enviadas pela conexão. Esse código deve seguir imediatamente o código acima. O exemplo a seguir usa o certificado criado pelo arquivo de setup.bat do exemplo de [nome de usuário de segurança de mensagem](../samples/message-security-user-name.md) :
 
     ```csharp
     // ...
@@ -40,7 +41,7 @@ No cliente do, você deve solicitar o nome de usuário e a senha e especificar a
     // ...
     ```
 
-    Você pode usar seu próprio certificado, basta modificar o código para se referir ao seu certificado. Para obter mais informações sobre como criar e usar certificados, consulte [trabalhando com certificados](working-with-certificates.md). Verifique se o certificado está no repositório de certificados pessoas confiáveis para o computador local. Você pode fazer isso executando MMC. exe e selecionando o **arquivo**, **Adicionar/remover snap-in...** item de menu. Na caixa de diálogo **Adicionar ou remover snap-ins** , selecione o **snap-in certificados** e clique em **Adicionar**. Na caixa de diálogo snap-in de certificados, selecione **conta de computador**. Por padrão, o certificado gerado do exemplo de nome de usuário de segurança de mensagem estará localizado na pasta pessoal/certificados.  Ele será listado como "localhost" na coluna emitido para na janela do MMC. Arraste e solte o certificado na pasta **pessoas confiáveis** . Isso permitirá que o WCF trate o certificado como um certificado confiável ao executar a autenticação.
+    Você pode usar seu próprio certificado, basta modificar o código para se referir ao seu certificado. Para obter mais informações sobre como criar e usar certificados, consulte [trabalhando com certificados](working-with-certificates.md). Verifique se o certificado está no repositório de certificados pessoas confiáveis para o computador local. Você pode fazer isso executando mmc.exe e selecionando o **arquivo**, **Adicionar/remover snap-in...** item de menu. Na caixa de diálogo **Adicionar ou remover snap-ins** , selecione o **snap-in certificados** e clique em **Adicionar**. Na caixa de diálogo snap-in de certificados, selecione **conta de computador**. Por padrão, o certificado gerado do exemplo de nome de usuário de segurança de mensagem estará localizado na pasta pessoal/certificados.  Ele será listado como "localhost" na coluna emitido para na janela do MMC. Arraste e solte o certificado na pasta **pessoas confiáveis** . Isso permitirá que o WCF trate o certificado como um certificado confiável ao executar a autenticação.
 
 ## <a name="to-call-the-service-passing-username-and-password"></a>Para chamar o nome de usuário e a senha do serviço
 
@@ -81,7 +82,7 @@ No cliente do, você deve solicitar o nome de usuário e a senha e especificar a
     // Call the service operation using the proxy
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSHttpSecurity>
