@@ -4,12 +4,12 @@ description: Saiba como implementar o UDF (funções definidas pelo usuário) no
 ms.date: 06/11/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 96597c7e2d45dfdf8406b0d3e80daad270996b97
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: fe3dec187f94f84adb1217c39ff6aabc4b4db1c5
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105587"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85142011"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>Criar funções definidas pelo usuário (UDF) no .NET para Apache Spark
 
@@ -61,7 +61,7 @@ Para entender melhor como implementar UDFs, examine as [funções auxiliares UDF
 
 ## <a name="udf-serialization"></a>Serialização de UDF
 
-Como as UDFs são funções que precisam ser executadas em trabalhadores, elas precisam ser serializadas e enviadas aos trabalhadores como parte da carga do driver. O [delegado](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/), que é uma referência ao método, precisa ser serializado, bem como seu [destino](https://docs.microsoft.com/en-us/dotnet/api/system.delegate.target?view=netframework-4.8) , que é a instância de classe na qual o delegado atual invoca o método de instância. Examine este [exemplo de código no GitHub](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149) para entender melhor como a serialização UDF está sendo feita.
+Como as UDFs são funções que precisam ser executadas em trabalhadores, elas precisam ser serializadas e enviadas aos trabalhadores como parte da carga do driver. O [delegado](../../csharp/programming-guide/delegates/index.md), que é uma referência ao método, precisa ser serializado, bem como seu [destino](xref:System.Delegate.Target%2A), que é a instância de classe na qual o delegado atual invoca o método de instância. Examine este [exemplo de código no GitHub](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149) para entender melhor como a serialização UDF está sendo feita.
 
 O .NET para Apache Spark usa o .NET Core, que não dá suporte a delegados de serialização. Em vez disso, a reflexão é usada para serializar o destino onde o delegado é definido. Quando vários delegados são definidos em um escopo comum, eles têm um fechamento compartilhado que se torna o destino de reflexão para serialização.
 

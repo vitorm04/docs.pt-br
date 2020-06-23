@@ -2,12 +2,12 @@
 title: Scripts dotnet-install
 description: Saiba mais sobre os scripts dotnet-install para instalar o SDK do .NET Core e o tempo de execução compartilhado.
 ms.date: 04/30/2020
-ms.openlocfilehash: 9f5cef9cfcca1d8b344021efe803c063a7393f8e
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 464e6fafa1c2e661892bcb3b35ba172ca1d7e76b
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802718"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141237"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referência de scripts dotnet-install
 
@@ -28,7 +28,7 @@ dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
     [-SkipNonVersionedFiles] [-UncachedFeed] [-Verbose]
     [-Version <VERSION>]
 
-dotnet-install.ps1 -Help
+Get-Help ./dotnet-install.ps1
 ```
 
 Linux/macOS:
@@ -94,9 +94,9 @@ Os scripts de instalação não atualizam o registro no Windows. Eles apenas bai
 
   Usado como uma cadeia de caracteres de consulta para acrescentar ao feed do Azure. Permite alterar a URL para usar contas de armazenamento de blobs não públicos.
 
-- **`-Help|--help`**
+- **`--help`**
 
-  Imprime a ajuda do script.
+  Imprime a ajuda do script. Aplica-se somente ao script bash. Para o PowerShell, use `Get-Help ./dotnet-install.ps1` .
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
@@ -104,7 +104,7 @@ Os scripts de instalação não atualizam o registro no Windows. Eles apenas bai
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 
-  Especifica um caminho para um arquivo [global. JSON](global-json.md) que será usado para determinar a versão do SDK. O arquivo *global. JSON* deve ter um valor para `sdk:version` .
+  Especifica um caminho para um [global.jsno](global-json.md) arquivo que será usado para determinar a versão do SDK. O *global.jsno* arquivo deve ter um valor para `sdk:version` .
 
 - **`-NoCdn|--no-cdn`**
 
