@@ -1,5 +1,6 @@
 ---
 title: <system.serviceModel>
+description: Saiba mais sobre os elementos de configuração do WCF ServiceModel, que permitem configurar aplicativos cliente e serviço WCF.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.ServiceModel
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 2125ce00b0e23f2e93ff251549f9c1276892b16b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 567cbd2cc07ee82e795daa067b9034b2b8dc1974
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399449"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243952"
 ---
 # \<system.serviceModel>
 Esta seção de configuração contém todos os elementos de configuração de ServiceModel Windows Communication Foundation (WCF).  
@@ -21,7 +22,7 @@ Esta seção de configuração contém todos os elementos de configuração de S
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;**\<system.serviceModel>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.serviceModel>
@@ -68,7 +69,7 @@ Esta seção de configuração contém todos os elementos de configuração de S
 |[\<bindings>](bindings.md)|Esta seção contém uma coleção de associações padrão e personalizadas. Cada entrada é identificada por seu exclusivo `name` . Os serviços usam associações vinculando-os usando o `name` .|  
 |[\<client>](client.md)|Esta seção contém uma lista de pontos de extremidade que um cliente usa para se conectar a um serviço.|  
 |[\<comContracts>](comcontracts.md)|Esta seção define contratos COM habilitados para WCF e interoperabilidade COM.|  
-|[\<commonBehaviors>](commonbehaviors.md)|Esta seção só pode ser definida no arquivo Machine. config. Ele define duas coleções filho chamadas `endpointBehaviors` e `serviceBehaviors` .  Cada coleção define elementos de comportamento consumidos por todos os pontos de extremidade do WCF e serviços no computador, respectivamente.  Se um comportamento for definido em ambas `<commonBehaviors>` as `<behaviors>` seções e, o comportamento na \<behaviors> seção terá preferência.|  
+|[\<commonBehaviors>](commonbehaviors.md)|Esta seção só pode ser definida no arquivo de machine.config. Ele define duas coleções filho chamadas `endpointBehaviors` e `serviceBehaviors` .  Cada coleção define elementos de comportamento consumidos por todos os pontos de extremidade do WCF e serviços no computador, respectivamente.  Se um comportamento for definido em ambas `<commonBehaviors>` as `<behaviors>` seções e, o comportamento na \<behaviors> seção terá preferência.|  
 |[\<diagnostics>](diagnostics.md)|Esta seção contém configurações para os recursos de diagnóstico do WCF. O usuário pode habilitar/desabilitar rastreamento, contadores de desempenho e o provedor WMI e pode adicionar filtros de mensagem personalizados.|  
 |[\<extensions>](extensions-section.md)|Esta seção contém uma coleção de extensões, que permitem ao usuário criar associações definidas pelo usuário, comportamentos e outros aspectos das extensões.|  
 |[\<protocolMapping>](protocolmapping.md)|Esta seção define um conjunto de mapeamento de protocolo padrão entre esquemas de protocolo de transporte (por exemplo, http, net. TCP, net. pipe, etc.) e associações do WCF.|  

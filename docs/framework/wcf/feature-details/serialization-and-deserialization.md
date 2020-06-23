@@ -1,16 +1,17 @@
 ---
 title: Serialização e desserialização
+description: Saiba mais sobre o mecanismo de serialização do WCF, que se traduz entre objetos .NET Framework e XML, em ambas as direções.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 8d62fe1cb646bfa00f3fd2e694f08d9fed297bc2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3927c17a2548a094a63ffd95ff8a3701403de281
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600419"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244901"
 ---
 # <a name="serialization-and-deserialization"></a>Serialização e desserialização
 Windows Communication Foundation (WCF) inclui um novo mecanismo de serialização, o <xref:System.Runtime.Serialization.DataContractSerializer> . O se <xref:System.Runtime.Serialization.DataContractSerializer> traduz entre objetos .NET Framework e XML, em ambas as direções. Este tópico explica como o serializador funciona.  
@@ -260,7 +261,7 @@ Windows Communication Foundation (WCF) inclui um novo mecanismo de serializaçã
   
  Além disso, observe que o não gera `NetDataContractSerializer` o tipo de .NET Framework completo e o nome do assembly para cada nó no grafo do objeto. Ele gera essas informações apenas quando são ambíguas. Isto é, ele gera no nível do objeto raiz e para qualquer caso polimórfico.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.NetDataContractSerializer>

@@ -1,6 +1,6 @@
 ---
 title: Determinar quais versões do .NET Framework estão instaladas
-description: Use o código, o regedit. exe ou o PowerShell para detectar quais versões do .NET Framework estão instaladas em um computador consultando o registro do Windows.
+description: Use o código, regedit.exe ou PowerShell para detectar quais versões do .NET Framework estão instaladas em um computador consultando o registro do Windows.
 ms.date: 02/03/2020
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: d25e4ae97877462b2a3b90e51262fb656921e392
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 122441e9238fd91199aed255b0125f69081c0a8c
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205494"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990139"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Como determinar quais versões do .NET Framework estão instaladas
 
@@ -61,7 +61,7 @@ O valor da **versão** REG_DWORD no registro representa a versão do .NET Framew
 | .NET Framework 4.7     | No Windows 10 Creators Update: 460798<br />Em todos os outros sistemas operacionais Windows (incluindo outros sistemas operacionais Windows 10): 460805 |
 | .NET Framework 4.7.1   | Na atualização dos criadores de outono do Windows 10 e do Windows Server, versão 1709:461308<br/>Em todos os outros sistemas operacionais Windows (incluindo outros sistemas operacionais Windows 10): 461310 |
 | .NET Framework 4.7.2   | Na atualização do Windows 10 de abril de 2018 e Windows Server, versão 1803:461808<br/>Em todos os sistemas operacionais Windows, exceto Windows 10 de abril de 2018 atualização e Windows Server, versão 1803:461814 |
-| .NET Framework 4.8     | No Windows 10 maio 2019 atualização e Windows 10 de novembro de 2019 atualização: 528040<br/>No Windows 10, pode ser 2020 atualização: 528209<br/>Em todos os outros sistemas operacionais Windows (incluindo outros sistemas operacionais Windows 10): 528049 |
+| .NET Framework 4.8     | No Windows 10 maio 2019 atualização e Windows 10 de novembro de 2019 atualização: 528040<br/>No Windows 10, pode ser 2020 atualização: 528372<br/>Em todos os outros sistemas operacionais Windows (incluindo outros sistemas operacionais Windows 10): 528049 |
 
 ### <a name="minimum-version"></a>Versão mínima
 
@@ -173,9 +173,9 @@ O exemplo a seguir localiza as .NET Framework de 1 a 4 versões instaladas:
 
 O .NET Framework CLR instalado com .NET Framework tem controle de versão separadamente. Há duas maneiras de detectar a versão do .NET Framework CLR:
 
-- **A ferramenta CLRVer. exe**
+- **A ferramenta de Clrver.exe**
 
-  Use a [ferramenta de versão do CLR (CLRVer. exe)](../tools/clrver-exe-clr-version-tool.md) para determinar quais versões do CLR estão instaladas em um computador. Abra o [prompt de comando do desenvolvedor para o Visual Studio](../tools/developer-command-prompt-for-vs.md) e digite `clrver` .
+  Use a [ferramenta de versão do CLR (Clrver.exe)](../tools/clrver-exe-clr-version-tool.md) para determinar quais versões do CLR estão instaladas em um computador. Abra o [prompt de comando do desenvolvedor para o Visual Studio](../tools/developer-command-prompt-for-vs.md) e digite `clrver` .
 
   Saída de exemplo:
 
@@ -209,7 +209,7 @@ O .NET Framework CLR instalado com .NET Framework tem controle de versão separa
   [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
   [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Como determinar quais .NET Framework atualizações estão instaladas](how-to-determine-which-net-framework-updates-are-installed.md)
 - [Instalar o .NET Framework para desenvolvedores](../install/guide-for-developers.md)

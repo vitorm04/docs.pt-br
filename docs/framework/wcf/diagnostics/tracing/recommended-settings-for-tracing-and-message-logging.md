@@ -1,19 +1,20 @@
 ---
 title: Configurações recomendadas para registro de rastreamento e mensagens
+description: Saiba mais sobre as configurações recomendadas de rastreamento e registro de mensagens para diferentes ambientes operacionais no WCF.
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: 9d2586570a3f590735c2a8e1ca176580886c8d92
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 71067a4d6f4cec65a148a8162c40e44d82b85784
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578910"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245317"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>Configurações recomendadas para registro de rastreamento e mensagens
 Este tópico descreve o rastreamento recomendado e as configurações de log de mensagens para diferentes ambientes operacionais.  
   
 ## <a name="recommended-settings-for-a-production-environment"></a>Configurações recomendadas para um ambiente de produção  
- Para um ambiente de produção, se você estiver usando fontes de rastreamento do WCF, defina o `switchValue` como aviso. Se você estiver usando a origem de rastreamento do WCF `System.ServiceModel` , defina o `switchValue` atributo como `Warning` e o `propagateActivity` atributo como `true` . Se você estiver usando uma fonte de rastreamento definida pelo usuário, defina o `switchValue` atributo como `Warning, ActivityTracing` . Isso pode ser feito manualmente usando a [ferramenta do editor de configuração (SvcConfigEditor. exe)](../../configuration-editor-tool-svcconfigeditor-exe.md). Se você não antecipar um impacto no desempenho, poderá definir o `switchValue` atributo como `Information` em todos os casos mencionados anteriormente, o que gera uma quantidade muito grande de dados de rastreamento. O exemplo a seguir demonstra essas configurações recomendadas.  
+ Para um ambiente de produção, se você estiver usando fontes de rastreamento do WCF, defina o `switchValue` como aviso. Se você estiver usando a origem de rastreamento do WCF `System.ServiceModel` , defina o `switchValue` atributo como `Warning` e o `propagateActivity` atributo como `true` . Se você estiver usando uma fonte de rastreamento definida pelo usuário, defina o `switchValue` atributo como `Warning, ActivityTracing` . Isso pode ser feito manualmente usando a [ferramenta do editor de configuração (SvcConfigEditor.exe)](../../configuration-editor-tool-svcconfigeditor-exe.md). Se você não antecipar um impacto no desempenho, poderá definir o `switchValue` atributo como `Information` em todos os casos mencionados anteriormente, o que gera uma quantidade muito grande de dados de rastreamento. O exemplo a seguir demonstra essas configurações recomendadas.  
   
 ```xml  
 <configuration>  
@@ -112,6 +113,6 @@ logman start mytrace -pf logman.providers -o test.etl –ets
 logman stop mytrace -ets  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Usando Instrumentação de Gerenciamento do Windows para diagnóstico](../wmi/index.md)

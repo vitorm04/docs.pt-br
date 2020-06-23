@@ -1,5 +1,6 @@
 ---
 title: Associações e segurança
+description: Descubra como selecionar a ligação certa para suas necessidades de segurança. As associações fornecidas pelo sistema incluídas com o WCF fornecem uma maneira rápida de programar aplicativos WCF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], security
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 0c41f357d63158979e448c2cc36f1e80b74b18d4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e012ec9ad340c74f5bc776cfc6d8b88326210fec
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587502"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245318"
 ---
 # <a name="bindings-and-security"></a>Associações e segurança
 
@@ -192,9 +193,9 @@ Se nenhuma das associações fornecidas pelo sistema atender aos requisitos, voc
 
 A tabela a seguir resume os recursos oferecidos na configuração do modo de segurança, ou seja, lista os recursos disponíveis quando o modo de segurança é definido como `Transport` , `Message` ou `TransportWithMessageCredential` . Use esta tabela para ajudá-lo a encontrar os recursos de segurança que seu aplicativo requer.
 
-|Setting|Recursos|
+|Configuração|Recursos|
 |-------------|--------------|
-|Transport|Autenticação de servidor<br /><br /> Autenticação de cliente<br /><br /> Segurança ponto a ponto<br /><br /> Interoperabilidade<br /><br /> Aceleração de hardware<br /><br /> Alta taxa de transferência<br /><br /> Proteger o firewall<br /><br /> Aplicativos de alta latência<br /><br /> Nova criptografia em vários saltos|
+|Transporte|Autenticação de servidor<br /><br /> Autenticação de cliente<br /><br /> Segurança ponto a ponto<br /><br /> Interoperabilidade<br /><br /> Aceleração de hardware<br /><br /> Alta taxa de transferência<br /><br /> Proteger o firewall<br /><br /> Aplicativos de alta latência<br /><br /> Nova criptografia em vários saltos|
 |Mensagem|Autenticação de servidor<br /><br /> Autenticação de cliente<br /><br /> Segurança de ponta a ponta<br /><br /> Interoperabilidade<br /><br /> Declarações avançadas<br /><br /> Federação<br /><br /> Autenticação multifator<br /><br /> Tokens personalizados<br /><br /> Serviço de Notary/carimbo de data/hora<br /><br /> Aplicativos de alta latência<br /><br /> Persistência de assinaturas de mensagem|
 |TransportWithMessageCredential|Autenticação de servidor<br /><br /> Autenticação de cliente<br /><br /> Segurança ponto a ponto<br /><br /> Interoperabilidade<br /><br /> Aceleração de hardware<br /><br /> Alta taxa de transferência<br /><br /> Declarações de cliente avançadas<br /><br /> Federação<br /><br /> Autenticação multifator<br /><br /> Tokens personalizados<br /><br /> Proteger o firewall<br /><br /> Aplicativos de alta latência<br /><br /> Nova criptografia em vários saltos|
 
@@ -202,14 +203,14 @@ A tabela a seguir lista as associações que dão suporte às várias configura�
 
 |Associação|Suporte ao modo de transporte|Suporte ao modo de mensagem|Suporte do TransportWithMessageCredential|
 |-------------|----------------------------|--------------------------|--------------------------------------------|
-|`BasicHttpBinding`|Sim|Sim|Sim|
-|`WSHttpBinding`|Sim|Sim|Sim|
+|`BasicHttpBinding`|Yes|Yes|Yes|
+|`WSHttpBinding`|Yes|Yes|Sim|
 |`WSDualHttpBinding`|Não|Sim|Não|
-|`NetTcpBinding`|Sim|Sim|Sim|
-|`NetNamedPipeBinding`|Sim|Não|Não|
+|`NetTcpBinding`|Sim|Yes|Yes|
+|`NetNamedPipeBinding`|Sim|No|Não|
 |`NetMsmqBinding`|Sim|Sim|Não|
-|`MsmqIntegrationBinding`|Sim|Não|Não|
-|`wsFederationHttpBinding`|Não|Sim|Sim|
+|`MsmqIntegrationBinding`|Sim|No|Não|
+|`wsFederationHttpBinding`|Não|Sim|Yes|
 
 ## <a name="transport-credentials-in-bindings"></a>Credenciais de transporte em associações
 
@@ -237,7 +238,7 @@ A tabela a seguir lista os tipos de credenciais de cliente disponíveis ao usar 
 |Certificado|Permite que o serviço exija que o cliente seja autenticado usando um certificado.|
 |IssuedToken|Permite que o serviço use um serviço de token de segurança para fornecer um token personalizado.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de segurança](security-overview.md)
 - [Protegendo serviços e clientes](securing-services-and-clients.md)

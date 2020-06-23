@@ -1,13 +1,14 @@
 ---
 title: Implantando um Serviço WCF hospedado do Internet Information Services dos Serviços de Informações da Internet
+description: Saiba mais sobre as tarefas necessárias para desenvolver e implantar um serviço WCF hospedado no IIS, começando com a verificação da instalação do componente
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 826a8798ada8f04173b047dc27829c384f79e2b8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 886fd9b8d8cf3059b1fd8679c5dd89ee015f2adf
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599237"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245087"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Implantando um Serviço WCF hospedado do Internet Information Services dos Serviços de Informações da Internet
 
@@ -35,7 +36,7 @@ As instruções para instalar o IIS em outros sistemas operacionais podem ser en
 
 O processo de instalação para .NET Framework registrará automaticamente o WCF com o IIS se o IIS já estiver presente no computador. Se o IIS for instalado após a .NET Framework, uma etapa adicional será necessária para registrar o WCF com o IIS e o ASP.NET. Você pode fazer isso da seguinte maneira, dependendo do sistema operacional:
 
-- Windows 7 e Windows Server 2003: Use a ferramenta de [registro ServiceModel (ServiceModelReg. exe)](../servicemodelreg-exe.md) para registrar o WCF com o IIS. Para usar essa ferramenta, digite **ServiceModelReg. exe/i/x** no [prompt de comando do desenvolvedor para Visual Studio](../../tools/developer-command-prompt-for-vs.md).
+- Windows 7 e Windows Server 2003: Use a ferramenta [ServiceModelReg.exe (ferramenta de registro do ServiceModel)](../servicemodelreg-exe.md) para registrar o WCF com o IIS. Para usar essa ferramenta, digite **ServiceModelReg.exe/i/x** no [prompt de comando do desenvolvedor para Visual Studio](../../tools/developer-command-prompt-for-vs.md).
 
 - Windows 7: por fim, você deve verificar se o ASP.NET está configurado para usar o .NET Framework versão 4 ou posterior. Faça isso executando a ferramenta ASPNET_Regiis com a `–i` opção. Para obter mais informações, consulte [ferramenta de registro do IIS ASP.net](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)).
 
@@ -75,7 +76,7 @@ Para obter mais informações sobre o modelo de compilação do ASP.NET 2,0, con
 
 ## <a name="configure-the-wcf-service"></a>Configurar o serviço WCF
 
-Os serviços WCF hospedados pelo IIS armazenam sua configuração no arquivo Web. config dos aplicativos. Os serviços hospedados pelo IIS usam os mesmos elementos de configuração e a mesma sintaxe que os serviços WCF hospedados fora do IIS. No entanto, as seguintes restrições são exclusivas para o ambiente de hospedagem do IIS:
+Os serviços WCF hospedados pelo IIS armazenam suas configurações no arquivo de Web.config de aplicativos. Os serviços hospedados pelo IIS usam os mesmos elementos de configuração e a mesma sintaxe que os serviços WCF hospedados fora do IIS. No entanto, as seguintes restrições são exclusivas para o ambiente de hospedagem do IIS:
 
 - Endereços de base para serviços hospedados no IIS.
 
@@ -109,7 +110,7 @@ Os serviços WCF hospedados pelo IIS podem usar a segurança de transporte HTTP 
 
 Por exemplo, um ponto de extremidade WCF configurado para usar a autenticação digest HTTP deve residir em um diretório virtual do IIS que também esteja configurado para permitir a autenticação digest HTTP. As combinações sem correspondência das configurações do IIS e das configurações do ponto de extremidade do WCF resultam em um erro durante a ativação do serviço.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Hospedagem no Internet Information Services](hosting-in-internet-information-services.md)
 - [Práticas recomendadas de hospedagem de Serviços de Informações da Internet](internet-information-services-hosting-best-practices.md)

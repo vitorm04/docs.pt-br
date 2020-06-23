@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: hospedar e executar um serviço de Windows Communication Foundation básico'
+description: Saiba como hospedar um serviço WCF em um aplicativo de console como parte de uma série de artigos que ajudam você a começar a criar um aplicativo WCF.
 ms.date: 03/19/2019
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 872844487578843492e05dd2abb87b50e0bec91c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5318991087e71430523681d601d3b38c4513027b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291390"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246123"
 ---
 # <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>Tutorial: hospedar e executar um serviço de Windows Communication Foundation básico
 
@@ -194,7 +195,7 @@ Faça as alterações a seguir ao código:
 
 1. Compile a solução e, em seguida, execute o aplicativo de console **GettingStartedHost** de dentro do Visual Studio.
 
-    O serviço deve ser executado com privilégios de administrador. Como você abriu o Visual Studio com privilégios de administrador, ao executar o **GettingStartedHost** no Visual Studio, o aplicativo também é executado com privilégios de administrador. Como alternativa, você pode abrir um novo prompt de comando como administrador (selecione **mais**  >  **Executar como administrador** no menu de atalho) e execute **GettingStartedHost. exe** nele.
+    O serviço deve ser executado com privilégios de administrador. Como você abriu o Visual Studio com privilégios de administrador, ao executar o **GettingStartedHost** no Visual Studio, o aplicativo também é executado com privilégios de administrador. Como alternativa, você pode abrir um novo prompt de comando como administrador (selecione **mais**  >  **Executar como administrador** no menu de atalho) e execute **GettingStartedHost.exe** dentro dele.
 
 2. Abra um navegador da Web e navegue até a página do serviço em `http://localhost:8000/GettingStarted/CalculatorService` .
 

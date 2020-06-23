@@ -1,17 +1,18 @@
 ---
 title: O que é o Windows Communication Foundation
+description: Saiba mais sobre o Windows Communication Foundation, que é uma estrutura para a criação de aplicativos orientados a serviços.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], technology overview
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: fd78f2cd8266f94c577801623a84b56919c82973
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 84cb45d62409769a79fa6a401fdb1aa6934c4099
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600848"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245603"
 ---
 # <a name="what-is-windows-communication-foundation"></a>O que é o Windows Communication Foundation
 O Windows Communication Foundation (WCF) é uma estrutura para a criação de aplicativos orientados a serviços. Usando o WCF, você pode enviar dados como mensagens assíncronas de um ponto de extremidade de serviço para outro. Um ponto de extremidade de serviço pode ser parte de um serviço disponível continuamente hospedado pelo IIS, ou pode ser um serviço hospedado em um aplicativo. Um ponto de extremidade pode ser um cliente de um serviço que solicita dados de um ponto de extremidade de serviço. As mensagens podem ser simples como um único caractere ou uma palavra enviada como XML ou complexo como um fluxo de dados binários. Alguns cenários de exemplo incluem:
@@ -94,7 +95,7 @@ O Microsoft Silverlight é uma plataforma para criar aplicativos Web interoperá
 
 Os recursos de hospedagem do servidor de aplicativos do Windows Server AppFabric foram projetados especificamente para implantar e gerenciar aplicativos que usam o WCF para comunicação. Os recursos de hospedagem incluem ferramentas avançadas e opções de configuração projetadas especificamente para aplicativos habilitados para WCF.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel>
 - [Conceitos fundamentais do Windows Communication Foundation](fundamental-concepts.md)

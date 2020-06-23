@@ -1,5 +1,6 @@
 ---
 title: Declarações e tokens de SAML
+description: Saiba como o WFC usa tokens SAML para transportar instruções que são conjuntos de declarações feitas por uma entidade sobre outra entidade.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: 6220365d5c43299a75d1e0fa8e46a7392b0ccaa2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c054e594af69def96879852a5145675b3123614a
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590365"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244940"
 ---
 # <a name="saml-tokens-and-claims"></a>Declarações e tokens de SAML
 *Tokens* SAML (Security Asserts Markup Language) são representações XML de declarações. Por padrão, os tokens SAML Windows Communication Foundation (WCF) usam em cenários de segurança federada são *tokens emitidos*.  
@@ -42,7 +43,7 @@ ms.locfileid: "84590365"
 ## <a name="from-samlattributes-to-claims"></a>De Samlattributes a declarações  
  Quando os tokens SAML são recebidos em mensagens, as várias instruções no token SAML são <xref:System.IdentityModel.Policy.IAuthorizationPolicy> transformadas em objetos que são colocados no <xref:System.IdentityModel.Policy.AuthorizationContext> . As declarações de cada instrução SAML são retornadas pela <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> propriedade de <xref:System.IdentityModel.Policy.AuthorizationContext> e podem ser examinadas para determinar se deseja autenticar e autorizar o usuário.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 0d462fcc92fc1be5ddbc2e76237d8436219c7295
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8ae30b8c29dcf3aaa183ff295c7ee8592322797f
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504531"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141775"
 ---
 # <a name="proxy-element-network-settings"></a>Elemento \<proxy> (Configurações de Rede)
 Define um servidor proxy.  
@@ -24,15 +24,15 @@ Define um servidor proxy.
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<proxy>**
 
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <proxy
-  autoDetect="true|false|unspecified"
-  bypassonlocal="true|false|unspecified"
+  autoDetect="True|False|Unspecified"
+  bypassonlocal="True|False|Unspecified"
   proxyaddress="uriString"
   scriptLocation="uriString"
-  usesystemdefault="true|false|unspecified"
+  usesystemdefault="True|False|Unspecified"
 />
 ```  
   
@@ -43,11 +43,11 @@ Define um servidor proxy.
   
 |**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
-|`autoDetect`|Especifica se o proxy é detectado automaticamente. O valor padrão é `unspecified`.|  
-|`bypassonlocal`|Especifica se o proxy é ignorado para os recursos locais. Os recursos locais incluem o servidor local ( `http://localhost` , `http://loopback` ou `http://127.0.0.1` ) e um URI sem um ponto ( `http://webserver` ). O valor padrão é `unspecified`.|  
+|`autoDetect`|Especifica se o proxy é detectado automaticamente. O valor padrão é `Unspecified`.|  
+|`bypassonlocal`|Especifica se o proxy é ignorado para os recursos locais. Os recursos locais incluem o servidor local ( `http://localhost` , `http://loopback` ou `http://127.0.0.1` ) e um URI sem um ponto ( `http://webserver` ). O valor padrão é `Unspecified`.|  
 |`proxyaddress`|Especifica o URI de proxy a ser usado.|  
 |`scriptLocation`|Especifica o local do script de configuração. Não use o `bypassonlocal` atributo com este atributo. |  
-|`usesystemdefault`|Especifica se as configurações de proxy do Internet Explorer devem ser usadas. Se definido como `true` , os atributos subsequentes substituirão as configurações de proxy do Internet Explorer. O valor padrão é `unspecified`.|  
+|`usesystemdefault`|Especifica se as configurações de proxy do Internet Explorer devem ser usadas. Se definido como `True` , os atributos subsequentes substituirão as configurações de proxy do Internet Explorer. O valor padrão é `Unspecified`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum.  
@@ -72,7 +72,7 @@ Define um servidor proxy.
  Uma exceção será gerada se o `proxyaddress` atributo especificar um proxy padrão inválido. A <xref:System.Exception.InnerException%2A> Propriedade na exceção deve ter mais informações sobre a causa raiz do erro.  
   
 ## <a name="configuration-files"></a>Arquivos de configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine.config).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa os padrões do proxy do Internet Explorer, especifica o endereço de proxy e ignora o proxy para acesso local.  
@@ -82,16 +82,16 @@ Define um servidor proxy.
   <system.net>  
     <defaultProxy>  
       <proxy  
-        usesystemdefault="true"  
+        usesystemdefault="True"  
         proxyaddress="http://192.168.1.10:3128"  
-        bypassonlocal="true"  
+        bypassonlocal="True"  
       />  
     </defaultProxy>  
   </system.net>  
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Esquema de configurações de rede](index.md)

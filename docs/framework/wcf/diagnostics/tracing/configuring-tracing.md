@@ -1,15 +1,16 @@
 ---
 title: Configurando o rastreamento
+description: Saiba como habilitar o rastreamento, configurar origens de rastreamento, definir rastreamento e propagação de atividade e definir ouvintes de rastreamento para acessar rastreamentos no WCF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 2fbe5b48a9405c9236923ffec268683bdf570831
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 55d701ee6769099698d2fd869a1502d94237b5a8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579001"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245343"
 ---
 # <a name="configuring-tracing"></a>Configurando o rastreamento
 Este tópico descreve como você pode habilitar o rastreamento, configurar fontes de rastreamento para emitir rastreamentos e definir níveis de rastreamento, definir rastreamento de atividade e propagação para dar suporte à correlação de rastreamento de ponta a ponta e definir ouvintes de rastreamento para acessar rastreamentos.  
@@ -32,7 +33,7 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar fonte
   
  Se você usar pontos de extensibilidade do WCF, como chamadores de operação personalizados, deverá emitir seus próprios rastreamentos. Isso ocorre porque, se você implementar um ponto de extensibilidade, o WCF não poderá mais emitir os rastreamentos padrão no caminho padrão. Se você não implementar o suporte de rastreamento manual emitindo rastreamentos, talvez você não veja os rastreamentos esperados.  
   
- Você pode configurar o rastreamento editando o arquivo de configuração do aplicativo — Web. config para aplicativos hospedados na Web ou AppName. exe. config para aplicativos hospedados internamente. Veja a seguir um exemplo de tal edição. Para obter mais informações sobre essas configurações, consulte a seção "Configurando ouvintes de rastreamento para consumir rastreamentos".  
+ Você pode configurar o rastreamento editando o arquivo de configuração do aplicativo — seja Web.config para aplicativos hospedados na Web ou Appname.exe.config para aplicativos hospedados internamente. Veja a seguir um exemplo de tal edição. Para obter mais informações sobre essas configurações, consulte a seção "Configurando ouvintes de rastreamento para consumir rastreamentos".  
   
 ```xml  
 <configuration>  
@@ -53,7 +54,7 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar fonte
 ```  
   
 > [!NOTE]
-> Para editar o arquivo de configuração de um projeto de serviço WCF no Visual Studio, clique com o botão direito do mouse no arquivo de configuração do aplicativo — Web. config para aplicativos hospedados na Web ou AppName. exe. config para o aplicativo auto-hospedado no **Gerenciador de soluções**. Em seguida, escolha o item de menu de contexto **Editar configuração do WCF** . Isso inicia a [ferramenta do editor de configuração (SvcConfigEditor. exe)](../../configuration-editor-tool-svcconfigeditor-exe.md), que permite que você modifique as definições de configuração dos serviços WCF usando uma interface gráfica do usuário.  
+> Para editar o arquivo de configuração de um projeto de serviço WCF no Visual Studio, clique com o botão direito do mouse no arquivo de configuração do aplicativo — seja Web.config para aplicativos hospedados na Web ou Appname.exe.config para aplicativo auto-hospedado no **Gerenciador de soluções**. Em seguida, escolha o item de menu de contexto **Editar configuração do WCF** . Isso inicia a [ferramenta do editor de configuração (SvcConfigEditor.exe)](../../configuration-editor-tool-svcconfigeditor-exe.md), que permite que você modifique as definições de configuração dos serviços WCF usando uma interface gráfica do usuário.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Configurando fontes de rastreamento para emitir rastreamentos  
  O WCF define uma origem de rastreamento para cada assembly. Os rastreamentos gerados em um assembly são acessados pelos ouvintes definidos para essa fonte. As seguintes origens de rastreamento são definidas:  
@@ -159,7 +160,7 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar fonte
 |Informações|Eventos "positivos": eventos que marcam Marcos com êxito|Marcos importantes e bem-sucedidos da execução do aplicativo, independentemente de o aplicativo estar funcionando corretamente ou não.|Em geral, as mensagens úteis para monitorar e diagnosticar o status do sistema, medir o desempenho ou a criação de perfil são geradas. Você pode usar essas informações para o planejamento de capacidade e o gerenciamento de desempenho:<br /><br /> -Os canais são criados.<br />-Os ouvintes de ponto de extremidade são criados.<br />-A mensagem entra/sai do transporte.<br />-O token de segurança é recuperado.<br />-A definição de configuração é leitura.|Administradores<br /><br /> Desenvolvedores de aplicativos<br /><br /> Desenvolvedores de produtos.|  
 |Detalhado|Eventos "positivos": eventos que marcam Marcos bem-sucedidos.|Eventos de nível baixo para código de usuário e serviço são emitidos.|Em geral, você pode usar esse nível para depuração ou otimização de aplicativo.<br /><br /> -Compreendido o cabeçalho da mensagem.|Administradores<br /><br /> Desenvolvedores de aplicativos<br /><br /> Desenvolvedores de produtos.|  
 |ActivityTracing||Eventos de fluxo entre atividades de processamento e componentes.|Esse nível permite que os administradores e desenvolvedores correlacionem aplicativos no mesmo domínio de aplicativo:<br /><br /> -Rastreia os limites de atividade, como iniciar/parar.<br />-Rastreia para transferências.|Todos|  
-|Todos||O aplicativo pode funcionar corretamente. Todos os eventos são emitidos.|Todos os eventos anteriores.|Todos|  
+|Todos||O aplicativo pode funcionar corretamente. Todos os eventos são emitidos.|Todos os eventos anteriores.|Tudo|  
   
  Os níveis de detalhado para crítico são empilhados em cima um do outro, ou seja, cada nível de rastreamento inclui todos os níveis acima dele, exceto o nível desativado. Por exemplo, um ouvinte ouvindo no nível de aviso recebe rastreamentos críticos, de erro e de aviso. O nível All inclui eventos de detalhado para eventos de rastreamento de atividade e críticos.  
   
@@ -180,7 +181,7 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar fonte
   
  Você não pode usar o `propagateActivity` atributo com fontes de rastreamento definidas pelo usuário. Para a propagação da ID da atividade de código do usuário, certifique-se de não definir ServiceModel `ActivityTracing` , enquanto ainda tem o `propagateActivity` atributo ServiceModel definido como `true` .  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Rastreamento](index.md)
 - [Administração e diagnóstico](../index.md)

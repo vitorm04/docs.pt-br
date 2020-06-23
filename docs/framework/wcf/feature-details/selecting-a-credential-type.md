@@ -1,13 +1,14 @@
 ---
 title: Selecionando um tipo de credencial
+description: Saiba mais sobre as credenciais, como elas são usadas no WCF e como selecionar a credencial correta para seu aplicativo estabelecer uma identidade ou recursos reivindicados.
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: 7bcc5f407077b32d85b7f1e5f7ddbc5aba4b80c1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7a8a6880e5fc3982bb7f470c34a77c771c26effd
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586189"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244914"
 ---
 # <a name="selecting-a-credential-type"></a>Selecionando um tipo de credencial
 As *credenciais* são o uso de Windows Communication Foundation de dados (WCF) para estabelecer uma identidade ou recursos reivindicados. Por exemplo, um passaporte é uma credencial que um governo emite para provar a cidadania em um país ou região. No WCF, as credenciais podem ter muitas formas, como tokens de nome de usuário e certificados X. 509. Este tópico discute as credenciais, como elas são usadas no WCF e como selecionar a credencial correta para seu aplicativo.  
@@ -23,7 +24,7 @@ As *credenciais* são o uso de Windows Communication Foundation de dados (WCF) p
 ## <a name="transport-credential-types"></a>Tipos de credencial de transporte  
  A tabela a seguir mostra os possíveis tipos de credenciais de cliente que podem ser usadas por uma associação no modo de segurança de transporte. Ao criar um serviço, defina a `ClientCredentialType` propriedade como um desses valores para especificar o tipo de credencial que o cliente deve fornecer para se comunicar com o serviço. Você pode definir os tipos no código ou nos arquivos de configuração.  
   
-|Setting|Descrição|  
+|Configuração|Descrição|  
 |-------------|-----------------|  
 |Nenhum|Especifica que o cliente não precisa apresentar nenhuma credencial. Isso se traduz em um cliente anônimo.|  
 |Basic|Especifica a autenticação básica para o cliente. Para obter informações adicionais, consulte RFC2617 –[autenticação http: autenticação básica e resumida](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt).|  
@@ -36,7 +37,7 @@ As *credenciais* são o uso de Windows Communication Foundation de dados (WCF) p
 ### <a name="message-client-credential-types"></a>Tipos de credencial do cliente da mensagem  
  A tabela a seguir mostra os possíveis tipos de credencial que você pode usar ao criar um aplicativo que usa a segurança de mensagem. Você pode usar esses valores no código ou nos arquivos de configuração.  
   
-|Setting|Descrição|  
+|Configuração|Descrição|  
 |-------------|-----------------|  
 |Nenhum|Especifica que o cliente não precisa apresentar uma credencial. Isso se traduz em um cliente anônimo.|  
 |Windows|Permite que as trocas de mensagens SOAP ocorram sob o contexto de segurança estabelecido com uma credencial do Windows.|  
@@ -97,7 +98,7 @@ As *credenciais* são o uso de Windows Communication Foundation de dados (WCF) p
   
  Para obter mais informações sobre credenciais e sessões seguras, consulte [considerações de segurança para sessões seguras](security-considerations-for-secure-sessions.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>

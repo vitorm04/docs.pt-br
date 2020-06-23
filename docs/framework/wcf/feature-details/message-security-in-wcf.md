@@ -1,13 +1,14 @@
 ---
 title: Segurança de mensagem no WCF
+description: Saiba mais sobre o TransportWithMessageCredential, um tipo de segurança de mensagem do WCF que usa uma combinação de modos de segurança de transporte e mensagem.
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 6875339df327371a79bc9b9072aca2df0bc7d3f6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 315a12c73929bfe71340e42f122ae542d4fddc07
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602655"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245018"
 ---
 # <a name="message-security-in-wcf"></a>Segurança de mensagem no WCF
 
@@ -63,7 +64,7 @@ A segurança da mensagem tem as seguintes desvantagens:
 
 - Requer a implementação de mecanismos de segurança em nível XML e suporte para especificação WS-Security. Isso pode afetar a interoperabilidade.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Protegendo serviços e clientes](securing-services-and-clients.md)
 - [Segurança de transporte](transport-security.md)

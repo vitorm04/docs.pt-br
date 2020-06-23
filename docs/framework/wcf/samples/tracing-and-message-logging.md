@@ -1,18 +1,19 @@
 ---
 title: Registro de mensagem e rastreamento
+description: Saiba como usar a ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe) para exibir rastreamentos e logs de mensagens usando este exemplo WFC.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 9af50f138a2788fc7af0ce5d07e95df49d6675cb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bb49334252c2415223b0f8f5559a6dc838d175e3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602642"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246019"
 ---
 # <a name="tracing-and-message-logging"></a>Registro de mensagem e rastreamento
-Este exemplo demonstra como habilitar o rastreamento e o log de mensagens. Os rastreamentos e os logs de mensagens resultantes são exibidos usando a [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md). Este exemplo é baseado na [introdução](getting-started-sample.md).  
+Este exemplo demonstra como habilitar o rastreamento e o log de mensagens. Os rastreamentos e os logs de mensagens resultantes são exibidos usando a [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md). Este exemplo é baseado na [introdução](getting-started-sample.md).  
   
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
@@ -81,7 +82,7 @@ Este exemplo demonstra como habilitar o rastreamento e o log de mensagens. Os ra
   
  Quando uma mensagem é gravada, o tipo de rastreamento depende se ele está sendo rastreado no cliente ou no servidor. Por exemplo, uma mensagem "Adicionar" enviada a um cliente é rastreada sob a categoria "TransportWrite" no cliente, enquanto a mesma mensagem é rastreada sob a categoria "TransportRead" no serviço.  
   
- Configure o ouvinte de rastreamento adicionando o código a seguir à <xref:System.Diagnostics> seção do arquivo app. config do cliente ou do arquivo Web. config do serviço:  
+ Configure o ouvinte de rastreamento adicionando o seguinte código à <xref:System.Diagnostics> seção do arquivo de App.config do cliente ou do arquivo de Web.config do serviço:  
   
 ```xml  
 <system.diagnostics>  
@@ -132,7 +133,7 @@ Este exemplo demonstra como habilitar o rastreamento e o log de mensagens. Os ra
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Rastreamento](../diagnostics/tracing/index.md)
 - [AppFabric que monitora Exemplos](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

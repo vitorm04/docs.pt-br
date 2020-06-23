@@ -9,12 +9,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 915fdc96dbd4d417f9c9e6aa3ff96de3026491ef
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 85004d49ce7605b050709a3019592ec696a7bada
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504596"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141625"
 ---
 # <a name="defaultproxy-element-network-settings"></a>Elemento \<defaultProxy> (Configurações de Rede)
 Configura o servidor proxy HTTP (Hypertext Transfer Protocol).  
@@ -23,12 +23,12 @@ Configura o servidor proxy HTTP (Hypertext Transfer Protocol).
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;**\<defaultProxy>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <defaultProxy  
-  enabled="true|false"  
-  useDefaultCredentials="true|false">  
+  enabled="True|False"  
+  useDefaultCredentials="True|False">  
     <bypasslist>...</bypasslist>  
     <proxy>...</proxy>  
     <module>...</module>  
@@ -42,8 +42,8 @@ Configura o servidor proxy HTTP (Hypertext Transfer Protocol).
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|`enabled`|Especifica se um proxy Web é usado. O valor padrão é `true`.|  
-|`useDefaultCredentials`|Especifica se as credenciais padrão para este host são usadas para acessar o proxy Web. O valor padrão é `false`.|  
+|`enabled`|Especifica se um proxy Web é usado. O valor padrão é `True`.|  
+|`useDefaultCredentials`|Especifica se as credenciais padrão para este host são usadas para acessar o proxy Web. O valor padrão é `False`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -51,7 +51,7 @@ Configura o servidor proxy HTTP (Hypertext Transfer Protocol).
 |-----------------|---------------------|  
 |[bypasslist](bypasslist-element-network-settings.md)|Fornece um conjunto de expressões regulares que descrevem endereços que não usam o proxy.|  
 |[modulo](module-element-network-settings.md)|Adiciona um novo módulo de proxy ao aplicativo.|  
-|[proxy](proxy-element-network-settings.md)|Define um servidor proxy.|  
+|[acionista](proxy-element-network-settings.md)|Define um servidor proxy.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -65,7 +65,7 @@ Configura o servidor proxy HTTP (Hypertext Transfer Protocol).
  Uma exceção é gerada se o elemento [Module](module-element-network-settings.md) especifica um tipo não público, o tipo não é derivado da <xref:System.Net.IWebProxy> classe, uma exceção do construtor sem parâmetros desse objeto ocorreu ou uma exceção ocorreu ao recuperar o proxy padrão especificado pelo sistema. A <xref:System.Exception.InnerException%2A> Propriedade na exceção deve ter mais informações sobre a causa raiz do erro.  
   
 ## <a name="configuration-files"></a>Arquivos de configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine.config).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa os padrões do proxy do Internet Explorer, especifica o endereço de proxy e ignora o proxy para acesso local e contoso.com.  
@@ -75,9 +75,9 @@ Configura o servidor proxy HTTP (Hypertext Transfer Protocol).
   <system.net>  
     <defaultProxy>  
       <proxy  
-        usesystemdefault="true"  
+        usesystemdefault="True"  
         proxyaddress="http://192.168.1.10:3128"  
-        bypassonlocal="true"  
+        bypassonlocal="True"  
       />  
       <bypasslist>  
         <add address="[a-z]+\.contoso\.com$" />  
@@ -87,7 +87,7 @@ Configura o servidor proxy HTTP (Hypertext Transfer Protocol).
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Esquema de configurações de rede](index.md)

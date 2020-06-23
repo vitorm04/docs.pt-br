@@ -1,5 +1,6 @@
 ---
 title: Gerenciamento de declarações e autorizações com o modelo de identidade
+description: Saiba mais sobre os principais conceitos de programação para o modelo de identidade do WCF, um modelo baseado em declarações para executar a autorização.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authorization [WCF]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: f9138102435aab07e5c1771ce5dba85bacbcac99
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0d5687f8ac5021c008254f0f5cc453eda5e538c7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586345"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245122"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gerenciamento de declarações e autorizações com o modelo de identidade
 A autorização é o processo de determinar quais entidades têm permissão para alterar, exibir ou acessar um recurso de computador. Por exemplo, em uma empresa, somente os gerentes podem ter permissão para acessar os arquivos de seus funcionários. Windows Communication Foundation (WCF) dá suporte a dois mecanismos para executar o processamento de autorização. O primeiro mecanismo permite que você controle a autorização usando construções de Common Language Runtime (CLR) existentes. O segundo é um modelo baseado em declarações conhecido como *modelo de identidade*. O WCF usa o modelo de identidade para criar declarações de mensagens de entrada; Classes de modelo de identidade podem ser estendidas para dar suporte a novos tipos de declaração para esquemas de autorização personalizados. Este tópico apresenta uma visão geral dos principais conceitos de programação do recurso de modelo de identidade, bem como uma lista das classes mais importantes que o recurso usa.  
@@ -75,7 +76,7 @@ A autorização é o processo de determinar quais entidades têm permissão para
 ## <a name="claims"></a>Declarações  
  O modelo de identidade é um sistema baseado em declarações. As declarações descrevem os recursos associados a alguma entidade no sistema, geralmente um usuário desse sistema. O conjunto de declarações associadas a uma determinada entidade pode ser considerado uma chave. As declarações específicas definem a forma dessa chave, semelhante a uma chave física usada para abrir um bloqueio em uma porta. As declarações são usadas para obter acesso aos recursos. O acesso a um determinado recurso protegido é determinado pela comparação das declarações necessárias para acessar esse recurso com as declarações associadas à entidade que está tentando acessar.  
   
- Uma declaração é a expressão de um direito em relação a um valor específico. Um direito pode ser algo como "leitura", "gravação" ou "executar". Um valor pode ser um banco de dados, um arquivo, uma caixa de correio ou uma propriedade. As declarações também têm um tipo de declaração. A combinação de tipo de declaração e direita fornece o mecanismo para especificar recursos em relação ao valor. Por exemplo, uma declaração do tipo "File", com right "Read" sobre o valor "biografia. doc", indica que a entidade com a qual essa declaração está associada tem acesso de leitura ao arquivo biografia. doc. Uma declaração do tipo "Name", com right "temproperty" sobre o valor "Martin", indica que a entidade com a qual tal declaração está associada possui uma propriedade Name com o valor "Martin".  
+ Uma declaração é a expressão de um direito em relação a um valor específico. Um direito pode ser algo como "leitura", "gravação" ou "executar". Um valor pode ser um banco de dados, um arquivo, uma caixa de correio ou uma propriedade. As declarações também têm um tipo de declaração. A combinação de tipo de declaração e direita fornece o mecanismo para especificar recursos em relação ao valor. Por exemplo, uma declaração do tipo "File", com right "Read" sobre o valor "Biography.doc", indica que a entidade com a qual essa declaração está associada tem acesso de leitura para o arquivo Biography.doc. Uma declaração do tipo "Name", com right "temproperty" sobre o valor "Martin", indica que a entidade com a qual tal declaração está associada possui uma propriedade Name com o valor "Martin".  
   
  Embora vários tipos de declaração e direitos sejam definidos como parte do modelo de identidade, o sistema é extensível, permitindo que vários sistemas, com base na infraestrutura de modelo de identidade, definam tipos de declaração e direitos adicionais, conforme necessário.  
   
@@ -153,13 +154,13 @@ A autorização é o processo de determinar quais entidades têm permissão para
 ### <a name="significant-members"></a>Membros significativos  
  Os membros a seguir são comumente usados para criar novos tipos de declaração.  
   
-|Membro|Descrição|  
+|Membro|Description|  
 |------------|-----------------|  
 |<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|As classes derivadas implementam esse método para executar verificações de acesso baseadas em declarações antes da execução de operações em um serviço. Qualquer e todas as informações no fornecido <xref:System.ServiceModel.OperationContext> , ou em outro lugar, podem ser examinadas ao tomar a decisão de verificação de acesso. Se <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> `true` for retornado, o acesso será concedido e a operação poderá ser executada. Se `CheckAccessCore` retorna `false` , o acesso é negado e a operação não é executada. Para obter um exemplo, consulte [como: criar um Gerenciador de autorização personalizado para um serviço](../extending/how-to-create-a-custom-authorization-manager-for-a-service.md).|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|Retorna o <xref:System.ServiceModel.ServiceAuthorizationManager> para o serviço. O <xref:System.ServiceModel.ServiceAuthorizationManager> é responsável por tomar decisões de autorização.|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|A coleção de políticas de autorização personalizadas especificadas para o serviço. Essas políticas são avaliadas além das políticas associadas às credenciais em mensagens de entrada.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Claims.Claim>
