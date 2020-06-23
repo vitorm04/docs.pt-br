@@ -1,17 +1,18 @@
 ---
 title: Especificando o local de um assembly
+description: Consulte como especificar o local de um assembly no .NET usando o elemento codeBase ou o elemento de investigação em um arquivo de configuração XML.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [.NET Framework], applications
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: ead69d1e850050214c15295134c06ff6f66e9760
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e14bdc12598d0aa6cdd2789b09a04ab8ed134169
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81646026"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141698"
 ---
 # <a name="specifying-an-assemblys-location"></a>Especificando o local de um assembly
 Há duas maneiras de especificar o local de um assembly:  
@@ -65,7 +66,7 @@ Há duas maneiras de especificar o local de um assembly:
   
  O atributo **privatePath** contém os diretórios em que o tempo de execução deve pesquisar assemblies. Se o aplicativo estiver localizado em C:\Program MyApp, o tempo de execução procurará assemblies que não especificam uma base de código em C:\Program Files\MyApp\Bin, C:\Program Files\MyApp\Bin2\Subbin e C:\Program Files\MyApp\Bin3. Os diretórios especificados em **privatePath** devem ser subdiretórios do diretório base do aplicativo.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Assemblies no .NET](../../standard/assembly/index.md)
 - [Programação com assemblies](../../standard/assembly/index.md)

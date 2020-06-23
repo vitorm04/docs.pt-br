@@ -1,5 +1,6 @@
 ---
 title: Redirecionando versões de assembly
+description: Redirecione referências de associação de tempo de compilação para diferentes versões de assemblies .NET, assemblies de terceiros ou assemblies de seu próprio aplicativo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assembly binding, redirection
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: 0d55171e37ec056b3470d238a60bc32f2feb04fb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4cfd4336fb9999c996bea28eb86f1143932d4c51
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81646037"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141728"
 ---
 # <a name="redirecting-assembly-versions"></a>Redirecionando versões de assembly
 
@@ -23,7 +24,7 @@ Você pode redirecionar referências de associação de tempo de compilação pa
 ## <a name="assembly-unification-and-default-binding"></a>Unificação de assembly e associação padrão
  Associações a .NET Framework assemblies são, às vezes, redirecionadas por meio de um processo chamado *Unificação de assembly*. O .NET Framework consiste em uma versão do Common Language Runtime e cerca de duas dúzias de .NET Framework assemblies que compõem a biblioteca de tipos. Esses .NET Framework assemblies são tratados pelo tempo de execução como uma única unidade. Por padrão, quando um aplicativo é iniciado, todas as referências a tipos no código são executadas pelo tempo de execução são direcionadas para .NET Framework assemblies que têm o mesmo número de versão que o tempo de execução que é carregado em um processo. Os redirecionamentos que ocorrem com esse modelo são o comportamento padrão para o tempo de execução.
 
- Por exemplo, se seu aplicativo referencia tipos no namespace System. XML e foi criado usando o .NET Framework 4,5, ele contém referências estáticas ao assembly System. XML que é fornecido com a versão 4,5 do tempo de execução. Se você quiser redirecionar a referência de associação para apontar para o assembly System. XML que acompanha o .NET Framework 4, você pode colocar as informações de redirecionamento no arquivo de configuração do aplicativo. Um redirecionamento de associação em um arquivo de configuração para um assembly de .NET Framework unificado cancela a unificação desse assembly.
+ Por exemplo, se seu aplicativo referencia tipos no namespace System.XML e foi criado usando o .NET Framework 4,5, ele contém referências estáticas ao assembly System.XML que é fornecido com a versão de tempo de execução 4,5. Se você quiser redirecionar a referência de associação para apontar para o System.XML assembly que acompanha o .NET Framework 4, você pode colocar as informações de redirecionamento no arquivo de configuração do aplicativo. Um redirecionamento de associação em um arquivo de configuração para um assembly de .NET Framework unificado cancela a unificação desse assembly.
 
  Além disso, talvez você queira redirecionar manualmente a associação de assembly para assemblies de terceiros se houver várias versões disponíveis.
 
@@ -55,17 +56,17 @@ Você pode redirecionar referências de associação de tempo de compilação pa
 
 ### <a name="relying-on-automatic-binding-redirection"></a>Contando com o redirecionamento de associação automática
 
-Quando você cria um aplicativo de área de trabalho no Visual Studio que tem como alvo o .NET Framework 4.5.1 ou uma versão posterior, o aplicativo usa o redirecionamento de associação automática. Isso significa que, se dois componentes fizerem referência a versões diferentes do mesmo assembly de nome forte, o tempo de execução adicionará automaticamente um redirecionamento de associação à versão mais recente do assembly no arquivo de configuração do aplicativo de saída (App. config). Esse redirecionamento substitui a Unificação de assembly que, de outra forma, poderia ocorrer. O arquivo de origem app.config não é modificado. Por exemplo, digamos que seu aplicativo faça referência diretamente a um componente de .NET Framework fora de banda, mas usa uma biblioteca de terceiros que se destina a uma versão mais antiga do mesmo componente. Quando você compila o aplicativo, o arquivo de configuração do aplicativo de saída é modificado para conter um redirecionamento de associação para a versão mais recente do componente. Se você criar um aplicativo Web, receberá um aviso de compilação sobre o conflito de associação que, por sua vez, oferecerá a opção de adicionar o redirecionamento de associação necessário ao arquivo de configuração da Web de origem.
+Quando você cria um aplicativo de área de trabalho no Visual Studio que tem como alvo o .NET Framework 4.5.1 ou uma versão posterior, o aplicativo usa o redirecionamento de associação automática. Isso significa que, se dois componentes fizerem referência a versões diferentes do mesmo assembly de nome forte, o tempo de execução adicionará automaticamente um redirecionamento de associação à versão mais recente do assembly no arquivo de configuração do aplicativo de saída (app.config). Esse redirecionamento substitui a Unificação de assembly que, de outra forma, poderia ocorrer. O arquivo de origem app.config não é modificado. Por exemplo, digamos que seu aplicativo faça referência diretamente a um componente de .NET Framework fora de banda, mas usa uma biblioteca de terceiros que se destina a uma versão mais antiga do mesmo componente. Quando você compila o aplicativo, o arquivo de configuração do aplicativo de saída é modificado para conter um redirecionamento de associação para a versão mais recente do componente. Se você criar um aplicativo Web, receberá um aviso de compilação sobre o conflito de associação que, por sua vez, oferecerá a opção de adicionar o redirecionamento de associação necessário ao arquivo de configuração da Web de origem.
 
-Se você adicionar manualmente os redirecionamentos de associação ao arquivo app. config de origem, no momento da compilação, o Visual Studio tentará unificar os assemblies com base nos redirecionamentos de associação adicionados. Por exemplo, digamos que você insira o redirecionamento de associação a seguir para um assembly:
+Se você adicionar manualmente os redirecionamentos de associação ao arquivo de app.config de origem, no momento da compilação, o Visual Studio tentará unificar os assemblies com base nos redirecionamentos de associação adicionados. Por exemplo, digamos que você insira o redirecionamento de associação a seguir para um assembly:
 
 `<bindingRedirect oldVersion="3.0.0.0" newVersion="2.0.0.0" />`
 
-Se outro projeto em seu aplicativo fizer referência à versão 1.0.0.0 do mesmo assembly, o redirecionamento de associação automático adicionará a seguinte entrada ao arquivo app. config de saída para que o aplicativo seja unificado na versão 2.0.0.0 deste assembly:
+Se outro projeto em seu aplicativo fizer referência à versão 1.0.0.0 do mesmo assembly, o redirecionamento de associação automática adicionará a seguinte entrada ao arquivo de app.config de saída para que o aplicativo seja unificado na versão 2.0.0.0 deste assembly:
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-Você pode habilitar o redirecionamento de associação automática se seu aplicativo for destinado a versões mais antigas do .NET Framework. Você pode substituir esse comportamento padrão fornecendo informações de redirecionamento de associação no arquivo app. config para qualquer assembly ou desativando o recurso de redirecionamento de associação. Para obter informações sobre como ativar ou desativar esse recurso, consulte [como habilitar e desabilitar o redirecionamento de associação automática](how-to-enable-and-disable-automatic-binding-redirection.md).
+Você pode habilitar o redirecionamento de associação automática se seu aplicativo for destinado a versões mais antigas do .NET Framework. Você pode substituir esse comportamento padrão fornecendo informações de redirecionamento de associação no arquivo de app.config para qualquer assembly ou desativando o recurso de redirecionamento de associação. Para obter informações sobre como ativar ou desativar esse recurso, consulte [como habilitar e desabilitar o redirecionamento de associação automática](how-to-enable-and-disable-automatic-binding-redirection.md).
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>Ignorando a política do Publicador
@@ -152,7 +153,7 @@ Você pode habilitar o redirecionamento de associação automática se seu aplic
 </assemblyBinding>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Como: Habilitar e desabilitar o redirecionamento automático de associação](how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<bindingRedirect>Elementos](./file-schema/runtime/bindingredirect-element.md)

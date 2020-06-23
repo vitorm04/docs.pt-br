@@ -1,16 +1,17 @@
 ---
 title: Como hospedar um serviço WCF no IIS
+description: Saiba como criar um serviço WCF hospedado no Serviços de Informações da Internet (IIS). Você pode usar a hospedagem do IIS somente com um transporte HTTP.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 326a270c4af38738c910828acd483070ab02ecd1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 63549b85f7bcdd4f246005401694db8827248038
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593081"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246903"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Como hospedar um serviço WCF no IIS
 Este tópico descreve as etapas básicas necessárias para criar um serviço de Windows Communication Foundation (WCF) hospedado no Serviços de Informações da Internet (IIS). Este tópico pressupõe que você está familiarizado com o IIS e compreende como usar a ferramenta de gerenciamento do IIS para criar e gerenciar aplicativos do IIS. Para obter mais informações sobre o IIS, consulte [serviços de informações da Internet](https://www.iis.net/). Um serviço WCF executado no ambiente do IIS aproveita totalmente os recursos do IIS, como reciclagem de processo, desligamento ocioso, monitoramento de integridade do processo e ativação baseada em mensagem. Essa opção de hospedando requer que o IIS esteja configurado corretamente, mas não requer que nenhum código de hospedagem seja escrito como parte do aplicativo. Você pode usar a hospedagem do IIS somente com um transporte HTTP.  
@@ -75,7 +76,7 @@ Este tópico descreve as etapas básicas necessárias para criar um serviço de 
  [!code-vb[C_HowTo_HostInIIS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#1)]
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Hospedagem no Internet Information Services](hosting-in-internet-information-services.md)
 - [Hospedando serviços](../hosting-services.md)

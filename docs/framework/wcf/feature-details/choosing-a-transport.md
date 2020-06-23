@@ -1,15 +1,16 @@
 ---
 title: Selecionando um transporte
+description: 'Saiba mais sobre os critérios para escolher entre os principais transportes que o WCF oferece: HTTP, TCP e pipes nomeados.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 7e1f6b2e1905fb92ebfe78be351feeaebb374c11
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e1a92203de25aa399316eea91a758802768442a0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587060"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247488"
 ---
 # <a name="choosing-a-transport"></a>Selecionando um transporte
 Este tópico discute os critérios para escolher entre os três transportes principais que estão incluídos no Windows Communication Foundation (WCF): HTTP, TCP e pipes nomeados. O WCF também inclui um transporte de enfileiramento de mensagens (também conhecido como MSMQ), mas este documento não aborda o enfileiramento de mensagens.  
@@ -57,11 +58,11 @@ Este tópico discute os critérios para escolher entre os três transportes prin
 |Inspeção|A inspeção é a capacidade de extrair e processar informações de mensagens durante a transmissão. O protocolo HTTP separa o roteamento e controla as informações dos dados, facilitando a criação de ferramentas que inspecionam e analisam mensagens. Os transportes que são fáceis de inspecionar também podem exigir menos capacidade de processamento em dispositivos de rede. O nível de segurança usado afeta se as mensagens podem ser inspecionadas.|HTTP|  
 |Latency|Latência é a quantidade mínima de tempo necessária para concluir uma troca de mensagens. Todas as operações de rede têm mais ou menos latência, dependendo da escolha do transporte. Usar a comunicação duplex ou unidirecional com um transporte cujo padrão de troca de mensagens nativa é solicitação-resposta, como HTTP, pode causar latência adicional devido à correlação forçada de mensagens. Nessa situação, considere usar um transporte cujo padrão de troca de mensagens nativa seja duplex, como TCP.|TCP, nomeado<br /><br /> Pipe|  
 |Reach|O alcance de um transporte reflete o quão capaz o transporte está na conexão com outros sistemas. O transporte de pipe nomeado tem muito pouco alcance; Ele só pode se conectar a serviços em execução no mesmo computador. Os transportes TCP e HTTP têm um alcance excelente e podem penetrar em algumas configurações de NAT e firewall. Para obter mais informações, consulte [trabalhando com NATs e firewalls](working-with-nats-and-firewalls.md).|HTTP, TCP|  
-|Segurança|A segurança é a capacidade de proteger mensagens durante a transferência, fornecendo confidencialidade, integridade ou autenticação. A confidencialidade protege uma mensagem de ser examinada, a integridade protege a modificação de uma mensagem e a autenticação fornece garantias sobre o remetente ou destinatário da mensagem.<br /><br /> O WCF dá suporte à segurança de transferência no nível da mensagem e no nível de transporte. A segurança da mensagem comporá com um transporte se o transporte der suporte a um modo de transferência em buffer. O suporte para segurança de transporte varia dependendo do transporte escolhido. Os transportes HTTP, TCP e pipe nomeado têm paridade razoável em seu suporte para segurança de transporte.|Todos|  
+|Segurança|A segurança é a capacidade de proteger mensagens durante a transferência, fornecendo confidencialidade, integridade ou autenticação. A confidencialidade protege uma mensagem de ser examinada, a integridade protege a modificação de uma mensagem e a autenticação fornece garantias sobre o remetente ou destinatário da mensagem.<br /><br /> O WCF dá suporte à segurança de transferência no nível da mensagem e no nível de transporte. A segurança da mensagem comporá com um transporte se o transporte der suporte a um modo de transferência em buffer. O suporte para segurança de transporte varia dependendo do transporte escolhido. Os transportes HTTP, TCP e pipe nomeado têm paridade razoável em seu suporte para segurança de transporte.|Tudo|  
 |Produtividade|A taxa de transferência mede a quantidade de dados que podem ser transmitidos e processados em um período de tempo especificado. Assim como a latência, o transporte escolhido pode afetar a taxa de transferência para operações de serviço. Maximizar a taxa de transferência para um transporte requer minimizar a sobrecarga de transmitir conteúdo, bem como minimizar o tempo gasto aguardando a conclusão das trocas de mensagens. Os transportes TCP e pipe nomeado adicionam pouca sobrecarga ao corpo da mensagem e dão suporte a uma forma duplex nativa que reduz a espera por respostas de mensagens.|TCP, pipe nomeado|  
 |Ferramentas|As ferramentas representam o suporte a aplicativos de terceiros para um protocolo para desenvolvimento, diagnóstico, hospedagem e outras atividades. Desenvolver ferramentas e software para trabalhar com o protocolo HTTP significa um investimento particularmente grande.|HTTP|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.WSHttpBinding>

@@ -1,5 +1,6 @@
 ---
 title: Ordem de membro de dados
+description: Saiba mais sobre a ordem dos membros de dados no WCF. Os aplicativos podem precisar saber ou alterar a ordem na qual os membros de dados são enviados ou esperados.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: 717d7014f4c4a56249ead0c839cf05f4f83a6f5f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5c192d3bda65a7364345df4310dccd96cbe04056
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593458"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247358"
 ---
 # <a name="data-member-order"></a>Ordem de membro de dados
 Em alguns aplicativos, é útil saber a ordem na qual os dados dos vários membros de dados são enviados ou devem ser recebidos (como a ordem na qual os dados aparecem no XML serializado). Às vezes, pode ser necessário alterar essa ordem. Este tópico explica as regras de ordenação.  
@@ -62,7 +63,7 @@ Em alguns aplicativos, é útil saber a ordem na qual os dados dos vários membr
 </DerivedType>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - [Equivalência de contrato de dados](data-contract-equivalence.md)

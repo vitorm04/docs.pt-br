@@ -1,5 +1,6 @@
 ---
 title: Tipos de enumeração em contratos de dados
+description: Saiba mais sobre como o modelo de contrato de dados expressa enumerações como parte do modelo de programação WFC.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 86fa38b281d8944797fa858f8c67f0b60c733be8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ff3184a285e88d47d4545a38a6c74b2f209827fb
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595538"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247293"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Tipos de enumeração em contratos de dados
 As enumerações podem ser expressas no modelo de contrato de dados. Este tópico descreve vários exemplos que explicam o modelo de programação.  
@@ -96,7 +97,7 @@ As enumerações podem ser expressas no modelo de contrato de dados. Este tópic
  [!code-csharp[c_DataContractEnumerations#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#5)]
  [!code-vb[c_DataContractEnumerations#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#5)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - [Usando contratos de dados](using-data-contracts.md)

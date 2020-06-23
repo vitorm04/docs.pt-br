@@ -1,16 +1,17 @@
 ---
 title: Como habilitar o serviço de compartilhamento de porta Net.TCP
+description: Saiba como configurar o serviço de compartilhamento de porta TCP NET usando o MMC para habilitar net. TCP, que está desabilitado por padrão.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-ms.openlocfilehash: 8b305b98d620636328866bce848411f395053485
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0292559e3befde7f0b00b36aa10a2d9615daf049
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593121"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246994"
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Como habilitar o serviço de compartilhamento de porta Net.TCP
 O Windows Communication Foundation (WCF) usa um serviço do Windows chamado serviço de compartilhamento de porta Net. TCP para facilitar o compartilhamento de portas TCP em vários processos. Esse serviço é instalado como parte do WCF, mas o serviço não é habilitado por padrão como uma precaução de segurança e, portanto, deve ser habilitado manualmente antes do primeiro uso. Este tópico descreve como configurar o serviço de compartilhamento de porta TCP NET usando o snap-in do MMC (console de gerenciamento Microsoft).  

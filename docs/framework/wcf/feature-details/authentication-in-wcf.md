@@ -1,16 +1,17 @@
 ---
 title: Autenticação no WCF
+description: Saiba mais sobre vários mecanismos no WCF que fornecem autenticação, como autenticação do Windows, certificados X. 509 e nome de usuário e senha.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF]
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
-ms.openlocfilehash: b513c9713bd2c04e125915d1a0a87c86ce249666
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4c3348cfb84b8571dc1f24b774ffcd691aaa5001
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597638"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247514"
 ---
 # <a name="authentication-in-wcf"></a>Autenticação no WCF
 Os tópicos a seguir mostram vários mecanismos diferentes no Windows Communication Foundation (WCF) que fornecem autenticação, por exemplo, autenticação do Windows, certificados X. 509 e nome de usuário e senhas.  
@@ -37,7 +38,7 @@ Os tópicos a seguir mostram vários mecanismos diferentes no Windows Communicat
 ## <a name="related-sections"></a>Seções relacionadas  
  [Cenários comuns de segurança](common-security-scenarios.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de segurança](security-overview.md)
 - [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

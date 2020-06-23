@@ -1,16 +1,17 @@
 ---
 title: Como habilitar transmissão
+description: Saiba como habilitar as mensagens transmitidas no WCF em vez das transferências em buffer padrão, que devem ser completamente recebidas antes de serem processadas.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: c2c22ab699a996f4bc40d0b5f620ddd92ffe8059
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 538fd8634094aa6fbf097ddb94469d7bca749a63
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593224"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247020"
 ---
 # <a name="how-to-enable-streaming"></a>Como habilitar transmissão
 O Windows Communication Foundation (WCF) pode enviar mensagens usando transferências em buffer ou em fluxo. No modo de transferência em buffer padrão, uma mensagem deve ser totalmente entregue antes que um receptor possa lê-la. No modo de transferência de streaming, o receptor pode começar a processar a mensagem antes de ser totalmente entregue. O modo de streaming é útil quando as informações que são passadas são demoradas e podem ser processadas em série. O modo de streaming também é útil quando a mensagem é muito grande para ser totalmente armazenada em buffer.  
@@ -74,7 +75,7 @@ O Windows Communication Foundation (WCF) pode enviar mensagens usando transferê
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Dados grandes e streaming](large-data-and-streaming.md)
-- [Fluxo](../samples/stream.md)
+- [STREAM](../samples/stream.md)

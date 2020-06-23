@@ -1,15 +1,16 @@
 ---
 title: Hospedagem no serviço de ativação do processo do Windows
+description: Saiba como o WAS gerencia a ativação e o tempo de vida dos processos de trabalho que contêm aplicativos que hospedam serviços WCF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: d0253202b0fad9a452507ed4296bc4a09b78e569
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6b0b23c21762009341fd62c029431824dd26d6c3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597300"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247254"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hospedagem no serviço de ativação do processo do Windows
 O Serviço de Ativação de Processos do Windows (WAS) gerencia a ativação e a vida útil dos processos de trabalho que contêm aplicativos que hospedam os serviços do Windows Communication Foundation (WCF). O modelo de processo WAS generaliza o modelo de processo IIS 6.0 para o servidor HTTP ao remover a dependência do HTTP. Isso permite que os serviços WCF usem protocolos HTTP e não HTTP, como net. TCP, em um ambiente de hospedagem que ofereça suporte à ativação baseada em mensagem e ofereça a capacidade de hospedar um grande número de aplicativos em um determinado computador.  
@@ -46,9 +47,9 @@ O [Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfab
 - `net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
   
 ## <a name="the-was-runtime"></a>O tempo de execução do WAS  
- Os aplicativos são organizados em sites para fins de endereçamento e gerenciamento. Em tempo de execução, os aplicativos também são agrupados em pools de aplicativos. Um pool de aplicativos pode alojar vários aplicativos diferentes de vários sites diferentes. Todos os aplicativos dentro de um pool de aplicativos compartilham um conjunto comum de características de tempo de execução. Por exemplo, todos eles são executados na mesma versão do Common Language Runtime (CLR) e todos compartilham uma identidade de processo comum. Cada pool de aplicativos corresponde a uma instância de um processo de trabalho (w3wp. exe). Cada aplicativo gerenciado em execução dentro de um pool de aplicativos compartilhado é isolado de outros aplicativos por meio de um AppDomain CLR.  
+ Os aplicativos são organizados em sites para fins de endereçamento e gerenciamento. Em tempo de execução, os aplicativos também são agrupados em pools de aplicativos. Um pool de aplicativos pode alojar vários aplicativos diferentes de vários sites diferentes. Todos os aplicativos dentro de um pool de aplicativos compartilham um conjunto comum de características de tempo de execução. Por exemplo, todos eles são executados na mesma versão do Common Language Runtime (CLR) e todos compartilham uma identidade de processo comum. Cada pool de aplicativos corresponde a uma instância de um processo de trabalho (w3wp.exe). Cada aplicativo gerenciado em execução dentro de um pool de aplicativos compartilhado é isolado de outros aplicativos por meio de um AppDomain CLR.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Arquitetura de ativação do WAS](was-activation-architecture.md)
 - [Configurar o WAS para uso com o WCF](configuring-the-wpa--service-for-use-with-wcf.md)

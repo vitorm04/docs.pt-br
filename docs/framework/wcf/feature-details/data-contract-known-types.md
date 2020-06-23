@@ -1,5 +1,6 @@
 ---
 title: Tipos de contratos de dados conhecidos
+description: Saiba como o modelo de contrato de dados usa a classe KnownTypeattribute para especificar os tipos a serem incluídos durante a desserialização no WCF.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: b7d78def4d656dea59af5400c7ed7deeef28cd0c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 52b0caaaac976893dcf5ef5c228ccc4f53bdbe9e
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597443"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247475"
 ---
 # <a name="data-contract-known-types"></a>Tipos de contratos de dados conhecidos
 A <xref:System.Runtime.Serialization.KnownTypeAttribute> classe permite que você especifique, com antecedência, os tipos que devem ser incluídos para consideração durante a desserialização. Para obter um exemplo de trabalho, consulte o exemplo [tipos conhecidos](../samples/known-types.md) .  
@@ -67,7 +68,7 @@ A <xref:System.Runtime.Serialization.KnownTypeAttribute> classe permite que voc�
  [!code-csharp[C_KnownTypeAttribute#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#4)]
  [!code-vb[C_KnownTypeAttribute#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#4)]  
   
-#### <a name="example-3"></a>Exemplo 3:  
+#### <a name="example-3"></a>Exemplo 3  
  No exemplo a seguir, um <xref:System.Collections.Hashtable> armazena seu conteúdo internamente como <xref:System.Object> . Para desserializar uma tabela de hash com êxito, o mecanismo de desserialização deve saber o conjunto de possíveis tipos que podem ocorrer lá. Nesse caso, sabemos com antecedência que somente os `Book` objetos e `Magazine` são armazenados no `Catalog` , portanto, eles são adicionados usando o <xref:System.Runtime.Serialization.KnownTypeAttribute> atributo.  
   
  [!code-csharp[C_KnownTypeAttribute#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#5)]
@@ -77,7 +78,7 @@ A <xref:System.Runtime.Serialization.KnownTypeAttribute> classe permite que voc�
  No exemplo a seguir, um contrato de dados armazena um número e uma operação a ser executada no número. O `Numbers` membro de dados pode ser um inteiro, uma matriz de inteiros ou um <xref:System.Collections.Generic.List%601> que contenha inteiros.  
   
 > [!CAUTION]
-> Isso só funcionará no lado do cliente se SVCUTIL. EXE é usado para gerar um proxy WCF. SVCUTIL. EXE recupera os metadados do serviço, incluindo todos os tipos conhecidos. Sem essas informações, um cliente não poderá desserializar os tipos.  
+> Isso só funcionará no lado do cliente se SVCUTIL.EXE for usado para gerar um proxy WCF. SVCUTIL.EXE recupera metadados do serviço, incluindo qualquer tipo conhecido. Sem essas informações, um cliente não poderá desserializar os tipos.  
   
  [!code-csharp[C_KnownTypeAttribute#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#6)]
  [!code-vb[C_KnownTypeAttribute#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#6)]  
@@ -167,7 +168,7 @@ A <xref:System.Runtime.Serialization.KnownTypeAttribute> classe permite que voc�
   
  No arquivo de configuração anterior, um tipo de contrato de dados chamado `MyCompany.Library.Shape` é declarado `MyCompany.Library.Circle` como tendo um tipo conhecido.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.Serialization.KnownTypeAttribute>
 - <xref:System.Collections.Hashtable>

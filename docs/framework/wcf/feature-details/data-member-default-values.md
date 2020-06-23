@@ -1,5 +1,6 @@
 ---
 title: Valores padrões de membro de dados
+description: Saiba como omitir um membro de dados de dados serializados quando ele tem um valor padrão de .NET Framework. O WCF pode melhorar o desempenho ao não serializar um padrão.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: e4eaaec880ecfcff24d9d5b4e8347a84738e070b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 97946a6b7da14efdcb5229b4cc5d0799eb8d7723
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593471"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247371"
 ---
 # <a name="data-member-default-values"></a>Valores padrões de membro de dados
 No .NET Framework, os tipos têm um conceito de *valores padrão*. Por exemplo, para qualquer tipo de referência, o valor padrão é `null` e para um tipo inteiro, ele é zero. Ocasionalmente, é desejável omitir um membro de dados de dados serializados quando ele é definido como seu valor padrão. Como o membro tem um valor padrão, um valor real não precisa ser serializado; Isso tem uma vantagem de desempenho.  

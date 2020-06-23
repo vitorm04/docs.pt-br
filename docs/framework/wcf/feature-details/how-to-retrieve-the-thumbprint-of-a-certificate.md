@@ -1,15 +1,16 @@
 ---
 title: Como recuperar a impressão digital de um certificado
+description: Saiba como especificar declarações encontradas em um certificado X. 509, que é necessário ao desenvolver um aplicativo WCF que usa certificados para autenticação.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-ms.openlocfilehash: f59fad86287e89b0a573a6e3ee8420f384b0bc3b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 87c696323af442021af267f0d8c523418e2234f7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601199"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246773"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Como recuperar a impressão digital de um certificado
 Ao escrever um aplicativo de Windows Communication Foundation (WCF) que usa um certificado X. 509 para autenticação, geralmente é necessário especificar as declarações encontradas no certificado. Por exemplo, você deve fornecer uma declaração de impressão digital ao usar a <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> enumeração no <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> método. Encontrar o valor da declaração requer duas etapas. Primeiro, abra o snap-in MMC (console de gerenciamento Microsoft) para certificados. (Consulte [como exibir certificados com o snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md).) Em segundo lugar, conforme descrito aqui, encontre um certificado apropriado e copie sua impressão digital (ou outros valores de declaração).  
@@ -38,7 +39,7 @@ Ao escrever um aplicativo de Windows Communication Foundation (WCF) que usa um c
   
 9. Copie os caracteres hexadecimais da caixa. Se essa impressão digital for usada no código para o `X509FindType` , remova os espaços entre os números hexadecimais. Por exemplo, a impressão digital "a9 09 50 2D D8 2a E4 14 33 E6 F8 38 86 B0 0d 42 77 a3 2a 7B" deve ser especificada como "a909502dd82ae41433e6f83886b00d4277a32a7b" no código.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>
