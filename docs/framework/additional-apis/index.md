@@ -24,7 +24,7 @@ Este artigo lista .NET Framework APIs que foram lançadas fora de banda, visam u
 
 Para melhorar o desenvolvimento de plataforma cruzada e introduzir novas funcionalidades no início, alguns recursos .NET Framework foram lançados fora de banda (OOB).
 
-| Project | Description |  
+| Project | Descrição |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | Fornece coleções que são thread-safe e têm garantias de que seu conteúdo nunca será alterado. |
 | <xref:System.Net.Http.WinHttpHandler> | Fornece um manipulador de mensagens para <xref:System.Net.Http.HttpClient> o com base na interface WinHTTP do Windows. |
@@ -35,7 +35,7 @@ Para melhorar o desenvolvimento de plataforma cruzada e introduzir novas funcion
 
 Algumas bibliotecas têm como destino plataformas específicas. Por exemplo, a <xref:System.Text.CodePagesEncodingProvider> classe torna codificações de página de código disponíveis para aplicativos UWP desenvolvidos usando .NET Framework.
   
-| Project | Description |  
+| Project | Descrição |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | Estende a <xref:System.Text.EncodingProvider> classe para tornar as codificações de página de código disponíveis para aplicativos direcionados ao plataforma universal do Windows. |  
   
