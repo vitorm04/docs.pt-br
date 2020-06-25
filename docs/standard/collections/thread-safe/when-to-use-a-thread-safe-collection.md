@@ -6,30 +6,31 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: cea9c038896d07d526874e2ae4c33e479eaa3963
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 499af6d7b8de1decbcffefe0a3b1420cc548488a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769126"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326044"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Quando usar uma coleção thread-safe
-O .NET Framework 4 apresenta cinco novos tipos de coleção especialmente projetados para dar suporte a operações multithread de adição e remoção. Para obter o acesso thread-safe, esses novos tipos usam vários tipos de mecanismos de sincronização de bloqueio e sem bloqueio. A sincronização adiciona sobrecarga a uma operação. A quantidade de sobrecarga depende do tipo de sincronização usado, os tipos de operações que são executadas e outros fatores, como o número de threads que estão tentando acessar a coleção simultaneamente.  
+
+.NET Framework 4 introduziu cinco tipos de coleção que são especialmente projetados para dar suporte a operações de adição e remoção com vários threads. Para obter a segurança de threads, esses tipos usam vários tipos de mecanismos de bloqueio e de sincronização sem bloqueio eficientes. A sincronização adiciona sobrecarga a uma operação. A quantidade de sobrecarga depende do tipo de sincronização usado, os tipos de operações que são executadas e outros fatores, como o número de threads que estão tentando acessar a coleção simultaneamente.  
   
  Em alguns cenários, a sobrecarga de sincronização é insignificante e permite que o tipo com multithread funcione significativamente mais rápido e ajuste a escala muito melhor do que seu equivalente não thread-safe quando protegido por um bloqueio externo. Em outros cenários, a sobrecarga pode fazer com o tipo thread-safe funcione e ajuste a escala na mesma velocidade ou até mais lentamente do que a versão bloqueada externamente não thread-safe do tipo.  
   
  As seções a seguir fornecem diretrizes gerais sobre quando usar uma coleção thread-safe versus sua equivalente não thread-safe que tem um bloqueio fornecido pelo usuário em torno de suas operações de leitura e gravação. Como o desempenho pode variar dependendo de vários fatores, as diretrizes não são específicas e não são necessariamente válidas em todas as circunstâncias. Se o desempenho for muito importante, a melhor maneira de determinar que tipo de coleção usar é medir o desempenho com base em cargas e configurações de computador representativas. Este documento usa os seguintes termos:  
   
- *Cenário de produtor-consumidor puro*  
+ *Produtor puro – cenário de consumidor*\
  Um determinado thread está adicionando ou removendo elementos, mas não executando as duas ações.  
   
- *Cenário de produtor-consumidor misto*  
+ *Produtor misto – cenário de consumidor*\
  Um determinado thread está tanto adicionando quanto removendo elementos.  
   
- *Aceleração*  
+ *Velocidade*\
  Desempenho algorítmico mais rápido em relação a outro tipo no mesmo cenário.  
   
- *Escalabilidade*  
+ *Escalabilidade*\
  O aumento no desempenho que é proporcional ao número de núcleos no computador. Um algoritmo que ajusta a escala tem um desempenho mais rápido em oito núcleos do que em dois núcleos.  
   
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue (T) vs. fila (T)  

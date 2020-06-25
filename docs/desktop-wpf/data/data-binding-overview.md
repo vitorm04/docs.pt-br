@@ -1,18 +1,18 @@
 ---
 title: Visão geral da vinculação de dados
 description: Saiba mais sobre as diferentes fontes de dados que você pode adicionar ao seu projeto no Windows Presentation Foundation para .NET Core. As fontes de dados podem ser associadas a elementos XAML para criar aplicativos dinâmicos.
-author: thraka
+author: adegeo
 ms.date: 09/19/2019
 ms.author: adegeo
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 4f7119ab8286e80160a500481675f83dfaef7713
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 829c93e97990b87e6e568614236de9708ef080d9
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662973"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325756"
 ---
 # <a name="data-binding-overview-in-wpf"></a>Visão geral da ligação de dados no WPF
 
@@ -438,7 +438,7 @@ Se a associação tiver um <xref:System.Windows.Controls.ExceptionValidationRule
 
 Você pode definir a propriedade anexada <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> em um objeto relacionado à associação para receber informações sobre o status de uma associação específica.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [Associar aos resultados de uma consulta LINQ](../../framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)

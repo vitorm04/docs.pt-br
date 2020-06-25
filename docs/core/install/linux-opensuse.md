@@ -1,15 +1,15 @@
 ---
 title: Instalar o .NET Core no openSUSE-.NET Core
 description: Demonstra as várias maneiras de instalar SDK do .NET Core e o tempo de execução do .NET Core no openSUSE.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: a642cee9ae78f81cd671d8745d5ce241be6a3b69
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3a2ff1ca1519428f42c88048dde22aa11baaaa01
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84603044"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324752"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a>Instalar o SDK do .NET Core ou o tempo de execução do .NET Core no openSUSE
 

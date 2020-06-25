@@ -1,15 +1,15 @@
 ---
 title: Selecionar qual versão do .NET Core usar
 description: Saiba como o .NET Core localiza e escolhe automaticamente versões de runtime para o seu programa. Além disso, este artigo ensina como forçar uma versão específica.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: 3c3d9b4ec5a68c88bdd0a45acfb49191f22abda4
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 5e855adc72f0e75e6f31643f8a8618e6d91be06e
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595722"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324351"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selecionar a versão do .NET Core a ser usada
 
@@ -38,7 +38,7 @@ Você pode aproveitar os recursos e as melhorias mais recentes do SDK mesmo ao d
 
 Em raras ocasiões, talvez você precise usar uma versão anterior do SDK. Nesse caso, especifique essa versão em um [arquivo *global. JSON*](../tools/global-json.md). A política "usar versão mais recente" significa usar o *global.json* somente para especificar uma versão do SDK do .NET Core anterior à versão mais recente instalada.
 
-O *global.json* pode ser colocado em qualquer lugar na hierarquia de arquivos. A CLI procura no diretório do projeto em diante até encontrar o primeiro *global.json*. Você controla a quais projetos um determinado *global.json* se aplica a pelo seu lugar no sistema de arquivos. A CLI do .NET procura um arquivo *global.json* navegando iterativamente do caminho do diretório de trabalho atual em diante. O primeiro arquivo *global.json* encontrado especifica a versão usada. Se essa versão do SDK estiver instalada, essa versão será usada. Se o SDK especificado no *global. JSON* não for encontrado, a CLI do .NET usará [regras de correspondência](../tools/global-json.md#matching-rules) para selecionar um SDK compatível ou falhará se nenhum for encontrado.
+O *global.json* pode ser colocado em qualquer lugar na hierarquia de arquivos. A CLI procura no diretório do projeto em diante até encontrar o primeiro *global.json*. Você controla a quais projetos um determinado *global.json* se aplica a pelo seu lugar no sistema de arquivos. A CLI do .NET procura um arquivo *global.json* navegando iterativamente do caminho do diretório de trabalho atual em diante. O primeiro arquivo *global.json* encontrado especifica a versão usada. Se essa versão do SDK estiver instalada, essa versão será usada. Se o SDK especificado no *global.jsem* não for encontrado, a CLI do .NET usará [regras de correspondência](../tools/global-json.md#matching-rules) para selecionar um SDK compatível ou falhará se nenhum for encontrado.
 
 O exemplo a seguir mostra a sintaxe *global.json*:
 
@@ -72,13 +72,13 @@ Você pode compilar o projeto em relação a várias TFMs. A definição de vár
 <TargetFrameworks>netcoreapp3.0;net47</TargetFrameworks>
 ```
 
-Um determinado SDK dá suporte a um conjunto fixo de estruturas, limitado à estrutura de destino do runtime com o qual é fornecido. Por exemplo, o SDK do .NET Core 3,0 inclui o tempo de execução do .NET Core 3,0, que é `netcoreapp3.0` uma implementação da estrutura de destino. O SDK do .NET Core 3,0 `netcoreapp2.1`dá `netcoreapp2.2`suporte `netcoreapp3.0`a,, `netcoreapp3.1` , mas não (ou superior). Você instala o SDK do .NET Core 3,1 para compilar `netcoreapp3.1`para o.
+Um determinado SDK dá suporte a um conjunto fixo de estruturas, limitado à estrutura de destino do runtime com o qual é fornecido. Por exemplo, o SDK do .NET Core 3,0 inclui o tempo de execução do .NET Core 3,0, que é uma implementação da `netcoreapp3.0` estrutura de destino. O SDK do .NET Core 3,0 dá suporte a `netcoreapp2.1` ,, `netcoreapp2.2` `netcoreapp3.0` , mas não `netcoreapp3.1` (ou superior). Você instala o SDK do .NET Core 3,1 para compilar para o `netcoreapp3.1` .
 
-As estruturas de destino do .NET Standard também são limitadas à estrutura de destino do runtime com o qual o SDK é fornecido. O SDK do .NET Core 3,1 está limitado `netstandard2.1`ao. Para obter mais informações, confira [.NET Standard](../../standard/net-standard.md).
+As estruturas de destino do .NET Standard também são limitadas à estrutura de destino do runtime com o qual o SDK é fornecido. O SDK do .NET Core 3,1 está limitado ao `netstandard2.1` . Para obter mais informações, confira [.NET Standard](../../standard/net-standard.md).
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Roll foward de aplicativos dependentes da estrutura
 
-Quando você executa um aplicativo de origem com [`dotnet run`](../tools/dotnet-run.md), de uma [**implantação dependente de estrutura**](../deploying/index.md#publish-runtime-dependent) com [`dotnet myapp.dll`](../tools/dotnet.md#description)o, ou de um [**executável dependente**](../deploying/index.md#publish-runtime-dependent) de estrutura `myapp.exe`com, `dotnet` o executável é o **host** para o aplicativo.
+Quando você executa um aplicativo de origem com [`dotnet run`](../tools/dotnet-run.md) , de uma [**implantação dependente de estrutura**](../deploying/index.md#publish-runtime-dependent) com o [`dotnet myapp.dll`](../tools/dotnet.md#description) , ou de um [**executável dependente de estrutura**](../deploying/index.md#publish-runtime-dependent) com `myapp.exe` , o `dotnet` executável é o **host** para o aplicativo.
 
 O host escolhe a versão de patch mais recente instalada no computador. Por exemplo, se você especificar `netcoreapp3.0` em seu arquivo de projeto e `3.0.4` for o runtime mais recente do .NET instalado, o runtime `3.0.4` será usado.
 
@@ -103,7 +103,7 @@ O roll forward de versão secundária tem um efeito colateral que pode afetar os
 
 É possível publicar um aplicativo como uma [**distribuição autossuficiente**](../deploying/index.md#publish-self-contained). Essa abordagem inclui o runtime e as bibliotecas do .NET Core com seu aplicativo. As implantações autossuficientes não são dependentes dos ambientes de runtime. A seleção da versão do runtime ocorre no momento da publicação, não no runtime.
 
-O processo de publicação seleciona a versão de patch mais recente da família de determinado runtime. Por exemplo, `dotnet publish` selecionará o .NET Core 3.0.4 se for a versão de patch mais recente na família de tempo de execução do .net Core 3,0. A estrutura de destino (incluindo os patches de segurança mais recentes instalados) é empacotada com o aplicativo.
+O processo de publicação seleciona a versão de patch mais recente da família de determinado runtime. Por exemplo, `dotnet publish` selecionará o .NET Core 3.0.4 se for a versão de patch mais recente na família de tempo de execução do .NET Core 3,0. A estrutura de destino (incluindo os patches de segurança mais recentes instalados) é empacotada com o aplicativo.
 
 É um erro quando a versão mínima especificada para um aplicativo não é atendida. O `dotnet publish` vincula-se à última versão de patch de runtime (em uma determinada família de versão principal.secundária). `dotnet publish` não dá suporte à semântica de roll forward de `dotnet run`. Para obter mais informações sobre patches e implantações autossuficientes, consulte o artigo sobre [seleção de patch de runtime](../deploying/runtime-patch-selection.md) na implantação de aplicativos .NET Core.
 
@@ -115,7 +115,7 @@ As implantações autossuficientes podem exigir uma versão de patch específica
 
 O elemento `RuntimeFrameworkVersion` substitui a política de versão padrão. Para implantações autossuficientes, o `RuntimeFrameworkVersion` especifica a versão *exata* da estrutura do runtime. Para aplicativos dependentes da estrutura, o `RuntimeFrameworkVersion` especifica a versão *mínima* da estrutura de runtime necessária.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Baixe e instale o .NET Core](../install/index.md).
 - [Como remover o SDK e o tempo de execução do .NET Core](../install/remove-runtime-sdk-versions.md).

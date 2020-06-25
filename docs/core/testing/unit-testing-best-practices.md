@@ -4,12 +4,12 @@ description: Conheça as melhores práticas para escrever testes de unidade que 
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 9115ff69b269e3723820fd8505d1a9f8ca278d12
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 8a879c16e48dfde617f9cd20f58cab96039361f0
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989377"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324476"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Melhores práticas de teste de unidade com .NET Core e .NET Standard
 
@@ -24,7 +24,7 @@ Por [John Reese](https://reese.dev) com agradecimentos especiais a [Roy Osherove
 ### <a name="less-time-performing-functional-tests"></a>Menos tempo realizando testes funcionais
 Testes funcionais são caros. Normalmente, envolvem abrir o aplicativo e realizar uma série de etapas que você (ou outra pessoa) deve seguir a fim de validar o comportamento esperado. Essas etapas nem sempre podem ser de conhecimento do testador, o que significa que ele terá que entrar em contato com alguém com maior conhecimento na área para executar o teste. O teste em si pode levar segundos para alterações triviais ou minutos para alterações maiores. Por fim, esse processo deve ser repetido para todas as alterações feitas no sistema.
 
-Testes de unidade, por outro lado, demoram milissegundos, podem ser executados ao pressionar um botão e não exigem, necessariamente, nenhum conhecimento do sistema em geral. A aprovação ou reprovação no teste cabe ao executor do teste, não ao indivíduo.
+Os testes de unidade, por outro lado, levam milissegundos, podem ser executados à imprensa de um botão e não necessariamente exigem qualquer conhecimento do sistema em geral. A aprovação ou reprovação no teste cabe ao executor do teste, não ao indivíduo.
 
 ### <a name="protection-against-regression"></a>Proteção contra regressão
 Defeitos de regressão são defeitos introduzidos quando uma alteração foi feita no aplicativo. É comum os testadores não só testarem seu novo recurso, mas também recursos que existiam antes a fim de verificar se recursos previamente implementados ainda funcionam conforme o esperado.
@@ -53,14 +53,14 @@ Escrever testes para seu código o desacoplará naturalmente, porque seria mais 
 
 Uma porcentagem alta de cobertura de código geralmente está associada a uma qualidade de código mais alta. No entanto, a própria medição *não pode* determinar a qualidade do código. Definir uma meta de porcentagem de cobertura de código excessivamente ambicioso pode ser de pré-produção. Imagine um projeto complexo com milhares de ramificações condicionais e imagine que você definiu uma meta de cobertura de código de 95%. Atualmente, o projeto mantém a cobertura de código de 90%. A quantidade de tempo que leva para levar em conta todos os casos de borda dos 5% restantes pode ser um grande empreendimento, e a proposta de valor diminui rapidamente.
 
-Uma porcentagem alta de cobertura de código não é um indicador de sucesso, nem significa alta qualidade de código. Ele jusst representa a quantidade de código coberta pelos testes de unidade. Para obter mais informações, consulte [cobertura de código de teste de unidade](unit-testing-code-coverage.md).
+Uma porcentagem alta de cobertura de código não é um indicador de sucesso, nem significa alta qualidade de código. Ele representa apenas a quantidade de código coberta pelos testes de unidade. Para obter mais informações, consulte [cobertura de código de teste de unidade](unit-testing-code-coverage.md).
 
 ## <a name="lets-speak-the-same-language"></a>Vamos falar a mesma língua
-O termo *simular* infelizmente é usado incorretamente quando falamos sobre o teste. Os itens a seguir definem os tipos mais comuns de *falsificações* ao escrever testes de unidade:
+A *simulação* de termos, infelizmente, geralmente é usada para falar sobre os testes. Os seguintes pontos definem os tipos mais comuns de *falsificações* ao escrever testes de unidade:
 
-*Falsificação* – Uma falsificação é um termo genérico que pode ser usado para descrever um stub ou um objeto fictício. Ser um stub ou uma simulação depende do contexto no qual ele é usado. Então, em outras palavras, uma falsificação pode ser um stub ou uma simulação.
+*Falso* -uma falsificação é um termo genérico que pode ser usado para descrever um stub ou um objeto fictício. Seja um stub ou uma simulação depende do contexto no qual ele é usado. Então, em outras palavras, uma falsificação pode ser um stub ou uma simulação.
 
-*Simulação* -um objeto fictício é um objeto falso no sistema que decide se um teste de unidade foi aprovado ou não. Uma simulação começa como falsificação até ser incorrida.
+*Simulação* -um objeto fictício é um objeto falso no sistema que decide se um teste de unidade foi aprovado ou não. Uma simulação começa como falsa até ser declarada.
 
 *Stub* – Um stub é uma substituição controlável para uma dependência existente (ou colaborador) no sistema. Ao usar um stub, é possível testar seu código sem lidar diretamente com a dependência. Por padrão, uma falsificação começa como um stub.
 
@@ -75,7 +75,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Este seria um exemplo de um stub sendo chamado de simulação. Nesse caso, ele é um stub. Você está passando a ordem como um meio de poder instanciar `Purchase` (o sistema em teste). O nome `MockOrder` também é muito enganoso, porque novamente, a ordem não é uma simulação.
+Este seria um exemplo de um stub sendo chamado de simulação. Nesse caso, ele é um stub. Você está passando a ordem como um meio de poder instanciar `Purchase` (o sistema em teste). O nome `MockOrder` também é enganoso porque, novamente, a ordem não é uma simulação.
 
 Uma abordagem melhor seria
 
@@ -88,7 +88,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Renomeando a classe para `FakeOrder`, você tornou a classe muito mais genérica, a classe pode ser usada como uma simulação ou um stub. O que for melhor para o caso de teste. No exemplo acima, `FakeOrder` é usado como um stub. Você não está usando o `FakeOrder` em qualquer forma durante a declaração. `FakeOrder` apenas foi passado para a classe `Purchase` para satisfazer os requisitos do construtor.
+Renomeando a classe para `FakeOrder`, você tornou a classe muito mais genérica, a classe pode ser usada como uma simulação ou um stub. O que for melhor para o caso de teste. No exemplo acima, `FakeOrder` é usado como um stub. Você não está usando o `FakeOrder` em qualquer forma durante a declaração. `FakeOrder`foi passado para a `Purchase` classe para atender aos requisitos do construtor.
 
 Para usá-lo como uma Simulação, você poderia fazer algo como isto
 
@@ -157,7 +157,7 @@ A entrada a ser usada em um teste de unidade deve ser a mais simples possível a
 - Os testes se tornam mais resilientes a alterações futuras na base de código.
 - Mais próximo do comportamento do teste ao longo da implementação.
 
-Testes que incluem mais informações do que as necessárias para serem aprovados têm maior chance de introduzir erros no teste e podem deixar a intenção dele menos clara. Ao escrever testes, concentre-se no comportamento. Definir propriedades extra em modelos ou usar valores diferentes de zero quando não for necessário só fará desviar do que você está tentando provar.
+Testes que incluem mais informações do que as necessárias para serem aprovados têm maior chance de introduzir erros no teste e podem deixar a intenção dele menos clara. Ao escrever testes, você deseja se concentrar no comportamento. Definir propriedades extra em modelos ou usar valores diferentes de zero quando não for necessário só fará desviar do que você está tentando provar.
 
 #### <a name="bad"></a>Ruim:
 [!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
@@ -210,7 +210,7 @@ Se você precisar de um objeto ou estado semelhante para seus testes, prefira um
 
 - Menos confusão ao ler os testes, uma vez que todo o código está visível de dentro de cada teste.
 - Menos chance de configurar demais ou de menos para o teste específico.
-- Menos chance de compartilhar estado entre testes, o que cria dependências indesejadas entre eles.
+- Menos chance de compartilhar o estado entre os testes, que cria dependências indesejadas entre eles.
 
 Nas estruturas de teste de unidade, `Setup` é chamado antes de cada teste de unidade dentro do seu conjunto de testes. Embora alguns possam conceber isso como uma ferramenta útil, ela geralmente acaba levando a testes difíceis de ler e sobrecarregados. Cada teste geralmente terá requisitos diferentes para fazer o teste entrar em funcionamento. Infelizmente, `Setup` força você a usar os mesmos requisitos exatos para cada teste.
 
@@ -294,7 +294,7 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 Com esse ponto de vista, se você vir um método privado, encontre o método público e escreva seus testes com relação a esse método. Só porque um método privado retorna o resultado esperado não significa que o sistema que eventualmente chama o método privado usa o resultado corretamente.
 
 ### <a name="stub-static-references"></a>Referências estáticas de stub
-Um dos princípios de um teste de unidade é que ele deve ter controle completo do sistema em teste. Isso pode ser problemático quando o código de produção inclui chamadas às referências estáticas (por exemplo, `DateTime.Now`). Considere o código a seguir
+Um dos princípios de um teste de unidade é que ele deve ter controle completo do sistema em teste. Isso pode ser problemático quando o código de produção inclui chamadas para referências estáticas (por exemplo, `DateTime.Now` ). Considere o código a seguir
 
 ```csharp
 public int GetDiscountedPrice(int price)

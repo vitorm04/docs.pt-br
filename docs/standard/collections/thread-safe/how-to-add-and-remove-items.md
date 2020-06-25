@@ -1,5 +1,5 @@
 ---
-title: Como adicionar e remover itens de um ConcurrentDictionary
+title: Adicionar e remover itens de um ConcurrentDictionary
 description: Leia um exemplo de como adicionar, recuperar, atualizar e remover itens da classe de coleção ConcurrentDictionary<TKey, TValue> no .NET.
 ms.date: 05/04/2020
 ms.technology: dotnet-standard
@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-ms.openlocfilehash: 827eb9db984289929c591046a4713419c9587312
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 0bfc17d93ea3088a7b2e4209e25003856770b9e7
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662856"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325955"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Como adicionar e remover itens de um ConcurrentDictionary
 
@@ -37,9 +37,9 @@ O exemplo a seguir usa duas instâncias de <xref:System.Threading.Tasks.Task> pa
 
 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> foi projetado para cenários multi-threaded. Você não precisa usar bloqueios em seu código para adicionar ou remover itens da coleção. No entanto, sempre é possível que um thread recupere um valor e que outro thread atualize imediatamente a coleção, dando um novo valor à mesma chave.
 
-Além disso, embora todos os métodos de <xref:System.Collections.Concurrent.ConcurrentDictionary%602> sejam thread-safe, nem todos os métodos são atômicos, especificamente <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>. O delegado do usuário que é passado para esses métodos é invocado fora do bloqueio interno do dicionário (isso é feito para impedir que um código desconhecido bloqueie todos os threads). Portanto, é possível que ocorra esta sequência de eventos:
+Além disso, embora todos os métodos de <xref:System.Collections.Concurrent.ConcurrentDictionary%602> sejam thread-safe, nem todos os métodos são atômicos, especificamente <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>. Para impedir que um código desconhecido bloqueie todos os threads, o representante do usuário que é passado para esses métodos é invocado fora do bloqueio interno do dicionário. Portanto, é possível que essa sequência de eventos ocorra:
 
-1. chamadas de _ThreadA_ <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> , não localizam nenhum item e cria um novo item a ser adicionado invocando o `valueFactory` delegado.
+1. _ThreadA_ chama <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> , não localiza nenhum item e cria um novo item a ser adicionado invocando o `valueFactory` delegado.
 
 1. _threadB_ chamadas ThreadB <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> simultaneamente, seu `valueFactory` delegado é invocado e chega ao bloqueio interno antes de _ThreadA_e, portanto, seu novo par chave-valor é adicionado ao dicionário.
 
@@ -49,7 +49,7 @@ Além disso, embora todos os métodos de <xref:System.Collections.Concurrent.Con
 
 Portanto, não há garantia de que os dados retornados pelo <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> são os mesmos dados que foram criados pelo thread `valueFactory` . Uma sequência semelhante de eventos pode ocorrer quando <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> é chamado.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Coleções com segurança de thread](index.md)

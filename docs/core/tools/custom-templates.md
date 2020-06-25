@@ -1,14 +1,14 @@
 ---
 title: Modelos personalizados para dotnet new
 description: Saiba mais sobre modelos personalizados para qualquer tipo de projeto ou de arquivos do .NET.
-author: thraka
+author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 56fcbfbc168143007f0772ce8a12347f7e25e50b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: cabe220917e7ff688a2c2d2df56d9bc7f8afdf56
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005305"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324502"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelos personalizados para dotnet new
 
@@ -36,7 +36,7 @@ dotnet new --list
 O modelo é composto pelas seguintes partes:
 
 - Arquivos e pastas de origem.
-- Um arquivo de configuração (*Template. JSON*).
+- Um arquivo de configuração (*template.jsem*).
 
 ### <a name="source-files-and-folders"></a>Arquivos e pastas de origem
 
@@ -251,7 +251,7 @@ Depois que um modelo é instalado, use o modelo executando o comando `dotnet new
 dotnet new <TEMPLATE>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Criar um modelo personalizado para dotnet new (tutorial)](../tutorials/cli-templates-create-item-template.md)
 - [Wiki do repositório GitHub dotnet/modelagem](https://github.com/dotnet/templating/wiki)

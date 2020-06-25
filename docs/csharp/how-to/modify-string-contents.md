@@ -3,16 +3,16 @@ title: Como modificar o conteúdo da cadeia de caracteres-guia C#
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: a32665b67cfa73aa7d4753a1427c6955827e1b86
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: e607a8a2e96a73f64463d75a75a2bfe3f518d118
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662999"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324166"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Como modificar o conteúdo da cadeia de caracteres em C\#
 
-Este artigo demonstra várias técnicas para produzir um `string` modificando um `string` existente. Todas as técnicas demonstradas retornam o resultado das modificações como um novo objeto `string`. Para demonstrar isso claramente, todos os exemplos armazenam o resultado em uma nova variável. Em seguida, você pode examinar o `string` original e o `string` resultante da modificação quando você executa cada exemplo.
+Este artigo demonstra várias técnicas para produzir um `string` modificando um `string` existente. Todas as técnicas demonstradas retornam o resultado das modificações como um novo objeto `string`. Para demonstrar que as cadeias de caracteres originais e modificadas são instâncias distintas, os exemplos armazenam o resultado em uma nova variável. Você pode examinar o original `string` e o novo modificado `string` ao executar cada exemplo.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -68,9 +68,9 @@ Como as cadeias de caracteres são imutáveis, todos os exemplos anteriores cria
 
 :::code language="csharp" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet7":::
 
-Você pode modificar uma cadeia de caracteres em um bloco fixo com código não seguro, mas não é **altamente** recomendável modificar o conteúdo da cadeia de caracteres depois que uma cadeia de caracteres é criada. Isso interromperá as coisas de maneiras imprevisíveis. Por exemplo, se alguém estagiárior uma cadeia de caracteres que tenha o mesmo conteúdo que o seu, ele obterá sua cópia e não esperará que você esteja modificando sua cadeia de caracteres.
+Você pode modificar uma cadeia de caracteres em um bloco fixo com código não seguro, mas **não é** recomendável modificar o conteúdo da cadeia de caracteres depois que uma cadeia de caracteres é criada. Isso interromperá as coisas de maneiras imprevisíveis. Por exemplo, se alguém estagiárior uma cadeia de caracteres que tenha o mesmo conteúdo que o seu, ele obterá sua cópia e não esperará que você esteja modificando sua cadeia de caracteres.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [.NET Framework expressões regulares](../../standard/base-types/regular-expressions.md)
 - [Linguagem de expressão regular-referência rápida](../../standard/base-types/regular-expression-language-quick-reference.md)

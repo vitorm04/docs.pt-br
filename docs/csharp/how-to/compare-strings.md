@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 725441f5399f72b6457af461d51419c35077f4c2
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: d1ea0fc3573714347580a2aaded2d0f3118681a8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662908"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324178"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Como comparar cadeias de caracteres no C\#
 
@@ -41,7 +41,7 @@ Execute uma comparação ordinal que diferencia maiúsculas de minúsculas e, se
 
 A comparação ordinal padrão não leva em conta as regras linguísticas ao comparar cadeias de caracteres. Ela compara o valor binário de cada objeto <xref:System.Char> em duas cadeias de caracteres. Como resultado, a comparação ordinal padrão também diferencia maiúsculas de minúsculas.
 
-Observe que o teste para igualdade com <xref:System.String.Equals%2A?displayProperty=nameWithType> e os `==` `!=` operadores and é diferente da comparação de cadeias de caracteres usando os <xref:System.String.CompareTo%2A?displayProperty=nameWithType> <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> métodos e. Embora os testes de igualdade executem uma comparação ordinal que diferencia maiúsculas de minúsculas, os métodos de comparação executam uma comparação de diferenciação de maiúsculas e minúsculas, com a cultura atual. Como os métodos de comparação padrão geralmente fazem diferentes tipos de comparações, recomendamos que você sempre esclareça a intenção do seu código, chamando uma sobrecarga que especifica explicitamente o tipo de comparação a ser feita.
+O teste para igualdade com <xref:System.String.Equals%2A?displayProperty=nameWithType> e os `==` `!=` operadores and é diferente da comparação de cadeias de caracteres usando os <xref:System.String.CompareTo%2A?displayProperty=nameWithType> <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> métodos e. Embora os testes de igualdade executem uma comparação ordinal que diferencia maiúsculas de minúsculas, os métodos de comparação executam uma comparação de diferenciação de maiúsculas e minúsculas, com a cultura atual. Como os métodos de comparação padrão geralmente fazem diferentes tipos de comparações, recomendamos que você sempre esclareça a intenção do seu código, chamando uma sobrecarga que especifica explicitamente o tipo de comparação a ser feita.
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Comparações ordinais que não diferenciam maiúsculas de minúsculas
 
@@ -55,11 +55,11 @@ Ao fazer uma comparação ordinal sem distinção entre maiúsculas e minúscula
 ## <a name="linguistic-comparisons"></a>Comparações linguísticas
 
 As cadeias de caracteres também podem ser ordenadas usando regras linguísticas para a cultura atual.
-Às vezes, isso é conhecido como "ordem de classificação de palavra". Quando você executa uma comparação linguística, alguns caracteres Unicode não alfanuméricos podem ter pesos especiais atribuídos. Por exemplo, o hífen "-" pode ter um peso muito pequeno atribuído, de modo que "co-op" e "coop" apareçam próximos um do outro na ordem de classificação. Além disso, alguns caracteres Unicode podem ser equivalentes a uma sequência de instâncias <xref:System.Char>. O exemplo a seguir usa a frase "They dance in the street." em alemão, com o “ss” (U+0073 U+0073) em uma cadeia de caracteres e ‘ß’ (U+00DF) em outra. Linguisticamente (no Windows), "ss" é igual ao caractere 'ß' Esszet alemão nas culturas "en-US" e "de-DE".
+Às vezes, isso é conhecido como "ordem de classificação de palavra". Quando você executa uma comparação linguística, alguns caracteres Unicode não alfanuméricos podem ter pesos especiais atribuídos. Por exemplo, o hífen "-" pode ter um pequeno peso atribuído para que "co-op" e "Coop" apareçam ao lado um do outro na ordem de classificação. Além disso, alguns caracteres Unicode podem ser equivalentes a uma sequência de instâncias <xref:System.Char>. O exemplo a seguir usa a frase "They dance in the street." em alemão, com o “ss” (U+0073 U+0073) em uma cadeia de caracteres e ‘ß’ (U+00DF) em outra. Linguisticamente (no Windows), "ss" é igual ao caractere 'ß' Esszet alemão nas culturas "en-US" e "de-DE".
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet3":::
 
-Este exemplo demonstra a natureza dependente de sistema operacional das comparações linguísticas. O host da janela interativa é um host Linux. As comparações de linguísticas e ordinais produzem os mesmos resultados. Se você executar este mesmo exemplo em um host do Windows, a saída será a seguinte:
+Este exemplo demonstra a natureza dependente de sistema operacional das comparações linguísticas. O host da janela interativa é um host Linux. As comparações de linguísticas e ordinais produzem os mesmos resultados. Se você executar esse mesmo exemplo em um host do Windows, verá a seguinte saída:
 
 ```console
 <coop> is less than <co-op> using invariant culture
@@ -81,7 +81,7 @@ A cultura usada afeta as comparações linguísticas. O exemplo a seguir mostra 
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet4":::
 
-As comparações que diferenciam cultura normalmente são usadas para comparar e classificar cadeias de caracteres inseridas por usuários com outras cadeias de caracteres inseridas por usuários. Os caracteres e as convenções de classificação dessas cadeias de caracteres podem variar de acordo com a localidade do computador do usuário. Até mesmo cadeias de caracteres que contêm caracteres idênticos podem ser classificadas de formas diferentes dependendo da cultura do thread atual. Além disso, experimente este código de exemplo localmente em um computador Windows, e você verá os seguintes resultados:
+As comparações que diferenciam cultura normalmente são usadas para comparar e classificar cadeias de caracteres inseridas por usuários com outras cadeias de caracteres inseridas por usuários. Os caracteres e as convenções de classificação dessas cadeias de caracteres podem variar de acordo com a localidade do computador do usuário. Até mesmo cadeias de caracteres que contêm caracteres idênticos podem ser classificadas de formas diferentes dependendo da cultura do thread atual. Além disso, experimente este código de exemplo localmente em um computador Windows e você obterá os seguintes resultados:
 
 ```console
 <coop> is less than <co-op> using en-US culture
@@ -92,7 +92,7 @@ As comparações que diferenciam cultura normalmente são usadas para comparar e
 <co-op> is less than <cop> using ordinal comparison
 ```
 
-As comparações linguísticas dependem da cultura atual e são dependentes do SO. Você deve considerar isso ao trabalhar com comparações de cadeia de caracteres.
+As comparações linguísticas dependem da cultura atual e são dependentes do SO. Leve isso em conta ao trabalhar com comparações de cadeias de caracteres.
 
 ## <a name="linguistic-sorting-and-searching-strings-in-arrays"></a>Classificação linguística e cadeias de caracteres de pesquisa em matrizes
 
@@ -102,13 +102,13 @@ Este exemplo mostra como classificar uma matriz de cadeias de caracteres usando 
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet5":::
 
-Depois que a matriz é classificada, você pode procurar as entradas usando uma pesquisa binária. Uma pesquisa binária é iniciada no meio da coleção para determinar qual metade da coleção contém a cadeia de caracteres procurada. Cada comparação subsequente subdivide a parte restante da coleção na metade.  A matriz é classificada usando o <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType>. A função local `ShowWhere` exibe informações sobre o local em que a cadeia de caracteres foi encontrada. Se a cadeia de caracteres não for encontrada, o valor retornado indicará o local em que estaria se fosse encontrada.
+Depois que a matriz é classificada, você pode procurar as entradas usando uma pesquisa binária. Uma pesquisa binária é iniciada no meio da coleção para determinar qual metade da coleção contém a cadeia de caracteres procurada. Cada comparação subsequente subdivide a parte restante da coleção na metade.  A matriz é classificada usando o <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType>. A função local `ShowWhere` exibe informações sobre o local em que a cadeia de caracteres foi encontrada. Se a cadeia de caracteres não foi encontrada, o valor retornado indicará onde seria se fosse encontrado.
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet6":::
 
 ## <a name="ordinal-sorting-and-searching-in-collections"></a>Classificação ordinal e pesquisa em coleções
 
-O código a seguir usa a classe de coleção <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> para armazenar cadeias de caracteres. As cadeias de caracteres são classificadas usando o método <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType>. Esse método precisa de um delegado que compara e ordena as duas cadeias de caracteres. O método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> fornece essa função de comparação. Execute o exemplo e observe a ordem. Essa operação de classificação usa uma classificação ordinal que diferencia maiúsculas e minúsculas. Você usaria os métodos <xref:System.String.Compare%2A?displayProperty=nameWithType> estáticos para especificar regras de comparação diferentes.
+O código a seguir usa a classe de coleção <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> para armazenar cadeias de caracteres. As cadeias de caracteres são classificadas usando o método <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType>. Esse método precisa de um delegado que compara e ordena as duas cadeias de caracteres. O método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> fornece essa função de comparação. Execute o exemplo e observe a ordem. Essa operação de classificação usa uma classificação ordinal que diferencia maiúsculas de minúsculas. Você usaria os métodos <xref:System.String.Compare%2A?displayProperty=nameWithType> estáticos para especificar regras de comparação diferentes.
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet7":::
 
@@ -122,7 +122,7 @@ Classes de coleção como <xref:System.Collections.Hashtable?displayProperty=nam
 
 ## <a name="reference-equality-and-string-interning"></a>Igualdade de referência e centralização de cadeia de caracteres
 
-Nenhum dos exemplos usou <xref:System.Object.ReferenceEquals%2A>. Este método determina se duas cadeias de caracteres são o mesmo objeto. Isso pode levar a resultados inconsistentes em comparações de cadeia de caracteres. O exemplo a seguir demonstra o recurso de *centralização da cadeia de caracteres* do C#. Quando um programa declara duas ou mais variáveis de cadeia de caracteres idênticas, o compilador armazena todas no mesmo local. Chamando o método <xref:System.Object.ReferenceEquals%2A>, você pode ver que as duas cadeias de caracteres na verdade se referem ao mesmo objeto na memória. Use o método <xref:System.String.Copy%2A?displayProperty=nameWithType> para evitar a centralização. Depois que a cópia for feita, as duas cadeias de caracteres terão locais de armazenamento diferentes, mesmo que tenham o mesmo valor. Execute o exemplo a seguir para mostrar que as cadeias de caracteres `a` e `b` são *centralizadas*, ou seja, que elas compartilham o mesmo armazenamento. As cadeias de caracteres `a` e `c` não são.
+Nenhum dos exemplos usou <xref:System.Object.ReferenceEquals%2A>. Esse método determina se duas cadeias de caracteres são o mesmo objeto, o que pode levar a resultados inconsistentes em comparações de cadeias de caracteres. O exemplo a seguir demonstra o recurso de *centralização da cadeia de caracteres* do C#. Quando um programa declara duas ou mais variáveis de cadeia de caracteres idênticas, o compilador armazena todas no mesmo local. Chamando o método <xref:System.Object.ReferenceEquals%2A>, você pode ver que as duas cadeias de caracteres na verdade se referem ao mesmo objeto na memória. Use o método <xref:System.String.Copy%2A?displayProperty=nameWithType> para evitar a centralização. Depois que a cópia for feita, as duas cadeias de caracteres terão locais de armazenamento diferentes, mesmo que tenham o mesmo valor. Execute o exemplo a seguir para mostrar que as cadeias de caracteres `a` e `b` são *centralizadas*, ou seja, que elas compartilham o mesmo armazenamento. As cadeias de caracteres `a` e `c` não são.
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet9":::
 
@@ -131,7 +131,7 @@ Nenhum dos exemplos usou <xref:System.Object.ReferenceEquals%2A>. Este método d
 
 Você pode internalizar uma cadeia de caracteres ou recuperar uma referência a uma cadeia de caracteres interna existente chamando o método <xref:System.String.Intern%2A?displayProperty=nameWithType>. Para determinar se uma cadeia de caracteres está internalizada, chame o método <xref:System.String.IsInterned%2A?displayProperty=nameWithType>.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>
 - <xref:System.StringComparer?displayProperty=nameWithType>

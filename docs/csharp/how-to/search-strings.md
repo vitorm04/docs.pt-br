@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: f5fd61452d6f83bd035b5c6930bd09673c0ded23
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 34f9f2df11f9b7c51fcec2f8475a50ccf4c5e220
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662947"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324132"
 ---
 # <a name="how-to-search-strings"></a>Como Pesquisar cadeias de caracteres
 
@@ -23,11 +23,11 @@ O tipo [string](../language-reference/builtin-types/reference-types.md#the-strin
 
 ## <a name="does-a-string-contain-text"></a>Uma cadeia de caracteres contém texto?
 
-Os métodos <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.StartsWith%2A?displayProperty=nameWithType> e <xref:System.String.EndsWith%2A?displayProperty=nameWithType> pesquisam uma cadeia de caracteres em busca de um texto específico. O exemplo a seguir mostra cada um desses métodos e uma variação que usa uma pesquisa que não diferencia maiúsculas de minúsculas:
+Os <xref:System.String.Contains%2A?displayProperty=nameWithType> <xref:System.String.StartsWith%2A?displayProperty=nameWithType> métodos, e <xref:System.String.EndsWith%2A?displayProperty=nameWithType> pesquisam uma cadeia de caracteres para um texto específico. O exemplo a seguir mostra cada um desses métodos e uma variação que usa uma pesquisa que não diferencia maiúsculas de minúsculas:
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs" id="Snippet1":::
 
-O exemplo anterior demonstra um ponto importante para usar esses métodos. As pesquisas de texto **diferenciam maiúsculas e minúsculas** por padrão. Você usa o valor de enumeração <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> para especificar uma pesquisa que não diferencia maiúsculas de minúsculas.
+O exemplo anterior demonstra um ponto importante para usar esses métodos. As pesquisas de texto **diferenciam maiúsculas e minúsculas** por padrão. Use o <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> valor de enumeração para especificar uma pesquisa que não diferencia maiúsculas de minúsculas.
 
 ## <a name="where-does-the-sought-text-occur-in-a-string"></a>Em que local de uma cadeia de caracteres o texto procurado ocorre?
 
@@ -41,7 +41,7 @@ A classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType
 
 O exemplo de código a seguir procura a palavra "the" ou "their" em uma oração, sem diferenciar maiúsculas e minúsculas. O método estático <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> realiza a pesquisa. Você fornece a ele a cadeia de caracteres a pesquisar e um padrão de pesquisa. Nesse caso, um terceiro argumento especifica que a pesquisa não diferencia maiúsculas de minúsculas. Para obter mais informações, consulte <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
 
-O padrão de pesquisa descreve o texto pelo qual procurar. A tabela a seguir descreve cada elemento desse padrão de pesquisa. (A tabela abaixo usa a `\` única, que deve ser escapada como `\\` em uma cadeia de caracteres C#).
+O padrão de pesquisa descreve o texto pelo qual procurar. A tabela a seguir descreve cada elemento desse padrão de pesquisa. (A tabela a seguir usa o único `\` , que deve ter escape como `\\` em uma cadeia de caracteres C#).
 
 | Padrão  | Significado                          |
 |----------|----------------------------------|
@@ -72,7 +72,7 @@ O código a seguir usa expressões regulares para validar o formato de cada cade
 
 Este padrão de pesquisa único corresponde a várias cadeias de caracteres válidas. Expressões regulares são melhores para pesquisar por ou validar mediante um padrão, em vez de uma única cadeia de caracteres de texto.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação em C#](../programming-guide/index.md)
 - [Cadeias de caracteres](../programming-guide/strings/index.md)

@@ -1,15 +1,15 @@
 ---
 title: Instalar o .NET Core no Debian – .NET Core
 description: Demonstra as várias maneiras de instalar o SDK do .NET Core e o tempo de execução do .NET Core no Debian.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: c66d8e1daad4e59a766781b7117600352879b724
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ded9d2be72e8ec476d5ace752e44d92eb0ee1028
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84603051"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324921"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-debian"></a>Instalar o SDK do .NET Core ou o tempo de execução do .NET Core no Debian
 

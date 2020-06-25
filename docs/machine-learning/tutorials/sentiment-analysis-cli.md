@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 06/03/2020
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: aab59463daad30748277602b9ab1d8ca2f3fa1f5
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: fcd325d518b276ccb042f3702db978e9189715b8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767670"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326024"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analisar sentimentos com a CLI do ML.NET
 
@@ -175,7 +175,7 @@ Esses ativos enumerados são explicados nas etapas do tutorial a seguir.
         ```
 
     - A próxima linha de código usa o `ConsumeModel.Predict()` método nos dados de entrada especificados para fazer uma previsão e retornar os resultados (com base no esquema ModelOutput.cs).
-    - As últimas linhas de código imprimem o Propriedades dos dados de exemplo (neste caso, o comentário), bem como a previsão de sentimentos e as pontuações correspondentes para uma opinião positiva (1) e uma opinião negativa (2).
+    - As últimas linhas de código imprimem as propriedades dos dados de exemplo (neste caso, o comentário), bem como a previsão de sentimentos e as pontuações correspondentes para uma opinião positiva (1) e uma opinião negativa (2).
 
 1. Execute o projeto, usando os dados de exemplo originais carregados da primeira linha do conjunto de dados ou fornecendo seus próprios dados de exemplo embutidos em código personalizados. Você deve obter uma previsão comparável a:
 
