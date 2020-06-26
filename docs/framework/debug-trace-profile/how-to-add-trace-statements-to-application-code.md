@@ -1,5 +1,6 @@
 ---
 title: Como adicionar instruções de rastreamento ao código de um aplicativo
+description: Saiba como adicionar instruções de rastreamento ao código do aplicativo no .NET. Os métodos usados com mais frequência para rastreamento são os métodos para gravar a saída em ouvintes.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,23 +14,23 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-ms.openlocfilehash: 9903a0357d1d8ceade21b590fd54c8cab517f134
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c75a8775649aabe73b02187c4604d2eb3a8435b
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174739"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415882"
 ---
-# <a name="how-to-add-trace-statements-to-application-code"></a><span data-ttu-id="bbcba-102">Como adicionar instruções de rastreamento ao código de um aplicativo</span><span class="sxs-lookup"><span data-stu-id="bbcba-102">How to: Add Trace Statements to Application Code</span></span>
-<span data-ttu-id="bbcba-103">Os métodos usados com mais frequência para rastreamento são os métodos para gravar a saída em ouvintes: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert** e **Fail**.</span><span class="sxs-lookup"><span data-stu-id="bbcba-103">The methods used most often for tracing are the methods for writing output to listeners: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, and **Fail**.</span></span> <span data-ttu-id="bbcba-104">Esses métodos podem ser divididos em duas categorias: **Write**, **WriteLine**, and **Fail** emitem a saída incondicionalmente, enquanto **WriteIf**, **WriteLineIf** e **Assert** testam uma condição booliana e gravam ou não com base no valor da condição.</span><span class="sxs-lookup"><span data-stu-id="bbcba-104">These methods can be divided into two categories: **Write**, **WriteLine**, and **Fail** all emit output unconditionally, whereas **WriteIf**, **WriteLineIf**, and **Assert** test a Boolean condition, and write or do not write based on the value of the condition.</span></span> <span data-ttu-id="bbcba-105">**WriteIf** e **WriteLineIf** emitirão a saída se a condição for `true` e **Assert** emitirá a saída se a condição for `false`.</span><span class="sxs-lookup"><span data-stu-id="bbcba-105">**WriteIf** and **WriteLineIf** emit output if the condition is `true`, and **Assert** emits output if the condition is `false`.</span></span>  
+# <a name="how-to-add-trace-statements-to-application-code"></a><span data-ttu-id="a0928-104">Como adicionar instruções de rastreamento ao código de um aplicativo</span><span class="sxs-lookup"><span data-stu-id="a0928-104">How to: Add Trace Statements to Application Code</span></span>
+<span data-ttu-id="a0928-105">Os métodos usados com mais frequência para rastreamento são os métodos para gravar a saída em ouvintes: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert** e **Fail**.</span><span class="sxs-lookup"><span data-stu-id="a0928-105">The methods used most often for tracing are the methods for writing output to listeners: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, and **Fail**.</span></span> <span data-ttu-id="a0928-106">Esses métodos podem ser divididos em duas categorias: **Write**, **WriteLine**, and **Fail** emitem a saída incondicionalmente, enquanto **WriteIf**, **WriteLineIf** e **Assert** testam uma condição booliana e gravam ou não com base no valor da condição.</span><span class="sxs-lookup"><span data-stu-id="a0928-106">These methods can be divided into two categories: **Write**, **WriteLine**, and **Fail** all emit output unconditionally, whereas **WriteIf**, **WriteLineIf**, and **Assert** test a Boolean condition, and write or do not write based on the value of the condition.</span></span> <span data-ttu-id="a0928-107">**WriteIf** e **WriteLineIf** emitirão a saída se a condição for `true` e **Assert** emitirá a saída se a condição for `false`.</span><span class="sxs-lookup"><span data-stu-id="a0928-107">**WriteIf** and **WriteLineIf** emit output if the condition is `true`, and **Assert** emits output if the condition is `false`.</span></span>  
   
- <span data-ttu-id="bbcba-106">Ao criar sua estratégia de rastreamento e depuração, pense em como você deseja que a saída se assemelhe.</span><span class="sxs-lookup"><span data-stu-id="bbcba-106">When designing your tracing and debugging strategy, you should think about how you want the output to look.</span></span> <span data-ttu-id="bbcba-107">Várias instruções **Write** preenchidas com informações não relacionadas criarão um log que é difícil de ser lido.</span><span class="sxs-lookup"><span data-stu-id="bbcba-107">Multiple **Write** statements filled with unrelated information will create a log that is difficult to read.</span></span> <span data-ttu-id="bbcba-108">Por outro lado, o uso de **WriteLine** para colocar instruções relacionadas em linhas separadas pode tornar difícil distinguir quais informações pertencem juntas.</span><span class="sxs-lookup"><span data-stu-id="bbcba-108">On the other hand, using **WriteLine** to put related statements on separate lines may make it difficult to distinguish what information belongs together.</span></span> <span data-ttu-id="bbcba-109">Em geral, use várias instruções **Write** quando desejar combinar informações de várias fontes para criar uma única mensagem informativa e use a instrução **WriteLine** quando desejar criar uma única mensagem completa.</span><span class="sxs-lookup"><span data-stu-id="bbcba-109">In general, use multiple **Write** statements when you want to combine information from multiple sources to create a single informative message, and use the **WriteLine** statement when you want to create a single, complete message.</span></span>  
+ <span data-ttu-id="a0928-108">Ao criar sua estratégia de rastreamento e depuração, pense em como você deseja que a saída se assemelhe.</span><span class="sxs-lookup"><span data-stu-id="a0928-108">When designing your tracing and debugging strategy, you should think about how you want the output to look.</span></span> <span data-ttu-id="a0928-109">Várias instruções **Write** preenchidas com informações não relacionadas criarão um log que é difícil de ser lido.</span><span class="sxs-lookup"><span data-stu-id="a0928-109">Multiple **Write** statements filled with unrelated information will create a log that is difficult to read.</span></span> <span data-ttu-id="a0928-110">Por outro lado, o uso de **WriteLine** para colocar instruções relacionadas em linhas separadas pode tornar difícil distinguir quais informações pertencem juntas.</span><span class="sxs-lookup"><span data-stu-id="a0928-110">On the other hand, using **WriteLine** to put related statements on separate lines may make it difficult to distinguish what information belongs together.</span></span> <span data-ttu-id="a0928-111">Em geral, use várias instruções **Write** quando desejar combinar informações de várias fontes para criar uma única mensagem informativa e use a instrução **WriteLine** quando desejar criar uma única mensagem completa.</span><span class="sxs-lookup"><span data-stu-id="a0928-111">In general, use multiple **Write** statements when you want to combine information from multiple sources to create a single informative message, and use the **WriteLine** statement when you want to create a single, complete message.</span></span>  
   
-### <a name="to-write-a-complete-line"></a><span data-ttu-id="bbcba-110">Para gravar uma linha completa</span><span class="sxs-lookup"><span data-stu-id="bbcba-110">To write a complete line</span></span>  
+### <a name="to-write-a-complete-line"></a><span data-ttu-id="a0928-112">Para gravar uma linha completa</span><span class="sxs-lookup"><span data-stu-id="a0928-112">To write a complete line</span></span>  
   
-1. <span data-ttu-id="bbcba-111">Chame o método <xref:System.Diagnostics.Trace.WriteLine%2A> or <xref:System.Diagnostics.Trace.WriteLineIf%2A>.</span><span class="sxs-lookup"><span data-stu-id="bbcba-111">Call the <xref:System.Diagnostics.Trace.WriteLine%2A> or <xref:System.Diagnostics.Trace.WriteLineIf%2A> method.</span></span>  
+1. <span data-ttu-id="a0928-113">Chame o método <xref:System.Diagnostics.Trace.WriteLine%2A> or <xref:System.Diagnostics.Trace.WriteLineIf%2A>.</span><span class="sxs-lookup"><span data-stu-id="a0928-113">Call the <xref:System.Diagnostics.Trace.WriteLine%2A> or <xref:System.Diagnostics.Trace.WriteLineIf%2A> method.</span></span>  
   
-     <span data-ttu-id="bbcba-112">Um retorno de carro é acrescentado ao final da mensagem retornada por esse método, de modo que a próxima mensagem retornada por **Write**, **WriteIf**, **WriteLine** ou **WriteLineIf** comece na seguinte linha:</span><span class="sxs-lookup"><span data-stu-id="bbcba-112">A carriage return is appended to the end of the message this method returns, so that the next message returned by **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the following line:</span></span>  
+     <span data-ttu-id="a0928-114">Um retorno de carro é acrescentado ao final da mensagem retornada por esse método, de modo que a próxima mensagem retornada por **Write**, **WriteIf**, **WriteLine** ou **WriteLineIf** comece na seguinte linha:</span><span class="sxs-lookup"><span data-stu-id="a0928-114">A carriage return is appended to the end of the message this method returns, so that the next message returned by **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the following line:</span></span>  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -44,11 +45,11 @@ ms.locfileid: "79174739"
        "Error in AppendData procedure.");  
     ```  
   
-### <a name="to-write-a-partial-line"></a><span data-ttu-id="bbcba-113">Para gravar uma linha parcial</span><span class="sxs-lookup"><span data-stu-id="bbcba-113">To write a partial line</span></span>  
+### <a name="to-write-a-partial-line"></a><span data-ttu-id="a0928-115">Para gravar uma linha parcial</span><span class="sxs-lookup"><span data-stu-id="a0928-115">To write a partial line</span></span>  
   
-1. <span data-ttu-id="bbcba-114">Chame o método <xref:System.Diagnostics.Trace.Write%2A> or <xref:System.Diagnostics.Trace.WriteIf%2A>.</span><span class="sxs-lookup"><span data-stu-id="bbcba-114">Call the <xref:System.Diagnostics.Trace.Write%2A> or <xref:System.Diagnostics.Trace.WriteIf%2A> method.</span></span>  
+1. <span data-ttu-id="a0928-116">Chame o método <xref:System.Diagnostics.Trace.Write%2A> or <xref:System.Diagnostics.Trace.WriteIf%2A>.</span><span class="sxs-lookup"><span data-stu-id="a0928-116">Call the <xref:System.Diagnostics.Trace.Write%2A> or <xref:System.Diagnostics.Trace.WriteIf%2A> method.</span></span>  
   
-     <span data-ttu-id="bbcba-115">A próxima mensagem colocada por uma instrução **Write**, **WriteIf**, **WriteLine** ou **WriteLineIf** começará na mesma linha da mensagem colocada pela instrução **Write** ou **WriteIf**:</span><span class="sxs-lookup"><span data-stu-id="bbcba-115">The next message put out by a **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the same line as the message put out by the **Write** or **WriteIf** statement:</span></span>  
+     <span data-ttu-id="a0928-117">A próxima mensagem colocada por uma instrução **Write**, **WriteIf**, **WriteLine** ou **WriteLineIf** começará na mesma linha da mensagem colocada pela instrução **Write** ou **WriteIf**:</span><span class="sxs-lookup"><span data-stu-id="a0928-117">The next message put out by a **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the same line as the message put out by the **Write** or **WriteIf** statement:</span></span>  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -65,9 +66,9 @@ ms.locfileid: "79174739"
     Trace.Write("Invalid value for data request");  
     ```  
   
-### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a><span data-ttu-id="bbcba-116">Para verificar se certas condições existem antes ou depois de executar um método</span><span class="sxs-lookup"><span data-stu-id="bbcba-116">To verify that certain conditions exist either before or after you execute a method</span></span>  
+### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a><span data-ttu-id="a0928-118">Para verificar se certas condições existem antes ou depois de executar um método</span><span class="sxs-lookup"><span data-stu-id="a0928-118">To verify that certain conditions exist either before or after you execute a method</span></span>  
   
-1. <span data-ttu-id="bbcba-117">Chame o método <xref:System.Diagnostics.Trace.Assert%2A> .</span><span class="sxs-lookup"><span data-stu-id="bbcba-117">Call the <xref:System.Diagnostics.Trace.Assert%2A> method.</span></span>  
+1. <span data-ttu-id="a0928-119">Chame o método <xref:System.Diagnostics.Trace.Assert%2A> .</span><span class="sxs-lookup"><span data-stu-id="a0928-119">Call the <xref:System.Diagnostics.Trace.Assert%2A> method.</span></span>  
   
     ```vb  
     Dim i As Integer = 4  
@@ -80,15 +81,15 @@ ms.locfileid: "79174739"
     ```  
   
     > [!NOTE]
-    > <span data-ttu-id="bbcba-118">Use **Assert** com o rastreamento e a depuração.</span><span class="sxs-lookup"><span data-stu-id="bbcba-118">You can use **Assert** with both tracing and debugging.</span></span> <span data-ttu-id="bbcba-119">Este exemplo gera a pilha de chamadas para qualquer ouvinte da coleção **Listeners**.</span><span class="sxs-lookup"><span data-stu-id="bbcba-119">This example outputs the call stack to any listener in the **Listeners** collection.</span></span> <span data-ttu-id="bbcba-120">Para obter mais informações, consulte [Declarações em código gerenciado](/visualstudio/debugger/assertions-in-managed-code) e <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="bbcba-120">For more information, see [Assertions in Managed Code](/visualstudio/debugger/assertions-in-managed-code) and <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.</span></span>  
+    > <span data-ttu-id="a0928-120">Use **Assert** com o rastreamento e a depuração.</span><span class="sxs-lookup"><span data-stu-id="a0928-120">You can use **Assert** with both tracing and debugging.</span></span> <span data-ttu-id="a0928-121">Este exemplo gera a pilha de chamadas para qualquer ouvinte da coleção **Listeners**.</span><span class="sxs-lookup"><span data-stu-id="a0928-121">This example outputs the call stack to any listener in the **Listeners** collection.</span></span> <span data-ttu-id="a0928-122">Para obter mais informações, consulte [Declarações em código gerenciado](/visualstudio/debugger/assertions-in-managed-code) e <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="a0928-122">For more information, see [Assertions in Managed Code](/visualstudio/debugger/assertions-in-managed-code) and <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bbcba-121">Confira também</span><span class="sxs-lookup"><span data-stu-id="bbcba-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a0928-123">Veja também</span><span class="sxs-lookup"><span data-stu-id="a0928-123">See also</span></span>
 
 - <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="bbcba-122">Rastreamento e instrumentação de aplicativos</span><span class="sxs-lookup"><span data-stu-id="bbcba-122">Tracing and Instrumenting Applications</span></span>](tracing-and-instrumenting-applications.md)
-- [<span data-ttu-id="bbcba-123">Como criar, inicializar e configurar opções de rastreamento</span><span class="sxs-lookup"><span data-stu-id="bbcba-123">How to: Create, Initialize and Configure Trace Switches</span></span>](how-to-create-initialize-and-configure-trace-switches.md)
-- [<span data-ttu-id="bbcba-124">Opções de rastreamento</span><span class="sxs-lookup"><span data-stu-id="bbcba-124">Trace Switches</span></span>](trace-switches.md)
-- [<span data-ttu-id="bbcba-125">Ouvintes de rastreamento</span><span class="sxs-lookup"><span data-stu-id="bbcba-125">Trace Listeners</span></span>](trace-listeners.md)
+- [<span data-ttu-id="a0928-124">Rastreamento e instrumentação de aplicativos</span><span class="sxs-lookup"><span data-stu-id="a0928-124">Tracing and Instrumenting Applications</span></span>](tracing-and-instrumenting-applications.md)
+- [<span data-ttu-id="a0928-125">Como criar, inicializar e configurar opções de rastreamento</span><span class="sxs-lookup"><span data-stu-id="a0928-125">How to: Create, Initialize and Configure Trace Switches</span></span>](how-to-create-initialize-and-configure-trace-switches.md)
+- [<span data-ttu-id="a0928-126">Opções de rastreamento</span><span class="sxs-lookup"><span data-stu-id="a0928-126">Trace Switches</span></span>](trace-switches.md)
+- [<span data-ttu-id="a0928-127">Ouvintes de rastreamento</span><span class="sxs-lookup"><span data-stu-id="a0928-127">Trace Listeners</span></span>](trace-listeners.md)
