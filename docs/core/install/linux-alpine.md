@@ -4,12 +4,12 @@ description: Demonstra as várias maneiras de instalar SDK do .NET Core e o temp
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 92753933cbcedae28867b66293d1044f700d7baa
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 0efe3bbacbe573b77eae8818ea29b5a3867e4570
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324829"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619514"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-alpine"></a>Instalar o SDK do .NET Core ou o tempo de execução do .NET Core no Alpine Ski
 
@@ -47,12 +47,11 @@ O .NET Core no Alpineum Linux requer as seguintes dependências instaladas:
 
 - ICU-bibliotecas
 - krb5-libs
+- libgcc
 - libintl
 - libssl 1.1 (Alpine v 3.9 ou superior)
-- libssl 1.0 (Alpine v 3.8)
+- libssl 1.0 (Alpine v 3.8 ou inferior)
 - libstdc++
-- lttng-ust
-- numactl (opcional)
 - zlib
 
 ## <a name="scripted-install"></a>Instalação com script

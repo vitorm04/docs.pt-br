@@ -639,6 +639,8 @@
       items:
         - name: Escolha entre classe e struct
           href: design-guidelines/choosing-between-class-and-struct.md
+        - name: Escolha entre os tipos anônimo e tupla
+          href: design-guidelines/choosing-between-anonymous-and-tuple.md
         - name: Design de classe abstrata
           href: design-guidelines/abstract-class.md
         - name: Design de classe estática

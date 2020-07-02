@@ -8,12 +8,12 @@ helpviewer_keywords:
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-ms.openlocfilehash: ad7774fd197db80ce84b3b8a5baa4e9ee06b6cef
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4000944c3b913f71bc18462cea9062e9237ae53f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289792"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619527"
 ---
 # <a name="events-and-callbacks"></a>Eventos e retornos de chamada
 Os retornos de chamada são pontos de extensibilidade que permitem que uma estrutura chame de volta no código do usuário por meio de um delegado. Esses delegados são geralmente passados para a estrutura por meio de um parâmetro de um método.
@@ -38,11 +38,11 @@ Os retornos de chamada são pontos de extensibilidade que permitem que uma estru
 
  ✔️ entender que ao chamar um delegado, você está executando código arbitrário e pode ter repercussões de segurança, exatidão e compatibilidade.
 
- *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*
+ *Partes &copy; 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Designer voltado para extensibilidade](designing-for-extensibility.md)
 - [Diretrizes de design de estrutura](index.md)

@@ -4,12 +4,12 @@ description: Demonstra as várias maneiras de instalar o SDK do .NET Core e o te
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 4a406fe1834c16bab9a5548b69206b51270b33fa
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 9e4d0ab86355329b898a82f135b9eeb839eab1cb
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324709"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619436"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-rhel"></a>Instalar o SDK do .NET Core ou o tempo de execução do .NET Core no RHEL
 
@@ -100,7 +100,7 @@ Como alternativa ao tempo de execução de ASP.NET Core, você pode instalar o t
 
 ## <a name="dependencies"></a>Dependências
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+[!INCLUDE [linux-rpm-install-dependencies](includes/linux-rpm-install-dependencies.md)]
 
 ## <a name="scripted-install"></a>Instalação com script
 

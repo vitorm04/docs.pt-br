@@ -4,12 +4,12 @@ description: Demonstra as várias maneiras de instalar SDK do .NET Core e o temp
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: c9774ff347382a6fe0be1ac1dcb78a74242ec999
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: c90c08eefa074fa139642a268f879af79d7280da
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324795"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619475"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-fedora"></a>Instalar o SDK do .NET Core ou o tempo de execução do .NET Core no Fedora
 
@@ -129,7 +129,7 @@ Esta seção fornece informações sobre erros comuns que você pode obter ao us
 
 ## <a name="dependencies"></a>Dependências
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+[!INCLUDE [linux-rpm-install-dependencies](includes/linux-rpm-install-dependencies.md)]
 
 ## <a name="scripted-install"></a>Instalação com script
 

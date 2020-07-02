@@ -1,15 +1,15 @@
 ---
 title: Implantar um aplicativo .NET para Apache Spark no Databricks
 description: Descubra como implantar um aplicativo do .NET para Apache Spark no Databricks.
-ms.date: 05/12/2020
+ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4010f363e8ba606a7294ea32dc34587da6d6c8aa
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 9e0b99b6706bf51adaa6e3795d1c81179e14cb7a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202237"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618331"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Tutorial: implantar um aplicativo .NET para Apache Spark no databricks
 
@@ -23,6 +23,8 @@ Neste tutorial, você aprenderá como:
 > - Publique seu aplicativo .NET para Apache Spark.
 > - Crie um trabalho do Spark e um cluster Spark.
 > - Execute seu aplicativo no cluster do Spark.
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -73,7 +75,7 @@ Você pode usar a **CLI do databricks** para se conectar a Azure Databricks clus
    python3 --version
    ```
 
-2. Use o Pip para instalar a CLI do databricks. Python 3,4 e posterior incluem Pip por padrão. Use pip3 para Python 3. Execute o comando a seguir:
+2. Use o Pip para instalar a CLI do databricks. Python 3,4 e posterior incluem Pip por padrão. Use pip3 para Python 3. Execute o seguinte comando:
 
    ```bash
    pip3 install databricks-cli
@@ -135,7 +137,7 @@ Em seguida, você publica o *mySparkApp* criado no [.net para Apache Spark-intro
 
    **No Windows:**
 
-   Navegue até mySparkApp/bin/Release/netcoreapp 3.1/Ubuntu. 16.04-x64. Em seguida, clique com o botão direito do mouse em **publicar** pasta e selecione **Enviar para > pasta compactada (zipada)**. Nomeie a nova pasta **Publish. zip**.
+   Navegue até mySparkApp/bin/Release/netcoreapp 3.1/Ubuntu. 16.04-x64. Em seguida, clique com o botão direito do mouse em **publicar** pasta e selecione **Enviar para > pasta compactada (zipada)**. Nomeie a nova pasta **publish.zip**.
 
    **No Linux, execute o seguinte comando:**
 
@@ -155,7 +157,7 @@ Nesta seção, você carrega vários arquivos em DBFS para que o cluster tenha t
    databricks fs cp Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
-2. Execute os seguintes comandos para carregar os arquivos restantes que o cluster precisará para executar seu aplicativo: a pasta de publicação compactada, *Input. txt*e *Microsoft-Spark-2.4. x-0.3.1. jar*.
+2. Execute os seguintes comandos para carregar os arquivos restantes que o cluster precisará para executar seu aplicativo: a pasta de publicação compactada, *input.txt*e *Microsoft-Spark-2.4. x-0.3.1. jar*.
 
    ```console
    cd mySparkApp
@@ -208,7 +210,7 @@ Seu aplicativo é executado em Azure Databricks por meio de um trabalho que exec
 
    Parabéns, você executou seu primeiro .NET para Apache Spark aplicativo na nuvem!
 
-## <a name="clean-up-resources"></a>Limpar os recursos
+## <a name="clean-up-resources"></a>Limpar recursos
 
 Se você não precisar mais do espaço de trabalho do databricks, poderá excluir seu recurso de Azure Databricks no portal do Azure. Também é possível selecionar o nome do grupo de recursos para abrir a página do grupo de recursos, e depois selecionar **Excluir grupo de recursos**.
 
