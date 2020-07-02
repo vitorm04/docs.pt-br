@@ -1,19 +1,21 @@
 ---
 title: Implantar .NET para Apache Spark trabalho e binários de função definidos pelo usuário
 description: Saiba como implantar o .NET para Apache Spark o trabalho e os binários de função definidos pelo usuário.
-ms.date: 01/21/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 042f336431a1c8cad7d94cf10cbe64b72ddfce5b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 672a32c430bd702167a294d2b895ac1ac90bf67e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617711"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Implantar .NET para Apache Spark trabalho e binários de função definidos pelo usuário
 
 Este "como" fornece instruções gerais sobre como implantar .NET para Apache Spark trabalho e binários de função definidos pelo usuário. Você aprende quais variáveis de ambiente configurar, bem como alguns parâmetros comumente usados para iniciar aplicativos com o `spark-submit` .
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="configurations"></a>Configurações
 As configurações mostram as variáveis de ambiente geral e as configurações de parâmetros para implantar o .NET para Apache Spark trabalho e os binários de função definidos pelo usuário.
@@ -46,12 +48,12 @@ Depois que o aplicativo Spark for [agrupado](https://spark.apache.org/docs/lates
 
 ## <a name="frequently-asked-questions"></a>Perguntas frequentes
 ### <a name="when-i-run-a-spark-app-with-udfs-i-get-a-filenotfoundexception-error-what-should-i-do"></a>Quando executo um aplicativo Spark com UDFs, obtenho um erro ' FileNotFoundException '. O que devo fazer?
-> **Erro:** [ERROR] [TaskRunner] [0] ProcessStream () falhou com a exceção: System. IO. FileNotFoundException: assembly "MySparkApp, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = null" arquivo não encontrado: "mySparkApp. dll"
+> **Erro:** [ERROR] [TaskRunner] [0] ProcessStream () falhou com a exceção: System. IO. FileNotFoundException: assembly "MySparkApp, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = null" arquivo não encontrado: "mySparkApp.dll"
 
 **Resposta:** Verifique se a `DOTNET_ASSEMBLY_SEARCH_PATHS` variável de ambiente está definida corretamente. Deve ser o caminho que contém seu `mySparkApp.dll` .
 
 ### <a name="after-i-upgraded-my-net-for-apache-spark-version-and-reset-the-dotnet_worker_dir-environment-variable-why-do-i-still-get-the-following-ioexception-error"></a>Depois de atualizar o .NET para Apache Spark versão e redefinir a `DOTNET_WORKER_DIR` variável de ambiente, por que eu ainda obtenho o seguinte `IOException` erro?
-> **Erro:** Tarefa perdida 0,0 no estágio 11,0 (TID 24, localhost, Driver de executor): Java. IO. IOException: não é possível executar o programa "Microsoft. Spark. Worker. exe": erro CreateProcess = 2, o sistema não pode localizar o arquivo especificado.
+> **Erro:** Tarefa perdida 0,0 no estágio 11,0 (TID 24, localhost, Driver de executor): Java. IO. IOException: não é possível executar o programa "Microsoft.Spark.Worker.exe": erro CreateProcess = 2, o sistema não pode localizar o arquivo especificado.
 
 **Resposta:** Tente reiniciar a janela do PowerShell (ou outras janelas de comando) primeiro para que possa obter os valores de variáveis de ambiente mais recentes. Em seguida, inicie o programa.
 
