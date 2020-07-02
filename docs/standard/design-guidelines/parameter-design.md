@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-ms.openlocfilehash: 46c1b8f03d054a63ea837a73fd30eeed163ab0a4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e0bc52f5679a7771d5690be9f903e677ce611605
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290091"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621581"
 ---
 # <a name="parameter-design"></a>Design de parâmetro
 
@@ -40,7 +40,7 @@ Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo 
 
  Isso comunica melhor a relação entre os métodos.
 
-### <a name="choose-between-enum-and-boolean-parameters"></a>Escolha entre parâmetros de enumeração e boolianos
+### <a name="choosing-between-enum-and-boolean-parameters"></a>Escolhendo entre parâmetros de enumeração e boolianos  
  ✔️ usar enums se um membro, caso contrário, teria dois ou mais parâmetros boolianos.
 
  ❌Não use boolianos, a menos que esteja absolutamente certo de que nunca haverá necessidade de mais de dois valores.
@@ -49,7 +49,7 @@ Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo 
 
  ✔️ Considere usar boolianos para parâmetros de construtor que são verdadeiramente valores de dois Estados e são simplesmente usados para inicializar propriedades booleanas.
 
-### <a name="validate-arguments"></a>Validar argumentos
+### <a name="validating-arguments"></a>Validando argumentos
  ✔️ validar argumentos passados para membros públicos, protegidos ou explicitamente implementados. Throw <xref:System.ArgumentException?displayProperty=nameWithType> , ou uma de suas subclasses, se a validação falhar.
 
  Observe que a validação real não precisa necessariamente acontecer no próprio membro público ou protegido. Isso pode acontecer em um nível inferior em alguma rotina privada ou interna. O ponto principal é que toda a área de superfície exposta aos usuários finais verifica os argumentos.
@@ -66,10 +66,10 @@ Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo 
 
  Se o membro for sensível à segurança, você será incentivado a fazer uma cópia e, em seguida, validar e processar o argumento.
 
-### <a name="pass-parameters"></a>Passar parâmetros
+### <a name="parameter-passing"></a>Passagem de parâmetro
  Da perspectiva de um designer de estrutura, há três grupos principais de parâmetros: parâmetros por valor, `ref` parâmetros e `out` parâmetros.
 
- Quando um argumento é passado por um parâmetro por valor, o membro recebe uma cópia do argumento real passado. Se o argumento for um tipo de valor, uma cópia do argumento será colocada na pilha. Se o argumento for um tipo de referência, uma cópia da referência será colocada na pilha. As linguagens CLR mais populares, como C#, Visual Basic e C++, assumem como padrão a passagem de parâmetros por valor.
+ Quando um argumento é passado por um parâmetro por valor, o membro recebe uma cópia do argumento real passado. Se o argumento for um tipo de valor, uma cópia do argumento será colocada na pilha. Se o argumento for um tipo de referência, uma cópia da referência será colocada na pilha. As linguagens CLR mais populares, como C#, VB.NET e C++, assumem como padrão a passagem de parâmetros por valor.
 
  Quando um argumento é passado por um `ref` parâmetro, o membro recebe uma referência para o argumento real passado. Se o argumento for um tipo de valor, uma referência ao argumento será colocada na pilha. Se o argumento for um tipo de referência, uma referência à referência será colocada na pilha. `Ref`os parâmetros podem ser usados para permitir que o membro modifique os argumentos passados pelo chamador.
 
@@ -151,11 +151,11 @@ public class String {
 
  Por exemplo, não há necessidade de passar o índice inicial, porque a aritmética simples de ponteiro pode ser usada para atingir o mesmo resultado.
 
- *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*
+ *Partes &copy; 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Diretrizes de design de membro](member.md)
 - [Diretrizes de design de estrutura](index.md)

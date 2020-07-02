@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 0fb21b09fbf97f9c9ac2bf2982c391b87e2debc1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7a4ffd5b1b58e6ea7fd46c676e139b77a126aa2b
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614351"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803021"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Implantar aplicativos .NET Core com o Visual Studio
 
@@ -32,7 +32,7 @@ Implantar uma implantação dependente de estrutura sem dependências de terceir
 
 1. Crie o projeto.
 
-   Selecione **arquivo**  >  **novo**  >  **projeto**. Na caixa de diálogo **Novo projeto**, expanda as categorias de projeto (C# ou Visual Basic) de sua linguagem no painel de tipos de projeto **Instalados**, escolha **.NET Core** e, em seguida, selecione o modelo **Aplicativo de console (.NET Core)** no painel central. Insira um nome de projeto, como "FDD" na caixa de texto **Nome**. Selecione o botão **OK** .
+   Selecione **Arquivo** > **Novo** > **Projeto**. Na caixa de diálogo **Novo projeto**, expanda as categorias de projeto (C# ou Visual Basic) de sua linguagem no painel de tipos de projeto **Instalados**, escolha **.NET Core** e, em seguida, selecione o modelo **Aplicativo de console (.NET Core)** no painel central. Insira um nome de projeto, como "FDD" na caixa de texto **Nome**. Selecione o botão **OK** .
 
 1. Adicione o código-fonte do aplicativo.
 
@@ -43,7 +43,7 @@ Implantar uma implantação dependente de estrutura sem dependências de terceir
 
 1. Crie um build de depuração do seu aplicativo.
 
-   Selecione **criar**  >  **solução de compilação**. Você também pode compilar e executar a compilação de depuração de seu aplicativo selecionando **depurar**  >  **Iniciar Depuração**.
+   Selecione **Compilar** > **Compilar Solução**. Você também pode compilar e executar a compilação de depuração de seu aplicativo selecionando **depurar**  >  **Iniciar Depuração**.
 
 1. Implante seu aplicativo.
 
@@ -83,7 +83,7 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
 
 1. Crie o projeto.
 
-   Selecione **arquivo**  >  **novo**  >  **projeto**. Na caixa de diálogo **Novo projeto**, expanda as categorias de projeto (C# ou Visual Basic) de sua linguagem no painel de tipos de projeto **Instalados**, escolha **.NET Core** e, em seguida, selecione o modelo **Aplicativo de console (.NET Core)** no painel central. Insira um nome de projeto, como "SCD" na caixa de texto **Nome** e selecione o botão **OK**.
+   Selecione **Arquivo** > **Novo** > **Projeto**. Na caixa de diálogo **Novo projeto**, expanda as categorias de projeto (C# ou Visual Basic) de sua linguagem no painel de tipos de projeto **Instalados**, escolha **.NET Core** e, em seguida, selecione o modelo **Aplicativo de console (.NET Core)** no painel central. Insira um nome de projeto, como "SCD" na caixa de texto **Nome** e selecione o botão **OK**.
 
 1. Adicione o código-fonte do aplicativo.
 
@@ -98,11 +98,11 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
 
    Para habilitar o modo invariável, clique com o botão direito do mouse no seu projeto (não na solução) no **Gerenciador de Soluções** e selecione **Editar SCD.csproj** ou **Editar SCD.vbproj**. Em seguida, adicione as seguintes linhas realçadas ao arquivo:
 
-   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=6-8)]
+   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=7-9)]
 
 1. Crie um build de depuração do seu aplicativo.
 
-   Selecione **criar**  >  **solução de compilação**. Você também pode compilar e executar a compilação de depuração de seu aplicativo selecionando **depurar**  >  **Iniciar Depuração**. Essa etapa de depuração permite identificar problemas com seu aplicativo quando ele está em execução em sua plataforma de host. Ainda será necessário testá-lo em cada uma de suas plataformas de destino.
+   Selecione **Compilar** > **Compilar Solução**. Você também pode compilar e executar a compilação de depuração de seu aplicativo selecionando **depurar**  >  **Iniciar Depuração**. Essa etapa de depuração permite identificar problemas com seu aplicativo quando ele está em execução em sua plataforma de host. Ainda será necessário testá-lo em cada uma de suas plataformas de destino.
 
    Se você tiver habilitado o modo invariável de globalização, certifique-se principalmente de testar se a ausência de dados que levam em conta a cultura é adequada para o seu aplicativo.
 
@@ -192,9 +192,9 @@ Para cada plataforma que seu aplicativo direciona, faça o seguinte:
 
 1. Selecione o local em que o Visual Studio publica seu aplicativo.
 
-   Se você estiver apenas publicando em uma única plataforma, poderá aceitar o valor padrão na caixa de texto **escolher uma pasta** ; Isso publica a implantação dependente de estrutura do seu aplicativo no diretório do * \< projeto> \bin\release\netcoreapp2.1\publish* .
+   Se você estiver apenas publicando em uma única plataforma, poderá aceitar o valor padrão na caixa de texto **escolher uma pasta** ; Isso publica a implantação dependente de estrutura do seu aplicativo no diretório * \<project-directory> \bin\Release\netcoreapp2.1\publish* .
 
-   Se você estiver publicando em mais de uma plataforma, acrescente uma cadeia de caracteres que identifique a plataforma de destino. Por exemplo, se você acrescentar a cadeia de caracteres "Linux" ao caminho do arquivo, o Visual Studio publicará a implantação dependente da estrutura de seu aplicativo no * \< diretório Project-Directory> \bin\release\netcoreapp2.1\publish\linux* .
+   Se você estiver publicando em mais de uma plataforma, acrescente uma cadeia de caracteres que identifique a plataforma de destino. Por exemplo, se você acrescentar a cadeia de caracteres "Linux" ao caminho do arquivo, o Visual Studio publicará a implantação dependente da estrutura do seu aplicativo no diretório * \<project-directory> \bin\Release\netcoreapp2.1\publish\linux* .
 
 1. Crie o perfil selecionando o ícone de lista suspensa ao lado do botão **Publicar** e selecionando **Criar perfil**. Em seguida, selecione o botão **Criar perfil** para criar o perfil.
 
@@ -309,7 +309,7 @@ Quando você implanta seu aplicativo, todas as dependências de terceiros usadas
 
 Você só pode implantar uma implantação independente com uma biblioteca de terceiros em plataformas com suporte nessa biblioteca. Isso é semelhante a ter dependências de terceiros com dependências nativas em sua implantação dependente de estrutura, em que as dependências nativas não existem na plataforma de destino a menos que elas tenham sido instaladas anteriormente.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Implantação do .NET Core Application](index.md)
 - [Catálogo do Identificador de Runtime do .NET Core](../rid-catalog.md)

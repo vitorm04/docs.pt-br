@@ -1,7 +1,7 @@
 ---
 title: 'Exemplo de expressão regular: Verificação de HREFs'
 description: Veja um exemplo de expressões regulares no .NET. O exemplo pesquisa uma cadeia de caracteres de entrada e exibe todos os valores de atributo href e suas localizações.
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,17 +14,19 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: 36273901ac9afb762ac70ee5d6dcd80ff0ede11d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7bcc2a4242bfaed3e3340347a30e97e7e4060794
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583486"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802840"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Exemplo de expressão regular: Verificação de HREFs
 O exemplo a seguir procura uma cadeia de caracteres de entrada e exibe todos os valores href="…" e suas localizações na cadeia de caracteres.  
-  
-## <a name="the-regex-object"></a>O objeto Regex  
+
+[!INCLUDE [regex](../../../includes/regex.md)]
+
+## <a name="the-regex-object"></a>O objeto Regex
  Como o método `DumpHRefs` pode ser chamado várias vezes do código do usuário, ele usa o método `static` (`Shared` no Visual Basic) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. Isso permite que o mecanismo de expressões regulares armazene em cache a expressão regular e evite a sobrecarga de instanciar um novo objeto <xref:System.Text.RegularExpressions.Regex> sempre que o método é chamado. Um objeto <xref:System.Text.RegularExpressions.Match> é usado para iterar por todas as correspondências na cadeia de caracteres.  
   
  [!code-csharp[RegularExpressions.Examples.HREF#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#1)]

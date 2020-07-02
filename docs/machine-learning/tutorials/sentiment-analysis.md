@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Analise os comentários do site - classificação binária'
+title: 'Tutorial: analisar comentários do site-classificação binária'
 description: Este tutorial mostra como criar um aplicativo de console do .NET Core que classifica sentimentos de comentários de um site e executa a ação adequada. O classificador binário de sentimento usa C# no Visual Studio.
-ms.date: 09/30/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c6e13cfca93c54648b1a0423c5983013d3e2a1a0
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b193752437c3e84476858bb3b70ba642d8562769
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243291"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803242"
 ---
-# <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: Analise o sentimento dos comentários do site com classificação binária em ML.NET
+# <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: analisar o sentimentos dos comentários do site com a classificação binária no ML.NET
 
 Este tutorial mostra como criar um aplicativo de console do .NET Core que classifica sentimentos de comentários de um site e executa a ação adequada. O classificador binário de sentimento usa C# no Visual Studio 2017.
 
@@ -19,7 +19,7 @@ Neste tutorial, você aprenderá como:
 > [!div class="checklist"]
 >
 > - Criar um aplicativo de console
-> - Preparar dados
+> - Preparar os dados
 > - Carregar os dados
 > - Criar e treinar o modelo
 > - Avalie o modelo
@@ -30,7 +30,7 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- [Visual Studio 2017 versão 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) com a carga de trabalho ".NET Core cross-platform development" instalada
+- [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) com a carga de trabalho "desenvolvimento de plataforma cruzada do .NET Core" instalada
 
 - [Conjunto de dados de Sentenças de sentimentos rotuladas da UCI](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (arquivo zip)
 
@@ -38,22 +38,24 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
 1. Crie um **Aplicativo de console do .NET Core** chamado "SentimentAnalysis".
 
-2. Crie um diretório chamado *Dados* em seu projeto para salvar seus arquivos do conjunto de dados.
+2. Crie um diretório chamado *dados* em seu projeto para salvar os arquivos do conjunto de dados.
 
 3. Instalar o **Pacote NuGet Microsoft.ML**:
 
-    No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**. Escolha "nuget.org" como a fonte do pacote e selecione a guia **Procurar** **Microsoft.ML,** selecione o pacote desejado e selecione o botão **Instalar.** Prossiga com a instalação concordando com os termos de licença do pacote que você escolher. Faça o mesmo para o pacote **Microsoft.ML.FastTree** NuGet.
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
+    No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**. Escolha "nuget.org" como a origem do pacote e, em seguida, selecione a guia **procurar** . procure **Microsoft.ml**, selecione o pacote desejado e, em seguida, selecione o botão **instalar** . Prossiga com a instalação concordando com os termos de licença do pacote que você escolher.
 
 ## <a name="prepare-your-data"></a>Preparar seus dados
 
 > [!NOTE]
-> Os conjuntos de dados deste tutorial são de "From Group to Individual Labels using Deep Features”, Kotzias et. al,. KDD 2015, e hospedado no Repositório de Machine Learning da UCI - Dua, D. e Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.
+> Os conjuntos de dados deste tutorial são de "From Group to Individual Labels using Deep Features”, Kotzias et. al,. KDD 2015 e hospedado na UCI Machine Learning Repository-Dua, D. e Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.
 
 1. Baixe o [arquivo zip do conjunto de dados de Sentenças de sentimentos rotuladas da UCI](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) e descompacte-o.
 
 2. Copie o arquivo `yelp_labelled.txt` para o diretório *Dados* que você criou.
 
-3. No Gerenciador de Soluções, clique com o botão direito do mouse no arquivo `yelp_labeled.txt` e selecione **Propriedades**. Em **Avançado,** altere o valor de **Copiar para Diretório de Saída** para Copiar se mais **novo**.
+3. No Gerenciador de Soluções, clique com o botão direito do mouse no arquivo `yelp_labeled.txt` e selecione **Propriedades**. Em **avançado**, altere o valor de **copiar para diretório de saída** para **copiar se mais recente**.
 
 ### <a name="create-classes-and-define-paths"></a>Criar classes e definir demarcadores
 
@@ -61,7 +63,7 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
     [!code-csharp[AddUsings](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#AddUsings "Add necessary usings")]
 
-1. Adicione o seguinte código à `Main` linha logo acima do método, para criar um campo para manter o caminho do arquivo do conjunto de dados recentemente baixado:
+1. Adicione o seguinte código à linha à direita acima do `Main` método, para criar um campo para manter o caminho do arquivo do conjunto de código baixado recentemente:
 
     [!code-csharp[Declare global variables](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
@@ -87,7 +89,7 @@ A classe de conjunto de dados de entrada, `SentimentData`, tem um `string` para 
 |--------------------------------------|----------|
 |A garçonete foi um pouco lenta no serviço.|    0     |
 |A torrada não é boa.                    |    0     |
-|Wow... Adorei esse lugar.              |    1     |
+|Wow... Adorei este lugar.              |    1     |
 |O serviço era muito rápido.              |    1     |
 
 `SentimentPrediction` é a classe de previsão usada após o treinamento do modelo. Ela herda `SentimentData` de modo que a entrada `SentimentText` possa ser exibida junto com a previsão de saída. O booliano `Prediction` é o valor que o modelo prevê quando fornecido com a nova entrada `SentimentText`.
@@ -131,7 +133,7 @@ Você prepara o aplicativo e, em seguida, carrega os dados:
 
     [!code-csharp[LoadData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#LoadData "loading dataset")]
 
-    O método [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) define o esquema de dados e é lido no arquivo. Ele usa as variáveis de caminho de dados e retorna uma `IDataView`.
+    O método [LoadFromTextFile ()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) define o esquema de dados e lê o arquivo. Ele usa as variáveis de caminho de dados e retorna uma `IDataView`.
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>Dividir o conjunto de dados para o modelo de treinamento e de teste
 
@@ -141,7 +143,7 @@ Ao preparar um modelo, você usa parte do conjunto de dados para treiná-lo e pa
 
     [!code-csharp[SplitData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#SplitData "Split the Data")]
 
-    O código anterior usa o método [TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) para dividir o conjunto de dados <xref:Microsoft.ML.DataOperationsCatalog.TrainTestData> carregado em conjuntos de dados de trem e teste e devolvê-los na classe. Especifique o percentual de dados do conjunto de teste com o parâmetro `testFraction`. O padrão é 10% e, nesse caso, você usa 20% para avaliar mais dados.
+    O código anterior usa o método [TrainTestSplit ()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) para dividir o DataSet carregado em conjuntos de valores de teste e de treinamento e retorná-los na <xref:Microsoft.ML.DataOperationsCatalog.TrainTestData> classe. Especifique o percentual de dados do conjunto de teste com o parâmetro `testFraction`. O padrão é 10% e, nesse caso, você usa 20% para avaliar mais dados.
 
 2. Retorne o `splitDataView` no final do método `LoadData()`:
 
@@ -181,7 +183,7 @@ Ao preparar um modelo, você usa parte do conjunto de dados para treiná-lo e pa
     |--------------------------------------|----------|----------------------|
     |A garçonete foi um pouco lenta no serviço.|    0     |[0,76, 0,65, 0,44, …] |
     |A torrada não é boa.                    |    0     |[0,98, 0,43, 0,54, …] |
-    |Wow... Adorei esse lugar.              |    1     |[0,35, 0,73, 0,46, …] |
+    |Wow... Adorei este lugar.              |    1     |[0,35, 0,73, 0,46, …] |
     |O serviço era muito rápido.              |    1     |[0,39, 0, 0,75, …]    |
 
 ### <a name="add-a-learning-algorithm"></a>Adicionar um algoritmo de aprendizado
@@ -282,7 +284,7 @@ Use o código a seguir para exibir as métricas:
 
     [!code-csharp[CreatePredictionEngine](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
 
-    O [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) é uma API de conveniência, que permite realizar uma previsão em uma única instância de dados. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)não é seguro para rosca. É aceitável usar em ambientes de um único fio ou protótipo. Para melhorar o desempenho e a segurança `PredictionEnginePool` dos fios nos [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ambientes de produção, use o serviço, que cria um objeto para uso em toda a sua aplicação. Consulte este guia sobre como [usar `PredictionEnginePool` em uma API web ASP.NET.](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)
+    O [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) é uma API de conveniência, que permite que você execute uma previsão em uma única instância de dados. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)Não é thread-safe. É aceitável usar em ambientes de protótipo ou de thread único. Para melhorar o desempenho e a segurança de thread em ambientes de produção, use o `PredictionEnginePool` serviço, que cria um [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) dos [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) objetos para uso em todo o aplicativo. Consulte este guia sobre como [usar o `PredictionEnginePool` em uma API Web do ASP.NET Core](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
     > [!NOTE]
     > A extensão de serviço `PredictionEnginePool` está atualmente em versão prévia.
@@ -291,7 +293,7 @@ Use o código a seguir para exibir as métricas:
 
     [!code-csharp[PredictionData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
 
-5. Passe os dados de [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) comentário do teste para o seguinte, adicionando as próximas linhas de código no `UseModelWithSingleItem()` método:
+5. Passe os dados do comentário de teste para o [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) adicionando o seguinte como as próximas linhas de código no `UseModelWithSingleItem()` método:
 
     [!code-csharp[Predict](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#Predict "Create a prediction of sentiment")]
 
@@ -376,7 +378,7 @@ Press any key to continue . . .
 
 Parabéns! Agora você criou com sucesso um modelo de aprendizado de máquina para classificar e prever o sentimento das mensagens.
 
-A criação de modelos bem-sucedidos é um processo iterativo. Esse modelo tem qualidade inicial inferior, pois o tutorial usa conjuntos de dados pequenos para fornecer um treinamento rápido do modelo. Se você não está satisfeito com a qualidade do modelo, você pode tentar melhorá-lo fornecendo conjuntos de dados de treinamento maiores ou escolhendo algoritmos de treinamento diferentes com [diferentes hiperparâmetros](../resources/glossary.md#hyperparameter) para cada algoritmo.
+A criação de modelos bem-sucedidos é um processo iterativo. Esse modelo tem qualidade inicial inferior, pois o tutorial usa conjuntos de dados pequenos para fornecer um treinamento rápido do modelo. Se você não estiver satisfeito com a qualidade do modelo, poderá tentar melhorá-la fornecendo um conjunto de maiores conjuntos de grandes ou escolhendo algoritmos de treinamento diferentes com [hiperparâmetros](../resources/glossary.md#hyperparameter) diferentes para cada algoritmo.
 
 Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis).
 
@@ -386,7 +388,7 @@ Neste tutorial, você aprendeu a:
 > [!div class="checklist"]
 >
 > - Criar um aplicativo de console
-> - Preparar dados
+> - Preparar os dados
 > - Carregar os dados
 > - Criar e treinar o modelo
 > - Avalie o modelo

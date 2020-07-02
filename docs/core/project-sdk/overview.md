@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Saiba mais sobre os SDKs do projeto .NET Core.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: 67dede3caabd2967adca22e7563376c761829655
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 9db62ab7774e3dd71412fa346d78ae0c62a2f81f
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803035"
 ---
 # <a name="net-core-project-sdks"></a>SDKs do projeto do .NET Core
 
@@ -41,7 +41,7 @@ Os projetos do .NET Core são baseados no formato [MSBuild](/visualstudio/msbuil
 </Project>
 ```
 
-Para especificar um SDK proveniente do NuGet, inclua a versão no final do nome ou especifique o nome e a versão no arquivo *global. JSON* .
+Para especificar um SDK proveniente do NuGet, inclua a versão no final do nome ou especifique o nome e a versão na *global.jsno* arquivo.
 
 ```xml
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
@@ -176,6 +176,6 @@ Você pode configurar como usar o destino personalizado. Como é um destino do M
 
 ## <a name="see-also"></a>Consulte também
 
-- [Instalar o .NET Core](../install/index.md)
+- [Instalar o .NET Core](../install/index.yml)
 - [Como usar SDKs de projeto do MSBuild](/visualstudio/msbuild/how-to-use-project-sdk)
 - [Empacotar destinos e props personalizados do MSBuild com o NuGet](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)
