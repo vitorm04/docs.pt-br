@@ -1,5 +1,6 @@
 ---
 title: Adicionar e remover guias com TabControl
+description: Saiba como adicionar e remover guias com o Windows Forms controle TabControl, que contém dois controles TabPage. Acesse essas guias por meio da propriedade TabPages.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +13,19 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: 8292d8441f9b47334b98736cf3282c846673dbb4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7e67d0bbc13bd7d9c8835dc6fb9b9c5c9333b8bf
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732711"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618071"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a><span data-ttu-id="389f3-102">Como adicionar e remover guias com o controle TabControl dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="389f3-102">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>
-<span data-ttu-id="389f3-103">Por padrão, um controle de <xref:System.Windows.Forms.TabControl> contém dois controles de <xref:System.Windows.Forms.TabPage>.</span><span class="sxs-lookup"><span data-stu-id="389f3-103">By default, a <xref:System.Windows.Forms.TabControl> control contains two <xref:System.Windows.Forms.TabPage> controls.</span></span> <span data-ttu-id="389f3-104">Você pode acessar essas guias por meio da propriedade <xref:System.Windows.Forms.TabControl.TabPages%2A>.</span><span class="sxs-lookup"><span data-stu-id="389f3-104">You can access these tabs through the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a><span data-ttu-id="c5a45-104">Como adicionar e remover guias com o controle TabControl dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c5a45-104">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>
+<span data-ttu-id="c5a45-105">Por padrão, um <xref:System.Windows.Forms.TabControl> controle contém dois <xref:System.Windows.Forms.TabPage> controles.</span><span class="sxs-lookup"><span data-stu-id="c5a45-105">By default, a <xref:System.Windows.Forms.TabControl> control contains two <xref:System.Windows.Forms.TabPage> controls.</span></span> <span data-ttu-id="c5a45-106">Você pode acessar essas guias por meio da <xref:System.Windows.Forms.TabControl.TabPages%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="c5a45-106">You can access these tabs through the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
-### <a name="to-add-a-tab-programmatically"></a><span data-ttu-id="389f3-105">Para adicionar uma guia programaticamente</span><span class="sxs-lookup"><span data-stu-id="389f3-105">To add a tab programmatically</span></span>  
+### <a name="to-add-a-tab-programmatically"></a><span data-ttu-id="c5a45-107">Para adicionar uma guia programaticamente</span><span class="sxs-lookup"><span data-stu-id="c5a45-107">To add a tab programmatically</span></span>  
   
-- <span data-ttu-id="389f3-106">Use o método <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> da propriedade <xref:System.Windows.Forms.TabControl.TabPages%2A>.</span><span class="sxs-lookup"><span data-stu-id="389f3-106">Use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+- <span data-ttu-id="c5a45-108">Use o <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> método da <xref:System.Windows.Forms.TabControl.TabPages%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="c5a45-108">Use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -45,13 +46,13 @@ ms.locfileid: "76732711"
     tabControl1->TabPages->Add(myTabPage);  
     ```  
   
-### <a name="to-remove-a-tab-programmatically"></a><span data-ttu-id="389f3-107">Para remover uma guia programaticamente</span><span class="sxs-lookup"><span data-stu-id="389f3-107">To remove a tab programmatically</span></span>  
+### <a name="to-remove-a-tab-programmatically"></a><span data-ttu-id="c5a45-109">Para remover uma guia programaticamente</span><span class="sxs-lookup"><span data-stu-id="c5a45-109">To remove a tab programmatically</span></span>  
   
-- <span data-ttu-id="389f3-108">Para remover as guias selecionadas, use o método <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> da propriedade <xref:System.Windows.Forms.TabControl.TabPages%2A>.</span><span class="sxs-lookup"><span data-stu-id="389f3-108">To remove selected tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+- <span data-ttu-id="c5a45-110">Para remover as guias selecionadas, use o <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> método da <xref:System.Windows.Forms.TabControl.TabPages%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="c5a45-110">To remove selected tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
-     <span data-ttu-id="389f3-109">-ou-</span><span class="sxs-lookup"><span data-stu-id="389f3-109">-or-</span></span>  
+     <span data-ttu-id="c5a45-111">-ou-</span><span class="sxs-lookup"><span data-stu-id="c5a45-111">-or-</span></span>  
   
-- <span data-ttu-id="389f3-110">Para remover todas as guias, use o método <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> da propriedade <xref:System.Windows.Forms.TabControl.TabPages%2A>.</span><span class="sxs-lookup"><span data-stu-id="389f3-110">To remove all tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+- <span data-ttu-id="c5a45-112">Para remover todas as guias, use o <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> método da <xref:System.Windows.Forms.TabControl.TabPages%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="c5a45-112">To remove all tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
     ```vb  
     ' Removes the selected tab:  
@@ -74,9 +75,9 @@ ms.locfileid: "76732711"
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="389f3-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="389f3-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c5a45-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c5a45-113">See also</span></span>
 
-- [<span data-ttu-id="389f3-112">Visão geral do controle TabControl</span><span class="sxs-lookup"><span data-stu-id="389f3-112">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
-- [<span data-ttu-id="389f3-113">Como adicionar um controle a uma página da guia</span><span class="sxs-lookup"><span data-stu-id="389f3-113">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
-- [<span data-ttu-id="389f3-114">Como desabilitar páginas de guia</span><span class="sxs-lookup"><span data-stu-id="389f3-114">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
-- [<span data-ttu-id="389f3-115">Como alterar a aparência do TabControl do Windows Forms</span><span class="sxs-lookup"><span data-stu-id="389f3-115">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [<span data-ttu-id="c5a45-114">Visão geral do controle TabControl</span><span class="sxs-lookup"><span data-stu-id="c5a45-114">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
+- [<span data-ttu-id="c5a45-115">Como adicionar um controle a uma página da guia</span><span class="sxs-lookup"><span data-stu-id="c5a45-115">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
+- [<span data-ttu-id="c5a45-116">Como desabilitar páginas de guia</span><span class="sxs-lookup"><span data-stu-id="c5a45-116">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
+- [<span data-ttu-id="c5a45-117">Como alterar a aparência do TabControl dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c5a45-117">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

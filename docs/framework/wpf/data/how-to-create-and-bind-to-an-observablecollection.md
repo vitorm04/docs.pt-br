@@ -1,5 +1,6 @@
 ---
 title: Como criar e associar a um ObservableCollection
+description: Descubra como criar e associar a uma coleção derivada da classe ObservableCollection no Windows Presentation Foundation.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 596f6ae71e83c5aa3b2b80764f68a8abf08cdb7b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 36e3d2d84aff0ab96c9b2914da28d4c968c32bac
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453521"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617863"
 ---
-# <a name="how-to-create-and-bind-to-an-observablecollection"></a><span data-ttu-id="386fc-102">Como criar e associar a um ObservableCollection</span><span class="sxs-lookup"><span data-stu-id="386fc-102">How to: Create and Bind to an ObservableCollection</span></span>
-<span data-ttu-id="386fc-103">Este exemplo mostra como criar e associar a uma coleção que deriva da classe <xref:System.Collections.ObjectModel.ObservableCollection%601>, que é uma classe de coleção que fornece notificações quando os itens são adicionados ou removidos.</span><span class="sxs-lookup"><span data-stu-id="386fc-103">This example shows how to create and bind to a collection that derives from the <xref:System.Collections.ObjectModel.ObservableCollection%601> class, which is a collection class that provides notifications when items get added or removed.</span></span>  
+# <a name="how-to-create-and-bind-to-an-observablecollection"></a><span data-ttu-id="2c2e5-103">Como criar e associar a um ObservableCollection</span><span class="sxs-lookup"><span data-stu-id="2c2e5-103">How to: Create and Bind to an ObservableCollection</span></span>
+<span data-ttu-id="2c2e5-104">Este exemplo mostra como criar e associar a uma coleção que deriva da <xref:System.Collections.ObjectModel.ObservableCollection%601> classe, que é uma classe de coleção que fornece notificações quando os itens são adicionados ou removidos.</span><span class="sxs-lookup"><span data-stu-id="2c2e5-104">This example shows how to create and bind to a collection that derives from the <xref:System.Collections.ObjectModel.ObservableCollection%601> class, which is a collection class that provides notifications when items get added or removed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="386fc-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="386fc-104">Example</span></span>  
- <span data-ttu-id="386fc-105">O exemplo a seguir mostra a implementação de uma coleção do `NameList`:</span><span class="sxs-lookup"><span data-stu-id="386fc-105">The following example shows the implementation of a `NameList` collection:</span></span>  
+## <a name="example"></a><span data-ttu-id="2c2e5-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="2c2e5-105">Example</span></span>  
+ <span data-ttu-id="2c2e5-106">O exemplo a seguir mostra a implementação de uma coleção do `NameList`:</span><span class="sxs-lookup"><span data-stu-id="2c2e5-106">The following example shows the implementation of a `NameList` collection:</span></span>  
   
 ```csharp  
 public class NameList : ObservableCollection<PersonName>  
@@ -104,7 +105,7 @@ Public Class PersonName
 End Class  
 ```  
   
- <span data-ttu-id="386fc-106">Você pode tornar a coleção disponível para associação da mesma maneira que faria com outros objetos Common Language Runtime (CLR), conforme descrito em [tornar os dados disponíveis para associação em XAML](how-to-make-data-available-for-binding-in-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="386fc-106">You can make the collection available for binding the same way you would with other common language runtime (CLR) objects, as described in [Make Data Available for Binding in XAML](how-to-make-data-available-for-binding-in-xaml.md).</span></span> <span data-ttu-id="386fc-107">Por exemplo, você pode instanciar a coleção em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e especificar a coleção como um recurso, como mostrado aqui:</span><span class="sxs-lookup"><span data-stu-id="386fc-107">For example, you can instantiate the collection in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] and specify the collection as a resource, as shown here:</span></span>  
+ <span data-ttu-id="2c2e5-107">Você pode tornar a coleção disponível para associação da mesma maneira que faria com outros objetos Common Language Runtime (CLR), conforme descrito em [tornar os dados disponíveis para associação em XAML](how-to-make-data-available-for-binding-in-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="2c2e5-107">You can make the collection available for binding the same way you would with other common language runtime (CLR) objects, as described in [Make Data Available for Binding in XAML](how-to-make-data-available-for-binding-in-xaml.md).</span></span> <span data-ttu-id="2c2e5-108">Por exemplo, você pode instanciar a coleção em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e especificar a coleção como um recurso, como mostrado aqui:</span><span class="sxs-lookup"><span data-stu-id="2c2e5-108">For example, you can instantiate the collection in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] and specify the collection as a resource, as shown here:</span></span>  
   
 ```xaml  
 <Window  
@@ -124,7 +125,7 @@ End Class
 </Window.Resources>  
 ```  
   
- <span data-ttu-id="386fc-108">Em seguida, você pode associar à coleção:</span><span class="sxs-lookup"><span data-stu-id="386fc-108">You can then bind to the collection:</span></span>  
+ <span data-ttu-id="2c2e5-109">Em seguida, você pode associar à coleção:</span><span class="sxs-lookup"><span data-stu-id="2c2e5-109">You can then bind to the collection:</span></span>  
   
 ```xaml  
 <ListBox Width="200"  
@@ -133,17 +134,17 @@ End Class
          IsSynchronizedWithCurrentItem="True"/>  
 ```  
   
- <span data-ttu-id="386fc-109">A definição de `NameItemTemplate` não é mostrada aqui.</span><span class="sxs-lookup"><span data-stu-id="386fc-109">The definition of `NameItemTemplate` is not shown here.</span></span>  
+ <span data-ttu-id="2c2e5-110">A definição de `NameItemTemplate` não é mostrada aqui.</span><span class="sxs-lookup"><span data-stu-id="2c2e5-110">The definition of `NameItemTemplate` is not shown here.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="386fc-110">Os objetos em sua coleção devem atender aos requisitos descritos na [Visão geral da origem da associação](binding-sources-overview.md).</span><span class="sxs-lookup"><span data-stu-id="386fc-110">The objects in your collection must satisfy the requirements described in the [Binding Sources Overview](binding-sources-overview.md).</span></span> <span data-ttu-id="386fc-111">Em particular, se você estiver usando <xref:System.Windows.Data.BindingMode.OneWay> ou <xref:System.Windows.Data.BindingMode.TwoWay> (por exemplo, deseja que seu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] seja atualizado quando as propriedades de origem forem alteradas dinamicamente), você deverá implementar um mecanismo de notificação de alteração de propriedade adequado, como a interface <xref:System.ComponentModel.INotifyPropertyChanged>.</span><span class="sxs-lookup"><span data-stu-id="386fc-111">In particular, if you are using <xref:System.Windows.Data.BindingMode.OneWay> or <xref:System.Windows.Data.BindingMode.TwoWay> (for example, you want your [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] to update when the source properties change dynamically), you must implement a suitable property changed notification mechanism such as the <xref:System.ComponentModel.INotifyPropertyChanged> interface.</span></span>  
+> <span data-ttu-id="2c2e5-111">Os objetos em sua coleção devem atender aos requisitos descritos na [Visão geral da origem da associação](binding-sources-overview.md).</span><span class="sxs-lookup"><span data-stu-id="2c2e5-111">The objects in your collection must satisfy the requirements described in the [Binding Sources Overview](binding-sources-overview.md).</span></span> <span data-ttu-id="2c2e5-112">Em particular, se você estiver usando o <xref:System.Windows.Data.BindingMode.OneWay> ou <xref:System.Windows.Data.BindingMode.TwoWay> (por exemplo, deseja que o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] seja atualizado quando as propriedades de origem forem alteradas dinamicamente), você deverá implementar um mecanismo de notificação de alteração de propriedade adequado, como a <xref:System.ComponentModel.INotifyPropertyChanged> interface.</span><span class="sxs-lookup"><span data-stu-id="2c2e5-112">In particular, if you are using <xref:System.Windows.Data.BindingMode.OneWay> or <xref:System.Windows.Data.BindingMode.TwoWay> (for example, you want your [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] to update when the source properties change dynamically), you must implement a suitable property changed notification mechanism such as the <xref:System.ComponentModel.INotifyPropertyChanged> interface.</span></span>  
   
- <span data-ttu-id="386fc-112">Para obter mais informações, consulte a seção Associando a coleções na [Visão geral de associação de dados](../../../desktop-wpf/data/data-binding-overview.md).</span><span class="sxs-lookup"><span data-stu-id="386fc-112">For more information, see the Binding to Collections section in the [Data Binding Overview](../../../desktop-wpf/data/data-binding-overview.md).</span></span>  
+ <span data-ttu-id="2c2e5-113">Para obter mais informações, consulte a seção Associando a coleções na [Visão geral de associação de dados](../../../desktop-wpf/data/data-binding-overview.md).</span><span class="sxs-lookup"><span data-stu-id="2c2e5-113">For more information, see the Binding to Collections section in the [Data Binding Overview](../../../desktop-wpf/data/data-binding-overview.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="386fc-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="386fc-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2c2e5-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2c2e5-114">See also</span></span>
 
-- [<span data-ttu-id="386fc-114">Classificar dados em uma exibição</span><span class="sxs-lookup"><span data-stu-id="386fc-114">Sort Data in a View</span></span>](how-to-sort-data-in-a-view.md)
-- [<span data-ttu-id="386fc-115">Filtrar dados em uma exibição</span><span class="sxs-lookup"><span data-stu-id="386fc-115">Filter Data in a View</span></span>](how-to-filter-data-in-a-view.md)
-- [<span data-ttu-id="386fc-116">Classificar e agrupar dados usando uma exibição em XAML</span><span class="sxs-lookup"><span data-stu-id="386fc-116">Sort and Group Data Using a View in XAML</span></span>](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [<span data-ttu-id="386fc-117">Visão geral da vinculação de dados</span><span class="sxs-lookup"><span data-stu-id="386fc-117">Data Binding Overview</span></span>](../../../desktop-wpf/data/data-binding-overview.md)
-- [<span data-ttu-id="386fc-118">Tópicos explicativos</span><span class="sxs-lookup"><span data-stu-id="386fc-118">How-to Topics</span></span>](data-binding-how-to-topics.md)
+- [<span data-ttu-id="2c2e5-115">Classificar dados em uma exibição</span><span class="sxs-lookup"><span data-stu-id="2c2e5-115">Sort Data in a View</span></span>](how-to-sort-data-in-a-view.md)
+- [<span data-ttu-id="2c2e5-116">Filtrar dados em uma exibição</span><span class="sxs-lookup"><span data-stu-id="2c2e5-116">Filter Data in a View</span></span>](how-to-filter-data-in-a-view.md)
+- [<span data-ttu-id="2c2e5-117">Classificar e agrupar dados usando uma exibição em XAML</span><span class="sxs-lookup"><span data-stu-id="2c2e5-117">Sort and Group Data Using a View in XAML</span></span>](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [<span data-ttu-id="2c2e5-118">Visão geral da ligação de dados</span><span class="sxs-lookup"><span data-stu-id="2c2e5-118">Data Binding Overview</span></span>](../../../desktop-wpf/data/data-binding-overview.md)
+- [<span data-ttu-id="2c2e5-119">Tópicos explicativos</span><span class="sxs-lookup"><span data-stu-id="2c2e5-119">How-to Topics</span></span>](data-binding-how-to-topics.md)
