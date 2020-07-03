@@ -3,12 +3,12 @@ title: Referência de comando da CLI ML.NET
 description: Visão geral, exemplos e referência para o comando de treinamento automático na ferramenta de CLI do ML.NET.
 ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 397f6fda8554024624b3ef630856dc8eca9696b2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4c6cb1346c16f6162077d3414140d693de9e0d8c
+ms.sourcegitcommit: 182c7b6c079ebcc0e1898dfd9e921b9ef472ea2c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594537"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946935"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>A referência de comando da CLI ML.NET
 
@@ -299,7 +299,7 @@ No entanto, para grandes conjuntos de dados, carregar todos os dados na memória
 
 Se você não especificar o parâmetro `--cache`, a configuração de cache `auto` será usada por padrão.
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
 `--name` (string)
 
@@ -309,7 +309,7 @@ O arquivo de modelo do ML.NET (arquivo zip) também receberá o mesmo nome.
 
 ## <a name="output-path"></a>Caminho de saída
 
-`--output-path | -o` (string)
+`--output | -o` (string)
 
 Local/pasta raiz para colocar a saída gerada. O padrão é o diretório atual.
 
@@ -333,7 +333,7 @@ Por padrão, a ferramenta CLI deve mostrar alguns comentários mínimos ( `minim
 
 Imprime uma ajuda para o comando com uma descrição para o parâmetro de cada comando.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Como instalar a ferramenta de CLI do ML.NET](../how-to-guides/install-ml-net-cli.md)
 - [Visão geral da CLI do ML.NET](../automate-training-with-cli.md)
