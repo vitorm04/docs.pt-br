@@ -2,12 +2,11 @@
 title: Como fazer intercâmbio de mensagens dentro de uma sessão confiável
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 5b01ddfd95db2f7e88f9481265c348f4f16fbbee
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: 39dd6636f80b107ced1caac29869c6c66e67e21e
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579470"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052033"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Como fazer intercâmbio de mensagens dentro de uma sessão confiável
 
@@ -27,13 +26,13 @@ Para a cópia de origem deste exemplo, consulte a [sessão confiável do WS](../
 
    [!code-csharp[c_HowTo_UseReliableSession#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1122)]
 
-1. Crie um arquivo *Web. config* para configurar um ponto de extremidade para o `CalculatorService` que usa a <xref:System.ServiceModel.WSHttpBinding> sessão confiável habilitada e a entrega ordenada de mensagens necessárias.
+1. Crie um arquivo de *Web.config* para configurar um ponto de extremidade para o `CalculatorService` que usa a <xref:System.ServiceModel.WSHttpBinding> sessão confiável habilitada e entrega ordenada de mensagens necessárias.
 
    [!code-xml[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]
 
 1. Crie um arquivo *Service. svc* que contenha a linha:
 
-   ```
+   ```aspx-csharp
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
@@ -41,7 +40,7 @@ Para a cópia de origem deste exemplo, consulte a [sessão confiável do WS](../
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Configurar o cliente com um WSHttpBinding para usar uma sessão confiável
 
-1. Use a [ferramenta de utilitário de metadados ServiceModel (*svcutil. exe*)](../servicemodel-metadata-utility-tool-svcutil-exe.md) da linha de comando para gerar código de metadados de serviço:
+1. Use a [ferramenta de utilitário de metadados ServiceModel (*Svcutil.exe*)](../servicemodel-metadata-utility-tool-svcutil-exe.md) da linha de comando para gerar código de metadados de serviço:
 
    ```console
    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -55,7 +54,7 @@ Para a cópia de origem deste exemplo, consulte a [sessão confiável do WS](../
 
    [!code-csharp[C_HowTo_UseReliableSession#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1222)]
 
-1. *Svcutil. exe* também gera a configuração para o cliente que usa a <xref:System.ServiceModel.WSHttpBinding> classe. Nomeie o arquivo de configuração *app. config* ao usar o Visual Studio.
+1. *Svcutil.exe* também gera a configuração para o cliente que usa a <xref:System.ServiceModel.WSHttpBinding> classe. Nomeie o arquivo de configuração *App.config* ao usar o Visual Studio.
 
    [!code-xml[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]
 

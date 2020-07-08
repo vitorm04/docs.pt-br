@@ -1,13 +1,12 @@
 ---
 title: Publicar um aplicativo de console do .NET Core usando Visual Studio Code
 description: A publicação cria o conjunto de arquivos necessários para executar um aplicativo .NET Core.
-ms.date: 06/08/2020
-ms.openlocfilehash: 442d08c9b016407327ba30db0aae78b5cf6b6fe3
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
-ms.translationtype: MT
+ms.date: 07/04/2020
+ms.openlocfilehash: 8fd9975e8a88704b9dea45b40127c8dc03f7d09f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701444"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051877"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: publicar um aplicativo de console do .NET Core usando Visual Studio Code
 
@@ -112,4 +111,4 @@ Nas etapas a seguir, você examinará os arquivos criados pelo processo de publi
 Neste tutorial, você publicou um aplicativo de console. No próximo tutorial, você criará uma biblioteca de classes.
 
 > [!div class="nextstepaction"]
-> [Criar uma biblioteca de .NET Standard no Visual Studio para Mac](library-with-visual-studio-mac.md)
+> [Criar uma biblioteca de .NET Standard no Visual Studio Code](library-with-visual-studio-code.md)

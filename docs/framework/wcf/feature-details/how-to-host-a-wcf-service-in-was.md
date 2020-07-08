@@ -2,12 +2,11 @@
 title: Como hospedar um serviço do WCF em WAS
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 1e338440b3a630840230df838e46579e3725bb60
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: 40460baeb136345f2532ec6ad5035bd5d3a40254
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593107"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051981"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Como hospedar um serviço do WCF em WAS
 Este tópico descreve as etapas básicas necessárias para criar um serviço do Windows Process Activation Services (também conhecido como WAS) hospedado Windows Communication Foundation (WCF). O WAS é o novo serviço de ativação de processos que é uma generalização dos recursos de Serviços de Informações da Internet (IIS) que funciona com protocolos de transporte não HTTP. O WCF usa a interface do adaptador de escuta para comunicar as solicitações de ativação recebidas nos protocolos não HTTP com suporte do WCF, como TCP, pipes nomeados e enfileiramento de mensagens.  
@@ -47,7 +46,7 @@ Este tópico descreve as etapas básicas necessárias para criar um serviço do 
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3. Crie um arquivo Web. config para definir a <xref:System.ServiceModel.NetTcpBinding> associação a ser usada pelos `CalculatorService` pontos de extremidade.  
+3. Crie um arquivo de Web.config para definir a <xref:System.ServiceModel.NetTcpBinding> associação a ser usada pelos `CalculatorService` pontos de extremidade.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -66,7 +65,7 @@ Este tópico descreve as etapas básicas necessárias para criar um serviço do 
   
 4. Crie um arquivo Service. svc que contenha o código a seguir.  
   
-   ```
+   ```aspx-csharp
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
   
@@ -74,7 +73,7 @@ Este tópico descreve as etapas básicas necessárias para criar um serviço do 
   
 ### <a name="to-create-a-client-to-use-the-service"></a>Para criar um cliente para usar o serviço  
   
-1. Use a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) da linha de comando para gerar código de metadados de serviço.  
+1. Use a [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) da linha de comando para gerar código de metadados de serviço.  
   
     ```console
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -88,7 +87,7 @@ Este tópico descreve as etapas básicas necessárias para criar um serviço do 
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4. A configuração do cliente que usa o <xref:System.ServiceModel.NetTcpBinding> também é gerada pelo svcutil. exe. Esse arquivo deve ser nomeado no arquivo app. config ao usar o Visual Studio.  
+4. A configuração do cliente que usa o <xref:System.ServiceModel.NetTcpBinding> também é gerada pelo Svcutil.exe. Esse arquivo deve ser nomeado no arquivo de App.config ao usar o Visual Studio.  
   
      [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]
   
@@ -98,7 +97,7 @@ Este tópico descreve as etapas básicas necessárias para criar um serviço do 
   
 6. Compile e execute o cliente.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Ativação TCP](../samples/tcp-activation.md)
 - [Recursos de hospedagem do Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

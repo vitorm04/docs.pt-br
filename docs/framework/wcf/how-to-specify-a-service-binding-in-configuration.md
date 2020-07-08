@@ -6,12 +6,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 92d0834091a1f243df6be214f606fbf0093dca54
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
-ms.translationtype: MT
+ms.openlocfilehash: 3b9dd12f2a28ae2d420e82013459613cee8140f1
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244550"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051942"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Como especificar uma associação de serviço em configuração
 Neste exemplo, um `ICalculator` contrato é definido para um serviço de calculadora básica, o serviço é implementado na `CalculatorService` classe e, em seguida, seu ponto de extremidade é configurado no arquivo de Web.config, onde é especificado que o serviço usa o <xref:System.ServiceModel.BasicHttpBinding> . Para obter uma descrição de como configurar esse serviço usando o código em vez de uma configuração, consulte [como especificar uma associação de serviço no código](how-to-specify-a-service-binding-in-code.md).  
@@ -77,7 +76,7 @@ Neste exemplo, um `ICalculator` contrato é definido para um serviço de calcula
   
 4. Crie um arquivo Service. svc que contenha a linha a seguir e coloque-o em seu diretório virtual Serviços de Informações da Internet (IIS).  
   
-    ```  
+    ```aspx-csharp
     <%@ServiceHost language=c# Service="CalculatorService" %>
     ```  
   
@@ -94,7 +93,7 @@ Neste exemplo, um `ICalculator` contrato é definido para um serviço de calcula
     </wsHttpBinding>  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Usando associações para configurar serviços e clientes](using-bindings-to-configure-services-and-clients.md)
 - [Especificando um endereço do ponto de extremidade](specifying-an-endpoint-address.md)
