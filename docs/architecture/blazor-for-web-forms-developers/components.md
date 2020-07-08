@@ -4,12 +4,11 @@ description: Saiba como criar componentes de interface do usuário reutilizávei
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 1a5f6b63143c4fd7a276219b9c4877e9e355c996
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
-ms.translationtype: MT
+ms.openlocfilehash: f6528b1e68b49b6ee3949baca166f4806448718b
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378315"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051446"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Crie componentes de interface do usuário reutilizáveis com mais utilidade
 
@@ -88,7 +87,7 @@ A tabela a seguir resume as várias diretivas Razor usadas no mais e suas ASP.NE
 |`@namespace` |Define o namespace para o componente|`@namespace MyNamespace`|Nenhum|
 |`@page`      |Especifica a rota para o componente|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |Especifica um parâmetro de tipo genérico para o componente|`@typeparam TItem`|Usar code-behind|
-|`@using`     |Especifica um namespace para trazer para o escopo|`@using MyComponentNamespace`|Adicionar namespace em *Web. config*|
+|`@using`     |Especifica um namespace para trazer para o escopo|`@using MyComponentNamespace`|Adicionar namespace no *web.config*|
 
 Os componentes do Razor também fazem uso extensivo de *atributos de diretiva* em elementos para controlar vários aspectos de como os componentes são compilados (manipulação de eventos, vinculação de dados, referências de elementos de & de componentes e assim por diante). Atributos de diretiva seguem uma sintaxe genérica comum em que os valores entre parênteses são opcionais:
 
@@ -110,7 +109,7 @@ Os vários atributos de diretiva usados pelo mais `@onclick` recente (, `@bind` 
 
 Muitas das sintaxes usadas em arquivos *. aspx* e *. ascx* têm sintaxes paralelas no Razor. Veja abaixo uma comparação simples das sintaxes para ASP.NET Web Forms e Razor.
 
-|Recurso                      |Formulários da Web           |Sintaxe               |Razor         |Sintaxe |
+|Recurso                      |Web Forms           |Syntax               |Razor         |Syntax |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |Diretivas                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |Blocos de códigos                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
@@ -146,7 +145,7 @@ Além do HTML normal, os componentes também podem usar outros componentes como 
 Ao contrário de ASP.NET Web Forms, os componentes do mais incrivelmente:
 
 - Não use um prefixo de elemento (por exemplo, `asp:` ).
-- Não exija o registro na página ou no *Web. config*.
+- Não exija o registro na página ou no *web.config*.
 
 Imagine os componentes do Razor como você faria com os tipos do .NET, pois isso é exatamente o que eles são. Se o assembly que contém o componente for referenciado, o componente estará disponível para uso. Para colocar o namespace do componente no escopo, aplique a `@using` diretiva:
 
@@ -602,8 +601,8 @@ A saída desse componente tem esta aparência:
 ```html
 <h1>My list</h1>
 <ul>
-    <li>The message is: message1</li>
-    <li>The message is: message2</li>
+    <li><p>The message is: message1</p></li>
+    <li><p>The message is: message2</p></li>
 <ul>
 ```
 

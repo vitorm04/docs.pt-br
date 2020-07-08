@@ -4,12 +4,11 @@ description: Descubra como usar o ML.NET em um cenário de classificação multi
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 5233924dab063fd1ba0232672613f9701f637385
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
-ms.translationtype: MT
+ms.openlocfilehash: d4ab7f0fcc6b582e74f54d3f0e60032696277249
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803723"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051539"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>Tutorial: categorizar problemas de suporte usando classificação multiclasse com ML.NET
 
@@ -74,7 +73,7 @@ Crie três campos globais para manter os caminhos para os arquivos baixados rece
 * `_trainingDataView` é o <xref:Microsoft.ML.IDataView> usado para processar o conjunto de dados de treinamento.
 * `_predEngine` é o <xref:Microsoft.ML.PredictionEngine%602> usado para previsões individuais.
 
-Adicione o seguinte código à linha logo acima do método `Main` para especificar estes caminhos e as outras variáveis:
+Adicione o seguinte código à linha diretamente acima do `Main` método para especificar os caminhos e as outras variáveis:
 
 [!code-csharp[DeclareGlobalVariables](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#DeclareGlobalVariables)]
 
