@@ -2,12 +2,12 @@
 title: Projetando validações na camada de modelo de domínio
 description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Compreenda conceitos-chave de validações de modelo de domínio.
 ms.date: 10/08/2018
-ms.openlocfilehash: d2efc5f3b3267c4573409952791c6e883a01aae2
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 94df2d6441581fbbae479da2524d6ffce2037d68
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988499"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100906"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Projetar validações na camada de modelo de domínio
 
@@ -49,21 +49,21 @@ public void SetAddress(string line1, string line2,
 
 Se o valor do estado for inválido, a primeira linha de endereço e a cidade já terão sido alteradas. Isso pode tornar o endereço inválido.
 
-Uma abordagem semelhante pode ser usada na construtora da entidade, levantando uma exceção para garantir que a entidade seja válida uma vez que seja criada.
+Uma abordagem semelhante pode ser usada no construtor da entidade, gerando uma exceção para garantir que a entidade seja válida depois de ser criada.
 
 ### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>Usar atributos de validação no modelo com base em anotações de dados
 
-Anotações de dados, como os atributos Required ou MaxLength necessários, pode ser usado para configurar propriedades de campo de banco de dados do EF Core, conforme explicado em detalhes na seção [Mapeamento de tabela](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping), mas [elas não funcionam mais para validação de entidade no EF Core](https://github.com/dotnet/efcore/issues/3680) (o método <xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> também não funciona mais para isso) como ocorria desde o EF 4.x no .NET Framework.
+Anotações de dados, como os atributos Required ou MaxLength necessários, pode ser usado para configurar propriedades de campo de banco de dados do EF Core, conforme explicado em detalhes na seção [Mapeamento de tabela](infrastructure-persistence-layer-implementation-entity-framework-core.md#table-mapping), mas [elas não funcionam mais para validação de entidade no EF Core](https://github.com/dotnet/efcore/issues/3680) (o método <xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> também não funciona mais para isso) como ocorria desde o EF 4.x no .NET Framework.
 
-Anotações de dados <xref:System.ComponentModel.DataAnnotations.IValidatableObject> e a interface ainda podem ser usadas para validação de modelos durante a vinculação do modelo, antes da invocação das ações do controlador, como de costume, mas esse modelo é destinado a ser um ViewModel ou DTO e isso é uma preocupação MVC ou API não uma preocupação de modelo de domínio.
+As anotações de dados e a <xref:System.ComponentModel.DataAnnotations.IValidatableObject> interface ainda podem ser usadas para validação de modelo durante a associação de modelo, antes da invocação de ações do controlador como de costume, mas esse modelo é destinado a ser um ViewModel ou dto e isso é um problema de API ou do MVC que não é uma preocupação com o modelo de domínio.
 
-Tendo esclarecido a diferença conceitual, você ainda poderá usar anotações de dados e `IValidatableObject` na classe de entidade para a validação se as ações receberem um parâmetro de objeto de classe de entidade, o que não é recomendado. Nesse caso, a validação ocorrerá na vinculação do modelo, pouco antes de invocar a ação e você pode verificar a propriedade ModelState.IsValid do controlador para verificar o resultado, mas, novamente, ele acontece no controlador, não antes de persistir o objeto da entidade no DbContext, como tinha feito desde eF 4.x.
+Tendo esclarecido a diferença conceitual, você ainda poderá usar anotações de dados e `IValidatableObject` na classe de entidade para a validação se as ações receberem um parâmetro de objeto de classe de entidade, o que não é recomendado. Nesse caso, a validação ocorrerá na associação de modelo, logo antes de invocar a ação, e você poderá verificar a Propriedade ModelState. IsValid do controlador para verificar o resultado, mas, novamente, isso ocorrerá no controlador, não antes de persistir o objeto de entidade no DbContext, como foi feito desde o EF 4. x.
 
-Você ainda pode implementar validação personalizada na classe de `IValidatableObject.Validate` entidade usando anotações de dados e o método, substituindo o método SaveChanges do DbContext.
+Você ainda pode implementar a validação personalizada na classe de entidade usando as anotações de dados e o `IValidatableObject.Validate` método, substituindo o método SaveChanges do DbContext.
 
-Você pode ver um exemplo de implementação para validar entidades `IValidatableObject`[neste comentário no GitHub](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539). Essa amostra não faz validações baseadas em atributos, mas deve ser fácil de implementar usando a reflexão na mesma substituição.
+Você pode ver um exemplo de implementação para validar entidades `IValidatableObject`[neste comentário no GitHub](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539). Esse exemplo não faz validações baseadas em atributo, mas elas devem ser fáceis de implementar usando reflexão na mesma substituição.
 
-No entanto, do ponto de vista DDD, o modelo de domínio é melhor mantido enxuto com o uso de exceções nos métodos de comportamento da sua entidade, ou implementando os padrões de Especificação e Notificação para impor regras de validação.
+No entanto, de um ponto de vista do DDD, o modelo de domínio é mais bem mantido com o uso de exceções nos métodos de comportamento de sua entidade ou pela implementação dos padrões de especificação e de notificação para impor regras de validação.
 
 Pode fazer sentido usar anotações de dados na camada de aplicativo em classes ViewModel (em vez de entidades de domínio) que aceitem a entrada para permitir a validação do modelo na camada da interface do usuário. No entanto, isso não deve ser feito na exclusão de validação dentro do modelo de domínio.
 
@@ -85,27 +85,27 @@ Usando a validação de campo com anotações de dados, por exemplo, você não 
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Rachel Appel. Introdução à validação de modelo sin ASP.NETd MVC do Núcleo** \
+- **Rachel Appel. Introdução à validação de modelo no ASP.NET Core MVC** \
   <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 
 - **Rick Anderson. Adicionando validação** \
   <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
-- **Martin Fowler. Substituindo exceções de arremesso por notificação em validações** \
+- **Martin Fowler. Substituindo exceções de lançamento com notificação em validações** \
   <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
-- **Padrões de especificação e notificação** \
+- **Padrões de especificação e de notificação** \
   <https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns>
 
-- **Lev Gorodinski. Validação em DDD (Domain-Driven Design, design orientado por domínio)** \
+- **Nível Gorodinski. Validação no design controlado por domínio (DDD)** \
   <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
-- **Colin Jack. Validação do modelo de domínio** \
+- **Tomada Colin. Validação do modelo de domínio** \
   <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
 - **Jimmy Bogard. Validação em um mundo DDD** \
   <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
 > [!div class="step-by-step"]
-> [Próximo](enumeration-classes-over-enum-types.md)
-> [anterior](client-side-validation.md)
+> [Anterior](enumeration-classes-over-enum-types.md) 
+>  [Avançar](client-side-validation.md)

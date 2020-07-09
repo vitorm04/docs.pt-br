@@ -4,6 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
 ms.openlocfilehash: 39dd6636f80b107ced1caac29869c6c66e67e21e
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86052033"
@@ -76,6 +77,6 @@ Por padrão, várias das associações fornecidas pelo sistema dão suporte a se
 
 Para obter um exemplo de como criar uma associação personalizada que dê suporte a sessões confiáveis, consulte [como: criar uma associação de sessão confiável personalizada com HTTPS](how-to-create-a-custom-reliable-session-binding-with-https.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Sessões confiáveis](reliable-sessions.md)

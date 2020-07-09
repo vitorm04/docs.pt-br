@@ -10,6 +10,7 @@ helpviewer_keywords:
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
 ms.openlocfilehash: 1de3d51953b632e3881db76202b63d3f287b39fe
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86051864"
@@ -64,7 +65,7 @@ Compile `t2.cs` e `t3.cs`, especificando que o método **Main** será encontrado
 csc t2.cs t3.cs -main:Test2
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

@@ -1,13 +1,16 @@
 ---
 title: Escolhendo entre tipos anônimos e de tupla
 description: Saiba quando é apropriado escolher entre tipos anônimos e tipo de tupla.
+author: IEvangelist
+ms.author: dapine
 ms.date: 07/01/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2f927b59d7206dd0f405c11529f93b56a1c778a0
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 9140250ad1f48501bf1d2e53a1c179e6823f19cd
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052072"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100958"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>Escolhendo entre tipos anônimos e de tupla
 
@@ -102,7 +105,7 @@ Você talvez queira sempre usar os <xref:System.ValueTuple> <xref:System.Tuple> 
 
 ### <a name="key-differences"></a>Principais diferenças
 
-| Nome                     | Modificador de acesso | Tipo     | Nome do membro personalizado | Suporte à desconstrução | Suporte à árvore de expressões |
+| Nome                     | Modificador de acesso | Type     | Nome do membro personalizado | Suporte à desconstrução | Suporte à árvore de expressões |
 |--------------------------|-----------------|----------|----------------------|------------------------|-------------------------|
 | Tipos anônimos          | `internal`      | `class`  | ✔️                   | ❌                     | ✔️                     |
 | <xref:System.Tuple>      | `public`        | `class`  | ❌                   | ❌                     | ✔️                     |
@@ -120,7 +123,7 @@ O desempenho entre esses tipos depende do cenário. O grande impacto envolve a c
 
 Como um desenvolvedor escolhendo entre tuplas e tipos anônimos, há vários fatores a serem considerados. Em termos gerais, se você não estiver trabalhando com [árvores de expressão](../../csharp/expression-trees.md)e estiver familiarizado com a sintaxe de tupla, escolha <xref:System.ValueTuple> como elas fornecem um tipo de valor com a flexibilidade para nomear Propriedades. Se você estiver trabalhando com árvores de expressão e preferir nomear Propriedades, escolha tipos anônimos. Caso contrário, use <xref:System.Tuple>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Tipos anônimos](../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
 - [Árvores de expressão](../../csharp/expression-trees.md)

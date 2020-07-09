@@ -4,6 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
 ms.openlocfilehash: 40460baeb136345f2532ec6ad5035bd5d3a40254
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86051981"
@@ -97,7 +98,7 @@ Este tópico descreve as etapas básicas necessárias para criar um serviço do 
   
 6. Compile e execute o cliente.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Ativação TCP](../samples/tcp-activation.md)
 - [Recursos de hospedagem do Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
