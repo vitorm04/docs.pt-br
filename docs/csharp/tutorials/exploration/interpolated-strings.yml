@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 7736a2a26b37d8fbfac98328f94ce3c9a25be181
-  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+  ms.openlocfilehash: a82fe645524e526d0373a4e4733c2fef9ca7c14f
+  ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/06/2020
-  ms.locfileid: "82861002"
+  ms.lasthandoff: 07/09/2020
+  ms.locfileid: "86174108"
 items:
 - durationInMinutes: 2
   content: >
@@ -22,7 +22,7 @@ items:
 - title: Criar uma cadeia de caracteres interpolada
   durationInMinutes: 2
   content: >
-    Execute o seguinte código na janela interativa. Selecione o botão **entrar no modo de foco** . Em seguida, digite o seguinte bloco de código na janela interativa ( `<name>` substitua pelo seu nome) e selecione **executar**:
+    Execute o seguinte código na janela interativa. Selecione o botão **entrar no modo de foco** . Em seguida, digite o seguinte bloco de código na janela interativa (substitua `<name>` pelo seu nome) e selecione **executar**:
 
 
     ```csharp
@@ -53,7 +53,7 @@ items:
     Na etapa anterior, você usou a interpolação de cadeias de caracteres para inserir uma cadeia de caracteres dentro de outra. Cada expressão de interpolação que faz parte de uma expressão de cadeia de caracteres interpolada pode ser de qualquer tipo de dados. Vamos incluir valores de várias expressões de tipo de dados em uma cadeia de caracteres interpolada.
 
 
-    No exemplo a seguir, primeiro definimos uma [tupla](../../tuples.md) que tem `Name`Membros `Price`, e `perPackage` . Execute o seguinte código na janela interativa:
+    No exemplo a seguir, primeiro definimos uma [tupla](../../language-reference/builtin-types/value-tuples.md) que tem `Name` `Price` Membros, e `perPackage` . Execute o seguinte código na janela interativa:
 
 
     ```csharp
