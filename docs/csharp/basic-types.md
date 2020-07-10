@@ -4,12 +4,12 @@ description: Saiba mais sobre os tipos principais (numéricos, cadeias de caract
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 468482bd1b4f1a5835df9d66ee483edc33c28f61
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 93a0023969bb8bb089922a9e30fbf599eddc7203
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202216"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174173"
 ---
 # <a name="types-variables-and-values"></a>Tipos, variáveis e valores
 
@@ -74,7 +74,7 @@ Conforme mencionado anteriormente, você pode digitar implicitamente uma variáv
   
 Em alguns casos, é inconveniente criar um tipo nomeado para conjuntos simples de valores relacionados que você não pretende armazenar ou transmitir para fora dos limites do método. Você pode criar *tipos anônimos* para essa finalidade. Para obter mais informações, consulte [tipos anônimos](programming-guide/classes-and-structs/anonymous-types.md).
 
-É comum querer retornar mais de um valor de um método. Você pode criar *tipos de tupla* que retornam vários valores em uma única chamada de método. Para obter mais informações, consulte [tuplas](tuples.md).
+É comum querer retornar mais de um valor de um método. Você pode criar *tipos de tupla* que retornam vários valores em uma única chamada de método. Para obter mais informações, consulte [tipos de tupla](language-reference/builtin-types/value-tuples.md).
 
 ## <a name="the-common-type-system"></a>O Common Type System
 

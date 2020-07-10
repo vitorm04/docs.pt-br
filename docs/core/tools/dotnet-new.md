@@ -1,13 +1,16 @@
 ---
 title: Comando dotnet new
 description: O comando dotnet new cria novos projetos .NET Core com base no modelo especificado.
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 04/10/2020
-ms.openlocfilehash: 39301ad95761848b60b45cb5c18ede937f70c32c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ec41b3b79ed5eded7c9124d3e4d95c658ee39580
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283969"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173114"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -30,7 +33,7 @@ dotnet new <TEMPLATE> [-l|--list] [--type <TYPE>]
 dotnet new -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 O `dotnet new` comando cria um projeto do .NET Core ou outros artefatos com base em um modelo.
 
@@ -55,7 +58,7 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 
   A tabela a seguir mostra os modelos que vêm pré-instalados com o SDK do .NET Core. O idioma padrão do modelo é mostrado entre parênteses. Clique no link nome curto para ver as opções de modelo específicas.
 
-| Modelos                                    | Nome curto                      | Language     | Marcações                                  | Incluída |
+| Modelos                                    | Nome curto                      | Linguagem     | Marcas                                  | Incluída |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | Aplicativo do Console                          | [MMC](#console)             | [C#], F#, VB | Comum/Console                        | 1.0        |
 | Biblioteca de classes                                | [classlib](#classlib)           | [C#], F#, VB | Comum/Library                        | 1.0        |
@@ -74,8 +77,8 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 | Página do Razor                                   | [Web](#page)                   | [C#]         | Web/ASP.NET                           | 2,0        |
 | Importações de Exibição do MVC                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2,0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2,0        |
-| Aplicativo de servidor mais incrivelmente                            | [blazorserver](#blazorserver)   | [C#]         | Web/mais e mais                            | 3.0        |
-| Aplicativo Webassembly mais incrivelmente                       | `blazorwasm`                    | [C#]         | Web/mais incrivelmente/Webassembly                            | 3.1.300    |
+| BlazorAplicativo de servidor                            | [blazorserver](#blazorserver)   | [C#]         | SiteBlazor                            | 3.0        |
+| BlazorDo WebAssembly aplicativo                       | `blazorwasm`                    | [C#]         | SiteBlazor/WebAssembly                            | 3.1.300    |
 | ASP.NET Core Vazio                           | [site](#web)                     | [C#], F#     | Web/Vazio                             | 1.0        |
 | Aplicativo Web ASP.NET Core (Modelo-Exibição-Controlador) | [MVC](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
 | Aplicativo Web ASP.NET Core                         | [webapp, Razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2,2, 2,0   |
@@ -247,7 +250,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`--exclude-launch-settings`**
 
-  Exclui *launchSettings. JSON* do modelo gerado.
+  Exclui *launchSettings.js* do modelo gerado.
 
 - **`--no-restore`**
 
@@ -378,7 +381,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`--exclude-launch-settings`**
 
-  Exclui *launchSettings. JSON* do modelo gerado.
+  Exclui *launchSettings.js* do modelo gerado.
 
 - **`--no-https`**
 
@@ -398,7 +401,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`--exclude-launch-settings`**
 
-  Exclui *launchSettings. JSON* do modelo gerado.
+  Exclui *launchSettings.js* do modelo gerado.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -477,7 +480,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`--exclude-launch-settings`**
 
-  Exclui *launchSettings. JSON* do modelo gerado.
+  Exclui *launchSettings.js* do modelo gerado.
 
 - **`--no-https`**
 
@@ -525,7 +528,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`--exclude-launch-settings`**
 
-  Exclui *launchSettings. JSON* do modelo gerado.
+  Exclui *launchSettings.js* do modelo gerado.
 
 - **`--no-restore`**
 
@@ -557,7 +560,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`--exclude-launch-settings`**
 
-  Exclui *launchSettings. JSON* do modelo gerado.
+  Exclui *launchSettings.js* do modelo gerado.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -634,7 +637,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`--exclude-launch-settings`**
 
-  Exclui *launchSettings. JSON* do modelo gerado.
+  Exclui *launchSettings.js* do modelo gerado.
 
 - **`--no-https`**
 
@@ -666,7 +669,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`--sdk-version <VERSION_NUMBER>`**
 
-  Especifica a versão do SDK do .NET Core a ser usada no arquivo *global. JSON* .
+  Especifica a versão do SDK do .NET Core a ser usada na *global.jsno* arquivo.
 
 ***
 
@@ -732,7 +735,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
   dotnet new -u
   ```
 
-- Crie um *global. JSON* no diretório atual definindo a versão do SDK para 3.1.101:
+- Crie um *global.jsno* diretório atual definindo a versão do SDK para 3.1.101:
 
   ```dotnetcli
   dotnet new globaljson --sdk-version 3.1.101

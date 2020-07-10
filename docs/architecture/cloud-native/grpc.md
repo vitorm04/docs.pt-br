@@ -2,13 +2,16 @@
 title: gRPC
 description: Saiba mais sobre o gRPC, sua função em aplicativos nativos de nuvem e como ele difere da comunicação HTTP RESTful.
 author: robvet
+no-loc:
+- Blazor
+- Blazor WebAssembly
 ms.date: 05/13/2020
-ms.openlocfilehash: 35a8325dd82e946d88b09b223287e2871be88ffa
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6b41363008405032f4233448f134a8a602dbd26a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201328"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173153"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -81,7 +84,7 @@ Favorecer o gRPC para os seguintes cenários:
 - Comunicação em tempo real de ponto a ponto – o gRPC pode enviar mensagens em tempo real sem sondagem e tem excelente suporte para streaming bidirecional.
 - Ambientes com restrição de rede – as mensagens gRPC binárias são sempre menores do que uma mensagem JSON equivalente com base em texto.
 
-No momento da redação deste artigo, o gRPC é usado principalmente com os serviços de back-end. A maioria dos navegadores modernos não pode fornecer o nível de controle HTTP/2 necessário para dar suporte a um cliente gRPC de front-end. Dito isso, há uma [iniciativa antecipada](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) que permite a comunicação gRPC de aplicativos baseados em navegador criados com tecnologias de Webassembly JavaScript ou mais recente. O [gRPC-Web para .net](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) permite que um aplicativo ASP.NET Core gRPC dê suporte aos recursos do gRPC em aplicativos de navegador:
+No momento da redação deste artigo, o gRPC é usado principalmente com os serviços de back-end. A maioria dos navegadores modernos não pode fornecer o nível de controle HTTP/2 necessário para dar suporte a um cliente gRPC de front-end. Dito isso, há uma [iniciativa antecipada](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) que permite a comunicação gRPC de aplicativos baseados em navegador criados com JavaScript ou Blazor WebAssembly tecnologias. O [gRPC-Web para .net](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) permite que um aplicativo ASP.NET Core gRPC dê suporte aos recursos do gRPC em aplicativos de navegador:
 
 - Clientes com rigidez de tipos e gerados por código
 - Compactar mensagens Protobuf

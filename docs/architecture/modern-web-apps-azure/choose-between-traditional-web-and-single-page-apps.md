@@ -3,13 +3,16 @@ title: Escolha entre aplicativos Web tradicionais e aplicativos de página únic
 description: Saiba como escolher entre aplicativos Web tradicionais e SPAs (aplicativos de única página) ao criar aplicativos Web.
 author: ardalis
 ms.author: wiwagn
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: 0aef42b78114a11c70456cb3122d3dcb5143f983
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 4fe889fe86d96a5b2ffa5bd879d2ec1801a3cf20
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662700"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174361"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Escolher entre aplicativos Web tradicionais e SPAs (aplicativos de página única)
 
@@ -38,21 +41,21 @@ Além disso, as estruturas de SPA exigem um maior conhecimento em arquitetura e 
 
 Melhorias na experiência do usuário possibilitadas pela abordagem SPA devem ser avaliadas em relação a essas considerações.
 
-## <a name="blazor"></a>Blazor
+## Blazor
 
-O ASP.NET Core 3.0 apresenta um novo modelo para a criação de uma interface do usuário sofisticada, interativa e combinável chamado Blazor. O lado do servidor mais grande permite que os desenvolvedores criem interface do usuário com C# e Razor no servidor e que a interface do usuário seja conectada interativamente ao navegador em tempo real usando uma conexão de sinalização persistente.
+ASP.NET Core 3,0 apresenta um novo modelo para a criação de uma interface do usuário rica, interativa e combinável chamada Blazor . Blazoro lado do servidor permite que os desenvolvedores criem interface do usuário com C# e Razor no servidor e que a interface do usuário seja conectada interativamente ao navegador em tempo real usando uma conexão de sinalização persistente.
 
-Webassembly mais incrivelmente apresenta outra opção para aplicativos mais incrivelmente, permitindo que eles executem no navegador usando o Webassembly. Como é um .NET real em execução no Webassembly, você pode usar novamente o código e as bibliotecas de partes do lado do servidor de seu aplicativo.
+BlazorWebAssemblyapresenta outra opção para Blazor aplicativos, permitindo que eles sejam executados no navegador usando o WebAssembly . Como o .NET real está em execução WebAssembly , você pode usar novamente o código e as bibliotecas de partes do lado do servidor do seu aplicativo.
 
-O mais novo é uma terceira opção a ser considerada ao avaliar se deve-se criar um aplicativo Web puramente renderizado no servidor ou um SPA. Você pode criar comportamentos avançados do lado do cliente, semelhantes ao SPA, usando um poderoso, sem a necessidade de um desenvolvimento de JavaScript significativo. Aplicativos mais fáceis podem chamar APIs para solicitar dados ou executar operações do lado do servidor.
+Blazorfornece uma nova opção a ser considerada ao avaliar se deve-se criar um aplicativo Web puramente renderizado no servidor ou um SPA. Você pode criar comportamentos avançados do lado do cliente, semelhantes ao SPA Blazor , usando, sem a necessidade de um desenvolvimento de JavaScript significativo. Blazoros aplicativos podem chamar APIs para solicitar dados ou executar operações do lado do servidor.
 
-Considere a criação de seu aplicativo Web com um mais incrivelmente quando:
+Considere criar seu aplicativo Web com Blazor quando:
 
 - Seu aplicativo deve expor uma interface do usuário rica
 
 - Sua equipe é mais confortável com o desenvolvimento do .NET do que o desenvolvimento de JavaScript ou TypeScript
 
-Para saber mais sobre o Blazor, confira a [Introdução ao Blazor](https://blazor.net/docs/get-started.html).
+Para obter mais informações sobre o Blazor , consulte Introdução [ Blazor ao ](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Quando escolher aplicativos Web tradicionais
 
@@ -97,25 +100,25 @@ A configuração de SPAs exige familiaridade com o JavaScript e/ou o TypeScript 
 
 Caso você já esteja dando suporte a uma API Web para uso por outros clientes, poderá ser necessário menos esforço para criar uma implementação de SPA que utiliza essas APIs em vez de reproduzir a lógica no formulário do lado do servidor. Os SPAs fazem uso extensivo de APIs Web para consultar e atualizar os dados conforme os usuários interagem com o aplicativo.
 
-## <a name="when-to-choose-blazor"></a>Quando escolher o mais incrivelmente
+## <a name="when-to-choose-blazor"></a>Quando escolherBlazor
 
-Veja a seguir uma explicação mais detalhada de quando escolher o mais claro para seu aplicativo Web.
+Veja a seguir uma explicação mais detalhada de quando escolher Blazor para seu aplicativo Web.
 
 **Seu aplicativo deve expor uma interface do usuário rica**
 
-Como SPAs com base em JavaScript, os aplicativos mais eficientes podem dar suporte ao comportamento de cliente avançado sem recargas de página. Esses aplicativos são mais responsivos aos usuários, buscando apenas os dados (ou HTML) necessários para responder a uma determinada interação do usuário. Projetado corretamente, aplicativos de mais alto do servidor podem ser configurados para serem executados como aplicativos de mais alto do cliente com alterações mínimas, uma vez que esse recurso tem suporte.
+Como SPAs com base em JavaScript, Blazor os aplicativos podem dar suporte ao comportamento de cliente avançado sem recargas de página. Esses aplicativos são mais responsivos aos usuários, buscando apenas os dados (ou HTML) necessários para responder a uma determinada interação do usuário. Projetado corretamente, os aplicativos do lado do servidor Blazor podem ser configurados para serem executados como aplicativos do lado do cliente Blazor com alterações mínimas, uma vez que esse recurso tem suporte.
 
 **Sua equipe é mais confortável com o desenvolvimento do .NET do que o desenvolvimento de JavaScript ou TypeScript**
 
-Muitos desenvolvedores são mais produtivos com o .NET e o Razor do que com linguagens do lado do cliente, como JavaScript ou TypeScript. Como o lado do servidor do aplicativo já está sendo desenvolvido com o .NET, usar o mais claro garante que todos os desenvolvedores do .NET da equipe possam entender e potencialmente criar o comportamento do front-end do aplicativo.
+Muitos desenvolvedores são mais produtivos com o .NET e o Razor do que com linguagens do lado do cliente, como JavaScript ou TypeScript. Como o lado do servidor do aplicativo já está sendo desenvolvido com o .NET, o uso de Blazor garante que todos os desenvolvedores do .NET da equipe possam entender e potencialmente criar o comportamento do front-end do aplicativo.
 
 ## <a name="decision-table"></a>Tabela de decisão
 
-A tabela de decisão a seguir resume alguns dos fatores básicos a serem considerados ao escolher entre um aplicativo Web tradicional, um SPA ou um aplicativo mais incrivelmente.
+A tabela de decisão a seguir resume alguns dos fatores básicos a serem considerados ao escolher entre um aplicativo Web tradicional, um SPA ou um Blazor aplicativo.
 
-| **Fator**                                           | **Aplicativo Web tradicional** | **Aplicativo de página única** | **Aplicativo mais incrivelmente**  |
+| **Fator**                                           | **Aplicativo Web tradicional** | **Aplicativo de página única** | **BlazorAplicação**  |
 | ---------------------------------------------------- | ----------------------- | --------------------------- | --------------- |
-| É necessária a familiaridade da equipe com JavaScript/TypeScript | **Minimal**             | **Necessária**                | **Minimal**     |
+| É necessária a familiaridade da equipe com JavaScript/TypeScript | **Mínimo**             | **Obrigatório**                | **Mínimo**     |
 | Suporte a navegadores sem scripts                   | **Com suporte**           | **Sem suporte**           | **Com suporte**   |
 | Comportamento mínimo do aplicativo do lado do cliente             | **Apropriado**         | **Exagero**                | **Viáveis**      |
 | Requisitos avançados e complexos de interface do usuário            | **Certo**             | **Apropriado**             | **Apropriado** |

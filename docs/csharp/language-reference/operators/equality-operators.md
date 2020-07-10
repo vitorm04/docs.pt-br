@@ -15,16 +15,16 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 7dd3e544dc03fb94577892b42aecd1a15a6621ac
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 011ef8b570a0bbbc38ec71df4286c3b08c3109da
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80110913"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174777"
 ---
 # <a name="equality-operators-c-reference"></a>Operadores de igualdade (Referência de C#)
 
-Os [ `==` ](#equality-operator-) operadores (igualdade) e [ `!=` (desigualdade)](#inequality-operator-) verificam se seus operands são iguais ou não.
+Os operadores [ `==` (igualdade)](#equality-operator-) e [ `!=` (desigualdade)](#inequality-operator-) verificam se os operandos são iguais ou não.
 
 ## <a name="equality-operator-"></a>Operador de igualdade ==
 
@@ -37,13 +37,13 @@ Os operandos dos [tipos de valor internos](../builtin-types/value-types.md#built
 [!code-csharp-interactive[value types equality](snippets/EqualityOperators.cs#ValueTypesEquality)]
 
 > [!NOTE]
-> Para `==`os operadores, [ `<` `>` `<=` `>=` ](comparison-operators.md) se algum dos operands não for<xref:System.Double.NaN?displayProperty=nameWithType> um <xref:System.Single.NaN?displayProperty=nameWithType>número (ou), `false`o resultado da operação é. Isso significa que o valor `NaN` não é superior, inferior nem igual a nenhum outro valor `double` (ou `float`), incluindo `NaN`. Para obter mais informações e exemplos, consulte o artigo de referência <xref:System.Double.NaN?displayProperty=nameWithType> ou <xref:System.Single.NaN?displayProperty=nameWithType>.
+> Para os `==` operadores,, [ `<` `>` , `<=` e `>=` ](comparison-operators.md) , se qualquer um dos operandos não for um número ( <xref:System.Double.NaN?displayProperty=nameWithType> ou <xref:System.Single.NaN?displayProperty=nameWithType> ), o resultado da operação será `false` . Isso significa que o valor `NaN` não é superior, inferior nem igual a nenhum outro valor `double` (ou `float`), incluindo `NaN`. Para obter mais informações e exemplos, consulte o artigo de referência <xref:System.Double.NaN?displayProperty=nameWithType> ou <xref:System.Single.NaN?displayProperty=nameWithType>.
 
 Dois operandos do mesmo tipo de [enum](../builtin-types/enum.md) serão iguais se os valores correspondentes do tipo integral subjacente forem iguais.
 
 Os tipos [struct](../builtin-types/struct.md) definidos pelo usuário não dão suporte ao operador `==`, por padrão. Para dar suporte ao operador `==`, um struct definido pelo usuário precisa [sobrecarregá-lo](operator-overloading.md).
 
-Começando com C# 7.3, os operadores `==`, `!=`,  e  são compatíveis com as [tuplas](../../tuples.md) de C#. Para obter mais informações, consulte a seção [Igualdade e tuplas](../../tuples.md#equality-and-tuples) do artigo [Tipos de tupla do C#](../../tuples.md).
+Começando com C# 7.3, os operadores `==`, `!=`,  e  são compatíveis com as [tuplas](../builtin-types/value-tuples.md) de C#. Para obter mais informações, consulte a seção de [igualdade de tupla](../builtin-types/value-tuples.md#tuple-equality) do artigo [tipos de tupla](../builtin-types/value-tuples.md) .
 
 ### <a name="reference-types-equality"></a>Igualdade de tipos de referência
 
@@ -59,7 +59,7 @@ Dois operandos da [cadeia de caracteres](../builtin-types/reference-types.md#the
 
 [!code-csharp-interactive[string equality](snippets/EqualityOperators.cs#StringEquality)]
 
-Essa é uma comparação ordinal sensível ao caso. Para obter mais informações sobre a comparação de cadeias de caracteres, confira [Como comparar cadeias de caracteres no C#](../../how-to/compare-strings.md).
+Essa é uma comparação ordinal que diferencia maiúsculas de minúsculas. Para obter mais informações sobre a comparação de cadeias de caracteres, confira [Como comparar cadeias de caracteres no C#](../../how-to/compare-strings.md).
 
 ### <a name="delegate-equality"></a>Igualdade de delegado
 
@@ -83,15 +83,15 @@ O exemplo a seguir demonstra o uso do operador `!=`:
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
-Os tipos definidos pelo usuário podem [sobrecarregar](operator-overloading.md) os operadores `==` e `!=`. Se um tipo sobrecarregar um dos dois operadores, ele também deve sobrecarregar o outro.
+Os tipos definidos pelo usuário podem [sobrecarregar](operator-overloading.md) os operadores `==` e `!=`. Se um tipo sobrecarrega um dos dois operadores, ele também deve sobrecarregar o outro.
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, consulte a seção [Operadores de teste de tipo e relacional](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) na [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Referência do C#](../index.md)
+- [Referência de C#](../index.md)
 - [Operadores do C#](index.md)
 - <xref:System.IEquatable%601?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>

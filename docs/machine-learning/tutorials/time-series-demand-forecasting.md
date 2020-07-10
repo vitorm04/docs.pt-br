@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 4ea002b690de877fd6f955c05eb8235f46e0a870
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: d93bdee8d5a057be0f405fe4334d7edbdc0649ec
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803204"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174400"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Tutorial: prever a demanda de serviço de aluguel de bicicletas com análise de série temporal e ML.NET
 
@@ -33,7 +33,7 @@ Neste tutorial, você aprenderá como:
 
 ## <a name="time-series-forecasting-sample-overview"></a>Visão geral de exemplo de previsão de série temporal
 
-Este exemplo é um **aplicativo de console C# .NET Core** que prevê a demanda por locações de bicicletas usando um algoritmo de análise de série temporal monovariável conhecido como análise de espectro único. O código para este exemplo pode ser encontrado no repositório [dotnet/MachineLearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) no github.
+Este exemplo é um **aplicativo de console C# .NET Core** que prevê a demanda por locações de bicicletas usando um algoritmo de análise de série temporal monovariável conhecido como análise de espectro singular. O código para este exemplo pode ser encontrado no repositório [dotnet/MachineLearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) no github.
 
 ## <a name="understand-the-problem"></a>Compreender o problema
 
@@ -41,7 +41,7 @@ Para executar uma operação eficiente, o gerenciamento de inventário desempenh
 
 A técnica para analisar dados usados neste tutorial é a análise de série temporal monovariável. A análise da série temporal monovariável examina uma única observação numérica durante um período de tempo em intervalos específicos, como vendas mensais.
 
-O algoritmo usado neste tutorial é [uma análise de espectro único (SSA)](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf). O SSA funciona decompondo uma série temporal em um conjunto de componentes principais. Esses componentes podem ser interpretados como as partes de um sinal que correspondem a tendências, ruídos, sazonalidade e muitos outros fatores. Em seguida, esses componentes são reconstruídos e usados para prever valores por algum tempo no futuro.
+O algoritmo usado neste tutorial é [análise de espectro singular (SSA)](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf). O SSA funciona decompondo uma série temporal em um conjunto de componentes principais. Esses componentes podem ser interpretados como as partes de um sinal que correspondem a tendências, ruídos, sazonalidade e muitos outros fatores. Em seguida, esses componentes são reconstruídos e usados para prever valores por algum tempo no futuro.
 
 ## <a name="create-console-application"></a>Criar um aplicativo de console
 
@@ -167,7 +167,7 @@ Veja a seguir um exemplo dos dados:
 
     [!code-csharp [TrainModel](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L47)]
 
-## <a name="evaluate-the-model"></a>Avalie o modelo
+## <a name="evaluate-the-model"></a>Avaliar o modelo
 
 Avalie como o modelo é executado prevendo os dados do próximo ano e comparando-os com os valores reais.
 

@@ -3,12 +3,12 @@ title: Novidades no C# 7.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos na versão 7.0 da linguagem C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: e78d680e19709bf3dd854531d5d9f6b7d6464f49
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 38b1afebf6d4fa69c46424c2d9a3631e8f3a8707
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392243"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174738"
 ---
 # <a name="whats-new-in-c-70"></a>Novidades no C# 7.0
 
@@ -20,7 +20,7 @@ O C# 7.0 adiciona vários recursos novos à linguagem C#:
   - Você pode criar tipos simples e sem nome que contêm vários campos públicos. Compiladores e ferramentas IDE entendem a semântica desses tipos.
 - [Descartes](#discards)
   - Descartes são variáveis temporárias de somente gravação usadas em atribuições quando o valor atribuído não tem importância. Eles são mais úteis ao desconstruir tuplas e tipos definidos pelo usuário, bem como ao chamar métodos com parâmetros `out`.
-- [Correspondência padrão](#pattern-matching)
+- [Correspondência de padrões](#pattern-matching)
   - Você pode criar a lógica de ramificação com base em tipos e valores arbitrários dos membros desses tipos.
 - [`ref`locais e retorna](#ref-locals-and-returns)
   - As variáveis locais do método e os valores de retorno podem ser referências a outros armazenamentos.
@@ -88,7 +88,7 @@ Extraia os campos individuais atribuindo um `Point` a uma tupla:
 
 [!code-csharp[DeconstructPoint](~/samples/snippets/csharp/new-in-7/program.cs#DeconstructPoint "Deconstruct a point")]
 
-Saiba mais detalhes sobre tuplas no [artigo sobre tuplas](../tuples.md).
+Para obter mais informações, consulte [tipos de tupla](../language-reference/builtin-types/value-tuples.md).
 
 ## <a name="discards"></a>Descartes
 

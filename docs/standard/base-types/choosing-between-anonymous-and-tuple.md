@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 07/01/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 9140250ad1f48501bf1d2e53a1c179e6823f19cd
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: 9c186133a639faf187c89d872856d860a20f5a2d
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100958"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174212"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>Escolhendo entre tipos anônimos e de tupla
 
@@ -90,12 +90,7 @@ foreach (var (formatted, ticks) in
 }
 ```
 
-O C# fornece suporte a idiomas de tuplas com o <xref:System.ValueTuple> tipo e a semântica para:
-
-- [Atribuição de tupla](../../csharp/tuples.md#assignment-and-tuples)
-- [Desconstrução de tupla](../../csharp/deconstruct.md) (não limitada a tuplas)
-- [Verificações de igualdade de tupla](../../csharp/tuples.md#equality-and-tuples)
-- [Inicializadores de projeção de tupla](../../csharp/tuples.md#tuple-projection-initializers)
+Para obter mais informações sobre tuplas, consulte [tipos de tupla (referência C#)](../../csharp/language-reference/builtin-types/value-tuples.md) ou [tuplas (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/tuples.md).
 
 No entanto, os exemplos anteriores são funcionalmente equivalentes; Há pequenas diferenças na usabilidade e nas implementações subjacentes.
 
@@ -105,7 +100,7 @@ Você talvez queira sempre usar os <xref:System.ValueTuple> <xref:System.Tuple> 
 
 ### <a name="key-differences"></a>Principais diferenças
 
-| Nome                     | Modificador de acesso | Type     | Nome do membro personalizado | Suporte à desconstrução | Suporte à árvore de expressões |
+| Nome                     | Modificador de acesso | Tipo     | Nome do membro personalizado | Suporte à desconstrução | Suporte à árvore de expressões |
 |--------------------------|-----------------|----------|----------------------|------------------------|-------------------------|
 | Tipos anônimos          | `internal`      | `class`  | ✔️                   | ❌                     | ✔️                     |
 | <xref:System.Tuple>      | `public`        | `class`  | ❌                   | ❌                     | ✔️                     |
@@ -123,9 +118,10 @@ O desempenho entre esses tipos depende do cenário. O grande impacto envolve a c
 
 Como um desenvolvedor escolhendo entre tuplas e tipos anônimos, há vários fatores a serem considerados. Em termos gerais, se você não estiver trabalhando com [árvores de expressão](../../csharp/expression-trees.md)e estiver familiarizado com a sintaxe de tupla, escolha <xref:System.ValueTuple> como elas fornecem um tipo de valor com a flexibilidade para nomear Propriedades. Se você estiver trabalhando com árvores de expressão e preferir nomear Propriedades, escolha tipos anônimos. Caso contrário, use <xref:System.Tuple>.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Tipos anônimos](../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
 - [Árvores de expressão](../../csharp/expression-trees.md)
-- [Tipos de tupla](../../csharp/tuples.md)
+- [Tipos de tupla (referência C#)](../../csharp/language-reference/builtin-types/value-tuples.md)
+- [Tuplas (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/tuples.md)
 - [Diretrizes de design de tipo](../design-guidelines/type.md)
