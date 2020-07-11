@@ -2,17 +2,18 @@
 title: Programação orientada a objeto (C#)
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 98dd5147ab54375ec851ccd9b981a68098a53270
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 83140a9dbd16f60f04f50ba18c71099cdd862f15
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241884"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226628"
 ---
 # <a name="object-oriented-programming-c"></a>Programação orientada a objeto (C#)
 
-O C# dá suporte completo à programação orientada a objeto, incluindo encapsulamento, herança e polimorfismo.
+O C# fornece suporte completo para a programação orientada a objeto, incluindo abstração, encapsulamento, herança e polimorfismo.
 
+- *Abstração* significa ocultar os detalhes desnecessários do tipo consumidores.
 - *Encapsulamento* significa que um grupo de propriedades, métodos e outros membros relacionados é tratado como uma única unidade ou objeto.
 - *Herança* descreve a capacidade de criar novas classes com base em uma classe existente.
 - *Polimorfismo* significa que você pode ter várias classes que podem ser usadas de forma intercambiável, ainda que cada classe implemente as mesmas propriedades ou métodos de maneiras diferentes.
@@ -29,7 +30,7 @@ class SampleClass
 }
 ```
 
-O C# também fornece tipos chamados de *estruturas* que são úteis quando você não precisa de suporte para herança ou polimorfismo.
+O C# também fornece tipos chamados de *estruturas* que são úteis quando você não precisa de suporte para herança ou polimorfismo. Para obter mais informações, consulte [escolhendo entre classe e estrutura](../../../standard/design-guidelines/choosing-between-class-and-struct.md).
 
 Para definir uma estrutura:
 
@@ -186,9 +187,9 @@ Os modificadores de acesso a seguir estão disponíveis:
 
 | Modificador de C# | Definição |
 |--|--|
-| [público](../../language-reference/keywords/public.md) | O tipo ou membro pode ser acessado por qualquer outro código no mesmo assembly ou em outro assembly que faz referência a ele. |
-| [particulares](../../language-reference/keywords/private.md) | O tipo ou membro pode ser acessado somente pelo código na mesma classe. |
-| [protegidos](../../language-reference/keywords/protected.md) | O tipo ou membro pode ser acessado somente pelo código na mesma classe ou em uma classe derivada. |
+| [public](../../language-reference/keywords/public.md) | O tipo ou membro pode ser acessado por qualquer outro código no mesmo assembly ou em outro assembly que faz referência a ele. |
+| [pessoal](../../language-reference/keywords/private.md) | O tipo ou membro pode ser acessado somente pelo código na mesma classe. |
+| [protected](../../language-reference/keywords/protected.md) | O tipo ou membro pode ser acessado somente pelo código na mesma classe ou em uma classe derivada. |
 | [interno](../../language-reference/keywords/internal.md) | O tipo ou membro pode ser acessado por qualquer código no mesmo assembly, mas não de outro assembly. |
 | [internos protegidos](../../language-reference/keywords/protected-internal.md) | O tipo ou membro pode ser acessado por qualquer código no mesmo assembly ou por qualquer classe derivada em outro assembly. |
 | [privado protegido](../../language-reference/keywords/private-protected.md) | O tipo ou membro pode ser acessado pelo código na mesma classe ou em uma classe derivada no assembly da classe base. |
@@ -308,7 +309,7 @@ Os seguintes modificadores são usados para controlar como as propriedades e mé
 
 | Modificador de C# | Definição |
 |--|--|
-| [virtual](../../language-reference/keywords/virtual.md) | Permite que um membro de classe seja substituído em uma classe derivada. |
+| [virtuaisLUNs](../../language-reference/keywords/virtual.md) | Permite que um membro de classe seja substituído em uma classe derivada. |
 | [substituição](../../language-reference/keywords/override.md) | Substitui um membro virtual (substituível) definido na classe base. |
 | [resume](../../language-reference/keywords/abstract.md) | Requer que um membro de classe seja substituído na classe derivada. |
 | [Modificador new](../../language-reference/keywords/new-modifier.md) | Oculta um membro herdado de uma classe base |
