@@ -274,7 +274,7 @@ dotnet <command> --help
 
 Se uma ferramenta não for instalada ou executada, consulte [solucionar problemas de uso da ferramenta .NET Core](troubleshoot-usage-issues.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Tutorial: criar uma ferramenta do .NET Core usando o CLI do .NET Core](global-tools-how-to-create.md)
 - [Tutorial: instalar e usar uma ferramenta global do .NET Core usando o CLI do .NET Core](global-tools-how-to-use.md)

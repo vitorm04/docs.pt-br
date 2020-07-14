@@ -171,6 +171,6 @@ O exemplo a seguir cria uma tupla, converte-a em um objeto de **tupla** do .net 
 
 [!code-vb[Convert](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple2.vb#1)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência de linguagem de Visual Basic](index.md)

@@ -1,5 +1,6 @@
 ---
 title: Especificando um conjunto de caracteres
+description: Saiba como especificar um conjunto de caracteres que usa codificação estreita (ANSI) ou larga (Unicode). Alternativamente, você pode especificar a seleção automática de tempo de execução.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-ms.openlocfilehash: 0db1cd8d75b45f6d718168793c873e5867028269
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a4f18431d89343a77ccf2b920edac485e7dcfca3
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125172"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282119"
 ---
 # <a name="specifying-a-character-set"></a>Especificando um conjunto de caracteres
 O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> controla o marshaling de cadeia de caracteres e determina como a invocação de plataforma localiza os nomes de função em uma DLL. Este tópico descreve os dois comportamentos.  
