@@ -4,12 +4,12 @@ description: Este tutorial mostra como criar um modelo de regressão usando do M
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 27054e28f9a4fa628f0d7348d45528b690d7da83
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: beb48c9252b83cd693c351d39882b7ac9d08d882
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281765"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309710"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Tutorial: prever preços usando regressão com ML.NET
 
@@ -35,7 +35,7 @@ Neste tutorial, você aprenderá como:
 
 1. Crie um diretório chamado *Dados* em seu projeto para armazenar o conjunto de dados e arquivos de modelo.
 
-1. Instale o pacote NuGet do **Microsoft.ml** :
+1. Instale o pacote NuGet **Microsoft.ml** e **Microsoft. ml. FastTree** :
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 

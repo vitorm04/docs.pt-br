@@ -4,12 +4,12 @@ description: Saiba mais sobre quais versões do macOS você pode instalar o .NET
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: bb1a0fa24e2f6e8850cbe59378793ff846f04ba9
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 2900d98dbd30c51f689cdce37ea273ccc4f598b5
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804473"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308917"
 ---
 # <a name="install-net-core-on-macos"></a>Instalar o .NET Core no macOS
 
@@ -23,7 +23,8 @@ Neste artigo, você aprenderá a instalar o .NET Core no macOS. O .NET Core é c
 
 A versão mais recente do .NET Core é a 3,1.
 
-[Baixe o .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Baixe o .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>Versões com suporte
 
@@ -32,7 +33,7 @@ A tabela a seguir é uma lista de versões do .NET Core com suporte no momento e
 - Um ✔️ indica que a versão do .NET Core ainda tem suporte.
 - Um ❌ indica que a versão do .NET Core não tem suporte.
 
-| Sistema operacional          | .NET Core 2.1 | .NET Core 3.1 | Versão prévia do .NET 5 |
+| Sistema Operacional          | .NET Core 2.1 | .NET Core 3.1 | Versão prévia do .NET 5 |
 |---------------------------|---------------|---------------|----------------|
 | macOS 10,15 "Catalina"    | ✔️ 2,1 ([notas de versão][release-notes-21]) | ✔️ 3,1 ([notas de versão][release-notes-31]) | ✔️ 5,0 Preview ([notas de versão][release-notes-50]) |
 | macOS 10,14 "Mojave"      | ✔️ 2,1 ([notas de versão][release-notes-21]) | ✔️ 3,1 ([notas de versão][release-notes-31]) | ✔️ 5,0 Preview ([notas de versão][release-notes-50]) |
@@ -59,13 +60,15 @@ Executa ASP.NET Core aplicativos. Inclui o tempo de execução do .NET Core.
 *Tempo de execução do .NET Core*\
 Esse tempo de execução é o tempo de execução mais simples e não inclui nenhum outro tempo de execução. É altamente recomendável que você instale o *ASP.NET Core Runtime* para obter a melhor compatibilidade com os aplicativos .NET Core.
 
-[Baixe o tempo de execução do .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Baixar o tempo de execução do .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>Informações do SDK
 
 O SDK é usado para compilar e publicar aplicativos e bibliotecas do .NET Core. A instalação do SDK inclui ambos os [tempos de execução](#runtime-information): ASP.NET Core e .NET Core.
 
-[Baixar SDK do .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Baixar o SDK do .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="dependencies"></a>Dependências
 

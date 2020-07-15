@@ -2,12 +2,12 @@
 title: O que há de novo no C# 8,0 – Guia C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: b4a9a1be0b0b60b0abda0b1f031dc648d831b46a
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 14df381e17fe89bd862f97522c7efd814857e71e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174725"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309398"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
@@ -398,7 +398,7 @@ Experimente você mesmo os fluxos assíncronos em nosso tutorial sobre como [cri
 
 ## <a name="asynchronous-disposable"></a>Descartável assíncrono
 
-A partir do C# 8,0, a linguagem dá suporte a tipos descartáveis assíncronos que implementam a <xref:System.IAsyncDisposable?displayProperty=nameWithType> interface. O operando de uma `using` expressão pode implementar um <xref:System.IDisposable> ou <xref:System.IAsyncDisposable> . No caso do `IAsyncDisposable` , o compilador gera código para `await` o <xref:System.Threading.Tasks.Task> retornado de <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType> . Para obter mais informações, consulte a [ `using` instrução](../language-reference/keywords/using-statement.md).
+A partir do C# 8,0, a linguagem dá suporte a tipos descartáveis assíncronos que implementam a <xref:System.IAsyncDisposable?displayProperty=nameWithType> interface. Você usa a `await using` instrução para trabalhar com um objeto descartável de forma assíncrona. Para obter mais informações, consulte o artigo [implementar um método DisposeAsync](../../standard/garbage-collection/implementing-disposeasync.md) .
 
 ## <a name="indices-and-ranges"></a>Índices e intervalos
 

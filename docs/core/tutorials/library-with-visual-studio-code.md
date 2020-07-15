@@ -2,12 +2,12 @@
 title: Criar uma biblioteca de classes de .NET Standard usando Visual Studio Code
 description: Saiba como criar uma biblioteca de classes de .NET Standard usando Visual Studio Code.
 ms.date: 06/08/2020
-ms.openlocfilehash: f7d2319bcea58f63ca40e43ba39745bdf1b394ce
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 714b5cf2125f1d296adc4a4dc7d1b6c9420417ed
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701793"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308878"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>Tutorial: criar uma biblioteca de .NET Standard usando Visual Studio Code
 
@@ -24,7 +24,7 @@ Uma *biblioteca de classes* define tipos e métodos que são chamados por um apl
 
 Comece criando uma solução em branco para colocar o projeto de biblioteca de classes no. Uma solução serve como um contêiner para um ou mais projetos. Você adicionará mais projetos relacionados à mesma solução.
 
-1. Inicie o Visual Studio Code.
+1. Iniciar o Visual Studio Code.
 
 1. Selecione **arquivo**  >  **abrir pasta** (**abrir...** no MacOS) no menu principal
 
@@ -169,10 +169,10 @@ Adicione um aplicativo de console que usa a biblioteca de classes. O aplicativo 
 
 Inicialmente, o novo projeto de aplicativo de console não tem acesso à biblioteca de classes. Para permitir que ele chame métodos na biblioteca de classes, crie uma referência de projeto para o projeto de biblioteca de classes.
 
-1. Execute o comando a seguir:
+1. Execute o seguinte comando:
 
    ```dotnetcli
-   dotnet add ShowCase/Showcase.csproj reference StringLibrary/StringLibrary.csproj
+   dotnet add ShowCase/ShowCase.csproj reference StringLibrary/StringLibrary.csproj
    ```
 
    A saída do terminal é semelhante ao exemplo a seguir:

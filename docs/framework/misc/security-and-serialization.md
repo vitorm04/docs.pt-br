@@ -11,19 +11,20 @@ helpviewer_keywords:
 - secure coding, serialization
 - security [.NET Framework], serialization
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
-ms.openlocfilehash: 79952ceee4c8b771aaadd4fc97a547bc65136770
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: f19641ad2154631b4eab5104252c12b73b9084fd
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281258"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309268"
 ---
 # <a name="security-and-serialization"></a>Segurança e serialização
+
 Como a serialização pode permitir que outro código veja ou modifique dados de instância de objeto que, de outra forma, seriam inacessíveis, uma permissão especial é necessária para o código que executa a serialização: <xref:System.Security.Permissions.SecurityPermission> com o <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> sinalizador especificado. De acordo com a política padrão, essa permissão não é dada ao código da intranet ou baixado da Internet; somente o código no computador local recebe essa permissão.  
   
  Normalmente, todos os campos de uma instância de objeto são serializados, o que significa que os dados são representados nos dados serializados da instância. É possível que o código possa interpretar o formato para determinar quais são os valores de dados, independentemente da acessibilidade do membro. Da mesma forma, a desserialização extrai dados da representação serializada e define o estado do objeto diretamente, independentemente das regras de acessibilidade.  
   
- Qualquer objeto que possa conter dados sensíveis à segurança deve se tornar não serializável, se possível. Se ele precisar ser serializável, tente criar campos específicos que contenham dados confidenciais não serializáveis. Se isso não puder ser feito, lembre-se de que esses dados serão expostos a qualquer código que tenha permissão para serializar e certifique-se de que nenhum código mal-intencionado possa obter essa permissão.  
+ Qualquer objeto que possa conter dados sensíveis à segurança deve se tornar não serializável, se possível. Se ele precisar ser serializável, tente criar campos específicos que contenham dados confidenciais não serializáveis. Se esses campos não puderem ser transserializáveis, os dados confidenciais serão expostos a qualquer código que tenha permissão para serializar. Certifique-se de que nenhum código mal-intencionado possa obter essa permissão.  
   
  A <xref:System.Runtime.Serialization.ISerializable> interface destina-se ao uso somente pela infraestrutura de serialização. No entanto, se desprotegido, ele poderá liberar informações confidenciais. Se você fornecer serialização personalizada implementando **ISerializable**, certifique-se de tomar as seguintes precauções:  
   

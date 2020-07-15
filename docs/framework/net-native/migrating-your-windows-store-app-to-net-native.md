@@ -2,12 +2,12 @@
 title: Migrando seu aplicativo da Windows Store para .NET Nativo
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 987669fc51eeaf7e3bdef3e91a2f1ce23164a055
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5e5c655d0e8d6f1730f27d35525692e110b3c80c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81389711"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309190"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Migre seu aplicativo da Windows Store para .NET Native
 
@@ -58,7 +58,7 @@ O compilador de .NET Native também pode manipular tipos genéricos comumente us
 > [!NOTE]
 > Você deve testar completamente todos os caminhos de código dinâmico ao portar seu aplicativo para .NET Native.
 
-A configuração padrão para .NET Native é suficiente para a maioria dos desenvolvedores, mas alguns desenvolvedores podem querer ajustar suas configurações usando um arquivo de diretivas de tempo de execução (. Rd. xml). Além disso, em alguns casos, o compilador .NET Native não é capaz de determinar quais metadados devem estar disponíveis para reflexão e se baseia em dicas, especialmente nos seguintes casos:
+A configuração padrão para .NET Native é suficiente para a maioria dos desenvolvedores, mas alguns desenvolvedores podem querer ajustar suas configurações usando um arquivo de diretivas de tempo de execução (.rd.xml). Além disso, em alguns casos, o compilador .NET Native não é capaz de determinar quais metadados devem estar disponíveis para reflexão e se baseia em dicas, especialmente nos seguintes casos:
 
 - Algumas construções <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> e <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> não podem ser determinadas estaticamente.
 
@@ -79,7 +79,7 @@ Em .NET Native:
 
 - Não há suporte para reflexão privada sobre tipos e membros da biblioteca de classes do .NET Framework. No entanto, é possível refletir sobre seus próprios tipos e membros privados, bem como tipos e membros em bibliotecas de terceiros.
 
-- A propriedade <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> retorna `false` corretamente para um objeto <xref:System.Reflection.ParameterInfo> que representa um valor de retorno. Nos aplicativos .NET para Windows Store, ele retorna `true`. A Linguagem intermediária (IL) não oferece suporte a isso diretamente e interpretações são deixada para a linguagem.
+- A propriedade <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> retorna `false` corretamente para um objeto <xref:System.Reflection.ParameterInfo> que representa um valor de retorno. Nos aplicativos .NET para Windows Store, ele retorna `true`. A IL (linguagem intermediária) não dá suporte a isso diretamente, e a interpretação é deixada para o idioma.
 
 - Membros públicos nas estruturas <xref:System.RuntimeFieldHandle> e <xref:System.RuntimeMethodHandle> não são suportadas. Esses tipos são suportados apenas para LINQ, árvores de expressão e inicialização de matriz estática.
 
@@ -121,7 +121,7 @@ As seções a seguir listam cenários não suportados e APIs de desenvolvimento 
 
 - Tipos de valor não podem ter um construtor sem parâmetros em .NET Native. (C# e Visual Basic proíbem construtores sem parâmetros em tipos de valor. No entanto, eles podem ser criados em IL.)
 
-**Matrizes**
+**matrizes**
 
 - Não há suporte para matrizes com um limite inferior diferente de zero. Normalmente, esses conjuntos são criados ao chamar a sobrecarga <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType>.
 
@@ -187,7 +187,7 @@ A <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> classe não permite que
 
 Aplicativos .NET para Windows Store permitem definir a propriedade <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> para <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>, ambas <xref:System.Net.DecompressionMethods.Deflate> e <xref:System.Net.DecompressionMethods.GZip>, ou <xref:System.Net.DecompressionMethods.None>.  .NET Native só dá suporte <xref:System.Net.DecompressionMethods.Deflate> ao <xref:System.Net.DecompressionMethods.GZip> , ou <xref:System.Net.DecompressionMethods.None> .  Tentar definir a propriedade <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> para <xref:System.Net.DecompressionMethods.Deflate> ou <xref:System.Net.DecompressionMethods.GZip> sozinho silenciosamente define-a para <xref:System.Net.DecompressionMethods.Deflate> e <xref:System.Net.DecompressionMethods.GZip>.
 
-**Cookies**
+**Arar**
 
 A manipulação de cookies é executada simultaneamente por <xref:System.Net.Http.HttpClient> e WinINet.  Os cookies do <xref:System.Net.CookieContainer> são combinados com cookies no cache de cookies do WinINet.  Remover um cookie do <xref:System.Net.CookieContainer> impede que <xref:System.Net.Http.HttpClient> envie o cookie, mas se o cookie já foi visto pelo WinINet e os cookies não foram excluídos pelo usuário, o WinINet o envia.  Não é possível programar a remoção automática de um cookie do WinINet usando a API <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.HttpClientHandler> ou <xref:System.Net.CookieContainer>.  Definir a propriedade <xref:System.Net.Http.HttpClientHandler.UseCookies%2A?displayProperty=nameWithType> para `false` faz com que apenas <xref:System.Net.Http.HttpClient> pare de enviar cookies; o WinINet ainda pode incluir os cookies na solicitação.
 
@@ -278,7 +278,7 @@ Outros recursos de interoperabilidade sem suporte incluem:
 
 - Delegados
 
-- Cadeias de caracteres (Unicode, Ansi e HSTRING)
+- Cadeias de caracteres (Unicode, ANSI e HSTRING)
 
 - Estruturas (`byref` e `byval`)
 

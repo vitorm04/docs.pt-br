@@ -1,18 +1,18 @@
 ---
 title: Personalização do marshaling de estrutura – .NET
-description: Saiba como personalizar a forma como o .NET realiza marshal em suas estruturas para uma representação nativa.
+description: Saiba como personalizar como o .NET empacota estruturas para uma representação nativa.
 ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 8248ca589f41967a9112ba61c09599b337814de7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c82e0099c44b8033cad241d69bdd284243711a50
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003887"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374527"
 ---
-# <a name="customizing-structure-marshaling"></a>Personalização do marshaling de estrutura
+# <a name="customize-structure-marshaling"></a>Personalizar marshaling de estruturas
 
 Às vezes, as regras de marshaling padrão para estruturas não são exatamente o que você precisa. Os runtimes do .NET fornecem alguns pontos de extensão para você personalizar o layout de sua estrutura e como os campos têm o marshaling realizado.
 
@@ -264,7 +264,7 @@ struct BString
 };
 ```
 
-Ao usar uma API baseada no WinRT, talvez seja necessário realizar marshal de uma cadeia de caracteres como um `HSTRING`.  Usando o valor <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType>, você pode realizar marshal de uma cadeia de caracteres como um `HSTRING`.
+Ao usar uma API baseada no WinRT, talvez seja necessário realizar marshal de uma cadeia de caracteres como um `HSTRING`. Usando o valor <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType>, você pode realizar marshal de uma cadeia de caracteres como um `HSTRING`.
 
 ```csharp
 public struct HString
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>Personalização do marshaling de campo decimal
 
-Se você estiver trabalhando no Windows, poderá encontrar algumas APIs que usam a estrutura [ `CY` ou `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy~r1) nativa. Por padrão, o `decimal` tipo .net realiza marshaling na [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) estrutura nativa. No entanto, você pode usar um <xref:System.Runtime.InteropServices.MarshalAsAttribute> com o valor <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> para instruir o marshaler para converter um valor `decimal` para um valor nativo `CY`.
+Se você estiver trabalhando no Windows, poderá encontrar algumas APIs que usam a estrutura [ `CY` ou `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy-r1) nativa. Por padrão, o `decimal` tipo .net realiza marshaling na [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal-r1) estrutura nativa. No entanto, você pode usar um <xref:System.Runtime.InteropServices.MarshalAsAttribute> com o valor <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> para instruir o marshaler para converter um valor `decimal` para um valor nativo `CY`.
 
 ```csharp
 public struct Currency
@@ -334,7 +334,7 @@ struct Currency
 };
 ```
 
-## <a name="marshaling-systemobjects"></a>`System.Object`s de marshaling
+## <a name="marshal-systemobject"></a>Efetua`System.Object`
 
 No Windows, você pode realizar marshal dos campos tipados de `object` para o código nativo. Você pode realizar marshal desses campos para um dos três tipos:
 

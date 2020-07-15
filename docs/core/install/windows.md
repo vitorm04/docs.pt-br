@@ -4,12 +4,12 @@ description: Saiba mais sobre quais versões do Windows você pode instalar no .
 author: adegeo
 ms.author: adegeo
 ms.date: 06/22/2020
-ms.openlocfilehash: e26494de7e9246b241cb965d8d735a781aab5478
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 97f67d00b3eb4dafc55256aea51f4295bb0ef06a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804474"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308943"
 ---
 # <a name="install-net-core-on-windows"></a>Instalar o .NET Core no Windows
 
@@ -23,7 +23,8 @@ Neste artigo, você aprenderá a instalar o .NET Core no Windows. O .NET Core é
 
 A versão mais recente do .NET Core é a 3,1.
 
-[Baixe o .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Baixe o .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>Versões com suporte
 
@@ -35,7 +36,7 @@ As datas de fim de serviço das versões do Windows 10 são segmentadas por edi�
 - Um ❌ indica que a versão do Windows ou .NET Core não tem suporte nessa versão do Windows.
 - Quando uma versão do Windows e uma versão do .NET Core têm ✔️, há suporte para essa combinação de so e .NET.
 
-| Sistema operacional                      | .NET Core 2.1 | .NET Core 3.1 | Versão prévia do .NET 5 |
+| Sistema Operacional                      | .NET Core 2.1 | .NET Core 3.1 | Versão prévia do .NET 5 |
 |-----------------------------|---------------|---------------|----------------|
 | ✔️ Windows 10, versão 2004 | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
 | ✔️ Windows 10, versão 1909 | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
@@ -54,7 +55,7 @@ Não há mais suporte para as seguintes versões do .NET Core ❌ . Os downloads
 
 - 3.0
 - 2.2
-- 2,0
+- 2.0
 
 ## <a name="runtime-information"></a>Informações de tempo de execução
 
@@ -71,13 +72,15 @@ Executa o .NET Core WPF e .NET Core Windows Forms aplicativos de área de trabal
 *Tempo de execução do .NET Core*\
 Esse tempo de execução é o tempo de execução mais simples e não inclui nenhum outro tempo de execução. É altamente recomendável que você instale o *tempo de execução do ASP.NET Core* e o *tempo de execução da área de trabalho* para obter a melhor compatibilidade com os aplicativos do .NET Core.
 
-[Baixe o tempo de execução do .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Baixar o tempo de execução do .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>Informações do SDK
 
 O SDK é usado para compilar e publicar aplicativos e bibliotecas do .NET Core. A instalação do SDK inclui todos os três [tempos de execução](#runtime-information): ASP.NET Core, desktop e .NET Core.
 
-[Baixar SDK do .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Baixar o SDK do .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="dependencies"></a>Dependências
 
@@ -91,7 +94,7 @@ As seguintes versões do Windows têm suporte com o .NET Core 3,1:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| Sistema operacional                            | Versão                        | Arquiteturas   |
+| SO                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 8.1                            | x64, x86        |
 | Cliente do Windows 10             | Versão 1609 +                  | x64, x86        |
@@ -109,7 +112,7 @@ As seguintes versões do Windows têm suporte com o .NET Core 3,0:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| Sistema operacional                            | Versão                        | Arquiteturas   |
+| SO                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
 | Cliente do Windows 10             | Versão 1607 +                  | x64, x86        |
@@ -127,7 +130,7 @@ As seguintes versões do Windows têm suporte com o .NET Core 2,2:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| Sistema operacional                            | Versão                        | Arquiteturas   |
+| SO                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
 | Cliente do Windows 10             | Versão 1607 +                  | x64, x86        |
@@ -143,7 +146,7 @@ As seguintes versões do Windows têm suporte com o .NET Core 2,1:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| Sistema operacional                            | Versão                        | Arquiteturas   |
+| SO                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
 | Cliente do Windows 10             | Versão 1607 +                  | x64, x86        |
@@ -218,7 +221,8 @@ Se você já tiver o Visual Studio instalado, poderá verificar sua versão com 
 
 O Visual Studio pode instalar o SDK do .NET Core e o tempo de execução mais recentes.
 
-- [Baixe o Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
+> [!div class="button"]
+> [Baixe o Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
 
 ### <a name="select-a-workload"></a>Selecionar uma carga de trabalho
 

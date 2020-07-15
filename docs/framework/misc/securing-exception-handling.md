@@ -10,15 +10,15 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-ms.openlocfilehash: 009e587c0458488db6c2aa92e13311ddc08a64b1
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 73597f83d7236cd48a18a891c987b4f5d7e1723d
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281989"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309034"
 ---
 # <a name="securing-exception-handling"></a>Protegendo a manipulação de exceções
-Em Visual C++ e Visual Basic, uma expressão de filtro mais acima da pilha é executada antes de qualquer instrução **finally** . O bloco **Catch** associado a esse filtro é executado após a instrução **finally** . Para obter mais informações, consulte [usando exceções filtradas pelo usuário](../../standard/exceptions/using-user-filtered-exception-handlers.md). Esta seção examina as implicações de segurança deste pedido. Considere o seguinte exemplo de pseudocódigo que ilustra a ordem em que as instruções de filtro e as instruções **finally** são executadas.  
+Em Visual C++ e Visual Basic, uma expressão de filtro mais acima da pilha é executada antes de qualquer `finally` instrução. O bloco **Catch** associado a esse filtro é executado após a `finally` instrução. Para obter mais informações, consulte [usando exceções filtradas pelo usuário](../../standard/exceptions/using-user-filtered-exception-handlers.md). Esta seção examina as implicações de segurança deste pedido. Considere o seguinte exemplo de pseudocódigo que ilustra a ordem em que as instruções de filtro e as `finally` instruções são executadas.  
   
 ```cpp  
 void Main()
@@ -59,7 +59,7 @@ Finally
 Catch  
 ```  
   
- O filtro é executado antes da instrução **finally** , portanto, problemas de segurança podem ser introduzidos por qualquer coisa que faça uma alteração de estado em que a execução de outro código pode tirar proveito. Por exemplo:  
+ O filtro é executado antes da `finally` instrução, portanto, problemas de segurança podem ser introduzidos por qualquer coisa que faça uma alteração de estado em que a execução de outro código possa tirar proveito. Por exemplo:  
   
 ```cpp  
 try
@@ -78,7 +78,7 @@ finally
 }  
 ```  
   
- Esse pseudocódigo permite que um filtro acima da pilha execute um código arbitrário. Outros exemplos de operações que teriam um efeito semelhante são a representação temporária de outra identidade, a definição de um sinalizador interno que ignora alguma verificação de segurança ou a alteração da cultura associada ao thread. A solução recomendada é introduzir um manipulador de exceção para isolar as alterações do código no estado do thread dos blocos de filtro dos chamadores. No entanto, é importante que o manipulador de exceção seja introduzido corretamente ou esse problema não seja corrigido. O exemplo a seguir alterna a cultura da interface do usuário, mas qualquer tipo de alteração de estado de thread pode ser exposta de forma semelhante.  
+ Esse pseudocódigo permite que um filtro acima da pilha execute um código arbitrário. Outros exemplos de operações que teriam um efeito semelhante são a representação temporária de outra identidade, a definição de um sinalizador interno que ignora alguma verificação de segurança ou a alteração da cultura associada ao thread. A solução recomendada é introduzir um manipulador de exceção para isolar as alterações do código no estado do thread dos blocos de filtro dos chamadores. No entanto, é importante introduzir corretamente o manipulador de exceção ou esse problema não será corrigido. O exemplo a seguir alterna a cultura da interface do usuário, mas qualquer tipo de alteração de estado de thread pode ser exposta de forma semelhante.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -135,9 +135,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- Isso não corrige o problema porque a instrução **finally** não foi executada antes do `FilterFunc` controle Gets.  
+ Isso não corrige o problema porque a `finally` instrução não foi executada antes do `FilterFunc` controle Gets.  
   
- O exemplo a seguir corrige o problema garantindo que a cláusula **finally** tenha sido executada antes de oferecer uma exceção dos blocos de filtro de exceção dos chamadores.  
+ O exemplo a seguir corrige o problema, garantindo que a `finally` cláusula tenha sido executada antes de oferecer uma exceção dos blocos de filtro de exceção dos chamadores.  
   
 ```cpp  
 YourObject.YourMethod()  

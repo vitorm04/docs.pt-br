@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-ms.openlocfilehash: 029f9863ebed94805675b629be7eb10963a7b689
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 019773b19eaca2e4364fb79c40fdb923093d4e7e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281388"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309359"
 ---
 # <a name="security-and-remoting-considerations"></a>Considerações sobre segurança e comunicação remota
 A comunicação remota permite que você configure a chamada transparente entre domínios de aplicativo, processos ou computadores. No entanto, a movimentação de pilha de segurança de acesso ao código não pode cruzar os limites do processo ou da máquina (ela se aplica entre os domínios do aplicativo do mesmo processo).  
@@ -34,7 +34,7 @@ A comunicação remota permite que você configure a chamada transparente entre 
   
  Um domínio de aplicativo pode forçar outro domínio de aplicativo a carregar um assembly e executar o código contido nele chamando um proxy para um objeto hospedado no outro domínio de aplicativo. Para obter um proxy de domínio entre aplicativos, o domínio do aplicativo que hospeda o objeto deve distribuir um por meio de um parâmetro de chamada de método ou valor de retorno. Ou, se o domínio do aplicativo acabou de ser criado, o criador tem um proxy para o <xref:System.AppDomain> objeto por padrão. Portanto, para evitar a interrupção do isolamento de código, um domínio de aplicativo com um nível mais alto de confiança não deve distribuir referências a objetos de marshaling por referência (instâncias de classes derivadas de <xref:System.MarshalByRefObject> ) em seu domínio para domínios de aplicativo com níveis inferiores de confiança.  
   
- Normalmente, o domínio de aplicativo padrão cria os domínios de aplicativo filho com um objeto de controle em cada um. O objeto Control gerencia o novo domínio de aplicativo e, eventualmente, recebe pedidos do domínio de aplicativo padrão, mas não pode realmente entrar em contato diretamente com o domínio. Ocasionalmente, o domínio de aplicativo padrão chama seu proxy para o objeto de controle. No entanto, pode haver casos em que é necessário que o objeto de controle chame de volta para o domínio de aplicativo padrão. Nesses casos, o domínio de aplicativo padrão passa um objeto de retorno de chamada Marshal-by-reference para o construtor do objeto de controle. É responsabilidade do objeto de controle proteger esse proxy. Se o objeto de controle fosse colocar o proxy em um campo estático público de uma classe pública ou expor publicamente o proxy, isso abriria um mecanismo perigoso para que outro código chame de volta no domínio de aplicativo padrão. Por esse motivo, os objetos de controle sempre são implicitamente confiáveis para manter o proxy privado.  
+ Normalmente, o domínio de aplicativo padrão cria os domínios de aplicativo filho com um objeto de controle em cada um. O objeto Control gerencia o novo domínio de aplicativo e, eventualmente, recebe pedidos do domínio de aplicativo padrão, mas não pode realmente entrar em contato diretamente com o domínio. Ocasionalmente, o domínio de aplicativo padrão chama seu proxy para o objeto de controle. No entanto, pode haver casos em que é necessário que o objeto de controle chame de volta para o domínio de aplicativo padrão. Nesses casos, o domínio de aplicativo padrão passa um objeto de retorno de chamada Marshal-by-reference para o construtor do objeto de controle. É responsabilidade do objeto de controle proteger esse proxy. Se o objeto de controle colocou o proxy em um campo estático público de uma classe pública ou expor publicamente o proxy, um mecanismo perigoso para outro código a ser chamado de volta para o domínio de aplicativo padrão seria aberto. Por esse motivo, os objetos de controle sempre são implicitamente confiáveis para manter o proxy privado.  
   
 ## <a name="see-also"></a>Confira também
 
