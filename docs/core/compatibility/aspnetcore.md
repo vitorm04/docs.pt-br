@@ -2,15 +2,15 @@
 title: ASP.NET Core alterações significativas
 titleSuffix: ''
 description: Lista as alterações significativas em ASP.NET Core.
-ms.date: 07/13/2020
+ms.date: 07/14/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 75f33e7d6d76206ebe46b1a229ccb152d79ddc61
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: b73492e0c2f60c2b214984d3987de1e9e6530847
+ms.sourcegitcommit: d4f7ba08f2a45a9dbef53be597eed6d4a9410f29
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309554"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86401998"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core alterações significativas
 
@@ -71,6 +71,7 @@ As seguintes alterações significativas estão documentadas nesta página:
 - [MVC: tipos alterados para interno](#mvc-pubternal-types-changed-to-internal)
 - [MVC: Shim de compatibilidade da API Web removido](#mvc-web-api-compatibility-shim-removed)
 - [Razor: compilação de tempo de execução movida para um pacote](#razor-runtime-compilation-moved-to-a-package)
+- [Segurança: codificação de nome de cookie removida](#security-cookie-name-encoding-removed)
 - [Segurança: versões do pacote NuGet do IdentityModel atualizadas](#security-identitymodel-nuget-package-versions-updated)
 - [Estado da sessão: APIs obsoletas removidas](#session-state-obsolete-apis-removed)
 - [Estrutura compartilhada: remoção de assembly do Microsoft. AspNetCore. app](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
@@ -138,6 +139,10 @@ As seguintes alterações significativas estão documentadas nesta página:
 ***
 
 [!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
+[!INCLUDE[Security: Cookie name encoding removed](~/includes/core-changes/aspnetcore/5.0/security-cookie-name-encoding-removed.md)]
 
 ***
 

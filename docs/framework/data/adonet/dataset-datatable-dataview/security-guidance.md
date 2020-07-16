@@ -3,12 +3,12 @@ title: Diretrizes de segurança do conjunto de tabela e DataTable
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: c6b32afeadccc3fd22d6611d282840233280440f
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: f78b52ede4ec76599d761e5188f39c3e9dae2a4f
+ms.sourcegitcommit: 98548968e89739a37625e72ddbd535fe1e11121e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86382451"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405286"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Diretrizes de segurança do conjunto de tabela e DataTable
 
@@ -195,7 +195,8 @@ Depois que o modo de auditoria estiver habilitado, você poderá usar _App.confi
 
 Para obter mais informações `TraceSource` sobre `TraceListener` o e o, consulte o documento [como: usar rastreamento e filtros com ouvintes de rastreamento](/dotnet/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners).
 
-**Observação**: a execução de um aplicativo no modo de auditoria não está disponível no .NET Core ou no .NET 5,0 e posterior.
+> [!NOTE]
+> A execução de um aplicativo no modo de auditoria não está disponível no .NET Core ou no .NET 5,0 e posterior.
 
 <a name="ratr"></a>
 
@@ -207,7 +208,7 @@ Se um aplicativo deve remover todas as restrições de limitação de tipo de `D
 * As opções disponíveis dependem da estrutura de destino do aplicativo.
 
 > [!WARNING]
-> A remoção de todas as restrições de tipo pode introduzir uma brecha de segurança dentro do aplicativo. Ao usar esse mecanismo, verifique se o aplicativo **não** usa `DataSet` ou `DataTable` para ler a entrada não confiável. Para obter mais informações, consulte [CVE-2020-1147](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1147) e a seção a seguir intitulada [segurança em relação à entrada não confiável](#swr).
+> A remoção de todas as restrições de tipo pode introduzir uma brecha de segurança dentro do aplicativo. Ao usar esse mecanismo, verifique se o aplicativo **não** usa `DataSet` ou `DataTable` para ler a entrada não confiável. Para obter mais informações, consulte [CVE-2020-1147](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147) e a seção a seguir intitulada [segurança em relação à entrada não confiável](#swr).
 
 #### <a name="through-appcontext-configuration-net-framework-46---48-net-core-21-and-later-net-50-and-later"></a>Por meio da configuração do AppContext (.NET Framework 4,6-4,8, .NET Core 2,1 e posterior, .NET 5,0 e posterior)
 
@@ -272,7 +273,7 @@ Se `AppContext` não estiver disponível, as verificações de limitação de ti
 | **Chave do registro** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
 | **Nome do valor** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
 | **Tipo de valor** | `REG_SZ` |
-| **os dados de Valor** | `true` |
+| **Dados do valor** | `true` |
 
 Em um sistema operacional de 64 bits, esse valor deve ser adicionado para a chave de 64 bits (mostrada acima) e a chave 32 bits. A chave de 32 bits está localizada em `HKLM\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\AppContext` .
 
@@ -463,7 +464,8 @@ public class MyClass
 
 A desserialização de uma `DataSet` ou `DataTable` dessa maneira de um blob JSON não confiável não é segura. Esse padrão é vulnerável a um ataque de negação de serviço. Tal ataque poderia falhar no aplicativo ou renderizá-lo sem resposta.
 
-**Observação**: a Microsoft não garante nem dá suporte à implementação de bibliotecas de terceiros como _Newtonsoft.Jsno_. Essas informações são fornecidas para fins de integridade e são precisas no momento da elaboração deste artigo.
+> [!NOTE]
+> A Microsoft não garante nem dá suporte à implementação de bibliotecas de terceiros, como _Newtonsoft.Jsno_. Essas informações são fornecidas para fins de integridade e são precisas no momento da elaboração deste artigo.
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>Desserializar um DataSet ou DataTable via BinaryFormatter
 
