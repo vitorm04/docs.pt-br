@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 8cb7ee2ea2418602d944c3c08cec2b9279dca3b9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 530bb54936f97f1d7460d63cfa316c760cbd449d
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601056"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441811"
 ---
 # <a name="security-considerations-for-data"></a>Considerações de segurança para dados
 
@@ -284,7 +284,7 @@ Essa situação pode ser evitada por estar ciente dos seguintes pontos:
 
 O <xref:System.Runtime.Serialization.NetDataContractSerializer> é um mecanismo de serialização que usa acoplamento rígido para tipos. Isso é semelhante ao <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> e ao <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> . Ou seja, ele determina qual tipo deve ser instanciado lendo o assembly .NET Framework e o nome do tipo dos dados de entrada. Embora faça parte do WCF, não há uma maneira fornecida de conectar-se a esse mecanismo de serialização; o código personalizado deve ser gravado. O `NetDataContractSerializer` é fornecido principalmente para facilitar a migração de .NET Framework comunicação remota para o WCF. Para obter mais informações, consulte a seção relevante em [serialização e desserialização](serialization-and-deserialization.md).
 
-Como a própria mensagem pode indicar que qualquer tipo pode ser carregado, o <xref:System.Runtime.Serialization.NetDataContractSerializer> mecanismo é inerentemente inseguro e deve ser usado somente com dados confiáveis. É possível torná-lo seguro escrevendo um associador de tipo de limitação de tipo seguro que permite que apenas os tipos de segurança sejam carregados (usando a <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> Propriedade).
+Como a própria mensagem pode indicar que qualquer tipo pode ser carregado, o <xref:System.Runtime.Serialization.NetDataContractSerializer> mecanismo é inerentemente inseguro e deve ser usado somente com dados confiáveis. Para obter mais informações, consulte o [Guia de segurança do BinaryFormatter](/dotnet/standard/serialization/binaryformatter-security-guide).
 
 Mesmo quando usado com dados confiáveis, os dados de entrada podem especificar insuficientemente o tipo a ser carregado, especialmente se a <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> propriedade estiver definida como <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> . Qualquer pessoa com acesso ao diretório do aplicativo ou ao cache de assembly global pode substituir um tipo mal-intencionado no lugar daquele que deve ser carregado. Sempre garanta a segurança do diretório do seu aplicativo e do cache de assembly global definindo as permissões corretamente.
 
@@ -324,7 +324,7 @@ Observe as seguintes preocupações com relação a ameaças relacionadas ao có
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> oferecem suporte à serialização de membros privados, protegidos, internos e públicos em confiança total. No entanto, em confiança parcial, somente membros públicos podem ser serializados. Um <xref:System.Security.SecurityException> será gerado se um aplicativo tentar serializar um membro não público.
 
-    Para permitir que membros internos ou protegidos internamente sejam serializados em confiança parcial, use o <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atributo assembly. Esse atributo permite que um assembly declare que seus membros internos são visíveis para algum outro assembly. Nesse caso, um assembly que deseja ter seus membros internos serializados declara que seus membros internos são visíveis para System. Runtime. Serialization. dll.
+    Para permitir que membros internos ou protegidos internamente sejam serializados em confiança parcial, use o <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atributo assembly. Esse atributo permite que um assembly declare que seus membros internos são visíveis para algum outro assembly. Nesse caso, um assembly que deseja ter seus membros internos serializados declara que seus membros internos são visíveis para System.Runtime.Serialization.dll.
 
     A vantagem dessa abordagem é que ela não requer um caminho de geração de código elevado.
 
@@ -354,7 +354,7 @@ Vale A pena mencionar algumas outras preocupações sobre o gerenciamento de est
 
 ## <a name="schema-import"></a>Importação de esquema
 
-Normalmente, o processo de importação de esquema para gerar tipos ocorre apenas no momento do design, por exemplo, ao usar a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) em um serviço Web para gerar uma classe de cliente. No entanto, em cenários mais avançados, você pode processar o esquema em tempo de execução. Lembre-se de que isso pode expô-lo a riscos de negação de serviço. Alguns esquemas podem levar muito tempo para serem importados. Nunca use o <xref:System.Xml.Serialization.XmlSerializer> componente de importação de esquema em cenários como esses, se os esquemas forem possivelmente provenientes de uma fonte não confiável.
+Normalmente, o processo de importação de esquema para gerar tipos ocorre apenas no momento do design, por exemplo, ao usar a [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) em um serviço Web para gerar uma classe de cliente. No entanto, em cenários mais avançados, você pode processar o esquema em tempo de execução. Lembre-se de que isso pode expô-lo a riscos de negação de serviço. Alguns esquemas podem levar muito tempo para serem importados. Nunca use o <xref:System.Xml.Serialization.XmlSerializer> componente de importação de esquema em cenários como esses, se os esquemas forem possivelmente provenientes de uma fonte não confiável.
 
 ## <a name="threats-specific-to-aspnet-ajax-integration"></a>Ameaças específicas à integração do ASP.NET AJAX
 
@@ -382,9 +382,9 @@ O WCF é um sistema flexível e personalizável. A maior parte do conteúdo dest
 
 - Em geral, ao usar qualquer componente que aceite uma cota, entenda suas implicações de segurança e defina-a como um valor seguro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.XmlDictionaryReader>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Tipos conhecidos de contrato de dados](data-contract-known-types.md)
+- [Tipos de contratos de dados conhecidos](data-contract-known-types.md)

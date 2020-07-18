@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 7061b6c1988da9f6dfac115ee555a914531df863
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: a3e29903448c3eb5e0b7dda027677d1785a445e7
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805933"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416295"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores retornados de Main() (Guia de Programação em C#)
 
@@ -21,11 +21,11 @@ Ele também pode retornar um `int`:
 
  [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-Se o valor retornado de `Main` não for usado, o retorno de `void` permite um código um pouco mais simples. No entanto, o retorno de um inteiro habilita o programa a comunicar informações de status para outros programas ou scripts, que invocam o arquivo executável. O valor retornado de `Main` é tratado como o código de saída para o processo. Se `void` for devolvido, o código de `Main` `0`saída será implicitamente . O exemplo a seguir mostra como o valor retornado de `Main` pode ser acessado.
+Se o valor retornado de `Main` não for usado, o retorno de `void` permite um código um pouco mais simples. No entanto, o retorno de um inteiro habilita o programa a comunicar informações de status para outros programas ou scripts, que invocam o arquivo executável. O valor retornado de `Main` é tratado como o código de saída para o processo. Se `void` for retornado de `Main` , o código de saída será implicitamente `0` . O exemplo a seguir mostra como o valor retornado de `Main` pode ser acessado.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo usa ferramentas de linha de comando [.NET Core.](../../../core/index.yml) Se você não estiver familiarizado com as ferramentas de linha de comando .NET Core, você pode aprender sobre elas neste [artigo inicial](../../../core/tutorials/cli-create-console-app.md).
+Este exemplo usa as ferramentas de linha de comando do [.NET Core](../../../core/index.yml) . Se você não estiver familiarizado com as ferramentas de linha de comando do .NET Core, poderá aprender sobre elas neste [artigo de introdução](../../../core/tutorials/with-visual-studio-code.md).
 
 Modifique o método `Main` em *program.cs* da seguinte maneira:
 
@@ -33,11 +33,11 @@ Modifique o método `Main` em *program.cs* da seguinte maneira:
 
 Quando um programa é executado no Windows, qualquer valor retornado da função `Main` é armazenado em uma variável de ambiente. Essa variável de ambiente pode ser recuperada usando `ERRORLEVEL` de um arquivo em lotes ou `$LastExitCode` do PowerShell.
 
-Você pode construir o aplicativo usando o comando [DOtnet CLI.](../../../core/tools/dotnet.md) `dotnet build`
+Você pode criar o aplicativo usando o comando [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build` .
 
 Em seguida, crie um script do Powershell para executar o aplicativo e exibir o resultado. Cole o código a seguir em um arquivo de texto e salve-o como `test.ps1` na pasta que contém o projeto. Execute o script do PowerShell digitando `test.ps1` no prompt do PowerShell.
 
-Como o código retorna zero, o arquivo em lotes relatará êxito. No entanto, se você alterar MainReturnValTest.cs para retornar um valor não-zero e, em seguida, recompilar o programa, a execução subseqüente do script powershell reportará falha.
+Como o código retorna zero, o arquivo em lotes relatará êxito. No entanto, se você alterar MainReturnValTest.cs para retornar um valor diferente de zero e, em seguida, recompilar o programa, a execução subsequente do script do PowerShell relatará falha.
 
 ```dotnetcli
 dotnet run
@@ -97,7 +97,7 @@ Quando o ponto de entrada do aplicativo retorna um `Task` ou `Task<int>`, o comp
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Guia de Programação](../index.md)
-- [C# Referência](../index.md)
-- [Principais() e Argumentos de linha de comando](index.md)
+- [Guia de programação C#](../index.md)
+- [Referência do C#](../index.md)
+- [Argumentos Main () e de linha de comando](index.md)
 - [Como exibir argumentos de linha de comando](./how-to-display-command-line-arguments.md)

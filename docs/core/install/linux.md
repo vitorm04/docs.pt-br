@@ -1,15 +1,15 @@
 ---
-title: Instalar as distribuições do .NET Core e do Linux
+title: Instalar o .NET Core em distribuições do Linux
 description: Saiba mais sobre o que as distribuições do Linux dão suporte à instalação do .NET Core no Linux.
 author: adegeo
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: 06a90d7fecfe9f25d26caccb2fe3aedec0176f64
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: c827dfbb05a7d49ee18209ef2c8b5613f45a4578
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803086"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441395"
 ---
 # <a name="install-net-core-on-linux"></a>Instalar o .NET Core no Linux
 
@@ -31,7 +31,7 @@ Não há mais suporte para as seguintes versões do .NET Core ❌ . Os downloads
 
 - 3.0
 - 2.2
-- 2,0
+- 2.0
 
 Essas versões sem suporte não são detalhadas nas seções abaixo e sua quilometragem pode variar se você tentar instalá-las.
 
@@ -82,7 +82,7 @@ A tabela a seguir é uma lista de versões do .NET Core com suporte no momento e
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [10](linux-debian.md#debian-10-)     | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
 | ✔️ [9](linux-debian.md#debian-9-)       | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
-| ❌[8](linux-debian.md#debian-8-)       | ✔️ 2,1        | ❌3,1        | ❌visualização de 5,0 |
+| ❌ [8](linux-debian.md#debian-8-)       | ✔️ 2,1        | ❌3,1        | ❌visualização de 5,0 |
 
 Para obter mais informações, consulte [instalar o .NET Core no Debian](linux-debian.md).
 
@@ -100,7 +100,7 @@ A tabela a seguir é uma lista de versões do .NET Core com suporte no momento e
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [32](linux-fedora.md#fedora-32-) | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
 | ✔️ [31](linux-fedora.md#fedora-31-) | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
-| ❌ [30](linux-fedora.md#fedora-30-) | ✔️ 2,1        | ✔️ 3,1        | ❌visualização de 5,0 |
+| ❌[30](linux-fedora.md#fedora-30-) | ✔️ 2,1        | ✔️ 3,1        | ❌visualização de 5,0 |
 | ❌[29](linux-fedora.md#fedora-29-) | ✔️ 2,1        | ✔️ 3,1        | ❌visualização de 5,0 |
 | ❌[28](linux-fedora.md#fedora-28-) | ✔️ 2,1        | ❌3,1        | ❌visualização de 5,0 |
 | ❌[27](linux-fedora.md#fedora-27-) | ✔️ 2,1        | ❌3,1        | ❌visualização de 5,0 |
@@ -174,7 +174,7 @@ A tabela a seguir representa o status de suporte do Ubuntu e do .NET Core.
 | ❌[19, 4](linux-ubuntu.md#1904-)       | ✔️ 2,1        | ✔️ 3,1        | ❌visualização de 5,0 |
 | ❌[18,10](linux-ubuntu.md#1810-)       | ✔️ 2,1        | ❌3,1        | ❌visualização de 5,0 |
 | ✔️ [18, 4 (LTS)](linux-ubuntu.md#1804-) | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
-| ❌ [17.10](linux-ubuntu.md#1710-)       | ✔️ 2,1        | ❌3,1        | ❌visualização de 5,0 |
+| ❌[17,10](linux-ubuntu.md#1710-)       | ✔️ 2,1        | ❌3,1        | ❌visualização de 5,0 |
 | ❌ [17.04](linux-ubuntu.md#1704-)       | ✔️ 2,1        | ❌3,1        | ❌visualização de 5,0 |
 | ❌[16,10](linux-ubuntu.md#1610-)       | ❌2,1        | ❌3,1        | ❌visualização de 5,0 |
 | ✔️ [16, 4 (LTS)](linux-ubuntu.md#1604-) | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |

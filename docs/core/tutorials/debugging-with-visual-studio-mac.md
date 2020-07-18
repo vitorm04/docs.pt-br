@@ -2,12 +2,12 @@
 title: Depurar um aplicativo de console do .NET Core usando Visual Studio para Mac
 description: Saiba como depurar um aplicativo de console do .NET Core usando o Mac do Visual Studio.
 ms.date: 06/08/2020
-ms.openlocfilehash: 4941605923a9897d481aca4ec31408ab62e873f3
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 7e2a25266fab40b5ef1d0a38b8bbf06a6843746b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713815"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416012"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-for-mac"></a>Tutorial: Depurar um aplicativo de console do .NET Core usando Visual Studio para Mac
 
@@ -15,7 +15,7 @@ Este tutorial apresenta as ferramentas de depuração disponíveis no Visual Stu
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Este tutorial funciona com o aplicativo de console que você cria em [criar um aplicativo de console do .NET Core no Visual Studio para Mac](using-on-mac-vs.md).
+- Este tutorial funciona com o aplicativo de console que você cria em [criar um aplicativo de console do .NET Core no Visual Studio para Mac](with-visual-studio-mac.md).
 
 ## <a name="use-debug-build-configuration"></a>Usar configuração de compilação de depuração
 
@@ -27,7 +27,7 @@ Por padrão, o Visual Studio usa a configuração de compilação de depuração
 
 1. Iniciar Visual Studio para Mac.
 
-1. Abra o projeto que você criou em [criar um aplicativo de console do .NET Core no Visual Studio para Mac](using-on-mac-vs.md).
+1. Abra o projeto que você criou em [criar um aplicativo de console do .NET Core no Visual Studio para Mac](with-visual-studio-mac.md).
 
    A configuração de build atual é mostrada na barra de ferramentas. A imagem da barra de ferramentas a seguir mostra que o Visual Studio está configurado para compilar a versão de depuração do aplicativo:
 

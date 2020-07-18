@@ -2,15 +2,15 @@
 title: ASP.NET Core alterações significativas
 titleSuffix: ''
 description: Lista as alterações significativas em ASP.NET Core.
-ms.date: 07/14/2020
+ms.date: 07/15/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: b73492e0c2f60c2b214984d3987de1e9e6530847
-ms.sourcegitcommit: d4f7ba08f2a45a9dbef53be597eed6d4a9410f29
+ms.openlocfilehash: cea6771afdc05edc525e7d35f530f42e7b3bc1fa
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86401998"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441941"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core alterações significativas
 
@@ -26,8 +26,10 @@ As seguintes alterações significativas estão documentadas nesta página:
 - [Autorização: sobrecarga de addautoria movida para um assembly diferente](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [Autorização: IAllowAnonymous removido de AuthorizationFilterContext. Filters](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [Autorização: implementações de IAuthorizationPolicyProvider exigem novo método](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [Autorização: o recurso no roteamento de ponto de extremidade é HttpContext](#authorization-resource-in-endpoint-routing-is-httpcontext)
 - [Azure: pacotes de integração do Azure prefixados da Microsoft removidos](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [Mais grande: espaço em branco insignificado cortado de componentes em tempo de compilação](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
+- [Mais incrivelmente: estrutura de destino de pacotes NuGet alterada](#blazor-target-framework-of-nuget-packages-changed)
 - [Caching: Propriedade CompactOnMemoryPressure removida](#caching-compactonmemorypressure-property-removed)
 - [Caching: o Microsoft. Extensions. Caching. SqlServer usa o novo pacote SqlClient](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [Caching: tipos de ResponseCaching "pubternal" alterados para interno](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -91,11 +93,19 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5,0
 
+[!INCLUDE[Authorization: Resource in endpoint routing is HttpContext](~/includes/core-changes/aspnetcore/5.0/authorization-resource-in-endpoint-routing.md)]
+
+***
+
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
 
 ***
 
 [!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
+
+***
+
+[!INCLUDE[Blazor: Target framework of NuGet packages changed](~/includes/core-changes/aspnetcore/5.0/blazor-packages-target-framework-changed.md)]
 
 ***
 

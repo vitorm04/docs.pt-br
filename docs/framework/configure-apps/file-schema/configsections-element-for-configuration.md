@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-ms.openlocfilehash: 55116f1fe6fdffffea8f26d8a4de783c7305ada3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1e4bb7a7cfb0b140ca6d13c162708c3c30bd496d
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155343"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441681"
 ---
 # <a name="configsections-element-for-configuration"></a>Elemento \<configSections> para \<configuration>
 
@@ -36,8 +36,6 @@ Nenhum
 | --- | ----------- |
 | [**\<section>**](section-element.md) | Contém uma declaração de seção de configuração. |
 | [**\<sectionGroup>**](sectiongroup-element-for-configsections.md) | Define um namespace para seções de configuração. |
-| [**\<remove>**](remove-element-for-configsections.md) | Remove uma seção ou um grupo de seções predefinido. |
-| [**\<clear>**](clear-element-for-configsections.md) | Limpa todas as seções e grupos de seções definidos anteriormente. |
 
 ## <a name="remarks"></a>Comentários
 
@@ -61,7 +59,7 @@ O exemplo a seguir mostra como definir uma seção de configuração e definir a
 
 ## <a name="configuration-file"></a>Arquivo de configuração
 
-Esse elemento pode ser usado no arquivo de configuração do aplicativo, no arquivo de configuração do computador (*Machine. config*) e nos arquivos *Web. config* que não estão no nível do diretório do aplicativo.
+Esse elemento pode ser usado no arquivo de configuração do aplicativo, no arquivo de configuração do computador (*Machine.config*) e *Web.config* arquivos que não estão no nível do diretório do aplicativo.
 
 ## <a name="see-also"></a>Confira também
 

@@ -19,38 +19,19 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: b9915faff2593cc51868c20e1a83a05ffca9f548
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 0de0c7e9843ca8a97392733a68367b1dae8de232
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325938"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416385"
 ---
-# <a name="isolated-storage"></a>Armazenamentos isolado
-<a name="top"></a> Para aplicativos desktop, o armazenamento isolado é um mecanismo de armazenamento de dados que proporciona isolamento e segurança ao definir formas padronizadas de associar código a dados salvos. A padronização também fornece outros benefícios. Os administradores podem usar as ferramentas desenvolvidas para manipular armazenamentos isolados para configurar espaço de armazenamento de arquivos, definir políticas de segurança e excluir dados não utilizados. Com armazenamentos isolados, seu código não precisa mais de caminhos exclusivos para especificar locais seguros na sistema de arquivos e os dados são protegidos de outros aplicativos que só têm acesso a armazenamentos isolados. Informações embutidas em código que indicam onde a área de armazenamento de um aplicativo se encontra são desnecessárias.
+# <a name="isolated-storage"></a>Armazenamento isolado
+
+ Para aplicativos desktop, o armazenamento isolado é um mecanismo de armazenamento de dados que proporciona isolamento e segurança ao definir formas padronizadas de associar código a dados salvos. A padronização também fornece outros benefícios. Os administradores podem usar as ferramentas desenvolvidas para manipular armazenamentos isolados para configurar espaço de armazenamento de arquivos, definir políticas de segurança e excluir dados não utilizados. Com armazenamentos isolados, seu código não precisa mais de caminhos exclusivos para especificar locais seguros na sistema de arquivos e os dados são protegidos de outros aplicativos que só têm acesso a armazenamentos isolados. Informações embutidas em código que indicam onde a área de armazenamento de um aplicativo se encontra são desnecessárias.
 
 > [!IMPORTANT]
 > O armazenamento isolado não está disponível para aplicativos da loja do Windows 8. x. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API do Windows Runtime para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.
-
-Este tópico contém as seguintes seções:
-
-- [Compartimentos e Repositórios de Dados](#data_compartments_and_stores)
-
-- [Cotas de armazenamento isolado](#quotas)
-
-- [Acesso seguro](#secure_access)
-
-- [Uso permitido e riscos de segurança](#allowed_usage)
-
-- [Locais de armazenamento isolados](#isolated_storage_locations)
-
-- [Criar, enumerar e excluir armazenamento isolado](#isolated_storage_tasks)
-
-- [Cenários para armazenamento isolado](#scenarios_for_isolated_storage)
-
-- [Tópicos relacionados](#related_topics)
-
-- [Referência](#reference)
 
 <a name="data_compartments_and_stores"></a>
 
@@ -114,11 +95,11 @@ __Esta seção se aplica às seguintes estruturas:__
 - .NET Core 2.1 +
 - .NET 5.0 +
 
-O .NET Framework e o .NET Core oferecem [armazenamento isolado](/dotnet/standard/io/isolated-storage) como um mecanismo para manter dados para um usuário, um aplicativo ou um componente. Esse é um componente herdado projetado principalmente para cenários de segurança de acesso a código preteridos.
+O .NET Framework e o .NET Core oferecem armazenamento isolado como um mecanismo para manter dados para um usuário, um aplicativo ou um componente. Esse é um componente herdado projetado principalmente para cenários de segurança de acesso a código preteridos.
 
 Várias APIs e ferramentas de armazenamento isolado podem ser usadas para ler dados entre limites de confiança. Por exemplo, a leitura de dados de um escopo em todo o computador pode agregar dados de outras contas de usuário possivelmente menos confiáveis no computador. Os componentes ou aplicativos que lêem os escopos de armazenamento isolado em toda a máquina devem estar cientes das consequências de ler esses dados.
 
-### <a name="security-sensitive-apis-which-can-read-from-the-machine-wide-scope"></a>APIs sensíveis à segurança que podem ser lidas no escopo de todo o computador
+### <a name="security-sensitive-apis-that-can-read-from-the-machine-wide-scope"></a>APIs sensíveis à segurança que podem ser lidas no escopo de todo o computador
 
 Componentes ou aplicativos que chamam qualquer uma das seguintes APIs lidas do escopo de todo o computador:
 
@@ -129,7 +110,7 @@ Componentes ou aplicativos que chamam qualquer uma das seguintes APIs lidas do e
 * [IsolatedStorageFile. GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore), passando um escopo que inclui o sinalizador IsolatedStorageScope. Machine
 * [IsolatedStorageFile. Remove](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove), passando um escopo que inclui o `IsolatedStorageScope.Machine` sinalizador
 
-A [ferramenta de armazenamento isolado](/dotnet/framework/tools/storeadm-exe-isolated-storage-tool) `storeadm.exe` será afetada se for chamada com a `/machine` opção, conforme mostrado no código a seguir:
+A [ferramenta de armazenamento isolado](../../framework/tools/storeadm-exe-isolated-storage-tool.md) `storeadm.exe` será afetada se for chamada com a `/machine` opção, conforme mostrado no código a seguir:
 
 ```txt
 storeadm.exe /machine [any-other-switches]
@@ -252,9 +233,9 @@ Muitos aplicativos usam bancos de dados para armazenar e isolar os dados. Nesse 
 
 <a name="related_topics"></a>
 
-## <a name="related-topics"></a>Tópicos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
-|Title|Descrição|
+|Título|Descrição|
 |-----------|-----------------|
 |[Tipos de isolamento](types-of-isolation.md)|Descreve os diferentes tipos de isolamento.|
 |[Como: Obter repositórios para o armazenamento isolado](how-to-obtain-stores-for-isolated-storage.md)|Fornece um exemplo de uso da classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> para obter um armazenamento isolado por usuário e assembly.|

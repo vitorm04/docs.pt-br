@@ -4,12 +4,12 @@ description: Informações sobre exemplos e tutoriais para .NET Core, ASP.NET Co
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 44ce0d740502686db1801db428a2f79c2250f8c0
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 367b2cbea24ac0da634051bf815c319f3679f79b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507423"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86417327"
 ---
 # <a name="net-samples-and-tutorials"></a>Exemplos e tutoriais do .NET
 
@@ -87,9 +87,9 @@ Este tutorial demonstra muitos dos recursos do LINQ e os elementos de linguagem 
 
 Este tutorial mostra como compilar um aplicativo de console simples do .NET Core usando o Visual Studio para Mac.
 
-**[Criando uma solução completa do .NET Core no macOS usando Visual Studio para Mac](../core/tutorials/using-on-mac-vs-full-solution.md)**
+**[Criar uma biblioteca de .NET Standard no macOS usando Visual Studio para Mac](../core/tutorials/library-with-visual-studio-mac.md)**
 
-Este tutorial mostra como compilar uma solução completa do .NET Core que inclui uma biblioteca reutilizável e testes de unidade.
+Este tutorial mostra como criar uma biblioteca de .NET Standard usando Visual Studio para Mac.
 
 **[Criação de um aplicativo do .NET Core compatível com plugins](../core/tutorials/creating-app-with-plugin-support.md)**
 

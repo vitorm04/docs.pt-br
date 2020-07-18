@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 2c8924ee3374489dded7e819ecde8e4d9da750bb
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: e6dc32274cc3b0d7ec9d66a837a422c87fb2468b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374380"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416210"
 ---
 # <a name="consume-a-dataset-from-an-xml-web-service"></a>Consumir um conjunto de um DataSet de um serviço Web XML
 
@@ -19,7 +19,7 @@ O <xref:System.Data.DataSet> foi arquitetado com um design desconectado, em part
  O exemplo a seguir mostra como criar um serviço Web XML e um cliente que usam o **conjunto** de dados para transportar (incluindo dados modificados) e resolver quaisquer atualizações de volta para a fonte de dados original.  
   
 > [!NOTE]
-> A transmissão `DataSet` ou `DataTable` instâncias como parte das chamadas de serviço Web XML não serão seguras se a entrada não for confiável. Para obter mais informações, consulte [diretrizes de segurança do conjunto de dados e DataTable](/dotnet/framework/data/adonet/dataset-datatable-dataview/security-guidance).
+> A transmissão `DataSet` ou `DataTable` instâncias como parte das chamadas de serviço Web XML não serão seguras se a entrada não for confiável. Para obter mais informações, consulte [diretrizes de segurança do conjunto de dados e DataTable](security-guidance.md).
 > Também recomendamos que você sempre considere as implicações de segurança ao criar um serviço Web XML. Para obter informações sobre como proteger um serviço Web XML, consulte [protegendo Web Services XML criados usando ASP.net](/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100)).  
   
 ## <a name="create-an-xml-web-service"></a>Criar um serviço Web XML
@@ -268,7 +268,7 @@ O <xref:System.Data.DataSet> foi arquitetado com um design desconectado, em part
 - [ADO.NET](../index.md)
 - [DataSets, DataTables e DataViews](index.md)
 - [DataTables](datatables.md)
-- [Populating a DataSet from a DataAdapter](../populating-a-dataset-from-a-dataadapter.md) (Preenchendo um DataSet por meio de um DataAdapter)
+- [Populando um DataSet a partir de um DataAdapter](../populating-a-dataset-from-a-dataadapter.md)
 - [Atualizando fontes de dados com DataAdapters](../updating-data-sources-with-dataadapters.md)
 - [Parâmetros DataAdapter](../dataadapter-parameters.md)
 - [Ferramenta de linguagem de descrição de serviços Web (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))

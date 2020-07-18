@@ -5,12 +5,12 @@ author: adegeo
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 5cfd9925f4ee93ef4ebe15ebf16febdfb98aaa9a
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ddbee0764897b511cac0c4142354ba995d94a2b6
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325013"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416059"
 ---
 # <a name="get-started-with-net-core"></a>Introdução ao .NET Core
 
@@ -75,7 +75,7 @@ Comece a desenvolver aplicativos .NET Core seguindo estes tutoriais passo a pass
 - [Introdução ao .NET Core no macOS usando o Visual Studio Code](./tutorials/using-on-macos.md)
 - [Introdução ao .NET Core usando a linha de comando](./tutorials/cli-create-console-app.md)
 - [Introdução ao .NET Core no macOS, usando o Visual Studio para Mac](./tutorials/using-on-mac-vs.md)
-- [Criar uma solução completa do .NET Core no macOS usando Visual Studio para Mac](./tutorials/using-on-mac-vs-full-solution.md)
+- [Criar uma biblioteca de .NET Standard no macOS usando Visual Studio para Mac](tutorials/library-with-visual-studio-mac.md)
 
 |   |   |
 |---|---|
