@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 3927c17a2548a094a63ffd95ff8a3701403de281
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: b770543eb09ed2edc1a028561e0cf41e74fab1cc
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244901"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86444489"
 ---
 # <a name="serialization-and-deserialization"></a>Serialização e desserialização
 Windows Communication Foundation (WCF) inclui um novo mecanismo de serialização, o <xref:System.Runtime.Serialization.DataContractSerializer> . O se <xref:System.Runtime.Serialization.DataContractSerializer> traduz entre objetos .NET Framework e XML, em ambas as direções. Este tópico explica como o serializador funciona.  
@@ -20,7 +20,13 @@ Windows Communication Foundation (WCF) inclui um novo mecanismo de serializaçã
   
  Ao desserializar XML, o serializador usa as classes <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter>. Ele também dá suporte <xref:System.Xml.XmlDictionaryReader> às <xref:System.Xml.XmlDictionaryWriter> classes e para permitir que ele produza XML otimizado em alguns casos, como ao usar o formato XML binário do WCF.  
   
- O WCF também inclui um serializador complementar, o <xref:System.Runtime.Serialization.NetDataContractSerializer> . O <xref:System.Runtime.Serialization.NetDataContractSerializer> é semelhante aos <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serializadores e porque também emite .NET Framework nomes de tipo como parte dos dados serializados. Ele é usado quando os mesmos tipos são compartilhados nas terminações de serialização e desserialização. O <xref:System.Runtime.Serialization.DataContractSerializer> e o <xref:System.Runtime.Serialization.NetDataContractSerializer> derivam de uma classe base comum, a <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
+ O WCF também inclui um serializador complementar, o <xref:System.Runtime.Serialization.NetDataContractSerializer> . <xref:System.Runtime.Serialization.NetDataContractSerializer>:
+
+* ***Não*** é seguro. Para obter mais informações, consulte o [Guia de segurança do BinaryFormatter](/dotnet/standard/serialization/binaryformatter-security-guide).
+* É semelhante aos <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serializadores e porque ele também emite .NET Framework nomes de tipo como parte dos dados serializados.
+* É usado quando os mesmos tipos são compartilhados na serialização e a desserialização termina.
+
+ <xref:System.Runtime.Serialization.DataContractSerializer>E <xref:System.Runtime.Serialization.NetDataContractSerializer> derivam de uma classe base comum, <xref:System.Runtime.Serialization.XmlObjectSerializer> .  
   
 > [!WARNING]
 > O <xref:System.Runtime.Serialization.DataContractSerializer> serializa cadeias de caracteres que contêm caracteres de controle com um valor hexadecimal abaixo de 20 como as entidades XML. Isso pode causar um problema com um cliente não WCF ao enviar esses dados para um serviço WCF.  
@@ -261,7 +267,7 @@ Windows Communication Foundation (WCF) inclui um novo mecanismo de serializaçã
   
  Além disso, observe que o não gera `NetDataContractSerializer` o tipo de .NET Framework completo e o nome do assembly para cada nó no grafo do objeto. Ele gera essas informações apenas quando são ambíguas. Isto é, ele gera no nível do objeto raiz e para qualquer caso polimórfico.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.NetDataContractSerializer>
