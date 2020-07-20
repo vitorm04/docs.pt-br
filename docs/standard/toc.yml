@@ -744,6 +744,8 @@
         - name: Visão geral
           href: serialization/binary-serialization.md
           displayName: binary serialization
+        - name: Guia de segurança do BinaryFormatter
+          href: serialization/binaryformatter-security-guide.md
         - name: Conceitos de serialização
           href: serialization/serialization-concepts.md
         - name: Serialização básica
