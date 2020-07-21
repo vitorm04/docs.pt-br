@@ -1,17 +1,18 @@
 ---
 title: Finalizadores – Guia de Programação em C#
+description: Os finalizadores em C#, que também são chamados de destruidores, executam qualquer limpeza final necessária quando uma instância de classe está sendo coletada pelo coletor de lixo.
 ms.date: 10/08/2018
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 62fc531a8064a8a5cb144a89aa9975b3199db976
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 392b69633e596f0682fdfb4a5875f46755203ff7
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990109"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474885"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizadores (Guia de Programação em C#)
 Os finalizadores (que também são chamados de **destruidores**) são usados para executar qualquer limpeza final necessária, quando uma instância da classe está sendo coletada pelo coletor de lixo.  
@@ -86,7 +87,7 @@ protected override void Finalize()
 
 Para obter mais informações, confira a seção [Destruidores](~/_csharplang/spec/classes.md#destructors) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction).
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.IDisposable>
 - [Guia de programação C#](../index.md)

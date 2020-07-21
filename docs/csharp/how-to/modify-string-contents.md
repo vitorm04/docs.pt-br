@@ -1,14 +1,15 @@
 ---
 title: Como modificar o conteúdo da cadeia de caracteres-guia C#
+description: Examine exemplos de várias técnicas para modificar o conteúdo da cadeia de caracteres existente em C#, que retorna um novo objeto de cadeia de caracteres.
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: e607a8a2e96a73f64463d75a75a2bfe3f518d118
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ecce8857befc66353deea341d81f8c6e4313b951
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324166"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473962"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Como modificar o conteúdo da cadeia de caracteres em C\#
 
@@ -70,7 +71,7 @@ Como as cadeias de caracteres são imutáveis, todos os exemplos anteriores cria
 
 Você pode modificar uma cadeia de caracteres em um bloco fixo com código não seguro, mas **não é** recomendável modificar o conteúdo da cadeia de caracteres depois que uma cadeia de caracteres é criada. Isso interromperá as coisas de maneiras imprevisíveis. Por exemplo, se alguém estagiárior uma cadeia de caracteres que tenha o mesmo conteúdo que o seu, ele obterá sua cópia e não esperará que você esteja modificando sua cadeia de caracteres.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [.NET Framework expressões regulares](../../standard/base-types/regular-expressions.md)
 - [Linguagem de expressão regular-referência rápida](../../standard/base-types/regular-expression-language-quick-reference.md)

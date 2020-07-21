@@ -2,15 +2,15 @@
 title: ASP.NET Core alterações significativas
 titleSuffix: ''
 description: Lista as alterações significativas em ASP.NET Core.
-ms.date: 07/15/2020
+ms.date: 07/17/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: cea6771afdc05edc525e7d35f530f42e7b3bc1fa
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 7a07df5194d5dc220b61d55a4457d90881ac9ddf
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441941"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474820"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core alterações significativas
 
@@ -60,6 +60,7 @@ As seguintes alterações significativas estão documentadas nesta página:
 - [Kestrel: versões do protocolo TLS com suporte padrão alteradas](#kestrel-default-supported-tls-protocol-versions-changed)
 - [Kestrel: assembly HTTPS vazio removido](#kestrel-empty-https-assembly-removed)
 - [Kestrel: HTTP/2 desabilitado via TLS em versões incompatíveis do Windows](#kestrel-http2-disabled-over-tls-on-incompatible-windows-versions)
+- [Kestrel: transporte Libuv marcado como obsoleto](#kestrel-libuv-transport-marked-as-obsolete)
 - [Kestrel: Solicitar cabeçalhos de trailer movidos para nova coleção](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel: alterações na camada de abstração de transporte](#kestrel-transport-abstractions-removed-and-made-public)
 - [Localização: APIs marcadas como obsoletas](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
@@ -137,6 +138,10 @@ As seguintes alterações significativas estão documentadas nesta página:
 ***
 
 [!INCLUDE[Kestrel: HTTP/2 disabled over TLS on incompatible Windows versions](~/includes/core-changes/aspnetcore/5.0/kestrel-disables-http2-over-tls.md)]
+
+***
+
+[!INCLUDE[Kestrel: Libuv transport marked as obsolete](~/includes/core-changes/aspnetcore/5.0/kestrel-libuv-transport-obsolete.md)]
 
 ***
 

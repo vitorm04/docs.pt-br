@@ -1,17 +1,18 @@
 ---
 title: Métodos de extensão – Guia de Programação em C#
+description: Os métodos de extensão no C# permitem que você adicione métodos a tipos existentes sem criar um novo tipo derivado, recompilar ou modificar o tipo original.
 ms.date: 03/19/2020
 helpviewer_keywords:
 - methods [C#], adding to existing types
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 0f9c0f053e531a44640084a35dc5d8e844ee0b46
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: e57447c89749451862bbb80047ed74135a0eb752
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803185"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474807"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Métodos de extensão (Guia de Programação em C#)
 
@@ -116,7 +117,7 @@ Se você implementar métodos de extensão para um determinado tipo, lembre-se d
 
 Para uma biblioteca de classes que você implemente, não use métodos de extensão para evitar incrementar o número de versão de um assembly. Se você quiser adicionar uma funcionalidade significativa a uma biblioteca para a qual você possui o código-fonte, siga as diretrizes do .NET para o controle de versão do assembly. Para obter mais informações, consulte [Controle de versão do assembly](../../../standard/assembly/versioning.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Guia de programação C#](../index.md)
 - [Exemplos de programação paralela (incluem vários métodos de extensão de exemplo)](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)

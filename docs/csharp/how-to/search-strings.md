@@ -1,17 +1,18 @@
 ---
 title: Como Pesquisar cadeias de caracteres (guia C#)
+description: Saiba mais sobre duas estratégias para Pesquisar texto em cadeias de caracteres em C#. Os métodos da classe String pesquisam um texto específico. Expressões regulares pesquisam por padrões no texto.
 ms.date: 02/21/2018
 helpviewer_keywords:
 - searching strings [C#]
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 34f9f2df11f9b7c51fcec2f8475a50ccf4c5e220
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 17bf6e080542242d30791b70ffbf00b05f03a7b0
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324132"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473988"
 ---
 # <a name="how-to-search-strings"></a>Como Pesquisar cadeias de caracteres
 
@@ -72,7 +73,7 @@ O código a seguir usa expressões regulares para validar o formato de cada cade
 
 Este padrão de pesquisa único corresponde a várias cadeias de caracteres válidas. Expressões regulares são melhores para pesquisar por ou validar mediante um padrão, em vez de uma única cadeia de caracteres de texto.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Guia de programação em C#](../programming-guide/index.md)
 - [Cadeias de caracteres](../programming-guide/strings/index.md)

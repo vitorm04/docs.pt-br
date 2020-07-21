@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 1e78b920eb6a1eae870a425b91711ac9d87b6530
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: f216534140b6e207ac110bb54b3e4f93a8ac6b70
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84811674"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474014"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opções do compilador de C# listadas por categoria
 
@@ -28,7 +28,7 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 
 |Opção|Finalidade|
 |------------|-------------|
-|[-deterministic](deterministic-compiler-option.md)|Faz com que o compilador gere um assembly de conteúdo binário idêntico entre compilações se as entradas são idênticas.|
+|[-determinístico](deterministic-compiler-option.md)|Faz com que o compilador gere um assembly de conteúdo binário idêntico entre compilações se as entradas são idênticas.|
 |[-doc](doc-compiler-option.md)|Especifica um arquivo XML em que os comentários da documentação processados devem ser gravados.|
 |[-out](out-compiler-option.md)|Especifica o arquivo de saída.|
 |[-pathmap](pathmap-compiler-option.md)|Especificar um mapeamento para os nomes de caminho de origem emitidos pelo compilador|
@@ -37,7 +37,7 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 |[-preferreduilang](preferreduilang-compiler-option.md)|Especifique uma linguagem para a saída do compilador.|
 |[-refout](refout-compiler-option.md)|Gere um assembly de referência além de um assembly principal.|
 |[-refonly](refonly-compiler-option.md)|Gere um assembly de referência em vez de um assembly principal.|
-|[-target](target-compiler-option.md)|Especifica o formato do arquivo de saída usando uma das cinco opções: [-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md) ou [-target:winmdobj](target-winmdobj-compiler-option.md).|
+|[-destino](target-compiler-option.md)|Especifica o formato do arquivo de saída usando uma das seguintes opções: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: library](target-library-compiler-option.md), [-target: módulo](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md)ou [-target: winmdobj](target-winmdobj-compiler-option.md).|
 |ModuleName\<string>|Especificar o nome do módulo de origem|
 
 ## <a name="net-framework-assemblies"></a>Assemblies do .NET Framework
@@ -67,7 +67,7 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 |[-errorreport](errorreport-compiler-option.md)|Define o comportamento de relatório de erros.|
 |[-fullpaths](fullpaths-compiler-option.md)|Especifica o caminho absoluto para o arquivo na saída do compilador.|
 |[-nowarn](nowarn-compiler-option.md)|Suprime a geração de avisos especificados do compilador.|
-|[-nullable](nullable-compiler-option.md)|Especifica a opção de contexto anulável.|
+|[– permite valor nulo](nullable-compiler-option.md)|Especifica a opção de contexto anulável.|
 |[-warn](warn-compiler-option.md)|Define o nível de aviso.|
 |[-warnaserror](warnaserror-compiler-option.md)|Promove avisos a erros.|
 |regras\<file>|Especifique um arquivo de conjunto de regras que desabilita o diagnóstico específico.|
@@ -95,7 +95,7 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 |[@](response-file-compiler-option.md)|Especifica um arquivo de resposta.|
 |[-?](help-compiler-option.md)|Lista as opções de compilador para stdout.|
 |[-baseaddress](baseaddress-compiler-option.md)|Especifica o endereço básico preferencial no qual uma DLL será carregada.|
-|[-codepage](codepage-compiler-option.md)|Especifica a página de código a ser usada para todos os arquivos de código-fonte na compilação.|
+|[-página de código](codepage-compiler-option.md)|Especifica a página de código a ser usada para todos os arquivos de código-fonte na compilação.|
 |[-ajuda](help-compiler-option.md)|Lista as opções de compilador para stdout.|
 |[-highentropyva](highentropyva-compiler-option.md)|Especifica que o arquivo executável dá suporte a uma ASLR (Address Space Layout Randomization).|
 |[-langversion](langversion-compiler-option.md)|Especificar a versão da linguagem: padrão, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 ou mais recente |
@@ -115,7 +115,7 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 |---|---|
 |-incremental|Habilita a compilação incremental.|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Opções do compilador C#](index.md)
 - [Opções do compilador de C# listadas em ordem alfabética](listed-alphabetically.md)
