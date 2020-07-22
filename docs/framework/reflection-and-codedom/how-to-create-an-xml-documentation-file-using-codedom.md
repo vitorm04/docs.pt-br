@@ -1,5 +1,6 @@
 ---
 title: Como criar um arquivo de documentação XML usando CodeDOM
+description: Neste exemplo detalhado, consulte como gerar código que cria um arquivo de documentação XML usando o Modelo de Objeto do Documento de Código (CodeDOM).
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,48 +10,48 @@ helpviewer_keywords:
 - XML documentation, creating using CodeDOM
 - Code Document Object Model, generating XML documentation
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
-ms.openlocfilehash: b9e11a51048733dbfc42ff9f575e18effc80db07
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f905b996910c6cfbc62378cc4cd6bb8c0e0e6fd4
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596240"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865145"
 ---
-# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a><span data-ttu-id="f4325-102">Como: criar um arquivo de documentação XML usando CodeDOM</span><span class="sxs-lookup"><span data-stu-id="f4325-102">How to: Create an XML documentation file using CodeDOM</span></span>
+# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a><span data-ttu-id="4840c-103">Como: criar um arquivo de documentação XML usando CodeDOM</span><span class="sxs-lookup"><span data-stu-id="4840c-103">How to: Create an XML documentation file using CodeDOM</span></span>
 
-<span data-ttu-id="f4325-103">O CodeDOM pode ser usado para criar o código que gera a documentação XML.</span><span class="sxs-lookup"><span data-stu-id="f4325-103">CodeDOM can be used to create code that generates XML documentation.</span></span> <span data-ttu-id="f4325-104">O processo envolve a criação do grafo CodeDOM que contém os comentários de documentação XML, a geração do código e a compilação do código gerado com a opção do compilador que cria a saída de documentação XML.</span><span class="sxs-lookup"><span data-stu-id="f4325-104">The process involves creating the CodeDOM graph that contains the XML documentation comments, generating the code, and compiling the generated code with the compiler option that creates the XML documentation output.</span></span>  
+<span data-ttu-id="4840c-104">O CodeDOM pode ser usado para criar o código que gera a documentação XML.</span><span class="sxs-lookup"><span data-stu-id="4840c-104">CodeDOM can be used to create code that generates XML documentation.</span></span> <span data-ttu-id="4840c-105">O processo envolve a criação do grafo CodeDOM que contém os comentários de documentação XML, a geração do código e a compilação do código gerado com a opção do compilador que cria a saída de documentação XML.</span><span class="sxs-lookup"><span data-stu-id="4840c-105">The process involves creating the CodeDOM graph that contains the XML documentation comments, generating the code, and compiling the generated code with the compiler option that creates the XML documentation output.</span></span>  
   
-## <a name="create-a-codedom-graph"></a><span data-ttu-id="f4325-105">Criar um grafo do CodeDOM</span><span class="sxs-lookup"><span data-stu-id="f4325-105">Create a CodeDOM graph</span></span>
+## <a name="create-a-codedom-graph"></a><span data-ttu-id="4840c-106">Criar um grafo do CodeDOM</span><span class="sxs-lookup"><span data-stu-id="4840c-106">Create a CodeDOM graph</span></span>
   
-1. <span data-ttu-id="f4325-106">Crie um <xref:System.CodeDom.CodeCompileUnit> que contém o grafo CodeDOM para o aplicativo de exemplo.</span><span class="sxs-lookup"><span data-stu-id="f4325-106">Create a <xref:System.CodeDom.CodeCompileUnit> containing the CodeDOM graph for the sample application.</span></span>  
+1. <span data-ttu-id="4840c-107">Crie um <xref:System.CodeDom.CodeCompileUnit> que contém o grafo CodeDOM para o aplicativo de exemplo.</span><span class="sxs-lookup"><span data-stu-id="4840c-107">Create a <xref:System.CodeDom.CodeCompileUnit> containing the CodeDOM graph for the sample application.</span></span>  
   
-2. <span data-ttu-id="f4325-107">Use o construtor <xref:System.CodeDom.CodeCommentStatement.%23ctor%2A> com o parâmetro `docComment` definido como `true` para criar o texto e os elementos de comentário da documentação XML.</span><span class="sxs-lookup"><span data-stu-id="f4325-107">Use the <xref:System.CodeDom.CodeCommentStatement.%23ctor%2A> constructor with the `docComment` parameter set to `true` to create the XML documentation comment elements and text.</span></span>  
+2. <span data-ttu-id="4840c-108">Use o construtor <xref:System.CodeDom.CodeCommentStatement.%23ctor%2A> com o parâmetro `docComment` definido como `true` para criar o texto e os elementos de comentário da documentação XML.</span><span class="sxs-lookup"><span data-stu-id="4840c-108">Use the <xref:System.CodeDom.CodeCommentStatement.%23ctor%2A> constructor with the `docComment` parameter set to `true` to create the XML documentation comment elements and text.</span></span>  
   
      [!code-csharp[CodeDomHelloWorldSample#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#4)]
      [!code-vb[CodeDomHelloWorldSample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#4)]  
   
-### <a name="generate-the-code-from-the-codecompileunit"></a><span data-ttu-id="f4325-108">Gerar o código a partir do CodeCompileUnit</span><span class="sxs-lookup"><span data-stu-id="f4325-108">Generate the code from the CodeCompileUnit</span></span>
+### <a name="generate-the-code-from-the-codecompileunit"></a><span data-ttu-id="4840c-109">Gerar o código a partir do CodeCompileUnit</span><span class="sxs-lookup"><span data-stu-id="4840c-109">Generate the code from the CodeCompileUnit</span></span>
   
-1. <span data-ttu-id="f4325-109">Use o método <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> para gerar o código e criar um arquivo de origem a ser compilado.</span><span class="sxs-lookup"><span data-stu-id="f4325-109">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> method to generate the code and create a source file to be compiled.</span></span>  
+1. <span data-ttu-id="4840c-110">Use o método <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> para gerar o código e criar um arquivo de origem a ser compilado.</span><span class="sxs-lookup"><span data-stu-id="4840c-110">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> method to generate the code and create a source file to be compiled.</span></span>  
   
      [!code-csharp[CodeDomHelloWorldSample#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#5)]
      [!code-vb[CodeDomHelloWorldSample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#5)]  
   
-### <a name="compile-the-code-and-generate-the-documentation-file"></a><span data-ttu-id="f4325-110">Compilar o código e gerar o arquivo de documentação</span><span class="sxs-lookup"><span data-stu-id="f4325-110">Compile the code and generate the documentation file</span></span>
+### <a name="compile-the-code-and-generate-the-documentation-file"></a><span data-ttu-id="4840c-111">Compilar o código e gerar o arquivo de documentação</span><span class="sxs-lookup"><span data-stu-id="4840c-111">Compile the code and generate the documentation file</span></span>
   
-1. <span data-ttu-id="f4325-111">Adicione a opção do compilador **/doc** à propriedade <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> de um objeto <xref:System.CodeDom.Compiler.CompilerParameters> e passe o objeto para o método <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> para criar o arquivo de documentação XML quando o código é compilado.</span><span class="sxs-lookup"><span data-stu-id="f4325-111">Add the **/doc** compiler option to the <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> property of a <xref:System.CodeDom.Compiler.CompilerParameters> object and pass the object to the <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> method to create the XML documentation file when the code is compiled.</span></span>  
+1. <span data-ttu-id="4840c-112">Adicione a opção do compilador **/doc** à propriedade <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> de um objeto <xref:System.CodeDom.Compiler.CompilerParameters> e passe o objeto para o método <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> para criar o arquivo de documentação XML quando o código é compilado.</span><span class="sxs-lookup"><span data-stu-id="4840c-112">Add the **/doc** compiler option to the <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> property of a <xref:System.CodeDom.Compiler.CompilerParameters> object and pass the object to the <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> method to create the XML documentation file when the code is compiled.</span></span>  
   
      [!code-csharp[CodeDomHelloWorldSample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#6)]
      [!code-vb[CodeDomHelloWorldSample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#6)]  
   
-## <a name="example"></a><span data-ttu-id="f4325-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="f4325-112">Example</span></span>
+## <a name="example"></a><span data-ttu-id="4840c-113">Exemplo</span><span class="sxs-lookup"><span data-stu-id="4840c-113">Example</span></span>
 
-<span data-ttu-id="f4325-113">O exemplo de código a seguir cria um grafo CodeDOM com comentários de documentação, gera um arquivo de código do grafo e compila o arquivo e cria um arquivo de documentação XML associado.</span><span class="sxs-lookup"><span data-stu-id="f4325-113">The following code example creates a CodeDOM graph with documentation comments, generates a code file from the graph, and compiles the file and creates an associated XML documentation file.</span></span>  
+<span data-ttu-id="4840c-114">O exemplo de código a seguir cria um grafo CodeDOM com comentários de documentação, gera um arquivo de código do grafo e compila o arquivo e cria um arquivo de documentação XML associado.</span><span class="sxs-lookup"><span data-stu-id="4840c-114">The following code example creates a CodeDOM graph with documentation comments, generates a code file from the graph, and compiles the file and creates an associated XML documentation file.</span></span>  
   
  [!code-csharp[CodeDomHelloWorldSample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#1)]
  [!code-vb[CodeDomHelloWorldSample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#1)]  
   
- <span data-ttu-id="f4325-114">O exemplo de código cria a seguinte documentação XML no arquivo *HelloWorldDoc. xml* .</span><span class="sxs-lookup"><span data-stu-id="f4325-114">The code example creates the following XML documentation in the *HelloWorldDoc.xml* file.</span></span>  
+ <span data-ttu-id="4840c-115">O exemplo de código cria a seguinte documentação XML no arquivo de *HelloWorldDoc.xml* .</span><span class="sxs-lookup"><span data-stu-id="4840c-115">The code example creates the following XML documentation in the *HelloWorldDoc.xml* file.</span></span>  
   
 ```xml  
 <?xml version="1.0" ?>
@@ -75,12 +76,12 @@ ms.locfileid: "84596240"
 </doc>  
 ```  
   
-## <a name="compile-permissions"></a><span data-ttu-id="f4325-115">Permissões de compilação</span><span class="sxs-lookup"><span data-stu-id="f4325-115">Compile permissions</span></span>
+## <a name="compile-permissions"></a><span data-ttu-id="4840c-116">Permissões de compilação</span><span class="sxs-lookup"><span data-stu-id="4840c-116">Compile permissions</span></span>
   
-<span data-ttu-id="f4325-116">Este exemplo de código requer a permissão `FullTrust` definida para ser executado com êxito.</span><span class="sxs-lookup"><span data-stu-id="f4325-116">This code example requires the `FullTrust` permission set to execute successfully.</span></span>
+<span data-ttu-id="4840c-117">Este exemplo de código requer a permissão `FullTrust` definida para ser executado com êxito.</span><span class="sxs-lookup"><span data-stu-id="4840c-117">This code example requires the `FullTrust` permission set to execute successfully.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="f4325-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f4325-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4840c-118">Veja também</span><span class="sxs-lookup"><span data-stu-id="4840c-118">See also</span></span>
 
-- [<span data-ttu-id="f4325-118">Documente seu código com XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f4325-118">Document your code with XML (Visual Basic)</span></span>](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [<span data-ttu-id="f4325-119">Comentários da documentação XML</span><span class="sxs-lookup"><span data-stu-id="f4325-119">XML documentation comments</span></span>](../../csharp/programming-guide/xmldoc/index.md)
-- [<span data-ttu-id="f4325-120">Documentação XML (C++)</span><span class="sxs-lookup"><span data-stu-id="f4325-120">XML documentation (C++)</span></span>](/cpp/ide/xml-documentation-visual-cpp)
+- [<span data-ttu-id="4840c-119">Documente seu código com XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4840c-119">Document your code with XML (Visual Basic)</span></span>](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [<span data-ttu-id="4840c-120">Comentários da documentação XML</span><span class="sxs-lookup"><span data-stu-id="4840c-120">XML documentation comments</span></span>](../../csharp/programming-guide/xmldoc/index.md)
+- [<span data-ttu-id="4840c-121">Documentação XML (C++)</span><span class="sxs-lookup"><span data-stu-id="4840c-121">XML documentation (C++)</span></span>](/cpp/ide/xml-documentation-visual-cpp)
