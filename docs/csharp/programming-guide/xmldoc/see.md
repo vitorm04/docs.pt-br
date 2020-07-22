@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 0f10feb0931c6d38c817fdecb925f68d439abb59
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 731e42a6d4d354b043a56dbe150bb03a693a9454
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287240"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863780"
 ---
 # <a name="see-c-programming-guide"></a>\<see>(Guia de programação C#)
 
@@ -33,7 +33,7 @@ ms.locfileid: "84287240"
 
 ## <a name="remarks"></a>Comentários
 
-A `<see>` marca permite especificar um link de dentro do texto. Use [\<seealso>](./seealso.md) para indicar que o texto deve ser colocado em uma seção ver também. Use o [atributo cref](./cref-attribute.md) para criar hyperlinks internos para páginas de documentação para elementos de código.
+A `<see>` marca permite especificar um link de dentro do texto. Use [\<seealso>](./seealso.md) para indicar que o texto deve ser colocado em uma seção ver também. Use o [atributo cref](./cref-attribute.md) para criar hyperlinks internos para páginas de documentação para elementos de código. Além disso, ``href`` é um atributo válido que funcionará como um hiperlink.
 
 Compile com [-Doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.
 

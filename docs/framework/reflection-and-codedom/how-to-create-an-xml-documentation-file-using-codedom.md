@@ -1,5 +1,6 @@
 ---
 title: Como criar um arquivo de documentação XML usando CodeDOM
+description: Neste exemplo detalhado, consulte como gerar código que cria um arquivo de documentação XML usando o Modelo de Objeto do Documento de Código (CodeDOM).
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - XML documentation, creating using CodeDOM
 - Code Document Object Model, generating XML documentation
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
-ms.openlocfilehash: b9e11a51048733dbfc42ff9f575e18effc80db07
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f905b996910c6cfbc62378cc4cd6bb8c0e0e6fd4
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596240"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865145"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Como: criar um arquivo de documentação XML usando CodeDOM
 
@@ -50,7 +51,7 @@ O exemplo de código a seguir cria um grafo CodeDOM com comentários de document
  [!code-csharp[CodeDomHelloWorldSample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#1)]
  [!code-vb[CodeDomHelloWorldSample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#1)]  
   
- O exemplo de código cria a seguinte documentação XML no arquivo *HelloWorldDoc. xml* .  
+ O exemplo de código cria a seguinte documentação XML no arquivo de *HelloWorldDoc.xml* .  
   
 ```xml  
 <?xml version="1.0" ?>
@@ -79,7 +80,7 @@ O exemplo de código a seguir cria um grafo CodeDOM com comentários de document
   
 Este exemplo de código requer a permissão `FullTrust` definida para ser executado com êxito.
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Documente seu código com XML (Visual Basic)](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [Comentários da documentação XML](../../csharp/programming-guide/xmldoc/index.md)

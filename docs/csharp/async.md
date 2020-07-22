@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/20/2020
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: bcea584ded6985a0ef166ab8e24672a19e27b0a3
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 35ba90f978b1993f80451a28a4cd08129afddd85
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415978"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864495"
 ---
 # <a name="asynchronous-programming"></a>Programação assíncrona
 
@@ -221,7 +221,7 @@ Com a programação assíncrona, há alguns detalhes a serem considerados, o que
 
 Essa é a convenção usada no .NET para diferenciar mais facilmente os métodos síncronos e assíncronos. Determinados métodos que não são chamados explicitamente pelo seu código (como manipuladores de eventos ou métodos de controlador da Web) não necessariamente se aplicam. Como eles não são chamados explicitamente pelo seu código, ser explícito sobre a nomenclatura não é tão importante.
 
-* `async void`**deve ser usado somente para manipuladores de eventos.**
+*  O `async void` ** só deve ser usado para manipuladores de eventos.**
 
 O `async void` é a única maneira de permitir que os manipuladores de eventos assíncronos trabalhem, pois os eventos não têm tipos de retorno (portanto, não podem fazer uso de `Task` e `Task<T>`). Qualquer outro uso de `async void` não segue o modelo TAP e pode ser um desafio utilizá-lo, como:
 

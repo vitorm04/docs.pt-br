@@ -1,16 +1,17 @@
 ---
 title: Objetos – Guia de Programação em C#
+description: O C# usa uma definição de classe ou estrutura para definir tipos de objetos. Em uma linguagem orientada a objeto, como C#, um programa consiste em objetos que interagem dinamicamente.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: a9411557e9177c8dbed45ec25984d574479da0de
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: b54db325c568dec702e4e50c3c265286662092fe
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241780"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864755"
 ---
 # <a name="objects-c-programming-guide"></a>Objetos (Guia de Programação em C#)
 Uma definição de classe ou struct é como um esquema que especifica o que o tipo pode fazer. Um objeto é basicamente um bloco de memória que foi alocado e configurado de acordo com o esquema. Um programa pode criar vários objetos da mesma classe. Objetos também são chamados de instâncias e podem ser armazenados em uma variável nomeada ou em uma matriz ou coleção. O código de cliente é o código que usa essas variáveis para chamar os métodos e acessar as propriedades públicas do objeto. Em uma linguagem orientada a objetos, como o C#, um programa típico consiste em vários objetos que interagem dinamicamente.  
@@ -48,9 +49,9 @@ Uma definição de classe ou struct é como um esquema que especifica o que o ti
 - Para determinar se os valores dos campos em duas instâncias de classe são iguais, você pode usar o método <xref:System.Object.Equals%2A> ou o [Operador ==](../../language-reference/operators/equality-operators.md#equality-operator-). No entanto, use-os apenas se a classe os tiver substituído ou sobrecarregado para fornecer uma definição personalizada do que "igualdade" significa para objetos desse tipo. A classe também pode implementar a interface <xref:System.IEquatable%601> ou a interface <xref:System.Collections.Generic.IEqualityComparer%601>. As duas interfaces fornecem métodos que podem ser usados para testar a igualdade de valores. Ao criar suas próprias classes que substituem `Equals` , certifique-se de seguir as diretrizes declaradas em [como definir a igualdade de valor para um tipo](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md) e <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> .
   
 ## <a name="related-sections"></a>Seções relacionadas  
- Para obter mais informações:  
+ Para mais informações:  
   
-- [Classe](./classes.md)  
+- [Classes](./classes.md)  
   
 - [Construtores](./constructors.md)  
   
@@ -58,12 +59,12 @@ Uma definição de classe ou struct é como um esquema que especifica o que o ti
   
 - [Eventos](../events/index.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação C#](../index.md)
 - [object](../../language-reference/builtin-types/reference-types.md)
 - [Herança](./inheritance.md)
-- [classes](../../language-reference/keywords/class.md)
+- [class](../../language-reference/keywords/class.md)
 - [Tipos de estrutura](../../language-reference/builtin-types/struct.md)
 - [novo operador](../../language-reference/operators/new-operator.md)
 - [Sistema de tipos comum](../../../standard/base-types/common-type-system.md)

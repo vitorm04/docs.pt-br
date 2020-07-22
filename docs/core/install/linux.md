@@ -4,12 +4,12 @@ description: Saiba mais sobre o que as distribuições do Linux dão suporte à 
 author: adegeo
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: c827dfbb05a7d49ee18209ef2c8b5613f45a4578
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 368ee879e5ab9027bd37c3ced12ed377276de507
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441395"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863767"
 ---
 # <a name="install-net-core-on-linux"></a>Instalar o .NET Core no Linux
 
@@ -170,7 +170,7 @@ A tabela a seguir representa o status de suporte do Ubuntu e do .NET Core.
 | Ubuntu                   | .NET Core 2.1 | .NET Core 3.1 | Versão prévia do .NET 5 (somente instalação manual) |
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [20, 4 (LTS)](linux-ubuntu.md#2004-) | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
-| ✔️ [19,10](linux-ubuntu.md#1910-)       | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
+| ❌[19,10](linux-ubuntu.md#1910-)       | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
 | ❌[19, 4](linux-ubuntu.md#1904-)       | ✔️ 2,1        | ✔️ 3,1        | ❌visualização de 5,0 |
 | ❌[18,10](linux-ubuntu.md#1810-)       | ✔️ 2,1        | ❌3,1        | ❌visualização de 5,0 |
 | ✔️ [18, 4 (LTS)](linux-ubuntu.md#1804-) | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fe370b34d311816a815f3b2d419751ac7871f013
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 78a47b01cc8fba4cb45a686adad901784552c1c1
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "83703585"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865327"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Como migrar do Newtonsoft.Json para oSystem.Text.Json
 
@@ -318,11 +318,27 @@ Para fazer a desserialização falhar se nenhuma `Date` propriedade estiver no J
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverter.cs)]
 
-Registre esse conversor personalizado [usando um atributo na classe poco](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) ou [adicionando o conversor](system-text-json-converters-how-to.md#registration-sample---converters-collection) à <xref:System.Text.Json.JsonSerializerOptions.Converters> coleção.
+Registre esse conversor personalizado [adicionando o conversor](system-text-json-converters-how-to.md#registration-sample---converters-collection) à <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType> coleção.
 
-Se você seguir esse padrão, não passe o objeto Options ao chamar de forma recursiva <xref:System.Text.Json.JsonSerializer.Serialize%2A> ou <xref:System.Text.Json.JsonSerializer.Deserialize%2A> . O objeto Options contém a <xref:System.Text.Json.JsonSerializerOptions.Converters%2A> coleção. Se você passá-lo para `Serialize` ou `Deserialize` , o conversor personalizado chamará a si mesmo, fazendo um loop infinito que resulta em uma exceção de estouro de pilha. Se as opções padrão não forem viáveis, crie uma nova instância das opções com as configurações necessárias. Essa abordagem será lenta, pois cada nova instância armazena em cache de forma independente.
+Esse padrão de chamar recursivamente o conversor exige que você registre o conversor usando <xref:System.Text.Json.JsonSerializerOptions> , não usando um atributo. Se você registrar o conversor usando um atributo, o conversor personalizado chamará recursivamente a si mesmo. O resultado é um loop infinito que termina em uma exceção de estouro de pilha.
 
-O código do conversor anterior é um exemplo simplificado. Será necessária uma lógica adicional se você precisar manipular atributos (como [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) ou opções diferentes (como codificadores personalizados). Além disso, o código de exemplo não manipula Propriedades para as quais um valor padrão é definido no construtor. E essa abordagem não diferencia os seguintes cenários:
+Quando você registra o conversor usando o objeto Options, evite um loop infinito não passando o objeto Options ao chamar <xref:System.Text.Json.JsonSerializer.Serialize%2A> ou <xref:System.Text.Json.JsonSerializer.Deserialize%2A> . O objeto Options contém a <xref:System.Text.Json.JsonSerializerOptions.Converters%2A> coleção. Se você passá-lo para `Serialize` ou `Deserialize` , o conversor personalizado chamará a si mesmo, fazendo um loop infinito que resulta em uma exceção de estouro de pilha. Se as opções padrão não forem viáveis, crie uma nova instância das opções com as configurações necessárias. Essa abordagem será lenta, pois cada nova instância armazena em cache de forma independente.
+
+Há um padrão alternativo que pode usar `JsonConverterAttribute` o registro na classe a ser convertida. Nessa abordagem, o código do conversor chama `Serialize` ou `Deserialize` em uma classe que deriva da classe a ser convertida. A classe derivada não tem uma `JsonConverterAttribute` aplicada a ela. No exemplo a seguir dessa alternativa:
+
+* `WeatherForecastWithRequiredPropertyConverterAttribute`é a classe a ser desserializada e está `JsonConverterAttribute` aplicada a ela.
+* `WeatherForecastWithoutRequiredPropertyConverterAttribute`é a classe derivada que não tem o atributo de conversor.
+* O código no conversor chama `Serialize` e `Deserialize` em `WeatherForecastWithoutRequiredPropertyConverterAttribute` para evitar um loop infinito. Há um custo de desempenho para essa abordagem na serialização devido a uma instanciação de objeto extra e à cópia de valores de propriedade.
+
+Estes são os `WeatherForecast*` tipos:
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithReqPptyConverterAttr)]
+
+E aqui está o conversor:
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverterForAttributeRegistration.cs)]
+
+O conversor de propriedades necessárias exigiria lógica adicional se você precisar manipular atributos como [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) ou opções diferentes, como codificadores personalizados. Além disso, o código de exemplo não manipula Propriedades para as quais um valor padrão é definido no construtor. E essa abordagem não diferencia os seguintes cenários:
 
 * Uma propriedade está ausente no JSON.
 * Uma propriedade para um tipo não anulável está presente no JSON, mas o valor é o padrão para o tipo, como zero para um `int` .
@@ -391,7 +407,7 @@ Registre esse conversor personalizado [usando um atributo na classe](system-text
 Se você usar um conversor personalizado que segue o exemplo anterior:
 
 * O `OnDeserializing` código não tem acesso à nova instância poco. Para manipular a nova instância POCO no início da desserialização, coloque esse código no Construtor POCO.
-* Não passe o objeto Options ao chamar de forma recursiva `Serialize` ou `Deserialize` . O objeto Options contém a `Converters` coleção. Se você passá-lo para `Serialize` ou `Deserialize` , o conversor será usado, fazendo um loop infinito que resulta em uma exceção de estouro de pilha.
+* Evite um loop infinito registrando o conversor no objeto Options e não passando o objeto Options ao chamar de forma recursiva `Serialize` ou `Deserialize` . Para obter mais informações, consulte a seção [Propriedades necessárias](#required-properties) anteriormente neste artigo.
 
 ### <a name="public-and-non-public-fields"></a>Campos públicos e não públicos
 

@@ -1,16 +1,17 @@
 ---
 title: Variáveis locais de tipo implícito – Guia de Programação em C#
+description: A palavra-chave var no C# instrui o compilador a inferir o tipo da variável a partir da expressão no lado direito da instrução de inicialização.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 842f73b7af9671157495df961f5db22702ae897e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 6badb8588dedda80227ab38bee027cf2890c8672
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240701"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864209"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variáveis locais de tipo implícito (Guia de Programação em C#)
 
@@ -68,7 +69,7 @@ As seguintes restrições se aplicam às declarações de variável de tipo impl
 
 - Se um tipo nomeado `var` estiver no escopo, a palavra-chave `var` será resolvida para esse nome de tipo e não será tratada como parte de uma declaração de variável local de tipo implícito.
 
-Tipagem implícita com a palavra-chave `var` só pode ser aplicada às variáveis no escopo do método local. Digitação implícita não está disponível para os campos de classe, uma vez que o compilador C# encontraria um paradoxo lógico ao processar o código: o compilador precisa saber o tipo do campo, mas não é possível determinar o tipo até que a expressão de atribuição seja analisada. A expressão não pode ser avaliada sem saber o tipo. Considere o código a seguir:
+Tipagem implícita com a palavra-chave `var` só pode ser aplicada às variáveis no escopo do método local. Digitação implícita não está disponível para os campos de classe, uma vez que o compilador C# encontraria um paradoxo lógico ao processar o código: o compilador precisa saber o tipo do campo, mas não é possível determinar o tipo até que a expressão de atribuição seja analisada. A expressão não pode ser avaliada sem saber o tipo. Considere o seguinte código:
 
 ```csharp
 private var bookTitles;
@@ -90,7 +91,7 @@ A palavra-chave `var` também pode ser útil quando o tipo específico da variá
 
 O uso de `var` ajuda a simplificar seu código, mas seu uso deve ser restrito a casos em que é necessário, ou quando torna seu código mais fácil de ler. Para obter mais informações sobre quando usar `var` corretamente, consulte a seção [variáveis locais digitadas implicitamente](../inside-a-program/coding-conventions.md#implicitly-typed-local-variables) no artigo diretrizes de codificação em C#.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência do C#](../../language-reference/index.md)
 - [Matrizes de tipo implícito](../arrays/implicitly-typed-arrays.md)
