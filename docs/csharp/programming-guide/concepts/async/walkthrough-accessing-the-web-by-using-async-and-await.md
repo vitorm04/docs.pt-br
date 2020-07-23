@@ -1,13 +1,14 @@
 ---
 title: 'Passo a passo: acessando a Web usando async e await (C#)'
+description: Este tutorial converte um aplicativo síncrono em uma solução assíncrona em C# que usa os recursos Async e Await.
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: edc45f252b75c742afe4f073ca7dd92d9784d2c4
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: d643793bfcdeaaeff56dd252c510d197a45442f9
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240646"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925105"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Passo a passo: acessando a Web usando async e await (C#)
 
@@ -688,11 +689,11 @@ namespace AsyncExampleWPF
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Exemplo de assincronia: acessando o passo a passo da Web (C# e Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hh300224(v=vs.110))
 - [async](../../../language-reference/keywords/async.md)
-- [expressões](../../../language-reference/operators/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [Programação assíncrona com Async e Await (C#)](./index.md)
 - [Tipos de retorno assíncronos (C#)](./async-return-types.md)
 - [TAP (programação assíncrona baseada em tarefas)](https://www.microsoft.com/download/details.aspx?id=19957)

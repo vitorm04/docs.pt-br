@@ -1,13 +1,14 @@
 ---
 title: Como fazer várias solicitações da Web em paralelo usando Async e Await (C#)
+description: Saiba como separar a criação de uma tarefa usando o operador Await em C#, em vez de aplicá-la quando uma tarefa é criada.
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 0cfc1d6d1d59dc74fcf5990abb0a9d980a83d7b0
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 899dfd9165d199a67a5178bb351081ee544b231f
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241793"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925157"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Como fazer várias solicitações da Web em paralelo usando Async e Await (C#)
 Em um método assíncrono, as tarefas são iniciadas quando são criadas. O operador [Await](../../../language-reference/operators/await.md) é aplicado à tarefa no ponto do método em que o processamento não pode continuar até que a tarefa seja concluída. Muitas vezes, uma tarefa é esperada assim que é criada, como mostra o exemplo a seguir.  
@@ -224,7 +225,7 @@ namespace AsyncExample_MultipleTasks
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Passo a passo: acessando a Web usando async e await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programação assíncrona com Async e Await (C#)](./index.md)

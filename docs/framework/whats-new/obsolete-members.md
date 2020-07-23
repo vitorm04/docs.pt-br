@@ -1,5 +1,6 @@
 ---
 title: Membros obsoletos - .NET Framework
+description: Consulte a lista de membros de tipo que são obsoletos no .NET 4,5 e versões posteriores. Membros de tipo são agrupados por assembly. Os membros de tipos obsoletos são excluídos aqui.
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: 64bbcd099016dd3d11fea2eaba81ae4559ba6762
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: c0e320b8499fec0c56d2e3560bf6f64194f73dad
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243070"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925820"
 ---
 # <a name="obsolete-members-in-net-framework"></a>Membros obsoletos no .NET Framework
 
@@ -664,7 +665,7 @@ Este artigo não lista os membros de tipos obsoletos. Para obter uma lista de ti
 
 ## <a name="iehostdll-and-ieexecexe"></a>IEHost.dll e IEExec.exe
 
-Os assemblies IEHost. dll e IEExec. exe foram removidos do .NET Framework. Todos os seus tipos e seus membros são obsoletos e não têm suporte no .NET Framework 4,5 e posterior. Esses assemblies foram usados para hospedar controles de Windows Forms e executar executáveis no Internet Explorer. Entre as alternativas a essa tecnologia estão ClickOnce, XBAP (Aplicativos de Navegador XAML) e Microsoft Silverlight.
+Os assemblies IEHost.dll e IEExec.exe foram removidos do .NET Framework. Todos os seus tipos e seus membros são obsoletos e não têm suporte no .NET Framework 4,5 e posterior. Esses assemblies foram usados para hospedar controles de Windows Forms e executar executáveis no Internet Explorer. Entre as alternativas a essa tecnologia estão ClickOnce, XBAP (Aplicativos de Navegador XAML) e Microsoft Silverlight.
 
 ## <a name="isymwrapperdll"></a>ISymWrapper.dll
 

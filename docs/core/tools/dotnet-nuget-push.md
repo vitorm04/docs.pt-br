@@ -3,12 +3,12 @@ title: Comando dotnet nuget push
 description: O comando dotnet nuget push efetua push de um pacote no servidor e o publica.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 1e7831de4c041591b3602e405418f89f1d1d27d1
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 608cd05d94dd6b5cdc53d582cfaa0407f011ff37
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895463"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925508"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -22,7 +22,7 @@ ms.locfileid: "82895463"
 
 ```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
-    [--interactive] [-k|--api-key <API_KEY>] [-n|--no-symbols]
+    [--interactive] [-k|--api-key <API_KEY>] [-n|--no-symbols true]
     [--no-service-endpoint] [-s|--source <SOURCE>] [--skip-duplicate]
     [-sk|--symbol-api-key <API_KEY>] [-ss|--symbol-source <SOURCE>]
     [-t|--timeout <TIMEOUT>]
@@ -34,7 +34,7 @@ dotnet nuget push -h|--help
 
 O comando `dotnet nuget push` envia um pacote ao servidor e os publica. O comando push usa o servidor e detalhes de credencial encontradas no arquivo de configuração do sistema NuGet ou uma cadeia de arquivos de configuração. Para obter mais informações sobre arquivos de configuração, consulte [Configurando o comportamento do NuGet](/nuget/consume-packages/configuring-nuget-behavior). A configuração de padrão do NuGet é obtida ao carregar *%AppData%\NuGet\NuGet.config* (Windows) ou *$HOME/.local/share* (Linux/macOS) e, em seguida, carregar qualquer *nuget.config* ou *.nuget\nuget.config* da raiz da unidade e terminar no diretório atual.
 
-O comando envia por push um pacote existente. Ele não cria um pacote. Para criar um pacote, use [`dotnet pack`](dotnet-pack.md).
+O comando envia por push um pacote existente. Ele não cria um pacote. Para criar um pacote, use [`dotnet pack`](dotnet-pack.md) .
 
 ## <a name="arguments"></a>Argumentos
 
@@ -64,7 +64,7 @@ O comando envia por push um pacote existente. Ele não cria um pacote. Para cria
 
   A chave da API para o servidor.
 
-- **`-n|--no-symbols`**
+- **`-n|--no-symbols true`**
 
   Não envia símbolos por push (mesmo se estiver presente).
 

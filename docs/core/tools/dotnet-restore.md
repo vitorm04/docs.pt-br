@@ -2,18 +2,18 @@
 title: Comando dotnet restore
 description: Saiba como restaurar as dependências e ferramentas específicas de projeto com o comando dotnet restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: 276fad896a6a8a647ed05a9de8c582d463d9ab8f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 7b456e28505a07c03936c9006c8631848fd4672c
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005304"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925470"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nome
 
 `dotnet restore` – Restaura as dependências e as ferramentas de um projeto.
 
@@ -48,10 +48,10 @@ O comando `dotnet restore` usa o NuGet para restaurar as dependências e ferrame
 
 Para restaurar as dependências, o NuGet precisa dos feeds nos quais os pacotes estão localizados. Os feeds são geralmente fornecidos por meio do arquivo de configuração *nuget.config*. Um arquivo de configuração padrão é fornecido quando o SDK do .NET Core é instalado. Para especificar Feeds adicionais, siga um destes procedimentos:
 
-- Crie seu próprio arquivo *NuGet. config* no diretório do projeto. Para obter mais informações, consulte [as configurações comuns do NuGet e as](/nuget/consume-packages/configuring-nuget-behavior) diferenças de [NuGet. config](#nugetconfig-differences) mais adiante neste artigo.
+- Crie seu próprio arquivo de *nuget.config* no diretório do projeto. Para obter mais informações, consulte [configurações comuns do NuGet](/nuget/consume-packages/configuring-nuget-behavior) e [diferenças denuget.config](#nugetconfig-differences) mais adiante neste artigo.
 - Use `dotnet nuget` comandos como [`dotnet nuget add source`](dotnet-nuget-add-source.md) .
 
-Você pode substituir os feeds *NuGet. config* pela `-s` opção.
+Você pode substituir os feeds *nuget.config* com a `-s` opção.
 
 Para obter informações sobre como usar feeds autenticados, consulte [consumindo pacotes de feeds autenticados](/nuget/consume-packages/consuming-packages-authenticated-feeds).
 
@@ -73,7 +73,7 @@ Há três configurações específicas que são ignoradas por `dotnet restore`:
 
   Os redirecionamentos de associação não funcionam com elementos `<PackageReference>` e o .NET Core só dá suporte a elementos `<PackageReference>` em pacotes NuGet.
 
-- [soluções](/nuget/schema/nuget-config-file#solution-section)
+- [solução](/nuget/schema/nuget-config-file#solution-section)
 
   Essa configuração é específica do Visual Studio e não se aplica ao .NET Core. O .NET Core não usa um arquivo `packages.config` e, em vez disso, usa elementos `<PackageReference>` para pacotes NuGet.
 
@@ -119,7 +119,7 @@ Há três configurações específicas que são ignoradas por `dotnet restore`:
 
 - **`--lock-file-path <LOCK_FILE_PATH>`**
 
-  Local de saída onde o arquivo de bloqueio do projeto é gravado. Por padrão, isso é *PROJECT_ROOT \Packages.Lock.JSON*.
+  Local de saída onde o arquivo de bloqueio do projeto é gravado. Por padrão, isso é *PROJECT_ROOT\packages.lock.jsem*.
 
 - **`--locked-mode`**
 
@@ -161,10 +161,10 @@ Há três configurações específicas que são ignoradas por `dotnet restore`:
   dotnet restore
   ```
 
-- Restaure as dependências e as ferramentas do `app1` projeto encontradas no caminho fornecido:
+- Restaure as dependências e as ferramentas para o projeto `app1` encontrado no caminho fornecido:
 
   ```dotnetcli
-  dotnet restore ~/projects/app1/app1.csproj
+  dotnet restore ./projects/app1/app1.csproj
   ```
 
 - Restaure as dependências e as ferramentas para o projeto no diretório atual usando o caminho de arquivo fornecido como a origem:

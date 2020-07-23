@@ -1,13 +1,14 @@
 ---
 title: O modelo TAP (programação assíncrona de tarefa) com async e await (C#)
+description: Saiba mais sobre quando e como usar a programação assíncrona baseada em tarefas, uma abordagem simplificada para programação assíncrona em C#.
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 90bee745a393ac35ac968e9f4f6b6c83ad8fbb46
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: ddda97e9c77473120ed32b0e224b07d7c4d71b1e
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990073"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925131"
 ---
 # <a name="task-asynchronous-programming-model"></a>Modelo de programação assíncrona de tarefa
 
@@ -170,7 +171,7 @@ Um método assíncrono normalmente contém uma ou mais ocorrências de um `await
 
 `async` e `await` são palavras-chave contextuais. Para obter mais informações e exemplos, consulte os seguintes tópicos:
 
-- [Async](../../../language-reference/keywords/async.md)
+- [async](../../../language-reference/keywords/async.md)
 - [await](../../../language-reference/operators/await.md)
 
 ## <a name="return-types-and-parameters"></a><a name="BKMK_ReturnTypesandParameters"></a>Tipos de retorno e parâmetros
@@ -240,7 +241,7 @@ Por convenção, os métodos que retornam tipos comumente awaitable (por exemplo
 
 ## <a name="related-topics-and-samples-visual-studio"></a><a name="BKMK_RelatedTopics"></a>Tópicos e exemplos relacionados (Visual Studio)
 
-|Title|Descrição|Amostra|
+|Título|Descrição|Amostra|
 |-----------|-----------------|------------|
 |[Passo a passo: acessando a Web usando async e await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)|Mostra como converter uma solução síncrona do WPF em uma solução assíncrona do WPF. O aplicativo baixa uma série de sites.|[Exemplo de assincronia: acessando o passo a passo da Web](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|
 |[Como estender a instrução assíncrona usando Task. WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|Adiciona <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> à explicação passo a passo anterior. O uso de `WhenAll` inicia todos os downloads ao mesmo tempo.||
@@ -252,7 +253,7 @@ Por convenção, os métodos que retornam tipos comumente awaitable (por exemplo
 |[WhenAny: ponte entre o .NET Framework e o Windows Runtime](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|Mostra como criar uma ponte entre tipos Task no .NET Framework e IAsyncOperations no Windows Runtime para que você possa usar <xref:System.Threading.Tasks.Task.WhenAny%2A> com um método do Windows Runtime.|[Exemplo de assincronia: ponte entre o .NET e o Windows Runtime (AsTask e WhenAny)](https://code.msdn.microsoft.com/Async-Sample-Bridging-d6a2f739)|
 |Cancelamento assíncrono: ponte entre o .NET Framework e o Windows Runtime |Mostra como criar uma ponte entre tipos Task no .NET Framework e IAsyncOperations no Windows Runtime para que você possa usar <xref:System.Threading.CancellationTokenSource> com um método do Windows Runtime.|[Exemplo de assincronia: ponte entre o .NET e o Windows Runtime (AsTask e Cancellation)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|
 |[Usando o Async para acessar arquivos (C#)](./using-async-for-file-access.md)|Lista e demonstra as vantagens de usar async e await para acessar arquivos.||
-|[TAP (Padrão Assíncrono Baseado em Tarefa)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|Descreve um novo padrão de assincronia no .NET Framework. O padrão baseia-se nos tipos <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>.||
+|[Padrão assíncrono baseado em tarefa (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|Descreve um novo padrão de assincronia no .NET Framework. O padrão baseia-se nos tipos <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>.||
 |[Vídeos sobre assincronia no Channel 9](https://channel9.msdn.com/search?term=async%20&type=All#pubDate=year&ch9Search&lang-en=en)|Fornece links para uma variedade de vídeos sobre programação assíncrona.||
 
 ## <a name="complete-example"></a><a name="BKMK_CompleteExample"></a>Exemplo completo
@@ -263,7 +264,7 @@ O código a seguir é o arquivo *MainWindow.XAML.cs* do aplicativo WPF que este 
 
 ## <a name="see-also"></a>Confira também
 
-- [Async](../../../language-reference/keywords/async.md)
+- [async](../../../language-reference/keywords/async.md)
 - [await](../../../language-reference/operators/await.md)
 - [Programação assíncrona](../../../async.md)
 - [Visão geral da assincronia](../../../../standard/async.md)

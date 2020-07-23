@@ -1,5 +1,6 @@
 ---
-title: Novidades no .NET Framework
+title: O que há de novo no .NET Framework
+description: Veja o que há de novo em várias versões do .NET Framework. Leia um resumo dos principais novos recursos e aprimoramentos em cada versão.
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ee67e6577c5ad2486a483e3593e4d0a8ecbb0407
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 42f872bba87a88fc92a37879e815ee7068407cf7
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244433"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925586"
 ---
 # <a name="whats-new-in-net-framework"></a>O que há de novo no .NET Framework
 
@@ -350,7 +351,7 @@ A compatibilidade para descompactação por meio das APIs do Windows está habil
 
 **APIs de coleção adicionais**
 
-O .NET Framework 4.7.2 adiciona uma série de novas APIs aos tipos <xref:System.Collections.Generic.SortedSet%601> e <xref:System.Collections.Generic.HashSet%601>. Eles incluem:
+O .NET Framework 4.7.2 adiciona uma série de novas APIs aos tipos <xref:System.Collections.Generic.SortedSet%601> e <xref:System.Collections.Generic.HashSet%601>. Elas incluem:
 
 - métodos `TryGetValue`, o que estende o padrão try usado em outros tipos de coleção. Os métodos são:
 
@@ -741,7 +742,7 @@ A partir do .NET Framework 4.7, o WCF permite que você configure o TSL 1.1 ou o
 
 **Confiabilidade aprimorada de aplicativos WCF e serialização do WCF**
 
-O WCF inclui diversas alterações de código que eliminam as condições de corrida, melhorando o desempenho e a confiabilidade das opções de serialização. Eles incluem:
+O WCF inclui diversas alterações de código que eliminam as condições de corrida, melhorando o desempenho e a confiabilidade das opções de serialização. Elas incluem:
 
 - Suporte aprimorado para combinação de código síncrono e assíncrono em chamadas para **SocketConnection.BeginRead** e **SocketConnection.Read**.
 - Confiabilidade aprimorada ao anular uma conexão com **SharedConnectionListener** e **DuplexChannelBinder**.
@@ -841,7 +842,7 @@ End Class
 
 Você pode criar um arquivo de recurso, DataAnnotation.Localization.fr.resx, cuja chave é a cadeia de caracteres da mensagem de erro e cujo valor é a mensagem de erro localizada. O arquivo deve ser encontrado na pasta `App.LocalResources`. Por exemplo, veja a seguir a chave e seu valor em uma mensagem de erro localizada no idioma francês (fr):
 
-| Name                                 | Valor                                     |
+| Nome                                 | Valor                                     |
 | ------------------------------------ | ----------------------------------------- |
 | A classificação deve estar entre 1 e 10. | La note doit être comprise entre 1 et 10. |
 
@@ -955,7 +956,7 @@ O .NET Framework 3.5 adicionou suporte para o Contrato de chave Diffie-Hellman d
 
 Para lidar com isso no .NET Framework 4.6.2, os três métodos a seguir foram adicionados à classe base <xref:System.Security.Cryptography.ECDiffieHellman> para representar mais claramente essas rotinas KDF e suas entradas:
 
-|Método ECDiffieHellman|Description|
+|Método ECDiffieHellman|Descrição|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva o material da chave usando a fórmula<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> em que *x* é o resultado calculado do algoritmo EC Diffie-Hellman.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva o material da chave usando a fórmula<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> em que *x* é o resultado calculado do algoritmo EC Diffie-Hellman.|
@@ -1308,7 +1309,7 @@ Agora, o SqlClient fornece automaticamente uma conexão mais rápida para um AG 
 
 Windows Presentation Foundation inclui diversos aprimoramentos e alterações.
 
-**desempenho aprimorado**
+**Desempenho aprimorado**
 
 O atraso em disparar eventos de toque foi corrigido no .NET Framework 4.6.1. Além disso, a digitação de controle <xref:System.Windows.Controls.RichTextBox> não ocupa mais o thread de renderização durante a entrada rápida.
 
@@ -1970,7 +1971,7 @@ O .NET Framework 4.5 fornece vários recursos e aperfeiçoamentos novos para com
 
 ### <a name="web"></a>Web
 
-ASP.NET 4.5 e 4.5.1 adicionam model binding para formulários da Web, suporte WebSocket, manipuladores assíncronos, aperfeiçoamentos de desempenho e muitos outros recursos. Para saber mais, consulte os recursos a seguir:
+ASP.NET 4.5 e 4.5.1 adicionam model binding para formulários da Web, suporte WebSocket, manipuladores assíncronos, aperfeiçoamentos de desempenho e muitos outros recursos. Para obter mais informações, consulte os seguintes recursos:
 
 - [ASP.NET 4.5 e Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
 

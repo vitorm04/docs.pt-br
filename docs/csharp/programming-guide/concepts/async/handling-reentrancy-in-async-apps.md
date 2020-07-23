@@ -1,13 +1,14 @@
 ---
 title: Tratando a reentrada em aplicativos assíncronos (C#)
+description: Saiba como lidar com a reentrância em aplicativos assíncronos em C#, que se refere à reinserção de uma operação assíncrona antes que ela seja concluída com possíveis resultados inesperados.
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: e03e0f6ecd8e74dd8518f84ec03c76c1ef5b9ee6
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: fdd440d167b95268a5ae6de0e57a32f0fad66b7c
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241806"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925235"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Tratando a reentrada em aplicativos assíncronos (C#)
 
@@ -728,7 +729,7 @@ A seção a seguir fornece o código para compilar o exemplo como um aplicativo 
 
 12. Faça as alterações de [Desabilitar o botão Iniciar](#BKMK_DisableTheStartButton), [Cancelar e reiniciar a operação](#BKMK_CancelAndRestart) ou [Executar várias operações e colocar a saída em fila](#BKMK_RunMultipleOperations) para tratar a reentrância.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Passo a passo: acessando a Web usando async e await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programação assíncrona com Async e Await (C#)](./index.md)

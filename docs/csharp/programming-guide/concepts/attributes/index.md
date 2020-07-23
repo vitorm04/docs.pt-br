@@ -1,12 +1,13 @@
 ---
 title: Atributos (C#)
+description: Saiba como usar atributos para associar metadados ou informações declarativas com código em C#. Um atributo pode ser consultado em tempo de execução usando reflexão.
 ms.date: 04/26/2018
-ms.openlocfilehash: 358285a39f72ad3ddf1b265e20b443308375d074
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 5c57838b649531d8e8fe89919771adf8830e7f54
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241572"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924979"
 ---
 # <a name="attributes-c"></a>Atributos (C#)
 
@@ -123,7 +124,7 @@ Para obter mais informações, consulte:
 - [Atributos comuns (C#)](../../../language-reference/attributes/global.md)  
 - [Informações do chamador (C#)](../../../language-reference/attributes/caller-information.md)  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Guia de programação C#](../../index.md)
 - [Reflexão (C#)](../reflection.md)
