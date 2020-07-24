@@ -1,28 +1,29 @@
 ---
 title: Como listar todos os nós em uma árvore (C#)
+description: Saiba como listar todos os nós em uma árvore executando uma expressão XPath usando LINQ to XML em C#. Você pode ver como um método ou propriedade afeta a árvore.
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: e1b37c1d0801f2924e6811e630094524331a0d86
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28400712154138fa474665a796b77572b095fe13
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345872"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104967"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-c"></a><span data-ttu-id="e53e5-102">Como listar todos os nós em uma árvore (C#)</span><span class="sxs-lookup"><span data-stu-id="e53e5-102">How to list all nodes in a tree (C#)</span></span>
+# <a name="how-to-list-all-nodes-in-a-tree-c"></a><span data-ttu-id="85ad0-104">Como listar todos os nós em uma árvore (C#)</span><span class="sxs-lookup"><span data-stu-id="85ad0-104">How to list all nodes in a tree (C#)</span></span>
 
-<span data-ttu-id="e53e5-103">Às vezes é útil listar todos os nós em uma árvore.</span><span class="sxs-lookup"><span data-stu-id="e53e5-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="e53e5-104">Isso pode ser útil para saber exatamente como um método ou propriedade afeta a árvore.</span><span class="sxs-lookup"><span data-stu-id="e53e5-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="e53e5-105">Uma abordagem para listar todos os nós em um formato textual é gerar uma expressão XPath que identifica exata e especificamente qualquer nó na árvore.</span><span class="sxs-lookup"><span data-stu-id="e53e5-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>
+<span data-ttu-id="85ad0-105">Às vezes é útil listar todos os nós em uma árvore.</span><span class="sxs-lookup"><span data-stu-id="85ad0-105">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="85ad0-106">Isso pode ser útil para saber exatamente como um método ou propriedade afeta a árvore.</span><span class="sxs-lookup"><span data-stu-id="85ad0-106">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="85ad0-107">Uma abordagem para listar todos os nós em um formato textual é gerar uma expressão XPath que identifica exata e especificamente qualquer nó na árvore.</span><span class="sxs-lookup"><span data-stu-id="85ad0-107">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>
 
-<span data-ttu-id="e53e5-106">Não é particularmente útil executar expressões XPath usando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e53e5-106">It is not particularly helpful to execute XPath expressions using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="e53e5-107">As expressões XPath têm um desempenho pior que consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e as consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] são muito mais avançadas.</span><span class="sxs-lookup"><span data-stu-id="e53e5-107">XPath expressions have poorer performance than [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries are much more powerful.</span></span> <span data-ttu-id="e53e5-108">No entanto, como uma maneira de identificar nós na árvore XML, o XPath funciona bem.</span><span class="sxs-lookup"><span data-stu-id="e53e5-108">However, as a way to identify nodes in the XML tree, XPath works well.</span></span>
+<span data-ttu-id="85ad0-108">Não é particularmente útil executar expressões XPath usando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="85ad0-108">It is not particularly helpful to execute XPath expressions using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="85ad0-109">As expressões XPath têm um desempenho pior que consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e as consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] são muito mais avançadas.</span><span class="sxs-lookup"><span data-stu-id="85ad0-109">XPath expressions have poorer performance than [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries are much more powerful.</span></span> <span data-ttu-id="85ad0-110">No entanto, como uma maneira de identificar nós na árvore XML, o XPath funciona bem.</span><span class="sxs-lookup"><span data-stu-id="85ad0-110">However, as a way to identify nodes in the XML tree, XPath works well.</span></span>
 
-## <a name="example"></a><span data-ttu-id="e53e5-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e53e5-109">Example</span></span>
- <span data-ttu-id="e53e5-110">Este exemplo mostra `GetXPath` uma função nomeada que gera uma expressão XPath específica para qualquer nó na árvore XML.</span><span class="sxs-lookup"><span data-stu-id="e53e5-110">This example shows a function named `GetXPath` that generates a specific XPath expression for any node in the XML tree.</span></span> <span data-ttu-id="e53e5-111">Ela gera expressões XPath apropriadas mesmo quando os nós estão em um namespace.</span><span class="sxs-lookup"><span data-stu-id="e53e5-111">It generates appropriate XPath expressions even when nodes are in a namespace.</span></span> <span data-ttu-id="e53e5-112">As expressões XPath são geradas usando prefixos de namespace.</span><span class="sxs-lookup"><span data-stu-id="e53e5-112">The XPath expressions are generated by using namespace prefixes.</span></span>
+## <a name="example"></a><span data-ttu-id="85ad0-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="85ad0-111">Example</span></span>
+ <span data-ttu-id="85ad0-112">Este exemplo mostra uma função chamada `GetXPath` que gera uma expressão XPath específica para qualquer nó na árvore XML.</span><span class="sxs-lookup"><span data-stu-id="85ad0-112">This example shows a function named `GetXPath` that generates a specific XPath expression for any node in the XML tree.</span></span> <span data-ttu-id="85ad0-113">Ela gera expressões XPath apropriadas mesmo quando os nós estão em um namespace.</span><span class="sxs-lookup"><span data-stu-id="85ad0-113">It generates appropriate XPath expressions even when nodes are in a namespace.</span></span> <span data-ttu-id="85ad0-114">As expressões XPath são geradas usando prefixos de namespace.</span><span class="sxs-lookup"><span data-stu-id="85ad0-114">The XPath expressions are generated by using namespace prefixes.</span></span>
 
- <span data-ttu-id="e53e5-113">O exemplo cria uma árvore XML pequena que contém um exemplo de vários tipos de nós.</span><span class="sxs-lookup"><span data-stu-id="e53e5-113">The example then creates a small XML tree that contains an example of several types of nodes.</span></span> <span data-ttu-id="e53e5-114">Ela, em seguida, itera pelos nós descendentes e imprime a expressão XPath para cada nó.</span><span class="sxs-lookup"><span data-stu-id="e53e5-114">It then iterates through the descendant nodes and prints the XPath expression for each node.</span></span>
+ <span data-ttu-id="85ad0-115">O exemplo cria uma árvore XML pequena que contém um exemplo de vários tipos de nós.</span><span class="sxs-lookup"><span data-stu-id="85ad0-115">The example then creates a small XML tree that contains an example of several types of nodes.</span></span> <span data-ttu-id="85ad0-116">Ela, em seguida, itera pelos nós descendentes e imprime a expressão XPath para cada nó.</span><span class="sxs-lookup"><span data-stu-id="85ad0-116">It then iterates through the descendant nodes and prints the XPath expression for each node.</span></span>
 
- <span data-ttu-id="e53e5-115">Você observará que a declaração XML não é um nó na árvore.</span><span class="sxs-lookup"><span data-stu-id="e53e5-115">You will notice that the XML declaration is not a node in the tree.</span></span>
+ <span data-ttu-id="85ad0-117">Você observará que a declaração XML não é um nó na árvore.</span><span class="sxs-lookup"><span data-stu-id="85ad0-117">You will notice that the XML declaration is not a node in the tree.</span></span>
 
- <span data-ttu-id="e53e5-116">Veja a seguir um arquivo XML que contém vários tipos de nós:</span><span class="sxs-lookup"><span data-stu-id="e53e5-116">The following is an XML file that contains several types of nodes:</span></span>
+ <span data-ttu-id="85ad0-118">Veja a seguir um arquivo XML que contém vários tipos de nós:</span><span class="sxs-lookup"><span data-stu-id="85ad0-118">The following is an XML file that contains several types of nodes:</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
@@ -38,7 +39,7 @@ ms.locfileid: "75345872"
 </Root>
 ```
 
- <span data-ttu-id="e53e5-117">Veja a seguir a lista de nós na árvore XML anterior, expressa como expressões XPath:</span><span class="sxs-lookup"><span data-stu-id="e53e5-117">The following is the list of nodes in the above XML tree, expressed as XPath expressions:</span></span>
+ <span data-ttu-id="85ad0-119">Veja a seguir a lista de nós na árvore XML anterior, expressa como expressões XPath:</span><span class="sxs-lookup"><span data-stu-id="85ad0-119">The following is the list of nodes in the above XML tree, expressed as XPath expressions:</span></span>
 
 ```text
 /processing-instruction()
@@ -316,7 +317,7 @@ class Program
 }
 ```
 
- <span data-ttu-id="e53e5-118">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="e53e5-118">This example produces the following output:</span></span>
+ <span data-ttu-id="85ad0-120">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="85ad0-120">This example produces the following output:</span></span>
 
 ```output
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
