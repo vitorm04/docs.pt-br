@@ -1,13 +1,14 @@
 ---
 title: Covariância e contravariância (C#)
+description: Saiba mais sobre covariância e contravariância e como eles afetam a compatibilidade de atribuição. Consulte um exemplo de código que demonstra as diferenças entre eles.
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: 23633675059b9c295dda7ddf3d78754c0223f5f8
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 65c75029c27b6c9a5ddc96f01622b520e8698f55
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241364"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105690"
 ---
 # <a name="covariance-and-contravariance-c"></a>Covariância e contravariância (C#)
 No C#, a covariância e a contravariância habilitam a conversão de referência implícita para tipos de matriz, tipos de delegados e argumentos de tipo genérico. A covariância preserva a compatibilidade de atribuição, e a contravariância reverte.  
@@ -79,9 +80,9 @@ IEnumerable<Object> objects = strings;
   
  Uma interface ou delegado genérico será chamado *variante* se seus parâmetros genéricos forem declarados covariantes ou contravariantes. O C# permite que você crie suas próprias interfaces variantes e delegados. Para obter mais informações, consulte [Criando interfaces genéricas variantes (C#)](./creating-variant-generic-interfaces.md) e [Variação em delegados (C#)](./variance-in-delegates.md).  
   
-## <a name="related-topics"></a>Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos Relacionados  
   
-|Title|Descrição|  
+|Título|Descrição|  
 |-----------|-----------------|  
 |[Variância em interfaces genéricas (C#)](./variance-in-generic-interfaces.md)|Discute a covariância e a contravariância em interfaces genéricas e fornece uma lista de interfaces genéricas variáveis no .NET Framework.|  
 |[Criando interfaces genéricas variáveis (C#)](./creating-variant-generic-interfaces.md)|Mostra como criar interfaces variantes personalizadas.|  

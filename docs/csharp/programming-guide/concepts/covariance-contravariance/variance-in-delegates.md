@@ -1,13 +1,14 @@
 ---
 title: Variação em delegados (C#)
+description: Saiba como o suporte à variação no .NET Framework permite que você corresponda a assinaturas de método com tipos delegados em todos os delegados.
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 7370813179040f54e65adf3b568a1fd914223f1d
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: ef57a7fa7feaef98a47822e3f1c9242d0205932d
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990034"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105659"
 ---
 # <a name="variance-in-delegates-c"></a>Variação em delegados (C#)
 O .NET Framework 3.5 introduziu o suporte a variação para assinaturas de método correspondentes com tipos de delegados em todos os delegados do C#. Isso significa que você pode atribuir a delegados não apenas os métodos que têm assinaturas correspondentes, mas também métodos que retornam tipos mais derivados (covariância) ou que aceitam parâmetros que têm tipos menos derivados (contravariância) do que o especificado pelo tipo de delegado. Isso inclui delegados genéricos e não genéricos.  

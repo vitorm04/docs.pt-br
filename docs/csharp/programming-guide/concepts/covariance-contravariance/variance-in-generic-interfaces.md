@@ -1,13 +1,14 @@
 ---
 title: Variância em interfaces genéricas (C#)
+description: Exiba informações de suporte de variação para interfaces genéricas, incluindo informações atualizadas para interfaces existentes no .NET Framework 4 e 4,5.
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: ea5d3d35bc9ee438263707efd16829b6217a1968
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 91218742c01eeb6e65ea26d9dc41ed7c98827377
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241325"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105628"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Variância em interfaces genéricas (C#)
 
@@ -98,7 +99,7 @@ Também é importante lembrar que as classes que implementam interfaces variante
 IEnumerable<Object> listObjects = new List<String>();
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Usando variação em interfaces para Coleções Genéricas (C#)](./using-variance-in-interfaces-for-generic-collections.md)
 - [Criando interfaces genéricas variáveis (C#)](./creating-variant-generic-interfaces.md)

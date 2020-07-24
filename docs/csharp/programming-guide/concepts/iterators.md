@@ -1,13 +1,14 @@
 ---
 title: Iterar em coleções em C#
+description: Saiba como usar um iterador para percorrer coleções como listas e matrizes. Os iteradores são consumidos do código do cliente usando uma instrução foreach ou uma consulta LINQ.
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 15b77fd11c0ff606119425ec7aae8e7127315e82
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 310fff68a242812620357517c212ddd5f053775c
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240688"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104250"
 ---
 # <a name="iterators-c"></a>Iteradores (C#)
 
@@ -354,7 +355,7 @@ Os iteradores permitem que você mantenha a simplicidade de um loop `foreach` qu
 
 - Encapsular a criação da lista no iterador. No método iterador, você pode criar a lista e, em seguida, gerar cada resultado em um loop.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>

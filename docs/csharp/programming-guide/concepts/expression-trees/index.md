@@ -1,13 +1,14 @@
 ---
 title: Árvores de expressão (C#)
+description: Saiba mais sobre árvores de expressão. Veja como compilar e executar o código representado por essas estruturas de dados, onde cada nó é uma expressão.
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: c260e649e7bd285a6bd07b5a1cd7fc1a7f75b82a
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 2fa8577dd945650edebf84459de10c0c3bd04225
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241546"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105583"
 ---
 # <a name="expression-trees-c"></a>Árvores de expressão (C#)
 Árvores de expressão representam código em uma estrutura de dados de árvore, onde cada nó é, por exemplo, uma expressão, uma chamada de método ou uma operação binária como `x < y`.  
@@ -147,7 +148,7 @@ Console.WriteLine(expr.Compile()(4));
   
  Para obter mais informações, consulte [como executar árvores de expressão (C#)](./how-to-execute-expression-trees.md).
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq.Expressions>
 - [Como executar árvores de expressão (C#)](./how-to-execute-expression-trees.md)
