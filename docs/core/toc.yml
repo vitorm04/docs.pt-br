@@ -304,6 +304,10 @@ items:
         items:
           - name: Depurar um vazamento de memória
             href: diagnostics/debug-memory-leak.md
+          - name: Depurar alto uso da CPU
+            href: diagnostics/debug-highcpu.md
+          - name: Depurar deadlock
+            href: diagnostics/debug-deadlock.md
   - name: Ferramentas adicionais do .NET Core
     items:
       - name: Visão geral
