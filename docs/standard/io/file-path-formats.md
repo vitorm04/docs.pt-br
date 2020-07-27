@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 2d3ede97b372dd8922a10a377f69155a12f88bda
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5eb9d5127dffd2e80349352ad7a4b57f8848d56b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447128"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165796"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de caminho de arquivo em sistemas Windows
 
@@ -124,7 +124,7 @@ Quase todos os caminhos passados para APIs do Windows são normalizados. Durante
 
 Essa normalização ocorre de maneira implícita, mas é possível fazê-la explicitamente chamando o método <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>, que encapsula uma chamada para a [função GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea). Também é possível chamar a [função GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) do Windows diretamente usando P/Invoke.
 
-### <a name="identifying-the-path"></a>Identificar o caminho
+### <a name="identify-the-path"></a>Identificar o caminho
 
 O primeiro passo na normalização do caminho é identificar o tipo do caminho. Os caminhos são classificados em uma dentre algumas categorias:
 
@@ -138,13 +138,13 @@ O primeiro passo na normalização do caminho é identificar o tipo do caminho. 
 
 O tipo do caminho determina se o diretório atual é aplicado de alguma maneira ou não. Também determina qual é a "raiz" do caminho.
 
-### <a name="handling-legacy-devices"></a>Tratamento de dispositivos herdados
+### <a name="handle-legacy-devices"></a>Manipular dispositivos herdados
 
 Se o caminho for um dispositivo DOS herdado como `CON`, `COM1` ou `LPT1`, será convertido em um caminho de dispositivo pelo `\\.\` precedente e retornado.
 
 Um caminho que começa com um nome do dispositivo herdado sempre é interpretado como um dispositivo herdado pelo método <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType>. Por exemplo, o caminho de dispositivo DOS de `CON.TXT` é `\\.\CON`, e o caminho de dispositivo DOS de `COM1.TXT\file1.txt` é `\\.\COM1`.
 
-### <a name="applying-the-current-directory"></a>Aplicar o diretório atual
+### <a name="apply-the-current-directory"></a>Aplicar o diretório atual
 
 Se o caminho não for totalmente qualificado, o Windows aplicará o diretório atual a ele. O diretório atual não foi aplicado a UNCs e caminhos de dispositivo. Nem a unidade total com o separador C:\\.
 
@@ -157,11 +157,11 @@ Se o caminho começar com algo diferente de um separador, a unidade e o diretór
 > [!IMPORTANT]
 > Os caminhos relativos são perigosos em aplicativos multi-threaded (ou seja, a maioria), porque o diretório atual tem uma configuração por processo. Qualquer thread pode alterar o diretório atual a qualquer momento. A partir do .NET Core 2.1, é possível chamar o método <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> para obter um caminho absoluto de um caminho relativo, bem como o caminho base (o diretório atual) que você precisa para resolvê-lo.
 
-### <a name="canonicalizing-separators"></a>Canonizar separadores
+### <a name="canonicalize-separators"></a>Tornar os separadores canônicos
 
 Todas as barras (`/`) são convertidas no separador padrão do Windows, a barra invertida (`\`). Se estiverem presentes, uma série de barras que segue as duas primeiras barras serão ocultadas e exibidas como uma barra só.
 
-### <a name="evaluating-relative-components"></a>Avaliar componentes relativos
+### <a name="evaluate-relative-components"></a>Avaliar componentes relativos
 
 Conforme o caminho é processado, quaisquer componentes ou segmentos compostos de um ponto final ou ponto duplo (`.` ou `..`) serão avaliados:
 
@@ -171,7 +171,7 @@ Conforme o caminho é processado, quaisquer componentes ou segmentos compostos d
 
    Os diretórios pais só serão removidos se não forem maiores que a raiz do caminho. A raiz do caminho depende do tipo do caminho. É a unidade (`C:\`) dos caminhos DOS, o servidor/compartilhamento de UNCs (`\\Server\Share`) e o prefixo do caminho de dispositivo dos caminhos de dispositivo (`\\?\` ou `\\.\`).
 
-### <a name="trimming-characters"></a>Cortar caracteres
+### <a name="trim-characters"></a>Caracteres de corte
 
 Alguns outros caracteres são removidos durante a normalização junto com os separadores e segmentos relativos removidos anteriormente:
 
@@ -184,7 +184,7 @@ Alguns outros caracteres são removidos durante a normalização junto com os se
    > [!IMPORTANT]
    > **Nunca** crie um diretório ou nome de arquivo com um espaço à direita. Os espaços à direita podem dificultar ou impossibilitar o acesso ao diretório e, normalmente, os aplicativos apresentam falha nas tentativas de tratar diretórios ou arquivos com nomes que contêm espaços à direita.
 
-## <a name="skipping-normalization"></a>Ignorar a normalização
+## <a name="skip-normalization"></a>Ignorar normalização
 
 Normalmente, qualquer caminho passado para uma API do Windows é (efetivamente) passado para a [função GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) e normalizado. Há uma exceção importante: um caminho de dispositivo que começa com um ponto de interrogação em vez de um ponto final. A menos que o caminho comece exatamente com `\\?\` (observe o uso da barra invertida canônica), ele é normalizado.
 
@@ -222,4 +222,4 @@ cria um diretório chamado TeStDiReCtOrY. Se você renomear um diretório ou arq
 [!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
 [!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
-No entanto, as comparações entre o nome do diretório e do arquivo não diferenciam maiúsculas e minúsculas. Se você pesquisar por um arquivo com o nome "test.txt", as APIs do sistema de arquivos do .NET ignorarão a comparação entre maiúsculas e minúsculas. Test.txt, TEST.TXT, test.TXT e qualquer outra combinação de maiúsculas e minúsculas corresponderão a "test.txt".
+No entanto, as comparações entre o nome do diretório e do arquivo não diferenciam maiúsculas e minúsculas. Se você pesquisar por um arquivo com o nome "test.txt", as APIs do sistema de arquivos do .NET ignorarão a comparação entre maiúsculas e minúsculas. "Test.txt", "TEST.TXT", "test.TXT" e qualquer outra combinação de letras maiúsculas e minúsculas corresponderá a "test.txt".

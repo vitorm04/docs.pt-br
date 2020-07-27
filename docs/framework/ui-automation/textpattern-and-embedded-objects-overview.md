@@ -1,5 +1,6 @@
 ---
 title: TextPattern Visão geral de objetos inseridos
+description: Leia uma visão geral de como a automação da interface do usuário expõe objetos inseridos ou elementos filho, dentro de um documento de texto ou contêiner usando TextPattern e TextPatternRange.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, TextPattern class
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 7a3338a08d06320acdc2acb0647bc91541448d7d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 0a06fb72b280fc61faeb12f6f2c3a05d957ec7b9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201063"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163564"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern Visão geral de objetos inseridos
 > [!NOTE]
@@ -148,7 +149,7 @@ Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclos
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A>com parâmetros de (1, 1).|Retorna o <xref:System.Windows.Automation.AutomationElement> que representa o conteúdo da célula da tabela; nesse caso, o elemento é um controle de texto.|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>em que <xref:System.Windows.Automation.AutomationElement> é o objeto retornado pelo `GetItem` método anterior.|Retorna "Y".|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Automation.TextPattern>
 - <xref:System.Windows.Automation.Text.TextPatternRange>

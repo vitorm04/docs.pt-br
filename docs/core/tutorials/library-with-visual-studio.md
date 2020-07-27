@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: ef9c62b0378e1064d8cfd90a8c59aed74ea312b2
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 69259b1d47a8e30945c578db10c6d697c81fa261
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701559"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164408"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>Tutorial: criar uma biblioteca de .NET Standard usando o Visual Studio
 
@@ -19,7 +19,7 @@ Neste tutorial, você cria uma biblioteca de utilitário simples que contém um 
 
 Uma *biblioteca de classes* define tipos e métodos que são chamados por um aplicativo. Uma biblioteca de classes que tem como alvo .NET Standard 2,0 permite que sua biblioteca seja chamada por qualquer implementação do .NET que dê suporte a essa versão do .NET Standard. Ao concluir a biblioteca de classes, você pode distribuí-la como um componente de terceiros ou como um componente agrupado com um ou mais aplicativos.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio 2019 versão 16,6 ou uma versão posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) com a carga de trabalho de **desenvolvimento de plataforma cruzada do .NET Core** instalada. O SDK do .NET Core 3,1 é instalado automaticamente quando você seleciona essa carga de trabalho.
 
@@ -111,7 +111,7 @@ Inicialmente, o novo projeto de aplicativo de console não tem acesso à bibliot
 
    ![Menu de contexto do projeto do Visual Studio para definir o projeto de inicialização](media/library-with-visual-studio/set-startup-project-context-menu.png)
 
-1. Pressione <kbd>Shift</kbd> + <kbd>F5</kbd> para compilar e executar o programa sem depuração.
+1. Pressione <kbd>Ctrl</kbd> + <kbd>F5</kbd> para compilar e executar o programa sem depuração.
 
    ![Barra de ferramentas do projeto do Visual Studio mostrando botão de depuração](media/library-with-visual-studio/visual-studio-project-toolbar.png)
 

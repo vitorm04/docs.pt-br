@@ -1,5 +1,6 @@
 ---
 title: Estilos e modelos ComboBox
+description: Saiba mais sobre estilos e modelos para o Windows Presentation Foundation controle ComboBox. Modifique o ControlTemplate para dar ao controle uma aparência exclusiva.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ComboBox [WPF], styles and templates
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: af7f8a544af5e9892a8f3f059048bbfd113d2491
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 5e929bafeaf849b4b5682a17ca51cb0aab963613
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865353"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165917"
 ---
 # <a name="combobox-styles-and-templates"></a>Estilos e modelos ComboBox
 Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.ComboBox> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [criar um modelo para um controle](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
@@ -22,7 +23,7 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 ## <a name="combobox-parts"></a>Partes de ComboBox  
  A tabela a seguir lista as partes nomeadas para o <xref:System.Windows.Controls.ComboBox> controle.  
   
-|Parte|Tipo|Descrição|  
+|Parte|Type|Descrição|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Contém o texto do <xref:System.Windows.Controls.ComboBox> .|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|A lista suspensa que contém os itens na caixa de combinação.|  
@@ -77,7 +78,7 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
   
  Para ver o exemplo completo, consulte [Styling with ControlTemplates Sample (Estilos com a amostra ControlTemplates)](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>

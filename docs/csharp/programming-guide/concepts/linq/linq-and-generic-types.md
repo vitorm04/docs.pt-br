@@ -1,17 +1,18 @@
 ---
 title: LINQ e tipos genéricos (C#)
+description: Saiba mais sobre os conceitos básicos de tipos genéricos em C# que dão suporte a consultas.  Consultas LINQ são baseadas em tipos genéricos.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], generic types
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 2cbff0b31cac091a57ea35cbd01535b7d0c4b78a
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 98054a4a21704293faa1194dac342bc48aef138d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241754"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165640"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ e tipos genéricos (C#)
 As consultas LINQ são baseadas em tipos genéricos, que foram introduzidos na versão 2,0 do .NET Framework. Não é necessário um conhecimento profundo sobre os genéricos antes de começar a escrever consultas. No entanto, convém entender dois conceitos básicos:  
@@ -36,6 +37,6 @@ As consultas LINQ são baseadas em tipos genéricos, que foram introduzidos na v
   
  A palavra-chave `var` é útil quando o tipo da variável for óbvio ou quando não é tão importante especificar explicitamente os tipos genéricos aninhados, como aqueles que são produzidos por consultas de grupo. É recomendável que você note que o código poderá se tornar mais difícil de ser lido por outras pessoas, caso você use a `var`. Para obter mais informações, consulte [Variáveis locais de tipo implícito](../../classes-and-structs/implicitly-typed-local-variables.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Genéricos](../../generics/index.md)
