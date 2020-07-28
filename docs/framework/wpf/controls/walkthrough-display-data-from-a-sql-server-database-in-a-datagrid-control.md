@@ -1,5 +1,6 @@
 ---
 title: 'Passo a passo: exibir dados de um banco de dados do SQL Server em um controle DataGrid'
+description: Saiba como obter dados de um banco de SQL Server e exibi-los em um controle DataGrid Windows Presentation Foundation usando este passo a passos.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 1398d8408a0b85d6603d638312e92ba35c5e77d3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cc41979c869021c9c363f3f68ce590d4702e068c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591027"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167549"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Walkthrough: exibir dados de um SQL Server banco de dado em um controle DataGrid
 
@@ -47,7 +48,7 @@ Você precisará dos seguintes componentes para concluir este passo a passo:
 
 6. Na tela Escolher a Conexão de Dados, forneça a conexão ao banco de dados AdventureWorksLT2008. Para obter mais informações, consulte [Escolher uma Caixa de Diálogo de Conexão de Dados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399244(v=vs.100)).
 
-    Verifique se o nome é `AdventureWorksLT2008Entities` e se a caixa de seleção **salvar configurações de conexão de entidade em app. config como** está marcada e clique em **Avançar**.
+    Verifique se o nome é `AdventureWorksLT2008Entities` e se a caixa de seleção **salvar configurações de conexão de entidade no App.Config como** está marcada e clique em **Avançar**.
 
 7. Na tela Escolher Objetos de Banco de Dados, expanda o nó Tabelas e selecione as tabelas **Product** e **ProductCategory**.
 
