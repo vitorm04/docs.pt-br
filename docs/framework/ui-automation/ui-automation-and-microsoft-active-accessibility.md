@@ -1,5 +1,6 @@
 ---
 title: Automação de Interface do usuário e Microsoft Active Accessibility
+description: Entenda as diferenças entre a automação da interface do usuário e o Microsoft Acessibilidade Ativa, a solução anterior para tornar os aplicativos acessíveis.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Active Accessibility
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 9aa975cf3c6e60fbcc759adbf5a991930bff36d6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0685a3f89a6578433641aaf78717f4ff377ff2f9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144780"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164070"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Automação de Interface do usuário e Microsoft Active Accessibility
 > [!NOTE]
@@ -23,7 +24,7 @@ ms.locfileid: "84144780"
  Este tópico inclui os principais recursos do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e explica como esses recursos são diferentes do acessibilidade ativa.  
   
 <a name="Programming_Languages_compare"></a>
-## <a name="programming-languages"></a>Linguagens de Programação  
+## <a name="programming-languages"></a>Linguagens de programação  
 O Acessibilidade Ativa é baseado no Component Object Model (COM) com suporte para interfaces duplas e, portanto, é programável em C/C++, Microsoft Visual Basic 6,0 e linguagens de script. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)](incluindo a biblioteca de provedores do lado do cliente para controles padrão) é escrito em código gerenciado e os aplicativos cliente de automação da interface do usuário são programados com mais facilidade usando C# ou Visual Basic .NET. Provedores de automação de interface do usuário, que são implementações de interface, podem ser escritos em código gerenciado ou em C/C++.  
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>
@@ -80,7 +81,7 @@ O Acessibilidade Ativa é baseado no Component Object Model (COM) com suporte pa
 |ROLE_SYSTEM_DOCUMENT|Document|  
 |ROLE_SYSTEM_TEXT|Editar|  
 |ROLE_SYSTEM_GROUPING|Agrupar|  
-|ROLE_SYSTEM_LIST|parâmetro|  
+|ROLE_SYSTEM_LIST|Cabeçalho|  
 |ROLE_SYSTEM_COLUMNHEADER|Item de cabeçalho|  
 |ROLE_SYSTEM_LINK|Hyperlink|  
 |ROLE_SYSTEM_GRAPHIC|Imagem|  
@@ -97,7 +98,7 @@ O Acessibilidade Ativa é baseado no Component Object Model (COM) com suporte pa
 |ROLE_SYSTEM_SLIDER|Controle deslizante|  
 |ROLE_SYSTEM_SPINBUTTON|Controle giratório|  
 |ROLE_SYSTEM_SPLITBUTTON|Botão de divisão|  
-|ROLE_SYSTEM_STATUSBAR|Barra de status|  
+|ROLE_SYSTEM_STATUSBAR|Barra de Status|  
 |ROLE_SYSTEM_PAGETABLIST|Tab|  
 |ROLE_SYSTEM_PAGETAB|Item de guia|  
 |ROLE_SYSTEM_TABLE|Tabela|  
@@ -249,6 +250,6 @@ O Acessibilidade Ativa é baseado no Component Object Model (COM) com suporte pa
   
  O [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] modelo elimina a necessidade de provedores chamarem para outro código de provedor. O [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] serviço principal faz toda a agregação necessária.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Conceitos básicos de automação da interface do usuário](index.md)
+- [Fundamentos de automação da interface do usuário](index.md)
