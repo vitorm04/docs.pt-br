@@ -2,12 +2,12 @@
 title: Adições ao formato csproj para .NET Core
 description: Saiba mais sobre as diferenças entre arquivos existentes e de csproj do .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 619f6121d9d476726c3d422e50737ff3d622f444
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: ea57b66d9a2e5cb69fe82e9a4bcf68625af546fd
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164920"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251199"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -180,7 +180,7 @@ Um elemento de item `<DotNetCliToolReference>` especifica a ferramenta da CLI qu
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-Observe que `DotNetCliToolReference` [agora é preterido](https://github.com/dotnet/announcements/issues/107) em favor das [ferramentas locais do .NET Core](https://aka.ms/local-tools).
+Observe que `DotNetCliToolReference` [agora é preterido](https://github.com/dotnet/announcements/issues/107) em favor das [ferramentas locais do .NET Core](./global-tools.md#install-a-local-tool).
 
 #### <a name="version"></a>Versão
 
@@ -278,7 +278,7 @@ Uma lista separada por ponto-e-vírgula de autores de pacotes, que correspondem 
 
 Uma descrição longa do pacote para exibição de interface do usuário.
 
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
 Uma descrição longa para o manifesto do assembly. Se `PackageDescription` não for especificado, essa propriedade também será usada como a descrição do pacote.
 
