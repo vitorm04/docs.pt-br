@@ -1,18 +1,19 @@
 ---
-title: 'Arquivo XML de Exemplo: Ordem de compra típico em um namespace'
+title: 'Arquivo XML de exemplo: Ordem de compra típica em um namespace'
+description: Esse arquivo XML é usado em vários exemplos na documentação do LINQ to XML. O arquivo é uma ordem de compra típica. XML é em um namespace.
 ms.date: 07/20/2015
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
-ms.openlocfilehash: 001a12210c2252d9718425d0d4013bdbdf25b996
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 698fb8711ad86e2739f1d8485747d3c56eb71d46
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167958"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302445"
 ---
-# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="75b3e-102">Arquivo XML de Exemplo: Ordem de compra típico em um namespace</span><span class="sxs-lookup"><span data-stu-id="75b3e-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
-<span data-ttu-id="75b3e-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="75b3e-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="75b3e-104">Este arquivo é uma ordem de compra típica.</span><span class="sxs-lookup"><span data-stu-id="75b3e-104">This file is a typical purchase order.</span></span> <span data-ttu-id="75b3e-105">XML é em um namespace.</span><span class="sxs-lookup"><span data-stu-id="75b3e-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="1c6dd-105">Arquivo XML de exemplo: Ordem de compra típica em um namespace</span><span class="sxs-lookup"><span data-stu-id="1c6dd-105">Sample XML File: Typical Purchase Order in a Namespace</span></span>
+<span data-ttu-id="1c6dd-106">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1c6dd-106">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="1c6dd-107">Este arquivo é uma ordem de compra típica.</span><span class="sxs-lookup"><span data-stu-id="1c6dd-107">This file is a typical purchase order.</span></span> <span data-ttu-id="1c6dd-108">XML é em um namespace.</span><span class="sxs-lookup"><span data-stu-id="1c6dd-108">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="75b3e-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="75b3e-106">PurchaseOrderInNamespace.xml</span></span>  
+## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="1c6dd-109">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="1c6dd-109">PurchaseOrderInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  

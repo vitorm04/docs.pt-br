@@ -1,18 +1,19 @@
 ---
-title: 'Arquivo XML de exemplo: várias ordens de compra (LINQ to XML)'
+title: 'Arquivo XML de exemplo: Várias ordens de compra (LINQ to XML)'
+description: Esse arquivo XML é usado em vários exemplos na documentação do LINQ to XML. O arquivo contém várias ordens de compra.
 ms.date: 07/20/2015
 ms.assetid: 2d29fcaa-60df-43d4-8ccc-6cdba7c013e9
-ms.openlocfilehash: d73887308c07b161887716ccf2194eeb3918ff51
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8902b262e838c385581fc221d210f2b7ec11cd47
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168135"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302510"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a><span data-ttu-id="c1c31-102">Arquivo XML de exemplo: várias ordens de compra (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c1c31-102">Sample XML File: Multiple Purchase Orders (LINQ to XML)</span></span>
-<span data-ttu-id="c1c31-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c1c31-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="c1c31-104">Este arquivo contém várias ordens de compra.</span><span class="sxs-lookup"><span data-stu-id="c1c31-104">This file contains several purchase orders.</span></span>  
+# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a><span data-ttu-id="273c5-104">Arquivo XML de exemplo: Várias ordens de compra (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="273c5-104">Sample XML File: Multiple Purchase Orders (LINQ to XML)</span></span>
+<span data-ttu-id="273c5-105">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="273c5-105">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="273c5-106">Este arquivo contém várias ordens de compra.</span><span class="sxs-lookup"><span data-stu-id="273c5-106">This file contains several purchase orders.</span></span>  
   
-## <a name="purchaseordersxml"></a><span data-ttu-id="c1c31-105">PurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="c1c31-105">PurchaseOrders.xml</span></span>  
+## <a name="purchaseordersxml"></a><span data-ttu-id="273c5-107">PurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="273c5-107">PurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  

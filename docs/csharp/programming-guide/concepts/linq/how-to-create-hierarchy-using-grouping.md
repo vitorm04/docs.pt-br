@@ -1,21 +1,22 @@
 ---
 title: Como criar hierarquia usando o agrupamento (C#)
+description: Saiba como agrupar dados e, em seguida, gerar um novo arquivo XML em que a hierarquia XML reflete o agrupamento.
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: c5a96b02595446b2efa01868cc88377c3a5151c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9470ce9b9b7702cf9b835cb2143b6a36f3a254f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141307"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302913"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-c"></a><span data-ttu-id="581d6-102">Como criar hierarquia usando o agrupamento (C#)</span><span class="sxs-lookup"><span data-stu-id="581d6-102">How to create hierarchy using grouping (C#)</span></span>
-<span data-ttu-id="581d6-103">Este exemplo mostra como agrupar dados, e gerencia em XML baseado em agrupamento.</span><span class="sxs-lookup"><span data-stu-id="581d6-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
+# <a name="how-to-create-hierarchy-using-grouping-c"></a><span data-ttu-id="c4a86-103">Como criar hierarquia usando o agrupamento (C#)</span><span class="sxs-lookup"><span data-stu-id="c4a86-103">How to create hierarchy using grouping (C#)</span></span>
+<span data-ttu-id="c4a86-104">Este exemplo mostra como agrupar dados, e gerencia em XML baseado em agrupamento.</span><span class="sxs-lookup"><span data-stu-id="c4a86-104">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="581d6-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="581d6-104">Example</span></span>  
- <span data-ttu-id="581d6-105">Este exemplo primeiro agrupa dados por uma categoria, então gerencia um novo arquivo XML na hierarquia XML reflete o agrupamento.</span><span class="sxs-lookup"><span data-stu-id="581d6-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
+## <a name="example"></a><span data-ttu-id="c4a86-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c4a86-105">Example</span></span>  
+ <span data-ttu-id="c4a86-106">Este exemplo primeiro agrupa dados por uma categoria, então gerencia um novo arquivo XML na hierarquia XML reflete o agrupamento.</span><span class="sxs-lookup"><span data-stu-id="c4a86-106">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
   
- <span data-ttu-id="581d6-106">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="581d6-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="c4a86-107">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="c4a86-107">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  
@@ -35,7 +36,7 @@ var newData =
 Console.WriteLine(newData);  
 ```  
   
- <span data-ttu-id="581d6-107">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="581d6-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="c4a86-108">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="c4a86-108">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  

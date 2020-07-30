@@ -1,27 +1,28 @@
 ---
-title: Cref attribute - C# guia de programação
+title: atributo cref-guia de programação C#
+description: Saiba mais sobre o atributo cref. O atributo cref significa "referência de código" e especifica que o texto interno da marca é um elemento de código.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: b06d0c9d447124dec7d8cf3c0cbbfd0daca78fe3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 31fa1a3f182d7b72a1dfbe1ce47386f87fbbff75
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157007"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381990"
 ---
-# <a name="cref-attribute-c-programming-guide"></a><span data-ttu-id="c7ba4-102">cref atributo (guia de programação C#)</span><span class="sxs-lookup"><span data-stu-id="c7ba4-102">cref attribute (C# programming guide)</span></span>
+# <a name="cref-attribute-c-programming-guide"></a><span data-ttu-id="8f6db-104">atributo cref (guia de programação C#)</span><span class="sxs-lookup"><span data-stu-id="8f6db-104">cref attribute (C# programming guide)</span></span>
 
-<span data-ttu-id="c7ba4-103">O atributo `cref` em uma marca de documentação XML significa “referência de código”.</span><span class="sxs-lookup"><span data-stu-id="c7ba4-103">The `cref` attribute in an XML documentation tag means "code reference."</span></span> <span data-ttu-id="c7ba4-104">Ele especifica que o texto interno da marca é um elemento de código, como um tipo, método ou propriedade.</span><span class="sxs-lookup"><span data-stu-id="c7ba4-104">It specifies that the inner text of the tag is a code element, such as a type, method, or property.</span></span> <span data-ttu-id="c7ba4-105">Ferramentas de documentação, como o [DocFX](https://dotnet.github.io/docfx/) e o [Sandcastle](https://github.com/EWSoftware/SHFB), usam os atributos `cref` para gerar automaticamente os hiperlinks para a página em que o tipo ou o membro está documentado.</span><span class="sxs-lookup"><span data-stu-id="c7ba4-105">Documentation tools like [DocFX](https://dotnet.github.io/docfx/) and [Sandcastle](https://github.com/EWSoftware/SHFB) use the `cref` attributes to automatically generate hyperlinks to the page where the type or member is documented.</span></span>
+<span data-ttu-id="8f6db-105">O atributo `cref` em uma marca de documentação XML significa “referência de código”.</span><span class="sxs-lookup"><span data-stu-id="8f6db-105">The `cref` attribute in an XML documentation tag means "code reference."</span></span> <span data-ttu-id="8f6db-106">Ele especifica que o texto interno da marca é um elemento de código, como um tipo, método ou propriedade.</span><span class="sxs-lookup"><span data-stu-id="8f6db-106">It specifies that the inner text of the tag is a code element, such as a type, method, or property.</span></span> <span data-ttu-id="8f6db-107">Ferramentas de documentação, como o [DocFX](https://dotnet.github.io/docfx/) e o [Sandcastle](https://github.com/EWSoftware/SHFB), usam os atributos `cref` para gerar automaticamente os hiperlinks para a página em que o tipo ou o membro está documentado.</span><span class="sxs-lookup"><span data-stu-id="8f6db-107">Documentation tools like [DocFX](https://dotnet.github.io/docfx/) and [Sandcastle](https://github.com/EWSoftware/SHFB) use the `cref` attributes to automatically generate hyperlinks to the page where the type or member is documented.</span></span>
 
-## <a name="example"></a><span data-ttu-id="c7ba4-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c7ba4-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="8f6db-108">Exemplo</span><span class="sxs-lookup"><span data-stu-id="8f6db-108">Example</span></span>
 
-<span data-ttu-id="c7ba4-107">O exemplo `cref` a seguir mostra atributos usados em [ \<ver>](./see.md) tags.</span><span class="sxs-lookup"><span data-stu-id="c7ba4-107">The following example shows `cref` attributes used in [\<see>](./see.md) tags.</span></span>
+<span data-ttu-id="8f6db-109">O exemplo a seguir mostra `cref` atributos usados em [\<see>](./see.md) marcas.</span><span class="sxs-lookup"><span data-stu-id="8f6db-109">The following example shows `cref` attributes used in [\<see>](./see.md) tags.</span></span>
 
 [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]
 
-<span data-ttu-id="c7ba4-108">Quando compilado, o programa produz o seguinte arquivo XML.</span><span class="sxs-lookup"><span data-stu-id="c7ba4-108">When compiled, the program produces the following XML file.</span></span> <span data-ttu-id="c7ba4-109">Observe que o atributo `cref` do método `GetZero`, por exemplo, foi transformado em `"M:TestNamespace.TestClass.GetZero"` pelo compilador.</span><span class="sxs-lookup"><span data-stu-id="c7ba4-109">Notice that the `cref` attribute for the `GetZero` method, for example, has been transformed by the compiler to `"M:TestNamespace.TestClass.GetZero"`.</span></span> <span data-ttu-id="c7ba4-110">O prefixo "M:" significa "método" e é uma convenção reconhecida por ferramentas de documentação como o DocFX e o Sandcastle.</span><span class="sxs-lookup"><span data-stu-id="c7ba4-110">The "M:" prefix means "method" and is a convention that is recognized by documentation tools such as DocFX and Sandcastle.</span></span> <span data-ttu-id="c7ba4-111">Para obter uma lista completa de prefixos, consulte [Processando o Arquivo XML](./processing-the-xml-file.md).</span><span class="sxs-lookup"><span data-stu-id="c7ba4-111">For a complete list of prefixes, see [Processing the XML File](./processing-the-xml-file.md).</span></span>
+<span data-ttu-id="8f6db-110">Quando compilado, o programa produz o seguinte arquivo XML.</span><span class="sxs-lookup"><span data-stu-id="8f6db-110">When compiled, the program produces the following XML file.</span></span> <span data-ttu-id="8f6db-111">Observe que o atributo `cref` do método `GetZero`, por exemplo, foi transformado em `"M:TestNamespace.TestClass.GetZero"` pelo compilador.</span><span class="sxs-lookup"><span data-stu-id="8f6db-111">Notice that the `cref` attribute for the `GetZero` method, for example, has been transformed by the compiler to `"M:TestNamespace.TestClass.GetZero"`.</span></span> <span data-ttu-id="8f6db-112">O prefixo "M:" significa "método" e é uma convenção reconhecida por ferramentas de documentação como o DocFX e o Sandcastle.</span><span class="sxs-lookup"><span data-stu-id="8f6db-112">The "M:" prefix means "method" and is a convention that is recognized by documentation tools such as DocFX and Sandcastle.</span></span> <span data-ttu-id="8f6db-113">Para obter uma lista completa de prefixos, consulte [Processando o Arquivo XML](./processing-the-xml-file.md).</span><span class="sxs-lookup"><span data-stu-id="8f6db-113">For a complete list of prefixes, see [Processing the XML File](./processing-the-xml-file.md).</span></span>
 
 ```xml  
 <?xml version="1.0"?>
@@ -82,7 +83,7 @@ ms.locfileid: "79157007"
 </doc>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="c7ba4-112">Confira também</span><span class="sxs-lookup"><span data-stu-id="c7ba4-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8f6db-114">Veja também</span><span class="sxs-lookup"><span data-stu-id="8f6db-114">See also</span></span>
 
-- [<span data-ttu-id="c7ba4-113">Comentários da documentação XML</span><span class="sxs-lookup"><span data-stu-id="c7ba4-113">XML documentation comments</span></span>](./index.md)
-- [<span data-ttu-id="c7ba4-114">Marcas recomendadas para comentários de documentação</span><span class="sxs-lookup"><span data-stu-id="c7ba4-114">Recommended tags for documentation comments</span></span>](./recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="8f6db-115">Comentários da documentação XML</span><span class="sxs-lookup"><span data-stu-id="8f6db-115">XML documentation comments</span></span>](./index.md)
+- [<span data-ttu-id="8f6db-116">Marcas recomendadas para comentários de documentação</span><span class="sxs-lookup"><span data-stu-id="8f6db-116">Recommended tags for documentation comments</span></span>](./recommended-tags-for-documentation-comments.md)

@@ -1,19 +1,20 @@
 ---
-title: Como encontrar um único descendente usando o método descendentes (C#)
+title: Como localizar um único descendente usando o método descendentes (C#)
+description: Saiba como localizar um único descendente usando o método de eixo descendentes. Esse método é útil para localizar um descendente específico com um nome específico.
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: 59d8cfb93ec527a6ceaa58b422a154e16d712533
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 993e2b45f93509cf526d0c8c5de488b50de3efef
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141205"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303329"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a><span data-ttu-id="b6ec8-102">Como encontrar um único descendente usando o método descendentes (C#)</span><span class="sxs-lookup"><span data-stu-id="b6ec8-102">How to find a single descendant using the descendants method (C#)</span></span>
-<span data-ttu-id="b6ec8-103">Você pode usar o método de eixo <xref:System.Xml.Linq.XContainer.Descendants%2A> para rapidamente escrever código para localizar um único elemento nomeado exclusivamente.</span><span class="sxs-lookup"><span data-stu-id="b6ec8-103">You can use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to quickly write code to find a single uniquely named element.</span></span> <span data-ttu-id="b6ec8-104">Essa técnica é especialmente útil quando você quer localizar um descendente específico com um nome específico.</span><span class="sxs-lookup"><span data-stu-id="b6ec8-104">This technique is especially useful when you want to find a particular descendant with a specific name.</span></span> <span data-ttu-id="b6ec8-105">Você pode escrever o código para navegar para o elemento desejado, mas geralmente é mais rápido e fácil escrever código usando o eixo <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span><span class="sxs-lookup"><span data-stu-id="b6ec8-105">You could write the code to navigate to the desired element, but it is often faster and easier to write the code using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a><span data-ttu-id="7fab3-104">Como localizar um único descendente usando o método descendentes (C#)</span><span class="sxs-lookup"><span data-stu-id="7fab3-104">How to find a single descendant using the descendants method (C#)</span></span>
+<span data-ttu-id="7fab3-105">Você pode usar o método de eixo <xref:System.Xml.Linq.XContainer.Descendants%2A> para rapidamente escrever código para localizar um único elemento nomeado exclusivamente.</span><span class="sxs-lookup"><span data-stu-id="7fab3-105">You can use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to quickly write code to find a single uniquely named element.</span></span> <span data-ttu-id="7fab3-106">Essa técnica é especialmente útil quando você quer localizar um descendente específico com um nome específico.</span><span class="sxs-lookup"><span data-stu-id="7fab3-106">This technique is especially useful when you want to find a particular descendant with a specific name.</span></span> <span data-ttu-id="7fab3-107">Você pode escrever o código para navegar para o elemento desejado, mas geralmente é mais rápido e fácil escrever código usando o eixo <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span><span class="sxs-lookup"><span data-stu-id="7fab3-107">You could write the code to navigate to the desired element, but it is often faster and easier to write the code using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b6ec8-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b6ec8-106">Example</span></span>  
- <span data-ttu-id="b6ec8-107">Este exemplo usa o operador padrão de consulta <xref:System.Linq.Enumerable.First%2A>.</span><span class="sxs-lookup"><span data-stu-id="b6ec8-107">This example uses the <xref:System.Linq.Enumerable.First%2A> standard query operator.</span></span>  
+## <a name="example"></a><span data-ttu-id="7fab3-108">Exemplo</span><span class="sxs-lookup"><span data-stu-id="7fab3-108">Example</span></span>  
+ <span data-ttu-id="7fab3-109">Este exemplo usa o operador padrão de consulta <xref:System.Linq.Enumerable.First%2A>.</span><span class="sxs-lookup"><span data-stu-id="7fab3-109">This example uses the <xref:System.Linq.Enumerable.First%2A> standard query operator.</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  
@@ -36,14 +37,14 @@ string grandChild3 = (string)
 Console.WriteLine(grandChild3);  
 ```  
   
- <span data-ttu-id="b6ec8-108">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="b6ec8-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="7fab3-110">Este código produz a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="7fab3-110">This code produces the following output:</span></span>  
   
 ```output  
 GC3 Value  
 ```  
   
-## <a name="example"></a><span data-ttu-id="b6ec8-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b6ec8-109">Example</span></span>  
- <span data-ttu-id="b6ec8-110">O exemplo a seguir mostra a mesma consulta para XML que está em um namespace.</span><span class="sxs-lookup"><span data-stu-id="b6ec8-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="b6ec8-111">Para obter mais informações, consulte [Visão geral de namespaces (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="b6ec8-111">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="7fab3-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="7fab3-111">Example</span></span>  
+ <span data-ttu-id="7fab3-112">O exemplo a seguir mostra a mesma consulta para XML que está em um namespace.</span><span class="sxs-lookup"><span data-stu-id="7fab3-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="7fab3-113">Para obter mais informações, consulte [Visão geral de namespaces (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="7fab3-113">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<aw:Root xmlns:aw='http://www.adventure-works.com'>  
@@ -67,7 +68,7 @@ string grandChild3 = (string)
 Console.WriteLine(grandChild3);  
 ```  
   
- <span data-ttu-id="b6ec8-112">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="b6ec8-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="7fab3-114">Este código produz a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="7fab3-114">This code produces the following output:</span></span>  
   
 ```output  
 GC3 Value  

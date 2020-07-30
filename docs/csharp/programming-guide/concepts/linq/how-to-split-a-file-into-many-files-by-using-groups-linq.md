@@ -1,20 +1,21 @@
 ---
-title: Como dividir um arquivo em muitos arquivos usando grupos (LINQ) (C#)
+title: Como dividir um arquivo em vários arquivos usando grupos (LINQ) (C#)
+description: Saiba como dividir um arquivo em vários arquivos usando grupos. Consulte um exemplo de código e exiba recursos adicionais disponíveis.
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 654b444c26f2868c4e2b0e2893a639ebc6cacabf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1db16a48db257069eca83127c0b1fed7e49f19d6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168564"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301054"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="a69db-102">Como dividir um arquivo em muitos arquivos usando grupos (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="a69db-102">How to split a file into many files by using groups (LINQ) (C#)</span></span>
-<span data-ttu-id="a69db-103">Este exemplo mostra uma maneira de mesclar o conteúdo de dois arquivos e, em seguida, criar um conjunto de novos arquivos que organizam os dados em uma nova forma.</span><span class="sxs-lookup"><span data-stu-id="a69db-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="5fb3c-104">Como dividir um arquivo em vários arquivos usando grupos (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="5fb3c-104">How to split a file into many files by using groups (LINQ) (C#)</span></span>
+<span data-ttu-id="5fb3c-105">Este exemplo mostra uma maneira de mesclar o conteúdo de dois arquivos e, em seguida, criar um conjunto de novos arquivos que organizam os dados em uma nova forma.</span><span class="sxs-lookup"><span data-stu-id="5fb3c-105">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="a69db-104">Para criar os arquivos de dados</span><span class="sxs-lookup"><span data-stu-id="a69db-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="5fb3c-106">Para criar os arquivos de dados</span><span class="sxs-lookup"><span data-stu-id="5fb3c-106">To create the data files</span></span>  
   
-1. <span data-ttu-id="a69db-105">Copie esses nomes em um arquivo de texto chamado names1.txt e salve-o na sua pasta do projeto:</span><span class="sxs-lookup"><span data-stu-id="a69db-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1. <span data-ttu-id="5fb3c-107">Copie esses nomes em um arquivo de texto chamado names1.txt e salve-o na sua pasta do projeto:</span><span class="sxs-lookup"><span data-stu-id="5fb3c-107">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```text  
     Bankov, Peter  
@@ -29,7 +30,7 @@ ms.locfileid: "79168564"
     Garcia, Debra  
     ```  
   
-2. <span data-ttu-id="a69db-106">Copie esses nomes em um arquivo de texto chamado names2.txt e salve-o na sua pasta do projeto: observe que os dois arquivos têm alguns nomes em comum.</span><span class="sxs-lookup"><span data-stu-id="a69db-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
+2. <span data-ttu-id="5fb3c-108">Copie esses nomes em um arquivo de texto chamado names2.txt e salve-o na sua pasta do projeto: observe que os dois arquivos têm alguns nomes em comum.</span><span class="sxs-lookup"><span data-stu-id="5fb3c-108">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
     ```text  
     Liu, Jinghao  
@@ -44,7 +45,7 @@ ms.locfileid: "79168564"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="a69db-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a69db-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="5fb3c-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5fb3c-109">Example</span></span>  
   
 ```csharp  
 class SplitWithGroups  
@@ -122,13 +123,13 @@ class SplitWithGroups
  */  
 ```  
   
- <span data-ttu-id="a69db-108">O programa grava um arquivo separado para cada grupo na mesma pasta que os arquivos de dados.</span><span class="sxs-lookup"><span data-stu-id="a69db-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
+ <span data-ttu-id="5fb3c-110">O programa grava um arquivo separado para cada grupo na mesma pasta que os arquivos de dados.</span><span class="sxs-lookup"><span data-stu-id="5fb3c-110">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a69db-109">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="a69db-109">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="5fb3c-111">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="5fb3c-111">Compiling the Code</span></span>
 
-<span data-ttu-id="a69db-110">Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.</span><span class="sxs-lookup"><span data-stu-id="a69db-110">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
+<span data-ttu-id="5fb3c-112">Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.</span><span class="sxs-lookup"><span data-stu-id="5fb3c-112">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="a69db-111">Confira também</span><span class="sxs-lookup"><span data-stu-id="a69db-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5fb3c-113">Veja também</span><span class="sxs-lookup"><span data-stu-id="5fb3c-113">See also</span></span>
 
-- [<span data-ttu-id="a69db-112">LINQ e cadeias de caracteres (C#)</span><span class="sxs-lookup"><span data-stu-id="a69db-112">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="a69db-113">LINQ e diretórios de arquivos (C#)</span><span class="sxs-lookup"><span data-stu-id="a69db-113">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="5fb3c-114">LINQ e cadeias de caracteres (C#)</span><span class="sxs-lookup"><span data-stu-id="5fb3c-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="5fb3c-115">LINQ e diretórios de arquivos (C#)</span><span class="sxs-lookup"><span data-stu-id="5fb3c-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
