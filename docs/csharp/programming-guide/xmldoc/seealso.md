@@ -1,5 +1,6 @@
 ---
 title: <seealso> -Guia de programação C#
+description: Saiba como usar o XML <seealso> Tags. Essa marca permite especificar o texto que você pode querer que apareça em uma seção ' Ver também '.
 ms.date: 07/20/2015
 f1_keywords:
 - cref
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: 1b801ac1b5a0a59d97ccc35ec78930d99223e846
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e8618ef352a4fa7f0fd4c88733c6568b0e12e376
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287214"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380638"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso>(Guia de programação C#)
 
@@ -27,7 +28,7 @@ ms.locfileid: "84287214"
 <seealso cref="member"/>
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 - cref = " `member`"
 
@@ -45,7 +46,7 @@ Compile com [-Doc](../../language-reference/compiler-options/doc-compiler-option
 
 Consulte [\<summary>](./summary.md) para obter um exemplo de como usar \<seealso> .
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de programação em C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

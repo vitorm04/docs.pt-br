@@ -1,16 +1,17 @@
 ---
 title: Delegados – Guia de Programação em C#
+description: Um delegado em C# é um tipo que se refere a métodos com uma lista de parâmetros e um tipo de retorno. Delegados são usados para passar métodos como argumentos a outros métodos.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: c0f28716926d4c9d74cde58fd00e27d1fdfa7ce1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94e7c130bd5d8e136d03ccdbaed643bc1a47d112
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75705360"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302159"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegados (Guia de Programação em C#)
 Um [delegado](../../language-reference/builtin-types/reference-types.md) é um tipo que representa referências aos métodos com lista de parâmetros e tipo de retorno específicos. Ao instanciar um delegado, você pode associar sua instância a qualquer método com assinatura e tipo de retorno compatíveis. Você pode invocar (ou chamar) o método através da instância de delegado.  
@@ -43,15 +44,15 @@ Um [delegado](../../language-reference/builtin-types/reference-types.md) é um t
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-- [Usar delegados](./using-delegates.md)  
+- [Usando delegados](./using-delegates.md)  
   
 - [Quando usar delegados em vez de interfaces (Guia de Programação em C#)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
-- [Delegados com métodos nomeados versus anônimos](./delegates-with-named-vs-anonymous-methods.md)  
+- [Delegados com Métodos Nomeados vs. Métodos anônimos](./delegates-with-named-vs-anonymous-methods.md)  
   
 - [Usando variação em delegados](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
-- [Como combinar delegados (Delegados Multicast)](./how-to-combine-delegates-multicast-delegates.md)  
+- [Como combinar delegados (delegados de multicast)](./how-to-combine-delegates-multicast-delegates.md)  
   
 - [Como declarar e usar um delegado e criar uma instância dele](./how-to-declare-instantiate-and-use-a-delegate.md)
 
@@ -67,5 +68,5 @@ Para obter mais informações, veja [Delegados](~/_csharplang/spec/delegates.md)
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Delegate>
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Eventos](../events/index.md)

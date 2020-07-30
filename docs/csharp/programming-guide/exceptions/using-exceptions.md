@@ -1,16 +1,17 @@
 ---
 title: Usando exceções – Guia de Programação em C#
+description: Saiba como usar exceções. As exceções são geradas pelo código que encontra um erro e detectadas pelo código que corrige o erro.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: a00259dfd5634ad9b9c951c3cd76da97afe5077d
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: fb45381f1c6cfa2f27d036ead8e662b7a0d8d924
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241689"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303368"
 ---
 # <a name="use-exceptions-c-programming-guide"></a>Usar exceções (guia de programação C#)
 
@@ -44,7 +45,7 @@ No C#, os erros no programa em tempo de execução são propagados pelo programa
   
 - Se o início do thread for atingido, o thread será encerrado.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Guia de programação C#](../index.md)
-- [Exceções e manipulação de exceções](./index.md)
+- [Exceções e tratamento de exceções](./index.md)

@@ -1,13 +1,14 @@
 ---
 title: Programação orientada a objeto (C#)
+description: O C# fornece suporte completo para a programação orientada a objeto, incluindo abstração, encapsulamento, herança e polimorfismo.
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 83140a9dbd16f60f04f50ba18c71099cdd862f15
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 0c5495aefad73a2916ad6e2bd2bf3701d0868f24
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226628"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302809"
 ---
 # <a name="object-oriented-programming-c"></a>Programação orientada a objeto (C#)
 
@@ -187,10 +188,10 @@ Os modificadores de acesso a seguir estão disponíveis:
 
 | Modificador de C# | Definição |
 |--|--|
-| [public](../../language-reference/keywords/public.md) | O tipo ou membro pode ser acessado por qualquer outro código no mesmo assembly ou em outro assembly que faz referência a ele. |
+| [público](../../language-reference/keywords/public.md) | O tipo ou membro pode ser acessado por qualquer outro código no mesmo assembly ou em outro assembly que faz referência a ele. |
 | [pessoal](../../language-reference/keywords/private.md) | O tipo ou membro pode ser acessado somente pelo código na mesma classe. |
 | [protected](../../language-reference/keywords/protected.md) | O tipo ou membro pode ser acessado somente pelo código na mesma classe ou em uma classe derivada. |
-| [interno](../../language-reference/keywords/internal.md) | O tipo ou membro pode ser acessado por qualquer código no mesmo assembly, mas não de outro assembly. |
+| [internal](../../language-reference/keywords/internal.md) | O tipo ou membro pode ser acessado por qualquer código no mesmo assembly, mas não de outro assembly. |
 | [internos protegidos](../../language-reference/keywords/protected-internal.md) | O tipo ou membro pode ser acessado por qualquer código no mesmo assembly ou por qualquer classe derivada em outro assembly. |
 | [privado protegido](../../language-reference/keywords/private-protected.md) | O tipo ou membro pode ser acessado pelo código na mesma classe ou em uma classe derivada no assembly da classe base. |
 
@@ -310,7 +311,7 @@ Os seguintes modificadores são usados para controlar como as propriedades e mé
 | Modificador de C# | Definição |
 |--|--|
 | [virtuaisLUNs](../../language-reference/keywords/virtual.md) | Permite que um membro de classe seja substituído em uma classe derivada. |
-| [substituição](../../language-reference/keywords/override.md) | Substitui um membro virtual (substituível) definido na classe base. |
+| [override](../../language-reference/keywords/override.md) | Substitui um membro virtual (substituível) definido na classe base. |
 | [resume](../../language-reference/keywords/abstract.md) | Requer que um membro de classe seja substituído na classe derivada. |
 | [Modificador new](../../language-reference/keywords/new-modifier.md) | Oculta um membro herdado de uma classe base |
 
