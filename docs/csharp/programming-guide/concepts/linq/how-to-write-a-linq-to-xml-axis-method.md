@@ -1,22 +1,23 @@
 ---
 title: Como escrever um método de eixo de LINQ to XML (C#)
+description: Saiba como escrever um método de eixo de LINQ to XML. Os métodos de eixo XML são usados para recuperar coleções de uma árvore XML.
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: bf1542471f44115bd787e7be6c8ffb836a842a4f
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 76469e767a6a54813770498488460e3e92897770
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662440"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303199"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a><span data-ttu-id="ac60a-102">Como escrever um método de eixo de LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="ac60a-102">How to write a LINQ to XML axis method (C#)</span></span>
+# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a><span data-ttu-id="0b430-104">Como escrever um método de eixo de LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="0b430-104">How to write a LINQ to XML axis method (C#)</span></span>
 
-<span data-ttu-id="ac60a-103">Um [método de eixo](linq-to-xml-axes-overview.md) XML recupera uma coleção de elementos XML de um documento XML ou elemento ancestral.</span><span class="sxs-lookup"><span data-stu-id="ac60a-103">An XML [axis method](linq-to-xml-axes-overview.md) retrieves a collection of XML elements from an XML document or ancestor element.</span></span> <span data-ttu-id="ac60a-104">Você pode escrever seus próprios métodos do eixo para recuperar coleções de uma árvore XML.</span><span class="sxs-lookup"><span data-stu-id="ac60a-104">You can write your own axis methods to retrieve collections from an XML tree.</span></span> <span data-ttu-id="ac60a-105">Uma das melhores maneiras de fazer isso é gravar um método de extensão que retorna uma coleção de elementos ou atributos.</span><span class="sxs-lookup"><span data-stu-id="ac60a-105">One of the best ways to do this is to write an extension method that returns a collection of elements or attributes.</span></span> <span data-ttu-id="ac60a-106">Você pode escrever seu método de extensão para subconjuntos específicos de retorno de elementos ou atributos, com base nos requisitos do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="ac60a-106">You can write your extension method to return specific subsets of elements or attributes, based on the requirements of your application.</span></span>  
+<span data-ttu-id="0b430-105">Um [método de eixo](linq-to-xml-axes-overview.md) XML recupera uma coleção de elementos XML de um documento XML ou elemento ancestral.</span><span class="sxs-lookup"><span data-stu-id="0b430-105">An XML [axis method](linq-to-xml-axes-overview.md) retrieves a collection of XML elements from an XML document or ancestor element.</span></span> <span data-ttu-id="0b430-106">Você pode escrever seus próprios métodos do eixo para recuperar coleções de uma árvore XML.</span><span class="sxs-lookup"><span data-stu-id="0b430-106">You can write your own axis methods to retrieve collections from an XML tree.</span></span> <span data-ttu-id="0b430-107">Uma das melhores maneiras de fazer isso é gravar um método de extensão que retorna uma coleção de elementos ou atributos.</span><span class="sxs-lookup"><span data-stu-id="0b430-107">One of the best ways to do this is to write an extension method that returns a collection of elements or attributes.</span></span> <span data-ttu-id="0b430-108">Você pode escrever seu método de extensão para subconjuntos específicos de retorno de elementos ou atributos, com base nos requisitos do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="0b430-108">You can write your extension method to return specific subsets of elements or attributes, based on the requirements of your application.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ac60a-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="ac60a-107">Example</span></span>  
- <span data-ttu-id="ac60a-108">O exemplo a seguir usa dois métodos de extensão.</span><span class="sxs-lookup"><span data-stu-id="ac60a-108">The following example uses two extension methods.</span></span> <span data-ttu-id="ac60a-109">O primeiro método de extensão, `GetXPath`, opera em <xref:System.Xml.Linq.XObject>, e retorna uma expressão XPath que quando avaliada retorna o nó ou do atributo.</span><span class="sxs-lookup"><span data-stu-id="ac60a-109">The first extension method, `GetXPath`, operates on <xref:System.Xml.Linq.XObject>, and returns an XPath expression that when evaluated will return the node or attribute.</span></span> <span data-ttu-id="ac60a-110">O segundo método de extensão, `Find`, opera em <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="ac60a-110">The second extension method, `Find`, operates on <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="ac60a-111">Retorna uma coleção de objetos <xref:System.Xml.Linq.XAttribute> e objetos de <xref:System.Xml.Linq.XElement> que contêm texto especificado.</span><span class="sxs-lookup"><span data-stu-id="ac60a-111">It returns a collection of <xref:System.Xml.Linq.XAttribute> objects and <xref:System.Xml.Linq.XElement> objects that contain some specified text.</span></span>  
+## <a name="example"></a><span data-ttu-id="0b430-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="0b430-109">Example</span></span>  
+ <span data-ttu-id="0b430-110">O exemplo a seguir usa dois métodos de extensão.</span><span class="sxs-lookup"><span data-stu-id="0b430-110">The following example uses two extension methods.</span></span> <span data-ttu-id="0b430-111">O primeiro método de extensão, `GetXPath`, opera em <xref:System.Xml.Linq.XObject>, e retorna uma expressão XPath que quando avaliada retorna o nó ou do atributo.</span><span class="sxs-lookup"><span data-stu-id="0b430-111">The first extension method, `GetXPath`, operates on <xref:System.Xml.Linq.XObject>, and returns an XPath expression that when evaluated will return the node or attribute.</span></span> <span data-ttu-id="0b430-112">O segundo método de extensão, `Find`, opera em <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="0b430-112">The second extension method, `Find`, operates on <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="0b430-113">Retorna uma coleção de objetos <xref:System.Xml.Linq.XAttribute> e objetos de <xref:System.Xml.Linq.XElement> que contêm texto especificado.</span><span class="sxs-lookup"><span data-stu-id="0b430-113">It returns a collection of <xref:System.Xml.Linq.XAttribute> objects and <xref:System.Xml.Linq.XElement> objects that contain some specified text.</span></span>  
   
- <span data-ttu-id="ac60a-112">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="ac60a-112">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="0b430-114">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="0b430-114">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 public static class MyExtensions  
@@ -279,7 +280,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="ac60a-113">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="ac60a-113">This code produces the following output:</span></span>  
+ <span data-ttu-id="0b430-115">Este código produz a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="0b430-115">This code produces the following output:</span></span>  
   
 ```output  
 /PurchaseOrders/PurchaseOrder[1]/@OrderDate  
