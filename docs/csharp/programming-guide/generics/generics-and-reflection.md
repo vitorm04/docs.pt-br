@@ -1,16 +1,17 @@
 ---
 title: Genéricos e reflexão – Guia de Programação em C#
+description: Saiba como usar a reflexão para obter informações sobre tipos genéricos. Exibir listas de termos e condições para reflexão genérica.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 672a0bebdc60eff00acf9b1bdbecc25052f7bc16
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 6e4387fe7e78cd0e970531ae42f323efa8f181db
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241676"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299299"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Genéricos e reflexão (Guia de Programação em C#)
 Como o tempo de execução do CLR (Common Language Runtime) tem acesso às informações de tipo genérico em tempo de execução, você pode usar a reflexão para obter informações sobre tipos genéricos da mesma forma como para tipos não genéricos. Para obter mais informações, consulte [Genéricos em tempo de execução](./generics-in-the-run-time.md).  
@@ -44,7 +45,7 @@ Como o tempo de execução do CLR (Common Language Runtime) tem acesso às infor
 |<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|Retorna verdadeiro se o <xref:System.Reflection.MethodInfo> atual representar a definição de um método genérico.|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|Substitui os elementos de uma matriz de tipos pelos parâmetros de tipo da definição de método genérico atual e retorna um objeto <xref:System.Reflection.MethodInfo> que representa o método construído resultante.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação C#](../index.md)
 - [Genéricos](./index.md)

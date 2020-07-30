@@ -1,5 +1,6 @@
 ---
 title: Olá, Mundo--seu primeiro programa usando o Visual Studio no Windows ou o guia de programação do Mac-C#
+description: O Visual Studio é um ambiente de desenvolvimento profissional com muitos recursos para o desenvolvimento do .NET. Use o Visual Studio para criar uma versão em C# do Olá, Mundo!
 ms.date: 09/12/2019
 f1_keywords:
 - cs.program
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 6d78ec83fec72b30f5cee398af1816d0cac35886
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: b78937b8ba1c7d4718bfb6252dac705945336d2a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241858"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301821"
 ---
 # <a name="hello-world----your-first-program"></a>Olá, Mundo--seu primeiro programa
 
@@ -122,7 +123,7 @@ Os programas em C# geralmente usam os serviços de entrada/saída fornecidos pel
 
 Para saber mais sobre os métodos de entrada/saída, veja <xref:System.IO>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação C#](../index.md)
 - [Exemplos e tutoriais](../../../samples-and-tutorials/index.md)

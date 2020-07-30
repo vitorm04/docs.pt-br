@@ -1,17 +1,18 @@
 ---
 title: Restrições a parâmetros de tipo – Guia de Programação em C#
+description: Saiba mais sobre restrições em parâmetros de tipo. Restrições informam ao compilador quais recursos um argumento de tipo deve ter.
 ms.date: 04/12/2018
 helpviewer_keywords:
 - generics [C#], type constraints
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 4c4554c808ab15776f3217c257e0a60119ea2338
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 91807fa05ce49b8507ee6913ff2620452fcbfab5
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84368355"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301938"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restrições a parâmetros de tipo (Guia de Programação em C#)
 
@@ -121,7 +122,7 @@ Você pode usá-lo conforme mostrado no exemplo a seguir para criar uma enum e c
 
 [!code-csharp[using the enum constrained method](snippets/GenericWhereConstraints.cs#20)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Collections.Generic>
 - [Guia de programação C#](../index.md)

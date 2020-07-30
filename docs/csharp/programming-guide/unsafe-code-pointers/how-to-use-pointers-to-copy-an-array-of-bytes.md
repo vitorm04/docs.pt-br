@@ -1,16 +1,17 @@
 ---
 title: Como usar ponteiros para copiar uma matriz de bytes-guia de programação C#
+description: Saiba como usar ponteiros para copiar uma matriz de bytes. Consulte um exemplo de código e recursos adicionais disponíveis.
 ms.date: 04/20/2018
 helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: 8c1afc06fb567a923d604ad53dc26f94178a8d60
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 70ab1441d25ea69afb2244bd94bd404a3e32838d
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397409"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381782"
 ---
 # <a name="how-to-use-pointers-to-copy-an-array-of-bytes-c-programming-guide"></a>Como usar ponteiros para copiar uma matriz de bytes (guia de programação C#)
 
@@ -27,6 +28,6 @@ Este exemplo acessa os elementos das duas matrizes usando índices em vez de um 
 ## <a name="see-also"></a>Confira também
 
 - [Guia de programação C#](../index.md)
-- [Código não seguro e ponteiros](index.md)
+- [Código e ponteiros inseguros](index.md)
 - [-Não seguro (opções do compilador C#)](../../language-reference/compiler-options/unsafe-compiler-option.md)
 - [Coleta de lixo](../../../standard/garbage-collection/index.md)

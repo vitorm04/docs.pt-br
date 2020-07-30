@@ -1,15 +1,16 @@
 ---
 title: Argumentos de linha de comando – Guia de Programação em C#
+description: Saiba mais sobre argumentos de linha de comando. Veja um exemplo que usa argumentos de linha de comando em um aplicativo de console.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: c203716d9bb8298c934a999a496793c294949ddb
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 35ff0425d3f09cf4ad116cf688b943cef3ef02e3
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007748"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381912"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumentos de linha de comando (Guia de Programação em C#)
 
@@ -65,7 +66,7 @@ Para compilar e executar o aplicativo em um prompt de comando, siga estas etapas
   
      `csc Factorial.cs`  
   
-     Se seu aplicativo não tiver erros de compilação, um arquivo executável chamado *fatorial. exe* será criado.
+     Se seu aplicativo não tiver erros de compilação, um arquivo executável chamado *Factorial.exe* será criado.
   
 4. Digite o seguinte comando para calcular o fatorial de 3:
   
@@ -76,7 +77,7 @@ Para compilar e executar o aplicativo em um prompt de comando, siga estas etapas
 > [!NOTE]
 > Ao executar um aplicativo no Visual Studio, você pode especificar argumentos de linha de comando na [Página de depuração, Designer de Projeto](/visualstudio/ide/reference/debug-page-project-designer).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Environment?displayProperty=nameWithType>
 - [Guia de programação C#](../index.md)

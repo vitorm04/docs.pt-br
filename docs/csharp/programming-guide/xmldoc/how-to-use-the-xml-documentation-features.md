@@ -1,16 +1,17 @@
 ---
 title: Como usar os recursos de documentação XML-guia de programação C#
+description: Saiba como usar os recursos de documentação XML. Consulte exemplos de código e exiba recursos adicionais disponíveis.
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: b7c5a8a895271f067505496c0d13f98b66a393d9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9ad2cfe62c70174eec9020ad4c8ce11608aca36d
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287357"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380664"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Como usar as funcionalidades da documentação XML
 
@@ -112,7 +113,7 @@ Para compilar o exemplo, digite o seguinte comando:
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-Esse comando cria o arquivo XML *XMLsample. xml*, que pode ser exibido em seu navegador ou usando o `TYPE` comando.
+Esse comando cria o arquivo XML *XMLsample.xml*, que pode ser exibido em seu navegador ou usando o `TYPE` comando.
 
 ## <a name="robust-programming"></a>Programação robusta
 

@@ -1,5 +1,6 @@
 ---
 title: <exception>-Guia de programação C#
+description: Saiba mais sobre a <exception> marca XML. Essa marca permite que você especifique quais exceções podem ser geradas e pode ser aplicada a métodos, propriedades, eventos e indexadores.
 ms.date: 07/20/2015
 f1_keywords:
 - exception
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: fb193c586456497ee60aad941d56241ad7c6b63a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 22a28f3fe6de5a0db9aea0f1fd7963d4e6fcee05
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287370"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381730"
 ---
 # <a name="exception-c-programming-guide"></a>\<exception>(Guia de programação C#)
 
@@ -23,7 +24,7 @@ ms.locfileid: "84287370"
 <exception cref="member">description</exception>
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 - cref = " `member`"
 

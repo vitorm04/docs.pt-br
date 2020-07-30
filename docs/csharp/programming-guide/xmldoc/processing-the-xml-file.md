@@ -1,16 +1,17 @@
 ---
 title: Processando o arquivo XML-guia de programação C#
+description: Saiba mais sobre o processamento do arquivo XML em programação em C#. Consulte exemplos de código e exiba recursos adicionais disponíveis.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 1e3d96f9398f2c08ed715111f01987e2d1948439
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6f8a278ed842cd9c4176f3efff423ee048f7e9b9
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287253"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381535"
 ---
 # <a name="process-the-xml-file-c-programming-guide"></a>Processar o arquivo XML (guia de programação C#)
 
@@ -29,7 +30,7 @@ O compilador observa as seguintes regras quando gera as cadeias de identificaç�
     |Caractere|Tipo de membro|Observações|
     |---------------|-----------------|-|
     |N|namespace|Não é possível adicionar comentários de documentação a um namespace, mas será possível fazer referências cref a eles se houver suporte.|
-    |T|tipo|Um tipo pode ser uma classe, interface, struct, enum ou delegate.|
+    |T|type|Um tipo pode ser uma classe, interface, struct, enum ou delegate.|
     |F|field|
     |P|propriedade|Inclui indexadores ou outras propriedades indexadas.|
     |M|method|Inclui métodos especiais, como construtores e operadores.|

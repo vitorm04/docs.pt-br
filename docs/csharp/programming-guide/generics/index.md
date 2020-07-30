@@ -1,16 +1,17 @@
 ---
 title: Genéricos – Guia de Programação em C#
+description: Saiba mais sobre os genéricos. Os tipos genéricos maximizam a reutilização de código, a segurança de tipo e o desempenho, e são comumente usados para criar classes de coleção.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: a3ed3aa412c7d9c9d6b705dba80b527057c647fa
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: beef9c20e3ac62505bc7a4584b404637935de1dc
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241663"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299390"
 ---
 # <a name="generics-c-programming-guide"></a>Genéricos (Guia de Programação em C#)
 
@@ -59,11 +60,11 @@ O exemplo de código a seguir mostra como o código cliente usa a classe `Generi
 
 Para obter mais informações, consulte a [especificação da linguagem C#](~/_csharplang/spec/types.md#constructed-types).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Collections.Generic>
 - [Guia de programação C#](../index.md)
-- [Tipos](../types/index.md)
+- [Types](../types/index.md)
 - [\<typeparam>](../xmldoc/typeparam.md)
 - [\<typeparamref>](../xmldoc/typeparamref.md)
 - [Generics in .NET (Genéricos no .NET)](../../../standard/generics/index.md)

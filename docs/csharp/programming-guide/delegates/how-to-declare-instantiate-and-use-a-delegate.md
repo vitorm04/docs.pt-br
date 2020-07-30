@@ -1,17 +1,18 @@
 ---
-title: Como declarar, instanciar e usar um delegado - Guia de Programação C#
+title: Como declarar, instanciar e usar um guia de programação do delegado C#
+description: Saiba como declarar, criar uma instância e usar um delegado. Veja exemplos que abordam o C# 1,0, 2,0 e 3,0 e posterior.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 7ac1d736e19c4dcf1c8408db944505c399762778
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d4c8424b07a9bccc9112ca9e635a78b9e1a3366
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712358"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300209"
 ---
-# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Como declarar, instanciar e usar um Delegate (Guia de Programação C#)
+# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Como declarar, instanciar e usar um delegado (guia de programação C#)
 No C# 1.0 e versões posteriores, é possível declarar delegados conforme mostrado no exemplo a seguir.  
   
  [!code-csharp[csProgGuideDelegates#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#13)]  
@@ -71,8 +72,8 @@ No C# 1.0 e versões posteriores, é possível declarar delegados conforme mostr
   
      Um delegado pode ser chamado de forma síncrona, como neste exemplo ou de forma assíncrona, usando os métodos `BeginInvoke` e `EndInvoke`.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Eventos](../events/index.md)
-- [Delega](./index.md)
+- [Representantes](./index.md)

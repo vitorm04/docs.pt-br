@@ -1,13 +1,14 @@
 ---
 title: Como ler dados de objeto de um arquivo XML (C#)
+description: Este exemplo de C# lê dados de objeto que foram gravados anteriormente em um arquivo XML usando a classe XmlSerializer.
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: e2365d1260d3f6e239f294b2af3399c2fb659575
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 525a93812279756b3802d43d85bb5e61d8f7415e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241871"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302783"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Como ler dados de objeto de um arquivo XML (C#)
 Este exemplo lê dados de objeto que foram previamente gravados em um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -61,7 +62,7 @@ Substitua o nome de arquivo "c:\temp\SerializationOverview.xml" pelo nome do arq
 ## <a name="net-security"></a>Segurança do .NET  
  Sempre verifique as entradas e nunca desserialize dados de uma fonte não confiável. O objeto recriado é executado em um computador local com as permissões do código que o desserializou. Verifique todas as entradas antes de usar os dados no seu aplicativo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IO.StreamWriter>
 - [Como gravar dados de objeto em um arquivo XML (C#)](./how-to-write-object-data-to-an-xml-file.md)

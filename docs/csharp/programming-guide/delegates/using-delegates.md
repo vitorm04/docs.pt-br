@@ -1,15 +1,16 @@
 ---
 title: Como usar delegados – Guia de Programação em C#
+description: Saiba como usar delegados. Delegados são um tipo seguro, de tipo seguro e orientado a objeto que encapsula com segurança um método.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 9a81ee5ccdc2697ca435d40be27568b651977f96
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: a9b625b8c0785ed2f446be27c11dc76108bc4bce
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241585"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302146"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Usando delegados (Guia de Programação em C#)
 
@@ -70,7 +71,7 @@ A comparação de delegados de dois tipos diferentes atribuídos no tempo de com
 ## <a name="see-also"></a>Confira também
 
 - [Guia de programação C#](../index.md)
-- [Delegados](./index.md)
+- [Representantes](./index.md)
 - [Usando variação em delegados](../concepts/covariance-contravariance/using-variance-in-delegates.md)
 - [Variação em delegações](../concepts/covariance-contravariance/variance-in-delegates.md)
 - [Usando Variação para Delegações Genéricas Func e Action](../concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

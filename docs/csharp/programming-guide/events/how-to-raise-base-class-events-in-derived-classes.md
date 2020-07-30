@@ -1,15 +1,16 @@
 ---
 title: Como gerar eventos de classe base em classes derivadas – guia de programação C#
+description: Saiba como gerar eventos de classe base em classes derivadas. Consulte um exemplo de código e exiba recursos adicionais disponíveis.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-ms.openlocfilehash: e2d2dfc2809a4de1756bfc362880eebc79076b94
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: b0b0a16a1fd165e437fc79ccacb20d406f5cff63
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240628"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302094"
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>Como gerar eventos de classe base em classes derivadas (guia de programação C#)
 O exemplo simples a seguir mostra o modo padrão para declarar os eventos em uma classe base para que eles também possam ser gerados das classes derivadas. Esse padrão é usado extensivamente em Windows Forms classes nas bibliotecas de classes do .NET.  
@@ -26,6 +27,6 @@ O exemplo simples a seguir mostra o modo padrão para declarar os eventos em uma
 
 - [Guia de programação C#](../index.md)
 - [Eventos](./index.md)
-- [Delegados](../delegates/index.md)
+- [Representantes](../delegates/index.md)
 - [Modificadores de acesso](../classes-and-structs/access-modifiers.md)
 - [Criando manipuladores de eventos no Windows Forms](../../../framework/winforms/creating-event-handlers-in-windows-forms.md)

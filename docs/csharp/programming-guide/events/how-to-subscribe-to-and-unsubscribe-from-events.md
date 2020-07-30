@@ -1,17 +1,18 @@
 ---
 title: Como assinar e cancelar a assinatura de eventos – guia de programação C#
+description: Saiba como assinar e cancelar a assinatura de eventos. Assine eventos usando o IDE do Visual Studio, programaticamente, ou usando um método anônimo.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: d917ea097cf9253a65c1907efdca71a640df9497
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: f228cc2e4fd719f4d79c56d65aa45b2a3031cba7
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240662"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302081"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Como assinar e cancelar a assinatura de eventos (guia de programação C#)
 Você assina um evento publicado por outra classe quando quer escrever um código personalizado que é chamado quando esse evento é gerado. Por exemplo, você pode assinar o evento `click` de um botão para fazer com que seu aplicativo faça algo útil quando o usuário clicar no botão.  
@@ -97,7 +98,7 @@ Você assina um evento publicado por outra classe quando quer escrever um códig
   
      Quando todos os assinantes tiverem cancelado a assinatura de um evento, a instância do evento na classe do publicador será definida como `null`.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Eventos](./index.md)
 - [event](../../language-reference/keywords/event.md)

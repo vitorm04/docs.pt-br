@@ -1,16 +1,17 @@
 ---
 title: Interfaces – Guia de Programação em C#
+description: Uma interface no C# contém definições para um grupo de funcionalidades relacionadas que uma classe não abstrata ou uma struct deve implementar.
 ms.date: 02/20/2020
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 50f2c5fc3570b6d66ed83206660caf4bd02f1f5b
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 4485a9f8e3581aa80ed65221258dc40310b3a695
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441330"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303043"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guia de Programação em C#)
 
@@ -69,7 +70,7 @@ Uma interface tem as propriedades a seguir:
 - [Eventos](../events/index.md)  
 - [Indexadores](../indexers/index.md)
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação C#](../index.md)
 - [Herança](../classes-and-structs/inheritance.md)

@@ -1,5 +1,6 @@
 ---
 title: Interoperabilidade – Guia de Programação em C#
+description: A interoperabilidade dá suporte a código não gerenciado ao lado do código que é executado no Common Language Runtime. Use esses recursos para entender as opções de interoperabilidade.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: e53465066cf27a5f46c66ac73ee242370be23395
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: d85eb51107d50e023270fcbe1ef6e08a7788ae78
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84242001"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302965"
 ---
 # <a name="interoperability-c-programming-guide"></a>Interoperabilidade (Guia de Programação em C#)
 
@@ -43,7 +44,7 @@ O .NET permite a interoperabilidade com código não gerenciado por meio de serv
 
 Para obter mais informações, veja [Noções básicas](~/_csharplang/spec/unsafe-code.md) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>
 - [Guia de programação C#](../index.md)

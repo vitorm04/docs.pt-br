@@ -1,16 +1,17 @@
 ---
 title: Como iterar por meio de uma árvore de diretórios – guia de programação em C#
+description: Saiba como iterar por meio de uma árvore de diretório. Acesse cada arquivo em cada subdiretório aninhado em uma pasta raiz especificada.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 24a6225527becb0b896017616e2661ab8247c74c
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: c49a9d1eaea9d4d8967b105d753f2a611d80e795
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241598"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301977"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Como iterar por meio de uma árvore de diretório (guia de programação C#)
 A expressão "iterar uma árvore de diretório" significa acessar cada arquivo em cada subdiretório aninhado em uma pasta raiz especificada, em qualquer profundidade. Você não precisa necessariamente abrir cada arquivo. Você pode recuperar apenas o nome do arquivo ou subdiretório como um `string`, ou então você pode recuperar informações adicionais na forma de um objeto <xref:System.IO.FileInfo?displayProperty=nameWithType> ou <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
@@ -56,7 +57,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 ## <a name="robust-programming"></a>Programação robusta  
  O código de iteração de arquivo robusto deve levar em conta muitas complexidades do sistema de arquivos. Para saber mais sobre o sistema de arquivos do Windows, confira [Visão geral do NTFS](/windows-server/storage/file-server/ntfs-overview).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IO>
 - [LINQ e diretórios de arquivos](../concepts/linq/linq-and-file-directories.md)

@@ -1,16 +1,17 @@
 ---
 title: Expressões – Guia de Programação em C#
+description: Saiba mais sobre expressões em programação em C#, como invocação, consulta, lambda, literais e nomes simples.
 ms.date: 05/11/2017
 helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 4bbee8f15c2591e8b172df9a6759449d48697804
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5bcfdae27c30bd5d845f621ac4b5b20ff37612a0
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75699087"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381821"
 ---
 # <a name="expressions-c-programming-guide"></a>Expressões (Guia de Programação em C#)
 
@@ -32,7 +33,7 @@ System.Convert.ToInt32("35");
   
 ## <a name="overflows"></a>Estouros
 
- Expressões numéricas podem causar estouros se o valor for maior que o valor máximo do tipo de valor. Para obter mais informações, consulte [Verificação e Desmarcada](../../language-reference/keywords/checked-and-unchecked.md) e a seção [Conversões numéricas explícitas](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) do artigo [Conversões numéricas incorporadas.](../../language-reference/builtin-types/numeric-conversions.md)
+ Expressões numéricas podem causar estouros se o valor for maior que o valor máximo do tipo de valor. Para obter mais informações, consulte [marcado e desmarcado](../../language-reference/keywords/checked-and-unchecked.md) e a seção de [conversões numéricas explícitas](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) do artigo [embutir conversões numéricas](../../language-reference/builtin-types/numeric-conversions.md) .
   
 ## <a name="operator-precedence-and-associativity"></a>Precedência e associatividade do operador
 
@@ -86,11 +87,11 @@ O C# dá suporte a *membros aptos para expressão*, o que permite que você forn
 
 Para saber mais, confira a seção [Expressões](~/_csharplang/spec/expressions.md) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Operadores](../../language-reference/operators/index.md)
 - [Métodos](../classes-and-structs/methods.md)
-- [Delega](../delegates/index.md)
-- [Tipos](../types/index.md)
-- [Linq](../../linq/index.md)
+- [Representantes](../delegates/index.md)
+- [Types](../types/index.md)
+- [LINQ](../../linq/index.md)

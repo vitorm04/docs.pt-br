@@ -1,16 +1,17 @@
 ---
 title: Buffers de tamanho fixo – Guia de Programação em C#
+description: Saiba mais sobre buffers de tamanho fixo. Buffers de tamanho fixo são usados para escrever métodos que interoperam com fontes de dados de outras linguagens.
 ms.date: 04/23/2020
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 932ff3d57995ce47c4b74e8e888a479f0d09d0ed
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1d4f5068121cdc98976954f2d99f4ac020c3b2a8
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397422"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381236"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Buffers de tamanho fixo (Guia de Programação em C#)
 
@@ -72,9 +73,9 @@ Buffers de tamanho fixo diferem de matrizes regulares das seguintes maneiras:
 - Eles são sempre vetores ou matrizes unidimensionais.
 - A declaração deve incluir o comprimento, como `fixed char id[8]` . Não é possível usar `fixed char id[]`.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação C#](../index.md)
-- [Código não seguro e ponteiros](index.md)
+- [Código e ponteiros inseguros](index.md)
 - [Instrução fixed](../../language-reference/keywords/fixed-statement.md)
 - [Interoperabilidade](../interop/index.md)

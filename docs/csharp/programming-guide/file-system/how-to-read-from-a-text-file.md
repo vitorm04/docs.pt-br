@@ -1,5 +1,6 @@
 ---
 title: Como ler de um arquivo de texto – guia de programação C#
+description: Saiba como ler de um arquivo de texto usando métodos estáticos da classe File. Consulte um exemplo de código e exiba recursos adicionais disponíveis.
 ms.date: 07/20/2015
 f1_keywords:
 - StreamReader.ReadToEnd
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 8f79d22a86390ca931b05262e50865d852c154c7
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 80ac6f8412f456b23d05ee87882dca8e16a132c3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241741"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301652"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Como ler de um arquivo de texto (guia de programação C#)
 Este exemplo lê o conteúdo de um arquivo de texto usando os métodos estáticos <xref:System.IO.File.ReadAllText%2A> e <xref:System.IO.File.ReadAllLines%2A> da classe <xref:System.IO.File?displayProperty=nameWithType>.  
@@ -40,7 +41,7 @@ Se você não estiver usando os arquivos de texto de [como gravar em um arquivo 
 ## <a name="net-security"></a>Segurança do .NET  
  Não confie no nome de um arquivo para determinar o conteúdo do arquivo. Por exemplo, o arquivo `myFile.cs` pode não ser um arquivo de origem do C#.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [Guia de programação C#](../index.md)

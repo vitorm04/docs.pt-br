@@ -1,16 +1,17 @@
 ---
 title: Usando o tipo dynamic – Guia de Programação em C#
+description: Saiba como usar o tipo dinâmico. O tipo dinâmico é um tipo estático, mas objetos dinâmicos ignoram a verificação de tipo estático.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 24d48605e560038d70f1818611f339a94ecc2bba
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 9904f0452feca388704067b1fd5432f74d0df86b
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241962"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381574"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Usando o tipo dynamic (Guia de Programação em C#)
 
@@ -73,7 +74,7 @@ Muitos métodos COM permitem variação nos tipos de argumento e tipo de retorno
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Title|Descrição|
+|Título|Descrição|
 |-----------|-----------------|
 |[dinâmico](../../language-reference/builtin-types/reference-types.md)|Descreve o uso da palavra-chave `dynamic`.|
 |[Visão geral do tempo de execução de linguagem dinâmica](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|Fornece uma visão geral do DLR, que é um ambiente de tempo de execução que adiciona um conjunto de serviços para as linguagens dinâmicas para o CLR (Common Language Runtime).|

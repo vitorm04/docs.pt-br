@@ -1,17 +1,18 @@
 ---
 title: Como criar uma chave no registro-guia de programação C#
+description: Saiba como criar uma chave no registro. Consulte um exemplo de código, compilando instruções e recursos adicionais disponíveis.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: 9e340083ffca118337dc9a53bdf20808cd1b15cb
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 6db076bc22e098c285b74a8c10e8b5f456c2c55e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241624"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299975"
 ---
 # <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>Como criar uma chave no registro (guia de programação C#)
 Este exemplo adiciona o par de valores, "Name" e "Isabella", ao Registro do usuário atual, sob a chave "Names".  
@@ -55,7 +56,7 @@ key.Close();
   
  Não é seguro armazenar segredos, como senhas, no Registro como texto sem formatação, mesmo se a chave do Registro estiver protegida por ACL (listas de controle de acesso).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [Guia de programação C#](../index.md)

@@ -1,15 +1,16 @@
 ---
 title: Comparações de igualdade – Guia de Programação em C#
+description: Saiba mais sobre comparações de igualdade. Consulte descrições de ' igualdade de valor ' e ' igualdade de referência ' e exibir recursos adicionais.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 46d6881955252b21de6a92e25d65d1f76c8ec06c
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: d10d1851978ef25b7b02503f196cd2a436aab608
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241910"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381678"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Comparações de igualdade (Guia de Programação em C#)
 
@@ -50,13 +51,13 @@ No entanto, não há nenhuma exigência de que a equivalência seja baseada em t
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Title|Descrição|  
+|Título|Descrição|  
 |-----------|-----------------|  
 |[Como testar a igualdade de referência (identidade)](./how-to-test-for-reference-equality-identity.md)|Descreve como determinar se duas variáveis têm igualdade de referência.|  
 |[Como definir a igualdade de valor para um tipo](./how-to-define-value-equality-for-a-type.md)|Descreve como fornecer uma definição personalizada de igualdade de valor a um tipo.|  
 |[Guia de programação C#](../index.md)|Fornece links para informações detalhadas sobre recursos importantes da linguagem C# e recursos que estão disponíveis para C# por meio do .NET.|  
-|[Tipos](../types/index.md)|Fornece informações sobre o sistema de tipos do C# e links para mais informações.|  
+|[Types](../types/index.md)|Fornece informações sobre o sistema de tipos do C# e links para mais informações.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação C#](../index.md)

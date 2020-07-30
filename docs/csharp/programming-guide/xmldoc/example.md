@@ -1,5 +1,6 @@
 ---
 title: <example> -Guia de programação C#
+description: Saiba mais sobre o XML <example> Tags. Essa marca permite que você especifique um exemplo de como usar um método ou outro membro da biblioteca.
 ms.date: 07/20/2015
 f1_keywords:
 - <example>
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: e8d26f82562cc5140662f5b32ea9fedf5481d8f8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: dd529e8f2a54cf9086d0d8c555dd1adb70b99126
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287371"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381522"
 ---
 # <a name="example-c-programming-guide"></a>\<example>(Guia de programação C#)
 
@@ -23,7 +24,7 @@ ms.locfileid: "84287371"
 <example>description</example>
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 - `description`
 

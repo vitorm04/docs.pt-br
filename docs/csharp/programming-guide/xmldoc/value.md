@@ -1,5 +1,6 @@
 ---
 title: <value> -Guia de programação C#
+description: Saiba mais sobre o XML <value> Tags. Essa marca permite descrever o valor que uma propriedade representa.
 ms.date: 07/20/2015
 f1_keywords:
 - <value>
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - <value> C# XML tag
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
-ms.openlocfilehash: bd6630a8d5894fda39ad289c8dd584f6d84e5490
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d8294b477d7067653c71d1ec2047a85a0bfe6d02
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287188"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380768"
 ---
 # <a name="value-c-programming-guide"></a>\<value>(Guia de programação C#)
 
@@ -22,7 +23,7 @@ ms.locfileid: "84287188"
 <value>property-description</value>
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 - `property-description`
 

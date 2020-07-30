@@ -1,5 +1,6 @@
 ---
 title: <summary> -Guia de programação C#
+description: Saiba mais sobre o XML <summary> marca que é usada para descrever um tipo ou um membro de tipo. Consulte exemplos de código e exiba recursos adicionais disponíveis.
 ms.date: 07/20/2015
 f1_keywords:
 - <summary>
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: f6984c60e6a7132e94c5c91837535484b12f93c5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f9243e598aaf0c12dd48b48045f461b4b307c18f
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590612"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380599"
 ---
 # <a name="summary-c-programming-guide"></a>\<summary>(Guia de programação C#)
 
@@ -23,7 +24,7 @@ ms.locfileid: "84590612"
 <summary>description</summary>
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 - `description`
 
@@ -98,7 +99,7 @@ O exemplo anterior produz o seguinte arquivo XML.
 </doc>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação em C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

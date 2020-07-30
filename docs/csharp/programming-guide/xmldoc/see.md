@@ -1,5 +1,6 @@
 ---
 title: <see>-Guia de programação C#
+description: Saiba mais sobre a <see> marca XML. Essa marca permite especificar um link de dentro do texto, por exemplo, usando um atributo cref.
 ms.date: 07/20/2015
 f1_keywords:
 - <see>
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 731e42a6d4d354b043a56dbe150bb03a693a9454
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 1cc4982d1ebe9d6896404218a6d200b10cc6503f
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86863780"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381925"
 ---
 # <a name="see-c-programming-guide"></a>\<see>(Guia de programação C#)
 
@@ -25,7 +26,7 @@ ms.locfileid: "86863780"
 <see cref="member"/>
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 - cref = " `member` "
 

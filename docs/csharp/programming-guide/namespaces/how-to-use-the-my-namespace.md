@@ -1,15 +1,16 @@
 ---
 title: Como usar o guia de programação meu namespace-C#
+description: Saiba como usar o namespace ' My '. O namespace ' My ' fornece acesso fácil e intuitivo a várias classes .NET.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: 268543980ba891b0b30f393ee8982f2863ba9a71
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 7abd5049a979d5a15d123052cba0cfdb35bf3fb7
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241936"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381704"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Como usar o namespace My (guia de programação C#)
 
@@ -40,7 +41,7 @@ O <xref:Microsoft.VisualBasic.MyServices> namespace ( `My` em Visual Basic) forn
   
  [!code-csharp[csProgGuideNamespaces#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#20)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação C#](../index.md)
 - [Namespaces](./index.md)

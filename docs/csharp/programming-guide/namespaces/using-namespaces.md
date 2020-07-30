@@ -1,5 +1,6 @@
 ---
 title: Usando namespaces – Guia de Programação em C#
+description: Saiba como usar namespaces em programação C#, como acessar namespaces, aliases de namespace e usar namespaces para controlar o escopo.
 ms.date: 07/20/2015
 f1_keywords:
 - cs.names
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 71d97f7c1c0c3ece0cdce3de4318d8a9d65baed3
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 86892f50e059c16ee9c133d7ba9f2716e11a8e56
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241923"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381691"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Usando namespaces (Guia de Programação em C#)
 
@@ -90,7 +91,7 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
   
  Isso funciona, mas se um tipo nomeado `Alias` fosse subsequentemente introduzido, `Alias.` se associaria a esse tipo. O uso de `Alias::Exception` garante que `Alias` seja tratado como um alias de namespace e não seja confundido com um tipo.  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação C#](../index.md)
 - [Namespaces](./index.md)

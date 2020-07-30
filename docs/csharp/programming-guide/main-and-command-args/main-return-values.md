@@ -1,15 +1,16 @@
 ---
 title: Valores de retorno de Main() – Guia de Programação em C#
+description: Saiba mais sobre os valores de retorno Main (). Consulte exemplos de código, código gerado pelo compilador e exibir recursos adicionais disponíveis.
 ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: a3e29903448c3eb5e0b7dda027677d1785a445e7
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 4458f3cd7c8259c5725cfe5e853f826fe2ef61cc
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416295"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87382055"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores retornados de Main() (Guia de Programação em C#)
 
@@ -95,7 +96,7 @@ Quando o ponto de entrada do aplicativo retorna um `Task` ou `Task<int>`, o comp
 > [!NOTE]
 >Se os exemplos usassem o modificador `async` no método `Main`, o compilador geraria o mesmo código.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação C#](../index.md)
 - [Referência do C#](../index.md)

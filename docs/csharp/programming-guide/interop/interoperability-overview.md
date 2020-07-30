@@ -1,5 +1,6 @@
 ---
 title: Visão geral sobre interoperabilidade – Guia de Programação em C#
+description: Saiba mais sobre a interoperabilidade entre C# e código não gerenciado, incluindo invocação de plataforma, interoperabilidade de C++, expondo componentes COM para C# e expondo C# para COM.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 6546a379d6d851aafbced0931221dc19ca022a72
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 6b1dec96dfb3fc354c614983ed1dafab66c5b007
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241728"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302952"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Visão geral sobre interoperabilidade (Guia de Programação em C#)
 O tópico descreve métodos para permitir a interoperabilidade entre código gerenciado e código não gerenciado do C#.  
@@ -36,7 +37,7 @@ Para obter mais informações, consulte [consumindo funções de dll não gerenc
   
 2. Adicione ao projeto uma referência ao componente COM ou à biblioteca de tipo.  
   
-     Quando você adiciona a referência, o Visual Studio usa o [Tlbimp. exe (tipo de importador de biblioteca de tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md), que usa uma biblioteca de tipos como entrada, para gerar um assembly de interoperabilidade .net. O assembly, também chamado de RCW (Runtime Callable Wrapper), contém classes gerenciadas e interfaces que encapsulam as classes COM e as interfaces que estão na biblioteca de tipos. O Visual Studio adiciona ao projeto uma referência ao assembly gerado.  
+     Quando você adiciona a referência, o Visual Studio usa a [Tlbimp.exe (tipo de importador de biblioteca de tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md), que usa uma biblioteca de tipos como entrada para gerar um assembly de interoperabilidade .net. O assembly, também chamado de RCW (Runtime Callable Wrapper), contém classes gerenciadas e interfaces que encapsulam as classes COM e as interfaces que estão na biblioteca de tipos. O Visual Studio adiciona ao projeto uma referência ao assembly gerado.  
   
 3. Crie uma instância de uma classe que esteja definida no RCW. Isso, por sua vez, criará uma instância do objeto COM.  
   
@@ -57,7 +58,7 @@ Para obter mais informações, consulte [consumindo funções de dll não gerenc
   
  Para obter mais informações, consulte [Expondo componentes do .NET Framework para o COM](../../../framework/interop/exposing-dotnet-components-to-com.md) e [Classe COM de exemplo](./example-com-class.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Melhorando o desempenho de interoperabilidade](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
 - [Introdução à interoperabilidade entre COM e .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)

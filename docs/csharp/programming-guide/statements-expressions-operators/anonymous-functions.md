@@ -1,17 +1,18 @@
 ---
 title: Funções anônimas – Guia de Programação em C#
+description: Saiba mais sobre funções anônimas. Você pode usar uma expressão lambda ou um método anônimo para criar uma função anônima.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], as anonymous functions
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: c99aaf4f35d2d294a9f07de54129bb3b4fbfbfde
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: ae8bda3c68542637b1430587ca4a537980c028bc
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241897"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381665"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Funções anônimas (Guia de Programação em C#)
 
@@ -31,9 +32,9 @@ Você pode usar uma [expressão lambda](lambda-expressions.md) ou um [método an
 
 Para obter mais informações, confira a seção [Expressões de função anônima](~/_csharplang/spec/expressions.md#anonymous-function-expressions) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Instruções, expressões e operadores](./index.md)
 - [Expressões lambda](./lambda-expressions.md)
-- [Delegados](../delegates/index.md)
+- [Representantes](../delegates/index.md)
 - [Árvores de expressão (C#)](../concepts/expression-trees/index.md)

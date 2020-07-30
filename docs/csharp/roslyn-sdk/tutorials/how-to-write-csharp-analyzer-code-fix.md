@@ -3,12 +3,12 @@ title: 'Tutorial: escrever seu primeiro analisador e correção de código'
 description: Este tutorial fornece instruções passo a passo para criar um analisador e correção de código usando o SDK do .NET Compiler (APIs do Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: c70fcacc6cb30969e5c69ffd0954ac52e637a915
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: e79907f364939462b7d0d5814c4752be23bcfdf3
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100932"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381587"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: escrever seu primeiro analisador e correção de código
 
@@ -504,7 +504,7 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 }
 ```
 
-Você precisa escrever um pouco mais de código no seu provedor de correção de código para substituir a palavra-chave var' com o nome do tipo correto. Retorne ao **CodeFixProvider.cs**. O código que você adicionará realizará as seguintes etapas:
+Você deve escrever um pouco mais de código no provedor de correção de código para substituir a `var` palavra-chave pelo nome de tipo correto. Retorne ao **CodeFixProvider.cs**. O código que você adicionará realizará as seguintes etapas:
 
 - Verifique se a declaração é uma declaração `var` e se afirmativo:
 - Crie um novo tipo para o tipo inferido.
@@ -522,12 +522,12 @@ Você precisará adicionar uma `using` diretiva para usar o <xref:Microsoft.Code
 using Microsoft.CodeAnalysis.Simplification;
 ```
 
-Execute seus testes, que devem todos ser aprovados. Dê parabéns a si mesmo, executando seu analisador concluído. Pressione <kbd>Ctrl + F5</kbd> para executar o projeto do analisador em uma segunda instância do Visual Studio com a extensão de visualização Roslyn carregada.
+Execute seus testes, que devem todos ser aprovados. Dê parabéns a si mesmo, executando seu analisador concluído. Pressione <kbd>Ctrl</kbd> + <kbd>F5</kbd> para executar o projeto do analisador em uma segunda instância do Visual Studio com a extensão de visualização do Roslyn carregada.
 
 - Na segunda instância do Visual Studio, crie um novo projeto de Aplicativo de Console de C# e adicione `int x = "abc";` ao método Main. Graças à primeira correção de bug, nenhum aviso deve ser relatado para esta declaração de variável local (embora haja um erro do compilador, conforme esperado).
 - Em seguida, adicione `object s = "abc";` ao método Main. Devido à segunda correção de bug, nenhum aviso deve ser relatado.
 - Por fim, adicione outra variável local que usa a palavra-chave `var`. Você verá que um aviso é relatado e uma sugestão é exibida abaixo e a esquerda.
-- Mova o cursor do editor sobre o sublinhado ondulado e pressione <kbd>Ctrl +</kbd>. para exibir a correção de código sugerida. Ao selecionar a correção de código, observe que a palavra-chave var' agora é manipulada corretamente.
+- Mova o cursor do editor sobre o sublinhado ondulado e pressione <kbd>Ctrl</kbd> + <kbd>.</kbd>. para exibir a correção de código sugerida. Ao selecionar a correção de código, observe que a `var` palavra-chave agora é manipulada corretamente.
 
 Por fim, adicione o seguinte código:
 

@@ -1,5 +1,6 @@
 ---
 title: Expressões lambda – Guia de Programação em C#
+description: Saiba mais sobre expressões lambda. Há lambdas de expressão que têm uma expressão como seu corpo, ou lambdas de instrução que têm um bloco de instrução como seu corpo.
 ms.date: 07/29/2019
 helpviewer_keywords:
 - lambda expressions [C#]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: ffda4ad93451d6991aeb20ed01511f16fd3e512b
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 902a3f63967b371c940693464408ff39534917f9
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174147"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380703"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Expressões lambda (Guia de Programação em C#)
 
