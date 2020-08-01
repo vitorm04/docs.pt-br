@@ -10,16 +10,16 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: c8b4b9a79577776bc049ef77e222d63374178708
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4f0cc9b88947d60638057ca83adb7f2e141c5d14
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447167"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455733"
 ---
 # <a name="implement-a-dispose-method"></a>Implementar um método Dispose
 
-A implementação do <xref:System.IDisposable.Dispose%2A> método destina-se principalmente à liberação de recursos não gerenciados usados pelo seu código. Ao trabalhar com membros de instância que são <xref:System.IDisposable> implementações, é comum fazer chamadas em cascata <xref:System.IDisposable.Dispose%2A> . Há motivos adicionais para a implementação do <xref:System.IDisposable.Dispose%2A> , como desfazer algo que foi feito anteriormente. Por exemplo, liberar memória que foi alocada, removendo um item de uma coleção que foi adicionada, sinalizando o lançamento de um bloqueio que foi adquirido e assim por diante.
+A implementação do <xref:System.IDisposable.Dispose%2A> método destina-se principalmente à liberação de recursos não gerenciados. Ao trabalhar com membros de instância que são <xref:System.IDisposable> implementações, é comum fazer chamadas em cascata <xref:System.IDisposable.Dispose%2A> . Há motivos adicionais para implementar <xref:System.IDisposable.Dispose%2A> , por exemplo, para liberar memória que foi alocada, remover um item que foi adicionado a uma coleção ou sinalizar a liberação de um bloqueio que foi adquirido.
 
 O [coletor de lixo do .net](index.md) não aloca ou libera memória não gerenciada. O padrão para descartar um objeto, chamado de padrão Dispose, impõe a ordem no tempo de vida de um objeto. O padrão Dispose é usado para objetos que implementam a <xref:System.IDisposable> interface e é comum ao interagir com identificadores de arquivo e pipe, identificadores de registro, identificadores de espera ou ponteiros para blocos de memória não gerenciada. Isso ocorre porque o coletor de lixo não pode recuperar objetos não gerenciados.
 
@@ -149,7 +149,7 @@ O exemplo a seguir ilustra o padrão de descarte para uma classe derivada, `Disp
 [!code-csharp[Conceptual.Disposable#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/derived1.cs#10)]
 [!code-vb[Conceptual.Disposable#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/derived1.vb#10)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.GC.SuppressFinalize%2A>
 - <xref:System.IDisposable>

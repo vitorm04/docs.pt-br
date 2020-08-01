@@ -2,12 +2,12 @@
 title: 'Funções recursivas: a palavra-chave rec'
 description: "Saiba como a palavra-chave ' Rec ' do F # é usada com a palavra-chave ' Let ' para definir uma função recursiva."
 ms.date: 05/16/2016
-ms.openlocfilehash: c9a3b7dc27f4ed86948a08b7783d7e8e8b60e57f
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: c2374f90b4585327c6f5208a3d6bca75a23d0cbb
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426970"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455651"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Funções recursivas: a palavra-chave rec
 
@@ -43,7 +43,7 @@ Os métodos são recursivos implicitamente dentro do tipo; Não é necessário a
 
 ## <a name="tail-recursion"></a>Recursão final
 
-Para algumas funções recursivas, é necessário refatorar uma definição mais "pura" para uma que seja a [cauda recursiva](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion). Isso impede os recálculos de desnecessários. Por exemplo, o gerador de número de Fibonacci anterior pode ser reescrito da seguinte maneira:
+Para algumas funções recursivas, é necessário refatorar uma definição mais "pura" para uma que seja a [cauda recursiva](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion). Isso impede recálculos desnecessários. Por exemplo, o gerador de número de Fibonacci anterior pode ser reescrito da seguinte maneira:
 
 ```fsharp
 let fib n =

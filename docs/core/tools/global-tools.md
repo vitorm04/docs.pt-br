@@ -3,12 +3,12 @@ title: " Ferramentas do .NET Core"
 description: Como instalar, usar, atualizar e remover as ferramentas do .NET Core. Aborda ferramentas globais, ferramentas de caminho de ferramenta e ferramentas locais.
 author: KathleenDollard
 ms.date: 02/12/2020
-ms.openlocfilehash: 583dbb461543d1efb7328d55f6ecce4a99afcaca
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 75bdedcbc3ebe9c23477795415076d160ab9a642
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226602"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455718"
 ---
 # <a name="how-to-manage-net-core-tools"></a>Como gerenciar as ferramentas do .NET Core
 
@@ -37,11 +37,11 @@ Uma ferramenta .NET Core é um pacote NuGet especial que contém um aplicativo d
 
 Atualmente, o .NET Core não tem um recurso de pesquisa de ferramenta. Aqui estão algumas maneiras de encontrar ferramentas:
 
+* Pesquise o site do [NuGet](https://www.nuget.org) usando o filtro de tipo de pacote "ferramenta .net". Para obter mais informações, consulte [Localizando e escolhendo pacotes](/nuget/consume-packages/finding-and-choosing-packages).
 * Consulte a lista de ferramentas no repositório GitHub [natemcmaster/dotnet-Tools](https://github.com/natemcmaster/dotnet-tools) .
 * Use [ToolGet](https://www.toolget.net/) para procurar ferramentas .net.
 * Consulte o código-fonte para as ferramentas criadas pela equipe de ASP.NET Core no [diretório de ferramentas do repositório do GitHub dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools).
 * Saiba mais sobre as ferramentas de diagnóstico nas [ferramentas de diagnóstico do .NET Core dotnet](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).
-* Pesquise o site do [NuGet](https://www.nuget.org) . No entanto, o site do NuGet ainda não tem um recurso que permite pesquisar apenas pacotes de ferramentas.
 
 ## <a name="check-the-author-and-statistics"></a>Verificar o autor e as estatísticas
 
@@ -66,7 +66,7 @@ Tool 'dotnetsay' (version '2.1.4') was successfully installed.
 
 O local padrão para os binários de uma ferramenta depende do sistema operacional:
 
-| SO          | Caminho                          |
+| Sistema operacional          | Caminho                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -274,7 +274,7 @@ dotnet <command> --help
 
 Se uma ferramenta não for instalada ou executada, consulte [solucionar problemas de uso da ferramenta .NET Core](troubleshoot-usage-issues.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Tutorial: criar uma ferramenta do .NET Core usando o CLI do .NET Core](global-tools-how-to-create.md)
 - [Tutorial: instalar e usar uma ferramenta global do .NET Core usando o CLI do .NET Core](global-tools-how-to-use.md)

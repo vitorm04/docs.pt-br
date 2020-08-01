@@ -2,12 +2,12 @@
 title: Alterações significativas na biblioteca de classes base
 description: Lista as alterações significativas nas principais bibliotecas do .NET.
 ms.date: 07/27/2020
-ms.openlocfilehash: d34cd2e7ba1122b11921eefaee2ed55ba0c8df8d
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: c80270eab723d922734431ed2087dc8c17e706f7
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302991"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455762"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Principais alterações significativas nas bibliotecas do .NET
 
@@ -17,6 +17,7 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 | Alteração significativa | Versão introduzida |
 | - | :-: |
+| [Os caminhos de código UTF-7 estão obsoletos](#utf-7-code-paths-are-obsolete) | 5.0 |
 | [Vetor \<T> sempre gera NotSupportedException para tipos sem suporte](#vectort-always-throws-notsupportedexception-for-unsupported-types) | 5.0 |
 | [O ActivityIdFormat padrão é W3C](#default-activityidformat-is-w3c) | 5.0 |
 | [Alteração de comportamento para vector2. Lerp e Vector4. Lerp](#behavior-change-for-vector2lerp-and-vector4lerp) | 5.0 |
@@ -46,6 +47,10 @@ As seguintes alterações significativas estão documentadas nesta página:
 | [Process. StartInfo gera InvalidOperationException para processos que você não iniciou](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [utf-7-code-paths-obsolete](../../../includes/core-changes/corefx/5.0/utf-7-code-paths-obsolete.md)]
+
+***
 
 [!INCLUDE [vectort-throws-notsupportedexception](../../../includes/core-changes/corefx/5.0/vectort-throws-notsupportedexception.md)]
 
