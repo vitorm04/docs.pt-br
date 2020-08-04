@@ -2,12 +2,12 @@
 title: dotnet-ferramenta de rastreamento-.NET Core
 description: Instalando e usando a ferramenta de linha de comando dotnet-Trace.
 ms.date: 11/21/2019
-ms.openlocfilehash: 6dd968dc49522229dca02c0dc6f3de898026dd82
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 25178a0e59ce9edb69d15ee761c1b9e56aa5eb3a
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924845"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517302"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-utilitário de análise de desempenho de rastreamento
 
@@ -38,13 +38,13 @@ A `dotnet-trace` ferramenta:
 
 ## <a name="options"></a>Opções
 
-- **`--version`**
-
-  Exibe a versão do utilitário dotnet-Trace.
-
 - **`-h|--help`**
 
   Mostra a ajuda da linha de comando.
+
+- **`--version`**
+
+  Exibe a versão do utilitário dotnet-Trace.
 
 ## <a name="commands"></a>Comandos
 
@@ -62,23 +62,45 @@ Coleta um rastreamento de diagnóstico de um processo em execução.
 ### <a name="synopsis"></a>Sinopse
 
 ```console
-dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--output]
-    [--providers] [--profile <profile-name>] [--format]
+dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--clrevents <clrevents>]
+    [--format <Chromium|NetTrace|Speedscope>] [-h|--help]
+    [-n, --name <name>]  [-o|--output <trace-file-path>] [-p|--process-id <pid>]
+    [--profile <profile-name>] [--providers <list-of-comma-separated-providers>]
 ```
 
 ### <a name="options"></a>Opções
-
-- **`-p|--process-id <PID>`**
-
-  O processo do qual coletar o rastreamento.
 
 - **`--buffersize <size>`**
 
   Define o tamanho do buffer circular na memória, em megabytes. 256 MB padrão.
 
+- **`--clreventlevel <clreventlevel>`**
+
+  Detalhes dos eventos CLR a serem emitidos.
+
+- **`--clrevents <clrevents>`**
+
+  Lista de eventos de tempo de execução CLR a serem emitidos.
+
+- **`--format {Chromium|NetTrace|Speedscope}`**
+
+  Define o formato de saída para a conversão do arquivo de rastreamento. O padrão é `NetTrace`.
+
+- **`-n, --name <name>`**
+
+  O nome do processo do qual coletar o rastreamento.
+
 - **`-o|--output <trace-file-path>`**
 
   O caminho de saída para os dados de rastreamento coletados. Se não for especificado, o padrão será `trace.nettrace` .
+
+- **`-p|--process-id <PID>`**
+
+  A ID do processo da qual coletar o rastreamento.
+
+- **`--profile <profile-name>`**
+
+  Um conjunto nomeado predefinido de configurações de provedor que permite que cenários de rastreamento comuns sejam especificados de forma sucinta.
 
 - **`--providers <list-of-comma-separated-providers>`**
 
@@ -90,14 +112,6 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
   - `Provider`está no formato: `KnownProviderName[:Flags[:Level][:KeyValueArgs]]` .
   - `KeyValueArgs`está no formato: `[key1=value1][;key2=value2]` .
 
-- **`--profile <profile-name>`**
-
-  Um conjunto nomeado predefinido de configurações de provedor que permite que cenários de rastreamento comuns sejam especificados de forma sucinta.
-
-- **`--format {NetTrace|Speedscope}`**
-
-  Define o formato de saída para a conversão do arquivo de rastreamento. O padrão é `NetTrace`.
-
 ## <a name="dotnet-trace-convert"></a>dotnet-conversão de rastreamento
 
 Converte `nettrace` rastreamentos em formatos alternativos para uso com ferramentas de análise de rastreamento alternativas.
@@ -105,7 +119,7 @@ Converte `nettrace` rastreamentos em formatos alternativos para uso com ferramen
 ### <a name="synopsis"></a>Sinopse
 
 ```console
-dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
+dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>] [-h|--help] [-o|--output <output-filename>]
 ```
 
 ### <a name="arguments"></a>Argumentos
@@ -116,7 +130,7 @@ dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 
 ### <a name="options"></a>Opções
 
-- **`--format <NetTrace|Speedscope>`**
+- **`--format <Chromium|NetTrace|Speedscope>`**
 
   Define o formato de saída para a conversão do arquivo de rastreamento.
 
@@ -126,7 +140,7 @@ dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 
 ## <a name="dotnet-trace-ps"></a>dotnet-rastrear PS
 
-Lista os processos dotnet que podem ser anexados ao.
+ Lista os processos dotnet dos quais os rastreamentos podem ser coletados.
 
 ### <a name="synopsis"></a>Sinopse
 
@@ -208,7 +222,7 @@ O comando anterior desabilita os eventos de tempo de execução e o profiler de 
 
 O tempo de execução do .NET Core dá suporte aos provedores .NET a seguir. O .NET Core usa as mesmas palavras-chave para habilitar `Event Tracing for Windows (ETW)` os `EventPipe` rastreamentos e.
 
-| Nome do provedor                            | Informações |
+| Nome do provedor                            | Informações do |
 |------------------------------------------|-------------|
 | `Microsoft-Windows-DotNETRuntime`        | [O provedor de runtime](../../framework/performance/clr-etw-providers.md#the-runtime-provider)<br>[Palavras-chave de tempo de execução CLR](../../framework/performance/clr-etw-keywords-and-levels.md#runtime) |
 | `Microsoft-Windows-DotNETRuntimeRundown` | [O provedor de encerramento](../../framework/performance/clr-etw-providers.md#the-rundown-provider)<br>[Palavras-chave de resumo do CLR](../../framework/performance/clr-etw-keywords-and-levels.md#rundown) |

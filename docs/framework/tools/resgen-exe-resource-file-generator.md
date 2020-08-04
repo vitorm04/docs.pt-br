@@ -1,5 +1,6 @@
 ---
 title: Resgen.exe (Gerador de Arquivo de Recurso)
+description: Use Resgen.exe, o gerador de arquivo de recurso. Converter arquivos de texto (. txt,. restext) e formato de recurso XML (. resx) em binários de tempo de execução CLR incorporáveis (. Resources).
 ms.date: 03/30/2017
 helpviewer_keywords:
 - resource files, .resources files
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-ms.openlocfilehash: b9be030689ecf78b3482743e486e32012e9ca5d4
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: f51ee6c8537abafc82017f3cc29d734e939a254f
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201115"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517224"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Gerador de Arquivo de Recurso)
 O Gerador de Arquivos de Recurso (Resgen.exe) converte arquivos de texto (.txt ou .restext) e arquivos de recurso com base em XML (.resx) em arquivos binários do Common Language Runtime (.resources) que podem ser inseridos em um executável binário do tempo de execução ou em um assembly satélite. (Consulte [Criando arquivos de recurso](../resources/creating-resource-files-for-desktop-apps.md).)  
@@ -39,7 +40,7 @@ O Gerador de Arquivos de Recurso (Resgen.exe) converte arquivos de texto (.txt o
   
  Se Resgen.exe falhar por algum motivo, o valor de retorno será –1.  
   
- Para obter ajuda com Resgen. exe, você pode usar o comando a seguir, sem opções especificadas, para exibir a sintaxe de comando e as opções para Resgen. exe:  
+ Para obter ajuda com Resgen.exe, você pode usar o comando a seguir, sem opções especificadas, para exibir a sintaxe de comando e as opções para Resgen.exe:  
   
 ```console  
 resgen  
@@ -51,7 +52,7 @@ resgen
 resgen /?  
 ```  
   
- Se você usar Resgen. exe para gerar arquivos. Resources binários, poderá usar um compilador de linguagem para inserir os arquivos binários em assemblies executáveis, ou pode usar o [vinculador de assembly (al. exe)](al-exe-assembly-linker.md) para compilá-los em assemblies satélites.  
+ Se você usar Resgen.exe para gerar arquivos. Resources binários, poderá usar um compilador de linguagem para inserir os arquivos binários em assemblies executáveis, ou você pode usar o [vinculador de assembly (Al.exe)](al-exe-assembly-linker.md) para compilá-los em assemblies satélite.  
   
  Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](developer-command-prompt-for-vs.md).  
   
@@ -178,7 +179,7 @@ resgen Resources.resx Resources.resources
   
  A sintaxe é igual à mostrada na seção anterior.  
   
- Além disso, você pode usar Resgen. exe para converter recursos incorporados em um assembly .NET Framework em um arquivo. resw Tor aplicativos da loja do Windows 8. x.  
+ Além disso, você pode usar Resgen.exe para converter recursos incorporados em um assembly de .NET Framework em um arquivo. resw Tor aplicativos da loja do Windows 8. x.  
   
  O comando a seguir lê um arquivo de recursos binário Resources.resources e grava um arquivo de saída com base em XML chamado Resources.resx.  
   
@@ -215,10 +216,10 @@ resgen /compile StringResources.txt TableResources.resx ImageResources.resx
   
 <a name="Exporting"></a>
 ### <a name="exporting-resources-to-a-resw-file"></a>Exportando Recursos para um Arquivo .resw  
- Se você estiver desenvolvendo um aplicativo de armazenamento do Windows 8. x, talvez queira usar recursos de um aplicativo de área de trabalho existente. No entanto, os dois tipos de aplicativos dão suporte a formatos de arquivo diferentes. Em aplicativos da área de trabalho, recursos em arquivos de texto (.txt ou .restext) ou .resx são compilados em arquivos .resources binários. Nos aplicativos da loja do Windows 8. x, os arquivos. resw são compilados em arquivos de índice de recurso de pacote binário (PRI). Você pode usar Resgen. exe para preencher essa lacuna extraindo recursos de um executável ou de um assembly satélite e gravando-os em um ou mais arquivos. resw que podem ser usados ao desenvolver um aplicativo da loja do Windows 8. x.  
+ Se você estiver desenvolvendo um aplicativo de armazenamento do Windows 8. x, talvez queira usar recursos de um aplicativo de área de trabalho existente. No entanto, os dois tipos de aplicativos dão suporte a formatos de arquivo diferentes. Em aplicativos da área de trabalho, recursos em arquivos de texto (.txt ou .restext) ou .resx são compilados em arquivos .resources binários. Nos aplicativos da loja do Windows 8. x, os arquivos. resw são compilados em arquivos de índice de recurso de pacote binário (PRI). Você pode usar Resgen.exe para preencher essa lacuna extraindo recursos de um executável ou de um assembly satélite e gravando-os em um ou mais arquivos. resw que podem ser usados ao desenvolver um aplicativo da loja do Windows 8. x.  
   
 > [!IMPORTANT]
-> O Visual Studio manipula automaticamente todas as conversões necessárias para incorporar os recursos em uma biblioteca portátil em um aplicativo da loja do Windows 8. x. Usar Resgen. exe diretamente para converter os recursos em um assembly para o formato de arquivo. resw é de interesse apenas para os desenvolvedores que desejam desenvolver um aplicativo de armazenamento do Windows 8. x fora do Visual Studio.  
+> O Visual Studio manipula automaticamente todas as conversões necessárias para incorporar os recursos em uma biblioteca portátil em um aplicativo da loja do Windows 8. x. Usar Resgen.exe diretamente para converter os recursos em um assembly para o formato de arquivo. resw é de interesse apenas para os desenvolvedores que desejam desenvolver um aplicativo da loja do Windows 8. x fora do Visual Studio.  
   
  A sintaxe para gerar arquivos .resw com base em um assembly é:  
   
@@ -291,7 +292,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  Se `inputFilename` for um arquivo .resources, Resgen.exe copiará o arquivo .resources se `outputFilename` também for um arquivo .resources. Se `outputFilename` for omitido, Resgen.exe substituirá `inputFilename` por um arquivo .resources idêntico.  
   
- *idioma*  
+ *linguagem*  
  O idioma no qual gerar o código-fonte para a classe de recurso fortemente tipado. Os valores possíveis são `cs`, `C#` e `csharp` para código C#, `vb` e `visualbasic` para código Visual Basic, `vbs` e `vbscript` para código VBScript e `c++`, `mc` e `cpp` para código C++.  
   
  *namespace*  
@@ -300,7 +301,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  *ClassName*  
  O nome da classe de recurso fortemente tipado. Isso deve corresponder ao nome da raiz do arquivo .resources. Por exemplo, se Resgen.exe gerar um arquivo .resources chamado MyCompany.Libraries.Strings.resources, o nome da classe de recurso fortemente tipado será Strings. Se *classname* for omitido, a classe gerada será derivada do nome da raiz de `outputFilename`. Se `outputFilename` for omitido, a classe gerada será derivada do nome da raiz de `inputFilename`.  
   
- *classname* não pode conter caracteres inválidos como espaços inseridos. Se *ClassName* contiver espaços inseridos, ou se *ClassName* for gerado por padrão de *inputFilename*e *inputFilename* contiver espaços inseridos, Resgen. exe substituirá todos os caracteres inválidos por um sublinhado ( \_ ).  
+ *classname* não pode conter caracteres inválidos como espaços inseridos. Se *ClassName* contiver espaços inseridos, ou se *ClassName* for gerado por padrão de *inputFilename*e *inputFilename* contiver espaços inseridos, Resgen.exe substituirá todos os caracteres inválidos por um sublinhado ( \_ ).  
   
  *nome do arquivo*  
  O nome do arquivo de classe.  
@@ -327,10 +328,10 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
 resgen StringResources.txt /str:vb,,StringResources
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Ferramentas](index.md)
 - [Recursos em aplicativos da área de trabalho](../resources/index.md)
 - [Criação de arquivos de recurso](../resources/creating-resource-files-for-desktop-apps.md)
-- [Al. exe (vinculador de assembly)](al-exe-assembly-linker.md)
+- [Al.exe (vinculador de assembly)](al-exe-assembly-linker.md)
 - [Prompts de comando](developer-command-prompt-for-vs.md)
