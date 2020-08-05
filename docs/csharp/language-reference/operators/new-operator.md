@@ -4,12 +4,12 @@ ms.date: 06/25/2019
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: ed18c42cd28412a967c94a65c2a92b0b75097b52
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 1e1abb95d8b0b956e391b05ddc5a0a8a20d01a63
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199723"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555299"
 ---
 # <a name="new-operator-c-reference"></a>operador new (Referência em C#)
 
@@ -61,6 +61,6 @@ Para saber mais, confira a seção [O operador new](~/_csharplang/spec/expressio
 
 ## <a name="see-also"></a>Confira também
 
-- [Referência do C#](../index.md)
-- [Operadores do C#](index.md)
+- [Referência de C#](../index.md)
+- [Operadores e expressões C#](index.md)
 - [Inicializadores de objeto e coleção](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)

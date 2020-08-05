@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: a9e80ecb3288479a2ca81b43c9d088809ed5f2f0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84dc67be95fa65f6c46dab02af2ee7bc08d2ec31
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847281"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555221"
 ---
 # <a name="sizeof-operator-c-reference"></a>Operador sizeof (referência em C#)
 
@@ -50,9 +50,9 @@ Para obter mais informações, confira a seção [O operador sizeof](~/_csharpla
 
 ## <a name="see-also"></a>Confira também
 
-- [Referência do C#](../index.md)
-- [Operadores do C#](index.md)
+- [Referência de C#](../index.md)
+- [Operadores e expressões C#](index.md)
 - [Operadores relacionados a ponteiro](pointer-related-operators.md)
-- [Tipos de Ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Tipos de ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Tipos relacionados a memória e extensão](../../../standard/memory-and-spans/index.md)
-- [Genéricos no .NET](../../../standard/generics/index.md)
+- [Generics in .NET (Genéricos no .NET)](../../../standard/generics/index.md)

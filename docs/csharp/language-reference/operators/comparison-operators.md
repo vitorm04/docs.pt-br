@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: eda039d950e4be13d9c041c8bb95b6ea773b83f6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d57f96b9c80bdc5f40169180b40326ffed91cf10
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207222"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555363"
 ---
 # <a name="comparison-operators-c-reference"></a>Operadores de comparação (referência do C#)
 
@@ -73,9 +73,9 @@ Se um tipo sobrecarregar um dos operadores `<` ou `>`, ele deverá sobrecarregar
 
 Para obter mais informações, consulte a seção [Operadores de teste de tipo e relacional](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) na [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
-- [Operadores do C#](index.md)
+- [Operadores e expressões C#](index.md)
 - <xref:System.IComparable%601?displayProperty=nameWithType>
 - [Operadores de igualdade](equality-operators.md)

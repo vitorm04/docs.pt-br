@@ -20,35 +20,35 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 7eb6666d10c44c342f69c7cfc763feb1b7b98c9d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 05bc6ce00adc8c874b88ccc8da5afbcfc702585b
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738612"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555284"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operadores relacionados a ponteiro (referência do C#)
 
 Você pode usar os operadores a seguir para trabalhar com ponteiros:
 
-- Operador unary [ `&` (endereço-de):](#address-of-operator-) para obter o endereço de uma variável
-- Operador unary [ `*` (ponteiro indirection):](#pointer-indirection-operator-) para obter a variável apontada por um ponteiro
-- Os [ `->` ](#pointer-member-access-operator--) operadores (acesso aos membros) e [ `[]` (acesso ao elemento)](#pointer-element-access-operator-)
-- Operadores de [ `+` `-`aritmética, `++`e`--`](#pointer-arithmetic-operators)
-- Operadores [ `==`de `!=` `<`comparação, , , `>`, `<=`, e`>=`](#pointer-comparison-operators)
+- Operador unário [ `&` (address-of)](#address-of-operator-) : para obter o endereço de uma variável
+- Operador unário [ `*` (ponteiro indireção)](#pointer-indirection-operator-) : para obter a variável apontada por um ponteiro
+- Os operadores [ `->` (acesso de membro)](#pointer-member-access-operator--) e [ `[]` (acesso de elemento)](#pointer-element-access-operator-)
+- Operadores aritméticos [ `+` , `-` , `++` e `--` ](#pointer-arithmetic-operators)
+- Operadores de comparação,,,, [ `==` `!=` `<` `>` `<=` e `>=` ](#pointer-comparison-operators)
 
 Para obter informações sobre tipos de ponteiros, veja [Tipos de ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md).
 
 > [!NOTE]
-> Qualquer operação com ponteiros exige um contexto [unsafe](../keywords/unsafe.md). O código que contém blocos inseguros deve ser compilado com a [`-unsafe`](../compiler-options/unsafe-compiler-option.md) opção compilador.
+> Qualquer operação com ponteiros exige um contexto [unsafe](../keywords/unsafe.md). O código que contém blocos não seguros deve ser compilado com a [`-unsafe`](../compiler-options/unsafe-compiler-option.md) opção do compilador.
 
-## <a name="address-of-operator-amp"></a><a name="address-of-operator-"></a>Endereço do operador&amp;
+## <a name="address-of-operator-amp"></a><a name="address-of-operator-"></a>Operador de endereço&amp;
 
 O operador unário `&` retorna o endereço de seu operando:
 
 [!code-csharp[address of local](snippets/PointerOperators.cs#AddressOf)]
 
-O operando do operador `&` deve ser uma variável fixa. Variáveis *fixas* são variáveis que residem em locais de armazenamento não afetados pela operação do [coletor de lixo](../../../standard/garbage-collection/index.md). No exemplo anterior, a variável local `number` é uma variável fixa, pois reside na pilha. Variáveis que residem em locais de armazenamento que podem ser afetados pelo coletor de lixo (por exemplo, realocado) são chamadas de variáveis *móveis*. Campos de objeto e elementos de matriz são exemplos de variáveis móveis. Você pode obter o endereço de uma variável móvel se você "corrigir", ou "pin", com uma [ `fixed` declaração](../keywords/fixed-statement.md). O endereço obtido é válido apenas `fixed` dentro do bloco de uma declaração. O exemplo a seguir `fixed` mostra como `&` usar uma declaração e o operador:
+O operando do operador `&` deve ser uma variável fixa. Variáveis *fixas* são variáveis que residem em locais de armazenamento não afetados pela operação do [coletor de lixo](../../../standard/garbage-collection/index.md). No exemplo anterior, a variável local `number` é uma variável fixa, pois reside na pilha. Variáveis que residem em locais de armazenamento que podem ser afetados pelo coletor de lixo (por exemplo, realocado) são chamadas de variáveis *móveis*. Campos de objeto e elementos de matriz são exemplos de variáveis móveis. Você pode obter o endereço de uma variável móvel se você "corrigir" ou "fixar", com uma [ `fixed` instrução](../keywords/fixed-statement.md). O endereço obtido é válido somente dentro do bloco de uma `fixed` instrução. O exemplo a seguir mostra como usar uma `fixed` instrução e o `&` operador:
 
 [!code-csharp[address of fixed](snippets/PointerOperators.cs#AddressOfFixed)]
 
@@ -70,7 +70,7 @@ O operador binário `*` computa o [produto](arithmetic-operators.md#multiplicati
 
 ## <a name="pointer-member-access-operator--"></a>Operador de acesso a membro do ponteiro ->
 
-O operador `->` combina [indireção do ponteiro](#pointer-indirection-operator-) e [acesso de membro](member-access-operators.md#member-access-expression-). Ou seja, `x` se é `T*` um `y` ponteiro de tipo `T`e é um membro acessível do tipo, uma expressão da forma
+O operador `->` combina [indireção do ponteiro](#pointer-indirection-operator-) e [acesso de membro](member-access-operators.md#member-access-expression-). Ou seja, se `x` for um ponteiro do tipo `T*` e `y` for um membro acessível do tipo `T` , uma expressão do formulário
 
 ```csharp
 x->y
@@ -96,14 +96,14 @@ O exemplo a seguir demonstra como acessar elementos da matriz com um ponteiro e 
 
 [!code-csharp[pointer element access](snippets/PointerOperators.cs#ElementAccess)]
 
-No exemplo anterior, [ `stackalloc` ](stackalloc.md) uma expressão aloca um bloco de memória na pilha.
+No exemplo anterior, uma [ `stackalloc` expressão](stackalloc.md) aloca um bloco de memória na pilha.
 
 > [!NOTE]
 > O operador de acesso de elemento de ponteiro não verifica se há erros fora dos limites.
 
 Não é possível usar `[]` para acesso de elemento de ponteiro com uma expressão do tipo `void*`.
 
-Você também pode `[]` usar o operador para acesso a [elemento de matriz ou indexador](member-access-operators.md#indexer-operator-).
+Você também pode usar o `[]` operador para [acesso de elemento de matriz ou indexador](member-access-operators.md#indexer-operator-).
 
 ## <a name="pointer-arithmetic-operators"></a>Operadores aritméticos de ponteiro
 
@@ -124,7 +124,7 @@ Para um ponteiro `p` do tipo `T*` e uma expressão `n` de um tipo implicitamente
 - As expressões `p + n` e `n + p` produzem um ponteiro do tipo `T*` que resulta da adição de `n * sizeof(T)` ao endereço fornecido pelo `p`.
 - A expressão `p - n` produz um ponteiro do tipo `T*` que resulta da subtração de `n * sizeof(T)` ao endereço fornecido pelo `p`.
 
-O [ `sizeof` operador](sizeof.md) obtém o tamanho de um tipo em bytes.
+O [ `sizeof` operador](sizeof.md) Obtém o tamanho de um tipo em bytes.
 
 O exemplo a seguir demonstra o uso do operador `+` com um ponteiro:
 
@@ -166,7 +166,7 @@ A lista a seguir ordena operadores relacionados a ponteiro começando da preced�
 
 Use parênteses, `()`, para alterar a ordem de avaliação imposta pela precedência do operador.
 
-Para obter a lista completa de operadores C# ordenados por nível de precedência, consulte a seção de [precedência](index.md#operator-precedence) do operador [C#.](index.md)
+Para obter a lista completa de operadores C# ordenados por nível de precedência, consulte a seção [precedência de operador](index.md#operator-precedence) do artigo sobre [operadores do c#](index.md) .
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
@@ -187,10 +187,10 @@ Para obter mais informações, confira as seguintes seções da [especificação
 
 ## <a name="see-also"></a>Confira também
 
-- [Referência do C#](../index.md)
-- [Operadores do C#](index.md)
+- [Referência de C#](../index.md)
+- [Operadores e expressões C#](index.md)
 - [Tipos de ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Palavra-chave unsafe](../keywords/unsafe.md)
-- [palavra-chave fixa](../keywords/fixed-statement.md)
+- [palavra-chave Fixed](../keywords/fixed-statement.md)
 - [stackalloc](stackalloc.md)
 - [Operador sizeof](sizeof.md)

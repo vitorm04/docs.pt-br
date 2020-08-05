@@ -1,34 +1,40 @@
 ---
-title: 'Instruções passo a passo: criando um aplicativo criptográfico'
+title: 'Passo a passo: criar um aplicativo criptográfico'
 description: Percorra a criação de um aplicativo criptográfico. Saiba como criptografar e descriptografar o conteúdo em um aplicativo Windows Forms.
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- cryptography [NET Framework], example
-- cryptography [NET Framework], cryptographic application example
-- cryptography [NET Framework], application example
+- cryptography [NET], example
+- cryptography [NET], cryptographic application example
+- cryptography [NET], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 72116227fbec2435d428ad2bbdb4cc74e5c3663f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 16a887f23c584daa83106ae61c497bcae8dc4dd2
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602174"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557184"
 ---
-# <a name="walkthrough-creating-a-cryptographic-application"></a>Instruções passo a passo: criando um aplicativo criptográfico
+# <a name="walkthrough-creating-a-cryptographic-application"></a>Passo a passo: criar um aplicativo criptográfico
+
+> [!NOTE]
+> Este artigo aplica-se ao Windows.
+>
+> Para obter informações sobre ASP.NET Core, consulte [proteção de dados do ASP.NET Core](/aspnet/core/security/data-protection/introduction).
+
 Este tutorial demonstra como criptografar e descriptografar conteúdo. Os exemplos de código são projetados para um aplicativo Windows Forms. Este aplicativo não demonstra cenários do mundo real, como o uso de cartões inteligentes. Em vez disso, ele demonstra os conceitos básicos de criptografia e descriptografia.  
   
- Este tutorial usa as seguintes diretrizes para criptografia:  
+Este tutorial usa as seguintes diretrizes para criptografia:  
   
-- Use a <xref:System.Security.Cryptography.RijndaelManaged> classe, um algoritmo simétrico, para criptografar e descriptografar dados usando seu automaticamente gerado <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> e <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> .  
+- Use a <xref:System.Security.Cryptography.Aes> classe, um algoritmo simétrico, para criptografar e descriptografar dados usando seu automaticamente gerado <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> e <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> .  
   
-- Use o <xref:System.Security.Cryptography.RSACryptoServiceProvider> , um algoritmo assimétrico, para criptografar e descriptografar a chave para os dados criptografados pelo <xref:System.Security.Cryptography.RijndaelManaged> . Os algoritmos assimétricos são mais bem usados para quantidades menores de dados, como uma chave.  
+- Use o <xref:System.Security.Cryptography.RSA> algoritmo assimétrico para criptografar e descriptografar a chave para os dados criptografados pelo <xref:System.Security.Cryptography.Aes> . Os algoritmos assimétricos são mais bem usados para quantidades menores de dados, como uma chave.  
   
     > [!NOTE]
-    > Se você quiser proteger os dados em seu computador em vez de trocar o conteúdo criptografado por outras pessoas, considere usar as <xref:System.Security.Cryptography.ProtectedData> <xref:System.Security.Cryptography.ProtectedMemory> classes ou.  
+    > Se você quiser proteger os dados em seu computador em vez de trocar o conteúdo criptografado por outras pessoas, considere usar a <xref:System.Security.Cryptography.ProtectedData> classe.  
   
  A tabela a seguir resume as tarefas de criptografia neste tópico.  
   
@@ -45,12 +51,14 @@ Este tutorial demonstra como criptografar e descriptografar conteúdo. Os exempl
 |Testando o aplicativo|Lista os procedimentos para testar este aplicativo.|  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Você precisará dos seguintes componentes para concluir este passo a passo:  
+
+Você precisará dos seguintes componentes para concluir este passo a passo:  
   
 - Referências aos namespaces <xref:System.IO> e <xref:System.Security.Cryptography>.  
   
 ## <a name="creating-a-windows-forms-application"></a>Criando um aplicativo Windows Forms  
- A maioria dos exemplos de código neste passo a passos é projetada para ser manipuladores de eventos para controles de botão. A tabela a seguir lista os controles necessários para o aplicativo de exemplo e seus nomes necessários para corresponder aos exemplos de código.  
+
+A maioria dos exemplos de código neste passo a passos é projetada para ser manipuladores de eventos para controles de botão. A tabela a seguir lista os controles necessários para o aplicativo de exemplo e seus nomes necessários para corresponder aos exemplos de código.  
   
 |Control|Nome|Propriedade Text (conforme necessário)|  
 |-------------|----------|---------------------------------|  
@@ -64,16 +72,18 @@ Este tutorial demonstra como criptografar e descriptografar conteúdo. Os exempl
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog1`||  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog2`||  
   
- Clique duas vezes nos botões no designer do Visual Studio para criar seus manipuladores de eventos.  
+ Clique duas vezes nos botões no designer do Visual Studio para criar seus manipuladores de eventos.
   
 ## <a name="declaring-global-objects"></a>Declarando objetos globais  
- Adicione o código a seguir ao construtor do formulário. Edite as variáveis de cadeia de caracteres para seu ambiente e preferências.  
+
+Adicione o código a seguir ao construtor do formulário. Edite as variáveis de cadeia de caracteres para seu ambiente e preferências.  
   
- [!code-csharp[CryptoWalkThru#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#1)]
- [!code-vb[CryptoWalkThru#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#1)]  
+[!code-csharp[CryptoWalkThru#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#1)]
+[!code-vb[CryptoWalkThru#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#1)]  
   
 ## <a name="creating-an-asymmetric-key"></a>Criando uma chave assimétrica  
- Essa tarefa cria uma chave assimétrica que criptografa e descriptografa a <xref:System.Security.Cryptography.RijndaelManaged> chave. Essa chave foi usada para criptografar o conteúdo e exibe o nome do contêiner de chave no controle rótulo.  
+
+Essa tarefa cria uma chave assimétrica que criptografa e descriptografa a <xref:System.Security.Cryptography.Aes> chave. Essa chave foi usada para criptografar o conteúdo e exibe o nome do contêiner de chave no controle rótulo.  
   
  Adicione o código a seguir como o `Click` manipulador de eventos para o `Create Keys` botão ( `buttonCreateAsmKeys_Click` ).  
   
@@ -81,15 +91,16 @@ Este tutorial demonstra como criptografar e descriptografar conteúdo. Os exempl
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>Criptografando um arquivo  
- Essa tarefa envolve dois métodos: o método manipulador de eventos para o `Encrypt File` botão ( `buttonEncryptFile_Click` ) e o `EncryptFile` método. O primeiro método exibe uma caixa de diálogo para selecionar um arquivo e passa o nome do arquivo para o segundo método, que executa a criptografia.  
+
+Essa tarefa envolve dois métodos: o método manipulador de eventos para o `Encrypt File` botão ( `buttonEncryptFile_Click` ) e o `EncryptFile` método. O primeiro método exibe uma caixa de diálogo para selecionar um arquivo e passa o nome do arquivo para o segundo método, que executa a criptografia.  
   
- O conteúdo criptografado, a chave e o IV são todos salvos em um <xref:System.IO.FileStream> , que é conhecido como o pacote de criptografia.  
+O conteúdo criptografado, a chave e o IV são todos salvos em um <xref:System.IO.FileStream> , que é conhecido como o pacote de criptografia.  
   
- O `EncryptFile` método faz o seguinte:  
+O `EncryptFile` método faz o seguinte:  
   
-1. Cria um <xref:System.Security.Cryptography.RijndaelManaged> algoritmo simétrico para criptografar o conteúdo.  
+1. Cria um <xref:System.Security.Cryptography.Aes> algoritmo simétrico para criptografar o conteúdo.  
   
-2. Cria um <xref:System.Security.Cryptography.RSACryptoServiceProvider> objeto para criptografar a <xref:System.Security.Cryptography.RijndaelManaged> chave.  
+2. Cria um <xref:System.Security.Cryptography.RSACryptoServiceProvider> objeto para criptografar a <xref:System.Security.Cryptography.Aes> chave.  
   
 3. Usa um <xref:System.Security.Cryptography.CryptoStream> objeto para ler e criptografar o <xref:System.IO.FileStream> do arquivo de origem, em blocos de bytes, em um <xref:System.IO.FileStream> objeto de destino para o arquivo criptografado.  
   
@@ -122,17 +133,18 @@ Este tutorial demonstra como criptografar e descriptografar conteúdo. Os exempl
  [!code-vb[CryptoWalkThru#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#5)]  
   
 ## <a name="decrypting-a-file"></a>Descriptografando um arquivo  
- Essa tarefa envolve dois métodos, o método manipulador de eventos para o `Decrypt File` botão ( `buttonDecryptFile_Click` ) e o `DecryptFile` método. O primeiro método exibe uma caixa de diálogo para selecionar um arquivo e passa seu nome de arquivo para o segundo método, que executa a descriptografia.  
+
+Essa tarefa envolve dois métodos, o método manipulador de eventos para o `Decrypt File` botão ( `buttonDecryptFile_Click` ) e o `DecryptFile` método. O primeiro método exibe uma caixa de diálogo para selecionar um arquivo e passa seu nome de arquivo para o segundo método, que executa a descriptografia.  
   
- O `Decrypt` método faz o seguinte:  
+O `Decrypt` método faz o seguinte:  
   
-1. Cria um <xref:System.Security.Cryptography.RijndaelManaged> algoritmo simétrico para descriptografar o conteúdo.  
+1. Cria um <xref:System.Security.Cryptography.Aes> algoritmo simétrico para descriptografar o conteúdo.  
   
 2. Lê os primeiros oito bytes do <xref:System.IO.FileStream> pacote criptografado em matrizes de bytes para obter os comprimentos da chave criptografada e o IV.  
   
 3. Extrai a chave e o IV do pacote de criptografia em matrizes de bytes.  
   
-4. Cria um <xref:System.Security.Cryptography.RSACryptoServiceProvider> objeto para descriptografar a <xref:System.Security.Cryptography.RijndaelManaged> chave.  
+4. Cria um <xref:System.Security.Cryptography.RSACryptoServiceProvider> objeto para descriptografar a <xref:System.Security.Cryptography.Aes> chave.  
   
 5. Usa um <xref:System.Security.Cryptography.CryptoStream> objeto para ler e descriptografar a seção de texto cifrado do <xref:System.IO.FileStream> pacote de criptografia, em blocos de bytes, no <xref:System.IO.FileStream> objeto do arquivo descriptografado. Quando isso for concluído, a descriptografia será concluída.  
   
@@ -146,38 +158,42 @@ Este tutorial demonstra como criptografar e descriptografar conteúdo. Os exempl
  [!code-csharp[CryptoWalkThru#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#6)]
  [!code-vb[CryptoWalkThru#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#6)]  
   
-## <a name="exporting-a-public-key"></a>Exportando uma chave pública  
- Essa tarefa salva a chave criada pelo `Create Keys` botão em um arquivo. Ele exporta apenas os parâmetros públicos.  
+## <a name="exporting-a-public-key"></a>Exportando uma chave pública
+
+Essa tarefa salva a chave criada pelo `Create Keys` botão em um arquivo. Ele exporta apenas os parâmetros públicos.  
   
- Essa tarefa simula o cenário de Alice dando a Bob sua chave pública para que ele possa criptografar arquivos. Ele e outros que tenham essa chave pública não poderão descriptografá-los porque não têm o par de chaves completo com parâmetros privados.  
+Essa tarefa simula o cenário de Alice dando a Bob sua chave pública para que ele possa criptografar arquivos. Ele e outros que tenham essa chave pública não poderão descriptografá-los porque não têm o par de chaves completo com parâmetros privados.  
   
- Adicione o código a seguir como o `Click` manipulador de eventos para o `Export Public Key` botão ( `buttonExportPublicKey_Click` ).  
+Adicione o código a seguir como o `Click` manipulador de eventos para o `Export Public Key` botão ( `buttonExportPublicKey_Click` ).  
   
- [!code-csharp[CryptoWalkThru#8](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#8)]
- [!code-vb[CryptoWalkThru#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#8)]  
+[!code-csharp[CryptoWalkThru#8](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#8)]
+[!code-vb[CryptoWalkThru#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#8)]  
   
-## <a name="importing-a-public-key"></a>Importando uma chave pública  
- Essa tarefa carrega a chave somente com parâmetros públicos, conforme criado pelo `Export Public Key` botão e o define como o nome do contêiner de chave.  
+## <a name="importing-a-public-key"></a>Importando uma chave pública
+
+Essa tarefa carrega a chave somente com parâmetros públicos, conforme criado pelo `Export Public Key` botão e o define como o nome do contêiner de chave.  
   
- Esta tarefa simula o cenário de Bob carregando a chave de Alice com apenas parâmetros públicos, portanto, ele pode criptografar arquivos.  
+Esta tarefa simula o cenário de Bob carregando a chave de Alice com apenas parâmetros públicos, portanto, ele pode criptografar arquivos.  
   
- Adicione o código a seguir como o `Click` manipulador de eventos para o `Import Public Key` botão ( `buttonImportPublicKey_Click` ).  
+Adicione o código a seguir como o `Click` manipulador de eventos para o `Import Public Key` botão ( `buttonImportPublicKey_Click` ).  
   
- [!code-csharp[CryptoWalkThru#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#9)]
- [!code-vb[CryptoWalkThru#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#9)]  
+[!code-csharp[CryptoWalkThru#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#9)]
+[!code-vb[CryptoWalkThru#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#9)]  
   
 ## <a name="getting-a-private-key"></a>Obtendo uma chave privada  
- Essa tarefa define o nome do contêiner de chave como o nome da chave criada usando o `Create Keys` botão. O contêiner de chave conterá o par de chaves completo com parâmetros privados.  
+
+Essa tarefa define o nome do contêiner de chave como o nome da chave criada usando o `Create Keys` botão. O contêiner de chave conterá o par de chaves completo com parâmetros privados.  
   
- Esta tarefa simula o cenário de Alice usando sua chave privada para descriptografar arquivos criptografados por Bob.  
+Esta tarefa simula o cenário de Alice usando sua chave privada para descriptografar arquivos criptografados por Bob.  
   
- Adicione o código a seguir como o `Click` manipulador de eventos para o `Get Private Key` botão ( `buttonGetPrivateKey_Click` ).  
+Adicione o código a seguir como o `Click` manipulador de eventos para o `Get Private Key` botão ( `buttonGetPrivateKey_Click` ).  
   
- [!code-csharp[CryptoWalkThru#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#7)]
- [!code-vb[CryptoWalkThru#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#7)]  
+[!code-csharp[CryptoWalkThru#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#7)]
+[!code-vb[CryptoWalkThru#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#7)]  
   
-## <a name="testing-the-application"></a>Testando o aplicativo  
- Depois de criar o aplicativo, execute os seguintes cenários de teste.  
+## <a name="testing-the-application"></a>Testando o aplicativo
+
+Depois de criar o aplicativo, execute os seguintes cenários de teste.  
   
 #### <a name="to-create-keys-encrypt-and-decrypt"></a>Para criar chaves, criptografar e descriptografar  
   
@@ -209,6 +225,9 @@ Este tutorial demonstra como criptografar e descriptografar conteúdo. Os exempl
   
 2. Clique no `Decrypt File` botão e selecione o arquivo que acabou de ser criptografado. Isso será bem-sucedido porque você tem o par de chaves completo a ser descriptografado.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Serviços de Criptografia](cryptographic-services.md)
+- [Modelo de criptografia](cryptography-model.md) – descreve como a criptografia é implementada na biblioteca de classes base.
+- [Serviços criptográficos](cryptographic-services.md)
+- [Criptografia de plataforma cruzada](cross-platform-cryptography.md)
+- [Proteção de dados do ASP.NET Core](/aspnet/core/security/data-protection/introduction)

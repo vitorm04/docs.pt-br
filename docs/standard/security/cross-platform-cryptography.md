@@ -6,12 +6,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography, cross-platform
 - encryption, cross-platform
-ms.openlocfilehash: 793a9bc55e5bd660374abd2ae81899e63ce3f36a
-ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
+ms.openlocfilehash: 61fd49e53761deac278b770003eb97241b6c2be9
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853998"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557145"
 ---
 # <a name="cross-platform-cryptography-in-net-core-and-net-5"></a>Criptografia de plataforma cruzada no .NET Core e no .NET 5
 
@@ -369,3 +369,5 @@ o macOS não dá suporte a um tempo limite iniciado pelo usuário na CRL (lista 
 
 * [Modelo de criptografia .NET](cryptography-model.md)
 * [Serviços de criptografia .NET](cryptographic-services.md)
+* [Vulnerabilidades de temporização com descriptografia simétrica no modo CBC usando preenchimento](vulnerabilities-cbc-mode.md)
+* [Proteção de dados do ASP.NET Core](/aspnet/core/security/data-protection/introduction)

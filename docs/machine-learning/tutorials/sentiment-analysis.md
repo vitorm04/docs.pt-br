@@ -4,12 +4,12 @@ description: Este tutorial mostra como criar um aplicativo de console do .NET Co
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: de8ea511b3d421e391b182a6de079b854d3f2390
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: da972d793570a8dd6b906762640bd6bfe5531a5b
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281739"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557158"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: analisar o sentimentos dos comentários do site com a classificação binária no ML.NET
 
@@ -212,7 +212,7 @@ O método [Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Mi
 
 ## <a name="evaluate-the-model"></a>Avaliar o modelo
 
-Depois que o modelo é treinado, use os dados de teste para validar o desempenho do modelo.
+Depois que o modelo for treinado, use seus dados de teste para validar o desempenho do modelo.
 
 1. Crie o método `Evaluate()`, logo após `BuildAndTrainModel()`, com o código a seguir:
 

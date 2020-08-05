@@ -10,24 +10,24 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 08692cbe583feb534315b637492adedb1254bc38
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 5cbebe1c7f56604b1b058452bdf2126b87bd3f97
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381613"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556781"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Instruções, expressões e operadores (Guia de Programação em C#)
 
 O código C# que compõe um aplicativo consiste em instruções compostas por palavras-chave, expressões e operadores. Esta seção contém informações sobre esses elementos fundamentais de um programa C#.
 
- Para obter mais informações, veja:
+ Para obter mais informações, consulte:
 
 - [Instruções](statements.md)
 
-- [Expressões](expressions.md)
+- [Operadores e expressões](../../language-reference/operators/index.md)
 
-  - [Membros aptos para expressão](expression-bodied-members.md)
+- [Membros aptos para expressão](expression-bodied-members.md)
 
 - [Funções anônimas](anonymous-functions.md)
 
@@ -37,7 +37,7 @@ O código C# que compõe um aplicativo consiste em instruções compostas por pa
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de programação C#](../index.md)
 - [Conversões cast e conversões de tipo](../types/casting-and-type-conversions.md)

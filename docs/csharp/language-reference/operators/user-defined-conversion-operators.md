@@ -10,20 +10,20 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: b59fc27be31f1a38e2a6c3cabd82598933b5ed53
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: ab3598b8158d0a789e8583403389df657ae01aed
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121400"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556274"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>Operadores de conversão definidos pelo usuário (Referência de C#)
 
 Um tipo definido pelo usuário pode definir uma conversão implícita ou explícita personalizada de outro tipo ou para outro.
 
-Conversões implícitas não requerem que uma sintaxe especial seja invocada e podem ocorrer em uma variedade de situações, por exemplo, em atribuições e invocações de método. Conversões implícitas C# predefinidas sempre têm sucesso e nunca lançam uma exceção. Conversões implícitas definidas pelo usuário devem se comportam dessa forma também. Se uma conversão personalizada puder gerar uma exceção ou perder informações, defina-a como uma conversão explícita.
+Conversões implícitas não requerem que uma sintaxe especial seja invocada e podem ocorrer em uma variedade de situações, por exemplo, em atribuições e invocações de método. Conversões implícitas de C# predefinidas sempre são bem sucedidos e nunca geram uma exceção. Conversões implícitas definidas pelo usuário devem se comportam dessa forma também. Se uma conversão personalizada puder gerar uma exceção ou perder informações, defina-a como uma conversão explícita.
 
-Conversões definidas pelo usuário não são consideradas pelos operadores [is](type-testing-and-cast.md#is-operator) e [as](type-testing-and-cast.md#as-operator). Use uma [expressão de elenco](type-testing-and-cast.md#cast-expression) para invocar uma conversão explícita definida pelo usuário.
+Conversões definidas pelo usuário não são consideradas pelos operadores [is](type-testing-and-cast.md#is-operator) e [as](type-testing-and-cast.md#as-operator). Use uma [expressão de conversão](type-testing-and-cast.md#cast-expression) para invocar uma conversão explícita definida pelo usuário.
 
 Use `operator` e as palavras-chave `implicit` ou `explicit` para definir uma conversão implícita ou explícita, respectivamente. O tipo que define uma conversão deve ser um tipo de origem ou e destino dessa conversão. Uma conversão entre os dois tipos definidos pelo usuário pode ser definida em qualquer um dos dois tipos.
 
@@ -44,10 +44,10 @@ Para obter mais informações, confira as seguintes seções da [especificação
 
 ## <a name="see-also"></a>Confira também
 
-- [Referência do C#](../index.md)
-- [Operadores do C#](index.md)
+- [Referência de C#](../index.md)
+- [Operadores e expressões C#](index.md)
 - [Sobrecarga de operador](operator-overloading.md)
 - [Operadores cast e teste de tipo](type-testing-and-cast.md)
 - [Conversão e conversão de tipo](../../programming-guide/types/casting-and-type-conversions.md)
-- [Diretrizes de design - Operadores de conversão](../../../standard/design-guidelines/operator-overloads.md#conversion-operators)
+- [Diretrizes de design – operadores de conversão](../../../standard/design-guidelines/operator-overloads.md#conversion-operators)
 - [Conversões explícitas encadeadas definidas pelo usuário em C#](https://docs.microsoft.com/archive/blogs/ericlippert/chained-user-defined-explicit-conversions-in-c)

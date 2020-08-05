@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 1324a4a3610b96f7258a856609dc4090b9751e52
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 2a27dc887671edc3f3f465ca757e7bf83262e915
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301756"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555169"
 ---
 # <a name="operator-overloading-c-reference"></a>Sobrecarga de operador (referência de C#)
 
@@ -59,10 +59,10 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - [Sobrecarga de operador](~/_csharplang/spec/expressions.md#operator-overloading)
 - [Operadores](~/_csharplang/spec/classes.md#operators)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
-- [Operadores do C#](index.md)
+- [Operadores e expressões C#](index.md)
 - [Operadores de conversões definidas pelo usuário](user-defined-conversion-operators.md)
 - [Diretrizes de design – sobrecargas de operador](../../../standard/design-guidelines/operator-overloads.md)
 - [Diretrizes de design-operadores de igualdade](../../../standard/design-guidelines/equality-operators.md)

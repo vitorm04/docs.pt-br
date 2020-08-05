@@ -5,19 +5,19 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 5ccd08a348478902bbbac36e99acf7ffc1fc814b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: efba2c1c921d867725db90a1879cc9dee1a22b4e
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846202"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555514"
 ---
 # <a name="true-and-false-operators-c-reference"></a>Operadores true e false (referência do C#)
 
-O `true` operador devolve o `true` valor [bool](../builtin-types/bool.md) para indicar que seu operador é definitivamente verdadeiro. O `false` operador `bool` devolve `true` o valor para indicar que seu operand é definitivamente falso. Não há garantia de que os operadores `true` e `false` se complementarão. Ou seja, ambos os operadores `true` e `false` podem retornar o valor `bool``false` para o mesmo operando. Se um tipo define um dos dois operadores, ele também deve definir outro operador.
+O `true` operador retorna o [bool](../builtin-types/bool.md) valor bool `true` para indicar que seu operando é definitivamente verdadeiro. O `false` operador retorna o `bool` valor `true` para indicar que seu operando é definitivamente falso. Não há garantia de que os operadores `true` e `false` se complementarão. Ou seja, ambos os operadores `true` e `false` podem retornar o valor `bool``false` para o mesmo operando. Se um tipo define um dos dois operadores, ele também deve definir outro operador.
 
 > [!TIP]
-> Use `bool?` o tipo, se você precisar suportar a lógica de três valores (por exemplo, quando você trabalha com bancos de dados que suportam um tipo booleano de três valores). C# fornece os operadores `&` e `|` que suportam a lógica de três valores com os operandos `bool?`. Para obter mais informações, confira a seção [Operadores lógicos booleanos anuláveis](boolean-logical-operators.md#nullable-boolean-logical-operators) do artigo [Operadores lógicos boolianos](boolean-logical-operators.md).
+> Use o `bool?` tipo, se você precisar dar suporte à lógica de três valores (por exemplo, ao trabalhar com bancos de dados que dão suporte a um tipo booliano de três valores). C# fornece os operadores `&` e `|` que suportam a lógica de três valores com os operandos `bool?`. Para obter mais informações, confira a seção [Operadores lógicos booleanos anuláveis](boolean-logical-operators.md#nullable-boolean-logical-operators) do artigo [Operadores lógicos boolianos](boolean-logical-operators.md).
 
 ## <a name="boolean-expressions"></a>Expressões boolianas
 
@@ -29,7 +29,7 @@ Se um tipo com os operadores `true` e `false` definidos [sobrecarregar](operator
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir apresenta o tipo que define os dois operadores, `true` e `false`. O tipo também sobrecarrega `&` o operador lógico `&&` E de tal forma que o operador também pode ser avaliado para os operands desse tipo.
+O exemplo a seguir apresenta o tipo que define os dois operadores, `true` e `false`. O tipo também sobrecarrega o operador AND lógico de `&` forma que o `&&` operador também possa ser avaliado para os operandos desse tipo.
 
 [!code-csharp[true and false operators example](snippets/TrueFalseOperators.cs)]
 
@@ -42,5 +42,5 @@ Wait!
 
 ## <a name="see-also"></a>Confira também
 
-- [Referência do C#](../index.md)
-- [Operadores do C#](index.md)
+- [Referência de C#](../index.md)
+- [Operadores e expressões C#](index.md)

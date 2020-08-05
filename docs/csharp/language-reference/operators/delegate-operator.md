@@ -4,12 +4,12 @@ ms.date: 07/18/2019
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: 1dd27fe5fdfdc1bc8a63e1298da00d252e800a72
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 85f960d236e35379180ec1d7f7dcc49e1ccddf55
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847333"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556671"
 ---
 # <a name="delegate-operator-c-reference"></a>operador delegate (referência do C#)
 
@@ -38,6 +38,6 @@ Para obter mais informações, confira a seção [Expressões de função anôni
 
 ## <a name="see-also"></a>Confira também
 
-- [Referência do C#](../index.md)
-- [Operadores do C#](index.md)
-- [= operador de>](lambda-operator.md)
+- [Referência de C#](../index.md)
+- [Operadores e expressões C#](index.md)
+- [= Operador de>](lambda-operator.md)

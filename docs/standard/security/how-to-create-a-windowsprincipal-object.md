@@ -1,27 +1,33 @@
 ---
-title: Como criar um objeto WindowsPrincipal
-ms.date: 03/30/2017
+title: 'Como: criar um objeto WindowsPrincipal'
+ms.date: 07/15/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WindowsPrincipal objects, creating
-- security [.NET Framework], creating a WindowsPrincipal object
-- security [.NET Framework], principals
+- security [.NET], creating a WindowsPrincipal object
+- security [.NET], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: 6064c98c4e1e5153f4e0de4849de196228972a89
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d99d63dc766f37e7cc30888d2e77657595f909af
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284423"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557028"
 ---
-# <a name="how-to-create-a-windowsprincipal-object"></a>Como criar um objeto WindowsPrincipal
+# <a name="how-to-create-a-windowsprincipal-object"></a>Como: criar um objeto WindowsPrincipal
+
+> [!NOTE]
+> Este artigo aplica-se ao Windows.
+>
+> Para obter informações sobre ASP.NET Core, consulte [segurança do ASP.NET Core](/aspnet/core/security/).
+
 Há duas maneiras de criar um <xref:System.Security.Principal.WindowsPrincipal> objeto, dependendo se o código deve executar repetidamente a validação baseada em função ou deve executá-la apenas uma vez.  
   
- Se o código precisar executar a validação baseada em função repetidamente, o primeiro dos procedimentos a seguir produzirá menos sobrecarga. Quando o código precisa fazer validações baseadas em função apenas uma vez, você pode criar um <xref:System.Security.Principal.WindowsPrincipal> objeto usando o segundo dos procedimentos a seguir.  
+Se o código precisar executar a validação baseada em função repetidamente, o primeiro dos procedimentos a seguir produzirá menos sobrecarga. Quando o código precisa fazer validações baseadas em função apenas uma vez, você pode criar um <xref:System.Security.Principal.WindowsPrincipal> objeto usando o segundo dos procedimentos a seguir.  
   
 ### <a name="to-create-a-windowsprincipal-object-for-repeated-validation"></a>Para criar um objeto WindowsPrincipal para validação repetida  
   
@@ -75,6 +81,7 @@ Há duas maneiras de criar um <xref:System.Security.Principal.WindowsPrincipal> 
   
 3. Quando o objeto principal tiver sido criado, você poderá usar um dos vários métodos para validá-lo.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Objetos Principal e Identity](principal-and-identity-objects.md)
+- [Segurança de ASP.NET Core](https://docs.microsoft.com/aspnet/core/security/)

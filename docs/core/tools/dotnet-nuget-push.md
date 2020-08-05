@@ -3,12 +3,12 @@ title: Comando dotnet nuget push
 description: O comando dotnet nuget push efetua push de um pacote no servidor e o publica.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 608cd05d94dd6b5cdc53d582cfaa0407f011ff37
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 50a4a542c2d192bfbd927845489d04fd1b6c6cf3
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925508"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555117"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -133,23 +133,26 @@ O comando envia por push um pacote existente. Ele não cria um pacote. Para cria
 - Envie por push todos os arquivos *. nupkg* no diretório atual para a fonte Push padrão:
 
   ```dotnetcli
-  dotnet nuget push *.nupkg
+  dotnet nuget push "*.nupkg"
   ```
 
   > [!NOTE]
   > Se esse comando não funcionar, talvez seja devido a um bug que existia em versões mais antigas do SDK (SDK do .NET Core 2.1 e versões anteriores).
-  > Para corrigir esse problema, atualize sua versão do SDK ou execute o seguinte comando em vez disso: `dotnet nuget push **/*.nupkg`
+  > Para corrigir esse problema, atualize sua versão do SDK ou execute o seguinte comando em vez disso: `dotnet nuget push "**/*.nupkg"`
+  
+  > [!NOTE]
+  > As aspas de circunscrição são necessárias para shells como bash que executam o mascaramento de arquivos. Para obter mais informações, consulte [NuGet/Home # 4393](https://github.com/NuGet/Home/issues/4393#issuecomment-667618120).
 
 - Envie todos os arquivos *. nupkg* mesmo se uma resposta de conflito 409 for retornada por um servidor http (S):
 
   ```dotnetcli
-  dotnet nuget push *.nupkg --skip-duplicate
+  dotnet nuget push "*.nupkg" --skip-duplicate
   ```
 
 - Envie por push todos os arquivos *. nupkg* no diretório atual para um diretório de feed local:
 
   ```dotnetcli
-  dotnet nuget push *.nupkg -s c:\mydir
+  dotnet nuget push "*.nupkg" -s c:\mydir
   ```
 
   Esse comando não armazena pacotes em uma estrutura de pastas hierárquicas, o que é recomendado para otimizar o desempenho. Para obter mais informações, consulte [feeds locais](/nuget/hosting-packages/local-feeds).  

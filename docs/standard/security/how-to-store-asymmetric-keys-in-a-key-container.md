@@ -7,25 +7,28 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- cryptography [.NET Framework], asymmetric keys
+- cryptography [.NET], asymmetric keys
 - storing asymmetric keys
 - keys, asymmetric
 - encryption keys
 - keys, storing in key containers
-- asymmetric keys [.NET Framework]
-- encryption [.NET Framework], asymmetric keys
+- asymmetric keys [.NET]
+- encryption [.NET], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: a0fbde37491043cc1aab71e9733087bf410b997d
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: aa6fad815338cbd6316deca7be0a23286630fa56
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769022"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556287"
 ---
 # <a name="store-asymmetric-keys-in-a-key-container"></a>Armazenar chaves assimétricas em um contêiner de chave
 
 As chaves privadas assimétricas nunca devem ser armazenadas no formato textual nem como texto sem formatação no computador local. Se você precisar armazenar uma chave privada, use um contêiner de chave. Para obter mais informações sobre contêineres de chave, consulte [noções básicas sobre contêineres de chave RSA no nível do computador e](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100))no nível do usuário.
+
+> [!NOTE]
+> O código neste artigo aplica-se ao Windows.
 
 ## <a name="create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Criar uma chave assimétrica e salvá-la em um contêiner de chave
 
@@ -242,9 +245,12 @@ Key added to container:
 Key deleted.
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
+- [Modelo de criptografia](cryptography-model.md)
+- [Serviços criptográficos](cryptographic-services.md)
+- [Criptografia de plataforma cruzada](cross-platform-cryptography.md)
 - [Gerando chaves para criptografia e descriptografia](generating-keys-for-encryption-and-decryption.md)
 - [Criptografando dados](encrypting-data.md)
 - [Descriptografando dados](decrypting-data.md)
-- [Serviços de criptografia](cryptographic-services.md)
+- [Proteção de dados do ASP.NET Core](/aspnet/core/security/data-protection/introduction)

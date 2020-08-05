@@ -1,39 +1,39 @@
 ---
-title: Como criptografar elementos XML com chaves assimétricas
-ms.date: 03/30/2017
+title: 'Como: criptografar elementos XML com chaves assimétricas'
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- cryptography [.NET Framework], asymmetric keys
+- cryptography [.NET], asymmetric keys
 - AES algorithm
-- System.Security.Cryptography.RSACryptoServiceProvider class
-- asymmetric keys [.NET Framework]
+- System.Security.Cryptography.RSA class
+- asymmetric keys [.NET]
 - System.Security.Cryptography.EncryptedXml class
 - XML encryption
 - key containers
 - Advanced Encryption Standard algorithm
-- Rijndael
-- encryption [.NET Framework], asymmetric keys
+- encryption [.NET], asymmetric keys
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
-ms.openlocfilehash: 475446f6206676e93ea72d16e01bcf1067c24e86
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1c824b00a1df920108cfcd8c4590b680020cdf3e
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277369"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555781"
 ---
-# <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Como criptografar elementos XML com chaves assimétricas
+# <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Como: criptografar elementos XML com chaves assimétricas
+
 Você pode usar as classes no <xref:System.Security.Cryptography.Xml> namespace para criptografar um elemento em um documento XML.  A criptografia XML é uma maneira padrão de trocar ou armazenar dados XML criptografados, sem se preocupar com os dados que estão sendo facilmente lidos.  Para obter mais informações sobre o padrão de criptografia XML, consulte a especificação do World Wide Web Consortium (W3C) para criptografia XML localizada em <https://www.w3.org/TR/xmldsig-core/> .  
   
  Você pode usar a criptografia XML para substituir qualquer elemento XML ou documento por um `EncryptedData` elemento <> que contenha os dados XML criptografados.  O `EncryptedData` elemento> de <também pode conter subelementos que incluem informações sobre as chaves e os processos usados durante a criptografia.  A criptografia XML permite que um documento contenha vários elementos criptografados e permite que um elemento seja criptografado várias vezes.  O exemplo de código neste procedimento mostra como criar um elemento <`EncryptedData`> juntamente com vários outros subelementos que você pode usar posteriormente durante a descriptografia.  
   
- Este exemplo criptografa um elemento XML usando duas chaves.  Ele gera um par de chaves pública/privada RSA e salva o par de chaves em um contêiner de chave segura.  Em seguida, o exemplo cria uma chave de sessão separada usando o algoritmo de criptografia AES (AES), também chamado de algoritmo Rijndael.  O exemplo usa a chave de sessão AES para criptografar o documento XML e, em seguida, usa a chave pública RSA para criptografar a chave de sessão AES.  Por fim, o exemplo salva a chave de sessão AES criptografada e os dados XML criptografados no documento XML em um novo `EncryptedData` elemento <>.  
+ Este exemplo criptografa um elemento XML usando duas chaves.  Ele gera um par de chaves pública/privada RSA e salva o par de chaves em um contêiner de chave segura.  Em seguida, o exemplo cria uma chave de sessão separada usando o algoritmo de criptografia AES (AES).  O exemplo usa a chave de sessão AES para criptografar o documento XML e, em seguida, usa a chave pública RSA para criptografar a chave de sessão AES.  Por fim, o exemplo salva a chave de sessão AES criptografada e os dados XML criptografados no documento XML em um novo `EncryptedData` elemento <>.  
   
  Para descriptografar o elemento XML, recupere a chave privada RSA do contêiner de chave, use-a para descriptografar a chave de sessão e, em seguida, use a chave de sessão para descriptografar o documento.  Para obter mais informações sobre como descriptografar um elemento XML que foi criptografado usando esse procedimento, consulte [como: descriptografar elementos XML com chaves assimétricas](how-to-decrypt-xml-elements-with-asymmetric-keys.md).  
   
- Este exemplo é apropriado para situações em que vários aplicativos precisam compartilhar dados criptografados ou onde um aplicativo precisa salvar dados criptografados entre os horários em que é executado.  
+ Este exemplo é apropriado para situações em que vários aplicativos precisam compartilhar dados criptografados ou onde um aplicativo precisa salvar dados criptografados entre os horários em que é executado.
   
 ### <a name="to-encrypt-an-xml-element-with-an-asymmetric-key"></a>Para criptografar um elemento XML com uma chave assimétrica  
   
@@ -57,7 +57,7 @@ Você pode usar as classes no <xref:System.Security.Cryptography.Xml> namespace 
      [!code-csharp[HowToEncryptXMLElementAsymmetric#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#5)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#5)]  
   
-5. Crie uma nova chave de sessão usando a <xref:System.Security.Cryptography.RijndaelManaged> classe.  Essa chave irá criptografar o elemento XML e, em seguida, será criptografada e colocada no documento XML.  
+5. Crie uma nova chave de sessão usando a <xref:System.Security.Cryptography.Aes> classe.  Essa chave irá criptografar o elemento XML e, em seguida, será criptografada e colocada no documento XML.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#6)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#6)]  
@@ -129,18 +129,24 @@ Você pode usar as classes no <xref:System.Security.Cryptography.Xml> namespace 
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
-- Para compilar este exemplo, você precisa incluir uma referência para `System.Security.dll` .  
+- Em um projeto que tem como destino .NET Framework, inclua uma referência a `System.Security.dll` .
+
+- Em um projeto direcionado para .NET Core ou .NET 5, instale o pacote NuGet [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml).
   
 - Inclua os seguintes namespaces: <xref:System.Xml> , <xref:System.Security.Cryptography> e <xref:System.Security.Cryptography.Xml> .  
   
-## <a name="net-framework-security"></a>Segurança do .NET Framework  
- Nunca armazene uma chave de criptografia simétrica em texto não criptografado ou transfira uma chave simétrica entre máquinas em texto não criptografado.  Além disso, nunca armazene ou transfira a chave privada de um par de chaves assimétricas em texto não criptografado.  Para obter mais informações sobre chaves de criptografia simétrica e assimétrica, consulte [gerando chaves para criptografia e descriptografia](generating-keys-for-encryption-and-decryption.md).  
-  
- Nunca incorpore uma chave diretamente no seu código-fonte.  Chaves inseridas podem ser facilmente lidas de um assembly usando o [ILDASM. exe (desmontador Il)](../../framework/tools/ildasm-exe-il-disassembler.md) ou abrindo o assembly em um editor de texto como o bloco de notas.  
-  
- Quando você terminar de usar uma chave criptográfica, limpe-a da memória definindo cada byte como zero ou chamando o <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> método da classe de criptografia gerenciada.  Às vezes, as chaves criptográficas podem ser lidas da memória por um depurador ou lidas de um disco rígido se o local da memória for paginado no disco.  
-  
-## <a name="see-also"></a>Veja também
+## <a name="net-security"></a>Segurança do .NET
 
-- <xref:System.Security.Cryptography.Xml>
-- [Como descriptografar elementos XML com chaves assimétricas](how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+Nunca armazene uma chave de criptografia simétrica em texto não criptografado ou transfira uma chave simétrica entre máquinas em texto não criptografado.  Além disso, nunca armazene ou transfira a chave privada de um par de chaves assimétricas em texto não criptografado.  Para obter mais informações sobre chaves de criptografia simétrica e assimétrica, consulte [gerando chaves para criptografia e descriptografia](generating-keys-for-encryption-and-decryption.md).  
+  
+Nunca incorpore uma chave diretamente no seu código-fonte.  Chaves inseridas podem ser facilmente lidas de um assembly usando o [Ildasm.exe (desmontador Il)](../../framework/tools/ildasm-exe-il-disassembler.md) ou abrindo o assembly em um editor de texto como o bloco de notas.  
+  
+Quando você terminar de usar uma chave criptográfica, limpe-a da memória definindo cada byte como zero ou chamando o <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> método da classe de criptografia gerenciada.  Às vezes, as chaves criptográficas podem ser lidas da memória por um depurador ou lidas de um disco rígido se o local da memória for paginado no disco.  
+  
+## <a name="see-also"></a>Confira também
+
+- [Modelo de criptografia](cryptography-model.md)
+- [Serviços criptográficos](cryptographic-services.md)
+- [Criptografia de plataforma cruzada](cross-platform-cryptography.md)- <xref:System.Security.Cryptography.Xml>
+- [Como: descriptografar elementos XML com chaves assimétricas](how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+- [Proteção de dados do ASP.NET Core](/aspnet/core/security/data-protection/introduction)

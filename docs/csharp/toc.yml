@@ -876,8 +876,6 @@
           href: programming-guide/statements-expressions-operators/index.md
         - name: Instruções
           href: programming-guide/statements-expressions-operators/statements.md
-        - name: Expressões
-          href: programming-guide/statements-expressions-operators/expressions.md
         - name: Membros aptos para expressão
           href: programming-guide/statements-expressions-operators/expression-bodied-members.md
         - name: Funções anônimas
@@ -1561,7 +1559,7 @@
       items:
         - name: Visão geral
           href: language-reference/operators/index.md
-          displayName: 'operator precedence, operator associativity'
+          displayName: 'operator precedence, operator associativity, expressions'
         - name: Operadores aritméticos
           href: language-reference/operators/arithmetic-operators.md
           displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'
