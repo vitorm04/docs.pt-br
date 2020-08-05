@@ -479,7 +479,5 @@ items:
     href: native-interop/expose-components-to-com.md
   - name: Como hospedar o .NET Core por meio de código nativo
     href: tutorials/netcore-hosting.md
-  - name: 'Pacotes, metapacotes e estruturas'
-    href: packages.md
   - name: Integração contínua
     href: tools/using-ci-with-cli.md
