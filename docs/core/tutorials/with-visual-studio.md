@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 3c8fc7c4702b786c05e14397dc36d994c77e114d
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: fbe0b3491260e787c08b98b320b19408f2c897eb
+ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84811650"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87795379"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>Tutorial: criar um aplicativo de console do .NET Core usando o Visual Studio
 
@@ -79,7 +79,7 @@ Se o idioma que você deseja usar não for mostrado, altere o seletor de idioma 
 
 ## <a name="run-the-app"></a>Executar o aplicativo
 
-1. Pressione <kbd>Shift</kbd> + <kbd>F5</kbd> para executar o programa sem depuração.
+1. Pressione <kbd>Ctrl</kbd> + <kbd>F5</kbd> para executar o programa sem depuração.
 
    Uma janela de console é aberta com o texto "Olá, Mundo!" impresso na tela e algumas informações de depuração do Visual Studio.
 
@@ -102,7 +102,7 @@ Aprimore o aplicativo para solicitar ao usuário seu nome e exibi-lo junto com a
 
    O cifrão ( `$` ) na frente de uma cadeia de caracteres permite que você coloque expressões como nomes de variáveis entre chaves na cadeia de caracteres. O valor da expressão é inserido na cadeia de caracteres no lugar da expressão. Essa sintaxe é conhecida como [cadeias de caracteres interpoladas](../../csharp/language-reference/tokens/interpolated.md).
 
-1. Pressione <kbd>Shift</kbd> + <kbd>F5</kbd> para executar o programa sem depuração.
+1. Pressione <kbd>Ctrl</kbd> + <kbd>F5</kbd> para executar o programa sem depuração.
 
 1. Responda ao prompt digitando um nome e pressionando a tecla <kbd>Enter</kbd> .
 
