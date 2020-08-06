@@ -17,14 +17,15 @@ helpviewer_keywords:
 - permissions [.NET Framework], overriding security checks
 - permissions [.NET Framework], assertions
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
-ms.openlocfilehash: 096e0375a94c92a835cccb4d1b3297783b4120e9
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 573b84f991e795c2513f213ddb52999fef51c454
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309801"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855655"
 ---
 # <a name="using-the-assert-method"></a>Usando o método Assert
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  <xref:System.Security.CodeAccessPermission.Assert%2A>é um método que pode ser chamado em classes de permissão de acesso ao código e na <xref:System.Security.PermissionSet> classe. Você pode usar **Assert** para habilitar seu código (e chamadores downstream) para executar ações que seu código tem permissão para fazer, mas seus chamadores podem não ter permissão para fazer. Uma asserção de segurança altera o processo normal que o tempo de execução executa durante uma verificação de segurança. Quando você declara uma permissão, ele diz ao sistema de segurança para não verificar os chamadores do seu código para a permissão declarada.  
@@ -166,7 +167,7 @@ namespace LogUtil
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Security.PermissionSet>
 - <xref:System.Security.Permissions.SecurityPermission>

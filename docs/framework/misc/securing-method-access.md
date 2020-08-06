@@ -11,14 +11,15 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: a7ef419cf3959cf7a3ffde874353dacd3815c81a
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 88868ab29fc37854959a044b9c0fed5bd8c82d77
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309385"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855758"
 ---
 # <a name="securing-method-access"></a>Protegendo o acesso dos métodos
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Alguns métodos podem não ser adequados para permitir que um código não confiável arbitrário chame. Esses métodos apresentam vários riscos: o método pode fornecer algumas informações restritas; pode acreditar que todas as informações sejam passadas para ele; Ele pode não fazer a verificação de erro nos parâmetros; ou com os parâmetros errados, ele pode não funcionar ou fazer algo prejudicial. Você deve estar atento a esses casos e tomar medidas para ajudar a proteger o método.  
@@ -239,6 +240,6 @@ class Implemented : ICanCastToMe
   
  Mesmo que um compilador de linguagem impeça essas substituições com um erro de compilação, é possível que o código escrito com outros compiladores substitua.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Diretrizes de codificação segura](../../standard/security/secure-coding-guidelines.md)

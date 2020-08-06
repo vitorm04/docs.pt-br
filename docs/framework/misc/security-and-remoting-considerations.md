@@ -8,14 +8,17 @@ helpviewer_keywords:
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-ms.openlocfilehash: 019773b19eaca2e4364fb79c40fdb923093d4e7e
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 3a272b2a8f164aad07413a069e68a2146d0df6a7
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309359"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855706"
 ---
 # <a name="security-and-remoting-considerations"></a>Considerações sobre segurança e comunicação remota
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
+
 A comunicação remota permite que você configure a chamada transparente entre domínios de aplicativo, processos ou computadores. No entanto, a movimentação de pilha de segurança de acesso ao código não pode cruzar os limites do processo ou da máquina (ela se aplica entre os domínios do aplicativo do mesmo processo).  
   
  Qualquer classe que seja remota (derivada de uma <xref:System.MarshalByRefObject> classe) precisa assumir a responsabilidade pela segurança. O código deve ser usado somente em ambientes fechados em que o código de chamada pode ser implicitamente confiável, ou as chamadas remotas devem ser projetadas para que não sejam sujeitas a código protegido a entradas externas que poderiam ser usadas maliciosamente.  
@@ -36,6 +39,6 @@ A comunicação remota permite que você configure a chamada transparente entre 
   
  Normalmente, o domínio de aplicativo padrão cria os domínios de aplicativo filho com um objeto de controle em cada um. O objeto Control gerencia o novo domínio de aplicativo e, eventualmente, recebe pedidos do domínio de aplicativo padrão, mas não pode realmente entrar em contato diretamente com o domínio. Ocasionalmente, o domínio de aplicativo padrão chama seu proxy para o objeto de controle. No entanto, pode haver casos em que é necessário que o objeto de controle chame de volta para o domínio de aplicativo padrão. Nesses casos, o domínio de aplicativo padrão passa um objeto de retorno de chamada Marshal-by-reference para o construtor do objeto de controle. É responsabilidade do objeto de controle proteger esse proxy. Se o objeto de controle colocou o proxy em um campo estático público de uma classe pública ou expor publicamente o proxy, um mecanismo perigoso para outro código a ser chamado de volta para o domínio de aplicativo padrão seria aberto. Por esse motivo, os objetos de controle sempre são implicitamente confiáveis para manter o proxy privado.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Diretrizes de codificação segura](../../standard/security/secure-coding-guidelines.md)

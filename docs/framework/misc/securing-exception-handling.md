@@ -10,14 +10,17 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-ms.openlocfilehash: 73597f83d7236cd48a18a891c987b4f5d7e1723d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: c7643bb34da0cbcbd267fc90e6294bc0b565985e
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309034"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855771"
 ---
 # <a name="securing-exception-handling"></a>Protegendo a manipulação de exceções
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
+
 Em Visual C++ e Visual Basic, uma expressão de filtro mais acima da pilha é executada antes de qualquer `finally` instrução. O bloco **Catch** associado a esse filtro é executado após a `finally` instrução. Para obter mais informações, consulte [usando exceções filtradas pelo usuário](../../standard/exceptions/using-user-filtered-exception-handlers.md). Esta seção examina as implicações de segurança deste pedido. Considere o seguinte exemplo de pseudocódigo que ilustra a ordem em que as instruções de filtro e as `finally` instruções são executadas.  
   
 ```cpp  
@@ -159,6 +162,6 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Diretrizes de codificação segura](../../standard/security/secure-coding-guidelines.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 - caller security checks
 - link demands
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
-ms.openlocfilehash: eaf9ee1bb5cd10c724240bacac014503685a0c8c
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 7f5475d5bfff8cc3c500f95b05d54daacc9b253e
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309086"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855784"
 ---
 # <a name="link-demands"></a>Demandas de link
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Uma demanda de link causa uma verificação de segurança durante a compilação just-in-time e verifica apenas o assembly de chamada imediata do seu código. A vinculação ocorre quando seu código está associado a uma referência de tipo, incluindo referências de ponteiro de função e chamadas de método. Se o assembly de chamada não tiver permissão suficiente para vincular ao seu código, o link não será permitido e uma exceção de tempo de execução será lançada quando o código for carregado e executado. As demandas de link podem ser substituídas em classes que herdam do seu código.  
@@ -53,7 +54,7 @@ public static string ReadData()
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Atributos](../../standard/attributes/index.md)
 - [Segurança de acesso do código](code-access-security.md)

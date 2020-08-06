@@ -5,14 +5,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [.NET Framework], public read-only array fields
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
-ms.openlocfilehash: 0a6a82c2c88fe61bd34c0accb831f018cf8702fc
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 5e499f8052306cd1ad063c9f44a2a0f1d0b365ef
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281427"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855732"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>Segurança e campos de matriz públicos somente leitura
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
+
 Nunca use campos de matriz pública somente leitura de bibliotecas gerenciadas para definir o comportamento de limite ou a segurança de seus aplicativos porque campos de matriz pública somente leitura podem ser modificados.  
   
 ## <a name="remarks"></a>Comentários  
@@ -25,6 +28,6 @@ Algumas classes .NET incluem campos públicos somente leitura que contêm parâm
   
  Observe que os tipos de .NET Framework não usam os campos públicos para definir tipos de limite internamente.  Em vez disso, o .NET Framework usa campos particulares separados.  A alteração dos valores desses campos públicos não altera o comportamento dos tipos de .NET Framework.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Diretrizes de codificação segura](../../standard/security/secure-coding-guidelines.md)
