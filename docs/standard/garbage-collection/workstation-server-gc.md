@@ -7,12 +7,12 @@ helpviewer_keywords:
 - garbage collection, server
 - workstation garbage collection
 - server garbage collection
-ms.openlocfilehash: 5ff2b1fe2f997913e071f35ec5abb167ed757608
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 640b5f42c1f841c2537284e4721e827248e3d300
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306689"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917012"
 ---
 # <a name="workstation-and-server-garbage-collection"></a>Coleta de lixo de estação de trabalho ou de servidor
 
@@ -40,7 +40,7 @@ Veja a seguir considerações de desempenho e de threading para a coleta de lixo
 
 - A coleção ocorre no thread do usuário que disparou a coleta de lixo e permanece com a mesma prioridade. Como os threads de usuário normalmente são executados com prioridade normal, o coletor de lixo (que é executado em um thread de prioridade normal) deve disputam competir outros threads por tempo da CPU. (Os threads que executam código nativo não são suspensos na coleta de lixo do servidor ou da estação de trabalho.)
 
-- A coleta de lixo de estação de trabalho é sempre usada em um computador que tem apenas um processador, independentemente da [definição de configuração](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
+- A coleta de lixo de estação de trabalho é sempre usada em um computador que tem apenas um processador, independentemente da [definição de configuração](../../core/run-time-config/garbage-collector.md#workstation-vs-server).
 
 ### <a name="server-gc"></a>GC do servidor
 
@@ -58,7 +58,7 @@ Veja a seguir considerações de desempenho e de threading para a coleta de lixo
 
 Se você estiver executando centenas de instâncias de um aplicativo, considere usar a coleta de lixo da estação de trabalho com a coleta de lixo simultânea desabilitada. Isso resultará na redução da comutação de contexto, o que pode melhorar o desempenho.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Coleta de lixo em segundo plano](background-gc.md)
 - [Opções de configuração de tempo de execução para coleta de lixo](../../core/run-time-config/garbage-collector.md)

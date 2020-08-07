@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: f4b0ef501a30d3dffc1346c805ce0161ca4cac90
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 20fc492e45b2d248602de59682e752026d421e06
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555429"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916924"
 ---
 # <a name="await-operator-c-reference"></a>Operador await (referência de C#)
 
@@ -20,7 +20,7 @@ O operador `await` suspende a avaliação do método [async](../keywords/async.m
 
 No exemplo a seguir, o método <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> retorna a instância `Task<byte[]>`, que representa uma operação assíncrona que produz uma matriz de bytes quando é concluída. O operador `await` suspende o método `DownloadDocsMainPageAsync` até que a operação seja concluída. Quando `DownloadDocsMainPageAsync` é suspenso, o controle é retornado ao método `Main`, que é o chamador de `DownloadDocsMainPageAsync`. O método `Main` é executado até precisar do resultado da operação assíncrona executada pelo método `DownloadDocsMainPageAsync`. Quando <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> obtém todos os bytes, o restante do método `DownloadDocsMainPageAsync` é avaliado. Depois disso, o restante do método `Main` é avaliado.
 
-[!code-csharp[await example](snippets/AwaitOperator.cs)]
+[!code-csharp[await example](snippets/shared/AwaitOperator.cs)]
 
 O exemplo anterior usa o [ `Main` método Async](../../programming-guide/main-and-command-args/index.md), que é possível a partir do C# 7,1. Para obter mais informações, confira a seção [Operador await no método Main](#await-operator-in-the-main-method).
 
@@ -51,11 +51,11 @@ A partir do C# 7,1, o [ `Main` método](../../programming-guide/main-and-command
 
 Para obter mais informações, confira a seção [Expressões await](~/_csharplang/spec/expressions.md#await-expressions) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)
-- [Async](../keywords/async.md)
+- [async](../keywords/async.md)
 - [Modelo de programação assíncrona de tarefa](../../programming-guide/concepts/async/task-asynchronous-programming-model.md)
 - [Programação assíncrona](../../async.md)
 - [Assincronia detalhada](../../../standard/async-in-depth.md)

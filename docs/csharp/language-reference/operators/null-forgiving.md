@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: b21b8a1f3c182fdc58d297424e0e70885e209e94
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 5d8dcba5eb794d4d64f58e23a3ad952ef8055aeb
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555143"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916748"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! operador (NULL-tolerante) (referência C#)
 
@@ -28,23 +28,23 @@ Para obter mais informações sobre o recurso de tipos de referência anulável,
 
 Um dos casos de uso do operador NULL-tolerante está no teste da lógica de validação de argumento. Por exemplo, considere a seguinte classe:
 
-[!code-csharp[Person class](snippets/NullForgivingOperator.cs#PersonClass)]
+[!code-csharp[Person class](snippets/shared/NullForgivingOperator.cs#PersonClass)]
 
 Usando a [estrutura de teste MSTest](../../../core/testing/unit-testing-with-mstest.md), você pode criar o seguinte teste para a lógica de validação no construtor:
 
-[!code-csharp[Person test](snippets/NullForgivingOperator.cs#TestPerson)]
+[!code-csharp[Person test](snippets/shared/NullForgivingOperator.cs#TestPerson)]
 
 Sem o operador NULL-tolerante, o compilador gera o seguinte aviso para o código anterior: `Warning CS8625: Cannot convert null literal to non-nullable reference type` . Usando o operador NULL-tolerante, você informa ao compilador que a passagem `null` é esperada e não deve ser avisado sobre.
 
 Você também pode usar o operador NULL-tolerante quando sabe definitivamente que uma expressão não pode ser `null` , mas o compilador não gerencia para reconhecê-la. No exemplo a seguir, se o `IsValid` método retornar `true` , seu argumento não será `null` e você poderá desreferenciá-lo com segurança:
 
-[!code-csharp[Use null-forgiving operator](snippets/NullForgivingOperator.cs#UseNullForgiving)]
+[!code-csharp[Use null-forgiving operator](snippets/shared/NullForgivingOperator.cs#UseNullForgiving)]
 
 Sem o operador NULL-tolerante, o compilador gera o seguinte aviso para o `p.Name` código: `Warning CS8602: Dereference of a possibly null reference` .
 
 Se você puder modificar o `IsValid` método, poderá usar o atributo [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) para informar ao compilador que um argumento do `IsValid` método não pode ser `null` quando o método retornar `true` :
 
-[!code-csharp[Use an attribute](snippets/NullForgivingOperator.cs#UseAttribute)]
+[!code-csharp[Use an attribute](snippets/shared/NullForgivingOperator.cs#UseAttribute)]
 
 No exemplo anterior, você não precisa usar o operador NULL-tolerante porque o compilador tem informações suficientes para descobrir que `p` não podem estar `null` dentro da `if` instrução. Para obter mais informações sobre os atributos que permitem fornecer informações adicionais sobre o estado nulo de uma variável, consulte [Atualizar APIs com atributos para definir expectativas nulas](../attributes/nullable-analysis.md).
 
@@ -52,7 +52,7 @@ No exemplo anterior, você não precisa usar o operador NULL-tolerante porque o 
 
 Para obter mais informações, consulte [a seção operador NULL-tolerante](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) do [rascunho da especificação de tipos de referência anulável](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

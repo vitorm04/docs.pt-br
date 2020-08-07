@@ -7,12 +7,12 @@ f1_keywords:
 - default
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: c07eb8e50dc2ec3413882fa841d2f896b28d2e8d
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: f03971efa87bf03967c79512e44d22134dd80c17
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556703"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916868"
 ---
 # <a name="default-value-expressions-c-reference"></a>expressões de valor padrão (referência C#)
 
@@ -24,7 +24,7 @@ Você também usa a `default` palavra-chave como o rótulo de caso padrão dentr
 
 O argumento do operador `default` deve ser o nome de um tipo ou um parâmetro de tipo, como mostra o exemplo a seguir:
 
-[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
+[!code-csharp-interactive[default of T](snippets/shared/DefaultOperator.cs#WithOperand)]
 
 ## <a name="default-literal"></a>literal padrão
 
@@ -37,7 +37,7 @@ A partir do C# 7,1, você pode usar o literal `default` para produzir o valor pa
 
 O exemplo a seguir mostra o uso do literal `default`:
 
-[!code-csharp-interactive[default literal](snippets/DefaultOperator.cs#DefaultLiteral)]
+[!code-csharp-interactive[default literal](snippets/shared/DefaultOperator.cs#DefaultLiteral)]
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 
@@ -45,7 +45,7 @@ Para saber mais, confira a seção [Expressões de valor padrão](~/_csharplang/
 
 Para obter mais informações sobre o literal `default`, confira a [nota da proposta do recurso](~/_csharplang/proposals/csharp-7.1/target-typed-default.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

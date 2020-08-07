@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 84dc67be95fa65f6c46dab02af2ee7bc08d2ec31
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 327183ccdf79cb8e15cd15aa3cffb044120808f8
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555221"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916697"
 ---
 # <a name="sizeof-operator-c-reference"></a>Operador sizeof (referência em C#)
 
@@ -40,7 +40,7 @@ Você também não precisará usar um contexto não seguro quando o operando do 
 
 O exemplo a seguir demonstra o uso do operador `sizeof`:
 
-[!code-csharp[sizeof examples](snippets/SizeOfOperator.cs)]
+[!code-csharp[sizeof examples](snippets/shared/SizeOfOperator.cs)]
 
 O operador `sizeof` retorna o número de bytes que seriam alocados pelo Common Language Runtime na memória gerenciada. Para tipos [struct](../builtin-types/struct.md), esse valor inclui todo o preenchimento, como demonstra o exemplo anterior. O resultado do operador `sizeof` pode ser diferente do resultado do método <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>, que retorna o tamanho de um tipo na memória *não gerenciada*.
 
@@ -48,7 +48,7 @@ O operador `sizeof` retorna o número de bytes que seriam alocados pelo Common L
 
 Para obter mais informações, confira a seção [O operador sizeof](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator), nas [especificações da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

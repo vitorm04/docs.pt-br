@@ -20,12 +20,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 328a40f0213cbb55f86e16625507c1a5a5d775fb
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 0bf0c3b1cea667456780ff56deb43467fd3bbffd
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855823"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916644"
 ---
 # <a name="type-testing-operators-and-cast-expression-c-reference"></a>Operadores de teste de tipo e expressão de conversão (referência C#)
 
@@ -52,11 +52,11 @@ A expressão `E is T` retorna `true` se o resultado de `E` não for nulo e puder
 
 O exemplo a seguir demonstra que o operador `is` retorna `true` se o tipo de runtime de um resultado da expressão é derivado de um determinado tipo, ou seja, existe uma conversão de referência entre tipos:
 
-[!code-csharp[is with reference conversion](snippets/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
+[!code-csharp[is with reference conversion](snippets/shared/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
 
 O exemplo a seguir mostra que o `is` operador leva em consideração as conversões boxing e unboxing, mas não considera as [conversões numéricas](../builtin-types/numeric-conversions.md):
 
-[!code-csharp-interactive[is with int](snippets/TypeTestingAndConversionOperators.cs#IsWithInt)]
+[!code-csharp-interactive[is with int](snippets/shared/TypeTestingAndConversionOperators.cs#IsWithInt)]
 
 Para saber mais sobre conversões em C#, confira o capítulo [Conversões](~/_csharplang/spec/conversions.md) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
@@ -72,7 +72,7 @@ em que `E` é uma expressão que retorna um valor, `T` é o nome de um tipo ou u
 
 O exemplo a seguir demonstra o uso do operador `is` com um padrão de tipo:
 
-[!code-csharp-interactive[is with type pattern](snippets/TypeTestingAndConversionOperators.cs#IsTypePattern)]
+[!code-csharp-interactive[is with type pattern](snippets/shared/TypeTestingAndConversionOperators.cs#IsTypePattern)]
 
 Para saber mais sobre o padrão de tipos e outros padrões com suporte, confira [Correspondência de padrões com is](../keywords/is.md#pattern-matching-with-is).
 
@@ -98,7 +98,7 @@ O operador `as` considera apenas as conversões de referência, anulável, boxin
 
 O exemplo a seguir demonstra o uso do operador `as`:
 
-[!code-csharp-interactive[as operator](snippets/TypeTestingAndConversionOperators.cs#AsOperator)]
+[!code-csharp-interactive[as operator](snippets/shared/TypeTestingAndConversionOperators.cs#AsOperator)]
 
 > [!NOTE]
 > Como mostrado no exemplo anterior, você precisa comparar o resultado da expressão `as` com `null` para verificar se uma conversão foi bem-sucedida. A partir do C# 7,0, você pode usar o [operador is](#type-testing-with-pattern-matching) para testar se a conversão é bem sucedido e, se tiver sucesso, atribuir seu resultado a uma nova variável.
@@ -109,7 +109,7 @@ Uma expressão de conversão do formulário `(T)E` realiza uma conversão explí
 
 O exemplo a seguir demonstra conversões numéricas e de referência explícitas:
 
-[!code-csharp-interactive[cast expression](snippets/TypeTestingAndConversionOperators.cs#Cast)]
+[!code-csharp-interactive[cast expression](snippets/shared/TypeTestingAndConversionOperators.cs#Cast)]
 
 Para saber mais sobre conversões explícitas sem suporte, confira a seção [Conversões explícitas](~/_csharplang/spec/conversions.md#explicit-conversions) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md). Para saber mais sobre como definir uma conversão de tipo explícito ou implícito personalizado, confira [Operadores de conversão definidos pelo usuário](user-defined-conversion-operators.md).
 
@@ -123,11 +123,11 @@ Outro uso dos parênteses é ajustar a ordem na qual as operações em uma expre
 
 O operador `typeof` obtém a instância <xref:System.Type?displayProperty=nameWithType> para um tipo. O argumento do operador `typeof` deve ser o nome de um tipo ou um parâmetro de tipo, como mostra o exemplo a seguir:
 
-[!code-csharp-interactive[typeof operator](snippets/TypeTestingAndConversionOperators.cs#TypeOf)]
+[!code-csharp-interactive[typeof operator](snippets/shared/TypeTestingAndConversionOperators.cs#TypeOf)]
 
 Você também pode usar o `typeof` operador com tipos genéricos não associados. O nome de um tipo genérico não associado deve conter o número apropriado de vírgulas, que é um a menos que o número de parâmetros de tipo. O exemplo a seguir mostra o uso do operador `typeof` com um tipo genérico não associado:
 
-[!code-csharp-interactive[typeof unbound generic](snippets/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
+[!code-csharp-interactive[typeof unbound generic](snippets/shared/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
 
 Uma expressão não pode ser um argumento do operador `typeof`. Para obter a <xref:System.Type?displayProperty=nameWithType> instância para o tipo de tempo de execução de um resultado de expressão, use o <xref:System.Object.GetType%2A?displayProperty=nameWithType> método.
 
@@ -135,7 +135,7 @@ Uma expressão não pode ser um argumento do operador `typeof`. Para obter a <xr
 
 Use o operador `typeof` para verificar se o tipo de runtime do resultado da expressão corresponde exatamente a um determinado tipo. O exemplo a seguir demonstra a diferença entre a verificação de tipo executada com o operador `typeof` e o [operador is](#is-operator):
 
-[!code-csharp[typeof vs is](snippets/TypeTestingAndConversionOperators.cs#TypeCheckWithTypeOf)]
+[!code-csharp[typeof vs is](snippets/shared/TypeTestingAndConversionOperators.cs#TypeCheckWithTypeOf)]
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
@@ -152,7 +152,7 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - [Expressões cast](~/_csharplang/spec/expressions.md#cast-expressions)
 - [O operador typeof](~/_csharplang/spec/expressions.md#the-typeof-operator)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

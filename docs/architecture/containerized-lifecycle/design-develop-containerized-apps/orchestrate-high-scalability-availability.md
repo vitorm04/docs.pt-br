@@ -1,13 +1,13 @@
 ---
 title: Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
 description: Aplicativos de produção reais precisam ser implantados e gerenciados com orquestradores que tratam da integridade, da carga de trabalho e dos ciclos de vida de todos os contêineres.
-ms.date: 02/15/2019
-ms.openlocfilehash: 459a445258a8d66834814f7b084fd969d005ff45
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.date: 08/06/2020
+ms.openlocfilehash: 61c66e1f3835df543cbc9ba23d9c098ad52c90cd
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374475"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915469"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
 
@@ -62,7 +62,7 @@ A Figura 4-7 mostra a estrutura de um cluster Kubernetes em que um nó mestre (V
 
 ## <a name="development-environment-for-kubernetes"></a>Ambiente de desenvolvimento para Kubernetes
 
-No ambiente de desenvolvimento, o [Docker anunciou em julho de 2018](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/) que o Kubernetes também pode ser executado em um único computador de desenvolvimento (Windows 10 ou macOS) simplesmente instalando o [Docker Desktop](https://www.docker.com/community-edition). Posteriormente, você pode implantar na nuvem (AKS) para testes de integração posteriores, conforme mostrado na figura 4-8.
+No ambiente de desenvolvimento, o [Docker anunciou em julho de 2018](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/) que o Kubernetes também pode ser executado em um único computador de desenvolvimento (Windows 10 ou macOS) simplesmente instalando o [Docker Desktop](https://www.docker.com/products/docker-desktop). Posteriormente, você pode implantar na nuvem (AKS) para testes de integração posteriores, conforme mostrado na figura 4-8.
 
 ![Diagrama mostrando kubernetes em um computador de desenvolvimento, então implantado no AKS.](./media/orchestrate-high-scalability-availability/kubernetes-development-environment.png)
 

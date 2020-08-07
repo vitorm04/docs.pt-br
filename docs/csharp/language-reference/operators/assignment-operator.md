@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 7843c15f15debeea7cb3627b3c7576579f0169fb
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 7b4f3b3f4d6b697903461f08435552f2df36bfe4
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555455"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916937"
 ---
 # <a name="assignment-operators-c-reference"></a>Operadores de atribuição (referência C#)
 
@@ -31,13 +31,13 @@ a = (b = c)
 
 O exemplo a seguir demonstra o uso do operador de atribuição com uma variável local, uma propriedade e um elemento do indexador como seu operando esquerdo:
 
-[!code-csharp-interactive[simple assignment](snippets/AssignmentOperator.cs#Simple)]
+[!code-csharp-interactive[simple assignment](snippets/shared/AssignmentOperator.cs#Simple)]
 
 ## <a name="ref-assignment-operator"></a>Operador de atribuição ref
 
 Começando pelo C# 7.3, você pode usar o operador de atribuição ref `= ref` para reatribuir uma variável [ref local](../keywords/ref.md#ref-locals) ou [ref readonly local](../keywords/ref.md#ref-readonly-locals). O exemplo a seguir demonstra o uso do operador de atribuição ref:
 
-[!code-csharp[ref assignment operator](snippets/AssignmentOperator.cs#RefAssignment)]
+[!code-csharp[ref assignment operator](snippets/shared/AssignmentOperator.cs#RefAssignment)]
 
 No caso do operador de atribuição de referência, os dois operandos devem ser do mesmo tipo.
 
@@ -75,7 +75,7 @@ Saiba mais na seção [Operadores de atribuição](~/_csharplang/spec/expression
 
 Para obter mais informações sobre o operador de atribuição de referência `= ref` , consulte a [Nota de proposta de recurso](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

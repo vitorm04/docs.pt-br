@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 7e2f1a52f1681e0cc454da8cba324dd1b5995f11
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 42128cf23fe2410bf33bb40131843325939646de
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855095"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916762"
 ---
 # <a name="new-operator-c-reference"></a>operador new (Referência em C#)
 
@@ -23,21 +23,21 @@ Você também pode usar a palavra-chave `new` como um [modificador de declaraç�
 
 Para criar uma nova instância de um tipo, você normalmente invoca um dos [construtores](../../programming-guide/classes-and-structs/constructors.md) desse tipo usando o operador `new`:
 
-[!code-csharp-interactive[invoke constructor](snippets/NewOperator.cs#Constructor)]
+[!code-csharp-interactive[invoke constructor](snippets/shared/NewOperator.cs#Constructor)]
 
 Você pode usar um [inicializador de objeto ou coleção](../../programming-guide/classes-and-structs/object-and-collection-initializers.md) com o operador `new` para instanciar e inicializar um objeto em uma instrução, como mostra o exemplo a seguir:
 
-[!code-csharp-interactive[constructor with initializer](snippets/NewOperator.cs#ConstructorWithInitializer)]
+[!code-csharp-interactive[constructor with initializer](snippets/shared/NewOperator.cs#ConstructorWithInitializer)]
 
 ## <a name="array-creation"></a>Criação de matriz
 
 Você também usar o operador `new` para criar uma instância de matriz, como mostra o exemplo a seguir:
 
-[!code-csharp-interactive[create array](snippets/NewOperator.cs#Array)]
+[!code-csharp-interactive[create array](snippets/shared/NewOperator.cs#Array)]
 
 Use a sintaxe de inicialização de matriz para criar uma instância de matriz e preenchê-la com os elementos em uma instrução. O exemplo a seguir mostra várias maneiras de como fazer isso:
 
-[!code-csharp-interactive[initialize array](snippets/NewOperator.cs#ArrayInitialization)]
+[!code-csharp-interactive[initialize array](snippets/shared/NewOperator.cs#ArrayInitialization)]
 
 Para obter mais informações sobre matrizes, confira [Matrizes](../../programming-guide/arrays/index.md).
 
@@ -45,7 +45,7 @@ Para obter mais informações sobre matrizes, confira [Matrizes](../../programmi
 
 Para criar uma instância de um [tipo anônimo](../../programming-guide/classes-and-structs/anonymous-types.md), use o operador `new` e a sintaxe do inicializador de objeto:
 
-[!code-csharp-interactive[anonymous type](snippets/NewOperator.cs#AnonymousType)]
+[!code-csharp-interactive[anonymous type](snippets/shared/NewOperator.cs#AnonymousType)]
 
 ## <a name="destruction-of-type-instances"></a>Destruição de instâncias do tipo
 
@@ -61,7 +61,7 @@ Um tipo definido pelo usuário não pode sobrecarregar o operador `new`.
 
 Para saber mais, confira a seção [O operador new](~/_csharplang/spec/expressions.md#the-new-operator) na [especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

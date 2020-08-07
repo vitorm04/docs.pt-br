@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 5a809a2c70cd2932870ed365bcaeb0edf838b679
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: b72b058c1709e7a643a70233cc3289d5d9165ca4
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556521"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916799"
 ---
 # <a name="-operator-c-reference"></a>Operador => (referência do C#)
 
@@ -24,15 +24,15 @@ Em [expressões lambda](../../programming-guide/statements-expressions-operators
 
 O seguinte exemplo usa o recurso [LINQ](../../programming-guide/concepts/linq/index.md) com a sintaxe de método para demonstrar o uso de expressões lambda:
 
-[!code-csharp-interactive[infer types of input variables](snippets/LambdaOperator.cs#InferredTypes)]
+[!code-csharp-interactive[infer types of input variables](snippets/shared/LambdaOperator.cs#InferredTypes)]
 
 Os parâmetros de entrada de uma expressão lambda são fortemente tipados no momento da compilação. Quando o compilador pode inferir os tipos de parâmetros de entrada, como no exemplo anterior, você pode omitir declarações de tipo. Se você precisar especificar o tipo de parâmetros de entrada, deverá fazer isso para cada parâmetro, como mostra o exemplo a seguir:
 
-[!code-csharp-interactive[specify types of input variables](snippets/LambdaOperator.cs#ExplicitTypes)]
+[!code-csharp-interactive[specify types of input variables](snippets/shared/LambdaOperator.cs#ExplicitTypes)]
 
 O exemplo a seguir mostra como definir uma expressão lambda sem parâmetros de entrada:
 
-[!code-csharp-interactive[without input variables](snippets/LambdaOperator.cs#WithoutInput)]
+[!code-csharp-interactive[without input variables](snippets/shared/LambdaOperator.cs#WithoutInput)]
 
 Para obter mais informações, consulte [expressões lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md).
 
@@ -73,7 +73,7 @@ O operador `=>` não pode ser sobrecarregado.
 
 Para obter mais informações sobre o operador lambda, consulte a seção [expressões de função anônimas](~/_csharplang/spec/expressions.md#anonymous-function-expressions) da [especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

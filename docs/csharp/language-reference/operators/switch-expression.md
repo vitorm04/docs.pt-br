@@ -2,12 +2,12 @@
 title: expressão switch-referência C#
 description: Saiba como usar a expressão de comutador C# para correspondência de padrões e outras introspecção de dados
 ms.date: 03/19/2020
-ms.openlocfilehash: e20257e32938b6b49fefd0a4167f6f1588e19b1c
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 2249afc1ff1cc81e9ad423d910ebb95df8c787d4
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555559"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916656"
 ---
 # <a name="switch-expression-c-reference"></a>expressão switch (referência C#)
 
@@ -17,7 +17,7 @@ Este artigo aborda a `switch` expressão, introduzida em C# 8,0. Para obter info
 
 A `switch` expressão fornece `switch` semântica semelhante em um contexto de expressão. Ele fornece uma sintaxe concisa quando os braços de switch produzem um valor. O exemplo a seguir mostra a estrutura de uma expressão switch. Ele traduz valores de uma representação de `enum` direções visuais em um mapa online para a direção Cardeal correspondente:
 
-:::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetBasicStructure":::
+:::code language="csharp" source="snippets/shared/SwitchExpressions.cs" id="SnippetBasicStructure":::
 
 O exemplo anterior mostra os elementos básicos de uma expressão switch:
 
@@ -30,27 +30,27 @@ Os *braços de expressão switch* são avaliados em ordem de texto. O compilador
 
 ## <a name="patterns-and-case-guards"></a>Padrões e proteções de caso
 
-Muitos padrões têm suporte em braços de expressão de switch. O exemplo anterior usou um *padrão de valor*. Um *padrão de valor* compara a expressão de intervalo com um valor. Esse valor deve ser uma constante de tempo de compilação. O *padrão de tipo* compara a expressão de intervalo com um tipo conhecido. O exemplo a seguir recupera o terceiro elemento de uma sequência. Ele usa métodos diferentes com base no tipo da sequência:
+Muitos padrões têm suporte em braços de expressão de switch. O exemplo anterior usa um *padrão constante*. Um *padrão constante* compara a expressão de intervalo com um valor. Esse valor deve ser uma constante de tempo de compilação. O *padrão de tipo* compara a expressão de intervalo com um tipo conhecido. O exemplo a seguir recupera o terceiro elemento de uma sequência. Ele usa métodos diferentes com base no tipo da sequência:
 
-:::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetTypePattern":::
+:::code language="csharp" source="snippets/shared/SwitchExpressions.cs" id="SnippetTypePattern":::
 
 Os padrões podem ser recursivos, onde um padrão testa um tipo e, se esse tipo corresponder, o padrão corresponde a um ou mais valores de propriedade na expressão de intervalo. Você pode usar padrões recursivos para estender o exemplo anterior. Você adiciona braços de expressão de switch para matrizes com menos de três elementos. Padrões recursivos são mostrados no exemplo a seguir:
 
-:::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetRecursivePattern":::
+:::code language="csharp" source="snippets/shared/SwitchExpressions.cs" id="SnippetRecursivePattern":::
 
 Padrões recursivos podem examinar as propriedades da expressão de intervalo, mas não podem executar código arbitrário. Você pode usar um *protetor de caso*, especificado em uma `when` cláusula, para fornecer verificações semelhantes para outros tipos de sequência:
 
-:::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetGuardCase":::
+:::code language="csharp" source="snippets/shared/SwitchExpressions.cs" id="SnippetGuardCase":::
 
 Por fim, você pode adicionar o `_` padrão e o `null` padrão para capturar argumentos que não são processados por nenhum outro ARM de expressão de switch. Isso torna a expressão de comutador *exaustiva*, o que significa que qualquer valor possível da expressão de intervalo é manipulado. O exemplo a seguir adiciona esses braços de expressão:
 
-:::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetExhaustive":::
+:::code language="csharp" source="snippets/shared/SwitchExpressions.cs" id="SnippetExhaustive":::
 
 O exemplo anterior adiciona um `null` padrão e altera o `IEnumerable<T>` padrão de tipo para um `_` padrão. O `null` padrão fornece uma verificação nula como um ARM de expressão switch. A expressão para esse ARM gera um <xref:System.ArgumentNullException> . O `_` padrão corresponde a todas as entradas que não corresponderam aos braços anteriores. Ele deve vir após a `null` verificação, ou ele corresponderá a `null` entradas.
 
 Você pode ler mais na proposta de especificação da linguagem C# para obter [padrões recursivos](~/_csharplang/proposals/csharp-8.0/patterns.md#switch-expression).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: 438188b6d694bdeab772c43ef92e5621c68facff
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 322e079a1be556efb536b24e216e480c1950bd8c
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990217"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917020"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Noções básicas da coleta de lixo
 
@@ -24,7 +24,7 @@ No Common Language Runtime (CLR), o coletor de lixo (GC) serve como um Gerenciad
 
 Este artigo descreve os principais conceitos da coleta de lixo.
 
-## <a name="benefits"></a>Benefícios
+## <a name="benefits"></a>Vantagens
 
 O coletor de lixo fornece os seguintes benefícios:
 
@@ -186,7 +186,7 @@ Uma coleta de lixo tem as seguintes fases:
   Normalmente, o LOH (heap de objeto grande) não é compactado, pois copiar objetos grandes impõe uma penalidade de desempenho. No entanto, no .NET Core e no .NET Framework 4.5.1 e posterior, você pode usar a <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> propriedade para compactar o heap de objeto grande sob demanda. Além disso, o LOH é compactado automaticamente quando um limite rígido é definido especificando:
 
   - Um limite de memória em um contêiner.
-  - As opções de configuração de tempo de execução do [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitcomplus_gcheaphardlimit) ou [GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) .
+  - As opções de configuração de tempo de execução do [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#heap-limit) ou [GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#heap-limit-percent) .
 
 O coletor de lixo usa as informações a seguir para determinar se os objetos estão vivos:
 
@@ -212,7 +212,7 @@ Você também deve fornecer uma maneira para que seus recursos não gerenciados 
 
 Para obter mais informações sobre como limpar recursos não gerenciados, consulte [limpar recursos não gerenciados](unmanaged.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Coleta de lixo de estação de trabalho ou de servidor](workstation-server-gc.md)
 - [Coleta de lixo em segundo plano](background-gc.md)

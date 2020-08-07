@@ -5,12 +5,12 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc expression [C#]
-ms.openlocfilehash: 32ac85f678912cb7e5f506244265b1bf57d0b4aa
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 4f20f3262b77cc2fe16480e53d13960e68d230b5
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555600"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916677"
 ---
 # <a name="stackalloc-expression-c-reference"></a>expressão stackalloc (referência C#)
 
@@ -20,24 +20,24 @@ Você pode atribuir o resultado de uma `stackalloc` expressão a uma variável d
 
 - A partir do C# 7,2 <xref:System.Span%601?displayProperty=nameWithType> ou <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> , como mostra o exemplo a seguir:
 
-  [!code-csharp[stackalloc span](snippets/StackallocOperator.cs#AssignToSpan)]
+  [!code-csharp[stackalloc span](snippets/shared/StackallocOperator.cs#AssignToSpan)]
 
   Você não precisa usar um contexto [unsafe](../keywords/unsafe.md) quando atribui um bloco de memória alocado na pilha a uma variável <xref:System.Span%601> ou <xref:System.ReadOnlySpan%601>.
 
   Ao trabalhar com esses tipos, você pode usar uma expressão `stackalloc` em [condicional](conditional-operator.md) ou expressões de atribuição, como mostra o seguinte exemplo:
 
-  [!code-csharp[stackalloc expression](snippets/StackallocOperator.cs#AsExpression)]
+  [!code-csharp[stackalloc expression](snippets/shared/StackallocOperator.cs#AsExpression)]
 
   A partir do C# 8,0, você pode usar uma `stackalloc` expressão dentro de outras expressões sempre que uma <xref:System.Span%601> <xref:System.ReadOnlySpan%601> variável ou é permitida, como mostra o exemplo a seguir:
 
-  [!code-csharp[stackalloc in nested expressions](snippets/StackallocOperator.cs#Nested)]
+  [!code-csharp[stackalloc in nested expressions](snippets/shared/StackallocOperator.cs#Nested)]
 
   > [!NOTE]
   > É recomendável usar os tipos <xref:System.Span%601> ou <xref:System.ReadOnlySpan%601> sempre que possível para trabalhar com memória alocada na pilha.
 
 - Um [tipo de ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md), como mostra o seguinte exemplo:
 
-  [!code-csharp[stackalloc pointer](snippets/StackallocOperator.cs#AssignToPointer)]
+  [!code-csharp[stackalloc pointer](snippets/shared/StackallocOperator.cs#AssignToPointer)]
 
   Como mostra o exemplo anterior, você precisa usar um contexto `unsafe` ao trabalhar com tipos de ponteiro.
 
@@ -47,7 +47,7 @@ A quantidade de memória disponível na pilha é limitada. Se você alocar muita
 
 - Limite a quantidade de memória que você aloca com `stackalloc` :
 
-  [!code-csharp[limit stackalloc](snippets/StackallocOperator.cs#LimitStackalloc)]
+  [!code-csharp[limit stackalloc](snippets/shared/StackallocOperator.cs#LimitStackalloc)]
 
   Como a quantidade de memória disponível na pilha depende do ambiente no qual o código é executado, seja conservador quando você define o valor de limite real.
 
@@ -57,7 +57,7 @@ O conteúdo da memória recém-alocada é indefinido. Você deve inicializá-lo 
 
 A partir do C# 7,3, você pode usar a sintaxe do inicializador de matriz para definir o conteúdo da memória alocada recentemente. O seguinte exemplo demonstra várias maneiras de fazer isso:
 
-[!code-csharp[stackalloc initialization](snippets/StackallocOperator.cs#StackallocInit)]
+[!code-csharp[stackalloc initialization](snippets/shared/StackallocOperator.cs#StackallocInit)]
 
 Em Expression `stackalloc T[E]` , `T` deve ser um [tipo não gerenciado](../builtin-types/unmanaged-types.md) e `E` deve ser avaliado como um valor [int](../builtin-types/integral-numeric-types.md) não negativo.
 
@@ -69,7 +69,7 @@ O uso de `stackalloc` habilita automaticamente os recursos de detecção de esto
 
 Para obter mais informações, consulte a seção de [alocação de pilha](~/_csharplang/spec/unsafe-code.md#stack-allocation) da [especificação da linguagem C#](~/_csharplang/spec/introduction.md) e a nota de proposta de recurso [permitir `stackalloc` em contextos aninhados](~/_csharplang/proposals/csharp-8.0/nested-stackalloc.md) .
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

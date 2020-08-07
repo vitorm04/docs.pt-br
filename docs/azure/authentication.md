@@ -3,18 +3,18 @@ title: Noções básicas sobre a autenticação nas bibliotecas do Azure para .N
 description: Explica as diferentes maneiras de se autenticar com o SDK do Azure para .NET.
 ms.date: 06/19/2020
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: 727842b34faa37558220a3035ac5228fae196201
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: e588499a789fc5e7da7eb51009f97090ca75e562
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301613"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916611"
 ---
 # <a name="authenticate-with-the-azure-sdk-for-net"></a>Autenticar com o SDK do Azure para .NET
 
 ## <a name="recommended-azureidentity"></a>Recomendado: Azure. Identity
 
-Os pacotes mais recentes no SDK do Azure para .NET usam um pacote de autenticação comum para autenticar, `Azure.Identity` . `Azure.Identity`O uso do é recomendado em outros mecanismos de autenticação descritos mais adiante neste documento. Pacotes que dão suporte às credenciais fornecidas por `Azure.Identity` têm identificadores de pacote começando com o *Azure.* [Para obter mais informações, consulte as versões mais recentes no SDK do Azure para .net](https://azure.github.io/azure-sdk/releases/latest/index.html#net).
+Os pacotes mais recentes no SDK do Azure para .NET usam um pacote de autenticação comum para autenticar, `Azure.Identity` . `Azure.Identity`O uso do é recomendado em outros mecanismos de autenticação descritos mais adiante neste documento. Os pacotes que dão suporte às credenciais fornecidas pelo `Azure.Identity` são criados sobre o `Azure.Core` e têm identificadores de pacote começando com o *Azure.* [Consulte a lista](packages.md) de pacotes para obter um inventário das embalagens que usam `Azure.Core` .
 
 Para obter instruções completas sobre como usar o `Azure.Identity` em seu projeto, consulte a documentação para o [cliente de identidade do Azure para .net](/dotnet/api/overview/azure/identity-readme).
 
