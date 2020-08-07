@@ -2,12 +2,12 @@
 title: Opções interativas
 description: Saiba mais sobre as opções de linha de comando com suporte pelo F# Interativo, fsi.exe.
 ms.date: 07/22/2020
-ms.openlocfilehash: f9932cac24fad187c332306968fb13981912e80a
-ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
+ms.openlocfilehash: abddd1fd990be18ede139ab26ffe80513ba6e0dd
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87795457"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855342"
 ---
 # <a name="f-interactive-options"></a>Opções de F# Interativo
 
@@ -15,7 +15,7 @@ Este artigo descreve as opções de linha de comando com suporte pelo F# Interat
 
 ## <a name="use-f-interactive-for-scripting"></a>Usar F# Interativo para scripts
 
-F# Interativo, `dotnet fsi` , pode ser iniciado interativamente ou pode ser iniciado na linha de comando para executar um script. A sintaxe da linha de comando é
+F# Interativo, `dotnet fsi` , pode ser iniciado interativamente ou pode ser iniciado na linha de comando para executar um script. A sintaxe de linha de comando é
 
 ```dotnetcli
 dotnet fsi [options] [ script-file [arguments] ]
@@ -25,7 +25,7 @@ A extensão de arquivo para arquivos de script F # é `.fsx` .
 
 ## <a name="table-of-f-interactive-options"></a>Tabela de opções de F# Interativo
 
-A tabela a seguir resume as opções com suporte pelo F# Interativo. Você pode definir essas opções na linha de comando ou por meio do IDE do Visual Studio. Para definir essas opções no IDE do Visual Studio, abra o menu **ferramentas** , selecione **opções...** e, em seguida, expanda o nó **ferramentas F #** e selecione **F# interativo**.
+A tabela a seguir resume as opções com suporte pelo F# Interativo. Você pode definir essas opções na linha de comando ou por meio do IDE do Visual Studio. Para definir essas opções no IDE do Visual Studio, abra o menu **ferramentas** , selecione **Opções**, expanda o nó **ferramentas F #** e, em seguida, selecione **F# interativo**.
 
 Quando as listas aparecem em F# Interativo argumentos de opção, os elementos de lista são separados por ponto e vírgula ( `;` ).
 
@@ -56,7 +56,7 @@ Quando as listas aparecem em F# Interativo argumentos de opção, os elementos d
 |**--ReadLine**[ **+**&#124;**-** ]|Habilitar ou desabilitar o preenchimento com Tab no modo interativo.|
 |**--referência: &lt; nome de arquivo&gt;**<br /><br />**-r: &lt; nome de arquivo&gt;**|O mesmo que a opção de compilador **fsc.exe** . Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
 |**--tailcalls**[ **+**&#124;**-** ]|Habilitar ou desabilitar o uso da instrução de IL final, que faz com que o quadro de pilha seja reutilizado para funções recursivas da parte final. Essa opção é habilitada por padrão.|
-|**--targetprofile: &lt; cadeia de caracteres&gt;**|Especifica o perfil da estrutura de destino deste assembly. Os valores válidos são mscorlib, NetCore ou netstandard.  O padrão é mscorlib.|
+|**--targetprofile: &lt; cadeia de caracteres&gt;**|Especifica o perfil da estrutura de destino deste assembly. Os valores válidos são `mscorlib`, `netcore` ou `netstandard`. O padrão é `mscorlib`.|
 |**--Use: &lt; nome de arquivo&gt;**|Instrui o intérprete a usar o arquivo fornecido na inicialização como entrada inicial.|
 |**--utf8output**|O mesmo que a opção de compilador fsc.exe. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
 |**--WARN: &lt; nível de aviso&gt;**|O mesmo que a opção de compilador **fsc.exe** . Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
