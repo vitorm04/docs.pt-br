@@ -38,8 +38,6 @@
           href: cryptographic-signatures.md
         - name: Assegurando a integridade dos dados com códigos hash
           href: ensuring-data-integrity-with-hash-codes.md
-        - name: Criando um esquema criptográfico
-          href: creating-a-cryptographic-scheme.md
         - name: 'Como: criptografar elementos XML com chaves simétricas'
           href: how-to-encrypt-xml-elements-with-symmetric-keys.md
         - name: 'Como: descriptografar elementos XML com chaves simétricas'
