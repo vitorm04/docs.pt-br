@@ -10,6 +10,9 @@ f1_keywords:
 - '|_CSharpKeyword'
 - '&&_CSharpKeyword'
 - '||_CSharpKeyword'
+- '|=_CSharpKeyword'
+- ^=_CSharpKeyword
+- '&=_CSharpKeyword'
 helpviewer_keywords:
 - logical operators [C#]
 - short-circuiting operators [C#]
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: cdabae0a4dbdcc3b1289bca7f1c42cb0a26b440f
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 2a67542e25ddb258602b4005a71b565cf6522917
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555403"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855134"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Operadores lógicos boolianos (referência do C#)
 
@@ -127,13 +130,13 @@ A tabela a seguir apresenta essa semântica:
 |----|----|----|----|  
 |true|true|true|true|  
 |true|false|false|true|  
-|true|nulo|nulo|true|  
+|true|null|null|true|  
 |false|true|false|true|  
 |false|false|false|false|  
-|false|nulo|false|nulo|  
-|nulo|true|nulo|true|  
-|nulo|false|false|nulo|  
-|nulo|nulo|nulo|nulo|  
+|false|null|false|null|  
+|null|true|null|true|  
+|null|false|false|null|  
+|null|null|null|null|  
 
 O comportamento desses operadores difere do comportamento típico do operador com tipos de valores anuláveis. Normalmente, um operador que é definido para operandos de um tipo de valor também pode ser usado com operandos do tipo de valor anulável correspondente. Tal operador produz `null` se qualquer um de seus operandos é avaliado como `null` . No entanto, os `&` `|` operadores e podem produzir não nulo mesmo se um dos operandos for avaliado como `null` . Para obter mais informações sobre o comportamento do operador com tipos de valores anuláveis, consulte a seção [operadores levantados](../builtin-types/nullable-value-types.md#lifted-operators) do artigo [tipos de valores anuláveis](../builtin-types/nullable-value-types.md) .
 
