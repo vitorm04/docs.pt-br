@@ -2,17 +2,17 @@
 title: Protegendo microsserviços e aplicativos Web .NET
 description: Segurança nos Microsserviços do .NET e aplicativos Web – Conheça as opções de autenticação em aplicativos Web ASP.NET Core.
 author: mjrousos
-ms.date: 01/30/2020
-ms.openlocfilehash: 2b503b326d1869ae095f9b177c04389bda9fe46c
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.date: 08/07/2020
+ms.openlocfilehash: 9ce62039374f2256cd9adbddbb850aa4135af9f4
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100776"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024609"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Proteger microsserviços .NET e aplicativos Web
 
-Há muitos aspectos sobre segurança em microsserviços e aplicativos Web que o tópico poderia ter facilmente vários livros como este. Portanto, nesta seção, vamos nos concentrar na autenticação, na autorização e nos segredos do aplicativo.
+Há muitos aspectos sobre segurança em microserviços e aplicativos Web que o tópico poderia facilmente pegar vários livros como este, portanto, nesta seção, você se concentrará na autenticação, na autorização e nos segredos do aplicativo.
 
 ## <a name="implement-authentication-in-net-microservices-and-web-applications"></a>Implementar a autenticação em microsserviços .NET e aplicativos Web
 
@@ -119,7 +119,7 @@ public void ConfigureServices(IServiceCollection services)
 
 Os provedores de autenticação externos populares e seus pacotes NuGet associados são mostrados na tabela a seguir:
 
-| **Provedor**  | **Package**                                          |
+| **Provedor**  | **Pacote**                                          |
 | ------------- | ---------------------------------------------------- |
 | **Microsoft** | **Microsoft.AspNetCore.Authentication.MicrosoftAccount** |
 | **Google**    | **Microsoft.AspNetCore.Authentication.Google**           |
@@ -174,7 +174,7 @@ public void ConfigureServices(IServiceCollection services)
 {
     var identityUrl = Configuration.GetValue<string>("IdentityUrl");
     var callBackUrl = Configuration.GetValue<string>("CallBackUrl");
-    var sessionCookieLifetime = configuration.GetValue("SessionCookieLifetimeMinutes", 60);
+    var sessionCookieLifetime = Configuration.GetValue("SessionCookieLifetimeMinutes", 60);
 
     // Add Authentication services
 

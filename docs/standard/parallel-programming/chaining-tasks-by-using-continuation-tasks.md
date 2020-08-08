@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: 53457f7f99d96c288b002f58c9db36f431ba863a
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 132518b9d8d22efecfcf3ed14e8b5969aa768cd4
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381301"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024583"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>Encadeando tarefas usando tarefas de continuação
 
@@ -145,7 +145,7 @@ O exemplo a seguir mostra como usar o estado de continuação. Ele cria uma cade
 O exemplo a seguir mostra como usar as continuações que encapsulam funções de retorno de tarefas adicionais. Cada continuação pode ser desencapsulada, expondo a tarefa interna que foi encapsulada.
 
 :::code language="csharp" source="snippets/cs/unwrap.cs":::
-:::code language="csharp" source="snippets/vb/unwrap.vb":::
+:::code language="vb" source="snippets/vb/unwrap.vb":::
 
 Para obter mais informações sobre <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> como usar [o, consulte Como: desencapsular uma tarefa aninhada](how-to-unwrap-a-nested-task.md).
 
@@ -175,6 +175,6 @@ Para saber mais, veja [Tratamento de exceção](exception-handling-task-parallel
 
 - Se a continuação for uma tarefa filha anexada que foi criada usando a opção <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType>, suas exceções serão propagadas pelo pai para o thread de chamada, como será o caso em qualquer outra filha anexada. Para obter mais informações, consulte [Tarefas filho anexadas e desanexadas](attached-and-detached-child-tasks.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Biblioteca de tarefas paralelas (TPL)](task-parallel-library-tpl.md)
