@@ -4,12 +4,12 @@ description: Aprenda a usar a herança em bibliotecas e aplicativos em C#.
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 8e24ad3e93dcd11f39ae979a3acda4c4ada13dc5
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 70db8716bea84984ad56d79fa9e26aab3a8182fa
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007722"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063504"
 ---
 # <a name="inheritance-in-c-and-net"></a>Herança em C# e .NET
 
@@ -295,7 +295,6 @@ O exemplo a seguir usa objetos derivados de `Shape`. Ele cria uma matriz de obje
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Classes e objetos](../tour-of-csharp/classes-and-objects.md)
 - [Herança (Guia de Programação em C#)](../programming-guide/classes-and-structs/inheritance.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: e2127b91efb5a77497ce22e0f2934fab98f015af
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 6db16a86e949fb50254c301f5e5ac0904a6072a4
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86473871"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063593"
 ---
 # <a name="c-programming-guide"></a>Guia de programação em C#
 
@@ -41,7 +41,7 @@ Esta seção fornece informações detalhadas sobre os principais recursos da li
   
  [Interfaces](./interfaces/index.md)  
 
- [Delegados](./delegates/index.md)  
+ [Representantes](./delegates/index.md)  
 
  [matrizes](./arrays/index.md)  
   
@@ -59,11 +59,9 @@ Esta seção fornece informações detalhadas sobre os principais recursos da li
   
  [Expressões de Consulta LINQ](../linq/index.md)  
   
- [Expressões lambda](./statements-expressions-operators/lambda-expressions.md)  
-  
  [Namespaces](./namespaces/index.md)  
   
- [Código e ponteiros inseguros](./unsafe-code-pointers/index.md)  
+ [Código não seguro e ponteiros](./unsafe-code-pointers/index.md)  
   
  [Comentários de documentação XML](./xmldoc/index.md)  
   
@@ -77,7 +75,7 @@ Esta seção fornece informações detalhadas sobre os principais recursos da li
   
  [Coleções](./concepts/collections.md)  
   
- [Exceções e tratamento de exceções](./exceptions/index.md)  
+ [Exceções e manipulação de exceções](./exceptions/index.md)  
   
  [Sistema de arquivos e o Registro (Guia de Programação em C#)](./file-system/index.md)  
   

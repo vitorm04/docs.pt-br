@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 1765a15347aeedb9cc5fa6784abdfad6fafe4016
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 46b0e44182d22158aa5fa54a0f44bae70aa8ddd9
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87300755"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063036"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Sintaxe de consulta e sintaxe de método em LINQ (C#)
 A maioria das consultas na documentação do LINQ (consulta integrada à linguagem introdutória) é escrita usando a sintaxe de consulta declarativa do LINQ. No entanto, a sintaxe de consulta deve ser convertida em chamadas de método para o CLR (Common Language Runtime) do .NET quando o código for compilado. Essas chamadas de método invocam os operadores de consulta padrão, que têm nomes como `Where`, `Select`, `GroupBy`, `Join`, `Max` e `Average`. Você pode chamá-los diretamente usando a sintaxe de método em vez da sintaxe de consulta.  
@@ -38,7 +38,7 @@ A maioria das consultas na documentação do LINQ (consulta integrada à linguag
 ## <a name="lambda-expressions"></a>Expressões lambda  
  No exemplo anterior, observe que a expressão condicional (`num % 2 == 0`) é passada como um argumento embutido para o método `Where`: `Where(num => num % 2 == 0).` Essa expressão embutida é chamada de uma expressão lambda. É uma maneira conveniente de escrever um código que de outra forma precisaria ser escrito de forma mais complicada como um método anônimo, um delegado genérico ou uma árvore de expressão. No C# `=>` é o operador lambda, que é lido como "vai para". O `num` à esquerda do operador é a variável de entrada que corresponde ao `num` na expressão de consulta. O compilador pode inferir o tipo de `num` porque ele sabe que `numbers` é um tipo <xref:System.Collections.Generic.IEnumerable%601> genérico. O corpo do lambda é exatamente igual à expressão na sintaxe de consulta ou em qualquer outra expressão ou instrução C#, ele pode incluir chamadas de método e outra lógica complexa. O "valor retornado" é apenas o resultado da expressão.  
   
- Para começar a usar o LINQ, você não precisa usar as lambdas extensivamente. No entanto, determinadas consultas só podem ser expressadas em sintaxe de método e algumas delas requerem expressões lambda. Depois de se familiarizar mais com as lambdas, você descobrirá que elas são uma ferramenta poderosa e flexível em sua caixa de ferramentas do LINQ. Para obter mais informações, consulte [Expressões Lambda](../../statements-expressions-operators/lambda-expressions.md).  
+ Para começar a usar o LINQ, você não precisa usar as lambdas extensivamente. No entanto, determinadas consultas só podem ser expressadas em sintaxe de método e algumas delas requerem expressões lambda. Depois de se familiarizar mais com as lambdas, você descobrirá que elas são uma ferramenta poderosa e flexível em sua caixa de ferramentas do LINQ. Para obter mais informações, consulte [Expressões Lambda](../../../language-reference/operators/lambda-expressions.md).  
   
 ## <a name="composability-of-queries"></a>Possibilidade de Composição das Consultas  
  No exemplo de código anterior, observe que o método `OrderBy` é invocado usando o operador ponto na chamada para `Where`. `Where` produz uma sequência filtrada e, em seguida, `Orderby` opera nessa sequência classificando-a. Como as consultas retornam uma `IEnumerable`, você pode escrevê-las na sintaxe de método encadeando as chamadas de método. Isso é o que o compilador faz nos bastidores quando você escreve consultas usando a sintaxe de consulta. E como uma variável de consulta não armazena os resultados da consulta, você pode modificá-la ou usá-la como base para uma nova consulta a qualquer momento, mesmo depois que ela foi executada.  

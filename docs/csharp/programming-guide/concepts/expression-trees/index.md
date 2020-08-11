@@ -3,12 +3,12 @@ title: Árvores de expressão (C#)
 description: Saiba mais sobre árvores de expressão. Veja como compilar e executar o código representado por essas estruturas de dados, onde cada nó é uma expressão.
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: 2fa8577dd945650edebf84459de10c0c3bd04225
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a5c84673f0b45b92be18b955a6d1e7268bb73c26
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105583"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063309"
 ---
 # <a name="expression-trees-c"></a>Árvores de expressão (C#)
 Árvores de expressão representam código em uma estrutura de dados de árvore, onde cada nó é, por exemplo, uma expressão, uma chamada de método ou uma operação binária como `x < y`.  
@@ -22,7 +22,7 @@ ms.locfileid: "87105583"
 ## <a name="creating-expression-trees-from-lambda-expressions"></a>Criando árvores de expressão de expressões Lambda  
  Quando uma expressão lambda é atribuída a uma variável do tipo <xref:System.Linq.Expressions.Expression%601>, o compilador emite código para criar uma árvore de expressão que representa a expressão lambda.  
   
- Os compiladores do C# podem gerar árvores de expressão apenas por meio de expressões lambda (ou lambdas de linha única). Ele não é possível analisar instruções lambdas (ou lambdas de várias linhas). Para obter mais informações sobre expressões lambda no C#, consulte [Expressões lambda](../../statements-expressions-operators/lambda-expressions.md).  
+ Os compiladores do C# podem gerar árvores de expressão apenas por meio de expressões lambda (ou lambdas de linha única). Ele não é possível analisar instruções lambdas (ou lambdas de várias linhas). Para obter mais informações sobre expressões lambda no C#, consulte [Expressões lambda](../../../language-reference/operators/lambda-expressions.md).  
   
  Os exemplos de código a seguir demonstram como fazer os compiladores do C# criarem uma árvore de expressão que representa a expressão lambda `num => num < 5`.  
   
@@ -148,11 +148,11 @@ Console.WriteLine(expr.Compile()(4));
   
  Para obter mais informações, consulte [como executar árvores de expressão (C#)](./how-to-execute-expression-trees.md).
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Linq.Expressions>
 - [Como executar árvores de expressão (C#)](./how-to-execute-expression-trees.md)
 - [Como modificar árvores de expressão (C#)](./how-to-modify-expression-trees.md)
-- [Expressões lambda](../../statements-expressions-operators/lambda-expressions.md)
+- [Expressões lambda](../../../language-reference/operators/lambda-expressions.md)
 - [Visão geral do tempo de execução de linguagem dinâmica](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [Conceitos de programação (C#)](../index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: f228cc2e4fd719f4d79c56d65aa45b2a3031cba7
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 4aecbbd58268e7b50a34f503160edd1eca4fe659
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302081"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063619"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Como assinar e cancelar a assinatura de eventos (guia de programação C#)
 Você assina um evento publicado por outra classe quando quer escrever um código personalizado que é chamado quando esse evento é gerado. Por exemplo, você pode assinar o evento `click` de um botão para fazer com que seu aplicativo faça algo útil quando o usuário clicar no botão.  
@@ -58,7 +58,7 @@ Você assina um evento publicado por outra classe quando quer escrever um códig
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
-     Você também pode usar uma [expressão lambda](../statements-expressions-operators/lambda-expressions.md) para especificar um manipulador de eventos:
+     Você também pode usar uma [expressão lambda](../../language-reference/operators/lambda-expressions.md) para especificar um manipulador de eventos:
   
     ```csharp
     public Form1()  
@@ -98,7 +98,7 @@ Você assina um evento publicado por outra classe quando quer escrever um códig
   
      Quando todos os assinantes tiverem cancelado a assinatura de um evento, a instância do evento na classe do publicador será definida como `null`.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Eventos](./index.md)
 - [event](../../language-reference/keywords/event.md)

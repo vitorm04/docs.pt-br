@@ -13,16 +13,16 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 5597043bb1c5af05f5f3633cba6ee6e6de1c52c1
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 883b587a7ef60bc686d6f453c775f6651f0ccb7f
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925599"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063816"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>Como instalar e desinstalar os serviços do Windows
 
-Se você estiver desenvolvendo um serviço do Windows com o .NET Framework, poderá instalar rapidamente seu aplicativo de serviço usando o utilitário de linha de comando [*InstallUtil.exe*](../tools/installutil-exe-installer-tool.md) ou o [PowerShell](/powershell/scripting/overview). Os desenvolvedores que desejam lançar um serviço Windows que os usuários possam instalar e desinstalar devem usar o InstallShield. Para obter mais informações, consulte [criar um pacote de instalador (Windows Desktop)](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
+Se você estiver desenvolvendo um serviço do Windows com o .NET Framework, poderá instalar rapidamente seu aplicativo de serviço usando o utilitário de linha de comando [*InstallUtil.exe*](../tools/installutil-exe-installer-tool.md) ou o [PowerShell](/powershell/scripting/overview). Os desenvolvedores que desejam lançar um serviço do Windows que os usuários podem instalar e desinstalar podem usar o conjunto de ferramentas do [WiX](https://wixtoolset.org/) , ou os recursos comerciais, como o [Advanced Installer](https://www.advancedinstaller.com/), o [InstallShield](https://www.revenera.com/install/products/installshield.html)ou outros. Para obter mais informações, consulte [criar um pacote de instalador (Windows Desktop)](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
 
 > [!WARNING]
 > Se você deseja desinstalar um serviço do seu computador, não execute as etapas neste artigo. Nesse caso, descubra qual pacote de software ou programa instalou o serviço e, em seguida, escolha **Aplicativos** em Configurações para desinstalar o programa. Observe que muitos serviços são partes integrais do Windows, se você removê-los, poderá causar instabilidade do sistema.
@@ -96,7 +96,7 @@ Não é possível executar projetos de serviço Windows diretamente no ambiente 
     sc.exe delete "YourServiceName"
     ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Introdução aos aplicativos de serviço do Windows](introduction-to-windows-service-applications.md)
 - [Como: criar serviços do Windows](how-to-create-windows-services.md)

@@ -4,12 +4,12 @@ ms.date: 07/18/2019
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: f7cd7caf11d9f076a5d6e82aae696c914bd60e44
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 33c438b88f1e993f4648786da9b20b91961b7ee1
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916846"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062984"
 ---
 # <a name="delegate-operator-c-reference"></a>operador delegate (referência do C#)
 
@@ -22,7 +22,7 @@ O operador `delegate` cria um método anônimo que pode ser convertido em um tip
 >
 > [!code-csharp-interactive[lambda expression](snippets/shared/DelegateOperator.cs#Lambda)]
 >
-> Para saber mais sobre recursos de expressões lambda, por exemplo, que capturam variáveis externas, confira [Expressões lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md).
+> Para saber mais sobre recursos de expressões lambda, por exemplo, que capturam variáveis externas, confira [Expressões lambda](lambda-expressions.md).
 
 Você pode omitir a lista de parâmetros quando usa o operador `delegate`. Se você fizer isso, o método anônimo criado poderá ser convertido em um tipo delegado com qualquer lista de parâmetros, como mostra o exemplo a seguir:
 
@@ -32,7 +32,7 @@ Essa é a única funcionalidade de métodos anônimos que não tem suporte por e
 
 Você também usa a palavra-chave `delegate` para declarar um [tipo delegado](../builtin-types/reference-types.md#the-delegate-type).
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, confira a seção [Expressões de função anônima](~/_csharplang/spec/expressions.md#anonymous-function-expressions) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: b72b058c1709e7a643a70233cc3289d5d9165ca4
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 30e1a3546f83a0a1ba5b1363238878868e94ab93
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916799"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063127"
 ---
 # <a name="-operator-c-reference"></a>Operador => (referência do C#)
 
@@ -20,7 +20,7 @@ O `=>` token tem suporte em duas formas: como o [operador lambda](#lambda-operat
 
 ## <a name="lambda-operator"></a>Operador lambda
 
-Em [expressões lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md), o operador lambda `=>` separa os parâmetros de entrada no lado esquerdo do corpo lambda no lado direito.
+Em [expressões lambda](lambda-expressions.md), o operador lambda `=>` separa os parâmetros de entrada no lado esquerdo do corpo lambda no lado direito.
 
 O seguinte exemplo usa o recurso [LINQ](../../programming-guide/concepts/linq/index.md) com a sintaxe de método para demonstrar o uso de expressões lambda:
 
@@ -34,7 +34,7 @@ O exemplo a seguir mostra como definir uma expressão lambda sem parâmetros de 
 
 [!code-csharp-interactive[without input variables](snippets/shared/LambdaOperator.cs#WithoutInput)]
 
-Para obter mais informações, consulte [expressões lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md).
+Para obter mais informações, consulte [expressões lambda](lambda-expressions.md).
 
 ## <a name="expression-body-definition"></a>Definição de corpo da expressão
 
@@ -69,7 +69,7 @@ Para obter mais informações, consulte [Membros aptos para expressão](../../pr
 
 O operador `=>` não pode ser sobrecarregado.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações sobre o operador lambda, consulte a seção [expressões de função anônimas](~/_csharplang/spec/expressions.md#anonymous-function-expressions) da [especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 

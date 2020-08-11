@@ -2,12 +2,12 @@
 title: dotnet-contadores-.NET Core
 description: Saiba como instalar e usar a ferramenta de linha de comando dotnet-Counter.
 ms.date: 02/26/2020
-ms.openlocfilehash: 71e3c4f0a60960c4e672b95000bc0d67bd427514
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 6a4fd92540dbc16173dfa3a10ff9dfaa1f31f7d0
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024622"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062893"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -76,7 +76,7 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 - **`--format <csv|json>`**
 
-  Formato Tnão a ser exportado. Atualmente disponível: CSV, JSON.
+  O formato a ser exportado. Atualmente disponível: CSV, JSON.
 
 - **`-o|--output <output>`**
 

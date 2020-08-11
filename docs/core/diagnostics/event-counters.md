@@ -2,12 +2,12 @@
 title: EventCounters no .NET Core
 description: Neste artigo, você aprenderá o que é o EventCounters, como implementá-los e como consumi-los.
 ms.date: 08/07/2020
-ms.openlocfilehash: 68868ff8b4e1393fc3b23af2bc8eef239ac56975
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: fc2f945e3de732a81b9ce3fd82eff10e455cae87
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024991"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062958"
 ---
 # <a name="eventcounters-in-net-core"></a>EventCounters no .NET Core
 
@@ -177,7 +177,9 @@ O EventCounters pode ser consumido por Azure Monitor, especificamente Aplicativo
 
 #### <a name="dotnet-monitor"></a>dotnet-monitor
 
-O `dotnet-monitor` é uma ferramenta experimental que torna mais fácil obter acesso a informações de diagnóstico em um processo do .net. Para obter mais informações, consulte [Introducing dotnet-monitor, uma ferramenta experimental](https://devblogs.microsoft.com/dotnet/introducing-dotnet-monitor).
+A `dotnet-monitor` ferramenta é uma ferramenta experimental que torna mais fácil obter acesso a informações de diagnóstico em um processo do .net. A ferramenta serve como um superconjunto de todas as ferramentas de diagnóstico. Além dos rastreamentos, ele pode monitorar as métricas, coletar despejos de memória e coletar despejos de GC. Ele é distribuído como uma ferramenta CLI e uma imagem do Docker. Ele expõe uma API REST e a coleção de artefatos de diagnóstico ocorre por meio de chamadas REST.
+
+Para obter mais informações, consulte [Introducing dotnet-monitor, uma ferramenta experimental](https://devblogs.microsoft.com/dotnet/introducing-dotnet-monitor).
 
 ### <a name="consume-in-proc"></a>Consumir no processo
 

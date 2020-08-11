@@ -2,13 +2,14 @@
 title: CLI do .NET Core
 titleSuffix: ''
 description: Uma visão geral do CLI do .NET Core e de seus recursos.
+ms.topic: overview
 ms.date: 02/13/2020
-ms.openlocfilehash: f92151c85b4816fef1859e84ad94945445db1854
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 18dde384058206f437b53572b2f8331d65324482
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415965"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062685"
 ---
 # <a name="net-core-cli-overview"></a>Visão geral da CLI do .NET Core
 
@@ -101,7 +102,7 @@ Os argumentos que você passa na linha de comando são aqueles do comando invoca
 
 As opções que você passa na linha de comando são aquelas do comando invocado. Por exemplo, quando você executa `dotnet publish --output /build_output` o, a `--output` opção e seu valor são passados para o `publish` comando.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [repositório do GitHub do dotnet/SDK](https://github.com/dotnet/sdk/)
 - [Guia de instalação do .NET Core](../install/windows.md)

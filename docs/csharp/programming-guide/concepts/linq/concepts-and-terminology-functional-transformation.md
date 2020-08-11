@@ -3,12 +3,12 @@ title: Conceitos e terminologia (transformação funcional) (C#)
 description: As funcionalidades de programação funcional facilitam a transformação de XML. Saiba mais sobre os conceitos e a terminologia de transformações funcionais puras em C#.
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: ee972b376f0d0898b7681049b9641b43780ed353
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: ca05a914f6156730e773d1effebfc72626b16507
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103978"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063270"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Conceitos e terminologia (transformação funcional) (C#)
 
@@ -55,7 +55,7 @@ Para obter mais informações, consulte [Visão geral de operadores de consulta 
 expressão lambda \
 Essencialmente, uma função anônimo embutido que pode ser usada em que um tipo delegate é esperada. Esta é uma definição simplificada de expressões lambda, mas é suficiente para fins deste tutorial.
 
-Para obter mais informações, consulte [Expressões lambda](../../statements-expressions-operators/lambda-expressions.md).
+Para obter mais informações, consulte [Expressões lambda](../../../language-reference/operators/lambda-expressions.md).
 
 coleção \
 Um conjunto estruturada de dados, geralmente um tipo de uniforme. Para ser compatível com LINQ, uma coleção deve implementar a interface de <xref:System.Collections.IEnumerable> ou a interface de <xref:System.Linq.IQueryable> (ou uma de suas contrapartes genéricos, de <xref:System.Collections.Generic.IEnumerator%601> ou de <xref:System.Linq.IQueryable%601>).
@@ -77,7 +77,7 @@ Para obter mais informações, consulte [Introdução a consultas LINQ (C#)](./i
 
 Esses recursos de idioma serão usados em exemplos de código em todo esta seção.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Introdução às transformações funcionais puras (C#)](./introduction-to-pure-functional-transformations.md)
 - [Programação funcional versus programação imperativa (C#)](./functional-programming-vs-imperative-programming.md)

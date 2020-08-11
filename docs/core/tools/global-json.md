@@ -1,14 +1,15 @@
 ---
 title: Visão geral do global.json
 description: Saiba como usar o arquivo global.json para definir a versão do SDK do .NET Core ao executar comandos de CLI do .NET Core.
+ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 5078bc03056c23bccf02e027441de72c69072c7d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: a9558090b1ef48f376334fbc826f6265a58908da
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202025"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062789"
 ---
 # <a name="globaljson-overview"></a>Visão geral do global.json
 
@@ -16,7 +17,7 @@ ms.locfileid: "84202025"
 
 O arquivo *global.json* permite que você defina qual versão do SDK do .NET Core é usada ao executar comandos de CLI do .NET Core. A seleção do SDK do .NET Core não depende da especificação do runtime ao qual o projeto é direcionado. A versão SDK do .NET Core indica quais versões do CLI do .NET Core são usadas.
 
-Em geral, você deseja usar a versão mais recente das ferramentas do SDK, portanto, nenhum arquivo *global. JSON* é necessário. Em alguns cenários avançados, talvez você queira controlar a versão das ferramentas do SDK, e este artigo explica como fazer isso.
+Em geral, você deseja usar a versão mais recente das ferramentas do SDK, portanto, nenhum *global.jsno* arquivo é necessário. Em alguns cenários avançados, talvez você queira controlar a versão das ferramentas do SDK, e este artigo explica como fazer isso.
 
 Para obter mais informações de como especificar o runtime nesse caso, confira [Estruturas de destino](../../standard/frameworks.md).
 
@@ -149,7 +150,7 @@ O exemplo a seguir mostra como usar a versão de patch mais alta instalada de um
 
 ## <a name="globaljson-and-the-net-core-cli"></a>global.json e CLI do .NET Core
 
-É útil saber quais versões do SDK estão instaladas em seu computador para definir uma no arquivo *global. JSON* . Para obter mais informações sobre como fazer isso, consulte [como verificar se o .NET Core já está instalado](../install/how-to-detect-installed-versions.md#check-sdk-versions).
+É útil saber quais versões do SDK estão instaladas em seu computador para definir uma na *global.jsno* arquivo. Para obter mais informações sobre como fazer isso, consulte [como verificar se o .NET Core já está instalado](../install/how-to-detect-installed-versions.md#check-sdk-versions).
 
 Para instalar versões adicionais do SDK do .NET Core em seu computador, visite a página [baixar o .NET Core](https://dotnet.microsoft.com/download/dotnet-core) .
 
@@ -168,11 +169,11 @@ dotnet new globaljson --sdk-version 3.0.100
 
 A partir do .NET Core 3,0, as seguintes regras se aplicam ao determinar qual versão do SDK usar:
 
-- Se nenhum arquivo *global. JSON* for encontrado ou *global. JSON* não especificar uma versão do SDK nem um `allowPrerelease` valor, a versão mais recente do SDK instalada será usada (equivalente a definir `rollForward` como `latestMajor` ). Se as versões de pré-lançamento do SDK são consideradas depende de como o `dotnet` está sendo invocado.
+- Se nenhum *global.jsno* arquivo for encontrado ou *global.jsem* não especificar uma versão do SDK nem um `allowPrerelease` valor, a versão mais recente do SDK será usada (equivalente a definir `rollForward` como `latestMajor` ). Se as versões de pré-lançamento do SDK são consideradas depende de como o `dotnet` está sendo invocado.
   - Se você **não** estiver no Visual Studio, as versões de pré-lançamento serão consideradas.
   - Se você estiver no Visual Studio, ele usará o status de pré-lançamento solicitado. Ou seja, se você estiver usando uma versão prévia do Visual Studio ou se definir a opção **usar visualizações da SDK do .NET Core** (em **ferramentas**  >  **Opções**  >  recursos de visualização do**ambiente**  >  **Preview Features**), as versões de pré-lançamento serão consideradas; caso contrário, apenas as versões de lançamento serão consideradas.
-- Se um arquivo *global. JSON* for encontrado e não especificar uma versão do SDK, mas especificar um `allowPrerelease` valor, a versão mais recente do SDK instalada será usada (equivalente a definir `rollForward` como `latestMajor` ). Se a versão mais recente do SDK pode ser Release ou pré-lançamento depende do valor de `allowPrerelease` . `true`indica que as versões de pré-lançamento são consideradas; `false`indica que apenas versões de lançamento são consideradas.
-- Se um arquivo *global. JSON* for encontrado e ele especificar uma versão do SDK:
+- Se um *global.jsno* arquivo for encontrado e não especificar uma versão do SDK, mas especificar um `allowPrerelease` valor, a versão mais recente do SDK instalada será usada (equivalente a definir `rollForward` como `latestMajor` ). Se a versão mais recente do SDK pode ser Release ou pré-lançamento depende do valor de `allowPrerelease` . `true`indica que as versões de pré-lançamento são consideradas; `false`indica que apenas versões de lançamento são consideradas.
+- Se um *global.jsno* arquivo for encontrado e ele especificar uma versão do SDK:
 
   - Se nenhum `rollFoward` valor for definido, ele será usado `latestPatch` como a `rollForward` política padrão. Caso contrário, verifique cada valor e seu comportamento na seção [avanço](#rollforward) .
   - Se as versões de pré-lançamento são consideradas e qual é o comportamento padrão quando `allowPrerelease` não está definido, é descrito na seção [allowPrerelease](#allowprerelease) .
@@ -205,14 +206,14 @@ As versões do SDK do .NET Core `2.1.100` até `2.1.201` foram lançadas durante
 
   > Você está trabalhando com uma versão prévia do SDK do .NET Core. Você pode definir a versão do SDK por meio de um arquivo global.json no projeto atual. Mais em <https://go.microsoft.com/fwlink/?linkid=869452> .
 
-  As versões do SDK do .NET Core têm um histórico e o compromisso de manter a alta qualidade. No entanto, se você não quiser usar uma versão de pré-lançamento, verifique as diferentes estratégias que você pode usar com o SDK do .NET Core 3,0 ou uma versão posterior na seção [allowPrerelease](#allowprerelease) . Para computadores que nunca tinham um .NET Core 3,0 ou um tempo de execução ou SDK superior instalado, você precisa criar um arquivo *global. JSON* e especificar a versão exata que deseja usar.
+  As versões do SDK do .NET Core têm um histórico e o compromisso de manter a alta qualidade. No entanto, se você não quiser usar uma versão de pré-lançamento, verifique as diferentes estratégias que você pode usar com o SDK do .NET Core 3,0 ou uma versão posterior na seção [allowPrerelease](#allowprerelease) . Para computadores que nunca tinham um .NET Core 3,0 ou um tempo de execução ou SDK superior instalado, você precisa criar um *global.jsno* arquivo e especificar a versão exata que deseja usar.
 
 * O aviso a seguir indica que seu projeto tem como alvo EF Core 1,0 ou 1,1, que não é compatível com o SDK do .NET Core 2,1 e versões posteriores:
 
   > O projeto de inicialização '{startupProject}' é direcionado à estrutura '.NETCoreApp' versão '{targetFrameworkVersion}'. Essa versão das ferramentas de linha de comando do .NET do Entity Framework Core são compatíveis apenas com a versão 2.0 ou superiores. Para obter informações sobre como usar versões mais antigas das ferramentas, consulte <https://go.microsoft.com/fwlink/?linkid=871254> .
 
-  A partir do SDK do .NET Core 2.1 (versão 2.1.300), o comando `dotnet ef` vem incluído no SDK. Para compilar seu projeto, instale o SDK do .NET Core 2,0 (versão 2.1.201) ou anterior em seu computador e defina a versão do SDK desejada usando o arquivo *global. JSON* . Para saber mais sobre o comando `dotnet ef`, confira [Ferramentas da linha de comando do .NET EF Core](/ef/core/miscellaneous/cli/dotnet).
+  A partir do SDK do .NET Core 2.1 (versão 2.1.300), o comando `dotnet ef` vem incluído no SDK. Para compilar seu projeto, instale o SDK do .NET Core 2,0 (versão 2.1.201) ou anterior em seu computador e defina a versão do SDK desejada usando o *global.jsno* arquivo. Para saber mais sobre o comando `dotnet ef`, confira [Ferramentas da linha de comando do .NET EF Core](/ef/core/miscellaneous/cli/dotnet).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Como os SDKs de projeto são resolvidos](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

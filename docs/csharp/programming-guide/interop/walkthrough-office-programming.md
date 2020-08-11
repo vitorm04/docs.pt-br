@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: bf4725f3f636bb208450cb9b5c58766d84947f86
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 76f0e2eccb5d1a59d9aaa3eed11b25dd2dd9cac3
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302939"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062997"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Passo a passo: Programação do Office (C# e Visual Basic)
 
@@ -125,7 +125,7 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
 
 ### <a name="to-invoke-displayinexcel"></a>Para invocar DisplayInExcel
 
-1. Adicione o código a seguir no final do método `ThisAddIn_StartUp`. A chamada para `DisplayInExcel` contém dois argumentos. O primeiro argumento é o nome da lista de contas a ser processada. O segundo argumento é uma expressão lambda com várias linhas que define como os dados deverão ser processados. Os valores `ID` e `balance` de cada conta serão exibidos em células adjacentes e a linha será exibida em vermelho se o equilíbrio for menor do que zero. Para obter mais informações, consulte [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
+1. Adicione o código a seguir no final do método `ThisAddIn_StartUp`. A chamada para `DisplayInExcel` contém dois argumentos. O primeiro argumento é o nome da lista de contas a ser processada. O segundo argumento é uma expressão lambda com várias linhas que define como os dados deverão ser processados. Os valores `ID` e `balance` de cada conta serão exibidos em células adjacentes e a linha será exibida em vermelho se o equilíbrio for menor do que zero. Para obter mais informações, consulte [Expressões Lambda](../../language-reference/operators/lambda-expressions.md).
 
      [!code-csharp[csOfficeWalkthrough#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#9)]
 
@@ -190,20 +190,20 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
 
 8. No Visual Studio, clique em **Limpar Solução** no menu **Compilar** para limpar o projeto concluído.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Propriedades autoimplementadas (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
 - [Propriedades autoimplementadas (C#)](../classes-and-structs/auto-implemented-properties.md)
 - [Inicializadores de coleção](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
 - [Inicializadores de objeto e coleção](../classes-and-structs/object-and-collection-initializers.md)
-- [Parâmetros opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [Parâmetros Opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
 - [Passando argumentos por posição e nome](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
 - [Argumentos nomeados e opcionais](../classes-and-structs/named-and-optional-arguments.md)
 - [Associação antecipada e tardia](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
 - [dinâmico](../../language-reference/builtin-types/reference-types.md)
 - [Usando o tipo dynamic](../types/using-type-dynamic.md)
 - [Expressões lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Expressões lambda [C#]](../statements-expressions-operators/lambda-expressions.md)
+- [Expressões lambda [C#]](../../language-reference/operators/lambda-expressions.md)
 - [Como usar propriedades indexadas na programação para interoperabilidade COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [Passo a passo: inserindo informações de tipo dos Microsoft Office Assemblies no Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
 - [Instruções passo a passo: Inserindo tipos de assemblies gerenciados](../../../standard/assembly/embed-types-visual-studio.md)

@@ -3,12 +3,12 @@ title: Consultas no LINQ to Entities
 description: Saiba mais sobre como o LINQ oferece um modelo simples e consistente para trabalhar com dados em vários tipos de fontes de dados e formatos usando objetos de programação.
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: 048fd56fc687dd715292fb3bb09405130de09779
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eaf44cf6c995be335c6127f42d7aaec0dd98527c
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286812"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063725"
 ---
 # <a name="queries-in-linq-to-entities"></a>Consultas no LINQ to Entities
 Uma consulta é uma expressão que recupera dados de uma fonte de dados. Normalmente, as consultas são expressas em uma linguagem de consulta especializada, como o SQL para bancos de dados relacionais e o XQuery para XML. Portanto, os desenvolvedores precisaram aprender uma nova linguagem de consulta para cada tipo de fonte de dados ou formato de dados que consultam. O LINQ (Consulta Integrada à Linguagem) oferece um modelo mais simples e consistente para trabalhar com dados em vários tipos de fontes de dados e formatos. Em uma consulta LINQ, você sempre trabalha com objetos de programação.  
@@ -44,7 +44,7 @@ Uma consulta é uma expressão que recupera dados de uma fonte de dados. Normalm
 - [Exemplos de sintaxe de expressão de consulta: navegar em relações](query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>Sintaxe de pesquisa baseada em método  
- Outra maneira de compor LINQ to Entities consultas é usando consultas baseadas em método. A sintaxe da consulta baseada em método é uma sequência de chamadas diretas de método para métodos de operadores LINQ, passando expressões lambda como parâmetros. Para obter mais informações, consulte [Expressões Lambda](../../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md). Para obter exemplos que demonstram como usar a sintaxe baseada em método, consulte os seguintes tópicos:  
+ Outra maneira de compor LINQ to Entities consultas é usando consultas baseadas em método. A sintaxe da consulta baseada em método é uma sequência de chamadas diretas de método para métodos de operadores LINQ, passando expressões lambda como parâmetros. Para obter mais informações, consulte [Expressões Lambda](../../../../../csharp/language-reference/operators/lambda-expressions.md). Para obter exemplos que demonstram como usar a sintaxe baseada em método, consulte os seguintes tópicos:  
   
 - [Exemplos de sintaxe da consulta baseada em método: projeção](method-based-query-syntax-examples-projection.md)  
   
@@ -66,7 +66,7 @@ Uma consulta é uma expressão que recupera dados de uma fonte de dados. Normalm
   
 - [Exemplos de sintaxe da consulta com base em método: Navegando em relações](method-based-query-syntax-examples-navigating-relationships.md)  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [LINQ to Entities](linq-to-entities.md)
 - [Introdução a LINQ em C#](../../../../../csharp/programming-guide/concepts/linq/index.md)

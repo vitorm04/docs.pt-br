@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: 132518b9d8d22efecfcf3ed14e8b5969aa768cd4
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: d42d244e644bf3ee1f45b25a71d60bbb2ef8e590
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024583"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063829"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>Encadeando tarefas usando tarefas de continuação
 
@@ -52,7 +52,7 @@ Você cria uma continuação que é executada quando seu antecessor é concluíd
 
 Você também pode criar uma continuação que será executada quando qualquer uma ou todo um grupo de tarefas tiver sido concluído. Para executar uma continuação quando todas as tarefas antecedentes são concluídas, você chama o método estático (`Shared` no Visual Basic) <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> ou o método de instância <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType>. Para executar uma continuação quando qualquer uma das tarefas antecedentes é concluída, você chama o método estático (`Shared` no Visual Basic) <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> ou o método de instância <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType>.
 
-Observe que as chamadas para as sobrecargas <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> não bloqueiam o thread de chamada. No entanto, normalmente você chama todos <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> os <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> métodos e, para recuperar a <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> propriedade retornada, que bloqueia o thread de chamada.
+Chamadas para as <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> sobrecargas e não bloqueiam o thread de chamada. No entanto, normalmente você chama todos <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> os <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> métodos e, para recuperar a <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> propriedade retornada, que bloqueia o thread de chamada.
 
 O exemplo a seguir chama o método <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> para criar uma tarefa de continuação que reflete os resultados das dez tarefas antecedentes. Cada tarefa antecessora eleva ao quadrado um valor de índice que varia de um a dez. Se os antecedentes tiverem sido concluídos com êxito (se sua propriedade <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> for <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>), a propriedade <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> da continuação será uma matriz dos valores <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> retornados por cada antecessor. O exemplo os adiciona para calcular a soma dos quadrados de todos os números entre um e dez.
 
@@ -88,7 +88,7 @@ Se você quiser que a continuação seja executada mesmo se a antecessora não t
 
 A propriedade <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> de uma continuação é definida como <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> nas seguintes situações:
 
-- Gera uma exceção <xref:System.OperationCanceledException> em resposta a uma solicitação de cancelamento. Assim como acontece com qualquer tarefa, se a exceção contiver o mesmo token que foi passado para a continuação, ela será tratada como uma confirmação do cancelamento cooperativo.
+- Gera uma exceção <xref:System.OperationCanceledException> em resposta a uma solicitação de cancelamento. Assim como ocorre com qualquer tarefa, se a exceção contiver o mesmo token que foi passado para a continuação, ela será tratada como uma confirmação de cancelamento cooperativo.
 - A continuação recebe um <xref:System.Threading.CancellationToken?displayProperty=nameWithType> cuja propriedade <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> é `true`. Nesse caso, a continuação não é iniciada e faz a transição para o estado <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>.
 - A continuação nunca é executada porque a condição definida por seu argumento <xref:System.Threading.Tasks.TaskContinuationOptions> não foi atendida. Por exemplo, se um antecessor entrar em um estado <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType>, sua continuação que recebeu a opção <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> não será executada, mas fará a transição para o estado <xref:System.Threading.Tasks.TaskStatus.Canceled>.
 

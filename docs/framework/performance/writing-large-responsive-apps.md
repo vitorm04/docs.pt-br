@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8b1c9ab25299fcbafca6aba7b13217713a941ce8
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 4a9f5d50ad78b2b0bef0ece3c4fce47d2925aca5
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475184"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063751"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escrevendo aplicativos .NET Framework grandes e dinâmicos
 
@@ -306,7 +306,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- Na primeira linha, a [expressão lambda](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [fecha](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures) a variável local `name`. Isso significa que, além de alocar um objeto para o [representante](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) que `predicate` mantém, o código aloca uma classe estática para manter o ambiente que captura o valor `name`. O compilador gera um código semelhante ao seguinte:  
+ Na primeira linha, a [expressão lambda](../../csharp/language-reference/operators/lambda-expressions.md) `s => s.Name == name` [fecha](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures) a variável local `name`. Isso significa que, além de alocar um objeto para o [representante](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) que `predicate` mantém, o código aloca uma classe estática para manter o ambiente que captura o valor `name`. O compilador gera um código semelhante ao seguinte:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  

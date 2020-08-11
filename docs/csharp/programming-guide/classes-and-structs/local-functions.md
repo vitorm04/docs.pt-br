@@ -4,12 +4,12 @@ description: As funções locais em C# são métodos privados que são aninhados
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 9987d6d5ad57c1dceb3a4bffbae22a81c240c794
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 854ec7ab4a4cc637c0a5ad03e0344d2f1f7679d2
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864521"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063296"
 ---
 # <a name="local-functions-c-programming-guide"></a>Funções locais (Guia de Programação em C#)
 
@@ -78,7 +78,7 @@ Assim como foi feito com o método iterador, podemos refatorar o código deste e
 
 ## <a name="local-functions-vs-lambda-expressions"></a>Funções locais vs. expressões lambda
 
-À primeira vista, funções locais e [expressões lambda](../statements-expressions-operators/lambda-expressions.md) são muito semelhantes. Em muitos casos, a escolha entre usar expressões lambda e funções locais é uma questão de estilo e preferência pessoal. No entanto, há diferenças reais nos casos em que você pode usar uma ou outra, e é importante conhecer essas diferenças.
+À primeira vista, funções locais e [expressões lambda](../../language-reference/operators/lambda-expressions.md) são muito semelhantes. Em muitos casos, a escolha entre usar expressões lambda e funções locais é uma questão de estilo e preferência pessoal. No entanto, há diferenças reais nos casos em que você pode usar uma ou outra, e é importante conhecer essas diferenças.
 
 Examinaremos as diferenças entre a função local e as implementações de expressão lambda do algoritmo fatorial. Primeiro a versão usando uma função local:
 
@@ -128,6 +128,6 @@ Uma vantagem final não demonstrada neste exemplo é que as funções locais pod
 
 Embora as funções locais possam parecer redundantes para expressões lambda, elas realmente têm finalidades e usos diferentes. As funções locais são mais eficientes para quando você deseja escrever uma função que é chamada apenas do contexto de outro método.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Métodos](methods.md)

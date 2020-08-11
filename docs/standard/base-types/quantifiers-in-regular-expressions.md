@@ -15,12 +15,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: 2fc47a834f8f5b18021aa4f321345b8d7e4e8459
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 3ffdd481ac001b4e1bd229c6f5fa0bf285b508b2
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662882"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063803"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Quantificadores em expressões regulares
 Os quantificadores especificam quantas instâncias de um caractere, grupo ou classe de caracteres devem estar presentes na entrada para encontrar uma correspondência.  A tabela a seguir lista os quantificadores tem suporte no .NET.  
@@ -48,7 +48,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
 ### <a name="match-zero-or-more-times-"></a>Corresponder a zero ou mais vezes: *  
  O quantificador `*` corresponde ao elemento anterior zero ou mais vezes. É equivalente ao quantificador `{0,}`. `*` é um quantificador Greedy, cujo equivalente lento é `*?`.  
   
- O exemplo a seguir ilustra essa expressão regular. Dentre os nove dígitos na cadeia de caracteres de entrada, cinco correspondem ao padrão e quatro (`95`, `929`, `9219` e `9919`) não.  
+ O exemplo a seguir ilustra essa expressão regular. Dos nove grupos de dígitos na cadeia de caracteres de entrada, cinco correspondem ao padrão e quatro ( `95` , `929` , `9219` e `9919` ) não.  
   
  [!code-csharp[RegularExpressions.Quantifiers#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#1)]  
@@ -270,7 +270,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch4.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch4.vb#2)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Linguagem de expressões regulares – referência rápida](regular-expression-language-quick-reference.md)
 - [Retrocesso](backtracking-in-regular-expressions.md)

@@ -290,6 +290,8 @@ items:
         href: diagnostics/index.md
       - name: Depuradores gerenciados
         href: diagnostics/managed-debuggers.md
+      - name: EventCounters
+        href: diagnostics/event-counters.md
       - name: Registro em log e rastreamento
         href: diagnostics/logging-tracing.md
       - name: Ferramentas globais da CLI do .NET Core
@@ -302,6 +304,8 @@ items:
             href: diagnostics/dotnet-trace.md
       - name: Tutoriais de diagnóstico do .NET Core
         items:
+          - name: Obter métricas de desempenho com o EventCounters
+            href: diagnostics/event-counter-perf.md
           - name: Depurar um vazamento de memória
             href: diagnostics/debug-memory-leak.md
           - name: Depurar alto uso da CPU

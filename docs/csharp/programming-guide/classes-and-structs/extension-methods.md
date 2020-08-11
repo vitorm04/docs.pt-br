@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: e57447c89749451862bbb80047ed74135a0eb752
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 116087ac1aab57f2869b05f436801c7861c56eca
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474807"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063699"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Métodos de extensão (Guia de Programação em C#)
 
@@ -22,7 +22,7 @@ Os métodos de extensão mais comuns são os operadores de consulta padrão do L
 
 ### <a name="orderby-example"></a>Exemplo de OrderBy
 
-O exemplo a seguir mostra como chamar o método de consulta padrão `OrderBy` em qualquer matriz de inteiros. A expressão entre parênteses é uma expressão lambda. Muitos operadores de consulta padrão usam expressões lambda como parâmetros, mas isso não é um requisito para métodos de extensão. Para obter mais informações, consulte [Expressões Lambda](../statements-expressions-operators/lambda-expressions.md).
+O exemplo a seguir mostra como chamar o método de consulta padrão `OrderBy` em qualquer matriz de inteiros. A expressão entre parênteses é uma expressão lambda. Muitos operadores de consulta padrão usam expressões lambda como parâmetros, mas isso não é um requisito para métodos de extensão. Para obter mais informações, consulte [Expressões Lambda](../../language-reference/operators/lambda-expressions.md).
 
 [!code-csharp[csProgGuideExtensionMethods#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#3)]
 
@@ -121,7 +121,7 @@ Para uma biblioteca de classes que você implemente, não use métodos de extens
 
 - [Guia de programação C#](../index.md)
 - [Exemplos de programação paralela (incluem vários métodos de extensão de exemplo)](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)
-- [Expressões lambda](../statements-expressions-operators/lambda-expressions.md)
+- [Expressões lambda](../../language-reference/operators/lambda-expressions.md)
 - [Visão geral de operadores de consulta padrão](../concepts/linq/standard-query-operators-overview.md)
 - [Regras de conversão para parâmetros de instância e seu impacto](https://docs.microsoft.com/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact)
 - [Interoperabilidade de métodos de extensão entre linguagens](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-interoperability-between-languages)

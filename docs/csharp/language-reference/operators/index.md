@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 9ada39a2144e5565a76a25df0f83424710ad939f
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 854d7c1278319869104e1758ba91eb3594741126
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916818"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063179"
 ---
 # <a name="c-operators-and-expressions-c-reference"></a>Operadores e expressões do c# (referência C#)
 
@@ -47,7 +47,7 @@ Aqui estão alguns outros tipos de expressões que o C# fornece:
 
   [!code-csharp-interactive[interpolated string](snippets/shared/Overview.cs#InterpolatedString)]
 
-- [Expressões lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) que permitem criar funções anônimas:
+- [Expressões lambda](lambda-expressions.md) que permitem criar funções anônimas:
 
   [!code-csharp-interactive[lambda expression](snippets/shared/Overview.cs#Lambda)]
 
@@ -123,7 +123,7 @@ Sem considerar a relação com a precedência e a associação de operadores, os
 
 Normalmente, todos os operandos do operador são avaliados. No entanto, alguns operadores avaliam os operandos condicionalmente. Ou seja, o valor do operando mais à esquerda de tal operador define if (ou quais) outros operandos devem ser avaliados. Esses operadores são os operadores lógicos condicional [and ( `&&` )](boolean-logical-operators.md#conditional-logical-and-operator-) e [or ( `||` )](boolean-logical-operators.md#conditional-logical-or-operator-) , os [operadores de União nula `??` e `??=` ](null-coalescing-operator.md), os [operadores condicionais NULL `?.` e `?[]` e ](member-access-operators.md#null-conditional-operators--and-)o [operador `?:` condicional ](conditional-operator.md). Para obter mais informações, consulte a descrição de cada operador.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
 

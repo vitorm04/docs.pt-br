@@ -1829,7 +1829,7 @@
       href: language-reference/compiler-messages/index.md
     - name: Especificação de rascunho do C# 6.0
       href: language-reference/specification/
-    - name: Propostas do C# 7.0 - 8.0
+    - name: Propostas do C# 7.0 ao C# 9.0
       href: language-reference/proposals/
 - name: Passo a passo
   href: walkthroughs.md

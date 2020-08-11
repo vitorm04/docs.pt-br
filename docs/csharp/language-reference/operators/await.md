@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 20fc492e45b2d248602de59682e752026d421e06
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 1941174d7e8d1676d11a13fa3ee6c7b84fe3952c
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916924"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063231"
 ---
 # <a name="await-operator-c-reference"></a>Operador await (referência de C#)
 
@@ -27,7 +27,7 @@ O exemplo anterior usa o [ `Main` método Async](../../programming-guide/main-an
 > [!NOTE]
 > Para obter uma introdução à programação assíncrona, confira [Programação assíncrona com async e await](../../programming-guide/concepts/async/index.md). A programação assíncrona com `async` e `await` segue o [padrão assíncrono baseado em tarefas](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).
 
-Use o operador `await` somente em um método, uma [expressão lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) ou um [método anônimo](delegate-operator.md) que seja modificado pela palavra-chave [async](../keywords/async.md). Em um método assíncrono, você não pode usar o `await` operador no corpo de uma função síncrona, dentro do bloco de uma [instrução Lock](../keywords/lock-statement.md), e em um contexto sem [segurança](../keywords/unsafe.md) .
+Use o operador `await` somente em um método, uma [expressão lambda](lambda-expressions.md) ou um [método anônimo](delegate-operator.md) que seja modificado pela palavra-chave [async](../keywords/async.md). Em um método assíncrono, você não pode usar o `await` operador no corpo de uma função síncrona, dentro do bloco de uma [instrução Lock](../keywords/lock-statement.md), e em um contexto sem [segurança](../keywords/unsafe.md) .
 
 O operando `await` do operador geralmente é de um dos seguintes tipos .NET: <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask> ou <xref:System.Threading.Tasks.ValueTask%601>. No entanto, qualquer expressão aguardável pode ser o operando do operador `await`. Para obter mais informações, confira a seção [Expressões aguardáveis](~/_csharplang/spec/expressions.md#awaitable-expressions) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
@@ -47,7 +47,7 @@ Você usa a `await using` instrução para trabalhar com um objeto descartável 
 
 A partir do C# 7,1, o [ `Main` método](../../programming-guide/main-and-command-args/index.md), que é o ponto de entrada do aplicativo, pode retornar `Task` ou `Task<int>` permitir que ele seja assíncrono para que você possa usar o `await` operador em seu corpo. Em versões anteriores do C#, para garantir que o método `Main` aguarde a conclusão de uma operação assíncrona, você pode recuperar o valor da propriedade <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> da instância <xref:System.Threading.Tasks.Task%601> retornada pelo método assíncrono correspondente. Para operações assíncronas que não produzem um valor, você pode chamar o método <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>. Para obter informações sobre como selecionar a versão de idioma, consulte [controle de versão da linguagem C#](../configure-language-version.md).
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, confira a seção [Expressões await](~/_csharplang/spec/expressions.md#await-expressions) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 

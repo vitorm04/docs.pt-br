@@ -7,18 +7,18 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: ae8bda3c68542637b1430587ca4a537980c028bc
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 1fde7d535054f09d55018a010468776622ebfba7
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381665"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063257"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Funções anônimas (Guia de Programação em C#)
 
 Uma função anônima é uma instrução ou expressão "embutida" que pode ser usada em qualquer local em que um tipo delegado é esperado. Você pode usá-la para inicializar um delegado nomeado ou passá-la em vez de um tipo delegado nomeado como um parâmetro de método.
 
-Você pode usar uma [expressão lambda](lambda-expressions.md) ou um [método anônimo](../../language-reference/operators/delegate-operator.md) para criar uma função anônima. Recomendamos o uso de expressões lambda já que elas fornecem uma maneira mais concisa e expressiva de gravar código embutido. Ao contrário dos métodos anônimos, alguns tipos de expressões lambda podem ser convertidos nos tipos de árvore de expressão.
+Você pode usar uma [expressão lambda](../../language-reference/operators/lambda-expressions.md) ou um [método anônimo](../../language-reference/operators/delegate-operator.md) para criar uma função anônima. Recomendamos o uso de expressões lambda já que elas fornecem uma maneira mais concisa e expressiva de gravar código embutido. Ao contrário dos métodos anônimos, alguns tipos de expressões lambda podem ser convertidos nos tipos de árvore de expressão.
 
 ## <a name="the-evolution-of-delegates-in-c"></a>A evolução de delegados em C\#
 
@@ -28,13 +28,13 @@ Você pode usar uma [expressão lambda](lambda-expressions.md) ou um [método an
   
  [!code-csharp[csProgGuideLINQ#65](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#65)]  
   
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, confira a seção [Expressões de função anônima](~/_csharplang/spec/expressions.md#anonymous-function-expressions) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Instruções, expressões e operadores](./index.md)
-- [Expressões lambda](./lambda-expressions.md)
+- [Expressões lambda](../../language-reference/operators/lambda-expressions.md)
 - [Representantes](../delegates/index.md)
 - [Árvores de expressão (C#)](../concepts/expression-trees/index.md)
