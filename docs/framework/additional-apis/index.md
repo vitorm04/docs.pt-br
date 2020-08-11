@@ -1,7 +1,7 @@
 ---
 title: Bibliotecas de classes e APIs adicionais
 description: Explore bibliotecas de classes e APIs adicionais no .NET, incluindo projetos de OOB (fora de banda), bibliotecas específicas de plataforma e APIs privadas.
-ms.date: 06/12/2020
+ms.date: 08/11/2020
 helpviewer_keywords:
 - Additional class libraries
 - Additional managed libraries
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 ms.topic: conceptual
-ms.openlocfilehash: 0b888d2f0e80685ba993682b2f3067cf8aee15bc
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: c6404df5d4f0be381bc0a9c1924fcf82cf078306
+ms.sourcegitcommit: 70d6a7e4f7187cbfa332f0f8be76566f7828cfcd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989743"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88075469"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Bibliotecas de classes e APIs adicionais
 
@@ -24,7 +24,7 @@ Este artigo lista .NET Framework APIs que foram lançadas fora de banda, visam u
 
 Para melhorar o desenvolvimento de plataforma cruzada e introduzir novas funcionalidades no início, alguns recursos .NET Framework foram lançados fora de banda (OOB).
 
-| Project | Descrição |  
+| Projeto | Descrição |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | Fornece coleções que são thread-safe e têm garantias de que seu conteúdo nunca será alterado. |
 | <xref:System.Net.Http.WinHttpHandler> | Fornece um manipulador de mensagens para <xref:System.Net.Http.HttpClient> o com base na interface WinHTTP do Windows. |
@@ -35,7 +35,7 @@ Para melhorar o desenvolvimento de plataforma cruzada e introduzir novas funcion
 
 Algumas bibliotecas têm como destino plataformas específicas. Por exemplo, a <xref:System.Text.CodePagesEncodingProvider> classe torna codificações de página de código disponíveis para aplicativos UWP desenvolvidos usando .NET Framework.
   
-| Project | Descrição |  
+| Projeto | Descrição |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | Estende a <xref:System.Text.EncodingProvider> classe para tornar as codificações de página de código disponíveis para aplicativos direcionados ao plataforma universal do Windows. |  
   
@@ -87,6 +87,7 @@ Essas APIs dão suporte à infraestrutura do produto e não são pretendidas nem
 * [Método System .net. WebHeaderCollection. addinterna](system.net.webheadercollection.addinternal.md)
 * [Método System. ServiceModel. Channels. Message. BodyToString](system.servicemodel.channels.message.bodytostring.md)
 * [Método System. ServiceModel. Channels. Message. WriteStartHeaders](system.servicemodel.channels.message.writestartheaders.md)
+* [Classe System. Web. Compilation. ControlBuilderInterceptor](controlbuilderinterceptor-class.md)
 * [Campo System. Windows. Diagnostics. VisualDiagnostics. s \_ isDebuggerCheckDisabledForTestPurposes](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [Classe System. Windows. Forms. Design. DataMemberFieldEditor](datamemberfieldeditor-class.md)
 * [Classe System. Windows. Forms. Design. DataMemberListEditor](datamemberlisteditor-class.md)
@@ -103,6 +104,6 @@ Essas APIs dão suporte à infraestrutura do produto e não são pretendidas nem
 * [stdole. Interface StdFont](stdole.stdfont.md)
 * [stdole. Interface StdPicture](stdole.stdpicture.md)
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 * [.NET Framework e versões fora de banda](../get-started/the-net-framework-and-out-of-band-releases.md)
