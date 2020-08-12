@@ -2,17 +2,17 @@
 title: Formatação de texto sem formatação
 description: 'Saiba como usar printf e outra formatação de texto sem formatação em aplicativos e scripts em F #.'
 ms.date: 07/22/2020
-ms.openlocfilehash: 6b14633e074961757d0f0cd258d1b1667f5fd8ee
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 90a861736dae69dfbc199a19e24f587c42404737
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854913"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063777"
 ---
 # <a name="plain-text-formatting"></a>Formatação de texto sem formatação
 
 O F # dá suporte à formatação verificada por tipo de texto sem formatação usando as `printf` `printfn` funções relacionadas,, e `sprintf` .
-Por exemplo:
+Por exemplo,
 
 ```console
 dotnet fsi
@@ -47,7 +47,7 @@ A formatação de texto sem formatação também é observável por meio de toda
 
 ## <a name="checking-of-printf-format-strings"></a>Verificação de `printf` cadeias de caracteres de formato
 
-Um erro de tempo de compilação será relatado se uma `printf` função de formatação for usada com um argumento que não corresponda aos especificadores de formato printf na cadeia de caracteres de formato.  Por exemplo:
+Um erro de tempo de compilação será relatado se uma `printf` função de formatação for usada com um argumento que não corresponda aos especificadores de formato printf na cadeia de caracteres de formato.  Por exemplo,
 
 ```fsharp
 sprintf "Hello %s" (2+2)
@@ -85,6 +85,7 @@ As especificações de formato para `printf` formatos são cadeias de caracteres
 | `%A` | qualquer valor  |   Formatado usando a [formatação de texto simples estruturado](plaintext-formatting.md) com as configurações de layout padrão |
 | `%a` | qualquer valor  |   Requer dois argumentos: uma função de formatação que aceita um parâmetro de contexto e o valor, e o valor específico a ser impresso |
 | `%t` | qualquer valor  |   Requer um argumento: uma função de formatação que aceita um parâmetro de contexto que gera ou retorna o texto apropriado |
+| `%%` | (nenhum)  |   Não requer argumentos e imprime um sinal de porcentagem simples:`%` |
 
 Os tipos de inteiro básicos são `byte` ( `System.Byte` ), `sbyte` ( `System.SByte` ), `int16` ( `System.Int16` ), `uint16` ( `System.UInt16` ), `int32` ( `System.Int32` ), `uint32` ( `System.UInt32` ), `int64` () `System.Int64` , `uint64` ( `System.UInt64` ), `nativeint` ( `System.IntPtr` ), e `unativeint` ( `System.UIntPtr` ).
 Os tipos de ponto flutuante básicos são `float` ( `System.Double` ) e `float32` ( `System.Single` ).
@@ -110,7 +111,7 @@ O `%A` especificador de formato é usado para formatar valores de uma maneira le
 
 ### <a name="primitive-values"></a>Valores primitivos
 
-Ao formatar texto sem formatação usando o `%A` especificador, os valores numéricos de F # são formatados com seu sufixo e cultura invariável. Os valores de ponto flutuante são formatados usando 10 locais de precisão de ponto flutuante. Por exemplo:
+Ao formatar texto sem formatação usando o `%A` especificador, os valores numéricos de F # são formatados com seu sufixo e cultura invariável. Os valores de ponto flutuante são formatados usando 10 locais de precisão de ponto flutuante. Por exemplo,
 
 ```fsharp
 printfn "%A" (1L, 3n, 5u, 7, 4.03f, 5.000000001, 5.0000000001)
@@ -122,7 +123,7 @@ grava
 (1L, 3n, 5u, 7, 4.03000021f, 5.000000001, 5.0)
 ```
 
-Ao usar o `%A` especificador, as cadeias de caracteres são formatadas usando aspas. Os códigos de escape não são adicionados e, em vez disso, os caracteres brutos são impressos. Por exemplo:
+Ao usar o `%A` especificador, as cadeias de caracteres são formatadas usando aspas. Os códigos de escape não são adicionados e, em vez disso, os caracteres brutos são impressos. Por exemplo,
 
 ```fsharp
 printfn "%A" ("abc", "a\tb\nc\"d")
@@ -138,7 +139,7 @@ c"d")
 
 ### <a name="net-values"></a>Valores do .NET
 
-Ao formatar texto sem formatação usando o `%A` especificador, os objetos não F # .NET são formatados com `x.ToString()` o uso das configurações padrão do .NET fornecido pelo `System.Globalization.CultureInfo.CurrentCulture` e pelo `System.Globalization.CultureInfo.CurrentUICulture` .  Por exemplo:
+Ao formatar texto sem formatação usando o `%A` especificador, os objetos não F # .NET são formatados com `x.ToString()` o uso das configurações padrão do .NET fornecido pelo `System.Globalization.CultureInfo.CurrentCulture` e pelo `System.Globalization.CultureInfo.CurrentUICulture` .  Por exemplo,
 
 ```fsharp
 open System.Globalization
@@ -162,7 +163,7 @@ Culture 2: 12/31/1999 12:00:00 AM
 ### <a name="structured-values"></a>Valores estruturados
 
 Ao formatar texto sem formatação usando o `%A` especificador, o recuo de bloco é usado para listas e tuplas F #. Isso é mostrado no exemplo anterior.
-A estrutura de matrizes também é usada, incluindo matrizes multidimensionais.  Matrizes unidimensionais são mostradas com a `[| ... |]` sintaxe. Por exemplo:
+A estrutura de matrizes também é usada, incluindo matrizes multidimensionais.  Matrizes unidimensionais são mostradas com a `[| ... |]` sintaxe. Por exemplo,
 
 ```fsharp
 printfn "%A" [| for i in 1 .. 20 -> (i, i*i) |]
@@ -176,7 +177,7 @@ grava
   (17, 289); (18, 324); (19, 361); (20, 400)|]
 ```
 
-A largura de impressão padrão é 80.  Essa largura pode ser personalizada usando uma largura de impressão no especificador de formato. Por exemplo:
+A largura de impressão padrão é 80.  Essa largura pode ser personalizada usando uma largura de impressão no especificador de formato. Por exemplo,
 
 ```fsharp
 printfn "%10A" [| for i in 1 .. 5 -> (i, i*i) |]
@@ -221,7 +222,7 @@ def"|]
 ```
 
 Um limite de profundidade de 4 é usado para valores de Sequence ( `IEnumerable` ), que são mostrados como `seq { ...}` . Um limite de profundidade de 100 é usado para valores de lista e matriz.
-Por exemplo:
+Por exemplo,
 
 ```fsharp
 printfn "%A" (seq { for i in 1 .. 10 -> (i, i*i) })
@@ -233,7 +234,7 @@ grava
 seq [(1, 1); (2, 4); (3, 9); (4, 16); ...]
 ```
 
-O recuo de bloco também é usado para a estrutura de valores públicos de registro e União. Por exemplo:
+O recuo de bloco também é usado para a estrutura de valores públicos de registro e União. Por exemplo,
 
 ```fsharp
 type R = { X : int list; Y : string list }
@@ -277,7 +278,7 @@ internal view:
 ### <a name="large-cyclic-or-deeply-nested-values"></a>Valores grandes, cíclicos ou profundamente aninhados
 
 Os valores estruturados grandes são formatados para uma contagem máxima de nós de objeto geral de 10000.
-Valores profundamente aninhados são formatados para uma profundidade de 100.  Em ambos os casos, `...` é usado para Elide parte da saída.  Por exemplo:
+Valores profundamente aninhados são formatados para uma profundidade de 100.  Em ambos os casos, `...` é usado para Elide parte da saída.  Por exemplo,
 
 ```fsharp
 type Tree =
@@ -348,7 +349,7 @@ Counts([0; 1; 2; 3;
 
 A implementação padrão de `ToString` é observável na programação em F #. Geralmente, os resultados padrão não são adequados para uso em exibição de informações voltadas para o programador ou saída do usuário e, como resultado, é comum substituir a implementação padrão.  
 
-Por padrão, os tipos de registro e União F # substituem a implementação de `ToString` por uma implementação que usa o `sprintf "%+A"` .  Por exemplo:
+Por padrão, os tipos de registro e União F # substituem a implementação de `ToString` por uma implementação que usa o `sprintf "%+A"` .  Por exemplo,
 
 ```fsharp
 type Counts = { Clicks:int list }
@@ -362,7 +363,7 @@ grava
 { Clicks = [0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10] }
 ```
 
-Para tipos de classe, nenhuma implementação padrão de `ToString` é fornecida e o padrão .net é usado, o que relata o nome do tipo. Por exemplo:
+Para tipos de classe, nenhuma implementação padrão de `ToString` é fornecida e o padrão .net é usado, o que relata o nome do tipo. Por exemplo,
 
 ```fsharp
 type MyClassType(clicks: int list) =
@@ -417,6 +418,6 @@ Esses atributos são ignorados na formatação de texto sem formatação F #, ma
 ## <a name="see-also"></a>Confira também
 
 - [Cadeias de caracteres](strings.md)
-- [Grava](records.md)
-- [Uniões Discriminadas](discriminated-unions.md)
+- [Registros](records.md)
+- [Uniões discriminadas](discriminated-unions.md)
 - [F# Interativo](fsharp-interactive-options.md)
