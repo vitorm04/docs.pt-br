@@ -6,12 +6,12 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: df44786dfd0a384ae2498a94d14b029612450fee
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: df7acc788943e9655dbbb03ffaaa88ff22b81ad2
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475470"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187908"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versões e dependências do .NET Framework
 
@@ -31,8 +31,9 @@ O CLR é identificado pelo seu próprio número de versão. O número de versão
 
 As tabelas a seguir resumem .NET Framework histórico de versão e correlacionam cada versão com o Visual Studio, o Windows e o Windows Server. O Visual Studio dá suporte a vários destinos, portanto, você não está limitado à versão do .NET Framework listada.
 
-- O ícone de marca de seleção ✔️ denota as versões do sistema operacional nas quais o .NET Framework está instalado, mas deve ser habilitado [no painel de controle](../install/dotnet-35-windows-10.md) (para Windows) ou por meio do Gerenciador do servidor (para Windows Server).
+- O ícone de marca de seleção ✔️ denota as versões do sistema operacional nas quais o .NET Framework está instalado por padrão.
 - O ícone de sinal de adição ➕ denota as versões do sistema operacional nas quais .NET Framework não vem instalado, mas pode ser instalado.
+- O asterisco **\*** denota as versões do sistema operacional nas quais .NET Framework (se pré-instalado ou não) devem ser habilitadas [no painel de controle](../install/dotnet-35-windows-10.md) ou, para o Windows Server, por meio do Gerenciador do servidor.
 
 | | |
 | - | - |
@@ -303,7 +304,7 @@ Além disso, se seu aplicativo tiver como destino a versão 2,0, 3,0 ou 3,5, os 
 
 - Para saber mais sobre como determinar quais versões ou atualizações estão instaladas em um computador, confira [How to: Determine Which .NET Framework Versions Are Installed](how-to-determine-which-versions-are-installed.md) (Como determinar quais versões do .NET Framework estão instaladas) e [How to: Determine Which .NET Framework Updates Are Installed](how-to-determine-which-net-framework-updates-are-installed.md) (Como determinar quais atualizações do .NET Framework estão instaladas).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Compatibilidade](version-compatibility.md) 
 |  de versão [.NET Framework a política de suporte oficial](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)

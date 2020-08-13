@@ -9,12 +9,12 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 312d977f832d262b1bebc6638280b67b133babdf
-ms.sourcegitcommit: 70d6a7e4f7187cbfa332f0f8be76566f7828cfcd
+ms.openlocfilehash: 0cd7409deb9cb84783cfa70600999fa4b2a2d2e2
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88084390"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187985"
 ---
 # <a name="controlbuilderinterceptor-class"></a>Classe ControlBuilderInterceptor
 
@@ -57,8 +57,9 @@ Registre o tipo de interceptador usando a `aspnet:20ControlBuilderInterceptor` c
          value="Fabrikam.Interceptor, Fabrikam, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2b3831f2f2b744f7" />
   </appSettings>
 </configuration>
+```
 
-To retrieve the assembly-qualified name of a type, use the <xref:System.Type.AssemblyQualifiedName?displayProperty=nameWithType> property, as demonstrated in the following code.
+Para recuperar o nome qualificado do assembly de um tipo, use a <xref:System.Type.AssemblyQualifiedName?displayProperty=nameWithType> propriedade, conforme demonstrado no código a seguir.
 
 ```csharp
 string assemblyQualifiedName = typeof(Fabrikam.Interceptor).AssemblyQualifiedName;
