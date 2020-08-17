@@ -4,16 +4,14 @@ description: Saiba como definir a lógica de inicialização para seu aplicativo
 author: csharpfritz
 ms.author: jefritz
 ms.date: 02/25/2020
-ms.openlocfilehash: 3d460750c36f64b8ad343755bd63b47af5c310d9
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: ea2ea458011d8351a834aa12db02e5d2bac2dc65
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87914874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267692"
 ---
 # <a name="app-startup"></a>Inicialização do aplicativo
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Os aplicativos escritos para ASP.NET normalmente têm um `global.asax.cs` arquivo que define o `Application_Start` evento que controla quais serviços são configurados e disponibilizados para processamento em HTML e .net. Este capítulo analisa como as coisas são ligeiramente diferentes com ASP.NET Core e um servidor mais incrivelmente.
 
@@ -21,10 +19,10 @@ Os aplicativos escritos para ASP.NET normalmente têm um `global.asax.cs` arquiv
 
 O método padrão de formulários da Web aumentou com a `Application_Start` finalidade de anos para lidar com muitas tarefas de configuração.  Um novo projeto Web Forms com o modelo padrão no Visual Studio 2019 agora contém a seguinte lógica de configuração:
 
-- `RouteConfig`-Roteamento de URL de aplicativo
-- `BundleConfig`-Agrupamento e minificação do CSS e do JavaScript
+- `RouteConfig` -Roteamento de URL de aplicativo
+- `BundleConfig` -Agrupamento e minificação do CSS e do JavaScript
 
-Cada um desses arquivos individuais reside na `App_Start` pasta e é executado apenas uma vez no início do nosso aplicativo.  `RouteConfig`no modelo de projeto padrão, o adiciona o `FriendlyUrlSettings` para Web Forms para permitir que as URLs de aplicativo omitam a `.ASPX` extensão de arquivo.  O modelo padrão também contém uma diretiva que fornece códigos de status de redirecionamento HTTP permanentes (HTTP 301) para as `.ASPX` páginas para a URL amigável com o nome do arquivo que omite a extensão.
+Cada um desses arquivos individuais reside na `App_Start` pasta e é executado apenas uma vez no início do nosso aplicativo.  `RouteConfig` no modelo de projeto padrão, o adiciona o `FriendlyUrlSettings` para Web Forms para permitir que as URLs de aplicativo omitam a `.ASPX` extensão de arquivo.  O modelo padrão também contém uma diretiva que fornece códigos de status de redirecionamento HTTP permanentes (HTTP 301) para as `.ASPX` páginas para a URL amigável com o nome do arquivo que omite a extensão.
 
 Com o ASP.NET Core e o mais claro, esses métodos são simplificados e consolidados na `Startup` classe ou são eliminados em favor de tecnologias da Web comuns.
 

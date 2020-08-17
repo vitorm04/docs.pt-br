@@ -2,14 +2,14 @@
 title: Os blocos de construção de programas em C# "
 description: Saiba mais sobre membros, expressões e instruções C#. Os tipos contêm membros que você escreve. Esses membros são criados a partir de instruções e expressões.
 ms.date: 08/06/2020
-ms.openlocfilehash: de9f634db129ea2ec6f692cabb657f9fe41b2f9c
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 142fe7b5a3424a8925638bfb4e4437392347f4c6
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88068515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88268134"
 ---
-# <a name="program-building-blocks"></a>Blocos de construção do programa
+# <a name="program-building-blocks"></a>Blocos de construção de programas
 
 Os tipos descritos no artigo anterior são criados usando estes blocos de construção: [***Membros***](../programming-guide/classes-and-structs/members.md), [ ***expressões***e ***instruções***](../programming-guide/statements-expressions-operators/index.md).
 
@@ -209,7 +209,7 @@ Um *indexador* é um membro que permite que objetos sejam indexados da mesma for
 
 A classe `MyList<T>` declara um indexador único de leitura-gravação que usa um parâmetro `int`. O indexador possibilita indexar instâncias `MyList<T>` com valores `int`. Por exemplo:
 
-:::code language="csharp" source="./snippets/shared/ClassesObjects.cs" ID="ListAddition":::
+:::code language="csharp" source="./snippets/shared/ClassesObjects.cs" ID="ListAccess":::
 
 Os indexadores podem ser sobrecarregados. Uma classe pode declarar vários indexadores, desde que o número ou os tipos de seus parâmetros sejam diferentes.
 
@@ -284,21 +284,21 @@ O seguinte lista os tipos de instruções que podem ser usadas:
 * Declaração de variável local.
 * Declaração de constante local.
 * Instrução de expressão.
-* `if`privacidade.
-* `switch`privacidade.
-* `while`privacidade.
-* `do`privacidade.
-* `for`privacidade.
-* `foreach`privacidade.
-* `break`privacidade.
-* `continue`privacidade.
-* `goto`privacidade.
-* `return`privacidade.
-* `yield`privacidade.
-* `throw`instruções e `try` instruções.
+* `if` privacidade.
+* `switch` privacidade.
+* `while` privacidade.
+* `do` privacidade.
+* `for` privacidade.
+* `foreach` privacidade.
+* `break` privacidade.
+* `continue` privacidade.
+* `goto` privacidade.
+* `return` privacidade.
+* `yield` privacidade.
+* `throw` instruções e `try` instruções.
 * `checked``unchecked`instruções and.
-* `lock`privacidade.
-* `using`privacidade.
+* `lock` privacidade.
+* `using` privacidade.
 
 >[!div class="step-by-step"]
 >[Anterior](types.md) 

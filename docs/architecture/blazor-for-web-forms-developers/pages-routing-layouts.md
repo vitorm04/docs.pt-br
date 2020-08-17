@@ -6,22 +6,20 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/19/2019
-ms.openlocfilehash: fc1f6f9420c7149b6e67123f2f68bef75667aa0c
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 714ba0be7c2014895a75250a47e6ce448863eb6c
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267783"
 ---
 # <a name="pages-routing-and-layouts"></a>Páginas, roteamento e layouts
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ASP.NET Web Forms aplicativos são compostos de páginas definidas em arquivos *. aspx* . O endereço de cada página é baseado em seu caminho de arquivo físico no projeto. Quando um navegador faz uma solicitação para a página, o conteúdo da página é processado dinamicamente no servidor. As contas de renderização para a marcação HTML da página e seus controles de servidor.
 
 No Blazor , cada página no aplicativo é um componente, normalmente definido em um arquivo *. Razor* , com uma ou mais rotas especificadas. O roteamento ocorre principalmente no lado do cliente sem envolver uma solicitação de servidor específica. O navegador primeiro faz uma solicitação para o endereço raiz do aplicativo. Um `Router` componente raiz no Blazor aplicativo, em seguida, lida com a interceptação de solicitações de navegação e com o componente correto.
 
-Blazortambém dá suporte à *vinculação profunda*. A vinculação profunda ocorre quando o navegador faz uma solicitação para uma rota específica diferente da raiz do aplicativo. As solicitações de links profundos enviados ao servidor são roteadas para o Blazor aplicativo, que roteia a solicitação do lado do cliente para o componente correto.
+Blazor também dá suporte à *vinculação profunda*. A vinculação profunda ocorre quando o navegador faz uma solicitação para uma rota específica diferente da raiz do aplicativo. As solicitações de links profundos enviados ao servidor são roteadas para o Blazor aplicativo, que roteia a solicitação do lado do cliente para o componente correto.
 
 Uma página simples no ASP.NET Web Forms pode conter a seguinte marcação:
 
@@ -94,7 +92,7 @@ Para criar uma página no Blazor , crie um componente e adicione a `@page` diret
 
 O parâmetro de modelo de rota é necessário. Ao contrário de ASP.NET Web Forms, a rota para um Blazor componente *não é* inferida de seu local de arquivo (embora isso possa ser um recurso adicionado no futuro).
 
-A sintaxe do modelo de rota é a mesma sintaxe básica usada para roteamento no ASP.NET Web Forms. Os parâmetros de rota são especificados no modelo usando chaves. Blazorassociará valores de rota a parâmetros de componente com o mesmo nome (não diferencia maiúsculas de minúsculas).
+A sintaxe do modelo de rota é a mesma sintaxe básica usada para roteamento no ASP.NET Web Forms. Os parâmetros de rota são especificados no modelo usando chaves. Blazor associará valores de rota a parâmetros de componente com o mesmo nome (não diferencia maiúsculas de minúsculas).
 
 ```razor
 @page "/product/{id}"
@@ -156,9 +154,9 @@ protected void NavigateButton_Click(object sender, EventArgs e)
 }
 ```
 
-O retorno de uma resposta de redirecionamento geralmente não é possível no Blazor . BlazorNão usa um modelo de solicitação-resposta. No entanto, é possível disparar navegações do navegador diretamente, como você pode com o JavaScript.
+O retorno de uma resposta de redirecionamento geralmente não é possível no Blazor . Blazor Não usa um modelo de solicitação-resposta. No entanto, é possível disparar navegações do navegador diretamente, como você pode com o JavaScript.
 
-Blazorfornece um `NavigationManager` serviço que pode ser usado para:
+Blazor fornece um `NavigationManager` serviço que pode ser usado para:
 
 - Obter o endereço do navegador atual
 - Obter o endereço base

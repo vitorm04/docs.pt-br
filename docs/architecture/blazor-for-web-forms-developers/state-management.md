@@ -4,16 +4,14 @@ description: Aprenda abordagens diferentes para o gerenciamento de estado em ASP
 author: csharpfritz
 ms.author: jefritz
 ms.date: 05/15/2020
-ms.openlocfilehash: bac2f00330113725f09259ca31bdf857a8769f24
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 2ca811f886c6a245ac16c2bd66a68ff16e5bfc44
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062334"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267718"
 ---
 # <a name="state-management"></a>Gerenciamento de estado
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 O gerenciamento de estado é um conceito-chave de Web Forms aplicativos, facilitado por meio do estado de exibição, estado de sessão, estado do aplicativo e recursos de postback. Esses recursos com estado da estrutura ajudaram a ocultar o gerenciamento de estado necessário para um aplicativo e permitir que os desenvolvedores de aplicativos se concentrem em fornecer sua funcionalidade. Com o ASP.NET Core e o mais bem, alguns desses recursos foram realocados e alguns foram completamente removidos. Este capítulo examina como manter o estado e fornecer a mesma funcionalidade com os novos recursos do mais novo.
 
@@ -84,8 +82,8 @@ O `MyApplicationState` objeto é criado apenas uma vez no servidor, e o valor `V
 
 Os dados do aplicativo também podem ser armazenados no lado do cliente no dispositivo do usuário para que ele esteja disponível posteriormente. Há dois recursos de navegador que permitem a persistência de dados em escopos diferentes do navegador do usuário:
 
-- `localStorage`-escopo do navegador inteiro do usuário. Se a página for recarregada, o navegador será fechado e reaberto, ou outra guia será aberta com a mesma URL, então o mesmo `localStorage` será fornecido pelo navegador
-- `sessionStorage`-escopo da guia atual do navegador do usuário. Se a guia for recarregada, o estado persiste. No entanto, se o usuário abrir outra guia para seu aplicativo ou fechar e reabrir o navegador, o estado será perdido.
+- `localStorage` -escopo do navegador inteiro do usuário. Se a página for recarregada, o navegador será fechado e reaberto, ou outra guia será aberta com a mesma URL, então o mesmo `localStorage` será fornecido pelo navegador
+- `sessionStorage` -escopo da guia atual do navegador do usuário. Se a guia for recarregada, o estado persiste. No entanto, se o usuário abrir outra guia para seu aplicativo ou fechar e reabrir o navegador, o estado será perdido.
 
 Você pode escrever um código JavaScript personalizado para interagir com esses recursos, ou há vários pacotes NuGet que você pode usar que fornecem essa funcionalidade. Um desses pacotes é [Microsoft. AspNetCore. ProtectedBrowserStorage](https://www.nuget.org/packages/Microsoft.AspNetCore.ProtectedBrowserStorage).
 

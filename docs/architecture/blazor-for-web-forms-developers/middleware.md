@@ -6,20 +6,18 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 10/11/2019
-ms.openlocfilehash: ff2b3fd41316a1c8c20a0eed9a585e5fd2733af3
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 639755dd78892df1b70ea5245a9584e575fbf691
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267874"
 ---
 # <a name="modules-handlers-and-middleware"></a>Módulos, manipuladores e middleware
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 Um aplicativo ASP.NET Core é criado com base em uma série de *middleware*. O middleware é manipuladores que são organizados em um pipeline para lidar com solicitações e respostas. Em um aplicativo Web Forms, manipuladores e módulos HTTP resolvem problemas semelhantes. Em ASP.NET Core, módulos, manipuladores, *global.asax.cs*e o ciclo de vida do aplicativo são substituídos por middleware. Neste capítulo, você aprenderá o que é o middleware no contexto de um Blazor aplicativo.
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 O pipeline de solicitação do ASP.NET Core consiste em uma sequência de delegados de solicitação, chamados um após o outro. O diagrama a seguir demonstra o conceito. O thread de execução segue as setas pretas.
 

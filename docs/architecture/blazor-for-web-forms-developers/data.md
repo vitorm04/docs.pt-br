@@ -6,26 +6,24 @@ ms.author: jefritz
 no-loc:
 - Blazor
 ms.date: 04/26/2020
-ms.openlocfilehash: 4bf9bee21ce1db828dbe0aeb156d5e15cae4f703
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 8bd326e6952708b2099c3a575d6811990335df17
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267588"
 ---
 # <a name="work-with-data"></a>Trabalhar com dados
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 Acesso a dados é o backbone de um aplicativo ASP.NET Web Forms. Se você estiver criando formulários para a Web, o que acontecerá com esses dados? Com Web Forms, havia várias técnicas de acesso a dados que podem ser usadas para interagir com um banco de dados:
 
-- Data Sources
+- Fontes de dados
 - ADO.NET
 - Entity Framework
 
 Fontes de dados eram controles que você pode fazer em uma Web Forms página e configurar como outros controles. O Visual Studio forneceu um conjunto amigável de caixas de diálogo para configurar e associar os controles às suas páginas de Web Forms. Os desenvolvedores que apreciam uma abordagem de "código baixo" ou "sem código" preferem essa técnica quando Web Forms foi lançado pela primeira vez.
 
-![Data Sources](media/data/datasources.png)
+![Fontes de dados](media/data/datasources.png)
 
 ADO.NET é a abordagem de nível baixo para interagir com um banco de dados. Seus aplicativos podem criar uma conexão com o banco de dados com comandos, conjuntos de registros e conjuntos de dados para interação. Os resultados podem então ser associados a campos na tela sem muito código. A desvantagem dessa abordagem era que cada conjunto de objetos ADO.NET ( `Connection` , `Command` e `Recordset` ) foi associado a bibliotecas fornecidas por um fornecedor de banco de dados. O uso desses componentes tornou o código rígido e difícil de migrar para um banco de dados diferente.
 
@@ -57,8 +55,8 @@ public class Product
 O produto tem uma chave primária e três campos adicionais que seriam criados em nosso banco de dados:  
 
 - O EF identificará a `Id` propriedade como uma chave primária por convenção.
-- `Name`será armazenado em uma coluna configurada para armazenamento de texto. O `[Required]` atributo decoração dessa propriedade irá adicionar uma `not null` restrição para ajudar a impor esse comportamento declarado da propriedade.
-- `Description`será armazenado em uma coluna configurada para armazenamento de texto e terá um comprimento máximo configurado de 4000 caracteres, conforme determinado pelo `[MaxLength]` atributo. O esquema de banco de dados será configurado com uma coluna chamada `MaxLength` usando o tipo de dados `varchar(4000)` .
+- `Name` será armazenado em uma coluna configurada para armazenamento de texto. O `[Required]` atributo decoração dessa propriedade irá adicionar uma `not null` restrição para ajudar a impor esse comportamento declarado da propriedade.
+- `Description` será armazenado em uma coluna configurada para armazenamento de texto e terá um comprimento máximo configurado de 4000 caracteres, conforme determinado pelo `[MaxLength]` atributo. O esquema de banco de dados será configurado com uma coluna chamada `MaxLength` usando o tipo de dados `varchar(4000)` .
 - A `Price` propriedade será armazenada como moeda. O `[Range]` atributo irá gerar restrições apropriadas para impedir o armazenamento de dados fora dos valores mínimo e máximo declarados.
 
 Precisamos adicionar essa `Product` classe a uma classe de contexto de banco de dados que define as operações de conexão e conversão com nosso banco de dados.

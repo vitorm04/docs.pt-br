@@ -7,22 +7,20 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: 1a99719f59415872510aef051d1f3c73daf53e15
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: d2dce23996e996a736b04c9cdd1ccf3b549ff3ff
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173270"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267549"
 ---
 # <a name="forms-and-validation"></a>Formulários e validação
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 O ASP.NET Web Forms Framework inclui um conjunto de controles de servidor de validação que lidam com a validação da entrada do usuário inserida em um formulário ( `RequiredFieldValidator` ,, `CompareValidator` `RangeValidator` e assim por diante). O ASP.NET Web Forms Framework também dá suporte à associação de modelo e à validação do modelo com base em anotações de dados ( `[Required]` ,, `[StringLength]` `[Range]` e assim por diante). A lógica de validação pode ser imposta tanto no servidor quanto no cliente usando a validação não invasiva baseada em JavaScript. O `ValidationSummary` controle de servidor é usado para exibir um resumo dos erros de validação para o usuário.
 
-Blazordá suporte ao compartilhamento de lógica de validação entre o cliente e o servidor. O ASP.NET fornece implementações de JavaScript predefinidas de muitas validações de servidor comuns. Em muitos casos, o desenvolvedor ainda precisa escrever JavaScript para implementar totalmente a lógica de validação específica do aplicativo. Os mesmos tipos de modelo, anotações de dados e lógica de validação podem ser usados no servidor e no cliente.
+Blazor dá suporte ao compartilhamento de lógica de validação entre o cliente e o servidor. O ASP.NET fornece implementações de JavaScript predefinidas de muitas validações de servidor comuns. Em muitos casos, o desenvolvedor ainda precisa escrever JavaScript para implementar totalmente a lógica de validação específica do aplicativo. Os mesmos tipos de modelo, anotações de dados e lógica de validação podem ser usados no servidor e no cliente.
 
-Blazorfornece um conjunto de componentes de entrada. Os componentes de entrada lidam com os dados do campo de associação a um modelo e validam a entrada do usuário quando o formulário é enviado.
+Blazor fornece um conjunto de componentes de entrada. Os componentes de entrada lidam com os dados do campo de associação a um modelo e validam a entrada do usuário quando o formulário é enviado.
 
 |Componente de entrada|Elemento HTML renderizado    |
 |---------------|-------------------------|

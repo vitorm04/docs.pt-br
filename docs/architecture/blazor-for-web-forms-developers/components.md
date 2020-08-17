@@ -1,25 +1,23 @@
 ---
-title: Crie componentes da interface do usuário reutilizáveis comBlazor
+title: Crie componentes da interface do usuário reutilizáveis com Blazor
 description: Saiba como criar componentes de interface do usuário reutilizáveis com Blazor e como eles se comparam aos controles de Web Forms de ASP.net.
 author: danroth27
 ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/18/2019
-ms.openlocfilehash: 9577fc916bb11783b885b2641242820865c0b115
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 4fdf062fb719e62b53e47f79db1e93d0bf079350
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267679"
 ---
-# <a name="build-reusable-ui-components-with-blazor"></a>Crie componentes da interface do usuário reutilizáveis comBlazor
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="build-reusable-ui-components-with-no-locblazor"></a>Crie componentes da interface do usuário reutilizáveis com Blazor
 
 Uma das belas coisas sobre o ASP.NET Web Forms é como ela permite o encapsulamento de partes reutilizáveis do código da interface do usuário em controles de interface de usuários reutilizáveis. Os controles de usuário personalizados podem ser definidos na marcação usando arquivos *. ascx* . Você também pode criar controles de servidor elaborados em código com suporte completo ao designer.
 
-Blazortambém dá suporte ao encapsulamento de interface do usuário por meio de *componentes*. Um componente:
+Blazor também dá suporte ao encapsulamento de interface do usuário por meio de *componentes*. Um componente:
 
 - É uma parte independente da interface do usuário.
 - Mantém seu próprio Estado e lógica de renderização.
@@ -112,13 +110,13 @@ Os vários atributos de diretiva usados pelo Blazor ( `@onclick` ,, `@bind` `@re
 
 Muitas das sintaxes usadas em arquivos *. aspx* e *. ascx* têm sintaxes paralelas no Razor. Veja abaixo uma comparação simples das sintaxes para ASP.NET Web Forms e Razor.
 
-|Recurso                      |Web Forms           |Syntax               |Razor         |Syntax |
+|Recurso                      |Web Forms           |Sintaxe               |Razor         |Sintaxe |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |Diretivas                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |Blocos de códigos                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
-|Expressões<br>(Codificado em HTML)|`<%: %>`            |`<%:DateTime.Now %>` |Localiza`@`<br>Explicita`@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
+|Expressões<br>(Codificado em HTML)|`<%: %>`            |`<%:DateTime.Now %>` |Localiza `@`<br>Explicita `@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
 |Comentários                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
-|Associação de dados                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
+|Vinculação de dados                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
 Para adicionar membros à classe de componente Razor, use a `@code` diretiva. Essa técnica é semelhante ao uso de um `<script runat="server">...</script>` bloco em um ASP.NET Web Forms controle de usuário ou página.
 
@@ -168,7 +166,7 @@ Se o namespace de um componente não estiver no escopo, você poderá especifica
 
 ## <a name="component-parameters"></a>Parâmetros do componente
 
-No ASP.NET Web Forms, você pode fluir parâmetros e dados para controles usando propriedades públicas. Essas propriedades podem ser definidas na marcação usando atributos ou definidos diretamente no código. Blazoros componentes funcionam de maneira semelhante, embora as propriedades do componente também devam ser marcadas com o `[Parameter]` atributo para serem considerados parâmetros de componente.
+No ASP.NET Web Forms, você pode fluir parâmetros e dados para controles usando propriedades públicas. Essas propriedades podem ser definidas na marcação usando atributos ou definidos diretamente no código. Blazor os componentes funcionam de maneira semelhante, embora as propriedades do componente também devam ser marcadas com o `[Parameter]` atributo para serem considerados parâmetros de componente.
 
 O componente a seguir `Counter` define um parâmetro de componente chamado `IncrementAmount` que pode ser usado para especificar a quantidade que `Counter` deve ser incrementada toda vez que o botão é clicado.
 
@@ -309,9 +307,9 @@ Os componentes também podem definir seus próprios eventos definindo um parâme
 }
 ```
 
-## <a name="data-binding"></a>Associação de dados
+## <a name="data-binding"></a>Vinculação de dados
 
-Blazorfornece um mecanismo simples para associar dados de um componente de interface do usuário ao estado do componente. Essa abordagem difere dos recursos do ASP.NET Web Forms para associação de dados de fontes de dados a controles de interface do usuário. Abordaremos o tratamento de dados de fontes de dados diferentes na seção [lidando com dados](data.md) .
+Blazor fornece um mecanismo simples para associar dados de um componente de interface do usuário ao estado do componente. Essa abordagem difere dos recursos do ASP.NET Web Forms para associação de dados de fontes de dados a controles de interface do usuário. Abordaremos o tratamento de dados de fontes de dados diferentes na seção [lidando com dados](data.md) .
 
 Para criar uma associação de dados bidirecional de um componente de interface do usuário para o estado do componente, use o `@bind` atributo de diretiva. No exemplo a seguir, o valor da caixa de seleção é associado ao `isChecked` campo.
 
@@ -433,7 +431,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-Blazoros componentes também têm um ciclo de vida bem definido. O ciclo de vida de um componente pode ser usado para inicializar o estado do componente e implementar comportamentos avançados de componentes.
+Blazor os componentes também têm um ciclo de vida bem definido. O ciclo de vida de um componente pode ser usado para inicializar o estado do componente e implementar comportamentos avançados de componentes.
 
 Todos os Blazor métodos de ciclo de vida do componente têm versões síncronas e assíncronas. A renderização do componente é síncrona. Não é possível executar a lógica assíncrona como parte da renderização do componente. Toda a lógica assíncrona deve ser executada como parte de um `async` método de ciclo de vida.
 
@@ -476,13 +474,13 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 }
 ```
 
-`OnAfterRender`e `OnAfterRenderAsync` *não são chamados durante o pré-processamento no servidor*.
+`OnAfterRender` e `OnAfterRenderAsync` *não são chamados durante o pré-processamento no servidor*.
 
 O `firstRender` parâmetro é `true` a primeira vez que o componente é renderizado; caso contrário, seu valor é `false` .
 
 ### <a name="idisposable"></a>IDisposable
 
-Blazoros componentes podem `IDisposable` ser implementados para descartar recursos quando o componente é removido da interface do usuário. Um componente Razor pode implementar `IDispose` usando a `@implements` diretiva:
+Blazor os componentes podem `IDisposable` ser implementados para descartar recursos quando o componente é removido da interface do usuário. Um componente Razor pode implementar `IDispose` usando a `@implements` diretiva:
 
 ```razor
 @using System
@@ -523,17 +521,17 @@ Não é recomendável manipular o estado do componente diretamente usando refer�
 
 ## <a name="capture-element-references"></a>Capturar referências de elemento
 
-Blazoros componentes do podem capturar referências a um elemento. Ao contrário dos controles de servidor HTML no ASP.NET Web Forms, você não pode manipular o DOM diretamente usando uma referência de elemento no Blazor . Blazorlida com a maioria das interações de DOM para você usando seu algoritmo de comparação DOM. Referências de elemento capturado no Blazor são opacas. No entanto, eles são usados para passar uma referência de elemento específica em uma chamada de interoperabilidade JavaScript. Para obter mais informações sobre a interoperabilidade de JavaScript, consulte [ASP.NET Core Blazor interoperabilidade de JavaScript](/aspnet/core/blazor/javascript-interop).
+Blazor os componentes do podem capturar referências a um elemento. Ao contrário dos controles de servidor HTML no ASP.NET Web Forms, você não pode manipular o DOM diretamente usando uma referência de elemento no Blazor . Blazor lida com a maioria das interações de DOM para você usando seu algoritmo de comparação DOM. Referências de elemento capturado no Blazor são opacas. No entanto, eles são usados para passar uma referência de elemento específica em uma chamada de interoperabilidade JavaScript. Para obter mais informações sobre a interoperabilidade de JavaScript, consulte [ASP.NET Core Blazor interoperabilidade de JavaScript](/aspnet/core/blazor/javascript-interop).
 
 ## <a name="templated-components"></a>Componentes modelados
 
 No ASP.NET Web Forms, você pode criar *controles modelo*. Controles de modelo permitem que o desenvolvedor especifique uma parte do HTML usada para renderizar um controle de contêiner. A mecânica da criação de controles de servidor modelo é complexa, mas permite cenários poderosos para a renderização de dados em uma maneira personalizável do usuário. Exemplos de controles de modelo incluem `Repeater` e `DataList` .
 
-Blazoros componentes também podem ser modelados definindo parâmetros de componente do tipo `RenderFragment` ou `RenderFragment<T>` . Um `RenderFragment` representa uma parte da marcação Razor que pode ser renderizada pelo componente. Um `RenderFragment<T>` é uma parte da marcação Razor que usa um parâmetro que pode ser especificado quando o fragmento de renderização é renderizado.
+Blazor os componentes também podem ser modelados definindo parâmetros de componente do tipo `RenderFragment` ou `RenderFragment<T>` . Um `RenderFragment` representa uma parte da marcação Razor que pode ser renderizada pelo componente. Um `RenderFragment<T>` é uma parte da marcação Razor que usa um parâmetro que pode ser especificado quando o fragmento de renderização é renderizado.
 
 ### <a name="child-content"></a>Conteúdo filho
 
-Blazoros componentes podem capturar seu conteúdo filho como um `RenderFragment` e renderizar esse conteúdo como parte da renderização do componente. Para capturar o conteúdo filho, defina um parâmetro de componente do tipo `RenderFragment` e nomeie-o `ChildContent` .
+Blazor os componentes podem capturar seu conteúdo filho como um `RenderFragment` e renderizar esse conteúdo como parte da renderização do componente. Para capturar o conteúdo filho, defina um parâmetro de componente do tipo `RenderFragment` e nomeie-o `ChildContent` .
 
 *ChildContentComponent. Razor*
 
