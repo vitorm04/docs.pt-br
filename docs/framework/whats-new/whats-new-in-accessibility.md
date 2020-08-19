@@ -1,19 +1,18 @@
 ---
 title: Novidades na acessibilidade do .NET Framework
 description: Veja o que há de novo na acessibilidade do .NET, começando com o .NET Framework 4.7.1. Os recursos de acessibilidade permitem que um aplicativo forneça a experiência certa para os usuários de tecnologia assistencial.
-ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 593591ca340cc130a3a6d1daa015a849b8eca0f8
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: df9188c4f7c2af77f5dc87309880a41724254c5c
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925833"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558953"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Novidades na acessibilidade do .NET Framework
 
@@ -23,7 +22,7 @@ O .NET Framework pretende tornar os aplicativos mais acessíveis para os usuári
 
 Configure seu aplicativo para aceitar os recursos de acessibilidade se ele for direcionado ao .NET Framework 4.7 ou a uma versão anterior, mas estiver em execução no .NET Framework 4.7.1 ou posterior. Além disso, configure seu aplicativo para usar recursos herdados (e não aproveitar os recursos de acessibilidade) se ele for direcionado ao .NET Framework 4.7.1 ou posterior. Cada versão do .NET Framework que inclui recursos de acessibilidade tem um comutador de acessibilidade específico à versão, que você adiciona ao [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) elemento na [`<runtime>`](../configure-apps/file-schema/runtime/index.md) seção do arquivo de configuração do aplicativo. Estas são as opções compatíveis:
 
-|Versão|Opção|
+|Versão|Alternar|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -75,7 +74,7 @@ O .NET Framework 4.8 inclui novos recursos de acessibilidade nas seguintes área
 
 - [Windows Forms](#winforms48)
 
-- [Windows Presentation Foundation (WPF)](#wpf48)
+- [WPF (Windows Presentation Foundation)](#wpf48)
 
 - [Designer de fluxo de trabalho do WF (Windows Workflow Foundation)](#wf48)
 
@@ -326,7 +325,7 @@ O .NET Framework 4.7.2 inclui novos recursos de acessibilidade nas seguintes ár
 
 - [Windows Forms](#winforms472)
 
-- [Windows Presentation Foundation (WPF)](#wpf472)
+- [WPF (Windows Presentation Foundation)](#wpf472)
 
 <a name="winforms472"></a>
 
@@ -402,7 +401,7 @@ No entanto, os aplicativos automatizados que se baseiam em foco e que nunca são
 
 O .NET Framework 4.7.1 inclui novos recursos de acessibilidade nas seguintes áreas:
 
-- [Windows Presentation Foundation (WPF)](#wpf471)
+- [WPF (Windows Presentation Foundation)](#wpf471)
 
 - [Windows Forms](#winforms471)
 
@@ -473,7 +472,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **Alto contraste**
 
-A partir do .NET Framework 4.7.1, foram feitas melhorias de alto contraste em vários controles do WPF. Agora eles estão visíveis quando o tema <xref:System.Windows.SystemParameters.HighContrast%2A> é definido. Elas incluem:
+A partir do .NET Framework 4.7.1, foram feitas melhorias de alto contraste em vários controles do WPF. Agora eles estão visíveis quando o tema <xref:System.Windows.SystemParameters.HighContrast%2A> é definido. Eles incluem:
 
 - Controle <xref:System.Windows.Controls.Expander>
 
@@ -708,6 +707,6 @@ As alterações de acessibilidade no Designer de Fluxo de Trabalho incluem as se
 
 - Usuários que escolherem temas de Alto Contraste verão muitas melhorias na visibilidade do Designer de Fluxo de Trabalho e em seus controles, como melhores taxas de contraste entre elementos e caixas de seleção mais perceptíveis usadas para elementos de foco.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Novidades no .NET Framework](index.md)

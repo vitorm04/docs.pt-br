@@ -1,19 +1,18 @@
 ---
 title: O que é obsoleto no .NET Framework
 description: Veja como a biblioteca de classes .NET marca Membros como obsoletos. Entenda o atributo ObsoleteAttribute, como lidar com tipos e membros obsoletos e muito mais.
-ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
 - obsolete [.NET Framework]
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-ms.openlocfilehash: 2f39f5ec614b669f3a0f63677cb6f8a6f9ed11cf
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 188d9184476e58fb679421467cd68e2ea8a8a101
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925794"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558862"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>O que está obsoleto na biblioteca de classes do .NET Framework
 
@@ -82,6 +81,6 @@ Para direcionar uma versão específica do .NET Framework, atribua um dos seguin
 - [Lista obsoleta do .NET Framework 3.5](https://docs.microsoft.com/previous-versions/cc835481(v=msdn.10))
 - [Lista obsoleta do .NET Framework 2.0](https://docs.microsoft.com/previous-versions/aa497286(v=msdn.10))
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [\<supportedRuntime>Elementos](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<supportedRuntime> Elementos](../configure-apps/file-schema/startup/supportedruntime-element.md)

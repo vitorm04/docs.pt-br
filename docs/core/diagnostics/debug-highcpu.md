@@ -3,12 +3,12 @@ title: Depurar alto uso da CPU-.NET Core
 description: Um tutorial que orienta você pela depuração de alto uso da CPU no .NET Core.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: e69585d0eb6f04bf37d0c023a1956be62c2a1cf3
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 93076bbce3baf3a219b25c927d2aba3d2d57456f
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86926388"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557796"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>Depurar alto uso da CPU no .NET Core
 
@@ -85,7 +85,7 @@ Press p to pause, r to resume, q to quit.
 
 Com o aplicativo Web em execução, imediatamente após a inicialização, a CPU não está sendo consumida e é relatada em `0%` . Navegue até a `api/diagscenario/highcpu` rota com `60000` como o parâmetro de rota:
 
-[https://localhost:5001/api/diagscenario/highcpu/60000](https://localhost:5001/api/diagscenario/highcpu/60000)
+`https://localhost:5001/api/diagscenario/highcpu/60000`
 
 Agora, execute novamente o comando [dotnet-Counters](dotnet-counters.md) . Para monitorar apenas o `cpu-usage` , especifique `System.Runtime[cpu-usage]` como parte do comando.
 
@@ -127,7 +127,7 @@ export COMPlus_PerfMapEnabled=1
 dotnet run
 ```
 
-Exerça o ponto de extremidade de API de CPU alta ( <https://localhost:5001/api/diagscenario/highcpu/60000> ) novamente. Enquanto estiver em execução dentro da solicitação de 1 minuto, execute o `perf` comando com a ID do processo:
+Exerça o ponto de extremidade de API de CPU alta ( `https://localhost:5001/api/diagscenario/highcpu/60000` ) novamente. Enquanto estiver em execução dentro da solicitação de 1 minuto, execute o `perf` comando com a ID do processo:
 
 ```bash
 sudo perf record -p 2266 -g
@@ -152,7 +152,7 @@ Esse comando gera um `flamegraph.svg` que você pode exibir no navegador para in
 
 ### <a name="windows"></a>[Windows](#tab/windows)
 
-No Windows, você pode usar a ferramenta [dotnet-Trace](dotnet-trace.md) como um criador de perfil. Usando o [destino de depuração de exemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)anterior, exerça novamente o ponto de extremidade de CPU alta ( <https://localhost:5001/api/diagscenario/highcpu/60000> ). Enquanto estiver em execução dentro da solicitação de 1 minuto, use o `collect` comando da seguinte maneira:
+No Windows, você pode usar a ferramenta [dotnet-Trace](dotnet-trace.md) como um criador de perfil. Usando o [destino de depuração de exemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)anterior, exerça novamente o ponto de extremidade de CPU alta ( `https://localhost:5001/api/diagscenario/highcpu/60000` ). Enquanto estiver em execução dentro da solicitação de 1 minuto, use o `collect` comando da seguinte maneira:
 
 ```dotnetcli
 dotnet-trace collect -p 22884 --providers Microsoft-DotNETCore-SampleProfiler
@@ -166,7 +166,7 @@ Abra o `nettrace` com [`PerfView`](https://github.com/microsoft/perfview/blob/ma
 
 ---
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [dotnet-rastrear](dotnet-trace.md) para listar processos
 - [dotnet-contadores](dotnet-counters.md) para verificar o uso de memória gerenciada

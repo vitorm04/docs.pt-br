@@ -3,12 +3,12 @@ title: Depuração do deadlock-.NET Core
 description: Um tutorial que orienta você pela depuração de um problema de bloqueio no .NET Core.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 247521176297254180d794d4d4fc850f30e343b0
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 6f060e1ae801eb4eacbbd1fb67110f827c37f597
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86926389"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557874"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>Depurar um deadlock no .NET Core
 
@@ -51,7 +51,7 @@ dotnet-trace ps
 
 Anote a ID do processo da saída do comando. Nossa ID de processo era `4807` , mas a sua será diferente. Navegue até a URL a seguir, que é um ponto de extremidade de API no site de exemplo:
 
-[https://localhost:5001/api/diagscenario/deadlock](https://localhost:5001/api/diagscenario/deadlock)
+`https://localhost:5001/api/diagscenario/deadlock`
 
 A solicitação de API para o site será travada e não responderá. Deixe a solicitação ser executada por cerca de 10-15 segundos. Em seguida, crie o dump principal usando o seguinte comando:
 
@@ -262,7 +262,7 @@ OS Thread Id: 0x5634 (28)
 
 O segundo thread é semelhante. Também está tentando adquirir um bloqueio que já possui. Os mais de 300 threads que estão aguardando provavelmente também aguardam um dos bloqueios que causaram o deadlock.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [dotnet-rastrear](dotnet-trace.md) para listar processos
 - [dotnet-contadores](dotnet-counters.md) para verificar o uso de memória gerenciada

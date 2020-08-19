@@ -24,12 +24,12 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-ms.openlocfilehash: be6603f3a593d9756d55204024214660b2220af3
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 3e515028919518cb93cdbec3417eef061a512832
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166216"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558407"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Criando assemblies satélite para aplicativos de área de trabalho
 
@@ -95,8 +95,13 @@ Este é um exemplo simples "Olá, Mundo", que exibe uma caixa de mensagem com um
 
 2. Para indicar que inglês (en) é a cultura padrão do aplicativo, adicione o seguinte atributo <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> ao arquivo AssemblyInfo do aplicativo ou ao arquivo de código-fonte principal que será compilado no assembly principal do aplicativo.
 
-    [!code-csharp[Conceptual.Resources.Locating#2](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
-    [!code-vb[Conceptual.Resources.Locating#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
+    ```csharp
+    [assembly: NeutralResourcesLanguageAttribute("en")]
+    ```
+
+    ```vb
+    <Assembly: NeutralResourcesLanguageAttribute("en")>
+    ```
   
 3. Adicione suporte a culturas adicionais (en-US, fr-FR e ru-RU) ao aplicativo da seguinte maneira:  
   
@@ -191,7 +196,7 @@ A opção **-delay+** especifica que o Assembly Linker deve atrasar a assinatura
 
 Antes de implantar seu aplicativo, você deve reassinar o assembly satélite com atraso com o par de chaves real. Você pode fazer isso usando *Sn.exe*.
 
-Os seguintes *Sn.exem* os sinais de comando *StringLibrary.resources.dll* com o par de chaves armazenado no arquivo *RealKeyPair. SNK*. A opção **– R** especifica que um assembly assinado anteriormente ou assinado com atraso deve ser assinado novamente.
+Os seguintes *Sn.exem * os sinais de comando *StringLibrary.resources.dll* com o par de chaves armazenado no arquivo *RealKeyPair. SNK*. A opção **– R** especifica que um assembly assinado anteriormente ou assinado com atraso deve ser assinado novamente.
 
 ```console
 sn –R StringLibrary.resources.dll RealKeyPair.snk

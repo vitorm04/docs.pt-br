@@ -1,18 +1,17 @@
 ---
 title: Guia de implantação do .NET Framework para desenvolvedores
 description: Leia o guia de implantação do .NET para desenvolvedores. Use essas informações se desejar instalar qualquer versão do .NET da versão 4,5 para a 4,8 com seus aplicativos.
-ms.custom: updateeachrelease
 ms.date: 01/17/2020
 helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 95c2cacc062bbe05ce0bc5c3e832bfe3006cf412
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 47946121334fe45132a7469894f30081045e3a68
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622660"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558823"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guia de implantação do .NET Framework para desenvolvedores
 Este tópico fornece informações para desenvolvedores que querem instalar qualquer versão do .NET Framework a partir do .NET Framework 4.5 até o [!INCLUDE[net_current](../../../includes/net-current-version.md)] com seus aplicativos.
@@ -262,7 +261,7 @@ Por exemplo, para detectar se o pacote de idioma japonês completo (LCID = 1041)
 | | |
 |-|-|
 | Chave | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| Name | Versão |
+| Nome | Versão |
 | Type | DWORD |
 
 Para determinar se a versão de lançamento final de um pacote de idiomas está instalada para uma versão específica do .NET Framework do 4.5 ao 4.7.2, verifique o valor DWORD da chave RELEASE descrito na seção anterior, [Detectando o .NET Framework](#detect_net).
@@ -351,7 +350,7 @@ A tabela a seguir lista opções que podem ser incluídas ao encadear o redistri
 |**/log** `file` &#124; `folder`|Especifica o local do arquivo de log. O padrão é a pasta temporária do processo, e o nome do arquivo padrão baseia-se no pacote. Se a extensão do arquivo for .txt, é produzido um log de texto. Se qualquer outra extensão ou nenhuma extensão for especificada, é criado um log HTML.|
 |**/msioptions**|Especifica opções a serem transmitidas para itens .msi e .msp, por exemplo: `/msioptions "PROPERTY1='Value'"`.|
 |**/norestart**|Impede que o programa de instalação reinicialize automaticamente. Se você usar essa opção, o aplicativo de encadeamento precisará capturar o código de retorno e manipular a reinicialização (consulte [obtendo informações de progresso de um pacote de instalação](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))).|
-|**/passive**|Define o modo passivo. Exibe a barra de progresso para indicar se a instalação está em progresso, mas não exibe nenhuma solicitação ou mensagem de erro ao usuário. Nesse modo, quando encadeado por um programa de instalação, o pacote de encadeamento deve lidar com [códigos de retorno](#return-codes).|
+|**/Passive**|Define o modo passivo. Exibe a barra de progresso para indicar se a instalação está em progresso, mas não exibe nenhuma solicitação ou mensagem de erro ao usuário. Nesse modo, quando encadeado por um programa de instalação, o pacote de encadeamento deve lidar com [códigos de retorno](#return-codes).|
 |**/pipe**|Cria um canal de comunicação para permitir que um pacote de encadeamento obtenha o progresso.|
 |**/promptrestart**|Somente modo passivo; se o programa de instalação exigir reinicialização, o usuário será avisado. Essa opção exigirá a interação do usuário se uma reinicialização for necessária.|
 |**/q**|Define o modo silencioso.|
@@ -359,7 +358,7 @@ A tabela a seguir lista opções que podem ser incluídas ao encadear o redistri
 |**/serialdownload**|Faz com que a instalação aconteça somente após ter sido feito download do pacote.|
 |**/showfinalerror**|Define o modo passivo. Exibe erros somente se a instalação não for bem-sucedida. Essa opção exigirá a interação do usuário se a instalação não for bem-sucedida.|
 |**/showrmui**|Usado somente com a opção **/passive**. Exibe uma caixa de mensagem que solicita que os usuários fechem aplicativos do .NET Framework que estão em execução no momento. Essa caixa de mensagem se comporta da mesma maneira no modo passivo e não passivo.|
-|**/uninstall**|Desinstala o redistribuível do .NET Framework.|
+|**/Uninstall**|Desinstala o redistribuível do .NET Framework.|
 
 ### <a name="supported-languages"></a>Idiomas com suporte
 
@@ -391,11 +390,11 @@ A tabela a seguir lista .NET Framework pacotes de idiomas que estão disponívei
 |2070|Português – Portugal|pt-PT|
 |3082|Espanhol - Espanha (Moderno)|es|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Guia de implantação para administradores](guide-for-administrators.md)
 - [Requisitos do sistema](../get-started/system-requirements.md)
 - [Instalar o .NET Framework para desenvolvedores](../install/guide-for-developers.md)
 - [Solução de problemas de instalações e desinstalações bloqueadas do .NET Framework](../install/troubleshoot-blocked-installations-and-uninstallations.md)
-- [Reduzindo reinicializações do sistema durante instalações do .NET Framework 4,5](reducing-system-restarts.md)
-- [Como acompanhar o progresso do instalador do .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)
+- [Reduzindo reinicializações do sistema durante instalações do .NET Framework 4.5](reducing-system-restarts.md)
+- [Como: Acompanhar o progresso do Instalador do .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)

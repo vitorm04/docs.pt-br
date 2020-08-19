@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 7a4ffd5b1b58e6ea7fd46c676e139b77a126aa2b
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 23d67761838f17e833a4a478e2355e908a2e35ca
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803021"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557900"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Implantar aplicativos .NET Core com o Visual Studio
 
@@ -309,7 +309,7 @@ Quando você implanta seu aplicativo, todas as dependências de terceiros usadas
 
 Você só pode implantar uma implantação independente com uma biblioteca de terceiros em plataformas com suporte nessa biblioteca. Isso é semelhante a ter dependências de terceiros com dependências nativas em sua implantação dependente de estrutura, em que as dependências nativas não existem na plataforma de destino a menos que elas tenham sido instaladas anteriormente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Implantação do .NET Core Application](index.md)
-- [Catálogo do Identificador de Runtime do .NET Core](../rid-catalog.md)
+- [Catálogo de RID (identificador de tempo de execução) do .NET Core](../rid-catalog.md)

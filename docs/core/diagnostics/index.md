@@ -3,12 +3,12 @@ title: Visão geral das ferramentas de diagnóstico – .NET Core
 description: Uma visão geral das ferramentas e das técnicas disponíveis para diagnosticar aplicativos .NET Core.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: dc64c03ee9c8cee6a5b3c5cc089b4a1a2c27f84a
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: ae3b9a1961f331c9cdea786bd5fe06b7bfa10927
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924776"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558108"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>Quais ferramentas de diagnóstico estão disponíveis no .NET Core?
 
@@ -37,6 +37,10 @@ O [teste de unidade](../testing/index.md) é um componente fundamental da integr
 ### <a name="dotnet-dump"></a>dotnet-dump
 
 A ferramenta [dotnet-dump](dotnet-dump.md) é uma maneira de coletar e analisar despejos do Windows e do Linux Core sem um depurador nativo.
+
+### <a name="dotnet-gcdump"></a>dotnet-gcdump
+
+A ferramenta [dotnet-gcdump](dotnet-gcdump.md) é uma maneira de coletar despejos de GC (coletor de lixo) de processos do .net em tempo real.
 
 ### <a name="dotnet-trace"></a>dotnet-trace
 
