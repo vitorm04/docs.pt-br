@@ -1,13 +1,13 @@
 ---
 title: 'Declarações de importação: a palavra-chave open'
 description: 'Saiba mais sobre as declarações de importação de F # e como elas especificam um módulo ou namespace cujos elementos você pode referenciar sem usar um nome totalmente qualificado.'
-ms.date: 04/04/2019
-ms.openlocfilehash: 2b88427ca92212fb4a7598447dd1a5e12061093a
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: 6420df071f86159c44606c2710331d5f587023cc
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855082"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557601"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Importar declarações: a `open` palavra-chave
 
@@ -20,9 +20,6 @@ open module-or-namespace-name
 ```
 
 ## <a name="remarks"></a>Comentários
-
-> [!NOTE]
-> A referência da API docs.microsoft.com para F # não está completa. Se você encontrar links desfeitos, consulte a [documentação da biblioteca principal F #](https://fsharp.github.io/fsharp-core-docs/) em vez disso.
 
 Fazer referência ao código usando o namespace totalmente qualificado ou o caminho do módulo toda vez pode criar código que seja difícil de gravar, ler e manter. Em vez disso, você pode usar a `open` palavra-chave para módulos e namespaces usados com frequência para que, ao fazer referência a um membro desse módulo ou namespace, você possa usar a forma abreviada do nome em vez do nome totalmente qualificado. Essa palavra-chave é semelhante à `using` palavra-chave em C#, `using namespace` em Visual C++ e `Imports` no Visual Basic.
 
@@ -52,19 +49,19 @@ Alguns namespaces são frequentemente usados no código F # que eles são aberto
 
 |Namespace|Descrição|
 |---------|-----------|
-|`Microsoft.FSharp.Core`|Contém definições de tipo F # básicas para tipos internos, como `int` e `float` .|
-|`Microsoft.FSharp.Core.Operators`|Contém operações aritméticas básicas, como `+` e `*` .|
-|`Microsoft.FSharp.Collections`|Contém classes de coleção imutáveis, como `List` e `Array` .|
-|`Microsoft.FSharp.Control`|Contém tipos de construções de controle, como avaliação lenta e fluxos de trabalho assíncronos.|
-|`Microsoft.FSharp.Text`|Contém funções para e/s formatada, como a `printf` função.|
+|`FSharp.Core`|Contém definições de tipo F # básicas para tipos internos, como `int` e `float` .|
+|`FSharp.Core.Operators`|Contém operações aritméticas básicas, como `+` e `*` .|
+|`FSharp.Collections`|Contém classes de coleção imutáveis, como `List` e `Array` .|
+|`FSharp.Control`|Contém tipos de construções de controle, como avaliação lenta e fluxos de trabalho assíncronos.|
+|`FSharp.Text`|Contém funções para e/s formatada, como a `printf` função.|
 
 ## <a name="autoopen-attribute"></a>Atributo AutoOpen
 
-Você pode aplicar o `AutoOpen` atributo a um assembly se desejar abrir automaticamente um namespace ou módulo quando o assembly for referenciado. Você também pode aplicar o `AutoOpen` atributo a um módulo para abrir esse módulo automaticamente quando o namespace ou o módulo pai for aberto. Para obter mais informações, consulte [classe Core. AutoOpenAttribute](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.autoopenattribute-class-%5bfsharp%5d).
+Você pode aplicar o `AutoOpen` atributo a um assembly se desejar abrir automaticamente um namespace ou módulo quando o assembly for referenciado. Você também pode aplicar o `AutoOpen` atributo a um módulo para abrir esse módulo automaticamente quando o namespace ou o módulo pai for aberto. Para obter mais informações, consulte [AutoOpenAttribute](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-autoopenattribute.html).
 
 ## <a name="requirequalifiedaccess-attribute"></a>Atributo RequireQualifiedAccess
 
-Alguns módulos, registros ou tipos de União podem especificar o `RequireQualifiedAccess` atributo. Ao referenciar elementos desses módulos, registros ou uniões, você deve usar um nome qualificado, independentemente de você incluir uma declaração de importação. Se você usar esse atributo estrategicamente em tipos que definem nomes comumente usados, você ajudará a evitar colisões de nomes e, portanto, tornará o código mais resiliente às alterações nas bibliotecas. Para obter mais informações, consulte [classe Core. RequireQualifiedAccessAttribute](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D).
+Alguns módulos, registros ou tipos de União podem especificar o `RequireQualifiedAccess` atributo. Ao referenciar elementos desses módulos, registros ou uniões, você deve usar um nome qualificado, independentemente de você incluir uma declaração de importação. Se você usar esse atributo estrategicamente em tipos que definem nomes comumente usados, você ajudará a evitar colisões de nomes e, portanto, tornará o código mais resiliente às alterações nas bibliotecas. Para obter mais informações, consulte [RequireQualifiedAccessAttribute](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-requirequalifiedaccessattribute.html).
 
 ## <a name="see-also"></a>Confira também
 

@@ -1,20 +1,17 @@
 ---
 title: Literais
 description: 'Saiba mais sobre os tipos literais na linguagem de programação F #.'
-ms.date: 06/28/2019
-ms.openlocfilehash: 98d609a1cf0beb00c0dd4d45ea343aaa2280b62e
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: 15f73db3c36f7c60ab1eeba96c63a28ebc6d7f01
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855017"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559148"
 ---
 # <a name="literals"></a>Literais
 
 Este artigo fornece uma tabela que mostra como especificar o tipo de um literal em F #.
-
-> [!NOTE]
-> A referência da API docs.microsoft.com para F # não está completa. Se você encontrar links desfeitos, consulte a [documentação da biblioteca principal F #](https://fsharp.github.io/fsharp-core-docs/) em vez disso.
 
 ## <a name="literal-types"></a> Tipos literais
 
@@ -26,7 +23,7 @@ A tabela a seguir mostra os tipos literais em F #. Os caracteres que representam
 |byte|número natural de 8 bits não assinado|uy|`86uy`<br /><br />`0b00000101uy`|
 |int16|inteiro de 16 bits assinado|s|`86s`|
 |uint16|número natural de 16 bits não assinado|us|`86us`|
-|int<br /><br />int32|inteiro de 32 bits assinado|l ou None|`86`<br /><br />`86l`|
+|INT<br /><br />int32|inteiro de 32 bits assinado|l ou None|`86`<br /><br />`86l`|
 |uint<br /><br />uint32|número natural de 32 bits não assinado|u ou UL|`86u`<br /><br />`86ul`|
 |nativeint|ponteiro nativo para um número natural assinado|n|`123n`|
 |unativeint|ponteiro nativo como um número natural não assinado|anula|`0x00002D3Fun`|
@@ -39,14 +36,14 @@ A tabela a seguir mostra os tipos literais em F #. Os caracteres que representam
 |BIGINT|inteiro não limitado à representação de 64 bits|I|`9999999999999999999999999999I`|
 |decimal|número fracionário representado como um ponto fixo ou um número racional|M ou m|`0.7833M` ou `0.7833m`|
 |Char|Caractere unicode|nenhum|`'a'` ou `'\u0061'`|
-|String|Cadeia de caracteres Unicode|nenhum|`"text\n"`<br /><br />ou o<br /><br />`@"c:\filename"`<br /><br />ou o<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />ou o<br /><br />`"string1" + "string2"`<br /><br />Consulte também [cadeias de caracteres](Strings.md).|
+|String|Cadeia de caracteres Unicode|nenhum|`"text\n"`<br /><br />ou<br /><br />`@"c:\filename"`<br /><br />ou<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />ou<br /><br />`"string1" + "string2"`<br /><br />Consulte também [cadeias de caracteres](Strings.md).|
 |byte|Caractere ASCII|B|`'a'B`|
 |byte[]|Cadeia de caracteres ASCII|B|`"text"B`|
-|Cadeia de caracteres ou byte []|Cadeia de caracteres textual|@ prefix|`@"\\server\share"`Unicode<br /><br />`@"\\server\share"B`LOCALIZADOS|
+|Cadeia de caracteres ou byte []|Cadeia de caracteres textual|@ prefix|`@"\\server\share"` Unicode<br /><br />`@"\\server\share"B` LOCALIZADOS|
 
 ## <a name="named-literals"></a>Literais nomeadas
 
-Os valores que se destinam a serem constantes podem ser marcados com o atributo [literal](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) . Esse atributo tem o efeito de fazer com que um valor seja compilado como uma constante.
+Os valores que se destinam a serem constantes podem ser marcados com o atributo [literal](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-literalattribute.html) . Esse atributo tem o efeito de fazer com que um valor seja compilado como uma constante.
 
 Em expressões de correspondência de padrões, os identificadores que começam com caracteres minúsculos são sempre tratados como variáveis a serem associadas, e não como literais, de modo que você geralmente deve usar maiúsculas iniciais ao definir literais.
 
@@ -93,7 +90,3 @@ let valueAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
 
 let exampleSSN = 123_456_7890
 ```
-
-## <a name="see-also"></a>Confira também
-
-- [Classe Core. LiteralAttribute](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.literalattribute-class-%5bfsharp%5d)
