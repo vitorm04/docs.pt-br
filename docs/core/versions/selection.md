@@ -4,12 +4,12 @@ description: Saiba como o .NET Core localiza e escolhe automaticamente versões 
 author: adegeo
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: faaa638905bb3c8e9cd4c09af83979d90698df3d
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 82b5522601b0ed5d3f4faf6e6c6c970ba285b11f
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803112"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608194"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selecionar a versão do .NET Core a ser usada
 
@@ -78,7 +78,7 @@ As estruturas de destino do .NET Standard também são limitadas à estrutura de
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Roll foward de aplicativos dependentes da estrutura
 
-Quando você executa um aplicativo de origem com [`dotnet run`](../tools/dotnet-run.md) , de uma [**implantação dependente de estrutura**](../deploying/index.md#publish-runtime-dependent) com o [`dotnet myapp.dll`](../tools/dotnet.md#description) , ou de um [**executável dependente de estrutura**](../deploying/index.md#publish-runtime-dependent) com `myapp.exe` , o `dotnet` executável é o **host** para o aplicativo.
+Quando você executa um aplicativo de origem com [`dotnet run`](../tools/dotnet-run.md) , de uma [**implantação dependente de estrutura**](../deploying/index.md#publish-framework-dependent) com o [`dotnet myapp.dll`](../tools/dotnet.md#description) , ou de um [**executável dependente de estrutura**](../deploying/index.md#publish-framework-dependent) com `myapp.exe` , o `dotnet` executável é o **host** para o aplicativo.
 
 O host escolhe a versão de patch mais recente instalada no computador. Por exemplo, se você especificar `netcoreapp3.0` em seu arquivo de projeto e `3.0.2` for o runtime mais recente do .NET instalado, o runtime `3.0.2` será usado.
 
@@ -87,9 +87,9 @@ Se nenhuma versão `3.0.*` aceitável for encontrada, uma nova versão `3.*` ser
 Alguns exemplos de uso demonstram o comportamento, se você visar 3,0:
 
 - ✔️ 3,0 está especificado. 3.0.3 é a versão de patch mais alta instalada. 3.0.3 é usado.
-- ❌3,0 está especificado. Nenhuma versão 3,0. * está instalada. 2.1.1 é o tempo de execução mais alto instalado. Uma mensagem de erro é exibida.
+- ❌ 3,0 está especificado. Nenhuma versão 3,0. * está instalada. 2.1.1 é o tempo de execução mais alto instalado. Uma mensagem de erro é exibida.
 - ✔️ 3,0 está especificado. Nenhuma versão 3,0. * está instalada. 3.1.0 é a versão de tempo de execução mais alta instalada. 3.1.0 é usado.
-- ❌2,0 está especificado. Não há nenhuma versão 2.x instalada. 3.0.0 é o tempo de execução mais alto instalado. Uma mensagem de erro é exibida.
+- ❌ 2,0 está especificado. Não há nenhuma versão 2.x instalada. 3.0.0 é o tempo de execução mais alto instalado. Uma mensagem de erro é exibida.
 
 O roll forward de versão secundária tem um efeito colateral que pode afetar os usuários finais. Considere o cenário a seguir.
 
@@ -115,7 +115,7 @@ As implantações autossuficientes podem exigir uma versão de patch específica
 
 O elemento `RuntimeFrameworkVersion` substitui a política de versão padrão. Para implantações autossuficientes, o `RuntimeFrameworkVersion` especifica a versão *exata* da estrutura do runtime. Para aplicativos dependentes da estrutura, o `RuntimeFrameworkVersion` especifica a versão *mínima* da estrutura de runtime necessária.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Baixe e instale o .NET Core](../install/index.yml).
 - [Como remover o SDK e o tempo de execução do .NET Core](../install/remove-runtime-sdk-versions.md).

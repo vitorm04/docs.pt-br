@@ -3,12 +3,12 @@ title: Diretrizes de segurança do conjunto de tabela e DataTable
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 2fbac625ae0049fc4c363977dc1d3fbcfb376025
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: f0fa43c467cc7866e69115acb5f807e6487fda7a
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416200"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608522"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Diretrizes de segurança do conjunto de tabela e DataTable
 
@@ -29,7 +29,7 @@ Em todas as versões com suporte do .NET Framework, .NET Core e .NET, `DataSet` 
 * Primitivas e equivalentes primitivos:,,,,,, `bool` `char` `sbyte` `byte` `short` `ushort` `int` , `uint` ,,,,,,,,,,,, `long` `ulong` `float` `double` `decimal` `DateTime` `DateTimeOffset` `TimeSpan` `string` `Guid` `SqlBinary` `SqlBoolean` , `SqlByte` , `SqlBytes` ,,,, `SqlChars` ,,,,,, `SqlDateTime` `SqlDecimal` `SqlDouble` `SqlGuid` `SqlInt16` `SqlInt32` `SqlInt64` `SqlMoney` `SqlSingle` e `SqlString` .
 * Não primitivos comumente usados: `Type` , `Uri` e `BigInteger` .
 * Tipos de _sistema. Drawing_ usados com frequência: `Color` ,,,, `Point` `PointF` `Rectangle` `RectangleF` , `Size` e `SizeF` .
-* `Enum`digita.
+* `Enum` digita.
 * Matrizes e listas dos tipos acima.
 
 Se os dados XML de entrada contiverem um objeto cujo tipo não está nesta lista:
@@ -252,7 +252,7 @@ No .NET Core, no .NET 5 e no ASP.NET Core, essa configuração é controlada por
 
 Para obter mais informações, consulte ["definições de configuração de tempo de execução do .NET Core"](/dotnet/core/run-time-config/).
 
-`AllowArbitraryDataSetTypeInstantiation`também pode ser definido programaticamente via [AppContext. setswitch](/dotnet/api/system.appcontext.setswitch) em vez de usar um arquivo de configuração, conforme mostrado no código a seguir:
+`AllowArbitraryDataSetTypeInstantiation` também pode ser definido programaticamente via [AppContext. setswitch](/dotnet/api/system.appcontext.setswitch) em vez de usar um arquivo de configuração, conforme mostrado no código a seguir:
 
 ```cs
 // Warning: setting the following switch can introduce a security problem.
@@ -270,7 +270,7 @@ Se `AppContext` não estiver disponível, as verificações de limitação de ti
 
 | Type  |  Valor |
 |---|---|
-| **Chave do registro** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
+| **Chave do Registro** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
 | **Nome do valor** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
 | **Tipo de valor** | `REG_SZ` |
 | **Dados do valor** | `true` |
@@ -289,7 +289,7 @@ Embora `DataSet` e `DataTable` imponham as limitações padrão nos tipos que po
 * O `DataSet.ReadXml` `DataTable.ReadXml` método ou é usado para ler um arquivo XML contendo informações de coluna e linha.
 * Uma `DataSet` `DataTable` instância ou é serializada como parte de um ASP.net (SOAP) serviços Web ou um ponto de extremidade WCF.
 * Um serializador, como `XmlSerializer` é usado para desserializar `DataSet` uma `DataTable` instância ou de um fluxo XML.
-* Um serializador, como `JsonConvert` é usado para desserializar `DataSet` uma `DataTable` instância ou de um fluxo JSON. `JsonConvert`é um método no conhecidoNewtonsoft.Jsde terceiros [na](https://www.newtonsoft.com/json) biblioteca.
+* Um serializador, como `JsonConvert` é usado para desserializar `DataSet` uma `DataTable` instância ou de um fluxo JSON. `JsonConvert` é um método no conhecidoNewtonsoft.Jsde terceiros [ na](https://www.newtonsoft.com/json) biblioteca.
 * Um serializador, como `BinaryFormatter` é usado para desserializar `DataSet` uma `DataTable` instância ou de um fluxo de bytes brutos.
 
 Este documento discute considerações de segurança para os cenários anteriores.
@@ -488,3 +488,28 @@ Considere substituir o modelo de objeto para usar [Entity Framework](/ef). Entit
 * Oferece proteções internas ao desserializar dados de fontes não confiáveis.
 
 Para aplicativos que usam `.aspx` pontos de extremidade SOAP, considere alterar esses pontos de extremidade para usar o [WCF](/dotnet/framework/wcf/). O WCF é uma substituição mais completa dos `.asmx` serviços da Web. Os pontos de extremidade do WCF [podem ser expostos por meio de SOAP](../../../wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) para compatibilidade com chamadores existentes.
+
+## <a name="code-analyzers"></a>Analisadores de código
+
+As regras de segurança do analisador de código, que são executadas quando o código-fonte é compilado, podem ajudar a encontrar vulnerabilidades relacionadas a esse problema de segurança em C# e Visual Basic código. Microsoft. CodeAnalysis. FxCopAnalyzers é um pacote NuGet de analisadores de código que é distribuído no [NuGet.org](https://www.nuget.org/).
+
+Para obter uma visão geral dos analisadores de código, consulte [visão geral dos analisadores de código-fonte](https://docs.microsoft.com/visualstudio/code-quality/roslyn-analyzers-overview).
+
+Habilite as seguintes regras Microsoft. CodeAnalysis. FxCopAnalyzers:
+
+- [CA2350](https://docs.microsoft.com/visualstudio/code-quality/ca2350): não use DataTable. ReadXml () com dados não confiáveis
+- [CA2351](https://docs.microsoft.com/visualstudio/code-quality/ca2351): não use DataSet. ReadXml () com dados não confiáveis
+- [CA2352](https://docs.microsoft.com/visualstudio/code-quality/ca2352): DataSet ou DataTable não seguro em tipo serializável pode ser vulnerável a ataques de execução remota de código
+- [CA2353](https://docs.microsoft.com/visualstudio/code-quality/ca2353): DataSet ou DataTable não seguro em tipo serializável
+- [CA2354](https://docs.microsoft.com/visualstudio/code-quality/ca2354): um DataSet não seguro ou DataTable no grafo de objeto desserializado pode ser vulnerável a ataques de execução remota de código
+- [CA2355](https://docs.microsoft.com/visualstudio/code-quality/ca2355): tipo de DataSet ou DataTable não seguro encontrado no grafo de objeto deserializável
+- [CA2356](https://docs.microsoft.com/visualstudio/code-quality/ca2356): tipo de DataSet ou DataTable não seguro no grafo de objeto deserializável da Web
+- [CA2361](https://docs.microsoft.com/visualstudio/code-quality/ca2361): garanta que a classe gerada automaticamente contendo DataSet. ReadXml () não seja usada com dados não confiáveis
+- [CA2362](https://docs.microsoft.com/visualstudio/code-quality/ca2362): DataSet ou DataTable não seguro em tipo serializável gerado automaticamente pode ser vulnerável a ataques de execução remota de código
+
+Para obter mais informações sobre como configurar regras, consulte [usar analisadores de código](https://docs.microsoft.com/visualstudio/code-quality/use-roslyn-analyzers).
+
+As novas regras de segurança estão disponíveis nos seguintes pacotes NuGet:
+
+- Microsoft. CodeAnalysis. FxCopAnalyzers 3.3.0: para Visual Studio 2019 versão 16,3 ou posterior
+- Microsoft. CodeAnalysis. FxCopAnalyzers 2.9.11: para Visual Studio 2017 versão 15,9 ou posterior

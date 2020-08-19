@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: f7cb42c8982cb6a704b39730a4f7aa0ce781d506
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 57261602c456a6dcf90c03aa044e7d1c0c8c1c6a
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446373"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608027"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programação assíncrona baseada em tarefas
 
@@ -159,7 +159,7 @@ Observe que a tarefa pai não espera a tarefa filha desanexada terminar.
 
 ## <a name="creating-child-tasks"></a>Criando tarefas filho
 
-Quando o código do usuário que está executando em uma tarefa cria uma tarefa com a opção <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent>, a nova tarefa é conhecida como uma *tarefa filha anexada* da tarefa pai. Você pode usar a opção <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> para expressar o paralelismo estruturado das tarefas, porque a tarefa pai espera implicitamente todas as tarefas filhas anexadas terminarem. O exemplo a seguir mostra uma tarefa pai que cria dez tarefas filhas anexadas. Observe que, embora o exemplo chame o método <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> para aguardar que a tarefa pai seja concluída, ele não precisará aguardar explicitamente que as tarefas filhas anexadas sejam concluídas.
+Quando o código de usuário que está sendo executado em uma tarefa cria uma tarefa com a <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> opção, a nova tarefa é conhecida como uma *tarefa filho anexada* da tarefa pai. Você pode usar a opção <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> para expressar o paralelismo estruturado das tarefas, porque a tarefa pai espera implicitamente todas as tarefas filhas anexadas terminarem. O exemplo a seguir mostra uma tarefa pai que cria dez tarefas filhas anexadas. Observe que, embora o exemplo chame o método <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> para aguardar que a tarefa pai seja concluída, ele não precisará aguardar explicitamente que as tarefas filhas anexadas sejam concluídas.
 
 [!code-csharp[TPL_TaskIntro#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/child1.cs#8)]
 [!code-vb[TPL_TaskIntro#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/child1.vb#8)]
@@ -278,7 +278,7 @@ Se você deve herdar de <xref:System.Threading.Tasks.Task> ou <xref:System.Threa
 |[Encadeando tarefas com tarefas de continuação](chaining-tasks-by-using-continuation-tasks.md)|Descreve como as continuações funcionam.|
 |[Tarefas filho anexadas e desanexadas](attached-and-detached-child-tasks.md)|Descreve a diferença entre tarefas filhas anexadas e desanexadas.|
 |[Cancelamento da tarefa](task-cancellation.md)|Descreve o suporte a cancelamento interno do objeto <xref:System.Threading.Tasks.Task>.|
-|[Tratamento de exceção](exception-handling-task-parallel-library.md)|Descreve como as exceções são manipuladas em threads simultâneos.|
+|[Tratamento de Exceção](exception-handling-task-parallel-library.md)|Descreve como as exceções são manipuladas em threads simultâneos.|
 |[Como: usar Parallel.Invoke para executar operações paralelas](how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Descreve como usar o <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|
 |[Como: Retornar um valor de uma tarefa](how-to-return-a-value-from-a-task.md)|Descreve como retornar valores de tarefas.|
 |[Como: Cancelar uma tarefa e seus filhos](how-to-cancel-a-task-and-its-children.md)|Descreve como cancelar tarefas.|

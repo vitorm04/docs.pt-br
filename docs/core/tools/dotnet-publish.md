@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: O comando dotnet publish publica um projeto do .NET Core ou uma solução em um diretório.
 ms.date: 02/24/2020
-ms.openlocfilehash: 4ff49452e4d941b3e06ad511507b1dc429ab459f
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 64a68c97e01bbf962616b31210889eb23d3734f1
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88187973"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608288"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -53,7 +53,7 @@ O comando `dotnet publish` chama MSBuild, que invoca o destino `Publish`. Quaisq
 
 O `dotnet publish` comando aceita opções do MSBuild, como `-p` para configurar propriedades e `-l` definir um agente de log. Por exemplo, você pode definir uma propriedade do MSBuild usando o formato: `-p:<NAME>=<VALUE>` .
 
-Você também pode definir propriedades relacionadas à publicação fazendo referência a um arquivo *. pubxml* (disponível desde o SDK do .net Core 3,1). Por exemplo: 
+Você também pode definir propriedades relacionadas à publicação fazendo referência a um arquivo *. pubxml* (disponível desde o SDK do .net Core 3,1). Por exemplo:
 
 ```dotnetcli
 dotnet publish -p:PublishProfile=FolderProfile
@@ -123,7 +123,7 @@ Para saber mais, consulte os recursos a seguir:
 
   Especifica o caminho para o diretório de saída.
   
-  Se não for especificado, o padrão é *[project_file_folder]./bin/[Configuration]/[Framework]/Publish/* para um executável dependente de tempo de execução e binários de plataforma cruzada. O padrão é *[project_file_folder]/bin/[Configuration]/[Framework]/[Runtime]/Publish/* para um executável independente.
+  Se não for especificado, o padrão é *[project_file_folder]./bin/[Configuration]/[Framework]/Publish/* para um executável dependente de estrutura e binários de plataforma cruzada. O padrão é *[project_file_folder]/bin/[Configuration]/[Framework]/[Runtime]/Publish/* para um executável independente.
 
   Em um projeto Web, se a pasta de saída estiver na pasta do projeto, os `dotnet publish` comandos sucessivos resultarão em pastas de saída aninhadas. Por exemplo, se a pasta do projeto *for MyProject*e a pasta de saída de publicação for *MyProject/Publish*e você `dotnet publish` executar duas vezes, a segunda execução colocará arquivos de conteúdo como arquivos *. config* e *. JSON* no *MyProject/publicar/Publish*. Para evitar o aninhamento de pastas de publicação, especifique uma pasta de publicação que não esteja **diretamente** sob a pasta do projeto ou exclua a pasta de publicação do projeto. Para excluir uma pasta de publicação chamada *publishoutput*, adicione o seguinte elemento a um `PropertyGroup` elemento no arquivo *. csproj* :
 
@@ -187,13 +187,13 @@ Para saber mais, consulte os recursos a seguir:
 
 ## <a name="examples"></a>Exemplos
 
-- Crie um [binário de plataforma cruzada dependente de tempo de execução](../deploying/index.md#produce-a-cross-platform-binary) para o projeto no diretório atual:
+- Crie um [binário de plataforma cruzada dependente de estrutura](../deploying/index.md#produce-a-cross-platform-binary) para o projeto no diretório atual:
 
   ```dotnetcli
   dotnet publish
   ```
 
-  A partir do SDK do .NET Core 3,0, este exemplo também cria um [executável dependente de tempo de execução](../deploying/index.md#publish-runtime-dependent) para a plataforma atual.
+  A partir do SDK do .NET Core 3,0, este exemplo também cria um [executável dependente da estrutura](../deploying/index.md#publish-framework-dependent) para a plataforma atual.
 
 - Crie um [executável independente](../deploying/index.md#publish-self-contained) para o projeto no diretório atual, para um tempo de execução específico:
 
@@ -203,7 +203,7 @@ Para saber mais, consulte os recursos a seguir:
 
   O RID deve estar no arquivo de projeto.
 
-- Crie um [executável dependente de tempo de execução](../deploying/index.md#publish-runtime-dependent) para o projeto no diretório atual, para uma plataforma específica:
+- Crie um [executável dependente de estrutura](../deploying/index.md#publish-framework-dependent) para o projeto no diretório atual, para uma plataforma específica:
 
   ```dotnetcli
   dotnet publish --runtime osx.10.11-x64 --self-contained false
