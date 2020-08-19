@@ -1,25 +1,25 @@
 ---
 title: Fatias
-description: Saiba como usar fatias para tipos F# de dados existentes e como definir suas próprias fatias para outros tipos de dados.
+description: 'Saiba como usar fatias para tipos de dados F # existentes e como definir suas próprias fatias para outros tipos de dados.'
 ms.date: 12/23/2019
-ms.openlocfilehash: 928005f2c63ffe099bb64e11ed29bb625e0a54c6
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: d3ddb2c247c36a85842f565f051372c5f2c9a9e9
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980373"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559005"
 ---
-# <a name="slices"></a><span data-ttu-id="936a3-103">Fatias</span><span class="sxs-lookup"><span data-stu-id="936a3-103">Slices</span></span>
+# <a name="slices"></a><span data-ttu-id="223d8-103">Fatias</span><span class="sxs-lookup"><span data-stu-id="223d8-103">Slices</span></span>
 
-<span data-ttu-id="936a3-104">No F#, uma fatia é um subconjunto de qualquer tipo de dados que tem um método `GetSlice` em sua definição ou em uma [extensão de tipo](type-extensions.md)no escopo.</span><span class="sxs-lookup"><span data-stu-id="936a3-104">In F#, a slice is a subset of any data type that has a `GetSlice` method in its definition or in an in-scope [type extension](type-extensions.md).</span></span> <span data-ttu-id="936a3-105">Ele é mais comumente usado com F# matrizes e listas.</span><span class="sxs-lookup"><span data-stu-id="936a3-105">It is most commonly used with F# arrays and lists.</span></span> <span data-ttu-id="936a3-106">Este artigo explica como tirar fatias de tipos F# existentes e como definir suas próprias fatias.</span><span class="sxs-lookup"><span data-stu-id="936a3-106">This article explains how to take slices from existing F# types and how to define your own slices.</span></span>
+<span data-ttu-id="223d8-104">Em F #, uma fatia é um subconjunto de qualquer tipo de dados que tem um `GetSlice` método em sua definição ou em uma [extensão de tipo](type-extensions.md)no escopo.</span><span class="sxs-lookup"><span data-stu-id="223d8-104">In F#, a slice is a subset of any data type that has a `GetSlice` method in its definition or in an in-scope [type extension](type-extensions.md).</span></span> <span data-ttu-id="223d8-105">Ele é mais comumente usado com matrizes e listas de F #.</span><span class="sxs-lookup"><span data-stu-id="223d8-105">It is most commonly used with F# arrays and lists.</span></span> <span data-ttu-id="223d8-106">Este artigo explica como tirar fatias de tipos existentes de F # e como definir suas próprias fatias.</span><span class="sxs-lookup"><span data-stu-id="223d8-106">This article explains how to take slices from existing F# types and how to define your own slices.</span></span>
 
-<span data-ttu-id="936a3-107">As fatias são semelhantes aos [indexadores](./members/indexed-properties.md), mas em vez de produzir um único valor da estrutura de dados subjacente, elas produzem várias delas.</span><span class="sxs-lookup"><span data-stu-id="936a3-107">Slices are similar to [indexers](./members/indexed-properties.md), but instead of yielding a single value from the underlying data structure, they yield multiple ones.</span></span>
+<span data-ttu-id="223d8-107">As fatias são semelhantes aos [indexadores](./members/indexed-properties.md), mas em vez de produzir um único valor da estrutura de dados subjacente, elas produzem várias delas.</span><span class="sxs-lookup"><span data-stu-id="223d8-107">Slices are similar to [indexers](./members/indexed-properties.md), but instead of yielding a single value from the underlying data structure, they yield multiple ones.</span></span>
 
-<span data-ttu-id="936a3-108">F#atualmente tem suporte intrínseco para cadeias de caracteres de divisão, listas, matrizes e matrizes 2D.</span><span class="sxs-lookup"><span data-stu-id="936a3-108">F# currently has intrinsic support for slicing strings, lists, arrays, and 2D arrays.</span></span>
+<span data-ttu-id="223d8-108">O F # atualmente tem suporte intrínseco para cadeias de caracteres de divisão, listas, matrizes e matrizes 2D.</span><span class="sxs-lookup"><span data-stu-id="223d8-108">F# currently has intrinsic support for slicing strings, lists, arrays, and 2D arrays.</span></span>
 
-## <a name="basic-slicing-with-f-lists-and-arrays"></a><span data-ttu-id="936a3-109">Divisão básica com F# listas e matrizes</span><span class="sxs-lookup"><span data-stu-id="936a3-109">Basic slicing with F# lists and arrays</span></span>
+## <a name="basic-slicing-with-f-lists-and-arrays"></a><span data-ttu-id="223d8-109">Divisão básica com listas e matrizes F #</span><span class="sxs-lookup"><span data-stu-id="223d8-109">Basic slicing with F# lists and arrays</span></span>
 
-<span data-ttu-id="936a3-110">Os tipos de dados mais comuns que são segmentados F# são listas e matrizes.</span><span class="sxs-lookup"><span data-stu-id="936a3-110">The most common data types that are sliced are F# lists and arrays.</span></span> <span data-ttu-id="936a3-111">O exemplo a seguir demonstra como fazer isso com listas:</span><span class="sxs-lookup"><span data-stu-id="936a3-111">The following example demonstrates how to do this with lists:</span></span>
+<span data-ttu-id="223d8-110">Os tipos de dados mais comuns que são segmentados são listas e matrizes de F #.</span><span class="sxs-lookup"><span data-stu-id="223d8-110">The most common data types that are sliced are F# lists and arrays.</span></span> <span data-ttu-id="223d8-111">O exemplo a seguir demonstra como fazer isso com listas:</span><span class="sxs-lookup"><span data-stu-id="223d8-111">The following example demonstrates how to do this with lists:</span></span>
 
 ```fsharp
 // Generate a list of 100 integers
@@ -38,7 +38,7 @@ let unboundedEnd = fullList.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-<span data-ttu-id="936a3-112">As matrizes de divisão são apenas como listas de fatias:</span><span class="sxs-lookup"><span data-stu-id="936a3-112">Slicing arrays is just like slicing lists:</span></span>
+<span data-ttu-id="223d8-112">As matrizes de divisão são apenas como listas de fatias:</span><span class="sxs-lookup"><span data-stu-id="223d8-112">Slicing arrays is just like slicing lists:</span></span>
 
 ```fsharp
 // Generate an array of 100 integers
@@ -57,11 +57,11 @@ let unboundedEnd = fullArray.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-## <a name="slicing-multidimensional-arrays"></a><span data-ttu-id="936a3-113">Fatiando matrizes multidimensionais</span><span class="sxs-lookup"><span data-stu-id="936a3-113">Slicing multidimensional arrays</span></span>
+## <a name="slicing-multidimensional-arrays"></a><span data-ttu-id="223d8-113">Fatiando matrizes multidimensionais</span><span class="sxs-lookup"><span data-stu-id="223d8-113">Slicing multidimensional arrays</span></span>
 
-<span data-ttu-id="936a3-114">F#dá suporte a F# matrizes multidimensionais na biblioteca principal.</span><span class="sxs-lookup"><span data-stu-id="936a3-114">F# supports multidimensional arrays in the F# core library.</span></span> <span data-ttu-id="936a3-115">Assim como acontece com matrizes unidimensionais, as fatias de matrizes multidimensionais também podem ser úteis.</span><span class="sxs-lookup"><span data-stu-id="936a3-115">As with one-dimensional arrays, slices of multidimensional arrays can also be useful.</span></span> <span data-ttu-id="936a3-116">No entanto, a introdução de dimensões adicionais exige uma sintaxe ligeiramente diferente para que você possa colocar fatias de linhas e colunas específicas.</span><span class="sxs-lookup"><span data-stu-id="936a3-116">However, the introduction of additional dimensions mandates a slightly different syntax so that you can take slices of specific rows and columns.</span></span>
+<span data-ttu-id="223d8-114">O f # dá suporte a matrizes multidimensionais na biblioteca principal do F #.</span><span class="sxs-lookup"><span data-stu-id="223d8-114">F# supports multidimensional arrays in the F# core library.</span></span> <span data-ttu-id="223d8-115">Assim como acontece com matrizes unidimensionais, as fatias de matrizes multidimensionais também podem ser úteis.</span><span class="sxs-lookup"><span data-stu-id="223d8-115">As with one-dimensional arrays, slices of multidimensional arrays can also be useful.</span></span> <span data-ttu-id="223d8-116">No entanto, a introdução de dimensões adicionais exige uma sintaxe ligeiramente diferente para que você possa colocar fatias de linhas e colunas específicas.</span><span class="sxs-lookup"><span data-stu-id="223d8-116">However, the introduction of additional dimensions mandates a slightly different syntax so that you can take slices of specific rows and columns.</span></span>
 
-<span data-ttu-id="936a3-117">Os exemplos a seguir demonstram como dividir uma matriz 2D:</span><span class="sxs-lookup"><span data-stu-id="936a3-117">The following examples demonstrate how to slice a 2D array:</span></span>
+<span data-ttu-id="223d8-117">Os exemplos a seguir demonstram como dividir uma matriz 2D:</span><span class="sxs-lookup"><span data-stu-id="223d8-117">The following examples demonstrate how to slice a 2D array:</span></span>
 
 ```fsharp
 // Generate a 3x3 2D matrix
@@ -89,13 +89,13 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-<span data-ttu-id="936a3-118">Atualmente F# , a biblioteca principal não define `GetSlice` para matrizes 3D.</span><span class="sxs-lookup"><span data-stu-id="936a3-118">The F# core library does not currently define `GetSlice` for 3D arrays.</span></span> <span data-ttu-id="936a3-119">Se você quiser fatiar matrizes 3D ou outras matrizes de mais dimensões, defina o membro `GetSlice` por conta própria.</span><span class="sxs-lookup"><span data-stu-id="936a3-119">If you wish to slice 3D arrays or other arrays of more dimensions, define the `GetSlice` member yourself.</span></span>
+<span data-ttu-id="223d8-118">A biblioteca de núcleos F # não define atualmente `GetSlice` para matrizes 3D.</span><span class="sxs-lookup"><span data-stu-id="223d8-118">The F# core library does not currently define `GetSlice` for 3D arrays.</span></span> <span data-ttu-id="223d8-119">Se você quiser fatiar matrizes 3D ou outras matrizes de mais dimensões, defina o `GetSlice` membro por conta própria.</span><span class="sxs-lookup"><span data-stu-id="223d8-119">If you wish to slice 3D arrays or other arrays of more dimensions, define the `GetSlice` member yourself.</span></span>
 
-## <a name="defining-slices-for-other-data-structures"></a><span data-ttu-id="936a3-120">Definindo fatias para outras estruturas de dados</span><span class="sxs-lookup"><span data-stu-id="936a3-120">Defining slices for other data structures</span></span>
+## <a name="defining-slices-for-other-data-structures"></a><span data-ttu-id="223d8-120">Definindo fatias para outras estruturas de dados</span><span class="sxs-lookup"><span data-stu-id="223d8-120">Defining slices for other data structures</span></span>
 
-<span data-ttu-id="936a3-121">A F# biblioteca principal define fatias para um conjunto limitado de tipos.</span><span class="sxs-lookup"><span data-stu-id="936a3-121">The F# core library defines slices for a limited set of types.</span></span> <span data-ttu-id="936a3-122">Se você quiser definir fatias para mais tipos de dados, poderá fazer isso na própria definição de tipo ou em uma extensão de tipo.</span><span class="sxs-lookup"><span data-stu-id="936a3-122">If you wish to define slices for more data types, you can do so either in the type definition itself or in a type extension.</span></span>
+<span data-ttu-id="223d8-121">A biblioteca de núcleos F # define fatias para um conjunto limitado de tipos.</span><span class="sxs-lookup"><span data-stu-id="223d8-121">The F# core library defines slices for a limited set of types.</span></span> <span data-ttu-id="223d8-122">Se você quiser definir fatias para mais tipos de dados, poderá fazer isso na própria definição de tipo ou em uma extensão de tipo.</span><span class="sxs-lookup"><span data-stu-id="223d8-122">If you wish to define slices for more data types, you can do so either in the type definition itself or in a type extension.</span></span>
 
-<span data-ttu-id="936a3-123">Por exemplo, veja como você pode definir fatias para a classe <xref:System.ArraySegment%601> para permitir uma manipulação de dados conveniente:</span><span class="sxs-lookup"><span data-stu-id="936a3-123">For example, here's how you might define slices for the <xref:System.ArraySegment%601> class to allow for convenient data manipulation:</span></span>
+<span data-ttu-id="223d8-123">Por exemplo, veja como você pode definir fatias para a <xref:System.ArraySegment%601> classe para permitir uma manipulação de dados conveniente:</span><span class="sxs-lookup"><span data-stu-id="223d8-123">For example, here's how you might define slices for the <xref:System.ArraySegment%601> class to allow for convenient data manipulation:</span></span>
 
 ```fsharp
 open System
@@ -110,23 +110,19 @@ let arr = ArraySegment [| 1 .. 10 |]
 let slice = arr.[2..5] //[ 3; 4; 5]
 ```
 
-### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a><span data-ttu-id="936a3-124">Use o Outlining para evitar boxing, se necessário</span><span class="sxs-lookup"><span data-stu-id="936a3-124">Use inlining to avoid boxing if it is necessary</span></span>
-
-<span data-ttu-id="936a3-125">Se você estiver definindo fatias para um tipo que é realmente uma struct, é recomendável `inline` o membro `GetSlice`.</span><span class="sxs-lookup"><span data-stu-id="936a3-125">If you are defining slices for a type that is actually a struct, we recommend that you `inline` the `GetSlice` member.</span></span> <span data-ttu-id="936a3-126">O F# compilador otimiza os argumentos opcionais, evitando qualquer alocação de heap como resultado de divisão.</span><span class="sxs-lookup"><span data-stu-id="936a3-126">The F# compiler optimizes away the optional arguments, avoiding any heap allocations as a result of slicing.</span></span> <span data-ttu-id="936a3-127">Isso é extremamente importante para as construções de fatias, como <xref:System.Span%601> que não podem ser alocadas no heap.</span><span class="sxs-lookup"><span data-stu-id="936a3-127">This is critically important for slicing constructs such as <xref:System.Span%601> that cannot be allocated on the heap.</span></span>
+<span data-ttu-id="223d8-124">Outro exemplo que usa <xref:System.Span%601> os <xref:System.ReadOnlySpan%601> tipos e:</span><span class="sxs-lookup"><span data-stu-id="223d8-124">Another example using the <xref:System.Span%601> and <xref:System.ReadOnlySpan%601> types:</span></span>
 
 ```fsharp
 open System
 
 type ReadOnlySpan<'T> with
-    // Note the 'inline' in the member definition
-    member inline sp.GetSlice(startIdx, endIdx) =
+    member sp.GetSlice(startIdx, endIdx) =
         let s = defaultArg startIdx 0
         let e = defaultArg endIdx sp.Length
         sp.Slice(s, e - s)
 
 type Span<'T> with
-    // Note the 'inline' in the member definition
-    member inline sp.GetSlice(startIdx, endIdx) =
+    member sp.GetSlice(startIdx, endIdx) =
         let s = defaultArg startIdx 0
         let e = defaultArg endIdx sp.Length
         sp.Slice(s, e - s)
@@ -142,9 +138,9 @@ printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..3] // |2; 3|]
 ```
 
-## <a name="built-in-f-slices-are-end-inclusive"></a><span data-ttu-id="936a3-128">As F# fatias internas são inclusivas</span><span class="sxs-lookup"><span data-stu-id="936a3-128">Built-in F# slices are end-inclusive</span></span>
+## <a name="built-in-f-slices-are-end-inclusive"></a><span data-ttu-id="223d8-125">As fatias F # internas são inclusivas</span><span class="sxs-lookup"><span data-stu-id="223d8-125">Built-in F# slices are end-inclusive</span></span>
 
-<span data-ttu-id="936a3-129">Todas as fatias F# intrínsecas no são completas, inclusive ou seja, o limite superior é incluído na fatia.</span><span class="sxs-lookup"><span data-stu-id="936a3-129">All intrinsic slices in F# are end-inclusive; that is, the upper bound is included in the slice.</span></span> <span data-ttu-id="936a3-130">Para uma determinada fatia com `x` de índice inicial e `y`de índice final, a fatia resultante incluirá o valor *YTH* .</span><span class="sxs-lookup"><span data-stu-id="936a3-130">For a given slice with starting index `x` and ending index `y`, the resulting slice will include the *yth* value.</span></span>
+<span data-ttu-id="223d8-126">Todas as fatias intrínsecas em F # são inclusivas; ou seja, o limite superior é incluído na fatia.</span><span class="sxs-lookup"><span data-stu-id="223d8-126">All intrinsic slices in F# are end-inclusive; that is, the upper bound is included in the slice.</span></span> <span data-ttu-id="223d8-127">Para uma determinada fatia com índice inicial `x` e índice final `y` , a fatia resultante incluirá o valor *YTH* .</span><span class="sxs-lookup"><span data-stu-id="223d8-127">For a given slice with starting index `x` and ending index `y`, the resulting slice will include the *yth* value.</span></span>
 
 ```fsharp
 // Define a new list
@@ -153,6 +149,6 @@ let xs = [1 .. 10]
 printfn "%A" xs.[2..5] // Includes the 5th index
 ```
 
-## <a name="see-also"></a><span data-ttu-id="936a3-131">Veja também</span><span class="sxs-lookup"><span data-stu-id="936a3-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="223d8-128">Confira também</span><span class="sxs-lookup"><span data-stu-id="223d8-128">See also</span></span>
 
-- [<span data-ttu-id="936a3-132">Propriedades indexadas</span><span class="sxs-lookup"><span data-stu-id="936a3-132">Indexed properties</span></span>](./members/indexed-properties.md)
+- [<span data-ttu-id="223d8-129">Propriedades indexadas</span><span class="sxs-lookup"><span data-stu-id="223d8-129">Indexed properties</span></span>](./members/indexed-properties.md)
