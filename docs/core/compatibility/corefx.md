@@ -2,12 +2,12 @@
 title: Alterações significativas na biblioteca de classes base
 description: Lista as alterações significativas nas principais bibliotecas do .NET.
 ms.date: 07/27/2020
-ms.openlocfilehash: c8eb5ec7d2bb1879a38a18337463230c7b731d29
-ms.sourcegitcommit: d3c09791297f0edc468a4849a5f11ef62e0e90fd
+ms.openlocfilehash: 9190fc2fc8dddc4fb4be8409915cf24c92a97daf
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88137477"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558162"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Principais alterações significativas nas bibliotecas do .NET
 
@@ -17,6 +17,7 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 | Alteração significativa | Versão introduzida |
 | - | :-: |
+| [Environment. OSVersion retorna a versão correta do sistema operacional](#environmentosversion-returns-the-correct-operating-system-version) | 5.0 |
 | [Complexidade do LINQ OrderBy. primeiro {OrDefault} aumentou](#complexity-of-linq-orderbyfirstordefault-increased) | 5.0 |
 | [IntPtr e UIntPtr implementam IFormattable](#intptr-and-uintptr-implement-iformattable) | 5.0 |
 | [PrincipalPermissionattribute está obsoleto como erro](#principalpermissionattribute-is-obsolete-as-error) | 5.0 |
@@ -46,6 +47,10 @@ As seguintes alterações significativas estão documentadas nesta página:
 | [Process. StartInfo gera InvalidOperationException para processos que você não iniciou](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [environment-osversion-returns-correct-version](../../../includes/core-changes/corefx/5.0/environment-osversion-returns-correct-version.md)]
+
+***
 
 [!INCLUDE [orderby-firstordefault-complexity-increase](../../../includes/core-changes/corefx/5.0/orderby-firstordefault-complexity-increase.md)]
 

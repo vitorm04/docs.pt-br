@@ -4,12 +4,12 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: 378ee4e7d3a3b106b719e5da819b09f336ff218e
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: b169a1c13b3f20d7b5e2a1386cfb28a9cc093dcd
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226654"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559083"
 ---
 # <a name="tuples-visual-basic"></a>Tuplas (Visual Basic)
 
@@ -72,7 +72,7 @@ Quando a inferência de nome de campo falha, Visual Basic não gera um erro de c
 
 ## <a name="tuples-versus-structures"></a>Tuplas versus estruturas
 
-Uma tupla de Visual Basic é um tipo de valor que é uma instância de um dos tipos genéricos **System. ValueTuple** . Por exemplo, a `holiday` tupla definida no exemplo anterior é uma instância da <xref:System.ValueTuple%603> estrutura. Ele foi projetado para ser um contêiner leve de dados. Como a tupla visa facilitar a criação de um objeto com vários itens de dados, ele não tem alguns dos recursos que uma estrutura personalizada pode ter. Elas incluem:
+Uma tupla de Visual Basic é um tipo de valor que é uma instância de um dos tipos genéricos **System. ValueTuple** . Por exemplo, a `holiday` tupla definida no exemplo anterior é uma instância da <xref:System.ValueTuple%603> estrutura. Ele foi projetado para ser um contêiner leve de dados. Como a tupla visa facilitar a criação de um objeto com vários itens de dados, ele não tem alguns dos recursos que uma estrutura personalizada pode ter. Eles incluem:
 
 - Membros personalizados. Você não pode definir suas próprias propriedades, métodos ou eventos para uma tupla.
 
@@ -84,14 +84,14 @@ Se membros personalizados, a validação de propriedade e de campo ou a imutabil
 
 Uma tupla Visual Basic herda os membros de seu tipo **ValueTuple** . Além de seus campos, eles incluem os seguintes métodos:
 
-| Membro | Descrição |
+| Método | Descrição |
 | ---|---|
 | CompareTo | Compara a tupla atual com outra tupla com o mesmo número de elementos. |
-| Igual a | Determina se a tupla atual é igual a outra tupla ou objeto. |
+| É igual a | Determina se a tupla atual é igual a outra tupla ou objeto. |
 | GetHashCode | Calcula o código hash para a instância atual. |
 | ToString | Retorna a representação da cadeia de caracteres dessa tupla, que assume o formulário `(Item1, Item2...)` , onde `Item1` e `Item2` representa os valores dos campos da tupla. |
 
-Além disso, os tipos **ValueTuple** implementam <xref:System.Collections.IStructuralComparable> e <xref:System.Collections.IStructuralEquatable> interfaces, que permitem que você defina os comparadores de clientes.
+Além disso, os tipos **ValueTuple** implementam <xref:System.Collections.IStructuralComparable> e <xref:System.Collections.IStructuralEquatable> interfaces, que permitem que você defina os comparadores personalizados.
 
 ## <a name="assignment-and-tuples"></a>Atribuição e tuplas
 
@@ -101,7 +101,7 @@ Visual Basic dá suporte à atribuição entre os tipos de tupla que têm o mesm
 
 - Uma conversão de alargamento (ou implícita) do tipo de origem para o tipo de destino é definida.
 
-- `Option Strict`é `On` , e uma conversão de restrição (ou explícita) do tipo de origem para o tipo de destino é definida. Essa conversão pode gerar uma exceção se o valor de origem estiver fora do intervalo do tipo de destino.
+- `Option Strict` é `On` , e uma conversão de restrição (ou explícita) do tipo de origem para o tipo de destino é definida. Essa conversão pode gerar uma exceção se o valor de origem estiver fora do intervalo do tipo de destino.
 
 Outras conversões não são consideradas para atribuições. Vamos examinar os tipos de atribuições que são permitidos entre tipos de tupla.
 

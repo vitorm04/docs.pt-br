@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: ca3d8747b02602c89aec187ea0826e658fb0cbc4
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: ba6dbfdf9a4fa9973dfe84cf5d58f1300f5d0cb4
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267796"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557536"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>Migrar do ASP.NET Web Forms para Blazor
 
@@ -39,7 +39,7 @@ Conforme descrito no capítulo [modelos de hospedagem](hosting-models.md) , um B
 
 No momento da elaboração do artigo, o modelo do lado do servidor se assemelha mais à Web Forms. A maior parte deste capítulo se concentra no modelo de hospedagem do lado do servidor, pois ele está pronto para produção.
 
-## <a name="create-a-new-project"></a>Criar um projeto
+## <a name="create-a-new-project"></a>Criar um novo projeto
 
 Essa etapa inicial de migração é criar um novo projeto. Esse tipo de projeto se baseia nos projetos de estilo do SDK do .NET Core e simplifica grande parte do timbre que foi usado em formatos de projeto anteriores. Para obter mais detalhes, consulte o capítulo sobre [estrutura do projeto](project-structure.md).
 
@@ -559,10 +559,6 @@ No Blazor , a marcação equivalente é fornecida em um arquivo *Create. Razor* 
 ```
 
 O `EditForm` contexto inclui suporte à validação e pode ser disposto em torno da entrada. As anotações de dados são uma maneira comum de adicionar validação. Esse suporte à validação pode ser adicionado por meio do `DataAnnotationsValidator` componente. Para obter mais informações sobre esse mecanismo, consulte [ASP.NET Core Blazor Forms and Validation](/aspnet/core/blazor/forms-validation).
-
-## <a name="migrate-built-in-web-forms-controls"></a>Migrar controles de Web Forms internos
-
-*Esse conteúdo será disponibilizado em breve.*
 
 ## <a name="migrate-configuration"></a>Migrar configuração
 

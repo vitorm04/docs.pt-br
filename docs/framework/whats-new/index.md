@@ -1,7 +1,6 @@
 ---
 title: O que há de novo no .NET Framework
 description: Veja o que há de novo em várias versões do .NET Framework. Leia um resumo dos principais novos recursos e aprimoramentos em cada versão.
-ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
 - csharp
@@ -9,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 42f872bba87a88fc92a37879e815ee7068407cf7
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 3eba676a4134415f0e2981d5094c0b0f6a1651be
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925586"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559018"
 ---
 # <a name="whats-new-in-net-framework"></a>O que há de novo no .NET Framework
 
@@ -61,7 +60,7 @@ O .NET Framework 4.8 apresenta novos recursos nas seguintes áreas:
 
 - [Classes base](#core48)
 - [Windows Communication Foundation (WCF)](#wcf48)
-- [Windows Presentation Foundation (WPF)](#wpf48)
+- [WPF (Windows Presentation Foundation)](#wpf48)
 - [Common Language Runtime](#clr48)
 
 A melhoria na acessibilidade, que permite a um aplicativo proporcionar uma experiência adequada para os usuários da Tecnologia Assistencial, continua sendo um ponto importante do .NET Framework 4.8. Para saber mais sobre melhorias de acessibilidade no .NET Framework 4.8, consulte [Novidades de acessibilidade no .NET Framework](whats-new-in-accessibility.md).
@@ -351,7 +350,7 @@ A compatibilidade para descompactação por meio das APIs do Windows está habil
 
 **APIs de coleção adicionais**
 
-O .NET Framework 4.7.2 adiciona uma série de novas APIs aos tipos <xref:System.Collections.Generic.SortedSet%601> e <xref:System.Collections.Generic.HashSet%601>. Elas incluem:
+O .NET Framework 4.7.2 adiciona uma série de novas APIs aos tipos <xref:System.Collections.Generic.SortedSet%601> e <xref:System.Collections.Generic.HashSet%601>. Eles incluem:
 
 - métodos `TryGetValue`, o que estende o padrão try usado em outros tipos de coleção. Os métodos são:
 
@@ -676,7 +675,7 @@ O .NET Framework 4.7 inclui novos recursos nas seguintes áreas:
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Forms](#wf47)
-- [Windows Presentation Foundation (WPF)](#WPF47)
+- [WPF (Windows Presentation Foundation)](#WPF47)
 
 Para obter uma lista das novas APIs adicionadas ao .NET Framework 4.7, consulte [Alterações na API do .NET Framework 4.7](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) no GitHub. Para obter uma lista de aprimoramentos de recursos e correções de bugs no .NET Framework 4.7, consulte [Lista de alterações do .NET Framework 4.7](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) no GitHub. Para obter mais informações, consulte [anunciando o .NET Framework 4,7](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7/) no blog do .net.
 
@@ -742,7 +741,7 @@ A partir do .NET Framework 4.7, o WCF permite que você configure o TSL 1.1 ou o
 
 **Confiabilidade aprimorada de aplicativos WCF e serialização do WCF**
 
-O WCF inclui diversas alterações de código que eliminam as condições de corrida, melhorando o desempenho e a confiabilidade das opções de serialização. Elas incluem:
+O WCF inclui diversas alterações de código que eliminam as condições de corrida, melhorando o desempenho e a confiabilidade das opções de serialização. Eles incluem:
 
 - Suporte aprimorado para combinação de código síncrono e assíncrono em chamadas para **SocketConnection.BeginRead** e **SocketConnection.Read**.
 - Confiabilidade aprimorada ao anular uma conexão com **SharedConnectionListener** e **DuplexChannelBinder**.
@@ -791,7 +790,7 @@ O .NET Framework 4.6.2 inclui novos recursos nas seguintes áreas:
 
 - [Windows Communication Foundation](#WCF)
 
-- [Windows Presentation Foundation (WPF)](#WPF462)
+- [WPF (Windows Presentation Foundation)](#WPF462)
 
 - [Windows Workflow Foundation (WF)](#WF462)
 
@@ -1038,7 +1037,7 @@ A adição da nova `PoolBlockingPeriod` palavra-chave permite selecionar o perí
 
 <xref:System.Data.SqlClient.PoolBlockingPeriod.Auto>
 
-O período de bloqueio do pool de conexão de um aplicativo que se conecta a um Banco de Dados SQL do Azure está desabilitado, e período de bloqueio do pool de conexão de um aplicativo que se conecta a qualquer outra instância do SQL Server está habilitado. Esse é o valor padrão. Se o nome de ponto de extremidade do Servidor terminar com qualquer uma das seguintes opções, será considerado um Banco de Dado SQL do Azure:
+O período de bloqueio do pool de conexão de um aplicativo que se conecta a um Banco de Dados SQL do Azure está desabilitado, e período de bloqueio do pool de conexão de um aplicativo que se conecta a qualquer outra instância do SQL Server está habilitado. Este é o valor padrão. Se o nome de ponto de extremidade do Servidor terminar com qualquer uma das seguintes opções, será considerado um Banco de Dado SQL do Azure:
 
 - .database.windows.net
 
@@ -1199,7 +1198,7 @@ No .NET Framework 4.6.2, o Windows Workflow Foundation foi aprimorado na seguint
 
 A partir do .NET Framework 4,5, o WF dá suporte a expressões C# no Visual Studio Designer e em fluxos de trabalho de código. A Designer de Fluxo de Trabalho rehospedada é um recurso-chave do WF que permite que o Designer de Fluxo de Trabalho esteja em um aplicativo fora do Visual Studio (por exemplo, no WPF).  Windows Workflow Foundation fornece a capacidade de dar suporte a expressões C# e IntelliSense no Designer de Fluxo de Trabalho rehospedado. Para saber mais, confira o [blog do Windows Workflow Foundation](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer).
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`Em versões do .NET Framework antes do 4.6.2, o WF designer IntelliSense é interrompido quando um cliente recria um projeto de fluxo de trabalho do Visual Studio. Embora a compilação do projeto seja bem-sucedida, os tipos de fluxo de trabalho não são encontrados no designer, e surgem avisos do IntelliSense para os tipos de fluxo de trabalho ausentes na janela **Lista de Erros**. .NET Framework 4.6.2 resolve esse problema e disponibiliza o IntelliSense.
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` Em versões do .NET Framework antes do 4.6.2, o WF designer IntelliSense é interrompido quando um cliente recria um projeto de fluxo de trabalho do Visual Studio. Embora a compilação do projeto seja bem-sucedida, os tipos de fluxo de trabalho não são encontrados no designer, e surgem avisos do IntelliSense para os tipos de fluxo de trabalho ausentes na janela **Lista de Erros**. .NET Framework 4.6.2 resolve esse problema e disponibiliza o IntelliSense.
 
 **Agora, os aplicativos do Fluxo de Trabalho V1 com Acompanhamento de Fluxo de Trabalho ativado são executados no modo FIPS**
 
@@ -1253,7 +1252,7 @@ O .NET Framework 4.6.1 inclui novos recursos nas seguintes áreas:
 
 - [ADO.NET](#ADO.NET461)
 
-- [Windows Presentation Foundation (WPF)](#WPF461)
+- [WPF (Windows Presentation Foundation)](#WPF461)
 
 - [Windows Workflow Foundation](#WWF461)
 
@@ -1617,7 +1616,7 @@ O .NET 2015 apresenta o .NET Framework 4.6 e o .NET Core. Alguns recursos novos 
 
     Para oferecer suporte a esses recursos, o método sobrecarregado <xref:System.Diagnostics.Tracing.EventSource.Write%2A> foi adicionado à classe <xref:System.Diagnostics.Tracing.EventSource>.
 
-- **Windows Presentation Foundation (WPF)**
+- **WPF (Windows Presentation Foundation)**
 
   - **Aprimoramentos de HDPI**
 
@@ -1971,7 +1970,7 @@ O .NET Framework 4.5 fornece vários recursos e aperfeiçoamentos novos para com
 
 ### <a name="web"></a>Web
 
-ASP.NET 4.5 e 4.5.1 adicionam model binding para formulários da Web, suporte WebSocket, manipuladores assíncronos, aperfeiçoamentos de desempenho e muitos outros recursos. Para obter mais informações, consulte os seguintes recursos:
+ASP.NET 4.5 e 4.5.1 adicionam model binding para formulários da Web, suporte WebSocket, manipuladores assíncronos, aperfeiçoamentos de desempenho e muitos outros recursos. Para saber mais, consulte os recursos a seguir:
 
 - [ASP.NET 4.5 e Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
 
@@ -2125,11 +2124,11 @@ Os aplicativos Windows 8.x Store foram projetados para fatores forma específico
 
 O projeto Biblioteca de Classes Portátil no Visual Studio 2012 (e em versões posteriores) permite gravar e compilar assemblies gerenciados que funcionem em várias plataformas do .NET Framework. Usando um projeto de biblioteca de classes portátil, você escolhe as plataformas (como Windows Phone e .NET para aplicativos da loja do Windows 8. x) para o destino. Os tipos e membros disponíveis em seu projeto são restritos automaticamente aos tipos e membros comuns através dessas plataformas. Para saber mais, veja [Biblioteca de Classes Portátil](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [O .NET Framework e lançamentos fora da banda](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [Novidades na acessibilidade do .NET Framework](whats-new-in-accessibility.md)
 - [O que há de novo no Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
-- [Novidades no Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
+- [O que há de novo no Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [O que há de novo para C++ no Visual Studio](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

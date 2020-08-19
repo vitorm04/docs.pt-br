@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
 ms.date: 04/29/2020
-ms.openlocfilehash: 9b1e190579902dda71547b01f31dd5adcc22fe9c
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: e5c0ec3423cf98895b49596633c81861bbcf4878
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251186"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557835"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -75,27 +75,27 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste, `xunit` é a estrutura de test
 
   Executa os testes no modo blame. Essa opção é útil para isolar testes problemáticos que causam falha no host de teste. Quando uma falha é detectada, ela cria um arquivo de sequência no `TestResults/<Guid>/<Guid>_Sequence.xml` que captura a ordem dos testes que foram executados antes da falha.
 
-- **`--blame-crash`**(Disponível desde o SDK da versão prévia do .NET 5,0)
+- **`--blame-crash`** (Disponível desde o SDK da versão prévia do .NET 5,0)
 
   Executa os testes no modo de culpa e coleta um despejo de memória quando o host de teste sai inesperadamente. Essa opção só tem suporte no Windows. Um diretório que contém *procdump.exe* e *procdump64.exe* deve estar no caminho ou na PROCDUMP_PATH variável de ambiente. [Baixe as ferramentas](https://docs.microsoft.com/sysinternals/downloads/procdump). Implica `--blame` .
 
-- **`--blame-crash-dump-type <DUMP_TYPE>`**(Disponível desde o SDK da versão prévia do .NET 5,0)
+- **`--blame-crash-dump-type <DUMP_TYPE>`** (Disponível desde o SDK da versão prévia do .NET 5,0)
 
   O tipo de despejo de memória a ser coletado. Implica `--blame-crash` .
 
-- **`--blame-crash-collect-always`**(Disponível desde o SDK da versão prévia do .NET 5,0)
+- **`--blame-crash-collect-always`** (Disponível desde o SDK da versão prévia do .NET 5,0)
 
   Coleta um despejo de memória em espera e saída de host de teste inesperado.
 
-- **`--blame-hang`**(Disponível desde o SDK da versão prévia do .NET 5,0)
+- **`--blame-hang`** (Disponível desde o SDK da versão prévia do .NET 5,0)
 
   Execute os testes no modo de culpa e coleta um despejo de travamento quando um teste excede o tempo limite especificado.
 
-- **`--blame-hang-dump-type <DUMP_TYPE>`**(Disponível desde o SDK da versão prévia do .NET 5,0)
+- **`--blame-hang-dump-type <DUMP_TYPE>`** (Disponível desde o SDK da versão prévia do .NET 5,0)
 
   O tipo de despejo de memória a ser coletado. Deve ser `full` , `mini` ou `none` . Quando `none` é especificado, o host de teste é encerrado no tempo limite, mas nenhum despejo é coletado. Implica `--blame-hang` .
 
-- **`--blame-hang-timeout <TIMESPAN>`**(Disponível desde o SDK da versão prévia do .NET 5,0)
+- **`--blame-hang-timeout <TIMESPAN>`** (Disponível desde o SDK da versão prévia do .NET 5,0)
 
   Tempo limite por teste, após o qual um despejo de travamento é disparado e o processo de host de teste é encerrado. O valor de tempo limite é especificado em um dos seguintes formatos:
   
@@ -156,7 +156,7 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste, `xunit` é a estrutura de test
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Diretório no qual encontram-se os binários para execução. Se não for especificado, o caminho padrão será `./bin/<configuration>/<framework>/`.  Para projetos com várias estruturas de destino (por meio da `TargetFrameworks` Propriedade), também é necessário definir `--framework` quando você especifica essa opção. `dotnet test`sempre executa testes do diretório de saída. Você pode usar <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> para consumir ativos de teste no diretório de saída.
+  Diretório no qual encontram-se os binários para execução. Se não for especificado, o caminho padrão será `./bin/<configuration>/<framework>/`.  Para projetos com várias estruturas de destino (por meio da `TargetFrameworks` Propriedade), também é necessário definir `--framework` quando você especifica essa opção. `dotnet test` sempre executa testes do diretório de saída. Você pode usar <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> para consumir ativos de teste no diretório de saída.
 
 - **`-r|--results-directory <RESULTS_DIR>`**
 
@@ -168,7 +168,7 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste, `xunit` é a estrutura de test
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  O arquivo `.runsettings` a ser usado para executar os testes. O `TargetPlatform` elemento (x86 | x64) não tem nenhum efeito para `dotnet test` . Para executar testes direcionados para x86, instale a versão x86 do .NET Core. O bit de bits do *dotnet.exe* que está no caminho é o que será usado para executar testes. Para obter mais informações, consulte os seguintes recursos:
+  O arquivo `.runsettings` a ser usado para executar os testes. O `TargetPlatform` elemento (x86 | x64) não tem nenhum efeito para `dotnet test` . Para executar testes direcionados para x86, instale a versão x86 do .NET Core. O bit de bits do *dotnet.exe* que está no caminho é o que será usado para executar testes. Para saber mais, consulte os recursos a seguir:
 
   - [Configurar testes de unidade usando um arquivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
   - [Configurar uma execução de teste](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
@@ -274,5 +274,5 @@ Para obter mais informações e exemplos sobre como usar a filtragem de teste de
 ## <a name="see-also"></a>Confira também
 
 - [Estruturas e destinos](../../standard/frameworks.md)
-- [Catálogo do Identificador de Runtime do .NET Core](../rid-catalog.md)
+- [Catálogo de RID (identificador de tempo de execução) do .NET Core](../rid-catalog.md)
 - [Passando argumentos RunSettings por meio de linha de comando](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

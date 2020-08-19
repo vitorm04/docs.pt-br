@@ -2,12 +2,12 @@
 title: Segurança do Azure para aplicativos nativos de nuvem
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Segurança do Azure para aplicativos nativos de nuvem
 ms.date: 05/13/2020
-ms.openlocfilehash: 223d9e77aca611697958981bf2ee3a630fb9fffb
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: 996c7075b252466a3b3374f1e75e64315fdd6fc7
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374488"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557640"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Segurança do Azure para aplicativos nativos de nuvem
 
@@ -201,7 +201,7 @@ kubectl apply -f ./secret.yaml
 
 Esses segredos podem então ser montados em volumes ou expostos a processos de contêiner por meio de variáveis de ambiente. A abordagem de [aplicativo de doze fatores](https://12factor.net/) para a criação de aplicativos sugere o uso do menor denominador comum para transmitir configurações a um aplicativo. As variáveis de ambiente são o denominador mais baixo comum, pois elas são suportadas não importa o sistema operacional ou aplicativo.
 
-Uma alternativa para usar os segredos internos do kubernetes é acessar os segredos em Azure Key Vault de dentro do kubernetes. A maneira mais simples de fazer isso é atribuir uma função de RBAC ao contêiner, buscando carregar segredos. O aplicativo pode usar as APIs de Azure Key Vault para acessar os segredos. No entanto, essa abordagem requer modificações no código e não segue o padrão de uso de variáveis de ambiente. Em vez disso, é possível injetar valores em um contêiner por meio do uso do [injetador Azure Key Vault](https://mrdevops.io/introducing-azure-key-vault-to-kubernetes-931f82364354). Essa abordagem é, na verdade, mais segura do que usar os segredos do kubernetes diretamente, pois eles podem ser acessados por usuários no cluster.
+Uma alternativa para usar os segredos internos do kubernetes é acessar os segredos em Azure Key Vault de dentro do kubernetes. A maneira mais simples de fazer isso é atribuir uma função de RBAC ao contêiner, buscando carregar segredos. O aplicativo pode usar as APIs de Azure Key Vault para acessar os segredos. No entanto, essa abordagem requer modificações no código e não segue o padrão de uso de variáveis de ambiente. Em vez disso, é possível injetar valores em um contêiner. Essa abordagem é, na verdade, mais segura do que usar os segredos do kubernetes diretamente, pois eles podem ser acessados por usuários no cluster.
 
 ## <a name="encryption-in-transit-and-at-rest"></a>Criptografia em trânsito e em repouso
 

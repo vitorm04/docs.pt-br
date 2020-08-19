@@ -1,19 +1,18 @@
 ---
 title: Compatibilidade de versão no .NET Framework
 description: Saiba mais sobre a compatibilidade entre as versões do .NET Framework, incluindo compatibilidade com versões anteriores e execução lado a lado.
-ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
 - .NET Framework, version compatibility
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: dfdc5a977b69af8aa3a0d33ed8b833745cf6bf11
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 92cfdc1a2a530f9790a693d0aa1ca5f65ff1af9f
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475496"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558758"
 ---
 # <a name="version-compatibility"></a>Compatibilidade de versões
 
@@ -68,7 +67,7 @@ Se o aplicativo ou o componente não funcionar conforme esperado no .NET Framewo
 
 Se você não encontrar uma solução alternativa adequada para seu problema, lembre-se de que o .NET Framework 4,5 (ou uma de suas versões de ponto) é executado lado a lado com as versões 1,1, 2,0 e 3,5, e é uma atualização in-loco que substitui a versão 4. Para aplicativos direcionados às versões 1,1, 2,0 e 3,5, você pode instalar a versão apropriada do .NET Framework no computador de destino para executar o aplicativo em seu melhor ambiente. Para saber mais sobre a execução lado a lado, confira [Side-by-Side Execution](../deployment/side-by-side-execution.md) (Execução lado a lado).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Novidades](../whats-new/index.md)
 - [O que está obsoleto na biblioteca de classes](../whats-new/whats-obsolete.md)
