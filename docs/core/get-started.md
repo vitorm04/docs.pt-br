@@ -5,37 +5,37 @@ author: adegeo
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: ddbee0764897b511cac0c4142354ba995d94a2b6
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 56eebc0fc5bad6f57d93358cbbef389d6355d66b
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416059"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656684"
 ---
 # <a name="get-started-with-net-core"></a>Introdução ao .NET Core
 
 Este artigo fornece informações de como começar a usar o .NET Core. O .NET Core pode ser instalado no Windows, no Linux e no macOS. Você pode codificar em seu editor de texto favorito e produzir aplicativos e bibliotecas multiplataforma.
 
-Se você não souber exatamente o que é o .NET Core ou como ele se relaciona com outras tecnologias do .NET, comece com a visão geral [O que é o .NET](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet). Resumindo, o .NET Core é uma implementação open-source e multiplataforma do .NET.
+Se você não tiver certeza de qual é o .NET Core ou de como ele se relaciona com outras tecnologias .NET, comece com o [que é](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet) a visão geral do .net. Resumindo, o .NET Core é uma implementação open-source e multiplataforma do .NET.
 
 ## <a name="create-an-application"></a>Criar um aplicativo
 
 Primeiro, baixe e instale o [SDK do .NET Core](https://dotnet.microsoft.com/download) em seu computador.
 
-Em seguida, abra um terminal, como o **PowerShell**, um **prompt de comando** ou o **Bash**. Digite os seguintes `dotnet` comandos para criar e executar um aplicativo C#:
+Em seguida, abra um terminal, como o **PowerShell**, um **prompt de comando** ou o **Bash**. Insira os seguintes `dotnet` comandos para criar e executar um aplicativo C#:
 
 ```dotnetcli
 dotnet new console --output sample1
 dotnet run --project sample1
 ```
 
-Você deve ver o seguinte resultado:
+A seguinte saída deve ser exibida:
 
 ```console
 Hello World!
 ```
 
-Parabéns! Você criou um aplicativo simples do .NET Core. Também é possível usar o [Visual Studio Code](./tutorials/with-visual-studio-code.md), o [Visual Studio](./tutorials/with-visual-studio.md) (somente Windows) ou o [Visual Studio para Mac](./tutorials/using-on-mac-vs.md) (somente macOS), para criar um aplicativo .NET Core.
+Parabéns! Você criou um aplicativo simples do .NET Core. Também é possível usar o [Visual Studio Code](./tutorials/with-visual-studio-code.md), o [Visual Studio](./tutorials/with-visual-studio.md) (somente Windows) ou o [Visual Studio para Mac](tutorials/with-visual-studio-mac.md) (somente macOS), para criar um aplicativo .NET Core.
 
 ## <a name="tutorials"></a>Tutoriais
 
@@ -47,7 +47,7 @@ Comece a desenvolver aplicativos .NET Core seguindo estes tutoriais passo a pass
 
 - [Criar seu primeiro aplicativo de console do .NET Core no Visual Studio 2019](./tutorials/with-visual-studio.md)
 - [Criar uma biblioteca de classes com .NET Standard no Visual Studio](./tutorials/library-with-visual-studio.md)
-- [Introdução ao .NET Core usando o CLI do .NET Core](./tutorials/cli-create-console-app.md)
+- [Tutorial: criar um aplicativo de console do .NET Core usando Visual Studio Code](tutorials/with-visual-studio-code.md)
 
 |   |   |
 |---|---|
@@ -60,7 +60,7 @@ Consulte o artigo [dependências e requisitos do .NET Core](install/dependencies
 
 Comece a desenvolver aplicativos .NET Core seguindo estes tutoriais passo a passo:
 
-- [Introdução ao .NET Core usando a linha de comando](./tutorials/cli-create-console-app.md)
+- [Tutorial: criar um aplicativo de console do .NET Core usando Visual Studio Code](tutorials/with-visual-studio-code.md)
 
 |   |   |
 |---|---|
@@ -72,9 +72,8 @@ Consulte o artigo [dependências e requisitos do .NET Core](install/dependencies
 
 Comece a desenvolver aplicativos .NET Core seguindo estes tutoriais passo a passo:
 
-- [Introdução ao .NET Core no macOS usando o Visual Studio Code](./tutorials/using-on-macos.md)
-- [Introdução ao .NET Core usando a linha de comando](./tutorials/cli-create-console-app.md)
-- [Introdução ao .NET Core no macOS, usando o Visual Studio para Mac](./tutorials/using-on-mac-vs.md)
+- [Tutorial: criar um aplicativo de console do .NET Core usando Visual Studio Code](tutorials/with-visual-studio-code.md)
+- [Tutorial: criar um aplicativo de console do .NET Core usando Visual Studio para Mac](tutorials/with-visual-studio-mac.md)
 - [Criar uma biblioteca de .NET Standard no macOS usando Visual Studio para Mac](tutorials/library-with-visual-studio-mac.md)
 
 |   |   |

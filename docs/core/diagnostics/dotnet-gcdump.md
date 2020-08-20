@@ -2,12 +2,12 @@
 title: dotnet-gcdump-.NET Core
 description: Instalando e usando a ferramenta de linha de comando dotnet-gcdump.
 ms.date: 07/26/2020
-ms.openlocfilehash: 10e4c7e9e3a1df5d0eb58e68d38c0af091aeedc1
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: a7b19f4d7487677b975621e7267a17894dae2e3a
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88575676"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656645"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>Ferramenta de análise de heap (dotNet-gcdump)
 
@@ -29,7 +29,7 @@ dotnet-gcdump [-h|--help] [--version] <command>
 
 ## <a name="description"></a>Descrição
 
-A `dotnet-gcdump` ferramenta global é uma maneira de coletar despejos de GC (coletor de lixo) de processos do .net em tempo real. Ele usa a tecnologia EventPipe, que é uma alternativa de plataforma cruzada para o ETW no Windows. Os despejos de GC são criados disparando um GC no processo de destino, ativando eventos especiais e regenerando o grafo de raízes de objeto a partir do fluxo de eventos. Isso permite que os despejos de GC sejam coletados enquanto o processo está em execução, com sobrecarga mínima. Esses despejos são úteis para vários cenários:
+A `dotnet-gcdump` ferramenta global é uma maneira de coletar despejos de GC (coletor de lixo) de processos do .net em tempo real. Ele usa a tecnologia EventPipe, que é uma alternativa de plataforma cruzada para o ETW no Windows. Os despejos de GC são criados disparando um GC no processo de destino, ativando eventos especiais e regenerando o grafo de raízes de objeto a partir do fluxo de eventos. Esse processo permite que os despejos de GC sejam coletados enquanto o processo está em execução e com sobrecarga mínima. Esses despejos são úteis para vários cenários:
 
 - Comparando o número de objetos no heap em vários pontos no tempo.
 - Análise de raízes de objetos (respondendo a perguntas como "o que ainda tem uma referência a esse tipo?").

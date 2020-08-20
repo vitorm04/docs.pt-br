@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 23d67761838f17e833a4a478e2355e908a2e35ca
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 73eee58a3d11f2f898a6d57cb282ccf4e802cdca
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557900"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656593"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Implantar aplicativos .NET Core com o Visual Studio
 
@@ -120,7 +120,7 @@ Para publicar seu aplicativo do Visual Studio, faça o seguinte:
 
    1. Clique com o botão direito do mouse no projeto (e não na solução) no **Gerenciador de Soluções** e selecione **Editar SCD.csproj**.
 
-   1. Crie uma marcação `<RuntimeIdentifiers>` na seção `<PropertyGroup>` de seu arquivo *csproj* que define as plataformas de destino do seu aplicativo e especifique o RID (identificador de runtime) de cada plataforma que você selecionar. Você também precisa adicionar um ponto e vírgula para separar os RIDs. Consulte o [Catálogo de Identificador de Runtime](../rid-catalog.md) para obter uma lista de identificadores de runtime.
+   1. Crie uma marcação `<RuntimeIdentifiers>` na seção `<PropertyGroup>` de seu arquivo *csproj* que define as plataformas de destino do seu aplicativo e especifique o RID (identificador de runtime) de cada plataforma que você selecionar. Você também precisa adicionar um ponto e vírgula para separar os RIDs. Consulte [catálogo do identificador de tempo de execução](../rid-catalog.md) para obter uma lista de identificadores de tempo de execução.
 
    Por exemplo, o exemplo a seguir indica que o aplicativo é executado em sistemas operacionais Windows 10 de 64 bits e no sistema de operacional OS X Versão 10.11 de 64 bits.
 
@@ -309,7 +309,7 @@ Quando você implanta seu aplicativo, todas as dependências de terceiros usadas
 
 Você só pode implantar uma implantação independente com uma biblioteca de terceiros em plataformas com suporte nessa biblioteca. Isso é semelhante a ter dependências de terceiros com dependências nativas em sua implantação dependente de estrutura, em que as dependências nativas não existem na plataforma de destino a menos que elas tenham sido instaladas anteriormente.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Implantação do .NET Core Application](index.md)
 - [Catálogo de RID (identificador de tempo de execução) do .NET Core](../rid-catalog.md)

@@ -4,12 +4,12 @@ description: Como lidar com problemas de notarization e certificado com o macOS 
 author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: 905a8b8a4a17836823b1c6574828acb08110d224
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: a7741727ad46216ebd9936515d8af29b6d7049c2
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415955"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656521"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>macOS Catalina notarization e o impacto sobre os downloads e projetos do .NET Core
 
@@ -92,5 +92,5 @@ Se você quiser que seu aplicativo seja executado no macOS (versão 10,15) ou su
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Dependências e requisitos do .NET Core](dependencies.md).
+- [Dependências e requisitos do .NET Core](macos.md#dependencies).
 - [Instale o SDK e o tempo de execução do .NET Core](macos.md).

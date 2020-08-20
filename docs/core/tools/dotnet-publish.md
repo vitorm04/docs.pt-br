@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: O comando dotnet publish publica um projeto do .NET Core ou uma solução em um diretório.
 ms.date: 02/24/2020
-ms.openlocfilehash: 64a68c97e01bbf962616b31210889eb23d3734f1
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 45bf8504fd882286041794d27ecb56464fc8d13d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608288"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656659"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -159,7 +159,7 @@ Para saber mais, consulte os recursos a seguir:
 
 - **`-p:PublishTrimmed=true`**
 
-  Apara as bibliotecas não usadas para reduzir o tamanho da implantação de um aplicativo ao publicar um executável independente. Para obter mais informações, consulte [aparar implantações e executáveis independentes](../deploying/trim-self-contained.md). Disponível desde o SDK do .NET Core 3.0.
+  Apara as bibliotecas não usadas para reduzir o tamanho da implantação de um aplicativo ao publicar um executável independente. Para obter mais informações, consulte [aparar implantações e executáveis independentes](../deploying/trim-self-contained.md). Disponível desde o SDK do .NET Core 3,0 como um recurso de visualização.
 
   Recomendamos que você especifique essa opção em um perfil de publicação em vez de na linha de comando. Para mais informações, consulte [MSBuild](#msbuild).
 
@@ -229,12 +229,12 @@ Para saber mais, consulte os recursos a seguir:
   dotnet publish --no-dependencies
   ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral da publicação de aplicativos do .NET Core](../deploying/index.md)
 - [Publicar aplicativos .NET Core com o CLI do .NET Core](../deploying/deploy-with-cli.md)
 - [Estruturas de destino](../../standard/frameworks.md)
-- [Catálogo de RID (identificador de tempo de execução)](../rid-catalog.md)
+- [Catálogo de RID (Identificador de Runtime)](../rid-catalog.md)
 - [Trabalhando com o notarization Catalina do macOS](../install/macos-notarization-issues.md)
 - [Estrutura de diretórios de um aplicativo publicado](/aspnet/core/hosting/directory-structure)
 - [Referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference)

@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
 ms.date: 04/29/2020
-ms.openlocfilehash: e5c0ec3423cf98895b49596633c81861bbcf4878
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: d67521084330b206afca89baf59228b99ca799a1
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557835"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656749"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -104,7 +104,7 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste, `xunit` é a estrutura de test
   - 5400
   - 5400000ms
 
-  Quando nenhuma unidade é usada (por exemplo, 5,4 milhões), presume-se que o valor esteja em milissegundos. Quando usado junto com testes controlados por dados, o comportamento de tempo limite depende do adaptador de teste usado. Para xUnit e NUnit, o tempo limite é renovado após cada caso de teste. Para MSTest, o tempo limite é usado para todos os casos. Essa opção tem suporte no Windows com o netcoreapp 2.1 e posterior e no Linux com o netcoreapp 3.1 e posterior. Não há suporte para macOS.
+  Quando nenhuma unidade é usada (por exemplo, 5,4 milhões), presume-se que o valor esteja em milissegundos. Quando usado junto com testes controlados por dados, o comportamento de tempo limite depende do adaptador de teste usado. Para xUnit e NUnit, o tempo limite é renovado após cada caso de teste. Para MSTest, o tempo limite é usado para todos os casos de teste. Essa opção tem suporte no Windows com o netcoreapp 2.1 e posterior e no Linux com o netcoreapp 3.1 e posterior. Não há suporte para macOS.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -271,7 +271,7 @@ Inclua expressões em parênteses ao usar operadores condicionais (por exemplo, 
 
 Para obter mais informações e exemplos sobre como usar a filtragem de teste de unidade seletivo, confira [Executando testes de unidade seletivos](../testing/selective-unit-tests.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Estruturas e destinos](../../standard/frameworks.md)
 - [Catálogo de RID (identificador de tempo de execução) do .NET Core](../rid-catalog.md)

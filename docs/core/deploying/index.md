@@ -2,12 +2,12 @@
 title: Publicação de aplicativos
 description: Saiba mais sobre as maneiras de publicar um aplicativo .NET Core. O .NET Core pode publicar aplicativos específicos da plataforma ou de plataforma cruzada. Você pode publicar um aplicativo como independente ou dependente de estrutura. Cada modo afeta como um usuário executa seu aplicativo.
 ms.date: 04/01/2020
-ms.openlocfilehash: 57889271ce2f210c0838a54bb793aeb3be5c7272
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: f343e184a7ccca66aaf94533b2d0262478f873f4
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608409"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656580"
 ---
 # <a name="net-core-application-publishing-overview"></a>Visão geral da publicação de aplicativos do .NET Core
 
@@ -131,8 +131,11 @@ Como seu aplicativo inclui o tempo de execução do .NET Core e todas as suas de
   > [!TIP]
   > Você pode reduzir o tamanho da implantação em sistemas Linux em aproximadamente 28 MB usando o [*modo invariável de globalização*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)do .NET Core. Isso força seu aplicativo a tratar todas as culturas como a [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
+  > [!TIP]
+  > Há um [recurso de corte de visualização](trim-self-contained.md) que pode reduzir ainda mais o tamanho da sua implantação.
+
 - **Mais difícil de atualizar a versão do .NET Core**\
-O tempo de execução do .NET Core (distribuído com seu aplicativo) só pode ser atualizado com a liberação de uma nova versão do seu aplicativo. Você é responsável por fornecer uma versão atualizada do seu aplicativo para patches de segurança para o tempo de execução do .NET Core.
+O tempo de execução do .NET Core (distribuído com seu aplicativo) só pode ser atualizado com a liberação de uma nova versão do seu aplicativo. No entanto, o .NET Core atualizará os patches de segurança críticos conforme necessário para a biblioteca do Framework no computador em que seu aplicativo é executado. Você é responsável pela validação de ponta a ponta deste cenário de patch de segurança.
 
 ### <a name="examples"></a>Exemplos
 
@@ -148,7 +151,7 @@ Publicar um aplicativo independente. Um executável do Windows de 64 bits é cri
 dotnet publish -r win-x64
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Implantando aplicativos .NET Core com o CLI do .NET Core.](deploy-with-cli.md)
 - [Implantação de aplicativos .NET Core com o Visual Studio.](deploy-with-vs.md)

@@ -2,12 +2,12 @@
 title: Um tour pelo C# – Guia do C#
 description: Novato em C#? Conheça os fundamentos da linguagem.
 ms.date: 08/06/2020
-ms.openlocfilehash: 42c4ff59a520a1b99bbb2fb01d79d8902e16bdd5
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 9fa292e8e85832d831f36cf0f21512aa0cf32580
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063543"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656222"
 ---
 # <a name="a-tour-of-the-c-language"></a>Um tour pela linguagem C#
 
@@ -15,7 +15,7 @@ O C# (pronuncia-se "Veja nítido") é uma linguagem de programação moderna, or
 
 O C# é uma linguagem de programação ***orientada*** a objetos e orientada a componentes. O c# fornece construções de linguagem para dar suporte direto a esses conceitos, tornando o C# uma linguagem natural para criar e usar componentes de software. Desde sua origem, o C# adicionou recursos para dar suporte a novas cargas de trabalho e práticas de design de software emergentes.
 
-Vários recursos do C# auxiliam na construção de aplicativos robustos e duráveis. A [***coleta de lixo***](../../standard/garbage-collection/index.md) recupera automaticamente a memória ocupada por objetos não utilizados inacessíveis. A [***manipulação de exceção***](../programming-guide/exceptions/index.md) fornece uma abordagem estruturada e extensível para detecção e recuperação de erros. As [***expressões lambda***](../programming-guide/statements-expressions-operators/lambda-expressions.md) dão suporte a técnicas de programação funcional. A [***sintaxe de consulta***](../linq/index.md) cria um padrão comum para trabalhar com dados de qualquer fonte. O suporte a idiomas para [***operações assíncronas***](../programming-guide/concepts/async/index.md) fornece a sintaxe para a criação de sistemas distribuídos. A [***correspondência de padrões***](..//pattern-matching.md) fornece sintaxe para separar facilmente os dados de algoritmos em sistemas distribuídos modernos. O C# tem um [***sistema de tipos unificado***](../programming-guide/types/index.md). Todos os tipos do C#, incluindo tipos primitivos, como `int` e `double`, herdam de um único tipo de `object` raiz. Todos os tipos compartilham um conjunto de operações comuns. Os valores de qualquer tipo podem ser armazenados, transportados e operados de maneira consistente. Além disso, o C# dá suporte a tipos de referência definidos pelo usuário e tipos de valor. O C# permite a alocação dinâmica de objetos e o armazenamento em linha de estruturas leves.
+Vários recursos do C# auxiliam na construção de aplicativos robustos e duráveis. A [***coleta de lixo***](../../standard/garbage-collection/index.md) recupera automaticamente a memória ocupada por objetos não utilizados inacessíveis. A [***manipulação de exceção***](../programming-guide/exceptions/index.md) fornece uma abordagem estruturada e extensível para detecção e recuperação de erros. As [***expressões lambda***](../language-reference/operators/lambda-expressions.md) dão suporte a técnicas de programação funcional. A [***sintaxe de consulta***](../linq/index.md) cria um padrão comum para trabalhar com dados de qualquer fonte. O suporte a idiomas para [***operações assíncronas***](../programming-guide/concepts/async/index.md) fornece a sintaxe para a criação de sistemas distribuídos. A [***correspondência de padrões***](..//pattern-matching.md) fornece sintaxe para separar facilmente os dados de algoritmos em sistemas distribuídos modernos. O C# tem um [***sistema de tipos unificado***](../programming-guide/types/index.md). Todos os tipos do C#, incluindo tipos primitivos, como `int` e `double`, herdam de um único tipo de `object` raiz. Todos os tipos compartilham um conjunto de operações comuns. Os valores de qualquer tipo podem ser armazenados, transportados e operados de maneira consistente. Além disso, o C# dá suporte a tipos de referência definidos pelo usuário e tipos de valor. O C# permite a alocação dinâmica de objetos e o armazenamento em linha de estruturas leves.
 
 O C# enfatiza o ***controle de versão*** para garantir que programas e bibliotecas possam evoluir ao longo do tempo de maneira compatível. Aspectos do design do C# que foram influenciados diretamente pelas considerações de controle de versão incluem os `virtual` `override` modificadores and separados, as regras para resolução de sobrecarga de método e suporte para declarações de membro de interface explícitas.
 
@@ -43,30 +43,30 @@ A seguinte estrutura de tópicos fornece uma visão geral do sistema de tipos do
 
 - [Tipos de valor](../language-reference/builtin-types/value-types.md)
   - [Tipos simples](../language-reference/builtin-types/value-types.md#built-in-value-types)
-    - [Integral assinada](../language-reference/builtin-types/integral-numeric-types.md): `sbyte` , `short` , `int` ,`long`
-    - [Integral não assinada](../language-reference/builtin-types/integral-numeric-types.md): `byte` , `ushort` , `uint` ,`ulong`
-    - [Caracteres Unicode](/dotnet/standard/base-types/character-encoding-introduction): `char` , que representa uma unidade de código UTF-16
-    - [Ponto flutuante de binário do IEEE](../language-reference/builtin-types/floating-point-numeric-types.md): `float` ,`double`
-    - [Ponto flutuante decimal de alta precisão](../language-reference/builtin-types/floating-point-numeric-types.md):`decimal`
-    - Booliano: `bool` , que representa valores Boolianos — valores que são `true` ou`false`
+    - [Integral assinada](../language-reference/builtin-types/integral-numeric-types.md): `sbyte` , `short` , `int` , `long`
+    - [Integral não assinada](../language-reference/builtin-types/integral-numeric-types.md): `byte` , `ushort` , `uint` , `ulong`
+    - [Caracteres Unicode](../../standard/base-types/character-encoding-introduction.md): `char` , que representa uma unidade de código UTF-16
+    - [Ponto flutuante de binário do IEEE](../language-reference/builtin-types/floating-point-numeric-types.md): `float` , `double`
+    - [Ponto flutuante decimal de alta precisão](../language-reference/builtin-types/floating-point-numeric-types.md): `decimal`
+    - Booliano: `bool` , que representa valores Boolianos — valores que são `true` ou `false`
   - [Tipos de enumeração](../language-reference/builtin-types/enum.md)
     - Tipos definidos pelo usuário do formulário `enum E {...}` . Um tipo `enum` é um tipo distinto com constantes nomeadas. Cada tipo `enum` tem um tipo subjacente, que deve ser um dos oito tipos integrais. O conjunto de valores de um tipo `enum` é o mesmo que o conjunto de valores do tipo subjacente.
   - [Tipos struct](../language-reference/builtin-types/struct.md)
     - Tipos definidos pelo usuário do formulário `struct S {...}`
   - [Tipos de valor anuláveis](../language-reference/builtin-types/nullable-value-types.md)
     - Extensões de todos os outros tipos de valor com um valor `null`
-  - [Tipos de valor de tupla](../tuples.md)
+  - [Tipos de valor de tupla](../language-reference/builtin-types/value-tuples.md)
     - Tipos definidos pelo usuário do formulário `(T1, T2, ...)`
 - [Tipos de referência](../language-reference/keywords/reference-types.md)
   - [Tipos de aula](../language-reference/keywords/class.md)
     - Classe base definitiva de todos os outros tipos: `object`
-    - [Cadeias de caracteres Unicode](/dotnet/standard/base-types/character-encoding-introduction): `string` , que representa uma sequência de unidades de código UTF-16
+    - [Cadeias de caracteres Unicode](../../standard/base-types/character-encoding-introduction.md): `string` , que representa uma sequência de unidades de código UTF-16
     - Tipos definidos pelo usuário do formulário `class C {...}`
   - [Tipos de interface](../language-reference/keywords/interface.md)
     - Tipos definidos pelo usuário do formulário `interface I {...}`
   - [Tipos de matriz](../programming-guide/arrays/index.md)
-    - Único e multidimensional e irregular, por exemplo,, `int[]` `int[,]` e`int[][]`
-  - [Tipos delegados](../language-reference/keywords/delegate.md)
+    - Único e multidimensional e irregular, por exemplo,, `int[]` `int[,]` e `int[][]`
+  - [Tipos delegados](../language-reference/builtin-types/reference-types.md#the-delegate-type)
     - Tipos definidos pelo usuário do formulário `delegate int D(...)`
 
 Os programas em C# usam *declarações de tipos* para criar novos tipos. Uma declaração de tipo especifica o nome e os membros do novo tipo. Cinco das categorias de tipos do C# são definíveis pelo usuário: tipos de classe, tipos de struct, tipos de interface, tipos de enumeração e tipos delegados.
@@ -96,7 +96,7 @@ Existem vários tipos de *variáveis* no C#, incluindo campos, elementos de matr
   - Um valor de tipo exato
 - Tipos de valor anulável
   - Um valor `null` ou um valor do tipo exato
-- object
+- objeto
   - Uma referência `null`, uma referência a um objeto de qualquer tipo de referência ou uma referência a um valor de qualquer tipo de valor demarcado
 - Tipo de classe
   - Uma referência `null`, uma referência a uma instância desse tipo de classe ou uma referência a uma instância de uma classe derivada desse tipo de classe

@@ -4,12 +4,12 @@ description: Saiba como usar iteradores C# internos e como criar seus próprios 
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: c2a1dfe38b6a65e382e140541c71e94bb0fc76aa
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: ee72331cb85ba1a03d48e2f58526ad432c7fe6d4
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062477"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656092"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -24,7 +24,7 @@ Você também criará métodos iteradores que são métodos que produzem um iter
 
 A linguagem C# fornece recursos para esses dois cenários. Este artigo fornece uma visão geral desses recursos.
 
-Este tutorial tem várias etapas. Após cada etapa, você poderá executar o aplicativo e ver o progresso. Você também pode [exibir ou baixar o exemplo concluído](https://github.com/dotnet/samples/blob/master/csharp/iterators) deste tópico. Para obter instruções de download, consulte [Exemplos e tutoriais](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Este tutorial tem várias etapas. Após cada etapa, você poderá executar o aplicativo e ver o progresso. Você também pode [exibir ou baixar o exemplo concluído](https://github.com/dotnet/samples/blob/master/csharp/iterators) deste tópico. Para obter instruções de download, consulte [Exemplos e tutoriais](../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="iterating-with-foreach"></a>iterando com foreach
 
