@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: b770543eb09ed2edc1a028561e0cf41e74fab1cc
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: a861ee38963f77bffe23bbca19a6f895289e372d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86444489"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656808"
 ---
 # <a name="serialization-and-deserialization"></a>Serialização e desserialização
 Windows Communication Foundation (WCF) inclui um novo mecanismo de serialização, o <xref:System.Runtime.Serialization.DataContractSerializer> . O se <xref:System.Runtime.Serialization.DataContractSerializer> traduz entre objetos .NET Framework e XML, em ambas as direções. Este tópico explica como o serializador funciona.  
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) inclui um novo mecanismo de serializaçã
   
  O WCF também inclui um serializador complementar, o <xref:System.Runtime.Serialization.NetDataContractSerializer> . <xref:System.Runtime.Serialization.NetDataContractSerializer>:
 
-* ***Não*** é seguro. Para obter mais informações, consulte o [Guia de segurança do BinaryFormatter](/dotnet/standard/serialization/binaryformatter-security-guide).
+* ***Não*** é seguro. Para obter mais informações, consulte o [Guia de segurança do BinaryFormatter](../../../standard/serialization/binaryformatter-security-guide.md).
 * É semelhante aos <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serializadores e porque ele também emite .NET Framework nomes de tipo como parte dos dados serializados.
 * É usado quando os mesmos tipos são compartilhados na serialização e a desserialização termina.
 
@@ -267,7 +267,7 @@ Windows Communication Foundation (WCF) inclui um novo mecanismo de serializaçã
   
  Além disso, observe que o não gera `NetDataContractSerializer` o tipo de .NET Framework completo e o nome do assembly para cada nó no grafo do objeto. Ele gera essas informações apenas quando são ambíguas. Isto é, ele gera no nível do objeto raiz e para qualquer caso polimórfico.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.NetDataContractSerializer>

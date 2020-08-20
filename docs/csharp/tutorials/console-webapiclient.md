@@ -3,12 +3,12 @@ title: Cria um cliente REST usando .NET Core
 description: Este tutorial ensina vários recursos no .NET Core e da linguagem C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 1d1d1bec8c6602e4fe34fa3ce243423290412736
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 8db87440bb6e0995b1cc2c97b0d28995170ada8c
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004849"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656938"
 ---
 # <a name="rest-client"></a>Cliente REST
 
@@ -25,7 +25,7 @@ Você compilará um aplicativo que emite solicitações HTTP para um serviço RE
 
 Há muitos recursos neste tutorial. Vamos compilá-los individualmente.
 
-Se preferir acompanhar com o [exemplo final](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) para esse tópico, você poderá baixá-lo. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Se preferir acompanhar com o [exemplo final](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) para esse tópico, você poderá baixá-lo. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

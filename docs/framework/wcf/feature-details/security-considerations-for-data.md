@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 530bb54936f97f1d7460d63cfa316c760cbd449d
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 8b54aea1409f2b4c0a3d39d215922ba62c2a3563
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441811"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656964"
 ---
 # <a name="security-considerations-for-data"></a>Considerações de segurança para dados
 
@@ -70,7 +70,7 @@ O modelo de segurança em mensagens grandes depende se o streaming está em uso.
 
 Observe também que `MaxReceivedMessageSize` o não coloca um limite superior no consumo de memória por mensagem, mas limita-o a dentro de um fator constante. Por exemplo, se o `MaxReceivedMessageSize` for 1 MB e uma mensagem de 1 MB for recebida e, em seguida, desserializada, será necessária memória adicional para conter o grafo de objeto desserializado, resultando em um consumo de memória total bem superior a 1 MB. Por esse motivo, Evite criar tipos serializáveis que possam resultar em um consumo de memória significativo sem muitos dados de entrada. Por exemplo, um contrato de dados "mycontract" com 50 campos de membro de dados opcionais e um adicional 100 campos particulares poderiam ser instanciados com a construção XML " \<MyContract/> ". Esse XML resulta na acesso à memória para 150 campos. Observe que os membros de dados são opcionais por padrão. O problema é composto quando tal tipo faz parte de uma matriz.
 
-`MaxReceivedMessageSize`sozinho não é suficiente para impedir todos os ataques de negação de serviço. Por exemplo, o desserializador pode ser forçado a desserializar um grafo de objeto profundamente aninhado (um objeto que contém outro objeto que contém um outro, e assim por diante) por uma mensagem de entrada. Os <xref:System.Runtime.Serialization.DataContractSerializer> métodos e de <xref:System.Xml.Serialization.XmlSerializer> chamada em uma maneira aninhada para desserializar esses grafos. O aninhamento profundo de chamadas de método pode resultar em irrecuperável <xref:System.StackOverflowException> . Essa ameaça é atenuada pela definição da <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement.MaxDepth%2A> cota para limitar o nível de aninhamento de XML, conforme discutido na seção "usando o XML com segurança" posteriormente no tópico.
+`MaxReceivedMessageSize` sozinho não é suficiente para impedir todos os ataques de negação de serviço. Por exemplo, o desserializador pode ser forçado a desserializar um grafo de objeto profundamente aninhado (um objeto que contém outro objeto que contém um outro, e assim por diante) por uma mensagem de entrada. Os <xref:System.Runtime.Serialization.DataContractSerializer> métodos e de <xref:System.Xml.Serialization.XmlSerializer> chamada em uma maneira aninhada para desserializar esses grafos. O aninhamento profundo de chamadas de método pode resultar em irrecuperável <xref:System.StackOverflowException> . Essa ameaça é atenuada pela definição da <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement.MaxDepth%2A> cota para limitar o nível de aninhamento de XML, conforme discutido na seção "usando o XML com segurança" posteriormente no tópico.
 
 Definir cotas adicionais para `MaxReceivedMessageSize` é especialmente importante ao usar a codificação XML binária. O uso da codificação binária é, de certa forma, equivalente à compactação: um pequeno grupo de bytes na mensagem de entrada pode representar muitos dados. Portanto, mesmo uma mensagem sendo ajustada ao `MaxReceivedMessageSize` limite pode ocupar muito mais memória na forma totalmente expandida. Para atenuar essas ameaças específicas de XML, todas as cotas do leitor de XML devem ser definidas corretamente, conforme discutido na seção "usando o XML com segurança" posteriormente neste tópico.
 
@@ -90,7 +90,7 @@ O codificador de mensagem MTOM também tem uma `MaxBufferSize` configuração. A
 
 ## <a name="xml-based-streaming-attacks"></a>Ataques de streaming baseados em XML
 
-`MaxBufferSize`sozinho não é suficiente para garantir que o WCF não possa ser forçado a armazenar em buffer quando o streaming é esperado. Por exemplo, os leitores XML do WCF sempre armazenam em buffer toda a marca de início do elemento XML ao começar a ler um novo elemento. Isso é feito para que os namespaces e atributos sejam processados corretamente. Se `MaxReceivedMessageSize` o estiver configurado para ser grande (por exemplo, para habilitar um cenário de streaming de arquivo grande de direto para disco), uma mensagem mal-intencionada poderá ser construída onde todo o corpo da mensagem for uma marca de início de elemento XML grande. Uma tentativa de ler os resultados resulta em um <xref:System.OutOfMemoryException> . Esse é um dos muitos ataques possíveis de negação de serviço baseados em XML que podem ser atenuados usando cotas de leitor XML, abordadas na seção "usando o XML com segurança" posteriormente neste tópico. Ao transmitir, é especialmente importante definir todas essas cotas.
+`MaxBufferSize` sozinho não é suficiente para garantir que o WCF não possa ser forçado a armazenar em buffer quando o streaming é esperado. Por exemplo, os leitores XML do WCF sempre armazenam em buffer toda a marca de início do elemento XML ao começar a ler um novo elemento. Isso é feito para que os namespaces e atributos sejam processados corretamente. Se `MaxReceivedMessageSize` o estiver configurado para ser grande (por exemplo, para habilitar um cenário de streaming de arquivo grande de direto para disco), uma mensagem mal-intencionada poderá ser construída onde todo o corpo da mensagem for uma marca de início de elemento XML grande. Uma tentativa de ler os resultados resulta em um <xref:System.OutOfMemoryException> . Esse é um dos muitos ataques possíveis de negação de serviço baseados em XML que podem ser atenuados usando cotas de leitor XML, abordadas na seção "usando o XML com segurança" posteriormente neste tópico. Ao transmitir, é especialmente importante definir todas essas cotas.
 
 ### <a name="mixing-streaming-and-buffering-programming-models"></a>Misturando modelos de programação de streaming e armazenamento em buffer
 
@@ -139,7 +139,7 @@ Os leitores de XML seguros têm cinco cotas configuráveis. Eles normalmente sã
 
 #### <a name="maxbytesperread"></a>MaxBytesPerRead
 
-Essa cota limita o número de bytes que são lidos em uma única `Read` operação ao ler a marca de início do elemento e seus atributos. (Em casos não transmitidos, o nome do elemento em si não é contado em relação à cota.) <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>é importante pelos seguintes motivos:
+Essa cota limita o número de bytes que são lidos em uma única `Read` operação ao ler a marca de início do elemento e seus atributos. (Em casos não transmitidos, o nome do elemento em si não é contado em relação à cota.) <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> é importante pelos seguintes motivos:
 
 - O nome do elemento e seus atributos sempre são armazenados em buffer na memória quando estão sendo lidos. Portanto, é importante definir essa cota corretamente no modo de streaming para evitar o buffer excessivo quando o streaming é esperado. Consulte a `MaxDepth` seção cota para obter informações sobre a quantidade real de buffers que ocorrem.
 
@@ -147,7 +147,7 @@ Essa cota limita o número de bytes que são lidos em uma única `Read` operaç�
 
 #### <a name="maxdepth"></a>MaxDepth
 
-Essa cota limita a profundidade máxima de aninhamento dos elementos XML. Por exemplo, o documento " \<A> \<B> \<C/> \</B> \</A> " tem uma profundidade de aninhamento de três. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>é importante pelos seguintes motivos:
+Essa cota limita a profundidade máxima de aninhamento dos elementos XML. Por exemplo, o documento " \<A> \<B> \<C/> \</B> \</A> " tem uma profundidade de aninhamento de três. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> é importante pelos seguintes motivos:
 
 - O `MaxDepth` interage com o `MaxBytesPerRead`: o leitor sempre mantém dados na memória para o elemento atual e todos os seus ancestrais, para que o consumo máximo de memória do leitor seja proporcional ao produto dessas duas configurações.
 
@@ -192,9 +192,9 @@ A tabela a seguir resume as diretrizes sobre cotas.
 |Condição|Cotas importantes a serem definidas|
 |---------------|-----------------------------|
 |Sem streaming ou streaming de mensagens pequenas, texto ou codificação MTOM|`MaxReceivedMessageSize`, `MaxBytesPerRead`, e `MaxDepth`|
-|Sem streaming ou streaming de mensagens pequenas, codificação binária|`MaxReceivedMessageSize`, `MaxSessionSize` e todos`ReaderQuotas`|
-|Transmissão de mensagens grandes, texto ou codificação MTOM|`MaxBufferSize`e todos`ReaderQuotas`|
-|Streaming de mensagens grandes, codificação binária|`MaxBufferSize`, `MaxSessionSize` e todos`ReaderQuotas`|
+|Sem streaming ou streaming de mensagens pequenas, codificação binária|`MaxReceivedMessageSize`, `MaxSessionSize` e todos `ReaderQuotas`|
+|Transmissão de mensagens grandes, texto ou codificação MTOM|`MaxBufferSize` e todos `ReaderQuotas`|
+|Streaming de mensagens grandes, codificação binária|`MaxBufferSize`, `MaxSessionSize` e todos `ReaderQuotas`|
 
 - Os tempos limite de nível de transporte sempre devem ser definidos e nunca usam leituras/gravações síncronas quando o streaming está em uso, independentemente de você estar transmitindo mensagens grandes ou pequenas.
 
@@ -224,11 +224,11 @@ O <xref:System.Runtime.Serialization.DataContractSerializer> sempre é permitido
 
 Além disso, o <xref:System.Runtime.Serialization.DataContractSerializer> dá suporte ao polimorfismo. Um membro de dados pode ser declarado como <xref:System.Object> , mas os dados de entrada podem conter uma `Customer` instância. Isso só será possível se o `Customer` tipo tiver sido "conhecido" para o desserializador por meio de um destes mecanismos:
 
-- <xref:System.Runtime.Serialization.KnownTypeAttribute>atributo aplicado a um tipo.
+- <xref:System.Runtime.Serialization.KnownTypeAttribute> atributo aplicado a um tipo.
 
-- `KnownTypeAttribute`atributo que especifica um método que retorna uma lista de tipos.
+- `KnownTypeAttribute` atributo que especifica um método que retorna uma lista de tipos.
 
-- `ServiceKnownTypeAttribute`Attribute.
+- `ServiceKnownTypeAttribute` Attribute.
 
 - A `KnownTypes` seção de configuração.
 
@@ -238,7 +238,7 @@ Cada um desses mecanismos aumenta a área da superfície introduzindo mais tipos
 
 Quando um tipo conhecido está no escopo, ele pode ser carregado a qualquer momento e as instâncias do tipo podem ser criadas, mesmo que o contrato proíba realmente usá-lo. Por exemplo, suponha que o tipo "myperigosatype" seja adicionado à lista de tipos conhecidos usando um dos mecanismos acima. Isso significa que:
 
-- `MyDangerousType`é carregado e seu construtor de classe é executado.
+- `MyDangerousType` é carregado e seu construtor de classe é executado.
 
 - Mesmo ao desserializar um contrato de dados com um membro de dados de cadeia de caracteres, uma mensagem mal-intencionada ainda pode fazer com que uma instância do `MyDangerousType` seja criada. O código no `MyDangerousType` , como setters de propriedade, pode ser executado. Depois que isso for feito, o desserializador tentará atribuir essa instância ao membro de dados de cadeia de caracteres e falhará com uma exceção.
 
@@ -284,7 +284,7 @@ Essa situação pode ser evitada por estar ciente dos seguintes pontos:
 
 O <xref:System.Runtime.Serialization.NetDataContractSerializer> é um mecanismo de serialização que usa acoplamento rígido para tipos. Isso é semelhante ao <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> e ao <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> . Ou seja, ele determina qual tipo deve ser instanciado lendo o assembly .NET Framework e o nome do tipo dos dados de entrada. Embora faça parte do WCF, não há uma maneira fornecida de conectar-se a esse mecanismo de serialização; o código personalizado deve ser gravado. O `NetDataContractSerializer` é fornecido principalmente para facilitar a migração de .NET Framework comunicação remota para o WCF. Para obter mais informações, consulte a seção relevante em [serialização e desserialização](serialization-and-deserialization.md).
 
-Como a própria mensagem pode indicar que qualquer tipo pode ser carregado, o <xref:System.Runtime.Serialization.NetDataContractSerializer> mecanismo é inerentemente inseguro e deve ser usado somente com dados confiáveis. Para obter mais informações, consulte o [Guia de segurança do BinaryFormatter](/dotnet/standard/serialization/binaryformatter-security-guide).
+Como a própria mensagem pode indicar que qualquer tipo pode ser carregado, o <xref:System.Runtime.Serialization.NetDataContractSerializer> mecanismo é inerentemente inseguro e deve ser usado somente com dados confiáveis. Para obter mais informações, consulte o [Guia de segurança do BinaryFormatter](../../../standard/serialization/binaryformatter-security-guide.md).
 
 Mesmo quando usado com dados confiáveis, os dados de entrada podem especificar insuficientemente o tipo a ser carregado, especialmente se a <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> propriedade estiver definida como <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> . Qualquer pessoa com acesso ao diretório do aplicativo ou ao cache de assembly global pode substituir um tipo mal-intencionado no lugar daquele que deve ser carregado. Sempre garanta a segurança do diretório do seu aplicativo e do cache de assembly global definindo as permissões corretamente.
 
@@ -322,7 +322,7 @@ Observe as seguintes preocupações com relação a ameaças relacionadas ao có
 
 - O fato de que o <xref:System.Runtime.Serialization.ExtensionDataObject> tipo não tem nenhum membro público não significa que os dados dentro dele são seguros. Por exemplo, se você desserializar de uma fonte de dados privilegiada em um objeto no qual alguns dados residem e, em seguida, enviar esse objeto para código parcialmente confiável, o código parcialmente confiável poderá ler os dados no `ExtensionDataObject` serializando o objeto. Considere definir <xref:System.Runtime.Serialization.DataContractSerializer.IgnoreExtensionDataObject%2A> como `true` ao desserializar de uma fonte de dados privilegiada em um objeto que é passado posteriormente para código parcialmente confiável.
 
-- <xref:System.Runtime.Serialization.DataContractSerializer>e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> oferecem suporte à serialização de membros privados, protegidos, internos e públicos em confiança total. No entanto, em confiança parcial, somente membros públicos podem ser serializados. Um <xref:System.Security.SecurityException> será gerado se um aplicativo tentar serializar um membro não público.
+- <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> oferecem suporte à serialização de membros privados, protegidos, internos e públicos em confiança total. No entanto, em confiança parcial, somente membros públicos podem ser serializados. Um <xref:System.Security.SecurityException> será gerado se um aplicativo tentar serializar um membro não público.
 
     Para permitir que membros internos ou protegidos internamente sejam serializados em confiança parcial, use o <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atributo assembly. Esse atributo permite que um assembly declare que seus membros internos são visíveis para algum outro assembly. Nesse caso, um assembly que deseja ter seus membros internos serializados declara que seus membros internos são visíveis para System.Runtime.Serialization.dll.
 
@@ -382,7 +382,7 @@ O WCF é um sistema flexível e personalizável. A maior parte do conteúdo dest
 
 - Em geral, ao usar qualquer componente que aceite uma cota, entenda suas implicações de segurança e defina-a como um valor seguro.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.XmlDictionaryReader>
