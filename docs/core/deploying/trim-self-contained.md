@@ -4,12 +4,12 @@ description: Saiba como cortar aplicativos independentes para reduzir seu tamanh
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 2bb0f03994468bbad3096ebf0b141bc1f47b867e
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 0fde409e9e5911213855ab206368d302b73eebb3
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656710"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720118"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Cortar implantações e executáveis autossuficientes
 
@@ -51,7 +51,7 @@ O exemplo a seguir publica um aplicativo para o Windows como independente e cort
 </ItemGroup>
 ```
 
-O exemplo a seguir publica um aplicativo no modo de corte agressivo em que o código não utilizado com assemblies será cortado e os avisos de corte estão habilitados.
+O exemplo a seguir publica um aplicativo no modo de corte agressivo em que o código não utilizado nos assemblies será cortado e os avisos de corte serão habilitados.
 
 ```xml
 <ItemGroup>

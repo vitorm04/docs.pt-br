@@ -5,12 +5,12 @@ description: Lista as alterações significativas em ASP.NET Core.
 ms.date: 07/17/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 7a07df5194d5dc220b61d55a4457d90881ac9ddf
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 1506e0aa27778d44497252231028689259f48896
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474820"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720235"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core alterações significativas
 
@@ -28,6 +28,7 @@ As seguintes alterações significativas estão documentadas nesta página:
 - [Autorização: implementações de IAuthorizationPolicyProvider exigem novo método](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
 - [Autorização: o recurso no roteamento de ponto de extremidade é HttpContext](#authorization-resource-in-endpoint-routing-is-httpcontext)
 - [Azure: pacotes de integração do Azure prefixados da Microsoft removidos](#azure-microsoft-prefixed-azure-integration-packages-removed)
+- [Os métodos de serialização BinaryFormatter são obsoletos e proibidos em aplicativos ASP.NET](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
 - [Mais grande: espaço em branco insignificado cortado de componentes em tempo de compilação](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
 - [Mais incrivelmente: estrutura de destino de pacotes NuGet alterada](#blazor-target-framework-of-nuget-packages-changed)
 - [Caching: Propriedade CompactOnMemoryPressure removida](#caching-compactonmemorypressure-property-removed)
@@ -99,6 +100,10 @@ As seguintes alterações significativas estão documentadas nesta página:
 ***
 
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
+
+***
+
+[!INCLUDE [binaryformatter-serialization-obsolete](../../../includes/core-changes/corefx/5.0/binaryformatter-serialization-obsolete.md)]
 
 ***
 

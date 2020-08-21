@@ -2,12 +2,12 @@
 title: Publicação de aplicativos
 description: Saiba mais sobre as maneiras de publicar um aplicativo .NET Core. O .NET Core pode publicar aplicativos específicos da plataforma ou de plataforma cruzada. Você pode publicar um aplicativo como independente ou dependente de estrutura. Cada modo afeta como um usuário executa seu aplicativo.
 ms.date: 04/01/2020
-ms.openlocfilehash: f343e184a7ccca66aaf94533b2d0262478f873f4
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: ece5e46162fd4a8de0b996ba239e89cceca4dbca
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656580"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720105"
 ---
 # <a name="net-core-application-publishing-overview"></a>Visão geral da publicação de aplicativos do .NET Core
 
