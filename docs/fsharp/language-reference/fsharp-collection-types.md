@@ -2,12 +2,12 @@
 title: Tipos de coleção
 description: 'Saiba mais sobre os tipos de coleção F # e como eles diferem dos tipos de coleção .NET.'
 ms.date: 08/14/2020
-ms.openlocfilehash: 197ba754d632051b5a0bf9c8364d45a1fb932f48
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 394f6bbaf58e7e8607abc3a0c20bbc2b1c9c3c8d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267276"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656899"
 ---
 # <a name="f-collection-types"></a>Tipos de coleção de F#
 
@@ -21,11 +21,11 @@ A tabela a seguir mostra os tipos de coleção F #.
 
 |Type|Descrição|Links Relacionados|
 |----|-----------|-------------|
-|[Lista](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|Uma série ordenada e imutável de elementos do mesmo tipo. Implementado como uma lista vinculada.|[Listas](lists.md)<br /><br />[Módulo List](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
-|[Matriz](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Uma coleção de tamanho fixo, baseada em zero, mutável de elementos de dados consecutivos que são do mesmo tipo.|[matrizes](arrays.md)<br /><br />[Módulo Array](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Módulo Array2D](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Módulo Array3D](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
-|[Seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Uma série lógica de elementos que são todos de um tipo. As sequências são particularmente úteis quando você tem uma coleção de dados grande e ordenada, mas não espera necessariamente usar todos os elementos. Os elementos de sequência individuais são computados somente conforme necessário, portanto, uma sequência pode ter um desempenho melhor do que uma lista se nem todos os elementos forem usados. As sequências são representadas pelo `seq<'T>` tipo, que é um alias para `IEnumerable<T>` . Portanto, qualquer tipo de .NET Framework que implemente `System.Collections.Generic.IEnumerable<'T>` possa ser usado como uma sequência.|[Sequências](sequences.md)<br /><br />[Módulo Seq](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
-|[Map](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Um dicionário imutável de elementos. Os elementos são acessados por chave.|[Módulo de mapa](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[Configurar](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Um conjunto imutável baseado em árvores binárias, em que Comparison é a função de comparação estrutural F #, que potencialmente usa implementações da `System.IComparable` interface em valores de chave.|[Definir módulo](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[Lista](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharplist-1.html)|Uma série ordenada e imutável de elementos do mesmo tipo. Implementado como uma lista vinculada.|[Listas](lists.md)<br /><br />[Módulo List](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html)|
+|[Matriz](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-array-1.html)|Uma coleção de tamanho fixo, baseada em zero, mutável de elementos de dados consecutivos que são do mesmo tipo.|[matrizes](arrays.md)<br /><br />[Módulo Array](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html)<br /><br />[Módulo Array2D](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html)<br /><br />[Módulo Array3D](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array3dmodule.html)|
+|[Seq](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seq-1.html)|Uma série lógica de elementos que são todos de um tipo. As sequências são particularmente úteis quando você tem uma coleção de dados grande e ordenada, mas não espera necessariamente usar todos os elementos. Os elementos de sequência individuais são computados somente conforme necessário, portanto, uma sequência pode ter um desempenho melhor do que uma lista se nem todos os elementos forem usados. As sequências são representadas pelo `seq<'T>` tipo, que é um alias para `IEnumerable<T>` . Portanto, qualquer tipo de .NET Framework que implemente `System.Collections.Generic.IEnumerable<'T>` possa ser usado como uma sequência.|[Sequências](sequences.md)<br /><br />[Módulo Seq](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html)|
+|[Map](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharpmap-2.html)|Um dicionário imutável de elementos. Os elementos são acessados por chave.|[Módulo de mapa](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-mapmodule.html)|
+|[Configurar](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharpset-1.html)|Um conjunto imutável baseado em árvores binárias, em que Comparison é a função de comparação estrutural F #, que potencialmente usa implementações da `System.IComparable` interface em valores de chave.|[Definir módulo](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-setmodule.html)|
 
 ### <a name="table-of-functions"></a>Tabela de funções
 
@@ -90,10 +90,10 @@ Esta seção compara as funções que estão disponíveis em tipos de coleção 
 |map3|-|O (N)|-|-|-|Cria uma coleção cujos elementos são os resultados da aplicação da função fornecida aos elementos correspondentes das três coleções simultaneamente.|
 |MAPI|O (N)|O (N)|O (N)|-|-|Cria uma matriz cujos elementos são os resultados da aplicação da função determinada em cada elemento da matriz. O índice de inteiro que é passado para a função indica o índice do elemento que está sendo transformado.|
 |mapi2|O (N)|O (N)|-|-|-|Cria uma coleção cujos elementos são os resultados da aplicação da função fornecida aos elementos correspondentes das duas coleções emparelhadas, também passando o índice dos elementos. As duas matrizes de entrada devem ter o mesmo comprimento.|
-|max|O (N)|O (N)|O (N)|-|-|Retorna o maior elemento na coleção, comparado usando o operador [Max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) .|
+|máx.|O (N)|O (N)|O (N)|-|-|Retorna o maior elemento na coleção, comparado usando o operador [Max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) .|
 |maxBy|O (N)|O (N)|O (N)|-|-|Retorna o maior elemento na coleção, comparado usando [Max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) no resultado da função.|
 |maxElement|-|-|-|-|O (log (N))|Retorna o elemento maior no conjunto de acordo com a ordenação usada para o conjunto.|
-|min|O (N)|O (N)|O (N)|-|-|Retorna o elemento mínimo na coleção, comparada usando o operador [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) .|
+|mín.|O (N)|O (N)|O (N)|-|-|Retorna o elemento mínimo na coleção, comparada usando o operador [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) .|
 |minBy|O (N)|O (N)|O (N)|-|-|Retorna o elemento mínimo na coleção, comparada usando o operador [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) no resultado da função.|
 |minElement|-|-|-|-|O (log (N))|Retorna o elemento mais baixo no conjunto de acordo com a ordenação usada para o conjunto.|
 |ofArray|-|O (N)|O (1)|O (N)|O (N)|Cria uma coleção que contém os mesmos elementos que a matriz especificada.|
@@ -144,7 +144,7 @@ Esta seção compara as funções que estão disponíveis em tipos de coleção 
 |zip|O (N)|O (N)|O (N)|-|-|Combina as duas coleções em uma lista de pares. As duas listas devem ter comprimentos iguais.|
 |zip3|O (N)|O (N)|O (N)|-|-|Combina as três coleções em uma lista de corridas. As listas devem ter comprimentos iguais.|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Tipos F#](fsharp-types.md)
 - [Referência de linguagem F #](index.md)

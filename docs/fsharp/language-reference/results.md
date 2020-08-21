@@ -1,17 +1,17 @@
 ---
 title: Resultados
-description: Saiba como usar o F# tipo ' Result ' para ajudá-lo a escrever código tolerante a erros.
-ms.date: 04/24/2017
-ms.openlocfilehash: 187aa26ccbaac7e0ec998756377bb7b0489eb1ab
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+description: "Saiba como usar o tipo ' Result ' de F # para ajudá-lo a escrever código tolerante a erros."
+ms.date: 08/13/2020
+ms.openlocfilehash: d69e6ddc37bcf5cb5fc28644d59a11a822b83faa
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424848"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656912"
 ---
 # <a name="results"></a>Resultados
 
-A partir F# do 4,1, há um tipo de `Result<'T,'TFailure>` que você pode usar para escrever código tolerante a erros que pode ser composto.
+O `Result<'T,'TFailure>` tipo permite que você grave código tolerante a erros que pode ser composto.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,9 +27,11 @@ type Result<'T,'TError> =
 
 ## <a name="remarks"></a>Comentários
 
-Observe que o tipo de resultado é uma [união discriminada de struct](discriminated-unions.md#struct-discriminated-unions), que é outro recurso F# introduzido em 4,1.  A semântica de igualdade estrutural se aplica aqui.
+Consulte o [`Result`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-resultmodule.html) módulo para os combinadores internos para o `Result` . Escreva.
 
-O tipo de `Result` normalmente é usado no tratamento de erros monadic, que é geralmente chamado de [programação orientada por ferrovia](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) na F# comunidade.  O exemplo trivial a seguir demonstra essa abordagem.
+Observe que o tipo de resultado é uma [união discriminada de struct](discriminated-unions.md#struct-discriminated-unions). A semântica de igualdade estrutural se aplica aqui.
+
+O `Result` tipo é normalmente usado no tratamento de erros do monadic, que geralmente é conhecido como [programação orientada por ferrovia](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) na Comunidade do F #.  O exemplo trivial a seguir demonstra essa abordagem.
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,9 +82,9 @@ let test() =
 test()
 ```
 
-Como você pode ver, é muito fácil encadear várias funções de validação se você forçá-las a retornar um `Result`.  Isso permite que você divida a funcionalidade como esta em pequenas partes, que são tão combináveis quanto você precisa delas.  Isso também tem o valor agregado de *impor* o uso da [correspondência de padrões](pattern-matching.md) no final de uma rodada de validação, o que, por sua vez, impõe um grau mais alto de exatidão do programa.
+Como você pode ver, é muito fácil encadear várias funções de validação se você forçá-las a retornar um `Result` .  Isso permite que você divida a funcionalidade como esta em pequenas partes, que são tão combináveis quanto você precisa delas.  Isso também tem o valor agregado de *impor* o uso da [correspondência de padrões](pattern-matching.md) no final de uma rodada de validação, o que, por sua vez, impõe um grau mais alto de exatidão do programa.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Uniões Discriminadas](discriminated-unions.md)
-- [Correspondência Padrão](pattern-matching.md)
+- [Uniões discriminadas](discriminated-unions.md)
+- [Correspondência de padrões](pattern-matching.md)
