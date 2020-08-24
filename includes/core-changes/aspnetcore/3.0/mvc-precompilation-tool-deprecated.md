@@ -14,7 +14,7 @@ No ASP.NET Core 3,0, a ferramenta de pré-compilação MVC ASP.NET Core 1,1 de e
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Comportamento antigo
 

@@ -6,17 +6,17 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/13/2020
 ms.locfileid: "81275265"
 ---
-### <a name="signalr-hubconnectioncontext-constructors-changed"></a>SignalR: Os construtores do HubConnectionContext mudaram
+### <a name="signalr-hubconnectioncontext-constructors-changed"></a>Signalr: construtores HubConnectionContext alterados
 
-Os construtores `HubConnectionContext` do SignalR mudaram para aceitar um tipo de opções, em vez de vários parâmetros, para opções de adição à prova de futuro. Esta mudança substitui dois construtores por um único construtor que aceita um tipo de opções.
+Os construtores do signalr `HubConnectionContext` foram alterados para aceitar um tipo de opções, em vez de vários parâmetros, para a adição de opções à prova de futuro. Essa alteração substitui dois construtores por um único Construtor que aceita um tipo de opções.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-`HubConnectionContext`tem dois construtores:
+`HubConnectionContext` tem dois construtores:
 
 ```csharp
 public HubConnectionContext(ConnectionContext connectionContext, TimeSpan keepAliveInterval, ILoggerFactory loggerFactory);
@@ -31,13 +31,13 @@ Os dois construtores foram removidos e substituídos por um construtor:
 public HubConnectionContext(ConnectionContext connectionContext, HubConnectionContextOptions contextOptions, ILoggerFactory loggerFactory)
 ```
 
-#### <a name="reason-for-change"></a>Motivo da mudança
+#### <a name="reason-for-change"></a>Motivo da alteração
 
-O novo construtor usa um novo objeto de opções. Consequentemente, as `HubConnectionContext` características podem ser expandidas no futuro sem fazer mais construtores e quebrar mudanças.
+O novo construtor usa um novo objeto Options. Consequentemente, os recursos do `HubConnectionContext` podem ser expandidos no futuro sem fazer mais construtores e alterações significativas.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Em vez de usar o seguinte construtor:
+Em vez de usar o Construtor a seguir:
 
 ```csharp
 HubConnectionContext connectionContext = new HubConnectionContext(

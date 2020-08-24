@@ -6,31 +6,31 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901587"
 ---
-### <a name="hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies"></a>Hospedagem: ObjectPoolProvider removido das dependências do WebHostBuilder
+### <a name="hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies"></a>Hospedagem: objectpoolprovider removido de dependências WebHostBuilder
 
-Como parte de fazer ASP.NET Core `ObjectPoolProvider` pagar mais pelo jogo, o foi removido do conjunto principal de dependências. Componentes específicos que `ObjectPoolProvider` dependem agora adicionam-no eles mesmos.
+Como parte de fazer ASP.NET Core mais Pay for Play, o `ObjectPoolProvider` foi removido do conjunto principal de dependências. Os componentes específicos que dependem de `ObjectPoolProvider` agora o adicionam.
 
-Para discussão, consulte [dotnet/aspnetcore#5944](https://github.com/dotnet/aspnetcore/issues/5944).
+Para obter uma discussão, consulte [dotnet/aspnetcore # 5944](https://github.com/dotnet/aspnetcore/issues/5944).
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-`WebHostBuilder`fornece `ObjectPoolProvider` por padrão no recipiente DI.
+`WebHostBuilder` fornece `ObjectPoolProvider` por padrão no contêiner di.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-`WebHostBuilder`não fornece `ObjectPoolProvider` mais por padrão no contêiner DI.
+`WebHostBuilder` não fornece mais `ObjectPoolProvider` por padrão no contêiner di.
 
-#### <a name="reason-for-change"></a>Motivo da mudança
+#### <a name="reason-for-change"></a>Motivo da alteração
 
-Essa mudança foi feita para fazer ASP.NET Core pagar mais pelo jogo.
+Essa alteração foi feita para fazer ASP.NET Core mais Pay for Play.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Se o `ObjectPoolProvider`seu componente precisar, ele precisa ser `IServiceCollection`adicionado às suas dependências através do .
+Se seu componente exigir `ObjectPoolProvider` , ele precisará ser adicionado às suas dependências por meio do `IServiceCollection` .
 
 #### <a name="category"></a>Categoria
 

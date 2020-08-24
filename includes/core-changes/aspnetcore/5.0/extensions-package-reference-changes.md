@@ -32,16 +32,16 @@ Os consumidores dos pacotes afetados devem adicionar uma dependência direta da 
 
 |Nome do pacote|Descrição da alteração|
 |------------|------------------|
-|[Microsoft. Extensions. Configuration. Binder](https://nuget.org/packages/Microsoft.Extensions.Configuration.Binder)|Referência removida para`Microsoft.Extensions.Configuration`|
-|[Microsoft. Extensions. Configuration. JSON](https://nuget.org/packages/Microsoft.Extensions.Configuration.Json)    |Referência removida para`System.Threading.Tasks.Extensions`|
-|[Microsoft. Extensions. Hosting. abstrações](https://nuget.org/packages/Microsoft.Extensions.Hosting.Abstractions)|Referência removida para`Microsoft.Extensions.Logging.Abstractions`|
-|[Microsoft.Extensions.Logging](https://nuget.org/packages/Microsoft.Extensions.Logging)                          |Referência removida para`Microsoft.Extensions.Configuration.Binder`|
-|[Microsoft. Extensions. Logging. console](https://nuget.org/packages/Microsoft.Extensions.Logging.Console)          |Referência removida para`Microsoft.Extensions.Configuration.Abstractions`|
-|[Microsoft. Extensions. Logging. EventLog](https://nuget.org/packages/Microsoft.Extensions.Logging.EventLog)        |Referência removida `System.Diagnostics.EventLog` para para o .NET Framework moniker da estrutura de destino do 4.6.1|
-|[Microsoft. Extensions. Logging. EventSource](https://nuget.org/packages/Microsoft.Extensions.Logging.EventSource)  |Referência removida para`System.Threading.Tasks.Extensions`|
-|[Microsoft. Extensions. opções](https://nuget.org/packages/Microsoft.Extensions.Options)                          |Referência removida para`System.ComponentModel.Annotations`|
+|[Microsoft.Extensions.Configuração. Associador](https://nuget.org/packages/Microsoft.Extensions.Configuration.Binder)|Referência removida para `Microsoft.Extensions.Configuration`|
+|[Microsoft.Extensions.Configuration.Jsem](https://nuget.org/packages/Microsoft.Extensions.Configuration.Json)    |Referência removida para `System.Threading.Tasks.Extensions`|
+|[Microsoft. Extensions. Hosting. abstrações](https://nuget.org/packages/Microsoft.Extensions.Hosting.Abstractions)|Referência removida para `Microsoft.Extensions.Logging.Abstractions`|
+|[Microsoft.Extensions.Logging](https://nuget.org/packages/Microsoft.Extensions.Logging)                          |Referência removida para `Microsoft.Extensions.Configuration.Binder`|
+|[Microsoft. Extensions. Logging. console](https://nuget.org/packages/Microsoft.Extensions.Logging.Console)          |Referência removida para `Microsoft.Extensions.Configuration.Abstractions`|
+|[Microsoft. Extensions. Logging. EventLog](https://nuget.org/packages/Microsoft.Extensions.Logging.EventLog)        |Referência removida para `System.Diagnostics.EventLog` para o .NET Framework moniker da estrutura de destino do 4.6.1|
+|[Microsoft. Extensions. Logging. EventSource](https://nuget.org/packages/Microsoft.Extensions.Logging.EventSource)  |Referência removida para `System.Threading.Tasks.Extensions`|
+|[Microsoft. Extensions. opções](https://nuget.org/packages/Microsoft.Extensions.Options)                          |Referência removida para `System.ComponentModel.Annotations`|
 
-Por exemplo, a referência de pacote `Microsoft.Extensions.Configuration` a foi removida do `Microsoft.Extensions.Configuration.Binder`. Nenhuma API da dependência foi usada no pacote. Os usuários `Microsoft.Extensions.Configuration.Binder` de quem dependem de APIs `Microsoft.Extensions.Configuration` devem adicionar uma referência direta a ele em seu projeto.
+Por exemplo, a referência de pacote a `Microsoft.Extensions.Configuration` foi removida do `Microsoft.Extensions.Configuration.Binder` . Nenhuma API da dependência foi usada no pacote. Os usuários de `Microsoft.Extensions.Configuration.Binder` quem dependem de APIs `Microsoft.Extensions.Configuration` devem adicionar uma referência direta a ele em seu projeto.
 
 #### <a name="category"></a>Categoria
 

@@ -22,7 +22,7 @@ As seguintes APIs foram `public` :
 
 - `Microsoft.Extensions.Localization.Internal.AssemblyWrapper`
 - `Microsoft.Extensions.Localization.Internal.IResourceStringProvider`
-- `Microsoft.Extensions.Localization.ResourceManagerStringLocalizer`sobrecargas de Construtor aceitam qualquer um dos seguintes tipos de parâmetro:
+- `Microsoft.Extensions.Localization.ResourceManagerStringLocalizer` sobrecargas de Construtor aceitam qualquer um dos seguintes tipos de parâmetro:
   - `AssemblyWrapper`
   - `IResourceStringProvider`
 
@@ -32,7 +32,7 @@ A lista a seguir descreve as alterações:
 
 - `Microsoft.Extensions.Localization.Internal.AssemblyWrapper``Microsoft.Extensions.Localization.AssemblyWrapper`já se tornou e agora é `internal` .
 - `Microsoft.Extensions.Localization.Internal.IResourceStringProvider``Microsoft.Extensions.Localization.Internal.IResourceStringProvider`já se tornou e agora é `internal` .
-- `Microsoft.Extensions.Localization.ResourceManagerStringLocalizer`as sobrecargas de construtor que aceitam qualquer um dos seguintes tipos de parâmetro agora são `internal` :
+- `Microsoft.Extensions.Localization.ResourceManagerStringLocalizer` as sobrecargas de construtor que aceitam qualquer um dos seguintes tipos de parâmetro agora são `internal` :
   - `AssemblyWrapper`
   - `IResourceStringProvider`
 

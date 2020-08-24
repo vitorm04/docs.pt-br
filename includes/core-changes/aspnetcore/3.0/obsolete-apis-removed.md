@@ -12,7 +12,7 @@ Os membros obsoletos e as opções de compatibilidade no ASP.NET Core 2,2 foram 
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
 #### <a name="reason-for-change"></a>Motivo da alteração
 
@@ -30,7 +30,7 @@ ASP.NET Core
 
 Os seguintes tipos e membros foram marcados como obsoletos para ASP.NET Core 2,1 e 2,2:
 
-**Tipos**
+**Types**
 
 - `Microsoft.AspNetCore.Diagnostics.Views.WelcomePage`
 - `Microsoft.AspNetCore.DiagnosticsViewPage.Views.AttributeValue`

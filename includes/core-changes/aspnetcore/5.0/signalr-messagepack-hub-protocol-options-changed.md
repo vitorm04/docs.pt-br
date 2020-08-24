@@ -8,7 +8,7 @@ ms.locfileid: "82507060"
 ---
 ### <a name="signalr-messagepack-hub-protocol-options-type-changed"></a>Signalr: tipo de opções de protocolo de Hub MessagePack alterado
 
-O tipo de opções do protocolo Hub MessagePack do Signalr ASP.NET Core `IList<MessagePack.IFormatterResolver>` foi alterado de para o `MessagePackSerializerOptions` tipo da biblioteca [MessagePack](https://www.nuget.org/packages/MessagePack) .
+O tipo de opções do protocolo Hub MessagePack do Signalr ASP.NET Core foi alterado de `IList<MessagePack.IFormatterResolver>` para o tipo da biblioteca [MessagePack](https://www.nuget.org/packages/MessagePack) `MessagePackSerializerOptions` .
 
 Para discussão sobre essa alteração, consulte [dotnet/aspnetcore # 20506](https://github.com/dotnet/aspnetcore/issues/20506).
 
@@ -69,11 +69,11 @@ services.AddSignalR()
 
 #### <a name="reason-for-change"></a>Motivo da alteração
 
-Essa alteração faz parte da mudança para o MessagePack v2. x, que foi anunciado em [ASPNET/comunicados # 404](https://github.com/aspnet/Announcements/issues/404). A biblioteca v2. x adicionou uma API de opções que é mais fácil de usar e fornece mais recursos do que a `MessagePack.IFormatterResolver` lista de que foi exposta antes.
+Essa alteração faz parte da mudança para o MessagePack v2. x, que foi anunciado em [ASPNET/comunicados # 404](https://github.com/aspnet/Announcements/issues/404). A biblioteca v2. x adicionou uma API de opções que é mais fácil de usar e fornece mais recursos do que a lista de `MessagePack.IFormatterResolver` que foi exposta antes.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Essa alteração significativa afeta qualquer pessoa que esteja Configurando valores <xref:Microsoft.AspNetCore.SignalR.MessagePackHubProtocolOptions>. Se você estiver usando o protocolo ASP.NET Core de Hub MessagePack Signalr e modificando as opções, atualize seu uso para usar a nova API de opções, conforme mostrado acima.
+Essa alteração significativa afeta qualquer pessoa que esteja Configurando valores <xref:Microsoft.AspNetCore.SignalR.MessagePackHubProtocolOptions> . Se você estiver usando o protocolo ASP.NET Core de Hub MessagePack Signalr e modificando as opções, atualize seu uso para usar a nova API de opções, conforme mostrado acima.
 
 #### <a name="category"></a>Categoria
 

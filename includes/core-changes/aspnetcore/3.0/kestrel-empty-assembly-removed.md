@@ -6,22 +6,22 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394127"
 ---
-### <a name="kestrel-empty-https-assembly-removed"></a>Kestrel: Conjunto HTTPS vazio removido
+### <a name="kestrel-empty-https-assembly-removed"></a>Kestrel: assembly HTTPS vazio removido
 
-A <xref:Microsoft.AspNetCore.Server.Kestrel.Https?displayProperty=fullName> assembléia foi removida.
+O assembly foi <xref:Microsoft.AspNetCore.Server.Kestrel.Https?displayProperty=fullName> removido.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
-#### <a name="reason-for-change"></a>Motivo da mudança
+#### <a name="reason-for-change"></a>Motivo da alteração
 
-Em ASP.NET Núcleo 2.1, `Microsoft.AspNetCore.Server.Kestrel.Https` o <xref:Microsoft.AspNetCore.Server.Kestrel.Core?displayProperty=fullName>conteúdo foi transferido para . Essa mudança foi feita de forma `[TypeForwardedTo]` não-quebra usando atributos.
+No ASP.NET Core 2,1, o conteúdo de `Microsoft.AspNetCore.Server.Kestrel.Https` foi movido para <xref:Microsoft.AspNetCore.Server.Kestrel.Core?displayProperty=fullName> . Essa alteração foi feita de forma não-significativa usando `[TypeForwardedTo]` atributos.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-- Bibliotecas referentes `Microsoft.AspNetCore.Server.Kestrel.Https` ao 2.0 devem atualizar todas as dependências ASP.NET Core para 2.1 ou posterior. Caso contrário, eles podem quebrar quando carregados em um aplicativo ASP.NET Core 3.0.
-- Aplicativos e bibliotecas direcionados ao ASP.NET Core 2.1 e `Microsoft.AspNetCore.Server.Kestrel.Https` posteriores devem remover quaisquer referências diretas ao pacote NuGet.
+- As bibliotecas `Microsoft.AspNetCore.Server.Kestrel.Https` que fazem referência a 2,0 devem atualizar todas as dependências de ASP.NET Core para 2,1 ou posterior. Caso contrário, eles poderão ser interrompidos quando forem carregados em um aplicativo ASP.NET Core 3,0.
+- Os aplicativos e bibliotecas destinados a ASP.NET Core 2,1 e posterior devem remover todas as referências diretas ao `Microsoft.AspNetCore.Server.Kestrel.Https` pacote NuGet.
 
 #### <a name="category"></a>Categoria
 

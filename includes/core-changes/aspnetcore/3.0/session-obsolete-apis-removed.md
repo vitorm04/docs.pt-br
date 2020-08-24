@@ -8,19 +8,19 @@ ms.locfileid: "73198335"
 ---
 ### <a name="session-state-obsolete-apis-removed"></a>Estado da sessão: APIs obsoletas removidas
 
-ApIs obsoletas para configurar cookies de sessão foram removidas. Para obter mais informações, consulte [aspnet/Announcements#257](https://github.com/aspnet/Announcements/issues/257).
+APIs obsoletas para configurar cookies de sessão foram removidas. Para obter mais informações, consulte [ASPNET/comunicados n º 257](https://github.com/aspnet/Announcements/issues/257).
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
-#### <a name="reason-for-change"></a>Motivo da mudança
+#### <a name="reason-for-change"></a>Motivo da alteração
 
-Essa alteração impõe consistência entre as APIs para configurar recursos que usam cookies.
+Essa alteração impõe a consistência entre APIs para configurar recursos que usam cookies.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Migre o uso das APIs removidas para suas substituições mais novas. Considere o exemplo a seguir em `Startup.ConfigureServices`:
+Migre o uso das APIs removidas para suas substituições mais recentes. Considere o exemplo a seguir em `Startup.ConfigureServices`:
 
 ```csharp
 public void ConfigureServices(ServiceCollection services)

@@ -8,7 +8,7 @@ ms.locfileid: "82507062"
 ---
 ### <a name="http-kestrel-and-iis-badhttprequestexception-types-marked-obsolete-and-replaced"></a>Tipos de BadHttpRequestException de HTTP: Kestrel e IIS marcados como obsoletos e substituídos
 
-`Microsoft.AspNetCore.Server.Kestrel.BadHttpRequestException`e `Microsoft.AspNetCore.Server.IIS.BadHttpRequestException` foram marcados como obsoletos e alterados para derivar de `Microsoft.AspNetCore.Http.BadHttpRequestException`. Os servidores Kestrel e IIS ainda lançam seus tipos de exceção antigos para compatibilidade com versões anteriores. Os tipos obsoletos serão removidos em uma versão futura.
+`Microsoft.AspNetCore.Server.Kestrel.BadHttpRequestException` e `Microsoft.AspNetCore.Server.IIS.BadHttpRequestException` foram marcados como obsoletos e alterados para derivar de `Microsoft.AspNetCore.Http.BadHttpRequestException` . Os servidores Kestrel e IIS ainda lançam seus tipos de exceção antigos para compatibilidade com versões anteriores. Os tipos obsoletos serão removidos em uma versão futura.
 
 Para obter uma discussão, consulte [dotnet/aspnetcore # 20614](https://github.com/dotnet/aspnetcore/issues/20614).
 
@@ -18,11 +18,11 @@ Para obter uma discussão, consulte [dotnet/aspnetcore # 20614](https://github.c
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-`Microsoft.AspNetCore.Server.Kestrel.BadHttpRequestException`e `Microsoft.AspNetCore.Server.IIS.BadHttpRequestException` derivado de <xref:System.IO.IOException?displayProperty=nameWithType>.
+`Microsoft.AspNetCore.Server.Kestrel.BadHttpRequestException` e `Microsoft.AspNetCore.Server.IIS.BadHttpRequestException` derivado de <xref:System.IO.IOException?displayProperty=nameWithType> .
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-`Microsoft.AspNetCore.Server.Kestrel.BadHttpRequestException`e `Microsoft.AspNetCore.Server.IIS.BadHttpRequestException` são obsoletos. Os tipos também derivam `Microsoft.AspNetCore.Http.BadHttpRequestException`de, que deriva de `System.IO.IOException`.
+`Microsoft.AspNetCore.Server.Kestrel.BadHttpRequestException` e `Microsoft.AspNetCore.Server.IIS.BadHttpRequestException` são obsoletos. Os tipos também derivam de `Microsoft.AspNetCore.Http.BadHttpRequestException` , que deriva de `System.IO.IOException` .
 
 #### <a name="reason-for-change"></a>Motivo da alteração
 
@@ -31,11 +31,11 @@ A alteração foi feita em:
 * Consolide tipos duplicados.
 * Unificar o comportamento entre implementações do servidor.
 
-Um aplicativo agora pode capturar a exceção `Microsoft.AspNetCore.Http.BadHttpRequestException` base ao usar o Kestrel ou o IIS.
+Um aplicativo agora pode capturar a exceção base `Microsoft.AspNetCore.Http.BadHttpRequestException` ao usar o Kestrel ou o IIS.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Substitua os usos de `Microsoft.AspNetCore.Server.Kestrel.BadHttpRequestException` e `Microsoft.AspNetCore.Server.IIS.BadHttpRequestException` por `Microsoft.AspNetCore.Http.BadHttpRequestException`.
+Substitua os usos de `Microsoft.AspNetCore.Server.Kestrel.BadHttpRequestException` e `Microsoft.AspNetCore.Server.IIS.BadHttpRequestException` por `Microsoft.AspNetCore.Http.BadHttpRequestException` .
 
 #### <a name="category"></a>Categoria
 

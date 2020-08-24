@@ -16,7 +16,7 @@ Os projetos Webassembly mais po3,2 foram compilados para o destino .NET Standard
 * [Microsoft. AspNetCore. Components. Web](https://www.nuget.org/packages/Microsoft.AspNetCore.Components.Web)
 * [Microsoft. AspNetCore. Components. Webassembly](https://www.nuget.org/packages/Microsoft.AspNetCore.Components.WebAssembly)
 * [Microsoft. AspNetCore. Components. Webassembly. Authentication](https://www.nuget.org/packages/Microsoft.AspNetCore.Components.WebAssembly.Authentication)
-* [Interoperabilidade deMicrosoft.JS](https://www.nuget.org/packages/Microsoft.JSInterop)
+* [ Interoperabilidade deMicrosoft.JS](https://www.nuget.org/packages/Microsoft.JSInterop)
 * [Microsoft.JSInterop. Webassembly](https://www.nuget.org/packages/Microsoft.JSInterop.WebAssembly)
 * [Microsoft. Authentication. Webassembly. MSAL](https://www.nuget.org/packages/Microsoft.Authentication.WebAssembly.Msal)
 

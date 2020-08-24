@@ -6,29 +6,29 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394435"
 ---
-### <a name="shared-framework-removed-microsoftaspnetcoreall"></a>Estrutura compartilhada: Removed Microsoft.AspNetCore.All
+### <a name="shared-framework-removed-microsoftaspnetcoreall"></a>Estrutura compartilhada: Microsoft. AspNetCore. All removido
 
-A partir de ASP.NET Core `Microsoft.AspNetCore.All` 3.0, `Microsoft.AspNetCore.All` o metapacote e a estrutura compartilhada correspondente não são mais produzidos. Este pacote está disponível em ASP.NET Core 2.2 e continuará recebendo atualizações de manutenção em ASP.NET Core 2.1.
+A partir do ASP.NET Core 3,0, o `Microsoft.AspNetCore.All` metapacote e a `Microsoft.AspNetCore.All` estrutura compartilhada correspondente não são mais produzidos. Este pacote está disponível no ASP.NET Core 2,2 e continuará a receber atualizações de serviço no ASP.NET Core 2,1.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-Os aplicativos `Microsoft.AspNetCore.All` podem usar o `Microsoft.AspNetCore.All` metapacote para segmentar a estrutura compartilhada no .NET Core.
+Os aplicativos podem usar o `Microsoft.AspNetCore.All` metapacote para direcionar a `Microsoft.AspNetCore.All` estrutura compartilhada no .NET Core.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-O .NET Core 3.0 `Microsoft.AspNetCore.All` não inclui uma estrutura compartilhada.
+O .NET Core 3,0 não inclui uma `Microsoft.AspNetCore.All` estrutura compartilhada.
 
-#### <a name="reason-for-change"></a>Motivo da mudança
+#### <a name="reason-for-change"></a>Motivo da alteração
 
 O `Microsoft.AspNetCore.All` metapacote incluiu um grande número de dependências externas.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Migre seu projeto `Microsoft.AspNetCore.App` para usar a estrutura. Os componentes que estavam disponíveis anteriormente ainda `Microsoft.AspNetCore.All` estão disponíveis no NuGet. Esses componentes agora são implantados com seu aplicativo em vez de serem incluídos na estrutura compartilhada.
+Migre seu projeto para usar a `Microsoft.AspNetCore.App` estrutura. Os componentes que estavam disponíveis anteriormente no `Microsoft.AspNetCore.All` ainda estão disponíveis no NuGet. Esses componentes agora são implantados com seu aplicativo, em vez de serem incluídos na estrutura compartilhada.
 
 #### <a name="category"></a>Categoria
 

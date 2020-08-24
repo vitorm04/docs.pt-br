@@ -6,35 +6,35 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393957"
 ---
-### <a name="caching-responsecaching-pubternal-types-changed-to-internal"></a>Cache: ResponseCaching tipos "pubternal" alterados para internos
+### <a name="caching-responsecaching-pubternal-types-changed-to-internal"></a>Caching: tipos de ResponseCaching "pubternal" alterados para interno
 
-Em ASP.NET Núcleo 3.0, os tipos `ResponseCaching` "pubternais" foram alterados para `internal`.
+No ASP.NET Core 3,0, os tipos "pubternal" no `ResponseCaching` foram alterados para `internal` .
 
-Além disso, implementações `IResponseCachingPolicyProvider` `IResponseCachingKeyProvider` padrão e não são mais `AddResponseCaching` adicionadas aos serviços como parte do método.
+Além disso, as implementações padrão do `IResponseCachingPolicyProvider` e do `IResponseCachingKeyProvider` não são mais adicionadas aos serviços como parte do `AddResponseCaching` método.
 
 #### <a name="change-description"></a>Descrição da alteração
 
-Em ASP.NET Core, os tipos "pubternais" são declarados como `public` `.Internal`mas residem em um namespace sufixo com . Embora esses tipos sejam públicos, eles não têm política de apoio e estão sujeitos a mudanças. Infelizmente, o uso acidental desses tipos tem sido comum, resultando em mudanças nesses projetos e limitando a capacidade de manter o quadro.
+Em ASP.NET Core, os tipos "pubternal" são declarados como `public` , mas residem em um namespace com sufixo `.Internal` . Embora esses tipos sejam públicos, eles não têm nenhuma política de suporte e estão sujeitos a alterações significativas. Infelizmente, o uso acidental desses tipos foi comum, resultando em alterações significativas nesses projetos e limitando a capacidade de manter a estrutura.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-Esses tipos eram publicamente visíveis, mas sem suporte.
+Esses tipos foram publicamente visíveis, mas sem suporte.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-Esses tipos `internal`são agora.
+Esses tipos agora são `internal` .
 
-#### <a name="reason-for-change"></a>Motivo da mudança
+#### <a name="reason-for-change"></a>Motivo da alteração
 
-O `internal` escopo reflete melhor a política sem fundamento.
+O `internal` escopo reflete melhor a política sem suporte.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Copiar tipos que são usados pelo seu aplicativo ou biblioteca.
+Tipos de cópia que são usados pelo seu aplicativo ou biblioteca.
 
 #### <a name="category"></a>Categoria
 

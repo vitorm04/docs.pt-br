@@ -6,25 +6,25 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393916"
 ---
-### <a name="signalr-usesignalr-and-useconnections-methods-marked-obsolete"></a>SignalR: UseSignalR e UseConnections métodos marcados como obsoletos
+### <a name="signalr-usesignalr-and-useconnections-methods-marked-obsolete"></a>Signalr: métodos UseSignalR e UseConnections marcados como obsoletos
 
-Os `UseConnections` métodos `UseSignalR` e `ConnectionsRouteBuilder` as `HubRouteBuilder` classes são marcados como obsoletos em ASP.NET Núcleo 3.0.
+Os métodos `UseConnections` e `UseSignalR` e as classes `ConnectionsRouteBuilder` e `HubRouteBuilder` são marcados como obsoletos no ASP.NET Core 3,0.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-O roteamento do hub `UseSignalR` `UseConnections`SignalR foi configurado usando ou .
+O roteamento de Hub do signalr foi configurado usando o `UseSignalR` ou o `UseConnections` .
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-A maneira antiga de configurar o roteamento foi obsoleta e substituída por roteamento de ponto final.
+A maneira antiga de configurar o roteamento foi obsoleta e substituída pelo roteamento de ponto de extremidade.
 
-#### <a name="reason-for-change"></a>Motivo da mudança
+#### <a name="reason-for-change"></a>Motivo da alteração
 
-O Middleware está sendo movido para o novo sistema de roteamento de ponto final. A velha maneira de adicionar middleware está sendo obsoleta.
+O middleware está sendo movido para o novo sistema de roteamento de ponto de extremidade. A maneira antiga de adicionar o middleware está sendo obsoleta.
 
 #### <a name="recommended-action"></a>Ação recomendada
 

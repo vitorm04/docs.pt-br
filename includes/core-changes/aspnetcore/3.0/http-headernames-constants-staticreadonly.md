@@ -6,40 +6,40 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75902053"
 ---
-### <a name="http-headernames-constants-changed-to-static-readonly"></a>HTTP: CabeçalhosAs constantes alteradas para leitura estática
+### <a name="http-headernames-constants-changed-to-static-readonly"></a>Constantes HTTP: Headernames alteradas para static readonly
 
-A partir de ASP.NET O Núcleo 3.0 `const` `static readonly`Preview 5, os campos em <xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> mudou de para .
+A partir do ASP.NET Core 3,0 Preview 5, os campos em <xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> alterados de `const` para `static readonly` .
 
-Para discussão, consulte [dotnet/aspnetcore#9514](https://github.com/dotnet/aspnetcore/issues/9514).
+Para obter uma discussão, consulte [dotnet/aspnetcore # 9514](https://github.com/dotnet/aspnetcore/issues/9514).
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-Esses campos costumavam ser. `const`
+Esses campos costumava ser `const` .
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-Esses campos `static readonly`estão agora.
+Esses campos agora são `static readonly` .
 
-#### <a name="reason-for-change"></a>Motivo da mudança
+#### <a name="reason-for-change"></a>Motivo da alteração
 
-A mudança:
+A alteração:
 
-* Impede que os valores sejam incorporados através dos limites de montagem, permitindo correções de valor conforme necessário.
-* Permite verificações mais rápidas de igualdade de referência.
+* Impede que os valores sejam inseridos entre limites de assembly, permitindo correções de valor conforme necessário.
+* Permite verificações de igualdade de referência mais rápidas.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Recompilar contra 3.0. O código-fonte que utiliza esses campos das seguintes maneiras não pode mais fazê-lo:
+Recompile em relação a 3,0. O código-fonte que usa esses campos das seguintes maneiras não pode mais fazer isso:
 
-* Como argumento de atributo
-* Como `case` uma `switch` declaração
-* Ao definir outro`const`
+* Como um argumento de atributo
+* Como um `case` em uma `switch` instrução
+* Ao definir outro `const`
 
-Para contornar a mudança de quebra, mude para usar constantes de nome de cabeçalho auto-definidas ou literais de seqüência.
+Para contornar a alteração significativa, alterne para usando constantes de nome de cabeçalho autodefinido ou literais de cadeia de caracteres.
 
 #### <a name="category"></a>Categoria
 

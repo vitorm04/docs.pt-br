@@ -6,29 +6,29 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522667"
 ---
-### <a name="spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger"></a>SPAs: SpaServices e NodeServices não voltam mais para o logger do console
+### <a name="spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger"></a>SPAs: SpaServices e Nodeservices não retornam mais para o agente do console
 
-<xref:Microsoft.AspNetCore.SpaServices?displayProperty=nameWithType>e <xref:Microsoft.AspNetCore.NodeServices?displayProperty=nameWithType> não exibirá registros do console a menos que o registro esteja configurado.
+<xref:Microsoft.AspNetCore.SpaServices?displayProperty=nameWithType> e <xref:Microsoft.AspNetCore.NodeServices?displayProperty=nameWithType> não exibirá os logs do console, a menos que o log esteja configurado.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-`Microsoft.AspNetCore.SpaServices`e `Microsoft.AspNetCore.NodeServices` usado para criar automaticamente um logger de console quando o registro não é configurado.
+`Microsoft.AspNetCore.SpaServices` e `Microsoft.AspNetCore.NodeServices` usado para criar automaticamente um agente de log do console quando o registro não estiver configurado.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-`Microsoft.AspNetCore.SpaServices`e `Microsoft.AspNetCore.NodeServices` não exibirá registros do console a menos que o registro esteja configurado.
+`Microsoft.AspNetCore.SpaServices` e `Microsoft.AspNetCore.NodeServices` não exibirá os logs do console, a menos que o log esteja configurado.
 
-#### <a name="reason-for-change"></a>Motivo da mudança
+#### <a name="reason-for-change"></a>Motivo da alteração
 
-Há uma necessidade de se alinhar com a forma como outros pacotes ASP.NET Core implementam o registro.
+Há a necessidade de se alinhar com o modo como outros pacotes de ASP.NET Core implementam o registro em log.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Se o comportamento antigo for necessário, para `services.AddLogging(builder => builder.AddConsole())` configurar `Setup.ConfigureServices` o registro do console, adicione ao seu método.
+Se o comportamento antigo for necessário, para configurar o log do console, adicione `services.AddLogging(builder => builder.AddConsole())` ao seu `Setup.ConfigureServices` método.
 
 #### <a name="category"></a>Categoria
 

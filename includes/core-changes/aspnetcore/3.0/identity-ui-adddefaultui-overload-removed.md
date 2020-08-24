@@ -6,21 +6,21 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/17/2020
 ms.locfileid: "81637191"
 ---
-### <a name="identity-adddefaultui-method-overload-removed"></a>Identidade: Sobrecarga de método AddDefaultUI removida
+### <a name="identity-adddefaultui-method-overload-removed"></a>Identidade: sobrecarga do método AddDefaultUI removida
 
-Começando com ASP.NET Core 3.0, a sobrecarga do método [IdentityBuilderUIExtensions.AddDefaultUI (IdentityBuilder,UIFramework)](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.identitybuilderuiextensions.adddefaultui?view=aspnetcore-2.2#Microsoft_AspNetCore_Identity_IdentityBuilderUIExtensions_AddDefaultUI_Microsoft_AspNetCore_Identity_IdentityBuilder_Microsoft_AspNetCore_Identity_UI_UIFramework_) não existe mais.
+A partir do ASP.NET Core 3,0, a sobrecarga do método [IdentityBuilderUIExtensions. AddDefaultUI (IdentityBuilder, UIFramework)](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.identitybuilderuiextensions.adddefaultui?view=aspnetcore-2.2#Microsoft_AspNetCore_Identity_IdentityBuilderUIExtensions_AddDefaultUI_Microsoft_AspNetCore_Identity_IdentityBuilder_Microsoft_AspNetCore_Identity_UI_UIFramework_) não existe mais.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
-#### <a name="reason-for-change"></a>Motivo da mudança
+#### <a name="reason-for-change"></a>Motivo da alteração
 
-Essa mudança foi resultado da adoção do recurso de ativos web estáticos.
+Essa alteração foi resultado da adoção do recurso de ativos da Web estáticos.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Ligue <xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)?displayProperty=nameWithType> em vez da sobrecarga que requer dois argumentos. Se você estiver usando bootstrap 3, adicione `<PropertyGroup>` também a seguinte linha a um elemento no arquivo do projeto:
+Chame <xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)?displayProperty=nameWithType> em vez da sobrecarga que usa dois argumentos. Se você estiver usando a inicialização 3, adicione também a seguinte linha a um `<PropertyGroup>` elemento em seu arquivo de projeto:
 
 ```xml
 <IdentityUIFrameworkVersion>Bootstrap3</IdentityUIFrameworkVersion>
@@ -32,7 +32,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>APIs afetadas
 
-[IdentityBuilderUIExtensions.AddDefaultUI (IdentityBuilder,UIFramework)](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.identitybuilderuiextensions.adddefaultui?view=aspnetcore-2.2#Microsoft_AspNetCore_Identity_IdentityBuilderUIExtensions_AddDefaultUI_Microsoft_AspNetCore_Identity_IdentityBuilder_Microsoft_AspNetCore_Identity_UI_UIFramework_)
+[IdentityBuilderUIExtensions.AddDefaultUI(IdentityBuilder,UIFramework)](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.identitybuilderuiextensions.adddefaultui?view=aspnetcore-2.2#Microsoft_AspNetCore_Identity_IdentityBuilderUIExtensions_AddDefaultUI_Microsoft_AspNetCore_Identity_IdentityBuilder_Microsoft_AspNetCore_Identity_UI_UIFramework_)
 
 <!--
 

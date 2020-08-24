@@ -6,13 +6,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901683"
 ---
-### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP: IO síncrono desativado em todos os servidores
+### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP: e/s síncrona desabilitada em todos os servidores
 
-Começando com ASP.NET Core 3.0, as operações síncronas do servidor são desativadas por padrão.
+A partir do ASP.NET Core 3,0, as operações de servidor síncronas são desabilitadas por padrão.
 
 #### <a name="change-description"></a>Descrição da alteração
 
-`AllowSynchronousIO`é uma opção em cada servidor que ativa ou desativa APIs síncronas de IO como `HttpRequest.Body.Read`, `HttpResponse.Body.Write`e `Stream.Flush`. Essas APIs têm sido há muito uma fonte de fome de thread saem. A partir de ASP.NET Pré-visualização do Core 3.0 3, essas operações síncronas são desativadas por padrão.
+`AllowSynchronousIO` é uma opção em cada servidor que habilita ou desabilita APIs de e/s síncronas como `HttpRequest.Body.Read` , `HttpResponse.Body.Write` e `Stream.Flush` . Essas APIs têm sido uma origem de privação de threads e bloqueios de aplicativo. A partir do ASP.NET Core 3,0 Preview 3, essas operações síncronas são desabilitadas por padrão.
 
 Servidores afetados:
 
@@ -21,15 +21,15 @@ Servidores afetados:
 - IIS em processo
 - TestServer
 
-Espere erros semelhantes aos:
+Esperar erros semelhantes a:
 
 - `Synchronous operations are disallowed. Call ReadAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call WriteAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call FlushAsync or set AllowSynchronousIO to true instead.`
 
-Cada servidor `AllowSynchronousIO` tem uma opção que controla esse comportamento `false`e o padrão para todos eles é agora .
+Cada servidor tem uma `AllowSynchronousIO` opção que controla esse comportamento e o padrão para todos eles agora é `false` .
 
-O comportamento também pode ser substituído por solicitação como uma mitigação temporária. Por exemplo: 
+O comportamento também pode ser substituído em uma base por solicitação como uma mitigação temporária. Por exemplo:
 
 ```csharp
 var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();
@@ -39,35 +39,35 @@ if (syncIOFeature != null)
 }
 ```
 
-Se você tiver `TextWriter` problemas com um ou outro `Dispose`fluxo chamando `DisposeAsync` uma API síncrona, chame a nova API em vez disso.
+Se você tiver problemas com um `TextWriter` ou outro fluxo chamando uma API síncrona no `Dispose` , chame a nova `DisposeAsync` API em vez disso.
 
-Para discussão, consulte [dotnet/aspnetcore#7644](https://github.com/dotnet/aspnetcore/issues/7644).
+Para obter uma discussão, consulte [dotnet/aspnetcore # 7644](https://github.com/dotnet/aspnetcore/issues/7644).
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-`HttpRequest.Body.Read`, `HttpResponse.Body.Write`e `Stream.Flush` foram permitidos por padrão.
+`HttpRequest.Body.Read`, `HttpResponse.Body.Write` e `Stream.Flush` eram permitidos por padrão.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-Essas APIs síncronas são proibidas por padrão:
+Essas APIs síncronas não são permitidas por padrão:
 
-Espere erros semelhantes aos:
+Esperar erros semelhantes a:
 
 - `Synchronous operations are disallowed. Call ReadAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call WriteAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call FlushAsync or set AllowSynchronousIO to true instead.`
 
-#### <a name="reason-for-change"></a>Motivo da mudança
+#### <a name="reason-for-change"></a>Motivo da alteração
 
-Essas APIs síncronas têm sido há muito uma fonte de fome de segmentos e travamentos de aplicativos. A partir ASP.NET pré-visualização do Núcleo 3.0, as operações síncronas são desativadas por padrão.
+Essas APIs síncronas têm sido uma origem de privação de threads e bloqueios de aplicativo. A partir do ASP.NET Core 3,0 Preview 3, as operações síncronas são desabilitadas por padrão.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Use as versões assíncronas dos métodos. O comportamento também pode ser substituído por solicitação como uma mitigação temporária.
+Use as versões assíncronas dos métodos. O comportamento também pode ser substituído em uma base por solicitação como uma mitigação temporária.
 
 ```csharp
 var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();

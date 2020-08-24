@@ -6,35 +6,35 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901667"
 ---
-### <a name="mvc-pubternal-types-changed-to-internal"></a>MVC: Tipos de "pubternal" alterados para internos
+### <a name="mvc-pubternal-types-changed-to-internal"></a>MVC: tipos "Pubternal" alterados para interno
 
-Em ASP.NET Núcleo 3.0, todos os tipos "pubternais" `public` em MVC foram `internal` atualizados para estar em um namespace suportado ou conforme apropriado.
+No ASP.NET Core 3,0, todos os tipos "pubternal" no MVC foram atualizados para ambos `public` em um namespace com suporte ou `internal` conforme apropriado.
 
 #### <a name="change-description"></a>Descrição da alteração
 
-Em ASP.NET Core, os tipos "pubternais" são declarados como `public` mas residem em um `.Internal`espaço de nome sufixo. Embora esses `public`tipos sejam, eles não têm política de apoio e estão sujeitos a mudanças. Infelizmente, o uso acidental desses tipos tem sido comum, resultando em mudanças nesses projetos e limitando a capacidade de manter o quadro.
+Em ASP.NET Core, os tipos "pubternal" são declarados como `public` , mas residem em um `.Internal` namespace com sufixo. Embora esses tipos sejam `public` , eles não têm nenhuma política de suporte e estão sujeitos a alterações significativas. Infelizmente, o uso acidental desses tipos foi comum, resultando em alterações significativas nesses projetos e limitando a capacidade de manter a estrutura.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-Alguns tipos em `public` MVC `.Internal` estavam em um namespace. Esses tipos não tinham política de apoio e estavam sujeitos a mudanças.
+Alguns tipos no MVC eram `public` , mas em um `.Internal` namespace. Esses tipos não tinham nenhuma política de suporte e estavam sujeitos a alterações significativas.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-Todos esses tipos são `public` atualizados para estar em `internal`um namespace suportado ou marcado como .
+Todos esses tipos são atualizados para que estejam `public` em um namespace com suporte ou marcados como `internal` .
 
-#### <a name="reason-for-change"></a>Motivo da mudança
+#### <a name="reason-for-change"></a>Motivo da alteração
 
-O uso acidental dos tipos "pubternais" tem sido comum, resultando em mudanças nesses projetos e limitando a capacidade de manutenção da estrutura.
+O uso acidental dos tipos "pubternal" é comum, resultando em alterações significativas nesses projetos e limitando a capacidade de manter a estrutura.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Se você estiver usando tipos `public` que se tornaram verdadeiramente e foram movidos para um novo espaço de nome suportado, atualize suas referências para combinar com os novos namespaces.
+Se você estiver usando tipos que se tornaram verdadeiramente `public` e foram movidos para um novo namespace com suporte, atualize suas referências para que correspondam aos novos namespaces.
 
-Se você estiver usando tipos que `internal`se tornaram marcados como , você precisará encontrar uma alternativa. Os tipos anteriormente "pubternais" nunca foram apoiados para uso público. Se houver tipos específicos nesses namespaces que são críticos para seus aplicativos, arquive um problema no [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues). Podem ser feitas considerações para `public`a realização dos tipos solicitados.
+Se você estiver usando tipos que se tornaram marcados como `internal` , você precisará encontrar uma alternativa. Os tipos de "pubternal" anteriormente nunca tinham suporte para uso público. Se houver tipos específicos nesses namespaces que são críticos para seus aplicativos, execute um problema em [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues). As considerações podem ser feitas para fazer os tipos solicitados `public` .
 
 #### <a name="category"></a>Categoria
 

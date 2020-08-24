@@ -28,23 +28,23 @@ ASP.NET Core 5,0 Preview 7
 
 A tabela a seguir descreve o comportamento quando HTTP/2 em TLS é configurado.
 
-| Protocolos | Windows 7,<br />Windows Server 2008 R2,<br />ou anterior | Windows 8,<br />Windows Server 2012 | Windows 8.1<br />Windows Server 2012 R2 | Windows 10,<br />Windows Server 2016,<br />ou mais recente |
+| Protocolos | Windows 7,<br />Windows Server 2008 R2,<br />ou anterior | Windows 8,<br />Windows Server 2012 | Windows 8.1<br />Windows Server 2012 R2 | Windows 10,<br />Windows Server 2016,<br /> ou mais recente |
 |---------------|-----------------------------------------------|--------------------------------|-------------------------------------|------------------------------------------|
-| `Http2`         | Throw`NotSupportedException`                   | Erro durante o handshake de TLS     | Erro durante o handshake de TLS&ast;     | Nenhum erro |
-| `Http1AndHttp2` | Fazer downgrade para`Http1`                    | Fazer downgrade para`Http1`     | Erro durante o handshake de TLS&ast;     | Nenhum erro |
+| `Http2`         | Throw `NotSupportedException`                   | Erro durante o handshake de TLS     | Erro durante o handshake de TLS &ast;     | Nenhum erro |
+| `Http1AndHttp2` | Fazer downgrade para `Http1`                    | Fazer downgrade para `Http1`     | Erro durante o handshake de TLS &ast;     | Nenhum erro |
 
-&ast;Configure conjuntos de codificação compatíveis para habilitar esses cenários.
+&ast; Configure conjuntos de codificação compatíveis para habilitar esses cenários.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
 A tabela a seguir descreve o comportamento quando HTTP/2 em TLS é configurado.
 
-| Protocolos | Windows 7,<br />Windows Server 2008 R2,<br />ou anterior | Windows 8,<br />Windows Server 2012 | Windows 8.1<br />Windows Server 2012 R2 | Windows 10,<br />Windows Server 2016,<br />ou mais recente |
+| Protocolos | Windows 7,<br />Windows Server 2008 R2,<br />ou anterior | Windows 8,<br />Windows Server 2012 | Windows 8.1<br />Windows Server 2012 R2 | Windows 10,<br />Windows Server 2016,<br /> ou mais recente |
 |---------------|-----------------------------------------------|--------------------------------|-------------------------------------|------------------------------------------|
-| `Http2`         | Throw`NotSupportedException`                   | Throw`NotSupportedException`     | Lançar `NotSupportedException`&ast;&ast;     | Nenhum erro |
-| `Http1AndHttp2` | Fazer downgrade para`Http1`                    | Fazer downgrade para`Http1`     | Fazer downgrade para `Http1`&ast;&ast;     | Nenhum erro |
+| `Http2`         | Throw `NotSupportedException`                   | Throw `NotSupportedException`     | Lançar `NotSupportedException`&ast;&ast;     | Nenhum erro |
+| `Http1AndHttp2` | Fazer downgrade para `Http1`                    | Fazer downgrade para `Http1`     | Fazer downgrade para `Http1`&ast;&ast;     | Nenhum erro |
 
-&ast;&ast;Configure conjuntos de codificação compatíveis e defina a opção de contexto do aplicativo `Microsoft.AspNetCore.Server.Kestrel.EnableWindows81Http2` como `true` para habilitar esses cenários.
+&ast;&ast; Configure conjuntos de codificação compatíveis e defina a opção de contexto do aplicativo `Microsoft.AspNetCore.Server.Kestrel.EnableWindows81Http2` como `true` para habilitar esses cenários.
 
 #### <a name="reason-for-change"></a>Motivo da alteração
 

@@ -18,7 +18,7 @@ Como parte da alteração, algumas alterações significativas importantes são 
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
@@ -54,7 +54,7 @@ Não será necessário que os projetos consumam assemblies no `Microsoft.AspNetC
 
 Essa alteração não se aplica a todos os binários referenciados por meio `Microsoft.AspNetCore.App` do ASP.NET Core 2. x. As exceções notáveis incluem:
 
-- `Microsoft.Extensions`as bibliotecas que continuam a atingir .NET Standard estarão disponíveis como pacotes NuGet (consulte <https://github.com/dotnet/extensions> ).
+- `Microsoft.Extensions` as bibliotecas que continuam a atingir .NET Standard estarão disponíveis como pacotes NuGet (consulte <https://github.com/dotnet/extensions> ).
 - APIs produzidas pela equipe de ASP.NET Core que não fazem parte do `Microsoft.AspNetCore.App` . Por exemplo, os seguintes componentes estão disponíveis como pacotes NuGet:
   - Entity Framework Core
   - APIs que fornecem integração de terceiros

@@ -6,29 +6,29 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901722"
 ---
-### <a name="signalr-handshakeprotocolsuccesshandshakedata-replaced"></a>SignalR: HandshakeProtocol.SuccessHandshakeData substituído
+### <a name="signalr-handshakeprotocolsuccesshandshakedata-replaced"></a>Signalr: HandshakeProtocol. SuccessHandshakeData substituído
 
-O campo [HandshakeProtocol.SuccessHandshakeData](https://github.com/dotnet/aspnetcore/blob/c5b2bc0df2a0027832bf7d01dfb19ca39cd08ae6/src/SignalR/common/SignalR.Common/src/Protocol/HandshakeProtocol.cs#L27) foi removido e substituído por um método auxiliar `IHubProtocol`que gera uma resposta de aperto de mão bem sucedida dada uma resposta específica .
+O campo [HandshakeProtocol. SuccessHandshakeData](https://github.com/dotnet/aspnetcore/blob/c5b2bc0df2a0027832bf7d01dfb19ca39cd08ae6/src/SignalR/common/SignalR.Common/src/Protocol/HandshakeProtocol.cs#L27) foi removido e substituído por um método auxiliar que gera uma resposta de handshake com êxito, dada uma específica `IHubProtocol` .
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-`HandshakeProtocol.SuccessHandshakeData`era `public static ReadOnlyMemory<byte>` um campo.
+`HandshakeProtocol.SuccessHandshakeData` era um `public static ReadOnlyMemory<byte>` campo.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-`HandshakeProtocol.SuccessHandshakeData`foi substituído por `static` `GetSuccessfulHandshake(IHubProtocol protocol)` um método `ReadOnlyMemory<byte>` que retorna um com base no protocolo especificado.
+`HandshakeProtocol.SuccessHandshakeData` foi substituído por um `static` `GetSuccessfulHandshake(IHubProtocol protocol)` método que retorna um `ReadOnlyMemory<byte>` com base no protocolo especificado.
 
-#### <a name="reason-for-change"></a>Motivo da mudança
+#### <a name="reason-for-change"></a>Motivo da alteração
 
-Campos adicionais foram adicionados à _resposta_ de aperto de mão que não são constantes e mudam dependendo do protocolo selecionado.
+Campos adicionais foram adicionados à _resposta_ de handshake que são não constantes e mudam dependendo do protocolo selecionado.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Nenhum. Este tipo não foi projetado para ser usado a partir do código do usuário. É `public`, para que possa ser compartilhado entre o servidor SignalR e o cliente. Também pode ser usado por clientes SignalR gravados em .NET. **Os usuários** do SignalR não devem ser afetados por essa mudança.
+Nenhum. Esse tipo não é projetado para uso do código do usuário. É `public` , portanto, pode ser compartilhado entre o servidor e o cliente do signalr. Ele também pode ser usado por clientes do Signalr do cliente escritos em .NET. **Os usuários** do signalr não devem ser afetados por essa alteração.
 
 #### <a name="category"></a>Categoria
 

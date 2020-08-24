@@ -6,29 +6,29 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394040"
 ---
-### <a name="identity-signinasync-throws-exception-for-unauthenticated-identity"></a>Identidade: SignInAsync lança exceção para identidade não autenticada
+### <a name="identity-signinasync-throws-exception-for-unauthenticated-identity"></a>Identidade: o SignInAsync gera uma exceção para a identidade não autenticada
 
-Por padrão, `SignInAsync` lança uma exceção para `IsAuthenticated` diretores /identidades em que é `false`.
+Por padrão, `SignInAsync` o gera uma exceção para entidades/identidades em que `IsAuthenticated` é `false` .
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-`SignInAsync`aceita quaisquer princípios/identidades, incluindo identidades `IsAuthenticated` `false`em que é .
+`SignInAsync` aceita quaisquer entidades/identidades, incluindo identidades em que `IsAuthenticated` é `false` .
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-Por padrão, `SignInAsync` lança uma exceção para `IsAuthenticated` diretores /identidades em que é `false`. Há uma nova bandeira para suprimir esse comportamento, mas o comportamento padrão mudou.
+Por padrão, `SignInAsync` o gera uma exceção para entidades/identidades em que `IsAuthenticated` é `false` . Há um novo sinalizador para suprimir esse comportamento, mas o comportamento padrão foi alterado.
 
-#### <a name="reason-for-change"></a>Motivo da mudança
+#### <a name="reason-for-change"></a>Motivo da alteração
 
-O comportamento antigo era problemático porque, por padrão, `[Authorize]`  /  `RequireAuthenticatedUser()`esses diretores eram rejeitados por .
+O comportamento antigo era problemático porque, por padrão, essas entidades foram rejeitadas pelo `[Authorize]`  /  `RequireAuthenticatedUser()` .
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Em ASP.NET Core 3.0 Preview 6, `AuthenticationOptions` há `true` uma `RequireAuthenticatedSignIn` bandeira que é por padrão. Coloque esta `false` bandeira para restaurar o velho comportamento.
+No ASP.NET Core 3,0 Preview 6, há um `RequireAuthenticatedSignIn` sinalizador `AuthenticationOptions` `true` por padrão. Defina esse sinalizador como `false` para restaurar o comportamento antigo.
 
 #### <a name="category"></a>Categoria
 

@@ -26,11 +26,11 @@ A `ResourceManagerWithCultureStringLocalizer` classe e o `ResourceManagerStringL
 
 #### <a name="reason-for-change"></a>Motivo da alteração
 
-A classe [ResourceManagerWithCultureStringLocalizer](/dotnet/api/microsoft.extensions.localization.resourcemanagerwithculturestringlocalizer?view=dotnet-plat-ext-3.1) e o método [ResourceManagerStringLocalizer. WithCulture](/dotnet/api/microsoft.extensions.localization.resourcemanagerstringlocalizer.withculture?view=dotnet-plat-ext-3.1) geralmente eram fontes de confusão para os usuários da localização. A confusão era especialmente alta ao criar uma implementação <xref:Microsoft.Extensions.Localization.IStringLocalizer> personalizada. Essa classe e o método dão aos consumidores a impressão `IStringLocalizer` de que uma instância deve ser "por idioma, por recurso". Na realidade, a instância só deve ser "por recurso". Em tempo de execução, <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> a propriedade determina o idioma a ser usado.
+A classe [ResourceManagerWithCultureStringLocalizer](/dotnet/api/microsoft.extensions.localization.resourcemanagerwithculturestringlocalizer?view=dotnet-plat-ext-3.1) e o método [ResourceManagerStringLocalizer. WithCulture](/dotnet/api/microsoft.extensions.localization.resourcemanagerstringlocalizer.withculture?view=dotnet-plat-ext-3.1) geralmente eram fontes de confusão para os usuários da localização. A confusão era especialmente alta ao criar uma <xref:Microsoft.Extensions.Localization.IStringLocalizer> implementação personalizada. Essa classe e o método dão aos consumidores a impressão de que uma `IStringLocalizer` instância deve ser "por idioma, por recurso". Na realidade, a instância só deve ser "por recurso". Em tempo de execução, a <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> propriedade determina o idioma a ser usado.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Pare de usar `ResourceManagerWithCultureStringLocalizer` a classe e `ResourceManagerStringLocalizer.WithCulture` o método.
+Pare de usar a `ResourceManagerWithCultureStringLocalizer` classe e o `ResourceManagerStringLocalizer.WithCulture` método.
 
 #### <a name="category"></a>Categoria
 

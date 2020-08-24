@@ -12,7 +12,7 @@ Como parte da afastamento das APIs "pubternal", as APIs da camada de transporte 
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
@@ -23,7 +23,7 @@ Como parte da afastamento das APIs "pubternal", as APIs da camada de transporte 
 
 - A `IConnectionListener` interface foi introduzida na `Microsoft.AspNetCore.Connections.Abstractions` biblioteca para expor a funcionalidade mais usada da `...Transport.Abstractions` biblioteca.
 - O `NoDelay` agora está disponível em opções de transporte ( `LibuvTransportOptions` e `SocketTransportOptions` ).
-- `SchedulingMode`Não está mais disponível.
+- `SchedulingMode` Não está mais disponível.
 
 #### <a name="reason-for-change"></a>Motivo da alteração
 

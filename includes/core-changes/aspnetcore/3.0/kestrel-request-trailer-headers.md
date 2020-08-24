@@ -8,40 +8,40 @@ ms.locfileid: "72394376"
 ---
 ### <a name="kestrel-request-trailer-headers-moved-to-new-collection"></a>Kestrel: Solicitar cabeçalhos de trailer movidos para nova coleção
 
-Em versões anteriores, Kestrel adicionou cabeçalhos de reboque em pedaços HTTP/1.1 na coleção de cabeçalhos de solicitação quando o corpo de solicitação foi lido até o fim. Esse comportamento causou preocupações sobre a ambiguidade entre cabeçalhos e reboques. A decisão foi tomada para mudar os trailers para uma nova coleção.
+Nas versões anteriores, Kestrel adicionou cabeçalhos de trailers de HTTP/1.1 na coleção de cabeçalhos de solicitação quando o corpo da solicitação foi lido até o final. Esse comportamento causou preocupações sobre ambigüidade entre cabeçalhos e trailers. A decisão foi feita para mover os trailers para uma nova coleção.
 
-Os reboques de solicitação HTTP/2 não estavam disponíveis em ASP.NET Core 2.2, mas agora também estão disponíveis nesta nova coleção no ASP.NET Core 3.0.
+Os trailers de solicitação HTTP/2 não estavam disponíveis no ASP.NET Core 2,2, mas agora também estão disponíveis nesta nova coleção no ASP.NET Core 3,0.
 
-Novos métodos de extensão de solicitação foram adicionados para acessar esses reboques.
+Novos métodos de extensão de solicitação foram adicionados para acessar esses trailers.
 
-Os reboques HTTP/1.1 estão disponíveis assim que todo o corpo de solicitação tiver sido lido.
+Os trailers HTTP/1.1 estão disponíveis quando todo o corpo da solicitação tiver sido lido.
 
-Os reboques HTTP/2 estão disponíveis assim que são recebidos do cliente. O cliente não enviará os reboques até que todo o corpo de solicitação tenha sido pelo menos protegido pelo servidor. Você pode precisar ler o corpo de solicitação para liberar espaço de buffer. Os reboques estão sempre disponíveis se você ler o corpo de solicitação até o final. Os trailers marcam a extremidade do corpo.
+Os trailers HTTP/2 estão disponíveis quando são recebidos do cliente. O cliente não enviará os trailers até que todo o corpo da solicitação tenha sido pelo menos armazenado em buffer pelo servidor. Talvez seja necessário ler o corpo da solicitação para liberar espaço no buffer. Os trailers sempre estarão disponíveis se você ler o corpo da solicitação para o final. Os marcadores marcam o fim do corpo.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-Solicitar cabeçalhos de `HttpRequest.Headers` reboque seria adicionado à coleção.
+Os cabeçalhos do trailer de solicitação seriam adicionados à `HttpRequest.Headers` coleção.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-Os cabeçalhos do trailer `HttpRequest.Headers` não estão **presentes** na coleção. Use os seguintes `HttpRequest` métodos de extensão para acessá-los:
+Os cabeçalhos de trailer de solicitação **não estão presentes** na `HttpRequest.Headers` coleção. Use os seguintes métodos de extensão no `HttpRequest` para acessá-los:
 
-- `GetDeclaredTrailers()`- Recebe o cabeçalho "Trailer" que lista quais reboques esperar após o corpo.
-- `SupportsTrailers()`- Indica se a solicitação suporta o recebimento de cabeçalhos de reboque.
-- `CheckTrailersAvailable()`- Determina se a solicitação suporta reboques e se eles estão disponíveis para leitura.
-- `GetTrailer(string trailerName)`- Recebe o cabeçalho de fuga solicitado da resposta.
+- `GetDeclaredTrailers()` -Obtém o cabeçalho "trailer" da solicitação que lista os marcadores a serem esperados após o corpo.
+- `SupportsTrailers()` -Indica se a solicitação dá suporte ao recebimento de cabeçalhos de trailer.
+- `CheckTrailersAvailable()` -Determina se a solicitação dá suporte a trailers e se estão disponíveis para leitura.
+- `GetTrailer(string trailerName)` -Obtém o cabeçalho à direita solicitado da resposta.
 
-#### <a name="reason-for-change"></a>Motivo da mudança
+#### <a name="reason-for-change"></a>Motivo da alteração
 
-Os trailers são uma característica fundamental em cenários como o gRPC. A fusão dos reboques para solicitar cabeçalhos foi confuso para os usuários.
+Os trailers são um recurso importante em cenários como o gRPC. Mesclar os trailers em cabeçalhos de solicitação era confuso para os usuários.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Use os métodos de `HttpRequest` extensão relacionados ao reboque para acessar reboques.
+Use os métodos de extensão relacionados ao trailer no `HttpRequest` para acessar os trailers.
 
 #### <a name="category"></a>Categoria
 

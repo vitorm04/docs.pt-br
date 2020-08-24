@@ -8,7 +8,7 @@ ms.locfileid: "82728284"
 ---
 ### <a name="http-httpclient-instances-created-by-ihttpclientfactory-log-integer-status-codes"></a>HTTP: instâncias de HttpClient criadas por códigos de status de inteiro de log IHttpClientFactory
 
-<xref:System.Net.Http.HttpClient>instâncias criadas por <xref:System.Net.Http.IHttpClientFactory> códigos de status HTTP de log como inteiros em vez de com nomes de código de status.
+<xref:System.Net.Http.HttpClient> instâncias criadas por <xref:System.Net.Http.IHttpClientFactory> códigos de status HTTP de log como inteiros em vez de com nomes de código de status.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -38,13 +38,13 @@ O comportamento original desse log é inconsistente com outras partes do ASP.NET
 
 O uso de valores inteiros é mais flexível que o texto, pois permite consultas em intervalos de valores.
 
-A adição de outro valor de log para capturar o código de status inteiro foi considerada. Infelizmente, isso introduziria outra inconsistência com o restante do ASP.NET Core. O log de HttpClient e o servidor HTTP/log de `StatusCode` hospedagem usam o mesmo nome de chave já.
+A adição de outro valor de log para capturar o código de status inteiro foi considerada. Infelizmente, isso introduziria outra inconsistência com o restante do ASP.NET Core. O log de HttpClient e o servidor HTTP/log de hospedagem usam o mesmo `StatusCode` nome de chave já.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
 A melhor opção é atualizar as consultas de log para usar os valores inteiros de códigos de status. Essa opção pode causar alguma dificuldade para gravar consultas em várias versões de ASP.NET Core. No entanto, o uso de inteiros para essa finalidade é muito mais flexível para consultar logs.
 
-Se você precisar forçar a compatibilidade com o comportamento antigo e usar códigos de status textuais, substitua `IHttpClientFactory` o log pelo seu próprio:
+Se você precisar forçar a compatibilidade com o comportamento antigo e usar códigos de status textuais, substitua o `IHttpClientFactory` log pelo seu próprio:
 
 1. Copie as versões 3,1 do .NET Core das seguintes classes em seu projeto:
 
@@ -55,7 +55,7 @@ Se você precisar forçar a compatibilidade com o comportamento antigo e usar c�
 
 1. Renomeie as classes para evitar conflitos com tipos públicos no pacote NuGet [Microsoft. Extensions. http](https://www.nuget.org/packages/Microsoft.Extensions.Http) .
 
-1. Substitua a implementação interna de `LoggingHttpMessageHandlerBuilderFilter` pela sua própria no método do `Startup.ConfigureServices` projeto. Por exemplo: 
+1. Substitua a implementação interna de `LoggingHttpMessageHandlerBuilderFilter` pela sua própria no método do projeto `Startup.ConfigureServices` . Por exemplo:
 
     ```csharp
     public void ConfigureServices(IServiceCollection services)

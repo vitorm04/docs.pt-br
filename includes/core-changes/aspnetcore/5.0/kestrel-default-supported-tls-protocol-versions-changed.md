@@ -27,7 +27,7 @@ O Kestrel exigiu que as conexões usem TLS 1,1 ou TLS 1,2 por padrão.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-O Kestrel permite que o sistema operacional escolha o melhor protocolo a ser usado e bloqueie protocolos inseguros. <xref:Microsoft.AspNetCore.Server.Kestrel.Https.HttpsConnectionAdapterOptions.SslProtocols%2A?displayProperty=nameWithType>Agora, o padrão é `SslProtocols.None` em vez de `SslProtocols.Tls12 | SslProtocols.Tls11` .
+O Kestrel permite que o sistema operacional escolha o melhor protocolo a ser usado e bloqueie protocolos inseguros. <xref:Microsoft.AspNetCore.Server.Kestrel.Https.HttpsConnectionAdapterOptions.SslProtocols%2A?displayProperty=nameWithType> Agora, o padrão é `SslProtocols.None` em vez de `SslProtocols.Tls12 | SslProtocols.Tls11` .
 
 #### <a name="reason-for-change"></a>Motivo da alteração
 
