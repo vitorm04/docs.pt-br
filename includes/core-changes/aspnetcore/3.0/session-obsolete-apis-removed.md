@@ -6,21 +6,21 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198335"
 ---
-### <a name="session-state-obsolete-apis-removed"></a><span data-ttu-id="ae99b-101">Estado da sessão: APIs obsoletas removidas</span><span class="sxs-lookup"><span data-stu-id="ae99b-101">Session state: Obsolete APIs removed</span></span>
+### <a name="session-state-obsolete-apis-removed"></a><span data-ttu-id="d5194-101">Estado da sessão: APIs obsoletas removidas</span><span class="sxs-lookup"><span data-stu-id="d5194-101">Session state: Obsolete APIs removed</span></span>
 
-<span data-ttu-id="ae99b-102">ApIs obsoletas para configurar cookies de sessão foram removidas.</span><span class="sxs-lookup"><span data-stu-id="ae99b-102">Obsolete APIs for configuring session cookies were removed.</span></span> <span data-ttu-id="ae99b-103">Para obter mais informações, consulte [aspnet/Announcements#257](https://github.com/aspnet/Announcements/issues/257).</span><span class="sxs-lookup"><span data-stu-id="ae99b-103">For more information, see [aspnet/Announcements#257](https://github.com/aspnet/Announcements/issues/257).</span></span>
+<span data-ttu-id="d5194-102">APIs obsoletas para configurar cookies de sessão foram removidas.</span><span class="sxs-lookup"><span data-stu-id="d5194-102">Obsolete APIs for configuring session cookies were removed.</span></span> <span data-ttu-id="d5194-103">Para obter mais informações, consulte [ASPNET/comunicados n º 257](https://github.com/aspnet/Announcements/issues/257).</span><span class="sxs-lookup"><span data-stu-id="d5194-103">For more information, see [aspnet/Announcements#257](https://github.com/aspnet/Announcements/issues/257).</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="ae99b-104">Versão introduzida</span><span class="sxs-lookup"><span data-stu-id="ae99b-104">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="d5194-104">Versão introduzida</span><span class="sxs-lookup"><span data-stu-id="d5194-104">Version introduced</span></span>
 
-<span data-ttu-id="ae99b-105">3.0</span><span class="sxs-lookup"><span data-stu-id="ae99b-105">3.0</span></span>
+<span data-ttu-id="d5194-105">3,0</span><span class="sxs-lookup"><span data-stu-id="d5194-105">3.0</span></span>
 
-#### <a name="reason-for-change"></a><span data-ttu-id="ae99b-106">Motivo da mudança</span><span class="sxs-lookup"><span data-stu-id="ae99b-106">Reason for change</span></span>
+#### <a name="reason-for-change"></a><span data-ttu-id="d5194-106">Motivo da alteração</span><span class="sxs-lookup"><span data-stu-id="d5194-106">Reason for change</span></span>
 
-<span data-ttu-id="ae99b-107">Essa alteração impõe consistência entre as APIs para configurar recursos que usam cookies.</span><span class="sxs-lookup"><span data-stu-id="ae99b-107">This change enforces consistency across APIs for configuring features that use cookies.</span></span>
+<span data-ttu-id="d5194-107">Essa alteração impõe a consistência entre APIs para configurar recursos que usam cookies.</span><span class="sxs-lookup"><span data-stu-id="d5194-107">This change enforces consistency across APIs for configuring features that use cookies.</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="ae99b-108">Ação recomendada</span><span class="sxs-lookup"><span data-stu-id="ae99b-108">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="d5194-108">Ação recomendada</span><span class="sxs-lookup"><span data-stu-id="d5194-108">Recommended action</span></span>
 
-<span data-ttu-id="ae99b-109">Migre o uso das APIs removidas para suas substituições mais novas.</span><span class="sxs-lookup"><span data-stu-id="ae99b-109">Migrate usage of the removed APIs to their newer replacements.</span></span> <span data-ttu-id="ae99b-110">Considere o exemplo a seguir em `Startup.ConfigureServices`:</span><span class="sxs-lookup"><span data-stu-id="ae99b-110">Consider the following example in `Startup.ConfigureServices`:</span></span>
+<span data-ttu-id="d5194-109">Migre o uso das APIs removidas para suas substituições mais recentes.</span><span class="sxs-lookup"><span data-stu-id="d5194-109">Migrate usage of the removed APIs to their newer replacements.</span></span> <span data-ttu-id="d5194-110">Considere o exemplo a seguir em `Startup.ConfigureServices`:</span><span class="sxs-lookup"><span data-stu-id="d5194-110">Consider the following example in `Startup.ConfigureServices`:</span></span>
 
 ```csharp
 public void ConfigureServices(ServiceCollection services)
@@ -44,11 +44,11 @@ public void ConfigureServices(ServiceCollection services)
 }
 ```
 
-#### <a name="category"></a><span data-ttu-id="ae99b-111">Categoria</span><span class="sxs-lookup"><span data-stu-id="ae99b-111">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="d5194-111">Categoria</span><span class="sxs-lookup"><span data-stu-id="d5194-111">Category</span></span>
 
-<span data-ttu-id="ae99b-112">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="ae99b-112">ASP.NET Core</span></span>
+<span data-ttu-id="d5194-112">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="d5194-112">ASP.NET Core</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="ae99b-113">APIs afetadas</span><span class="sxs-lookup"><span data-stu-id="ae99b-113">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="d5194-113">APIs afetadas</span><span class="sxs-lookup"><span data-stu-id="d5194-113">Affected APIs</span></span>
 
 - <xref:Microsoft.AspNetCore.Builder.SessionOptions.CookieDomain?displayProperty=fullName>
 - <xref:Microsoft.AspNetCore.Builder.SessionOptions.CookieHttpOnly?displayProperty=fullName>

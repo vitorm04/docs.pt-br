@@ -6,31 +6,31 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/24/2020
 ms.locfileid: "82135822"
 ---
-### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a><span data-ttu-id="94d1c-101">APIs antifalsificação obsoletas, CORS, diagnóstico, MVC e roteamento removidas</span><span class="sxs-lookup"><span data-stu-id="94d1c-101">Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed</span></span>
+### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a><span data-ttu-id="51ef1-101">APIs antifalsificação obsoletas, CORS, diagnóstico, MVC e roteamento removidas</span><span class="sxs-lookup"><span data-stu-id="51ef1-101">Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed</span></span>
 
-<span data-ttu-id="94d1c-102">Os membros obsoletos e as opções de compatibilidade no ASP.NET Core 2,2 foram removidos.</span><span class="sxs-lookup"><span data-stu-id="94d1c-102">Obsolete members and compatibility switches in ASP.NET Core 2.2 were removed.</span></span>
+<span data-ttu-id="51ef1-102">Os membros obsoletos e as opções de compatibilidade no ASP.NET Core 2,2 foram removidos.</span><span class="sxs-lookup"><span data-stu-id="51ef1-102">Obsolete members and compatibility switches in ASP.NET Core 2.2 were removed.</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="94d1c-103">Versão introduzida</span><span class="sxs-lookup"><span data-stu-id="94d1c-103">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="51ef1-103">Versão introduzida</span><span class="sxs-lookup"><span data-stu-id="51ef1-103">Version introduced</span></span>
 
-<span data-ttu-id="94d1c-104">3.0</span><span class="sxs-lookup"><span data-stu-id="94d1c-104">3.0</span></span>
+<span data-ttu-id="51ef1-104">3,0</span><span class="sxs-lookup"><span data-stu-id="51ef1-104">3.0</span></span>
 
-#### <a name="reason-for-change"></a><span data-ttu-id="94d1c-105">Motivo da alteração</span><span class="sxs-lookup"><span data-stu-id="94d1c-105">Reason for change</span></span>
+#### <a name="reason-for-change"></a><span data-ttu-id="51ef1-105">Motivo da alteração</span><span class="sxs-lookup"><span data-stu-id="51ef1-105">Reason for change</span></span>
 
-<span data-ttu-id="94d1c-106">Melhoria da superfície da API ao longo do tempo.</span><span class="sxs-lookup"><span data-stu-id="94d1c-106">Improvement of API surface over time.</span></span>
+<span data-ttu-id="51ef1-106">Melhoria da superfície da API ao longo do tempo.</span><span class="sxs-lookup"><span data-stu-id="51ef1-106">Improvement of API surface over time.</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="94d1c-107">Ação recomendada</span><span class="sxs-lookup"><span data-stu-id="94d1c-107">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="51ef1-107">Ação recomendada</span><span class="sxs-lookup"><span data-stu-id="51ef1-107">Recommended action</span></span>
 
-<span data-ttu-id="94d1c-108">Embora tenha como alvo o .NET Core 2,2, siga as orientações nas mensagens de compilação obsoletas para adotar novas APIs em vez disso.</span><span class="sxs-lookup"><span data-stu-id="94d1c-108">While targeting .NET Core 2.2, follow the guidance in the obsolete build messages to adopt new APIs instead.</span></span>
+<span data-ttu-id="51ef1-108">Embora tenha como alvo o .NET Core 2,2, siga as orientações nas mensagens de compilação obsoletas para adotar novas APIs em vez disso.</span><span class="sxs-lookup"><span data-stu-id="51ef1-108">While targeting .NET Core 2.2, follow the guidance in the obsolete build messages to adopt new APIs instead.</span></span>
 
-#### <a name="category"></a><span data-ttu-id="94d1c-109">Categoria</span><span class="sxs-lookup"><span data-stu-id="94d1c-109">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="51ef1-109">Categoria</span><span class="sxs-lookup"><span data-stu-id="51ef1-109">Category</span></span>
 
-<span data-ttu-id="94d1c-110">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="94d1c-110">ASP.NET Core</span></span>
+<span data-ttu-id="51ef1-110">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="51ef1-110">ASP.NET Core</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="94d1c-111">APIs afetadas</span><span class="sxs-lookup"><span data-stu-id="94d1c-111">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="51ef1-111">APIs afetadas</span><span class="sxs-lookup"><span data-stu-id="51ef1-111">Affected APIs</span></span>
 
-<span data-ttu-id="94d1c-112">Os seguintes tipos e membros foram marcados como obsoletos para ASP.NET Core 2,1 e 2,2:</span><span class="sxs-lookup"><span data-stu-id="94d1c-112">The following types and members were marked as obsolete for ASP.NET Core 2.1 and 2.2:</span></span>
+<span data-ttu-id="51ef1-112">Os seguintes tipos e membros foram marcados como obsoletos para ASP.NET Core 2,1 e 2,2:</span><span class="sxs-lookup"><span data-stu-id="51ef1-112">The following types and members were marked as obsolete for ASP.NET Core 2.1 and 2.2:</span></span>
 
-<span data-ttu-id="94d1c-113">**Tipos**</span><span class="sxs-lookup"><span data-stu-id="94d1c-113">**Types**</span></span>
+<span data-ttu-id="51ef1-113">**Types**</span><span class="sxs-lookup"><span data-stu-id="51ef1-113">**Types**</span></span>
 
 - `Microsoft.AspNetCore.Diagnostics.Views.WelcomePage`
 - `Microsoft.AspNetCore.DiagnosticsViewPage.Views.AttributeValue`
@@ -43,7 +43,7 @@ ms.locfileid: "82135822"
 - `Microsoft.AspNetCore.Routing.IRouteValuesAddressMetadata`
 - `Microsoft.AspNetCore.Routing.RouteValuesAddressMetadata`
 
-<span data-ttu-id="94d1c-114">**Construtores**</span><span class="sxs-lookup"><span data-stu-id="94d1c-114">**Constructors**</span></span>
+<span data-ttu-id="51ef1-114">**Construtores**</span><span class="sxs-lookup"><span data-stu-id="51ef1-114">**Constructors**</span></span>
 
 - `Microsoft.AspNetCore.Cors.Infrastructure.CorsService(IOptions{CorsOptions})`
 - `Microsoft.AspNetCore.Routing.Tree.TreeRouteBuilder(ILoggerFactory,UrlEncoder,ObjectPool{UriBuildingContext},IInlineConstraintResolver)`
@@ -53,8 +53,8 @@ ms.locfileid: "82135822"
 - `Microsoft.AspNetCore.Mvc.Formatters.FormatFilter(IOptions{MvcOptions})`
 - ``Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinder`1(IModelBinder)``
 - `Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinder`
-- [<span data-ttu-id="94d1c-115">Microsoft. AspNetCore. Mvc. Modelbinding. Binderers. CollectionModelBinder ' 1 (IModelBinder)</span><span class="sxs-lookup"><span data-stu-id="94d1c-115">Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinder\`1(IModelBinder)</span></span>](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.binders.collectionmodelbinder-1.-ctor?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_ModelBinding_Binders_CollectionModelBinder_1__ctor_Microsoft_AspNetCore_Mvc_ModelBinding_IModelBinder_)
-- [<span data-ttu-id="94d1c-116">Microsoft. AspNetCore. Mvc. Modelbinding. Binderers. ComplexTypeModelBinder (IDictionary ' 2)</span><span class="sxs-lookup"><span data-stu-id="94d1c-116">Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder(IDictionary\`2)</span></span>](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.binders.complextypemodelbinder.-ctor?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_ModelBinding_Binders_ComplexTypeModelBinder__ctor_System_Collections_Generic_IDictionary_Microsoft_AspNetCore_Mvc_ModelBinding_ModelMetadata_Microsoft_AspNetCore_Mvc_ModelBinding_IModelBinder__)
+- [<span data-ttu-id="51ef1-115">Microsoft. AspNetCore. Mvc. Modelbinding. Binderers. CollectionModelBinder ' 1 (IModelBinder)</span><span class="sxs-lookup"><span data-stu-id="51ef1-115">Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinder\`1(IModelBinder)</span></span>](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.binders.collectionmodelbinder-1.-ctor?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_ModelBinding_Binders_CollectionModelBinder_1__ctor_Microsoft_AspNetCore_Mvc_ModelBinding_IModelBinder_)
+- [<span data-ttu-id="51ef1-116">Microsoft. AspNetCore. Mvc. Modelbinding. Binderers. ComplexTypeModelBinder (IDictionary ' 2)</span><span class="sxs-lookup"><span data-stu-id="51ef1-116">Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder(IDictionary\`2)</span></span>](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.binders.complextypemodelbinder.-ctor?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_ModelBinding_Binders_ComplexTypeModelBinder__ctor_System_Collections_Generic_IDictionary_Microsoft_AspNetCore_Mvc_ModelBinding_ModelMetadata_Microsoft_AspNetCore_Mvc_ModelBinding_IModelBinder__)
 - ``Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinder`2(IModelBinder,IModelBinder)``
 - `Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DoubleModelBinder(System.Globalization.NumberStyles)`
 - `Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatModelBinder(System.Globalization.NumberStyles)`
@@ -67,19 +67,19 @@ ms.locfileid: "82135822"
 - `Microsoft.AspNetCore.Mvc.ModelBinding.ModelAttributes(IEnumerable{System.Object},IEnumerable{System.Object})`
 - `Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory(IModelMetadataProvider,IOptions{MvcOptions})`
 - `Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder(IModelMetadataProvider,IModelBinderFactory,IObjectModelValidator)`
-- [<span data-ttu-id="94d1c-117">Microsoft. AspNetCore. Mvc. Routing. KnownRouteValueConstraint ()</span><span class="sxs-lookup"><span data-stu-id="94d1c-117">Microsoft.AspNetCore.Mvc.Routing.KnownRouteValueConstraint()</span></span>](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.routing.knownroutevalueconstraint.-ctor?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_Routing_KnownRouteValueConstraint__ctor)
+- [<span data-ttu-id="51ef1-117">Microsoft. AspNetCore. Mvc. Routing. KnownRouteValueConstraint ()</span><span class="sxs-lookup"><span data-stu-id="51ef1-117">Microsoft.AspNetCore.Mvc.Routing.KnownRouteValueConstraint()</span></span>](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.routing.knownroutevalueconstraint.-ctor?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_Routing_KnownRouteValueConstraint__ctor)
 - `Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerInputFormatter`
 - `Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerInputFormatter(System.Boolean)`
 - `Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerInputFormatter(MvcOptions)`
 - `Microsoft.AspNetCore.Mvc.Formatters.XmlSerializerInputFormatter`
 - `Microsoft.AspNetCore.Mvc.Formatters.XmlSerializerInputFormatter(System.Boolean)`
 - `Microsoft.AspNetCore.Mvc.Formatters.XmlSerializerInputFormatter(MvcOptions)`
-- [<span data-ttu-id="94d1c-118">Microsoft. AspNetCore. Mvc. TagHelpers. ImageTagHelper (IHostingEnvironment, IMemoryCache, HtmlEncoder, IUrlHelperFactory)</span><span class="sxs-lookup"><span data-stu-id="94d1c-118">Microsoft.AspNetCore.Mvc.TagHelpers.ImageTagHelper(IHostingEnvironment,IMemoryCache,HtmlEncoder,IUrlHelperFactory)</span></span>](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.taghelpers.imagetaghelper.-ctor?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_TagHelpers_ImageTagHelper__ctor_Microsoft_AspNetCore_Hosting_IHostingEnvironment_Microsoft_Extensions_Caching_Memory_IMemoryCache_System_Text_Encodings_Web_HtmlEncoder_Microsoft_AspNetCore_Mvc_Routing_IUrlHelperFactory_)
+- [<span data-ttu-id="51ef1-118">Microsoft. AspNetCore. Mvc. TagHelpers. ImageTagHelper (IHostingEnvironment, IMemoryCache, HtmlEncoder, IUrlHelperFactory)</span><span class="sxs-lookup"><span data-stu-id="51ef1-118">Microsoft.AspNetCore.Mvc.TagHelpers.ImageTagHelper(IHostingEnvironment,IMemoryCache,HtmlEncoder,IUrlHelperFactory)</span></span>](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.taghelpers.imagetaghelper.-ctor?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_TagHelpers_ImageTagHelper__ctor_Microsoft_AspNetCore_Hosting_IHostingEnvironment_Microsoft_Extensions_Caching_Memory_IMemoryCache_System_Text_Encodings_Web_HtmlEncoder_Microsoft_AspNetCore_Mvc_Routing_IUrlHelperFactory_)
 - `Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper(IHostingEnvironment,IMemoryCache,HtmlEncoder,JavaScriptEncoder,IUrlHelperFactory)`
 - `Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper(IHostingEnvironment,IMemoryCache,HtmlEncoder,JavaScriptEncoder,IUrlHelperFactory)`
 - `Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.RazorPageAdapter(RazorPageBase)`
 
-<span data-ttu-id="94d1c-119">**Propriedades**</span><span class="sxs-lookup"><span data-stu-id="94d1c-119">**Properties**</span></span>
+<span data-ttu-id="51ef1-119">**Propriedades**</span><span class="sxs-lookup"><span data-stu-id="51ef1-119">**Properties**</span></span>
 
 - `Microsoft.AspNetCore.Antiforgery.AntiforgeryOptions.CookieDomain`
 - `Microsoft.AspNetCore.Antiforgery.AntiforgeryOptions.CookieName`
@@ -104,7 +104,7 @@ ms.locfileid: "82135822"
 - `Microsoft.AspNetCore.Mvc.RazorPages.RazorPagesOptions.AllowDefaultHandlingForOptionsRequests`
 - `Microsoft.AspNetCore.Mvc.RazorPages.RazorPagesOptions.AllowMappingHeadRequestsToGetHandler`
 
-<span data-ttu-id="94d1c-120">**Métodos**</span><span class="sxs-lookup"><span data-stu-id="94d1c-120">**Methods**</span></span>
+<span data-ttu-id="51ef1-120">**Métodos**</span><span class="sxs-lookup"><span data-stu-id="51ef1-120">**Methods**</span></span>
 
 - `Microsoft.AspNetCore.Mvc.LocalRedirectResult.ExecuteResult(ActionContext)`
 - `Microsoft.AspNetCore.Mvc.RedirectResult.ExecuteResult(ActionContext)`
@@ -112,7 +112,7 @@ ms.locfileid: "82135822"
 - `Microsoft.AspNetCore.Mvc.RedirectToPageResult.ExecuteResult(ActionContext)`
 - `Microsoft.AspNetCore.Mvc.RedirectToRouteResult.ExecuteResult(ActionContext)`
 - `Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext,IValueProvider,ParameterDescriptor)`
-- [<span data-ttu-id="94d1c-121">Microsoft. AspNetCore. Mvc. Modelbinding. ParameterBinder. BindModelAsync (ActionContext, IValueProvider, ParameterDescriptor, Object)</span><span class="sxs-lookup"><span data-stu-id="94d1c-121">Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext,IValueProvider,ParameterDescriptor,Object)</span></span>](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.parameterbinder.bindmodelasync?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_ModelBinding_ParameterBinder_BindModelAsync_Microsoft_AspNetCore_Mvc_ActionContext_Microsoft_AspNetCore_Mvc_ModelBinding_IValueProvider_Microsoft_AspNetCore_Mvc_Abstractions_ParameterDescriptor_System_Object_)
+- [<span data-ttu-id="51ef1-121">Microsoft. AspNetCore. Mvc. Modelbinding. ParameterBinder. BindModelAsync (ActionContext, IValueProvider, ParameterDescriptor, Object)</span><span class="sxs-lookup"><span data-stu-id="51ef1-121">Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext,IValueProvider,ParameterDescriptor,Object)</span></span>](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.parameterbinder.bindmodelasync?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_ModelBinding_ParameterBinder_BindModelAsync_Microsoft_AspNetCore_Mvc_ActionContext_Microsoft_AspNetCore_Mvc_ModelBinding_IValueProvider_Microsoft_AspNetCore_Mvc_Abstractions_ParameterDescriptor_System_Object_)
 
 <!--
 
