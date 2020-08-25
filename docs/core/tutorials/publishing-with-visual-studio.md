@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 44646a307d230db395b55b9dec5acfd168605940
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: afbffa5dc8a620836ec1433a095face46c32df90
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701278"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811309"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio"></a>Tutorial: publicar um aplicativo de console do .NET Core usando o Visual Studio
 
@@ -87,7 +87,7 @@ Nas etapas a seguir, você examinará os arquivos criados pelo processo de publi
 
 1. Abra um prompt de comando e navegue até a pasta de *publicação* . Para fazer isso, insira `cd` e cole o caminho completo. Por exemplo:
 
-   ```
+   ```console
    cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\
    ```
 

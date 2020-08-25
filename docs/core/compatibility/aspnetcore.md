@@ -2,15 +2,15 @@
 title: ASP.NET Core alterações significativas
 titleSuffix: ''
 description: Lista as alterações significativas em ASP.NET Core.
-ms.date: 07/17/2020
+ms.date: 08/20/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 1506e0aa27778d44497252231028689259f48896
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 4f37bf73c13379bce006c9a3b51302c09562cc44
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720235"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811244"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core alterações significativas
 
@@ -69,6 +69,7 @@ As seguintes alterações significativas estão documentadas nesta página:
 - [Localização: Construtor obsoleto removido no middleware de localização de solicitação](#localization-obsolete-constructor-removed-in-request-localization-middleware)
 - [Localização: classe ResourceManagerWithCultureStringLocalizer e membro da interface WithCulture removidos](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [Log: classe DebugLogger criada internamente](#logging-debuglogger-class-made-internal)
+- [Middleware: página de erro do banco de dados marcada como obsoleta](#middleware-database-error-page-marked-as-obsolete)
 - [MVC: sufixo assíncrono de ação do controlador removido](#mvc-async-suffix-trimmed-from-controller-action-names)
 - [MVC: JsonResult movido para Microsoft. AspNetCore. Mvc. Core](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
 - [MVC: ferramenta de pré-compilação preterida](#mvc-precompilation-tool-deprecated)
@@ -159,6 +160,10 @@ As seguintes alterações significativas estão documentadas nesta página:
 ***
 
 [!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
+[!INCLUDE[Middleware: Database error page marked as obsolete](~/includes/core-changes/aspnetcore/5.0/middleware-database-error-page-obsolete.md)]
 
 ***
 

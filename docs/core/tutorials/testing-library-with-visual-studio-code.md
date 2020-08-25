@@ -2,12 +2,12 @@
 title: Testar um .NET Standard biblioteca de classes com o .NET Core usando Visual Studio Code
 description: Crie um projeto de teste de unidade para uma biblioteca de classes do .NET Core. Verifique se uma biblioteca de classes do .NET Core funciona corretamente com testes de unidade.
 ms.date: 06/08/2020
-ms.openlocfilehash: a61fd952eea2dec0d5a9f351d3f3d01c738e8fad
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: b5f394b5dea2bf0b4af6e8b119df3fa0ec113dd3
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701027"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811711"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>Tutorial: testar uma biblioteca de classes .NET Standard com o .NET Core usando Visual Studio Code
 
@@ -21,7 +21,7 @@ Este tutorial mostra como automatizar o teste de unidade adicionando um projeto 
 
 As unidade de teste fornecem testes de software automatizados durante o desenvolvimento e a publicação. A estrutura de teste que você usa neste tutorial é MSTest. [MSTest](https://github.com/Microsoft/testfx-docs) é uma das três estruturas de teste que você pode escolher. Os outros são [xUnit](https://xunit.net/) e [NUnit](https://nunit.org/).
 
-1. Inicie o Visual Studio Code.
+1. Iniciar o Visual Studio Code.
 
 1. Abra a `ClassLibraryProjects` solução que você criou em [criar uma .net Standard biblioteca no Visual Studio](library-with-visual-studio.md).
 
@@ -75,7 +75,7 @@ Para que o projeto de teste funcione com a `StringLibrary` classe, adicione uma 
 
 ## <a name="add-and-run-unit-test-methods"></a>Adicionar e executar métodos de teste de unidade
 
-Quando o Visual Studio executa um teste de unidade, ele executa cada método marcado com o <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> atributo em uma classe marcada com o <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> atributo. Um método de teste termina quando a primeira falha é encontrada ou quando todos os testes contidos no método foram bem-sucedidos.
+Quando o Visual Studio executa um teste de unidade, ele executa cada método marcado com o <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> atributo em uma classe marcada com o  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> atributo. Um método de teste termina quando a primeira falha é encontrada ou quando todos os testes contidos no método foram bem-sucedidos.
 
 Os testes mais comuns chamam membros da classe <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>. Muitos métodos assert incluem pelo menos dois parâmetros, um deles é o resultado esperado do teste, e o outro é o resultado real do teste. Alguns dos `Assert` métodos chamados mais frequentemente da classe são mostrados na tabela a seguir:
 
@@ -112,7 +112,7 @@ Para criar os métodos de teste:
 
    A saída do terminal mostra que todos os testes passaram.
 
-   ```
+   ```output
    Starting test execution, please wait...
 
    A total of 1 test files matched the specified pattern.
@@ -142,7 +142,7 @@ Se você estiver fazendo o TDD (desenvolvimento controlado por teste), você esc
 
    A saída do terminal mostra que um teste falha e fornece uma mensagem de erro para o teste com falha: "Assert. IsFalse falhou. Esperado para 'Error': false, real: True". Devido à falha, nenhuma cadeia de caracteres na matriz após o "erro" foi testada.
 
-   ```
+   ```output
    Starting test execution, please wait...
 
    A total of 1 test files matched the specified pattern.

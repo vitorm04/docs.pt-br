@@ -2,12 +2,12 @@
 title: Publicar um aplicativo de console do .NET Core usando Visual Studio Code
 description: A publicação cria o conjunto de arquivos necessários para executar um aplicativo .NET Core.
 ms.date: 07/04/2020
-ms.openlocfilehash: 8fd9975e8a88704b9dea45b40127c8dc03f7d09f
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 04dfbae85f196ca4c8f8eb593637a801aa9773f2
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051877"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811386"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: publicar um aplicativo de console do .NET Core usando Visual Studio Code
 
@@ -21,7 +21,7 @@ O CLI do .NET Core é usado para publicar o aplicativo, para que você possa seg
 
 ## <a name="publish-the-app"></a>Publicar o aplicativo
 
-1. Inicie o Visual Studio Code.
+1. Iniciar o Visual Studio Code.
 
 1. Abra a pasta do projeto *HelloWorld* que você criou em [criar um aplicativo de console do .net Core no Visual Studio Code](with-visual-studio-code.md).
 
@@ -39,7 +39,7 @@ O CLI do .NET Core é usado para publicar o aplicativo, para que você possa seg
 
    A saída do comando é semelhante ao exemplo a seguir:
 
-   ```
+   ```output
    Microsoft (R) Build Engine version 16.6.0+5ff7b0c9e for .NET Core
    Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -97,7 +97,7 @@ Nas etapas a seguir, você examinará os arquivos criados pelo processo de publi
 
    1. Insira um nome em resposta ao prompt e pressione qualquer tecla para sair.
 
-1. Em qualquer plataforma, execute o aplicativo usando o [`dotnet`](../tools/dotnet.md) comando:
+1. Em qualquer plataforma, execute o aplicativo usando o  [`dotnet`](../tools/dotnet.md) comando:
 
    1. Insira `dotnet HelloWorld.dll` e pressione <kbd>Enter</kbd>.
 

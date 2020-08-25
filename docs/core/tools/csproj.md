@@ -3,12 +3,12 @@ title: Adições ao formato csproj para .NET Core
 description: Saiba mais sobre as diferenças entre arquivos existentes e de csproj do .NET Core
 ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: 82174b2976abda2337a4a9b5a5a5e1f60a1094fb
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 7760dc095fa894b1f356c939eb030e675f58a876
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608333"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810879"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -20,13 +20,13 @@ Os metapacotes são referenciados implicitamente de acordo com as estruturas de 
 
 ```xml
  <PropertyGroup>
-   <TargetFramework>netcoreapp2.1</TargetFramework>
+   <TargetFramework>netcoreapp3.1</TargetFramework>
  </PropertyGroup>
  ```
 
  ```xml
  <PropertyGroup>
-   <TargetFrameworks>netcoreapp2.1;net462</TargetFrameworks>
+   <TargetFrameworks>netcoreapp3.1;net462</TargetFrameworks>
  </PropertyGroup>
  ```
 
@@ -116,11 +116,15 @@ Para desabilitar **todos os globs implícitos**, defina a propriedade `<EnableDe
 
 Uma vez que essas alterações do csproj simplificam bastante os arquivos de projeto, talvez você queira conferir o projeto totalmente expandido conforme exibido pelo MSBuild, quando o SDK e os respectivos destinos forem incluídos. Pré-processe o projeto com [a opção `/pp`](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) do comando [`dotnet msbuild`](dotnet-msbuild.md), que mostra quais arquivos foram importados, as respectivas origens e contribuições para o build, sem realmente criar o projeto:
 
-`dotnet msbuild -pp:fullproject.xml`
+```dotnetcli
+dotnet msbuild -pp:fullproject.xml
+```
 
 Quando o projeto tem várias estruturas de destino, os resultados do comando devem se concentrar apenas em uma delas, especificando-a como uma propriedade do MSBuild:
 
-`dotnet msbuild -p:TargetFramework=netcoreapp2.0 -pp:fullproject.xml`
+```dotnetcli
+dotnet msbuild -p:TargetFramework=netcoreapp3.1 -pp:fullproject.xml
+```
 
 ## <a name="additions"></a>Adições
 
@@ -218,10 +222,10 @@ O exemplo a seguir fornece os fallbacks para todos os destinos em seu projeto:
 </PackageTargetFallback >
 ```
 
-O exemplo a seguir especifica os fallbacks apenas para o destino `netcoreapp2.1`:
+O exemplo a seguir especifica os fallbacks apenas para o destino `netcoreapp3.1`:
 
 ```xml
-<PackageTargetFallback Condition="'$(TargetFramework)'=='netcoreapp2.1'">
+<PackageTargetFallback Condition="'$(TargetFramework)'=='netcoreapp3.1'">
     $(PackageTargetFallback);portable-net45+win8+wpa81+wp8
 </PackageTargetFallback >
 ```
@@ -267,7 +271,7 @@ Especifica a versão que o pacote resultante terá. Aceita todos os formatos de 
 
 Especifica o nome para o pacote resultante. Se não for especificado, a operação `pack` usará como padrão o `AssemblyName` ou o nome do diretório como o nome do pacote.
 
-### <a name="title"></a>Title
+### <a name="title"></a>Título
 
 Um título amigável do pacote, geralmente usado em exibições de interface do usuário como em nuget.org e no Gerenciador de Pacotes do Visual Studio. Se não for especificado, a ID do pacote será usada em seu lugar.
 

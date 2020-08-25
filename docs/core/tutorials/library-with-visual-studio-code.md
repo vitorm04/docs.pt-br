@@ -2,12 +2,12 @@
 title: Criar uma biblioteca de classes de .NET Standard usando Visual Studio Code
 description: Saiba como criar uma biblioteca de classes de .NET Standard usando Visual Studio Code.
 ms.date: 06/08/2020
-ms.openlocfilehash: 714b5cf2125f1d296adc4a4dc7d1b6c9420417ed
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 146dfd49e448494cce0c844282bc0394a8739ac9
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308878"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810853"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>Tutorial: criar uma biblioteca de .NET Standard usando Visual Studio Code
 
@@ -42,7 +42,7 @@ Comece criando uma solução em branco para colocar o projeto de biblioteca de c
 
    A saída do terminal é semelhante ao exemplo a seguir:
 
-   ```
+   ```output
    The template "Solution File" was created successfully.
    ```
 
@@ -58,7 +58,7 @@ Adicione um novo projeto de biblioteca de classe .NET Standard chamado "StringLi
 
    A saída do terminal é semelhante ao exemplo a seguir:
 
-   ```
+   ```output
    The template "Class library" was created successfully.
    Processing post-creation actions...
    Running 'dotnet restore' on StringLibrary\StringLibrary.csproj...
@@ -75,7 +75,7 @@ Adicione um novo projeto de biblioteca de classe .NET Standard chamado "StringLi
 
    A saída do terminal é semelhante ao exemplo a seguir:
 
-   ```
+   ```output
    Project `StringLibrary\StringLibrary.csproj` added to the solution.
    ```
 
@@ -109,7 +109,7 @@ Adicione um novo projeto de biblioteca de classe .NET Standard chamado "StringLi
 
    A saída do terminal é semelhante ao exemplo a seguir:
 
-   ```
+   ```output
    Microsoft (R) Build Engine version 16.6.0 for .NET Core
    Copyright (C) Microsoft Corporation. All rights reserved.
      Determining projects to restore...
@@ -134,7 +134,7 @@ Adicione um aplicativo de console que usa a biblioteca de classes. O aplicativo 
 
    A saída do terminal é semelhante ao exemplo a seguir:
 
-   ```
+   ```output
    The template "Console Application" was created successfully.
    Processing post-creation actions...
    Running 'dotnet restore' on ShowCase\ShowCase.csproj...  
@@ -151,7 +151,7 @@ Adicione um aplicativo de console que usa a biblioteca de classes. O aplicativo 
 
    A saída do terminal é semelhante ao exemplo a seguir:
 
-   ```
+   ```output
    Project `ShowCase\ShowCase.csproj` added to the solution.
    ```
 
@@ -169,7 +169,7 @@ Adicione um aplicativo de console que usa a biblioteca de classes. O aplicativo 
 
 Inicialmente, o novo projeto de aplicativo de console não tem acesso à biblioteca de classes. Para permitir que ele chame métodos na biblioteca de classes, crie uma referência de projeto para o projeto de biblioteca de classes.
 
-1. Execute o seguinte comando:
+1. Execute o comando a seguir:
 
    ```dotnetcli
    dotnet add ShowCase/ShowCase.csproj reference StringLibrary/StringLibrary.csproj
@@ -177,7 +177,7 @@ Inicialmente, o novo projeto de aplicativo de console não tem acesso à bibliot
 
    A saída do terminal é semelhante ao exemplo a seguir:
 
-   ```
+   ```output
    Reference `..\StringLibrary\StringLibrary.csproj` added to the project.
    ```
 
@@ -193,7 +193,7 @@ Inicialmente, o novo projeto de aplicativo de console não tem acesso à bibliot
 
    A saída do terminal é semelhante ao exemplo a seguir:
 
-   ```
+   ```output
    Press <Enter> only to exit; otherwise, enter a string and press <Enter>:
 
    A string that starts with an uppercase letter

@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: a5d838176bf4437a295ebe6c2cea8b1fe0eeeb61
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: d1f9878c7e7c07944a943c0b05e557ceaa5d1b2f
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656287"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812114"
 ---
 # <a name="character-encoding-in-net"></a>Codificação de caracteres no .NET
 
@@ -89,7 +89,7 @@ No exemplo anterior, cada char acter, exceto o espaço, é representado por duas
 
 Um único Emoji Unicode também é representado por dois `char` s, como visto no exemplo a seguir, mostrando um Emoji Ox:
 
-```
+```output
 "🐂".Length = 2
 s[0] = '�' ('\ud83d')
 s[1] = '�' ('\udc02')
@@ -384,7 +384,7 @@ string asString = encoding.GetString(utf8Bytes); // will throw if 'utf8Bytes' is
 
 Para obter informações sobre como usar as `Encoding` classes internas, consulte [como usar char classes de codificação acter no .net](character-encoding.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.String>
 - <xref:System.Char>

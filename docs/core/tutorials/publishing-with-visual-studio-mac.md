@@ -2,12 +2,12 @@
 title: Publicar um aplicativo de console do .NET Core usando Visual Studio para Mac
 description: A publicação cria o conjunto de arquivos necessários para executar um aplicativo .NET Core.
 ms.date: 06/08/2020
-ms.openlocfilehash: 67762481d3a56b8473e643f71b8df909b6e54fc6
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 38b656ac919dfb8b710a97c5d7fc63479e3fa367
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713661"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811399"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-for-mac"></a>Tutorial: publicar um aplicativo de console do .NET Core usando Visual Studio para Mac
 
@@ -69,7 +69,7 @@ Como mostra a imagem anterior, a saída publicada inclui os seguintes arquivos:
 
 1. Abra um terminal e navegue até a pasta de *publicação* . Para fazer isso, insira `cd` e cole o caminho que você copiou anteriormente. Por exemplo:
 
-   ```
+   ```console
    cd ~/Projects/HelloWorld/HelloWorld/bin/Release/netcoreapp3.1/publish/
    ```
 

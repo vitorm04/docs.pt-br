@@ -4,12 +4,12 @@ description: Saiba como cortar aplicativos independentes para reduzir seu tamanh
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 0fde409e9e5911213855ab206368d302b73eebb3
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: e3eb161b14f206723ad034af0a4a6ba8cd575578
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720118"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810606"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Cortar implantações e executáveis autossuficientes
 
@@ -36,28 +36,29 @@ Quando o código está indiretamente referenciando um assembly por meio de refle
 
 ## <a name="trim-your-app---cli"></a>Cortar sua app-CLI
 
-Corte seu aplicativo usando o comando [dotnet Publish](../tools/dotnet-publish.md) . Ao publicar seu aplicativo, defina as três configurações a seguir:
+Corte seu aplicativo usando o comando [dotnet Publish](../tools/dotnet-publish.md) . Ao publicar seu aplicativo, defina as seguintes propriedades:
 
-- Publicar como independente: `--self-contained true`
-- Habilitar corte: `p:PublishTrimmed=true`
+- Publicar como um aplicativo independente para um tempo de execução específico: `-r win-x64`
+- Habilitar corte: `/p:PublishTrimmed=true`
 
 O exemplo a seguir publica um aplicativo para o Windows como independente e corta a saída.
 
 ```xml
-<ItemGroup>
+<PropertyGroup>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <SelfContained>true</SelfContained>
     <PublishTrimmed>true</PublishTrimmed>
-</ItemGroup>
+</PropertyGroup>
 ```
 
 O exemplo a seguir publica um aplicativo no modo de corte agressivo em que o código não utilizado nos assemblies será cortado e os avisos de corte serão habilitados.
 
 ```xml
-<ItemGroup>
+<PropertyGroup>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishTrimmed>true</PublishTrimmed>
     <TrimMode>link</TrimMode>
     <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
-</ItemGroup>
+</PropertyGroup>
 ```
 
 Para obter mais informações, consulte [publicar aplicativos .NET Core com CLI do .NET Core](deploy-with-cli.md).
@@ -94,7 +95,7 @@ Para obter mais informações, consulte [publicar aplicativos .NET Core com o Vi
 
 Visual Studio para Mac não fornece opções para cortar seu aplicativo durante a publicação. Você precisará publicar manualmente seguindo as instruções da seção [cortar sua app-CLI](#trim-your-app---cli) . Para obter mais informações, consulte [publicar aplicativos .NET Core com CLI do .NET Core](deploy-with-cli.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Implantação de aplicativo .NET Core](index.md).
 - [Publicar aplicativos .NET Core com CLI do .NET Core](deploy-with-cli.md).

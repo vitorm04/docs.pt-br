@@ -3,12 +3,12 @@ title: Diretrizes de segurança do conjunto de tabela e DataTable
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: f0fa43c467cc7866e69115acb5f807e6487fda7a
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 24c8a830f8638bc2d9dd20c2384c8230a682d817
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608522"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812231"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Diretrizes de segurança do conjunto de tabela e DataTable
 
@@ -34,7 +34,14 @@ Em todas as versões com suporte do .NET Framework, .NET Core e .NET, `DataSet` 
 
 Se os dados XML de entrada contiverem um objeto cujo tipo não está nesta lista:
 
-* Uma exceção é gerada.
+* Uma exceção é lançada com a mensagem e o rastreamento de pilha a seguir.  
+Mensagem de erro:  
+System. InvalidOperationException: tipo ' \<Type Name\> , Version = \<n.n.n.n\> , Culture = \<culture\> , PublicKeyToken = \<token value\> ' não é permitido aqui. Consulte [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227) para obter mais detalhes.  
+Rastreamento de pilha:  
+em System. Data. TypeLimiter. EnsureTypeIsAllowed (tipo Type, TypeLimiter capturedLimiter)  
+em System. Data. DataColumn. UpdateColumnType (tipo Type, o storagetype typeCode)  
+em System. Data. DataColumn. set_DataType (valor de tipo)  
+
 * A operação de desserialização falha.
 
 Ao carregar XML em uma `DataSet` instância ou existente `DataTable` , as definições de coluna existentes também são levadas em conta. Se a tabela já contiver uma definição de coluna de um tipo personalizado, esse tipo será adicionado temporariamente à lista de permissões para a duração da operação de desserialização de XML.

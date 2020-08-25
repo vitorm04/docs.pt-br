@@ -7,37 +7,37 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 95c0368889dfa4e69b5e40b32ea19ba845aa5c30
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 2d7cf73e37fe8c4bbdbef3d356f1dbb8903815f3
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747057"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812322"
 ---
 # <a name="globalization-for-wpf"></a>Globalização do WPF
-Este tópico apresenta problemas que você deve estar atento ao escrever [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos para o mercado global. Os elementos de programação de globalização são definidos no .NET no namespace <xref:System.Globalization>.
+Este tópico apresenta problemas que você deve estar atento ao escrever [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos para o mercado global. Os elementos de programação de globalização são definidos no .NET no <xref:System.Globalization> namespace.
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>Globalização XAML
- O Extensible Application Markup Language (XAML) é baseado em XML e aproveita o suporte à globalização definido na especificação XML. As seções a seguir descrevem alguns recursos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dos quais você deve estar atento.
+ O Extensible Application Markup Language (XAML) é baseado em XML e aproveita o suporte à globalização definido na especificação XML. As seções a seguir descrevem alguns [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] recursos dos quais você deve estar ciente.
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>Referências de Caractere
 Uma referência de caractere fornece a unidade de código UTF16 do caractere Unicode específico que ela representa, em decimal ou hexadecimal. O exemplo a seguir mostra uma referência de caractere decimal para a letra maiúscula CÓPTICA HORI ou ' Ϩ ':
 
-```
+```xaml
 &#1000;
 ```
 
 O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que ele tem um **x** na frente do número hexadecimal.
 
-```
+```xaml
 &#x3E8;
 ```
 
 <a name="encoding"></a>
 ### <a name="encoding"></a>Codificação
- A codificação com suporte do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é ASCII, Unicode UTF-16 e UTF-8. A instrução Encoding está no início do documento [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Se nenhum atributo de codificação existe e não há nenhuma ordem de bytes, o analisador padrão é UTF-8. UTF-8 e UTF-16 são as codificações preferenciais. UTF-7 não tem suporte. O exemplo a seguir demonstra como especificar uma codificação UTF-8 em um arquivo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
+ A codificação com suporte do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é ASCII, Unicode UTF-16 e UTF-8. A instrução Encoding está no início do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] documento. Se nenhum atributo de codificação existe e não há nenhuma ordem de bytes, o analisador padrão é UTF-8. UTF-8 e UTF-16 são as codificações preferenciais. UTF-7 não tem suporte. O exemplo a seguir demonstra como especificar uma codificação UTF-8 em um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo.
 
 ```xaml
 ?xml encoding="UTF-8"?
@@ -45,11 +45,11 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>Atributo de idioma
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usa [XML: lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) para representar o atributo language de um elemento.  Para aproveitar a classe <xref:System.Globalization.CultureInfo>, o valor do atributo language precisa ser um dos nomes de cultura predefinidos por <xref:System.Globalization.CultureInfo>. [xml:lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) é herdável na árvore de elementos (pelas regras de XML, não necessariamente devido a herança de propriedade de dependência) e seu valor padrão será uma cadeia de caracteres vazia se ele não for definido explicitamente.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usa [XML: lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) para representar o atributo language de um elemento.  Para aproveitar a <xref:System.Globalization.CultureInfo> classe, o valor do atributo language precisa ser um dos nomes de cultura predefinidos pelo <xref:System.Globalization.CultureInfo> . [xml:lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) é herdável na árvore de elementos (pelas regras de XML, não necessariamente devido a herança de propriedade de dependência) e seu valor padrão será uma cadeia de caracteres vazia se ele não for definido explicitamente.
 
  O atributo de idioma é muito útil para especificar dialetos. Por exemplo, francês tem ortografia, vocabulário e pronúncia diferentes na França, Bélgica, Quebec e Suíça. Além disso, o chinês, o japonês e o coreano compartilham pontos de código em Unicode, mas as formas ideográficas são diferentes e usam fontes totalmente diferentes.
 
- O exemplo a seguir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] usa o atributo de linguagem `fr-CA` para especificar o francês canadense.
+ O exemplo a seguir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] usa o `fr-CA` atributo language para especificar o francês canadense.
 
 ```xaml
 <TextBlock xml:lang="fr-CA">Découvrir la France</TextBlock>
@@ -57,15 +57,15 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
 <a name="unicode"></a>
 ### <a name="unicode"></a>Unicode
- o [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dá suporte a todos os recursos Unicode, incluindo substitutos. Desde que o conjunto de caracteres possa ser mapeado para Unicode, ele tem suporte. Por exemplo, GB18030 apresenta alguns caracteres que são mapeados para o chinês, japonês e coreano (CFK), extensão A e B e pares substitutos, portanto, ele é totalmente com suporte. Um aplicativo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pode usar <xref:System.Globalization.StringInfo> para manipular cadeias de caracteres sem entender se eles têm pares substitutos ou combinações.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dá suporte a todos os recursos Unicode, incluindo substitutos. Desde que o conjunto de caracteres possa ser mapeado para Unicode, ele tem suporte. Por exemplo, GB18030 apresenta alguns caracteres que são mapeados para o chinês, japonês e coreano (CFK), extensão A e B e pares substitutos, portanto, ele é totalmente com suporte. Um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo pode usar <xref:System.Globalization.StringInfo> para manipular cadeias de caracteres sem entender se eles têm pares substitutos ou caractere de combinação.
 
 <a name="design_intl_ui_with_xaml"></a>
 ## <a name="designing-an-international-user-interface-with-xaml"></a>Criando uma Interface do usuário internacional com XAML
- Esta seção descreve [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] recursos que você deve considerar ao escrever um aplicativo.
+ Esta seção descreve os [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] recursos que você deve considerar ao escrever um aplicativo.
 
 <a name="intl_text"></a>
 ### <a name="international-text"></a>Texto internacional
- o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclui processamento interno para todos os sistemas de escrita com suporte do Microsoft .NET Framework.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclui o processamento interno para todos os Microsoft .NET Framework com suporte para sistemas de gravação.
 
  Os scripts a seguir tem suporte atualmente:
 
@@ -73,7 +73,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
 - Bengali
 
-- Devanágari
+- Devanagari
 
 - Cirílico
 
@@ -89,7 +89,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
 - canarim
 
-- Lao
+- Laosiano
 
 - Latim
 
@@ -111,7 +111,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
 - Tibetano
 
- \* Nesta versão, a exibição e edição de texto em tailandês tem suporte; quebra de palavras não tem suporte.
+ * Nesta versão, a exibição e edição de texto em tailandês tem suporte; quebra de palavras não tem suporte.
 
  Os scripts a seguir não têm suporte atualmente:
 
@@ -127,11 +127,11 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
  As fontes OpenType permitem a manipulação de grandes conjuntos de glifos usando a codificação Unicode. Tal codificação permite um amplo suporte internacional, bem como para variantes tipográficas de glifos.
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderização de texto é alimentada pela tecnologia de subpixel do Microsoft ClearType que dá suporte à independência de resolução. Isso significativamente melhora a legibilidade e fornece a capacidade de dar suporte a documentos no estilo de revista de alta qualidade para todos os scripts.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a renderização de texto é alimentada pela tecnologia de subpixel do Microsoft ClearType que dá suporte à independência de resolução. Isso significativamente melhora a legibilidade e fornece a capacidade de dar suporte a documentos no estilo de revista de alta qualidade para todos os scripts.
 
 <a name="intl_layout"></a>
 ### <a name="international-layout"></a>Layout internacional
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferece uma forma muito conveniente de dar suporte para layouts horizontais, bidirecionais e verticais. No Framework de apresentação, a propriedade <xref:System.Windows.FrameworkElement.FlowDirection%2A> pode ser usada para definir o layout. Os padrões de direção de fluxo são:
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferece uma forma muito conveniente de dar suporte para layouts horizontais, bidirecionais e verticais. Na estrutura de apresentação, a <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriedade pode ser usada para definir o layout. Os padrões de direção de fluxo são:
 
 - *LeftToRight* -layout horizontal para latim, Leste da Ásia e assim por diante.
 
@@ -143,27 +143,27 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>Interface do Usuário Multilíngue
- MUI (Multilingual User Interfaces) é um suporte da Microsoft para alternar interfaces de usuário de um idioma para outro. Um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa o modelo de assembly para dar suporte ao MUI. Um aplicativo contém assemblies de com neutralidade de idioma, bem como assemblies satélite dependentes de idioma em recursos. O ponto de entrada é .EXE gerenciado no assembly principal.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] carregador de recursos aproveita o Gerenciador de recursos da estrutura para dar suporte à pesquisa e ao fallback de recursos. Vários assemblies satélite funcionam com o mesmo assembly principal. O assembly de recurso que é carregado depende da <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> do thread atual.
+ MUI (Multilingual User Interfaces) é um suporte da Microsoft para alternar interfaces de usuário de um idioma para outro. Um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo usa o modelo de assembly para dar suporte ao mui. Um aplicativo contém assemblies de com neutralidade de idioma, bem como assemblies satélite dependentes de idioma em recursos. O ponto de entrada é .EXE gerenciado no assembly principal.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o carregador de recursos aproveita o Gerenciador de recursos da estrutura para dar suporte à pesquisa e ao fallback de recursos. Vários assemblies satélite funcionam com o mesmo assembly principal. O assembly de recurso que é carregado depende do <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> do thread atual.
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>Interface do usuário localizável
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos usam [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para definir seus [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] permite que os desenvolvedores especifiquem uma hierarquia de objetos com um conjunto de propriedades e lógica. O uso principal do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é desenvolver [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos, mas pode ser usado para especificar uma hierarquia de objetos Common Language Runtime (CLR). A maioria dos desenvolvedores usa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para especificar a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] do seu aplicativo e usar uma linguagem C# de programação, como reagir à interação do usuário.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] os aplicativos usam [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para definir seus [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] . [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] permite que os desenvolvedores especifiquem uma hierarquia de objetos com um conjunto de propriedades e lógica. O principal uso do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é desenvolver [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos, mas pode ser usado para especificar uma hierarquia de qualquer objeto Common Language Runtime (CLR). A maioria dos desenvolvedores usa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] o para especificar seus aplicativos [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] e usar uma linguagem de programação, como o C#, para reagir à interação do usuário.
 
- Do ponto de vista de um recurso, um arquivo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] projetado para descrever um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dependente de idioma é um elemento de recurso e, portanto, seu formato de distribuição final deve ser localizável para dar suporte a idiomas internacionais. Como [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] não pode manipular eventos muitos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplicativos contêm blocos de código para fazer isso. Para obter mais informações, consulte [visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md). O código é removido e compilado em binários diferentes quando um arquivo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é indexado na forma BAML do XAML. O formulário BAML de arquivos XAML, imagens e outros tipos de objetos de recursos gerenciados são inseridos no assembly de recursos satélite, que pode ser localizado em outros idiomas ou o assembly principal quando a localização não é necessária.
+ Do ponto de vista de um recurso, um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo criado para descrever um dependente de idioma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] é um elemento de recurso e, portanto, seu formato de distribuição final deve ser localizável para dar suporte a idiomas internacionais. Como [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] o não pode manipular eventos, muitos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplicativos contêm blocos de código para fazer isso. Para obter mais informações, consulte [visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md). O código é removido e compilado em binários diferentes quando um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo é indexado na forma BAML do XAML. O formulário BAML de arquivos XAML, imagens e outros tipos de objetos de recursos gerenciados são inseridos no assembly de recursos satélite, que pode ser localizado em outros idiomas ou o assembly principal quando a localização não é necessária.
 
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos dão suporte a todos os recursos FrameworkCLR, incluindo tabelas de cadeias de caracteres, imagens e assim por diante.
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] os aplicativos dão suporte a todos os recursos do FrameworkCLR, incluindo tabelas de cadeias de caracteres, imagens e assim por diante.
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Construindo aplicativos localizáveis
- Localização significa adaptar um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a diferentes culturas. Para tornar um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] localizável, os desenvolvedores precisam criar todos os recursos localizáveis em um assembly de recurso. O assembly de recursos é localizado em idiomas diferentes, e o code-behind usa a API de gerenciamento de recursos para carregar. Um dos arquivos necessários para um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é um arquivo de projeto (. proj). Todos os recursos que você usa em seu aplicativo devem ser incluídos no arquivo de projeto. O exemplo de um arquivo. csproj a seguir mostra como fazer isso.
+ Localização significa adaptar um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a diferentes culturas. Para tornar um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo localizável, os desenvolvedores precisam criar todos os recursos localizáveis em um assembly de recurso. O assembly de recursos é localizado em idiomas diferentes, e o code-behind usa a API de gerenciamento de recursos para carregar. Um dos arquivos necessários para um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo é um arquivo de projeto (. proj). Todos os recursos que você usa em seu aplicativo devem ser incluídos no arquivo de projeto. O exemplo de um arquivo. csproj a seguir mostra como fazer isso.
 
 ```xml
 <Resource Include="data\picture1.jpg"/>
 <EmbeddedResource Include="data\stringtable.en-US.restext"/>
 ```
 
- Para usar um recurso em seu aplicativo, instancie um <xref:System.Resources.ResourceManager> e carregue o recurso que você deseja usar. O exemplo a seguir demonstra como fazer isso.
+ Para usar um recurso em seu aplicativo, instancie a <xref:System.Resources.ResourceManager> e carregue o recurso que você deseja usar. O exemplo a seguir demonstra como fazer isso.
 
  [!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
 
@@ -171,13 +171,13 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 ## <a name="using-clickonce-with-localized-applications"></a>Usando o ClickOnce com aplicativos localizados
  O ClickOnce é uma nova tecnologia de implantação Windows Forms que será fornecida com o Visual Studio 2005. Ele permite a instalação do aplicativo e a atualização de aplicativos da Web. Quando um aplicativo que foi implantado com o ClickOnce é localizado, ele somente pode ser exibido na cultura localizada. Por exemplo, se um aplicativo implantado for localizado para japonês, ele só poderá ser exibido no Microsoft Windows em Japonês, não em janelas em inglês. Isso apresenta um problema porque é um cenário comum para os usuários japoneses executarem uma versão em inglês do Windows.
 
- A solução para esse problema é configurar o atributo de fallback de idioma neutro. Um desenvolvedor de aplicativos pode, opcionalmente, remover recursos do assembly principal e especificar que os recursos podem ser encontrados em um assembly satélite correspondente a uma cultura específica. Para controlar esse processo, use o <xref:System.Resources.NeutralResourcesLanguageAttribute>. O construtor da classe <xref:System.Resources.NeutralResourcesLanguageAttribute> tem duas assinaturas, uma que usa um parâmetro <xref:System.Resources.UltimateResourceFallbackLocation> para especificar o local em que a <xref:System.Resources.ResourceManager> deve extrair os recursos de fallback: assembly principal ou assembly satélite. O exemplo a seguir mostra como usar o atributo. Para o local de fallback final, o código faz com que a <xref:System.Resources.ResourceManager> procure os recursos no subdiretório "de" do diretório do assembly em execução no momento.
+ A solução para esse problema é configurar o atributo de fallback de idioma neutro. Um desenvolvedor de aplicativos pode, opcionalmente, remover recursos do assembly principal e especificar que os recursos podem ser encontrados em um assembly satélite correspondente a uma cultura específica. Para controlar esse processo, use o <xref:System.Resources.NeutralResourcesLanguageAttribute> . O construtor da <xref:System.Resources.NeutralResourcesLanguageAttribute> classe tem duas assinaturas, uma que usa um <xref:System.Resources.UltimateResourceFallbackLocation> parâmetro para especificar o local em que o <xref:System.Resources.ResourceManager> deve extrair os recursos de fallback: assembly principal ou assembly satélite. O exemplo a seguir mostra como usar o atributo. Para o local de fallback final, o código faz com que o <xref:System.Resources.ResourceManager> procure os recursos no subdiretório "de" do diretório do assembly em execução no momento.
 
 ```csharp
 [assembly: NeutralResourcesLanguageAttribute(
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral de globalização e localização do WPF](wpf-globalization-and-localization-overview.md)

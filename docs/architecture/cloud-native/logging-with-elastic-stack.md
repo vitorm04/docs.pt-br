@@ -2,12 +2,12 @@
 title: Como registrar em log com a pilha elástica
 description: Registro em log usando Stack elástico, Logstash e Kibana
 ms.date: 05/13/2020
-ms.openlocfilehash: e886141fa691b75b882b5d67eae4ceb242e8089f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 32d9d0dae175d8d45d48b56d17f133b4cc432363
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613844"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811165"
 ---
 # <a name="logging-with-elastic-stack"></a>Como registrar em log com a pilha elástica
 
@@ -81,7 +81,7 @@ As mensagens de log que foram criadas para conter parâmetros ou que tiveram par
 
 Uma consulta que pesquisa as 10 principais páginas visitadas por `jill@example.com` , aparece na figura 7-9.
 
-```
+```json
 "query": {
     "match": {
       "user": "jill@example.com"

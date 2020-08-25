@@ -7,12 +7,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 746fe35e6d6d4a75f363ccb82ae8dc6106854d8d
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: d7e367f3b4e9a6d88d2a13ca8727d2e2884bb97c
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381886"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810593"
 ---
 # <a name="c-walkthroughs"></a>Passo a passos do C#
 
@@ -22,7 +22,7 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
 
 ## <a name="in-this-section"></a>Nesta seção
 
-- [Acessando a Web usando Async e Await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)\
+- [Processar tarefas assíncronas conforme elas são concluídas](./programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)\
   Mostra como criar uma solução assíncrona usando [Async](./language-reference/keywords/async.md) e [Await](./language-reference/operators/await.md).
 
 - [Criando um componente Windows Runtime em C# ou Visual Basic e chamando-o do JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)\
@@ -72,7 +72,7 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
 - [Exemplos e instruções de implantação](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)\
   Fornece exemplos passo a passo de cenários comuns de implantação.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de programação C#](./programming-guide/index.md)
 - [Exemplos do Visual Studio](/visualstudio/ide/visual-studio-ide)

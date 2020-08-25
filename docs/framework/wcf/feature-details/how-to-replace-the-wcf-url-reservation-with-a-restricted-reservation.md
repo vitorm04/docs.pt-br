@@ -1,15 +1,15 @@
 ---
-title: 'How to: Replace the WCF URL Reservation with a Restricted Reservation'
+title: 'Como: substituir a reserva de URL do WCF com uma reserva restrita'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 780a2c7fe240ed624ff106e8157661f8b76b32bd
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: a7025636bb1ca2ef250d7d25634bda961f2db09d
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202370"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811607"
 ---
-# <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>How to: Replace the WCF URL Reservation with a Restricted Reservation
+# <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Como: substituir a reserva de URL do WCF com uma reserva restrita
 
 Uma reserva de URL permite restringir quem pode receber mensagens de uma URL ou um conjunto de URLs. Uma reserva consiste em um modelo de URL, uma ACL (lista de controle de acesso) e um conjunto de sinalizadores. O modelo de URL define quais URLs a reserva afeta. Para obter mais informações sobre como os modelos de URL são processados, consulte [Roteamento de solicitações de entrada](/windows/win32/http/routing-incoming-requests). A ACL controla qual usuário ou grupo de usuários tem permissão para receber mensagens das URLs especificadas. Os sinalizadores indicam se a reserva é para conceder a um usuário ou grupo permissão para escutar na URL diretamente ou para delegar a permissão para escutar algum outro processo.  
   
@@ -17,7 +17,7 @@ Uma reserva de URL permite restringir quem pode receber mensagens de uma URL ou 
   
 No Windows Vista ou no Windows Server 2008, você pode exibir todas as reservas de URL HTTP de um prompt de comando elevado digitando `netsh http show urlacl` . O exemplo a seguir mostra o que uma reserva de URL do WCF deve ser semelhante a:
 
-```
+```output
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  
         User: \Everyone  
             Listen: Yes  

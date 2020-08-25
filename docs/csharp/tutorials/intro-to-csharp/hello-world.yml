@@ -12,12 +12,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 17d33b25867f75419a0e65ab0d75950bad13af57
-  ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+  ms.openlocfilehash: 72198287028c73f0e518d7bcfd0b694bb267e132
+  ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 08/17/2020
-  ms.locfileid: "88267393"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88812270"
 items:
 - durationInMinutes: 1
   content: >
@@ -52,7 +52,7 @@ items:
     > Esse exercício ajudará você a conhecer a estrutura do código C#.
 
 
-    Seu primeiro programa está limitado à impressão de uma mensagem. Você pode escrever programas mais úteis usando **variáveis**. Uma **variável** é um símbolo que você pode usar para executar o mesmo código com valores diferentes. Vamos testá-lo! Substitua o código que você escreveu na janela interativa pelo código a seguir:
+    Seu primeiro programa está limitado à impressão de uma mensagem. Você pode escrever programas mais úteis usando *variáveis*. Uma *variável* é um símbolo que você pode usar para executar o mesmo código com valores diferentes. Vamos testá-lo! Substitua o código que você escreveu na janela interativa pelo código a seguir:
 
 
     ```csharp
@@ -64,7 +64,7 @@ items:
     ```
 
 
-    A primeira linha declara uma variável, `aFriend`, e atribui a ela um valor, "Conta". A segunda linha imprime o nome.
+    A primeira linha declara uma variável, `aFriend` e atribui a ela um valor "Bill". A segunda linha imprime o nome.
 
 
     Atribua valores diferentes para qualquer variável declarada. Altere o nome para um dos seus amigos. Adicione estas duas linhas na janela interativa, após o código que você já adicionou:
@@ -149,11 +149,11 @@ items:
 
     > [!TIP]
 
-    > Este é um bom momento para explorar por conta própria. Você aprendeu que `Console.WriteLine()` escreve um texto na tela. Você aprendeu como declarar variáveis e concatenar cadeias de caracteres. Experimente com a janela interativa. A janela tem um recurso chamado **IntelliSense**, que faz sugestões sobre o que você pode fazer. Digite um `.` depois do `d` em `firstFriend`. Você verá uma lista de sugestões para propriedades e métodos que você pode usar.
+    > Este é um bom momento para explorar por conta própria. Você aprendeu que `Console.WriteLine()` escreve um texto na tela. Você aprendeu como declarar variáveis e concatenar cadeias de caracteres. Experimente com a janela interativa. A janela tem um recurso chamado *IntelliSense*, que faz sugestões sobre o que você pode fazer. Digite um `.` depois do `d` em `firstFriend`. Você verá uma lista de sugestões para propriedades e métodos que você pode usar.
 - title: Faça mais com as cadeias de caractere
   durationInMinutes: 5
   content: >
-    Você está usando um **método**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> , para imprimir mensagens. Um **método** é um bloco de código que implementa alguma ação. Ele tem um nome, portanto você pode acessá-lo.
+    Você está usando um *método*, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> , para imprimir mensagens. Um *método* é um bloco de código que implementa alguma ação. Ele tem um nome, portanto você pode acessá-lo.
 
 
     Suponha que suas cadeias de caracteres têm espaços à esquerda ou à direita que você não deseja exibir. Você deseja **cortar** os espaços das cadeias de caracteres.
@@ -234,7 +234,7 @@ items:
     ```
 
 
-    O método <xref:System.String.Contains%2A> retorna um valor **booliano** que indica se a cadeia de caracteres que você estava procurando foi encontrada. Um **booliano** armazena um valor `true` ou `false`. Quando exibido como saída de texto, eles são capitalizados: `True` e `False` , respectivamente. Você saberá mais sobre valores **boolianos** em uma lição posterior.
+    O método <xref:System.String.Contains%2A> retorna um valor *booliano* que indica se a cadeia de caracteres que você estava procurando foi encontrada. Um *booliano* armazena um valor `true` ou `false`. Quando exibido como saída de texto, eles são capitalizados: `True` e `False` , respectivamente. Você saberá mais sobre valores *boolianos* em uma lição posterior.
 
 
     ***Desafio***

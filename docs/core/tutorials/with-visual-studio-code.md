@@ -2,12 +2,12 @@
 title: Criar um aplicativo de console do .NET Core usando Visual Studio Code
 description: Saiba como criar um aplicativo de console do .NET Core usando Visual Studio Code e o CLI do .NET Core.
 ms.date: 05/22/2020
-ms.openlocfilehash: 466a1353b574711a73570428569b58eab7ad8135
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: e936c23d8525e42a9d2781cc680067c9da2ce42f
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84811694"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811920"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: criar um aplicativo de console do .NET Core usando Visual Studio Code
 
@@ -22,7 +22,7 @@ Este tutorial mostra como criar e executar um aplicativo de console do .NET Core
 
 Crie um projeto de aplicativo de console do .NET Core chamado "HelloWorld".
 
-1. Inicie o Visual Studio Code.
+1. Iniciar o Visual Studio Code.
 
 1. Selecione **arquivo**  >  **abrir pasta** (**arquivo**  >  **aberto...** no MacOS) no menu principal.
 
@@ -40,7 +40,7 @@ Crie um projeto de aplicativo de console do .NET Core chamado "HelloWorld".
    dotnet new console
    ```
 
-O modelo cria um simples aplicativo “Olá, Mundo”. Ele chama o <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> método para exibir "Olá, mundo!" na janela do console.
+O modelo cria um simples aplicativo “Olá, Mundo”. Ele chama o <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> método para exibir " :::no-loc text="Hello World!"::: " na janela do console.
 
 O código de modelo define uma classe, `Program` , com um único método, `Main` , que usa uma <xref:System.String> matriz como um argumento:
 
@@ -91,7 +91,7 @@ Aprimore o aplicativo para solicitar ao usuário seu nome e exibi-lo junto com a
 
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
-   Esse código exibe "Qual é o seu nome?" na janela do console e aguarda até que o usuário insira uma cadeia de caracteres seguida pela tecla <kbd>Enter</kbd> . Ele armazena essa cadeia de caracteres em uma variável chamada `name` . Ele também recupera o valor da propriedade <xref:System.DateTime.Now?displayProperty=nameWithType>, que contém a hora local atual e o atribui a uma variável chamada `date`. Por fim, ele exibe esses valores na janela do console.
+   Esse código exibe um prompt na janela do console e aguarda até que o usuário insira uma cadeia de caracteres seguida pela tecla <kbd>Enter</kbd> . Ele armazena essa cadeia de caracteres em uma variável chamada `name` . Ele também recupera o valor da propriedade <xref:System.DateTime.Now?displayProperty=nameWithType>, que contém a hora local atual e o atribui a uma variável chamada `date`. E ele exibe esses valores na janela do console. Por fim, ele exibe um prompt na janela do console e chama o <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> método para aguardar a entrada do usuário.
 
    O `\n` representa um caractere de nova linha.
 

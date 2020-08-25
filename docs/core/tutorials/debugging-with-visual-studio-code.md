@@ -2,12 +2,12 @@
 title: Depurar um aplicativo de console do .NET Core usando Visual Studio Code
 description: Saiba como depurar um aplicativo de console do .NET Core usando Visual Studio Code.
 ms.date: 05/26/2020
-ms.openlocfilehash: 40e9b114df1bd12fb05bfb773781d6009d087a06
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 84c7b64ad7708cf2def084593cd7f96eb0ad82e5
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84702121"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810658"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Depurar um aplicativo de console do .NET Core usando Visual Studio Code
 
@@ -25,7 +25,7 @@ Na configuração de depuração, um programa é compilado com informações de 
 
 Por padrão, Visual Studio Code configurações de inicialização usam a configuração de compilação de depuração, portanto, você não precisa alterá-la antes da depuração.
 
-1. Inicie o Visual Studio Code.
+1. Iniciar o Visual Studio Code.
 
 1. Abra a pasta do projeto que você criou em [criar um aplicativo de console do .NET Core no Visual Studio Code](with-visual-studio-code.md).
 
@@ -51,13 +51,13 @@ O ponto de interrupção está localizado após uma `Console.ReadLine` chamada d
 
    De:
 
-   ```
+   ```json
    "console": "internalConsole",
    ```
 
    Para:
 
-   ```
+   ```json
    "console": "integratedTerminal",
    ```
 
@@ -71,7 +71,7 @@ O ponto de interrupção está localizado após uma `Console.ReadLine` chamada d
 
 1. Selecione a seta verde na parte superior do painel, ao lado de **inicialização do .NET Core (console)**. Outra maneira de iniciar o programa no modo de depuração é escolhendo **executar**  >  **Iniciar Depuração** no menu.
 
-   :::image type="content" source="media/debugging-with-visual-studio-code/start-debugging.png" alt-text="Iniciar Depuração":::
+   :::image type="content" source="media/debugging-with-visual-studio-code/start-debugging.png" alt-text="Iniciar a depuração":::
 
 1. Selecione a guia **terminal** para ver o "Qual é seu nome?" avisar que o programa é exibido antes de aguardar uma resposta.
 

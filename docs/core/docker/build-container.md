@@ -4,12 +4,12 @@ description: Neste tutorial, você aprenderá a colocar em contêiner um aplicat
 ms.date: 04/27/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c5e6648539af45f3ce615bfc183e6f95a62b085a
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 99bbc67096d98622ca5c0dc83d8b1be44a9995e5
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200022"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810541"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: colocar um aplicativo .NET Core em contêineres
 
@@ -35,7 +35,7 @@ Instale os seguintes pré-requisitos:
 
 - [SDK do .NET Core 3,1](https://dotnet.microsoft.com/download)\
 Se você tiver o .NET Core instalado, use o comando `dotnet --info` para determinar qual SDK está usando.
-- [Docker Community Edition](https://www.docker.com/products/docker-desktop)
+- [Docking Community Edition](https://www.docker.com/products/docker-desktop)
 - Uma pasta de trabalho temporária para o *Dockerfile* e o aplicativo de exemplo do .NET Core. Neste tutorial, o nome *Docker – Working* é usado como a pasta de trabalho.
 
 ## <a name="create-net-core-app"></a>Criar aplicativo .NET Core
@@ -73,7 +73,7 @@ O modelo padrão cria um aplicativo que é impresso no terminal e, em seguida, t
 > [!TIP]
 > Se você estiver usando Visual Studio Code, na sessão de terminal anterior, digite o seguinte comando:
 >
-> ```
+> ```console
 > code .
 > ```
 >
@@ -148,7 +148,7 @@ Esse comando compila seu aplicativo para a pasta *publish*. O caminho para a pas
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
-Na pasta do *aplicativo* , obtenha uma listagem de diretório da pasta de publicação para verificar se o arquivo *NetCore. Docker. dll* foi criado.
+Na pasta do *aplicativo* , obtenha uma listagem de diretório da pasta de publicação para verificar se o arquivo de *NetCore.Docker.dll* foi criado.
 
 ```powershell
 dir .\bin\Release\netcoreapp3.1\publish\
@@ -166,7 +166,7 @@ Mode                LastWriteTime         Length Name
 
 #### <a name="linux"></a>[Linux](#tab/linux)
 
-Use o `ls` comando para obter uma listagem de diretório e verificar se o arquivo *NetCore. Docker. dll* foi criado.
+Use o `ls` comando para obter uma listagem de diretório e verificar se o arquivo de *NetCore.Docker.dll* foi criado.
 
 ```bash
 me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp3.1/publish
@@ -186,9 +186,9 @@ FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 ```
 
 > [!NOTE]
-> A imagem de tempo de execução ASP.NET Core é usada intencionalmente aqui `mcr.microsoft.com/dotnet/core/runtime:3.1` , embora a imagem possa ter sido usada.
+> A imagem de tempo de execução ASP.NET Core é usada intencionalmente aqui, embora a `mcr.microsoft.com/dotnet/core/runtime:3.1` imagem possa ter sido usada.
 
-A `FROM` palavra-chave requer um nome de imagem de contêiner do Docker totalmente qualificado. O registro de contêiner da Microsoft (MCR, mcr.microsoft.com) é uma agregação do Hub do Docker, que hospeda contêineres publicamente acessíveis. O `dotnet/core` segmento é o repositório de contêiner, onde o `aspnet` segmento é o nome da imagem de contêiner. A imagem é marcada com `3.1`, que é usada para controle de versão. Portanto, `mcr.microsoft.com/dotnet/core/aspnet:3.1` é o tempo de execução do .net Core 3,1. Certifique-se de extrair a versão de tempo de execução que corresponde ao tempo de execução direcionado pelo seu SDK. Por exemplo, o aplicativo criado na seção anterior usava o SDK do .NET Core 3,1 e a imagem base mencionada no *Dockerfile* é marcada com **3,1**.
+A `FROM` palavra-chave requer um nome de imagem de contêiner do Docker totalmente qualificado. O registro de contêiner da Microsoft (MCR, mcr.microsoft.com) é uma agregação do Hub do Docker, que hospeda contêineres publicamente acessíveis. O `dotnet/core` segmento é o repositório de contêiner, onde o `aspnet` segmento é o nome da imagem de contêiner. A imagem é marcada com `3.1` , que é usada para controle de versão. Portanto, `mcr.microsoft.com/dotnet/core/aspnet:3.1` é o tempo de execução do .NET Core 3,1. Certifique-se de extrair a versão de tempo de execução que corresponde ao tempo de execução direcionado pelo seu SDK. Por exemplo, o aplicativo criado na seção anterior usava o SDK do .NET Core 3,1 e a imagem base mencionada no *Dockerfile* é marcada com **3,1**.
 
 Salve o arquivo *Dockerfile*. A estrutura de diretório da pasta de trabalho deve ser semelhante à mostrada a seguir. Alguns arquivos e pastas de nível mais profundo foram omitidos para economizar espaço no artigo:
 
@@ -287,7 +287,7 @@ CONTAINER ID    IMAGE            COMMAND                   CREATED           STA
 
 ### <a name="manage-the-container"></a>Gerenciar o contêiner
 
-O contêiner foi criado com um nome `core-counter`específico, esse nome é usado para gerenciar o contêiner. O exemplo a seguir usa o comando `docker start` para iniciar o contêiner e, em seguida, usa o comando `docker ps` para mostrar apenas os contêineres em execução:
+O contêiner foi criado com um nome específico `core-counter` , esse nome é usado para gerenciar o contêiner. O exemplo a seguir usa o comando `docker start` para iniciar o contêiner e, em seguida, usa o comando `docker ps` para mostrar apenas os contêineres em execução:
 
 ```Docker
 docker start core-counter
@@ -298,7 +298,7 @@ CONTAINER ID    IMAGE            COMMAND                   CREATED          STAT
 2f6424a7ddce    counter-image    "dotnet NetCore.Dock…"    2 minutes ago    Up 11 seconds            core-counter
 ```
 
-Da mesma forma, o comando `docker stop` interromperá o contêiner. O exemplo a seguir usa `docker stop` o comando para parar o contêiner e, em seguida `docker ps` , usa o comando para mostrar que nenhum contêiner está em execução:
+Da mesma forma, o comando `docker stop` interromperá o contêiner. O exemplo a seguir usa o `docker stop` comando para parar o contêiner e, em seguida, usa o `docker ps` comando para mostrar que nenhum contêiner está em execução:
 
 ```Docker
 docker stop core-counter
@@ -376,7 +376,7 @@ Counter: 2
 Counter: 3
 ```
 
-Com `docker run -it`o, o comando <kbd>Ctrl + C</kbd> interromperá o processo que está sendo executado no contêiner, o que, por sua vez, interromperá o contêiner. Como o parâmetro `--rm` foi fornecido, o contêiner é automaticamente excluído quando o processo é interrompido. Verifique se ele não existe:
+Com `docker run -it` o, o comando <kbd>Ctrl + C</kbd> interromperá o processo que está sendo executado no contêiner, o que, por sua vez, interromperá o contêiner. Como o parâmetro `--rm` foi fornecido, o contêiner é automaticamente excluído quando o processo é interrompido. Verifique se ele não existe:
 
 ```Docker
 docker ps -a

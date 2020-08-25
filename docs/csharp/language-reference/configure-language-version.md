@@ -3,12 +3,12 @@ title: Controle de versão da linguagem C# – Guia de C#
 description: Saiba mais sobre como a versão da linguagem C# é determinada com base no seu projeto e os motivos por trás dessa escolha. Saiba como substituir o padrão manualmente.
 ms.custom: updateeachrelease
 ms.date: 05/20/2020
-ms.openlocfilehash: a27f3210f399f1bed190c18d778cf3824772d576
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 24797c564890b034683d2989010bc694aabc423c
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656841"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811945"
 ---
 # <a name="c-language-versioning"></a>Controle de versão da linguagem C#
 
@@ -37,6 +37,9 @@ O compilador determina um padrão com base nestas regras:
 | .NET Framework   | all     | C# 7.3                      |
 
 Quando seu projeto se destina a uma estrutura de visualização que tem uma versão da linguagem correspondente da visualização, a versão de linguagem usada é a de visualização. Você usa os recursos mais recentes com essa visualização em qualquer ambiente, sem afetar projetos direcionados a uma versão lançada do .NET Core.
+
+> [!TIP]
+> Para saber qual versão de idioma você está usando no momento, coloque `#error version` (diferencia maiúsculas de minúsculas) em seu código. Isso faz com que o compilador produza um diagnóstico, CS8304, com uma mensagem que contém a versão do compilador que está sendo usada e a versão atual do idioma selecionado.
 
 ## <a name="override-a-default"></a>Substituir um padrão
 

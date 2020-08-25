@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 44d33fb28e66e590e4604c6dd2c73616e4c5e943
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 47f42305f4106f5e05e555a859f13c41bb950519
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728284"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811246"
 ---
 ### <a name="http-httpclient-instances-created-by-ihttpclientfactory-log-integer-status-codes"></a>HTTP: instâncias de HttpClient criadas por códigos de status de inteiro de log IHttpClientFactory
 
@@ -18,7 +18,7 @@ ms.locfileid: "82728284"
 
 O registro em log usa as descrições textuais dos códigos de status HTTP. Considere as seguintes mensagens de log:
 
-```
+```output
 Received HTTP response after 56.0044ms - OK
 End processing HTTP request after 70.0862ms - OK
 ```
@@ -27,7 +27,7 @@ End processing HTTP request after 70.0862ms - OK
 
 O registro em log usa os valores inteiros dos códigos de status HTTP. Considere as seguintes mensagens de log:
 
-```
+```output
 Received HTTP response after 56.0044ms - 200
 End processing HTTP request after 70.0862ms - 200
 ```

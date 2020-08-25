@@ -4,14 +4,14 @@ description: Visão geral dos métodos, parâmetros de método e valores retorna
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 09a287b3d74e1b8dbdaf4a53cb207dfe1fad8a0c
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 8c33bcb9dd4052589222c2cb1b375d94d6792ba2
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063348"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810567"
 ---
-# <a name="methods"></a>Métodos
+# <a name="methods-in-c"></a>Métodos em (C#)
 
 Um método é um bloco de código que contém uma série de instruções. Um programa faz com que as instruções sejam executadas chamando o método e especificando os argumentos de método necessários. No C#, todas as instruções executadas são realizadas no contexto de um método. O método `Main` é o ponto de entrada para todos os aplicativos C# e é chamado pelo CLR (Common Language Runtime) quando o programa é iniciado.
 
@@ -32,7 +32,7 @@ Os métodos são declarados em uma `class` ou `struct` especificando:
 
 Essas partes juntas formam a assinatura do método.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Um tipo de retorno de um método não faz parte da assinatura do método para fins de sobrecarga de método. No entanto, ele faz parte da assinatura do método ao determinar a compatibilidade entre um delegado e o método para o qual ele aponta.
 
 O exemplo a seguir define uma classe chamada `Motorcycle` que contém cinco métodos:
@@ -243,17 +243,17 @@ Usando o recurso async, você pode invocar métodos assíncronos sem usar retorn
 Se marcar um método com o modificador [async](language-reference/keywords/async.md), você poderá usar o operador [await](language-reference/operators/await.md) no método. Quando o controle atingir uma expressão `await` no método assíncrono, o controle retornará para o chamador se a tarefa aguardada não estiver concluída e o progresso no método com a palavra-chave `await` será suspenso até a tarefa aguardada ser concluída. Quando a tarefa for concluída, a execução poderá ser retomada no método.
 
 > [!NOTE]
-> Um método assíncrono retorna para o chamador quando encontra o primeiro objeto esperado que ainda não está completo ou chega ao final do método assíncrono, o que ocorrer primeiro.
+> Um método assíncrono retorna ao chamador quando encontra o primeiro objeto esperado que ainda não está concluído ou chega ao final do método Async, o que ocorrer primeiro.
 
 Um método assíncrono pode ter um tipo de retorno <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> ou `void`. O tipo de retorno `void` é usado principalmente para definir manipuladores de eventos, nos quais o tipo de retorno `void` é necessário. Um método assíncrono que retorna `void` não pode ser aguardado e o chamador de um método de retorno nulo não pode capturar as exceções que esse método gera. Começando com o C# 7.0, um método assíncrono pode ter [qualquer tipo de retorno como os de tarefa](./whats-new/csharp-7.md#generalized-async-return-types).
 
 No exemplo a seguir, `DelayAsync` é um método assíncrono que contém uma instrução return que retorna um inteiro. Como é um método assíncrono, sua declaração de método deve ter um tipo de retorno de `Task<int>`. Como o tipo de retorno é `Task<int>`, a avaliação da expressão `await` em `DoSomethingAsync` produz um inteiro, como a instrução `int result = await delayTask` a seguir demonstra.
 
-[!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
+:::code language="csharp" source="programming-guide/classes-and-structs/snippets/classes-and-structs/methods/Program.cs":::
 
 Um método assíncrono não pode declarar os parâmetros [in](language-reference/keywords/in-parameter-modifier.md), [ref](language-reference/keywords/ref.md) nem [out](language-reference/keywords/out-parameter-modifier.md), mas pode chamar métodos que tenham esses parâmetros.
 
- Para obter mais informações sobre os métodos assíncronos, consulte [Programação assíncrona com async e await](async.md), [Fluxo de controle em programas assíncronos](programming-guide/concepts/async/control-flow-in-async-programs.md) e [Tipos de retorno assíncronos](programming-guide/concepts/async/async-return-types.md).
+ Para obter mais informações sobre métodos assíncronos, consulte [programação assíncrona com tipos de retorno Async e Await](async.md) e [Async](programming-guide/concepts/async/async-return-types.md).
 
 <a name="expr"></a>
 
@@ -282,7 +282,7 @@ O tipo de retorno de um iterador pode ser <xref:System.Collections.IEnumerable>,
 
 Para obter mais informações, consulte [Iteradores](programming-guide/concepts/iterators.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Modificadores de acesso](language-reference/keywords/access-modifiers.md)
 - [Classes static e membros de classes static](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
@@ -290,6 +290,6 @@ Para obter mais informações, consulte [Iteradores](programming-guide/concepts/
 - [Classes e membros de classes abstract e sealed](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [params](language-reference/keywords/params.md)
 - [fora](language-reference/keywords/out-parameter-modifier.md)
-- [ref](language-reference/keywords/ref.md)
-- [no](language-reference/keywords/in-parameter-modifier.md)
+- [referência](language-reference/keywords/ref.md)
+- [Em](language-reference/keywords/in-parameter-modifier.md)
 - [Passando parâmetros](programming-guide/classes-and-structs/passing-parameters.md)

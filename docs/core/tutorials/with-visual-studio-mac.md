@@ -2,12 +2,12 @@
 title: Criar um aplicativo de console do .NET Core usando Visual Studio para Mac
 description: Saiba como criar um aplicativo de console do .NET Core usando Visual Studio para Mac.
 ms.date: 06/02/2020
-ms.openlocfilehash: 9cab838eaab2c59d8a0270267514f57acb7c60fb
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: e0b18837bf8bef5be5f20b84341bde8526b9f7a2
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84811665"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811867"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>Tutorial: criar um aplicativo de console do .NET Core usando Visual Studio para Mac
 
@@ -86,7 +86,7 @@ Aprimore o aplicativo para solicitar ao usuário seu nome e exibi-lo junto com a
 
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
-   Esse código exibe "Qual é o seu nome?" na janela do console e aguarda até que o usuário insira uma cadeia de caracteres seguida pela tecla <kbd>Enter</kbd> . Ele armazena essa cadeia de caracteres em uma variável chamada `name` . Ele também recupera o valor da propriedade <xref:System.DateTime.Now?displayProperty=nameWithType>, que contém a hora local atual e o atribui a uma variável chamada `date`. Por fim, ele exibe esses valores na janela do console.
+   Esse código exibe um prompt na janela do console e aguarda até que o usuário insira uma cadeia de caracteres seguida pela tecla <kbd>Enter</kbd> . Ele armazena essa cadeia de caracteres em uma variável chamada `name` . Ele também recupera o valor da propriedade <xref:System.DateTime.Now?displayProperty=nameWithType>, que contém a hora local atual e o atribui a uma variável chamada `date`. E ele exibe esses valores na janela do console. Por fim, ele exibe um prompt na janela do console e chama o <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> método para aguardar a entrada do usuário.
 
    O `\n` representa um caractere de nova linha.
 

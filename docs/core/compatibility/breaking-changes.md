@@ -1,13 +1,13 @@
 ---
-title: Alterações da falha
+title: Alterações de quebra
 description: Saiba mais sobre as alterações significativas em cada versão do .NET Core.
 ms.date: 11/27/2019
-ms.openlocfilehash: 550553ef14cd0635fbe4a5346c457a41264a4b82
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 73c1576aa92f0e236ead0ca1a12ac26efcbf3cbe
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916262"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810892"
 ---
 # <a name="breaking-change-selectors"></a>Seletores de alteração de interrupção
 
@@ -33,6 +33,7 @@ Selecione a área de tecnologia do .NET Core na qual você está interessado. As
 > [!div class="op_single_selector"]
 >
 > - [ASP.NET Core](aspnetcore.md)
+> - [Análise de código](code-analysis.md)
 > - [Bibliotecas principais do .NET](corefx.md)
 > - [Criptografia](cryptography.md)
 > - [EF Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)
@@ -51,6 +52,6 @@ Você também pode exibir problemas individuais que detalham as alterações sig
 - Por ASP.NET Core, o repositório [ASPNET/comunicados](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) .
 - Por Entity Framework Core, o repositório [dotnet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Migrar do .NET Framework para o .NET Core](../porting/index.md)

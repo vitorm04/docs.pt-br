@@ -2,12 +2,12 @@
 title: <add> de <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: 8fdae02b558708a9b3f4535123752dce12dd5cf5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2572a6ee6763ae26fe5c56669e10f8c9aef8a280
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153134"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811789"
 ---
 # <a name="add-of-baseaddressprefixfilter"></a>\<add> de \<baseAddressPrefixFilter>
 Representa um elemento de configuração que especifica um filtro de passagem, que fornece um mecanismo para escolher as associações de Serviços de Informações da Internet (IIS) apropriadas ao hospedar um aplicativo de Windows Communication Foundation (WCF) no IIS.  
@@ -55,7 +55,7 @@ Representa um elemento de configuração que especifica um filtro de passagem, q
   
  Por exemplo, seu site pode conter os seguintes endereços base:
   
-```
+```http
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  

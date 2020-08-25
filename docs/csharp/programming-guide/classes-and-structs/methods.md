@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: db35b48d4d7e70a54b38342e79fa2881b3857bd7
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 7b411283822360f3057b0d4f4e60ebade4fe45bc
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864144"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810931"
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guia de Programação em C#)
 
@@ -24,7 +24,7 @@ Um método é um bloco de código que contém uma série de instruções. Um pro
 
 Os métodos são declarados em uma [classe](../../language-reference/keywords/class.md), [struct](../../language-reference/builtin-types/struct.md)ou [interface](../interfaces/index.md) especificando o nível de acesso, como `public` ou `private` , modificadores opcionais, como `abstract` ou `sealed` , o valor de retorno, o nome do método e qualquer parâmetro de método. Juntas, essas partes são a assinatura do método.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Um tipo de retorno de um método não faz parte da assinatura do método para fins de sobrecarga de método. No entanto, ele faz parte da assinatura do método ao determinar a compatibilidade entre um delegado e o método para o qual ele aponta.
 
 Os parâmetros de método estão entre parênteses e separados por vírgulas. Parênteses vazios indicam que o método não requer parâmetros. Essa classe contém quatro métodos:
@@ -123,19 +123,19 @@ Usando o recurso async, você pode invocar métodos assíncronos sem usar retorn
 Se marcar um método com o modificador [async](../../language-reference/keywords/async.md), você poderá usar o operador [await](../../language-reference/operators/await.md) no método. Quando o controle atinge uma expressão await no método assíncrono, ele retorna para o chamador e o progresso no método é suspenso até a tarefa aguardada ser concluída. Quando a tarefa for concluída, a execução poderá ser retomada no método.
 
 > [!NOTE]
-> Um método assíncrono retorna para o chamador quando encontra o primeiro objeto esperado que ainda não está completo ou chega ao final do método assíncrono, o que ocorrer primeiro.
+> Um método assíncrono retorna ao chamador quando encontra o primeiro objeto esperado que ainda não está concluído ou chega ao final do método Async, o que ocorrer primeiro.
 
 Um método assíncrono pode conter um tipo de retorno <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> ou nulo. O tipo de retorno nulo é usado principalmente para definir manipuladores de eventos, em que um tipo de retorno nulo é necessário. Um método assíncrono que retorna nulo não pode ser aguardado e o chamador de um método de retorno nulo não pode capturar as exceções que esse método gera.
 
 No exemplo a seguir, `DelayAsync` é um método assíncrono que tem um tipo de retorno de <xref:System.Threading.Tasks.Task%601>. `DelayAsync` tem uma instrução `return` que retorna um número inteiro. Portanto, a declaração do método de `Task<int>` deve ter um tipo de retorno de `DelayAsync`. Como o tipo de retorno é `Task<int>`, a avaliação da expressão `await` em `DoSomethingAsync` produz um inteiro, como a instrução a seguir demonstra: `int result = await delayTask`.
 
-O método `startButton_Click` é um exemplo de método assíncrono que tem um tipo de retorno nulo. Como `DoSomethingAsync` é um método assíncrono, a tarefa para a chamada para `DoSomethingAsync` deve ser colocada em espera, como mostra a seguinte instrução: `await DoSomethingAsync();`. O método `startButton_Click` deve ser definido com o modificador `async` porque o método tem uma expressão `await`.
+O `Main` método é um exemplo de um método assíncrono que tem um tipo de retorno de <xref:System.Threading.Tasks.Task> . Ele vai para o `DoSomethingAsync` método e, como é expresso com uma única linha, ele pode omitir as `async` `await` palavras-chave e. Como `DoSomethingAsync` é um método assíncrono, a tarefa para a chamada para `DoSomethingAsync` deve ser colocada em espera, como mostra a seguinte instrução: `await DoSomethingAsync();`.
 
-[!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]
+:::code language="csharp" source="snippets/classes-and-structs/methods/Program.cs":::
 
 Um método assíncrono não pode declarar nenhum parâmetro [ref](../../language-reference/keywords/ref.md) ou [out](../../language-reference/keywords/out-parameter-modifier.md), mas pode chamar métodos com tais parâmetros.
 
-Para obter mais informações sobre métodos assíncronos, consulte [programação assíncrona com Async e Await](../concepts/async/index.md), [fluxo de controle em programas assíncronos](../concepts/async/control-flow-in-async-programs.md)e [tipos de retorno assíncronos](../concepts/async/async-return-types.md).
+Para obter mais informações sobre métodos assíncronos, consulte [programação assíncrona com tipos de retorno Async e Await](../concepts/async/index.md) e [Async](../concepts/async/async-return-types.md).
 
 ## <a name="expression-body-definitions"></a>Definições de corpo de expressão
 
@@ -162,11 +162,11 @@ O tipo de retorno de um iterador pode ser <xref:System.Collections.IEnumerable>,
 
 Para obter mais informações, consulte [Iteradores](../concepts/iterators.md).
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de programação C#](../index.md)
 - [Classes e structs](index.md)
@@ -175,7 +175,7 @@ Para obter mais informações, consulte [Iteradores](../concepts/iterators.md).
 - [Herança](inheritance.md)
 - [Classes e membros de classes abstract e sealed](abstract-and-sealed-classes-and-class-members.md)
 - [params](../../language-reference/keywords/params.md)
-- [return](../../language-reference/keywords/return.md)
+- [exibir](../../language-reference/keywords/return.md)
 - [fora](../../language-reference/keywords/out.md)
-- [ref](../../language-reference/keywords/ref.md)
+- [referência](../../language-reference/keywords/ref.md)
 - [Passando parâmetros](passing-parameters.md)

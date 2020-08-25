@@ -2,12 +2,12 @@
 title: Visão geral dos serviços de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: f752eca621f9d30f38d85d7e71228fdfe1343c32
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7055ea6e6b6d6a5d7bef8d5ff465d2eb0c838bf6
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594862"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812179"
 ---
 # <a name="workflow-services-overview"></a>Visão geral dos serviços de fluxo de trabalho
 
@@ -38,7 +38,7 @@ Ao implementar um serviço WCF, você define um número de contratos que descrev
 O resultado final da inferência de contrato é uma descrição do serviço usando as mesmas estruturas de dados que os serviços WCF e os contratos de operação. Essas informações são usadas para expor WSDL para o serviço de fluxo de trabalho.
 
 > [!NOTE]
-> [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]Não permite que você grave serviços de fluxo de trabalho usando uma definição de contrato existente sem algum suporte de ferramentas adicional. Os contratos de serviço de fluxo de trabalho são criados pelo processo de inferência de contrato discutido anteriormente. No entanto, os contratos de mensagem e os contratos de dados têm suporte total.
+> [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] Não permite que você grave serviços de fluxo de trabalho usando uma definição de contrato existente sem algum suporte de ferramentas adicional. Os contratos de serviço de fluxo de trabalho são criados pelo processo de inferência de contrato discutido anteriormente. No entanto, os contratos de mensagem e os contratos de dados têm suporte total.
 
 ## <a name="workflow-services-and-msmq-based-bindings"></a>Serviços de fluxo de trabalho e associações baseadas no MSMQ
 
@@ -58,9 +58,9 @@ Como os serviços WCF, os serviços de fluxo de trabalho devem ser hospedados. O
 
 Os serviços de fluxo de trabalho hospedados em um aplicativo .NET Framework gerenciado ou um serviço gerenciado do Windows criam uma instância da <xref:System.ServiceModel.Activities.WorkflowServiceHost> classe e passam a ela uma instância do <xref:System.ServiceModel.Activities.WorkflowService> que contém a definição de fluxo de trabalho dentro da <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> propriedade. Uma definição de fluxo de trabalho que contém atividades de mensagens é exposta como um serviço de fluxo de trabalho.
 
-Para hospedar um serviço de fluxo de trabalho no IIS ou WAS, coloque o arquivo. xamlx que contém a definição do serviço de fluxo de trabalho em um diretório virtual. Um ponto de extremidade padrão (usando <xref:System.ServiceModel.BasicHttpBinding> ) é criado automaticamente para obter mais informações, consulte [configuração simplificada](../simplified-configuration.md). Você também pode inserir um arquivo Web. config no diretório virtual para especificar seus próprios pontos de extremidade. Se sua definição de fluxo de trabalho estiver em um assembly, você poderá inserir um arquivo. svc no diretório virtual e no assembly do fluxo de trabalho no diretório App_Code. O arquivo. svc deve especificar a fábrica de hosts de serviço e a classe que implementa o serviço de fluxo de trabalho. O exemplo a seguir mostra como especificar a fábrica de hosts de serviço e especificar a classe que implementa o serviço de fluxo de trabalho.
+Para hospedar um serviço de fluxo de trabalho no IIS ou WAS, coloque o arquivo. xamlx que contém a definição do serviço de fluxo de trabalho em um diretório virtual. Um ponto de extremidade padrão (usando <xref:System.ServiceModel.BasicHttpBinding> ) é criado automaticamente para obter mais informações, consulte [configuração simplificada](../simplified-configuration.md). Você também pode inserir um arquivo de Web.config no diretório virtual para especificar seus próprios pontos de extremidade. Se sua definição de fluxo de trabalho estiver em um assembly, você poderá inserir um arquivo. svc no diretório virtual e no assembly do fluxo de trabalho no diretório App_Code. O arquivo. svc deve especificar a fábrica de hosts de serviço e a classe que implementa o serviço de fluxo de trabalho. O exemplo a seguir mostra como especificar a fábrica de hosts de serviço e especificar a classe que implementa o serviço de fluxo de trabalho.
 
-```
-<%@ServiceHost Factory=" System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory
+```aspx-csharp
+<%@ServiceHost Factory="System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory"
 Service="EchoService"%>
 ```

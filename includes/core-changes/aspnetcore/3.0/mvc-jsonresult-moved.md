@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1356f3eee5e2d8090d7d96aafc07a19507a1aff1
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 96c2a32dd7cca91e965601d715bbd4625bba439a
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721559"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811243"
 ---
 ### <a name="mvc-jsonresult-moved-to-microsoftaspnetcoremvccore"></a>MVC: JsonResult movido para Microsoft. AspNetCore. Mvc. Core
 
@@ -22,7 +22,7 @@ Um aplicativo que usa uma biblioteca baseada em 2,2 é compilado com êxito.
 
 Um aplicativo que usa uma biblioteca com base em 2,2 falha na compilação. Um erro contendo uma variação do texto a seguir é fornecido:
 
-```
+```output
 The type 'JsonResult' exists in both 'Microsoft.AspNetCore.Mvc.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' and 'Microsoft.AspNetCore.Mvc.Formatters.Json, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
 ```
 

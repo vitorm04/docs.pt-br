@@ -10,12 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 4715a27a94ac86c5e4955c0e8be95c6ee4a28507
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: bb81ddbe631fedfcfe247c6e62580de679ad972f
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619696"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812296"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Referência de C#)
 
@@ -131,9 +131,9 @@ Para obter mais informações sobre catch, consulte [try-catch-finally](try-catc
 
 Um método assíncrono é marcado por um modificador [async](async.md) e geralmente contém uma ou mais expressões ou instruções await. Uma expressão await aplica o operador [await](../operators/await.md) a um <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>.
 
-Quando o controle atinge um `await` no método assíncrono, o progresso no método é suspenso até que a tarefa aguardada seja concluída. Quando a tarefa for concluída, a execução poderá ser retomada no método. Para obter mais informações, consulte [Programação assíncrona com async e await (C#)](../../programming-guide/concepts/async/index.md) e [Fluxo de controle em programas assíncronos](../../programming-guide/concepts/async/control-flow-in-async-programs.md).
+Quando o controle atinge um `await` no método assíncrono, o progresso no método é suspenso até que a tarefa aguardada seja concluída. Quando a tarefa for concluída, a execução poderá ser retomada no método. Para obter mais informações, consulte [programação assíncrona com Async e Await](../../programming-guide/concepts/async/index.md).
 
-A tarefa concluída para a qual `await` é aplicada pode estar em um estado de falha devido a uma exceção sem tratamento no método que retorna a tarefa. Aguardar a tarefa gera uma exceção. Uma tarefa também poderá terminar em um estado cancelado se o processo assíncrono que a retorna for cancelado. Aguardar uma tarefa cancelada lança um `OperationCanceledException`. Para obter mais informações sobre como cancelar um processo assíncrono, consulte [Ajuste fino de seu aplicativo assíncrono (C#)](../../programming-guide/concepts/async/fine-tuning-your-async-application.md).
+A tarefa concluída para a qual `await` é aplicada pode estar em um estado de falha devido a uma exceção sem tratamento no método que retorna a tarefa. Aguardar a tarefa gera uma exceção. Uma tarefa também poderá terminar em um estado cancelado se o processo assíncrono que a retorna for cancelado. Aguardar uma tarefa cancelada lança um `OperationCanceledException` .
 
 Para capturar a exceção, aguarde a tarefa em um bloco `try` e capture a exceção no bloco `catch` associado. Para obter um exemplo, confira a seção [Exemplo de método assíncrono](#async-method-example).
 
@@ -173,16 +173,16 @@ Cada uma das três tarefas causa uma exceção. O bloco `catch` itera por meio d
 
 [!code-csharp[csAsyncExceptions#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncexceptions/cs/class1.cs#4)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, confira a seção [A instrução try](~/_csharplang/spec/statements.md#the-try-statement) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência do C#](../index.md)
 - [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [Instruções try, throw e catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
 - [throw](throw.md)
-- [Experimente-finalmente](try-finally.md)
+- [try-finally](try-finally.md)
 - [Como gerar exceções explicitamente](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
