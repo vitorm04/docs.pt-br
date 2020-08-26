@@ -368,6 +368,13 @@ items:
         href: run-time-config/networking.md
       - name: Configurações de threading
         href: run-time-config/threading.md
+  - name: Análise de código
+    items:
+      - name: Visão geral
+        href: ../fundamentals/productivity/code-analysis.md
+        displayName: 'code analysis, analyzers'
+      - name: Configurar regras
+        href: ../fundamentals/productivity/configure-code-analysis-rules.md
   - name: Migração
     items:
       - name: .NET Core 2.0 para 2.1
