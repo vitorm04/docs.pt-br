@@ -2,12 +2,12 @@
 title: Publicar um aplicativo de console do .NET Core usando Visual Studio para Mac
 description: A publicação cria o conjunto de arquivos necessários para executar um aplicativo .NET Core.
 ms.date: 06/08/2020
-ms.openlocfilehash: 38b656ac919dfb8b710a97c5d7fc63479e3fa367
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: ec6b867f145ffdea491187de3745149f2cebd8dd
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811399"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867536"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-for-mac"></a>Tutorial: publicar um aplicativo de console do .NET Core usando Visual Studio para Mac
 
@@ -15,13 +15,13 @@ Este tutorial mostra como publicar um aplicativo de console para que outros usu�
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Este tutorial funciona com o aplicativo de console que você cria em [criar um aplicativo de console do .NET Core no Visual Studio para Mac](with-visual-studio-mac.md).
+- Este tutorial funciona com o aplicativo de console que você cria em [criar um aplicativo de console do .NET Core usando Visual Studio para Mac](with-visual-studio-mac.md).
 
 ## <a name="publish-the-app"></a>Publicar o aplicativo
 
 1. Iniciar Visual Studio para Mac.
 
-1. Abra o projeto HelloWorld que você criou em [criar um aplicativo de console do .NET Core no Visual Studio para Mac](with-visual-studio-mac.md).
+1. Abra o projeto HelloWorld que você criou em [criar um aplicativo de console .NET Core usando Visual Studio para Mac](with-visual-studio-mac.md).
 
 1. Certifique-se de que o Visual Studio esteja compilando a versão de lançamento de seu aplicativo. Se necessário, altere a configuração de build na barra de ferramentas de **Depuração** para **Lançamento**.
 
@@ -88,4 +88,4 @@ Como mostra a imagem anterior, a saída publicada inclui os seguintes arquivos:
 Neste tutorial, você publicou um aplicativo de console. No próximo tutorial, você criará uma biblioteca de classes.
 
 > [!div class="nextstepaction"]
-> [Criar uma biblioteca de .NET Standard no Visual Studio para Mac](library-with-visual-studio-mac.md)
+> [Criar uma biblioteca de .NET Standard usando Visual Studio para Mac](library-with-visual-studio-mac.md)

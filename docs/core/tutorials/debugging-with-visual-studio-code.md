@@ -2,12 +2,12 @@
 title: Depurar um aplicativo de console do .NET Core usando Visual Studio Code
 description: Saiba como depurar um aplicativo de console do .NET Core usando Visual Studio Code.
 ms.date: 05/26/2020
-ms.openlocfilehash: 84c7b64ad7708cf2def084593cd7f96eb0ad82e5
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: e2be9324a77d0360247a225bbd93224d379bda0d
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810658"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867575"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Depurar um aplicativo de console do .NET Core usando Visual Studio Code
 
@@ -15,7 +15,7 @@ Este tutorial apresenta as ferramentas de depuração disponíveis no Visual Stu
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Este tutorial funciona com o aplicativo de console que você cria em [criar um aplicativo de console do .NET Core no Visual Studio Code](with-visual-studio-code.md).
+- Este tutorial funciona com o aplicativo de console que você cria em [criar um aplicativo de console do .NET Core usando Visual Studio Code](with-visual-studio-code.md).
 
 ## <a name="use-debug-build-configuration"></a>Usar configuração de compilação de depuração
 
@@ -27,7 +27,7 @@ Por padrão, Visual Studio Code configurações de inicialização usam a config
 
 1. Iniciar o Visual Studio Code.
 
-1. Abra a pasta do projeto que você criou em [criar um aplicativo de console do .NET Core no Visual Studio Code](with-visual-studio-code.md).
+1. Abra a pasta do projeto que você criou em [criar um aplicativo de console .NET Core usando Visual Studio Code](with-visual-studio-code.md).
 
 ## <a name="set-a-breakpoint"></a>Definir um ponto de interrupção
 
@@ -173,7 +173,7 @@ Visual Studio Code também permite que você percorra linha por linha por meio d
 
 1. Selecione **executar**  >  **etapa em** ou pressione <kbd>F11</kbd>.
 
-   Visual Studio Code executa o `Console.WriteLine` para o prompt de nome e realça a próxima linha de execução. A próxima linha é o `Console.ReadLine` para o `name` . A janela **variáveis** é inalterada e a guia **terminal** mostra o "Qual é seu nome?" aviso.
+   Visual Studio Code executa o `Console.WriteLine` para o prompt de nome e realça a próxima linha de execução. A próxima linha é o `Console.ReadLine` para o `name` . A janela **variáveis** é inalterada e a guia **terminal** mostra o "Qual é seu nome?" "Quem é o proprietário deste computador?".
 
 1. Selecione **executar**  >  **etapa em** ou pressione <kbd>F11</kbd>.
 
@@ -224,4 +224,4 @@ dotnet run --configuration Release
 Neste tutorial, você usou Visual Studio Code ferramentas de depuração. No próximo tutorial, você publica uma versão implantável do aplicativo.
 
 > [!div class="nextstepaction"]
-> [Publicar um aplicativo de console do .NET Core com o Visual Studio Code](publishing-with-visual-studio-code.md)
+> [Publicar um aplicativo de console do .NET Core usando Visual Studio Code](publishing-with-visual-studio-code.md)

@@ -2,16 +2,16 @@
 title: Mapas do Protobuf para dicionários-gRPC para desenvolvedores do WCF
 description: Entenda como usar o Protobuf Maps para representar tipos de dicionário no .NET.
 ms.date: 09/09/2019
-ms.openlocfilehash: bf848bbc7e3618f6d78e280fcd85d5eb88d5cfae
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 2c2ae76d47b2309227d22235b5acbe2afa794158
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543125"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867459"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>Mapas de Protobuf para dicionários
 
-É importante poder representar coleções arbitrárias de valores nomeados em mensagens. No .NET, isso é normalmente tratado por meio de tipos de dicionário. O equivalente do tipo de <xref:System.Collections.Generic.IDictionary%602> do .NET no buffer de protocolo (Protobuf) é o tipo de `map<key_type, value_type>`. Esta seção mostra como declarar um tipo de `map` em Protobuf e como usar o código gerado.
+É importante poder representar coleções arbitrárias de valores nomeados em mensagens. No .NET, isso é normalmente tratado por meio de tipos de dicionário. O equivalente do tipo .NET <xref:System.Collections.Generic.IDictionary%602> no buffer de protocolo (Protobuf) é o `map<key_type, value_type>` tipo. Esta seção mostra como declarar um `map` tipo em Protobuf e como usar o código gerado.
 
 ```protobuf
 message StockPrices {
@@ -19,7 +19,7 @@ message StockPrices {
 }
 ```
 
-No código gerado, `map` campos usam a classe `Google.Protobuf.Collections.MapField<TKey, TValue>`. Essa classe implementa as interfaces de coleção do .NET padrão, incluindo <xref:System.Collections.Generic.IDictionary%602>.
+No código gerado, os `map` campos são representados por propriedades somente leitura do [`Google.Protobuf.Collections.MapField<TKey, TValue>`][map-field] tipo. Esse tipo implementa as interfaces de coleção do .NET padrão, incluindo <xref:System.Collections.Generic.IDictionary%602> .
 
 Os campos de mapa não podem ser repetidos diretamente em uma definição de mensagem. Mas você pode criar uma mensagem aninhada que contém um mapa e usar `repeated` no tipo de mensagem, como no exemplo a seguir:
 
@@ -34,7 +34,7 @@ message Order {
 
 ## <a name="using-mapfield-properties-in-code"></a>Usando Propriedades MapField no código
 
-As propriedades `MapField` geradas de `map` campos são somente leitura e nunca serão `null`das. Para definir uma propriedade de mapa, use o método `Add(IDictionary<TKey,TValue> values)` na propriedade `MapField` vazia para copiar valores de qualquer dicionário .NET.
+As `MapField` Propriedades geradas a partir de `map` campos são somente leitura e nunca serão `null` . Para definir uma propriedade de mapa, use o `Add(IDictionary<TKey,TValue> values)` método na `MapField` Propriedade Empty para copiar valores de qualquer dicionário .net.
 
 ```csharp
 public Order CreateOrder(Dictionary<string, string> attributes)
@@ -49,6 +49,8 @@ public Order CreateOrder(Dictionary<string, string> attributes)
 
 Para obter mais informações sobre o Protobuf, consulte a documentação oficial do [Protobuf](https://developers.google.com/protocol-buffers/docs/overview).
 
+[map-field]: https://developers.google.cn/protocol-buffers/docs/reference/csharp/class/google/protobuf/collections/map-field-t-key-t-value-
+
 >[!div class="step-by-step"]
->[Anterior](protobuf-enums.md)
->[Próximo](wcf-services-to-grpc-comparison.md)
+>[Anterior](protobuf-enums.md) 
+> [Avançar](wcf-services-to-grpc-comparison.md)

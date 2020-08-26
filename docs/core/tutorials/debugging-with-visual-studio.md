@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 743603cb037406948190c7090ca3527bfc40db18
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 0555c6b4185da088333503c1e744da2dd7b4f2e4
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84702061"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867588"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio"></a>Tutorial: Depurar um aplicativo de console do .NET Core usando o Visual Studio
 
@@ -19,7 +19,7 @@ Este tutorial apresenta as ferramentas de depuração disponíveis no Visual Stu
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Este tutorial funciona com o aplicativo de console que você cria em [criar um aplicativo de console do .NET Core no Visual Studio 2019](with-visual-studio.md).
+- Este tutorial funciona com o aplicativo de console que você cria em [criar um aplicativo de console do .NET Core usando o Visual Studio](with-visual-studio.md).
 
 ## <a name="use-debug-build-configuration"></a>Usar configuração de compilação de depuração
 
@@ -31,7 +31,7 @@ Na configuração de depuração, um programa é compilado com informações de 
 
 1. Inicie o Visual Studio.
 
-1. Abra o projeto que você criou em [criar um aplicativo de console do .NET Core no Visual Studio 2019](with-visual-studio.md).
+1. Abra o projeto que você criou em [criar um aplicativo de console do .NET Core usando o Visual Studio](with-visual-studio.md).
 
    A configuração de build atual é mostrada na barra de ferramentas. A imagem da barra de ferramentas a seguir mostra que o Visual Studio está configurado para compilar a versão de depuração do aplicativo:
 
@@ -188,4 +188,4 @@ Quando você pressiona <kbd>F5</kbd> ou escolhe **Compilar solução** no menu *
 Neste tutorial, você usou as ferramentas de depuração do Visual Studio. No próximo tutorial, você publica uma versão implantável do aplicativo.
 
 > [!div class="nextstepaction"]
-> [Publicar um aplicativo de console do .NET Core com o Visual Studio](publishing-with-visual-studio.md)
+> [Publicar um aplicativo de console do .NET Core usando o Visual Studio](publishing-with-visual-studio.md)

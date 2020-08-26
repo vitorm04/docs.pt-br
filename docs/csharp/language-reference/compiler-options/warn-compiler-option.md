@@ -11,13 +11,14 @@ helpviewer_keywords:
 - /warn compiler option [C#]
 - w compiler option [C#]
 - warn compiler option [C#]
+ms.custom: updateeachrelease
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 5b05e944a37e16fc1fcc422271be00c09a271a33
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d495ef76dc390d8dd2a361d5530f9e39d7128b3e
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602399"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867601"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (opções do compilador C#)
 A opção **-warn** especifica o nível de aviso a ser exibido pelo compilador.  
@@ -30,15 +31,17 @@ A opção **-warn** especifica o nível de aviso a ser exibido pelo compilador.
   
 ## <a name="arguments"></a>Argumentos  
  `option`  
- O nível de aviso que você deseja que seja exibido para a compilação: números mais baixos mostram apenas avisos de gravidade alta; números mais altos mostram mais avisos. Os valores válidos vão de 0 a 4:  
-  
-|Nível de aviso|Significado|  
-|-------------------|-------------|  
-|0|Desativa a emissão de todas as mensagens de aviso.|  
+ O nível de aviso que você deseja que seja exibido para a compilação: números mais baixos mostram apenas avisos de gravidade alta; números mais altos mostram mais avisos. O valor deve ser zero ou um inteiro positivo:
+
+|Nível de aviso|Significado|
+|-------------------|-------------|
+|0|Desativa a emissão de todas as mensagens de aviso.|
 |1|Exibe mensagens de aviso graves.|  
 |2|Exibe os avisos do nível 1 e mais alguns avisos menos graves, como avisos sobre membros de classe ocultos.|  
 |3|Exibe os avisos do nível 2 e mais alguns avisos menos graves, como avisos sobre expressões que sempre resultam em `true` ou `false`.|  
-|4 (o padrão)|Exibe todos os avisos do nível 3 e também avisos informativos.|  
+|4 (o padrão)|Exibe todos os avisos do nível 3 e também avisos informativos.|
+|5|Exibe avisos de nível 4 mais [avisos adicionais](https://github.com/dotnet/roslyn/blob/a6013f3213c902c0973b2d371c3007217d610533/docs/compilers/CSharp/Warnversion%20Warning%20Waves.md) do compilador fornecidos com o C# 9,0.|
+|Maior que 5|Qualquer valor maior que 5 será tratado como 5. Em geral, você coloca um valor grande arbitrário (por exemplo, `9999` ) para certificar-se de sempre ter todos os avisos se o compilador for atualizado com novos níveis de aviso.|
   
 ## <a name="remarks"></a>Comentários  
  Para obter informações sobre um erro ou aviso, você pode procurar o código de erro no Índice da Ajuda. Para outras maneiras de se obter informações sobre um erro ou aviso, consulte [Erros do compilador do C#](../compiler-messages/index.md).  
@@ -66,5 +69,5 @@ csc -warn:1 in.cs
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

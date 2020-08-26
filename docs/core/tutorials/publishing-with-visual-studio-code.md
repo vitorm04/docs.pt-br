@@ -2,12 +2,12 @@
 title: Publicar um aplicativo de console do .NET Core usando Visual Studio Code
 description: A publicação cria o conjunto de arquivos necessários para executar um aplicativo .NET Core.
 ms.date: 07/04/2020
-ms.openlocfilehash: 04dfbae85f196ca4c8f8eb593637a801aa9773f2
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: a84e66126806e2ab45c14527df1b931fa9980468
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811386"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867640"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: publicar um aplicativo de console do .NET Core usando Visual Studio Code
 
@@ -17,13 +17,13 @@ O CLI do .NET Core é usado para publicar o aplicativo, para que você possa seg
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Este tutorial funciona com o aplicativo de console que você cria em [criar um aplicativo de console do .NET Core no Visual Studio Code](with-visual-studio-code.md).
+- Este tutorial funciona com o aplicativo de console que você cria em [criar um aplicativo de console do .NET Core usando Visual Studio Code](with-visual-studio-code.md).
 
 ## <a name="publish-the-app"></a>Publicar o aplicativo
 
 1. Iniciar o Visual Studio Code.
 
-1. Abra a pasta do projeto *HelloWorld* que você criou em [criar um aplicativo de console do .net Core no Visual Studio Code](with-visual-studio-code.md).
+1. Abra a pasta do projeto *HelloWorld* que você criou em [criar um aplicativo de console do .net Core usando Visual Studio Code](with-visual-studio-code.md).
 
 1. Escolha **Exibir**  >  **terminal** no menu principal.
 
@@ -112,4 +112,4 @@ Nas etapas a seguir, você examinará os arquivos criados pelo processo de publi
 Neste tutorial, você publicou um aplicativo de console. No próximo tutorial, você criará uma biblioteca de classes.
 
 > [!div class="nextstepaction"]
-> [Criar uma biblioteca de .NET Standard no Visual Studio Code](library-with-visual-studio-code.md)
+> [Criar uma biblioteca de .NET Standard usando Visual Studio Code](library-with-visual-studio-code.md)

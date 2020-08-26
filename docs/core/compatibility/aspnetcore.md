@@ -5,18 +5,24 @@ description: Lista as alterações significativas em ASP.NET Core.
 ms.date: 08/20/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 4f37bf73c13379bce006c9a3b51302c09562cc44
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 8b37ae5c5eea9e192a269092fccf435ab4877e61
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811244"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867666"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core alterações significativas
 
 ASP.NET Core fornece os recursos de desenvolvimento de aplicativo Web usados pelo .NET Core.
 
-As seguintes alterações significativas estão documentadas nesta página:
+Selecione um dos links a seguir para alterações significativas em uma versão específica:
+
+* [ASP.NET Core 5,0](#aspnet-core-50)
+* [ASP.NET Core 3,1](#aspnet-core-31)
+* [ASP.NET Core 3,0](#aspnet-core-30)
+
+As seguintes alterações significativas no ASP.NET Core 3,0, 3,1 e 5,0 estão documentadas nesta página:
 
 - [APIs antifalsificação obsoletas, CORS, diagnóstico, MVC e roteamento removidas](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [Autenticação: Google + substituição](#authentication-google-deprecated-and-replaced)

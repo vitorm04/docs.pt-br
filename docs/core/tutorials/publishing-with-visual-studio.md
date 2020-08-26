@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: afbffa5dc8a620836ec1433a095face46c32df90
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: e0033d52ab54259ce5e4ccf2a25bf4e3d4f244de
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811309"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867549"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio"></a>Tutorial: publicar um aplicativo de console do .NET Core usando o Visual Studio
 
@@ -19,13 +19,13 @@ Este tutorial mostra como publicar um aplicativo de console para que outros usu�
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Este tutorial funciona com o aplicativo de console que você cria em [criar um aplicativo de console do .NET Core no Visual Studio 2019](with-visual-studio.md).
+- Este tutorial funciona com o aplicativo de console que você cria em [criar um aplicativo de console do .NET Core usando o Visual Studio](with-visual-studio.md).
 
 ## <a name="publish-the-app"></a>Publicar o aplicativo
 
 1. Inicie o Visual Studio.
 
-1. Abra o projeto *HelloWorld* que você criou em [criar um aplicativo de console .NET Core no Visual Studio](with-visual-studio.md).
+1. Abra o projeto *HelloWorld* que você criou em [criar um aplicativo de console do .NET Core usando o Visual Studio](with-visual-studio.md).
 
 1. Verifique se o Visual Studio está usando a configuração de Build de versão. Se necessário, altere a configuração de build na barra de ferramentas de **Depuração** para **Lançamento**.
 
@@ -112,4 +112,4 @@ Nas etapas a seguir, você examinará os arquivos criados pelo processo de publi
 Neste tutorial, você publicou um aplicativo de console. No próximo tutorial, você criará uma biblioteca de classes.
 
 > [!div class="nextstepaction"]
-> [Criar uma biblioteca .NET Standard no Visual Studio](library-with-visual-studio.md)
+> [Criar uma biblioteca de .NET Standard usando o Visual Studio](library-with-visual-studio.md)

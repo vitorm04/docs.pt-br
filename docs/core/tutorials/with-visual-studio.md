@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: c732728a98eb993762e4fbb9e4b0f5229fdde181
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 4cd18aca4396f902268d59867760424d65ddcf6d
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811838"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867627"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>Tutorial: criar um aplicativo de console do .NET Core usando o Visual Studio
 
@@ -115,4 +115,4 @@ Aprimore o aplicativo para solicitar ao usuário seu nome e exibi-lo junto com a
 Neste tutorial, você criou um aplicativo de console do .NET Core. No próximo tutorial, você depurará o aplicativo.
 
 > [!div class="nextstepaction"]
-> [Depurar um aplicativo de console do .NET Core no Visual Studio](debugging-with-visual-studio.md)
+> [Depurar um aplicativo de console do .NET Core usando o Visual Studio](debugging-with-visual-studio.md)
