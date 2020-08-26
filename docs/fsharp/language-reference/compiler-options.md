@@ -2,12 +2,12 @@
 title: Opção de compilador
 description: 'Use as opções de linha de comando do compilador F # para controlar a compilação de seus aplicativos e bibliotecas do F #.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 7f7b7dac2060213cd7d783669cb4de2b96a88968
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: c10808e97d31bd3bdb469fc2a8e57a4650170dec
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557354"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812140"
 ---
 # <a name="compiler-options"></a>Opções do compilador
 
@@ -52,7 +52,7 @@ A tabela a seguir mostra as opções de compilador listadas em ordem alfabética
 |`--pdb:pdb-filename`|Nomeia o arquivo PDB de depuração de saída (banco de dados do programa). Essa opção só se aplica quando o `--debug` também está habilitado.<br /><br />Essa opção de compilador é equivalente à opção de compilador C# de mesmo nome. Para obter mais informações, consulte [&#47;pdb &#40;C&#35; opções do compilador&#41;](../../csharp/language-reference/compiler-options/pdb-compiler-option.md).|
 |`--platform:platform-name`|Especifica que o código gerado só será executado na plataforma especificada ( `x86` , `Itanium` ou `x64` ) ou, se o nome da plataforma `anycpu` for escolhido, especifica que o código gerado pode ser executado em qualquer plataforma.<br /><br />Essa opção de compilador é equivalente à opção de compilador C# de mesmo nome. Para obter mais informações, consulte [&#47;platform &#40;C&#35; opções do compilador&#41;](../../csharp/language-reference/compiler-options/platform-compiler-option.md).|
 |`--preferreduilang:lang`| Especifica o nome de cultura do idioma de saída preferencial (por exemplo,  `es-ES` `ja-JP` ). |
-|`--quotations-debug`|Especifica que as informações adicionais de depuração devem ser emitidas para expressões derivadas de literais de cotação F # e definições refletidas. As informações de depuração são adicionadas aos atributos personalizados de um nó de árvore de expressão F #. Consulte [Incitaçãos de código](code-quotations.md) e [expr. CustomAttributes](https://msdn.microsoft.com/visualfsharpdocs/conceptual/expr.customattributes-property-%5bfsharp%5d).|
+|`--quotations-debug`|Especifica que as informações adicionais de depuração devem ser emitidas para expressões derivadas de literais de cotação F # e definições refletidas. As informações de depuração são adicionadas aos atributos personalizados de um nó de árvore de expressão F #. Consulte [Incitaçãos de código](code-quotations.md) e [expr. CustomAttributes](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr.html#CustomAttributes).|
 |`--reference:assembly-filename`<br /><br />`-r:assembly-filename`|Torna o código de um assembly F # ou .NET Framework disponível para o código que está sendo compilado.<br /><br />Essa opção de compilador é equivalente à opção de compilador C# de mesmo nome. Para obter mais informações, consulte [&#47;referência &#40;C&#35; opções do compilador&#41;](../../csharp/language-reference/compiler-options/reference-compiler-option.md).|
 |`--resource:resource-filename`|Insere um arquivo de recurso gerenciado no assembly gerado.<br /><br />Essa opção de compilador é equivalente à opção de compilador C# de mesmo nome. Para obter mais informações, consulte [&#47;resource &#40;C&#35; opções do compilador&#41;](../../csharp/language-reference/compiler-options/resource-compiler-option.md).|
 |`--sig:signature-filename`|Gera um arquivo de assinatura com base no assembly gerado. Para obter mais informações sobre arquivos de assinatura, consulte [assinaturas](signature-files.md).|
@@ -72,7 +72,7 @@ A tabela a seguir mostra as opções de compilador listadas em ordem alfabética
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-|Title|Descrição|
+|Título|Descrição|
 |-----|-----------|
 |[Opções do F# Interativo](fsharp-interactive-options.md)|Descreve as opções de linha de comando suportadas pelo interpretador F # fsi.exe.|
 |[Referência de propriedades do projeto](/visualstudio/ide/reference/project-properties-reference)|Descreve a interface do usuário para projetos, incluindo páginas de propriedades do projeto que fornecem opções de compilação.|

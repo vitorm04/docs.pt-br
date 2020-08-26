@@ -1,20 +1,17 @@
 ---
 title: Cadeias de caracteres
 description: 'Saiba como o tipo de cadeia de caracteres F # representa um texto imutável como uma sequência de caracteres Unicode.'
-ms.date: 07/05/2019
-ms.openlocfilehash: 67a6506b4b8c479da1022c069a7f53402f904b4d
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: f6ec36feeb197bf785c702e7b626cf5cf80696ab
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855407"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812205"
 ---
 # <a name="strings"></a>Cadeias de caracteres
 
 O `string` tipo representa texto imutável como uma sequência de caracteres Unicode. `string` é um alias de `System.String` no .NET.
-
-> [!NOTE]
-> A referência da API docs.microsoft.com para F # não está completa. Se você encontrar links desfeitos, consulte a [documentação da biblioteca principal F #](https://fsharp.github.io/fsharp-core-docs/) em vez disso.
 
 ## <a name="remarks"></a>Comentários
 
@@ -27,15 +24,15 @@ Literais de cadeia de caracteres são delimitadas pelo caractere de aspas ("). O
 |Avanço de formulário|`\f`|
 |Nova linha|`\n`|
 |Retorno de carro|`\r`|
-|Tab|`\t`|
+|Guia|`\t`|
 |Guia vertical|`\v`|
 |Barra invertida|`\\`|
 |Aspas|`\"`|
 |Apóstrofo|`\'`|
-|Caractere unicode|`\DDD`(onde `D` indica um dígito decimal; intervalo de 000-255; por exemplo, `\231` = "ç")|
-|Caractere unicode|`\xHH`(onde `H` indica um dígito hexadecimal; intervalo de 00-FF; por exemplo, `\xE7` = "ç")|
-|Caractere unicode|`\uHHHH`(UTF-16) (onde `H` indica um dígito hexadecimal; intervalo de 0000-ffff;  por exemplo, `\u00E7` = "ç")|
-|Caractere unicode|`\U00HHHHHH`(UTF-32) (onde `H` indica um dígito hexadecimal; intervalo de 000000-10FFFF;  por exemplo, `\U0001F47D` = " 👽 ")|
+|Caractere unicode|`\DDD` (onde `D` indica um dígito decimal; intervalo de 000-255; por exemplo, `\231` = "ç")|
+|Caractere unicode|`\xHH` (onde `H` indica um dígito hexadecimal; intervalo de 00-FF; por exemplo, `\xE7` = "ç")|
+|Caractere unicode|`\uHHHH` (UTF-16) (onde `H` indica um dígito hexadecimal; intervalo de 0000-ffff;  por exemplo, `\u00E7` = "ç")|
+|Caractere unicode|`\U00HHHHHH` (UTF-32) (onde `H` indica um dígito hexadecimal; intervalo de 000000-10FFFF;  por exemplo, `\U0001F47D` = " 👽 ")|
 
 > [!IMPORTANT]
 > A `\DDD` sequência de escape é notação decimal, não notação octal, como na maioria das outras linguagens. Portanto, os dígitos `8` e `9` são válidos, e uma sequência de `\032` representa um espaço (U + 0020), enquanto que o mesmo ponto de código na notação octal seria `\040` .
@@ -102,7 +99,7 @@ Usando a `Chars` propriedade de `System.String` , você pode acessar os caracter
 
 ## <a name="string-module"></a>Módulo de cadeia de caracteres
 
-A funcionalidade adicional para manipulação de cadeia de caracteres está incluída no `String` módulo no `FSharp.Core` namespace. Para obter mais informações, consulte [Core. String Module](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
+A funcionalidade adicional para manipulação de cadeia de caracteres está incluída no `String` módulo no `FSharp.Core` namespace. Para obter mais informações, consulte [módulo de cadeia de caracteres](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-stringmodule.html).
 
 ## <a name="see-also"></a>Confira também
 

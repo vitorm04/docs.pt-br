@@ -1,27 +1,27 @@
 ---
-title: Introdução ao F# com ferramentas de linha de comando
-description: Saiba como criar uma solução simples de vários projetos sobre F# como usar o CLI do .NET Core em qualquer sistema operacional (Windows, MacOS ou Linux).
-ms.date: 03/26/2018
-ms.openlocfilehash: 6f67314f49150e20b18734f21f24daa3ce856922
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+title: 'Introdução ao F # com ferramentas de linha de comando'
+description: 'Saiba como criar uma solução de vários projetos simples em F # usando o CLI do .NET Core em qualquer sistema operacional (Windows, macOS ou Linux).'
+ms.date: 08/15/2020
+ms.openlocfilehash: e652b66337a3122de8e6bd4d62d86fb6082b759d
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504138"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811984"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a>Introdução ao F# com o CLI do .NET Core
+# <a name="get-started-with-f-with-the-net-core-cli"></a>Introdução ao F # com o CLI do .NET Core
 
-Este artigo aborda como você pode começar a usar F# o em qualquer sistema operacional (Windows, MacOS ou Linux) com o CLI do .NET Core. Ele passa pela criação de uma solução de vários projetos com uma biblioteca de classes chamada por um aplicativo de console.
+Este artigo aborda como você pode começar a usar o F # em qualquer sistema operacional (Windows, macOS ou Linux) com o CLI do .NET Core. Ele passa pela criação de uma solução de vários projetos com uma biblioteca de classes chamada por um aplicativo de console.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para começar, você deve instalar a [SDK do .NET Core](https://dotnet.microsoft.com/download)mais recente.
 
-Este artigo pressupõe que você saiba como usar uma linha de comando e ter um editor de texto preferido. Se você ainda não o utiliza, [Visual Studio Code](get-started-vscode.md) é uma ótima opção como um editor de texto F#para o.
+Este artigo pressupõe que você saiba como usar uma linha de comando e ter um editor de texto preferido. Se você ainda não o utiliza, [Visual Studio Code](get-started-vscode.md) é uma ótima opção como um editor de texto para F #.
 
 ## <a name="build-a-simple-multi-project-solution"></a>Criar uma solução simples de vários projetos
 
-Abra um prompt de comando/terminal e use o comando [dotnet New](../../core/tools/dotnet-new.md) para criar um novo arquivo de solução chamado `FSNetCore`:
+Abra um prompt de comando/terminal e use o comando [dotnet New](../../core/tools/dotnet-new.md) para criar um novo arquivo de solução chamado `FSNetCore` :
 
 ```dotnetcli
 dotnet new sln -o FSNetCore
@@ -38,7 +38,7 @@ FSNetCore
 
 Altere os diretórios para *FSNetCore*.
 
-Use o comando `dotnet new`, crie um projeto de biblioteca de classes na pasta **src** denominada library.
+Use o `dotnet new` comando, crie um projeto de biblioteca de classes na pasta **src** denominada library.
 
 ```dotnetcli
 dotnet new classlib -lang "F#" -o src/Library
@@ -63,16 +63,17 @@ module Library
 open Newtonsoft.Json
 
 let getJsonNetJson value =
-    sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value (JsonConvert.SerializeObject(value))
+    let json = JsonConvert.SerializeObject(value)
+    sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value json
 ```
 
-Adicione o pacote NuGet Newtonsoft. JSON ao projeto de biblioteca.
+Adicione o Newtonsoft.Jsno pacote NuGet ao projeto de biblioteca.
 
 ```dotnetcli
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
-Adicione o projeto `Library` à solução `FSNetCore` usando o comando [dotnet sln Add](../../core/tools/dotnet-sln.md) :
+Adicione o `Library` projeto à `FSNetCore` solução usando o comando [dotnet DPD Add](../../core/tools/dotnet-sln.md) :
 
 ```dotnetcli
 dotnet sln add src/Library/Library.fsproj
@@ -82,7 +83,7 @@ Execute `dotnet build` para compilar o projeto. As dependências não resolvidas
 
 ### <a name="write-a-console-application-that-consumes-the-class-library"></a>Escrever um aplicativo de console que consome a biblioteca de classes
 
-Use o comando `dotnet new`, crie um aplicativo de console na pasta **src** chamada app.
+Use o `dotnet new` comando, crie um aplicativo de console na pasta **src** chamada app.
 
 ```dotnetcli
 dotnet new console -lang "F#" -o src/App
@@ -112,28 +113,28 @@ open Library
 let main argv =
     printfn "Nice command-line arguments! Here's what JSON.NET has to say about them:"
 
-    argv
-    |> Array.map getJsonNetJson
-    |> Array.iter (printfn "%s")
+    for arg in argv do
+        let value = getJsonNetJson arg
+        printfn "%s" value
 
     0 // return an integer exit code
 ```
 
-Adicione uma referência ao projeto `Library` usando [dotnet Adicionar referência](../../core/tools/dotnet-add-reference.md).
+Adicione uma referência ao `Library` projeto usando [dotnet Add Reference](../../core/tools/dotnet-add-reference.md).
 
 ```dotnetcli
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
-Adicione o projeto `App` à solução `FSNetCore` usando o comando `dotnet sln add`:
+Adicione o `App` projeto à `FSNetCore` solução usando o `dotnet sln add` comando:
 
 ```dotnetcli
 dotnet sln add src/App/App.fsproj
 ```
 
-Restaure as dependências do NuGet, `dotnet restore` e execute `dotnet build` para compilar o projeto.
+Restaure as dependências do NuGet `dotnet restore` e execute `dotnet build` para compilar o projeto.
 
-Altere o diretório para o projeto de console `src/App` e execute o projeto passando `Hello World` como argumentos:
+Altere o diretório para o `src/App` projeto de console e execute o projeto passando `Hello World` como argumentos:
 
 ```dotnetcli
 cd src/App
@@ -151,4 +152,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Em seguida, confira o [Tour F# do](../tour.md) para saber mais sobre F# os diferentes recursos.
+Em seguida, confira o [Tour do F #](../tour.md) para saber mais sobre os diferentes recursos do F #.

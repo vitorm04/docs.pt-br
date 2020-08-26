@@ -2,12 +2,12 @@
 title: Registros
 description: 'Saiba como os registros F # representam agregações simples de valores nomeados, opcionalmente com membros.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 182b2e83c3940c866197052af102787a96e49c54
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: a72c0f15b58407e7d759e2fb5a1b35a7fc0d29e3
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559044"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812348"
 ---
 # <a name="records"></a>Registros
 
@@ -184,5 +184,5 @@ Se você precisar de igualdade de referência para registros, adicione o atribut
 - [Tipos F#](fsharp-types.md)
 - [Classes](classes.md)
 - [Referência de linguagem F #](index.md)
-- [Referência-igualdade](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+- [Referência-igualdade](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-referenceequalityattribute.html)
 - [Correspondência de padrões](pattern-matching.md)

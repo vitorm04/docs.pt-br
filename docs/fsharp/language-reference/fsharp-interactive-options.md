@@ -2,12 +2,12 @@
 title: Opções interativas
 description: Saiba mais sobre as opções de linha de comando com suporte pelo F# Interativo, fsi.exe.
 ms.date: 08/15/2020
-ms.openlocfilehash: da2251c1d2e57090ed926e501cebf3c53ac58052
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: adc8dc86f14366720e1acbf35115d4e318a76aef
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558602"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810518"
 ---
 # <a name="f-interactive-options"></a>Opções de F# Interativo
 
@@ -52,7 +52,7 @@ Quando as listas aparecem em F# Interativo argumentos de opção, os elementos d
 |**--otimizar**[ **+**&#124;**-** ]|O mesmo que a opção de compilador **fsc.exe** . Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
 |**--preferreduilang: &lt; lang&gt;**| Especifica o nome de cultura do idioma de saída preferencial (por exemplo, es-ES, ja-JP). |
 |**--Quiet**|Suprime a saída de F# Interativo para o fluxo **stdout** .|
-|**--Cotações-depurar**|Especifica que as informações adicionais de depuração devem ser emitidas para expressões derivadas de literais de cotação F # e definições refletidas. As informações de depuração são adicionadas aos atributos personalizados de um nó de árvore de expressão F #. Consulte [Incitaçãos de código](code-quotations.md) e [expr. CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
+|**--Cotações-depurar**|Especifica que as informações adicionais de depuração devem ser emitidas para expressões derivadas de literais de cotação F # e definições refletidas. As informações de depuração são adicionadas aos atributos personalizados de um nó de árvore de expressão F #. Consulte [Incitaçãos de código](code-quotations.md) e [expr. CustomAttributes](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr.html#CustomAttributes).|
 |**--ReadLine**[ **+**&#124;**-** ]|Habilitar ou desabilitar o preenchimento com Tab no modo interativo.|
 |**--referência: &lt; nome de arquivo&gt;**<br /><br />**-r: &lt; nome de arquivo&gt;**|O mesmo que a opção de compilador **fsc.exe** . Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
 |**--tailcalls**[ **+**&#124;**-** ]|Habilitar ou desabilitar o uso da instrução de IL final, que faz com que o quadro de pilha seja reutilizado para funções recursivas da parte final. Essa opção é habilitada por padrão.|
@@ -163,6 +163,6 @@ val y : string = ["quack"; "quack"; "quack"]
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Title|Descrição|
+|Título|Descrição|
 |-----|-----------|
 |[Opções do compilador](compiler-options.md)|Descreve as opções de linha de comando disponíveis para o compilador F #, **fsc.exe**.|
