@@ -1,30 +1,21 @@
 ---
-title: Referência do F# Interativo (fsi.exe)
-description: 'Saiba como F# Interativo (fsi.exe) é usado para executar o código F # interativamente no console ou para executar scripts em F #.'
-ms.date: 05/16/2016
+title: Referência de F# Interativo (dotnet)
+description: 'Saiba como F# Interativo (dotNet FSI) é usado para executar o código F # interativamente no console ou para executar scripts em F #.'
+ms.date: 08/20/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 8bb1563ad34e65101fb9f09d6e347278e4b0de78
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 760b096c8a3ee0d495b893ab66fa6f9007cdbbf9
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854939"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867614"
 ---
 # <a name="interactive-programming-with-f"></a>Programação interativa com F\#
 
-> [!NOTE]
-> Atualmente, este artigo descreve somente a experiência para Windows.
+F# Interativo (dotNet FSI) é usado para executar o código F # interativamente no console ou para executar scripts em F #. Em outras palavras, o F# interativo executa um REPL (Ler, Avaliar, Imprimir Loop) para a linguagem F#.
 
-O F# interativo (fsi.exe) é usado para executar o código do F# de forma interativa no console ou executar scripts do F#. Em outras palavras, o F# interativo executa um REPL (Ler, Avaliar, Imprimir Loop) para a linguagem F#.
-
-Para executar o F# interativo a partir do console, execute fsi.exe. Você encontrará fsi.exe em:
-
-```console
-C:\Program Files (x86)\Microsoft Visual Studio\2019\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
-```
-
-onde `sku` é `Community` , `Professional` ou `Enterprise` .
+Para executar o F# Interativo no console do, execute `dotnet fsi` . Você encontrará `dotnet fsi` em qualquer SDK do .net.
 
 Para saber mais sobre as opções de linha de comando disponíveis, veja [Opções de F# Interativo](../../language-reference/fsharp-interactive-options.md).
 
@@ -44,7 +35,7 @@ Você pode controlar os argumentos de linha de comando do F# interativo (opçõe
 
 ## <a name="scripting-with-f"></a>Criando scripts com o F\#
 
-Os scripts usam a extensão de arquivo **.fsx** ou **.fsscript**. Em vez de compilar o código-fonte e executar o conjunto compilado posteriormente, é possível executar apenas **fsi.exe** e especificar o nome do arquivo do script de código-fonte do F# e o F# interativo lerá o código e o executará em tempo real.
+Os scripts usam a extensão de arquivo **.fsx** ou **.fsscript**. Em vez de compilar o código-fonte e, posteriormente, executar o assembly compilado, você pode apenas executar **dotnet FSI** e especificar o nome de arquivo do script do código-fonte f # e o f # Interactive lê o código e o executa em tempo real.
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Diferenças entre os ambientes interativo, de script e compilados
 
@@ -92,6 +83,36 @@ Command line arguments:
 file1.fsx
 test
 90
+```
+
+## <a name="package-management-in-f-interactive"></a>Gerenciamento de Pacotes em F# Interativo
+
+[!NOTE] O gerenciamento de pacotes está disponível como um recurso de visualização em versões do `dotnet fsi` fornecidas no `3.1.300` e em versões posteriores do SDK do .net, bem como todas as `5.*` versões do SDK do .net. Para habilitá-lo nesta versão de visualização, execute `dotnet fsi` com o `--langversion:preview` argumento.
+
+A `#r` sintaxe para referenciar uma dll no F# interativo também pode ser usada para fazer referência a um pacote NuGet por meio da seguinte sintaxe:
+
+```fsharp
+#r "nuget: <package name>
+```
+
+Por exemplo, para fazer referência ao `FSharp.Data` pacote, use a seguinte `#r` referência:
+
+```fsharp
+#r "nuget: FSharp.Data"
+```
+
+Depois de executar essa linha, a versão mais recente do `FSharp.Data` pacote será baixada para o cache do NuGet e referenciada na sessão de F# interativo atual.
+
+Além do nome do pacote, versões específicas de um pacote podem ser referenciadas por meio de uma sintaxe curta:
+
+```fsharp
+#r "nuget: FSharp.Data, 3.3.2"
+```
+
+ou de maneira mais explícita:
+
+```fsharp
+#r "nuget: FSharp.Data, Version=3.3.2"
 ```
 
 ## <a name="related-articles"></a>Artigos relacionados
