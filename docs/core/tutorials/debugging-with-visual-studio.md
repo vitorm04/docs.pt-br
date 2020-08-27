@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 0555c6b4185da088333503c1e744da2dd7b4f2e4
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: 4e408d5bd0976d88f368615860ac373142d0fe1e
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867588"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957219"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio"></a>Tutorial: Depurar um aplicativo de console do .NET Core usando o Visual Studio
 
@@ -27,7 +27,7 @@ Este tutorial apresenta as ferramentas de depuração disponíveis no Visual Stu
 
 Na configuração de depuração, um programa é compilado com informações de depuração simbólicas completas e sem otimização. A otimização complica a depuração, porque a relação entre o código fonte e as instruções geradas é mais complexa. A configuração de versão de um programa não tem informações de depuração simbólicas e é totalmente otimizada.
 
- Por padrão, Visual Studio Code usa a configuração de compilação de depuração, portanto, você não precisa alterá-la antes da depuração.
+ Por padrão, o Visual Studio usa a configuração de compilação de depuração, portanto, você não precisa alterá-la antes da depuração.
 
 1. Inicie o Visual Studio.
 
@@ -41,7 +41,7 @@ Na configuração de depuração, um programa é compilado com informações de 
 
 Um *ponto de interrupção* interrompe temporariamente a execução do aplicativo antes de a linha com o ponto de interrupção ser executada.
 
-1. Defina um *ponto de interrupção* na linha que exibe o nome, a data e a hora clicando na margem esquerda da janela de código nessa linha. A margem esquerda está à esquerda dos números de linha.  Outra maneira de definir um ponto de interrupção é colocando o cursor na linha de código e escolhendo **depurar**  >  **alternância de ponto de interrupção** na barra de menus.
+1. Defina um *ponto de interrupção* na linha que exibe o nome, a data e a hora clicando na margem esquerda da janela de código nessa linha. A margem esquerda está à esquerda dos números de linha.  Outras maneiras de definir um ponto de interrupção são colocando o cursor na linha de código e, em seguida, pressionando <kbd>F9</kbd> ou escolhendo **depurar**  >  **alternância de ponto de interrupção** na barra de menus.
 
    Como mostra a imagem a seguir, o Visual Studio indica a linha na qual o ponto de interrupção é definido, destacando-o e exibindo um ponto vermelho na margem esquerda.
 
@@ -127,7 +127,7 @@ O programa exibe a cadeia de caracteres que o usuário insere. O que acontecerá
 
 1. Pressione qualquer tecla para fechar a janela do console e parar a depuração.
 
-1. Desmarque o ponto de interrupção clicando no pontos na margem esquerda da janela de código. Outra maneira de limpar um ponto de interrupção é escolhendo **Debug > alternar ponto de interrupção** enquanto a linha de código é selecionada.
+1. Desmarque o ponto de interrupção clicando no pontos na margem esquerda da janela de código. Outras maneiras de limpar um ponto de interrupção são pressionando <kbd>F9</kbd> ou escolhendo **debug > alternar o ponto de interrupção** enquanto a linha de código é selecionada.
 
 ## <a name="step-through-a-program"></a>Percorrer um programa
 

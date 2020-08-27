@@ -4,20 +4,24 @@ description: Saiba como cortar aplicativos independentes para reduzir seu tamanh
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: e3eb161b14f206723ad034af0a4a6ba8cd575578
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 47bccf25b6f6a1b65742bb5e3f5f299932659c3c
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810606"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957547"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Cortar implantações e executáveis autossuficientes
 
 O [modelo de implantação dependente de estrutura](index.md#publish-framework-dependent) foi o modelo de implantação mais bem-sucedido desde o início do .net. Nesse cenário, o desenvolvedor de aplicativos agrupa apenas o aplicativo e os assemblies de terceiros, com a expectativa de que as bibliotecas de tempo de execução .NET e estrutura estarão disponíveis no computador cliente. Esse modelo de implantação continua sendo o dominante no .NET Core, mas há alguns cenários em que o modelo dependente de estrutura não é o ideal. A alternativa é publicar um [aplicativo](index.md#publish-self-contained)independente, em que o tempo de execução e a estrutura do .NET Core são agrupados com o aplicativo e com assemblies de terceiros.
 
-O modelo de implantação de preparo – autocontido é uma versão especializada do modelo de implantação independente que é otimizado para reduzir o tamanho da implantação. Minimizar o tamanho da implantação é um requisito crítico para alguns cenários do lado do cliente, como aplicativos mais Incrivelmenteos. Dependendo da complexidade do aplicativo, apenas um subconjunto dos assemblies do Framework é necessário para executar o aplicativo. Essas partes não utilizadas da biblioteca são desnecessárias e podem ser cortadas do aplicativo empacotado. No entanto, há um risco de que a análise de tempo de compilação do aplicativo possa causar falhas em tempo de execução, devido ao fato de não poder analisar de maneira confiável vários padrões de código problemáticos (amplamente centrados no uso de reflexão). Como a confiabilidade não pode ser garantida, esse modelo de implantação é oferecido como um recurso de visualização. O mecanismo de análise de tempo de compilação fornece avisos ao desenvolvedor de padrões de código que são problemáticos, com a expectativa de que esses padrões de código sejam corrigidos. Sempre que possível, recomendamos que você mova qualquer dependência de reflexão de tempo de execução em seu aplicativo para compilar o tempo usando código que atenda aos mesmos requisitos.
+O modelo de implantação de preparo – autocontido é uma versão especializada do modelo de implantação independente que é otimizado para reduzir o tamanho da implantação. Minimizar o tamanho da implantação é um requisito crítico para alguns cenários do lado do cliente, como aplicativos mais Incrivelmenteos. Dependendo da complexidade do aplicativo, apenas um subconjunto dos assemblies da estrutura são referenciados e um subconjunto do código dentro de cada assembly é necessário para executar o aplicativo. As partes não utilizadas das bibliotecas são desnecessárias e podem ser cortadas do aplicativo empacotado.
 
-O modo de corte para os aplicativos pode ser configurado por meio do TRIMMODE e será padrão ( `copyused` ) para agrupar assemblies que são usados no aplicativo. Os aplicativos Webassembly mais atraentes usarão um modo mais agressivo ( `link` ) que cortará o código não utilizado dentro de assemblies. Avisos de análise de corte fornecem informações sobre padrões de código em que uma análise de dependência completa não era possível. Esses avisos são suprimidos por padrão e podem ser ativados definindo o sinalizador, `SuppressTrimAnalysisWarnings` , para false. Mais informações sobre as opções de corte disponíveis podem ser encontradas na [página ILLinker](https://github.com/mono/linker/blob/master/docs/illink-options.md).
+No entanto, há um risco de que a análise de tempo de compilação do aplicativo possa causar falhas em tempo de execução, devido ao fato de não poder analisar de maneira confiável vários padrões de código problemáticos (amplamente centrados no uso de reflexão). Como a confiabilidade não pode ser garantida, esse modelo de implantação é oferecido como um recurso de visualização.
+
+O mecanismo de análise de tempo de compilação fornece avisos para o desenvolvedor de padrões de código que são problemmatic para detectar qual outro código é necessário. O código pode ser anotado com atributos para informar ao corte o que mais incluir. Muitos padrões de reflexão podem ser substituídos com geração de código em tempo de compilação usando [geradores de origem](https://github.com/dotnet/roslyn/blob/master/docs/features/source-generators.md).
+
+O modo de corte para os aplicativos é configurado com a `TrimMode` configuração. O valor padrão é `copyused` e agrupa os assemblies referenciados com o aplicativo. O `link` valor é usado com aplicativos Webassembly mais podestas e corta código não utilizado em assemblies. Avisos de análise de corte fornecem informações sobre padrões de código em que uma análise de dependência completa não era possível. Esses avisos são suprimidos por padrão e podem ser ativados definindo o sinalizador `SuppressTrimAnalysisWarnings` como `false` . Para obter mais informações sobre as opções de corte disponíveis, consulte a [página ILLinker](https://github.com/mono/linker/blob/master/docs/illink-options.md).
 
 > [!NOTE]
 > O corte é um recurso experimental no .NET Core 3,1, 5,0 e está disponível _somente_ para aplicativos que são publicados internamente.

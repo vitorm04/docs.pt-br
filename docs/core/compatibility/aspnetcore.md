@@ -2,15 +2,15 @@
 title: ASP.NET Core alterações significativas
 titleSuffix: ''
 description: Lista as alterações significativas em ASP.NET Core.
-ms.date: 08/20/2020
+ms.date: 08/25/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 8b37ae5c5eea9e192a269092fccf435ab4877e61
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: 443494291f4ec58aecd7c8d8ed42cb4086e64095
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867666"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957724"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core alterações significativas
 
@@ -81,6 +81,7 @@ As seguintes alterações significativas no ASP.NET Core 3,0, 3,1 e 5,0 estão d
 - [MVC: ferramenta de pré-compilação preterida](#mvc-precompilation-tool-deprecated)
 - [MVC: tipos alterados para interno](#mvc-pubternal-types-changed-to-internal)
 - [MVC: Shim de compatibilidade da API Web removido](#mvc-web-api-compatibility-shim-removed)
+- [Razor: API RazorTemplateEngine removida](#razor-razortemplateengine-api-removed)
 - [Razor: compilação de tempo de execução movida para um pacote](#razor-runtime-compilation-moved-to-a-package)
 - [Segurança: codificação de nome de cookie removida](#security-cookie-name-encoding-removed)
 - [Segurança: versões do pacote NuGet do IdentityModel atualizadas](#security-identitymodel-nuget-package-versions-updated)
@@ -354,6 +355,10 @@ As seguintes alterações significativas no ASP.NET Core 3,0, 3,1 e 5,0 estão d
 ***
 
 [!INCLUDE[MVC: Web API compatibility shim removed](~/includes/core-changes/aspnetcore/3.0/mvc-webapi-compat-shim-removed.md)]
+
+***
+
+[!INCLUDE[Razor: RazorTemplatEengine API removed](~/includes/core-changes/aspnetcore/3.0/razor-razortemplateengine-api-removed.md)]
 
 ***
 

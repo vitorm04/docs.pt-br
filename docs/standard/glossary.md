@@ -3,12 +3,12 @@ title: Glossário .NET
 description: Descubra o significado de termos selecionados usados na documentação do .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: c984a29208d8680de3c04f6b4d16c6f41afedc71
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 59e338de99510759e3e7acfd782915ed6dc5d988
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812335"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957567"
 ---
 # <a name="net-glossary"></a>Glossário .NET
 
@@ -48,13 +48,13 @@ Biblioteca de classes base. Também conhecida como *bibliotecas de estrutura*.
 
 Um conjunto de bibliotecas que compõem o sistema. \* (e com uma extensão limitada da Microsoft. \* ) namespaces. A BCL é uma estrutura de nível inferior e de uso geral, base para a criação de estruturas de aplicativo de nível mais alto, como o ASP.NET Core.
 
-O código-fonte da BCL para o [.NET 5 e versões posteriores (incluindo o .NET Core 2.1-3.1)](#net-5-and-later-versions) está contido no [repositório do tempo de execução do .net](https://github.com/dotnet/runtime). A maioria das APIs de BCL para essa implementação mais recente do .NET também está disponível em .NET Framework, portanto, você pode considerar esse código-fonte como uma bifurcação do código-fonte da BCL .NET Framework.
+O código-fonte da BCL para [.NET 5 (e .NET Core) e versões posteriores](#net-5-and-later-versions) está contido no [repositório do tempo de execução do .net](https://github.com/dotnet/runtime). A maioria das APIs de BCL para essa implementação mais recente do .NET também está disponível em .NET Framework, portanto, você pode considerar esse código-fonte como uma bifurcação do código-fonte da BCL .NET Framework.
 
 ## <a name="clr"></a>CLR
 
 Common Language Runtime.
 
-O significado exato depende do contexto. O Common Language Runtime geralmente se refere ao tempo de execução de [.NET Framework](#net-framework) ou ao tempo de execução do [.NET 5 e versões posteriores (incluindo o .NET Core 2.1-3.1)](#net-5-and-later-versions).
+O significado exato depende do contexto. O Common Language Runtime geralmente se refere ao tempo de execução de [.NET Framework](#net-framework) ou ao tempo de execução do [.NET 5 (e do .NET Core) e versões posteriores](#net-5-and-later-versions).
 
 Um CLR gerencia A alocação e o gerenciamento de memória. Um CLR também é uma máquina virtual que não só executa aplicativos, mas também gera e compila código imediatamente usando um compilador [JIT](#jit) .
 
@@ -66,7 +66,7 @@ Consulte também [tempo de execução](#runtime).
 
 ## <a name="core-clr"></a>CLR principal
 
-O Common Language Runtime para [.NET 5 e versões posteriores (incluindo o .NET Core 2.1-3.1)](#net-5-and-later-versions).
+O Common Language Runtime para [.NET 5 (e .NET Core) e versões posteriores](#net-5-and-later-versions).
 
 Consulte [CLR](#clr)
 
@@ -126,7 +126,7 @@ Semelhante ao [AOT](#aot), esse compilador converte a [IL](#il) em um código de
 Uma implementação do .NET inclui:
 
 - Um ou mais runtimes. Exemplos: [CLR](#clr), [CoreRT](#corert).
-- Uma biblioteca de classes que implemente uma versão do .NET Standard, podendo incluir APIs adicionais. Exemplos: o [BCLs](#bcl) para [.NET Framework](#net-framework) e o [.NET 5 e versões posteriores (incluindo o .NET Core 2.1-3.1)](#net-5-and-later-versions).
+- Uma biblioteca de classes que implemente uma versão do .NET Standard, podendo incluir APIs adicionais. Exemplos: o [BCLs](#bcl) para [.NET Framework](#net-framework) e o [.NET 5 (e .NET Core) e versões posteriores](#net-5-and-later-versions).
 - Opcionalmente, uma ou mais estruturas de aplicativo. Exemplos: [ASP.net](#aspnet), Windows Forms e WPF estão incluídos no .NET Framework e no .NET 5.
 - Opcionalmente, ferramentas de desenvolvimento. Algumas ferramentas de desenvolvimento são compartilhadas entre várias implementações.
 
@@ -173,7 +173,7 @@ Consulte [.net](../core/index.yml).
 
 ## <a name="net-cli"></a>CLI do .NET
 
-Um ferramentas de plataforma cruzada para o desenvolvimento de aplicativos e bibliotecas para o [.NET 5 e versões posteriores (incluindo o .NET Core 2.1-3.1)](#net-5-and-later-versions). Também conhecido como o CLI do .NET Core.
+Um ferramentas de plataforma cruzada para o desenvolvimento de aplicativos e bibliotecas para [.NET 5 (e .NET Core) e versões posteriores](#net-5-and-later-versions). Também conhecido como o CLI do .NET Core.
 
 Consulte [CLI do .net](../core/tools/index.md).
 
@@ -199,7 +199,7 @@ Consulte [Introdução ao .NET Native e ao CoreRT](https://github.com/dotnet/cor
 
 ## <a name="net-sdk"></a>SDK .NET
 
-Um conjunto de bibliotecas e ferramentas que permitem aos desenvolvedores criar aplicativos e bibliotecas .NET para o [.NET 5 e versões posteriores (incluindo o .NET Core 2.1-3.1)](#net-5-and-later-versions). Também conhecido como o SDK do .NET Core.
+Um conjunto de bibliotecas e ferramentas que permitem aos desenvolvedores criar aplicativos e bibliotecas .NET para o [.NET 5 (e o .NET Core) e versões posteriores](#net-5-and-later-versions). Também conhecido como o SDK do .NET Core.
 
 Inclui a [CLI do .net](#net-cli) para compilar aplicativos, bibliotecas .net e tempo de execução para compilar e executar aplicativos e o executável dotnet (*dotnet.exe*) que executa comandos da CLI e executa aplicativos.
 
@@ -252,7 +252,7 @@ A palavra "tempo de execução" tem um significado diferente nos seguintes conte
 
   O "tempo de execução" aqui significa o [CLR](#clr) junto com a [BCL](#bcl) (bibliotecas de estruturas), que você pode baixar e instalar em um computador para que possa executar aplicativos [dependentes da estrutura](../core/deploying/index.md#publish-framework-dependent) no computador.
 
-* O [RID (identificador de tempo de execução)](../core/rid-catalog.md) para o [.NET 5 e versões posteriores (incluindo o .NET Core 2.1-3.1)](#net-5-and-later-versions).
+* O [RID (identificador de tempo de execução)](../core/rid-catalog.md) para [.NET 5 (e .NET Core) e versões posteriores](#net-5-and-later-versions).
 
   "Tempo de execução" aqui significa a plataforma do sistema operacional e a arquitetura de CPU em que um aplicativo .NET é executado, por exemplo: `linux-x64` .
 
@@ -290,7 +290,7 @@ Consulte [Estruturas de destino](frameworks.md).
 
 Plataforma Universal do Windows.
 
-Uma implementação do .NET que é usada para criar aplicativos do Windows modernos e sensíveis ao toque, bem como software para a IoT (Internet das Coisas). Ele foi projetado para unificar os diferentes tipos de dispositivos que você talvez queira direcionar, incluindo PCs, tablets, telefones e até mesmo o Xbox. A UWP fornece muitos serviços, como um repositório centralizado de aplicativos, um ambiente de execução (AppContainer) e um conjunto de APIs do Windows para usar em vez das APIS do Win32 (WinRT). Os aplicativos podem ser escritos em C++, C#, Visual Basic e JavaScript. Ao usar C# e Visual Basic, as APIs do .NET são fornecidas pelo .NET 5 e por versões posteriores (incluindo o .NET Core 2.1-3.1).
+Uma implementação do .NET que é usada para criar aplicativos do Windows modernos e sensíveis ao toque, bem como software para a IoT (Internet das Coisas). Ele foi projetado para unificar os diferentes tipos de dispositivos que você talvez queira direcionar, incluindo PCs, tablets, telefones e até mesmo o Xbox. A UWP fornece muitos serviços, como um repositório centralizado de aplicativos, um ambiente de execução (AppContainer) e um conjunto de APIs do Windows para usar em vez das APIS do Win32 (WinRT). Os aplicativos podem ser escritos em C++, C#, Visual Basic e JavaScript. Ao usar C# e Visual Basic, as APIs do .NET são fornecidas pelo .NET 5 (e .NET Core) e por versões posteriores.
 
 ## <a name="see-also"></a>Confira também
 

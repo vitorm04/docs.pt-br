@@ -2,18 +2,18 @@
 title: Depurar um aplicativo de console do .NET Core usando Visual Studio para Mac
 description: Saiba como depurar um aplicativo de console do .NET Core usando o Mac do Visual Studio.
 ms.date: 06/08/2020
-ms.openlocfilehash: 79936fb99d0bc37c1234eb8f227eb5415ae48b93
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: 011647a6e3e676909880befa3b770205eb9616d6
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867562"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957519"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-for-mac"></a>Tutorial: Depurar um aplicativo de console do .NET Core usando Visual Studio para Mac
 
 Este tutorial apresenta as ferramentas de depuração disponíveis no Visual Studio para Mac.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Este tutorial funciona com o aplicativo de console que você cria em [criar um aplicativo de console do .NET Core usando Visual Studio para Mac](with-visual-studio-mac.md).
 
@@ -23,7 +23,7 @@ Este tutorial apresenta as ferramentas de depuração disponíveis no Visual Stu
 
 Na configuração de depuração, um programa é compilado com informações de depuração simbólicas completas e sem otimização. A otimização complica a depuração, porque a relação entre o código fonte e as instruções geradas é mais complexa. A configuração de versão de um programa não tem informações de depuração simbólicas e é totalmente otimizada.
 
-Por padrão, o Visual Studio usa a configuração de compilação de depuração, portanto, você não precisa alterá-la antes da depuração.
+Por padrão, Visual Studio para Mac usa a configuração de compilação de depuração, portanto, você não precisa alterá-la antes da depuração.
 
 1. Iniciar Visual Studio para Mac.
 
