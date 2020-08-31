@@ -1,27 +1,27 @@
 ---
 title: Implementar um método DisposeAsync
-description: ''
+description: Saiba como implementar os métodos DisposeAsync e DisposeAsyncCore para executar a limpeza assíncrona de recursos.
 author: IEvangelist
 ms.author: dapine
-ms.date: 06/02/2020
+ms.date: 08/25/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 0f6370d37703509681dd9fb818af8e7e2f3a1085
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 268cea7584040ad92e2da75e5e03112480cda93c
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608078"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053172"
 ---
 # <a name="implement-a-disposeasync-method"></a>Implementar um método DisposeAsync
 
 A <xref:System.IAsyncDisposable?displayProperty=nameWithType> interface foi introduzida como parte do C# 8,0. Você implementa o <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> método quando precisa executar a limpeza de recursos, assim como faria ao [implementar um método Dispose](implementing-dispose.md). No entanto, uma das principais diferenças é que essa implementação permite operações de limpeza assíncronas. O <xref:System.IAsyncDisposable.DisposeAsync> retorna um <xref:System.Threading.Tasks.ValueTask> que representa a operação de descarte assíncrona.
 
-É comum que, ao implementar a <xref:System.IAsyncDisposable> interface, as classes também implementem a <xref:System.IDisposable> interface. Um bom padrão de implementação da <xref:System.IAsyncDisposable> interface é estar preparado para o descarte síncrono ou assíncrono. Todas as diretrizes para implementar o padrão Dispose se aplicam à implementação assíncrona. Este artigo pressupõe que você já esteja familiarizado com a forma de [implementar um método Dispose](implementing-dispose.md).
+É comum ao implementar a <xref:System.IAsyncDisposable> interface que as classes também implementarão a <xref:System.IDisposable> interface. Um bom padrão de implementação da <xref:System.IAsyncDisposable> interface é estar preparado para o descarte síncrono ou assíncrono. Todas as diretrizes para implementar o padrão Dispose também se aplicam à implementação assíncrona. Este artigo pressupõe que você já esteja familiarizado com a forma de [implementar um método Dispose](implementing-dispose.md).
 
 ## <a name="disposeasync-and-disposeasynccore"></a>DisposeAsync () e DisposeAsyncCore ()
 
@@ -30,13 +30,11 @@ A <xref:System.IAsyncDisposable> interface declara um único método sem parâme
 - Uma `public` <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> implementação que não tem parâmetros.
 - Um `protected virtual ValueTask DisposeAsyncCore()` método cuja assinatura é:
 
-```csharp
-protected virtual ValueTask DisposeAsyncCore()
-{
-}
-```
-
-O `DisposeAsyncCore()` método é `virtual` para que as classes derivadas possam definir limpeza adicional em suas substituições.
+  ```csharp
+  protected virtual ValueTask DisposeAsyncCore()
+  {
+  }
+  ```
 
 ### <a name="the-disposeasync-method"></a>O método DisposeAsync ()
 
@@ -57,6 +55,13 @@ public async ValueTask DisposeAsync()
 
 > [!NOTE]
 > Uma diferença principal no padrão de descarte assíncrono comparado ao padrão Dispose é que a chamada de <xref:System.IAsyncDisposable.DisposeAsync> para o `Dispose(bool)` método Overload é fornecida `false` como um argumento. <xref:System.IDisposable.Dispose?displayProperty=nameWithType>No entanto, ao implementar o método, `true` será passado. Isso ajuda a garantir a equivalência funcional com o padrão de descarte síncrono e garante ainda mais que os caminhos de código do finalizador ainda sejam invocados. Em outras palavras, o `DisposeAsyncCore()` método descartará os recursos gerenciados de forma assíncrona, de modo que você não deseje descartar também de maneira síncrona. Portanto, chame `Dispose(false)` em vez de `Dispose(true)` .
+
+### <a name="the-disposeasynccore-method"></a>O método DisposeAsyncCore ()
+
+O `DisposeAsyncCore()` método destina-se a executar a limpeza assíncrona de recursos gerenciados ou para chamadas em cascata para o `DisposeAsync()` . Ele encapsula as operações comuns de limpeza assíncrona quando uma subclasse herda uma classe base que é uma implementação de <xref:System.IAsyncDisposable> . O `DisposeAsyncCore()` método é `virtual` para que as classes derivadas possam definir limpeza adicional em suas substituições.
+
+> [!TIP]
+> Se uma implementação do <xref:System.IAsyncDisposable> for `sealed` , o `DisposeAsyncCore()` método não será necessário e a limpeza assíncrona poderá ser executada diretamente no <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> método.
 
 ## <a name="implement-the-async-dispose-pattern"></a>Implementar o padrão de descarte assíncrono
 

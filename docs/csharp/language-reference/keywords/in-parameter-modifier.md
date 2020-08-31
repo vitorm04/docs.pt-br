@@ -1,15 +1,16 @@
 ---
+description: Modificador de parâmetro in – Referência de C#
 title: Modificador de parâmetro in – Referência de C#
 ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 20956f9e25b6830a8876824a4c9dad1dbc4c4f3e
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 613be9248e6ce9b974bcab1b59abd30469e9e180
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249364"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118398"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modificador de parâmetro in (referência do C#)
 
@@ -116,16 +117,16 @@ Não é possível usar as palavras-chave `in`, `ref` e `out` para os seguintes t
   
 - Métodos assíncronos, que você define usando o modificador [async](async.md).  
 - Métodos de iterador, que incluem uma instrução [yield return](yield.md) ou `yield break`.
-- O primeiro argumento de um `in` método de extensão não pode ter o modificador a menos que esse argumento seja uma estrutura.
-- O primeiro argumento de um método de extensão onde esse argumento é um tipo genérico (mesmo quando esse tipo é constrangido a ser uma estrutura.)
+- O primeiro argumento de um método de extensão não pode ter o `in` modificador, a menos que esse argumento seja um struct.
+- O primeiro argumento de um método de extensão em que esse argumento é um tipo genérico (mesmo quando esse tipo é restrito a um struct.)
 
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [Parâmetros de método](method-parameters.md)
 - [Escrever código eficiente seguro](../../write-safe-efficient-code.md)

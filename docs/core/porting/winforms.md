@@ -4,12 +4,12 @@ description: Ensina como portar um aplicativo .NET Framework Windows Forms para 
 author: Thraka
 ms.author: adegeo
 ms.date: 01/24/2020
-ms.openlocfilehash: efa73428c816eddc00c62c2275d3457c92284388
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 71bd5740e1ea380fdde86328a5aed71fded64765
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206127"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118540"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Como portar um aplicativo de área de trabalho Windows Forms para o .NET Core
 
@@ -26,18 +26,18 @@ Neste artigo, vários nomes são usados a fim de identificar os tipos de arquivo
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- [Visual Studio 2019 16,5 Preview 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) ou posterior para qualquer trabalho de designer que você queira fazer. É recomendável atualizar para a [versão de visualização mais recente do Visual Studio](https://visualstudio.microsoft.com/vs/preview/).
+- [Visual Studio 2019 versão 16,5 ou posterior](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=16) para qualquer trabalho de designer que você queira fazer. É recomendável atualizar para a [versão mais recente do Visual Studio](https://visualstudio.microsoft.com/vs/).
 
   Instale as seguintes cargas de trabalho do Visual Studio:
   
-  - Desenvolvimento de área de trabalho do .NET
+  - Desenvolvimento para área de trabalho com .NET
   - Desenvolvimento multiplataforma com o .NET Core
 
 - Um projeto do Windows Forms em funcionamento em uma solução compilada e executada sem problemas.
 - Um projeto codificado em C#.
 
 > [!NOTE]
-> Os projetos do .NET Core 3,0 têm suporte apenas no **Visual Studio 2019** ou em uma versão posterior. A partir do **Visual Studio 2019 versão 16,5 Preview 1**, também há suporte para o designer de Windows Forms do .NET Core.
+> Os projetos do .NET Core Windows Forms têm suporte no Visual Studio 2019 e versões posteriores. O designer de Windows Forms do .NET Core tem suporte a partir do Visual Studio 2019 versão 16,5.
 >
 > Para habilitar o designer, vá para **ferramentas**  >  **Opções**  >  **Environment**  >  **recursos de visualização** de ambiente e selecione a opção **usar a visualização Windows Forms Designer para aplicativos .NET Core** .
 

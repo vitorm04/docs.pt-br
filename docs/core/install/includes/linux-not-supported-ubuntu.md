@@ -7,4 +7,4 @@ ms.lasthandoff: 06/09/2020
 ms.locfileid: "84602932"
 ---
 
-❌Observe que esta versão do Ubuntu não é mais suportada.
+❌ Observe que esta versão do Ubuntu não é mais suportada.

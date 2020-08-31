@@ -1,4 +1,5 @@
 ---
+description: Operadores de atribuição-referência C#
 title: Operadores de atribuição-referência C#
 ms.date: 09/10/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 7b4f3b3f4d6b697903461f08435552f2df36bfe4
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 3df118143b692cc8655de31cce23af41f7da125c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916937"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89117877"
 ---
 # <a name="assignment-operators-c-reference"></a>Operadores de atribuição (referência C#)
 
@@ -69,13 +70,13 @@ Um tipo definido pelo usuário não pode [sobrecarregar](operator-overloading.md
 
 Um tipo definido pelo usuário não pode sobrecarregar explicitamente um operador de atribuição composta. No entanto, se um tipo definido pelo usuário sobrecarregar um operador binário `op` , o `op=` operador, se existir, também será sobrecarregado implicitamente.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Saiba mais na seção [Operadores de atribuição](~/_csharplang/spec/expressions.md#assignment-operators) na [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
 Para obter mais informações sobre o operador de atribuição de referência `= ref` , consulte a [Nota de proposta de recurso](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

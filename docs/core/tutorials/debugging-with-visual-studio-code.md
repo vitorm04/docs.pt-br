@@ -2,12 +2,12 @@
 title: Depurar um aplicativo de console do .NET Core usando Visual Studio Code
 description: Saiba como depurar um aplicativo de console do .NET Core usando Visual Studio Code.
 ms.date: 05/26/2020
-ms.openlocfilehash: e2be9324a77d0360247a225bbd93224d379bda0d
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: 8e84747256551b633a5bf74b72723ba8d2840d52
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867575"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118293"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Depurar um aplicativo de console do .NET Core usando Visual Studio Code
 
@@ -35,7 +35,7 @@ Um *ponto de interrupção* interrompe temporariamente a execução do aplicativ
 
 1. Abra o arquivo *Program.cs* .
 
-1. Defina um *ponto de interrupção* na linha que exibe o nome, a data e a hora clicando na margem esquerda da janela de código. A margem esquerda está à esquerda dos números de linha. Outras maneiras de definir um ponto de interrupção são pressionando <kbd>F9</kbd> ou selecionando **executar**  >  **alternância de ponto de interrupção** no menu enquanto a linha de código está selecionada.
+1. Defina um *ponto de interrupção* na linha que exibe o nome, a data e a hora clicando na margem esquerda da janela de código. A margem esquerda está à esquerda dos números de linha. Outras maneiras de definir um ponto de interrupção são pressionando <kbd>F9</kbd> ou escolhendo **executar**  >  **alternância de ponto de interrupção** no menu enquanto a linha de código está selecionada.
 
    Visual Studio Code indica a linha na qual o ponto de interrupção é definido exibindo um ponto vermelho na margem esquerda.
 
@@ -69,7 +69,7 @@ O ponto de interrupção está localizado após uma `Console.ReadLine` chamada d
 
    :::image type="content" source="media/debugging-with-visual-studio-code/select-debug-pane.png" alt-text="Abrir a guia Depurar no Visual Studio Code":::
 
-1. Selecione a seta verde na parte superior do painel, ao lado de **inicialização do .NET Core (console)**. Outra maneira de iniciar o programa no modo de depuração é escolhendo **executar**  >  **Iniciar Depuração** no menu.
+1. Selecione a seta verde na parte superior do painel, ao lado de **inicialização do .NET Core (console)**. Outras maneiras de iniciar o programa no modo de depuração são pressionar <kbd>F5</kbd> ou escolher **executar**  >  **Iniciar Depuração** no menu.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/start-debugging.png" alt-text="Iniciar a depuração":::
 
@@ -133,7 +133,7 @@ O programa exibe a cadeia de caracteres que o usuário insere. O que acontecerá
 
 1. Na guia **terminal** , pressione a tecla <kbd>Enter</kbd> quando for solicitado a inserir seu nome.
 
-   Como a condição especificada ( `name` is `null` ou <xref:System.String.Empty?displayProperty=nameWithType> ) foi satisfeita, a execução do programa é interrompida quando atinge o ponto de interrupção e antes da execução do `Console.WriteLine` método.
+   Como a condição que você especificou ( `name` é `null` ou <xref:System.String.Empty?displayProperty=nameWithType> ) foi satisfeita, a execução do programa é interrompida quando atinge o ponto de interrupção e antes da `Console.WriteLine` execução do método.
 
    A janela **variáveis** mostra que o valor da `name` variável é `""` , ou <xref:System.String.Empty?displayProperty=nameWithType> .
 

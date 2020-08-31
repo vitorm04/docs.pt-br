@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - var keyword [C#]
 ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
-ms.openlocfilehash: ff8348a725f43fa8789c73fa58549da26126369c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d944cde932b5c1f5ef1439ee46a1447e107e6ac9
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712878"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053069"
 ---
 # <a name="var-c-reference"></a>var (Referência de C#)
 
@@ -23,7 +23,10 @@ var i = 10; // Implicitly typed.
 int i = 10; // Explicitly typed.
 ```
 
-Para obter mais informações, consulte [Variáveis locais digitadas implicitamente](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md) e [relações de tipo em Operações de consulta LINQ](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).
+Para obter mais informações, consulte [variáveis locais digitadas implicitamente](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md) e [relações de tipo em operações de consulta LINQ](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).
+
+> [!IMPORTANT]
+> Quando `var` é usado com tipos de referência anuláveis habilitados, ele sempre implica um tipo de referência anulável mesmo que o tipo de expressão não seja anulável.
 
 ## <a name="example"></a>Exemplo
 
@@ -33,6 +36,6 @@ O exemplo a seguir mostra duas expressões de consulta. Na primeira expressão, 
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
-- [Variáveis locais digitadas implicitamente](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
+- [Variáveis Locais Tipadas Implicitamente](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md)

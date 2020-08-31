@@ -6,12 +6,12 @@ metadata:
   description: Saiba mais sobre o .NET, uma plataforma de desenvolvedor de software livre para a criação de vários tipos diferentes de aplicativos.
   ms.topic: landing-page
   ms.date: 04/22/2020
-  ms.openlocfilehash: 67fa6bb8c14ef3fad05b4874553a9ce75f811833
-  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+  ms.openlocfilehash: 37908d252d6dfcef92ce642f6f7c6f7e12f551f1
+  ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 04/24/2020
-  ms.locfileid: "82135809"
+  ms.lasthandoff: 08/28/2020
+  ms.locfileid: "89053206"
 landingContent:
 - title: Saiba mais sobre o .NET
   linkLists:
@@ -53,7 +53,7 @@ landingContent:
     links:
     - text: 'Serializar e desserializar JSON usando C #'
       url: serialization/system-text-json-how-to.md
-    - text: Migrar de Newtonsoft. JSON para System. Text. JSON
+    - text: Migrar de Newtonsoft.Jspara System.Text.Jsem
       url: serialization/system-text-json-migrate-from-newtonsoft-how-to.md
     - text: Gravar conversores personalizados para serialização JSON
       url: serialization/system-text-json-converters-how-to.md
@@ -141,6 +141,8 @@ landingContent:
       url: garbage-collection/fundamentals.md
     - text: Implementar um método Dispose
       url: garbage-collection/implementing-dispose.md
+    - text: Implementar um método DisposeAsync
+      url: garbage-collection/implementing-disposeasync.md
 - title: Saiba mais sobre a programação paralela
   linkLists:
   - linkListType: overview

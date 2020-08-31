@@ -4,12 +4,12 @@ description: Saiba como cortar aplicativos independentes para reduzir seu tamanh
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 47bccf25b6f6a1b65742bb5e3f5f299932659c3c
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: 7a4731e2cbaa3835e6aa6ba558dfa8cd03828e01
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957547"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053101"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Cortar implantações e executáveis autossuficientes
 
@@ -21,7 +21,7 @@ No entanto, há um risco de que a análise de tempo de compilação do aplicativ
 
 O mecanismo de análise de tempo de compilação fornece avisos para o desenvolvedor de padrões de código que são problemmatic para detectar qual outro código é necessário. O código pode ser anotado com atributos para informar ao corte o que mais incluir. Muitos padrões de reflexão podem ser substituídos com geração de código em tempo de compilação usando [geradores de origem](https://github.com/dotnet/roslyn/blob/master/docs/features/source-generators.md).
 
-O modo de corte para os aplicativos é configurado com a `TrimMode` configuração. O valor padrão é `copyused` e agrupa os assemblies referenciados com o aplicativo. O `link` valor é usado com aplicativos Webassembly mais podestas e corta código não utilizado em assemblies. Avisos de análise de corte fornecem informações sobre padrões de código em que uma análise de dependência completa não era possível. Esses avisos são suprimidos por padrão e podem ser ativados definindo o sinalizador `SuppressTrimAnalysisWarnings` como `false` . Para obter mais informações sobre as opções de corte disponíveis, consulte a [página ILLinker](https://github.com/mono/linker/blob/master/docs/illink-options.md).
+O modo de corte para os aplicativos é configurado com a `TrimMode` configuração. O valor padrão é `copyused` e agrupa os assemblies referenciados com o aplicativo. O `link` valor é usado com aplicativos Webassembly mais podestas e corta código não utilizado em assemblies. Avisos de análise de corte fornecem informações sobre padrões de código em que uma análise de dependência completa não era possível. Esses avisos são suprimidos por padrão e podem ser ativados definindo o sinalizador `SuppressTrimAnalysisWarnings` como `false` . Para obter mais informações sobre as opções de corte disponíveis, consulte [Opções de corte](trimming-options.md).
 
 > [!NOTE]
 > O corte é um recurso experimental no .NET Core 3,1, 5,0 e está disponível _somente_ para aplicativos que são publicados internamente.

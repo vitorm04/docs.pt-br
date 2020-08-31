@@ -1,4 +1,5 @@
 ---
+description: operador new – Referência em C#
 title: operador new – Referência em C#
 ms.date: 06/25/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 42128cf23fe2410bf33bb40131843325939646de
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 88ec929317d4e6c6651233c1a1aa0ce8a8cce611
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916762"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118267"
 ---
 # <a name="new-operator-c-reference"></a>operador new (Referência em C#)
 
@@ -57,11 +58,11 @@ Para instâncias de tipo que contêm recursos não gerenciados, por exemplo, um 
 
 Um tipo definido pelo usuário não pode sobrecarregar o operador `new`.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para saber mais, confira a seção [O operador new](~/_csharplang/spec/expressions.md#the-new-operator) na [especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

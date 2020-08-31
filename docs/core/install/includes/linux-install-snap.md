@@ -45,7 +45,7 @@ Os pacotes snap para o tempo de execução do .NET Core são publicados em seu p
 |-------------------|---------------------|
 | 3,1 (LTS)         | `dotnet-runtime-31` |
 | 3.0               | `dotnet-runtime-30` |
-| 2.2               | `dotnet-runtime-22` |
+| 2,2               | `dotnet-runtime-22` |
 | 2,1 (LTS)         | `dotnet-runtime-21` |
 
 Use o `snap install` comando para instalar um pacote de snap do tempo de execução do .NET Core. Neste exemplo, o .NET Core 3,1 está instalado:
@@ -84,6 +84,6 @@ export SSL_CERT_DIR=/dev/null
 
 O local do certificado variará de acordo com distribuição. Aqui estão os locais para o distribuições onde tivemos o problema.
 
-* Fedora`/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem`
-* OpenSUSE`/etc/ssl/ca-bundle.pem`
-* Solus -`/etc/ssl/certs/ca-certificates.crt`
+* Fedora `/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem`
+* OpenSUSE `/etc/ssl/ca-bundle.pem`
+* Solus - `/etc/ssl/certs/ca-certificates.crt`

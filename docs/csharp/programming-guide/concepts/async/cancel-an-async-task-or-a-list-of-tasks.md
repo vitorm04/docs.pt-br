@@ -4,12 +4,12 @@ description: Saiba como usar tokens de cancelamento para sinalizar uma solicita�
 ms.date: 08/19/2020
 ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 000b6a89a9240344508a5ae6b248572c8a2177dc
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 30bef5d1a5082fbd3757377dbedb8f9b9d17e218
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811477"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053087"
 ---
 # <a name="cancel-a-list-of-tasks-c"></a>Cancelar uma lista de tarefas (C#)
 
@@ -33,7 +33,7 @@ Este tutorial exige o seguinte:
 
 ### <a name="create-example-application"></a>Criar aplicativo de exemplo
 
-Crie um novo aplicativo de console .NET Core. Você pode criar um usando o comando [dotnet New console](../../../../core/tools/dotnet-new.md#console) ou do [Visual Studio](/visualstudio/install/install-visual-studio). Abra o arquivo *Program.cs* em seu editor de código favorito.
+Crie um novo aplicativo de console .NET Core. Você pode criar um usando o [`dotnet new console`](../../../../core/tools/dotnet-new.md#console) comando ou do [Visual Studio](/visualstudio/install/install-visual-studio). Abra o arquivo *Program.cs* em seu editor de código favorito.
 
 ### <a name="replace-using-statements"></a>Substituir usando instruções
 

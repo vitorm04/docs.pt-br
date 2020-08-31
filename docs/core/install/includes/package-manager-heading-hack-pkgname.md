@@ -32,9 +32,9 @@ A versão do SDK ou do tempo de execução a ser instalado. Este artigo sempre f
 
 ### <a name="examples"></a>Exemplos
 
-- Instale o tempo de execução do ASP.NET Core 3,1:`aspnetcore-runtime-3.1`
-- Instale o tempo de execução do .NET Core 2,1:`dotnet-runtime-2.1`
-- Instale o SDK do .NET Core 3,1:`dotnet-sdk-3.1`
+- Instale o tempo de execução do ASP.NET Core 3,1: `aspnetcore-runtime-3.1`
+- Instale o tempo de execução do .NET Core 2,1: `dotnet-runtime-2.1`
+- Instale o SDK do .NET Core 3,1: `dotnet-sdk-3.1`
 
 ### <a name="package-missing"></a>Pacote ausente
 

@@ -1,15 +1,16 @@
 ---
+description: private protected – Referência de C#
 title: private protected – Referência de C#
 ms.date: 11/15/2017
 f1_keywords:
 - privateprotected_CSharpKeyword
 author: sputier
-ms.openlocfilehash: 94ef55d7e13841f81b036f52659b215e22a3a0d7
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: d83fd2a570b735a029bd2a79ad24e30d235dc5fb
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301795"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89117955"
 ---
 # <a name="private-protected-c-reference"></a>private protected (referência do C#)
 
@@ -63,15 +64,15 @@ O primeiro arquivo contém uma classe base pública, `BaseClass`, e um tipo deri
 
 No segundo arquivo, uma tentativa de acessar `myValue` como um membro herdado de `DerivedClass2` produzirá um erro, pois ele é acessível apenas por tipos derivados em Assembly1.
 
-Se `Assembly1.cs` contiver um <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> nome que `Assembly2` , a classe derivada terá `DerivedClass1` acesso aos `private protected` membros declarados em `BaseClass` . `InternalsVisibleTo`torna `private protected` os membros visíveis para classes derivadas em outros assemblies.
+Se `Assembly1.cs` contiver um <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> nome que `Assembly2` , a classe derivada terá `DerivedClass1` acesso aos `private protected` membros declarados em `BaseClass` . `InternalsVisibleTo` torna `private protected` os membros visíveis para classes derivadas em outros assemblies.
 
 Membros de struct não podem ser `private protected` porque o struct não pode ser herdado.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência do C#](../index.md)
 - [Guia de programação C#](../../programming-guide/index.md)
@@ -79,7 +80,7 @@ Membros de struct não podem ser `private protected` porque o struct não pode s
 - [Modificadores de acesso](access-modifiers.md)
 - [Níveis de acessibilidade](accessibility-levels.md)
 - [Modificadores](index.md)
-- [público](public.md)
-- [pessoal](private.md)
-- [internal](internal.md)
+- [public](public.md)
+- [particulares](private.md)
+- [interno](internal.md)
 - [Questões de segurança de palavras-chave virtuais internas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

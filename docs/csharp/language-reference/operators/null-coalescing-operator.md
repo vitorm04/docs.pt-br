@@ -1,4 +1,5 @@
 ---
+description: ?? e?? = Operators-referência C#
 title: ?? e?? = Operators-referência C#
 ms.date: 09/10/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - null-coalescing assignment [C#]
 - ??= operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 58c60dad3badc62f850f737a3d210ec486809272
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 273bc6d3a4c65c09dc600621b435bf0d1baea9e4
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916741"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118280"
 ---
 # <a name="-and--operators-c-reference"></a>?? e?? = Operators (referência C#)
 
@@ -84,13 +85,13 @@ Os `??` `??=` operadores e podem ser úteis nos seguintes cenários:
 
 Os operadores `??` e `??=` não podem ser sobrecarregados.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações sobre o `??` operador, consulte [a seção operador de União nula](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) da [especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
 Para obter mais informações sobre o `??=` operador, consulte a [Nota de proposta de recurso](~/_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

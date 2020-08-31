@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 515b8d9adc1359581625f0d822e254d2c1df3b58
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 8f99af5accdecf1892a67a88c221e866bfddcbb2
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062490"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053038"
 ---
 # <a name="structure-types-c-reference"></a>Tipos de estrutura (referência C#)
 
@@ -27,7 +27,7 @@ Normalmente, você usa tipos de estrutura para criar pequenos tipos centrados em
 
 Como os tipos de estrutura têm semântica de valor, recomendamos que você defina tipos de estrutura *imutáveis* .
 
-## <a name="readonly-struct"></a>`readonly`struct
+## <a name="readonly-struct"></a>`readonly` struct
 
 A partir do C# 7,2, você usa o `readonly` modificador para declarar que um tipo de estrutura é imutável:
 
@@ -38,14 +38,14 @@ Todos os membros de dados de um `readonly` struct devem ser somente leitura da s
 - Qualquer declaração de campo deve ter o [ `readonly` modificador](../keywords/readonly.md)
 - Qualquer propriedade, incluindo as implementadas automaticamente, deve ser somente leitura
 
-Isso garante que nenhum membro de uma `readonly` struct modifique o estado da estrutura.
+Isso garante que nenhum membro de uma `readonly` struct modifique o estado da estrutura. No C# 8,0 e posterior, isso significa que outros membros da instância, exceto construtores, são implicitamente [`readonly`](#readonly-instance-members) .
 
 > [!NOTE]
 > Em uma `readonly` struct, um membro de dados de um tipo de referência mutável ainda pode mutar seu próprio estado. Por exemplo, você não pode substituir uma <xref:System.Collections.Generic.List%601> instância, mas pode adicionar novos elementos a ela.
 
-## <a name="readonly-instance-members"></a>`readonly`Membros da instância
+## <a name="readonly-instance-members"></a>`readonly` Membros da instância
 
-A partir do C# 8,0, você também pode usar o `readonly` modificador para declarar que um membro de instância não modifica o estado de um struct. Se você não puder declarar o tipo de estrutura inteira como `readonly` , use o `readonly` modificador para marcar os membros da instância que não modificam o estado da estrutura. Em uma `readonly` struct, cada membro de instância é implicitamente `readonly` .
+A partir do C# 8,0, você também pode usar o `readonly` modificador para declarar que um membro de instância não modifica o estado de um struct. Se você não puder declarar o tipo de estrutura inteira como `readonly` , use o `readonly` modificador para marcar os membros da instância que não modificam o estado da estrutura.
 
 Dentro de um `readonly` membro de instância, você não pode atribuir a campos de instância da estrutura. No entanto, um `readonly` membro pode chamar um não `readonly` membro. Nesse caso, o compilador cria uma cópia da instância de estrutura e chama o não `readonly` membro nessa cópia. Como resultado, a instância da estrutura original não é modificada.
 
@@ -102,7 +102,7 @@ No caso dos tipos de [valor internos](value-types.md#built-in-value-types), use 
 
 Quando você passa uma variável de tipo de estrutura para um método como um argumento ou retorna um valor de tipo de estrutura de um método, toda a instância de um tipo de estrutura é copiada. Isso pode afetar o desempenho do seu código em cenários de alto desempenho que envolvem tipos de estrutura grandes. Você pode evitar a cópia de valor passando uma variável de tipo de estrutura por referência. Use os [`ref`](../keywords/ref.md#passing-an-argument-by-reference) [`out`](../keywords/out-parameter-modifier.md) modificadores de parâmetro de método,, ou [`in`](../keywords/in-parameter-modifier.md) para indicar que um argumento deve ser passado por referência. Use [ref retorna](../../programming-guide/classes-and-structs/ref-returns.md) para retornar um resultado de método por referência. Para obter mais informações, consulte [escrever código C# seguro e eficiente](../../write-safe-efficient-code.md).
 
-## <a name="ref-struct"></a>`ref`struct
+## <a name="ref-struct"></a>`ref` struct
 
 A partir do C# 7,2, você pode usar o `ref` modificador na declaração de um tipo de estrutura. As instâncias de um `ref` tipo de struct são alocadas na pilha e não podem sair para o heap gerenciado. Para garantir isso, o compilador limita o uso de `ref` tipos de struct da seguinte maneira:
 
@@ -139,7 +139,7 @@ Para obter mais informações sobre os recursos introduzidos no C# 7,2 e posteri
 - [Membros da instância ReadOnly](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
 - [Segurança de tempo de compilação para tipos semelhantes a ref](~/_csharplang/proposals/csharp-7.2/span-safety.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [Diretrizes de design-escolhendo entre classe e estrutura](../../../standard/design-guidelines/choosing-between-class-and-struct.md)
