@@ -1,4 +1,5 @@
 ---
+description: '##define – Referência de C#'
 title: '##define – Referência de C#'
 ms.date: 06/30/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: c08d6f42c11184a4d14aa6712f9f0f8706a72cab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a37f883a249ec74b66769ee40b84b20e8568c451
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173426"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132333"
 ---
 # <a name="define-c-reference"></a>#define (Referência de C#)
 Use `#define` para definir um símbolo. Quando você usa o símbolo como a expressão passada para a diretiva [#if](./preprocessor-if.md), a expressão será avaliada como `true`, conforme mostra o exemplo a seguir:  
@@ -65,10 +66,10 @@ public class TestDefine
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
-- [C# Diretivas de pré-processador](./index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
+- [Diretivas de pré-processador do C#](./index.md)
 - [const](../keywords/const.md)
-- [Como compilar condicionalmente com Trace e Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Como: compilar condicionalmente com Trace e Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 - [#undef](./preprocessor-undef.md)
 - [#if](./preprocessor-if.md)

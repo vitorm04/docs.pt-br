@@ -1,4 +1,5 @@
 ---
+description: Diretivas de pré-processador do C#
 title: Diretivas de pré-processador do C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - preprocessor directives [C#]
 - keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
-ms.openlocfilehash: f63ba3e0bd89a88ad04b14c2f359a8cde65e8f12
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a7ffca8b39f1bd9f05193bccbb6d90e67fa262c9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "69608606"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132359"
 ---
 # <a name="c-preprocessor-directives"></a>Diretivas de pré-processador do C#
 Esta seção contém informações sobre as seguintes diretivas de pré-processador do C#:
@@ -29,8 +30,8 @@ Esta seção contém informações sobre as seguintes diretivas de pré-processa
 - [#region](./preprocessor-region.md)
 - [#endregion](./preprocessor-endregion.md)
 - [#pragma](./preprocessor-pragma.md)
-- [#pragma warning](./preprocessor-pragma-warning.md)
-- [#pragma soma de verificação](./preprocessor-pragma-checksum.md)
+- [aviso de #pragma](./preprocessor-pragma-warning.md)
+- [soma de verificação de #pragma](./preprocessor-pragma-checksum.md)
 
 Para obter mais informações e exemplos, consulte os tópicos individuais.
 
@@ -40,5 +41,5 @@ Uma diretiva de pré-processador deve ser a única instrução em uma linha.
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)

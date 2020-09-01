@@ -4,12 +4,12 @@ description: Saiba mais sobre quais versões do macOS você pode instalar o .NET
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: 951e9b6a64d55274729e233b4a2d7728c75d05d4
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 19d5ca77b0308533c8f228be70c61daf1b7f82d9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302926"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132749"
 ---
 # <a name="install-net-core-on-macos"></a>Instalar o .NET Core no macOS
 
@@ -38,7 +38,7 @@ A tabela a seguir é uma lista de versões do .NET Core com suporte no momento e
 | macOS 10,15 "Catalina"    | ✔️ 2,1 ([notas de versão][release-notes-21]) | ✔️ 3,1 ([notas de versão][release-notes-31]) | ✔️ 5,0 Preview ([notas de versão][release-notes-50]) |
 | macOS 10,14 "Mojave"      | ✔️ 2,1 ([notas de versão][release-notes-21]) | ✔️ 3,1 ([notas de versão][release-notes-31]) | ✔️ 5,0 Preview ([notas de versão][release-notes-50]) |
 | macOS 10,13 "alta serra" | ✔️ 2,1 ([notas de versão][release-notes-21]) | ✔️ 3,1 ([notas de versão][release-notes-31]) | ✔️ 5,0 Preview ([notas de versão][release-notes-50]) |
-| macOS 10.12 "Sierra"      | ✔️ 2,1 ([notas de versão][release-notes-21]) | ❌3,1 ([notas de versão][release-notes-31]) | ❌5,0 visualização ([notas de versão][release-notes-50]) |
+| macOS 10.12 "Sierra"      | ✔️ 2,1 ([notas de versão][release-notes-21]) | ❌ 3,1 ([notas de versão][release-notes-31]) | ❌ 5,0 visualização ([notas de versão][release-notes-50]) |
 
 ## <a name="unsupported-releases"></a>Versões sem suporte
 
@@ -81,7 +81,7 @@ O .NET Core tem suporte nas seguintes versões do macOS:
 | ----------------- | --------------------- | --------------| --- |
 | 3.1               | Alta serra (10.13 +)  | x64 | [Mais informações](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
 | 3.0               | Alta serra (10.13 +)  | x64 | [Mais informações](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
-| 2.2               | Sierra (10.12 +)       | x64 | [Mais informações](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
+| 2,2               | Sierra (10.12 +)       | x64 | [Mais informações](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
 | 2.1               | Sierra (10.12 +)       | x64 | [Mais informações](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
 
 A partir do macOS Catalina (versão 10,15), todo software criado após 1º de junho de 2019 que é distribuído com a ID do desenvolvedor deve ser notarized. Esse requisito se aplica ao tempo de execução do .NET Core, SDK do .NET Core e software criado com o .NET Core.
@@ -159,7 +159,7 @@ Essa abordagem permite que você instale versões diferentes em locais separados
 
 ## <a name="install-with-visual-studio-for-mac"></a>Instalar com o Visual Studio para Mac
 
-Visual Studio para Mac instala o SDK do .NET Core quando a carga de trabalho do **.NET Core** é selecionada. Para começar a usar o desenvolvimento do .NET Core no macOS, consulte [instalar o Visual Studio 2019 para Mac](/visualstudio/mac/installation). Para a versão mais recente, o .NET Core 3,1, você deve usar a visualização Visual Studio para Mac 8,4.
+Visual Studio para Mac instala o SDK do .NET Core quando a carga de trabalho do **.NET Core** é selecionada. Para começar a usar o desenvolvimento do .NET Core no macOS, consulte [instalar o Visual Studio 2019 para Mac](/visualstudio/mac/installation). Para a versão mais recente, o .NET Core 3,1, você deve usar o Visual Studio para Mac 8,4.
 
 [![recurso macOS Visual Studio 2019 para Mac com carga de trabalho do .NET Core](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)
 

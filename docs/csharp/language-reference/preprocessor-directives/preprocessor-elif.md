@@ -1,4 +1,5 @@
 ---
+description: '#elif – Referência de C#'
 title: '#elif – Referência de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#elif directive [C#]'
 ms.assetid: 731d78df-08e0-4d51-b8c8-f193c27de13f
-ms.openlocfilehash: c78818f40b76414d289af6c704ff019b63befe37
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3aa9082b392b352091b9fde74a85f9dd155ad7b1
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712566"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132281"
 ---
 # <a name="elif-c-reference"></a>#elif (Referência de C#)
-O `#elif` permite criar uma diretiva condicional composta. A expressão `#elif` será avaliada se nenhum dos [#if](./preprocessor-if.md) anteriores nem nenhuma diretiva `#elif`, opcional, anterior avaliar expressões para `true`. Se uma expressão `#elif` for avaliada como `true`, o compilador avalia todo o código entre o `#elif` e a próxima diretiva condicional. Por exemplo:   
+O `#elif` permite criar uma diretiva condicional composta. A expressão `#elif` será avaliada se nenhum dos [#if](./preprocessor-if.md) anteriores nem nenhuma diretiva `#elif`, opcional, anterior avaliar expressões para `true`. Se uma expressão `#elif` for avaliada como `true`, o compilador avalia todo o código entre o `#elif` e a próxima diretiva condicional. Por exemplo:  
   
 ```csharp
 #define VC7  
@@ -42,6 +43,6 @@ O `#elif` permite criar uma diretiva condicional composta. A expressão `#elif` 
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
-- [C# Diretivas de pré-processador](./index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
+- [Diretivas de pré-processador do C#](./index.md)
