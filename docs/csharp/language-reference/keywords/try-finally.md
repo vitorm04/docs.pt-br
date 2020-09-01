@@ -1,4 +1,5 @@
 ---
+description: try-finally – Referência de C#
 title: try-finally – Referência de C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-ms.openlocfilehash: 2c4c69b1e104aed968bc24bac690de83026643a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 621c5bf1607136361b72f978681607ec2aec150f
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713008"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141966"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (Referência de C#)
 
@@ -37,16 +38,16 @@ Para obter mais informações sobre `finally`, consulte [try-catch-finally](try-
 
 C# também contém a [instrução using](using-statement.md), que fornece uma funcionalidade semelhante para objetos <xref:System.IDisposable> em uma sintaxe conveniente.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, confira a seção [A instrução try](~/_csharplang/spec/statements.md#the-try-statement) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [Instruções try, throw e catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
-- [Jogar](throw.md)
-- [tentar pegar](try-catch.md)
+- [throw](throw.md)
+- [try-catch](try-catch.md)
 - [Como gerar exceções explicitamente](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

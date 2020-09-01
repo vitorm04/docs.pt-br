@@ -1,4 +1,5 @@
 ---
+description: throw – Referência de C#
 title: throw – Referência de C#
 ms.date: 03/02/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-ms.openlocfilehash: 7ed84e04dae54283e4b5f03be0600c4dbf95b4b4
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 4cad4810b89f976f92ce576917feb2398acce636
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063114"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142031"
 ---
 # <a name="throw-c-reference"></a>throw (Referência de C#)
 
@@ -65,7 +66,7 @@ Começando com o C# 7.0, o `throw` pode ser usado como uma expressão, bem como 
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência do C#](../index.md)
 - [Guia de programação C#](../../programming-guide/index.md)

@@ -1,4 +1,5 @@
 ---
+description: switch (Referência em C#)
 title: Instrução switch do C#
 ms.date: 04/09/2019
 f1_keywords:
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 9335399be2d4909a02fecbf2959c6f5608664732
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 20c1d9786eaa184088500cf1b37d33afc421b5e7
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493663"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142018"
 ---
 # <a name="switch-c-reference"></a>switch (Referência em C#)
 
 Este artigo aborda a `switch` instrução. Para obter informações sobre a `switch` expressão (introduzida no C# 8,0), consulte o artigo sobre [ `switch` expressões](../operators/switch-expression.md) na seção [expressões e operadores](../operators/index.md) .
 
-`switch` é uma instrução de seleção que escolhe uma única *seção switch* para ser executada de uma lista de candidatas com base em uma correspondência de padrão com a *expressão de correspondência*.
+`switch` é uma instrução de seleção que escolhe uma única *seção de opção* para executar a partir de uma lista de candidatos com base em uma correspondência de padrão com a expressão de *correspondência*.
 
 [!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
@@ -55,7 +56,7 @@ Começando com o C# 7.0, a expressão de correspondência pode ser qualquer expr
 
 ## <a name="the-switch-section"></a>A seção switch
 
-Uma instrução `switch` inclui uma ou mais seções do comutador. Cada seção switch contém um ou mais *rótulos case* (em um rótulo case ou padrão) seguidos por uma ou mais instruções. A instrução `switch` pode incluir no máximo um rótulo padrão colocado em qualquer seção switch. O exemplo a seguir mostra uma instrução `switch` simples que tem três seções switch, cada uma contendo duas instruções. A segunda seção switch contém os rótulos `case 2:` e `case 3:`.
+Uma instrução `switch` inclui uma ou mais seções do comutador. Cada seção do comutador contém um ou mais *Rótulos de caso* (um caso ou rótulo padrão) seguido por uma ou mais instruções. A instrução `switch` pode incluir no máximo um rótulo padrão colocado em qualquer seção switch. O exemplo a seguir mostra uma instrução `switch` simples que tem três seções switch, cada uma contendo duas instruções. A segunda seção switch contém os rótulos `case 2:` e `case 3:`.
 
 Uma instrução `switch` pode incluir qualquer número de seções switch e cada seção pode ter um ou mais rótulos case, conforme mostrado no exemplo a seguir. No entanto, dois rótulos case não podem conter a mesma expressão.
 
@@ -195,7 +196,7 @@ O exemplo a seguir define uma classe `Shape` base, uma classe `Rectangle` que de
 
 Observe que a cláusula `when` no exemplo que tenta testar se um objeto `Shape` é `null` não é executada. O padrão de tipo correto para testar um `null` é `case null:`.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, consulte [A instrução switch](~/_csharplang/spec/statements.md#the-switch-statement) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
@@ -205,4 +206,4 @@ Para obter mais informações, consulte [A instrução switch](~/_csharplang/spe
 - [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [if-else](if-else.md)
-- [Correspondência padrão](../../pattern-matching.md)
+- [Correspondência de padrões](../../pattern-matching.md)

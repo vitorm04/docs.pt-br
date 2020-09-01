@@ -1,4 +1,5 @@
 ---
+description: Palavra-chave unchecked – Referência do C#
 title: Palavra-chave unchecked – Referência do C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-ms.openlocfilehash: 6dad0dfd508fb390dd0a52d1b48d70b4c5725513
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb66639e3657b247b9ebcad1594daf1f57a5c76b
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712995"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141979"
 ---
 # <a name="unchecked-c-reference"></a>unchecked (Referência de C#)
 
@@ -34,14 +35,14 @@ Esse exemplo mostra como usar a palavra-chave `unchecked`.
 
 [!code-csharp[csrefKeywordsChecked#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#2)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [Checked e unchecked](checked-and-unchecked.md)
-- [verificado](checked.md)
+- [Contexto verificado e não verificado](checked-and-unchecked.md)
+- [check](checked.md)

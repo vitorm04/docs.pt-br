@@ -1,4 +1,5 @@
 ---
+description: Palavra-chave class – Referência de C#
 title: Palavra-chave class – Referência de C#
 ms.date: 07/18/2017
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 67c9c4be55cce25edf9ecb84b257a8523f193bec
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77673089"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142109"
 ---
 # <a name="class-c-reference"></a>class (Referência de C#)
 
@@ -33,7 +34,7 @@ Somente a herança única é permitida em C#. Em outras palavras, uma classe pod
 |Herança|Exemplo|
 |-----------------|-------------|
 |Nenhum|`class ClassA { }`|
-|Single|`class DerivedClass : BaseClass { }`|
+|Único|`class DerivedClass : BaseClass { }`|
 |Nenhuma, implementa duas interfaces|`class ImplClass : IFace1, IFace2 { }`|
 |Única, implementa uma interface|`class ImplDerivedClass : BaseClass, IFace1 { }`|
 
@@ -51,7 +52,7 @@ Uma classe pode conter declarações dos seguintes membros:
 
 - [Constantes](../../programming-guide/classes-and-structs/constants.md)
 
-- [Campos](../../programming-guide/classes-and-structs/fields.md)
+- [Fields](../../programming-guide/classes-and-structs/fields.md)
 
 - [Finalizadores](../../programming-guide/classes-and-structs/destructors.md)
 
@@ -65,7 +66,7 @@ Uma classe pode conter declarações dos seguintes membros:
 
 - [Eventos](../../programming-guide/events/index.md)
 
-- [Delega](../../programming-guide/delegates/index.md)
+- [Representantes](../../programming-guide/delegates/index.md)
 
 - [Classes](../../programming-guide/classes-and-structs/classes.md)
 
@@ -95,13 +96,13 @@ Tipos declarados dentro de uma classe sem um modificador de acesso têm o valor 
 
 Por fim, observe que, para o objeto criado usando o construtor sem parâmetro (`child3`), o campo `age` foi inicializado como zero por padrão.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](./index.md)
 - [Tipos de referência](./reference-types.md)

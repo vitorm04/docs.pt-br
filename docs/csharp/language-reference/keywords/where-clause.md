@@ -1,4 +1,5 @@
 ---
+description: Cláusula where – Referência de C#
 title: Cláusula where – Referência de C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 33616e4eacb484b9c6eda3862cd86fdd1e6df165
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 58a8dc226bb2720b6a8251f028712a80f74e893c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173478"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141680"
 ---
 # <a name="where-clause-c-reference"></a>Cláusula where (Referência de C#)
 
@@ -26,7 +27,7 @@ No exemplo a seguir, a cláusula `where` filtra todos os números, exceto aquele
 
 ## <a name="example"></a>Exemplo
 
-Dentro de `where` uma única cláusula, você pode especificar quantos predicados fornecessário usando os [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) operadores e [&#124;&#124;.](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) No exemplo a seguir, a consulta especifica dois predicados para selecionar apenas os números pares que são menores que cinco.
+Em uma única `where` cláusula, você pode especificar quantos predicados forem necessários usando os [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) operadores e [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) . No exemplo a seguir, a consulta especifica dois predicados para selecionar apenas os números pares que são menores que cinco.
 
 [!code-csharp[cscsrefQueryKeywords#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#6)]  
 
@@ -40,15 +41,15 @@ Uma cláusula `where` pode conter um ou mais métodos que retornam valores booli
 
 A cláusula `where` é um mecanismo de filtragem. Ela pode ser posicionada em quase qualquer lugar em uma expressão de consulta, exceto que ela não pode ser a primeira ou a última cláusula. A cláusula `where` pode aparecer antes ou depois de uma cláusula [group](group-clause.md) dependendo se você tiver que filtrar os elementos de origem antes ou depois de eles serem agrupados.
 
-Se um predicado especificado não for válido para os elementos na fonte de dados, o resultado será um erro em tempo de compilação. Este é um benefício da forte verificação de tipo fornecida pela LINQ.
+Se um predicado especificado não for válido para os elementos na fonte de dados, o resultado será um erro em tempo de compilação. Esse é um dos benefícios da verificação de tipo forte fornecida pelo LINQ.
 
 Em tempo de compilação, a palavra-chave `where` é convertida em uma chamada para o método de operador de consulta padrão <xref:System.Linq.Enumerable.Where%2A>.
 
 ## <a name="see-also"></a>Confira também
 
 - [Palavras-chave de consulta (LINQ)](query-keywords.md)
-- [de cláusula](from-clause.md)
-- [cláusula de seleção](select-clause.md)
-- [Filtrando dados](../../programming-guide/concepts/linq/filtering-data.md)
+- [Cláusula from](from-clause.md)
+- [Cláusula select](select-clause.md)
+- [Filtrar dados](../../programming-guide/concepts/linq/filtering-data.md)
 - [LINQ em C#](../../linq/index.md)
-- [Consulta Integrada ao Idioma (LINQ)](../../programming-guide/concepts/linq/index.md)
+- [LINQ (Consulta Integrada à Linguagem)](../../programming-guide/concepts/linq/index.md)

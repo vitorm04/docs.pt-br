@@ -1,4 +1,5 @@
 ---
+description: virtual – Referência de C#
 title: virtual – Referência de C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 883e0a7f833c15d2c1cce6b3d52d16aad01a5cd0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 67bdfcf27bb108ca85e94ba7fdce208e4cd83b80
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173452"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141719"
 ---
 # <a name="virtual-c-reference"></a>virtual (Referência de C#)
 
@@ -37,7 +38,7 @@ Não é possível usar o modificador `virtual` com os modificadores `static`, `a
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
-As propriedades virtuais se comportam como métodos virtuais, exceto pelas diferenças na sintaxe de declaração e invocação.
+As propriedades virtuais se comportam como métodos virtuais, exceto pelas diferenças na declaração e na sintaxe de invocação.
 
 - É um erro usar o modificador `virtual` em uma propriedade estática.
 
@@ -57,13 +58,13 @@ O programa a seguir calcula e exibe a área apropriada para cada figura invocand
 
 [!code-csharp[csrefKeywordsModifiers#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#23)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Confira também
 
 - [Polimorfismo](../../programming-guide/classes-and-structs/polymorphism.md)
-- [Abstrata](abstract.md)
-- [Substituir](override.md)
+- [abstract](abstract.md)
+- [override](override.md)
 - [novo (modificador)](new-modifier.md)

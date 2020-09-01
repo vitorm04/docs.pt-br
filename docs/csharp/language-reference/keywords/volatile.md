@@ -1,4 +1,5 @@
 ---
+description: volatile – Referência de C#
 title: volatile – Referência de C#
 ms.date: 10/24/2018
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: c7a6c442c33ac2b41f652805837f455a957819de
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb89e99e8e28ff1e263817f498619dbfae700a50
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712839"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141693"
 ---
 # <a name="volatile-c-reference"></a>volatile (Referência de C#)
 
@@ -27,7 +28,7 @@ A palavra-chave `volatile` pode ser aplicada a campos desses tipos:
 - Parâmetros de tipo genérico conhecidos por serem tipos de referência.
 - <xref:System.IntPtr> e <xref:System.UIntPtr>.
 
-Outros tipos, inclusive `double` e `long`, não podem ser marcados como `volatile`, pois as leituras e gravações nos campos desses tipos não podem ser garantidas como atômicas. Para proteger o acesso multi-threaded a <xref:System.Threading.Interlocked> esses tipos de campos, use os membros da classe ou proteja o acesso usando a [`lock`](lock-statement.md) declaração.
+Outros tipos, inclusive `double` e `long`, não podem ser marcados como `volatile`, pois as leituras e gravações nos campos desses tipos não podem ser garantidas como atômicas. Para proteger o acesso multi-threaded a esses tipos de campos, use os membros da <xref:System.Threading.Interlocked> classe ou proteja o acesso usando a [`lock`](lock-statement.md) instrução.
 
 A palavra-chave `volatile` pode ser aplicada somente aos campos de uma `class` ou `struct`. As variáveis locais não podem ser declaradas como `volatile`.
 
@@ -43,16 +44,16 @@ O exemplo a seguir demonstra como um thread de trabalho ou auxiliar pode ser cri
 
 Com o modificador `volatile` adicionado à declaração de `_shouldStop` definida, você sempre obterá os mesmos resultados (semelhante ao trecho mostrado no código anterior). No entanto, sem esse modificador no membro `_shouldStop`, o comportamento é imprevisível. O método `DoWork` pode otimizar o acesso do membro, resultando na leitura de dados obsoletos. Devido à natureza da programação multithreaded, o número de leituras obsoletas é imprevisível. Diferentes execuções do programa produzirão resultados um pouco diferentes.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Confira também
 
 - [Especificação da linguagem C#: palavra-chave volatile](../../../../_csharplang/spec/classes.md#volatile-fields)
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [Modificadores](index.md)
-- [declaração de bloqueio](lock-statement.md)
+- [instrução Lock](lock-statement.md)
 - <xref:System.Threading.Interlocked>

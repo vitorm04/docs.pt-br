@@ -1,4 +1,5 @@
 ---
+description: foreach, in (Referência em C#)
 title: Instrução foreach do C#
 ms.date: 07/22/2020
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 4af431d29e538c1516efeaad3008eaa3b2229ece
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 2ed89fa52b2d3d369d668bf79ab32eaf7be18a8a
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104245"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142070"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Referência em C#)
 
@@ -62,13 +63,13 @@ foreach (V item in collection) { }
 
 No formulário anterior, o tipo `T` de um elemento de coleção deve ser implicitamente ou explicitamente conversível para `V` o tipo de uma variável de iteração. Se uma conversão explícita de `T` para `V` falhar em tempo de execução, a `foreach` instrução lançará um <xref:System.InvalidCastException> . Por exemplo, se `T` for um tipo de classe não lacrado, `V` pode ser qualquer tipo de interface, até mesmo aquele que `T` não implementa. No tempo de execução, o tipo de um elemento de coleção pode ser o que deriva de `T` e realmente implementa `V` . Se esse não for o caso, um <xref:System.InvalidCastException> será lançado.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, confira a seção [A instrução foreach](~/_csharplang/spec/statements.md#the-foreach-statement) na [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
-- [Palavras-chave do C#](index.md)
+- [Palavras-chave de C#](index.md)
 - [Usando foreach com matrizes](../../programming-guide/arrays/using-foreach-with-arrays.md)
 - [Instrução for](for.md)
