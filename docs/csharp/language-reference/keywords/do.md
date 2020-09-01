@@ -1,4 +1,5 @@
 ---
+description: do – Referência de C#
 title: do – Referência de C#
 ms.date: 05/28/2018
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: d75dd816278a876fa05d133e5eb189d606300a5c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 601231f23a58e8af8339a733677f0bbd92bb4ffc
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401921"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126951"
 ---
 # <a name="do-c-reference"></a>do (Referência de C#)
 
@@ -30,7 +31,7 @@ O exemplo a seguir mostra o uso da instrução `do`. Selecione **Executar** para
 
 [!code-csharp-interactive[do loop example](snippets/IterationKeywordsExamples.cs#4)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para saber mais, confira a seção [A instrução do](~/_csharplang/spec/statements.md#the-do-statement) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction).
 

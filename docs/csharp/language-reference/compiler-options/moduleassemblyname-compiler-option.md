@@ -1,4 +1,5 @@
 ---
+description: -moduleassemblyname (opção do compilador C#)
 title: -moduleassemblyname (opção do compilador C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 1477eeb0f2e16e18cb86009739bc8e7d9dee2ac0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d669a1687abe496b921d5670b9149b0e933b2d95
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173712"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125248"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (opção do compilador C#)
 Especifica um assembly cujos tipos não públicos podem ser acessados por um .netmodule.  
@@ -66,7 +67,7 @@ class An_Internal_Class
 ```  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo compila um .netmodule que acessa um tipo não público no assembly moduleassemblyname_1.dll. Ao saber que este módulo .net será incorporado em um conjunto chamado csman_an_assembly, podemos especificar **-moduleassemblyname**, permitindo que o módulo .neta acesse tipos não públicos em um conjunto que concedeu acesso de reunião de amigos a csman_an_assembly.  
+ Este exemplo compila um .netmodule que acessa um tipo não público no assembly moduleassemblyname_1.dll. Sabendo que esse. netmodule será criado em um assembly chamado csman_an_assembly, podemos especificar **-moduleassemblyname**, permitindo que o. netmodule acesse tipos não públicos em um assembly que tenha concedido acesso de assembly friend a csman_an_assembly.  
   
 ```csharp  
 // moduleassemblyname_2.cs  
@@ -97,5 +98,5 @@ class A {
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

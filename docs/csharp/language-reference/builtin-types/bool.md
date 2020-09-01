@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre o tipo booliano interno em C #'
 title: tipo bool-referência C#
 ms.date: 11/26/2019
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 4623dc7d6c8c6c437c78aee45f0eeee8a92e3200
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 23e5bc34f1751b0a706c20dae340920239fcda9d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854874"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126457"
 ---
 # <a name="bool-c-reference"></a>bool (referência C#)
 
@@ -43,7 +44,7 @@ Para obter mais informações sobre tipos de valor anulável, consulte [tipos de
 
 O C# fornece apenas duas conversões que envolvem o `bool` tipo. Essas são uma conversão implícita para o tipo anulável correspondente `bool?` e uma conversão explícita do `bool?` tipo. No entanto, o .NET fornece métodos adicionais que você pode usar para converter de ou para o `bool` tipo. Para obter mais informações, consulte a seção [convertendo de valores booleanos](/dotnet/api/system.boolean#converting-to-and-from-boolean-values) da <xref:System.Boolean?displayProperty=nameWithType> página de referência da API.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, consulte [a seção tipo bool](~/_csharplang/spec/types.md#the-bool-type) da [especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 

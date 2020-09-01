@@ -1,16 +1,17 @@
 ---
+description: Níveis de acessibilidade – Referência de C#
 title: Níveis de acessibilidade – Referência de C#
 ms.date: 12/06/2017
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 26fbc2a6d86aead537465c304146630f8bcd3ad4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 26b8f78595b1406deb371113cf491b80ad7c1474
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713824"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127016"
 ---
 # <a name="accessibility-levels-c-reference"></a>Níveis de acessibilidade (Referência de C#)
 
@@ -42,21 +43,21 @@ Use os modificadores de acesso, `public`, `protected`, `internal` ou `private`, 
 |`interface`|`public`|Nenhum|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
- A acessibilidade de um tipo aninhado depende de seu [domínio de acessibilidade,](./accessibility-domain.md)que é determinado tanto pela acessibilidade declarada do membro quanto pelo domínio de acessibilidade do tipo que contém imediatamente. Entretanto, o domínio de acessibilidade de um tipo aninhado não pode exceder o do tipo contido.  
+ A acessibilidade de um tipo aninhado depende de seu [domínio de acessibilidade](./accessibility-domain.md), que é determinado pela acessibilidade declarada do membro e o domínio de acessibilidade do tipo que o contém imediatamente. Entretanto, o domínio de acessibilidade de um tipo aninhado não pode exceder o do tipo contido.  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](./index.md)
 - [Modificadores de acesso](./access-modifiers.md)
 - [Domínio de acessibilidade](./accessibility-domain.md)
 - [Restrições ao uso de níveis de acessibilidade](./restrictions-on-using-accessibility-levels.md)
 - [Modificadores de acesso](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [público](./public.md)
-- [Privada](./private.md)
-- [Protegido](./protected.md)
-- [Interno](./internal.md)
+- [public](./public.md)
+- [particulares](./private.md)
+- [protegidos](./protected.md)
+- [interno](./internal.md)

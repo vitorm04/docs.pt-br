@@ -1,4 +1,5 @@
 ---
+description: abstract – Referência de C#
 title: abstract – Referência de C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 96e8bbce2e67c316d5cd1cd78e3e2506dabead25
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 095c4dea838aff4f14833d78fb10a2f831cf5173
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713859"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127198"
 ---
 # <a name="abstract-c-reference"></a>abstract (Referência de C#)
 O modificador `abstract` indica que o item que está sendo modificado tem uma implementação ausente ou incompleta. O modificador abstrato pode ser usado com classes, métodos, propriedades, indexadores e eventos. Use o modificador `abstract` em uma declaração de classe para indicar que uma classe se destina somente a ser uma classe base de outras classes, não instanciada por conta própria. Membros marcados como abstratos precisam ser implementados por classes não abstratas que derivam da classe abstrata.
@@ -40,7 +41,7 @@ O modificador `abstract` indica que o item que está sendo modificado tem uma im
   
 - Declarações de método abstrato são permitidas apenas em classes abstratas.  
   
-- Como uma declaração de método abstrato não fornece nenhuma implementação real, não há nenhum corpo de método, a declaração do método simplesmente termina com um ponto e vírgula e não há chaves ({ }) após a assinatura. Por exemplo:   
+- Como uma declaração de método abstrato não fornece nenhuma implementação real, não há nenhum corpo de método, a declaração do método simplesmente termina com um ponto e vírgula e não há chaves ({ }) após a assinatura. Por exemplo:  
   
     ```csharp  
     public abstract void MyMethod();  
@@ -60,7 +61,7 @@ O modificador `abstract` indica que o item que está sendo modificado tem uma im
   
  Uma classe abstrata deve fornecer uma implementação para todos os membros de interface.  
   
- Uma classe abstrata que implementa uma interface pode mapear os métodos de interface em métodos abstratos. Por exemplo:   
+ Uma classe abstrata que implementa uma interface pode mapear os métodos de interface em métodos abstratos. Por exemplo:  
   
 [!code-csharp[csrefKeywordsModifiers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#2)]
   
@@ -82,9 +83,9 @@ Você receberá uma mensagem de erro informando que o compilador não pode criar
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Modificadores](index.md)
-- [Virtual](./virtual.md)
-- [Substituir](./override.md)
+- [virtual](./virtual.md)
+- [override](./override.md)
 - [Palavras-chave do C#](./index.md)

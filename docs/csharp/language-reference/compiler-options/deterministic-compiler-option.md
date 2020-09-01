@@ -1,4 +1,5 @@
 ---
+description: -deterministic (Opções do Compilador C#)
 title: -deterministic (Opções do Compilador C#)
 ms.date: 04/12/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-ms.openlocfilehash: ed5d1db4618649391f88affad67e62dd9fc95925
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d0bcc2957e5a666c21cdc2ce61e74fc90fe3530
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73455179"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125820"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -54,5 +55,5 @@ Quando as fontes estão disponíveis publicamente, a compilação determinístic
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

@@ -1,4 +1,5 @@
 ---
+description: -keycontainer (opções do compilador C#)
 title: -keycontainer (opções do compilador C#)
 ms.date: 05/16/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: fead2d4296cfa6fb0195cb4b43f6448c0fc7e6a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b11380683159b7792149558a5dd432707ba3818
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70970144"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125495"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer (opções do compilador C#)
 Especifica o nome do contêiner da chave de criptografia.  
@@ -48,5 +49,5 @@ Especifica o nome do contêiner da chave de criptografia.
 ## <a name="see-also"></a>Confira também
 
 - [Opção -keyfile do compilador C#](keyfile-compiler-option.md)
-- [C# Opções de compilador](index.md)
+- [Opções do compilador C#](index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

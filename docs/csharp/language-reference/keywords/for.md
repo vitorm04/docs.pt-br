@@ -1,4 +1,5 @@
 ---
+description: instrução for-referência C#
 title: instrução for-referência C#
 ms.date: 06/13/2018
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: db7cecc697a9cc9e5ff6b94b78747b799ed7e505
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: be9ecdc08d54c9cde1c49656a16e0d85a6d7084d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401895"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126925"
 ---
 # <a name="for-c-reference"></a>for (referência de C#)
 
@@ -103,7 +104,7 @@ O exemplo a seguir define o loop `for` infinito:
 
 [!code-csharp[infinite for loop example](snippets/IterationKeywordsExamples.cs#7)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, confira a seção [A instrução for](~/_csharplang/spec/statements.md#the-for-statement) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction).
 

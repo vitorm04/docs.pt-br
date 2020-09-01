@@ -1,4 +1,5 @@
 ---
+description: -noconfig (opções do compilador C#)
 title: -noconfig (opções do compilador C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -noconfig compiler option [C#]
 - noconfig compiler option [C#]
 ms.assetid: cd26967e-e494-4c8c-b5c9-af13b2f78b2e
-ms.openlocfilehash: 2d6d0c52be2306292224d7831f8818c6f865f2f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 26d0680743ccc3af26a0e81eeec9cd2fc0d693af
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602746"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125222"
 ---
 # <a name="-noconfig-c-compiler-options"></a>-noconfig (opções do compilador C#)
 A opção **-noconfig** informa que o compilador não deve compilar com o arquivo csc.rsp, localizado no mesmo diretório que o arquivo csc.exe e carregado dele.  
@@ -28,7 +29,7 @@ A opção **-noconfig** informa que o compilador não deve compilar com o arquiv
 ## <a name="remarks"></a>Comentários  
  O arquivo csc.rsp referencia todos os assemblies que acompanham o .NET Framework. As referências reais que o ambiente de desenvolvimento do Visual Studio .NET inclui dependem do tipo de projeto.  
   
- Você pode modificar o arquivo csc.rsp e especificar opções adicionais de compilador que devem ser incluídas em cada compilação da linha de comando com csc.exe (exceto a opção **-noconfig).**  
+ Você pode modificar o arquivo csc. rsp e especificar opções de compilador adicionais que devem ser incluídas em todas as compilações da linha de comando com csc.exe (exceto a opção **-noconfig** ).  
   
  O compilador processa as opções passadas para o comando **csc** pela última vez. Portanto, qualquer opção na linha de comando substitui a configuração da mesma opção no arquivo csc.rsp.  
   
@@ -38,5 +39,5 @@ A opção **-noconfig** informa que o compilador não deve compilar com o arquiv
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

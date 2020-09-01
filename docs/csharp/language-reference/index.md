@@ -1,4 +1,5 @@
 ---
+description: Referência de C#
 title: Referência de C#
 ms.date: 02/14/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: bed8f430793a8d8544cf0bbb5ea765490945bfc0
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 317f375c46eee3bb9c719afb68993cd4720e54fe
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855329"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127185"
 ---
 # <a name="c-reference"></a>Referência de C#
 
@@ -41,7 +42,7 @@ Esta seção fornece o material de referência sobre palavras-chave do C#, opera
  [Erros do compilador C#](./compiler-messages/index.md)  
  Inclui snippets de código que demonstram a causa e a correção de erros do compilador do C# e avisos.  
   
- [C# Language Specification](../../../_csharplang/spec/introduction.md) (Especificação da linguagem C#)  
+ [Especificação da linguagem C#](../../../_csharplang/spec/introduction.md)  
  Especificação de linguagem do C# 6.0. Este é um projeto de proposta da linguagem C# 6.0. Este documento será refinado por meio do trabalho com o Comitê de padrões ECMA C#. A versão 5.0 foi lançada em dezembro de 2017 como o documento [Padrão ECMA-334 – 5ª Edição](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf).
 
 Os recursos que foram implementados nas versões do C# depois da 6.0 são representados em propostas de especificação de linguagem. Esses documentos descrevem os deltas para a especificação da linguagem a fim de adicionar os novos recursos. Eles estão no formulário de proposta de rascunho. Essas especificações serão refinadas e enviadas para o Comitê de padrões ECMA para revisão formal e Incorporation em uma versão futura do C# Standard.

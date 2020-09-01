@@ -1,4 +1,5 @@
 ---
+description: -errorreport (opções do compilador C#)
 title: -errorreport (opções do compilador C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 52b58aac5e82d4228dfda9c4d77c1d1c5de3e0cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5b3143f4da81ac693626778263c277e3a484c45e
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253889"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125716"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (opções do compilador C#)
 Esta opção fornece uma maneira conveniente de relatar um erro interno do compilador do C# à Microsoft.
@@ -31,11 +32,11 @@ Esta opção fornece uma maneira conveniente de relatar um erro interno do compi
  **nenhum**  
  Relatórios sobre erros internos do compilador não serão coletados ou enviados à Microsoft.
 
- **solicitar** Solicita que você envie um relatório quando receber um erro do compilador interno. **prompt** é o padrão quando você compila um aplicativo no ambiente de desenvolvimento.
+ **aviso** Solicita que você envie um relatório quando recebe um erro de compilador interno. **prompt** é o padrão quando você compila um aplicativo no ambiente de desenvolvimento.
 
- **fila** Faz fila o relatório de erro. Quando você faz logon com credenciais administrativas, pode relatar falhas desde a última vez que você fez logon. Não será solicitado que você envie relatórios de falhas mais de uma vez a cada três dias. **queue** é o padrão quando você compila um aplicativo na linha de comando.
+ **fila** Enfileira o relatório de erros. Quando você faz logon com credenciais administrativas, pode relatar falhas desde a última vez que você fez logon. Não será solicitado que você envie relatórios de falhas mais de uma vez a cada três dias. **queue** é o padrão quando você compila um aplicativo na linha de comando.
 
- **enviar** Envia automaticamente relatórios de erros do compilador interno para a Microsoft. Para habilitar essa opção, primeiro você deve concordar com a política de coleta de dados da Microsoft. Na primeira vez que você especificar **-errorreport:send** em um computador, uma mensagem de compilador indicará um site que contém a política de coleta de dados da Microsoft.
+ **Enviar** Envia automaticamente relatórios de erros de compilador interno à Microsoft. Para habilitar essa opção, primeiro você deve concordar com a política de coleta de dados da Microsoft. Na primeira vez que você especificar **-errorreport:send** em um computador, uma mensagem de compilador indicará um site que contém a política de coleta de dados da Microsoft.
 
 ## <a name="remarks"></a>Comentários
  Um ICE (erro interno do compilador) ocorre quando o compilador não pode processar um arquivo de código-fonte. Quando um ICE ocorre, o compilador não produz um arquivo de saída ou qualquer diagnóstico útil que você pode usar para corrigir o código.
@@ -50,7 +51,7 @@ Esta opção fornece uma maneira conveniente de relatar um erro interno do compi
 
 2. Clique na página de propriedades **Compilar**.
 
-3. Clique no botão **Avançado**.
+3. Clique no botão **Avançado** .
 
 4. Modifique a propriedade **Relatório de Erros do Compilador Interno**.
 
@@ -58,4 +59,4 @@ Esta opção fornece uma maneira conveniente de relatar um erro interno do compi
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)

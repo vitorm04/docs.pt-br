@@ -1,15 +1,16 @@
 ---
+description: Modificadores de acesso – Referência de C#
 title: Modificadores de acesso – Referência de C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: 754949e42771de30cc2dce7e4e610f70ada6dfd4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ea7a65c23b6a1edee572f6f6ff6c52d14358408
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713850"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127146"
 ---
 # <a name="access-modifiers-c-reference"></a>Modificadores de acesso (Referência de C#)
 Os modificadores de acesso são palavras-chave usadas para especificar a acessibilidade declarada de um membro ou de um tipo. Esta seção apresenta os quatro modificadores de acesso:  
@@ -23,15 +24,15 @@ Os modificadores de acesso são palavras-chave usadas para especificar a acessib
   
 - [`public`](public.md): O acesso não é restrito.  
   
-- [`protected`](protected.md): O acesso é limitado à classe ou aos tipos que contêm a classe que contém.  
+- [`protected`](protected.md): O acesso é limitado à classe que a contém ou aos tipos derivados da classe que a contém.  
   
-- [`internal`](internal.md): O acesso é limitado à montagem atual.  
+- [`internal`](internal.md): O acesso é limitado ao assembly atual.  
   
-- [`protected internal`](protected-internal.md): O acesso é limitado ao conjunto atual ou aos tipos derivados da classe de contenção.  
+- [`protected internal`](protected-internal.md): O acesso é limitado ao assembly ou tipos atuais derivados da classe que a contém.  
   
-- [`private`](private.md): O acesso é limitado ao tipo de contémade.  
+- [`private`](private.md): O acesso é limitado ao tipo recipiente.  
 
-- [`private protected`](private-protected.md): O acesso é limitado à classe ou aos tipos que contêm derivados da classe de contenção no conjunto atual.  
+- [`private protected`](private-protected.md): O acesso é limitado à classe que a contém ou aos tipos derivados da classe que a contém dentro do assembly atual.  
   
  Esta seção também apresenta o seguinte:  
   
@@ -43,8 +44,8 @@ Os modificadores de acesso são palavras-chave usadas para especificar a acessib
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](./index.md)
 - [Modificadores de acesso](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [Palavras-chave de acesso](base.md)

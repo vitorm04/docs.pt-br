@@ -1,4 +1,5 @@
 ---
+description: Opções do compilador de C# listadas por categoria
 title: Opções do compilador de C# listadas por categoria
 ms.date: 06/04/2020
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: f216534140b6e207ac110bb54b3e4f93a8ac6b70
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 27445b6685f48f7acf646c16de3201e68767da69
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474014"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125287"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opções do compilador de C# listadas por categoria
 
@@ -28,7 +29,7 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 
 |Opção|Finalidade|
 |------------|-------------|
-|[-determinístico](deterministic-compiler-option.md)|Faz com que o compilador gere um assembly de conteúdo binário idêntico entre compilações se as entradas são idênticas.|
+|[-deterministic](deterministic-compiler-option.md)|Faz com que o compilador gere um assembly de conteúdo binário idêntico entre compilações se as entradas são idênticas.|
 |[-doc](doc-compiler-option.md)|Especifica um arquivo XML em que os comentários da documentação processados devem ser gravados.|
 |[-out](out-compiler-option.md)|Especifica o arquivo de saída.|
 |[-pathmap](pathmap-compiler-option.md)|Especificar um mapeamento para os nomes de caminho de origem emitidos pelo compilador|
@@ -62,12 +63,12 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 |Opção|Finalidade|
 |------------|-------------|
 |[-bugreport](bugreport-compiler-option.md)|Cria um arquivo que contém informações que tornam mais fácil relatar um bug.|
-|[-checked](checked-compiler-option.md)|Especifica se o aritmético inteiro que estoura os limites do tipo de dados causará uma exceção em tempo de execução.|
+|[-verificado](checked-compiler-option.md)|Especifica se o aritmético inteiro que estoura os limites do tipo de dados causará uma exceção em tempo de execução.|
 |[-Depurar](debug-compiler-option.md)|Instrua o compilador a emitir informações de depuração.|
 |[-errorreport](errorreport-compiler-option.md)|Define o comportamento de relatório de erros.|
 |[-fullpaths](fullpaths-compiler-option.md)|Especifica o caminho absoluto para o arquivo na saída do compilador.|
 |[-nowarn](nowarn-compiler-option.md)|Suprime a geração de avisos especificados do compilador.|
-|[– permite valor nulo](nullable-compiler-option.md)|Especifica a opção de contexto anulável.|
+|[-nullable](nullable-compiler-option.md)|Especifica a opção de contexto anulável.|
 |[-warn](warn-compiler-option.md)|Define o nível de aviso.|
 |[-warnaserror](warnaserror-compiler-option.md)|Promove avisos a erros.|
 |regras\<file>|Especifique um arquivo de conjunto de regras que desabilita o diagnóstico específico.|
@@ -95,7 +96,7 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 |[@](response-file-compiler-option.md)|Especifica um arquivo de resposta.|
 |[-?](help-compiler-option.md)|Lista as opções de compilador para stdout.|
 |[-baseaddress](baseaddress-compiler-option.md)|Especifica o endereço básico preferencial no qual uma DLL será carregada.|
-|[-página de código](codepage-compiler-option.md)|Especifica a página de código a ser usada para todos os arquivos de código-fonte na compilação.|
+|[-codepage](codepage-compiler-option.md)|Especifica a página de código a ser usada para todos os arquivos de código-fonte na compilação.|
 |[-ajuda](help-compiler-option.md)|Lista as opções de compilador para stdout.|
 |[-highentropyva](highentropyva-compiler-option.md)|Especifica que o arquivo executável dá suporte a uma ASLR (Address Space Layout Randomization).|
 |[-langversion](langversion-compiler-option.md)|Especificar a versão da linguagem: padrão, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 ou mais recente |
@@ -115,7 +116,7 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 |---|---|
 |-incremental|Habilita a compilação incremental.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Opções do compilador C#](index.md)
 - [Opções do compilador de C# listadas em ordem alfabética](listed-alphabetically.md)

@@ -1,4 +1,5 @@
 ---
+description: Palavra-chave contextual descending – Referência de C#
 title: Palavra-chave contextual descending – Referência de C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - descending keyword [C#]
 ms.assetid: 8d2cd1e5-9c1c-4dfc-b84c-60e2d3240927
-ms.openlocfilehash: e17963e58abef2757594d0f6f3f7c5e805a1c966
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a303e98a35cf20720b9776d70d83934f7d4a648
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713589"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126977"
 ---
 # <a name="descending-c-reference"></a>descending (Referência de C#)
 
@@ -26,6 +27,6 @@ O exemplo a seguir mostra o uso de `descending` em uma [cláusula orderby](./ord
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
+- [Referência do C#](../index.md)
 - [LINQ em C#](../../linq/index.md)
-- [Crescente](./ascending.md)
+- [ascending](./ascending.md)

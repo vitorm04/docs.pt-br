@@ -1,4 +1,5 @@
 ---
+description: -doc (opções do compilador C#)
 title: -doc (opções do compilador C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 01ea71f3de9e30abe25184e38a59f3707b54bd5a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 366bad1029904b3571be0a76d827ff0213d776bb
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73422969"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125742"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (opções do compilador C#)
 A opção **-doc** permite colocar comentários de documentação em um arquivo XML.  
@@ -43,7 +44,7 @@ A opção **-doc** permite colocar comentários de documentação em um arquivo 
   
  Para usar o arquivo .xml gerado para uso com o recurso [IntelliSense](/visualstudio/ide/using-intellisense), deixe o nome do arquivo .xml igual ao do assembly a que você deseja dar suporte e, em seguida, verifique se o arquivo .xml está no mesmo diretório que o assembly. Sendo assim, quando o assembly for referenciado no projeto do Visual Studio, o arquivo .xml também será encontrado. Consulte [Fornecendo comentários de código](/visualstudio/ide/reference/generate-xml-documentation-comments) para obter mais informações.  
   
- A menos que você compile `file` com \< [-target:module,](./target-module-compiler-option.md)conterá>\<de montagem/montagem> tags especificando o nome do arquivo contendo o manifesto de montagem para o arquivo de saída da compilação.  
+ A menos que você compile com o [módulo-target:](./target-module-compiler-option.md), conterá `file` \<assembly> \</assembly> marcas especificando o nome do arquivo que contém o manifesto do assembly para o arquivo de saída da compilação.  
   
 > [!NOTE]
 > A opção -doc se aplica a todos os arquivos de entrada ou, se definida nas Configurações do Projeto, todos os arquivos no projeto. Para desabilitar avisos relacionados aos comentários de documentação para um arquivo ou uma seção específica do código, use [#pragma warning](../preprocessor-directives/preprocessor-pragma-warning.md).  
@@ -62,5 +63,5 @@ A opção **-doc** permite colocar comentários de documentação em um arquivo 
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

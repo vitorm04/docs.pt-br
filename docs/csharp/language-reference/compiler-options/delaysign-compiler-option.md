@@ -1,4 +1,5 @@
 ---
+description: -delaysign (opções do compilador C#)
 title: -delaysign (opções do compilador C#)
 ms.date: 05/15/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: 9fdc02c22d9d8c8a709155e43a17ebf0d86dfd69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5512ebeca4672f5d69852ab07c3f3fa40c305327
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70970438"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125833"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (opções do compilador C#)
 
@@ -33,7 +34,7 @@ Use **-delaysign-** se você quiser um assembly totalmente assinado. Use **-dela
 
 ## <a name="remarks"></a>Comentários
 
-A opção **-delaysign** não tem efeito a menos que seja usada com [-keyfile](./keyfile-compiler-option.md) ou [-keycontainer](./keycontainer-compiler-option.md).
+A opção **-delaysign** não tem nenhum efeito, a menos que seja usada com [-keyfile](./keyfile-compiler-option.md) ou [-keycontainer](./keycontainer-compiler-option.md).
 
 As opções **-delaysign** e **-publicsign** são mutuamente exclusivas.
 
@@ -53,5 +54,5 @@ Para obter informações sobre como definir essa opção do compilador programat
 ## <a name="see-also"></a>Confira também
 
 - [Opção -publicsign do C#](publicsign-compiler-option.md)
-- [C# Opções de compilador](index.md)
+- [Opções do compilador C#](index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

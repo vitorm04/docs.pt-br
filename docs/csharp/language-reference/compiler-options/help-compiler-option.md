@@ -1,4 +1,5 @@
 ---
+description: /help, /? (Opções do Compilador C#)
 title: /help, /? (Opções do Compilador C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - /help compiler option [C#]
 - -? compiler option [C#]
 ms.assetid: 8d53f6ba-5c3b-4183-976e-9c0f26fd3680
-ms.openlocfilehash: bbf4fd6fd13ee267dcbc80568577d5f8aa7d625e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e51f8848bbd0b57ac083dccb6813e3f39fd9a74
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602914"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125677"
 ---
 # <a name="-help---c-compiler-options"></a>/help, /? (Opções do Compilador C#)
 Essa opção envia uma lista de opções do compilador e uma breve descrição de cada opção para stdout.  
@@ -36,5 +37,5 @@ Essa opção envia uma lista de opções do compilador e uma breve descrição d
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

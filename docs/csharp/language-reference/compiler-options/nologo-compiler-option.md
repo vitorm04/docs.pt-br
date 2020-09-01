@@ -1,4 +1,5 @@
 ---
+description: -nologo (opções do compilador C#)
 title: -nologo (opções do compilador C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - banners, suppressing startup
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
-ms.openlocfilehash: 84fc7f7448309a0800ea05f03f0c5039a6b4f807
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5107563b5133c183dca7626281ad11df9d09a8d8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606649"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125209"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo (opções do compilador C#)
 A opção **-nologo** inibe a exibição da faixa de conexão quando o compilador é iniciado e inibe a exibição de mensagens informativas durante a compilação.  
@@ -32,5 +33,5 @@ A opção **-nologo** inibe a exibição da faixa de conexão quando o compilado
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

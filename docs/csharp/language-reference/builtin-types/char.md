@@ -1,4 +1,5 @@
 ---
+description: 'Saiba abouot o tipo de caractere interno em C #'
 title: tipo de caractere-referência C#
 ms.date: 05/11/2020
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: f771626e9777deab30e798559d847615d6124e6d
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 5c15cfb8050bc93e055dbde53308f9460ff90bc8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205787"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126379"
 ---
 # <a name="char-c-reference"></a>Char (referência C#)
 
 A `char` palavra-chave Type é um alias para o <xref:System.Char?displayProperty=nameWithType> tipo de estrutura .NET que representa um caractere Unicode UTF-16.
 
-|Type|Intervalo|Tamanho|Tipo .NET|
+|Tipo|Intervalo|Tamanho|Tipo .NET|
 |----------|-----------|----------|-------------------------|
 |`char`|U+0000 a U+FFFF|16 bits|<xref:System.Char?displayProperty=nameWithType>|
 
@@ -51,13 +52,13 @@ O `char` tipo é implicitamente conversível nos seguintes tipos [integral](inte
 
 Não há conversões implícitas de outros tipos para o `char` tipo. No entanto, qualquer tipo [integral](integral-numeric-types.md) ou numérico [de ponto flutuante](floating-point-numeric-types.md) é explicitamente conversível para `char` .
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, consulte a seção [tipos integrais](~/_csharplang/spec/types.md#integral-types) da [especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Confira também
 
-- [Referência do C#](../index.md)
+- [Referência de C#](../index.md)
 - [Tipos de valor](value-types.md)
 - [Cadeias de caracteres](../../programming-guide/strings/index.md)
 - <xref:System.Text.Rune?displayProperty=nameWithType>

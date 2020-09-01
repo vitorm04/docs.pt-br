@@ -1,4 +1,5 @@
 ---
+description: -lib (opções do compilador C#)
 title: -lib (opções do compilador C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,15 +9,15 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: 0c230147be055170ca015f27bd42bb096399405d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e53c54dc446d9fea87a9b7a336a38ffaa31704e9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606823"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125443"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (opções do compilador C#)
-A opção **-lib** especifica a localização dos conjuntos referenciados por meio da opção [-referência (C# Compiler Options).](./reference-compiler-option.md)  
+A opção **-lib** especifica o local dos assemblies referenciados por meio da opção [-Reference (opções do compilador C#)](./reference-compiler-option.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,5 +70,5 @@ csc -lib:c:\ -reference:t2.dll t2.cs
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

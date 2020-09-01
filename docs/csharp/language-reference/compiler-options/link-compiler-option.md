@@ -1,4 +1,5 @@
 ---
+description: -link (opções do compilador C#)
 title: -link (opções do compilador C#)
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: d5684298bbd736cae2d9c13381431036806aab17
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0f6927fd240f3f8535478d163be615fc74dad8d2
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144455"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125391"
 ---
 # <a name="-link-c-compiler-options"></a>-link (opções do compilador C#)
 Faz com que o compilador disponibilize as informações de tipo COM nos assemblies especificados para o projeto sendo compilado no momento.
@@ -79,7 +80,7 @@ Faz com que o compilador disponibilize as informações de tipo COM nos assembli
 csc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.cs
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Opções do compilador C#](./index.md)
 - [Instruções passo a passo: Inserindo tipos de assemblies gerenciados](../../../standard/assembly/embed-types-visual-studio.md)

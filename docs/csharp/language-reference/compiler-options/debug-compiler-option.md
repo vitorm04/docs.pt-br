@@ -1,4 +1,5 @@
 ---
+description: -debug (opções do compilador C#)
 title: -debug (opções do compilador C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: 8bb2b411dc867b6a43e52058dccf2ac980cf0b1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 164530a5ec99e7d5b9f34dbcdfb18d80f3102308
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69922508"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125911"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (opções do compilador C#)
 A opção **-debug** faz o compilador gerar informações de depuração e colocá-las nos arquivos de saída.  
@@ -42,7 +43,7 @@ A opção **-debug** faz o compilador gerar informações de depuração e coloc
   
  Para obter informações sobre como configurar o desempenho de depuração de um aplicativo, consulte [Facilitando a Depuração de uma Imagem](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   
- Para alterar a localização do arquivo .pdb, consulte [-pdb (C# Opções de compilação)](./pdb-compiler-option.md).  
+ Para alterar o local do arquivo. pdb, consulte [-PDB (opções do compilador C#)](./pdb-compiler-option.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
@@ -50,7 +51,7 @@ A opção **-debug** faz o compilador gerar informações de depuração e coloc
   
 2. Clique na página de propriedades **Compilar**.  
   
-3. Clique no botão **Avançado**.  
+3. Clique no botão **Avançado** .  
   
 4. Modifique a propriedade **Informações de Depuração**.  
   
@@ -65,5 +66,5 @@ csc -debug -pdb:app.pdb test.cs
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
