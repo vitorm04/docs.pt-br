@@ -1,4 +1,5 @@
 ---
+description: Palavra-chave protected – Referência de C#
 title: Palavra-chave protected – Referência de C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: bec619d4f49bd26daa742c18c830909c14948adf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4c18d1f2f45a0a154dccd42736a01874dd1af853
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713177"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89122375"
 ---
 # <a name="protected-c-reference"></a>protected (Referência de C#)
 
 A palavra-chave `protected` é um modificador de acesso de membro.
 
- > Esta página aborda o acesso `protected`. A `protected` palavra-chave também [`protected internal`](protected-internal.md) faz [`private protected`](private-protected.md) parte dos modificadores de acesso.
+ > Esta página aborda o acesso `protected`. A `protected` palavra-chave também faz parte [`protected internal`](protected-internal.md) dos [`private protected`](private-protected.md) modificadores de acesso e.
 
 Um membro protegido é acessível dentro de sua classe e por instâncias da classe derivada.
 
@@ -46,19 +47,19 @@ Se você alterar os níveis de acesso de `x` e `y` para [private](private.md), o
 
 `'Point.x' is inaccessible due to its protection level.`
 
-## <a name="c-language-specification"></a>especificação da linguagem C#  
+## <a name="c-language-specification"></a>Especificação da linguagem C#  
 
 Para obter mais informações, veja [Acessibilidade declarada](~/_csharplang/spec/basic-concepts.md#declared-accessibility) na [Especificação da Linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [Modificadores de acesso](access-modifiers.md)
 - [Níveis de acessibilidade](accessibility-levels.md)
 - [Modificadores](index.md)
-- [público](public.md)
-- [Privada](private.md)
-- [Interno](internal.md)
+- [public](public.md)
+- [particulares](private.md)
+- [interno](internal.md)
 - [Questões de segurança de palavras-chave virtuais internas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

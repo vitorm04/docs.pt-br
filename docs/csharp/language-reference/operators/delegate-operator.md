@@ -1,15 +1,16 @@
 ---
+description: operador delegate – referência do C#
 title: operador delegate – referência do C#
 ms.date: 07/18/2019
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: 33c438b88f1e993f4648786da9b20b91961b7ee1
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 1dfaaf40c0f5a19534adef3be7e3c917bc95c4a8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062984"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89122245"
 ---
 # <a name="delegate-operator-c-reference"></a>operador delegate (referência do C#)
 
@@ -36,7 +37,7 @@ Você também usa a palavra-chave `delegate` para declarar um [tipo delegado](..
 
 Para obter mais informações, confira a seção [Expressões de função anônima](~/_csharplang/spec/expressions.md#anonymous-function-expressions) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)
