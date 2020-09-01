@@ -1,4 +1,5 @@
 ---
+description: Cláusula from – Referência de C#
 title: Cláusula from – Referência de C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: 388b9c0245b112d619fc173f6019b3f7dbf59940
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 474b22f5a9d8f12c8a4365159817f878761b563c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715286"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89140783"
 ---
 # <a name="from-clause-c-reference"></a>Cláusula from (Referência de C#)
 
@@ -31,9 +32,9 @@ No exemplo a seguir, `numbers` é a fonte de dados e `num` é a variável de int
 
 ## <a name="the-range-variable"></a>A variável de intervalo
 
-O compilador infere que o tipo da variável de intervalo quando a fonte de dados implementa <xref:System.Collections.Generic.IEnumerable%601>. Por exemplo, se a fonte tem um tipo de `IEnumerable<Customer>`, então, a variável de intervalo será inferida como `Customer`. O tipo deve ser especificado explicitamente somente quando a fonte for um tipo `IEnumerable` não genérico, como <xref:System.Collections.ArrayList>. Para obter mais informações, consulte [Como consultar uma ArrayList com LINQ](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
+O compilador infere que o tipo da variável de intervalo quando a fonte de dados implementa <xref:System.Collections.Generic.IEnumerable%601>. Por exemplo, se a fonte tem um tipo de `IEnumerable<Customer>`, então, a variável de intervalo será inferida como `Customer`. O tipo deve ser especificado explicitamente somente quando a fonte for um tipo `IEnumerable` não genérico, como <xref:System.Collections.ArrayList>. Para obter mais informações, consulte [como consultar uma ArrayList com LINQ](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
 
-No exemplo anterior, `num` é inferido como do tipo `int`. Como a variável de intervalo é fortemente tipada, é possível chamar métodos nela ou usá-la em outras operações. Por exemplo, em vez de gravar `select num`, grave `select num.ToString()` para fazer com que a expressão de consulta retorne uma sequência de cadeias de caracteres em vez de números inteiros. Também é possível gravar `select num + 10` para fazer com que a expressão retorne a sequência 14, 11, 13, 12, 10. Para obter mais informações, consulte [selecionar cláusula](select-clause.md).
+No exemplo anterior, `num` é inferido como do tipo `int`. Como a variável de intervalo é fortemente tipada, é possível chamar métodos nela ou usá-la em outras operações. Por exemplo, em vez de gravar `select num`, grave `select num.ToString()` para fazer com que a expressão de consulta retorne uma sequência de cadeias de caracteres em vez de números inteiros. Também é possível gravar `select num + 10` para fazer com que a expressão retorne a sequência 14, 11, 13, 12, 10. Para obter mais informações, consulte [cláusula SELECT](select-clause.md).
 
 A variável de intervalo é como uma variável de iteração em uma instrução [foreach](foreach-in.md), com a exceção de uma diferença muito importante: na verdade, uma variável de intervalo nunca armazena dados da fonte. É apenas uma conveniência sintática que habilita a consulta a descrever o que ocorrerá quando ela for executada. Para obter mais informações, consulte [Introdução a Consultas de LINQ (C#)](../../programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
@@ -56,4 +57,4 @@ Para obter mais informações sobre as operações de união que usam várias cl
 ## <a name="see-also"></a>Confira também
 
 - [Palavras-chave de consulta (LINQ)](query-keywords.md)
-- [Consulta Integrada ao Idioma (LINQ)](../../linq/index.md)
+- [LINQ (Consulta Integrada à Linguagem)](../../linq/index.md)

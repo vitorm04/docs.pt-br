@@ -1,4 +1,5 @@
 ---
+description: Cláusula join – Referência de C#
 title: Cláusula join – Referência de C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-ms.openlocfilehash: 8e52e9db241392b67818b7316767dd97bd38432a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44b35bd1243e4715f81513eef9968f30a8f315a3
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713405"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139743"
 ---
 # <a name="join-clause-c-reference"></a>Cláusula join (Referência de C#)
 
@@ -55,7 +56,7 @@ Para obter mais informações, consulte [Executar junções agrupadas](../../lin
 
 ## <a name="left-outer-join"></a>Junção externa esquerda
 
-Em uma junção externa esquerda, todos os elementos na sequência de origem à esquerda são retornados, mesmo que não haja elementos correspondentes na sequência à direita. Para executar uma junta externa à `DefaultIfEmpty` esquerda no LINQ, use o método em combinação com uma junta de grupo para especificar um elemento do lado direito padrão para produzir se um elemento do lado esquerdo não tiver correspondências. Você pode usar `null` como o valor padrão para qualquer tipo de referência ou pode especificar um tipo padrão definido pelo usuário. No exemplo a seguir, é mostrado um tipo padrão definido pelo usuário:
+Em uma junção externa esquerda, todos os elementos na sequência de origem à esquerda são retornados, mesmo que não haja elementos correspondentes na sequência à direita. Para executar uma junção externa esquerda no LINQ, use o `DefaultIfEmpty` método em combinação com uma junção de grupo para especificar um elemento do lado direito padrão para produzir se um elemento do lado esquerdo não tiver correspondência. Você pode usar `null` como o valor padrão para qualquer tipo de referência ou pode especificar um tipo padrão definido pelo usuário. No exemplo a seguir, é mostrado um tipo padrão definido pelo usuário:
 
 [!code-csharp[cscsrefQueryKeywords#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#27)]
 
@@ -71,7 +72,7 @@ Você pode realizar junções por não igualdade, uniões cruzadas e outras oper
 
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>Junções em coleções de objetos versus tabelas relacionais
 
-Em uma expressão de consulta LINQ, as operações de adesão são realizadas em coleções de objetos. As coleções de objetos não podem ser "unidas" exatamente da mesma forma que duas tabelas relacionais. No LINQ, `join` as cláusulas explícitas só são necessárias quando duas seqüências de origem não são vinculadas por qualquer relacionamento. Ao trabalhar com [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], as tabelas de chave estrangeira são representadas no modelo de objeto como propriedades da tabela primária. Por exemplo, no banco de dados Northwind, a tabela Cliente tem uma relação de chave estrangeira com a tabela Pedidos. Quando você mapear as tabelas para o modelo de objeto, a classe Cliente terá uma propriedade de Pedidos contendo a coleção de Pedidos associados a esse Cliente. Na verdade, a junção já foi feita para você.
+Em uma expressão de consulta LINQ, as operações de junção são executadas em coleções de objetos. As coleções de objetos não podem ser "unidas" exatamente da mesma forma que duas tabelas relacionais. No LINQ, `join` cláusulas explícitas só são necessárias quando duas sequências de origem não são vinculadas por nenhuma relação. Ao trabalhar com [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], as tabelas de chave estrangeira são representadas no modelo de objeto como propriedades da tabela primária. Por exemplo, no banco de dados Northwind, a tabela Cliente tem uma relação de chave estrangeira com a tabela Pedidos. Quando você mapear as tabelas para o modelo de objeto, a classe Cliente terá uma propriedade de Pedidos contendo a coleção de Pedidos associados a esse Cliente. Na verdade, a junção já foi feita para você.
 
 Para obter mais informações sobre como fazer consultas entre tabelas relacionadas no contexto de [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], consulte [Como mapear relações de banco de dados](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
 
@@ -92,8 +93,8 @@ Uma cláusula `join` que não é seguida por `into` é convertida em uma chamada
 ## <a name="see-also"></a>Confira também
 
 - [Palavras-chave de consulta (LINQ)](query-keywords.md)
-- [Consulta Integrada ao Idioma (LINQ)](../../linq/index.md)
-- [Participe das Operações](../../programming-guide/concepts/linq/join-operations.md)
+- [LINQ (Consulta Integrada à Linguagem)](../../linq/index.md)
+- [Operações de junção](../../programming-guide/concepts/linq/join-operations.md)
 - [Cláusula group](group-clause.md)
 - [Executar junções externas esquerdas](../../linq/perform-left-outer-joins.md)
 - [Executar junções internas](../../linq/perform-inner-joins.md)

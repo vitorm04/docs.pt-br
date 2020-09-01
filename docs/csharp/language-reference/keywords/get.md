@@ -1,4 +1,5 @@
 ---
+description: get – Referência de C#
 title: get – Referência de C#
 ms.date: 03/10/2017
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - get keyword [C#]
 ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
-ms.openlocfilehash: 61d8c02aaf13f43ff8ea17c1e868ea9fd52893c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e13dc3ed6577717c64b4e36000a9e090f7b4751
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173621"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139730"
 ---
 # <a name="get-c-reference"></a>get (Referência de C#)
 
@@ -36,7 +37,7 @@ Para casos simples em que os acessadores `get` e `set` de uma propriedade não r
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](./index.md)
 - [Propriedades](../../programming-guide/classes-and-structs/properties.md)

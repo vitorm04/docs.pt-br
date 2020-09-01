@@ -1,4 +1,5 @@
 ---
+description: Palavra-chave private – Referência de C#
 title: Palavra-chave private – Referência de C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-ms.openlocfilehash: a13e9ef18b0f6452c3ff1497dc97110bc21c433d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6f40712fd2cca6d7b1f64760f1c6c5dd5c71370
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715194"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139392"
 ---
 # <a name="private-c-reference"></a>private (Referência de C#)
 
 A palavra-chave `private` é um modificador de acesso de membro.
 
-> Esta página aborda o acesso `private`. A `private` palavra-chave também [`private protected`](./private-protected.md) faz parte do modificador de acesso.
+> Esta página aborda o acesso `private`. A `private` palavra-chave também faz parte do [`private protected`](./private-protected.md) modificador de acesso.
 
 Acesso particular é o nível de acesso menos permissivo. Membros particulares são acessíveis somente dentro do corpo da classe ou do struct em que são declarados, como neste exemplo:
 
@@ -42,18 +43,18 @@ Neste exemplo, a classe `Employee` contém dois membros de dados particulares, `
 
 [!code-csharp[csrefKeywordsModifiers#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#10)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#  
+## <a name="c-language-specification"></a>Especificação da linguagem C#  
 
 Para obter mais informações, veja [Acessibilidade declarada](~/_csharplang/spec/basic-concepts.md#declared-accessibility) na [Especificação da Linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [Modificadores de acesso](access-modifiers.md)
 - [Níveis de acessibilidade](accessibility-levels.md)
 - [Modificadores](index.md)
-- [público](public.md)
-- [Protegido](protected.md)
-- [Interno](internal.md)
+- [public](public.md)
+- [protegidos](protected.md)
+- [interno](internal.md)

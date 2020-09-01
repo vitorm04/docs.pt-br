@@ -1,4 +1,5 @@
 ---
+description: Instrução fixed – Referência de C#
 title: Instrução fixed – Referência de C#
 ms.date: 05/10/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: d743daca2fa779e300c7e8ab430b1ffff10b434c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 05505916ab3837d2c433ec420d7928a8ee883fa8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401908"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139717"
 ---
 # <a name="fixed-statement-c-reference"></a>Instrução fixed (Referência de C#)
 
@@ -64,7 +65,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 
 É possível alocar memória na pilha, local que não está sujeito à coleta de lixo e, portanto, não precisa ser fixado. Para fazer isso, use uma [ `stackalloc` expressão](../operators/stackalloc.md).
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para saber mais, confira a seção [A instrução corrigida](~/_csharplang/spec/unsafe-code.md#the-fixed-statement) na [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 

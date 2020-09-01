@@ -1,4 +1,5 @@
 ---
+description: Palavra-chave namespace – Referência de C#
 title: Palavra-chave namespace – Referência de C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: b35f0a2a5cc0b2895b491d4ee24f89955f4b8fed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6cfd1c3d37cbdef1f0dd72ddca85ce91f2e183b
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77625794"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139574"
 ---
 # <a name="namespace-c-reference"></a>namespace (Referência de C#)
 
@@ -29,13 +30,13 @@ Dentro de um namespace, é possível declarar zero ou mais dos seguintes tipos:
 
 - [class](class.md)
 
-- [Interface](interface.md)
+- [interface](interface.md)
 
 - [struct](../builtin-types/struct.md)
 
-- [Enum](../builtin-types/enum.md)
+- [enumera](../builtin-types/enum.md)
 
-- [Delegado](../builtin-types/reference-types.md#the-delegate-type)
+- [delegate](../builtin-types/reference-types.md#the-delegate-type)
 
 Quer você declare explicitamente ou não um namespace em um arquivo de origem C#, o compilador adiciona um namespace padrão. Este namespace sem nome, às vezes chamado de namespace global, está presente em todos os arquivos. Qualquer identificador no namespace global está disponível para uso em um namespace nomeado.
 
@@ -51,15 +52,15 @@ O exemplo a seguir mostra como chamar um método estático em um namespace aninh
 
 [!code-csharp[csrefKeywordsNamespace#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#3)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para saber mais, confira a seção [Namespaces](~/_csharplang/spec/namespaces.md) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Confira também
 
-- [Referência do C#](../index.md)
-- [C# palavras-chave](index.md)
-- [Usando](using-directive.md)
-- [usando estática](using-static.md)
+- [Referência de C#](../index.md)
+- [Palavras-chave de C#](index.md)
+- [usando](using-directive.md)
+- [usando estático](using-static.md)
 - [Qualificador de alias de namespace `::`](../operators/namespace-alias-qualifier.md)
 - [Namespaces](../../programming-guide/namespaces/index.md)
