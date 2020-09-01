@@ -1,4 +1,5 @@
 ---
+description: '#Diretiva de pré-processamento "if" – Referência de C#'
 title: '#Diretiva de pré-processamento "if" – Referência de C#'
 ms.date: 10/27/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: d047b88f202341a795834809d0b601706c30fcb4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f01db9d7801d4b6f4c273a9cf82806acbb4828bb
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75899847"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138131"
 ---
 # <a name="if-c-reference"></a>#if (referência C#)
 
-Quando o Compilador do Visual C# encontra uma diretiva `#if`, seguida eventualmente por uma diretiva [#endif](preprocessor-endif.md), ele compila o código entre as diretivas somente quando o símbolo especificado é definido. Ao contrário do C e do C++, não é possível atribuir um valor numérico a um símbolo. A `#if` declaração em C# é booleana e só testa se o símbolo foi definido ou não. Por exemplo: 
+Quando o Compilador do Visual C# encontra uma diretiva `#if`, seguida eventualmente por uma diretiva [#endif](preprocessor-endif.md), ele compila o código entre as diretivas somente quando o símbolo especificado é definido. Ao contrário do C e do C++, não é possível atribuir um valor numérico a um símbolo. A `#if` instrução em C# é booliana e só testa se o símbolo foi definido ou não. Por exemplo:
 
 ```csharp
 #if DEBUG
@@ -23,11 +24,11 @@ Quando o Compilador do Visual C# encontra uma diretiva `#if`, seguida eventualme
 #endif
 ```
 
-Você pode usar [==](../operators/equality-operators.md#equality-operator-) os operadores (igualdade) e [!=](../operators/equality-operators.md#inequality-operator-) (desigualdade) apenas `true` para `false`testar os valores [bool](../builtin-types/bool.md) ou . `true`significa que o símbolo é definido. A instrução `#if DEBUG` tem o mesmo significado que `#if (DEBUG == true)`. Você pode usar o [&& (e)](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) [&#124;&#124; (ou)](../operators/boolean-logical-operators.md#conditional-logical-or-operator-)e [! (não)](../operators/boolean-logical-operators.md#logical-negation-operator-) operadores para avaliar se vários símbolos foram definidos. Também é possível agrupar os símbolos e operadores com parênteses.
+Você pode usar os operadores [==](../operators/equality-operators.md#equality-operator-) (igualdade) e [! =](../operators/equality-operators.md#inequality-operator-) (desigualdade) somente para testar os valores [bool](../builtin-types/bool.md) `true` ou `false` . `true` significa que o símbolo está definido. A instrução `#if DEBUG` tem o mesmo significado que `#if (DEBUG == true)`. Você pode usar a [&&  (and)](../operators/boolean-logical-operators.md#conditional-logical-and-operator-), [&#124;&#124;  (ou)](../operators/boolean-logical-operators.md#conditional-logical-or-operator-)e [! (não)](../operators/boolean-logical-operators.md#logical-negation-operator-) operadores para avaliar se vários símbolos foram definidos. Também é possível agrupar os símbolos e operadores com parênteses.
 
 ## <a name="remarks"></a>Comentários
 
-`#if`, juntamente com as [diretivas #else](preprocessor-else.md), [#elif](preprocessor-elif.md), [#endif](preprocessor-endif.md), [#define](preprocessor-define.md)e [#undef,](preprocessor-undef.md) permite incluir ou excluir código com base na existência de um ou mais símbolos. Isso pode ser útil ao compilar o código para um build de depuração ou ao compilar para uma configuração específica.
+`#if`junto com as diretivas [#else](preprocessor-else.md), [#elif](preprocessor-elif.md), [#endif](preprocessor-endif.md), [#define](preprocessor-define.md)e [#undef](preprocessor-undef.md) , permite que você inclua ou exclua o código com base na existência de um ou mais símbolos. Isso pode ser útil ao compilar o código para um build de depuração ou ao compilar para uma configuração específica.
 
 Uma diretiva condicional que começa com uma diretiva `#if` deverá ser explicitamente encerrada com uma diretiva `#endif`.
 
@@ -39,12 +40,12 @@ Um símbolo definido com `-define` ou com `#define` não entra em conflito com u
 
 O escopo de um símbolo criado com `#define` é o arquivo no qual ele foi definido.
 
-O sistema de compilação também está ciente de símbolos predefinidos de pré-processador que representam [diferentes frameworks de destino](../../../standard/frameworks.md) em projetos no estilo SDK. Eles são úteis ao criar aplicativos que podem direcionar mais de uma implementação ou versão do .NET.
+O sistema de compilação também reconhece os símbolos de pré-processador predefinidos que representam [estruturas de destino](../../../standard/frameworks.md) diferentes em projetos em estilo SDK. Eles são úteis ao criar aplicativos que podem direcionar mais de uma implementação ou versão do .NET.
 
 [!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
 > [!NOTE]
-> Para projetos tradicionais do .NET Framework, você deve configurar manualmente os símbolos de compilação condicional para as diferentes estruturas de destino no Visual Studio através das páginas de propriedades do projeto.
+> Para projetos tradicionais de .NET Framework, você precisa configurar manualmente os símbolos de compilação condicional para as diferentes estruturas de destino no Visual Studio por meio das páginas de propriedades do projeto.
 
 As constantes TRACE e DEBUG são exemplos de outros símbolos predefinidos. Para substituir os valores definidos no projeto, use a diretiva `#define`. Por exemplo, o símbolo DEBUG é definido automaticamente, de acordo com as propriedades de configuração do build (Modo de Depuração ou Modo de Versão).
 
@@ -91,7 +92,7 @@ public class MyClass
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
-- [C# Diretivas de pré-processador](index.md)
-- [Como compilar condicionalmente com Trace e Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
+- [Diretivas de pré-processador do C#](index.md)
+- [Como: compilar condicionalmente com Trace e Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

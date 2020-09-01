@@ -1,4 +1,5 @@
 ---
+description: -win32icon (opções do compilador C#)
 title: -win32icon (opções do compilador C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-ms.openlocfilehash: f3df92d8d0b0135eac1a055afafffa0015fecc2b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76a54f9011371492bdc15f15c3e40d51082deed3
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606281"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138404"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon (opções do compilador C#)
 A opção **-win32icon** insere um arquivo .ico no arquivo de saída, que fornece ao arquivo de saída a aparência desejada no Explorador de Arquivos.  
@@ -31,7 +32,7 @@ A opção **-win32icon** insere um arquivo .ico no arquivo de saída, que fornec
 ## <a name="remarks"></a>Comentários  
  Um arquivo .ico pode ser criado com o [Compilador de Recurso](/windows/desktop/menurc/resource-compiler). O Compilador de Recurso é invocado quando você compila um programa do Visual C++; um arquivo .ico é criado com base no arquivo .rc.  
   
- Consulte [-linkresource](./linkresource-compiler-option.md) (para referenciar) ou [-resource](./resource-compiler-option.md) (para anexar) um arquivo de recurso do .NET Framework. Consulte [-win32res](./win32res-compiler-option.md) para importar um arquivo .res.  
+ Consulte [-linkresource](./linkresource-compiler-option.md) (para referenciar) ou [-resource](./resource-compiler-option.md) (para anexar) um arquivo de recurso do .NET Framework. Consulte [-win32res](./win32res-compiler-option.md) para importar um arquivo. res.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
@@ -52,5 +53,5 @@ csc -win32icon:rf.ico in.cs
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

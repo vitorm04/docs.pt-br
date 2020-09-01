@@ -1,4 +1,5 @@
 ---
+description: '##warning – Referência de C#'
 title: '##warning – Referência de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
-ms.openlocfilehash: 38c3807a696599390667060d3bf374c68845fed0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab2cc5120492fc2a4b94296eb85e563c0a1d5ad3
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715064"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137832"
 ---
 # <a name="warning-c-reference"></a>#warning (Referência de C#)
-`#warning` permite gerar um aviso do compilador [CS1030](../../misc/cs1030.md) de nível um de um local específico no código. Por exemplo:   
+`#warning` permite gerar um aviso do compilador [CS1030](../../misc/cs1030.md) de nível um de um local específico no código. Por exemplo:  
   
 ```csharp
 #warning Deprecated code in this method.  
@@ -42,6 +43,6 @@ class MainClass
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
-- [C# Diretivas de pré-processador](./index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
+- [Diretivas de pré-processador do C#](./index.md)

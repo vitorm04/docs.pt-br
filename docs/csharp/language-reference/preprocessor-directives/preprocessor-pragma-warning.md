@@ -1,4 +1,5 @@
 ---
+description: '##pragma warning – Referência de C#'
 title: '##pragma warning – Referência de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 5620ea9e5f31c22e26bee95a450335bb179ced25
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3085c21db386ca215d48bbe8ade83cd26732242c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712462"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137962"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning (Referência de C#)
 O `#pragma warning` pode habilitar ou desabilitar determinados avisos.  
@@ -23,7 +24,7 @@ O `#pragma warning` pode habilitar ou desabilitar determinados avisos.
 #pragma warning restore warning-list  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `warning-list`  
  Uma lista de números de aviso separada por vírgulas. O prefixo "CS" é opcional.  
   
@@ -60,7 +61,7 @@ public class D
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
-- [C# Diretivas de pré-processador](./index.md)
-- [Erros do Compilador do C#](../compiler-messages/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
+- [Diretivas de pré-processador do C#](./index.md)
+- [Erros do compilador C#](../compiler-messages/index.md)

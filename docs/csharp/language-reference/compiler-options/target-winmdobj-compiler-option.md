@@ -1,13 +1,14 @@
 ---
+description: -target:winmdobj (opções do compilador C#)
 title: -target:winmdobj (opções do compilador C#)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 85ae9a3f5e9b038c0c56935ec5af2b9b09d19f20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 66a4bddb34832705ad4779829e561afd9442be8f
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74204486"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139080"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (opções do compilador C#)
 Se você usar a opção do compilador **-target:winmdobj**, o compilador criará um arquivo .winmdobj intermediário que pode ser convertido em um arquivo binário do Windows Runtime (.winmd). O arquivo .winmd pode, então, ser consumido por programas JavaScript e C++, bem como programas de linguagem gerenciada.  
@@ -35,7 +36,7 @@ Se você usar a opção do compilador **-target:winmdobj**, o compilador criará
   
 3. Na lista **Tipo de saída**, escolha **Arquivo WinMD**.  
   
-     A opção **Arquivo WinMD** está disponível apenas para modelos de aplicativos do Windows 8.x Store.  
+     A opção de **arquivo WinMD** está disponível somente para modelos de aplicativo da loja do Windows 8. x.  
   
  Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
@@ -48,5 +49,5 @@ csc -target:winmdobj filename.cs
   
 ## <a name="see-also"></a>Confira também
 
-- [-destino (C# Opções de compilador)](./target-compiler-option.md)
-- [C# Opções de compilador](./index.md)
+- [-Target (opções do compilador C#)](./target-compiler-option.md)
+- [Opções do compilador C#](./index.md)

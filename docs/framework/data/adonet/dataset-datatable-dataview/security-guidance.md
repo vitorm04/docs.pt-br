@@ -3,12 +3,12 @@ title: Diretrizes de segurança do conjunto de tabela e DataTable
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 24c8a830f8638bc2d9dd20c2384c8230a682d817
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 4fe8a062c762cc70d33243e3443aa9bf55635f98
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812231"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137611"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Diretrizes de segurança do conjunto de tabela e DataTable
 
@@ -45,6 +45,9 @@ em System. Data. DataColumn. set_DataType (valor de tipo)
 * A operação de desserialização falha.
 
 Ao carregar XML em uma `DataSet` instância ou existente `DataTable` , as definições de coluna existentes também são levadas em conta. Se a tabela já contiver uma definição de coluna de um tipo personalizado, esse tipo será adicionado temporariamente à lista de permissões para a duração da operação de desserialização de XML.
+
+> [!NOTE]
+> Depois que você adicionar colunas a um `DataTable` , o `ReadXml` não lerá o esquema do XML e, se o esquema não corresponder, ele também não será lido nos registros, portanto, você precisará adicionar todas as colunas por conta própria para usar esse método.
 
 ```cs
 XmlReader xmlReader = GetXmlReader();
@@ -275,7 +278,7 @@ Se `AppContext` não estiver disponível, as verificações de limitação de ti
 * Um administrador deve configurar o registro.
 * O uso do registro é uma alteração em todo o computador e afetará _todos os_ aplicativos em execução no computador.
 
-| Type  |  Valor |
+| Tipo  |  Valor |
 |---|---|
 | **Chave do Registro** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
 | **Nome do valor** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |

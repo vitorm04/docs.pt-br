@@ -1,4 +1,5 @@
 ---
+description: Contexto verificado e não verificado – Referência de C#
 title: Contexto verificado e não verificado – Referência de C#
 ms.date: 05/15/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 8ee4c481a30dce30029fbe8cc26f4798b523a7ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8d6a26e28062da682689bf64a9e38ea5fd158b2
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173634"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138261"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Contexto verificado e não verificado (Referência de C#)
 Instruções C# podem ser executadas em contexto marcado ou desmarcado. Em um contexto marcado, o estouro aritmético gera uma exceção. Em um contexto não verificado, o estouro aritmético é ignorado, e o resultado é truncado descartando todos os bits de ordem superior que não se encaixam no tipo de destino.  
@@ -37,7 +38,7 @@ Instruções C# podem ser executadas em contexto marcado ou desmarcado. Em um co
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [Palavras-chave de declaração](statement-keywords.md)
+- [Palavras-chave de instrução](statement-keywords.md)

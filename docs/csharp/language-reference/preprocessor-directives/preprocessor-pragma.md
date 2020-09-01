@@ -1,4 +1,5 @@
 ---
+description: '#pragma – Referência de C#'
 title: '#pragma – Referência de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
-ms.openlocfilehash: 3bd62364aeae0f21715711324655ef7d00d88afc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 97d7a786c83a8be21f7fd38873061dba0f9278ae
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712449"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137949"
 ---
 # <a name="pragma-c-reference"></a>#pragma (Referência de C#)
 O `#pragma` fornece ao compilador instruções especiais para a compilação do arquivo no qual ele é exibido. O compilador deve dar suporte às instruções. Em outras palavras, não é possível usar `#pragma` para criar instruções personalizadas de pré-processamento. O compilador Microsoft C# dá suporte a estas duas `#pragma` instruções:  
   
- [#pragma warning](./preprocessor-pragma-warning.md)  
+ [aviso de #pragma](./preprocessor-pragma-warning.md)  
   
- [#pragma soma de verificação](./preprocessor-pragma-checksum.md)  
+ [soma de verificação de #pragma](./preprocessor-pragma-checksum.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -26,7 +27,7 @@ O `#pragma` fornece ao compilador instruções especiais para a compilação do 
 #pragma pragma-name pragma-arguments  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pragma-name`  
  O nome de um pragma reconhecido.  
   
@@ -35,8 +36,8 @@ O `#pragma` fornece ao compilador instruções especiais para a compilação do 
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
-- [C# Diretivas de pré-processador](./index.md)
-- [#pragma warning](./preprocessor-pragma-warning.md)
-- [#pragma soma de verificação](./preprocessor-pragma-checksum.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
+- [Diretivas de pré-processador do C#](./index.md)
+- [aviso de #pragma](./preprocessor-pragma-warning.md)
+- [soma de verificação de #pragma](./preprocessor-pragma-checksum.md)

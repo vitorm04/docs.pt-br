@@ -1,4 +1,5 @@
 ---
+description: Palavra-chave checked – Referência de C#
 title: Palavra-chave checked – Referência de C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: 5963bb85ef4b61c1dc478667fb0e2e5438f3e4ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4dd8bc02d3af89d6bab3aef55a88cb8b40704da6
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713702"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138274"
 ---
 # <a name="checked-c-reference"></a>checked (Referência de C#)
 
@@ -36,14 +37,14 @@ Este exemplo mostra como usar `checked` para habilitar a verificação de estour
 
 [!code-csharp[csrefKeywordsChecked#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#1)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](./index.md)
-- [Checked e unchecked](./checked-and-unchecked.md)
-- [desmarcado](./unchecked.md)
+- [Contexto verificado e não verificado](./checked-and-unchecked.md)
+- [unchecked](./unchecked.md)

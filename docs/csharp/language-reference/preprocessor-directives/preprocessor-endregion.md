@@ -1,4 +1,5 @@
 ---
+description: '##endregion – Referência de C#'
 title: '##endregion – Referência de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#endregion directive [C#]'
 ms.assetid: 16099660-91b2-49e5-9646-77f9ef069526
-ms.openlocfilehash: c61c7a890811014acc69a43e422be53480bfb6f9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5bf95d499dc61c74a2474d47deb76ada21763538
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173413"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138144"
 ---
 # <a name="endregion-c-reference"></a>#endregion (Referência de C#)
-O `#endregion` marca o fim de um bloco [#region](./preprocessor-region.md). Por exemplo:   
+O `#endregion` marca o fim de um bloco [#region](./preprocessor-region.md). Por exemplo:  
   
 ```csharp
 #region MyClass definition  
@@ -29,6 +30,6 @@ class MyClass
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
-- [C# Diretivas de pré-processador](./index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
+- [Diretivas de pré-processador do C#](./index.md)

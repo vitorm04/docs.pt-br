@@ -1,4 +1,5 @@
 ---
+description: Palavra-chave contextual when – referência de C#
 title: Palavra-chave contextual when – referência de C#
 ms.date: 03/07/2017
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: 2b041ca3a821f45dd63ce3f6bee7a920eb495651
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: bd3a7beeb7d3c4b62d6b70e2b1c6f38ab4b6804f
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426989"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138209"
 ---
 # <a name="when-c-reference"></a>when (Referência de C#)
 
@@ -50,7 +51,7 @@ O exemplo a seguir usa a palavra-chave `when` para testar os objetos `Shape` que
 
 [!code-csharp[when-with-case#1](~/samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [instrução switch](switch.md)
 - [instruções try/catch](try-catch.md)
