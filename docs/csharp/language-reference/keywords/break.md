@@ -1,4 +1,5 @@
 ---
+description: Instrução break – Referência de C#
 title: Instrução break – Referência de C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: ef276fd9e8da0ea25695c5afdf06a300bbd2a123
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7fd05889f684f7a2282de8222e1195898dead5b9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713760"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134738"
 ---
 # <a name="break-c-reference"></a>break (Referência de C#)
 
@@ -39,23 +40,23 @@ Sorry, invalid selection.
 
 ## <a name="example"></a>Exemplo
 
-Neste exemplo, a instrução `break` é usada para interromper um loop aninhado interno e retornar o controle para o loop externo. O controle _só_ é devolvido um nível acima nos loops aninhados.
+Neste exemplo, a instrução `break` é usada para interromper um loop aninhado interno e retornar o controle para o loop externo. O controle _só_ retornou um nível acima nos loops aninhados.
 
 [!code-csharp[csrefKeywordsJump#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#7)]
 
 ## <a name="example"></a>Exemplo
 
-Neste exemplo, `break` a declaração só é usada para sair do ramo atual durante cada iteração do loop. O loop em si não `break` é afetado pelas instâncias que pertencem à declaração de [switch](./switch.md) aninhada.
+Neste exemplo, a `break` instrução é usada apenas para interromper a ramificação atual durante cada iteração do loop. O loop em si não é afetado pelas instâncias do `break` que pertencem à instrução [switch](./switch.md) aninhada.
 
 [!code-csharp[csrefKeywordsJump#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#8)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](./index.md)
-- [Interruptor](./switch.md)
+- [switch](./switch.md)

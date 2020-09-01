@@ -1,4 +1,5 @@
 ---
+description: Operador await – referência de C#
 title: Operador await – referência de C#
 ms.date: 07/13/2020
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 1941174d7e8d1676d11a13fa3ee6c7b84fe3952c
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 6531e696a6193bf1b1909c9f1be3f5beb4d7dd69
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063231"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134361"
 ---
 # <a name="await-operator-c-reference"></a>Operador await (referência de C#)
 
@@ -51,7 +52,7 @@ A partir do C# 7,1, o [ `Main` método](../../programming-guide/main-and-command
 
 Para obter mais informações, confira a seção [Expressões await](~/_csharplang/spec/expressions.md#await-expressions) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

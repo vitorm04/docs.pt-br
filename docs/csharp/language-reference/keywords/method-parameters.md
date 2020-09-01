@@ -1,4 +1,5 @@
 ---
+description: Parâmetros de método – Referência de C#
 title: Parâmetros de método – Referência de C#
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - method parameters [C#]
 - parameters [C#]
 ms.assetid: 680e39ff-775b-48b0-9f47-4186a5bfc4a1
-ms.openlocfilehash: 2cc7f9178fa5c1a040be9d45ba66fac292bb0e28
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7090bf1c3df65cf1e65942404f883b49612e7521
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713384"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134400"
 ---
 # <a name="method-parameters-c-reference"></a>Parâmetros de método (Referência de C#)
 
@@ -29,6 +30,6 @@ Os parâmetros declarados para um método sem [in](./in-parameter-modifier.md), 
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](./index.md)

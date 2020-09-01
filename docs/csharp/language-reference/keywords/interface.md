@@ -1,4 +1,5 @@
 ---
+description: ':::no-loc text=interface::: (Referência C#)'
 title: interface – Referência de C#
 ms.date: 01/17/2020
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: 869f1398ae0af3c7379655aa018a9f4aacb934d7
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 24f95e828522f467c519c0c8a7ba9410aa97af4e
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85243965"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134582"
 ---
-# <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface":::(Referência C#)
+# <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (Referência C#)
 
 Uma interface define um contrato. Qualquer um [`class`](class.md) ou [`struct`](../builtin-types/struct.md) que implemente esse contrato deve fornecer uma implementação dos membros definidos na interface. A partir do C# 8,0, uma interface pode definir uma implementação padrão para membros. Ele também pode definir [`static`](static.md) Membros para fornecer uma única implementação para a funcionalidade comum.
 
@@ -65,11 +66,11 @@ O exemplo a seguir demonstra a implementação da interface. Neste exemplo, a in
 
 [!code-csharp[csrefKeywordsTypes#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#15)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, consulte a seção [interfaces](~/_csharplang/spec/interfaces.md) da [especificação da linguagem C#](~/_csharplang/spec/introduction.md) e a especificação de recurso para [membros de interface padrão-C# 8,0](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência do C#](../index.md)
 - [Guia de programação C#](../../programming-guide/index.md)

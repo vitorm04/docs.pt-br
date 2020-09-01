@@ -1,4 +1,5 @@
 ---
+description: internal – Referência de C#
 title: internal – Referência de C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: e5a5ca18828b689241abbb6d80c5adc51efb073c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14722d66a65eb5f96118acf017dc877e657b2dd9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173595"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134569"
 ---
 # <a name="internal-c-reference"></a>internal (Referência de C#)
 A palavra-chave `internal` é um [modificador de acesso](./access-modifiers.md) para tipos e membros de tipo.
   
- > Esta página aborda o acesso `internal`. A `internal` palavra-chave também [`protected internal`](./protected-internal.md) faz parte do modificador de acesso.
+ > Esta página aborda o acesso `internal`. A `internal` palavra-chave também faz parte do [`protected internal`](./protected-internal.md) modificador de acesso.
   
 Tipos ou membros internos são acessíveis somente em arquivos no mesmo assembly, como neste exemplo:  
   
@@ -92,12 +93,12 @@ Para obter mais informações, veja [Acessibilidade declarada](~/_csharplang/spe
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](./index.md)
 - [Modificadores de acesso](./access-modifiers.md)
 - [Níveis de acessibilidade](./accessibility-levels.md)
 - [Modificadores](index.md)
-- [público](./public.md)
-- [Privada](./private.md)
-- [Protegido](./protected.md)
+- [public](./public.md)
+- [particulares](./private.md)
+- [protegidos](./protected.md)
