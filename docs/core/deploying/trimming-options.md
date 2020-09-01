@@ -4,12 +4,12 @@ description: Saiba como controlar a remoção de aplicativos independentes.
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 5597d4cdb9e8e96dcec6545e039d43295ca991bd
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d6081a24cc18e424b55d40e152f519c680f11aa0
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142252"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271874"
 ---
 # <a name="trimming-options"></a>Opções de corte
 
@@ -25,7 +25,7 @@ Ao usar `Microsoft.NET.Sdk` o, isso executará o corte no nível do assembly dos
 
 ## <a name="trimming-granularity"></a>Granularidade de corte
 
-As configurações de granularidade a seguir controlam o quão agressivamente não usado IL é Descartado. Isso pode ser definido como uma propriedade ou como metadados em um [assembly individual](#Trimmed-assemblies).
+As configurações de granularidade a seguir controlam o quão agressivamente não usado IL é Descartado. Isso pode ser definido como uma propriedade ou como metadados em um [assembly individual](#trimmed-assemblies).
 
 - `<TrimMode>copyused</TrimMode>`
 
@@ -60,7 +60,7 @@ Não adicione ou remova itens de/para `ManagedAssemblyToLink` , pois o SDK compu
 
 - `<TrimMode>copyused</TrimMode>` ou `<TrimMode>link</TrimMode>`
 
-  Controle a [granularidade de corte](#Trimming-granularity) deste assembly. Isso tem precedência sobre o global `TrimMode` . `TrimMode`A configuração em um assembly implica `<IsTrimmable>true</IsTrimmable>` .
+  Controle a [granularidade de corte](#trimming-granularity) deste assembly. Isso tem precedência sobre o global `TrimMode` . `TrimMode`A configuração em um assembly implica `<IsTrimmable>true</IsTrimmable>` .
 
 ## <a name="root-assemblies"></a>Assemblies raiz
 
@@ -106,7 +106,7 @@ Isso incluirá avisos sobre todo o aplicativo, incluindo seu próprio código, c
 
 ## <a name="warning-versions"></a>Versões de aviso
 
-A análise de corte respeita a [`AnalysisLevel`](../project-sdk/msbuild-props.md#AnalysisLevel) propriedade que controla a versão dos avisos de análise no SDK. Há outra propriedade que controla a versão dos avisos de análise de corte de forma independente (semelhante a `WarningLevel` para o compilador):
+A análise de corte respeita a [`AnalysisLevel`](../project-sdk/msbuild-props.md#analysislevel) propriedade que controla a versão dos avisos de análise no SDK. Há outra propriedade que controla a versão dos avisos de análise de corte de forma independente (semelhante a `WarningLevel` para o compilador):
 
 - `<ILLinkWarningLevel>5</ILLinkWarningLevel>`
 

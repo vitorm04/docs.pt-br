@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 5eb9d5127dffd2e80349352ad7a4b57f8848d56b
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 8cbb687b0c7cfb69d3f3807c083f1c25e9d39594
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165796"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271783"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de caminho de arquivo em sistemas Windows
 
@@ -33,19 +33,19 @@ Se todos os três componentes estiverem presentes, o caminho será absoluto. Se 
 
 |Caminho  |Descrição  |
 | -- | -- |
-| `C:\Documents\Newsletters\Summer2018.pdf` | Um caminho de arquivo absoluto da raiz da unidade C: |
+| `C:\Documents\Newsletters\Summer2018.pdf` | Um caminho de arquivo absoluto da raiz da unidade `C:` . |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Um caminho absoluto da raiz da unidade atual. |
 | `2018\January.xlsx` | Um caminho relativo para um arquivo em um subdiretório do diretório atual. |
 | `..\Publications\TravelBrochure.pdf` | Um caminho relativo para um arquivo em um diretório par do diretório atual. |
-| `C:\Projects\apilibrary\apilibrary.sln` | Um caminho absoluto para um arquivo na raiz da unidade C: |
-| `C:Projects\apilibrary\apilibrary.sln` | Um caminho relativo do diretório atual da unidade C:. |
+| `C:\Projects\apilibrary\apilibrary.sln` | Um caminho absoluto para um arquivo da raiz da unidade `C:` . |
+| `C:Projects\apilibrary\apilibrary.sln` | Um caminho relativo do diretório atual da `C:` unidade. |
 
 > [!IMPORTANT]
-> Observe a diferença entre os últimos dois caminhos. Ambos especificam o especificador de volume opcional (C: em ambos os casos), mas o primeiro começa com a raiz do volume especificado, e o segundo não. Assim, o primeiro é um caminho absoluto do diretório raiz da unidade C:, ao passo que o segundo é um caminho relativo do diretório atual da unidade C:. Uso do segundo formulário quando o primeiro é uma fonte comum de bugs que envolvem caminhos de arquivo do Windows.
+> Observe a diferença entre os últimos dois caminhos. Ambos especificam o especificador de volume opcional ( `C:` em ambos os casos), mas o primeiro começa com a raiz do volume especificado, enquanto o segundo não. Como resultado, o primeiro é um caminho absoluto do diretório raiz da unidade `C:` , enquanto o segundo é um caminho relativo do diretório atual da unidade `C:` . Uso do segundo formulário quando o primeiro é uma fonte comum de bugs que envolvem caminhos de arquivo do Windows.
 
 É possível determinar se um caminho de arquivo é totalmente qualificado (ou seja, se o caminho é independente do diretório atual e não se altera quando o diretório atual é alterado) chamando o método <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType>. Esse tipo de caminho poderá incluir segmentos de diretório relativo (`.` e `..`) e ainda ser totalmente qualificado se o caminho resolvido sempre apontar para o mesmo local.
 
-O exemplo a seguir ilustra a diferença entre caminhos absolutos e relativos. Ele assume que o diretório D:\FY2018\ existe e que você não definiu nenhum diretório atual para D:\ no prompt de comando antes de executar o exemplo.
+O exemplo a seguir ilustra a diferença entre caminhos absolutos e relativos. Ele pressupõe que o diretório `D:\FY2018\` existe e que você não definiu nenhum diretório atual para `D:\` o no prompt de comando antes de executar o exemplo.
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
@@ -56,8 +56,8 @@ O exemplo a seguir ilustra a diferença entre caminhos absolutos e relativos. El
 
 Os caminhos UNC (convenção de nomenclatura universal), usados para acessar recursos de rede, têm o seguinte formato:
 
-- Um nome do host ou servidor, que é precedido por \\\\. O nome do servidor pode ser um nome de computador NetBIOS ou um endereço IP/FQDN (IPv4 e v6 são compatíveis).
-- Um nome do compartilhamento, separado do nome do host por \\. Juntos, o servidor e o nome do compartilhamento compõem o volume.
+- Um nome do host ou servidor, que é precedido por `\\`. O nome do servidor pode ser um nome de computador NetBIOS ou um endereço IP/FQDN (IPv4 e v6 são compatíveis).
+- Um nome do compartilhamento, separado do nome do host por `\`. Juntos, o servidor e o nome do compartilhamento compõem o volume.
 - Um nome de diretório. O [caractere separador de diretório](<xref:System.IO.Path.DirectorySeparatorChar>) separa subdiretórios dentro da hierarquia aninhada do diretório.
 - Um nome de arquivo opcional. O [caractere separador de diretório](<xref:System.IO.Path.DirectorySeparatorChar>) separa o caminho do arquivo e o nome do arquivo.
 
@@ -65,8 +65,8 @@ Veja alguns exemplos de caminhos UNC:
 
 |Caminho  |Descrição  |
 | -- | -- |
-| `\\system07\C$\` | O diretório raiz da unidade C: em `system07`. |
-| `\\Server2\Share\Test\Foo.txt` | O arquivo Foo.txt no diretório Teste do volume \\\\Server2\\Share.|
+| `\\system07\C$\` | O diretório raiz da `C:` unidade em `system07` . |
+| `\\Server2\Share\Test\Foo.txt` | O `Foo.txt` arquivo no diretório de teste do `\\Server2\Share` volume.|
 
 Caminhos UNC devem sempre ser totalmente qualificados. Podem incluir segmentos de diretório relativo (`.` e `..`), mas esses precisam ser parte de um caminho totalmente qualificado. É possível usar caminhos relativos somente mapeando um caminho UNC para uma letra da unidade.
 
@@ -101,7 +101,7 @@ O caminho de dispositivo DOS tem os seguintes componentes:
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    Para UNCs de dispositivo, a parte do servidor/compartilhamento forma o volume. Por exemplo, no `\\?\server1\e:\utilities\\filecomparer\`, a parte do servidor/compartilhamento é server1\utilities. Isso é importante ao chamar um método como <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> com segmentos de diretório relativo. Não é possível navegar além desse volume.
+    Para UNCs de dispositivo, a parte do servidor/compartilhamento forma o volume. Por exemplo, no `\\?\server1\e:\utilities\\filecomparer\` , a parte de servidor/compartilhamento é `server1\utilities` . Isso é importante ao chamar um método como <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> com segmentos de diretório relativo. Não é possível navegar além desse volume.
 
 Caminhos de dispositivo DOS são totalmente qualificados por definição. Os segmento de diretório relativo (`.` e `..`) não são permitidos. Os diretórios atuais nunca são inseridos no uso deles.
 
@@ -146,7 +146,7 @@ Um caminho que começa com um nome do dispositivo herdado sempre é interpretado
 
 ### <a name="apply-the-current-directory"></a>Aplicar o diretório atual
 
-Se o caminho não for totalmente qualificado, o Windows aplicará o diretório atual a ele. O diretório atual não foi aplicado a UNCs e caminhos de dispositivo. Nem a unidade total com o separador C:\\.
+Se o caminho não for totalmente qualificado, o Windows aplicará o diretório atual a ele. O diretório atual não foi aplicado a UNCs e caminhos de dispositivo. Nenhuma unidade completa com separador `C:\` .
 
 Se o caminho começar com um único separador de componente, a unidade do diretório atual será aplicada. Por exemplo, se o caminho do arquivo for `\utilities` e o diretório atual for `C:\temp\`, a normalização produzirá `C:\utilities`.
 

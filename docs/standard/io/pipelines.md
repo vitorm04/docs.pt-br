@@ -1,7 +1,7 @@
 ---
-title: Oleodutos de I/O - .NET
-description: Aprenda a usar eficientemente os pipelines de I/O em .NET e evite problemas em seu código.
-ms.date: 10/01/2019
+title: Pipelines de e/s-.NET
+description: Saiba como usar pipelines de e/s com eficiência no .NET e evitar problemas em seu código.
+ms.date: 08/27/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - Pipelines
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 8822e731ae805e83d4072c5bd78dff3fcf9a31a1
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: a24d7f5c22c936cd3fd3fdc51f0f3ace56386574
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81462516"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271978"
 ---
-# <a name="systemiopipelines-in-net"></a>Pipelines system.IO.em .NET
+# <a name="systemiopipelines-in-net"></a>System. IO. pipelines no .NET
 
-<xref:System.IO.Pipelines>é uma nova biblioteca projetada para facilitar a realização de I/O de alto desempenho em .NET. É uma biblioteca direcionada ao .NET Standard que funciona em todas as implementações .NET.
+<xref:System.IO.Pipelines> é uma nova biblioteca criada para facilitar a execução de e/s de alto desempenho no .NET. É uma biblioteca direcionada .NET Standard que funciona em todas as implementações do .NET.
 
 <a name="solve"></a>
 
-## <a name="what-problem-does-systemiopipelines-solve"></a>Que problema o System.IO.Pipelines resolve
+## <a name="what-problem-does-systemiopipelines-solve"></a>Qual problema o System. IO. pipelines resolve
 
 <!-- corner case doesn't MT (machine translate)   -->
-Os aplicativos que analisam os dados de streaming são compostos de código de caldeira com muitos fluxos de código especializados e incomuns. A caldeira e o código de caso especial são complexos e difíceis de manter.
+Aplicativos que analisam dados de streaming são compostos por código clichê com muitos fluxos de código especializados e incomuns. O código de caso clichê e especial é complexo e difícil de manter.
 
-`System.IO.Pipelines`foi arquitetado para:
+`System.IO.Pipelines` foi arquitetado para:
 
-* Tenha dados de streaming de análise de alto desempenho.
+* Ter dados de streaming de análise de alto desempenho.
 * Reduza a complexidade do código.
 
-O código a seguir é típico de um servidor TCP que `'\n'`recebe mensagens delimitadas de linha (delimitadas por ) de um cliente:
+O código a seguir é típico para um servidor TCP que recebe mensagens delimitadas por linha (delimitadas por `'\n'` ) de um cliente:
 
 ```csharp
 async Task ProcessLinesAsync(NetworkStream stream)
@@ -47,95 +47,95 @@ async Task ProcessLinesAsync(NetworkStream stream)
 
 O código anterior tem vários problemas:
 
-* A mensagem inteira (fim da linha) pode `ReadAsync`não ser recebida em uma única chamada para .
-* Está ignorando o resultado `stream.ReadAsync`de. `stream.ReadAsync`retorna quantos dados foram lidos.
-* Ele não lida com o caso em que `ReadAsync` várias linhas são lidas em uma única chamada.
-* Ele aloca `byte` uma matriz a cada leitura.
+* A mensagem inteira (fim da linha) não pode ser recebida em uma única chamada para `ReadAsync` .
+* Ele está ignorando o resultado de `stream.ReadAsync` . `stream.ReadAsync` Retorna o número de dados lidos.
+* Ele não manipula o caso em que várias linhas são lidas em uma única `ReadAsync` chamada.
+* Ele aloca uma `byte` matriz com cada leitura.
 
-Para corrigir os problemas anteriores, são necessárias as seguintes alterações:
+Para corrigir os problemas anteriores, as seguintes alterações são necessárias:
 
-* Tampe os dados de entrada até que uma nova linha seja encontrada.
-* Analise todas as linhas devolvidas no buffer.
-* É possível que a linha seja maior que 1 KB (1024 bytes). O código precisa redimensionar o buffer de entrada até que o delimitador seja encontrado para encaixar a linha completa dentro do buffer.
+* Armazenar os dados de entrada em buffer até que uma nova linha seja encontrada.
+* Analise todas as linhas retornadas no buffer.
+* É possível que a linha seja maior que 1 KB (1024 bytes). O código precisa redimensionar o buffer de entrada até que o delimitador seja encontrado para ajustar a linha completa dentro do buffer.
 
-  * Se o buffer for redimensionado, mais cópias de buffer serão feitas à medida que linhas mais longas aparecerem na entrada.
-  * Para reduzir o espaço desperdiçado, compacte o buffer usado para leitura de linhas.
+  * Se o buffer for redimensionado, mais cópias de buffer serão feitas conforme as linhas mais longas aparecerem na entrada.
+  * Para reduzir o espaço desperdiçado, compacte o buffer usado para ler as linhas.
 
-* Considere usar o buffer pooling para evitar alocar a memória repetidamente.
+* Considere o uso do pool de buffers para evitar a alocação repetida de memória.
 * O código a seguir aborda alguns desses problemas:
 
-[!code-csharp[](~/samples/snippets/csharp/pipelines/ProcessLinesAsync.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/ProcessLinesAsync.cs" id="snippet":::
 
-O código anterior é complexo e não resolve todos os problemas identificados. Rede de alto desempenho geralmente significa escrever código muito complexo para maximizar o desempenho. `System.IO.Pipelines`foi projetado para facilitar a escrita deste tipo de código.
+O código anterior é complexo e não aborda todos os problemas identificados. A rede de alto desempenho geralmente significa escrever código muito complexo para maximizar o desempenho. `System.IO.Pipelines` foi projetado para tornar mais fácil a criação desse tipo de código.
 
 [!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
 
 ## <a name="pipe"></a>Pipe
 
-A <xref:System.IO.Pipelines.Pipe> classe pode ser `PipeWriter/PipeReader` usada para criar um par. Todos os dados `PipeWriter` gravados `PipeReader`no está disponível no:
+A <xref:System.IO.Pipelines.Pipe> classe pode ser usada para criar um `PipeWriter/PipeReader` par. Todos os dados gravados no `PipeWriter` estão disponíveis no `PipeReader` :
 
-[!code-csharp[](~/samples/snippets/csharp/pipelines/Pipe.cs?name=snippet2)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/Pipe.cs" id="snippet2":::
 
 <a name="pbu"></a>
 
-### <a name="pipe-basic-usage"></a>Uso básico do tubo
+### <a name="pipe-basic-usage"></a>Uso básico do pipe
 
-[!code-csharp[](~/samples/snippets/csharp/pipelines/Pipe.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/Pipe.cs" id="snippet":::
 
 Há dois loops:
 
-* `FillPipeAsync`lê do `Socket` e escreve `PipeWriter`para o .
-* `ReadPipeAsync`lê a `PipeReader` partir das linhas de entrada e analisa.
+* `FillPipeAsync` lê do `Socket` e grava no `PipeWriter` .
+* `ReadPipeAsync` lê de `PipeReader` e analisa as linhas de entrada.
 
-Não há buffers explícitos alocados. Toda a gestão de `PipeReader` `PipeWriter` buffer é delegada para as implementações. Delegar o gerenciamento de buffer satisfaz que o consumo de código se concentre apenas na lógica do negócio.
+Não há buffers explícitos alocados. Todo o gerenciamento de buffer é delegado às `PipeReader` `PipeWriter` implementações e. A delegação do gerenciamento de buffer facilita o consumo do código para se concentrar exclusivamente na lógica de negócios.
 
 No primeiro loop:
 
-* <xref:System.IO.Pipelines.PipeWriter.GetMemory(System.Int32)?displayProperty=nameWithType>é chamado para obter memória do escritor subjacente.
-* <xref:System.IO.Pipelines.PipeWriter.Advance(System.Int32)?displayProperty=nameWithType>é chamado para `PipeWriter` dizer quantos dados foram escritos para o buffer.
-* <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType>é chamado para disponibilizar os `PipeReader`dados para o .
+* <xref:System.IO.Pipelines.PipeWriter.GetMemory(System.Int32)?displayProperty=nameWithType> é chamado para obter memória do gravador subjacente.
+* <xref:System.IO.Pipelines.PipeWriter.Advance(System.Int32)?displayProperty=nameWithType> é chamado para informar a `PipeWriter` quantidade de dados gravados no buffer.
+* <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType> é chamado para disponibilizar os dados para o `PipeReader` .
 
-No segundo loop, `PipeReader` o consome os `PipeWriter`buffers escritos por . Os buffers vêm do soquete. A chamada `PipeReader.ReadAsync`para:
+No segundo loop, o `PipeReader` consome os buffers gravados pelo `PipeWriter` . Os buffers são provenientes do soquete. A chamada para `PipeReader.ReadAsync` :
 
-* Retorna <xref:System.IO.Pipelines.ReadResult> um que contém duas informações importantes:
+* Retorna um <xref:System.IO.Pipelines.ReadResult> que contém duas partes importantes de informações:
 
-  * Os dados que foram lidos na forma de `ReadOnlySequence<byte>`.
-  * Um booleano `IsCompleted` que indica se o fim dos dados (EOF) foi atingido.
+  * Os dados que foram lidos na forma de `ReadOnlySequence<byte>` .
+  * Um booliano `IsCompleted` que indica se o fim de dados (EOF) foi atingido.
 
-Depois de encontrar o delimitador final da linha (EOL) e analisar a linha:
+Depois de encontrar o delimitador de fim de linha (EOL) e analisar a linha:
 
-* A lógica processa o buffer para pular o que já está processado.
-* `PipeReader.AdvanceTo`é chamado para `PipeReader` dizer quantos dados foram consumidos e examinados.
+* A lógica processa o buffer para ignorar o que já foi processado.
+* `PipeReader.AdvanceTo` é chamado para informar a `PipeReader` quantidade de dados consumidos e examinados.
 
-Os loops de leitor `Complete`e escritor terminam chamando . `Complete`permite que o tubo subjacente libere a memória que ele alocou.
+Os loops de leitor e gravador terminam chamando `Complete` . `Complete` permite que o pipe subjacente libere a memória alocada.
 
-### <a name="backpressure-and-flow-control"></a>Backpressure e controle de fluxo
+### <a name="backpressure-and-flow-control"></a>Controle de fluxo e de pressão
 
-Idealmente, a leitura e o trabalho de análise em conjunto:
+Idealmente, a leitura e a análise funcionam em conjunto:
 
-* O segmento de escrita consome dados da rede e os coloca em buffers.
-* O segmento de análise é responsável pela construção das estruturas de dados apropriadas.
+* O thread de gravação consome dados da rede e os coloca em buffers.
+* O thread de análise é responsável por construir as estruturas de dados apropriadas.
 
 Normalmente, a análise leva mais tempo do que apenas copiar blocos de dados da rede:
 
-* O fio de leitura fica à frente do fio de análise.
-* O segmento de leitura tem que diminuir ou alocar mais memória para armazenar os dados para o segmento de análise.
+* O thread de leitura fica à frente do thread de análise.
+* O thread de leitura precisa diminuir ou alocar mais memória para armazenar os dados para o thread de análise.
 
 Para um desempenho ideal, há um equilíbrio entre pausas frequentes e alocação de mais memória.
 
-Para resolver o problema `Pipe` anterior, o tem duas configurações para controlar o fluxo de dados:
+Para resolver o problema anterior, o `Pipe` tem duas configurações para controlar o fluxo de dados:
 
-* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>: Determina quantos dados devem ser <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> protegidos antes das chamadas pausarem.
-* <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>: Determina quantos dados o leitor tem `PipeWriter.FlushAsync` que observar antes das chamadas para retomar.
+* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>: Determina a quantidade de dados que deve ser armazenada em buffer antes das chamadas para <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> Pausar.
+* <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>: Determina a quantidade de dados que o leitor deve observar antes de chamar a `PipeWriter.FlushAsync` retomada.
 
-![Diagrama com resumeWriterThreshold e PauseWriterThreshold](./media/pipelines/resume-pause.png)
+![Diagrama com ResumeWriterThreshold e PauseWriterThreshold](media/pipelines/resume-pause.png)
 
 <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType>:
 
-* Retorna um `ValueTask<FlushResult>` incompleto quando a `Pipe` quantidade `PauseWriterThreshold`de dados nas cruzes .
-* Completa `ValueTask<FlushResult>` quando se torna `ResumeWriterThreshold`mais baixo do que .
+* Retorna um incompleto `ValueTask<FlushResult>` quando a quantidade de dados em `Pipe` cruza `PauseWriterThreshold` .
+* É concluído `ValueTask<FlushResult>` quando se torna menor que `ResumeWriterThreshold` .
 
-Dois valores são usados para prevenir o ciclismo rápido, o que pode ocorrer se um valor for usado.
+Dois valores são usados para evitar o ciclo rápido, que pode ocorrer se um valor for usado.
 
 ### <a name="examples"></a>Exemplos
 
@@ -148,203 +148,229 @@ var pipe = new Pipe(options);
 
 ### <a name="pipescheduler"></a>PipeScheduler
 
-Normalmente, `async` ao `await`usar e, o código assíncrono é retomado em um <xref:System.Threading.Tasks.TaskScheduler> ou na corrente <xref:System.Threading.SynchronizationContext>.
+Normalmente, ao usar o `async` e `await` o, o código assíncrono continua em um <xref:System.Threading.Tasks.TaskScheduler> ou no atual <xref:System.Threading.SynchronizationContext> .
 
-Ao fazer I/O, é importante ter controle fino sobre onde a I/O é realizada. Este controle permite tirar vantagem dos caches da CPU de forma eficaz. O cache eficiente é fundamental para aplicativos de alto desempenho, como servidores web. <xref:System.IO.Pipelines.PipeScheduler>fornece controle sobre onde os retornos assíncronos são executados. Por padrão:
+Ao fazer e/s, é importante ter um controle refinado sobre onde a e/s é executada. Esse controle permite aproveitar os caches de CPU com eficiência. O cache eficiente é essencial para aplicativos de alto desempenho, como servidores Web. <xref:System.IO.Pipelines.PipeScheduler> fornece controle sobre onde os retornos de chamada assíncronos são executados. Por padrão:
 
-* A <xref:System.Threading.SynchronizationContext> corrente é usada.
-* Se não `SynchronizationContext`houver, ele usa o pool de segmentos para executar retornos de chamadas.
+* O atual <xref:System.Threading.SynchronizationContext> é usado.
+* Se não houver `SynchronizationContext` , ele usará o pool de threads para executar retornos de chamada.
 
-[!code-csharp[](~/samples/snippets/csharp/pipelines/Program.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/Program.cs" id="snippet":::
 
-[PipeScheduler.ThreadPool](xref:System.IO.Pipelines.PipeScheduler.ThreadPool) é <xref:System.IO.Pipelines.PipeScheduler> a implementação que faz filas de retorno saqueado no pool de segmentos. `PipeScheduler.ThreadPool`é o padrão e geralmente a melhor escolha. [PipeScheduler.Inline](xref:System.IO.Pipelines.PipeScheduler.Inline) pode causar consequências não intencionais, como impasses.
+[PipeScheduler. ThreadPool](xref:System.IO.Pipelines.PipeScheduler.ThreadPool) é a <xref:System.IO.Pipelines.PipeScheduler> implementação que enfileira os retornos de chamada para o pool de threads. `PipeScheduler.ThreadPool` é o padrão e geralmente é a melhor opção. [PipeScheduler. Inline](xref:System.IO.Pipelines.PipeScheduler.Inline) pode causar consequências indesejadas, como deadlocks.
 
-### <a name="pipe-reset"></a>Reset de tubulação
+### <a name="pipe-reset"></a>Redefinição de pipe
 
-É freqüentemente eficiente reutilizar `Pipe` o objeto. Para reiniciar o tubo, <xref:System.IO.Pipelines.PipeReader> <xref:System.IO.Pipelines.Pipe.Reset%2A> ligue `PipeReader` `PipeWriter` quando ambos estiverem completos.
+Com frequência, é eficiente reutilizar o `Pipe` objeto. Para redefinir o pipe, chame <xref:System.IO.Pipelines.PipeReader> <xref:System.IO.Pipelines.Pipe.Reset%2A> quando o `PipeReader` e o `PipeWriter` estiverem concluídos.
 
 ## <a name="pipereader"></a>PipeReader
 
-<xref:System.IO.Pipelines.PipeReader>gerencia a memória em nome do chamador. **Sempre** <xref:System.IO.Pipelines.PipeReader.AdvanceTo%2A?displayProperty=nameWithType> ligue <xref:System.IO.Pipelines.PipeReader.ReadAsync%2A?displayProperty=nameWithType>depois de ligar. Isso permite `PipeReader` saber quando o chamador é feito com a memória para que ele possa ser rastreado. O `ReadOnlySequence<byte>` retorno `PipeReader.ReadAsync` só é válido até `PipeReader.AdvanceTo`a chamada do . É ilegal usar `ReadOnlySequence<byte>` depois `PipeReader.AdvanceTo`de ligar.
+<xref:System.IO.Pipelines.PipeReader> gerencia a memória em nome do chamador. **Sempre** chamar <xref:System.IO.Pipelines.PipeReader.AdvanceTo%2A?displayProperty=nameWithType> após a chamada <xref:System.IO.Pipelines.PipeReader.ReadAsync%2A?displayProperty=nameWithType> . Isso permite `PipeReader` saber quando o chamador é feito com a memória para que possa ser acompanhado. O `ReadOnlySequence<byte>` retornado de `PipeReader.ReadAsync` é válido somente até a chamada de `PipeReader.AdvanceTo` . É ilegal usar depois de `ReadOnlySequence<byte>` chamar `PipeReader.AdvanceTo` .
 
-`PipeReader.AdvanceTo`leva <xref:System.SequencePosition> dois argumentos:
+`PipeReader.AdvanceTo` usa dois <xref:System.SequencePosition> argumentos:
 
-* O primeiro argumento determina quanta memória foi consumida.
-* O segundo argumento determina quanto do buffer foi observado.
+* O primeiro argumento determina a quantidade de memória consumida.
+* O segundo argumento determina o quanto do buffer foi observado.
 
-Marcar dados como consumidos significa que o tubo pode retornar a memória para o pool de buffer subjacente. Marcar dados como observado controla o `PipeReader.ReadAsync` que a próxima chamada faz. Marcar tudo como observado significa que `PipeReader.ReadAsync` a próxima chamada não retornará até que haja mais dados escritos no tubo. Qualquer outro valor fará a `PipeReader.ReadAsync` próxima chamada para retornar imediatamente com os dados observados *e* não observados, mas não dados que já foram consumidos.
+Marcar dados como consumidos significa que o pipe pode retornar a memória para o pool de buffers subjacente. Marcar dados como observados controla o que a próxima chamada `PipeReader.ReadAsync` faz. Marcar tudo como observado significa que a próxima chamada para `PipeReader.ReadAsync` não retornará até que haja mais dados gravados no pipe. Qualquer outro valor fará com que a próxima chamada seja `PipeReader.ReadAsync` retornada imediatamente com os dados observados *e* inobservados, mas não os dados que já foram consumidos.
 
-### <a name="read-streaming-data-scenarios"></a>Leia cenários de dados de streaming
+### <a name="read-streaming-data-scenarios"></a>Ler cenários de dados de streaming
 
-Existem alguns padrões típicos que surgem ao tentar ler dados de streaming:
+Há alguns padrões típicos que surgem ao tentar ler dados de streaming:
 
 * Dado um fluxo de dados, analise uma única mensagem.
 * Dado um fluxo de dados, analise todas as mensagens disponíveis.
 
-Os exemplos a `TryParseMessage` seguir usam o método para `ReadOnlySequence<byte>`analisar mensagens de a . `TryParseMessage`analisa uma única mensagem e atualiza o buffer de entrada para aparar a mensagem analisado do buffer. `TryParseMessage`não faz parte do .NET, é um método escrito pelo usuário usado nas seguintes seções.
+Os exemplos a seguir usam o `TryParseMessage` método para analisar mensagens de um `ReadOnlySequence<byte>` . `TryParseMessage` analisa uma única mensagem e atualiza o buffer de entrada para cortar a mensagem analisada do buffer. `TryParseMessage` Não faz parte do .NET, é um método escrito pelo usuário usado nas seções a seguir.
 
 ```csharp
 bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 ```
 
-### <a name="read-a-single-message"></a>Leia uma única mensagem
+### <a name="read-a-single-message"></a>Ler uma única mensagem
 
-O código a seguir lê `PipeReader` uma única mensagem de um e devolve-a ao chamador.
+O código a seguir lê uma única mensagem de a `PipeReader` e retorna-a para o chamador.
 
-[!code-csharp[ReadSingleMsg](~/samples/snippets/csharp/pipelines/ReadSingleMsg.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/ReadSingleMsg.cs" id="snippet":::
 
 O código anterior:
 
 * Analisa uma única mensagem.
-* Atualiza o `SequencePosition` consumido e `SequencePosition` examinado para apontar para o início do buffer de entrada aparado.
+* Atualiza o consumido `SequencePosition` e examinado `SequencePosition` para apontar para o início do buffer de entrada cortado.
 
-Os `SequencePosition` dois argumentos `TryParseMessage` são atualizados porque remove a mensagem analisado do buffer de entrada. Geralmente, ao analisar uma única mensagem do buffer, a posição examinada deve ser uma das seguintes:
+Os dois `SequencePosition` argumentos são atualizados porque `TryParseMessage` o Remove a mensagem analisada do buffer de entrada. Geralmente, ao analisar uma única mensagem do buffer, a posição examinada deve ser uma das seguintes:
 
 * O fim da mensagem.
-* O fim do buffer recebido se nenhuma mensagem foi encontrada.
+* O final do buffer recebido se nenhuma mensagem for encontrada.
 
-O caso de mensagem única tem o maior potencial para erros. Passar os valores errados para *examinados* pode resultar em uma exceção fora da memória ou um loop infinito. Para obter mais informações, consulte a seção [problemas comuns do PipeReader](#gotchas) neste artigo.
+O caso de mensagem única tem o maior potencial para erros. Passar os valores incorretos para *examinados* pode resultar em uma exceção de memória insuficiente ou um loop infinito. Para obter mais informações, consulte a seção [problemas comuns do PipeReader](#gotchas) neste artigo.
 
 ### <a name="reading-multiple-messages"></a>Lendo várias mensagens
 
-O código a seguir lê `PipeReader` todas `ProcessMessageAsync` as mensagens de a e chama cada um.
+O código a seguir lê todas as mensagens de um `PipeReader` e chamadas `ProcessMessageAsync` em cada uma.
 
-[!code-csharp[MyConnection1](~/samples/snippets/csharp/pipelines/MyConnection1.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyConnection1.cs" id="snippet":::
 
 ### <a name="cancellation"></a>Cancelamento
 
 `PipeReader.ReadAsync`:
 
-* Suporta passar <xref:System.Threading.CancellationToken>um .
-* Joga <xref:System.OperationCanceledException> um `CancellationToken` se o for cancelado enquanto há uma leitura pendente.
-* Apoia uma maneira de cancelar a <xref:System.IO.Pipelines.PipeReader.CancelPendingRead%2A?displayProperty=nameWithType>operação de leitura atual via , o que evita aumentar uma exceção. A `PipeReader.CancelPendingRead` chamada faz com `PipeReader.ReadAsync` que a <xref:System.IO.Pipelines.ReadResult> `IsCanceled` chamada `true`atual ou próxima retorne a um com set para . Isso pode ser útil para parar o loop de leitura existente de uma forma não destrutiva e não excepcional.
+* Dá suporte à passagem de um <xref:System.Threading.CancellationToken> .
+* Gera um <xref:System.OperationCanceledException> se o `CancellationToken` for cancelado enquanto houver uma leitura pendente.
+* O oferece suporte a uma maneira de cancelar a operação de leitura atual por meio do <xref:System.IO.Pipelines.PipeReader.CancelPendingRead%2A?displayProperty=nameWithType> , que evita a geração de uma exceção. `PipeReader.CancelPendingRead`A chamada faz com que a chamada atual ou seguinte para `PipeReader.ReadAsync` retorne um <xref:System.IO.Pipelines.ReadResult> com `IsCanceled` definido como `true` . Isso pode ser útil para interromper o loop de leitura existente de forma não destrutiva e não excepcional.
 
-[!code-csharp[MyConnection](~/samples/snippets/csharp/pipelines/MyConnection.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyConnection.cs" id="snippet":::
 
 <a name="gotchas"></a>
 
 ### <a name="pipereader-common-problems"></a>Problemas comuns do PipeReader
 
-* Passar os valores errados para `consumed` ou `examined` pode resultar na leitura de dados já lidos.
+* Passar os valores incorretos para `consumed` ou `examined` pode resultar na leitura de dados já lidos.
 * Passar `buffer.End` como examinado pode resultar em:
 
-  * Dados paralisados
-  * Possivelmente uma eventual exceção fora da memória (OOM) se os dados não forem consumidos. Por exemplo, `PipeReader.AdvanceTo(position, buffer.End)` ao processar uma única mensagem de cada vez a partir do buffer.
+  * Dados interrompidos
+  * Possivelmente uma exceção de memória insuficiente (OOM) se os dados não forem consumidos. Por exemplo, `PipeReader.AdvanceTo(position, buffer.End)` ao processar uma única mensagem por vez do buffer.
 
-* Passar os valores errados para `consumed` ou `examined` pode resultar em um loop infinito. Por `PipeReader.AdvanceTo(buffer.Start)` exemplo, `buffer.Start` se não tiver sido alterado `PipeReader.ReadAsync` fará com que a próxima chamada retorne imediatamente antes que novos dados cheguem.
-* Passar os valores errados para `consumed` ou `examined` pode resultar em buffering infinito (eventual OOM).
-* O `ReadOnlySequence<byte>` uso `PipeReader.AdvanceTo` da chamada pós-chamada pode resultar em corrupção de memória (uso após a liberdade).
-* Não ligar `PipeReader.Complete/CompleteAsync` pode resultar em um vazamento de memória.
-* Verificar <xref:System.IO.Pipelines.ReadResult.IsCompleted?displayProperty=nameWithType> e sair da lógica de leitura antes de processar o buffer resulta em perda de dados. A condição de saída `ReadResult.Buffer.IsEmpty` do `ReadResult.IsCompleted`loop deve ser baseada em e . Fazer isso incorretamente pode resultar em um loop infinito.
+* Passar os valores incorretos para `consumed` ou `examined` pode resultar em um loop infinito. Por exemplo, `PipeReader.AdvanceTo(buffer.Start)` se não alterado, fará com que `buffer.Start` a próxima chamada a `PipeReader.ReadAsync` seja retornada imediatamente antes que novos dados cheguem.
+* Passar os valores incorretos para `consumed` ou `examined` pode resultar em buffer infinito (OOM eventual).
+* Usar o `ReadOnlySequence<byte>` após chamar `PipeReader.AdvanceTo` pode resultar em corrupção de memória (use depois de gratuito).
+* A falha na chamada `PipeReader.Complete/CompleteAsync` pode resultar em um vazamento de memória.
+* Verificar <xref:System.IO.Pipelines.ReadResult.IsCompleted?displayProperty=nameWithType> e sair da lógica de leitura antes de processar o buffer resulta em perda de dados. A condição de saída do loop deve ser baseada em `ReadResult.Buffer.IsEmpty` e `ReadResult.IsCompleted` . Fazer isso incorretamente pode resultar em um loop infinito.
 
 #### <a name="problematic-code"></a>Código problemático
 
 ❌**Perda de dados**
 
-O `ReadResult` pode retornar o segmento `IsCompleted` final `true`de dados quando é definido para . Não ler esses dados antes de sair do loop de leitura resultará em perda de dados.
+O `ReadResult` pode retornar o segmento final de dados quando `IsCompleted` é definido como `true` . Não ler os dados antes de sair do loop de leitura resultará em perda de dados.
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#1](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
 ❌**Loop infinito**
 
-A seguinte lógica pode resultar em `Result.IsCompleted` `true` um loop infinito se for, mas nunca há uma mensagem completa no buffer.
+A lógica a seguir pode resultar em um loop infinito se o `Result.IsCompleted` for `true` , mas nunca há uma mensagem completa no buffer.
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#2](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet2)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet2":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
-Aqui está outro código com o mesmo problema. Está verificando se há um buffer não `ReadResult.IsCompleted`vazio antes de verificar . Porque ele está `else if`em um , ele vai loop para sempre se nunca há uma mensagem completa no buffer.
+Aqui está outra parte do código com o mesmo problema. Ele está verificando um buffer não vazio antes de verificar `ReadResult.IsCompleted` . Como ele está em um `else if` , ele fará um loop contínuo se nunca houver uma mensagem completa no buffer.
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#3](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet3)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet3":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
-❌**Hang inesperado**
+❌**Falha inesperada**
 
-Chamar `PipeReader.AdvanceTo` incondicionalmente com `buffer.End` na `examined` posição pode resultar em travamentos ao analisar uma única mensagem. A próxima `PipeReader.AdvanceTo` chamada não retornará até:
+Chamar incondicionalmente `PipeReader.AdvanceTo` com `buffer.End` na `examined` posição pode resultar em suspensões durante a análise de uma única mensagem. A próxima chamada para `PipeReader.AdvanceTo` não retornará até:
 
-* Há mais dados escritos no tubo.
+* Há mais dados gravados no pipe.
 * E os novos dados não foram examinados anteriormente.
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#4](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet4)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet4":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
-❌**Fora da memória (OOM)**
+❌**Memória insuficiente (OOM)**
 
-Com as seguintes condições, o seguinte <xref:System.OutOfMemoryException> código continua a ser tamponado até que ocorra um:
+Com as condições a seguir, o código a seguir mantém o buffer até <xref:System.OutOfMemoryException> ocorrer:
 
 * Não há tamanho máximo de mensagem.
-* Os dados devolvidos `PipeReader` do não fazem uma mensagem completa. Por exemplo, ele não faz uma mensagem completa porque o outro lado está escrevendo uma mensagem grande (por exemplo, uma mensagem de 4 GB).
+* Os dados retornados de `PipeReader` não fazem uma mensagem completa. Por exemplo, ele não faz uma mensagem completa porque o outro lado está escrevendo uma mensagem grande (por exemplo, uma mensagem de 4 GB).
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#5](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet5)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet5":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
 ❌**Corrupção de memória**
 
-Ao escrever ajudantes que lêem o buffer, qualquer carga `Advance`de carga retornada deve ser copiada antes de ligar . O exemplo a seguir `Pipe` retornará a memória que o tem descartado e poderá reutilizá-la para a próxima operação (ler/gravar).
+Ao escrever auxiliares que lêem o buffer, qualquer carga retornada deve ser copiada antes de chamar `Advance` . O exemplo a seguir retornará a memória que o `Pipe` foi descartada e pode reutilizá-lo para a próxima operação (leitura/gravação).
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#Message](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippetMessage)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippetMessage":::
 
-[!code-csharp[DoNotUse#6](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet6)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet6":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
 ## <a name="pipewriter"></a>PipeWriter
 
-Os <xref:System.IO.Pipelines.PipeWriter> buffers gerenciapara escrever em nome do chamador. `PipeWriter`implementos [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601). `IBufferWriter<byte>`torna possível ter acesso a buffers para executar gravações sem cópias de buffer adicionais.
+O <xref:System.IO.Pipelines.PipeWriter> gerencia buffers para gravação em nome do chamador. `PipeWriter` implementa [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601) . `IBufferWriter<byte>` torna possível obter acesso a buffers para executar gravações sem cópias de buffer adicionais.
 
-[!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyPipeWriter.cs" id="snippet":::
 
 O código anterior:
 
-* Solicita um buffer de pelo menos `PipeWriter` 5 <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A>bytes do uso .
-* Escreve bytes para a `"Hello"` seqüência `Memory<byte>`ASCII para o retornado .
-* Chamadas <xref:System.IO.Pipelines.PipeWriter.Advance%2A> para indicar quantos bytes foram escritos para o buffer.
-* Lava o `PipeWriter`, que envia os bytes para o dispositivo subjacente.
+* Solicita um buffer de pelo menos 5 bytes do `PipeWriter` uso do <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A> .
+* Grava bytes para a cadeia de caracteres ASCII no `"Hello"` retornado `Memory<byte>` .
+* Chama <xref:System.IO.Pipelines.PipeWriter.Advance%2A> para indicar quantos bytes foram gravados no buffer.
+* Libera o `PipeWriter` , que envia os bytes para o dispositivo subjacente.
 
-O método anterior de escrita usa os `PipeWriter`buffers fornecidos pelo . Alternativamente, <xref:System.IO.Pipelines.PipeWriter.WriteAsync%2A?displayProperty=nameWithType>:
+O método anterior de gravação usa os buffers fornecidos pelo `PipeWriter` . Como alternativa, <xref:System.IO.Pipelines.PipeWriter.WriteAsync%2A?displayProperty=nameWithType> :
 
-* Copia o buffer existente `PipeWriter`para o .
-* `GetSpan`Chamadas, `Advance` conforme apropriado <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A>e chamadas.
+* Copia o buffer existente para o `PipeWriter` .
+* Chamadas `GetSpan` , `Advance` conforme apropriado e chamadas <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> .
 
-[!code-csharp[MyPipeWriter#2](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet2)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyPipeWriter.cs" id="snippet2":::
 
 ### <a name="cancellation"></a>Cancelamento
 
-<xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A>suporta passar <xref:System.Threading.CancellationToken>um . Passando `CancellationToken` um resultado `OperationCanceledException` em um se o token é cancelado enquanto há um flush pendente. `PipeWriter.FlushAsync`suporta uma maneira de cancelar a <xref:System.IO.Pipelines.PipeWriter.CancelPendingFlush%2A?displayProperty=nameWithType> operação de flush atual via sem levantar uma exceção. A `PipeWriter.CancelPendingFlush` chamada faz com `PipeWriter.FlushAsync` que `PipeWriter.WriteAsync` a <xref:System.IO.Pipelines.FlushResult> chamada `IsCanceled` atual `true`ou próxima para ou para retornar um com set para . Isso pode ser útil para parar o flush de rendimento de uma forma não destrutiva e não excepcional.
+<xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> dá suporte à passagem de um <xref:System.Threading.CancellationToken> . Passar um `CancellationToken` resultado em um `OperationCanceledException` se o token for cancelado enquanto houver uma liberação pendente. `PipeWriter.FlushAsync` dá suporte a uma maneira de cancelar a operação de liberação atual por meio <xref:System.IO.Pipelines.PipeWriter.CancelPendingFlush%2A?displayProperty=nameWithType> de sem gerar uma exceção. `PipeWriter.CancelPendingFlush`A chamada faz com que a chamada atual ou próxima chame `PipeWriter.FlushAsync` ou `PipeWriter.WriteAsync` retorne um <xref:System.IO.Pipelines.FlushResult> com `IsCanceled` definido como `true` . Isso pode ser útil para interromper a liberação de rendimento de forma não destrutiva e não excepcional.
 
 <a name="pwcp"></a>
 
 ### <a name="pipewriter-common-problems"></a>Problemas comuns do PipeWriter
 
-* <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A>e <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A> retornar um buffer com pelo menos a quantidade solicitada de memória. **Não assuma** tamanhos exatos de buffer.
-* Não há garantia de que as chamadas sucessivas retornarão o mesmo buffer ou o buffer do mesmo tamanho.
-* Um novo buffer deve ser <xref:System.IO.Pipelines.PipeWriter.Advance%2A> solicitado após a chamada para continuar a escrever mais dados. O buffer adquirido anteriormente não pode ser escrito para.
-* Ligar `GetMemory` `GetSpan` ou enquanto houver uma `FlushAsync` chamada incompleta não é seguro.
-* Ligar `Complete` `CompleteAsync` ou enquanto houver dados não lavados pode resultar em corrupção de memória.
+* <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A> e <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A> retornam um buffer com pelo menos a quantidade solicitada de memória. **Não** presuma os tamanhos de buffer exatos.
+* Não há nenhuma garantia de que as chamadas sucessivas retornarão o mesmo buffer ou o buffer de mesmo tamanho.
+* Um novo buffer deve ser solicitado após <xref:System.IO.Pipelines.PipeWriter.Advance%2A> a chamada para continuar gravando mais dados. Não é possível gravar no buffer adquirido anteriormente.
+* Chamar `GetMemory` ou `GetSpan` embora haja uma chamada incompleta para `FlushAsync` não é seguro.
+* Chamar `Complete` ou `CompleteAsync` embora haja dados não liberados pode resultar em corrupção de memória.
 
 ## <a name="iduplexpipe"></a>IDuplexPipe
 
-O <xref:System.IO.Pipelines.IDuplexPipe> é um contrato para tipos que suportam tanto a leitura quanto a escrita. Por exemplo, uma conexão de `IDuplexPipe`rede seria representada por um .
+O <xref:System.IO.Pipelines.IDuplexPipe> é um contrato para tipos que dão suporte à leitura e gravação. Por exemplo, uma conexão de rede seria representada por um `IDuplexPipe` .
 
- Ao `Pipe` contrário `PipeReader` do `PipeWriter`que `IDuplexPipe` contém a e a, representa um único lado de uma conexão duplex completa. Isso significa que o `PipeWriter` que está escrito `PipeReader`para o não será lido a partir do .
+ Ao contrário de `Pipe` , que contém um `PipeReader` e um `PipeWriter` , `IDuplexPipe` representa um único lado de uma conexão Full duplex. Isso significa que o que é gravado no `PipeWriter` não será lido no `PipeReader` .
 
 ## <a name="streams"></a>Fluxos
 
-Ao ler ou escrever dados de fluxo, você normalmente lê dados usando um desserializador e escreve dados usando um serializador. A maioria dessas APIs de `Stream` fluxo de leitura e gravação tem um parâmetro. Para facilitar a integração com essas `PipeReader` APIs existentes e `PipeWriter` expor uma <xref:System.IO.Pipelines.PipeReader.AsStream%2A>.  <xref:System.IO.Pipelines.PipeWriter.AsStream%2A>retorna `Stream` uma implementação em torno do `PipeReader` ou `PipeWriter`.
+Ao ler ou gravar dados de fluxo, você normalmente lê dados usando um desserializador e grava dados usando um serializador. A maioria dessas APIs de leitura e gravação de fluxo tem um `Stream` parâmetro. Para facilitar a integração com essas APIs existentes `PipeReader` e `PipeWriter` expor um <xref:System.IO.Pipelines.PipeReader.AsStream%2A> método. <xref:System.IO.Pipelines.PipeWriter.AsStream%2A> Retorna uma `Stream` implementação em relação ao `PipeReader` ou ao `PipeWriter` .
+
+### <a name="stream-example"></a>Exemplo de fluxo
+
+`PipeReader``PipeWriter`as instâncias e podem ser criadas usando os métodos estáticos de `Create` acordo com um <xref:System.IO.Stream> objeto e as opções de criação correspondentes opcionais.
+
+O <xref:System.IO.Pipelines.StreamPipeReaderOptions> Permitir controle sobre a criação da `PipeReader` instância com os seguintes parâmetros:
+
+- <xref:System.IO.Pipelines.StreamPipeReaderOptions.BufferSize?displayProperty=nameWithType> é o tamanho mínimo do buffer em bytes usado ao aluguel a memória do pool e usa como padrão `4096` .
+- <xref:System.IO.Pipelines.StreamPipeReaderOptions.LeaveOpen?displayProperty=nameWithType> sinalizador determina se o fluxo subjacente é deixado aberto após a `PipeReader` conclusão e o padrão é `false` .
+- <xref:System.IO.Pipelines.StreamPipeReaderOptions.MinimumReadSize?displayProperty=nameWithType> representa o limite de bytes restantes no buffer antes de um novo buffer ser alocado e o padrão é `1024` .
+- <xref:System.IO.Pipelines.StreamPipeReaderOptions.Pool?displayProperty=nameWithType> é `MemoryPool<byte>` usado ao alocar memória e usa como padrão `null` .
+
+O <xref:System.IO.Pipelines.StreamPipeWriterOptions> Permitir controle sobre a criação da `PipeWriter` instância com os seguintes parâmetros:
+
+- <xref:System.IO.Pipelines.StreamPipeWriterOptions.LeaveOpen?displayProperty=nameWithType> sinalizador determina se o fluxo subjacente é deixado aberto após a `PipeWriter` conclusão e o padrão é `false` .
+- <xref:System.IO.Pipelines.StreamPipeWriterOptions.MinimumBufferSize?displayProperty=nameWithType> representa o tamanho mínimo do buffer a ser usado ao aluguel a memória do <xref:System.IO.Pipelines.StreamPipeWriterOptions.Pool> e o padrão é `4096` .
+- <xref:System.IO.Pipelines.StreamPipeWriterOptions.Pool?displayProperty=nameWithType> é `MemoryPool<byte>` usado ao alocar memória e usa como padrão `null` .
+
+> [!IMPORTANT]
+> Ao criar `PipeReader` e `PipeWriter` instâncias usando os `Create` métodos, você precisa considerar o `Stream` tempo de vida do objeto. Se você precisar de acesso ao fluxo depois que o leitor ou o gravador for feito com ele, você precisará definir o `LeaveOpen` sinalizador como `true` nas opções de criação. Caso contrário, o fluxo será fechado.
+
+O código a seguir demonstra a criação `PipeReader` de `PipeWriter` instâncias e usando os `Create` métodos de um fluxo.
+
+:::code language="csharp" source="snippets/pipelines/Program.cs":::
+
+O aplicativo usa um <xref:System.IO.StreamReader> para ler o arquivo de *lorem-ipsum.txt* como um fluxo. O <xref:System.IO.FileStream> é passado para <xref:System.IO.Pipelines.PipeReader.Create%2A?displayProperty=nameWithType> , que instancia um `PipeReader` objeto. Em seguida, o aplicativo de console passa seu fluxo de saída padrão para o <xref:System.IO.Pipelines.PipeWriter.Create%2A?displayProperty=nameWithType> usando <xref:System.Console.OpenStandardOutput?displayProperty=nameWithType> . O exemplo dá suporte ao [cancelamento](#cancellation).

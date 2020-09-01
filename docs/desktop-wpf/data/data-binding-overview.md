@@ -7,12 +7,12 @@ ms.author: adegeo
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 829c93e97990b87e6e568614236de9708ef080d9
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 3c9615d7d79b5da1c180bb505f5f37b99aeae775
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325756"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271991"
 ---
 # <a name="data-binding-overview-in-wpf"></a>Visão geral da ligação de dados no WPF
 
@@ -91,11 +91,11 @@ Esta figura ilustra os diferentes tipos de fluxo de dados:
 
 ![Fluxo de dados de vinculação de dados](./media/data-binding-overview/databinding-dataflow.png "DataBinding_DataFlow")
 
-- <xref:System.Windows.Data.BindingMode.OneWay>a associação faz com que as alterações na propriedade de origem atualizem automaticamente a propriedade de destino, mas as alterações na propriedade de destino não são propagadas de volta para a propriedade de origem. Esse tipo de associação será apropriado se o controle associado for somente leitura de forma implícita. Por exemplo, você pode associar a uma fonte, como uma cotação de ações, ou talvez a sua propriedade de destino não tenha nenhuma interface de controle fornecida para fazer alterações, como uma cor de plano de fundo associada a dados de uma tabela. Se não houver necessidade de monitorar as alterações da propriedade de destino, o uso do modo de associação <xref:System.Windows.Data.BindingMode.OneWay> evitará a sobrecarga do modo de associação <xref:System.Windows.Data.BindingMode.TwoWay>.
+- <xref:System.Windows.Data.BindingMode.OneWay> a associação faz com que as alterações na propriedade de origem atualizem automaticamente a propriedade de destino, mas as alterações na propriedade de destino não são propagadas de volta para a propriedade de origem. Esse tipo de associação será apropriado se o controle associado for somente leitura de forma implícita. Por exemplo, você pode associar a uma fonte, como uma cotação de ações, ou talvez a sua propriedade de destino não tenha nenhuma interface de controle fornecida para fazer alterações, como uma cor de plano de fundo associada a dados de uma tabela. Se não houver necessidade de monitorar as alterações da propriedade de destino, o uso do modo de associação <xref:System.Windows.Data.BindingMode.OneWay> evitará a sobrecarga do modo de associação <xref:System.Windows.Data.BindingMode.TwoWay>.
 
-- <xref:System.Windows.Data.BindingMode.TwoWay>a associação faz com que as alterações sejam feitas na propriedade Source ou na propriedade de destino para atualizar automaticamente a outra. Esse tipo de associação é apropriado para formulários editáveis ou outros cenários de interface do usuário totalmente interativas. A maioria das propriedades assume a associação como padrão <xref:System.Windows.Data.BindingMode.OneWay> , mas algumas propriedades de dependência (normalmente Propriedades de controles editáveis pelo usuário, como a <xref:System.Windows.Controls.TextBox.Text?displayProperty=nameWithType> caixa de [seleção e. ischeckd](xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked) default para <xref:System.Windows.Data.BindingMode.TwoWay> Binding. Uma maneira programática de determinar se uma propriedade de dependência associa uma ou duas vias por padrão é obter os metadados de propriedade com <xref:System.Windows.DependencyProperty.GetMetadata%2A?displayProperty=nameWithType> e, em seguida, verificar o valor booliano da <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A?displayProperty=nameWithType> propriedade.
+- <xref:System.Windows.Data.BindingMode.TwoWay> a associação faz com que as alterações sejam feitas na propriedade Source ou na propriedade de destino para atualizar automaticamente a outra. Esse tipo de associação é apropriado para formulários editáveis ou outros cenários de interface do usuário totalmente interativas. A maioria das propriedades assume a associação como padrão <xref:System.Windows.Data.BindingMode.OneWay> , mas algumas propriedades de dependência (normalmente Propriedades de controles editáveis pelo usuário, como a <xref:System.Windows.Controls.TextBox.Text?displayProperty=nameWithType> caixa de  [seleção e. ischeckd](xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked) default para <xref:System.Windows.Data.BindingMode.TwoWay> Binding. Uma maneira programática de determinar se uma propriedade de dependência associa uma ou duas vias por padrão é obter os metadados de propriedade com <xref:System.Windows.DependencyProperty.GetMetadata%2A?displayProperty=nameWithType> e, em seguida, verificar o valor booliano da <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A?displayProperty=nameWithType> propriedade.
 
-- <xref:System.Windows.Data.BindingMode.OneWayToSource>é o inverso da <xref:System.Windows.Data.BindingMode.OneWay> Associação; ele atualiza a propriedade Source quando a propriedade de destino é alterada. Um cenário de exemplo é se você só precisa reavaliar o valor de origem da interface do usuário.
+- <xref:System.Windows.Data.BindingMode.OneWayToSource> é o inverso da <xref:System.Windows.Data.BindingMode.OneWay> Associação; ele atualiza a propriedade Source quando a propriedade de destino é alterada. Um cenário de exemplo é se você só precisa reavaliar o valor de origem da interface do usuário.
 
 - Não ilustrado na figura a <xref:System.Windows.Data.BindingMode.OneTime> associação, que faz com que a propriedade Source inicialize a propriedade de destino, mas não propaga as alterações subsequentes. Se o contexto de dados for alterado ou o objeto no contexto de dados for alterado, a alteração *não* será refletida na propriedade de destino. Esse tipo de associação será apropriado se um instantâneo do estado atual for apropriado ou se os dados forem verdadeiramente estáticos. Esse tipo de associação também é útil se você deseja inicializar a propriedade de destino com um valor de uma propriedade de origem e o contexto de dados não é conhecido com antecedência. Esse modo é essencialmente uma forma mais simples de <xref:System.Windows.Data.BindingMode.OneWay> associação que fornece melhor desempenho em casos em que o valor de origem não é alterado.
 
@@ -113,7 +113,7 @@ No entanto, seu valor de origem é atualizado enquanto você está editando o te
 
 Se o `UpdateSourceTrigger` valor for <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged?displayProperty=nameWithType> , o valor apontado pela seta para a direita <xref:System.Windows.Data.BindingMode.TwoWay> ou pelas <xref:System.Windows.Data.BindingMode.OneWayToSource> associações será atualizado assim que a propriedade de destino for alterada. No entanto, se o `UpdateSourceTrigger` valor for <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> , esse valor somente será atualizado com o novo valor quando a propriedade de destino perder o foco.
 
-Semelhante à <xref:System.Windows.Data.Binding.Mode%2A> propriedade, diferentes propriedades de dependência têm valores padrão diferentes <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> . O valor padrão para a maioria das propriedades de dependência é <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, enquanto a propriedade `TextBox.Text` tem um valor padrão de <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. `PropertyChanged`significa que as atualizações de origem geralmente ocorrem sempre que a propriedade de destino é alterada. Alterações instantâneas são bem para caixas de seleção e outros controles simples. No entanto, para campos de texto, a atualização após cada pressionamento de tecla pode diminuir o desempenho e nega ao usuário a oportunidade usual de Backspace e corrigir erros de digitação antes de confirmar o novo valor.
+Semelhante à <xref:System.Windows.Data.Binding.Mode%2A> propriedade, diferentes propriedades de dependência têm valores padrão diferentes <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> . O valor padrão para a maioria das propriedades de dependência é <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, enquanto a propriedade `TextBox.Text` tem um valor padrão de <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. `PropertyChanged` significa que as atualizações de origem geralmente ocorrem sempre que a propriedade de destino é alterada. Alterações instantâneas são bem para caixas de seleção e outros controles simples. No entanto, para campos de texto, a atualização após cada pressionamento de tecla pode diminuir o desempenho e nega ao usuário a oportunidade usual de Backspace e corrigir erros de digitação antes de confirmar o novo valor.
 
 Consulte a <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> página de propriedades para obter informações sobre como localizar o valor padrão de uma propriedade de dependência.
 
@@ -121,7 +121,7 @@ A tabela a seguir fornece um cenário de exemplo para cada <xref:System.Windows.
 
 | Valor de UpdateSourceTrigger | Quando o valor de origem é atualizado | Cenário de exemplo para TextBox |
 | ------------------------- | ---------------------------------- | ---------------------------- |
-| `LostFocus`(padrão para <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> ) | Quando o controle TextBox perde o foco. | Uma caixa de texto associada à lógica de validação (consulte a [validação de dados](#data-validation) abaixo). |
+| `LostFocus` (padrão para <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> ) | Quando o controle TextBox perde o foco. | Uma caixa de texto associada à lógica de validação (consulte a [validação de dados](#data-validation) abaixo). |
 | `PropertyChanged` | Conforme você digita no <xref:System.Windows.Controls.TextBox> . | Controles de caixa de texto em uma janela de sala de chat. |
 | `Explicit` | Quando o aplicativo chama <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> . | Os controles de caixa de texto em um formulário editável (atualiza os valores de origem somente quando o usuário clica no botão enviar). |
 
@@ -173,12 +173,12 @@ Talvez seja necessário aplicar a lógica personalizada para que os dados sejam 
 
 Antes de entrar em outros recursos e usos da vinculação de dados, é útil introduzir a <xref:System.Windows.Data.BindingExpression> classe. Como você viu nas seções anteriores, a <xref:System.Windows.Data.Binding> classe é a classe de alto nível para a declaração de uma associação; ela fornece muitas propriedades que permitem que você especifique as características de uma associação. Uma classe relacionada, <xref:System.Windows.Data.BindingExpression> , é o objeto subjacente que mantém a conexão entre a origem e o destino. Uma associação contém todas as informações que podem ser compartilhadas entre várias expressões de associação. Um <xref:System.Windows.Data.BindingExpression> é uma expressão de instância que não pode ser compartilhada e contém todas as informações de instância do <xref:System.Windows.Data.Binding> .
 
-Considere o exemplo a seguir, em que `myDataObject` é uma instância da `MyData` classe, `myBinding` é o <xref:System.Windows.Data.Binding> objeto de origem e `MyData` é uma classe definida que contém uma propriedade de cadeia de caracteres denominada `MyDataProperty` . Este exemplo associa o conteúdo de texto de `myText` , uma instância do <xref:System.Windows.Controls.TextBlock> , ao `MyDataProperty` .
+Considere o exemplo a seguir, em que `myDataObject` é uma instância da `MyData` classe, `myBinding` é o <xref:System.Windows.Data.Binding> objeto de origem e `MyData` é uma classe definida que contém uma propriedade de cadeia de caracteres denominada `ColorName` . Este exemplo associa o conteúdo de texto de `myText` , uma instância do <xref:System.Windows.Controls.TextBlock> , ao `ColorName` .
 
 [!code-csharp[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/ManualBinding.cs#CodeOnlyBinding)]
 [!code-vb[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/ManualBinding.vb#CodeOnlyBinding)]
 
-Você pode usar o mesmo objeto *myBinding* para criar outras associações. Por exemplo, você pode usar o objeto *Myassociation* para associar o conteúdo de texto de uma caixa de seleção a *MyDataProperty*. Nesse cenário, haverá duas instâncias de <xref:System.Windows.Data.BindingExpression> compartilhamento do objeto *myBinding* .
+Você pode usar o mesmo objeto *myBinding* para criar outras associações. Por exemplo, você pode usar o objeto *Myassociation* para associar o conteúdo de texto de uma caixa de seleção a *colorname*. Nesse cenário, haverá duas instâncias de <xref:System.Windows.Data.BindingExpression> compartilhamento do objeto *myBinding* .
 
 Um <xref:System.Windows.Data.BindingExpression> objeto é retornado chamando <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A> -se em um objeto associado a dados. Os artigos a seguir demonstram alguns dos usos da <xref:System.Windows.Data.BindingExpression> classe:
 
@@ -215,7 +215,7 @@ A seguir estão alguns cenários típicos em que faz sentido implementar um conv
 
 - Mais de um controle ou várias propriedades de controles são associados aos mesmos dados. Nesse caso, a associação primária pode simplesmente exibir o texto, enquanto outras associações lidam com questões específicas de exibição, mas ainda usam a mesma associação como informações da origem.
 
-- Uma propriedade de destino tem uma coleção de associações, que é chamada <xref:System.Windows.Data.MultiBinding> . Para o <xref:System.Windows.Data.MultiBinding> , você usa um personalizado <xref:System.Windows.Data.IMultiValueConverter> para produzir um valor final dos valores das associações. Por exemplo, a cor pode ser computada de valores vermelhos, azuis e verdes, que podem ser valores dos mesmos ou de diferentes objetos de origem da associação. Consulte <xref:System.Windows.Data.MultiBinding> para obter exemplos e informações.
+- Uma propriedade de destino tem uma coleção de associações, que é chamada <xref:System.Windows.Data.MultiBinding> . Para o <xref:System.Windows.Data.MultiBinding> , você usa um personalizado <xref:System.Windows.Data.IMultiValueConverter> para produzir um valor final dos valores das associações. Por exemplo, a cor pode ser computada de valores vermelhos, azuis e verdes, que podem ser valores dos mesmos ou de diferentes objetos de origem da associação. Consulte  <xref:System.Windows.Data.MultiBinding> para obter exemplos e informações.
 
 ## <a name="binding-to-collections"></a>Associando a coleções
 
@@ -261,7 +261,7 @@ A tabela a seguir mostra quais tipos de dados de exibição são criados como a 
 
 | Tipo de coleção de origem                    | Tipo de exibição de coleção | Observações |
 | ----------------------------------------- | -------------------- | ----- |
-| <xref:System.Collections.IEnumerable>     | Um tipo interno baseado em<xref:System.Windows.Data.CollectionView> | Não é possível agrupar itens. |
+| <xref:System.Collections.IEnumerable>     | Um tipo interno baseado em <xref:System.Windows.Data.CollectionView> | Não é possível agrupar itens. |
 | <xref:System.Collections.IList>           | <xref:System.Windows.Data.ListCollectionView> | Mais rápido. |
 | <xref:System.ComponentModel.IBindingList> | <xref:System.Windows.Data.BindingListCollectionView> | |
 
@@ -438,11 +438,11 @@ Se a associação tiver um <xref:System.Windows.Controls.ExceptionValidationRule
 
 Você pode definir a propriedade anexada <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> em um objeto relacionado à associação para receber informações sobre o status de uma associação específica.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [Associar aos resultados de uma consulta LINQ](../../framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
-- [Associação de dados](../../framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Vinculação de dados](../../framework/wpf/advanced/optimizing-performance-data-binding.md)
 - [Demonstração de vinculação de dados][data-binding-demo]
 - [Artigos de instruções](../../framework/wpf/data/data-binding-how-to-topics.md)
 - [Associar a uma fonte de dados ADO.NET](../../framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)
