@@ -1,13 +1,14 @@
 ---
+description: -subsystemversion (opções do compilador C#)
 title: -subsystemversion (opções do compilador C#)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: d76c9424340b4b6f3c211c849b466be55eb79d1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8001d8db214123e75fec4e1d1117ef90a9df606
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74802039"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128589"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (opções do compilador C#)
 
@@ -22,7 +23,7 @@ Especifica a versão mínima do subsistema no qual o arquivo executável gerado 
 -subsystemversion:major.minor
 ```
 
-## <a name="parameters"></a>parâmetros
+## <a name="parameters"></a>Parâmetros
 
 `major.minor`
 
@@ -36,7 +37,7 @@ A seguinte tabela lista as versões de subsistema comuns do Windows.
 
 |Versão do Windows|Versão do subsistema|
 |---------------------|-----------------------|
-|Windows 2000|5.00|
+|Windows 2000|5,00|
 |Windows XP|5,01|
 |Windows Server 2003|5,02|
 |Windows Vista|6,00|
@@ -50,9 +51,9 @@ O valor padrão da opção do compilador **-subsystemversion** depende das condi
 
 - O valor padrão é 6.02 se qualquer opção do compilador na lista a seguir for definida:
 
-  - [-alvo:appcontainerexe](./target-appcontainerexe-compiler-option.md)
+  - [-target:appcontainerexe](./target-appcontainerexe-compiler-option.md)
 
-  - [-alvo:winmdobj](./target-winmdobj-compiler-option.md)
+  - [-target:winmdobj](./target-winmdobj-compiler-option.md)
 
   - [-platform:arm](./platform-compiler-option.md)
 
@@ -66,4 +67,4 @@ Para definir a opção do compilador **-subsystemversion** no Visual Studio, voc
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)

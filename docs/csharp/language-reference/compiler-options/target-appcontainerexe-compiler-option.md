@@ -1,16 +1,17 @@
 ---
+description: -target:appcontainerexe (opções do compilador C#)
 title: -target:appcontainerexe (opções do compilador C#)
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
-ms.openlocfilehash: 64661e72f9efe190606cadd93558678cb849e8cc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8c3b85c2f5a20788bd311e9bf3b300c32967da77
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74204530"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128576"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (opções do compilador C#)
-Se você usar a opção do compilador **-target:appcontainerexe**, o compilador criará um arquivo executável (.exe) do Windows que deverá ser executado em um contêiner de aplicativos. Esta opção é equivalente a [-target:winexe,](./target-winexe-compiler-option.md) mas foi projetada para aplicativos do Windows 8.x Store.  
+Se você usar a opção do compilador **-target:appcontainerexe**, o compilador criará um arquivo executável (.exe) do Windows que deverá ser executado em um contêiner de aplicativos. Essa opção é equivalente a [-target: winexe](./target-winexe-compiler-option.md) , mas é projetada para aplicativos da loja do Windows 8. x.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,7 +32,7 @@ Se você usar a opção do compilador **-target:appcontainerexe**, o compilador 
   
 2. Na guia **Aplicativo**, na lista **Tipo de saída**, escolha **Aplicativo da Windows Store**.  
   
-     Esta opção está disponível apenas para modelos de aplicativos do Windows 8.x Store.  
+     Essa opção está disponível somente para modelos de aplicativo da loja do Windows 8. x.  
   
  Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
@@ -44,6 +45,6 @@ csc -target:appcontainerexe filename.cs
   
 ## <a name="see-also"></a>Confira também
 
-- [-destino (C# Opções de compilador)](./target-compiler-option.md)
-- [-alvo:winexe (C# Opções de compilador)](./target-winexe-compiler-option.md)
-- [C# Opções de compilador](./index.md)
+- [-Target (opções do compilador C#)](./target-compiler-option.md)
+- [-Target: winexe (opções do compilador C#)](./target-winexe-compiler-option.md)
+- [Opções do compilador C#](./index.md)

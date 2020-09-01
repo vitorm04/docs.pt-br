@@ -1,4 +1,5 @@
 ---
+description: -target (opções do compilador C#)
 title: -target (opções do compilador C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: 80cec001b27000e71b74f380a0f33e30602c01af
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 5bfd988e8e399273dbd3292543a3730234c022d6
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86473903"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128550"
 ---
 # <a name="-target-c-compiler-options"></a>-target (opções do compilador C#)
 A opção **-target** do compilador pode ser especificada em uma das seguintes formas:  
@@ -62,7 +63,7 @@ public class TestClass
   
  Para obter mais informações sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

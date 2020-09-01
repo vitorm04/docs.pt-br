@@ -14,12 +14,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-ms.openlocfilehash: 03d00fb802032b981a5ebe80f7166eba0fb54a60
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 7ef8782c15ad816b8bb0356e74615a49387f73b9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85326056"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89129122"
 ---
 # <a name="choose-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Escolha entre DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo
 
@@ -43,6 +43,28 @@ O .NET inclui <xref:System.DateTime> os <xref:System.DateTimeOffset> tipos,, <xr
 
 > [!NOTE]
 > Este tópico não aborda <xref:System.TimeZone> porque sua funcionalidade está quase totalmente incorporada à <xref:System.TimeZoneInfo> classe. Sempre que possível, use a <xref:System.TimeZoneInfo> classe em vez da <xref:System.TimeZone> classe.
+
+## <a name="the-datetimeoffset-structure"></a>A estrutura DateTimeOffset
+
+A <xref:System.DateTimeOffset> estrutura representa um valor de data e hora, junto com um deslocamento que indica o quanto esse valor difere do UTC. Portanto, o valor sempre identifica sem ambiguidade um único ponto no tempo.
+
+O <xref:System.DateTimeOffset> tipo inclui toda a funcionalidade do <xref:System.DateTime> tipo junto com o reconhecimento de fuso horário. Isso o torna adequado para aplicativos que:
+
+- Identifique de maneira única e não ambígua um único ponto no tempo. O <xref:System.DateTimeOffset> tipo pode ser usado para definir de forma não ambígua o significado de "Now", para registrar tempos de transação, registrar os tempos de eventos do sistema ou do aplicativo e registrar os horários de criação e modificação do arquivo.
+
+- Realizar aritmética geral de data e hora.
+
+- Preserve vários tempos relacionados contanto que esses tempos sejam armazenados como dois valores separados ou como dois membros de uma estrutura.
+
+> [!NOTE]
+> Esses usos para <xref:System.DateTimeOffset> valores são muito mais comuns do que aqueles para <xref:System.DateTime> valores. Como resultado, considere <xref:System.DateTimeOffset> como o tipo de data e hora padrão para o desenvolvimento de aplicativos.
+
+Um <xref:System.DateTimeOffset> valor não está vinculado a um fuso horário específico, mas pode se originar de uma variedade de fusos horários. O exemplo a seguir lista os fusos horários nos quais um número de <xref:System.DateTimeOffset> valores (incluindo uma hora padrão do Pacífico local) pode pertencer.
+
+[!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
+[!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
+
+A saída mostra que cada valor de data e hora nesse exemplo pode pertencer a pelo menos três fusos horários diferentes. O <xref:System.DateTimeOffset> valor de 6/10/2007 mostra que se um valor de data e hora representa um horário de verão, seu deslocamento do UTC não necessariamente corresponde ao deslocamento UTC base do fuso horário de origem ou ao deslocamento do UTC encontrado em seu nome de exibição. Como um único <xref:System.DateTimeOffset> valor não está rigidamente acoplado a seu fuso horário, ele não pode refletir a transição de um fuso horário para e do horário de verão. Isso pode ser problemático quando a aritmética de data e hora é usada para manipular um <xref:System.DateTimeOffset> valor. Para ver uma discussão sobre como realizar a aritmética de data e hora de uma forma que considere as regras de ajuste de um fuso horário, consulte [Executando operações aritméticas com datas e horas](performing-arithmetic-operations.md).
 
 ## <a name="the-datetime-structure"></a>A estrutura DateTime
 
@@ -68,28 +90,6 @@ A menos <xref:System.DateTime> que um valor específico represente o UTC, esse v
 
 > [!IMPORTANT]
 > Ao salvar ou compartilhar <xref:System.DateTime> dados, o UTC deve ser usado e a <xref:System.DateTime> Propriedade do valor <xref:System.DateTime.Kind%2A> deve ser definida como <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> .
-
-## <a name="the-datetimeoffset-structure"></a>A estrutura DateTimeOffset
-
-A <xref:System.DateTimeOffset> estrutura representa um valor de data e hora, junto com um deslocamento que indica o quanto esse valor difere do UTC. Portanto, o valor sempre identifica sem ambiguidade um único ponto no tempo.
-
-O <xref:System.DateTimeOffset> tipo inclui toda a funcionalidade do <xref:System.DateTime> tipo junto com o reconhecimento de fuso horário. Isso o torna adequado para aplicativos que:
-
-- Identifique de maneira única e não ambígua um único ponto no tempo. O <xref:System.DateTimeOffset> tipo pode ser usado para definir de forma não ambígua o significado de "Now", para registrar tempos de transação, registrar os tempos de eventos do sistema ou do aplicativo e registrar os horários de criação e modificação do arquivo.
-
-- Realizar aritmética geral de data e hora.
-
-- Preserve vários tempos relacionados contanto que esses tempos sejam armazenados como dois valores separados ou como dois membros de uma estrutura.
-
-> [!NOTE]
-> Esses usos para <xref:System.DateTimeOffset> valores são muito mais comuns do que aqueles para <xref:System.DateTime> valores. Como resultado, considere <xref:System.DateTimeOffset> como o tipo de data e hora padrão para o desenvolvimento de aplicativos.
-
-Um <xref:System.DateTimeOffset> valor não está vinculado a um fuso horário específico, mas pode se originar de uma variedade de fusos horários. O exemplo a seguir lista os fusos horários nos quais um número de <xref:System.DateTimeOffset> valores (incluindo uma hora padrão do Pacífico local) pode pertencer.
-
-[!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
-[!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
-
-A saída mostra que cada valor de data e hora nesse exemplo pode pertencer a pelo menos três fusos horários diferentes. O <xref:System.DateTimeOffset> valor de 6/10/2007 mostra que se um valor de data e hora representa um horário de verão, seu deslocamento do UTC não necessariamente corresponde ao deslocamento UTC base do fuso horário de origem ou ao deslocamento do UTC encontrado em seu nome de exibição. Como um único <xref:System.DateTimeOffset> valor não está rigidamente acoplado a seu fuso horário, ele não pode refletir a transição de um fuso horário para e do horário de verão. Isso pode ser problemático quando a aritmética de data e hora é usada para manipular um <xref:System.DateTimeOffset> valor. Para ver uma discussão sobre como realizar a aritmética de data e hora de uma forma que considere as regras de ajuste de um fuso horário, consulte [Executando operações aritméticas com datas e horas](performing-arithmetic-operations.md).
 
 ## <a name="the-timespan-structure"></a>A estrutura TimeSpan
 
@@ -119,6 +119,6 @@ Em alguns casos, aproveitar ao máximo a <xref:System.TimeZoneInfo> classe pode 
 
 Para aproveitar o suporte de fuso horário no .NET, você deve saber o fuso horário ao qual um valor de data e hora pertence quando esse objeto de data e hora é instanciado. O fuso horário geralmente não é conhecido, especialmente em aplicativos Web ou de rede.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Datas, horas e fusos horários](index.md)

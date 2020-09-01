@@ -1,4 +1,5 @@
 ---
+description: -target:module (opções do compilador C#)
 title: -target:module (opções do compilador C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:module
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
-ms.openlocfilehash: 25421df2e9306071ce3506aaf7affd1b259d1c32
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c592d2fe001bb0908a06a6eb3287a39040b8715
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602446"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128446"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module (opções do compilador C#)
 Essa opção faz com que o compilador não gere um manifesto do assembly.  
@@ -44,5 +45,5 @@ csc -target:module in.cs
   
 ## <a name="see-also"></a>Confira também
 
-- [-destino (C# Opções de compilador)](./target-compiler-option.md)
-- [C# Opções de compilador](./index.md)
+- [-Target (opções do compilador C#)](./target-compiler-option.md)
+- [Opções do compilador C#](./index.md)
