@@ -1,4 +1,5 @@
 ---
+description: Palavra-chave readonly – Referência de C#
 title: Palavra-chave readonly – Referência de C#
 ms.date: 04/14/2020
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 66a096e8831f72a2216e8ba5dd9866046504624f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b1bab5af18216fcef2162179493dbbb59e3470cf
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84368615"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137169"
 ---
 # <a name="readonly-c-reference"></a>readonly (Referência de C#)
 
@@ -32,7 +33,7 @@ A `readonly` palavra-chave é um modificador que pode ser usado em quatro contex
 - Em uma declaração de membro de instância dentro de um tipo de estrutura, `readonly` indica que um membro de instância não modifica o estado da estrutura. Para obter mais informações, consulte a seção [ `readonly` membros da instância](../builtin-types/struct.md#readonly-instance-members) do artigo [tipos de estrutura](../builtin-types/struct.md) .
 - Em um [ `ref readonly` retorno de método](#ref-readonly-return-example), o `readonly` modificador indica que o método retorna uma referência e as gravações não são permitidas para essa referência.
 
-Os `readonly struct` `ref readonly` contextos e foram adicionados em C# 7,2. `readonly`Membros de struct foram adicionados em C# 8,0
+Os `readonly struct` `ref readonly` contextos e foram adicionados em C# 7,2. `readonly` Membros de struct foram adicionados em C# 8,0
 
 ## <a name="readonly-field-example"></a>Exemplo de campo readonly
 
@@ -80,7 +81,7 @@ O `readonly` modificador em um `ref return` indica que a referência retornada n
 
 O tipo retornado não precisa ser um `readonly struct`. Qualquer tipo que possa ser retornado por `ref` pode ser retornado por `ref readonly`.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

@@ -1,4 +1,5 @@
 ---
+description: Cláusula select – Referência de C#
 title: Cláusula select – Referência de C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: 68ea7ad6fc7cf5580dbdd0ae7f012f36566db0dc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d67c99cc841c08a63cc83843a07a46e80199b9d1
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173504"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89136896"
 ---
 # <a name="select-clause-c-reference"></a>Cláusula select (Referência de C#)
 
@@ -27,7 +28,7 @@ O tipo da sequência produzida pela cláusula `select` determina o tipo da vari�
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra todas as diferentes formas que uma cláusula `select` pode tomar. Em cada consulta, observe a `select` relação entre a cláusula e`studentQuery1` `studentQuery2`o tipo da *variável consulta* ( , e assim por diante).
+O exemplo a seguir mostra todas as diferentes formas que uma cláusula `select` pode tomar. Em cada consulta, observe a relação entre a `select` cláusula e o tipo da *variável de consulta* ( `studentQuery1` , `studentQuery2` e assim por diante).
 
 [!code-csharp[cscsrefQueryKeywords#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Select.cs#9)]
 
@@ -39,10 +40,10 @@ No tempo de compilação, a cláusula `select` é convertida em uma chamada de m
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
+- [Referência do C#](../index.md)
 - [Palavras-chave de consulta (LINQ)](query-keywords.md)
-- [de cláusula](from-clause.md)
+- [Cláusula from](from-clause.md)
 - [partial (método) (Referência do C#)](partial-method.md)
-- [Tipos Anônimos](../../programming-guide/classes-and-structs/anonymous-types.md)
+- [Tipos anônimos](../../programming-guide/classes-and-structs/anonymous-types.md)
 - [LINQ em C#](../../linq/index.md)
-- [Consulta Integrada ao Idioma (LINQ)](../../programming-guide/concepts/linq/index.md)
+- [LINQ (Consulta Integrada à Linguagem)](../../programming-guide/concepts/linq/index.md)

@@ -1,4 +1,5 @@
 ---
+description: Palavra-chave set – Referência de C#
 title: Palavra-chave set – Referência de C#
 ms.date: 03/10/2017
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - set keyword [C#]
 ms.assetid: 30d7e4e5-cc2e-4635-a597-14a724879619
-ms.openlocfilehash: cdd84c824cc4dc93f4433f07e9978d22cba3f245
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: ff0c99e5d4d6271351783befd6650d9a77f39886
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795060"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89136909"
 ---
 # <a name="set-c-reference"></a>set (Referência de C#)
 
@@ -30,11 +31,11 @@ Para casos simples em que os acessadores `get` e `set` de uma propriedade não r
 
 [!code-csharp[set#2](~/samples/snippets/csharp/language-reference/keywords/get/get-2.cs)]
   
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência do C#](../index.md)
 - [Guia de programação C#](../../programming-guide/index.md)

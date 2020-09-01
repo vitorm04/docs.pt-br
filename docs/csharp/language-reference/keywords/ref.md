@@ -1,4 +1,5 @@
 ---
+description: Palavra-chave ref – Referência de C#
 title: Palavra-chave ref – Referência de C#
 ms.date: 04/21/2020
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 07e1b49605c83908f7b9af25e0cb2599a97257c5
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 58a4ce30e11ca023b50e5e53b1f1554a30d44390
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102067"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137078"
 ---
 # <a name="ref-c-reference"></a>ref (Referência de C#)
 
@@ -21,11 +22,11 @@ A palavra-chave `ref` indica um valor que é passado por referência. Ela é usa
 - Em uma assinatura de método e em uma chamada de método, para passar um argumento a um método por referência. Para obter mais informações, veja [Passar um argumento por referência](#passing-an-argument-by-reference).
 - Em uma assinatura de método para retornar um valor para o chamador por referência. Para obter mais informações, consulte [Reference return values](#reference-return-values) (Valores retornados de referência).
 - Em um corpo de membro, para indicar que um valor retornado por referência é armazenado localmente como uma referência que o chamador pretende modificar ou, em geral, uma variável local acessa outro valor por referência. Para obter mais informações, veja [Locais de referência](#ref-locals).
-- Em uma declaração `struct` para declarar um `ref struct` ou um `readonly ref struct`. Para obter mais [ `ref` ](../builtin-types/struct.md#ref-struct) informações, consulte a seção de estrutura do artigo [Tipos de Estrutura.](../builtin-types/struct.md)
+- Em uma declaração `struct` para declarar um `ref struct` ou um `readonly ref struct`. Para obter mais informações, consulte a seção [ `ref` struct](../builtin-types/struct.md#ref-struct) do artigo [tipos de estrutura](../builtin-types/struct.md) .
 
 ## <a name="passing-an-argument-by-reference"></a>Passando um argumento por referência
 
-Quando usado na lista de parâmetros do método, a palavra-chave `ref` indica que um argumento é passado por referência, não por valor. A palavra-chave `ref` torna o parâmetro formal um alias para o argumento, que deve ser uma variável. Em outras palavras, qualquer operação no parâmetro é feita no argumento. Por exemplo, se o chamador passar uma expressão de variável local ou uma expressão de acesso a elemento de matriz, e o método chamado substituir o objeto ao qual o parâmetro de ref se refere, então a variável local do chamador ou o elemento de matriz agora se refere ao novo objeto quando o método retorna.
+Quando usado na lista de parâmetros do método, a palavra-chave `ref` indica que um argumento é passado por referência, não por valor. A palavra-chave `ref` torna o parâmetro formal um alias para o argumento, que deve ser uma variável. Em outras palavras, qualquer operação no parâmetro é feita no argumento. Por exemplo, se o chamador passar uma expressão de variável local ou uma expressão de acesso de elemento de matriz, e o método chamado substituir o objeto ao qual o parâmetro ref se refere, a variável local do chamador ou o elemento de matriz agora se referirá ao novo objeto quando o método retornar.
 
 > [!NOTE]
 > Não confunda o conceito de passar por referência com o conceito de tipos de referência. Os dois conceitos não são iguais. Um parâmetro de método pode ser modificado por `ref`, independentemente de ele ser um tipo de valor ou um tipo de referência. Não há nenhuma conversão boxing de um tipo de valor quando ele é passado por referência.  
@@ -61,11 +62,11 @@ No entanto, os métodos podem ser sobrecarregados quando um método tem um parâ
 - Métodos assíncronos, que você define usando o modificador [async](async.md).  
 - Métodos de iterador, que incluem uma instrução [yield return](yield.md) ou `yield break`.
 
-Além disso, [os métodos de extensão](../../programming-guide/classes-and-structs/extension-methods.md) têm as seguintes restrições:
+Além disso, os [métodos de extensão](../../programming-guide/classes-and-structs/extension-methods.md) têm as seguintes restrições:
 
 - A `out` palavra-chave não pode ser usada no primeiro argumento de um método de extensão.
-- A `ref` palavra-chave não pode ser usada no primeiro argumento de um método de extensão quando o argumento não é uma estrutura, ou um tipo genérico não constrangido a ser uma estrutura.
-- A `in` palavra-chave não pode ser usada a menos que o primeiro argumento seja uma estrutura. A `in` palavra-chave não pode ser usada em qualquer tipo genérico, mesmo quando constrangida a ser uma estrutura.
+- A `ref` palavra-chave não pode ser usada no primeiro argumento de um método de extensão quando o argumento não é um struct ou um tipo genérico não restrito a ser um struct.
+- A `in` palavra-chave não pode ser usada, a menos que o primeiro argumento seja um struct. A `in` palavra-chave não pode ser usada em nenhum tipo genérico, mesmo quando restrita a um struct.
 
 ## <a name="passing-an-argument-by-reference-an-example"></a>Passando um argumento por referência: um exemplo
 
@@ -77,7 +78,7 @@ Para obter mais informações sobre como passar tipos de referência por valor e
   
 ## <a name="reference-return-values"></a>Valores retornados por referência
 
-Valores retornados por referência (ou ref returns) são valores que um método retorna por referência para o chamador. Ou seja, o chamador pode modificar o valor retornado por um método, e essa alteração se reflete no estado do objeto no método de chamada.
+Valores retornados por referência (ou ref returns) são valores que um método retorna por referência para o chamador. Ou seja, o chamador pode modificar o valor retornado por um método e essa alteração é refletida no estado do objeto no método de chamada.
 
 Um valor retornado por referência é definido usando a palavra-chave `ref`:
 
@@ -95,13 +96,13 @@ return ref DecimalArray[0];
 
 Para que o chamador modifique o estado do objeto, o valor retornado de referência deve ser armazenado em uma variável que é definida explicitamente como um [ref local](#ref-locals).
 
-Aqui está um exemplo de retorno mais completo do ref, mostrando tanto a assinatura do método quanto o corpo do método.
+Aqui está um exemplo de retorno de referência mais completo, mostrando a assinatura do método e o corpo do método.
 
 [!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
 O método chamado também poderá declarar o valor retornado como `ref readonly` para retornar o valor por referência e, em seguida, impor que o código de chamada não possa modificar o valor retornado. O método de chamada pode evitar a cópia retornada com um valor ao armazenar o valor em um local [ref readonly](#ref-readonly-locals) variável.
 
-Por exemplo, veja [A ref returns e ref locals exemplo](#a-ref-returns-and-ref-locals-example).
+Para obter um exemplo, consulte [um exemplo de referências de ref e ref local](#a-ref-returns-and-ref-locals-example).
 
 ## <a name="ref-locals"></a>Ref locals
 
@@ -121,11 +122,11 @@ Você pode acessar um valor por referência da mesma maneira. Em alguns casos, a
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-Em ambos os `ref` exemplos, a palavra-chave deve ser usada em ambos os lugares, ou o compilador gera erro CS8172, "Não é possível inicializar uma variável por referência com um valor."
+Em ambos os exemplos `ref` , a palavra-chave deve ser usada em ambos os locais ou o compilador gera o erro CS8172, "não é possível inicializar uma variável por referência com um valor".
 
 A partir do C# 7.3, a variável de iteração da instrução `foreach` pode ser ref local ou a variável local ref readonly. Para saber mais, confira o artigo [Instrução foreach](foreach-in.md).
 
-Também começando com C# 7.3, você pode reatribuir um árbitro local ou ref readonly variável local com o [operador de atribuição de ref](../operators/assignment-operator.md#ref-assignment-operator).
+Além de começar com o C# 7,3, você pode reatribuir uma variável local ref local ou ref ReadOnly com o [operador ref Assignment](../operators/assignment-operator.md#ref-assignment-operator).
 
 ## <a name="ref-readonly-locals"></a>Locais somente leitura de referência
 
@@ -141,17 +142,17 @@ Quando o chamador armazena o valor retornado pelo método `GetBookByTitle` como 
 
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Escreva um código eficiente seguro](../../write-safe-efficient-code.md)
+- [Escrever código eficiente seguro](../../write-safe-efficient-code.md)
 - [Ref returns e ref locals](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Expressão condicional ref](../operators/conditional-operator.md#conditional-ref-expression)
-- [Parâmetros de passagem](../../programming-guide/classes-and-structs/passing-parameters.md)
+- [Passar parâmetros](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [Parâmetros de método](method-parameters.md)
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
-- [C# Palavras-chave](index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
+- [Palavras-chave do C#](index.md)

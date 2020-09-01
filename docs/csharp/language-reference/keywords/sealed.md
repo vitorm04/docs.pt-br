@@ -1,4 +1,5 @@
 ---
+description: Modificador sealed – Referência de C#
 title: Modificador sealed – Referência de C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: 686afd5d9d0394bb1a802551b65083732599f384
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5b945503c6f6546f571a2422ae77760da0363b08
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713099"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89136961"
 ---
 # <a name="sealed-c-reference"></a>sealed (Referência de C#)
 
@@ -63,18 +64,18 @@ Para determinar se deve lacrar uma classe, método ou propriedade, geralmente vo
 
 - O potencial de as classes derivadas modificarem suas classes de forma que elas deixem de funcionar corretamente ou como esperado.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [Classes static e membros de classes static](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
-- [Classes e membros de classes abstratas e lacradas](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [Classes e membros de classes abstract e sealed](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [Modificadores de acesso](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [Modificadores](index.md)
-- [Substituir](override.md)
-- [Virtual](virtual.md)
+- [override](override.md)
+- [virtual](virtual.md)

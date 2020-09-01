@@ -1,15 +1,16 @@
 ---
+description: Restrições ao uso de níveis de acessibilidade – Referência em C#
 title: Restrições ao uso de níveis de acessibilidade – Referência em C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 8082dbd7398b6634b68f1dd2887cd55d6798a5d9
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 542e463e41c70f2e8aed5c20dc1294e296a88518
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795151"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89136987"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Restrições ao uso de níveis de acessibilidade (Referência em C#)
 
@@ -26,7 +27,7 @@ A tabela a seguir resume as restrições nos níveis de acessibilidade declarada
 |-------------|-------------|
 |[Classes](../../programming-guide/classes-and-structs/classes.md)|A classe base direta de um tipo de classe deve ser, pelo menos, tão acessível quanto o próprio tipo de classe.|
 |[Interfaces](../../programming-guide/interfaces/index.md)|As interfaces base explícitas de um tipo de interface devem ser, pelo menos, tão acessíveis quanto o próprio tipo de interface.|
-|[Delegados](../../programming-guide/delegates/index.md)|O tipo de retorno e os tipos de parâmetro de um tipo delegado devem ser, pelo menos, tão acessíveis quanto o próprio tipo delegado.|
+|[Representantes](../../programming-guide/delegates/index.md)|O tipo de retorno e os tipos de parâmetro de um tipo delegado devem ser, pelo menos, tão acessíveis quanto o próprio tipo delegado.|
 |[Constantes](../../programming-guide/classes-and-structs/constants.md)|O tipo de uma constante deve ser, pelo menos, tão acessível quanto a própria constante.|
 |[Fields](../../programming-guide/classes-and-structs/fields.md)|O tipo de um campo deve ser, pelo menos, tão acessível quanto o próprio campo.|
 |[Métodos](../../programming-guide/classes-and-structs/methods.md)|O tipo de retorno e os tipos de parâmetro de um método devem ser, pelo menos, tão acessíveis quanto o próprio método.|
@@ -103,11 +104,11 @@ public class A
 }
 ```
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência do C#](../index.md)
 - [Guia de programação C#](../../programming-guide/index.md)
@@ -116,7 +117,7 @@ public class A
 - [Domínio de acessibilidade](accessibility-domain.md)
 - [Níveis de acessibilidade](accessibility-levels.md)
 - [Modificadores de acesso](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [publicada](public.md)
-- [pessoal](private.md)
-- [protected](protected.md)
+- [public](public.md)
+- [particulares](private.md)
+- [protegidos](protected.md)
 - [interno](internal.md)
