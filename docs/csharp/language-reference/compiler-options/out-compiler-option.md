@@ -1,4 +1,5 @@
 ---
+description: -out (opções do compilador C#)
 title: -out (opções do compilador C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d1b79879639e1cbdc3dc040977d9fcd0c3a73602
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70970374"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125014"
 ---
 # <a name="-out-c-compiler-options"></a>-out (opções do compilador C#)
 A opção **-out** especifica o nome do arquivo de saída.  
@@ -66,6 +67,6 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
-- [Assembléias de Amigos](../../../standard/assembly/friend.md)
+- [Opções do compilador C#](./index.md)
+- [Assemblies Friend](../../../standard/assembly/friend.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

@@ -1,4 +1,5 @@
 ---
+description: -nostdlib (opções do compilador C#)
 title: -nostdlib (opções do compilador C#)
 ms.date: 12/20/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: ad8a2b5fc87dd7beee86d96331cf3961315be533
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 214918b32f1f1276eb936e66daba3d372a1e9228
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345085"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125092"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib (opções do compilador C#)
 
@@ -34,13 +35,13 @@ Se você não especificar **-nostdlib**, o mscorlib.dll será importado no progr
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Para definir essa opção do compilador no Visual Studio
 
 > [!NOTE]
-> As instruções a seguir se aplicam apenas ao Visual Studio 2015 (e a versões anteriores). A **propriedade De não referenciar mscorlib.dll** não existe em versões mais recentes do Visual Studio.
+> As instruções a seguir se aplicam apenas ao Visual Studio 2015 (e a versões anteriores). A propriedade não **referenciar mscorlib.dll** Build não existe em versões mais recentes do Visual Studio.
 
 1. Abra a página **Propriedades** do projeto.
 
 2. Clique na página de propriedades **Compilar**.
 
-3. Clique no botão **Avançado**.
+3. Clique no botão **Avançado** .
 
 4. Modifique a propriedade **Não referenciar mscorlib.dll**.
 
@@ -50,4 +51,4 @@ Para obter informações sobre como definir essa opção do compilador programat
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)

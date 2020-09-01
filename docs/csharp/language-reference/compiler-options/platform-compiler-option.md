@@ -1,4 +1,5 @@
 ---
+description: -platform (opções do compilador C#)
 title: -platform (opções do compilador C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 5150e871d75c3c34dab10f10cdac3d8322d7a834
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2e4fc37418243ff6998d19165250b895c0a4fa1
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70849871"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124858"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (opções do compilador C#)
 
@@ -25,7 +26,7 @@ Especifica qual versão do CLR (Common Language Runtime) pode executar o assembl
 -platform:string
 ```
 
-## <a name="parameters"></a>parâmetros
+## <a name="parameters"></a>Parâmetros
 
 `string` \
 anycpu (padrão), anycpu32bitpreferred, ARM, x64, x86 ou Itanium.
@@ -69,7 +70,7 @@ Para obter mais informações sobre o desenvolvimento de um aplicativo para ser 
 3. Modifique a propriedade **Destino da plataforma** e, para projetos que definem como destino o .NET Framework 4.5, marque ou desmarque a caixa de seleção **Preferir 32 bits**.
 
 > [!NOTE]
-> `-platform`não está disponível no ambiente de desenvolvimento no Visual C# Express.
+> `-platform` Não está disponível no ambiente de desenvolvimento do Visual C# Express.
 
 Para obter informações sobre como definir essa opção do compilador programaticamente, consulte <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>.
 
@@ -83,5 +84,5 @@ csc -platform:anycpu filename.cs
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](index.md)
+- [Opções do compilador C#](index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

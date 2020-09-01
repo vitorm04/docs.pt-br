@@ -1,4 +1,5 @@
 ---
+description: -reference (opções do compilador do C#)
 title: -reference (opções do compilador do C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 3e6a999d528be111ba2b92886f4e6e3ebf185d5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b84953f85545c0400c7136c258849f259e8b48a
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173660"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124793"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (opções do compilador do C#)
 A opção **-reference** opção faz com que o compilador importe informações de tipo [public](../keywords/public.md) no arquivo especificado para o projeto atual, permitindo que você referencie metadados dos arquivos do assembly especificado.  
@@ -94,5 +95,5 @@ GridV2::Grid
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

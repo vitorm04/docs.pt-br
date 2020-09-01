@@ -1,4 +1,5 @@
 ---
+description: -target:winexe (opções do compilador C#)
 title: -target:winexe (opções do compilador C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:winexe
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
-ms.openlocfilehash: 981f1b0b6ca9f708bb022a3662ab181a4f472040
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a1be07455b54b375106fef1fb480d7abd2f1ca4
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606385"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124715"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (opções do compilador C#)
 A opção **-target:winexe** faz com que o compilador crie um programa do Windows executável (EXE).  
@@ -54,5 +55,5 @@ csc -target:winexe in.cs
   
 ## <a name="see-also"></a>Confira também
 
-- [-destino (C# Opções de compilador)](./target-compiler-option.md)
-- [C# Opções de compilador](./index.md)
+- [-Target (opções do compilador C#)](./target-compiler-option.md)
+- [Opções do compilador C#](./index.md)

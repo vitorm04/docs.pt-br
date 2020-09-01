@@ -1,4 +1,5 @@
 ---
+description: '- Operadores - e -= – referência do C#'
 title: '- Operadores - e -= – referência do C#'
 ms.date: 05/27/2019
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: c126837309b5fe3495a5e9e6af589892670b62c3
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 871067d8049c66f2b8d863987b668e5287b36911
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063075"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124689"
 ---
 # <a name="--and---operators-c-reference"></a>Operadores - e -= (referência do C#)
 
@@ -77,7 +78,7 @@ Um tipo definido pelo usuário pode [sobrecarregar](operator-overloading.md) o o
 
 Para obter mais informações, veja as seções [Operador de subtração unário](~/_csharplang/spec/expressions.md#unary-minus-operator) e [Operador de subtração](~/_csharplang/spec/expressions.md#subtraction-operator) da [Especificação de linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

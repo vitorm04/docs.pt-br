@@ -1,4 +1,5 @@
 ---
+description: -pathmap (opções do compilador C#)
 title: -pathmap (opções do compilador C#)
 ms.date: 05/16/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -pathmap compiler option [C#]
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
-ms.openlocfilehash: 48e96d2ec2ccbea83d573c0eb3630b1591c407a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 707a37c6946cfcaf429552f0aeece6b87f3ad71d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606632"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125001"
 ---
 # <a name="-pathmap-c-compiler-options"></a>-pathmap (opções do compilador C#)
 
@@ -52,5 +53,5 @@ csc -pathmap:C:\work\tests=\publish t.cs
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

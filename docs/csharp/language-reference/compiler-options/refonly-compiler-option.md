@@ -1,4 +1,5 @@
 ---
+description: -refonly (Opções do compilador do C#)
 title: -refonly (Opções do compilador do C#)
 ms.date: 07/08/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
 - refonly compiler option [C#]
-ms.openlocfilehash: 856b65d3b2217dbe5d53ecda00723b47247d80a4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9a92462203bedff93a4a711ca8742465b7a561c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72773847"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124741"
 ---
 # <a name="-refonly-c-compiler-options"></a>-refonly (Opções do compilador do C#)
 
@@ -26,11 +27,11 @@ A opção **-refonly** indica que um assembly de referência deve ser gerado em 
 
 ## <a name="remarks"></a>Comentários
 
-Os conjuntos de referência são um tipo especial de montagem que contém apenas a quantidade mínima de metadados necessários para representar a superfície pública da API da biblioteca. Eles incluem declarações para todos os membros que são significativas ao fazer referência a uma assembléia em ferramentas de construção, mas excluem todas as implementações de membros membros e declarações de membros privados que não tenham impacto observável em seu contrato de API. Para obter mais informações, consulte [conjuntos de referência](../../../standard/assembly/reference-assemblies.md) no Guia .NET.
+Os assemblies de referência são um tipo especial de assembly que contém apenas a quantidade mínima de metadados necessários para representar a superfície da API pública da biblioteca. Eles incluem declarações para todos os membros que são significativos ao referenciar um assembly em ferramentas de compilação, mas excluem todas as implementações de membro e declarações de membros privados que não têm impacto observável em seu contrato de API. Para obter mais informações, consulte [Reference Assemblies](../../../standard/assembly/reference-assemblies.md) in .net Guide.
 
-As `-refonly` [`-refout`](refout-compiler-option.md) opções são mutuamente exclusivas.
+As `-refonly` [`-refout`](refout-compiler-option.md) Opções e são mutuamente exclusivas.
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

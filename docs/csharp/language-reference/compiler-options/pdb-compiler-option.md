@@ -1,4 +1,5 @@
 ---
+description: -pdb (opções do compilador C#)
 title: -pdb (opções do compilador C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pdb compiler option [C#]
 - /pdb compiler option [C#]
 ms.assetid: e9d0f96a-5b75-45d6-9765-92538dd5f823
-ms.openlocfilehash: 3081f4716e8cd858d789db6050e635af941aa05c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0dcafd0fd260488922c74a2330b312e80467e779
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602570"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124910"
 ---
 # <a name="-pdb-c-compiler-options"></a>-pdb (opções do compilador C#)
 A opção do compilador **-pdb** especifica o nome e o local do arquivo de símbolos de depuração.  
@@ -44,5 +45,5 @@ csc -debug -pdb:tt t.cs
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
