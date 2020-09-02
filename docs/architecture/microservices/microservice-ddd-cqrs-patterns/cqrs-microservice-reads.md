@@ -2,12 +2,12 @@
 title: Implementando leituras/consultas em um microsserviço CQRS
 description: Arquitetura de Microsserviços do .NET para aplicativos .NET em contêineres | Entenda a implementação do lado de consultas do CQRS no microsserviço de ordenação no eShopOnContainers usando o Dapper.
 ms.date: 10/08/2018
-ms.openlocfilehash: 71db95e6fc17475693183be9c6854884cd331ce1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 41932122326cf4c49b9c9e2c344d2ac17da7466b
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614403"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358889"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementando leituras/consultas em um microsserviço CQRS
 
@@ -33,7 +33,7 @@ Uma vez que as consultas são executadas para obter os dados necessários para o
 
 Os dados retornados (ViewModel) podem ser o resultado da associação de dados de várias entidades ou tabelas no banco de dados, ou mesmo entre várias agregações definidas no modelo de domínio para a área transacional. Nesse caso, como você está criando consultas independentes do modelo de domínio, os limites e restrições de agregações são ignorados e você pode consultar qualquer tabela e coluna que você possa precisar. Essa abordagem fornece grande flexibilidade e produtividade para os desenvolvedores criarem ou atualizarem as consultas.
 
-Os ViewModels podem ser tipos estáticos definidos nas classes. Ou eles podem ser criados dinamicamente com base nas consultas executadas (conforme implementado no microsserviço de ordenação), que é muito ágil para desenvolvedores.
+Os ViewModels podem ser tipos estáticos definidos em classes (como é implementado no microserviço de ordenação). Ou podem ser criados dinamicamente com base nas consultas executadas, o que é muito ágil para os desenvolvedores.
 
 ## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Usar o Dapper como um micro ORM para executar consultas
 
