@@ -11,12 +11,12 @@ metadata:
   helpviewer_keywords:
   - .NET Framework guide
   ms.date: 04/22/2020
-  ms.openlocfilehash: 67e1549395ab5657a5d609b186fc1816211c5af3
-  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+  ms.openlocfilehash: 47781bbc5b1b1a2f4c0bc44929c5bb29fe3e7978
+  ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 04/24/2020
-  ms.locfileid: "82135900"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89379168"
 landingContent:
 - title: Saiba mais sobre o .NET Framework
   linkLists:
@@ -24,7 +24,7 @@ landingContent:
     links:
     - text: Visão geral de .NET Framework
       url: get-started/overview.md
-    - text: Requisitos de sistema
+    - text: Requisitos do sistema
       url: get-started/system-requirements.md
   - linkListType: concept
     links:
@@ -34,7 +34,7 @@ landingContent:
     links:
     - text: Guia de implantação para desenvolvedores
       url: deployment/deployment-guide-for-developers.md
-- title: Instalar .NET Framework
+- title: Instalar o .NET Framework
   linkLists:
   - linkListType: download
     links:
@@ -74,24 +74,16 @@ landingContent:
     links:
     - text: instalar e desinstalar serviços Windows
       url: windows-services/how-to-install-and-uninstall-services.md
-- title: Criar Windows Forms aplicativos
+- title: Criar aplicativos da área de trabalho
   linkLists:
   - linkListType: overview
     links:
-    - text: Visão geral do Windows Forms
-      url: winforms/index.md
-  - linkListType: tutorial
-    links:
-    - text: introdução ao Designer de Formulários do Windows
-      url: /visualstudio/designers/walkthrough-windows-forms-designer
-    - text: Criar um aplicativo Windows Forms na linha de comando
-      url: winforms/how-to-create-a-windows-forms-application-from-the-command-line.md
-  - linkListType: how-to-guide
-    links:
-    - text: Adicionar e remover itens dos controles ComboBox, ListBox e CheckedListBox
-      url: winforms/controls/add-and-remove-items-from-a-wf-combobox.md
-    - text: Fazer chamadas thread-safe para controles
-      url: winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md
+    - text: Introdução ao guia da área de trabalho
+      url: /dotnet/desktop/
+    - text: .NET Framework WPF
+      url: wpf/index.md
+    - text: .NET Framework Windows Forms
+      url: /dotnet/desktop/winforms/?view=netframework-4-8
 - title: Criar aplicativos WPF
   linkLists:
   - linkListType: overview
