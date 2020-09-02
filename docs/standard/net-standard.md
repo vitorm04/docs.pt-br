@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: b52d69756d85e3e422b798c3ac7d53de3b538b8d
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: e96a03ca55682d3e30bc13fb20a8e443105301fc
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167405"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359305"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -92,7 +92,7 @@ A especificação não é única, mas um conjunto de versões de APIs de crescim
 
 O .NET Standard não é específico a nenhuma implementação do .NET, nem corresponde ao esquema de controle de versão de nenhum desses runtimes.
 
-APIs adicionadas a qualquer implementação (por exemplo, .NET Framework, .NET Core e Mono) podem ser consideradas como candidatas a serem adicionadas à especificação, especialmente se forem consideradas fundamentais por natureza. As novas [versões do .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md) são criadas com base em versões de implementação do .NET, permitindo que você destine a novas APIs de uma PCL do .NET Standard. Os mecanismos de controle de versão são descritos mais detalhadamente em [Controle de versão do .NET Core](../core/versions/index.md).
+As APIs adicionadas a qualquer implementação do .NET (por exemplo, .NET Framework, .NET Core e mono) podem ser consideradas candidatas a serem adicionadas à especificação, especialmente se elas forem consideradas fundamentais por natureza. Novas [versões do .net Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md) são criadas com base em versões de implementação do .net, permitindo que você direcione novas APIs de uma .net Standard PCL (biblioteca de classes portátil). Os mecanismos de controle de versão são descritos mais detalhadamente em [Controle de versão do .NET Core](../core/versions/index.md).
 
 O controle de versão do .NET Standard é importante para uso. Com uma versão do .NET Standard você pode usar bibliotecas direcionadas a essa mesma versão ou inferior. A abordagem a seguir descreve o fluxo de trabalho para uso de PCLs do .NET Standard, específico ao direcionamento do .NET Standard.
 
@@ -149,13 +149,13 @@ Você pode ver o conjunto de perfis PCL que são compatíveis com .NET Standard:
 |:-----------:|:-------------:|------------------------------------------------------------------------------
 | Profile7    | 1,1           | .NET Framework 4.5, Windows 8
 | Profile31   | 1.0           | Windows 8.1, Windows Phone Silverlight 8.1
-| Profile32   | 1.2           | Windows 8.1, Windows Phone 8.1
-| Profile44   | 1.2           | .NET Framework 4.5.1, Windows 8.1
+| Profile32   | 1,2           | Windows 8.1, Windows Phone 8.1
+| Profile44   | 1,2           | .NET Framework 4.5.1, Windows 8.1
 | Profile49   | 1.0           | .NET Framework 4.5, Windows Phone Silverlight 8
 | Profile78   | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone Silverlight 8
 | Profile84   | 1.0           | Windows Phone 8.1, Windows Phone Silverlight 8.1
 | Profile111  | 1,1           | .NET Framework 4.5, Windows 8, Windows Phone 8.1
-| Profile151  | 1.2           | .NET Framework 4.5.1, Windows 8.1, Windows Phone 8.1
+| Profile151  | 1,2           | .NET Framework 4.5.1, Windows 8.1, Windows Phone 8.1
 | Profile157  | 1.0           | Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1
 | Profile259  | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
 

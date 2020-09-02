@@ -2,12 +2,12 @@
 title: Testar um .NET Standard biblioteca de classes com o .NET Core usando Visual Studio para Mac
 description: Crie um projeto de teste de unidade para uma biblioteca de classes do .NET Core. Verifique se uma biblioteca de classes do .NET Core funciona corretamente com testes de unidade.
 ms.date: 06/08/2020
-ms.openlocfilehash: a183049623df44cbb8c4abd47ce6e78d91adae12
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: d3c8a5e01d16047949e977f3af6a429970d996d0
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713605"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359214"
 ---
 # <a name="test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Testar um .NET Standard biblioteca de classes com o .NET Core usando o Visual Studio
 
@@ -15,7 +15,7 @@ Este tutorial mostra como automatizar o teste de unidade adicionando um projeto 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Este tutorial funciona com a solução que você cria em [criar uma .net Standard biblioteca no Visual Studio para Mac](library-with-visual-studio-mac.md).
+- Este tutorial funciona com a solução que você cria em [criar uma .net Standard biblioteca usando Visual Studio para Mac](library-with-visual-studio-mac.md).
 
 ## <a name="create-a-unit-test-project"></a>Crie um projeto de teste de unidade
 
@@ -23,7 +23,7 @@ As unidade de teste fornecem testes de software automatizados durante o desenvol
 
 1. Iniciar Visual Studio para Mac.
 
-1. Abra a `ClassLibraryProjects` solução que você criou em [criar uma .net Standard biblioteca no Visual Studio para Mac](library-with-visual-studio-mac.md).
+1. Abra a `ClassLibraryProjects` solução que você criou em [criar uma .net Standard biblioteca usando Visual Studio para Mac](library-with-visual-studio-mac.md).
 
 1. No painel de **solução** , <kbd>pressione CTRL +</kbd>clique na `ClassLibraryProjects` solução e selecione **Adicionar**  >  **novo projeto**.
 
@@ -73,7 +73,7 @@ Para que o projeto de teste funcione com a `StringLibrary` classe, adicione uma 
 
 ## <a name="add-and-run-unit-test-methods"></a>Adicionar e executar métodos de teste de unidade
 
-Quando o Visual Studio executa um teste de unidade, ele executa cada método marcado com o <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> atributo em uma classe marcada com o <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> atributo. Um método de teste termina quando a primeira falha é encontrada ou quando todos os testes contidos no método foram bem-sucedidos.
+Quando o Visual Studio executa um teste de unidade, ele executa cada método marcado com o <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> atributo em uma classe marcada com o  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> atributo. Um método de teste termina quando a primeira falha é encontrada ou quando todos os testes contidos no método foram bem-sucedidos.
 
 Os testes mais comuns chamam membros da classe <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>. Muitos métodos assert incluem pelo menos dois parâmetros, um deles é o resultado esperado do teste, e o outro é o resultado real do teste. Alguns dos `Assert` métodos chamados mais frequentemente da classe são mostrados na tabela a seguir:
 
@@ -186,4 +186,4 @@ Se você publicar uma biblioteca como um pacote NuGet, outras pessoas poderão i
 Uma biblioteca não precisa ser distribuída como um pacote. Ele pode ser agrupado com um aplicativo de console que o utiliza. Para saber como publicar um aplicativo de console, consulte o tutorial anterior nesta série:
 
 > [!div class="nextstepaction"]
-> [Publicar um aplicativo de console do .NET Core com o Visual Studio para Mac](publishing-with-visual-studio-mac.md)
+> [Publicar um aplicativo de console do .NET Core usando Visual Studio para Mac](publishing-with-visual-studio-mac.md)

@@ -2,12 +2,12 @@
 title: Os blocos de construção de programas em C# "
 description: Saiba mais sobre membros, expressões e instruções C#. Os tipos contêm membros que você escreve. Esses membros são criados a partir de instruções e expressões.
 ms.date: 08/06/2020
-ms.openlocfilehash: 142fe7b5a3424a8925638bfb4e4437392347f4c6
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 3bdc6a4da6ae76148c7d1d5cb8ccb65d91fda61a
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88268134"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358811"
 ---
 # <a name="program-building-blocks"></a>Blocos de construção de programas
 
@@ -137,7 +137,7 @@ Quando uma declaração de método de instância inclui um modificador `virtual`
 
 Quando um método virtual é invocado, o *tipo de tempo de execução* da instância para o qual essa invocação ocorre determina a implementação real do método para invocar. Em uma invocação de método não virtual, o *tipo de tempo de compilação* da instância é o fator determinante.
 
-Um método virtual pode ser *substituído* em uma classe derivada. Quando uma declaração de método de instância inclui um modificador de substituição, o método substitui um método virtual herdado com a mesma assinatura. A declaração de método virtual AA introduz um novo método. Uma declaração de método de substituição especializa um método virtual herdado existente fornecendo uma nova implementação desse método.
+Um método virtual pode ser *substituído* em uma classe derivada. Quando uma declaração de método de instância inclui um modificador de substituição, o método substitui um método virtual herdado com a mesma assinatura. Uma declaração de método virtual apresenta um novo método. Uma declaração de método de substituição especializa um método virtual herdado existente fornecendo uma nova implementação desse método.
 
 Um *método abstrato* é um método virtual sem implementação. Um método abstract é declarado com o `abstract` modificador e é permitido somente em uma classe abstrata. Um método abstrato deve ser substituído em cada classe derivada não abstrata.
 
@@ -192,8 +192,6 @@ As *propriedades* são uma extensão natural dos campos. Elas são denominadas m
 Uma propriedade é declarada como um campo, exceto que a declaração termina com um acessador get ou um acessador set gravado entre os delimitadores `{` e `}` em vez de terminar em um ponto e vírgula. Uma propriedade que tem um acessador get e um acessador set é uma *propriedade de leitura-gravação*. Uma propriedade que tem apenas um acessador get é uma *propriedade somente leitura*, e uma propriedade que tem apenas um acessador set é uma *propriedade somente gravação*.
 
 Um acessador get corresponde a um método sem parâmetros com um valor retornado do tipo de propriedade. Um acessador set corresponde a um método com um parâmetro único chamado valor e nenhum tipo de retorno. O acessador get computa o valor da propriedade. O acessador set fornece um novo valor para a propriedade. Quando a propriedade é o destino de uma atribuição, ou o operando de `++` ou `--` , o acessador set é invocado. Em outros casos em que a propriedade é referenciada, o acessador get é invocado.
-
- Quando uma propriedade é referenciada como o destino de uma atribuição ou como o operando do + + ou --, o acessador set é invocado com um argumento que fornece o novo valor.
 
 A classe `MyList<T>` declara duas propriedades, `Count` e `Capacity`, que são somente leitura e leitura/gravação, respectivamente. O código a seguir é um exemplo de uso dessas propriedades:
 

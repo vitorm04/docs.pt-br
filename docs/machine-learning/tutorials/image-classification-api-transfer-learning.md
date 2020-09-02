@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 593897b31c86e79db2376dde94f3e5c87fdf8289
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: a2ebad329f583d35f110c5db053eebfa80ace6e2
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89052817"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359318"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Tutorial: inspeção visual automatizada usando o aprendizado de transferência com a API de classificação de imagem ML.NET
 
@@ -32,7 +32,7 @@ Neste tutorial, você aprenderá como:
 
 ## <a name="image-classification-transfer-learning-sample-overview"></a>Visão geral do exemplo de aprendizado de transferência de classificação de imagem
 
-Este exemplo é um aplicativo de console C# .NET Core que classifica imagens usando um modelo de TensorFlow de aprendizado profundo pretreinado. O código para este exemplo pode ser encontrado no [repositório dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary) no GitHub.
+Este exemplo é um aplicativo de console C# .NET Core que classifica imagens usando um modelo de TensorFlow de aprendizado profundo pretreinado. O código para este exemplo pode ser encontrado no [navegador de exemplos](/samples/dotnet/machinelearning-samples/mlnet-image-classification-transfer-learning/).
 
 ## <a name="understand-the-problem"></a>Compreender o problema
 

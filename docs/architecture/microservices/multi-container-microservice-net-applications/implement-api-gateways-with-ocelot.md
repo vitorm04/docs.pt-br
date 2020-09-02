@@ -2,12 +2,12 @@
 title: Implementação de Gateways de API com o Ocelot
 description: Saiba como implementar Gateways de API com o Ocelot e como usar o Ocelot em um ambiente baseado em contêiner.
 ms.date: 03/02/2020
-ms.openlocfilehash: f103c1e394a3f829489b61fd17af749798b02f70
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 3611ffa7a163ff632ca854fafb910fcd3e228306
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864092"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358980"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementar Gateways de API com o Ocelot
 
@@ -15,6 +15,7 @@ ms.locfileid: "86864092"
 > O aplicativo de desserviço de referência [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) está usando atualmente os recursos fornecidos pelo [Envoy](https://www.envoyproxy.io/) para implementar o gateway de API em vez do [Ocelot](https://github.com/ThreeMammals/Ocelot)referenciado anterior.
 > Fizemos essa escolha de design devido ao suporte interno do Envoy para o protocolo WebSocket, exigido pelas novas comunicações entre serviços gRPC implementadas no eShopOnContainers.
 > No entanto, reguardamos esta seção no guia para que você possa considerar o Ocelot como um gateway de API simples, compatível e leve, adequado para cenários de nível de produção.
+> Além disso, a versão mais recente do Ocelot contém uma alteração significativa em seu esquema JSON. Considere usar o Ocelot < v 16.0.0 ou usar as rotas de chave em vez de redirecionar.
 
 ## <a name="architect-and-design-your-api-gateways"></a>Arquitetar e projetar seus Gateways de API
 

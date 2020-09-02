@@ -1,5 +1,5 @@
 ---
-title: Novidades do Visual Basic
+title: O que há de novo
 ms.date: 10/24/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: a9bac04a7839796229a2e1c61771ca32573f8fcd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e9ab745a60cd9eb646bee57a9a6838c30add77c5
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374506"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359201"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novidades do Visual Basic
 
@@ -64,7 +64,7 @@ A primeira versão do Visual Basic .NET
 
 ## <a name="visual-basic-160"></a>Visual Basic 16,0
 
-Visual Basic 16,0 concentra-se em fornecer mais recursos do Visual Basic Runtime (Microsoft. VisualBasic. dll) para o .NET Core e é a primeira versão do Visual Basic concentrada no .NET Core. Muitas partes do Visual Basic Runtime dependem de WinForms e elas serão adicionadas em uma versão posterior do Visual Basic.
+Visual Basic 16,0 concentra-se em fornecer mais recursos do Visual Basic Runtime (microsoft.visualbasic.dll) para o .NET Core e é a primeira versão do Visual Basic concentrada no .NET Core. Muitas partes do Visual Basic Runtime dependem de WinForms e elas serão adicionadas em uma versão posterior do Visual Basic.
 
 **Comentários permitidos em mais lugares dentro de instruções**
 
@@ -124,7 +124,7 @@ Por exemplo, a seguinte chamada de método tem dois argumentos posicionais entre
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
 
-[`Private Protected`modificador de acesso de membro](../language-reference/modifiers/private-protected.md)
+[`Private Protected` modificador de acesso de membro](../language-reference/modifiers/private-protected.md)
 
 Essa nova combinação de palavra-chave definirá um membro que é acessível por todos os membros em sua classe recipiente, bem como por tipos derivados da classe recipiente, mas somente se eles também forem encontrados no assembly de contenção. Como estruturas não podem ser herdadas, `Private Protected` só pode ser aplicado aos membros de uma classe.
 
@@ -238,11 +238,11 @@ Você pode ter literais de data no formato aaaa-mm-dd, `#2015-03-17 16:10 PM#`.
 
 Você pode implementar propriedades de interface readonly usando uma propriedade readwrite. A interface garante a funcionalidade mínima e não impede que uma classe de implementação permita que a propriedade seja definida.
 
-[TypeOf \<expr> IsNot\<type>](../language-reference/operators/typeof-operator.md)
+[TypeOf \<expr> IsNot \<type>](../language-reference/operators/typeof-operator.md)
 
 Para facilitar a leitura do seu código, agora você pode usar `TypeOf` com `IsNot`.
 
-[Aviso \<ID> de #Disable e aviso de #Enable\<ID>](../language-reference/directives/index.md)
+[Aviso \<ID> de #Disable e aviso de #Enable \<ID>](../language-reference/directives/index.md)
 
 É possível desabilitar e habilitar avisos específicos para regiões dentro de um arquivo de origem.
 
@@ -292,4 +292,4 @@ Agora, o compilador usará regras de resolução de sobrecarga normais para esco
 ## <a name="see-also"></a>Confira também
 
 - [O que há de novo no Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
-- [O que há de novo no Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
+- [Novidades no Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)

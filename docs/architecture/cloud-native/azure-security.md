@@ -2,12 +2,12 @@
 title: Segurança do Azure para aplicativos nativos de nuvem
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Segurança do Azure para aplicativos nativos de nuvem
 ms.date: 05/13/2020
-ms.openlocfilehash: 996c7075b252466a3b3374f1e75e64315fdd6fc7
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 7780b005d84124f202049deeb5be876364e6c5fa
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557640"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358967"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Segurança do Azure para aplicativos nativos de nuvem
 
@@ -147,7 +147,7 @@ As regras de negação têm precedência sobre regras de permissão. Agora que r
 
 ## <a name="checking-access"></a>Verificando o acesso
 
-Como você pode imaginar, ter um grande número de funções e escopos pode tornar a descoberta da permissão efetiva de uma entidade de serviço muito difícil. Empilhando regras de negação além disso, serve apenas para aumentar a complexidade. Felizmente, há uma calculadora de permissões que pode mostrar as permissões efetivas para qualquer entidade de serviço. Normalmente, ele é encontrado na guia IAM no portal, como mostra a Figura 10-3.
+Como você pode imaginar, ter um grande número de funções e escopos pode tornar a descoberta da permissão efetiva de uma entidade de serviço muito difícil. Empilhando regras de negação além disso, serve apenas para aumentar a complexidade. Felizmente, há uma [calculadora de permissões](https://docs.microsoft.com/azure/role-based-access-control/check-access) que pode mostrar as permissões efetivas para qualquer entidade de serviço. Normalmente, ele é encontrado na guia IAM no portal, como mostra a Figura 10-3.
 
 ![Figura 9-4 calculadora de permissão para um serviço de aplicativo](./media/check-rbac.png)
 
