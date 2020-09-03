@@ -6,16 +6,16 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 55b90d10a1d8ac8534ba98e1cc5af906d69822a6
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: fe504124a4274ccce332be255addd1f0b41e9026
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100828"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414715"
 ---
-# <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introdução à linguagem C# e à .NET Framework
+# <a name="introduction-to-the-c-language-and-net-framework"></a>Introdução à linguagem C# e .NET Framework
 
-O C# é uma linguagem elegante e orientada a objetos de tipo seguro que permite aos desenvolvedores criar uma variedade de aplicativos seguros e robustos que são executados no ecossistema do .NET. O ecossistema do .NET é composto de todas as implementações do .NET, incluindo as duas, mas não limitadas ao [.NET Core](../../core/index.yml), e [.NET Framework](../../framework/index.yml). Este artigo se concentra em .NET Framework. Você pode usar C# para criar aplicativos de cliente do Windows, serviços Web XML, componentes distribuídos, aplicativos cliente-servidor, aplicativos de banco de dados e muito, muito mais.
+O C# é uma linguagem elegante e orientada a objetos de tipo seguro que permite aos desenvolvedores criar uma variedade de aplicativos seguros e robustos que são executados no ecossistema do .NET. O ecossistema do .NET é composto de todas as implementações do .NET, incluindo as duas, mas não limitadas ao [.NET Core](../../core/introduction.md), e [.NET Framework](../../framework/index.yml). Este artigo se concentra em .NET Framework. Você pode usar C# para criar aplicativos de cliente do Windows, serviços Web XML, componentes distribuídos, aplicativos cliente-servidor, aplicativos de banco de dados e muito, muito mais.
 
 > [!NOTE]
 > A documentação do Visual C# considera que você já tenha conhecimento dos conceitos básicos de programação. Se você é principiante, convém explorar o Visual C# Express, que está disponível na Web. Você também pode tirar proveito de livros e recursos da Web sobre C# para aprender técnicas de programação práticas.

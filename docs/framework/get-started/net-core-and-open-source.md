@@ -3,16 +3,16 @@ title: .NET Core e software livre
 description: Leia uma visão geral sobre o .NET Core, que é uma implementação de uso geral, modular, de plataforma cruzada e de código aberto do .NET Standard.
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: 08d30d047c25b3b6d681d72b46b81a0cb21f8e0a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 4627d4cc1bf45f3a7ad3f269279384b4a303f00d
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622751"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414910"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core e software livre
 
-Este artigo fornece uma breve visão geral do que é o .NET Core e mostra como você pode encontrar mais informações. Para encontrar a lista completa de documentação do .NET Core, visite o [Guia do .NET Core](../../core/index.yml).
+Este artigo fornece uma breve visão geral do que é o .NET Core e mostra como você pode encontrar mais informações.
 
 ## <a name="what-is-net-core"></a>O que é o .NET Core?  
 
@@ -44,8 +44,8 @@ A plataforma .NET Core é composta por vários componentes, incluindo os compila
   
 - [ASP.NET Core](https://github.com/dotnet/aspnetcore)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Tutorial .NET – Olá, Mundo em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
-- [Guia do .NET Core](../../core/index.yml)
+- [Introdução ao .NET Core](../../core/introduction.md)
 - [ASP.NET Core docs](/aspnet/core/)

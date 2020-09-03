@@ -3,12 +3,12 @@ title: Bem-vindo ao .NET
 description: Introdução à família de tecnologias do .NET.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 64b9b0402631d34adc7ebd3bf8f7bc13416026b0
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 1933714263b98b4a503ced3868570c35feafe8f0
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646288"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89415053"
 ---
 # <a name="welcome-to-net"></a>Bem-vindo ao .NET
 
@@ -22,7 +22,7 @@ Para obter notícias sobre o .NET, verifique os seguintes blogs:
 
 - [.NET Blog](https://devblogs.microsoft.com/dotnet/)
 - [Blog do ASP.NET](https://devblogs.microsoft.com/aspnet/)
-- [O Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/)
+- [O blog do Visual Studio](https://devblogs.microsoft.com/visualstudio/)
 - [A equipe do Visual Basic](https://devblogs.microsoft.com/vbteam/)
 
 Além disso, siga os eventos .NET mais recentes:
@@ -34,21 +34,20 @@ Além disso, siga os eventos .NET mais recentes:
 Para obter informações sobre os recursos mais recentes adicionados às implementações do .NET e os idiomas com suporte, consulte os seguintes artigos:
 
 - [Novidades do .NET Core 3.1](core/whats-new/dotnet-core-3-1.md)
-- [Novidades no .NET Framework](framework/whats-new/index.md)
+- [O que há de novo na .NET Framework](framework/whats-new/index.md)
 - [Novidades no C#](csharp/whats-new/index.md)
-- [Novidades do Visual Basic](visual-basic/getting-started/whats-new.md)
+- [O que há de novo para Visual Basic](visual-basic/getting-started/whats-new.md)
 
 ## <a name="documentation"></a>Documentação
 
 Esta documentação abrange a extensão do .NET entre plataformas e linguagens. Você pode começar com o .NET e suas linguagens em qualquer uma das seções a seguir:
 
-- [.NET Guia](standard/index.yml)
-- [.NET Core Guide](core/index.yml)
-- [.NET Framework Guide](framework/index.yml)
-- [Guia C#](csharp/index.yml)
-- [Guia F#](fsharp/index.yml)
-- [Guia Básico Visual](visual-basic/index.yml)
-- [Guia de ML.NET](machine-learning/index.yml)
+- [Conceitos básicos do .NET](fundamentals/index.yml)
+- [Guia de .NET Framework](framework/index.yml)
+- [Guia do C#](csharp/index.yml)
+- [Guia de F #](fsharp/index.yml)
+- [Guia de Visual Basic](visual-basic/index.yml)
+- [Guia do ML.NET](machine-learning/index.yml)
 - [.NET para Apache Spark](spark/index.yml)
 - [Arquitetura do Aplicativo .NET](architecture/index.yml)
 
@@ -56,20 +55,20 @@ Além disso, você pode procurar a [referência da API .NET](/dotnet/api).
 
 ## <a name="videos"></a>vídeos
 
-Explorar vídeos na web, mobile, desktop, C#, machine learning, containers/Docker, acesso a dados e muito mais:
+Explore vídeos em Web, móveis, desktops, C#, Machine Learning, contêineres/Docker, acesso a dados e muito mais:
 
-[Série de vídeos .NET 101](https://dotnet.microsoft.com/learn/videos)
+[Série de vídeos do .NET 101](https://dotnet.microsoft.com/learn/videos)
 
-## <a name="open-source"></a>Código-fonte aberto
+## <a name="open-source"></a>Software livre
 
 Esta documentação é totalmente de [software livre](https://github.com/dotnet/docs). É possível contribuir da maneira que você desejar, desde criar problemas até escrever a documentação. Além disso, grande parte do próprio .NET também é de software livre. A lista a seguir mostra os principais repositórios do GitHub sobre o .NET:
 
 - [Página inicial do .NET Core](https://github.com/dotnet/core)
-- [Tempo de execução do .NET Core](https://github.com/dotnet/runtime)
+- [runtime do .NET Core](https://github.com/dotnet/runtime)
 - [SDK do .NET Core](https://github.com/dotnet/sdk)
 - [Ferramentas IDE e plataforma do compilador Roslyn (C# e Visual Basic)](https://github.com/dotnet/roslyn)
 - [Ferramentas IDE e compilador F#](https://github.com/dotnet/fsharp)
 - [Windows Forms](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 
-Você pode se juntar a outras pessoas que já estão ativas na [comunidade .NET](https://dotnet.microsoft.com/platform/community) para descobrir o que há de novo ou pedir ajuda.
+Você pode ingressar em outras pessoas que já estão ativas na [comunidade .net](https://dotnet.microsoft.com/platform/community) para descobrir o que há de novo ou pedir ajuda.

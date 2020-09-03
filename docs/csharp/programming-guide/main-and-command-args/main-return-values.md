@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 4458f3cd7c8259c5725cfe5e853f826fe2ef61cc
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 469ed872c1c8c4eb41eecd04277d4fc53fb3d112
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382055"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414637"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores retornados de Main() (Guia de Programação em C#)
 
@@ -26,7 +26,7 @@ Se o valor retornado de `Main` não for usado, o retorno de `void` permite um c�
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo usa as ferramentas de linha de comando do [.NET Core](../../../core/index.yml) . Se você não estiver familiarizado com as ferramentas de linha de comando do .NET Core, poderá aprender sobre elas neste [artigo de introdução](../../../core/tutorials/with-visual-studio-code.md).
+Este exemplo usa as ferramentas de linha de comando do [.NET Core](../../../core/introduction.md) . Se você não estiver familiarizado com as ferramentas de linha de comando do .NET Core, poderá aprender sobre elas neste [artigo de introdução](../../../core/tutorials/with-visual-studio-code.md).
 
 Modifique o método `Main` em *program.cs* da seguinte maneira:
 
@@ -96,7 +96,7 @@ Quando o ponto de entrada do aplicativo retorna um `Task` ou `Task<int>`, o comp
 > [!NOTE]
 >Se os exemplos usassem o modificador `async` no método `Main`, o compilador geraria o mesmo código.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de programação C#](../index.md)
 - [Referência do C#](../index.md)

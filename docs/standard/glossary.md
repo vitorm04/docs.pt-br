@@ -3,12 +3,12 @@ title: Glossário .NET
 description: Descubra o significado de termos selecionados usados na documentação do .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 59e338de99510759e3e7acfd782915ed6dc5d988
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: b79580baa12cc8081346678f06d49a9d0455375c
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957567"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89415001"
 ---
 # <a name="net-glossary"></a>Glossário .NET
 
@@ -161,7 +161,7 @@ O termo coletivo para [.NET Standard](#net-standard) e todas as [implementaçõe
 
 Quando o [.NET 5](#net-5-and-later-versions) (atualmente em visualização) for lançado, será a implementação do .net recomendada para todo o novo desenvolvimento .net e, portanto, em alguns contextos ".net", significa ".NET 5 e versões posteriores".
 
-Consulte o [guia .net](index.yml)
+Consulte os [conceitos básicos do .net](../fundamentals/index.yml)
 
 ## <a name="net-5-and-later-versions"></a>.NET 5 e versões posteriores
 
@@ -169,7 +169,7 @@ Uma implementação de software livre de várias plataformas, de alto desempenho
 
 As versões anteriores desta implementação .NET são conhecidas como .NET Core. O .NET 5,0 é a próxima versão do .NET Core 3,1. A versão 4 foi ignorada para evitar confusão nesta implementação mais recente do .NET com a implementação mais antiga conhecida como [.NET Framework](#net-framework). A versão atual do .NET Framework é 4,8.
 
-Consulte [.net](../core/index.yml).
+Consulte [conceitos básicos do .net](../fundamentals/index.yml).
 
 ## <a name="net-cli"></a>CLI do .NET
 
@@ -294,8 +294,7 @@ Uma implementação do .NET que é usada para criar aplicativos do Windows moder
 
 ## <a name="see-also"></a>Confira também
 
-- [Guia do .NET](index.yml)
+- [Conceitos básicos do .NET](../fundamentals/index.yml)
 - [Guia de .NET Framework](../framework/index.yml)
-- [.NET Core](../core/index.yml)
 - [Visão geral do ASP.NET](/aspnet/index#pivot=aspnet)
 - [Visão geral de ASP.NET Core](/aspnet/index#pivot=core)

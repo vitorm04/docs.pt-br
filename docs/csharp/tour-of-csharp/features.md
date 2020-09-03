@@ -2,14 +2,14 @@
 title: Um tour pelo C# – áreas de linguagem principal
 description: Novato em C#? Conheça os fundamentos da linguagem.
 ms.date: 08/06/2020
-ms.openlocfilehash: f0e9bff144cc3c853a82f2ee6b400049df60683d
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: e1e533982757c10085f0444197ff97ee7487391f
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88068504"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414897"
 ---
-# <a name="major-language-areas"></a>Principais áreas de idioma
+# <a name="major-language-areas"></a>Principais áreas de linguagem
 
 ## <a name="arrays-collections-and-linq"></a>Matrizes, coleções e LINQ
 
@@ -60,7 +60,7 @@ A [***interpolação de cadeia de caracteres***](../language-reference/tokens/in
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="StringInterpolation":::
 
-Uma cadeia de caracteres interpolada é declarada usando o `$` token. A interpolação de cadeia de caracteres avalia as expressões entre `{` e `}` , em seguida, converte o resultado em um `string` e substitui o texto entre colchetes pelo resultado da cadeia de caracteres da expressão. O `:` na primeira expressão `{weatherData.Data:MM-DD-YYYY}` especifica a cadeia de *caracteres de formato*. No exemplo anterior, ele especifica que a data deve ser impressa no formato "MM-DD-AAAA".
+Uma cadeia de caracteres interpolada é declarada usando o `$` token. A interpolação de cadeia de caracteres avalia as expressões entre `{` e `}` , em seguida, converte o resultado em um `string` e substitui o texto entre colchetes pelo resultado da cadeia de caracteres da expressão. O `:` na primeira expressão `{weatherData.Date:MM-DD-YYYY}` especifica a cadeia de *caracteres de formato*. No exemplo anterior, ele especifica que a data deve ser impressa no formato "MM-DD-AAAA".
 
 ## <a name="pattern-matching"></a>Correspondência de padrões
 

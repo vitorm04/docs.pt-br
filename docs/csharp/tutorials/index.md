@@ -2,12 +2,12 @@
 title: Tutoriais do C#
 description: Explore estes tutoriais do c# para aprender a criar programas em c# e conhecer os recursos da linguagem c#.
 ms.date: 10/25/2018
-ms.openlocfilehash: 57d2471ef8ad06eb821a1d1d88210dfbb8dc732e
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 9542f4919c9b1f0363fb8bc27136eb9a7e074913
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345100"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414807"
 ---
 # <a name="c-tutorials"></a>Tutoriais do C#
 
@@ -15,11 +15,11 @@ Bem-vindo aos tutoriais do C#. Eles começam com lições interativas que podem 
 
 ## <a name="introduction-to-c-interactive-tutorials"></a>Tutoriais interativos de introdução ao C#
 
-Se você quiser iniciar sua exploração em formato de vídeo, a [série de vídeo C# 101](https://aka.ms/dotnet3-csharp) fornece uma introdução ao C#. Você aprenderá sobre conceitos que você pode explorar nestes tutoriais.
+Se você quiser iniciar sua exploração em formato de vídeo, a [série de vídeos c# 101](https://aka.ms/dotnet3-csharp) fornece uma introdução ao C#. Você aprenderá sobre os conceitos que pode explorar nesses tutoriais.
 
 As primeiras lições explicam os conceitos de C# usando pequenos snippets de código. Você aprenderá os conceitos básicos da sintaxe de C# e como trabalhar com tipos de dados como cadeias de caracteres, números e valores boolianos. É tudo interativo e você começará a gravar e executar o código em questão de minutos. Estas primeiras lições não exigem conhecimento prévio de programação ou da linguagem C#.
 
-## <a name="hello-world"></a>[Olá, mundo](intro-to-csharp/hello-world.yml)
+## <a name="hello-world"></a>[Hello world](intro-to-csharp/hello-world.yml)
 
 No tutorial [Olá, Mundo](intro-to-csharp/hello-world.yml), você criará o programa C# mais básico. Você explorará o tipo `string` e como trabalhar com texto.
 
@@ -47,16 +47,16 @@ Todos os tutoriais de introdução posteriores à lição Olá, Mundo estão dis
 
 ## <a name="explore-new-features-in-c"></a>Explore novos recursos no C\#
 
-* [Experimente novos recursos em C# 6 interativamente](exploration/csharp-6.yml): Explore os recursos adicionados em [C# 6](../whats-new/csharp-6.md) interativamente em seu navegador.
+* [Experimente os novos recursos no c# 6 de forma interativa](exploration/csharp-6.yml): Explore os recursos adicionados no [c# 6](../whats-new/csharp-6.md) interativamente em seu navegador.
 * [Interpolação de cadeia de caracteres](string-interpolation.md): demonstra como usar interpolação de cadeia de caracteres para criar cadeias de caracteres formatadas em C#.
 * [Tipos de referência nula](nullable-reference-types.md): demonstra como usar tipos de referência nula para expressar sua intenção para referências nulas.
 * [Atualizar um projeto para usar tipos de referência que permitem valor nulo](upgrade-to-nullable-references.md): demonstra técnicas para atualizar um projeto existente a fim de usar tipos de referência que permitem valor nulo.
 * [Estender recursos de dados usando a correspondência de padrões](pattern-matching.md): demonstra como usar a correspondência de padrões a fim de estender os tipos para além dos principais recursos.
-* [Trabalhe com seqüências de dados usando índices e faixas](ranges-indexes.md): Demonstra nova sintaxe conveniente para acessar elementos únicos ou intervalos de um contêiner de dados seqüencial.
+* [Trabalhar com sequências de dados usando índices e intervalos](ranges-indexes.md): demonstra uma nova sintaxe conveniente para acessar elementos únicos ou intervalos de um contêiner de dados sequenciais.
 
 ## <a name="general-tutorials"></a>Tutoriais gerais
 
-Os tutoriais a seguir permitem que você compile programas em C# usando [.NET Core](../../core/index.yml):
+Os tutoriais a seguir permitem que você compile programas em C# usando [.NET Core](../../core/introduction.md):
 
 * [Aplicativo de console](console-teleprompter.md): demonstra a E/S de console, a estrutura de um aplicativo de console e os conceitos básicos do modelo de programação assíncrono baseado em tarefa.
 * [Cliente REST](console-webapiclient.md): demonstra as comunicações da Web, serialização JSON e recursos orientados a objeto na linguagem C#.

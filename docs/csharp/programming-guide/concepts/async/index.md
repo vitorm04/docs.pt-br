@@ -2,12 +2,12 @@
 title: Programação assíncrona em C#
 description: Uma visão geral do suporte de linguagem C# para programação assíncrona usando async, await, Task e Task<T>
 ms.date: 06/04/2020
-ms.openlocfilehash: 992ccd3a015653ea9ee13dfc309d47711ad0fca4
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 853019c39880b1f4ef6536aed5841ecab53d7304
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619709"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414975"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>Programação assíncrona com async e await
 
@@ -45,7 +45,7 @@ Se você quiser que o computador execute as instruções acima de forma assíncr
 
 Essas questões são importantes para os programas que você escreve atualmente. Ao escrever programas de cliente, você quer que a interface do usuário responda de acordo com as solicitações do usuário. Seu aplicativo não deve fazer um telefone parecer travado enquanto ele está baixando dados da Web. Ao escrever programas de servidor, você não quer threads bloqueados. Esses threads poderiam servir a outras solicitações. O uso de código síncrono quando existem alternativas assíncronas afeta sua capacidade de aumentar de forma menos custosa. Você paga pelos threads bloqueados.
 
-Aplicativos modernos bem-sucedidos exigem código assíncrono. Sem suporte de linguagem, escrever código assíncrono exigia retornos de chamada, eventos de conclusão ou outros meios que obscureciam a intenção original do código. A vantagem do código síncrono é que ele é fácil de entender. As ações passo a passo facilitam o exame e o entendimento. Modelos assíncronos tradicionais forçavam você a se concentrar na natureza assíncrona do código e não nas ações fundamentais do código.
+Aplicativos modernos bem-sucedidos exigem código assíncrono. Sem suporte de linguagem, escrever código assíncrono exigia retornos de chamada, eventos de conclusão ou outros meios que obscureciam a intenção original do código. A vantagem do código síncrono é que as ações passo a passo facilitam a verificação e a compreensão. Modelos assíncronos tradicionais forçavam você a se concentrar na natureza assíncrona do código e não nas ações fundamentais do código.
 
 ## <a name="dont-block-await-instead"></a>Não bloquear, mas aguardar
 
@@ -181,7 +181,7 @@ while (breakfastTasks.Count > 0)
 }
 ```
 
-Depois de todas essas alterações, a versão final do código tem esta aparência:<a id="final-version"></a>
+Depois de todas essas alterações, a versão final do código tem esta aparência: <a id="final-version"></a>
 :::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
 
 :::image type="content" source="media/whenany-async-breakfast.png" alt-text="Quando qualquer café assíncrono":::

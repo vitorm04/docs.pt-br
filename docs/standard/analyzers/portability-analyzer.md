@@ -4,12 +4,12 @@ description: Saiba como usar a ferramenta .NET Portability Analyzer para avaliar
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: d8b5fcf8b6c3230e41585261de747edb9105aa31
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: d61dd9ebe744686885dad41ef700caaea9853f85
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811802"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414793"
 ---
 # <a name="the-net-portability-analyzer"></a>O .NET Portability Analyzer
 
@@ -19,7 +19,7 @@ Depois de converter seu projeto para direcionar a nova plataforma, como o .NET C
 
 ## <a name="common-targets"></a>Destinos comuns
 
-- [.NET Core](../../core/index.yml): tem um design modular, dá suporte à instalação lado a lado e tem como alvo cenários de plataforma cruzada. A instalação lado a lado permite que você adote novas versões do .NET Core sem interromper outros aplicativos. Se seu objetivo é portar seu aplicativo para o .NET Core e oferecer suporte a várias plataformas, esse é o destino recomendado.
+- [.NET Core](../../core/introduction.md): tem um design modular, dá suporte à instalação lado a lado e tem como alvo cenários de plataforma cruzada. A instalação lado a lado permite que você adote novas versões do .NET Core sem interromper outros aplicativos. Se seu objetivo é portar seu aplicativo para o .NET Core e oferecer suporte a várias plataformas, esse é o destino recomendado.
 - . [Net Standard](../net-standard.md): inclui as APIs de .net Standard disponíveis em todas as implementações do .net. Se seu objetivo é fazer com que sua biblioteca seja executada em todas as plataformas com suporte do .NET, esse é o destino recomendado.
 - [ASP.NET Core](/aspnet/core): uma estrutura da Web moderna criada no .NET Core. Se sua meta é portar seu aplicativo Web para o .NET Core para dar suporte a várias plataformas, esse é o destino recomendado.
 - [Extensões de plataforma](../../core/porting/windows-compat-pack.md).NET Core +: inclui as APIs do .NET Core, além do pacote de compatibilidade do Windows, que fornece muitas das .NET Framework tecnologias disponíveis. Esse é um destino recomendado para portar seu aplicativo do .NET Framework para o .NET Core no Windows.
