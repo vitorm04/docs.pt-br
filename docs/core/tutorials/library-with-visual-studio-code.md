@@ -2,12 +2,12 @@
 title: Criar uma biblioteca de classes de .NET Standard usando Visual Studio Code
 description: Saiba como criar uma biblioteca de classes de .NET Standard usando Visual Studio Code.
 ms.date: 06/08/2020
-ms.openlocfilehash: 146dfd49e448494cce0c844282bc0394a8739ac9
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: d37e3c663146c90f4ae4188b25ea7e501501c93b
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810853"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465280"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>Tutorial: criar uma biblioteca de .NET Standard usando Visual Studio Code
 
@@ -55,6 +55,8 @@ Adicione um novo projeto de biblioteca de classe .NET Standard chamado "StringLi
    ```dotnetcli
    dotnet new classlib -o StringLibrary
    ```
+
+   O `-o` `--output` comando ou especifica o local para posicionar a saída gerada.
 
    A saída do terminal é semelhante ao exemplo a seguir:
 
@@ -169,7 +171,7 @@ Adicione um aplicativo de console que usa a biblioteca de classes. O aplicativo 
 
 Inicialmente, o novo projeto de aplicativo de console não tem acesso à biblioteca de classes. Para permitir que ele chame métodos na biblioteca de classes, crie uma referência de projeto para o projeto de biblioteca de classes.
 
-1. Execute o comando a seguir:
+1. Execute o seguinte comando:
 
    ```dotnetcli
    dotnet add ShowCase/ShowCase.csproj reference StringLibrary/StringLibrary.csproj
@@ -200,9 +202,9 @@ Inicialmente, o novo projeto de aplicativo de console não tem acesso à bibliot
    Input: A string that starts with an uppercase letter
    Begins with uppercase? : Yes
 
-   A string that starts with a lowercase letter
-   Input: A string that starts with a lowercase letter
-   Begins with uppercase? : Yes
+   a string that starts with a lowercase letter
+   Input: a string that starts with a lowercase letter
+   Begins with uppercase? : No
    ```
 
 ## <a name="additional-resources"></a>Recursos adicionais

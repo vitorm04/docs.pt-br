@@ -4,12 +4,12 @@ description: Saiba como controlar a remoção de aplicativos independentes.
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: d6081a24cc18e424b55d40e152f519c680f11aa0
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: 42e98f9ede004f06221d2df5ecd076500061e37d
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271874"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465410"
 ---
 # <a name="trimming-options"></a>Opções de corte
 
@@ -29,7 +29,7 @@ As configurações de granularidade a seguir controlam o quão agressivamente n�
 
 - `<TrimMode>copyused</TrimMode>`
 
-   Habilitar o corte em nível de assembly, que manterá um assembly inteiro se qualquer parte dele for usada (de maneira estática e compreendida).
+   Habilite o corte em nível de assembly, que manterá um assembly inteiro se qualquer parte dele for usada (de forma estaticamente compreendida).
 
 - `<TrimMode>link</TrimMode>`
 
@@ -39,7 +39,7 @@ Assemblies com `<IsTrimmable>true</IsTrimmable>` metadados, mas nenhum explícit
 
 ## <a name="trimmed-assemblies"></a>Assemblies cortados
 
-Ao publicar um aplicativo cortado, o SDK computa um `ItemGroup` chamado `ManagedAssemblyToLink` que representa o conjunto de arquivos a serem processados para corte. `ManagedAssemblyToLink` pode ter metadados que controlam o comportamento de corte por assembly. Para definir esses metadados, crie um destino que seja executado antes do destino interno `PrepareForILLink` . Este exemplo mostra como habilitar o corte de `MyAssembly` :
+Ao publicar um aplicativo cortado, o SDK computa um `ItemGroup` chamado `ManagedAssemblyToLink` que representa o conjunto de arquivos a serem processados para corte. `ManagedAssemblyToLink` pode ter metadados que controlam o comportamento de corte por assembly. Para definir esses metadados, crie um destino que seja executado antes do destino interno `PrepareForILLink` . O exemplo a seguir mostra como habilitar o corte de `MyAssembly` .
 
 ```xml
 <Target Name="ConfigureTrimming"
