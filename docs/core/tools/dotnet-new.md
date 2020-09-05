@@ -5,12 +5,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/01/2020
-ms.openlocfilehash: 8e05f4dc7a03ae8ae68acc6a57f6fa0e1c6b2ce4
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 70297cfe15732716b9ceacae091abe3c8957fb61
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465423"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495467"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -62,12 +62,12 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | Aplicativo do Console                          | [MMC](#console)             | [C#], F#, VB | Comum/Console                        | 1.0        |
 | Biblioteca de classes                                | [classlib](#classlib)           | [C#], F#, VB | Comum/Library                        | 1.0        |
-| Aplicativo WPF                              | [WFP](#wpf)                     | [C#], VB     | Comum/WPF                            | 3.0        |
-| Biblioteca de classes do WPF                            | [wpflib](#wpf)                  | [C#], VB     | Comum/WPF                            | 3.0        |
-| Biblioteca de Controles Personalizados do WPF                   | [wpfcustomcontrollib](#wpf)     | [C#], VB     | Comum/WPF                            | 3.0        |
-| Biblioteca de controle de usuário WPF                     | [wpfusercontrollib](#wpf)       | [C#], VB     | Comum/WPF                            | 3.0        |
-| Aplicativo Windows Forms (WinForms)         | [WinForms](#winforms)           | [C#], VB     | Comum/WinForms                       | 3.0        |
-| Biblioteca de classes do Windows Forms (WinForms)       | [winformslib](#winforms)        | [C#], VB     | Comum/WinForms                       | 3.0        |
+| Aplicativo WPF                              | [WFP](#wpf)                     | [C#], VB     | Comum/WPF                            | 3,0 (5,0 para VB)|
+| Biblioteca de classes do WPF                            | [wpflib](#wpf)                  | [C#], VB     | Comum/WPF                            | 3,0 (5,0 para VB)|
+| Biblioteca de Controles Personalizados do WPF                   | [wpfcustomcontrollib](#wpf)     | [C#], VB     | Comum/WPF                            | 3,0 (5,0 para VB)|
+| Biblioteca de controle de usuário WPF                     | [wpfusercontrollib](#wpf)       | [C#], VB     | Comum/WPF                            | 3,0 (5,0 para VB)|
+| Aplicativo Windows Forms (WinForms)         | [WinForms](#winforms)           | [C#], VB     | Comum/WinForms                       | 3,0 (5,0 para VB)|
+| Biblioteca de classes do Windows Forms (WinForms)       | [winformslib](#winforms)        | [C#], VB     | Comum/WinForms                       | 3,0 (5,0 para VB)|
 | Serviço de trabalho                               | [funcionários](#web-others)           | [C#]         | Comum/de trabalho/Web                     | 3.0        |
 | Projeto de Teste de Unidade                            | [MSTest](#test)                 | [C#], F#, VB | Teste/MSTest                           | 1.0        |
 | Projeto de Teste do NUnit 3                         | [NUnit](#nunit)                 | [C#], F#, VB | Teste/NUnit                            | 2.1.400    |

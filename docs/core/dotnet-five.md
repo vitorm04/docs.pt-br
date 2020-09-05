@@ -5,12 +5,12 @@ ms.date: 09/02/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: f9fd0d09dbb65c2367ac268ea4a7055a299a7586
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: c9ac93c152d39bd06875f82ee5f34c1540236038
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89471982"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495226"
 ---
 # <a name="the-evolution-of-net-core-to-net-5"></a>A evolução do .NET Core para o .NET 5
 
@@ -42,7 +42,7 @@ O .NET 5 estende essas características, fazendo melhorias incrementais:
 - [Corte de aplicativo](https://devblogs.microsoft.com/dotnet/app-trimming-in-net-5)
 - [Aprimoramentos do compilador C#](https://devblogs.microsoft.com/dotnet/automatically-find-latent-bugs-in-your-code-with-net-5)
 - Suporte de ferramentas para depuração de despejo
-- A plataforma é 80% anotada para [tipos de referência anuláveis](csharp/nullable-references.md)
+- A plataforma é 80% anotada para [tipos de referência anuláveis](../csharp/nullable-references.md)
 
 ### <a name="what-net-5-is-not"></a>O que o .NET 5 não é
 
@@ -58,7 +58,7 @@ O .NET 5 não é uma substituição para .NET Framework. Não há planos de port
 
 O novo desenvolvimento de aplicativos pode especificar o `net5.0` moniker do Framework de destino (TFM) para todos os tipos de projeto, incluindo bibliotecas de classes. O compartilhamento de código entre as cargas de trabalho do .NET 5 é simplificado, pois tudo o que você precisa é o `net5.0` TFM.
 
-O `net5.0` TFM combina e substitui `netcoreapp` os `netstandard` nomes. Esse TFM geralmente incluirá apenas tecnologias que funcionam entre plataformas, como foi feito com .NET Standard. No entanto, se você estiver planejando compartilhar código entre as cargas de trabalho .NET Framework, .NET Core e .NET 5, poderá fazer isso especificando `netstandard2.0` como seu TFM. Para obter mais informações, consulte [como especificar estruturas de destino](standard/frameworks.md#how-to-specify-target-frameworks).
+O `net5.0` TFM combina e substitui `netcoreapp` os `netstandard` nomes. Esse TFM geralmente incluirá apenas tecnologias que funcionam entre plataformas, como foi feito com .NET Standard. No entanto, se você estiver planejando compartilhar código entre as cargas de trabalho .NET Framework, .NET Core e .NET 5, poderá fazer isso especificando `netstandard2.0` como seu TFM. Para obter mais informações, consulte [como especificar estruturas de destino](../standard/frameworks.md#how-to-specify-target-frameworks).
 
 ## <a name="language-updates"></a>Atualizações de linguagem
 
@@ -76,9 +76,9 @@ Os desenvolvedores que escrevem aplicativos .NET 5 terão acesso à versão e ao
    System.Console.Write("Hello world!");
    ```
 
-- Ponteiros funcionais: construções de linguagem que expõem a linguagem intermediária (IL) os seguintes opcodes `ldftn` e `calli` .
+- Ponteiros de função: constructos de linguagem que expõem os seguintes opcodes de linguagem intermediária (IL): `ldftn` e `calli` .
 
-Para obter mais informações sobre os recursos disponíveis do C# 9, consulte [o que há de novo no c# 9](csharp/whats-new/csharp-9.md).
+<!-- For more information on the available C# 9 features, see [What's new in C# 9](csharp/whats-new/csharp-9.md). -->
 
 #### <a name="source-generators"></a>Geradores de origem
 
@@ -108,7 +108,7 @@ let age = 36
 let message = $"%s{name} is %d{age} years old."
 ```
 
-Isso é semelhante à [`sprintf`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-printfmodule.html#sprintf) função que formata uma cadeia de caracteres com base em entradas de tipo seguro. Para obter mais informações, consulte [What ' s New in F # 5](fsharp/whats-new/fsharp-50.md)
+Isso é semelhante à [`sprintf`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-printfmodule.html#sprintf) função que formata uma cadeia de caracteres com base em entradas de tipo seguro. <!-- For more information, see [What's new in F# 5](fsharp/whats-new/fsharp-50.md). -->
 
 ### <a name="visual-basic-updates"></a>Atualizações de Visual Basic
 
@@ -129,7 +129,7 @@ Não há novos recursos de linguagem para Visual Basic no .NET 5. No entanto, co
 | Item de Teste do NUnit 3                      | `nunit-test`           |
 | Projeto de Teste xUnit                     | `xunit`                |
 
-Para obter mais informações sobre modelos de projeto da CLI do .NET, consulte [`dotnet new`](core/tools/dotnet-new.md) .
+Para obter mais informações sobre modelos de projeto da CLI do .NET, consulte [`dotnet new`](tools/dotnet-new.md) .
 
 ## <a name="net-maui"></a>.NET MAUI
 
