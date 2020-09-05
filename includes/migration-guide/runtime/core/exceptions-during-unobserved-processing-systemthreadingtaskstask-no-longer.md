@@ -1,27 +1,53 @@
 ---
-ms.openlocfilehash: 5ba2ddb76ab946339449246840667ba4a48e9c66
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: bae211e5684dc1fbbb1d7e69c928e37c1c532096
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619783"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496636"
 ---
-### <a name="exceptions-during-unobserved-processing-in-systemthreadingtaskstask-no-longer-propagate-on-finalizer-thread"></a><span data-ttu-id="db1c4-101">Exceções durante o processamento não observado em System.Threading.Tasks.Task não são mais propagadas no thread do finalizador</span><span class="sxs-lookup"><span data-stu-id="db1c4-101">Exceptions during unobserved processing in System.Threading.Tasks.Task no longer propagate on finalizer thread</span></span>
+### <a name="exceptions-during-unobserved-processing-in-systemthreadingtaskstask-no-longer-propagate-on-finalizer-thread"></a><span data-ttu-id="ce5bc-101">Exceções durante o processamento não observado em System.Threading.Tasks.Task não são mais propagadas no thread do finalizador</span><span class="sxs-lookup"><span data-stu-id="ce5bc-101">Exceptions during unobserved processing in System.Threading.Tasks.Task no longer propagate on finalizer thread</span></span>
 
-#### <a name="details"></a><span data-ttu-id="db1c4-102">Detalhes</span><span class="sxs-lookup"><span data-stu-id="db1c4-102">Details</span></span>
+#### <a name="details"></a><span data-ttu-id="ce5bc-102">Detalhes</span><span class="sxs-lookup"><span data-stu-id="ce5bc-102">Details</span></span>
 
-<span data-ttu-id="db1c4-103">Como a classe <xref:System.Threading.Tasks.Task?displayProperty=fullName> representa uma operação assíncrona, ela captura todas as exceções não graves que ocorrem durante o processamento assíncrono.</span><span class="sxs-lookup"><span data-stu-id="db1c4-103">Because the <xref:System.Threading.Tasks.Task?displayProperty=fullName> class represents an asynchronous operation, it catches all non-severe exceptions that occur during asynchronous processing.</span></span> <span data-ttu-id="db1c4-104">No .NET Framework 4.5, se uma exceção não for observada e seu código nunca aguarda a tarefa, a exceção não será mais propagada no thread do finalizador e causará a falha do processo durante a coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="db1c4-104">In the .NET Framework 4.5, if an exception is not observed and your code never waits on the task, the exception will no longer propagate on the finalizer thread and crash the process during garbage collection.</span></span> <span data-ttu-id="db1c4-105">Essa alteração melhora a confiabilidade de aplicativos que usam a classe Task para executar processamento assíncrono não observado.</span><span class="sxs-lookup"><span data-stu-id="db1c4-105">This change enhances the reliability of applications that use the Task class to perform unobserved asynchronous processing.</span></span>
+<span data-ttu-id="ce5bc-103">Como a classe <xref:System.Threading.Tasks.Task?displayProperty=fullName> representa uma operação assíncrona, ela captura todas as exceções não graves que ocorrem durante o processamento assíncrono.</span><span class="sxs-lookup"><span data-stu-id="ce5bc-103">Because the <xref:System.Threading.Tasks.Task?displayProperty=fullName> class represents an asynchronous operation, it catches all non-severe exceptions that occur during asynchronous processing.</span></span> <span data-ttu-id="ce5bc-104">No .NET Framework 4.5, se uma exceção não for observada e seu código nunca aguarda a tarefa, a exceção não será mais propagada no thread do finalizador e causará a falha do processo durante a coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="ce5bc-104">In the .NET Framework 4.5, if an exception is not observed and your code never waits on the task, the exception will no longer propagate on the finalizer thread and crash the process during garbage collection.</span></span> <span data-ttu-id="ce5bc-105">Essa alteração melhora a confiabilidade de aplicativos que usam a classe Task para executar processamento assíncrono não observado.</span><span class="sxs-lookup"><span data-stu-id="ce5bc-105">This change enhances the reliability of applications that use the Task class to perform unobserved asynchronous processing.</span></span>
 
-#### <a name="suggestion"></a><span data-ttu-id="db1c4-106">Sugestão</span><span class="sxs-lookup"><span data-stu-id="db1c4-106">Suggestion</span></span>
+#### <a name="suggestion"></a><span data-ttu-id="ce5bc-106">Sugestão</span><span class="sxs-lookup"><span data-stu-id="ce5bc-106">Suggestion</span></span>
 
-<span data-ttu-id="db1c4-107">Se um aplicativo depender de exceções assíncronas não observadas que se propagam para o thread do finalizador, o comportamento anterior poderá ser restaurado com o fornecimento de um manipulador apropriado para o evento <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> ou com a definição de um [elemento de configuração de runtime](~/docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md).</span><span class="sxs-lookup"><span data-stu-id="db1c4-107">If an app depends on unobserved asynchronous exceptions propagating to the finalizer thread, the previous behavior can be restored by providing an appropriate handler for the <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> event, or by setting a [runtime configuration element](~/docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md).</span></span>
+<span data-ttu-id="ce5bc-107">Se um aplicativo depender de exceções assíncronas não observadas que se propagam para o thread do finalizador, o comportamento anterior poderá ser restaurado com o fornecimento de um manipulador apropriado para o evento <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> ou com a definição de um [elemento de configuração de runtime](~/docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md).</span><span class="sxs-lookup"><span data-stu-id="ce5bc-107">If an app depends on unobserved asynchronous exceptions propagating to the finalizer thread, the previous behavior can be restored by providing an appropriate handler for the <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> event, or by setting a [runtime configuration element](~/docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md).</span></span>
 
-| <span data-ttu-id="db1c4-108">Name</span><span class="sxs-lookup"><span data-stu-id="db1c4-108">Name</span></span>    | <span data-ttu-id="db1c4-109">Valor</span><span class="sxs-lookup"><span data-stu-id="db1c4-109">Value</span></span>       |
+| <span data-ttu-id="ce5bc-108">Nome</span><span class="sxs-lookup"><span data-stu-id="ce5bc-108">Name</span></span>    | <span data-ttu-id="ce5bc-109">Valor</span><span class="sxs-lookup"><span data-stu-id="ce5bc-109">Value</span></span>       |
 |:--------|:------------|
-| <span data-ttu-id="db1c4-110">Escopo</span><span class="sxs-lookup"><span data-stu-id="db1c4-110">Scope</span></span>   |<span data-ttu-id="db1c4-111">Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="db1c4-111">Edge</span></span>|
-|<span data-ttu-id="db1c4-112">Versão</span><span class="sxs-lookup"><span data-stu-id="db1c4-112">Version</span></span>|<span data-ttu-id="db1c4-113">4.5</span><span class="sxs-lookup"><span data-stu-id="db1c4-113">4.5</span></span>|
-|<span data-ttu-id="db1c4-114">Type</span><span class="sxs-lookup"><span data-stu-id="db1c4-114">Type</span></span>|<span data-ttu-id="db1c4-115">Runtime</span><span class="sxs-lookup"><span data-stu-id="db1c4-115">Runtime</span></span>
+| <span data-ttu-id="ce5bc-110">Escopo</span><span class="sxs-lookup"><span data-stu-id="ce5bc-110">Scope</span></span>   |<span data-ttu-id="ce5bc-111">Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="ce5bc-111">Edge</span></span>|
+|<span data-ttu-id="ce5bc-112">Versão</span><span class="sxs-lookup"><span data-stu-id="ce5bc-112">Version</span></span>|<span data-ttu-id="ce5bc-113">4.5</span><span class="sxs-lookup"><span data-stu-id="ce5bc-113">4.5</span></span>|
+|<span data-ttu-id="ce5bc-114">Tipo</span><span class="sxs-lookup"><span data-stu-id="ce5bc-114">Type</span></span>|<span data-ttu-id="ce5bc-115">Runtime</span><span class="sxs-lookup"><span data-stu-id="ce5bc-115">Runtime</span></span>|
 
-#### <a name="affected-apis"></a><span data-ttu-id="db1c4-116">APIs afetadas</span><span class="sxs-lookup"><span data-stu-id="db1c4-116">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="ce5bc-116">APIs afetadas</span><span class="sxs-lookup"><span data-stu-id="ce5bc-116">Affected APIs</span></span>
 
--<xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.Run(System.Action,System.Threading.CancellationToken)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task})?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task},System.Threading.CancellationToken)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.Run%60%601(System.Func{%60%600})?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.Run%60%601(System.Func{%60%600},System.Threading.CancellationToken)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.Run%60%601(System.Func{System.Threading.Tasks.Task{%60%600}})?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.Run%60%601(System.Func{System.Threading.Tasks.Task{%60%600}},System.Threading.CancellationToken)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.Start?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.Start(System.Threading.Tasks.TaskScheduler)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task.Run(System.Action,System.Threading.CancellationToken)?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task})?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task},System.Threading.CancellationToken)?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task.Run%60%601(System.Func{%60%600})?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task.Run%60%601(System.Func{%60%600},System.Threading.CancellationToken)?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task.Run%60%601(System.Func{System.Threading.Tasks.Task{%60%600}})?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task.Run%60%601(System.Func{System.Threading.Tasks.Task{%60%600}},System.Threading.CancellationToken)?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task.Start?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task.Start(System.Threading.Tasks.TaskScheduler)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Threading.Tasks.Task.Run(System.Action)`
+- `M:System.Threading.Tasks.Task.Run(System.Action,System.Threading.CancellationToken)`
+- `M:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task})`
+- `M:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task},System.Threading.CancellationToken)`
+- ``M:System.Threading.Tasks.Task.Run``1(System.Func{``0})``
+- ``M:System.Threading.Tasks.Task.Run``1(System.Func{``0},System.Threading.CancellationToken)``
+- ``M:System.Threading.Tasks.Task.Run``1(System.Func{System.Threading.Tasks.Task{``0}})``
+- ``M:System.Threading.Tasks.Task.Run``1(System.Func{System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)``
+- `M:System.Threading.Tasks.Task.Start`
+- `M:System.Threading.Tasks.Task.Start(System.Threading.Tasks.TaskScheduler)`
+
+-->
