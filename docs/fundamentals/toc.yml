@@ -136,6 +136,8 @@ items:
             href: ../core/tutorials/index.md
   - name: Novidades
     items:
+      - name: Evolução do .NET Core para o .NET 5
+        href: ../core/dotnet-five.md
       - name: Novidades do .NET Core 3.1
         href: ../core/whats-new/dotnet-core-3-1.md
       - name: Novidades do .NET Core 3.0
@@ -407,6 +409,8 @@ items:
             href: ../core/deploying/creating-nuget-packages.md
           - name: Roll forward de runtime de implantação autossuficiente
             href: ../core/deploying/runtime-patch-selection.md
+          - name: Implantação de arquivo único e executável
+            href: ../core/deploying/single-file.md
           - name: Cortar implantações e executáveis autossuficientes
             href: ../core/deploying/trim-self-contained.md
           - name: Repositório de pacotes de runtime
@@ -696,7 +700,7 @@ items:
         href: /aspnet/core/fundamentals/dependency-injection/
       - name: Registro em log
         href: /aspnet/core/fundamentals/logging/
-  - name: Acesso de dados
+  - name: Acesso a dados
     items:
       - name: LINQ
         href: ../standard/using-linq.md

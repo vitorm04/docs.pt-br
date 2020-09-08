@@ -5,16 +5,16 @@ ms.date: 09/02/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: c9ac93c152d39bd06875f82ee5f34c1540236038
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 5e8ed371173ff8b81909ceb071ed93c6b0e1eea5
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495226"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515839"
 ---
 # <a name="the-evolution-of-net-core-to-net-5"></a>A evolução do .NET Core para o .NET 5
 
-Este artigo fornece detalhes sobre o que está incluído no .NET 5, que é a próxima versão do .NET Core a seguir 3,1. O número de versão é 5,0 para evitar confusão com .NET Framework 4. x. E "Core" é descartado do nome porque é a principal implementação do .NET em frente. O .NET 5 dá suporte a mais tipos de aplicativos e mais plataformas do que o .NET Core ou o .NET Framework.
+Este artigo fornece detalhes sobre o que está incluído no .NET 5, que é a próxima versão do .NET Core a seguir 3,1. O número de versão é 5,0 para evitar confusão com .NET Framework 4. x. E "Core" é descartado do nome porque é a principal implementação do .NET em frente. ASP.NET Core retém o nome "Core" para evitar confusão com o ASP.NET MVC 5. Além disso, Entity Framework Core retém o nome "Core" para evitar confusão com Entity Framework 5 e 6. O .NET 5 dá suporte a mais tipos de aplicativos e mais plataformas do que o .NET Core ou o .NET Framework.
 
 O advento do .NET Core evoluiu o ecossistema do .NET de maneiras atraentes. Ele amadureceu como um projeto de software livre no GitHub, comemorando contribuições da Comunidade e humildemente melhorando com o tempo.
 
@@ -78,7 +78,7 @@ Os desenvolvedores que escrevem aplicativos .NET 5 terão acesso à versão e ao
 
 - Ponteiros de função: constructos de linguagem que expõem os seguintes opcodes de linguagem intermediária (IL): `ldftn` e `calli` .
 
-<!-- For more information on the available C# 9 features, see [What's new in C# 9](csharp/whats-new/csharp-9.md). -->
+Para obter mais informações sobre os recursos disponíveis do C# 9, consulte [o que há de novo no c# 9](../csharp/whats-new/csharp-9.md).
 
 #### <a name="source-generators"></a>Geradores de origem
 
@@ -160,7 +160,7 @@ View body() => new StackLayout
 
 Para obter mais informações, consulte o [roteiro do .net Maui](https://github.com/dotnet/maui/wiki/Roadmap)e apresentando o artigo do [.net Maui](https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui) .
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [A jornada para um .NET](https://channel9.msdn.com/Events/Build/2020/BOD106)
 - [Melhorias de desempenho no .NET 5](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5)
