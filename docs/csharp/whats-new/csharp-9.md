@@ -2,14 +2,14 @@
 title: O que há de novo no C# 9,0 – Guia C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 9,0.
 ms.date: 09/04/2020
-ms.openlocfilehash: a863e544c0fcc8682994f49a464acccafc5ce92f
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: ddffe4aaaed6c9079999b2ab29ca61ab5753f15a
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495819"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598137"
 ---
-# <a name="whats-new-in-c-90"></a>O que há de novo no C# 9,0
+# <a name="whats-new-in-c-90"></a>Novidades do C# 9.0
 
 O c# 9,0 adiciona os seguintes recursos e aprimoramentos à linguagem C#:
 
@@ -24,6 +24,7 @@ O c# 9,0 adiciona os seguintes recursos e aprimoramentos à linguagem C#:
 - funções anônimas estáticas
 - Expressões condicionais de tipo de destino
 - Tipos de retorno covariantes
+- `GetEnumerator`Suporte de extensão para `foreach` loops
 - Parâmetros discard de lambda
 - Atributos em funções locais
 - Inicializadores de módulo
@@ -217,7 +218,7 @@ Você pode chamá-lo da seguinte maneira:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="TargetTypeNewArgument":::
 
-Outro bom uso para esse recurso é combiná-lo com propriedades init somente para inicializar um novo objeto. Os parênteses em `new` são opcionais:
+Outro bom uso para esse recurso é combiná-lo com propriedades init somente para inicializar um novo objeto:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="InitWeatherStation":::
 
@@ -228,6 +229,8 @@ Um recurso semelhante melhora a resolução de tipo de destino de expressões co
 A partir do C# 9,0, você pode adicionar o `static` modificador a expressões lambda ou a métodos anônimos. As expressões lambda estáticas são análogas às `static` funções locais: uma função lambda ou anônima estática não pode capturar variáveis locais ou estado de instância. O `static` modificador impede a captura acidental de outras variáveis.
 
 Os tipos de retorno covariantes fornecem flexibilidade para os tipos de retorno de funções substituídas. Uma função virtual substituída pode retornar um tipo derivado do tipo de retorno declarado no método de classe base. Isso pode ser útil para registros e para outros tipos que dão suporte a métodos de clonagem ou de alocador virtual.
+
+Além disso, o `foreach` loop reconhecerá e usará um método de extensão `GetEnumerator` que, de outra forma, atende ao `foreach` padrão. Essa alteração significa `foreach` ser consistente com outras construções baseadas em padrão, como o padrão assíncrono e a desconstrução baseada em padrões. Na prática, essa alteração significa que você pode adicionar `foreach` suporte a qualquer tipo. Você deve limitar seu uso ao ao enumerar um objeto faz sentido em seu design.
 
 Em seguida, você pode usar os descartes como parâmetros para expressões lambda. Essa conveniência permite que você evite nomear o argumento, e o compilador pode evitar usá-lo. Você usa o `_` para qualquer argumento.
 

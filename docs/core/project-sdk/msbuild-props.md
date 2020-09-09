@@ -4,12 +4,12 @@ description: Referência para as propriedades e os itens do MSBuild que são com
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 39cbd18121d2b8659b2f5270f39624798f4ebbdc
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 866253a0526741f5554971a5202c179106503951
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810515"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598013"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>Referência do MSBuild para projetos de SDK do .NET Core
 
@@ -26,7 +26,7 @@ Esta página é uma referência para as propriedades e os itens do MSBuild que v
 
 ### <a name="targetframework"></a>TargetFramework
 
-A `TargetFramework` propriedade especifica a versão do Framework de destino para o aplicativo. Para obter uma lista de monikers de estrutura de destino válidos, consulte [estruturas de destino em projetos em estilo SDK](../../standard/frameworks.md#supported-target-framework-versions).
+A `TargetFramework` propriedade especifica a versão do Framework de destino para o aplicativo. Para obter uma lista de monikers de estrutura de destino válidos, consulte [estruturas de destino em projetos em estilo SDK](../../standard/frameworks.md#supported-target-frameworks).
 
 ```xml
 <PropertyGroup>
@@ -38,7 +38,7 @@ Para obter mais informações, consulte [estruturas de destino em projetos em es
 
 ### <a name="targetframeworks"></a>TargetFrameworks
 
-Use a `TargetFrameworks` propriedade quando desejar que seu aplicativo direcione várias plataformas. Para obter uma lista de monikers de estrutura de destino válidos, consulte [estruturas de destino em projetos em estilo SDK](../../standard/frameworks.md#supported-target-framework-versions).
+Use a `TargetFrameworks` propriedade quando desejar que seu aplicativo direcione várias plataformas. Para obter uma lista de monikers de estrutura de destino válidos, consulte [estruturas de destino em projetos em estilo SDK](../../standard/frameworks.md#supported-target-frameworks).
 
 > [!NOTE]
 > Essa propriedade será ignorada se `TargetFramework` (singular) for especificado.
@@ -183,7 +183,7 @@ A tabela a seguir mostra as opções disponíveis.
 
 | Valor | Significado |
 |-|-|
-| `latest` | Os analisadores de código mais recentes que foram lançados são usados. Esse é o padrão. |
+| `latest` | Os analisadores de código mais recentes que foram lançados são usados. Este é o padrão. |
 | `preview` | Os analisadores de código mais recentes são usados, mesmo se estiverem em versão prévia. |
 | `5.0` | O conjunto de regras que foi habilitado para a versão 5,0 do .NET é usado, mesmo se as regras mais recentes estiverem disponíveis. |
 | `5` | O conjunto de regras que foi habilitado para a versão 5,0 do .NET é usado, mesmo se as regras mais recentes estiverem disponíveis. |
@@ -327,7 +327,7 @@ A `TieredCompilationQuickJitForLoops` propriedade define se o compilador JIT usa
 
 A `AssetTargetFallback` propriedade permite que você especifique versões de estrutura compatíveis adicionais para referências de projeto e pacotes NuGet. Por exemplo, se você especificar uma dependência de pacote usando `PackageReference` , mas esse pacote não contiver ativos que são compatíveis com seus projetos `TargetFramework` , a `AssetTargetFallback` Propriedade entrará em cena. A compatibilidade do pacote referenciado é verificada novamente usando cada estrutura de destino especificada em `AssetTargetFallback` .
 
-Você pode definir a `AssetTargetFallback` propriedade para uma ou mais [versões da estrutura de destino](../../standard/frameworks.md#supported-target-framework-versions).
+Você pode definir a `AssetTargetFallback` propriedade para uma ou mais [versões da estrutura de destino](../../standard/frameworks.md#supported-target-frameworks).
 
 ```xml
 <PropertyGroup>
