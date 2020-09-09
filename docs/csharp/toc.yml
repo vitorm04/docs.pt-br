@@ -5,7 +5,7 @@
     - name: Visão geral
       displayName: get started
       href: getting-started/index.md
-    - name: Introdução à linguagem C# e ao .NET Framework
+    - name: Introdução à linguagem C# e .NET
       href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
 - name: Tutoriais
   items:
@@ -80,8 +80,10 @@
       href: tour-of-csharp/features.md
 - name: Novidades no C#
   items:
-    - name: C# 8.0
+    - name: C# 9.0
       displayName: what's new
+      href: whats-new/csharp-9.md
+    - name: C# 8.0
       href: whats-new/csharp-8.md
     - name: C# 7.3
       href: whats-new/csharp-7-3.md
@@ -1066,7 +1068,7 @@
           href: programming-guide/events/index.md
         - name: Como realizar e cancelar a assinatura de eventos
           href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
-        - name: Como publicar eventos em conformidade com as diretrizes do .NET Framework
+        - name: Como publicar eventos em conformidade com as diretrizes do .NET
           href: programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md
         - name: Como acionar eventos de classe base em classes derivadas
           href: programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md
