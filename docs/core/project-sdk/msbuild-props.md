@@ -4,12 +4,12 @@ description: Referência para as propriedades e os itens do MSBuild que são com
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 866253a0526741f5554971a5202c179106503951
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: c1093a0acd5b75ae6478767d690966a30fe84a31
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598013"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656256"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>Referência do MSBuild para projetos de SDK do .NET Core
 
@@ -188,9 +188,27 @@ A tabela a seguir mostra as opções disponíveis.
 | `5.0` | O conjunto de regras que foi habilitado para a versão 5,0 do .NET é usado, mesmo se as regras mais recentes estiverem disponíveis. |
 | `5` | O conjunto de regras que foi habilitado para a versão 5,0 do .NET é usado, mesmo se as regras mais recentes estiverem disponíveis. |
 
+### <a name="analysismode"></a>Analysismode
+
+A partir do .NET 5,0 RC2, o SDK do .NET é fornecido com todas as [regras de qualidade de código "CA"](/visualstudio/code-quality/code-analysis-for-managed-code-warnings). Por padrão, somente [algumas regras são habilitadas](../../fundamentals/productivity/code-analysis.md#enabled-rules) como avisos de compilação. A `AnalysisMode` propriedade permite que você personalize o conjunto de regras habilitadas por padrão. Você pode alternar para um modo de análise mais agressivo (recusar) ou um modo de análise mais conservador (opcional). Por exemplo, se você quiser habilitar todas as regras por padrão como avisos de compilação, defina o valor como `AllEnabledByDefault` .
+
+```xml
+<PropertyGroup>
+  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+</PropertyGroup>
+```
+
+A tabela a seguir mostra as opções disponíveis.
+
+| Valor | Significado |
+|-|-|
+| `Default` | Modo padrão, em que determinadas regras são habilitadas como avisos de compilação, determinadas regras são habilitadas como sugestões de IDE do Visual Studio e o restante é desabilitado. |
+| `AllEnabledByDefault` | Modo agressivo ou de aceitação, em que todas as regras são habilitadas por padrão como avisos de compilação. Você pode [recusar](../../fundamentals/productivity/configure-code-analysis-rules.md) seletivamente as regras individuais para desabilitá-las. |
+| `AllDisabledByDefault` | Modo conservador ou opt, onde todas as regras estão desabilitadas por padrão. Você pode [optar](../../fundamentals/productivity/configure-code-analysis-rules.md) seletivamente por regras individuais para habilitá-las. |
+
 ### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors
 
-A `CodeAnalysisTreatWarningsAsErrors` propriedade permite configurar se os avisos de análise de código devem ser tratados como avisos e interromper a compilação. Se você usar o `-warnaserror` sinalizador ao compilar seus projetos, os avisos de [análise de código do .net](../../fundamentals/productivity/code-analysis.md) também serão tratados como erros. Se você quiser que os avisos do compilador sejam tratados como erros, poderá definir a `CodeAnalysisTreatWarningsAsErrors` Propriedade MSBuild como `false` em seu arquivo de projeto.
+A `CodeAnalysisTreatWarningsAsErrors` propriedade permite que você configure se os avisos de análise de qualidade de código (CAxxxx) devem ser tratados como avisos e interromper a compilação. Se você usar o `-warnaserror` sinalizador ao compilar seus projetos, os avisos de [análise de qualidade de código do .net](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) também serão tratados como erros. Se você não quiser que os avisos de análise de qualidade de código sejam tratados como erros, você poderá definir a `CodeAnalysisTreatWarningsAsErrors` Propriedade do MSBuild como `false` em seu arquivo de projeto.
 
 ```xml
 <PropertyGroup>
@@ -200,7 +218,7 @@ A `CodeAnalysisTreatWarningsAsErrors` propriedade permite configurar se os aviso
 
 ### <a name="enablenetanalyzers"></a>EnableNETAnalyzers
 
-A [análise de código .net](../../fundamentals/productivity/code-analysis.md) está habilitada, por padrão, para projetos direcionados ao .NET 5,0 ou posterior. Você pode habilitar a análise de código .NET para projetos destinados a versões anteriores do .NET, definindo a `EnableNETAnalyzers` propriedade como true. Para desabilitar a análise de código em qualquer projeto, defina essa propriedade como `false` .
+A [análise de qualidade de código .net](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) está habilitada, por padrão, para projetos direcionados ao .NET 5,0 ou posterior. Você pode habilitar a análise de código .NET para projetos destinados a versões anteriores do .NET, definindo a `EnableNETAnalyzers` propriedade como `true` . Para desabilitar a análise de código em qualquer projeto, defina essa propriedade como `false` .
 
 ```xml
 <PropertyGroup>
@@ -210,6 +228,18 @@ A [análise de código .net](../../fundamentals/productivity/code-analysis.md) e
 
 > [!TIP]
 > Outra maneira de habilitar a análise de código .NET em projetos que visam versões .NET anteriores ao .NET 5,0 é definir a propriedade [AnalysisLevel](#analysislevel) como `latest` .
+
+### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
+
+A [análise de estilo de código .net](../../fundamentals/productivity/code-analysis.md#code-style-analysis) está desabilitada, por padrão, na compilação para todos os projetos .net. Você pode habilitar a análise de estilo de código para projetos .NET definindo a `EnforceCodeStyleInBuild` propriedade como `true` .
+
+```xml
+<PropertyGroup>
+  <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+</PropertyGroup>
+```
+
+Todas as regras de estilo de código [configuradas](../../fundamentals/productivity/code-analysis.md#code-style-analysis) para serem avisos ou erros serão executadas em violações de compilação e relatório.
 
 ## <a name="run-time-configuration-properties"></a>Propriedades de configuração de tempo de execução
 
