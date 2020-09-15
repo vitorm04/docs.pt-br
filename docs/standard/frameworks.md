@@ -4,12 +4,12 @@ description: Saiba mais sobre estruturas de destino para aplicativos e bibliotec
 ms.date: 09/08/2020
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 9c5d3605f893072b2a5e84751e3657152ac0213e
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 22689f6c1f161a67978dc0f41c6bc9a6b5acfad7
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598155"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065247"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Estruturas de destino em projetos no estilo SDK
 
@@ -31,7 +31,7 @@ A tabela a seguir define as estruturas de destino mais comuns, como elas são re
 | :-: | :-: | :-: | :-: |
 | .NET Standard         | 2.1                         | netstandard 2.1                 | N/D                                     |
 | .NET Core             | 3.1                         | netcoreapp 3.1                  | 2.1                                     |
-| .NET Framework        | 4.8                         | net48                          | 2,0                                     |
+| .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
 ## <a name="supported-target-frameworks"></a>Estruturas de destino com suporte
 
@@ -125,9 +125,9 @@ public class MyClass
 }
 ```
 
-O sistema de compilação reconhece os símbolos de pré-processador que representam as estruturas de destino mostradas na tabela de [versões do Framework de destino com suporte](#supported-target-frameworks) quando você está usando projetos em estilo SDK. Ao usar um símbolo que representa um TFM do .NET Standard ou .NET Core, substitua o ponto por um sublinhado e altere as letras minúsculas por maiúsculas (por exemplo, o símbolo de `netstandard1.4` é `NETSTANDARD1_4`).
+O sistema de compilação reconhece os símbolos de pré-processador que representam as estruturas de destino mostradas na tabela de [versões do Framework de destino com suporte](#supported-target-frameworks) quando você está usando projetos em estilo SDK. Ao usar um símbolo que representa um .NET Standard, .NET Core ou .NET 5 TFM, substitua pontos e hifens por um sublinhado e altere as letras minúsculas para maiúsculas (por exemplo, o símbolo de `netstandard1.4` é `NETSTANDARD1_4` ).
 
-A lista completa de símbolos de pré-processador para estruturas de destino do .NET Core é:
+A lista completa de símbolos de pré-processador para estruturas de destino do .NET é:
 
 [!INCLUDE [Preprocessor symbols](../../includes/preprocessor-symbols.md)]
 
@@ -146,7 +146,7 @@ As seguintes estruturas de destino estão preteridas. Os pacotes direcionados a 
 | win10                                                                                      | uap10.0     |
 | winrt                                                                                      | netcore45   |
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Desenvolver bibliotecas com as ferramentas de plataforma cruzada](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)

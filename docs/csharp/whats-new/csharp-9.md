@@ -2,12 +2,12 @@
 title: O que há de novo no C# 9,0 – Guia C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 9,0.
 ms.date: 09/04/2020
-ms.openlocfilehash: ddffe4aaaed6c9079999b2ab29ca61ab5753f15a
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 80d636db04655650c7448590cd1042cdb1b17de1
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598137"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065026"
 ---
 # <a name="whats-new-in-c-90"></a>Novidades do C# 9.0
 
@@ -108,7 +108,7 @@ A linha acima cria um novo `Person` registro no qual a `LastName` propriedade é
 
 ## <a name="init-only-setters"></a>Setters somente init
 
-Os ***setters somente init*** fornecem sintaxe consistente para inicializar membros de um objeto. Os inicializadores de propriedade fornecem claro qual valor está definindo qual propriedade. A desvantagem é que essas propriedades devem ser configurável. A partir do C# 9,0, você pode criar `init` acessadores em vez de `set` acessadores para propriedades e indexadores. Os chamadores podem usar a sintaxe do inicializador de propriedade para definir esses valores em expressões de criação, mas essas propriedades são ReadOnly quando a construção é concluída. Os setters somente init fornecem uma janela para alterar o estado. Essa janela fecha quando a fase de construção termina. A fase de construção termina com eficiência após toda a inicialização, incluindo inicializadores de propriedade e with-Expressions concluídos.
+Os ***setters somente init*** fornecem sintaxe consistente para inicializar membros de um objeto. Os inicializadores de propriedade tornam claro qual valor está definindo qual propriedade. A desvantagem é que essas propriedades devem ser configurável. A partir do C# 9,0, você pode criar `init` acessadores em vez de `set` acessadores para propriedades e indexadores. Os chamadores podem usar a sintaxe do inicializador de propriedade para definir esses valores em expressões de criação, mas essas propriedades são ReadOnly quando a construção é concluída. Os setters somente init fornecem uma janela para alterar o estado. Essa janela fecha quando a fase de construção termina. A fase de construção termina com eficiência após toda a inicialização, incluindo inicializadores de propriedade e with-Expressions concluídos.
 
 O exemplo anterior para registros posicionais demonstra o uso de um setter somente init para definir uma propriedade usando uma expressão with. Você pode declarar somente setters init em qualquer tipo que você escreve. Por exemplo, a seguinte estrutura define uma estrutura de observação do clima:
 
@@ -122,7 +122,7 @@ Mas, a alteração de uma observação após a inicialização é um erro ao atr
 
 ```csharp
 // Error! CS8852.
-now.TempetureInCelsius = 18;
+now.TemperatureInCelsius = 18;
 ```
 
 Os setters somente init podem ser úteis para definir propriedades de classe base de classes derivadas. Eles também podem definir propriedades derivadas por meio de auxiliares em uma classe base. Registros posicionais declaram propriedades usando somente init setters. Esses setters são usados em with-Expressions. Você pode declarar setters somente init para qualquer um `class` ou `struct` definir.
