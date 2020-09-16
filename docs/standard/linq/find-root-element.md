@@ -6,20 +6,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4fd824e0-4d39-429b-b092-f6a5c046ee6c
-ms.openlocfilehash: 16217960b84276bd3bb4c5cb6b38d7cb56d2b41e
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 89247c19fc31add4e95f11742772cef1bdd2ce63
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551932"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679462"
 ---
-# <a name="how-to-find-the-root-element-linq-to-xml"></a><span data-ttu-id="2d6e3-103">Como localizar o elemento raiz (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="2d6e3-103">How to find the root element (LINQ to XML)</span></span>
+# <a name="how-to-find-the-root-element-linq-to-xml"></a><span data-ttu-id="64ea3-103">Como localizar o elemento raiz (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="64ea3-103">How to find the root element (LINQ to XML)</span></span>
 
-<span data-ttu-id="2d6e3-104">Este artigo fornece um exemplo que mostra como usar XPath e LINQ to XML, em C# e Visual Basic, para localizar o elemento raiz de um documento XML.</span><span class="sxs-lookup"><span data-stu-id="2d6e3-104">This article provides an example that shows how to use XPath and LINQ to XML, in C# and Visual Basic, to find the root element of an XML document.</span></span>
+<span data-ttu-id="64ea3-104">Este artigo fornece um exemplo que mostra como usar XPath e LINQ to XML, em C# e Visual Basic, para localizar o elemento raiz de um documento XML.</span><span class="sxs-lookup"><span data-stu-id="64ea3-104">This article provides an example that shows how to use XPath and LINQ to XML, in C# and Visual Basic, to find the root element of an XML document.</span></span>
 
-## <a name="example-find-the-root-element"></a><span data-ttu-id="2d6e3-105">Exemplo: localizar o elemento raiz</span><span class="sxs-lookup"><span data-stu-id="2d6e3-105">Example: Find the root element</span></span>
+## <a name="example-find-the-root-element"></a><span data-ttu-id="64ea3-105">Exemplo: localizar o elemento raiz</span><span class="sxs-lookup"><span data-stu-id="64ea3-105">Example: Find the root element</span></span>
 
-<span data-ttu-id="2d6e3-106">Este exemplo usa LINQ to XML consulta e XPath para localizar o elemento raiz no arquivo XML de exemplo de documento XML [: várias ordens de compra](sample-xml-file-multiple-purchase-orders.md).</span><span class="sxs-lookup"><span data-stu-id="2d6e3-106">This example uses LINQ to XML query and XPath to find the root element in XML document [Sample XML file: Multiple purchase orders](sample-xml-file-multiple-purchase-orders.md).</span></span> <span data-ttu-id="2d6e3-107">A expressão XPath é `/PurchaseOrders`.</span><span class="sxs-lookup"><span data-stu-id="2d6e3-107">The XPath expression is `/PurchaseOrders`.</span></span>
+<span data-ttu-id="64ea3-106">Este exemplo usa LINQ to XML consulta e XPath para localizar o elemento raiz no arquivo XML de exemplo de documento XML [: várias ordens de compra](sample-xml-file-multiple-purchase-orders.md).</span><span class="sxs-lookup"><span data-stu-id="64ea3-106">This example uses LINQ to XML query and XPath to find the root element in XML document [Sample XML file: Multiple purchase orders](sample-xml-file-multiple-purchase-orders.md).</span></span> <span data-ttu-id="64ea3-107">A expressão XPath é `/PurchaseOrders`.</span><span class="sxs-lookup"><span data-stu-id="64ea3-107">The XPath expression is `/PurchaseOrders`.</span></span>
 
 ```csharp
 XDocument po = XDocument.Load("PurchaseOrders.xml");
@@ -54,13 +54,13 @@ End If
 Console.WriteLine(el1.Name)
 ```
 
-<span data-ttu-id="2d6e3-108">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="2d6e3-108">This example produces the following output:</span></span>
+<span data-ttu-id="64ea3-108">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="64ea3-108">This example produces the following output:</span></span>
 
 ```output
 Results are identical
 PurchaseOrders
 ```
 
-## <a name="see-also"></a><span data-ttu-id="2d6e3-109">Confira também</span><span class="sxs-lookup"><span data-stu-id="2d6e3-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="64ea3-109">Confira também</span><span class="sxs-lookup"><span data-stu-id="64ea3-109">See also</span></span>
 
-- [<span data-ttu-id="2d6e3-110">LINQ to XML para usuários do XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2d6e3-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](/../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="64ea3-110">Comparação XPath e de LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="64ea3-110">Comparison of XPath and LINQ to XML</span></span>](comparison-xpath-linq-xml.md)

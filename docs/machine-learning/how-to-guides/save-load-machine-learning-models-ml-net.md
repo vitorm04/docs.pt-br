@@ -5,18 +5,18 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: e3cebe979b5c279ce8cb90db5510f8758c24c2b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 681a35956a8959e2f1cbb5a7023e0ef29b67097e
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73977002"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679528"
 ---
-# <a name="save-and-load-trained-models"></a><span data-ttu-id="9824a-103">Salvar e carregar modelos treinados</span><span class="sxs-lookup"><span data-stu-id="9824a-103">Save and load trained models</span></span>
+# <a name="save-and-load-trained-models"></a><span data-ttu-id="720c8-103">Salvar e carregar modelos treinados</span><span class="sxs-lookup"><span data-stu-id="720c8-103">Save and load trained models</span></span>
 
-<span data-ttu-id="9824a-104">Saiba como salvar e carregar modelos treinados em seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="9824a-104">Learn how to save and load trained models in your application.</span></span>
+<span data-ttu-id="720c8-104">Saiba como salvar e carregar modelos treinados em seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="720c8-104">Learn how to save and load trained models in your application.</span></span>
 
-<span data-ttu-id="9824a-105">Em todo o processo de criação de modelo, um modelo reside na memória e é acessível em todo o ciclo de vida do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="9824a-105">Throughout the model building process, a model lives in memory and is accessible throughout the application's lifecycle.</span></span> <span data-ttu-id="9824a-106">No entanto, depois que o aplicativo terminar a execução, se o modelo não for salvo em algum lugar local ou remotamente, ele não ficará mais acessível.</span><span class="sxs-lookup"><span data-stu-id="9824a-106">However, once the application stops running, if the model is not saved somewhere locally or remotely, it's no longer accessible.</span></span> <span data-ttu-id="9824a-107">Normalmente, os modelos são usados em algum momento após o treinamento em outros aplicativos para inferência de tipos ou novo treinamento.</span><span class="sxs-lookup"><span data-stu-id="9824a-107">Typically models are used at some point after training in other applications either for inference or re-training.</span></span> <span data-ttu-id="9824a-108">Assim, é importante armazenar o modelo.</span><span class="sxs-lookup"><span data-stu-id="9824a-108">Therefore, it's important to store the model.</span></span> <span data-ttu-id="9824a-109">Salve e carregue modelos usando as etapas descritas nas seções subsequentes deste documento ao usar pipelines de treinamento de modelo e preparação de dados como os detalhados abaixo.</span><span class="sxs-lookup"><span data-stu-id="9824a-109">Save and load models using the steps described in subsequent sections of this document when using data preparation and model training pipelines like the one detailed below.</span></span> <span data-ttu-id="9824a-110">Embora este exemplo use um modelo de regressão linear, o mesmo processo se aplica a outros algoritmos do ML.NET.</span><span class="sxs-lookup"><span data-stu-id="9824a-110">Although this sample uses a linear regression model, the same process applies to other ML.NET algorithms.</span></span>
+<span data-ttu-id="720c8-105">Em todo o processo de criação de modelo, um modelo reside na memória e é acessível em todo o ciclo de vida do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="720c8-105">Throughout the model building process, a model lives in memory and is accessible throughout the application's lifecycle.</span></span> <span data-ttu-id="720c8-106">No entanto, depois que o aplicativo terminar a execução, se o modelo não for salvo em algum lugar local ou remotamente, ele não ficará mais acessível.</span><span class="sxs-lookup"><span data-stu-id="720c8-106">However, once the application stops running, if the model is not saved somewhere locally or remotely, it's no longer accessible.</span></span> <span data-ttu-id="720c8-107">Normalmente, os modelos são usados em algum momento após o treinamento em outros aplicativos para inferência de tipos ou novo treinamento.</span><span class="sxs-lookup"><span data-stu-id="720c8-107">Typically models are used at some point after training in other applications either for inference or re-training.</span></span> <span data-ttu-id="720c8-108">Assim, é importante armazenar o modelo.</span><span class="sxs-lookup"><span data-stu-id="720c8-108">Therefore, it's important to store the model.</span></span> <span data-ttu-id="720c8-109">Salve e carregue modelos usando as etapas descritas nas seções subsequentes deste documento ao usar pipelines de treinamento de modelo e preparação de dados como os detalhados abaixo.</span><span class="sxs-lookup"><span data-stu-id="720c8-109">Save and load models using the steps described in subsequent sections of this document when using data preparation and model training pipelines like the one detailed below.</span></span> <span data-ttu-id="720c8-110">Embora este exemplo use um modelo de regressão linear, o mesmo processo se aplica a outros algoritmos do ML.NET.</span><span class="sxs-lookup"><span data-stu-id="720c8-110">Although this sample uses a linear regression model, the same process applies to other ML.NET algorithms.</span></span>
 
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -60,27 +60,27 @@ ITransformer trainedModel = pipelineEstimator.Fit(data);
 mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 ```
 
-<span data-ttu-id="9824a-111">Porque a maioria dos pipelines de preparação de dados e modelos herda o mesmo conjunto de classes, as assinaturas do método salvar e carregar para esses componentes são iguais.</span><span class="sxs-lookup"><span data-stu-id="9824a-111">Because most models and data preparation pipelines inherit from the same set of classes, the save and load method signatures for these components is the same.</span></span> <span data-ttu-id="9824a-112">Dependendo do seu caso de uso, você pode combinar [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601) o pipeline de [`ITransformer`](xref:Microsoft.ML.ITransformer) preparação de dados [`ITransformer`](xref:Microsoft.ML.ITransformer) e o modelo em um único que produziria um único ou os separaria, criando assim um separado para cada um.</span><span class="sxs-lookup"><span data-stu-id="9824a-112">Depending on your use case, you can either combine the data preparation pipeline and model into a single [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601) which would output a single [`ITransformer`](xref:Microsoft.ML.ITransformer) or separate them thus creating a separate [`ITransformer`](xref:Microsoft.ML.ITransformer) for each.</span></span>
+<span data-ttu-id="720c8-111">Porque a maioria dos pipelines de preparação de dados e modelos herda o mesmo conjunto de classes, as assinaturas do método salvar e carregar para esses componentes são iguais.</span><span class="sxs-lookup"><span data-stu-id="720c8-111">Because most models and data preparation pipelines inherit from the same set of classes, the save and load method signatures for these components is the same.</span></span> <span data-ttu-id="720c8-112">Dependendo do seu caso de uso, você pode combinar o pipeline de preparação de dados e o modelo em um único que produzirá [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601) um único [`ITransformer`](xref:Microsoft.ML.ITransformer) ou separá-los, criando um separado [`ITransformer`](xref:Microsoft.ML.ITransformer) para cada um.</span><span class="sxs-lookup"><span data-stu-id="720c8-112">Depending on your use case, you can either combine the data preparation pipeline and model into a single [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601) which would output a single [`ITransformer`](xref:Microsoft.ML.ITransformer) or separate them thus creating a separate [`ITransformer`](xref:Microsoft.ML.ITransformer) for each.</span></span>
 
-## <a name="save-a-model-locally"></a><span data-ttu-id="9824a-113">Salvar um modelo localmente</span><span class="sxs-lookup"><span data-stu-id="9824a-113">Save a model locally</span></span>
+## <a name="save-a-model-locally"></a><span data-ttu-id="720c8-113">Salvar um modelo localmente</span><span class="sxs-lookup"><span data-stu-id="720c8-113">Save a model locally</span></span>
 
-<span data-ttu-id="9824a-114">Ao salvar um modelo, você precisa de dois itens:</span><span class="sxs-lookup"><span data-stu-id="9824a-114">When saving a model you need two things:</span></span>
+<span data-ttu-id="720c8-114">Ao salvar um modelo, você precisa de dois itens:</span><span class="sxs-lookup"><span data-stu-id="720c8-114">When saving a model you need two things:</span></span>
 
-1. <span data-ttu-id="9824a-115">O [`ITransformer`](xref:Microsoft.ML.ITransformer) do modelo.</span><span class="sxs-lookup"><span data-stu-id="9824a-115">The [`ITransformer`](xref:Microsoft.ML.ITransformer) of the model.</span></span>
-2. <span data-ttu-id="9824a-116">A [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) [`ITransformer`](xref:Microsoft.ML.ITransformer)da entrada esperada.</span><span class="sxs-lookup"><span data-stu-id="9824a-116">The [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) of the [`ITransformer`](xref:Microsoft.ML.ITransformer)'s expected input.</span></span>
+1. <span data-ttu-id="720c8-115">O [`ITransformer`](xref:Microsoft.ML.ITransformer) do modelo.</span><span class="sxs-lookup"><span data-stu-id="720c8-115">The [`ITransformer`](xref:Microsoft.ML.ITransformer) of the model.</span></span>
+2. <span data-ttu-id="720c8-116">O [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) da [`ITransformer`](xref:Microsoft.ML.ITransformer) entrada esperada.</span><span class="sxs-lookup"><span data-stu-id="720c8-116">The [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) of the [`ITransformer`](xref:Microsoft.ML.ITransformer)'s expected input.</span></span>
 
-<span data-ttu-id="9824a-117">Depois de treinar o [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) modelo, use o método `model.zip` para `DataViewSchema` salvar o modelo treinado em um arquivo chamado usando os dados de entrada.</span><span class="sxs-lookup"><span data-stu-id="9824a-117">After training the model, use the [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) method to save the trained model to a file called `model.zip` using the `DataViewSchema` of the input data.</span></span>
+<span data-ttu-id="720c8-117">Depois de treinar o modelo, use o [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save%2A) método para salvar o modelo treinado em um arquivo chamado `model.zip` usando os `DataViewSchema` dados de entrada.</span><span class="sxs-lookup"><span data-stu-id="720c8-117">After training the model, use the [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save%2A) method to save the trained model to a file called `model.zip` using the `DataViewSchema` of the input data.</span></span>
 
 ```csharp
 // Save Trained Model
 mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 ```
 
-## <a name="load-a-model-stored-locally"></a><span data-ttu-id="9824a-118">Carregar um modelo armazenado localmente</span><span class="sxs-lookup"><span data-stu-id="9824a-118">Load a model stored locally</span></span>
+## <a name="load-a-model-stored-locally"></a><span data-ttu-id="720c8-118">Carregar um modelo armazenado localmente</span><span class="sxs-lookup"><span data-stu-id="720c8-118">Load a model stored locally</span></span>
 
-<span data-ttu-id="9824a-119">Os modelos armazenados localmente podem ser usados em outros processos ou aplicativos, como `ASP.NET Core` e `Serverless Web Applications`.</span><span class="sxs-lookup"><span data-stu-id="9824a-119">Models stored locally can be used in other processes or applications like `ASP.NET Core` and `Serverless Web Applications`.</span></span> <span data-ttu-id="9824a-120">Veja os artigos de instruções [Usar ML.NET na API Web](./serve-model-web-api-ml-net.md) e [Implantar aplicativo Web sem servidor do ML.NET](./serve-model-serverless-azure-functions-ml-net.md) para saber mais.</span><span class="sxs-lookup"><span data-stu-id="9824a-120">See [Use ML.NET in Web API](./serve-model-web-api-ml-net.md) and [Deploy ML.NET Serverless Web App](./serve-model-serverless-azure-functions-ml-net.md) how-to articles to learn more.</span></span>
+<span data-ttu-id="720c8-119">Os modelos armazenados localmente podem ser usados em outros processos ou aplicativos, como `ASP.NET Core` e `Serverless Web Applications`.</span><span class="sxs-lookup"><span data-stu-id="720c8-119">Models stored locally can be used in other processes or applications like `ASP.NET Core` and `Serverless Web Applications`.</span></span> <span data-ttu-id="720c8-120">Veja os artigos de instruções [Usar ML.NET na API Web](./serve-model-web-api-ml-net.md) e [Implantar aplicativo Web sem servidor do ML.NET](./serve-model-serverless-azure-functions-ml-net.md) para saber mais.</span><span class="sxs-lookup"><span data-stu-id="720c8-120">See [Use ML.NET in Web API](./serve-model-web-api-ml-net.md) and [Deploy ML.NET Serverless Web App](./serve-model-serverless-azure-functions-ml-net.md) how-to articles to learn more.</span></span>
 
-<span data-ttu-id="9824a-121">Em um aplicativo ou processo [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) separado, use o método junto com o caminho do arquivo para colocar o modelo treinado em sua aplicação.</span><span class="sxs-lookup"><span data-stu-id="9824a-121">In a separate application or process, use the [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) method along with the file path to get the trained model into your application.</span></span>
+<span data-ttu-id="720c8-121">Em um aplicativo ou processo separado, use o [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load%2A) método junto com o caminho do arquivo para obter o modelo treinado em seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="720c8-121">In a separate application or process, use the [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load%2A) method along with the file path to get the trained model into your application.</span></span>
 
 ```csharp
 //Define DataViewSchema for data preparation pipeline and trained model
@@ -90,9 +90,9 @@ DataViewSchema modelSchema;
 ITransformer trainedModel = mlContext.Model.Load("model.zip", out modelSchema);
 ```
 
-## <a name="load-a-model-stored-remotely"></a><span data-ttu-id="9824a-122">Carregar um modelo armazenado remotamente</span><span class="sxs-lookup"><span data-stu-id="9824a-122">Load a model stored remotely</span></span>
+## <a name="load-a-model-stored-remotely"></a><span data-ttu-id="720c8-122">Carregar um modelo armazenado remotamente</span><span class="sxs-lookup"><span data-stu-id="720c8-122">Load a model stored remotely</span></span>
 
-<span data-ttu-id="9824a-123">Para carregar os pipelines e modelos de preparação de [`Stream`](xref:System.IO.Stream) dados armazenados em [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) um local remoto em seu aplicativo, use um caminho de arquivo em vez de um caminho de arquivo no método.</span><span class="sxs-lookup"><span data-stu-id="9824a-123">To load data preparation pipelines and models stored in a remote location into your application, use a [`Stream`](xref:System.IO.Stream) instead of a file path in the [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) method.</span></span>
+<span data-ttu-id="720c8-123">Para carregar pipelines de preparação de dados e modelos armazenados em um local remoto em seu aplicativo, use um [`Stream`](xref:System.IO.Stream) em vez de um caminho de arquivo no [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load%2A) método.</span><span class="sxs-lookup"><span data-stu-id="720c8-123">To load data preparation pipelines and models stored in a remote location into your application, use a [`Stream`](xref:System.IO.Stream) instead of a file path in the [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load%2A) method.</span></span>
 
 ```csharp
 // Create MLContext
@@ -111,14 +111,14 @@ using (HttpClient client = new HttpClient())
 }
 ```
 
-## <a name="working-with-separate-data-preparation-and-model-pipelines"></a><span data-ttu-id="9824a-124">Trabalhando com pipelines de modelo e preparação de dados separados</span><span class="sxs-lookup"><span data-stu-id="9824a-124">Working with separate data preparation and model pipelines</span></span>
+## <a name="working-with-separate-data-preparation-and-model-pipelines"></a><span data-ttu-id="720c8-124">Trabalhando com pipelines de modelo e preparação de dados separados</span><span class="sxs-lookup"><span data-stu-id="720c8-124">Working with separate data preparation and model pipelines</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="9824a-125">Trabalhar com pipelines de treinamento de modelo e preparação de dados separados é opcional.</span><span class="sxs-lookup"><span data-stu-id="9824a-125">Working with separate data preparation and model training pipelines is optional.</span></span> <span data-ttu-id="9824a-126">A separação de pipelines facilita a inspeção dos parâmetros do modelo aprendido.</span><span class="sxs-lookup"><span data-stu-id="9824a-126">Separation of pipelines makes it easier to inspect the learned model parameters.</span></span> <span data-ttu-id="9824a-127">Para obter previsões, é mais fácil de salvar e carregar um único pipeline que inclua as operações de treinamento de modelo e preparação de dados.</span><span class="sxs-lookup"><span data-stu-id="9824a-127">For predictions, it's easier to save and load a single pipeline that includes the data preparation and model training operations.</span></span>
+> <span data-ttu-id="720c8-125">Trabalhar com pipelines de treinamento de modelo e preparação de dados separados é opcional.</span><span class="sxs-lookup"><span data-stu-id="720c8-125">Working with separate data preparation and model training pipelines is optional.</span></span> <span data-ttu-id="720c8-126">A separação de pipelines facilita a inspeção dos parâmetros do modelo aprendido.</span><span class="sxs-lookup"><span data-stu-id="720c8-126">Separation of pipelines makes it easier to inspect the learned model parameters.</span></span> <span data-ttu-id="720c8-127">Para obter previsões, é mais fácil de salvar e carregar um único pipeline que inclua as operações de treinamento de modelo e preparação de dados.</span><span class="sxs-lookup"><span data-stu-id="720c8-127">For predictions, it's easier to save and load a single pipeline that includes the data preparation and model training operations.</span></span>
 
-<span data-ttu-id="9824a-128">Ao trabalhar com modelos e pipelines de preparação de dados separados, aplica-se o mesmo processo que o para pipelines únicos, exceto que agora os dois pipelines precisam ser salvos e carregados simultaneamente.</span><span class="sxs-lookup"><span data-stu-id="9824a-128">When working with separate data preparation pipelines and models, the same process as single pipelines applies; except now both pipelines need to be saved and loaded simultaneously.</span></span>
+<span data-ttu-id="720c8-128">Ao trabalhar com modelos e pipelines de preparação de dados separados, aplica-se o mesmo processo que o para pipelines únicos, exceto que agora os dois pipelines precisam ser salvos e carregados simultaneamente.</span><span class="sxs-lookup"><span data-stu-id="720c8-128">When working with separate data preparation pipelines and models, the same process as single pipelines applies; except now both pipelines need to be saved and loaded simultaneously.</span></span>
 
-<span data-ttu-id="9824a-129">Dados pipelines de treinamento de modelo e preparação de dados separados:</span><span class="sxs-lookup"><span data-stu-id="9824a-129">Given separate data preparation and model training pipelines:</span></span>
+<span data-ttu-id="720c8-129">Dados pipelines de treinamento de modelo e preparação de dados separados:</span><span class="sxs-lookup"><span data-stu-id="720c8-129">Given separate data preparation and model training pipelines:</span></span>
 
 ```csharp
 // Define data preparation estimator
@@ -139,9 +139,9 @@ IDataView transformedData = dataPrepTransformer.Transform(data);
 RegressionPredictionTransformer<LinearRegressionModelParameters> trainedModel = sdcaEstimator.Fit(transformedData);
 ```
 
-### <a name="save-data-preparation-pipeline-and-trained-model"></a><span data-ttu-id="9824a-130">Salve o pipeline de preparação de dados e o modelo treinado</span><span class="sxs-lookup"><span data-stu-id="9824a-130">Save data preparation pipeline and trained model</span></span>
+### <a name="save-data-preparation-pipeline-and-trained-model"></a><span data-ttu-id="720c8-130">Salve o pipeline de preparação de dados e o modelo treinado</span><span class="sxs-lookup"><span data-stu-id="720c8-130">Save data preparation pipeline and trained model</span></span>
 
-<span data-ttu-id="9824a-131">Para salvar o pipeline de preparação de dados e o modelo treinado, use os seguintes comandos:</span><span class="sxs-lookup"><span data-stu-id="9824a-131">To save both the data preparation pipeline and trained model, use the following commands:</span></span>
+<span data-ttu-id="720c8-131">Para salvar o pipeline de preparação de dados e o modelo treinado, use os seguintes comandos:</span><span class="sxs-lookup"><span data-stu-id="720c8-131">To save both the data preparation pipeline and trained model, use the following commands:</span></span>
 
 ```csharp
 // Save Data Prep transformer
@@ -151,9 +151,9 @@ mlContext.Model.Save(dataPrepTransformer, data.Schema, "data_preparation_pipelin
 mlContext.Model.Save(trainedModel, transformedData.Schema, "model.zip");
 ```
 
-### <a name="load-data-preparation-pipeline-and-trained-model"></a><span data-ttu-id="9824a-132">Carregar o pipeline de preparação de dados e o modelo treinado</span><span class="sxs-lookup"><span data-stu-id="9824a-132">Load data preparation pipeline and trained model</span></span>
+### <a name="load-data-preparation-pipeline-and-trained-model"></a><span data-ttu-id="720c8-132">Carregar o pipeline de preparação de dados e o modelo treinado</span><span class="sxs-lookup"><span data-stu-id="720c8-132">Load data preparation pipeline and trained model</span></span>
 
-<span data-ttu-id="9824a-133">Em um processo ou aplicativo separado, carregue o modelo treinado e o pipeline de preparação de dados simultaneamente da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="9824a-133">In a separate process or application, load the data preparation pipeline and trained model simultaneously as follows:</span></span>
+<span data-ttu-id="720c8-133">Em um processo ou aplicativo separado, carregue o modelo treinado e o pipeline de preparação de dados simultaneamente da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="720c8-133">In a separate process or application, load the data preparation pipeline and trained model simultaneously as follows:</span></span>
 
 ```csharp
 // Create MLContext

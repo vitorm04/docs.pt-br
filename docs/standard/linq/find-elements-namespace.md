@@ -6,22 +6,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9m
-ms.openlocfilehash: d463aed02a9293ca85e77f262ccfb8fdce5976b1
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: db1eb39bd5e91a1f3f096743884533e979d96077
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551833"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545677"
 ---
-# <a name="how-to-find-elements-in-a-namespace-linq-to-xml"></a><span data-ttu-id="828ef-103">Como localizar elementos em um namespace (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="828ef-103">How to find elements in a namespace (LINQ to XML)</span></span>
+# <a name="how-to-find-elements-in-a-namespace-linq-to-xml"></a><span data-ttu-id="eaf1c-103">Como localizar elementos em um namespace (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="eaf1c-103">How to find elements in a namespace (LINQ to XML)</span></span>
 
-<span data-ttu-id="828ef-104">Use prefixos de namespace em expressões XPath para localizar nós em um namespace específico.</span><span class="sxs-lookup"><span data-stu-id="828ef-104">Use namespace prefixes in XPath expressions to find nodes in a particular namespace.</span></span> <span data-ttu-id="828ef-105">Para analisar uma expressão XPath que contém prefixos de namespace, você passa um objeto para os métodos XPath que implementam <xref:System.Xml.IXmlNamespaceResolver> .</span><span class="sxs-lookup"><span data-stu-id="828ef-105">To parse an XPath expression that contains namespace prefixes, you pass an object to the XPath methods that implement <xref:System.Xml.IXmlNamespaceResolver>.</span></span>
+<span data-ttu-id="eaf1c-104">Use prefixos de namespace em expressões XPath para localizar nós em um namespace específico.</span><span class="sxs-lookup"><span data-stu-id="eaf1c-104">Use namespace prefixes in XPath expressions to find nodes in a particular namespace.</span></span> <span data-ttu-id="eaf1c-105">Para analisar uma expressão XPath que contém prefixos de namespace, você passa um objeto para os métodos XPath que implementam <xref:System.Xml.IXmlNamespaceResolver> .</span><span class="sxs-lookup"><span data-stu-id="eaf1c-105">To parse an XPath expression that contains namespace prefixes, you pass an object to the XPath methods that implement <xref:System.Xml.IXmlNamespaceResolver>.</span></span>
 
-## <a name="example-find-purchase-orders-from-a-specific-namespace-in-a-document-that-has-two-namespaces"></a><span data-ttu-id="828ef-106">Exemplo: localizar ordens de compra de um namespace específico em um documento que tem dois namespaces</span><span class="sxs-lookup"><span data-stu-id="828ef-106">Example: Find purchase orders from a specific namespace in a document that has two namespaces</span></span>
+## <a name="example-find-purchase-orders-from-a-specific-namespace-in-a-document-that-has-two-namespaces"></a><span data-ttu-id="eaf1c-106">Exemplo: localizar ordens de compra de um namespace específico em um documento que tem dois namespaces</span><span class="sxs-lookup"><span data-stu-id="eaf1c-106">Example: Find purchase orders from a specific namespace in a document that has two namespaces</span></span>
 
-<span data-ttu-id="828ef-107">O exemplo a seguir usa um <xref:System.Xml.XmlReader> arquivo XML de exemplo para ler documento XML [: ordens de compra consolidadas](sample-xml-file-consolidated-purchase-orders.md), que tem ordens de compra em dois namespaces.</span><span class="sxs-lookup"><span data-stu-id="828ef-107">The following example uses an <xref:System.Xml.XmlReader> to read XML document [Sample XML file: Consolidated purchase orders](sample-xml-file-consolidated-purchase-orders.md), which has purchase orders in two namespaces.</span></span> <span data-ttu-id="828ef-108">Então obtém <xref:System.Xml.XmlNameTable> de <xref:System.Xml.XmlReader>, e <xref:System.Xml.XmlNamespaceManager> de <xref:System.Xml.XmlNameTable>.</span><span class="sxs-lookup"><span data-stu-id="828ef-108">It then gets an <xref:System.Xml.XmlNameTable> from the <xref:System.Xml.XmlReader>, and an <xref:System.Xml.XmlNamespaceManager> from the <xref:System.Xml.XmlNameTable>.</span></span> <span data-ttu-id="828ef-109">Usa <xref:System.Xml.XmlNamespaceManager> ao selecionar elementos.</span><span class="sxs-lookup"><span data-stu-id="828ef-109">It uses the <xref:System.Xml.XmlNamespaceManager> when selecting elements.</span></span>
+<span data-ttu-id="eaf1c-107">O exemplo a seguir usa um <xref:System.Xml.XmlReader> arquivo XML de exemplo para ler documento XML [: ordens de compra consolidadas](sample-xml-file-consolidated-purchase-orders.md), que tem ordens de compra em dois namespaces.</span><span class="sxs-lookup"><span data-stu-id="eaf1c-107">The following example uses an <xref:System.Xml.XmlReader> to read XML document [Sample XML file: Consolidated purchase orders](sample-xml-file-consolidated-purchase-orders.md), which has purchase orders in two namespaces.</span></span> <span data-ttu-id="eaf1c-108">Então obtém <xref:System.Xml.XmlNameTable> de <xref:System.Xml.XmlReader>, e <xref:System.Xml.XmlNamespaceManager> de <xref:System.Xml.XmlNameTable>.</span><span class="sxs-lookup"><span data-stu-id="eaf1c-108">It then gets an <xref:System.Xml.XmlNameTable> from the <xref:System.Xml.XmlReader>, and an <xref:System.Xml.XmlNamespaceManager> from the <xref:System.Xml.XmlNameTable>.</span></span> <span data-ttu-id="eaf1c-109">Usa <xref:System.Xml.XmlNamespaceManager> ao selecionar elementos.</span><span class="sxs-lookup"><span data-stu-id="eaf1c-109">It uses the <xref:System.Xml.XmlNamespaceManager> when selecting elements.</span></span>
 
-<span data-ttu-id="828ef-110">A expressão XPath é: `./aw:*`</span><span class="sxs-lookup"><span data-stu-id="828ef-110">The XPath expression is: `./aw:*`</span></span>
+<span data-ttu-id="eaf1c-110">A expressão XPath é: `./aw:*`</span><span class="sxs-lookup"><span data-stu-id="eaf1c-110">The XPath expression is: `./aw:*`</span></span>
 
 ```csharp
 XmlReader reader = XmlReader.Create("ConsolidatedPurchaseOrders.xml");
@@ -69,7 +69,7 @@ For Each el As XElement In list2
 Next
 ```
 
-<span data-ttu-id="828ef-111">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="828ef-111">This example produces the following output:</span></span>
+<span data-ttu-id="eaf1c-111">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="eaf1c-111">This example produces the following output:</span></span>
 
 ```output
 Results are identical
@@ -104,6 +104,6 @@ Results are identical
   </aw:PurchaseOrder>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="828ef-112">Confira também</span><span class="sxs-lookup"><span data-stu-id="828ef-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eaf1c-112">Confira também</span><span class="sxs-lookup"><span data-stu-id="eaf1c-112">See also</span></span>
 
-- [<span data-ttu-id="828ef-113">LINQ to XML para usuários do XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="828ef-113">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="eaf1c-113">LINQ to XML para usuários do XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eaf1c-113">LINQ to XML for XPath Users (Visual Basic)</span></span>](./comparison-xpath-linq-xml.md)
