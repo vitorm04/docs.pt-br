@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2b3be8b42b5046e52074236de01ca312a0a9a361
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: c5e3f692c2bf754ccd35324019246ee905e8c591
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474261"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554639"
 ---
 # <a name="net-performance-tips"></a>Dicas de desempenho do .NET
 O termo *desempenho* geralmente se refere à velocidade de execução de um programa. Às vezes, você pode aumentar a velocidade de execução seguindo algumas regras básicas em seu código-fonte. Em alguns programas, é importante examinar atentamente o código e usar criadores de perfil para verificar se eles estão executando o mais rápido possível. Em outros programas, você não precisa executar essa otimização porque o código é executado em velocidade aceitável conforme ele é gravado. Este artigo lista algumas áreas comuns em que o desempenho pode ser prejudicado e dicas para melhorá-lo, bem como links para tópicos adicionais sobre desempenho. Para obter mais informações sobre como planejar e medir o desempenho, consulte [Desempenho](index.md)  
@@ -31,19 +31,19 @@ O termo *desempenho* geralmente se refere à velocidade de execução de um prog
   
 ## <a name="other-resources"></a>Outros recursos  
   
-- [Gravar código gerenciado mais rápido: conheça o custo das coisas](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973852(v=msdn.10))  
+- [Gravar código gerenciado mais rápido: conheça o custo das coisas](/previous-versions/dotnet/articles/ms973852(v=msdn.10))  
   
-- [Gravação de aplicativos de alto desempenho gerenciados: informações elementares](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973858(v=msdn.10))  
+- [Gravação de aplicativos de alto desempenho gerenciados: informações elementares](/previous-versions/dotnet/articles/ms973858(v=msdn.10))  
   
-- [Noções básicas do coletor de lixo e dicas de desempenho](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973837(v=msdn.10))  
+- [Noções básicas do coletor de lixo e dicas de desempenho](/previous-versions/dotnet/articles/ms973837(v=msdn.10))  
   
-- [Dicas e truques sobre desempenho em aplicativos .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
+- [Dicas e truques sobre desempenho em aplicativos .NET](/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
 
-- [Informações úteis sobre desempenho, por Rico Mariani](https://docs.microsoft.com/archive/blogs/ricom/)  
+- [Informações úteis sobre desempenho, por Rico Mariani](/archive/blogs/ricom/)  
 
-- [Blog de Vance Morrison](https://docs.microsoft.com/archive/blogs/vancem/)
+- [Blog de Vance Morrison](/archive/blogs/vancem/)
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Desempenho](index.md)
 - [Guia de programação do Visual Basic](../../visual-basic/programming-guide/index.md)

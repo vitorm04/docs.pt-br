@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 2d4c513b7a4b0e111f2b7e7384c6ee4970d5665f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2be58251c767c937e817edf1ba19309f0c62ac33
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286993"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554730"
 ---
 # <a name="net-framework-data-providers"></a>Provedores de dados .NET Framework
 Um provedor de dados .NET Framework é usado para se conectar a um banco de dado, executar comandos e recuperar resultados. Os resultados são processados diretamente, colocados no <xref:System.Data.DataSet> para serem expostos ao usuário conforme o necessário, combinados com os dados de várias fontes ou colocados remotamente entre camadas. .NET Framework provedores de dados são leves, criando uma camada mínima entre a fonte de dados e o código, aumentando o desempenho sem sacrificar a funcionalidade.  
@@ -25,7 +25,7 @@ Um provedor de dados .NET Framework é usado para se conectar a um banco de dado
 |Provedor de dados .NET Framework para ODBC|Para fontes de dados expostas usando ODBC. Usa o namespace <xref:System.Data.Odbc>.|  
 |Provedor de Dados do .NET Framework para Oracle|Para fontes de dados Oracle. O .NET Framework Provedor de Dados para Oracle dá suporte ao software cliente Oracle versão 8.1.7 e posterior e usa o <xref:System.Data.OracleClient> namespace.|  
 |Provedor EntityClient|Fornece acesso a dados para aplicativos de Modelo de Dados de Entidade (EDM). Usa o namespace <xref:System.Data.EntityClient>.|  
-|.NET Framework Provedor de Dados para SQL Server Compact 4,0.|Fornece acesso a dados para o Microsoft SQL Server Compact 4,0. Usa o namespace [System. Data. SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) .|  
+|.NET Framework Provedor de Dados para SQL Server Compact 4,0.|Fornece acesso a dados para o Microsoft SQL Server Compact 4,0. Usa o namespace [System. Data. SqlServerCe](/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) .|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>Os objetos principais de provedores de dados .NET Framework  
  A tabela a seguir descreve os quatro objetos principais que compõem um provedor de dados .NET Framework.  
@@ -158,7 +158,7 @@ using System.Data.OracleClient;
 ## <a name="entityclient-provider"></a>Provedor EntityClient  
  O provedor EntityClient é usado para acessar dados com base no EDM (Modelo de Dados de Entidade). Diferentemente de outros provedores de dados .NET Framework, ele não interage diretamente com uma fonte de dados. Em vez disso, ele usa o Entity SQL para se comunicar com o provedor de dados subjacente. Para obter mais informações, consulte [EntityClient Provider para o Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral do ADO.NET](ado-net-overview.md)
-- [Retrieving and Modifying Data in ADO.NET](retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
+- [Recuperando e modificando dados no ADO.NET](retrieving-and-modifying-data.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-ms.openlocfilehash: 40ff144e0899f3560805a31fa76f391afaeccd67
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fa03d13036e9e245b8ca3f8c3218ae80a2762a12
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594836"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553942"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>Como: ler caracteres de uma cadeia de caracteres
 Os exemplos de código a seguir mostram como ler caracteres de forma síncrona ou assíncrona de uma cadeia de caracteres.  
@@ -36,12 +36,12 @@ Os exemplos de código a seguir mostram como ler caracteres de forma síncrona o
  [!code-csharp[Conceptual.StringReader#2](../../../samples/snippets/csharp/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.cs)]
  [!code-vb[Conceptual.StringReader#2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.vb)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IO.StringReader>  
 - <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
 - [E/S de arquivo assíncrona](asynchronous-file-i-o.md)  
-- [Como: criar uma listagem de diretório](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))  
+- [Como: criar uma listagem de diretório](/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))  
 - [Como: ler e gravar em um arquivo de dados recém-criado](how-to-read-and-write-to-a-newly-created-data-file.md)  
 - [Como: abrir e anexar a um arquivo de log](how-to-open-and-append-to-a-log-file.md)  
 - [Como: ler texto de um arquivo](how-to-read-text-from-a-file.md)  

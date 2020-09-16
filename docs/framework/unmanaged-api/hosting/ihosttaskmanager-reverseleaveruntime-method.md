@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4837d398-16a1-4e32-902c-022cd1aad3ca
 topic_type:
 - apiref
-ms.openlocfilehash: d328afcba9761f686dd38bdb2dd651994faaac2a
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: ea352b189d65e0be6a2bbc81c19a03d1edd8143d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841848"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554795"
 ---
 # <a name="ihosttaskmanagerreverseleaveruntime-method"></a>Método IHostTaskManager::ReverseLeaveRuntime
 Notifica o host que o controle está deixando o Common Language Runtime (CLR) e inserindo uma função não gerenciada que, por sua vez, foi chamada a partir do código gerenciado.  
@@ -35,7 +35,7 @@ HRESULT ReverseLeaveRuntime ();
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`ReverseLeaveRuntime`retornado com êxito.|  
+|S_OK|`ReverseLeaveRuntime` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -51,11 +51,11 @@ HRESULT ReverseLeaveRuntime ();
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Método CallNeedsHostHook](ihosttaskmanager-callneedshosthook-method.md)
 - [Método EnterRuntime](ihosttaskmanager-enterruntime-method.md)
@@ -64,4 +64,4 @@ HRESULT ReverseLeaveRuntime ();
 - [Interface IHostTask](ihosttask-interface.md)
 - [Interface IHostTaskManager](ihosttaskmanager-interface.md)
 - [Método LeaveRuntime](ihosttaskmanager-leaveruntime-method.md)
-- [Um olhar detalhado sobre invocação de plataforma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0h9e9t7d(v=vs.100))
+- [Um olhar detalhado sobre invocação de plataforma](/previous-versions/dotnet/netframework-4.0/0h9e9t7d(v=vs.100))

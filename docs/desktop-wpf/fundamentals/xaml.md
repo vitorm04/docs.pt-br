@@ -21,12 +21,12 @@ helpviewer_keywords:
 - content models [XAML]
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
-ms.openlocfilehash: 4ccf107bd56be33d9b195d97ae5edf1a6b85117f
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: d9634b5638b84222c0e08aaf4bbaace99ff107d7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325698"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545963"
 ---
 # <a name="xaml-overview-in-wpf"></a>Visão geral do XAML no WPF
 
@@ -46,7 +46,7 @@ O exemplo a seguir mostra como você pode criar um botão como parte de uma inte
 
 ## <a name="xaml-syntax-in-brief"></a>Sintaxe XAML em breve
 
-As seções a seguir explicam as formas básicas de sintaxe XAML e fornecem um exemplo de marcação curta. Essas seções não se destinam a fornecer informações completas sobre cada forma de sintaxe, por exemplo, de como esses itens são representados no sistema de tipos de suporte. Para obter mais informações sobre as especificidades da sintaxe XAML, consulte [sintaxe XAML em detalhes](../../framework/wpf/advanced/xaml-syntax-in-detail.md).
+As seções a seguir explicam as formas básicas de sintaxe XAML e fornecem um exemplo de marcação curta. Essas seções não se destinam a fornecer informações completas sobre cada forma de sintaxe, por exemplo, de como esses itens são representados no sistema de tipos de suporte. Para obter mais informações sobre as especificidades da sintaxe XAML, consulte [sintaxe XAML em detalhes](/dotnet/desktop/wpf/advanced/xaml-syntax-in-detail).
 
 Grande parte do material nas próximas seções será elementar se você tiver familiaridade anterior com a linguagem XML. Isso é consequência de um dos princípios básicos de design do XAML. A linguagem XAML define os conceitos próprios, mas esses conceitos funcionam dentro da linguagem XML e do formulário de marcação.
 
@@ -120,7 +120,7 @@ Como uma regra da linguagem XAML, o valor de uma propriedade de conteúdo XAML d
   blue button</Button>
 ```
 
-Para obter mais informações sobre as especificidades da sintaxe XAML, consulte [sintaxe XAML em detalhes](../../framework/wpf/advanced/xaml-syntax-in-detail.md).
+Para obter mais informações sobre as especificidades da sintaxe XAML, consulte [sintaxe XAML em detalhes](/dotnet/desktop/wpf/advanced/xaml-syntax-in-detail).
 
 ### <a name="text-content"></a>Conteúdo de texto
 
@@ -145,7 +145,7 @@ Considere este exemplo.
 
 Aqui, cada <xref:System.Windows.Controls.Button> um é um elemento filho de <xref:System.Windows.Controls.StackPanel> . Isso é uma marcação otimizada e intuitiva que omite duas marcas por dois motivos diferentes.
 
-- **Elemento de Propriedade StackPanel. Children omitido:** <xref:System.Windows.Controls.StackPanel> deriva de <xref:System.Windows.Controls.Panel> . <xref:System.Windows.Controls.Panel>define <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> como sua propriedade de conteúdo XAML.
+- **Elemento de Propriedade StackPanel. Children omitido:** <xref:System.Windows.Controls.StackPanel> deriva de <xref:System.Windows.Controls.Panel> . <xref:System.Windows.Controls.Panel> define <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> como sua propriedade de conteúdo XAML.
 
 - **Elemento de objeto UIElementCollection omitido:** A <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> propriedade usa o tipo <xref:System.Windows.Controls.UIElementCollection> , que implementa <xref:System.Collections.IList> . A marca do elemento da coleção pode ser omitida, com base nas regras XAML para processamento de coleções, como <xref:System.Collections.IList> . (Nesse caso, na <xref:System.Windows.Controls.UIElementCollection> verdade não pode ser instanciado porque não expõe um construtor sem parâmetros, e é por isso que o <xref:System.Windows.Controls.UIElementCollection> elemento Object é mostrado comentado).
 
@@ -178,7 +178,7 @@ Os processadores e serializadores WPF XAML ignorarão ou descartarão todos os e
 
 Extensões de marcação são um conceito de linguagem XAML. Quando usados para fornecer o valor de uma sintaxe de atributo, chaves (`{` e `}`) indicam um uso de extensão de marcação. Esse uso direciona o processamento XAML para escape do tratamento geral de valores de atributo como uma cadeia de caracteres literal ou um valor conversível em cadeia de caracteres.
 
-As extensões de marcação mais comuns usadas na programação de aplicativo do WPF são [`Binding`](../../framework/wpf/advanced/binding-markup-extension.md) , usadas para expressões de ligação de dados e as referências de recurso [`StaticResource`](../../framework/wpf/advanced/staticresource-markup-extension.md) e [`DynamicResource`](../../framework/wpf/advanced/dynamicresource-markup-extension.md) . Usando extensões de marcação, você pode usar a sintaxe de atributo para fornecer valores para propriedades mesmo que essas propriedades não deem suporte a uma sintaxe de atributo em geral. As extensões de marcação geralmente usam tipos de expressões intermediárias para habilitar recursos como, por exemplo, valores de adiamento ou referência a outros objetos que estão presentes apenas em tempo de execução.
+As extensões de marcação mais comuns usadas na programação de aplicativo do WPF são [`Binding`](/dotnet/desktop/wpf/advanced/binding-markup-extension) , usadas para expressões de ligação de dados e as referências de recurso [`StaticResource`](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) e [`DynamicResource`](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension) . Usando extensões de marcação, você pode usar a sintaxe de atributo para fornecer valores para propriedades mesmo que essas propriedades não deem suporte a uma sintaxe de atributo em geral. As extensões de marcação geralmente usam tipos de expressões intermediárias para habilitar recursos como, por exemplo, valores de adiamento ou referência a outros objetos que estão presentes apenas em tempo de execução.
 
 Por exemplo, a marcação a seguir define o valor da <xref:System.Windows.FrameworkElement.Style%2A> propriedade usando a sintaxe do atributo. A <xref:System.Windows.FrameworkElement.Style%2A> propriedade usa uma instância da <xref:System.Windows.Style> classe, que, por padrão, não pôde ser instanciada por uma cadeia de caracteres de sintaxe de atributo. Mas, nesse caso, o atributo faz referência a uma extensão de marcação específica, `StaticResource` . Quando essa extensão de marcação é processada, ela retorna uma referência a um estilo que foi anteriormente instanciado como um recurso com chave em um dicionário de recursos.
 
@@ -186,13 +186,13 @@ Por exemplo, a marcação a seguir define o valor da <xref:System.Windows.Framew
 [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources2](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources2)]
 [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources3](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources3)]
 
-Para uma referência listando todas as extensões de marcação para XAML implementado especificamente no WPF, consulte [Extensões XAML WPF](../../framework/wpf/advanced/wpf-xaml-extensions.md). Para obter uma listagem de referência das extensões de marcação que são definidas pelo System. XAML e estão mais amplamente disponíveis para implementações XAML do .NET Core, consulte [XAML namespace (x:) Recursos de linguagem](../xaml-services/namespace-language-features.md). Para obter mais informações sobre conceitos de extensão de marcação, consulte [Extensões de marcação e XAML WPF](../../framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).
+Para uma referência listando todas as extensões de marcação para XAML implementado especificamente no WPF, consulte [Extensões XAML WPF](/dotnet/desktop/wpf/advanced/wpf-xaml-extensions). Para obter uma listagem de referência das extensões de marcação que são definidas pelo System. XAML e estão mais amplamente disponíveis para implementações XAML do .NET Core, consulte [XAML namespace (x:) Recursos de linguagem](../xaml-services/namespace-language-features.md). Para obter mais informações sobre conceitos de extensão de marcação, consulte [Extensões de marcação e XAML WPF](/dotnet/desktop/wpf/advanced/markup-extensions-and-wpf-xaml).
 
 ## <a name="type-converters"></a>Conversores de tipo
 
 Na seção [Resumo sobre sintaxe XAML](#xaml-syntax-in-brief), foi mencionado que o valor do atributo deve poder ser definido por uma cadeia de caracteres. O tratamento nativo básico de como as cadeias de caracteres são convertidas em outros tipos de objeto ou valores primitivos baseia- <xref:System.String> se no próprio tipo, além do processamento nativo para determinados tipos, como <xref:System.DateTime> ou <xref:System.Uri> . Mas muitos tipos WPF ou membros desses tipos estendem o comportamento básico de processamento de atributos de cadeia de caracteres de forma que instâncias de tipos de objetos mais complexos possam ser especificadas como cadeias de caracteres e atributos.
 
-A <xref:System.Windows.Thickness> estrutura é um exemplo de um tipo que tem uma conversão de tipo habilitada para usos XAML. <xref:System.Windows.Thickness>indica medidas em um retângulo aninhado e é usado como o valor para propriedades como <xref:System.Windows.FrameworkElement.Margin%2A> . Ao colocar um conversor de tipo no <xref:System.Windows.Thickness> , todas as propriedades que usam um <xref:System.Windows.Thickness> são mais fáceis de especificar em XAML porque podem ser especificadas como atributos. O exemplo a seguir usa uma conversão de tipo e uma sintaxe de atributo para fornecer um valor para <xref:System.Windows.FrameworkElement.Margin%2A> :
+A <xref:System.Windows.Thickness> estrutura é um exemplo de um tipo que tem uma conversão de tipo habilitada para usos XAML. <xref:System.Windows.Thickness> indica medidas em um retângulo aninhado e é usado como o valor para propriedades como <xref:System.Windows.FrameworkElement.Margin%2A> . Ao colocar um conversor de tipo no <xref:System.Windows.Thickness> , todas as propriedades que usam um <xref:System.Windows.Thickness> são mais fáceis de especificar em XAML porque podem ser especificadas como atributos. O exemplo a seguir usa uma conversão de tipo e uma sintaxe de atributo para fornecer um valor para <xref:System.Windows.FrameworkElement.Margin%2A> :
 
 [!code-xaml[XAMLOvwSupport#MarginTCE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#margintce)]
 
@@ -203,7 +203,7 @@ O exemplo de sintaxe de atributo anterior é equivalente ao seguinte exemplo de 
 > [!NOTE]
 > Há também um número limitado de objetos em que a conversão de tipo é a única maneira pública de definir uma propriedade para esse tipo sem envolver uma subclasse, porque o próprio tipo não tem um construtor com parâmetros. Um exemplo é <xref:System.Windows.Input.Cursor>.
 
-Para obter mais informações sobre conversão de tipo, consulte [TypeConverters e XAML](../../framework/wpf/advanced/typeconverters-and-xaml.md).
+Para obter mais informações sobre conversão de tipo, consulte [TypeConverters e XAML](/dotnet/desktop/wpf/advanced/typeconverters-and-xaml).
 
 ## <a name="xaml-root-elements-and-xaml-namespaces"></a>Elementos raiz XAML e namespaces XAML
 
@@ -224,7 +224,7 @@ A implementação do WPF de seu processador XAML inclui uma infraestrutura que t
 
 No exemplo de elemento raiz anterior, o prefixo `x:` foi usado para mapear o namespace XAML `http://schemas.microsoft.com/winfx/2006/xaml`, que é o namespace XAML dedicado que dá suporte a constructos de linguagem XAML. Esse `x:` prefixo é usado para mapear esse namespace XAML nos modelos para projetos, em exemplos e na documentação em todo esse SDK. O namespace XAML para a linguagem XAML contém várias construções de programação que serão usadas com frequência em seu XAML. A seguir está uma lista dos constructos de programação de prefixo `x:` mais comuns que você usará:
 
-- [x:Key](../xaml-services/xkey-directive.md): define uma chave exclusiva para cada recurso em um <xref:System.Windows.ResourceDictionary> (ou conceitos de dicionário semelhantes em outras estruturas). `x:Key`Provavelmente será uma conta de 90% dos `x:` usos que você verá em uma marcação típica do aplicativo WPF.
+- [x:Key](../xaml-services/xkey-directive.md): define uma chave exclusiva para cada recurso em um <xref:System.Windows.ResourceDictionary> (ou conceitos de dicionário semelhantes em outras estruturas). `x:Key` Provavelmente será uma conta de 90% dos `x:` usos que você verá em uma marcação típica do aplicativo WPF.
 
 - [x:Class](../xaml-services/xclass-directive.md): especifica o namespace CLR e o nome de classe para a classe que fornece code-behind para uma página XAML. Você deve ter uma classe desse tipo para dar suporte a code-behind segundo o modelo de programação do WPF e, portanto, você quase sempre vê `x:` mapeado, mesmo que não existam recursos.
 
@@ -255,9 +255,9 @@ Veja a seguir um exemplo básico de como os prefixos personalizados funcionam na
 </Page>
 ```
 
-Para obter mais informações sobre tipos personalizados em XAML, consulte [XAML e classes personalizadas para WPF](../../framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).
+Para obter mais informações sobre tipos personalizados em XAML, consulte [XAML e classes personalizadas para WPF](/dotnet/desktop/wpf/advanced/xaml-and-custom-classes-for-wpf).
 
-Para obter mais informações sobre como namespaces XML e namespaces de código em assemblies estão relacionados, consulte [namespaces XAML e mapeamento de namespace para WPF XAML](../../framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).
+Para obter mais informações sobre como namespaces XML e namespaces de código em assemblies estão relacionados, consulte [namespaces XAML e mapeamento de namespace para WPF XAML](/dotnet/desktop/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml).
 
 ## <a name="events-and-xaml-code-behind"></a>Eventos e código XAML-por trás
 
@@ -272,13 +272,13 @@ Nos exemplos até agora você viu vários botões, mas nenhum deles tinha ainda 
 
 Observe que o arquivo code-behind usa o namespace CLR `ExampleNamespace` e declara `ExamplePage` como uma classe parcial dentro desse namespace. Isso é comparável ao valor do atributo `x:Class` de `ExampleNamespace`.`ExamplePage` que foi fornecido na raiz da marcação. O compilador de marcação do WPF criará uma classe parcial para qualquer arquivo XAML compilado, derivando uma classe do tipo de elemento raiz. Quando você fornece code-behind que também define a mesma classe parcial, o código resultante é combinado dentro do mesmo namespace e classe do aplicativo compilado.
 
-Para obter mais informações sobre os requisitos para programação code-behind no WPF, consulte [code-behind, manipulador de eventos e requisitos de classe parcial no WPF](../../framework/wpf/advanced/code-behind-and-xaml-in-wpf.md#code-behind-event-handler-and-partial-class-requirements-in-wpf).
+Para obter mais informações sobre os requisitos para programação code-behind no WPF, consulte [code-behind, manipulador de eventos e requisitos de classe parcial no WPF](/dotnet/desktop/wpf/advanced/code-behind-and-xaml-in-wpf#code-behind-event-handler-and-partial-class-requirements-in-wpf).
 
-Se você não deseja criar um arquivo code-behind separado, você também pode embutir seu código em um arquivo XAML. No entanto, o código embutido é uma técnica menos versátil que tem limitações significativas. Para obter mais informações, consulte [code-behind e XAML no WPF](../../framework/wpf/advanced/code-behind-and-xaml-in-wpf.md).
+Se você não deseja criar um arquivo code-behind separado, você também pode embutir seu código em um arquivo XAML. No entanto, o código embutido é uma técnica menos versátil que tem limitações significativas. Para obter mais informações, consulte [code-behind e XAML no WPF](/dotnet/desktop/wpf/advanced/code-behind-and-xaml-in-wpf).
 
 ### <a name="routed-events"></a>Eventos roteados
 
-Um recurso de evento específico que é fundamental para o WPF é um evento roteado. Eventos roteados habilitam um elemento para manipular um evento que foi acionado por um elemento diferente, desde que os elementos estejam conectados por meio de uma relação de árvore. Ao especificar o tratamento de eventos com um atributo XAML, o evento roteado pode ser escutado e manipulado em qualquer elemento, incluindo elementos que não listam esse evento específico na tabela de membros de classe. Isso é feito qualificando o atributo de nome do evento com o nome de classe proprietária. Por exemplo, o pai `StackPanel` no exemplo em andamento `StackPanel`  /  `Button` poderia registrar um manipulador para o evento do botão do elemento filho <xref:System.Windows.Controls.Primitives.ButtonBase.Click> , especificando o atributo `Button.Click` no `StackPanel` elemento Object, com o nome do manipulador como o valor do atributo. Para obter mais informações, consulte [Visão geral de eventos roteados](../../framework/wpf/advanced/routed-events-overview.md).
+Um recurso de evento específico que é fundamental para o WPF é um evento roteado. Eventos roteados habilitam um elemento para manipular um evento que foi acionado por um elemento diferente, desde que os elementos estejam conectados por meio de uma relação de árvore. Ao especificar o tratamento de eventos com um atributo XAML, o evento roteado pode ser escutado e manipulado em qualquer elemento, incluindo elementos que não listam esse evento específico na tabela de membros de classe. Isso é feito qualificando o atributo de nome do evento com o nome de classe proprietária. Por exemplo, o pai `StackPanel` no exemplo em andamento `StackPanel`  /  `Button` poderia registrar um manipulador para o evento do botão do elemento filho <xref:System.Windows.Controls.Primitives.ButtonBase.Click> , especificando o atributo `Button.Click` no `StackPanel` elemento Object, com o nome do manipulador como o valor do atributo. Para obter mais informações, consulte [Visão geral de eventos roteados](/dotnet/desktop/wpf/advanced/routed-events-overview).
 
 ## <a name="xaml-named-elements"></a>Elementos nomeados XAML
 
@@ -294,7 +294,7 @@ O exemplo a seguir define <xref:System.Windows.FrameworkElement.Name%2A> em um <
 [!code-csharp[XAMLOvwSupport#NameCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml.cs#namecode)]
 [!code-vb[XAMLOvwSupport#NameCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XAMLOvwSupport/VisualBasic/Page1.xaml.vb#namecode)]
 
-Assim como uma variável, o nome XAML para uma instância é regido por um conceito do escopo, de modo que pode ser imposto que os nomes sejam exclusivos dentro de um determinado escopo previsível. A marcação primária que define uma página denota um namescope XAML exclusivo, com o limite de namescopes XAML sendo o elemento raiz dessa página. No entanto, outras fontes de marcação podem interagir com uma página em tempo de execução, como estilos ou modelos dentro de estilos, e essas fontes de marcação geralmente têm seus próprios namescopes XAML que não necessariamente se conectam ao namescope do XAML da página. Para obter mais informações `x:Name` e namescopes XAML, consulte <xref:System.Windows.FrameworkElement.Name%2A> , [diretiva x:Name](../xaml-services/xname-directive.md)ou [namescopes XAML do WPF](../../framework/wpf/advanced/wpf-xaml-namescopes.md).
+Assim como uma variável, o nome XAML para uma instância é regido por um conceito do escopo, de modo que pode ser imposto que os nomes sejam exclusivos dentro de um determinado escopo previsível. A marcação primária que define uma página denota um namescope XAML exclusivo, com o limite de namescopes XAML sendo o elemento raiz dessa página. No entanto, outras fontes de marcação podem interagir com uma página em tempo de execução, como estilos ou modelos dentro de estilos, e essas fontes de marcação geralmente têm seus próprios namescopes XAML que não necessariamente se conectam ao namescope do XAML da página. Para obter mais informações `x:Name` e namescopes XAML, consulte <xref:System.Windows.FrameworkElement.Name%2A> , [diretiva x:Name](../xaml-services/xname-directive.md)ou [namescopes XAML do WPF](/dotnet/desktop/wpf/advanced/wpf-xaml-namescopes).
 
 ## <a name="attached-properties-and-attached-events"></a>Propriedades anexadas e eventos anexados
 
@@ -302,7 +302,7 @@ O XAML Especifica um recurso de linguagem que permite que determinadas proprieda
 
 Propriedades anexadas em XAML normalmente são usadas por meio da sintaxe de atributo. Em sintaxe de atributo, você especifica uma propriedade anexada no formulário `ownerType.propertyName` .
 
-Superficialmente, isso se assemelha a um uso de elemento de propriedade, mas, nesse caso, o `ownerType` que você especifica é sempre um tipo diferente do elemento de objeto em que a propriedade anexada está sendo definida. `ownerType`é o tipo que fornece os métodos acessadores que são exigidos por um processador XAML para obter ou definir o valor da propriedade anexada.
+Superficialmente, isso se assemelha a um uso de elemento de propriedade, mas, nesse caso, o `ownerType` que você especifica é sempre um tipo diferente do elemento de objeto em que a propriedade anexada está sendo definida. `ownerType` é o tipo que fornece os métodos acessadores que são exigidos por um processador XAML para obter ou definir o valor da propriedade anexada.
 
 O cenário mais comum para propriedades anexadas é habilitar que elementos filho relatem um valor da propriedade para o respectivo elemento pai.
 
@@ -310,13 +310,13 @@ O exemplo a seguir ilustra a <xref:System.Windows.Controls.DockPanel.Dock%2A?dis
 
 [!code-xaml[XAMLOvwSupport#DockAP](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#dockap)]
 
-No WPF, a maioria ou todas as propriedades anexadas também são implementadas como propriedades de dependência. Para obter mais informações, consulte [Visão geral das propriedades anexadas](../../framework/wpf/advanced/attached-properties-overview.md).
+No WPF, a maioria ou todas as propriedades anexadas também são implementadas como propriedades de dependência. Para obter mais informações, consulte [Visão geral das propriedades anexadas](/dotnet/desktop/wpf/advanced/attached-properties-overview).
 
-Os eventos anexados usam uma `ownerType.eventName` forma semelhante de sintaxe de atributo. Assim como nos eventos não anexados, o valor do atributo para um evento anexado em XAML especifica o nome do método manipulador que é invocado quando o evento é manipulado no elemento. Usos de evento anexado no XAML WPF são menos comuns. Para obter mais informações, consulte [Visão geral de eventos anexados](../../framework/wpf/advanced/attached-events-overview.md).
+Os eventos anexados usam uma `ownerType.eventName` forma semelhante de sintaxe de atributo. Assim como nos eventos não anexados, o valor do atributo para um evento anexado em XAML especifica o nome do método manipulador que é invocado quando o evento é manipulado no elemento. Usos de evento anexado no XAML WPF são menos comuns. Para obter mais informações, consulte [Visão geral de eventos anexados](/dotnet/desktop/wpf/advanced/attached-events-overview).
 
 ## <a name="base-types-and-xaml"></a>Tipos base e XAML
 
-O WPF XAML subjacente e seu namespace XAML é uma coleção de tipos que correspondem a objetos CLR, além de elementos de marcação para XAML. No entanto, nem todas as classes podem ser mapeadas para elementos. Classes abstratas, como <xref:System.Windows.Controls.Primitives.ButtonBase> e determinadas classes de base não abstratas, são usadas para herança no modelo de objetos CLR. Classes base, incluindo aquelas abstratas, são importantes para o desenvolvimento de XAML, porque cada um dos elementos XAML concretos herda os membros de alguma classe base na sua hierarquia. Frequentemente esses membros incluem propriedades que podem ser definidas como atributos no elemento ou eventos que podem ser manipulados. <xref:System.Windows.FrameworkElement>é a classe de interface do usuário de base concreta do WPF no nível do WPF Framework. Ao projetar a interface do usuário, você usará várias classes de forma, painel, decorador ou controle, das quais todas derivam <xref:System.Windows.FrameworkElement> . Uma classe base relacionada, <xref:System.Windows.FrameworkContentElement> , oferece suporte a elementos orientados a documentos que funcionam bem para uma apresentação de layout de fluxo, usando APIs que espelham as APIs deliberadamente <xref:System.Windows.FrameworkElement> . A combinação de atributos no nível de elemento e um modelo de objeto CLR fornece um conjunto de propriedades comuns que são configuráveis na maioria dos elementos XAML concretos, independentemente do elemento XAML específico e seu tipo subjacente.
+O WPF XAML subjacente e seu namespace XAML é uma coleção de tipos que correspondem a objetos CLR, além de elementos de marcação para XAML. No entanto, nem todas as classes podem ser mapeadas para elementos. Classes abstratas, como <xref:System.Windows.Controls.Primitives.ButtonBase> e determinadas classes de base não abstratas, são usadas para herança no modelo de objetos CLR. Classes base, incluindo aquelas abstratas, são importantes para o desenvolvimento de XAML, porque cada um dos elementos XAML concretos herda os membros de alguma classe base na sua hierarquia. Frequentemente esses membros incluem propriedades que podem ser definidas como atributos no elemento ou eventos que podem ser manipulados. <xref:System.Windows.FrameworkElement> é a classe de interface do usuário de base concreta do WPF no nível do WPF Framework. Ao projetar a interface do usuário, você usará várias classes de forma, painel, decorador ou controle, das quais todas derivam <xref:System.Windows.FrameworkElement> . Uma classe base relacionada, <xref:System.Windows.FrameworkContentElement> , oferece suporte a elementos orientados a documentos que funcionam bem para uma apresentação de layout de fluxo, usando APIs que espelham as APIs deliberadamente <xref:System.Windows.FrameworkElement> . A combinação de atributos no nível de elemento e um modelo de objeto CLR fornece um conjunto de propriedades comuns que são configuráveis na maioria dos elementos XAML concretos, independentemente do elemento XAML específico e seu tipo subjacente.
 
 ## <a name="xaml-security"></a>Segurança XAML
 
@@ -326,17 +326,17 @@ XAML é uma linguagem de marcação que representa diretamente a instanciação 
 
 **Esta seção se aplica somente a .NET Framework. O WPF para .NET Core não dá suporte a CAS. Para obter mais informações, consulte [diferenças de segurança de acesso ao código](../migration/differences-from-net-framework.md#code-access-security).**
 
-O WPF para .NET Framework dá suporte à CAS (segurança de acesso do código). Isso significa que o conteúdo do WPF em execução na zona da Internet tem permissões de execução reduzidas. "XAML livre" (as páginas de XAML não compilado interpretadas no tempo de carregamento por um visualizador XAML) e XBAP geralmente são executados nessa zona da Internet e usam o mesmo conjunto de permissões. No entanto, o XAML carregado em um aplicativo totalmente confiável tem o mesmo acesso aos recursos de sistema que o aplicativo host. Para obter mais informações, consulte [Segurança parcialmente confiável do WPF](../../framework/wpf/wpf-partial-trust-security.md).
+O WPF para .NET Framework dá suporte à CAS (segurança de acesso do código). Isso significa que o conteúdo do WPF em execução na zona da Internet tem permissões de execução reduzidas. "XAML livre" (as páginas de XAML não compilado interpretadas no tempo de carregamento por um visualizador XAML) e XBAP geralmente são executados nessa zona da Internet e usam o mesmo conjunto de permissões. No entanto, o XAML carregado em um aplicativo totalmente confiável tem o mesmo acesso aos recursos de sistema que o aplicativo host. Para obter mais informações, consulte [Segurança parcialmente confiável do WPF](/dotnet/desktop/wpf/wpf-partial-trust-security).
 
 ## <a name="loading-xaml-from-code"></a>Carregando XAML do código
 
 XAML pode ser usado para definir toda a interface do usuário, mas às vezes também é apropriado definir apenas uma parte da interface do usuário em XAML. Essa funcionalidade pode ser usada para habilitar personalização parcial, armazenamento local de informações, uso do XAML para fornecer um objeto comercial ou uma variedade de cenários possíveis. A chave para esses cenários é a <xref:System.Windows.Markup.XamlReader> classe e seu <xref:System.Windows.Markup.XamlReader.Load%2A> método. A entrada é um arquivo XAML e a saída é um objeto que representa toda a árvore de objetos em tempo de execução que foi criada com base nessa marcação. Em seguida, você pode inserir o objeto para ser uma propriedade de outro objeto que já existe no aplicativo. Contanto que a propriedade seja uma propriedade apropriada no modelo de conteúdo que tenha recursos de exibição eventual e que notifique o mecanismo de execução de que o novo conteúdo foi adicionado ao aplicativo, você pode modificar facilmente o conteúdo de um aplicativo em execução ao carregá-lo em XAML. Por .NET Framework, esse recurso geralmente está disponível apenas em aplicativos de confiança total, devido às implicações de segurança óbvias de carregar arquivos em aplicativos à medida que eles são executados.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Sintaxe XAML em detalhes](../../framework/wpf/advanced/xaml-syntax-in-detail.md)
-- [XAML e classes personalizadas para WPF](../../framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Sintaxe XAML em detalhes](/dotnet/desktop/wpf/advanced/xaml-syntax-in-detail)
+- [XAML e classes personalizadas para WPF](/dotnet/desktop/wpf/advanced/xaml-and-custom-classes-for-wpf)
 - [Namespace XAML (x:) Funcionalidades de linguagem](../xaml-services/namespace-language-features.md)
-- [Extensões XAML WPF](../../framework/wpf/advanced/wpf-xaml-extensions.md)
-- [Visão geral de elementos base](../../framework/wpf/advanced/base-elements-overview.md)
-- [Árvores no WPF](../../framework/wpf/advanced/trees-in-wpf.md)
+- [Extensões XAML WPF](/dotnet/desktop/wpf/advanced/wpf-xaml-extensions)
+- [Visão geral de elementos base](/dotnet/desktop/wpf/advanced/base-elements-overview)
+- [Árvores no WPF](/dotnet/desktop/wpf/advanced/trees-in-wpf)

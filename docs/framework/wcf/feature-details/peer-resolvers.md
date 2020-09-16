@@ -2,12 +2,12 @@
 title: Resolvedor peer
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: a1f5bcfb721ccbc98856e81198a3f7e0b45abe93
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ef72f44a7dd7f3e8f3108e4f77dcdbdf8ef1b1b7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600770"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554626"
 ---
 # <a name="peer-resolvers"></a>Resolvedor peer
 Para se conectar a uma malha, um nó par requer os endereços IP de outros nós. Os endereços IP são obtidos entrando em contato com um serviço resolvedor, que usa a ID de malha e retorna uma lista de endereços correspondentes aos nós registrados com essa ID de malha específica. O resolvedor mantém uma lista de endereços registrados, que ele cria, fazendo com que cada nó na malha seja registrado no serviço.  
@@ -32,12 +32,12 @@ Para se conectar a uma malha, um nó par requer os endereços IP de outros nós.
 > [!NOTE]
 > Ao usar redes locais e improvisadas com um resolvedor personalizado, é altamente recomendável que os aplicativos que usam ou suportem redes de link local ou improvisadas incluam uma lógica que selecione um único endereço de link local para usar ao se conectar. Isso evita qualquer confusão possivelmente causada por computadores com vários endereços de link local. De acordo com isso, o canal par só dá suporte ao uso de um único endereço de link local a qualquer momento. Você pode especificar esse endereço com a `ListenIpAddress` propriedade no <xref:System.ServiceModel.NetPeerTcpBinding> .  
   
- Para ver uma demonstração de como implementar um resolvedor personalizado, consulte [resolvedor de pares personalizado do canal par](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
+ Para ver uma demonstração de como implementar um resolvedor personalizado, consulte [resolvedor de pares personalizado do canal par](/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Sobre o CustomPeerResolverService: Registro de clientes](inside-the-custompeerresolverservice-client-registrations.md)  
+ [Sobre o CustomPeerResolverService: registros de clientes](inside-the-custompeerresolverservice-client-registrations.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Conceitos de canal par](peer-channel-concepts.md)
 - [Segurança de canal par](peer-channel-security.md)

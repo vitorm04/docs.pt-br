@@ -2,12 +2,12 @@
 title: Convenções de codificação do F#
 description: 'Aprenda as diretrizes gerais e os idiomas ao escrever o código F #.'
 ms.date: 01/15/2020
-ms.openlocfilehash: 748a9c26794f46dcc67fdcfcf21f41847a462a19
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 8c7fedf429ecba6e01b26f37972ffa4eeba6d8af
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053005"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554020"
 ---
 # <a name="f-coding-conventions"></a>Convenções de codificação do F#
 
@@ -209,7 +209,7 @@ Primeiro, é recomendável que você leia as [diretrizes de design de exceção]
 
 As principais construções disponíveis em F # para fins de geração de exceções devem ser consideradas na seguinte ordem de preferência:
 
-| Função | Syntax | Finalidade |
+| Função | Sintaxe | Finalidade |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | Gera um `System.ArgumentNullException` com o nome do argumento especificado. |
 | `invalidArg` | `invalidArg "argumentName" "message"` | Gera um `System.ArgumentException` com um nome de argumento e uma mensagem especificados. |
@@ -703,7 +703,7 @@ Como não há necessidade de uma classe ao interagir com a API de Visual Studio 
 
 ## <a name="consider-type-abbreviations-to-shorten-signatures"></a>Considere abreviações de tipo para diminuir as assinaturas
 
-As [abreviações de tipo](../language-reference/type-abbreviations.md) são uma maneira conveniente de atribuir um rótulo a outro tipo, como uma assinatura de função ou um tipo mais complexo. Por exemplo, o alias a seguir atribui um rótulo para o que é necessário para definir uma computação com [CNTK](https://docs.microsoft.com/cognitive-toolkit/), uma biblioteca de aprendizado profundo:
+As [abreviações de tipo](../language-reference/type-abbreviations.md) são uma maneira conveniente de atribuir um rótulo a outro tipo, como uma assinatura de função ou um tipo mais complexo. Por exemplo, o alias a seguir atribui um rótulo para o que é necessário para definir uma computação com [CNTK](/cognitive-toolkit/), uma biblioteca de aprendizado profundo:
 
 ```fsharp
 open CNTK

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: b790c87cc3ec293c18bf730567f92b490c7c6594
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0c7c89a9104ac72bf03f2900e7ca474b709be40c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286709"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554456"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Obtendo um DbProviderFactory
 O processo de obter <xref:System.Data.Common.DbProviderFactory> envolve passar informações sobre um provedor de dados para a classe <xref:System.Data.Common.DbProviderFactories>. Com base nessas informações, o método <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> cria uma fábrica de provedor fortemente tipada. Por exemplo, para criar <xref:System.Data.SqlClient.SqlClientFactory>, você pode passar para `GetFactory` uma cadeia de caracteres com o nome do provedor especificado como “System.Data.SqlClient”. Outra sobrecarga de `GetFactory` utiliza <xref:System.Data.DataRow>. Uma vez que você criar a fábrica de provedor, poderá usar seus métodos para criar objetos adicionais. Alguns dos métodos de `SqlClientFactory` incluem <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A> e <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
@@ -20,7 +20,7 @@ O processo de obter <xref:System.Data.Common.DbProviderFactory> envolve passar i
 > As classes <xref:System.Data.OracleClient.OracleClientFactory>, <xref:System.Data.Odbc.OdbcFactory> e <xref:System.Data.OleDb.OleDbFactory> do .NET Framework também oferecem funcionalidade semelhante.  
   
 ## <a name="registering-dbproviderfactories"></a>Registrando DbProviderFactories  
- Cada provedor de dados de .NET Framework que dá suporte a uma classe baseada em fábrica registra informações de configuração na seção **DbProviderFactories** do arquivo **Machine. config** no computador local. O fragmento do arquivo de configuração a seguir mostra a sintaxe e o formato para <xref:System.Data.SqlClient>.  
+ Cada provedor de dados de .NET Framework que dá suporte a uma classe baseada em fábrica registra informações de configuração na seção **DbProviderFactories** do arquivo **machine.config** no computador local. O fragmento do arquivo de configuração a seguir mostra a sintaxe e o formato para <xref:System.Data.SqlClient>.  
   
 ```xml  
 <system.data>  
@@ -56,7 +56,7 @@ O processo de obter <xref:System.Data.Common.DbProviderFactory> envolve passar i
  [!code-vb[DataWorks DbProviderFactories#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories/VB/source.vb#1)]  
   
 ## <a name="using-application-configuration-files-to-store-factory-information"></a>Usando arquivos de configuração de aplicativo para armazenar informações da fábrica  
- O padrão de design usado para trabalhar com fábricas envolve o armazenamento de informações de cadeia de conexão e provedor em um arquivo de configuração de aplicativo, como **app. config** para um aplicativo do Windows e **Web. config** para um aplicativo ASP.net.  
+ O padrão de design usado para trabalhar com fábricas envolve o armazenamento de informações de cadeia de conexão e provedor em um arquivo de configuração de aplicativo, como **app.config** para um aplicativo do Windows e **web.config** para um aplicativo ASP.net.  
   
  O fragmento de arquivo de configuração a seguir demonstra como salvar duas cadeias de conexão nomeadas: “NorthwindSQL” para uma conexão com o banco de dados Northwind no SQL Server e “NorthwindAccess” para uma conexão com o banco de dados Northwind no Access/Jet. O nome **invariável** é usado para o atributo **ProviderName** .  
   
@@ -96,9 +96,9 @@ O processo de obter <xref:System.Data.Common.DbProviderFactory> envolve passar i
  [!code-csharp[DataWorks DbProviderFactories.GetFactory#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.GetFactory/CS/source.cs#1)]
  [!code-vb[DataWorks DbProviderFactories.GetFactory#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.GetFactory/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [DbProviderFactories](dbproviderfactories.md)
 - [Cadeias de conexão](connection-strings.md)
-- [Usando as classes de configuração](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
+- [Usando as classes de configuração](/previous-versions/aspnet/ms228063(v=vs.100))
 - [Visão geral do ADO.NET](ado-net-overview.md)

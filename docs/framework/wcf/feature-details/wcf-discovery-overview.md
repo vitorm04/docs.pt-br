@@ -2,12 +2,12 @@
 title: Visão geral de descoberta do WCF
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: e7fd7ae4103600eb5463114987ca4ccbc2e0a1f2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8b4dda410b9ca7d7d3ff76795753811a80a617ec
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600186"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554613"
 ---
 # <a name="wcf-discovery-overview"></a>Visão geral de descoberta do WCF
 As APIs de descoberta fornecem um modelo de programação unificado para a publicação dinâmica e a descoberta de serviços Web usando o protocolo WS-Discovery. Essas APIs permitem que os serviços se publiquem e os clientes localizem serviços publicados. Depois que um serviço é detectável, o serviço tem a capacidade de enviar mensagens de comunicado, além de escutar e responder às solicitações de descoberta. Os serviços detectáveis podem enviar mensagens de saudação para anunciar sua chegada em uma rede e até mesmo as mensagens para anunciar sua partida de uma rede. Para localizar um serviço, os clientes enviam uma `Probe` solicitação que contém critérios específicos, como tipo de contrato de serviço, palavras-chave e escopo na rede. Os serviços recebem a `Probe` solicitação e determinam se elas correspondem aos critérios. Se um serviço corresponder, ele responderá enviando uma `ProbeMatch` mensagem de volta ao cliente com as informações necessárias para entrar em contato com o serviço. Os clientes também podem enviar `Resolve` solicitações que permitem encontrar serviços que podem ter alterado seu endereço de ponto de extremidade. Os serviços correspondentes respondem às `Resolve` solicitações enviando uma `ResolveMatch` mensagem de volta ao cliente.  
@@ -153,7 +153,7 @@ class Client
   
 2. Usar um proxy de descoberta para se comunicar em nome do serviço  
   
- O Windows Server AppFabric tem um recurso de início automático que permitirá que um serviço seja iniciado antes de receber qualquer mensagem. Com esse conjunto de início automático, um serviço hospedado do IIS/WAS pode ser configurado para ser detectável. Para obter mais informações sobre o recurso de início automático, consulte o [recurso de início automático do Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677260(v=azure.10)). Além de ativar o recurso de início automático, você deve configurar o serviço para descoberta. Para obter mais informações, consulte [como: programaticamente adicionar detectabilidade a um serviço WCF e cliente](how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Configurando a descoberta em um arquivo de configuração](configuring-discovery-in-a-configuration-file.md).  
+ O Windows Server AppFabric tem um recurso de início automático que permitirá que um serviço seja iniciado antes de receber qualquer mensagem. Com esse conjunto de início automático, um serviço hospedado do IIS/WAS pode ser configurado para ser detectável. Para obter mais informações sobre o recurso de início automático, consulte o [recurso de início automático do Windows Server AppFabric](/previous-versions/appfabric/ee677260(v=azure.10)). Além de ativar o recurso de início automático, você deve configurar o serviço para descoberta. Para obter mais informações, consulte [como: programaticamente adicionar detectabilidade a um serviço WCF e cliente](how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Configurando a descoberta em um arquivo de configuração](configuring-discovery-in-a-configuration-file.md).  
   
  Um proxy de descoberta pode ser usado para se comunicar em nome do serviço WCF quando o serviço não estiver em execução. O proxy pode escutar a investigação ou resolver mensagens e responder ao cliente. O cliente pode enviar mensagens diretamente para o serviço. Quando o cliente envia uma mensagem para o serviço, ele será instanciado para responder à mensagem. Para obter mais informações sobre como implementar um proxy de descoberta, consulte [implementando um proxy de descoberta](implementing-a-discovery-proxy.md).  
   
