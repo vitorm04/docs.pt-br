@@ -8,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 8e77c667dd8904c10bbab88e1413690677cef53b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: a473a2bb3582274baddf7595ac396a0f833f8daf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244979"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535892"
 ---
 # <a name="programming-wcf-security"></a>Programação de segurança do WCF
 Este tópico descreve as tarefas de programação fundamentais usadas para criar um aplicativo de Windows Communication Foundation de segurança (WCF). Este tópico aborda somente autenticação, confidencialidade e integridade, coletivamente conhecido como *segurança de transferência*. Este tópico não abrange a autorização (o controle de acesso a recursos ou serviços); para obter informações sobre autorização, consulte [Authorization](authorization-in-wcf.md).  
   
 > [!NOTE]
-> Para obter uma introdução valiosa aos conceitos de segurança, especialmente em relação ao WCF, consulte o conjunto de tutoriais de padrões e práticas no MSDN em [cenários, padrões e diretrizes de implementação para o WSE (Web Services Enhancements) 3,0](https://docs.microsoft.com/previous-versions/msp-n-p/ff648183(v=pandp.10)).  
+> Para obter uma introdução valiosa aos conceitos de segurança, especialmente em relação ao WCF, consulte o conjunto de tutoriais de padrões e práticas no MSDN em [cenários, padrões e diretrizes de implementação para o WSE (Web Services Enhancements) 3,0](/previous-versions/msp-n-p/ff648183(v=pandp.10)).  
   
  A programação da segurança do WCF baseia-se em três etapas definindo o seguinte: o modo de segurança, um tipo de credencial de cliente e os valores de credencial. Você pode executar essas etapas por meio de código ou configuração.  
   
@@ -103,7 +103,7 @@ Este tópico descreve as tarefas de programação fundamentais usadas para criar
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Programação básica do WCF](../basic-wcf-programming.md)
+- [Programação de WCF básica](../basic-wcf-programming.md)
 - [Cenários comuns de segurança](common-security-scenarios.md)

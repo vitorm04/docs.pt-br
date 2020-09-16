@@ -2,12 +2,12 @@
 title: Visão geral do .NET Core
 description: Saiba mais sobre as características e a composição do .NET Core e compare-o com outras implementações do .NET.
 ms.date: 03/26/2020
-ms.openlocfilehash: d5ef79fe5a8fbb56beae77edd01830fe6561fa51
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: e99939cf85cc441fd473e4d033e22b1a5d053638
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100724"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539002"
 ---
 # <a name="net-core-overview"></a>Visão geral do .NET Core
 
@@ -39,7 +39,7 @@ O .NET Core expõe estruturas para a criação de qualquer tipo de aplicativo:
 
 * Aplicativos de nuvem com [ASP.NET Core](/aspnet/core/)
 * Aplicativos móveis com o [Xamarin](/xamarin)
-* Aplicativos de IoT com [System. Device. GPIO](https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0)
+* Aplicativos de IoT com [System. Device. GPIO](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0)
 * Aplicativos cliente do Windows com [WPF](../desktop-wpf/overview/index.md) e Windows Forms
 * [Ml.net](../machine-learning/index.yml) de Machine Learning
 
@@ -62,9 +62,9 @@ O .NET Core é composto pelas seguintes partes:
 - Os compiladores de [SDK do .NET Core](https://github.com/dotnet/sdk) e linguagem ([Roslyn](https://github.com/dotnet/roslyn) e [F #](https://github.com/microsoft/visualfsharp)) que habilitam a experiência do desenvolvedor do .NET Core.
 - O [comando dotnet](./tools/dotnet.md), que é usado para iniciar aplicativos .NET Core e comandos da CLI. Ele seleciona e hospeda o tempo de execução, fornece uma política de carregamento de assembly e inicia aplicativos e ferramentas.
 
-### <a name="open-source"></a>Código-fonte aberto
+### <a name="open-source"></a>Software livre
 
-O [.NET Core](about.md) é uma plataforma de desenvolvimento de software livre [, de uso](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)geral. Você pode criar aplicativos .NET Core para Windows, macOS e Linux para processadores x64, x86, ARM32 e ARM64. Estruturas e APIs são fornecidas para a [nuvem](/aspnet/core/), a [IOT](https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), a [interface do usuário do cliente](../desktop-wpf/overview/index.md)e o [Machine Learning](../machine-learning/index.yml).
+O [.NET Core](about.md) é uma plataforma de desenvolvimento de software livre [, de uso](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)geral. Você pode criar aplicativos .NET Core para Windows, macOS e Linux para processadores x64, x86, ARM32 e ARM64. Estruturas e APIs são fornecidas para a [nuvem](/aspnet/core/), a [IOT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), a [interface do usuário do cliente](../desktop-wpf/overview/index.md)e o [Machine Learning](../machine-learning/index.yml).
 
 ## <a name="support"></a>Suporte
 

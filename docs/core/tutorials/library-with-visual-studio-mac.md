@@ -2,12 +2,12 @@
 title: Criar uma biblioteca de classes de .NET Standard usando Visual Studio para Mac
 description: Saiba como criar uma biblioteca de classes de .NET Standard usando Visual Studio para Mac.
 ms.date: 06/08/2020
-ms.openlocfilehash: 8e1e4ca3bc1b12d889b847d80318f3d6cd1bbe46
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 433f6e0e2d784878c9a1616139b39ec56d695bcf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416000"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537633"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>Tutorial: criar uma biblioteca de .NET Standard usando Visual Studio para Mac
 
@@ -23,10 +23,10 @@ Uma *biblioteca de classes* define tipos e métodos que são chamados por um apl
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* [Instale Visual Studio para Mac versão 8,6 ou posterior](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Selecione a opção para instalar o .NET Core. A instalação do Xamarin é opcional para o desenvolvimento do .NET Core. Para obter mais informações, consulte os seguintes recursos:
+* [Instale Visual Studio para Mac versão 8,6 ou posterior](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Selecione a opção para instalar o .NET Core. A instalação do Xamarin é opcional para o desenvolvimento do .NET Core. Para saber mais, consulte os recursos a seguir:
 
   * [Tutorial: instalar o Visual Studio para Mac](/visualstudio/mac/installation).
-  * [Versões do MacOS com suporte](../install/dependencies.md?pivots=os-macos).
+  * [Versões do MacOS com suporte](../install/macos.md).
   * [Versões do .NET Core com suporte pelo Visual Studio para Mac](/visualstudio/mac/net-core-support).
 
 ## <a name="create-a-solution-with-a-class-library-project"></a>Criar uma solução com um projeto de biblioteca de classes
@@ -39,7 +39,7 @@ Uma solução do Visual Studio serve como um contêiner para um ou mais projetos
 
 1. Na caixa de diálogo **novo projeto** no nó **várias plataformas** , selecione **biblioteca**, em seguida, selecione o modelo de **biblioteca de .net Standard** e selecione **Avançar**.
 
-   :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Caixa de diálogo novo projeto":::
+   :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Caixa de diálogo Novo Projeto":::
 
 1. Na caixa de diálogo **configurar sua nova biblioteca de .net Standard** , escolha ".net Standard 2,1" e selecione **Avançar**.
 

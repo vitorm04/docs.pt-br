@@ -4,16 +4,16 @@ description: O .NET Core é uma implementação modular de alto desempenho do .N
 author: richlander
 ms.date: 03/26/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: b28ad965e54680e2e1134c389266741ade28084f
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 350fd50bee3403a05d1c19c9a692535613b17498
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226576"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538270"
 ---
 # <a name="introduction-to-net-core"></a>Introdução ao .NET Core
 
-O [.NET Core](about.md) é uma plataforma de desenvolvimento de software livre [, de uso](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)geral. Você pode criar aplicativos .NET Core para Windows, macOS e Linux para processadores x64, x86, ARM32 e ARM64 usando várias linguagens de programação. Estruturas e APIs são fornecidas para a [nuvem](/aspnet/core/), a [IOT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), a [interface do usuário do cliente](../desktop-wpf/overview/index.md)e o [Machine Learning](/dotnet/machine-learning/).
+O [.NET Core](about.md) é uma plataforma de desenvolvimento de software livre [, de uso](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)geral. Você pode criar aplicativos .NET Core para Windows, macOS e Linux para processadores x64, x86, ARM32 e ARM64 usando várias linguagens de programação. Estruturas e APIs são fornecidas para a [nuvem](/aspnet/core/), a [IOT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), a [interface do usuário do cliente](../desktop-wpf/overview/index.md)e o [Machine Learning](../machine-learning/index.yml).
 
 [Baixe o SDK do .NET Core](https://dotnet.microsoft.com/download) para experimentar o .NET Core em seu computador. A versão mais recente é o [.NET Core 3,1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/).
 
@@ -22,11 +22,11 @@ O [.NET Core](about.md) é uma plataforma de desenvolvimento de software livre [
 Você pode obter o .NET Core das seguintes maneiras:
 
 * [Instaladores para Windows e macOS](https://dotnet.microsoft.com/download)
-* [Pacotes do Linux](https://docs.microsoft.com/dotnet/core/install/linux-package-managers)
+* [Pacotes do Linux](./install/linux.md)
 * [Contêineres do Docker](https://hub.docker.com/_/microsoft-dotnet-core/)
 * [Zips e tarballs](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 * [Scripts de instalação](https://dotnet.microsoft.com/download/dotnet-core/scripts)
-* [Notas de versão](https://github.com/dotnet/core/tree/master/release-notes)
+* [Notas sobre a versão](https://github.com/dotnet/core/tree/master/release-notes)
 
 ## <a name="create-your-first-application"></a>Criar seu primeiro aplicativo
 
@@ -37,7 +37,7 @@ dotnet new console
 dotnet run
 ```
 
-A seguinte saída deve ser exibida:
+Você deve ver o seguinte resultado:
 
 ```output
 Hello World!

@@ -4,12 +4,12 @@ description: Saiba mais sobre quais versões do Windows você pode instalar no .
 author: adegeo
 ms.author: adegeo
 ms.date: 06/22/2020
-ms.openlocfilehash: 97f67d00b3eb4dafc55256aea51f4295bb0ef06a
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 12cffb78de803845a4b18adc70289993e67f64f1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308943"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538283"
 ---
 # <a name="install-net-core-on-windows"></a>Instalar o .NET Core no Windows
 
@@ -36,18 +36,18 @@ As datas de fim de serviço das versões do Windows 10 são segmentadas por edi�
 - Um ❌ indica que a versão do Windows ou .NET Core não tem suporte nessa versão do Windows.
 - Quando uma versão do Windows e uma versão do .NET Core têm ✔️, há suporte para essa combinação de so e .NET.
 
-| Sistema Operacional                      | .NET Core 2.1 | .NET Core 3.1 | Versão prévia do .NET 5 |
+| Sistema operacional                      | .NET Core 2.1 | .NET Core 3.1 | Versão prévia do .NET 5 |
 |-----------------------------|---------------|---------------|----------------|
 | ✔️ Windows 10, versão 2004 | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
 | ✔️ Windows 10, versão 1909 | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
 | ✔️ Windows 10, versão 1903 | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
 | ✔️ Windows 10, versão 1809 | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
-| ❌Windows 10, versão 1803 | ✔️ 2,1        | ❌3,1        | ❌visualização de 5,0 |
-| ❌Windows 10, versão 1709 | ❌2,1        | ❌3,1        | ❌visualização de 5,0 |
-| ❌Windows 10, versão 1703 | ❌2,1        | ❌3,1        | ❌visualização de 5,0 |
-| ❌Windows 10, versão 1607 | ❌2,1        | ❌3,1        | ❌visualização de 5,0 |
-| ❌Windows 10, versão 1511 | ❌2,1        | ❌3,1        | ❌visualização de 5,0 |
-| ❌Windows 10, versão 1507 | ❌2,1        | ❌3,1        | ❌visualização de 5,0 |
+| ❌ Windows 10, versão 1803 | ✔️ 2,1        | ❌ 3,1        | ❌ visualização de 5,0 |
+| ❌ Windows 10, versão 1709 | ❌ 2,1        | ❌ 3,1        | ❌ visualização de 5,0 |
+| ❌ Windows 10, versão 1703 | ❌ 2,1        | ❌ 3,1        | ❌ visualização de 5,0 |
+| ❌ Windows 10, versão 1607 | ❌ 2,1        | ❌ 3,1        | ❌ visualização de 5,0 |
+| ❌ Windows 10, versão 1511 | ❌ 2,1        | ❌ 3,1        | ❌ visualização de 5,0 |
+| ❌ Windows 10, versão 1507 | ❌ 2,1        | ❌ 3,1        | ❌ visualização de 5,0 |
 
 ## <a name="unsupported-releases"></a>Versões sem suporte
 
@@ -94,9 +94,9 @@ As seguintes versões do Windows têm suporte com o .NET Core 3,1:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| SO                            | Versão                        | Arquiteturas   |
+| Sistema operacional                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
-| Windows Client                | 8.1                            | x64, x86        |
+| Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
 | Cliente do Windows 10             | Versão 1609 +                  | x64, x86        |
 | Windows Server                | 2012 R2 +                       | x64, x86        |
 | Nano Server                   | Versão 1803 +                  | x64, ARM32      |
@@ -112,7 +112,7 @@ As seguintes versões do Windows têm suporte com o .NET Core 3,0:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| SO                            | Versão                        | Arquiteturas   |
+| Sistema operacional                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
 | Cliente do Windows 10             | Versão 1607 +                  | x64, x86        |
@@ -130,7 +130,7 @@ As seguintes versões do Windows têm suporte com o .NET Core 2,2:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| SO                            | Versão                        | Arquiteturas   |
+| Sistema operacional                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
 | Cliente do Windows 10             | Versão 1607 +                  | x64, x86        |
@@ -146,7 +146,7 @@ As seguintes versões do Windows têm suporte com o .NET Core 2,1:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| SO                            | Versão                        | Arquiteturas   |
+| Sistema operacional                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
 | Cliente do Windows 10             | Versão 1607 +                  | x64, x86        |
@@ -159,12 +159,12 @@ Para obter mais informações sobre OS sistemas operacionais, as distribuições
 
 <!-- markdownlint-disable MD001 -->
 
-### <a name="windows-7--vista--81--server-2008-r2--server-2012-r2"></a><a name="additional-deps"></a>Windows 7/Vista/8,1/servidor 2008 R2/Server 2012 R2
+### <a name="windows-7--vista--81--server-2008-r2--server-2012-r2"></a><a name="additional-deps"></a> Windows 7/Vista/8,1/servidor 2008 R2/Server 2012 R2
 
 Dependências adicionais serão necessárias se você estiver instalando o SDK do .NET ou o tempo de execução nas seguintes versões do Windows:
 
-- ❌Windows 7 SP1
-- ❌Windows Vista SP 2
+- ❌ Windows 7 SP1
+- ❌ Windows Vista SP 2
 - ✔️ Windows 8.1
 - ✔️ o Windows Server 2008 R2
 - ✔️ o Windows Server 2012 R2
@@ -190,7 +190,7 @@ Os requisitos acima também serão necessários se você vir entre um dos seguin
 
 Os [scripts dotnet-install](../tools/dotnet-install-script.md) são usados para a automação CI e para instalações não administrativas do tempo de execução. Você pode baixar o script na [página de referência de script dotnet-install](../tools/dotnet-install-script.md).
 
-O script assume como padrão a instalação da versão mais recente do [LTS (suporte a longo prazo)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , que é o .net Core 3,1. Você pode escolher uma versão específica especificando a `Channel` opção. Inclua a `Runtime` opção para instalar um tempo de execução. Caso contrário, o script instalará o [SDK](sdk.md).
+O script assume como padrão a instalação da versão mais recente do [LTS (suporte a longo prazo)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , que é o .net Core 3,1. Você pode escolher uma versão específica especificando a `Channel` opção. Inclua a `Runtime` opção para instalar um tempo de execução. Caso contrário, o script instalará o SDK.
 
 ```powershell
 dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore

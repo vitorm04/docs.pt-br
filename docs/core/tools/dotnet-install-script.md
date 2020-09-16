@@ -2,18 +2,18 @@
 title: Scripts dotnet-install
 description: Saiba mais sobre os scripts dotnet-install para instalar o SDK do .NET Core e o tempo de execução compartilhado.
 ms.date: 04/30/2020
-ms.openlocfilehash: c3aa6549a0b521db7fc19c6ff44665e3c4ba0c5f
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 8f27b8a7794e84e6e2b288d6cc2ec33ffcb7600f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024648"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538036"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referência de scripts dotnet-install
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
-`dotnet-install.ps1` | `dotnet-install.sh`-Script usado para instalar o SDK do .NET Core e o tempo de execução compartilhado.
+`dotnet-install.ps1` | `dotnet-install.sh` -Script usado para instalar o SDK do .NET Core e o tempo de execução compartilhado.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -46,7 +46,7 @@ dotnet-install.sh --help
 
 O script de bash também lê comutadores do PowerShell. Portanto, você pode usar comutadores do PowerShell com o script nos sistemas Linux/macOS.
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Os `dotnet-install` scripts executam uma instalação não administrativa do SDK do .NET Core, que inclui o CLI do .NET Core e o tempo de execução compartilhado. Há dois scripts:
 
@@ -71,8 +71,8 @@ Para configurar um ambiente de desenvolvimento ou executar aplicativos, use os i
 
 Recomendamos que você use a versão estável dos scripts:
 
-- Bash (Linux/macOS):<https://dot.net/v1/dotnet-install.sh>
-- PowerShell (Windows):<https://dot.net/v1/dotnet-install.ps1>
+- Bash (Linux/macOS): <https://dot.net/v1/dotnet-install.sh>
+- PowerShell (Windows): <https://dot.net/v1/dotnet-install.ps1>
 
 ### <a name="script-behavior"></a>Comportamento do script
 
@@ -131,7 +131,7 @@ Os scripts de instalação não atualizam o registro no Windows. Eles apenas bai
 
 - **`-NoCdn|--no-cdn`**
 
-  Desabilita o download da [Rede de Distribuição de Conteúdo (CDN) Azure](https://docs.microsoft.com/azure/cdn/cdn-overview) e usa o feed não armazenado em cache diretamente.
+  Desabilita o download da [Rede de Distribuição de Conteúdo (CDN) Azure](/azure/cdn/cdn-overview) e usa o feed não armazenado em cache diretamente.
 
 - **`-NoPath|--no-path`**
 
@@ -256,7 +256,7 @@ Os scripts de instalação não atualizam o registro no Windows. Eles apenas bai
   curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Versões do .NET Core](https://github.com/dotnet/core/releases)
 - [Arquivo de download de runtime e SDK do .NET Core](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

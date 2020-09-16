@@ -3,12 +3,12 @@ title: Migrar seu aplicativo Web .NET ou serviço para o Serviço de Aplicativo 
 description: Saiba mais sobre como migrar um aplicativo Web ou serviço do .NET do local para o serviço Azure App.
 ms.topic: conceptual
 ms.date: 07/08/2020
-ms.openlocfilehash: d208865942b49ae2d5437b8f2fcff294933af21b
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: a5e193b2dbaedb86ff0e24bc8b70043896bbeea3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174303"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539080"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>Migrar seu aplicativo Web .NET ou serviço para o Serviço de Aplicativo do Azure
 
@@ -37,9 +37,9 @@ Para o WCF, há suporte para as seguintes associações:
 |--|--|
 | `BasicHttp` |  |
 | `WSHttp` |  |
-| `WSDualHttpBinding` | [O suporte de soquete da Web](https://docs.microsoft.com/azure/app-service/web-sites-configure) deve ser habilitado. | [O suporte de soquete da Web](/azure/app-service/web-sites-configure) deve ser habilitado. |
-| `NetHttpBinding` | [O suporte de soquete da Web](https://docs.microsoft.com/azure/app-service/web-sites-configure) deve estar habilitado para contratos duplex. | [O suporte de soquete da Web](/azure/app-service/web-sites-configure) deve estar habilitado para contratos duplex. |
-| `NetHttpsBinding` | [O suporte de soquete da Web](https://docs.microsoft.com/azure/app-service/web-sites-configure) deve estar habilitado para contratos duplex. | [O suporte de soquete da Web](/azure/app-service/web-sites-configure) deve estar habilitado para contratos duplex. |
+| `WSDualHttpBinding` | [O suporte de soquete da Web](/azure/app-service/web-sites-configure) deve ser habilitado. | [O suporte de soquete da Web](/azure/app-service/web-sites-configure) deve ser habilitado. |
+| `NetHttpBinding` | [O suporte de soquete da Web](/azure/app-service/web-sites-configure) deve estar habilitado para contratos duplex. | [O suporte de soquete da Web](/azure/app-service/web-sites-configure) deve estar habilitado para contratos duplex. |
+| `NetHttpsBinding` | [O suporte de soquete da Web](/azure/app-service/web-sites-configure) deve estar habilitado para contratos duplex. | [O suporte de soquete da Web](/azure/app-service/web-sites-configure) deve estar habilitado para contratos duplex. |
 | `BasicHttpContextBinding` |  |
 | `WebHttpBinding` |  |
 | `WSHttpContextBinding` |  |
@@ -62,7 +62,7 @@ Não há suporte para o Modo de Compatibilidade do IIS5. No serviço Azure App, 
 
 #### <a name="iis7-schema-compliance"></a>IIS7+ conformidade de esquema
 
-Alguns elementos e atributos não são definidos no esquema do IIS do Serviço de Aplicativo do Azure. Se você encontrar problemas, considere o uso de [transformações XDT](https://azure.microsoft.com/documentation/articles/web-sites-transform-extend/).
+Alguns elementos e atributos não são definidos no esquema do IIS do Serviço de Aplicativo do Azure. Se você encontrar problemas, considere o uso de [transformações XDT](/azure/app-service/configure-common).
 
 #### <a name="single-application-pool-per-site"></a>Pool de aplicativos único por site
 
@@ -116,7 +116,7 @@ Talvez seja necessário atualizar as configurações de DNS com base nos requisi
 
 Se seu aplicativo não pode ser migrado diretamente para o Serviço de Aplicativo, considere usar o Serviço de Aplicativo usando contêineres do Windows, que permite o uso do GAC, componentes COM, MSIs, o acesso completo a APIs do .NET FX, DirectX e muito mais.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 * [Como determinar se seu aplicativo se qualifica para o Serviço de Aplicativo](https://appmigration.microsoft.com/)
 * [Movendo o banco de dados para a nuvem](sql.md)

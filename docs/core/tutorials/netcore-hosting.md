@@ -4,12 +4,12 @@ description: Saiba como hospedar o runtime do .NET Core a partir do código nati
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 3b24ade694e25040d77e411bead3f454e9d5cdef
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 9f45a75d7ec836c14a2285a1707649cc32c2a25c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656170"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537542"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escreva um host personalizado do .NET Core para controlar o runtime do .NET a partir de seu código nativo
 
@@ -144,7 +144,7 @@ Neste exemplo, agora o host pode chamar `managedDelegate` para executar o métod
 
 Como alternativa, a função `coreclr_execute_assembly` pode ser usada para iniciar um executável gerenciado. Essa API usa um caminho de assembly e a matriz de argumentos como parâmetros de entrada. Ela carrega o assembly nesse caminho e invoca seu método principal.
 
-```C++
+```c++
 int hr = executeAssembly(
         hostHandle,
         domainId,
@@ -197,7 +197,7 @@ Com um `ICLRRuntimeHost4` em mãos, agora podemos especificar sinalizadores de i
 
 O runtime é iniciado com uma chamada à função `Start`.
 
-```C++
+```c++
 hr = runtimeHost->Start();
 ```
 
@@ -234,7 +234,7 @@ Com um AppDomain em execução, agora o host pode começar a execução do códi
 
 Outra opção, caso `ExecuteAssembly` não atenda às necessidades do host, é usar `CreateDelegate` para criar um ponteiro de função para um método estático gerenciado. Isso exige que o host conheça a assinatura do método na qual ele está chamando (para criar o tipo de ponteiro de função), mas permite aos hosts a flexibilidade de invocar um código diferente de um ponto de entrada de um assembly. O nome do assembly fornecido no segundo parâmetro é o [nome completo do assembly gerenciado](../../standard/assembly/names.md) da biblioteca a ser carregada.
 
-```C++
+```c++
 void *pfnDelegate = NULL;
 hr = runtimeHost->CreateDelegate(
     domainId,

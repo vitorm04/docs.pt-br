@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 0b02d1efc98f02390555861871d280f9800ced1e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 017744d692d6fd4183fde3c21e71fcee2f35844e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598873"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535352"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Serviço e cliente de internet desprotegido
 A ilustração a seguir mostra um exemplo de um cliente e serviço de Windows Communication Foundation (WCF) não seguros e público:  
@@ -21,7 +21,7 @@ A ilustração a seguir mostra um exemplo de um cliente e serviço de Windows Co
 |--------------------|-----------------|  
 |Modo de segurança|Nenhum|  
 |Transport|HTTP|  
-|Associação|<xref:System.ServiceModel.BasicHttpBinding>no código, ou o [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) elemento na configuração.|  
+|Associação|<xref:System.ServiceModel.BasicHttpBinding> no código, ou o [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) elemento na configuração.|  
 |Interoperabilidade|Com serviços e clientes de serviços Web existentes|  
 |Autenticação|Nenhum|  
 |Integridade|Nenhum|  
@@ -109,8 +109,8 @@ A ilustração a seguir mostra um exemplo de um cliente e serviço de Windows Co
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Cenários comuns de segurança](common-security-scenarios.md)
 - [Visão geral de segurança](security-overview.md)
-- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

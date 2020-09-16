@@ -3,12 +3,12 @@ title: Medir o desempenho usando o EventCounters no .NET Core
 description: Neste tutorial, você aprenderá a medir o desempenho usando o EventCounters.
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7b4940e17d01e7ec5a50d11e3c818ecdec2d48cf
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: db9a0889d46cc4db02baac60cbed6f6e0ba6856b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024992"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538560"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>Tutorial: medir o desempenho usando o EventCounters no .NET Core
 
@@ -29,11 +29,11 @@ O tutorial usa:
 
 - [SDK do .NET Core 3,1](https://dotnet.microsoft.com/download/dotnet-core) ou uma versão posterior.
 - [dotnet-contadores](dotnet-counters.md) para monitorar os contadores de eventos.
-- Um aplicativo de [destino de depuração de exemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) para diagnosticar.
+- Um aplicativo de [destino de depuração de exemplo](/samples/dotnet/samples/diagnostic-scenarios) para diagnosticar.
 
 ## <a name="get-the-source"></a>Obter a origem
 
-O aplicativo de exemplo será usado como base para o monitoramento. O [repositório de ASP.NET Core de exemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) está disponível no navegador de exemplos. Baixe o arquivo zip, extraia-o depois de baixado e abra-o em seu IDE favorito. Compile e execute o aplicativo para garantir que ele funcione corretamente e, em seguida, interrompa o aplicativo.
+O aplicativo de exemplo será usado como base para o monitoramento. O [repositório de ASP.NET Core de exemplo](/samples/dotnet/samples/diagnostic-scenarios) está disponível no navegador de exemplos. Baixe o arquivo zip, extraia-o depois de baixado e abra-o em seu IDE favorito. Compile e execute o aplicativo para garantir que ele funcione corretamente e, em seguida, interrompa o aplicativo.
 
 ## <a name="implement-an-eventsource"></a>Implementar um EventSource
 

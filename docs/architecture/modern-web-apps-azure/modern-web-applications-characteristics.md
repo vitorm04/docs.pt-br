@@ -7,17 +7,17 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: fd6658a6143e132d488660d1aa4a35e427ba2d84
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: a4d7558039d64b21a2744f74d037369ea8c6c923
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174790"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539262"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Características de aplicativos Web modernos
 
 > "… com o design correto, os recursos são obtidos sem esforços. Essa abordagem é árdua, mas continua a ter êxito."  
-> _\-Dennis Ritchie_
+> _\- Dennis Ritchie_
 
 Os aplicativos Web modernos têm maiores expectativas de usuário e maiores demandas do que nunca. Os aplicativos Web de hoje devem estar disponíveis 24/7 em qualquer lugar do mundo e ser utilizáveis praticamente em qualquer dispositivo ou tamanho de tela. Os aplicativos Web precisam ser seguros, flexíveis e escalonáveis para atender aos picos da demanda. Cada vez mais, os cenários complexos devem ser tratados por experiências avançadas do usuário criadas no cliente por meio de JavaScript e pela comunicação eficiente por meio de APIs Web.
 
@@ -38,11 +38,11 @@ Estas diretrizes incluem um aplicativo de referência, o _eShopOnWeb_, que demon
 
 ## <a name="cloud-hosted-and-scalable"></a>Hospedado na nuvem e escalonável
 
-O ASP.NET Core é otimizado para a nuvem (nuvem pública, nuvem privada, qualquer nuvem) porque tem baixa memória e alta taxa de transferência. Uma superfície menor dos aplicativos ASP.NET Core significa que você pode hospedar mais partes dele no mesmo hardware e pagar por menos recursos quando usar os serviços pré-pagos de hospedagem na nuvem. A taxa de transferência mais alta significa que você pode atender mais clientes por meio de um aplicativo considerando o mesmo hardware, reduzindo ainda mais a necessidade de investir em servidores e na infraestrutura de hospedagem.
+O ASP.NET Core é otimizado para a nuvem (nuvem pública, nuvem privada, qualquer nuvem) porque tem baixa memória e alta taxa de transferência. A menor superfície dos aplicativos de ASP.NET Core significa que você pode hospedar mais deles no mesmo hardware e pagar por menos recursos ao usar serviços de Hospedagem de nuvem pagos conforme o uso. A taxa de transferência mais alta significa que você pode atender mais clientes por meio de um aplicativo considerando o mesmo hardware, reduzindo ainda mais a necessidade de investir em servidores e na infraestrutura de hospedagem.
 
 ## <a name="cross-platform"></a>Plataforma cruzada
 
-O ASP.NET Core é multiplataforma e pode ser executado no Windows, no macOS e no Linux. Isso proporciona muitas novas opções para o desenvolvimento e a implantação de aplicativos criados com o ASP.NET Core. Os contêineres do Docker, tanto do Linux quanto do Windows, podem hospedar aplicativos ASP.NET Core, permitindo que eles aproveitem os benefícios de [contêineres e microsserviços](../microservices/index.md).
+O ASP.NET Core é multiplataforma e pode ser executado no Windows, no macOS e no Linux. Isso abre muitas opções novas para o desenvolvimento e a implantação de aplicativos criados com o ASP.NET Core. Os contêineres do Docker, tanto do Linux quanto do Windows, podem hospedar aplicativos ASP.NET Core, permitindo que eles aproveitem os benefícios de [contêineres e microsserviços](../microservices/index.md).
 
 ## <a name="modular-and-loosely-coupled"></a>Flexível e acoplado de forma flexível
 
@@ -72,11 +72,11 @@ Além do ASP.NET Core, o ASP.NET 4.x tradicional continua sendo uma plataforma r
 
 ## Blazor
 
-Blazorestá incluído no ASP.NET Core 3,0 e posterior. Ele fornece um novo mecanismo para a criação de aplicativos avançados de cliente Web interativos usando Razor, C# e ASP.NET Core. Ele oferece outra solução a ser considerada ao desenvolver aplicativos Web modernos. Há duas versões do Blazor a serem consideradas: lado do servidor e do cliente.
+Blazor está incluído no ASP.NET Core 3,0 e posterior. Ele fornece um novo mecanismo para a criação de aplicativos avançados de cliente Web interativos usando Razor, C# e ASP.NET Core. Ele oferece outra solução a ser considerada ao desenvolver aplicativos Web modernos. Há duas versões do Blazor a serem consideradas: lado do servidor e do cliente.
 
 O lado do servidor Blazor foi lançado em 2019 com ASP.NET Core 3,0. Como o nome indica, ele é executado no servidor, processando alterações no documento do cliente de volta para o navegador pela rede. O lado do servidor Blazor fornece uma experiência de cliente rica sem a necessidade de JavaScript do lado do cliente e sem a necessidade de carregamentos de página separados para cada interação de página de cliente. As alterações na página carregada são solicitadas e processadas pelo servidor e, em seguida, enviadas de volta para o cliente usando o Signalr.
 
-O lado do cliente Blazor será lançado em 2020 e eliminará a necessidade de processar alterações no servidor. Em vez disso, ele será aproveitado WebAssembly para executar o código .net dentro do cliente. O cliente ainda pode fazer chamadas à API para o servidor, se necessário, para solicitar dados, mas todo o comportamento do lado do cliente é executado no cliente via WebAssembly , que já tem suporte em todos os principais navegadores e é apenas uma biblioteca JavaScript.
+Lançado no lado do cliente Blazor em maio de 2020 elimina a necessidade de processar alterações no servidor. Em vez disso, ele aproveita WebAssembly a execução do código .net dentro do cliente. O cliente ainda pode fazer chamadas à API para o servidor, se necessário, para solicitar dados, mas todo o comportamento do lado do cliente é executado no cliente via WebAssembly , que já tem suporte em todos os principais navegadores e é apenas uma biblioteca JavaScript.
 
 > ### <a name="references--modern-web-applications"></a>Referências – Aplicativos Web modernos
 >
@@ -84,7 +84,7 @@ O lado do cliente Blazor será lançado em 2020 e eliminará a necessidade de pr
 >   <https://docs.microsoft.com/aspnet/core/>
 > - **Teste no ASP.NET Core**  
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **Blazor-Introdução**  
+> - **Blazor -Introdução**  
 >   <https://blazor.net/docs/get-started.html>
 
 >[!div class="step-by-step"]

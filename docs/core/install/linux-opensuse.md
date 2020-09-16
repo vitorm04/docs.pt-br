@@ -4,12 +4,12 @@ description: Demonstra as várias maneiras de instalar SDK do .NET Core e o temp
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 24f0a5b5278d038c2f941b0984efcacd91dcbe31
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ccdb23ca1838d2c15c9a95b45c8505efe7a6df0e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619462"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539224"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a>Instalar o SDK do .NET Core ou o tempo de execução do .NET Core no openSUSE
 
@@ -35,7 +35,7 @@ Não há mais suporte para as seguintes versões do .NET Core. Os downloads para
 
 - 3.0
 - 2.2
-- 2,0
+- 2.0
 
 ## <a name="how-to-install-other-versions"></a>Como instalar outras versões
 
@@ -58,6 +58,10 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 ## <a name="troubleshoot-the-package-manager"></a>Solucionar problemas do Gerenciador de pacotes
 
 Esta seção fornece informações sobre erros comuns que você pode obter ao usar o Gerenciador de pacotes para instalar o .NET Core.
+
+### <a name="unable-to-find-package"></a>Não é possível localizar o pacote
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
 ### <a name="failed-to-fetch"></a>Falha ao buscar
 

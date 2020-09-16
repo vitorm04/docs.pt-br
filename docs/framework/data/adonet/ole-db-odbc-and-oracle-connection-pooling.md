@@ -2,12 +2,12 @@
 title: OLE DB, ODBC e pool de conexões Oracle
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 58ea5aa54a0f6acbc8d2400dd04eeba9ff498055
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: c19f341d869ee983531fa5c90c0d7c94978dadb1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545037"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535365"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>Pool de conexões OLE DB, ODBC e Oracle
 
@@ -23,9 +23,9 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 
  É recomendável sempre fechar ou encerrar uma conexão quando você terminar de usá-la para retornar a conexão ao pool. As conexões que não são fechadas explicitamente não podem ser retornadas ao pool. Por exemplo, uma conexão que sai de escopo, mas que não foi fechada explicitamente será retornada somente para o pool de conexões se o tamanho do máximo tiver sido atingido e a conexão ainda estiver válida.
 
- Para obter mais informações sobre OLE DB pooling de sessão ou de recursos, além de como desabilitar o pooling substituindo os padrões de serviço do provedor de OLE DB, consulte o [Guia do programador do OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms713643(v=vs.85)).
+ Para obter mais informações sobre OLE DB pooling de sessão ou de recursos, além de como desabilitar o pooling substituindo os padrões de serviço do provedor de OLE DB, consulte o [Guia do programador do OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-## <a name="odbc"></a>ODBC
+## <a name="odbc"></a>ODBCODBC
  O pooling de conexões para o provedor de dados .NET Framework para ODBC é gerenciado pelo ODBC Driver Manager que é usado para a conexão, e não é afetado pelo provedor de dados .NET Framework para ODBC.
 
  Para habilitar ou desabilitar o pool de conexões, abra o **administrador de fonte de dados ODBC** na pasta Ferramentas administrativas do painel de controle. A guia **pooling de conexão** permite especificar parâmetros de pool de conexões para cada driver ODBC instalado. As alterações no pool de conexões de um driver ODBC específico afetam todos os aplicativos que usam o driver ODBC.
@@ -62,7 +62,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 
  A tabela a seguir descreve os valores de <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> que você pode usar para ajustar o comportamento do pooling de conexões.
 
-|Name|Padrão|Descrição|
+|Nome|Padrão|Descrição|
 |----------|-------------|-----------------|
 |`Connection Lifetime`|0|Quando uma conexão é retornada para o pool, seu tempo de criação é comparado com a hora atual e a conexão será destruída se esse intervalo de tempo (em segundos) exceder o valor especificado por `Connection Lifetime`. Isso é útil nas configurações clusterizadas para forçar o balanceamento de carga entre um servidor em execução e um servidor que acabou de ficar online.<br /><br /> Um valor de 0 (zero) fará as conexões com pool excederem o tempo limite máximo.|
 |`Enlist`|'true'|Quando for `true`, o pooler automaticamente inserirá a conexão no contexto de transação atual do thread de criação se um contexto de transação existir.|
@@ -70,8 +70,8 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 |`Min Pool Size`|0|O número mínimo de conexões mantidas no pool.|
 |`Pooling`|'true'|Quando for `true`, o objeto de conexão será obtido do pool apropriado ou, se necessário, será criado e adicionado ao pool apropriado.|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Pooling de Conexão](connection-pooling.md)
+- [Pool de conexões](connection-pooling.md)
 - [Contadores de desempenho](performance-counters.md)
-- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)
+- [Visão geral do ADO.NET](ado-net-overview.md)

@@ -4,12 +4,12 @@ description: Demonstra as várias maneiras de instalar o SDK do .NET Core e o te
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 9694dac719024264edee849044f048970b63b7b7
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5c07de20110a1aecf2ec5cb9de88f204625e548d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132931"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538442"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>Instalar o SDK do .NET Core ou o tempo de execução do .NET Core no Ubuntu
 
@@ -36,14 +36,14 @@ A tabela a seguir é uma lista de versões do .NET Core com suporte no momento e
 | ✔️ [18, 4 (LTS)](#1804-) | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
 | ❌[17,10](#1710-)       | ✔️ 2,1        | ❌ 3,1        | ❌ visualização de 5,0 |
 | ❌ [17.04](#1704-)       | ✔️ 2,1        | ❌ 3,1        | ❌ visualização de 5,0 |
-| ❌ [16,10](#1610-)       | ❌ 2,1        | ❌ 3,1        | ❌ visualização de 5,0 |
+| ❌[16,10](#1610-)       | ❌ 2,1        | ❌ 3,1        | ❌ visualização de 5,0 |
 | ✔️ [16, 4 (LTS)](#1604-) | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
 
 Não há mais suporte para as seguintes versões do .NET Core. Os downloads para eles ainda permanecem publicados:
 
 - 3.0
-- 2,2
-- 2,0
+- 2.2
+- 2.0
 
 ## <a name="how-to-install-other-versions"></a>Como instalar outras versões
 
@@ -172,6 +172,10 @@ sudo apt-get upgrade
 ## <a name="apt-troubleshooting"></a>Solução de problemas da APT
 
 Esta seção fornece informações sobre erros comuns que você pode obter ao usar a APT para instalar o .NET Core.
+
+### <a name="unable-to-find-package"></a>Não é possível localizar o pacote
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
 ### <a name="unable-to-locate--some-packages-could-not-be-installed"></a>Não foi possível \\ instalar alguns pacotes
 

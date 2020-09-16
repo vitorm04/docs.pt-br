@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: bf712e88d96a5c2c80c3ff50283d44e9c7717abb
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: ac2b4193849c56002c5bba35932f2882b987a0d6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608213"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537490"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novidades do .NET Core 3.0
 
@@ -102,7 +102,7 @@ Para publicar um único arquivo executável, defina o `PublishSingleFile` em seu
 </PropertyGroup>
 ```
 
--ou-
+- ou -
 
 ```dotnetcli
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
@@ -136,7 +136,7 @@ Por exemplo, o modelo básico de novo projeto de console "hello world" incluído
 
 Antes de mais nada, teste seu aplicativo depois de cortar.
 
-Para saber mais sobre a ferramenta Vinculador de IL, confira a [documentação](https://aka.ms/dotnet-illink) ou visite o repositório [mono/linker]( https://github.com/mono/linker).
+Para saber mais sobre a ferramenta Vinculador de IL, confira a [documentação](../deploying/trim-self-contained.md) ou visite o repositório [mono/linker]( https://github.com/mono/linker).
 
 ### <a name="tiered-compilation"></a>Compilação em camadas
 
@@ -329,9 +329,9 @@ O Windows oferece uma API nativa rica na forma de APIs C simples, COM e WinRT. E
 
 ### <a name="msix-deployment"></a>Implantação do MSIX
 
-[MSIX](https://docs.microsoft.com/windows/msix/) é um novo formato de pacote de aplicativos do Windows. Ele pode ser usado para implantar aplicativos da área de trabalho do .NET Core 3.0 no Windows 10.
+[MSIX](/windows/msix/) é um novo formato de pacote de aplicativos do Windows. Ele pode ser usado para implantar aplicativos da área de trabalho do .NET Core 3.0 no Windows 10.
 
-O [Projeto de Empacotamento de Aplicativos do Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponível no Visual Studio 2019, permite criar pacotes MSIX com aplicativos .NET Core [autossuficientes](../deploying/index.md#publish-self-contained).
+O [Projeto de Empacotamento de Aplicativos do Windows](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponível no Visual Studio 2019, permite criar pacotes MSIX com aplicativos .NET Core [autossuficientes](../deploying/index.md#publish-self-contained).
 
 O arquivo de projeto do .NET Core precisa especificar os runtimes compatíveis na propriedade `<RuntimeIdentifiers>`:
 

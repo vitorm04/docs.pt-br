@@ -3,18 +3,18 @@ title: Depurar alto uso da CPU-.NET Core
 description: Um tutorial que orienta você pela depuração de alto uso da CPU no .NET Core.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 93076bbce3baf3a219b25c927d2aba3d2d57456f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 71e0b98f7ad38836c6a20c3e0e75a878fb6525c7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557796"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538703"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>Depurar alto uso da CPU no .NET Core
 
 **Este artigo aplica-se a: ✔️** SDK do .net Core 3,1 e versões posteriores
 
-Neste tutorial, você aprenderá a depurar um cenário de uso excessivo da CPU. Usando o exemplo fornecido ASP.NET Core repositório de código-fonte do [aplicativo Web](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) , você pode causar um deadlock intencionalmente. O ponto de extremidade passará por uma falha e acumulação de threads. Você aprenderá como é possível usar várias ferramentas para diagnosticar esse cenário com várias partes importantes dos dados de diagnóstico.
+Neste tutorial, você aprenderá a depurar um cenário de uso excessivo da CPU. Usando o exemplo fornecido ASP.NET Core repositório de código-fonte do [aplicativo Web](/samples/dotnet/samples/diagnostic-scenarios) , você pode causar um deadlock intencionalmente. O ponto de extremidade passará por uma falha e acumulação de threads. Você aprenderá como é possível usar várias ferramentas para diagnosticar esse cenário com várias partes importantes dos dados de diagnóstico.
 
 Neste tutorial, você irá:
 
@@ -31,13 +31,13 @@ Neste tutorial, você irá:
 O tutorial usa:
 
 - [SDK do .NET Core 3,1](https://dotnet.microsoft.com/download/dotnet-core) ou uma versão posterior.
-- [Exemplo de destino de depuração](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) para disparar o cenário.
+- [Exemplo de destino de depuração](/samples/dotnet/samples/diagnostic-scenarios) para disparar o cenário.
 - [dotnet – rastreamento](dotnet-trace.md) para listar processos e gerar um perfil.
 - [dotnet-contadores](dotnet-counters.md) para monitorar o uso da CPU.
 
 ## <a name="cpu-counters"></a>Contadores de CPU
 
-Antes de tentar coletar dados de diagnóstico, você precisa observar uma alta condição de CPU. Execute o [aplicativo de exemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) usando o comando a seguir no diretório raiz do projeto.
+Antes de tentar coletar dados de diagnóstico, você precisa observar uma alta condição de CPU. Execute o [aplicativo de exemplo](/samples/dotnet/samples/diagnostic-scenarios) usando o comando a seguir no diretório raiz do projeto.
 
 ```dotnetcli
 dotnet run
@@ -116,11 +116,11 @@ Ao analisar uma solicitação lenta, você precisa de uma ferramenta de diagnós
 
 ### <a name="linux"></a>[Linux](#tab/linux)
 
-A `perf` ferramenta pode ser usada para gerar perfis de aplicativo .NET Core. Saia da instância anterior do [destino de depuração de exemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios).
+A `perf` ferramenta pode ser usada para gerar perfis de aplicativo .NET Core. Saia da instância anterior do [destino de depuração de exemplo](/samples/dotnet/samples/diagnostic-scenarios).
 
 Defina a `COMPlus_PerfMapEnabled` variável de ambiente para fazer com que o aplicativo .NET Core crie um `map` arquivo no `/tmp` diretório. Esse `map` arquivo é usado pelo `perf` para mapear o endereço de CPU para funções geradas por JIT por nome. Para obter mais informações, consulte [Write perf MAP](../run-time-config/debugging-profiling.md#write-perf-map).
 
-Execute o [destino de depuração de exemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) na mesma sessão de terminal.
+Execute o [destino de depuração de exemplo](/samples/dotnet/samples/diagnostic-scenarios) na mesma sessão de terminal.
 
 ```dotnetcli
 export COMPlus_PerfMapEnabled=1
@@ -152,7 +152,7 @@ Esse comando gera um `flamegraph.svg` que você pode exibir no navegador para in
 
 ### <a name="windows"></a>[Windows](#tab/windows)
 
-No Windows, você pode usar a ferramenta [dotnet-Trace](dotnet-trace.md) como um criador de perfil. Usando o [destino de depuração de exemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)anterior, exerça novamente o ponto de extremidade de CPU alta ( `https://localhost:5001/api/diagscenario/highcpu/60000` ). Enquanto estiver em execução dentro da solicitação de 1 minuto, use o `collect` comando da seguinte maneira:
+No Windows, você pode usar a ferramenta [dotnet-Trace](dotnet-trace.md) como um criador de perfil. Usando o [destino de depuração de exemplo](/samples/dotnet/samples/diagnostic-scenarios)anterior, exerça novamente o ponto de extremidade de CPU alta ( `https://localhost:5001/api/diagscenario/highcpu/60000` ). Enquanto estiver em execução dentro da solicitação de 1 minuto, use o `collect` comando da seguinte maneira:
 
 ```dotnetcli
 dotnet-trace collect -p 22884 --providers Microsoft-DotNETCore-SampleProfiler
