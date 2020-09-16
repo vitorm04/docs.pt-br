@@ -6,17 +6,17 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 327fb509a5186a0b3f428efc2ddd7f983bcfa978
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9498358dd480487afcd3b746d14266e486c62d71
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595135"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546309"
 ---
 # <a name="windows-communication-foundation-security"></a>Segurança do Windows Communication Foundation
 Os tópicos nesta seção descrevem os recursos de segurança do Windows Communication Foundation (WCF) e como usá-los para ajudar a proteger mensagens.  
   
- Para obter mais informações sobre o Windows Server AppFabric e a segurança, consulte [modelo de segurança para Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))  
+ Para obter mais informações sobre o Windows Server AppFabric e a segurança, consulte [modelo de segurança para Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral de segurança](security-overview.md)  
@@ -52,7 +52,7 @@ Os tópicos nesta seção descrevem os recursos de segurança do Windows Communi
  [Auditoria](auditing-security-events.md)  
  Descreve como auditar eventos de segurança.  
   
- [Diretrizes e práticas recomendadas de segurança](security-guidance-and-best-practices.md)  
+ [Orientação de segurança e práticas recomendadas](security-guidance-and-best-practices.md)  
  Diretrizes para criar aplicativos WCF seguros.  
   
 ## <a name="reference"></a>Referência  
@@ -63,12 +63,12 @@ Os tópicos nesta seção descrevem os recursos de segurança do Windows Communi
 ## <a name="related-sections"></a>Seções relacionadas  
  [Detalhes do recurso WCF](index.md)  
   
- [Programação básica do WCF](../basic-wcf-programming.md)  
+ [Programação de WCF básica](../basic-wcf-programming.md)  
   
- [Tutorial de Introdução](../getting-started-tutorial.md)  
+ [Guia de introdução ao tutorial](../getting-started-tutorial.md)  
   
  [Visão geral conceitual](../conceptual-overview.md)  
   
 ## <a name="see-also"></a>Confira também
 
-- [Configurar seu aplicativo](../diagnostics/configuring-your-application.md)
+- [Configurando seu aplicativo](../diagnostics/configuring-your-application.md)

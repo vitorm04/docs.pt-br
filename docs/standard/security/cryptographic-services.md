@@ -25,12 +25,12 @@ helpviewer_keywords:
 - cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 4cd4e493e0e7d159b2749dac78b9a560e20fd75c
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 651231dcc41926307e3a46b67c80ba3df1fb25e9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557015"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549974"
 ---
 # <a name="cryptographic-services"></a>Serviços criptográficos
 
@@ -150,7 +150,7 @@ Duas partes (Alice e Bob) podem usar uma função de hash para garantir a integr
 
 - Alice envia a mensagem de texto sem formatação e a mensagem com hash (assinatura digital) para Bob. Bob recebe e aplica hash à mensagem e compara seu valor de hash ao valor de hash recebido de Alice. Se os valores de hash forem idênticos, a mensagem não foi alterada. Se os valores não forem idênticos, a mensagem foi alterada depois que Alice o escreveu.
 
-  Infelizmente, esse método não estabelece a autenticidade do remetente. Qualquer pessoa pode representar Alice e enviar uma mensagem para Bob. Eles podem usar o mesmo algoritmo de hash para assinar suas mensagens, e todos os Bob podem determinar que a mensagem corresponde à sua assinatura. Essa é uma forma de ataque man-in-the-Middle. Para obter mais informações, consulte [exemplo de comunicação segura da CNG (Cryptography Next Generation)](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
+  Infelizmente, esse método não estabelece a autenticidade do remetente. Qualquer pessoa pode representar Alice e enviar uma mensagem para Bob. Eles podem usar o mesmo algoritmo de hash para assinar suas mensagens, e todos os Bob podem determinar que a mensagem corresponde à sua assinatura. Essa é uma forma de ataque man-in-the-Middle. Para obter mais informações, consulte [exemplo de comunicação segura da CNG (Cryptography Next Generation)](/previous-versions/cc488018(v=vs.100)).
 
 - Alice envia a mensagem de texto não criptografado para Bob em um canal público não seguro. Ela envia a mensagem com hash para Bob por um canal privado seguro. Bob recebe a mensagem de texto sem formatação, faz hash e compara o hash ao hash trocado de modo privado. Se os hashes corresponderem, Bob saberá duas coisas:
 
@@ -194,13 +194,13 @@ No .NET Framework 3,5, as seguintes classes de criptografia permitem obter e ver
 
  Além disso, as seguintes classes fornecem informações de assinatura específicas:
 
-- <xref:System.Security.Cryptography.StrongNameSignatureInformation>contém as informações de assinatura de nome forte para um manifesto.
+- <xref:System.Security.Cryptography.StrongNameSignatureInformation> contém as informações de assinatura de nome forte para um manifesto.
 
-- <xref:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation>representa as informações de assinatura Authenticode de um manifesto.
+- <xref:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation> representa as informações de assinatura Authenticode de um manifesto.
 
-- <xref:System.Security.Cryptography.X509Certificates.TimestampInformation>contém informações sobre o carimbo de data/hora em uma assinatura Authenticode.
+- <xref:System.Security.Cryptography.X509Certificates.TimestampInformation> contém informações sobre o carimbo de data/hora em uma assinatura Authenticode.
 
-- <xref:System.Security.Cryptography.X509Certificates.TrustStatus>fornece uma maneira simples de verificar se uma assinatura Authenticode é confiável.
+- <xref:System.Security.Cryptography.X509Certificates.TrustStatus> fornece uma maneira simples de verificar se uma assinatura Authenticode é confiável.
 
 ## <a name="cryptography-next-generation-cng-classes"></a>Classes CNG (Cryptography Next Generation)
 
@@ -210,11 +210,11 @@ A <xref:System.Security.Cryptography.CngKey> classe é usada para uma variedade 
 
 O .NET Framework 3,5 também inclui uma variedade de classes CNG com suporte, como as seguintes:
 
-- <xref:System.Security.Cryptography.CngProvider>mantém um provedor de armazenamento de chaves.
+- <xref:System.Security.Cryptography.CngProvider> mantém um provedor de armazenamento de chaves.
 
-- <xref:System.Security.Cryptography.CngAlgorithm>mantém um algoritmo CNG.
+- <xref:System.Security.Cryptography.CngAlgorithm> mantém um algoritmo CNG.
 
-- <xref:System.Security.Cryptography.CngProperty>mantém as propriedades de chave usadas com frequência.
+- <xref:System.Security.Cryptography.CngProperty> mantém as propriedades de chave usadas com frequência.
 
 ## <a name="see-also"></a>Confira também
 

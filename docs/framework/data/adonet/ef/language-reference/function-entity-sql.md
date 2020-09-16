@@ -2,12 +2,12 @@
 title: FUNÇÃO (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: fd7f484733e7135d2d6c8094b6527d672a988088
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3cc843c7f16f667508aeaea65879de6842478bc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150292"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544486"
 ---
 # <a name="function-entity-sql"></a>FUNÇÃO (Entity SQL)
 Define uma função no escopo de um comando de consulta Entity SQL.  
@@ -41,17 +41,17 @@ FUNCTION function-name
  `data_type`  
  Nome de um tipo suportado.  
   
- COLETA (`>` <type_definition)  
+ COLEÇÃO (<type_definition `>` )  
  Uma expressão que retorna uma coleção de tipos suportados, de linhas, ou de referências.  
   
- REF **(**`data_type`**)**  
+ REF **(** `data_type` **)**  
  Uma expressão que retorna uma referência a um tipo de objeto.  
   
- ROW **(**`row_expression`**)**  
- Uma expressão que retorna registros anônimos, tipados estrutural de um ou mais valores. Para obter mais informações, consulte [ROW](row-entity-sql.md).  
+ LINHA **(** `row_expression` **)**  
+ Uma expressão que retorna registros anônimos, tipados estrutural de um ou mais valores. Para obter mais informações, consulte [linha](row-entity-sql.md).  
   
 ## <a name="remarks"></a>Comentários  
- Várias funções com o mesmo nome podem ser declarados embutidos, como as assinaturas de função são diferentes. Para obter mais informações, consulte [Resolução de sobrecarga de função](function-overload-resolution-entity-sql.md).  
+ Várias funções com o mesmo nome podem ser declarados embutidos, como as assinaturas de função são diferentes. Para obter mais informações, consulte [resolução de sobrecarga de função](function-overload-resolution-entity-sql.md).  
   
  Uma função in-line pode ser chamado em um comando de Entity SQL somente após foi definida no comando. No entanto, uma função in-line pode ser chamada dentro de outra função in-line tanto antes ou após a função chamada foi definido. No exemplo a seguir, funciona a função B de chamadas de antes que a função B é definida:  
   
@@ -61,9 +61,9 @@ FUNCTION function-name
   
  `A()`  
   
- Para obter mais informações, [consulte Como: Chamar uma função definida pelo usuário](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
+ Para obter mais informações, consulte [como: chamar uma função definida pelo usuário](/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
   
- As funções podem também ser declaradas no próprio modelo. As funções declaradas no modelo são executadas da mesma forma como as funções está embutido no comando. Para obter mais informações, consulte [Funções definidas pelo usuário](user-defined-functions-entity-sql.md).  
+ As funções podem também ser declaradas no próprio modelo. As funções declaradas no modelo são executadas da mesma forma como as funções está embutido no comando. Para obter mais informações, consulte [funções definidas pelo usuário](user-defined-functions-entity-sql.md).  
   
 ## <a name="example"></a>Exemplo  
  O seguinte comando de Entity SQL define uma função `Products` que recebe um valor inteiro para filtrar os produtos retornados.  

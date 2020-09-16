@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-ms.openlocfilehash: 27f2b7d3146199f1c3e9a228202618c992e2a1ea
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bd3156e0fa8ea976d2297ffc0767cd948c9c96b4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601355"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550476"
 ---
 # <a name="access-control-mechanisms"></a>Mecanismos de controle de acesso
 Você pode controlar o acesso de várias maneiras com o Windows Communication Foundation (WCF). Este tópico aborda brevemente os vários mecanismos e fornece sugestões sobre quando usar cada um deles; Ele destina-se a ajudá-lo a selecionar o mecanismo correto a ser usado. As tecnologias de acesso são listadas em ordem de complexidade. O mais simples é o <xref:System.Security.Permissions.PrincipalPermissionAttribute> ; o mais complexo é o modelo de identidade.  
@@ -46,7 +46,7 @@ Você pode controlar o acesso de várias maneiras com o Windows Communication Fo
   
  Você também pode usar o AzMan e o provedor de função ASP.NET se você já tiver acesso a uma instalação existente do AzMan e quiser autorizar os usuários de serviço usando os recursos da combinação de provedor de AzMan/função.  
   
- Para obter mais informações sobre o AzMan e o provedor de função ASP.NET, consulte [como: usar o Gerenciador de autorização (AzMan) com o ASP.NET 2,0](https://docs.microsoft.com/previous-versions/msp-n-p/ff649313(v=pandp.10)). Para obter mais informações sobre como usar o AzMan e o provedor de função para serviços WCF, consulte [como: usar o provedor de função Gerenciador de autorização ASP.NET com um serviço](how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
+ Para obter mais informações sobre o AzMan e o provedor de função ASP.NET, consulte [como: usar o Gerenciador de autorização (AzMan) com o ASP.NET 2,0](/previous-versions/msp-n-p/ff649313(v=pandp.10)). Para obter mais informações sobre como usar o AzMan e o provedor de função para serviços WCF, consulte [como: usar o provedor de função Gerenciador de autorização ASP.NET com um serviço](how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
   
 ## <a name="identity-model"></a>Modelo de identidade  
  O modelo de identidade é um conjunto de APIs que permite que você gerencie declarações e políticas para autorizar clientes. Com o modelo de identidade, você pode examinar todas as declarações contidas nas credenciais que o chamador usou para se autenticar no serviço, comparar as declarações com o conjunto de políticas para o serviço e conceder ou negar acesso com base na comparação.  
@@ -57,11 +57,11 @@ Você pode controlar o acesso de várias maneiras com o Windows Communication Fo
   
  Para obter mais informações sobre o modelo de identidade, consulte [Gerenciando declarações e autorização com o modelo de identidade](managing-claims-and-authorization-with-the-identity-model.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [Como restringir o acesso com a classe PrincipalPermissionAttribute](../how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [Como utilizar o provedor de função do ASP.NET com um serviço](how-to-use-the-aspnet-role-provider-with-a-service.md)
-- [Como usar o provedor de função do gerenciador de autorização do ASP.NET com um serviço](how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
+- [Como: restringir o acesso com a classe PrincipalPermissionAttribute](../how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Como: usar o provedor de função do ASP.NET com um serviço](how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Como: usar o provedor de função do gerenciador de autorização ASP.NET com um serviço](how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
 - [Gerenciamento de declarações e autorizações com o modelo de identidade](managing-claims-and-authorization-with-the-identity-model.md)
 - [Delegação e representação](delegation-and-impersonation-with-wcf.md)

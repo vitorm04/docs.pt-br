@@ -1,21 +1,21 @@
 ---
-title: 'Como: Converter entre fluxos de execução .NET e Windows Runtime (somente windows)'
+title: Como converter entre fluxos de .NET Framework e Windows Runtime (somente Windows)
 ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: 7413c3fae7d7189ec8dca43b0c77f6b56158f416
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 037ae0dff80c96d08d8778146b5683454b1f80b1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159462"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543680"
 ---
-# <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Como: Converter entre fluxos de execução .NET e Windows Runtime (somente windows)
+# <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Como converter entre fluxos de .NET Framework e Windows Runtime (somente Windows)
 
-O .NET Framework para aplicativos UWP é um subconjunto do .NET Framework completo. Devido a requisitos de segurança e outros requisitos dos aplicativos UWP, não é possível usar o conjunto completo de APIs do .NET Framework para abrir e ler arquivos. Para obter mais informações, confira [Visão geral do .NET para aplicativos UWP](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). No entanto, talvez você queira usar APIs do .NET Framework para outras operações de manipulação de fluxos. Para manipular esses fluxos, faça a conversão entre um tipo de fluxo do .NET Framework, como <xref:System.IO.MemoryStream> ou <xref:System.IO.FileStream>, e um fluxo do Windows Runtime, como <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream> ou <xref:Windows.Storage.Streams.IRandomAccessStream>.
+O .NET Framework para aplicativos UWP é um subconjunto do .NET Framework completo. Devido a requisitos de segurança e outros requisitos dos aplicativos UWP, não é possível usar o conjunto completo de APIs do .NET Framework para abrir e ler arquivos. Para obter mais informações, confira [Visão geral do .NET para aplicativos UWP](/previous-versions/windows/apps/br230302(v=vs.140)). No entanto, talvez você queira usar APIs do .NET Framework para outras operações de manipulação de fluxos. Para manipular esses fluxos, faça a conversão entre um tipo de fluxo do .NET Framework, como <xref:System.IO.MemoryStream> ou <xref:System.IO.FileStream>, e um fluxo do Windows Runtime, como <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream> ou <xref:Windows.Storage.Streams.IRandomAccessStream>.
 
 A classe <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType> contém métodos que tornam fáceis essas conversões. No entanto, as diferenças subjacentes entre os fluxos do .NET Framework e os fluxos do Windows Runtime afetam os resultados do uso desses métodos, conforme descrito nas seguintes seções:
 
@@ -32,7 +32,7 @@ O Windows Runtime oferece tipos de fluxo que dão suporte ao acesso somente leit
 
 É uma melhor prática usar o método de conversão correspondente às funcionalidades do fluxo do Windows Runtime que você deseja converter. No entanto, como <xref:Windows.Storage.Streams.IRandomAccessStream> é legível e gravável (implementa <xref:Windows.Storage.Streams.IOutputStream> e <xref:Windows.Storage.Streams.IInputStream>), os métodos de conversão mantêm as funcionalidades do fluxo original. Por exemplo, o uso de <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> para converter um <xref:Windows.Storage.Streams.IRandomAccessStream> não limita o fluxo convertido do .NET Framework a ser legível. Ele também é gravável.
 
-## <a name="example-convert-windows-runtime-random-access-to-net-framework-stream"></a>Exemplo: Converter o acesso aleatório do Windows Runtime ao fluxo .NET Framework
+## <a name="example-convert-windows-runtime-random-access-to-net-framework-stream"></a>Exemplo: Converter Windows Runtime acesso aleatório para .NET Framework Stream
 Para converter de um fluxo de acesso aleatório do Windows Runtime para um fluxo do .NET Framework, use o método <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A?displayProperty=nameWithType>.
 
 O exemplo de código a seguir solicita que você selecione um arquivo, abre-o com as APIs do Windows Runtime e, em seguida, converte-o em um fluxo do .NET Framework. Ele lê o fluxo e os coloca em um bloco de texto. Você normalmente manipulará o fluxo com as APIs do .NET Framework antes de produzir os resultados.
@@ -55,7 +55,7 @@ Quando você converte um fluxo do .NET Framework em um fluxo do Windows Runtime,
 
 Os fluxos do .NET Framework não dão suporte à clonagem, mesmo após a conversão. Se você converte um fluxo do .NET Framework em um fluxo do Windows Runtime e chama <xref:Windows.Storage.Streams.InMemoryRandomAccessStream.GetInputStreamAt%2A> ou <xref:Windows.Storage.Streams.IRandomAccessStream.GetOutputStreamAt%2A>, que chama <xref:Windows.Storage.Streams.RandomAccessStreamOverStream.CloneStream%2A>, ou se você chama <xref:Windows.Storage.Streams.RandomAccessStreamOverStream.CloneStream%2A> diretamente, ocorre uma exceção.
 
-## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>Exemplo: Converter o .NET Framework para o fluxo de acesso aleatório do Windows Runtime
+## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>Exemplo: converter .NET Framework em Windows Runtime fluxo de acesso aleatório
 
 Para converter um fluxo do .NET Framework em um fluxo de acesso aleatório do Windows Runtime, use o método <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A>, conforme mostrado no seguinte exemplo:
 
@@ -69,6 +69,6 @@ Para executar esse exemplo, crie um aplicativo UWP XAML direcionado ao .NET Fram
 
 ## <a name="see-also"></a>Confira também
 
-- [Quickstart: Leia e escreva um arquivo (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh464978(v=win.10))  
-- [Visão geral dos aplicativos .NET para Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))  
-- [APIs do .NET para aplicativos da Windows Store](https://docs.microsoft.com/previous-versions/br230232(v=vs.120))  
+- [Início rápido: ler e gravar um arquivo (Windows)](/previous-versions/windows/apps/hh464978(v=win.10))  
+- [Visão geral dos aplicativos .NET para Windows Store](/previous-versions/windows/apps/br230302(v=vs.140))  
+- [APIs do .NET para aplicativos da Windows Store](/previous-versions/br230232(v=vs.120))

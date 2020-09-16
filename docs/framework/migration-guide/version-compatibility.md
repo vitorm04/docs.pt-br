@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 92cfdc1a2a530f9790a693d0aa1ca5f65ff1af9f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 824765e1f3ecfd1381f9c5f8b144b7b11aee8f0b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558758"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550378"
 ---
 # <a name="version-compatibility"></a>Compatibilidade de versões
 
@@ -53,9 +53,9 @@ Se o aplicativo ou o componente não funcionar conforme esperado no .NET Framewo
 
 - Se você tiver um aplicativo .NET Framework 3.5, consulte também [Problemas de migração do .NET Framework 4](net-framework-4-migration-issues.md).
 
-- Se você tiver um aplicativo .NET Framework 2.0, consulte também [Alterações no .NET Framework 3.5 SP1](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10)).
+- Se você tiver um aplicativo .NET Framework 2.0, consulte também [Alterações no .NET Framework 3.5 SP1](/previous-versions/dotnet/articles/dd310284(v=msdn.10)).
 
-- Se você tiver um aplicativo .NET Framework 1.1, consulte também [Alterações no .NET Framework 2.0](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10)).
+- Se você tiver um aplicativo .NET Framework 1.1, consulte também [Alterações no .NET Framework 2.0](/previous-versions/aa570326(v=msdn.10)).
 
 - Caso esteja recompilando o código-fonte existente para ser executado no .NET Framework 4.5 ou suas versões de ponto ou desenvolvendo uma nova versão de um aplicativo ou componente direcionado ao .NET Framework 4.5 ou suas versões de ponto de uma base de código-fonte existente, confira [O que está obsoleto na biblioteca de classes](../whats-new/whats-obsolete.md) para obter tipos e membros obsoletos e aplicar a solução alternativa descrita. (O código compilado anteriormente continuará sendo executado em tipos e membros marcados como obsoletos.)
 

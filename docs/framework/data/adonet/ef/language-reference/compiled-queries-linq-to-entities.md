@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: b4594932b6ed21de98faab57d80404a7b763067d
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: f3270147f0cf38a646efac603f058173daa78547
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207910"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541129"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Consultas compiladas (LINQ to Entities)
 
@@ -18,7 +18,7 @@ Quando um aplicativo executa muitas vezes consultas estruturalmente similares no
   
  A partir do .NET Framework 4,5, as consultas LINQ são armazenadas em cache automaticamente. No entanto, você ainda pode usar consultas LINQ para reduzir esse custo em execuções posteriores e consultas compiladas podem ser mais eficientes que consultas LINQ que são automaticamente armazenadas em cache. LINQ to Entities consultas que aplicam o `Enumerable.Contains` operador a coleções na memória não são armazenadas em cache automaticamente. Além disso, a parametrização de coleções na memória em consultas do LINQ compiladas não é permitida.  
   
- A classe <xref:System.Data.Objects.CompiledQuery> fornece a compilação e o cache de consultas para reutilização. Conceitualmente, essa classe contém um método <xref:System.Data.Objects.CompiledQuery> de `Compile` com várias sobrecargas. Chame o método `Compile` para criar um novo delegado para representar a consulta compilada. Os métodos `Compile`, com <xref:System.Data.Objects.ObjectContext> e valores de parâmetro, retornam um delegado que gera um resultado (como uma instância <xref:System.Linq.IQueryable%601>). A consulta é compilada somente uma vez durante a primeira execução. As opções de mesclagem definidas para a consulta no momento da compilação não podem ser alteradas posteriormente. Depois que a consulta é compilada, você só pode fornecer parâmetros de tipo primitivo, mas não pode substituir partes da consulta que alterariam o SQL gerado. Para obter mais informações, consulte [Opções de mesclagem do EF e consultas compiladas](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries).
+ A classe <xref:System.Data.Objects.CompiledQuery> fornece a compilação e o cache de consultas para reutilização. Conceitualmente, essa classe contém um método <xref:System.Data.Objects.CompiledQuery> de `Compile` com várias sobrecargas. Chame o método `Compile` para criar um novo delegado para representar a consulta compilada. Os métodos `Compile`, com <xref:System.Data.Objects.ObjectContext> e valores de parâmetro, retornam um delegado que gera um resultado (como uma instância <xref:System.Linq.IQueryable%601>). A consulta é compilada somente uma vez durante a primeira execução. As opções de mesclagem definidas para a consulta no momento da compilação não podem ser alteradas posteriormente. Depois que a consulta é compilada, você só pode fornecer parâmetros de tipo primitivo, mas não pode substituir partes da consulta que alterariam o SQL gerado. Para obter mais informações, consulte [Opções de mesclagem do EF e consultas compiladas](/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries).
   
  A LINQ to Entities expressão de consulta que <xref:System.Data.Objects.CompiledQuery> o `Compile` método do compila é representada por um dos `Func` delegados genéricos, como <xref:System.Func%605> . No máximo, a expressão de consulta pode encapsular um parâmetro `ObjectContext`, um parâmetro de retorno e 16 parâmetros de consulta. Se mais de 16 parâmetros de consulta forem necessários, você poderá criar uma estrutura cujas propriedades representem parâmetros de consulta. Será possível usar, então, as propriedades da estrutura na expressão de consulta depois de definir as propriedades.  
   
@@ -73,4 +73,4 @@ Quando um aplicativo executa muitas vezes consultas estruturalmente similares no
 
 - [ADO.NET Entity Framework](../index.md)
 - [LINQ to Entities](linq-to-entities.md)
-- [Opções de mesclagem do EF e consultas compiladas](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)
+- [Opções de mesclagem do EF e consultas compiladas](/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)

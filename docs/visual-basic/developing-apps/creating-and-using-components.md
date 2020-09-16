@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: 2fefdff9dc27915066e3d92efd8439adffed9fc5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e4d4fa092363a5e76658f2770c0d655bb225f3f3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330293"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544577"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Criando e usando componentes no Visual Basic
 
@@ -63,9 +63,9 @@ Um *componente* é uma classe que implementa a interface <xref:System.ComponentM
   
 ## <a name="related-sections"></a>Seções relacionadas  
 
- [Solução de problemas de criação de controle e de componente](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
+ [Solução de problemas de criação de controle e de componente](/dotnet/desktop/winforms/controls/troubleshooting-control-and-component-authoring)  
  Explica como corrigir problemas comuns.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Como acessar o suporte a tempo de design no Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [Como acessar o suporte a tempo de design no Windows Forms](/dotnet/desktop/winforms/controls/developing-windows-forms-controls-at-design-time)

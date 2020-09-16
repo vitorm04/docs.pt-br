@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: b9a7142de01d818390b740a795f70a4606952780
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ff0ff35f42e20725cab49afd971523aabda866c3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497368"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547787"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>Método ICorProfilerInfo2::DoStackSnapshot
 Percorre os quadros gerenciados na pilha para o thread especificado e envia informações para o criador de perfil por meio de um retorno de chamada.  
@@ -71,7 +71,7 @@ HRESULT DoStackSnapshot(
   
  A ordem na qual a pilha é movimentada é o inverso de como os quadros foram enviados para a pilha: quadro (último a ser enviado) primeiro, principal (primeiro a ser enviado).  
   
- Para obter mais informações sobre como programar o criador de perfil para movimentar pilhas gerenciadas, consulte [movimentação de pilha do profiler no .NET Framework 2,0: Noções básicas e além disso](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).  
+ Para obter mais informações sobre como programar o criador de perfil para movimentar pilhas gerenciadas, consulte [movimentação de pilha do profiler no .NET Framework 2,0: Noções básicas e além disso](/previous-versions/dotnet/articles/bb264782(v=msdn.10)).  
   
  Uma movimentação de pilha pode ser síncrona ou assíncrona, conforme explicado nas seções a seguir.  
   
@@ -85,7 +85,7 @@ HRESULT DoStackSnapshot(
   
  Você Obtém uma semente suspendendo diretamente o thread-alvo e movimentando sua pilha por conta própria até encontrar o quadro gerenciado superior. Depois que o thread de destino for suspenso, obtenha o contexto de registro atual do thread de destino. Em seguida, determine se o contexto de registro aponta para código não gerenciado chamando [ICorProfilerInfo:: GetFunctionFromIP](icorprofilerinfo-getfunctionfromip-method.md) — se ele retornar um `FunctionID` igual a zero, o quadro será um código não gerenciado. Agora, percorra a pilha até atingir o primeiro quadro gerenciado e, em seguida, calcule o contexto de semente com base no contexto de registro desse quadro.  
   
- Chame `DoStackSnapshot` com o contexto de semente para iniciar a movimentação de pilha assíncrona. Se você não fornecer uma semente, o `DoStackSnapshot` poderá ignorar os quadros gerenciados na parte superior da pilha e, consequentemente, fornecerá uma movimentação de pilha incompleta. Se você fornecer uma semente, ele deverá apontar para código gerado por JIT ou gerador de imagem nativa (NGen. exe); caso contrário, `DoStackSnapshot` retorna o código de falha, CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX.  
+ Chame `DoStackSnapshot` com o contexto de semente para iniciar a movimentação de pilha assíncrona. Se você não fornecer uma semente, o `DoStackSnapshot` poderá ignorar os quadros gerenciados na parte superior da pilha e, consequentemente, fornecerá uma movimentação de pilha incompleta. Se você fornecer uma semente, ele deverá apontar para código gerado pelo gerador de imagem nativa ou compilação JIT (Ngen.exe); caso contrário, `DoStackSnapshot` retorna o código de falha, CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX.  
   
  As movimentações assíncronas podem causar facilmente deadlocks ou violações de acesso, a menos que você siga estas diretrizes:  
   

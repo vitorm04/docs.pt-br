@@ -2,17 +2,17 @@
 title: LINQ e cadeias de caracteres
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
-ms.openlocfilehash: 73ce4bf5586f1f9ff4995ea6f425b90744b7e333
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ee2a44175e8546f879473a3af6bf1a2de92d2501
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353279"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549843"
 ---
 # <a name="linq-and-strings-visual-basic"></a>LINQ e cadeias de caracteres (Visual Basic)
 A LINQ pode ser usada para consultar e transformar as cadeias de caracteres e coleções de cadeias de caracteres. Ele pode ser especialmente útil com os dados semiestruturados em arquivos de texto. Consultas LINQ podem ser combinadas com expressões regulares e funções de cadeia de caracteres tradicionais. Por exemplo, você pode usar o método <xref:System.String.Split%2A> ou <xref:System.Text.RegularExpressions.Regex.Split%2A> para criar uma matriz de cadeias de caracteres que você pode consultar ou modificar usando o LINQ. Você pode usar o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> na cláusula `where` de uma consulta LINQ. E você pode usar o LINQ para consultar ou modificar os resultados de <xref:System.Text.RegularExpressions.MatchCollection> retornados por uma expressão regular.  
   
- Você também pode usar as técnicas descritas nessa seção para transformar dados de texto semiestruturados em XML. Para obter mais informações, consulte [Como gerar um XML de arquivos CSV](how-to-generate-xml-from-csv-files.md).  
+ Você também pode usar as técnicas descritas nessa seção para transformar dados de texto semiestruturados em XML. Para obter mais informações, consulte [Como gerar um XML de arquivos CSV](../../../../standard/linq/generate-xml-csv-files.md).  
   
  Os exemplos nesta seção se enquadram em duas categorias:  
   
@@ -59,7 +59,7 @@ A LINQ pode ser usada para consultar e transformar as cadeias de caracteres e co
  [Como: calcular valores de coluna em um arquivo de texto CSV (LINQ) (Visual Basic)](how-to-compute-column-values-in-a-csv-text-file-linq.md)  
  Mostra como executar cálculos matemáticos em dados de texto em arquivos .csv.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [LINQ (consulta integrada à linguagem) (Visual Basic)](index.md)
-- [Como gerar um XML de arquivos CSV](how-to-generate-xml-from-csv-files.md)
+- [Como gerar XML a partir de arquivos CSV](../../../../standard/linq/generate-xml-csv-files.md)

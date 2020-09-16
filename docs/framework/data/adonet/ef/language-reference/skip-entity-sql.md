@@ -2,12 +2,12 @@
 title: IGNORAR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
-ms.openlocfilehash: 75140384823588b8f6785de00b0ab3cd17314a3f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 68f54dc5118e09d78f98c687e8a44def43b45c7d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319337"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540986"
 ---
 # <a name="skip-entity-sql"></a>IGNORAR (Entity SQL)
 
@@ -19,7 +19,7 @@ Você pode executar a físico paginação usando a cláusula subpropriedades de 
 [ SKIP n ]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 `n` \
 O número de itens para ignorar.
@@ -38,11 +38,11 @@ Se uma subpropriedades cláusula de expressão de SKIP está presente em uma cl�
 > SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L
 > ```
 
-A consulta [!INCLUDE[esql](../../../../../../includes/esql-md.md)] em [como: paginar os resultados da consulta](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)) usa o operador order by com Skip para especificar a ordem de classificação usada nos objetos retornados em uma instrução SELECT.
+A [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta em [como: paginar os resultados da consulta](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)) usa o operador order by com Skip para especificar a ordem de classificação usada nos objetos retornados em uma instrução SELECT.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [ORDER BY](order-by-entity-sql.md)
-- [Como: paginar os resultados da consulta](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
+- [Como: paginar os resultados da consulta](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
 - [Paginação](paging-entity-sql.md)
-- [TOP](top-entity-sql.md)
+- [Início](top-entity-sql.md)

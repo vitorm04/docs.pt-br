@@ -3,12 +3,12 @@ title: Rastreamento ETW
 description: Este exemplo demonstra como implementar o rastreamento de ponta a ponta (E2E) usando o ETW (rastreamento de eventos para Windows) e o ETWTraceListener.
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 210186285ed749a5d1567becd6738939b0bd9d03
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 6e7526ef05d672b550599e3b12a4b083e9130b96
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244420"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547135"
 ---
 # <a name="etw-tracing"></a>Rastreamento ETW
 Este exemplo demonstra como implementar o rastreamento de ponta a ponta (E2E) usando o ETW (rastreamento de eventos para Windows) e o `ETWTraceListener` que é fornecido com este exemplo. O exemplo é baseado na [introdução](getting-started-sample.md) e inclui o rastreamento ETW.  
@@ -51,7 +51,7 @@ Este exemplo demonstra como implementar o rastreamento de ponta a ponta (E2E) us
  Antes de usar esse ouvinte, uma sessão de rastreamento ETW deve ser iniciada. Esta sessão pode ser iniciada usando Logman.exe ou Tracelog.exe. Um arquivo de SetupETW.bat está incluído neste exemplo para que você possa configurar a sessão de rastreamento ETW junto com um arquivo CleanupETW.bat para fechar a sessão e concluir o arquivo de log.  
   
 > [!NOTE]
-> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico. Para obter mais informações sobre essas ferramentas, consulte<https://go.microsoft.com/fwlink/?LinkId=56580>  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico. Para obter mais informações sobre essas ferramentas, consulte <https://go.microsoft.com/fwlink/?LinkId=56580>  
   
  Ao usar o ETWTraceListener, os rastreamentos são registrados em arquivos. etl binários. Com o rastreamento de ServiceModel ativado, todos os rastreamentos gerados aparecem no mesmo arquivo. Use a [ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) para exibir arquivos de log. ETL e. svclog Connector. O visualizador cria uma exibição de ponta a ponta do sistema que torna possível rastrear uma mensagem de sua origem para seu destino e ponto de consumo.  
   
@@ -107,6 +107,6 @@ logman stop Wcf
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [AppFabric que monitora Exemplos](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric que monitora Exemplos](/previous-versions/appfabric/ff383407(v=azure.10))

@@ -3,12 +3,12 @@ title: Publicação de serviço do WCF
 description: A publicação do serviço WCF ajuda a implantar seu aplicativo em um ambiente de produção para fins de teste.
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 99798b75e1dc01c8db361f4d8d1f162c7f7617b1
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: ccd3fe80e51ef28f7a037d624e9099c42d867d95
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245668"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544564"
 ---
 # <a name="wcf-service-publishing"></a>Publicação de serviço do WCF
 
@@ -22,7 +22,7 @@ A publicação do serviço WCF dá suporte à publicação de serviços WCF cria
 
 - Biblioteca de serviço de distribuição.
 
-Você pode encontrar esses modelos de serviço escolhendo **arquivo**  >  **novo projeto** > [**Visual Basic** ou **Visual C#**] > **WCF**. Para outros modelos do WCF neste local (incluindo o aplicativo de serviço de fluxo de trabalho do WCF e o aplicativo de serviço WCF), você pode publicar usando [a publicação de um clique para aplicativos Web](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110)).
+Você pode encontrar esses modelos de serviço escolhendo **arquivo**  >  **novo projeto** > [**Visual Basic** ou **Visual C#**] > **WCF**. Para outros modelos do WCF neste local (incluindo o aplicativo de serviço de fluxo de trabalho do WCF e o aplicativo de serviço WCF), você pode publicar usando [a publicação de um clique para aplicativos Web](/previous-versions/aspnet/dd465337(v=vs.110)).
 
 O serviço pode ser publicado nos seguintes locais de destino.
 
@@ -69,12 +69,12 @@ Se você optar por implantar seu aplicativo no IIS local, poderá encontrar erro
 - As configurações no `<diagnostics>` elemento são excluídas para preservar as configurações de rastreamento da plataforma de destino.
 
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>Publicando serviços WCF com associações não HTTP para o IIS
- Se você estiver usando o IIS 7.0 ou posterior, poderá publicar serviços WCF com associações não HTTP para o IIS. Você precisa fazer algumas configurações prévias. Para obter mais informações, consulte os tópicos em [hospedagem no serviço de ativação de processos do Windows](./feature-details/hosting-in-windows-process-activation-service.md).
+ Se você estiver usando o IIS 7.0 ou posterior, poderá publicar serviços WCF com associações não HTTP para o IIS. Você precisa fazer algumas configurações prévias. Para obter mais informações, consulte os tópicos em  [hospedagem no serviço de ativação de processos do Windows](./feature-details/hosting-in-windows-process-activation-service.md).
 
 ## <a name="security"></a>Segurança
  A publicação no IIS local requer privilégio de administrador, pois o IIS requer a execução na conta de administrador. Se um usuário sem privilégio de administrador abrir a publicação do serviço WCF, o IIS não estará disponível como um local de destino. A publicação no sistema de arquivos ou no site FTP funciona sem privilégios de administrador.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Modelos do Visual Studio do WCF](wcf-vs-templates.md)
 - [Host de serviço do WCF (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)

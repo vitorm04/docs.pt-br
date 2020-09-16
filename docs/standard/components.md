@@ -4,12 +4,12 @@ description: Descreve os componentes de arquitetura do .NET, como o .NET Standar
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2fc8bcea59cd2ba652b88644677f077d62994ca4
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: fc34cf35e82e3a401f32561aa239996c7697aa03
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414728"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547669"
 ---
 # <a name="net-architectural-components"></a>Componentes de arquitetura do .NET
 
@@ -29,14 +29,14 @@ Cada implementação do .NET inclui os seguintes componentes:
 
 - Um ou mais runtimes. Exemplos: o CLR para o .NET Framework, o CoreCLR e o CoreRT para o .NET Core.
 - Uma biblioteca de classes que implemente o .NET Standard e possa implementar APIs adicionais. Exemplos: biblioteca de classes base do NET Framework, biblioteca de classes base do .NET Core.
-- Opcionalmente, uma ou mais estruturas de aplicativo. Exemplos: [ASP.net](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md)e [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) estão incluídos no .NET Framework e no .NET Core.
+- Opcionalmente, uma ou mais estruturas de aplicativo. Exemplos: [ASP.net](https://www.asp.net/), [Windows Forms](/dotnet/desktop/winforms/windows-forms-overview)e [Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) estão incluídos no .NET Framework e no .NET Core.
 - Opcionalmente, ferramentas de desenvolvimento. Algumas ferramentas de desenvolvimento são compartilhadas entre várias implementações.
 
 Há quatro implementações principais de .NET que a Microsoft desenvolve e mantém ativamente: .NET Core, .NET Framework, Mono e UWP.
 
 ### <a name="net-core"></a>.NET Core
 
-O .NET Core é uma implementação multiplataforma do .NET, projetado para lidar com cargas de trabalho de servidor e na nuvem em escala. Ele é executado no Windows, no macOS e no Linux. Ele implementa o .NET Standard, portanto o código direcionado para o .NET Standard pode ser executados no .NET Core. O [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), o [Windows Forms](../framework/winforms/windows-forms-overview.md) e o [WPF (Windows Presentation Foundation)](../framework/wpf/index.md) são executados no .NET Core.
+O .NET Core é uma implementação multiplataforma do .NET, projetado para lidar com cargas de trabalho de servidor e na nuvem em escala. Ele é executado no Windows, no macOS e no Linux. Ele implementa o .NET Standard, portanto o código direcionado para o .NET Standard pode ser executados no .NET Core. O [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), o [Windows Forms](/dotnet/desktop/winforms/windows-forms-overview) e o [WPF (Windows Presentation Foundation)](/dotnet/desktop/wpf/) são executados no .NET Core.
 
 Para saber mais sobre o .NET Core, consulte a [introdução ao .NET Core](../core/introduction.md) e [escolhendo entre o .net core e o .NET Framework para aplicativos de servidor](choosing-core-framework-server.md).
 
@@ -108,7 +108,7 @@ Os documentos ISO/IEC oficiais estão disponíveis na página de padrões do ISO
 - [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md)
 - [Introdução .NET Standard](net-standard.md)
 - [Introdução ao .NET Core](../core/introduction.md)
-- [Guia de .NET Framework](../framework/index.yml)
+- [Guia do .NET Framework](../framework/index.yml)
 - [Guia do C#](../csharp/index.yml)
-- [Guia de F #](../fsharp/index.yml)
-- [Guia de Visual Basic](../visual-basic/index.yml)
+- [Guia do F#](../fsharp/index.yml)
+- [Guia do Visual Basic](../visual-basic/index.yml)

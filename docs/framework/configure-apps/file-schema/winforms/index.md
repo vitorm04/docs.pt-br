@@ -2,19 +2,19 @@
 title: Seção de configuração do Windows Forms
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
-ms.openlocfilehash: 4de61ae3cb5eb8a3fc226881e2b7f842030dfddf
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8a6f13da9bf05d87c45d86a09261d0c7245f5b00
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79151826"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546902"
 ---
 # <a name="windows-forms-configuration-section"></a>Seção de configuração do Windows Forms
 As definições de configuração do Windows Forms permitem que um aplicativo do Windows Forms armazene e recupere informações sobre configurações personalizadas de aplicativo, como suporte a vários monitores, suporte ao DPI e outras configurações predefinidas.
 
 As definições de configuração de aplicativo do Windows Forms são armazenadas em um elemento `System.Windows.Forms.ApplicationConfigurationSection` do arquivo de configuração de aplicativo.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <configuration>
@@ -52,5 +52,5 @@ O `<System.Windows.Forms.ApplicationConfigurationSection>` elemento pode incluir
 
 ## <a name="see-also"></a>Confira também
 
-- [Esquema de arquivos de configuração](../index.md)
-- [Suporte a alto DPI no Windows Forms](../../../winforms/high-dpi-support-in-windows-forms.md)
+- [Esquema do arquivo de configuração](../index.md)
+- [Suporte a alto DPI no Windows Forms](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms)

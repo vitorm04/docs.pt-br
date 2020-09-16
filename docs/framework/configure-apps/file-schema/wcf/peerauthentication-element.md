@@ -2,12 +2,12 @@
 title: Elemento <peerAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 4c29c84a2cc56a890c8273e410ba31b5f3900732
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 093b0c4b6a7fbf54455ec523b52c1f3a9884cfa8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400089"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536009"
 ---
 # <a name="peerauthentication-element"></a>Elemento \<peerAuthentication>
 Especifica opções de autenticação para clientes ponto a ponto.  
@@ -23,7 +23,7 @@ Especifica opções de autenticação para clientes ponto a ponto.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<peer>**](peer-of-clientcredentials-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<peerAuthentication>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <peerAuthentication customCertificateValidatorType="namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"
@@ -109,7 +109,7 @@ Especifica opções de autenticação para clientes ponto a ponto.
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - [Trabalhando com certificados](../../../wcf/feature-details/working-with-certificates.md)
-- [Rede ponto a ponto](../../../wcf/feature-details/peer-to-peer-networking.md)
-- [Autenticação de mensagem de canal par](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Autenticação personalizada do canal par](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Rede peer-to-peer](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [Autenticação de mensagem de canal par](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Autenticação personalizada do canal par](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Protegendo aplicativos de canal par](../../../wcf/feature-details/securing-peer-channel-applications.md)

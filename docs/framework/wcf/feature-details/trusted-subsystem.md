@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: f90906b4c3fc1d1d76977451abfb238bb33fb581
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 29ac26616313ec8bd7661cb92c42f726ec051cd7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595109"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542881"
 ---
 # <a name="trusted-subsystem"></a>Subsistema de confiança
 Um cliente acessa um ou mais serviços Web que são distribuídos em uma rede. Os serviços Web são projetados de forma que o acesso a recursos adicionais (como bancos de dados ou outros serviços Web) seja encapsulado na lógica de negócios do serviço Web. Esses recursos devem ser protegidos contra acesso não autorizado. A ilustração a seguir descreve um processo de subsistema confiável.  
@@ -35,10 +35,10 @@ Um cliente acessa um ou mais serviços Web que são distribuídos em uma rede. O
 |Interoperabilidade|Somente Windows Communication Foundation (WCF).|  
 |Autenticação (serviço)|O serviço de token de segurança autentica e autoriza clientes.|  
 |Autenticação (cliente)|O subsistema confiável autentica o cliente e o recurso autentica o serviço de subsistema confiável.|  
-|Integridade|Sim|  
-|Confidencialidade|Sim|  
+|Integridade|Yes|  
+|Confidencialidade|Yes|  
 |Transport|HTTP entre o cliente e o serviço de subsistema confiável.<br /><br /> Virtual. TCP entre o serviço de subsistema confiável e o recurso (serviço de back-end).|  
-|Associação|<xref:System.ServiceModel.WSHttpBinding>e<xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Associação|<xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Recurso (serviço de back-end)  
   
@@ -213,4 +213,4 @@ Um cliente acessa um ou mais serviços Web que são distribuídos em uma rede. O
 ## <a name="see-also"></a>Confira também
 
 - [Visão geral de segurança](security-overview.md)
-- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

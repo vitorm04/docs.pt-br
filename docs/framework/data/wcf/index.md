@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: ca6b196e8c910f97ead6d1df5b6c0dd6c49c68a4
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: c36967236c40efbf432d554c3f551aea22cfb148
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247747"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549673"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
@@ -37,9 +37,9 @@ Mostrar apenas alguns códigos...
 
 - [Início rápido](quickstart-wcf-data-services.md)
 
-- [Como executar consultas de serviço de dados](how-to-execute-data-service-queries-wcf-data-services.md)
+- [Como: executar consultas de serviço de dados](how-to-execute-data-service-queries-wcf-data-services.md)
 
-- [Como associar dados aos elementos do Windows Presentation Foundation](bind-data-to-wpf-elements-wcf-data-services.md)
+- [Como: associar dados aos elementos do Windows Presentation Foundation](bind-data-to-wpf-elements-wcf-data-services.md)
 
 Quero saber mais sobre o OData...
 
@@ -54,7 +54,7 @@ Quero ver exemplos de ponta a ponta...
 
 Como ele se integra ao Visual Studio?
 
-- [Gerando a biblioteca do cliente de serviço de dados](generating-the-data-service-client-library-wcf-data-services.md)
+- [Gerar a biblioteca de clientes do serviço de dados](generating-the-data-service-client-library-wcf-data-services.md)
 
 - [Criar o serviço de dados](creating-the-data-service.md)
 
@@ -72,11 +72,11 @@ Quero usar LINQ...
 
 - [Considerações sobre o LINQ](linq-considerations-wcf-data-services.md)
 
-- [Como executar consultas de serviço de dados](how-to-execute-data-service-queries-wcf-data-services.md)
+- [Como: executar consultas de serviço de dados](how-to-execute-data-service-queries-wcf-data-services.md)
 
 Ainda preciso de mais algumas informações...
 
-- [Blog da equipe do WCF Data Services](https://docs.microsoft.com/archive/blogs/astoriateam/)
+- [Blog da equipe do WCF Data Services](/archive/blogs/astoriateam/)
 
 - [Recursos](wcf-data-services-resources.md)
 
@@ -86,7 +86,7 @@ Ainda preciso de mais algumas informações...
 
 Fornece uma visão geral dos recursos e funcionalidades disponíveis no WCF Data Services.
 
-[O que há de novo no WCF Data Services 5,0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
+[O que há de novo no WCF Data Services 5,0](/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
 
 Descreve a nova funcionalidade no WCF Data Services e suporte para novos recursos OData.
 
@@ -102,6 +102,6 @@ Descreve como criar e configurar um serviço de dados que expõe feeds OData.
 
 Descreve como usar bibliotecas de cliente para consumir feeds OData de um aplicativo cliente .NET Framework.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Representational State Transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) [REST (Transferência de Estado Representacional)]

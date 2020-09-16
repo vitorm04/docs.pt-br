@@ -2,12 +2,12 @@
 title: Depurar fluxos de trabalho
 ms.date: 03/30/2017
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
-ms.openlocfilehash: 2bfc50215697636f1771d6bb35510fbf9e0b435d
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 31c688f5f45b41f337176108486ec2074e1915a7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802629"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543830"
 ---
 # <a name="debugging-workflows"></a>Depurar fluxos de trabalho
 
@@ -31,11 +31,11 @@ Fluxo de trabalho que depurar também suporta usando a infraestrutura do Visual 
 
 ## <a name="remote-debugging"></a>Depuração remota
 
-A depuração remota do Windows Workflow Foundation (WF) funciona da mesma forma que a depuração remota para outros componentes do Visual Studio. Para obter informações sobre como usar a depuração remota, consulte [como habilitar a depuração remota](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100)).
+A depuração remota do Windows Workflow Foundation (WF) funciona da mesma forma que a depuração remota para outros componentes do Visual Studio. Para obter informações sobre como usar a depuração remota, consulte [como habilitar a depuração remota](/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100)).
 
 > [!NOTE]
 > Se o aplicativo de fluxo de trabalho for direcionado para a arquitetura x86 e estiver hospedado em um computador que esteja executando um sistema operacional de 64 bits, a depuração remota não funcionará a menos que o Visual Studio esteja instalado no computador remoto ou o destino do aplicativo de fluxo de trabalho seja alterado para **qualquer CPU**.
 
 ## <a name="extending-the-workflow-debugging-service"></a>Estendendo o serviço de depuração de fluxo de trabalho
 
-O serviço do depurador de fluxo de trabalho WF agora é público e pode ser usado para criar aplicativos personalizados como o monitoramento, a simulação, e depuração em um designer novamente hospedado. Para obter mais informações, consulte o artigo <xref:System.Activities.Presentation.Debug.DebuggerService>.
+O serviço do depurador de fluxo de trabalho WF agora é público e pode ser usado para criar aplicativos personalizados como o monitoramento, a simulação, e depuração em um designer novamente hospedado. Para obter mais informações, consulte o <xref:System.Activities.Presentation.Debug.DebuggerService> artigo.

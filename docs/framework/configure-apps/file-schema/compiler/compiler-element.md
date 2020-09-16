@@ -10,12 +10,12 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-ms.openlocfilehash: 46676f25597f85596598d6f67c98930971cb0447
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0abbe594754cbd70ec4732a1e7ef98e8e88bf167
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088052"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544746"
 ---
 # <a name="compiler-element"></a>Elemento \<compiler>
 
@@ -26,7 +26,7 @@ Especifica os atributos de configuração do compilador para um provedor de ling
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<compilers>**](compilers-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<compiler>**
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <compiler
@@ -56,15 +56,15 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[\<providerOption>Elementos](provideroption-element.md)|Especifica os atributos de versão do compilador para um provedor de idiomas.|
+|[\<providerOption> Elementos](provideroption-element.md)|Especifica os atributos de versão do compilador para um provedor de idiomas.|
 
 ### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[\<configuration>Elementos](../configuration-element.md)|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|
-|[\<system.codedom>Elementos](system-codedom-element.md)|Especifica as definições de configuração do compilador para provedores de linguagem disponíveis.|
-|[\<compilers>Elementos](compilers-element.md)|Contêiner para elementos de configuração do compilador; contém zero ou mais `<compiler>` elementos.|
+|[\<configuration> Elementos](../configuration-element.md)|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|
+|[\<system.codedom> Elementos](system-codedom-element.md)|Especifica as definições de configuração do compilador para provedores de linguagem disponíveis.|
+|[\<compilers> Elementos](compilers-element.md)|Contêiner para elementos de configuração do compilador; contém zero ou mais `<compiler>` elementos.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -104,7 +104,7 @@ O exemplo a seguir ilustra um elemento de configuração de compilador típico:
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [Esquema de arquivos de configuração](../index.md)
-- [\<compilers>Elementos](compilers-element.md)
+- [Esquema do arquivo de configuração](../index.md)
+- [\<compilers> Elementos](compilers-element.md)
 - [Especificando nomes de tipo totalmente qualificados](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)
-- [Elemento do compilador para compiladores para compilação (esquema de configurações do ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))
+- [Elemento do compilador para compiladores para compilação (esquema de configurações do ASP.NET)](/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

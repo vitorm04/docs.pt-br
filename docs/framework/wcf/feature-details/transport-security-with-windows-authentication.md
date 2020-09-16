@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: b6134d4cbdff0c1adea704a7f3aaff7e40fd75ec
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 9b81f2f2fb6352af254146951ed35ad4fdca8caa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244758"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545201"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Segurança de transporte com autenticação do Windows
 O cenário a seguir mostra um cliente Windows Communication Foundation (WCF) e um serviço protegido pela segurança do Windows. Para obter mais informações sobre programação, consulte [como proteger um serviço com credenciais do Windows](../how-to-secure-a-service-with-windows-credentials.md).  
@@ -22,12 +22,12 @@ O cenário a seguir mostra um cliente Windows Communication Foundation (WCF) e u
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|Modo de segurança|Transporte|  
+|Modo de segurança|Transport|  
 |Interoperabilidade|Somente WCF|  
 |Autenticação (servidor)<br /><br /> Autenticação (cliente)|Sim (usando a autenticação integrada do Windows)<br /><br /> Sim (usando a autenticação integrada do Windows)|  
 |Integridade|Yes|  
 |Confidencialidade|Yes|  
-|Transporte|Virtual. Protocol|  
+|Transport|Virtual. Protocol|  
 |Associação|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Serviço  
@@ -118,8 +118,8 @@ O cenário a seguir mostra um cliente Windows Communication Foundation (WCF) e u
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral de segurança](security-overview.md)
-- [Como proteger um serviço com credenciais Windows](../how-to-secure-a-service-with-windows-credentials.md)
-- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Como: proteger um serviço com credenciais do Windows](../how-to-secure-a-service-with-windows-credentials.md)
+- [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

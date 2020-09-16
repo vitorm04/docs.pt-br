@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 6e0051e3181e03070436b8d53d30326e8d71d096
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 73b930efa893fd2b481c4c130754154a0d10d5b4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622569"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547878"
 ---
 # <a name="net-framework-development-guide"></a>Guia de desenvolvimento do .NET Framework
 
@@ -27,7 +27,7 @@ Esta seção explica como criar, configurar, depurar, proteger e implantar aplic
  [Aplicativos Web com o ASP.NET](develop-web-apps-with-aspnet.md)  
  Fornece links para informações sobre como usar o ASP.NET para compilar aplicativos Web de classe corporativa com um mínimo de codificação.  
   
- [Aplicativos orientados a serviços com o WCF](./wcf/index.md)  
+ [Aplicativos orientados a serviços com WCF](./wcf/index.md)  
  Descreve como usar o Windows Communication Foundation (WCF) para compilar aplicativos orientados a serviços, seguros e confiáveis.  
   
  [Criando fluxos de trabalho com Windows Workflow Foundation](windows-workflow-foundation/index.md) Fornece informações sobre o modelo de programação, exemplos e ferramentas para usar o Windows Workflow Foundation (WF).  
@@ -43,7 +43,7 @@ Esta seção explica como criar, configurar, depurar, proteger e implantar aplic
   
  [Configurando aplicativos .NET Framework](configure-apps/index.md) Explica como você pode usar arquivos de configuração para alterar as configurações sem a necessidade de recompilar seus aplicativos .NET Framework.  
   
- [Compilando aplicativos com o .NET Nativo](./net-native/index.md)  
+ [Compilando aplicativos com .NET Native](./net-native/index.md)  
  Explica como usar a tecnologia de pré-compilação do .NET Native para compilar e implantar aplicativos da Windows Store. O .NET Native compila aplicativos que são escritos em código gerenciado (C#) e que destinam o .NET Framework para código nativo.  
   
  [Segurança](../standard/security/index.md)  
@@ -62,7 +62,7 @@ Esta seção explica como criar, configurar, depurar, proteger e implantar aplic
  Fornece informações sobre armazenamento em cache, inicialização ociosa, confiabilidade e eventos ETW.  
 
 ## <a name="reference"></a>Referência  
- [Biblioteca de classes .NET Framework](/dotnet/api/?view=netframework-4.7)  
+ [Biblioteca de classes .NET Framework](../../api/index.md?view=netframework-4.7)  
  Fornece sintaxe, exemplos de código e informações de uso para cada classe contida nos namespaces do .NET Framework.  
   
 ## <a name="related-sections"></a>Seções relacionadas  

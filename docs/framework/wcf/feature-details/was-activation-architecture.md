@@ -2,12 +2,12 @@
 title: Arquitetura de ativação do WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: cfbfd91f9e7bc2e1b4f8485d5ae22c1fb2b5228b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 77cebede5827016c5c9660663c0491614ba0ef19
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600666"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545976"
 ---
 # <a name="was-activation-architecture"></a>Arquitetura de ativação do WAS
 Este tópico relaciona e discute os componentes do serviço de ativação de processos do Windows (também conhecido como WAS).  
@@ -19,7 +19,7 @@ Este tópico relaciona e discute os componentes do serviço de ativação de pro
   
 - Deveria. O serviço do Windows que gerencia a criação e o tempo de vida de processos de trabalho.  
   
-- O processo de trabalho genérico executável (w3wp. exe).  
+- O executável do processo de trabalho genérico (w3wp.exe).  
   
 - Gerenciador de aplicativos. Gerencia a criação e o tempo de vida de domínios de aplicativo que hospedam aplicativos dentro do processo de trabalho.  
   
@@ -40,7 +40,7 @@ Este tópico relaciona e discute os componentes do serviço de ativação de pro
 |NetMsmqActivator|net.msmq|Para uso com aplicativos baseados no serviço de enfileiramento de mensagens do WCF.|  
 |NetMsmqActivator|msmq.formatname|Fornece compatibilidade com versões anteriores com aplicativos de enfileiramento de mensagens existentes.|  
   
- Os adaptadores de escuta para protocolos específicos são registrados durante a instalação no arquivo applicationHost. config, conforme mostrado no exemplo de XML a seguir.  
+ Os adaptadores de escuta para protocolos específicos são registrados durante a instalação no arquivo de applicationHost.config, conforme mostrado no exemplo de XML a seguir.  
   
 ```xml  
 <system.applicationHost>  
@@ -59,7 +59,7 @@ Este tópico relaciona e discute os componentes do serviço de ativação de pro
 ```  
   
 ### <a name="protocol-handlers"></a>Manipuladores de protocolo  
- Manipuladores de protocolo de processo e AppDomain para protocolos específicos são registrados no arquivo Web. config no nível da máquina.  
+ Os manipuladores de protocolo de processo e AppDomain para protocolos específicos são registrados no arquivo de Web.config no nível da máquina.  
   
 ```xml  
 <system.web>  
@@ -85,7 +85,7 @@ Este tópico relaciona e discute os componentes do serviço de ativação de pro
 </system.web>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Configurar o WAS para uso com o WCF](configuring-the-wpa--service-for-use-with-wcf.md)
-- [Recursos de hospedagem do Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Recursos de hospedagem do Windows Server AppFabric](/previous-versions/appfabric/ee677189(v=azure.10))

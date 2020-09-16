@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 517d80395e09598fcbd067034223dc6ba58cbe2e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e7dd73b755c7aed91a1fd59baaf9d5e090a36768
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600432"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541455"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Visão geral da segurança do Windows Communication Foundation
 O Windows Communication Foundation (WCF) é uma plataforma de programação distribuída baseada em mensagem SOAP, e a proteção de mensagens entre clientes e serviços é essencial para proteger os dados. O WCF fornece uma plataforma versátil e interoperável para trocar mensagens seguras com base na infraestrutura de segurança existente e nos padrões de segurança reconhecidos para mensagens SOAP.  
@@ -97,10 +97,10 @@ O Windows Communication Foundation (WCF) é uma plataforma de programação dist
 ### <a name="auditing"></a>Auditoria  
  A *auditoria* é o log de eventos de segurança no log de eventos do Windows. Você pode registrar eventos relacionados à segurança, como falhas de autenticação (ou êxitos). Para obter mais informações, consulte [auditoria](auditing-security-events.md). Para obter detalhes de programação, consulte [como: auditar eventos de segurança](how-to-audit-wcf-security-events.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [Protegendo serviços](../securing-services.md)
+- [Serviços de segurança](../securing-services.md)
 - [Cenários comuns de segurança](common-security-scenarios.md)
 - [Associações e segurança](bindings-and-security.md)
 - [Protegendo serviços e clientes](securing-services-and-clients.md)
@@ -108,9 +108,9 @@ O Windows Communication Foundation (WCF) é uma plataforma de programação dist
 - [Autorização](authorization-in-wcf.md)
 - [Federação e tokens emitidos](federation-and-issued-tokens.md)
 - [Auditoria](auditing-security-events.md)
-- [Diretrizes e práticas recomendadas de segurança](security-guidance-and-best-practices.md)
+- [Orientação de segurança e práticas recomendadas](security-guidance-and-best-practices.md)
 - [Configurando serviços usando arquivos de configuração](../configuring-services-using-configuration-files.md)
 - [Associações fornecidas pelo sistema](../system-provided-bindings.md)
 - [Visão geral de criação de ponto de extremidade](../endpoint-creation-overview.md)
-- [Estendendo a segurança](../extending/extending-security.md)
-- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Segurança estendida](../extending/extending-security.md)
+- [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

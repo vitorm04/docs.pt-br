@@ -5,12 +5,12 @@ ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-ms.openlocfilehash: eedfb60a75e2fe5fafdaa786dbb54adddf28400e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 94149e0c444cad7e32f959eaedd55bf14acb1ecb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621503"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547838"
 ---
 # <a name="marshaling-data-with-com-interop"></a>Realizando marshaling em dados com interoperabilidade COM
 Interoperabilidade COM dá suporte ao uso de objetos COM por código gerenciado e à exposição de objetos gerenciados para COM. O suporte a marshaling dos dados de e para o COM é abrangente e quase sempre proporciona o comportamento de marshaling correto.  
@@ -30,23 +30,23 @@ Interoperabilidade COM dá suporte ao uso de objetos COM por código gerenciado 
  Descreve como migrar o código DCOM gerenciado para o WCF para obter a solução mais segura possível.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Tipos de dados COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))  
+ [Tipos de dados COM](/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))  
  Fornece tipos de dados gerenciados e não gerenciados correspondentes.  
   
- [Personalizando COM Callable Wrappers](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3bwc828w(v=vs.100))  
+ [Personalizando COM Callable Wrappers](/previous-versions/dotnet/netframework-4.0/3bwc828w(v=vs.100))  
  Descreve como realizar marshaling nos tipos de dados explicitamente usando o atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> em tempo de design.  
   
- [Personalizando RCWs (Runtime Callable Wrappers)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))  
+ [Personalizando RCWs (Runtime Callable Wrappers)](/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))  
  Descreve como ajustar o comportamento de marshaling de tipos em um assembly de interoperabilidade e como definir tipos COM manualmente.  
   
- [Interoperabilidade COM avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
+ [Interoperabilidade COM avançada](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
  Fornece links para obter mais informações sobre como incorporar componentes COM no aplicativo do .NET Framework.  
   
- [Resumo da conversão de assemblies em bibliotecas de tipos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))  
+ [Resumo da conversão de assemblies em bibliotecas de tipos](/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))  
  Descreve o processo de conversão de exportação de assembly em biblioteca de tipos.  
   
- [Resumo da conversão de bibliotecas de tipos em assemblies](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))  
+ [Resumo da conversão de bibliotecas de tipos em assemblies](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))  
  Descreve o processo de conversão de importação de biblioteca de tipos em assembly.  
   
- [Interoperação usando tipos genéricos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))  
+ [Interoperação usando tipos genéricos](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))  
  Descreve quais ações têm suporte ao usar tipos genéricos para interoperabilidade COM.

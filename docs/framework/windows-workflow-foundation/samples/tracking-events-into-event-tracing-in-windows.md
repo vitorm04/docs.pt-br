@@ -2,12 +2,12 @@
 title: Eventos de rastreamento no rastreamento de evento no Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: fa5d86e327bc9c6eca85ed2908775de5f647f410
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 4350287aedae73a7ca9556de7ae3f597950e32ea
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144884"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549608"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Eventos de rastreamento no rastreamento de evento no Windows
 
@@ -27,7 +27,7 @@ Windows Workflow Foundation fornece uma infraestrutura de controle para acompanh
 
 A tabela a seguir detalha os registros de rastreamento que o runtime de fluxo de trabalho se emite.
 
-|Controlando o registro|Descrição|
+|Controlando o registro|Description|
 |---------------------|-----------------|
 |Registros de rastreamento de instância de fluxo de trabalho.|Descreve o ciclo de vida de instância de fluxo de trabalho. Por exemplo, um registro de instância é emitida quando o fluxo de trabalho inicia ou termina.|
 |Estado da atividade que acompanha registros.|Detalha a execução da atividade. Esses registros indicam o estado de uma atividade de fluxo de trabalho como quando uma atividade é agendada ou quando a atividade completa ou quando uma falha é lançada.|
@@ -51,7 +51,7 @@ O participante de rastreamento assinatura para um subconjunto de registros emiss
 
 4. Usando o explorador de arquivos, abra o cliente de teste do WCF.
 
-    O cliente de teste do WCF (WcfTestClient. exe) está localizado na \<Visual Studio 2010 installation folder> pasta \Common7\IDE\
+    O cliente de teste do WCF (WcfTestClient.exe) está localizado na \<Visual Studio 2010 installation folder> pasta \Common7\IDE\
 
     A pasta de instalação padrão do Visual Studio 2010 é C:\Program Files\Microsoft Visual Studio 10,0.
 
@@ -151,6 +151,6 @@ O perfil de acompanhamento de monitoramento de integridade emite-se registros de
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [AppFabric que monitora Exemplos](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric que monitora Exemplos](/previous-versions/appfabric/ff383407(v=azure.10))

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
-ms.openlocfilehash: f8d052c7b9bac9c4bab61ab1950e9e89a7c73912
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: fad0a8163bd3d023911fd8554a77f740ac010ee6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618955"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547239"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Como: Referenciar tipos .NET por meio do COM
 Do ponto de vista do código de cliente e servidor, as diferenças entre o .NET Framework e o COM são bastante invisíveis. Os clientes do Microsoft Visual Basic podem exibir um objeto .NET no Pesquisador de Objetos, que expõe os métodos de objeto e a sintaxe, propriedades e campos exatamente como se fosse qualquer outro objeto COM.  
@@ -33,7 +33,7 @@ Do ponto de vista do código de cliente e servidor, as diferenças entre o .NET 
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
     ```  
   
-     -ou-  
+     - ou -  
   
 - Inclua uma diretiva #import para Mscorlib.tlb. Por exemplo:  
   
@@ -46,5 +46,5 @@ Do ponto de vista do código de cliente e servidor, as diferenças entre o .NET 
 
 - [Expondo componentes do .NET Framework para COM](exposing-dotnet-components-to-com.md)
 - [Registrando assemblies com o COM](registering-assemblies-with-com.md)
-- [Chamando um objeto .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
-- [Implantando um aplicativo para acesso COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))
+- [Chamando um objeto .NET](/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
+- [Implantando um aplicativo para acesso COM](/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

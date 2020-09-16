@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 6b1dec96dfb3fc354c614983ed1dafab66c5b007
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 41ee25397d519f189b462291d823586113c78b67
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302952"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541533"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Visão geral sobre interoperabilidade (Guia de Programação em C#)
 O tópico descreve métodos para permitir a interoperabilidade entre código gerenciado e código não gerenciado do C#.  
@@ -58,9 +58,9 @@ Para obter mais informações, consulte [consumindo funções de dll não gerenc
   
  Para obter mais informações, consulte [Expondo componentes do .NET Framework para o COM](../../../framework/interop/exposing-dotnet-components-to-com.md) e [Classe COM de exemplo](./example-com-class.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Melhorando o desempenho de interoperabilidade](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
+- [Melhorando o desempenho de interoperabilidade](/previous-versions/msp-n-p/ff647812(v=pandp.10))
 - [Introdução à interoperabilidade entre COM e .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)
 - [Introdução à interoperabilidade COM em Visual Basic](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
 - [Marshaling entre código gerenciado e não gerenciado](../../../framework/interop/interop-marshaling.md)

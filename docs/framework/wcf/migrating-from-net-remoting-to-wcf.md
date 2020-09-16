@@ -3,12 +3,12 @@ title: Migrando de .NET Remoting para o WCF
 description: Saiba como migrar um aplicativo que usa a comunicação remota do .NET para usar o WCF. Você pode realizar vários cenários comuns de comunicação remota no WCF.
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: f6f526db09806008314980b71233b208d25359fc
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 73bdac5d8f4d39694f038bb600828c79e527efb0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246148"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542844"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrando de .NET Remoting para o WCF
 Este artigo descreve como migrar um aplicativo que usa a comunicação remota do .NET para usar o Windows Communication Foundation (WCF). Ele compara conceitos semelhantes entre esses produtos e descreve como realizar vários cenários comuns de comunicação remota no WCF.  
@@ -106,7 +106,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
 - [Configurando serviços usando arquivos de configuração](configuring-services-using-configuration-files.md)  
   
-- [Hospedando serviços](hosting-services.md)  
+- [Serviços de hospedagem](hosting-services.md)  
   
 ### <a name="client-implementation-comparison"></a>Comparação de implementação do cliente  
   
@@ -143,7 +143,7 @@ Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received
   
  Este exemplo mostra a programação no nível do canal porque ele é mais semelhante ao exemplo de comunicação remota. Também está disponível a abordagem **Adicionar referência de serviço** no Visual Studio que gera código para simplificar a programação do cliente. Para obter mais informações, consulte estes tópicos:  
   
-- [Programação de nível de canal do cliente](./extending/client-channel-level-programming.md)  
+- [Programação de nível de canal cliente](./extending/client-channel-level-programming.md)  
   
 - [Como adicionar, atualizar ou remover uma referência de serviço](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
@@ -269,7 +269,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
  Para obter mais informações sobre contratos de falha, consulte <xref:System.ServiceModel.FaultException> .  
   
-### <a name="security-considerations"></a>Considerações de segurança  
+### <a name="security-considerations"></a>Considerações sobre segurança  
   
 #### <a name="security-in-net-remoting"></a>Segurança na comunicação remota do .NET  
  Alguns canais de comunicação remota do .NET dão suporte a recursos de segurança como autenticação e criptografia na camada de canal (IPC e TCP). O canal HTTP depende do Serviços de Informações da Internet (IIS) para autenticação e criptografia. Apesar desse suporte, você deve considerar o .NET Remoting um protocolo de comunicação não seguro e usá-lo somente em ambientes totalmente confiáveis. Nunca exponha um ponto de extremidade de comunicação remota pública para a Internet ou clientes não confiáveis.  
@@ -285,7 +285,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 ### <a name="why-migrate-from-remoting-to-wcf"></a>Por que migrar da comunicação remota para o WCF?  
   
-- **O .NET Remoting é um produto herdado.** Conforme descrito em [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29), ele é considerado um produto herdado e não é recomendado para um novo desenvolvimento. O WCF ou o ASP.NET Web API são recomendados para aplicativos novos e existentes.  
+- **O .NET Remoting é um produto herdado.** Conforme descrito em [.NET Remoting](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)), ele é considerado um produto herdado e não é recomendado para um novo desenvolvimento. O WCF ou o ASP.NET Web API são recomendados para aplicativos novos e existentes.  
   
 - **O WCF usa padrões de plataforma cruzada.** O WCF foi projetado com a interoperabilidade entre plataformas em mente e dá suporte a muitos padrões do setor (SOAP, WS-Security, WS-Trust, etc.). Um serviço WCF pode interoperar com clientes em execução em sistemas operacionais diferentes do Windows. A comunicação remota foi projetada principalmente para ambientes em que ambos os aplicativos cliente e servidor são executados usando .NET Framework em um sistema operacional Windows.
   
