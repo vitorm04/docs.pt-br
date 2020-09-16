@@ -6,20 +6,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
-ms.openlocfilehash: c4be649a5f35f7e9cbe65332a60b1c8aeb2a66ea
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: c92258fa9501aeeee46fe664cc4436f9349ff232
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552027"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558121"
 ---
-# <a name="how-to-control-the-type-of-a-projection-linq-to-xml"></a><span data-ttu-id="460a6-103">Como controlar o tipo de uma projeção (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="460a6-103">How to control the type of a projection (LINQ to XML)</span></span>
+# <a name="how-to-control-the-type-of-a-projection-linq-to-xml"></a><span data-ttu-id="0d1da-103">Como controlar o tipo de uma projeção (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="0d1da-103">How to control the type of a projection (LINQ to XML)</span></span>
 
-<span data-ttu-id="460a6-104">*Projeção* é o processo de filtrar um conjunto de dados, alterar sua forma e, talvez, seu tipo.</span><span class="sxs-lookup"><span data-stu-id="460a6-104">*Projection* is the process of filtering a set of data, changing its shape and perhaps its type.</span></span> <span data-ttu-id="460a6-105">A maioria das expressões de consulta faz projeções.</span><span class="sxs-lookup"><span data-stu-id="460a6-105">Most query expressions do projections.</span></span> <span data-ttu-id="460a6-106">A maioria das expressões de consulta nesta seção é avaliada como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> , mas você pode criar coleções de outros tipos.</span><span class="sxs-lookup"><span data-stu-id="460a6-106">Most of the query expressions in this section evaluate to <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, but you can create collections of other types.</span></span> <span data-ttu-id="460a6-107">Este artigo mostra como fazer isso.</span><span class="sxs-lookup"><span data-stu-id="460a6-107">This article shows how to do this.</span></span>
+<span data-ttu-id="0d1da-104">*Projeção* é o processo de filtrar um conjunto de dados, alterar sua forma e, talvez, seu tipo.</span><span class="sxs-lookup"><span data-stu-id="0d1da-104">*Projection* is the process of filtering a set of data, changing its shape and perhaps its type.</span></span> <span data-ttu-id="0d1da-105">A maioria das expressões de consulta faz projeções.</span><span class="sxs-lookup"><span data-stu-id="0d1da-105">Most query expressions do projections.</span></span> <span data-ttu-id="0d1da-106">A maioria das expressões de consulta nesta seção é avaliada como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> , mas você pode criar coleções de outros tipos.</span><span class="sxs-lookup"><span data-stu-id="0d1da-106">Most of the query expressions in this section evaluate to <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, but you can create collections of other types.</span></span> <span data-ttu-id="0d1da-107">Este artigo mostra como fazer isso.</span><span class="sxs-lookup"><span data-stu-id="0d1da-107">This article shows how to do this.</span></span>
 
-## <a name="example-define-a-new-type-and-create-a-query-that-creates-an-ienumerable-of-that-type"></a><span data-ttu-id="460a6-108">Exemplo: definir um novo tipo e criar uma consulta que cria um IEnumerable desse tipo</span><span class="sxs-lookup"><span data-stu-id="460a6-108">Example: Define a new type and create a query that creates an IEnumerable of that type</span></span>
+## <a name="example-define-a-new-type-and-create-a-query-that-creates-an-ienumerable-of-that-type"></a><span data-ttu-id="0d1da-108">Exemplo: definir um novo tipo e criar uma consulta que cria um IEnumerable desse tipo</span><span class="sxs-lookup"><span data-stu-id="0d1da-108">Example: Define a new type and create a query that creates an IEnumerable of that type</span></span>
 
-<span data-ttu-id="460a6-109">O exemplo a seguir define um novo tipo, `Customer` , e a expressão de consulta cria novos `Customer` objetos na `Select` cláusula.</span><span class="sxs-lookup"><span data-stu-id="460a6-109">The following example defines a new type, `Customer`, and the query expression instantiates new `Customer` objects in the `Select` clause.</span></span> <span data-ttu-id="460a6-110">Isso faz com que o tipo da expressão de consulta para ser <xref:System.Collections.Generic.IEnumerable%601> de `Customer`.</span><span class="sxs-lookup"><span data-stu-id="460a6-110">This causes the type of the query expression to be <xref:System.Collections.Generic.IEnumerable%601> of `Customer`.</span></span> <span data-ttu-id="460a6-111">O exemplo usa [arquivo XML de exemplo de documento XML: clientes e pedidos](sample-xml-file-customers-orders.md).</span><span class="sxs-lookup"><span data-stu-id="460a6-111">The example uses XML document [Sample XML file: Customers and orders](sample-xml-file-customers-orders.md).</span></span>
+<span data-ttu-id="0d1da-109">O exemplo a seguir define um novo tipo, `Customer` , e a expressão de consulta cria novos `Customer` objetos na `Select` cláusula.</span><span class="sxs-lookup"><span data-stu-id="0d1da-109">The following example defines a new type, `Customer`, and the query expression instantiates new `Customer` objects in the `Select` clause.</span></span> <span data-ttu-id="0d1da-110">Isso faz com que o tipo da expressão de consulta para ser <xref:System.Collections.Generic.IEnumerable%601> de `Customer`.</span><span class="sxs-lookup"><span data-stu-id="0d1da-110">This causes the type of the query expression to be <xref:System.Collections.Generic.IEnumerable%601> of `Customer`.</span></span> <span data-ttu-id="0d1da-111">O exemplo usa [arquivo XML de exemplo de documento XML: clientes e pedidos](sample-xml-file-customers-orders.md).</span><span class="sxs-lookup"><span data-stu-id="0d1da-111">The example uses XML document [Sample XML file: Customers and orders](sample-xml-file-customers-orders.md).</span></span>
 
 ```csharp
 public class Customer
@@ -126,7 +126,7 @@ Sub Main()
 End Sub
 ```
 
-<span data-ttu-id="460a6-112">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="460a6-112">This example produces the following output:</span></span>
+<span data-ttu-id="0d1da-112">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="0d1da-112">This example produces the following output:</span></span>
 
 ```output
 GREAL:Great Lakes Food Market:Howard Snyder
@@ -135,7 +135,7 @@ LAZYK:Lazy K Kountry Store:John Steel
 LETSS:Let's Stop N Shop:Jaime Yorres
 ```
 
-## <a name="see-also"></a><span data-ttu-id="460a6-113">Confira também</span><span class="sxs-lookup"><span data-stu-id="460a6-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d1da-113">Confira também</span><span class="sxs-lookup"><span data-stu-id="0d1da-113">See also</span></span>
 
 - <xref:System.Linq.Enumerable.Select%2A>
-- [<span data-ttu-id="460a6-114">Projeções e transformações (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="460a6-114">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="0d1da-114">Projeções e transformações (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0d1da-114">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](./work-dictionaries-linq-xml.md)

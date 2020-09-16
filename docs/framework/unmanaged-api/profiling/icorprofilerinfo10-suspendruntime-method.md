@@ -11,33 +11,33 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 8d00718579f44a164cd83e2b05d41f70f1c65785
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 121ed0401628193f6e2fe632a124c08aad7bd1b4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452143"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551433"
 ---
-# <a name="icorprofilerinfo10suspendruntime-method"></a><span data-ttu-id="b41c5-102">Método ICorProfilerInfo10:: SuspendRuntime</span><span class="sxs-lookup"><span data-stu-id="b41c5-102">ICorProfilerInfo10::SuspendRuntime Method</span></span>
+# <a name="icorprofilerinfo10suspendruntime-method"></a><span data-ttu-id="58fec-102">Método ICorProfilerInfo10:: SuspendRuntime</span><span class="sxs-lookup"><span data-stu-id="58fec-102">ICorProfilerInfo10::SuspendRuntime Method</span></span>
 
-<span data-ttu-id="b41c5-103">Suspende o tempo de execução sem executar um GC.</span><span class="sxs-lookup"><span data-stu-id="b41c5-103">Suspends the runtime without performing a GC.</span></span>
+<span data-ttu-id="58fec-103">Suspende o tempo de execução sem executar um GC.</span><span class="sxs-lookup"><span data-stu-id="58fec-103">Suspends the runtime without performing a GC.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="b41c5-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b41c5-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="58fec-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="58fec-104">Syntax</span></span>
 
 ```cpp
 HRESULT SuspendRuntime();
 ```
 
-## <a name="requirements"></a><span data-ttu-id="b41c5-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b41c5-105">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="58fec-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="58fec-105">Requirements</span></span>
 
-<span data-ttu-id="b41c5-106">**Plataformas:** Consulte [sistemas operacionais com suporte do .NET Core](../../../core/install/dependencies.md?pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="b41c5-106">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?pivots=os-windows).</span></span>
+<span data-ttu-id="58fec-106">**Plataformas:** Consulte [sistemas operacionais com suporte do .NET Core](../../../core/install/windows.md?pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="58fec-106">**Platforms:** See [.NET Core supported operating systems](../../../core/install/windows.md?pivots=os-windows).</span></span>
 
-<span data-ttu-id="b41c5-107">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="b41c5-107">**Header:** CorProf.idl, CorProf.h</span></span>
+<span data-ttu-id="58fec-107">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="58fec-107">**Header:** CorProf.idl, CorProf.h</span></span>
 
-<span data-ttu-id="b41c5-108">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b41c5-108">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="58fec-108">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="58fec-108">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="b41c5-109">**Versões do .net:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b41c5-109">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
+<span data-ttu-id="58fec-109">**Versões do .net:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="58fec-109">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="b41c5-110">Confira também</span><span class="sxs-lookup"><span data-stu-id="b41c5-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="58fec-110">Confira também</span><span class="sxs-lookup"><span data-stu-id="58fec-110">See also</span></span>
 
-- [<span data-ttu-id="b41c5-111">Interface ICorProfilerInfo10</span><span class="sxs-lookup"><span data-stu-id="b41c5-111">ICorProfilerInfo10 Interface</span></span>](icorprofilerinfo10-interface.md)
+- [<span data-ttu-id="58fec-111">Interface ICorProfilerInfo10</span><span class="sxs-lookup"><span data-stu-id="58fec-111">ICorProfilerInfo10 Interface</span></span>](icorprofilerinfo10-interface.md)
