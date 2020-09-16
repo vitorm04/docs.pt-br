@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: 513c5dde1526a8a21f68171f304b245d0a34f563
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 617757581f6d2491098e1172072bdf0387c6852b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594459"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558908"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Paralelismo de dados (biblioteca de tarefas paralelas)
 *Paralelismo de dados* refere-se a cenários em que a mesma operação é realizada simultaneamente (ou seja, em paralelo) em elementos em uma matriz ou coleção de origem. Nas operações paralelas de dados, a coleção de origem é particionada de modo que múltiplos threads possam operar em segmentos diferentes simultaneamente.  
@@ -40,11 +40,11 @@ ms.locfileid: "84594459"
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Title|Descrição|  
+|Título|Descrição|  
 |-----------|-----------------|  
 |[Como: Escrever um loop Parallel.For simples](how-to-write-a-simple-parallel-for-loop.md)|Descreve como gravar um loop <xref:System.Threading.Tasks.Parallel.For%2A> sobre qualquer matriz ou coleção de origem <xref:System.Collections.Generic.IEnumerable%601> indexável.|  
 |[Como: escrever um loop Parallel.ForEach simples](how-to-write-a-simple-parallel-foreach-loop.md)|Descreve como gravar um loop <xref:System.Threading.Tasks.Parallel.ForEach%2A> sobre qualquer coleção de origem <xref:System.Collections.Generic.IEnumerable%601>.|  
-|[Como parar ou interromper um loop Parallel.For](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100))|Descreve como parar ou interromper um loop paralelo para que todos os threads sejam informados da ação.|  
+|[Como parar ou interromper um loop Parallel.For](/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100))|Descreve como parar ou interromper um loop paralelo para que todos os threads sejam informados da ação.|  
 |[Como: Gravar um loop Parallel.For com variáveis locais de thread](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|Descreve como gravar um loop <xref:System.Threading.Tasks.Parallel.For%2A> em que cada thread mantém uma variável privada que não está visível para outros threads, e como sincronizar os resultados de todos os threads quando o loop for concluído.|  
 |[Como: escrever um loop Parallel.ForEach com variáveis locais de partição](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)|Descreve como gravar um loop <xref:System.Threading.Tasks.Parallel.ForEach%2A> em que cada thread mantém uma variável privada que não está visível para outros threads, e como sincronizar os resultados de todos os threads quando o loop for concluído.|  
 |[Como: Cancelar um loop Parallel.For ou ForEach](how-to-cancel-a-parallel-for-or-foreach-loop.md)|Descreve como cancelar um loop paralelo usando um <xref:System.Threading.CancellationToken?displayProperty=nameWithType>|  
@@ -52,6 +52,6 @@ ms.locfileid: "84594459"
 |[Biblioteca de tarefas paralelas (TPL)](task-parallel-library-tpl.md)|Fornece uma visão geral da biblioteca de paralelismo de tarefas.|  
 |[Programação paralela](index.md)|Apresenta a Programação paralela no .NET Framework.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Programação paralela](index.md)

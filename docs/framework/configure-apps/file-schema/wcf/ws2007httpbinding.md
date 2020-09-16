@@ -2,12 +2,12 @@
 title: <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-ms.openlocfilehash: 379552f461a79415e3140a8084901e0c1d6b2c32
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 102e220ad01410568a18ce4ea6fac06ca8c15230
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140484"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558726"
 ---
 # \<ws2007HttpBinding>
 Define uma associação interoperável que fornece suporte para as versões corretas <xref:System.ServiceModel.WSHttpBinding.Security%2A> dos <xref:System.ServiceModel.ReliableSession> elementos de <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> associação, e.  
@@ -17,7 +17,7 @@ Define uma associação interoperável que fornece suporte para as versões corr
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<ws2007HttpBinding>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <ws2007HttpBinding>
@@ -86,8 +86,8 @@ Define uma associação interoperável que fornece suporte para as versões corr
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<security>](security-of-wshttpbinding.md)|Define as configurações de segurança para a associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.WSHttpSecurityElement> .|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições sobre a complexidade das mensagens SOAP que os pontos de extremidade configurados com essa associação podem processar. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> .|  
-|[\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Especifica se as sessões confiáveis são estabelecidas entre os pontos de extremidade do canal.|  
+|[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições sobre a complexidade das mensagens SOAP que os pontos de extremidade configurados com essa associação podem processar. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> .|  
+|[\<reliableSession>](/previous-versions/ms731375(v=vs.90))|Especifica se as sessões confiáveis são estabelecidas entre os pontos de extremidade do canal.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   

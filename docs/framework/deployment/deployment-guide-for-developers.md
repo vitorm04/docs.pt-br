@@ -6,19 +6,19 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 47946121334fe45132a7469894f30081045e3a68
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 5b9d22062d273404c7451beb44e56d3fa5c4aa1d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558823"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558739"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guia de implantação do .NET Framework para desenvolvedores
 Este tópico fornece informações para desenvolvedores que querem instalar qualquer versão do .NET Framework a partir do .NET Framework 4.5 até o [!INCLUDE[net_current](../../../includes/net-current-version.md)] com seus aplicativos.
 
 Você pode baixar os pacotes redistribuíveis e os pacotes de idiomas para .NET Framework nas páginas de download:
 
-- [.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
 - [.NET Framework 4,7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
@@ -43,9 +43,9 @@ Você pode baixar os pacotes redistribuíveis e os pacotes de idiomas para .NET 
 
 - A partir do .NET Framework 4.5, seus usuários podem exibir uma lista dos aplicativos .NET Framework em execução durante a instalação e encerrá-los com facilidade. Isso pode ajudar a evitar reinicializações do sistema causadas por instalações do .NET Framework. Consulte [Reduzindo reinicializações do sistema](reducing-system-restarts.md).
 
-- A desinstalação do .NET Framework 4,5 ou versões posteriores também remove arquivos .NET Framework 4 já existentes. Se quiser voltar para o .NET Framework 4, você deverá reinstalá-lo e todas as suas atualizações. Consulte [instalando o .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)).
+- A desinstalação do .NET Framework 4,5 ou versões posteriores também remove arquivos .NET Framework 4 já existentes. Se quiser voltar para o .NET Framework 4, você deverá reinstalá-lo e todas as suas atualizações. Consulte [instalando o .NET Framework 4](/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)).
 
-- O .NET Framework 4.5 redistribuível foi atualizado em 9 de outubro de 2012 para corrigir um problema relacionado a um carimbo de data/hora incorreto em um certificado digital, que fazia com que a assinatura digital em arquivos produzidos e assinados pela Microsoft expirassem prematuramente. Se você já instalou o pacote redistribuível do .NET Framework 4,5 com data de 16 de agosto de 2012, recomendamos que atualize sua cópia com os pacotes redistribuíveis mais recentes da [página de download do .NET Framework](https://dotnet.microsoft.com/download/dotnet-framework/net45). Para saber mais sobre esse problema, consulte [Comunicado de Segurança da Microsoft 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655).
+- O .NET Framework 4.5 redistribuível foi atualizado em 9 de outubro de 2012 para corrigir um problema relacionado a um carimbo de data/hora incorreto em um certificado digital, que fazia com que a assinatura digital em arquivos produzidos e assinados pela Microsoft expirassem prematuramente. Se você já instalou o pacote redistribuível do .NET Framework 4,5 com data de 16 de agosto de 2012, recomendamos que atualize sua cópia com os pacotes redistribuíveis mais recentes da [página de download do .NET Framework](https://dotnet.microsoft.com/download/dotnet-framework/net45). Para saber mais sobre esse problema, consulte [Comunicado de Segurança da Microsoft 2749655](/security-updates/SecurityAdvisories/2012/2749655).
 
 Para obter informações sobre como um administrador do sistema pode implantar o .NET Framework e suas dependências de sistema em uma rede, consulte [Guia de implantação para administradores](guide-for-administrators.md).
 
@@ -261,8 +261,8 @@ Por exemplo, para detectar se o pacote de idioma japonês completo (LCID = 1041)
 | | |
 |-|-|
 | Chave | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| Nome | Versão |
-| Type | DWORD |
+| Name | Versão |
+| Tipo | DWORD |
 
 Para determinar se a versão de lançamento final de um pacote de idiomas está instalada para uma versão específica do .NET Framework do 4.5 ao 4.7.2, verifique o valor DWORD da chave RELEASE descrito na seção anterior, [Detectando o .NET Framework](#detect_net).
 
@@ -272,7 +272,7 @@ Para determinar se a versão de lançamento final de um pacote de idiomas está 
 
 O .NET Framework oferece um conjunto de arquivos executáveis de pacotes de idiomas independentes que contém recursos localizados para culturas específicas. Os pacotes de idiomas estão disponíveis no download .NET Framework páginas:
 
-- [.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
 - [.NET Framework 4,7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
@@ -345,11 +345,11 @@ A tabela a seguir lista opções que podem ser incluídas ao encadear o redistri
 |Opção|Descrição|
 |------------|-----------------|
 |**/CEIPConsent**|Substitui o comportamento padrão e envia comentários anônimos à Microsoft para aprimorar experiências futuras de implantação. Essa opção só pode ser usada se o programa de instalação solicitar consentimento e se o usuário conceder permissão para enviar comentários anônimos à Microsoft.|
-|**/chainingpackage** `packageName`|Especifica o nome do executável que está fazendo o encadeamento. Essas informações são enviadas à Microsoft como comentários anônimos para ajudar a aprimorar experiências futuras de implantação.<br /><br /> Se o nome do pacote contiver espaços, use aspas duplas como delimitadores: **/chainingpackage "Lucerne Publishing"**. Para obter um exemplo de um pacote de encadeamento, consulte [obtendo informações de progresso de um pacote de instalação](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).|
+|**/chainingpackage** `packageName`|Especifica o nome do executável que está fazendo o encadeamento. Essas informações são enviadas à Microsoft como comentários anônimos para ajudar a aprimorar experiências futuras de implantação.<br /><br /> Se o nome do pacote contiver espaços, use aspas duplas como delimitadores: **/chainingpackage "Lucerne Publishing"**. Para obter um exemplo de um pacote de encadeamento, consulte [obtendo informações de progresso de um pacote de instalação](/previous-versions/cc825975(v=vs.100)).|
 |**/LCID**  `LCID`<br /><br /> em que `LCID` especifica um identificador de localidade (consulte os [idiomas com suporte](#supported-languages))|Instala o pacote de idiomas especificado por `LCID` e faz com que a interface do usuário exibida seja mostrada nesse idioma, a menos que o modo silencioso seja configurado.<br /><br /> No caso do instalador da Web, essa opção instala de maneira encadeada o pacote de idiomas da Web. **Observação:** use essa opção somente com o instalador da Web.|
 |**/log** `file` &#124; `folder`|Especifica o local do arquivo de log. O padrão é a pasta temporária do processo, e o nome do arquivo padrão baseia-se no pacote. Se a extensão do arquivo for .txt, é produzido um log de texto. Se qualquer outra extensão ou nenhuma extensão for especificada, é criado um log HTML.|
 |**/msioptions**|Especifica opções a serem transmitidas para itens .msi e .msp, por exemplo: `/msioptions "PROPERTY1='Value'"`.|
-|**/norestart**|Impede que o programa de instalação reinicialize automaticamente. Se você usar essa opção, o aplicativo de encadeamento precisará capturar o código de retorno e manipular a reinicialização (consulte [obtendo informações de progresso de um pacote de instalação](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))).|
+|**/norestart**|Impede que o programa de instalação reinicialize automaticamente. Se você usar essa opção, o aplicativo de encadeamento precisará capturar o código de retorno e manipular a reinicialização (consulte [obtendo informações de progresso de um pacote de instalação](/previous-versions/cc825975(v=vs.100))).|
 |**/Passive**|Define o modo passivo. Exibe a barra de progresso para indicar se a instalação está em progresso, mas não exibe nenhuma solicitação ou mensagem de erro ao usuário. Nesse modo, quando encadeado por um programa de instalação, o pacote de encadeamento deve lidar com [códigos de retorno](#return-codes).|
 |**/pipe**|Cria um canal de comunicação para permitir que um pacote de encadeamento obtenha o progresso.|
 |**/promptrestart**|Somente modo passivo; se o programa de instalação exigir reinicialização, o usuário será avisado. Essa opção exigirá a interação do usuário se uma reinicialização for necessária.|
@@ -380,7 +380,7 @@ A tabela a seguir lista .NET Framework pacotes de idiomas que estão disponívei
 |1041|Japonês|ja|
 |1042|Coreano|ko|
 |1043|Holandês – Holanda|nl|
-|1044|Norueguês (Bokmål)|não|
+|1044|Norueguês (Bokmål)|no|
 |1045|Polonês|pl|
 |1046|Português – Brasil|pt-BR|
 |1049|Russo|ru|

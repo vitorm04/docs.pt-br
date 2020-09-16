@@ -2,12 +2,12 @@
 title: Escolhendo um codificador de mensagem
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: dbc5981013fe5e023f1d6d9eaf64b2e1fa18e2df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fd5bc2270f2e4095ef6ad2b1d89af3560fb8d312
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587333"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559364"
 ---
 # <a name="choose-a-message-encoder"></a>Escolher um codificador de mensagem
 
@@ -31,9 +31,9 @@ Este artigo discute os critérios para escolher entre os codificadores de mensag
 ## <a name="how-to-choose-a-message-encoder"></a>Como escolher um codificador de mensagem  
  A tabela a seguir descreve os fatores comuns usados para escolher um codificador de mensagem. Priorize os fatores que são importantes para seu aplicativo e, em seguida, escolha os codificadores de mensagem que funcionam melhor com esses fatores. Certifique-se de considerar quaisquer fatores adicionais não listados nesta tabela e quaisquer codificadores de mensagem personalizados que possam ser necessários em seu aplicativo.  
   
-|Fator|Descrição|Codificadores que dão suporte a esse fator|  
+|Fator|Description|Codificadores que dão suporte a esse fator|  
 |------------|-----------------|---------------------------------------|  
-|Conjuntos de caracteres com suporte|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>e <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> dão suporte apenas às codificações UTF8 e UTF16 Unicode (*big-endian* e *little-endian*). Se outras codificações forem necessárias, como UTF7 ou ASCII, um codificador personalizado deverá ser usado. Para obter um codificador personalizado de exemplo, consulte [codificador de mensagem personalizada](https://docs.microsoft.com/dotnet/framework/wcf/samples/custom-message-encoder-custom-text-encoder).|Texto|  
+|Conjuntos de caracteres com suporte|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> e <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> dão suporte apenas às codificações UTF8 e UTF16 Unicode (*big-endian* e *little-endian*). Se outras codificações forem necessárias, como UTF7 ou ASCII, um codificador personalizado deverá ser usado. Para obter um codificador personalizado de exemplo, consulte [codificador de mensagem personalizada](../samples/custom-message-encoder-custom-text-encoder.md).|Texto|  
 |Inspeção|A inspeção é a capacidade de examinar as mensagens durante a transmissão. Codificações de texto, com ou sem o uso de SOAP, permitem que as mensagens sejam inspecionadas e analisadas por muitos aplicativos sem o uso de ferramentas especializadas. O uso da segurança de transferência, no nível de mensagem ou de transporte, afeta sua capacidade de inspecionar mensagens. A confidencialidade protege uma mensagem de ser examinada e a integridade protege a modificação de uma mensagem.|Texto|  
 |Confiabilidade|Confiabilidade é a resiliência de um codificador para erros de transmissão. A confiabilidade também pode ser fornecida na mensagem, no transporte ou na camada de aplicativo. Todos os codificadores do WCF padrão pressupõem que outra camada esteja fornecendo confiabilidade. O codificador tem pouca capacidade de se recuperar de um erro de transmissão.|Nenhum|  
 |Simplicidade|A simplicidade representa a facilidade com a qual você pode criar codificadores e decodificadores para uma especificação de codificação. As codificações de texto são particularmente vantajosas para simplificar, e a codificação de texto POX tem a vantagem adicional de não exigir suporte para o processamento de SOAP.|Texto (POX)|  
