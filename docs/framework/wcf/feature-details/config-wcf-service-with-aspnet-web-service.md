@@ -1,24 +1,24 @@
 ---
-title: Como configurar um serviço do WCF para interoperar com os clientes de serviço Web do ASP.NET
+title: 'Como: configurar um serviço do WCF para interoperar com os clientes de serviço Web do ASP.NET'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 52f7857a2dc7108eb308fde942bf153d85d8e8ed
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 696e6a08f3f040fcc6f27d101cd6b7c8cc89a0d6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593601"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556636"
 ---
-# <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Como configurar um serviço do WCF para interoperar com os clientes de serviço Web do ASP.NET
+# <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Como: configurar um serviço do WCF para interoperar com os clientes de serviço Web do ASP.NET
 
 Para configurar um ponto de extremidade de serviço do Windows Communication Foundation (WCF) para ser interoperável com clientes de serviço Web ASP.NET, use o <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> tipo como o tipo de associação para o ponto de extremidade de serviço.  
   
  Opcionalmente, você pode habilitar o suporte para HTTPS e autenticação de cliente de nível de transporte na associação. Os clientes do serviço Web ASP.NET não dão suporte à codificação de mensagem MTOM, portanto, a <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> propriedade deve ser deixada como seu valor padrão, que é <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> . Os clientes do serviço Web ASP.NET não dão suporte ao WS-Security, portanto, <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> deve ser definido como <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> .  
   
- Para disponibilizar os metadados para um serviço WCF para ferramentas de geração de proxy do serviço Web do ASP.NET (ou seja, [ferramenta de linguagem de descrição de serviços Web (WSDL. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100)), [ferramenta de descoberta de serviços Web (disco. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))e o recurso **Adicionar referência Web** no Visual Studio), você deve expor um ponto de extremidade de metadados http/Get.  
+ Para disponibilizar os metadados para um serviço WCF para ferramentas de geração de proxy do serviço Web do ASP.NET (ou seja, [ferramenta de linguagem de descrição de serviços Web (Wsdl.exe)](/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100)), [ferramenta de descoberta de serviços Web (Disco.exe)](/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))e o recurso **Adicionar referência Web** no Visual Studio), você deve expor um ponto de extremidade de metadados http/Get.  
   
 ## <a name="add-an-endpoint-in-code"></a>Adicionar um ponto de extremidade no código  
   
@@ -49,10 +49,10 @@ Para configurar um ponto de extremidade de serviço do Windows Communication Fou
   
 ## <a name="see-also"></a>Confira também
 
-- [Como criar um ponto de extremidade de serviço em código](how-to-create-a-service-endpoint-in-code.md)
-- [Como publicar metadados utilizando código para um serviço](how-to-publish-metadata-for-a-service-using-code.md)
-- [Como especificar uma associação de serviço na configuração](../how-to-specify-a-service-binding-in-configuration.md)
-- [Como criar um ponto de extremidade de serviço em configuração](how-to-create-a-service-endpoint-in-configuration.md)
-- [Como publicar metadados para um serviço usando um arquivo de configuração](how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Como: criar um ponto de extremidade de serviço em código](how-to-create-a-service-endpoint-in-code.md)
+- [Como: publicar metadados utilizando código para um serviço](how-to-publish-metadata-for-a-service-using-code.md)
+- [Como: especificar uma associação de serviço na configuração](../how-to-specify-a-service-binding-in-configuration.md)
+- [Como: criar um ponto de extremidade de serviço em configuração](how-to-create-a-service-endpoint-in-configuration.md)
+- [Como: publicar metadados para um serviço usando um arquivo de configuração](how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Segurança de transporte](transport-security.md)
 - [Utilizando metadados](using-metadata.md)

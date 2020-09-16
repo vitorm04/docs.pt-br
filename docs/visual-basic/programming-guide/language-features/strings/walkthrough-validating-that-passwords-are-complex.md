@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: 7b2d6a81f5dc88688a469b96d56a098a2b45c59f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8cb04286e98cf78f0fb66dde92002ee09e2ea0f5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363678"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556239"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Instruções passo a passo: validando senhas complexas (Visual Basic)
 Esse método verifica algumas características de senha forte e atualiza um parâmetro de cadeia de caracteres com informações sobre quais verificações a senha falha.  
@@ -31,7 +31,7 @@ Esse método verifica algumas características de senha forte e atualiza um par�
 - Acesso aos membros do namespace <xref:System.Text.RegularExpressions>. Adicione uma instrução `Imports` se você não está qualificando totalmente os nomes de membros em seu código. Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Segurança  
- Se estiver movendo a senha em uma rede, você precisará usar um método seguro para transferir dados. Para obter mais informações, consulte [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
+ Se estiver movendo a senha em uma rede, você precisará usar um método seguro para transferir dados. Para obter mais informações, consulte [ASP.NET Web Application Security](/previous-versions/aspnet/330a99hc(v=vs.100)).
   
  Você pode melhorar a precisão da `ValidatePassword` função adicionando verificações de complexidade adicionais:  
   
@@ -46,4 +46,4 @@ Esse método verifica algumas características de senha forte e atualiza um par�
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Text.RegularExpressions.Regex>
-- [Segurança de aplicativo Web ASP .NET](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))
+- [Segurança de aplicativo Web ASP .NET](/previous-versions/aspnet/330a99hc(v=vs.100))

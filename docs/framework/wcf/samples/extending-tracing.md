@@ -2,12 +2,12 @@
 title: Estendendo rastreamento
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 59bdfeea41bac812840ffe166895050a6cd1ad2d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f2b9deb346077609193ec08c2c01b10a3ad9357b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600510"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556506"
 ---
 # <a name="extend-tracing"></a>Estender rastreamento
 
@@ -31,7 +31,7 @@ Este exemplo demonstra como estender o recurso de rastreamento de Windows Commun
  O rastreamento de atividade definido pelo usuário permite que o usuário crie suas próprias atividades de rastreamento para agrupar rastreamentos em unidades lógicas de trabalho, correlacionar atividades por meio de transferências e propagação e diminuir o custo de desempenho do rastreamento do WCF (por exemplo, o custo de espaço em disco de um arquivo de log).  
   
 ### <a name="add-custom-sources"></a>Adicionar fontes personalizadas  
- Os rastreamentos definidos pelo usuário podem ser adicionados ao código do cliente e do serviço. A adição de fontes de rastreamento aos arquivos de configuração do cliente ou do serviço permite que esses rastreamentos personalizados sejam registrados e exibidos na [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md). O código a seguir mostra como adicionar uma fonte de rastreamento definida pelo usuário chamada `ServerCalculatorTraceSource` ao arquivo de configuração.  
+ Os rastreamentos definidos pelo usuário podem ser adicionados ao código do cliente e do serviço. A adição de fontes de rastreamento aos arquivos de configuração do cliente ou do serviço permite que esses rastreamentos personalizados sejam registrados e exibidos na [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md). O código a seguir mostra como adicionar uma fonte de rastreamento definida pelo usuário chamada `ServerCalculatorTraceSource` ao arquivo de configuração.  
   
 ```xml  
 <system.diagnostics>  
@@ -97,6 +97,6 @@ Este exemplo demonstra como estender o recurso de rastreamento de Windows Commun
   
 3. Para executar o exemplo em uma configuração de computador único ou entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [AppFabric que monitora Exemplos](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric que monitora Exemplos](/previous-versions/appfabric/ff383407(v=azure.10))

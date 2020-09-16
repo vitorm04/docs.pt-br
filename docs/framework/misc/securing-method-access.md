@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: 88868ab29fc37854959a044b9c0fed5bd8c82d77
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: f9b9bc00058aefc8f58facff43509e717967c2a7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855758"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555712"
 ---
 # <a name="securing-method-access"></a>Protegendo o acesso dos métodos
 
@@ -30,7 +30,7 @@ ms.locfileid: "87855758"
   
 - Limite o escopo de acessibilidade à classe, ao assembly ou às classes derivadas, se eles puderem ser confiáveis. Essa é a maneira mais simples de limitar o acesso do método. Em geral, as classes derivadas podem ser menos confiáveis do que a classe da qual derivam, embora, em alguns casos, eles compartilhem a identidade da classe pai. Em particular, não infere confiança da palavra-chave `protected` , que não é necessariamente usada no contexto de segurança.  
   
-- Limitar o acesso do método a chamadores de uma identidade especificada – essencialmente, qualquer [evidência](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) específica (nome forte, Publicador, zona e assim por diante) que você escolher.  
+- Limitar o acesso do método a chamadores de uma identidade especificada – essencialmente, qualquer [evidência](/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100)) específica (nome forte, Publicador, zona e assim por diante) que você escolher.  
   
 - Limite o método de acesso a chamadores que têm quaisquer permissões que você selecionar.  
   
@@ -240,6 +240,6 @@ class Implemented : ICanCastToMe
   
  Mesmo que um compilador de linguagem impeça essas substituições com um erro de compilação, é possível que o código escrito com outros compiladores substitua.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Diretrizes de codificação segura](../../standard/security/secure-coding-guidelines.md)

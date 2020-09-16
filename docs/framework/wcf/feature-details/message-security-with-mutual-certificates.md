@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 44d06762bf66950ea0cc06986c61ecd548ae2e0c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bbe99b133e7edda191d17e9fe8a1dea89d3f0eb7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576402"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556519"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Segurança de mensagem com certificados mútuos
 O cenário a seguir mostra um serviço de Windows Communication Foundation (WCF) e o cliente protegidos usando o modo de segurança da mensagem. O cliente e o serviço são autenticados com certificados.  
@@ -27,8 +27,8 @@ O cenário a seguir mostra um serviço de Windows Communication Foundation (WCF)
 |Modo de segurança|Mensagem|  
 |Interoperabilidade|Sim, com serviços e clientes compatíveis com o perfil de token de certificado do WS-Security e X. 509.|  
 |Autenticação|Autenticação mútua do servidor e do cliente.|  
-|Integridade|Sim|  
-|Confidencialidade|Sim|  
+|Integridade|Yes|  
+|Confidencialidade|Yes|  
 |Transport|HTTP|  
 |Associação|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -158,8 +158,8 @@ O cenário a seguir mostra um serviço de Windows Communication Foundation (WCF)
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral de segurança](security-overview.md)
-- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
-- [Como: criar e instalar certificados temporários no WCF para segurança de transporte durante o desenvolvimento](https://docs.microsoft.com/previous-versions/msp-n-p/ff648498(v=pandp.10))
+- [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))
+- [Como: criar e instalar certificados temporários no WCF para segurança de transporte durante o desenvolvimento](/previous-versions/msp-n-p/ff648498(v=pandp.10))

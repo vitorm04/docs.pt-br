@@ -1,16 +1,16 @@
 ---
-title: Modificando dados de grande valor (max)
+title: Modificando dados de valor grande (max)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 00a4ae83270bb74e9703faebfc93e26b5c069478
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a077c56f4de5a88e9c2a6f932c9a8b5ffc6b974
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174271"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556961"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modificando dados de valores grandes (max) no ADO.NET
 Os tipos de dados de objetos grandes (LOB) são os que excedem o tamanho de linha máximo de 8 KB. O SQL Server apresenta um especificador `max` para tipos de dados `varchar`, `nvarchar` e `varbinary` para permitir o armazenamento de valores tão grandes quanto 2^32 bytes. Colunas de tabela e variáveis Transact-SQL podem especificar tipos de dados `varchar(max)`, `nvarchar(max)` ou `varbinary(max)`. No ADO.NET, os tipos de dados `max` podem ser encontrados por `DataReader` e também podem ser especificados como valores de parâmetro de entrada e saída sem nenhuma manipulação especial. Para tipos de dados `varchar` grandes, os dados podem ser recuperados e atualizados incrementalmente.  
@@ -21,7 +21,7 @@ Os tipos de dados de objetos grandes (LOB) são os que excedem o tamanho de linh
   
  **Documentação do SQL Server**  
   
-1. [Usando tipos de dados de valores grandes](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))  
+1. [Usando tipos de dados de valores grandes](/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))  
   
 ## <a name="large-value-type-restrictions"></a>Restrições de tipo de valores grandes  
  As seguintes restrições se aplicam aos tipos de dados `max` que não existem para tipos de dados menores:  
@@ -57,11 +57,11 @@ FROM OPENROWSET
   
  UPDATE  
   
- { * \<>de objeto* }  
+ { *\<object>* }  
   
  SET  
   
- { *column_name* = { . WRITE *(expressão* @Offset @Length , ) }  
+ { *column_name* = {. WRITE ( *expressão* , @Offset , @Length )}  
   
  O método WRITE especifica que uma seção do valor do *column_name* será modificada. A expressão é o valor que será copiado para o *column_name*, o `@Offset` é o ponto inicial no qual a expressão será escrita e o argumento `@Length` é o comprimento da seção na coluna.  
   
@@ -251,7 +251,7 @@ WHERE   DocumentID=@DocumentID
   
 ## <a name="see-also"></a>Confira também
 
-- [Dados binários e de grande valor do servidor SQL](sql-server-binary-and-large-value-data.md)
-- [Mapeamentos de tipo de dados do SQL Server](../sql-server-data-type-mappings.md)
-- [Operações de dados do servidor SQL em ADO.NET](sql-server-data-operations.md)
+- [SQL Server dados binários e de valor grande](sql-server-binary-and-large-value-data.md)
+- [Mapeamentos de tipos de dados do SQL Server](../sql-server-data-type-mappings.md)
+- [SQL Server operações de dados no ADO.NET](sql-server-data-operations.md)
 - [Visão geral do ADO.NET](../ado-net-overview.md)
