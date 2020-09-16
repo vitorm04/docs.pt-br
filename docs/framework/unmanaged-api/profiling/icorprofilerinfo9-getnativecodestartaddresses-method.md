@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 99706fdc3d60a5e1a7f85400c1184d5acc808e42
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ca1643dfa980fa647164accf6432082428124acb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449719"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541233"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>Método ICorProfilerInfo9:: GetNativeCodeStartAddresses
 
@@ -32,19 +32,19 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
                                      [out] UINT_PTR codeStartAddresses[]);
 ```
 
-## <a name="parameters"></a>parâmetros
+## <a name="parameters"></a>Parâmetros
 
 - `functionId`
 
-  \[em] a ID da função cujos endereços de início de código nativo devem ser retornados.
+  \[in] a ID da função cujos endereços de início de código nativo devem ser retornados.
 
 - `reJitId`
 
-  \[em] a identidade da função de compilação JIT recompilada.
+  \[in] a identidade da função de compilação JIT recompilada.
 
 - `cCodeStartAddresses`
 
-  \[em] o tamanho máximo da matriz de `codeStartAddresses`.
+  \[in] o tamanho máximo da `codeStartAddresses` matriz.
 
 - `pcCodeStartAddresses`
 
@@ -52,7 +52,7 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
 - `codeStartAddresses`
 
-  \[out] uma matriz de `UINT_PTR`, cada uma delas é o endereço inicial de um corpo nativo para a função especificada.
+  \[out] uma matriz de `UINT_PTR` , cada uma delas é o endereço inicial de um corpo nativo para a função especificada.
 
 ## <a name="remarks"></a>Comentários
 
@@ -60,13 +60,13 @@ Quando a compilação em camadas está habilitada, uma função pode ter mais de
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [sistemas operacionais com suporte do .NET Core](../../../core/install/dependencies.md?pivots=os-windows).
+**Plataformas:** Consulte [sistemas operacionais com suporte do .NET Core](../../../core/install/windows.md?pivots=os-windows).
 
 **Cabeçalho:** CorProf. idl, CorProf. h
 
 **Biblioteca:** CorGuids.lib
 
-**Versões do .net:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**Versões do .net:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
 ## <a name="see-also"></a>Confira também
 

@@ -2,12 +2,12 @@
 title: 'Como: reordenar os campos de um arquivo delimitado (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-ms.openlocfilehash: 6f87374978425e0d51542c6eceda23697d7a3a67
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 62c21dfb67ef35591a8ffe214bc132e63a2433bd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397889"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535378"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Como: reordenar os campos de um arquivo delimitado (LINQ) (Visual Basic)
 
@@ -79,4 +79,4 @@ End Class
 
 - [LINQ e cadeias de caracteres (Visual Basic)](linq-and-strings.md)
 - [LINQ e diretórios de arquivos (Visual Basic)](linq-and-file-directories.md)
-- [Como gerar XML a partir de arquivos CSV](how-to-generate-xml-from-csv-files.md)
+- [Como gerar XML a partir de arquivos CSV](../../../../standard/linq/generate-xml-csv-files.md)

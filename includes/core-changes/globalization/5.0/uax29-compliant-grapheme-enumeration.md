@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c0c1c9c9d8e3aeb6f689f754d09b50b208b54112
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 70b71fc55f76514dd17e5b9ba0e76151a966eebb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702271"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539431"
 ---
 ### <a name="stringinfo-and-textelementenumerator-are-now-uax29-compliant"></a>StringInfo e TextElementEnumerator agora são compatíveis com UAX29
 
@@ -12,12 +12,12 @@ Antes dessa alteração, <xref:System.Globalization.StringInfo?displayProperty=f
 
 Além disso, o <xref:Microsoft.VisualBasic.Strings.StrReverse%2A?displayProperty=fullName> método, que reverte os caracteres em uma cadeia de caracteres em Visual Basic, agora também segue o padrão Unicode para clusters grafemas.
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 Um cluster [grafemas](https://www.unicode.org/glossary/#grapheme) ou [grafemas estendido](https://www.unicode.org/glossary/#extended_grapheme_cluster) é um único caractere percebido pelo usuário que pode ser composto por vários pontos de código Unicode. Por exemplo, a cadeia de caracteres que contém o caractere Tai "Kam" ( :::no-loc text="กำ"::: ) consiste nos dois caracteres a seguir:
 
-- :::no-loc text="ก":::(= ' \u0e01 ') CARACTERE TAI KO KAI
-- :::no-loc text=" ำ":::(= ' \u0e33 ') CARACTERE TAI SARA AM
+- :::no-loc text="ก"::: (= ' \u0e01 ') CARACTERE TAI KO KAI
+- :::no-loc text=" ำ"::: (= ' \u0e33 ') CARACTERE TAI SARA AM
 
 Quando exibido para o usuário, o sistema operacional combina os dois caracteres para formar o único caractere de exibição (ou grafemas) "Kam" ou :::no-loc text="กำ"::: . O emoji também pode consistir em vários caracteres que são combinados para exibição de forma semelhante.
 
@@ -30,7 +30,7 @@ A partir do .NET 5, <xref:System.Globalization.StringInfo> as <xref:System.Globa
 
 Considere o seguinte código C#:
 
-```cs
+```csharp
 using System.Globalization;
 
 static void Main(string[] args)

@@ -2,12 +2,12 @@
 title: Fluxo de trabalho de desenvolvimento do loop interno para aplicativos do Docker
 description: Saiba mais sobre o fluxo de trabalho de desenvolvimento de "loop interno" para aplicativos do Docker.
 ms.date: 08/06/2020
-ms.openlocfilehash: bf837ab53fff2b53cf141b2e621d484cff9b6889
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 071e16afede91f4cfd6cbe8662fa68814ffdcdd7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916174"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539756"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento do loop interno para aplicativos do Docker
 
@@ -118,7 +118,7 @@ Usar um repositório oficial de uma pilha de linguagem com um número de versão
 
 A seguir, há um DockerFile de exemplo para um contêiner do .NET Core:
 
-```Dockerfile
+```dockerfile
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
@@ -284,7 +284,7 @@ Observe que ele está usando a porta 50080, mas internamente ela está sendo red
 
 Você pode testar isso usando o navegador usando a rotação do terminal, conforme descrito na Figura 4-30.
 
-![O resultado da ondulação obtido dehttp://localhost:51080/WeatherForecast](media/docker-apps-inner-loop-workflow/test-docker-app-locally-curl.png)
+![O resultado da ondulação obtido de http://localhost:51080/WeatherForecast](media/docker-apps-inner-loop-workflow/test-docker-app-locally-curl.png)
 
 **Figura 4-30**. Testando um aplicativo do Docker localmente usando CURL
 

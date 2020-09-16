@@ -7,12 +7,12 @@ ms.date: 09/09/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: faa54e0a3c827717114ca6ca4f033c1c4c3acfa8
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 61cddfeb0d881ad2f2006db50ebb33f6a0c870ba
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325776"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535430"
 ---
 # <a name="styles-and-templates-in-wpf"></a>Estilos e modelos no WPF
 
@@ -103,7 +103,7 @@ Para obter um exemplo, consulte [criar um modelo para um controle](../themes/how
 
 ### <a name="templatebinding"></a>TemplateBinding
 
-Talvez você tenha notado que o recurso de modelo definido na seção anterior usa a [extensão de marcação TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md). Uma `TemplateBinding` é uma forma otimizada de uma associação para cenários de modelo, análoga a uma associação construída com `{Binding RelativeSource={RelativeSource TemplatedParent}}` . `TemplateBinding`é útil para associar partes do modelo a propriedades do controle. Por exemplo, cada controle tem uma <xref:System.Windows.Controls.Control.BorderThickness> propriedade. Use um `TemplateBinding` para gerenciar qual elemento no modelo é afetado por essa configuração de controle.
+Talvez você tenha notado que o recurso de modelo definido na seção anterior usa a [extensão de marcação TemplateBinding](/dotnet/desktop/wpf/advanced/templatebinding-markup-extension). Uma `TemplateBinding` é uma forma otimizada de uma associação para cenários de modelo, análoga a uma associação construída com `{Binding RelativeSource={RelativeSource TemplatedParent}}` . `TemplateBinding` é útil para associar partes do modelo a propriedades do controle. Por exemplo, cada controle tem uma <xref:System.Windows.Controls.Control.BorderThickness> propriedade. Use um `TemplateBinding` para gerenciar qual elemento no modelo é afetado por essa configuração de controle.
 
 ### <a name="contentcontrol-and-itemscontrol"></a>ContentControl e ItemsControl
 
@@ -136,7 +136,7 @@ Essencialmente, o <xref:System.Windows.DataTemplate> no exemplo acima define que
 
 ![Imagem de foto](./media/styles-and-templates-overview/stylingintro-photosasimages.png "StylingIntro_PhotosAsImages")
 
-O modelo de modelagem de dados fornece outros recursos. Por exemplo, se você estiver exibindo dados de coleção que contêm outras coleções usando um <xref:System.Windows.Controls.HeaderedItemsControl> tipo como <xref:System.Windows.Controls.Menu> ou <xref:System.Windows.Controls.TreeView> , há o <xref:System.Windows.HierarchicalDataTemplate> . Outro recurso de modelagem de dados é o <xref:System.Windows.Controls.DataTemplateSelector> , que permite que você escolha um <xref:System.Windows.DataTemplate> para usar com base na lógica personalizada. Para obter mais informações, consulte [Visão geral de modelagem dos dados](../../framework/wpf/data/data-templating-overview.md), que oferece uma discussão mais detalhada sobre os diferentes recursos de modelagem de dados.
+O modelo de modelagem de dados fornece outros recursos. Por exemplo, se você estiver exibindo dados de coleção que contêm outras coleções usando um <xref:System.Windows.Controls.HeaderedItemsControl> tipo como <xref:System.Windows.Controls.Menu> ou <xref:System.Windows.Controls.TreeView> , há o <xref:System.Windows.HierarchicalDataTemplate> . Outro recurso de modelagem de dados é o <xref:System.Windows.Controls.DataTemplateSelector> , que permite que você escolha um <xref:System.Windows.DataTemplate> para usar com base na lógica personalizada. Para obter mais informações, consulte [Visão geral de modelagem dos dados](/dotnet/desktop/wpf/data/data-templating-overview), que oferece uma discussão mais detalhada sobre os diferentes recursos de modelagem de dados.
 
 ## <a name="triggers"></a>Gatilhos
 
@@ -162,7 +162,7 @@ Outro tipo de gatilho é o <xref:System.Windows.EventTrigger> , que inicia um co
 
 [!code-xaml[StyleEventTriggers](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window6.xaml#SnippetStyleEventTriggers)]
 
-Para obter mais informações, consulte a [visão geral dos storyboards](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
+Para obter mais informações, consulte a [visão geral dos storyboards](/dotnet/desktop/wpf/graphics-multimedia/storyboards-overview).
 
 Na ilustração a seguir, o mouse está apontando para o terceiro item.
 
@@ -170,7 +170,7 @@ Na ilustração a seguir, o mouse está apontando para o terceiro item.
 
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTriggers, DataTriggers e MultiDataTriggers
 
-Além de <xref:System.Windows.Trigger> e <xref:System.Windows.EventTrigger> , há outros tipos de gatilhos. <xref:System.Windows.MultiTrigger>permite que você defina valores de propriedade com base em várias condições. Você usa <xref:System.Windows.DataTrigger> e <xref:System.Windows.MultiDataTrigger> quando a propriedade da condição é associada a dados.
+Além de <xref:System.Windows.Trigger> e <xref:System.Windows.EventTrigger> , há outros tipos de gatilhos. <xref:System.Windows.MultiTrigger> permite que você defina valores de propriedade com base em várias condições. Você usa <xref:System.Windows.DataTrigger> e <xref:System.Windows.MultiDataTrigger> quando a propriedade da condição é associada a dados.
 
 ## <a name="visual-states"></a>Estados visuais
 
@@ -212,7 +212,7 @@ Por exemplo, o código XAML a seguir observa o `CommonStates.MouseOver` estado p
         ...
 ```
 
-Para obter mais informações sobre storyboards, consulte [visão geral de storyboards](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
+Para obter mais informações sobre storyboards, consulte [visão geral de storyboards](/dotnet/desktop/wpf/graphics-multimedia/storyboards-overview).
 
 ## <a name="shared-resources-and-themes"></a>Temas e recursos compartilhados
 
@@ -236,12 +236,12 @@ Para compartilhar um conjunto de recursos, incluindo estilos e modelos, entre ap
 
 É o compartilhamento de `shared.xaml` , que, por sua vez, define um <xref:System.Windows.ResourceDictionary> que contém um conjunto de recursos de estilo e pincel, que permite que os controles em um aplicativo tenham uma aparência consistente.
 
-Para obter mais informações, consulte [dicionários de Recursos mesclados](../../framework/wpf/advanced/merged-resource-dictionaries.md).
+Para obter mais informações, consulte [dicionários de Recursos mesclados](/dotnet/desktop/wpf/advanced/merged-resource-dictionaries).
 
-Se você estiver criando um tema para seu controle personalizado, consulte a seção **definindo recursos no nível do tema** da [visão geral de criação de controles](../../framework/wpf/controls/control-authoring-overview.md#defining-resources-at-the-theme-level).
+Se você estiver criando um tema para seu controle personalizado, consulte a seção **definindo recursos no nível do tema** da [visão geral de criação de controles](/dotnet/desktop/wpf/controls/control-authoring-overview#defining-resources-at-the-theme-level).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [URIs "pack://" no WPF](../../framework/wpf/app-development/pack-uris-in-wpf.md)
-- [Como: localizar elementos gerados por ControlTemplate](../../framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)
-- [Localizar elementos gerados pelo DataTemplate](../../framework/wpf/data/how-to-find-datatemplate-generated-elements.md)
+- [URIs "pack://" no WPF](/dotnet/desktop/wpf/app-development/pack-uris-in-wpf)
+- [Como: localizar elementos gerados por ControlTemplate](/dotnet/desktop/wpf/controls/how-to-find-controltemplate-generated-elements)
+- [Localizar elementos gerados pelo DataTemplate](/dotnet/desktop/wpf/data/how-to-find-datatemplate-generated-elements)

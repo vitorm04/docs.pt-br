@@ -3,12 +3,12 @@ title: Comunicação entre serviços
 description: Saiba como os microserviços nativos de nuvem de back-end se comunicam com outros microserviços de back-end.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: dec06cc28ac177381b882f9e441e19e5c51bd5ad
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 88d7dfabee14419978889f5d9ea30b12f36837de
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613701"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539795"
 ---
 # <a name="service-to-service-communication"></a>Comunicação entre serviços
 
@@ -164,7 +164,7 @@ Com eventos, mudamos da tecnologia de enfileiramento para *Tópicos*. Um [tópic
 
 **Figura 4-16**. Arquitetura do tópico
 
-Na figura anterior, os editores enviam mensagens para o tópico. No final, os assinantes recebem mensagens de assinaturas. No meio, o tópico encaminha mensagens para assinaturas com base em um conjunto de *regras*, mostrado em caixas azuis escuras. As regras atuam como um filtro que encaminha mensagens específicas para uma assinatura. Aqui, um evento "CreateOrder" seria enviado à assinatura \# 1 e à assinatura \# 3, mas não à assinatura \# 2. Um evento "OrderCompleted" seria enviado para a assinatura \# 2 e a assinatura \# 3.
+Na figura anterior, os editores enviam mensagens para o tópico. No final, os assinantes recebem mensagens de assinaturas. No meio, o tópico encaminha mensagens para assinaturas com base em um conjunto de regras, mostrado em caixas azuis escuras. As regras atuam como um filtro que encaminha mensagens específicas para uma assinatura. Aqui, um evento "getPrice" seria enviado para as assinaturas Price e logging, pois a assinatura de log optou por receber todas as mensagens.  Um evento "GetInformation" seria enviado para as informações e assinaturas de registro em log.
 
 A nuvem do Azure dá suporte a dois serviços de tópico diferentes: tópicos do barramento de serviço do Azure e EventGrid do Azure.
 
@@ -218,7 +218,7 @@ O Hub de eventos dá suporte à baixa latência e à retenção de tempo configu
 
 O Hub de eventos dá suporte a protocolos comuns de publicação de eventos, incluindo HTTPS e AMQP. Ele também dá suporte a Kafka 1,0. Os [aplicativos Kafka existentes podem se comunicar com o Hub de eventos](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) usando o protocolo Kafka, fornecendo uma alternativa ao gerenciamento de clusters grandes do Kafka. Muitos sistemas de código aberto em nuvem nativas adotam o Kafka.
 
-Os hubs de eventos implementam o streaming de mensagens por meio de um [modelo de consumidor particionado](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) no qual cada consumidor lê apenas um subconjunto específico, ou partição, do fluxo de mensagens. Esse padrão permite a enorme escala horizontal para processamento de eventos e fornece outros recursos centrados no fluxo que não estão disponíveis em filas e tópicos. Uma partição é uma sequência ordenada de eventos que é mantida em um hub de eventos. À medida que os eventos mais recentes chegam, eles são adicionados ao final dessa sequência.A Figura 4-19 mostra o particionamento em um hub de eventos.
+Os hubs de eventos implementam o streaming de mensagens por meio de um [modelo de consumidor particionado](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) no qual cada consumidor lê apenas um subconjunto específico, ou partição, do fluxo de mensagens. Esse padrão permite a enorme escala horizontal para processamento de eventos e fornece outros recursos centrados no fluxo que não estão disponíveis em filas e tópicos. Uma partição é uma sequência ordenada de eventos que é mantida em um hub de eventos. À medida que novos eventos chegam, eles são adicionados ao final dessa sequência.A Figura 4-19 mostra o particionamento em um hub de eventos.
 
 ![Particionamento do hub de eventos](./media/event-hub-partitioning.png)
 

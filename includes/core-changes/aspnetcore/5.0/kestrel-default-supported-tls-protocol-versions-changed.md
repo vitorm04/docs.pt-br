@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3244a36808fb687663241e704d08775ea5c96720
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: 97870553d4ec66a569ba63cd945639b03bbbd6df
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803238"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539434"
 ---
 ### <a name="kestrel-default-supported-tls-protocol-versions-changed"></a>Kestrel: versões do protocolo TLS com suporte padrão alteradas
 
@@ -39,7 +39,7 @@ A menos que seu aplicativo tenha um motivo específico para não, você deve usa
 
 Para desabilitar protocolos mais antigos, execute uma das seguintes ações:
 
-* Desabilite os protocolos mais antigos, como o TLS 1,0, em todo o sistema com as [instruções do Windows](/dotnet/framework/network-programming/tls#configuring-schannel-protocols-in-the-windows-registry). Atualmente, ele está habilitado por padrão em todas as versões do Windows.
+* Desabilite os protocolos mais antigos, como o TLS 1,0, em todo o sistema com as [instruções do Windows](../../../../docs/framework/network-programming/tls.md#configuring-schannel-protocols-in-the-windows-registry). Atualmente, ele está habilitado por padrão em todas as versões do Windows.
 * Selecione manualmente os protocolos aos quais você deseja dar suporte no código da seguinte maneira:
 
     ```csharp

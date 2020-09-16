@@ -1,13 +1,13 @@
 ---
 title: Padrões de observabilidade
 description: Padrões de observação para aplicativos nativos de nuvem
-ms.date: 05/13/2020
-ms.openlocfilehash: db6a56358923025cbcca9478908474227e5da96d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.date: 08/10/2020
+ms.openlocfilehash: 2a6ef0e58f1e20667167042614768b099f640858
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613805"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539847"
 ---
 # <a name="observability-patterns"></a>Padrões de observabilidade
 
@@ -15,7 +15,7 @@ Assim como os padrões foram desenvolvidos para auxiliar no layout do código em
 
 ## <a name="when-to-use-logging"></a>Quando usar o registro em log
 
-Não importa o cuidado que estamos, os aplicativos quase sempre se comportam de maneiras inesperadas na produção. Quando os usuários relatam problemas com um aplicativo, é extremamente útil conseguir ver o que estava acontecendo com o aplicativo quando o problema ocorreu. Uma das maneiras mais testadas e verdadeiras de capturar informações sobre o que um aplicativo está fazendo durante sua execução é fazer com que o aplicativo anote o que está fazendo. Esse processo é conhecido como registro em log. Sempre que ocorrerem falhas ou problemas na produção, o objetivo deve ser reproduzir as condições sob as quais as falhas ocorreram, em um ambiente de não produção. Ter um bom registro em vigor fornece um roteiro para os desenvolvedores seguirem a fim de duplicar problemas em um ambiente que pode ser testado e experimentado.
+Não importa o cuidado que estamos, os aplicativos quase sempre se comportam de maneiras inesperadas na produção. Quando os usuários relatam problemas com um aplicativo, é útil conseguir ver o que estava acontecendo com o aplicativo quando o problema ocorreu. Uma das maneiras mais testadas e verdadeiras de capturar informações sobre o que um aplicativo está fazendo durante sua execução é fazer com que o aplicativo anote o que está fazendo. Esse processo é conhecido como registro em log. Quando ocorrem falhas ou problemas em produção, a meta deve ser reproduzir as condições sob as quais as falhas ocorreram, em um ambiente de não produção. Ter um bom registro em vigor fornece um roteiro para os desenvolvedores seguirem a fim de duplicar problemas em um ambiente que pode ser testado e experimentado.
 
 ### <a name="challenges-when-logging-with-cloud-native-applications"></a>Desafios ao registrar em log com aplicativos nativos de nuvem
 

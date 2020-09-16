@@ -2,12 +2,12 @@
 title: Store instância de fluxo de trabalho do SQL
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: 1764017369e82cfbed38be06b4a36847576b5fc0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 38cf83ebb8417009c6aa205aa29cd633d1232f0a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837630"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540226"
 ---
 # <a name="sql-workflow-instance-store"></a>Store instância de fluxo de trabalho do SQL
 Os vem de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] com a instância Store de fluxo de trabalho SQL, que permite que fluxos de trabalho persistam informações de estado sobre instâncias de fluxo de trabalho em uma base de dados SQL Server 2005 ou SQL Server 2008. Esse recurso é implementado primeiro na forma da classe de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> , que deriva da classe abstrata de <xref:System.Runtime.DurableInstancing.InstanceStore> a estrutura de persistência. O recurso de Store de instância de fluxo de trabalho do SQL constitui um provedor de persistência SQL, que é uma implementação concreta de persistência API que um host usa para enviar comandos de persistência no armazenamento.  
@@ -18,24 +18,24 @@ Os vem de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-m
   
  Os tópicos nesta seção descrevem as propriedades e os recursos de instância de fluxo de trabalho do SQL e fornecer-l com detalhes sobre como configurar o armazenamento.  
   
- A tela de aplicativo Windows Server fornece seus próprios armazenamento e trabalho feito com ferramentas de instância para simplificar a configuração e uso da instância. Para obter mais informações, consulte [Windows Server app Fabric Instance Store](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10)). Para obter mais informações sobre o banco de dados de persistência do App Fabric SQL Server, consulte [app fabric SQL Server Persistence Database](https://docs.microsoft.com/previous-versions/appfabric/ee790819(v=azure.10))  
+ A tela de aplicativo Windows Server fornece seus próprios armazenamento e trabalho feito com ferramentas de instância para simplificar a configuração e uso da instância. Para obter mais informações, consulte [Windows Server app Fabric Instance Store](/previous-versions/appfabric/ff383417(v=azure.10)). Para obter mais informações sobre o banco de dados de persistência do App Fabric SQL Server, consulte [app fabric SQL Server Persistence Database](/previous-versions/appfabric/ee790819(v=azure.10))  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-- [Propriedades do repositório de instâncias de fluxo de trabalho do SQL](properties-of-sql-workflow-instance-store.md)  
+- [Propriedades de instância Store de fluxo de trabalho do SQL](properties-of-sql-workflow-instance-store.md)  
   
-- [Como habilitar a persistência de SQL para fluxos de trabalho e serviços de fluxo de trabalho](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+- [Como: habilitar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
 - [Ativação de instância](instance-activation.md)  
   
 - [Suporte para consultas](support-for-queries.md)  
   
-- [Extensibilidade de repositório](store-extensibility.md)  
+- [Extensibilidade de Store](store-extensibility.md)  
   
-- [Security](security.md)  
+- [Segurança](security.md)  
   
-- [Banco de dados de persistência do SQL Server](sql-server-persistence-database.md)  
+- [A base de dados do SQL Server](sql-server-persistence-database.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Exemplos de persistência](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd699769(v=vs.100))
+- [Persistência Exemplos](/previous-versions/dotnet/netframework-4.0/dd699769(v=vs.100))

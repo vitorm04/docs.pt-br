@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: adbb5eca3b7ffa36d0c963d0dacc3b2afdb664d4
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 395d5f63eef12570c07f1f601de7f9e480d62905
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935559"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540499"
 ---
 # <a name="loadtypelibwithresolver-function"></a>Função LoadTypeLibWithResolver
 Carrega uma biblioteca de tipos e usa a [interface ITypeLibResolver](itypelibresolver-interface.md) fornecida para resolver quaisquer bibliotecas de tipos referenciadas internamente.  
@@ -41,11 +41,11 @@ HRESULT LoadTypeLibWithResolver(
  `regkind`  
  no Um sinalizador de [Enumeração regkind](/windows/win32/api/oleauto/ne-oleauto-regkind) que controla como a biblioteca de tipos é registrada. Seus valores possíveis são:  
   
-- `REGKIND_DEFAULT`: usar o comportamento de registro padrão.  
+- `REGKIND_DEFAULT`: Use o comportamento de registro padrão.  
   
-- `REGKIND_REGISTER`: registre essa biblioteca de tipos.  
+- `REGKIND_REGISTER`: Registre esta biblioteca de tipos.  
   
-- `REGKIND_NONE`: não Registre esta biblioteca de tipos.  
+- `REGKIND_NONE`: Não Registre esta biblioteca de tipos.  
   
  `pTlbResolver`  
  no Um ponteiro para a implementação da [interface ITypeLibResolver](itypelibresolver-interface.md).  
@@ -53,7 +53,7 @@ HRESULT LoadTypeLibWithResolver(
  `pptlib`  
  fora Uma referência à biblioteca de tipos que está sendo carregada.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor Retornado  
  Um dos valores HRESULT listados na tabela a seguir.  
   
 |Valor retornado|Significado|  
@@ -68,21 +68,21 @@ HRESULT LoadTypeLibWithResolver(
 |`TYPE_E_CANTLOADLIBRARY`|Não foi possível carregar a biblioteca de tipos ou a DLL.|  
   
 ## <a name="remarks"></a>Comentários  
- O [Tlbexp. exe (tipo de exportador da biblioteca de tipos)](../../tools/tlbexp-exe-type-library-exporter.md) chama a função `LoadTypeLibWithResolver` durante o processo de conversão assembly-to-Type-Library.  
+ O [Tlbexp.exe (tipo de exportador da biblioteca de tipos)](../../tools/tlbexp-exe-type-library-exporter.md) chama a `LoadTypeLibWithResolver` função durante o processo de conversão de assembly para tipo de biblioteca.  
   
  Essa função carrega a biblioteca de tipos especificada com acesso mínimo ao registro. Em seguida, a função examina a biblioteca de tipos para bibliotecas de tipos referenciadas internamente, cada uma delas deve ser carregada e adicionada à biblioteca de tipos pai.  
   
- Antes que uma biblioteca de tipos referenciada possa ser carregada, seu caminho de arquivo de referência deve ser resolvido para um caminho de arquivo completo. Isso é feito por meio do [Método ResolveTypeLib](resolvetypelib-method.md) que é fornecido pela [interface ITypeLibResolver](itypelibresolver-interface.md), que é passada no parâmetro `pTlbResolver`.  
+ Antes que uma biblioteca de tipos referenciada possa ser carregada, seu caminho de arquivo de referência deve ser resolvido para um caminho de arquivo completo. Isso é feito por meio do [Método ResolveTypeLib](resolvetypelib-method.md) que é fornecido pela [interface ITypeLibResolver](itypelibresolver-interface.md), que é passada no `pTlbResolver` parâmetro.  
   
- Quando o caminho completo do arquivo da biblioteca de tipos referenciado é conhecido, a função `LoadTypeLibWithResolver` carrega e adiciona a biblioteca de tipos referenciada à biblioteca de tipos pai, criando uma biblioteca de tipos mestre combinada.  
+ Quando o caminho completo do arquivo da biblioteca de tipos referenciado é conhecido, a `LoadTypeLibWithResolver` função carrega e adiciona a biblioteca de tipos referenciada à biblioteca de tipos pai, criando uma biblioteca de tipos mestre combinada.  
   
- Depois que a função resolve e carrega todas as bibliotecas de tipos referenciadas internamente, ela retorna uma referência à biblioteca de tipos resolvida Master no parâmetro `pptlib`.  
+ Depois que a função resolve e carrega todas as bibliotecas de tipos referenciadas internamente, ela retorna uma referência à biblioteca de tipos do mestre resolvido no `pptlib` parâmetro.  
   
- A função `LoadTypeLibWithResolver` é geralmente chamada pelo [Tlbexp. exe (tipo exportador da biblioteca de tipos)](../../tools/tlbexp-exe-type-library-exporter.md), que fornece sua própria implementação de [interface ITypeLibResolver](itypelibresolver-interface.md) interna no parâmetro `pTlbResolver`.  
+ A `LoadTypeLibWithResolver` função é geralmente chamada pelo [Tlbexp.exe (tipo de exportador da biblioteca de tipos)](../../tools/tlbexp-exe-type-library-exporter.md), que fornece sua própria implementação de [interface ITypeLibResolver](itypelibresolver-interface.md) interna no `pTlbResolver` parâmetro.  
   
  Se você chamar `LoadTypeLibWithResolver` diretamente, deverá fornecer sua própria implementação de [interface ITypeLibResolver](itypelibresolver-interface.md) .  
   
-## <a name="requirements"></a>Requisitos do  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** TlbRef. h  
@@ -91,7 +91,7 @@ HRESULT LoadTypeLibWithResolver(
   
  **Versão do .NET Framework:** 3,5, 3,0, 2,0  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Funções auxiliares do Tlbexp](index.md)
-- [Função LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [Funções auxiliares Tlbexp](index.md)
+- [Função LoadTypeLibEx](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
