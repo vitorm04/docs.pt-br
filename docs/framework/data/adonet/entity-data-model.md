@@ -3,12 +3,12 @@ title: Modelo de Dados de Entidade
 description: O Modelo de Dados de Entidade descreve a estrutura de dados, independentemente de sua forma armazenada, que aborda os desafios resultantes do armazenamento de dados em muitas formas.
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: c98b1f4559ef297f8b11051940fd91f5f6fa06fd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d32207e3a9dd35d2d8f8990bcbbd35e38d21d8bb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286734"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557613"
 ---
 # <a name="entity-data-model"></a>Modelo de Dados de Entidade
 O EDM (Modelo de Dados de Entidade) é um conjunto de conceitos que descrevem a estrutura de dados, independentemente do formato armazenado. O EDM pede emprestado o modelo de relacionamento entre entidades descrito por Peter Chen em 1976, mas também cria a partir desse modelo e estende seus usos tradicionais.  
@@ -22,7 +22,7 @@ O EDM (Modelo de Dados de Entidade) é um conjunto de conceitos que descrevem a 
   
  [Conceitos chave do Modelo de Dados de Entidade](entity-data-model-key-concepts.md)  
   
- [Modelo de Dados de Entidade: namespaces](entity-data-model-namespaces.md)  
+ [Modelo de Dados de Entidade: Namespaces](entity-data-model-namespaces.md)  
   
  [Modelo de Dados de Entidade: Tipos de dados primitivos](entity-data-model-primitive-data-types.md)  
   
@@ -34,13 +34,13 @@ O EDM (Modelo de Dados de Entidade) é um conjunto de conceitos que descrevem a 
   
  [conjunto de associações](association-set.md)  
   
- [extremidade do conjunto de associações](association-set-end.md)  
+ [extremidade do conjunto de associação](association-set-end.md)  
   
  [tipo de associação](association-type.md)  
   
  [tipo complexo](complex-type.md)  
   
- [contêiner de entidade](entity-container.md)  
+ [contêiner da entidade](entity-container.md)  
   
  [chave de entidade](entity-key.md)  
   
@@ -54,7 +54,7 @@ O EDM (Modelo de Dados de Entidade) é um conjunto de conceitos que descrevem a 
   
  [função declarada por modelo](model-declared-function.md)  
   
- [função definida pelo modelo](model-defined-function.md)  
+ [função definida por modelo](model-defined-function.md)  
   
  [propriedade de navegação](navigation-property.md)  
   
@@ -62,8 +62,8 @@ O EDM (Modelo de Dados de Entidade) é um conjunto de conceitos que descrevem a 
   
  [restrição de integridade referencial](referential-integrity-constraint.md)  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Ferramentas de Modelo de Dados de Entidade de ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Visão geral do arquivo. edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Ferramentas de Modelo de Dados de Entidade de ADO.NET](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [Visão geral do arquivo. edmx](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Especificação de CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)

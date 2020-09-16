@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 9dde2d7305a1176dadba3802fc5335c0c95bfbbb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4c1da6041b2343565bdaeb53e586c893bd85c922
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286670"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557899"
 ---
 # <a name="performance-counters-in-adonet"></a>Contadores de desempenho no ADO.NET
 O ADO.NET 2,0 introduziu suporte expandido para contadores de desempenho que incluem suporte para o <xref:System.Data.SqlClient> e o <xref:System.Data.OracleClient> . Os <xref:System.Data.SqlClient> contadores de desempenho disponíveis nas versões anteriores do ADO.net foram preteridos e substituídos pelos novos contadores de desempenho discutidos neste tópico. Você pode usar contadores de desempenho ADO.NET para monitorar o status do seu aplicativo e os recursos de conexão que ele usa. Os contadores de desempenho podem ser monitorados usando o monitor de desempenho do Windows ou podem ser acessados programaticamente usando a <xref:System.Diagnostics.PerformanceCounter> classe no <xref:System.Diagnostics> namespace.  
@@ -19,7 +19,7 @@ O ADO.NET 2,0 introduziu suporte expandido para contadores de desempenho que inc
 ## <a name="available-performance-counters"></a>Contadores de desempenho disponíveis  
  Atualmente, há 14 diferentes contadores de desempenho disponíveis <xref:System.Data.SqlClient> para <xref:System.Data.OracleClient> o e conforme descrito na tabela a seguir. Observe que os nomes dos contadores individuais não são localizados em versões regionais do Microsoft .NET Framework.  
   
-|Contador de desempenho|Description|  
+|Contador de desempenho|Descrição|  
 |-------------------------|-----------------|  
 |`HardConnectsPerSecond`|O número de conexões por segundo que estão sendo feitas a um servidor de banco de dados.|  
 |`HardDisconnectsPerSecond`|O número de desconexões por segundo que estão sendo feitas em um servidor de banco de dados.|  
@@ -398,8 +398,8 @@ class Program
 ## <a name="see-also"></a>Confira também
 
 - [Conectando a uma Fonte de Dados](connecting-to-a-data-source.md)
-- [Conexão do Oracle, ODBC e OLE DB Pooling](ole-db-odbc-and-oracle-connection-pooling.md)
-- [Contadores de Desempenho do ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
+- [OLE DB, ODBC e pool de conexões Oracle](ole-db-odbc-and-oracle-connection-pooling.md)
+- [Contadores de Desempenho do ASP.NET](/previous-versions/aspnet/fxk122b4(v=vs.100))
 - [Criação de perfil de tempo de execução](../../debug-trace-profile/runtime-profiling.md)
-- [Introdução ao monitoramento de limites de desempenho](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
+- [Introdução ao monitoramento de limites de desempenho](/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [Visão geral do ADO.NET](ado-net-overview.md)

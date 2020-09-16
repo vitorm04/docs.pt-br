@@ -2,12 +2,12 @@
 title: Um tour pelo C# – áreas de linguagem principal
 description: Novato em C#? Conheça os fundamentos da linguagem.
 ms.date: 08/06/2020
-ms.openlocfilehash: e1e533982757c10085f0444197ff97ee7487391f
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 9069bb194169a7743f12d998b2842186ed0ef404
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414897"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558168"
 ---
 # <a name="major-language-areas"></a>Principais áreas de linguagem
 
@@ -86,7 +86,7 @@ Um delegado não conhece ou se preocupa com a classe do método referenciado. Tu
 
 ## <a name="async--await"></a>Async/Await
 
-O C# dá suporte a programas assíncronos com duas palavras-chave: `async` e `await` . Você adiciona o `async` modificador a uma declaração de método para declarar que o método é assíncrono. O `await` operador informa ao compilador para aguardar de forma assíncrona que um resultado seja concluído. O controle é retornado para o chamador e o método retorna uma estrutura que gerencia o estado do trabalho assíncrono. A estrutura é normalmente um <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> , mas pode ser qualquer tipo que ofereça suporte ao padrão de aguardador. Esses recursos permitem que você escreva o código que lê como sua contraparte síncrona, mas é executado de forma assíncrona. Por exemplo, o código a seguir baixa o home page do [Microsoft docs](https://docs.microsoft.com):
+O C# dá suporte a programas assíncronos com duas palavras-chave: `async` e `await` . Você adiciona o `async` modificador a uma declaração de método para declarar que o método é assíncrono. O `await` operador informa ao compilador para aguardar de forma assíncrona que um resultado seja concluído. O controle é retornado para o chamador e o método retorna uma estrutura que gerencia o estado do trabalho assíncrono. A estrutura é normalmente um <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> , mas pode ser qualquer tipo que ofereça suporte ao padrão de aguardador. Esses recursos permitem que você escreva o código que lê como sua contraparte síncrona, mas é executado de forma assíncrona. Por exemplo, o código a seguir baixa o home page do [Microsoft docs](/):
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="AsyncExample":::
 

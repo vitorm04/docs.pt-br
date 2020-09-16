@@ -10,12 +10,12 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: 75cf38412f3ba21832c5e63898b10bcf681f5904
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 55cf6b937d4bb12c44aae2022921c8adb8180df4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855693"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556415"
 ---
 # <a name="security-transparent-code-level-1"></a>Código transparente de segurança, nível 1
 
@@ -130,7 +130,7 @@ public class B
   
  O código anterior é transparente, exceto pelo `Critical` método, que é explicitamente marcado como Security-Critical. Transparência é a configuração padrão, mesmo com o atributo de nível de assembly <xref:System.Security.SecurityCriticalAttribute> .  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Código transparente de segurança, nível 2](security-transparent-code-level-2.md)
-- [Alterações de segurança](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
+- [Alterações de segurança](/previous-versions/dotnet/framework/security/security-changes)

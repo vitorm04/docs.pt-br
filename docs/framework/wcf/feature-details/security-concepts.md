@@ -2,12 +2,12 @@
 title: Conceitos de segurança
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
-ms.openlocfilehash: 3818a1a1449a4a8b6df548541c1aebce968a0b78
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b39db755ad33405e5dfcb22297f311bd3f6dbaae
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595161"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558258"
 ---
 # <a name="security-concepts"></a>Conceitos de segurança
 Esta seção explica brevemente os conceitos associados à segurança do Windows Communication Foundation (WCF).  
@@ -34,10 +34,10 @@ Esta seção explica brevemente os conceitos associados à segurança do Windows
  <xref:System.Security>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Estendendo a segurança](../extending/extending-security.md)  
+ [Segurança estendida](../extending/extending-security.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Segurança](security.md)
 - [Visão geral de segurança](security-overview.md)
-- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

@@ -30,7 +30,7 @@ Para obter uma discussão, consulte o problema do GitHub em [dotnet/aspnetcore #
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Concluir as seguintes etapas:
+Conclua as seguintes etapas:
 
 1. Pare `DatabaseErrorPageMiddleware` de usar no seu projeto. Por exemplo, remova a `UseDatabaseErrorPage` chamada de método de `Startup.Configure` :
 

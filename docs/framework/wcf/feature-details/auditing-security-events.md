@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: b130ed57ba086535122c8c8795c42863348870d0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5ab10bcc58166d5a38768f988fb18f23088256cc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597651"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558284"
 ---
 # <a name="auditing-security-events"></a>Auditoria de eventos de segurança
 Os aplicativos criados com o Windows Communication Foundation (WCF) podem registrar eventos de segurança (êxito, falha ou ambos) com o recurso de auditoria. Os eventos são gravados no log de eventos do sistema do Windows e podem ser examinados usando o Visualizador de Eventos.  
@@ -75,7 +75,7 @@ Os aplicativos criados com o Windows Communication Foundation (WCF) podem regist
   
  Se a auditoria estiver habilitada e um `auditLogLocation` não for especificado, o nome de log padrão será o log de "segurança" para a plataforma que dá suporte à gravação no log de segurança; caso contrário, será o log de "aplicativo". Somente os sistemas operacionais Windows Server 2003 e Windows Vista dão suporte à gravação no log de segurança. Para obter mais informações, consulte a seção "sistema operacional" mais adiante neste tópico.  
   
-## <a name="security-considerations"></a>Considerações de segurança  
+## <a name="security-considerations"></a>Considerações sobre segurança  
  Se um usuário mal-intencionado sabe que a auditoria está habilitada, esse invasor pode enviar mensagens inválidas que fazem com que as entradas de auditoria sejam gravadas. Se o log de auditoria for preenchido dessa maneira, o sistema de auditoria falhará. Para atenuar isso, defina a <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> propriedade como `true` e use as propriedades do Visualizador de eventos para controlar o comportamento de auditoria.  
   
  Eventos de auditoria que são gravados no log do aplicativo no Windows XP são visíveis para qualquer usuário autenticado.  
@@ -88,7 +88,7 @@ Os aplicativos criados com o Windows Communication Foundation (WCF) podem regist
 |Sistema|Log do aplicativo|Log de segurança|  
 |------------|---------------------|------------------|  
 |Windows XP SP2 ou posterior|Com suporte|Sem suporte|  
-|Windows Server 2003 SP1 e Windows Vista|Com suporte|O contexto do thread deve possuir`SeAuditPrivilege`|  
+|Windows Server 2003 SP1 e Windows Vista|Com suporte|O contexto do thread deve possuir `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Outros fatores  
  Além do sistema operacional, a tabela a seguir descreve outras configurações que controlam a habilitação do registro em log.  
@@ -98,13 +98,13 @@ Os aplicativos criados com o Windows Communication Foundation (WCF) podem regist
 |Gerenciamento de política de auditoria|Não aplicável.|Juntamente com a configuração, o log de segurança também é controlado pela política da autoridade de segurança local (LSA). A categoria "acesso ao objeto de auditoria" também deve ser habilitada.|  
 |Experiência do usuário padrão|Todos os usuários autenticados podem gravar no log do aplicativo, portanto, nenhuma etapa de permissão adicional é necessária para processos de aplicativo.|O processo (contexto) do aplicativo deve ter `SeAuditPrivilege` .|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>
 - [Visão geral de segurança](security-overview.md)
-- [Programação básica do WCF](../basic-wcf-programming.md)
-- [Como fazer auditoria de eventos de segurança](how-to-audit-wcf-security-events.md)
+- [Programação de WCF básica](../basic-wcf-programming.md)
+- [Como: auditar eventos de segurança](how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md)
-- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

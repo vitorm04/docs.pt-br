@@ -1,19 +1,19 @@
 ---
-title: Como fazer intercâmbio de mensagens dentro de uma sessão confiável
+title: 'Como: fazer intercâmbio de mensagens dentro de uma sessão confiável'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 39dd6636f80b107ced1caac29869c6c66e67e21e
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 97371f8572d5d0db633ab8dd1ca82067d9d55c3f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052033"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550183"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Como fazer intercâmbio de mensagens dentro de uma sessão confiável
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Como: fazer intercâmbio de mensagens dentro de uma sessão confiável
 
 Este tópico descreve as etapas necessárias para habilitar uma sessão confiável usando uma das associações fornecidas pelo sistema que dão suporte a essa sessão, mas não por padrão. Você habilita uma sessão confiável imperativamente usando código ou declarativamente em seu arquivo de configuração. Este procedimento usa os arquivos de configuração de cliente e serviço para habilitar a sessão confiável e estipular que as mensagens chegam na mesma ordem em que foram enviadas.
 
-A parte principal desse procedimento é que o elemento de configuração do ponto de extremidade contém um `bindingConfiguration` atributo que faz referência a uma configuração de associação denominada `Binding1` . O [**\<binding>**](../../configure-apps/file-schema/wcf/bindings.md) elemento de configuração referencia esse nome para habilitar sessões confiáveis definindo o `enabled` atributo do [**\<reliableSession>**](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100)) elemento como `true` . Você especifica as garantias de entrega ordenadas para a sessão confiável definindo o `ordered` atributo como `true` .
+A parte principal desse procedimento é que o elemento de configuração do ponto de extremidade contém um `bindingConfiguration` atributo que faz referência a uma configuração de associação denominada `Binding1` . O [**\<binding>**](../../configure-apps/file-schema/wcf/bindings.md) elemento de configuração referencia esse nome para habilitar sessões confiáveis definindo o `enabled` atributo do [**\<reliableSession>**](/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100)) elemento como `true` . Você especifica as garantias de entrega ordenadas para a sessão confiável definindo o `ordered` atributo como `true` .
 
 Para a cópia de origem deste exemplo, consulte a [sessão confiável do WS](../samples/ws-reliable-session.md).
 

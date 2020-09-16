@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: f15a19feaed631a76948efd24ee225acf789cb2d
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 2add8c21ca8ade4b530e0e6b1b3c5bba66e100ab
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244849"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556779"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Segurança de transporte com autenticação básica
 A ilustração a seguir mostra um serviço e cliente do Windows Communication Foundation (WCF). O servidor precisa de um certificado X. 509 válido que possa ser usado para protocolo SSL (SSL) e os clientes devem confiar no certificado do servidor. Além disso, o serviço Web já tem uma implementação SSL que pode ser usada. Para obter mais informações sobre como habilitar a autenticação básica no Serviços de Informações da Internet (IIS), consulte <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication> .  
@@ -20,12 +20,12 @@ A ilustração a seguir mostra um serviço e cliente do Windows Communication Fo
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|Modo de segurança|Transporte|  
+|Modo de segurança|Transport|  
 |Interoperabilidade|Com serviços e clientes de serviços Web existentes|  
 |Autenticação (servidor)<br /><br /> Autenticação (cliente)|Sim (usando HTTPS)<br /><br /> Sim (por nome de usuário/senha)|  
 |Integridade|Yes|  
 |Confidencialidade|Yes|  
-|Transporte|HTTPS|  
+|Transport|HTTPS|  
 |Associação|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Serviço  
@@ -111,12 +111,12 @@ A ilustração a seguir mostra um serviço e cliente do Windows Communication Fo
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - [Trabalhando com certificados](working-with-certificates.md)
-- [Como configurar uma porta com um certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Como: configurar uma porta com um certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md)
 - [Visão geral de segurança](security-overview.md)
 - [\<clientCredentials>](../../configure-apps/file-schema/wcf/clientcredentials.md)
-- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

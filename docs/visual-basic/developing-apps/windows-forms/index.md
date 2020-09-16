@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 11216186a28509e1f10bafa1b24a440bcedaeeb6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9d061aeccb914cce80e02bb7df44dae2edf25412
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398240"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557013"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Noções básicas de Aplicativo do Windows Forms (Visual Basic)
 
@@ -20,9 +20,9 @@ Uma parte importante do Visual Basic é a capacidade de criar Windows Forms apli
 
 Você pode criar Windows Forms e aplicativos de serviço do Windows com o Visual Studio. Para obter mais informações, consulte estes tópicos:
 
-- [Introdução com Windows Forms](../../../framework/winforms/getting-started-with-windows-forms.md). Fornece informações sobre como criar e programar Windows Forms.
+- [Introdução com Windows Forms](/dotnet/desktop/winforms/getting-started-with-windows-forms). Fornece informações sobre como criar e programar Windows Forms.
 
-- [Controles de Windows Forms](../../../framework/winforms/controls/index.md). Coleção de tópicos detalhando o uso de controles de Windows Forms.
+- [Controles de Windows Forms](/dotnet/desktop/winforms/controls/). Coleção de tópicos detalhando o uso de controles de Windows Forms.
 
 - [Aplicativos de serviço do Windows](../../../framework/windows-services/index.md). Lista os tópicos que explicam como criar serviços do Windows.
 
@@ -34,11 +34,11 @@ nos Windows Forms, um formulário é uma superfície visual na qual são exibida
 
 ### <a name="events"></a>Eventos
 
-Quando um usuário faz algo em seu formulário ou em um de seus controles, ele gera um evento. O seu aplicativo reage a esses eventos usando código e os processa quando eles acontecem. Para obter mais informações, consulte [Criando manipuladores de eventos nos Windows Forms](../../../framework/winforms/creating-event-handlers-in-windows-forms.md).
+Quando um usuário faz algo em seu formulário ou em um de seus controles, ele gera um evento. O seu aplicativo reage a esses eventos usando código e os processa quando eles acontecem. Para obter mais informações, consulte [Criando manipuladores de eventos nos Windows Forms](/dotnet/desktop/winforms/creating-event-handlers-in-windows-forms).
 
 ### <a name="controls"></a>Controles
 
-O Windows Forms contém uma variedade de controles que você pode colocar em formulários: controles que exibem caixas de texto, botões, caixas suspensas, botões de opção e até mesmo páginas da Web. Para obter uma lista de todos os controles que podem ser usados em um formulário, consulte [Controles que podem ser usados nos Windows Forms](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md). Se um controle existente não atender às suas necessidades, Windows Forms também dará suporte à criação de seus próprios controles personalizados usando a <xref:System.Windows.Forms.UserControl> classe.
+O Windows Forms contém uma variedade de controles que você pode colocar em formulários: controles que exibem caixas de texto, botões, caixas suspensas, botões de opção e até mesmo páginas da Web. Para obter uma lista de todos os controles que podem ser usados em um formulário, consulte [Controles que podem ser usados nos Windows Forms](/dotnet/desktop/winforms/controls/controls-to-use-on-windows-forms). Se um controle existente não atender às suas necessidades, Windows Forms também dará suporte à criação de seus próprios controles personalizados usando a <xref:System.Windows.Forms.UserControl> classe.
 
 O Windows Forms tem controles avançados de interface do usuário que emulam recursos em aplicativos de alta tecnologia, como o Microsoft Office. Usando o <xref:System.Windows.Forms.ToolStrip> <xref:System.Windows.Forms.MenuStrip> controle e, você pode criar barras de ferramentas e menus que contêm texto e imagens, exibir submenus e hospedar outros controles, como caixas de texto e caixas de combinação.
 
@@ -53,9 +53,9 @@ Para obter informações passo a passo sobre como usar esses recursos, consulte 
 |Para|Consulte|
 |--------|---------|
 |Criar um novo aplicativo Windows Forms com o Visual Studio|[Tutorial 1: Criar um visualizador de imagens](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|
-|Usar controles em formulários|[Como Adicionar Controles ao Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|Criar elementos gráficos com<xref:System.Drawing>|[Introdução à Programação de Elementos Gráficos](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|
-|Criar controles personalizados|[Como herdar da classe UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
+|Usar controles em formulários|[Como Adicionar Controles ao Windows Forms](/dotnet/desktop/winforms/controls/how-to-add-controls-to-windows-forms)|
+|Criar elementos gráficos com <xref:System.Drawing>|[Introdução à programação de elementos gráficos](/dotnet/desktop/winforms/advanced/getting-started-with-graphics-programming)|
+|Criar controles personalizados|[Como: Herdar da classe UserControl](/dotnet/desktop/winforms/controls/how-to-inherit-from-the-usercontrol-class)|
 
 ## <a name="displaying-and-manipulating-data"></a>Exibindo e manipulando dados
 
@@ -75,8 +75,8 @@ Para obter informações passo a passo sobre como usar esses recursos, consulte 
 
 |Para|Consulte|
 |--------|---------|
-|Usar o <xref:System.Windows.Forms.BindingSource> componente|[Como associar controles dos Windows Forms ao componente BindingSource usando o designer](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|Trabalhar com fontes de dados ADO.NET|[Como classificar e filtrar dados ADO.NET com o componente BindingSource do Windows Forms](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Usar o <xref:System.Windows.Forms.BindingSource> componente|[Como: Associar controles do Windows Forms ao componente BindingSource usando o designer](/dotnet/desktop/winforms/controls/bind-wf-controls-with-the-bindingsource)|
+|Trabalhar com fontes de dados ADO.NET|[Como: Classificar e filtrar dados ADO.NET com o componente BindingSource do Windows Forms](/dotnet/desktop/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component)|
 |Usar a janela fontes de dados|[Passo a passo: exibindo dados em um Windows Form](/visualstudio/data-tools/accessing-data-in-visual-studio)|
 
 ## <a name="deploying-applications-to-client-computers"></a>Implantando aplicativos em computadores cliente
@@ -103,11 +103,11 @@ Para obter informações passo a passo sobre como usar esses recursos, consulte 
 
 |Para|Consulte|
 |--------|---------|
-|Imprimir o conteúdo de um formulário|[Como imprimir elementos gráficos no Windows Forms](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Como imprimir um arquivo de texto de várias páginas no Windows Forms](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
-|Saiba mais sobre a segurança dos Windows Forms|[Visão geral da Segurança do Windows Forms](../../../framework/winforms/security-in-windows-forms-overview.md)|
+|Imprimir o conteúdo de um formulário|[Como: imprimir elementos gráficos no Windows Forms](/dotnet/desktop/winforms/advanced/how-to-print-graphics-in-windows-forms)<br /><br /> [Como: imprimir um arquivo de texto de várias páginas nos Windows Forms](/dotnet/desktop/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms)|
+|Saiba mais sobre a segurança dos Windows Forms|[Visão geral da Segurança do Windows Forms](/dotnet/desktop/winforms/security-in-windows-forms-overview)|
 
 ## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
-- [Visão geral dos Windows Forms](../../../framework/winforms/windows-forms-overview.md)
+- [Visão geral dos Windows Forms](/dotnet/desktop/winforms/windows-forms-overview)
 - [Objeto My.Forms](../../language-reference/objects/my-forms-object.md)

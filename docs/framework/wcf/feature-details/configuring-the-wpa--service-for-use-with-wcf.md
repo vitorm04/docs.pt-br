@@ -2,12 +2,12 @@
 title: Configurando o Serviço de ativação de processos do Windows (WAS) para utilizar com o Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 06d3a7bd798913b06d342ac09d12e736fc436b3c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7dccfea990afff1d2aacd5e9714472e733684c33
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597495"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556597"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Configurando o Serviço de ativação de processos do Windows (WAS) para utilizar com o Windows Communication Foundation
 Este tópico descreve as etapas necessárias para configurar o serviço de ativação de processos do Windows (também conhecido como WAS) no Windows Vista para hospedar serviços de Windows Communication Foundation (WCF) que não se comunicam por protocolos de rede HTTP. As seções a seguir descrevem as etapas para essa configuração:  
@@ -21,17 +21,17 @@ Este tópico descreve as etapas necessárias para configurar o serviço de ativa
 - Crie um serviço WCF que expõe um ponto de extremidade não HTTP.  
   
 ## <a name="configuring-a-site-with-non-http-bindings"></a>Configurando um site com associações não HTTP  
- Para usar uma associação não HTTP com o WAS, a associação do site deve ser adicionada à configuração do WAS. O repositório de configuração para WAS é o arquivo applicationHost. config, localizado no diretório%windir%\system32\inetsrv\config Esse repositório de configuração é compartilhado pelo WAS e pelo IIS 7,0.  
+ Para usar uma associação não HTTP com o WAS, a associação do site deve ser adicionada à configuração do WAS. O repositório de configuração do WAS é o arquivo de applicationHost.config, localizado no diretório%windir%\system32\inetsrv\config Esse repositório de configuração é compartilhado pelo WAS e pelo IIS 7,0.  
   
- applicationHost. config é um arquivo de texto XML que pode ser aberto com qualquer editor de texto padrão (como o bloco de notas). No entanto, a ferramenta de configuração de linha de comando do IIS 7,0 (appcmd. exe) é a maneira preferida de adicionar associações de site não HTTP.  
+ applicationHost.config é um arquivo de texto XML que pode ser aberto com qualquer editor de texto padrão (como o bloco de notas). No entanto, a ferramenta de configuração de linha de comando do IIS 7,0 (appcmd.exe) é a maneira preferida de adicionar associações de site não HTTP.  
   
- O comando a seguir adiciona uma associação de site net. TCP ao site padrão usando AppCmd. exe (esse comando é inserido como uma única linha).  
+ O comando a seguir adiciona uma associação de site net. TCP ao site padrão usando appcmd.exe (esse comando é inserido como uma única linha).  
   
 ```console  
 appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
 ```  
   
- Esse comando adiciona a nova associação net. TCP ao site padrão adicionando a linha indicada abaixo ao arquivo applicationHost. config.  
+ Esse comando adiciona a nova associação net. TCP ao site padrão adicionando a linha indicada abaixo ao arquivo applicationHost.config.  
   
 ```xml  
 <sites>  
@@ -52,9 +52,9 @@ appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInf
 appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp  
 ```  
   
- A lista de protocolos habilitados também pode ser definida no \<applicationDefaults> elemento da configuração XML do site armazenada em ApplicationHost. config.  
+ A lista de protocolos habilitados também pode ser definida no \<applicationDefaults> elemento da configuração XML do site armazenada em ApplicationHost.config.  
   
- O código XML a seguir de applicationHost. config ilustra um site associado a protocolos HTTP e não HTTP. A configuração adicional necessária para dar suporte a protocolos não HTTP é chamada com comentários.  
+ O código XML a seguir de applicationHost.config ilustra um site associado a protocolos HTTP e não HTTP. A configuração adicional necessária para dar suporte a protocolos não HTTP é chamada com comentários.  
   
 ```xml  
 <sites>  
@@ -96,7 +96,7 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
   
  Para obter instruções detalhadas sobre como criar um serviço WCF ativado, consulte [como hospedar um serviço WCF no was](how-to-host-a-wcf-service-in-was.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Hosting in Windows Process Activation Service](hosting-in-windows-process-activation-service.md) (Hospedagem no Serviço de Ativação de Processos do Windows)
-- [Recursos de hospedagem do Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Hospedagem no serviço de ativação do processo do Windows](hosting-in-windows-process-activation-service.md)
+- [Recursos de hospedagem do Windows Server AppFabric](/previous-versions/appfabric/ee677189(v=azure.10))

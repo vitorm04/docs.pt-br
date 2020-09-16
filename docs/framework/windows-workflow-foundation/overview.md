@@ -3,12 +3,12 @@ title: Visão geral de fluxo de trabalho do Windows
 description: Este artigo descreve os fluxos de trabalho do Workflow Foundation, que são modelos que descrevem processos do mundo real.
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: ec1a00b37abe2cb842735fb98e1c113a97943758
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c54e405c5fff013f994f98cbf84fcce4d17d9d4e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421469"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558094"
 ---
 # <a name="windows-workflow-overview"></a>Visão geral de fluxo de trabalho do Windows
 Um fluxo de trabalho é um conjunto de unidades elementas chamadas *atividades* que são armazenadas como um modelo que descreve um processo real. Fluxos de trabalho fornecem uma maneira de descrever a ordem de relações de execução e dependentes entre partes de trabalho ou longo tempo. Este trabalho passa pelo modelo do início ao final, e as atividades podem ser executadas por pessoas ou funções do sistema.  
@@ -42,6 +42,6 @@ Componentes de fluxo de trabalho no processo do host
   
 - Uma atividade personalizada que derive da classe abstrata de <xref:System.Activities.CodeActivity> . <xref:System.Activities.CodeActivity> pode acessar os recursos de tempo de execução (como o rastreamento e as propriedades) que usam <xref:System.Activities.CodeActivityContext> que está disponível como um parâmetro do método de <xref:System.Activities.CodeActivity.Execute%2A> . Para obter mais informações sobre esses recursos de tempo de execução, consulte rastreamento de [fluxo de trabalho e](workflow-tracking-and-tracing.md) [Propriedades de execução de fluxo](workflow-execution-properties.md)de trabalho.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [BizTalk Server 2006 ou WF? Escolhendo a ferramenta de fluxo de trabalho certa para seu projeto](https://docs.microsoft.com/previous-versions/dotnet/articles/cc303238(v=msdn.10))
+- [BizTalk Server 2006 ou WF? Escolhendo a ferramenta de fluxo de trabalho certa para seu projeto](/previous-versions/dotnet/articles/cc303238(v=msdn.10))

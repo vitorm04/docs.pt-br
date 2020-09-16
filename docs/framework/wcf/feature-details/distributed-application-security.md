@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 3cae20cfe8d52497646ca173740533a22326c8f8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 70718b5dfbd54693d2734a58c3da17806137ad2f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599134"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557535"
 ---
 # <a name="distributed-application-security"></a>Segurança de aplicativos distribuídos
 A segurança do Windows Communication Foundation (WCF) é dividida em três áreas funcionais principais: segurança de transferência, controle de acesso e auditoria. A segurança de transferência fornece integridade, confidencialidade e autenticação. A segurança de transferência é fornecida por um dos seguintes: segurança de transporte, segurança de mensagem ou `TransportWithMessageCredential` .  
@@ -78,7 +78,7 @@ A segurança do Windows Communication Foundation (WCF) é dividida em três áre
 |-------------|-----------------|  
 |Nenhum|Permite que o serviço interaja com clientes anônimos.|  
 |Windows|Permite que as trocas de mensagens SOAP ocorram sob o contexto autenticado de uma credencial do Windows. Usa o mecanismo de negociação SSPI para escolher o protocolo Kerberos ou NTLM como um serviço de autenticação.|  
-|Nome de Usuário|Permite que o serviço exija que o cliente seja autenticado com uma credencial de nome de usuário. Observe que o WCF não permite nenhuma operação criptográfica com o nome de usuário, como gerar uma assinatura ou criptografar dados. Dessa forma, o WCF impõe que o transporte seja protegido ao usar credenciais de nome de usuário.|  
+|Nome de usuário|Permite que o serviço exija que o cliente seja autenticado com uma credencial de nome de usuário. Observe que o WCF não permite nenhuma operação criptográfica com o nome de usuário, como gerar uma assinatura ou criptografar dados. Dessa forma, o WCF impõe que o transporte seja protegido ao usar credenciais de nome de usuário.|  
 |Certificado|Permite que o serviço exija que o cliente seja autenticado usando um certificado.|  
 |CardSpace|Permite que o serviço exija que o cliente seja autenticado usando um CardSpace.|  
   
@@ -94,9 +94,9 @@ A segurança do Windows Communication Foundation (WCF) é dividida em três áre
   
  O modo de segurança de mensagem também permite que você execute a segurança de transferência para que a credencial de serviço seja trocada pelo cliente como parte de uma negociação inicial. Para habilitar a negociação, defina a <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> propriedade como `true` .  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral de criação de ponto de extremidade](../endpoint-creation-overview.md)
 - [Associações fornecidas pelo sistema](../system-provided-bindings.md)
 - [Visão geral de segurança](security-overview.md)
-- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

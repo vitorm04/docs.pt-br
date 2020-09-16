@@ -6,16 +6,16 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: e1cd1d9db5c19decd840b433f986e0ba53557a8b
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: d5000b51d83066ec2d529db2033d8ac54f7ad329
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "82071370"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557782"
 ---
 # <a name="xshared-attribute"></a>Atributo x:Shared
 
-Quando definido `false`para , modifica o comportamento de recuperação de recursos do WPF para que as solicitações para o recurso atribuído criem uma nova instância para cada solicitação em vez de compartilhar a mesma instância para todas as solicitações.
+Quando definido como `false` , modifica o comportamento de recuperação de recursos do WPF para que as solicitações para o recurso atribuído criem uma nova instância para cada solicitação em vez de compartilhar a mesma instância para todas as solicitações.
 
 ## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML
 
@@ -27,32 +27,32 @@ Quando definido `false`para , modifica o comportamento de recuperação de recur
 
 ## <a name="remarks"></a>Comentários
 
-`x:Shared`é mapeado para o espaço de nome XAML da linguagem XAML e é reconhecido como um elemento de linguagem XAML válido pela .NET XAML Services e seus leitores XAML. No entanto, as `x:Shared` capacidades declaradas de são apenas relevantes para aplicações WPF e para o analisador WPF XAML. No WPF, `x:Shared` só é útil como um atributo quando é aplicado <xref:System.Windows.ResourceDictionary>a um objeto que existe dentro de um WPF . Outros usos não jogam exceções de análise ou outros erros, mas não têm efeito.
+`x:Shared` é mapeado para o namespace XAML da linguagem XAML e é reconhecido como um elemento de linguagem XAML válido pelos serviços XAML .NET e seus leitores XAML. No entanto, os recursos declarados do `x:Shared` são relevantes apenas para aplicativos do WPF e para o analisador XAML do WPF. No WPF, `x:Shared` é útil apenas como um atributo quando ele é aplicado a um objeto que existe dentro de um WPF <xref:System.Windows.ResourceDictionary> . Outros usos não geram exceções de análise ou outros erros, mas não têm nenhum efeito.
 
-O significado `x:Shared` de não está especificado na especificação do idioma XAML. Outras implementações xaml, como as que se baseiam em Serviços XAML .NET, não necessariamente fornecem suporte de compartilhamento de recursos. Tais implementações XAML poderiam fornecer comportamento semelhante `x:Shared` no quadro de suporte que também usou valores.
+O significado de `x:Shared` não é especificado na especificação da linguagem XAML. Outras implementações de XAML, como as que se baseiam nos serviços XAML .NET, não necessariamente fornecem suporte ao compartilhamento de recursos. Essas implementações de XAML poderiam fornecer um comportamento semelhante na estrutura de suporte que também usava `x:Shared` valores.
 
-No WPF, `x:Shared` a condição `true`padrão para os recursos é . Essa condição significa que qualquer solicitação de recurso sempre retorna a mesma instância.
+No WPF, a `x:Shared` condição padrão para recursos é `true` . Essa condição significa que qualquer solicitação de recurso fornecida sempre retorna a mesma instância.
 
-Modificar um objeto que é retornado através de <xref:System.Windows.FrameworkElement.FindResource%2A>uma API de recurso, como , ou modificar um objeto diretamente dentro de um <xref:System.Windows.ResourceDictionary>, altera o recurso original. Se as referências a esse recurso eram referências dinâmicas de recursos, os consumidores desse recurso recebem o recurso alterado.
+Modificar um objeto que é retornado por meio de uma API de recurso, como <xref:System.Windows.FrameworkElement.FindResource%2A> ou modificar um objeto diretamente dentro de um <xref:System.Windows.ResourceDictionary> , altera o recurso original. Se as referências a esse recurso fossem referências dinâmicas a recursos, os consumidores desse recurso obterão o recurso alterado.
 
-Se as referências ao recurso foram referências estáticas de recursos, as alterações no recurso após [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] o tempo de processamento são irrelevantes. Para obter mais informações sobre referências estáticas versus dinâmicas de recursos, consulte [XAML Resources](../fundamentals/xaml-resources-define.md).
+Se as referências ao recurso forem referências a recursos estáticos, as alterações no recurso após o [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] tempo de processamento serão irrelevantes. Para obter mais informações sobre referências de recursos estáticos versus dinâmicos, consulte [recursos XAML](../fundamentals/xaml-resources-define.md).
 
-Especificar `x:Shared="true"` explicitamente raramente é feito, porque esse já é o padrão. Não há equivalente de `x:Shared` código direto para no modelo de objeto WPF; ele só pode ser especificado em um uso XAML e deve ser processado pelo comportamento padrão do WPF ou em um fluxo de nó XAML intermediário no caminho de carga se processado usando .NET XAML Services e seus leitores XAML.
+Especificar explicitamente `x:Shared="true"` é raramente feito, pois esse já é o padrão. Não há nenhum equivalente direto de código para `x:Shared` no modelo de objeto do WPF; ele só pode ser especificado em um uso XAML e deve ser processado pelo comportamento padrão do WPF ou em um fluxo de nó XAML intermediário no caminho de carga, se processado usando os serviços XAML .net e seus leitores XAML.
 
-Um cenário `x:Shared="false"` para é <xref:System.Windows.FrameworkElement> se <xref:System.Windows.FrameworkContentElement> você definir uma classe ou derivado como um recurso e, em seguida, você introduzir o recurso de elemento em um modelo de conteúdo. `x:Shared="false"`permite que um recurso de elemento seja introduzido várias vezes na mesma coleção (como a <xref:System.Windows.Controls.UIElementCollection>). Sem `x:Shared="false"` isso é inválido porque a coleção impõe a singularidade de seu conteúdo. No entanto, o `x:Shared="false"` comportamento cria outra instância idêntica do recurso em vez de retornar a mesma instância.
+Um cenário para o `x:Shared="false"` é se você definir <xref:System.Windows.FrameworkElement> uma <xref:System.Windows.FrameworkContentElement> classe derivada ou como um recurso e, em seguida, introduzir o recurso de elemento em um modelo de conteúdo. `x:Shared="false"` permite que um recurso de elemento seja introduzido várias vezes na mesma coleção (como um <xref:System.Windows.Controls.UIElementCollection> ). Sem `x:Shared="false"` isso é inválido porque a coleção impõe exclusividade de seu conteúdo. No entanto, o `x:Shared="false"` comportamento cria outra instância idêntica do recurso em vez de retornar a mesma instância.
 
-Outro cenário `x:Shared="false"` para é <xref:System.Windows.Freezable> se você usar um recurso para valores de animação, mas quiser modificar o recurso em uma base de animação.
+Outro cenário do `x:Shared="false"` é se você usar um <xref:System.Windows.Freezable> recurso para valores de animação, mas quiser modificar o recurso em uma base por animação.
 
-O manuseio de `false` cordas não é sensível ao caso.
+A manipulação de cadeia de caracteres de `false` não diferencia maiúsculas de minúsculas.
 
-No WPF, `x:Shared` só é válido sob as seguintes condições:
+No WPF, `x:Shared` só é válido nas seguintes condições:
 
-- O <xref:System.Windows.ResourceDictionary> que contém os `x:Shared` itens com deve ser compilado. O <xref:System.Windows.ResourceDictionary> não pode estar dentro de XAML solto ou usado para temas.
+- O <xref:System.Windows.ResourceDictionary> que contém os itens com `x:Shared` deve ser compilado. O <xref:System.Windows.ResourceDictionary> não pode estar no XAML flexível ou usado para temas.
 
-- O <xref:System.Windows.ResourceDictionary> que contém os itens não deve <xref:System.Windows.ResourceDictionary>ser aninhado dentro de outro . Por exemplo, você `x:Shared` não pode usar <xref:System.Windows.ResourceDictionary> para itens <xref:System.Windows.Style> em um <xref:System.Windows.ResourceDictionary> que está dentro de um que já é um item.
+- O <xref:System.Windows.ResourceDictionary> que contém os itens não deve ser aninhado dentro de outro <xref:System.Windows.ResourceDictionary> . Por exemplo, você não pode usar `x:Shared` para itens em um <xref:System.Windows.ResourceDictionary> que esteja dentro de um <xref:System.Windows.Style> que já seja um <xref:System.Windows.ResourceDictionary> Item.
 
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.ResourceDictionary>
 - [Recursos XAML](../fundamentals/xaml-resources-define.md)
-- [Elementos base](../../framework/wpf/advanced/base-elements.md)
+- [Elementos base](/dotnet/desktop/wpf/advanced/base-elements)

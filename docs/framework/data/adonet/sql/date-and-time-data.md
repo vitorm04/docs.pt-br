@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 9345e995dcb1179e7d0a86f62737f9fda5889f42
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 43b3349b2a35385dcc49d0866e0695b08eac2d2e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286488"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551485"
 ---
 # <a name="date-and-time-data"></a>Dados de data e hora
 O SQL Server 2008 apresenta novos tipos de dados para o tratamento de informações de data e hora. Os novos tipos de dados incluem tipos separados para data e hora e tipos de dados expandidos com maior reconhecimento de intervalo, precisão e fuso horário. A partir do .NET Framework versão 3.5 Service Pack (SP) 1, o Provedor de Dados .NET Framework para SQL Server (<xref:System.Data.SqlClient>) oferece suporte completo para todos os novos recursos do Mecanismo de Banco de Dados do SQL Server 2008. Você deve instalar o .NET Framework 3.5 SP1 (ou posterior) para usar esses novos recursos com o SqlClient.  
@@ -22,12 +22,12 @@ O SQL Server 2008 apresenta novos tipos de dados para o tratamento de informaç�
   
  **Documentação do SQL Server**  
   
-1. [Usando dados de data e hora](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))  
+1. [Usando dados de data e hora](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Tipos de dados de data/hora introduzidos no SQL Server 2008  
  A tabela a seguir descreve os novos tipos de dados de data e hora.  
   
-|Tipo de dados do SQL Server|Description|  
+|Tipo de dados do SQL Server|Descrição|  
 |--------------------------|-----------------|  
 |`date`|O tipo de dados `date` tem um intervalo de 1º de janeiro de 01 a 31 de dezembro de 9999 com precisão de um dia. O valor padrão é 1º de janeiro de 1900. O tamanho do armazenamento é 3 bytes.|  
 |`time`|O tipo de dados `time` armazena somente valores temporais, com base em um relógio de 24 horas. O tipo de dados `time` tem um intervalo de 00:00:00.0000000 a 23:59:59,9999999 com precisão de 100 nanossegundos. O valor padrão é 00:00:00.0000000 (meia-noite). O tipo de dados `time` dá suporte à precisão de fração de segundo definida pelo usuário. O tamanho do armazenamento varia de 3 a 6 bytes, com base na precisão especificada.|  
@@ -47,7 +47,7 @@ O SQL Server 2008 apresenta novos tipos de dados para o tratamento de informaç�
 > [!NOTE]
 > Não há suporte para o formato de data ADM ao converter de um formato de cadeia de caracteres para `date`, `time`, `datetime2` ou `datetimeoffset`.  
   
- Para obter mais informações sobre como SQL Server interpreta dados de data e hora, consulte [usando dados de data e hora](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100)).  
+ Para obter mais informações sobre como SQL Server interpreta dados de data e hora, consulte [usando dados de data e hora](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100)).  
   
 ## <a name="datetime-data-types-and-parameters"></a>Parâmetros e tipos de dados de data/hora  
  As enumerações a seguir foram adicionadas ao <xref:System.Data.SqlDbType> para dar suporte aos novos tipos de dados de data e hora.  
@@ -77,7 +77,7 @@ Você pode especificar o tipo de dados de um <xref:System.Data.SqlClient.SqlPara
   
 |Tipo de dados do SQL Server|Tipo de .NET Framework|System.Data.SqlDbType|System.Data.DbType|  
 |--------------------------|-------------------------|---------------------------|------------------------|  
-|date|System.DateTime|Data|Data|  
+|Data|System.DateTime|Data|Data|  
 |time|System.TimeSpan|Hora|Hora|  
 |datetime2|System.DateTime|DateTime2|DateTime2|  
 |datetimeoffset|System.DateTimeOffset|DateTimeOffset|DateTimeOffset|  
@@ -198,7 +198,7 @@ command.Parameters.AddWithValue( _
 ## <a name="retrieving-date-and-time-data"></a>Recuperando dados de data e hora  
  A tabela a seguir descreve os métodos que são usados para recuperar os valores de data e hora do SQL Server 2008.  
   
-|Método SqlClient|Description|  
+|Método SqlClient|Descrição|  
 |----------------------|-----------------|  
 |<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|Recupera o valor da coluna especificada como uma estrutura <xref:System.DateTime>.|  
 |<xref:System.Data.SqlClient.SqlDataReader.GetDateTimeOffset%2A>|Recupera o valor da coluna especificada como uma estrutura <xref:System.DateTimeOffset>.|  
@@ -237,12 +237,12 @@ command.Parameters.AddWithValue( _
 |Tópico|Descrição|  
 |-----------|-----------------|  
 |[tipos de dados e funções de data e hora (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|Fornece uma visão geral de todos os tipos de dados e as funções de data e hora do Transact-SQL.|  
-|[Usando dados de data e hora](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|Fornece informações sobre as funções e os tipos de dados de data e hora e exemplos de como usá-los.|  
+|[Usando dados de data e hora](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|Fornece informações sobre as funções e os tipos de dados de data e hora e exemplos de como usá-los.|  
 |[Tipos de dados (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)|Descreve os tipos de dados do sistema no SQL Server.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Mapeamentos de tipo de dados do SQL Server](../sql-server-data-type-mappings.md)
-- [Configurando parâmetros e tipos de dados de parâmetro](../configuring-parameters-and-parameter-data-types.md)
+- [Mapeamentos de tipos de dados do SQL Server](../sql-server-data-type-mappings.md)
+- [Configurar parâmetros e tipos de dados de parâmetro](../configuring-parameters-and-parameter-data-types.md)
 - [Tipos de dados SQL Server e ADO.NET](sql-server-data-types.md)
 - [Visão geral do ADO.NET](../ado-net-overview.md)

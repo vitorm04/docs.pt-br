@@ -2,12 +2,12 @@
 title: Guia de Introdução ao .NET Nativo
 ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-ms.openlocfilehash: 1c0c25ddf379c31a9c7b4437d36e7e0cbf1bb2f3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b6cd4acaa377de7fc172fb12c9fb9ff1b832f88a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128405"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551204"
 ---
 # <a name="getting-started-with-net-native"></a>Guia de Introdução ao .NET Nativo
 
@@ -58,7 +58,7 @@ Há duas categorias de serializadores e ambas podem necessitar de entradas adici
 
 - Serializadores não baseado em reflexão. Os serializadores encontrados na biblioteca de classes do .NET Framework, como as classes <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> e <xref:System.Xml.Serialization.XmlSerializer>, não dependem de reflexão. No entanto, eles necessitam que o código seja gerado com base no objeto a ser serializado ou desserializado.  Para obter mais informações, consulte a seção “Serializadores da Microsoft” em [Serialização e metadados](serialization-and-metadata.md).
 
-- Serializadores de terceiros. As bibliotecas de serialização de terceiros, a mais comum do que é o serializador JSON Newtonsoft, geralmente são baseadas em reflexão e exigem entradas no \* arquivo. Rd. xml para dar suporte à serialização e desserialização de objetos. Para obter mais informações, consulte a seção “Serializadores de Terceiros” em [Serialização e metadados](serialization-and-metadata.md).
+- Serializadores de terceiros. As bibliotecas de serialização de terceiros, a mais comum do que é o serializador JSON Newtonsoft, geralmente são baseadas em reflexão e exigem entradas no \* arquivo.rd.xml para dar suporte à serialização e desserialização de objetos. Para obter mais informações, consulte a seção “Serializadores de Terceiros” em [Serialização e metadados](serialization-and-metadata.md).
 
 **Métodos que dependem de reflexão**
 
@@ -79,7 +79,7 @@ Para obter mais informações, consulte [APIs que dependem de reflexão](apis-th
 
 ## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Etapa 3: Implantar e testar os builds de versão do aplicativo
 
-Depois de atualizar o arquivo de diretivas de runtime, você poderá recompilar e implantar builds de versão do aplicativo. .NET Native binários são colocados no subdiretório ILC. out do diretório especificado na caixa de texto **caminho de saída da compilação** da caixa de diálogo **Propriedades** do projeto, **compile** Tab. os binários que não estão nesta pasta não foram compilados com .net Native. Teste o aplicativo por completo e todos os cenários, incluindo cenários de falha, em cada uma de suas plataformas de destino.
+Depois de atualizar o arquivo de diretivas de runtime, você poderá recompilar e implantar builds de versão do aplicativo. .NET Native binários são colocados no subdiretório ILC. out do diretório especificado na caixa de texto **caminho de saída da compilação** da caixa de diálogo **Propriedades** do projeto, guia **Compilar** . Os binários que não estão nesta pasta não foram compilados com .NET Native. Teste o aplicativo por completo e todos os cenários, incluindo cenários de falha, em cada uma de suas plataformas de destino.
 
 Se o aplicativo não funcionar corretamente (especialmente nos casos em que ele gera as exceções [MissingMetadataException](missingmetadataexception-class-net-native.md) ou [MissingInteropDataException](missinginteropdataexception-class-net-native.md) em tempo de execução), siga as instruções da próxima seção, [Etapa 4: Resolver manualmente os metadados ausentes](#Step4). Ativar exceções de primeira chance pode ajudá-lo a encontrar esses bugs.
 
@@ -124,7 +124,7 @@ Para ver alguns exemplos específicos de como lidar com exceções e outros prob
 ## <a name="see-also"></a>Confira também
 
 - [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Instalação e configuração do .NET Nativo](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [Instalação e configuração do .NET Nativo](/previous-versions/dn600164(v=vs.110))
 - [Compilação e .NET nativo](net-native-and-compilation.md)
 - [Reflexão e .NET Nativo](reflection-and-net-native.md)
 - [APIs que dependem de reflexão](apis-that-rely-on-reflection.md)

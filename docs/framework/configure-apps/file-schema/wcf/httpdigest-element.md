@@ -2,12 +2,12 @@
 title: Elemento <httpDigest>
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: 328411a429cd42927a190c6805a1f5e2b3555ea1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0ffaba218d31a77407c598f8b7fa0260daa4e39c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77448446"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556896"
 ---
 # <a name="httpdigest-element"></a>Elemento \<httpDigest>
 Especifica uma credencial de tipo Digest usada ao autenticar o cliente para um serviço.  
@@ -20,7 +20,7 @@ Especifica uma credencial de tipo Digest usada ao autenticar o cliente para um s
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<httpDigest>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <httpDigest impersonationLevel="Identification/Impersonation/Delegation/Anonymous/None" />
@@ -47,7 +47,7 @@ Especifica uma credencial de tipo Digest usada ao autenticar o cliente para um s
 ## <a name="remarks"></a>Comentários  
  Um resumo é um hash determinado pelo uso de um algoritmo e um conjunto de entradas. O autenticador e o concorda autenticado sobre um algoritmo e trocam os dados usados como entradas. O cliente pode calcular o hash e enviá-lo para o serviço. O serviço também calcula o hash e compara os valores. Uma correspondência valida o cliente.  
   
- Esse recurso deve ser habilitado com Active Directory no Windows e no Serviços de Informações da Internet (IIS). Para obter mais informações, consulte [autenticação Digest no IIS 6,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10)).  
+ Esse recurso deve ser habilitado com Active Directory no Windows e no Serviços de Informações da Internet (IIS). Para obter mais informações, consulte [autenticação Digest no IIS 6,0](/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10)).  
   
 ## <a name="see-also"></a>Confira também
 

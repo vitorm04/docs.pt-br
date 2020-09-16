@@ -5,12 +5,12 @@ helpviewer_keywords:
 - supportPortability element
 - <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
-ms.openlocfilehash: 63c309a8a93c1d31ed8f73a495cf5154c3590d56
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 99fa51238040f21d998a8c6c2aef7c13d288104a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73115650"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551579"
 ---
 # <a name="supportportability-element"></a>Elemento \<supportPortability>
 Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas implementações diferentes do .NET Framework, desabilitando o comportamento padrão que trata os assemblies como equivalentes para fins de portabilidade do aplicativo.  
@@ -20,7 +20,7 @@ Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas im
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<supportPortability>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <supportPortability PKT="public_key_token" enabled="true|false"/>  
@@ -63,11 +63,11 @@ A partir do .NET Framework 4, o suporte é fornecido automaticamente para aplica
 Um cenário desse tipo é um assembly que tem que referenciar a implementação de .NET Framework e o .NET Framework para a implementação do Silverlight de um determinado assembly de referência. Por exemplo, um designer XAML escrito em Windows Presentation Foundation (WPF) pode precisar referenciar a implementação da área de trabalho do WPF, para a interface do usuário do designer e o subconjunto do WPF que está incluído na implementação do Silverlight. Por padrão, as referências separadas causam um erro do compilador, pois a associação de assembly considera os dois assemblies equivalentes. Esse elemento desabilita o comportamento padrão e permite que a compilação tenha sucesso.  
   
 > [!IMPORTANT]
-> Para que o compilador passe as informações para a lógica de associação de assembly do Common Language Runtime, você deve usar a `/appconfig` opção do compilador para especificar o local do arquivo app. config que contém esse elemento.  
+> Para que o compilador passe as informações para a lógica de associação de assembly do Common Language Runtime, você deve usar a `/appconfig` opção do compilador para especificar o local do arquivo de app.config que contém esse elemento.  
   
 ## <a name="example"></a>Exemplo  
 
-O exemplo a seguir permite que um aplicativo tenha referências para a implementação de .NET Framework e o .NET Framework para a implementação do Silverlight de qualquer assembly .NET Framework que exista em ambas as implementações. A `/appconfig` opção do compilador deve ser usada para especificar o local deste arquivo app. config.  
+O exemplo a seguir permite que um aplicativo tenha referências para a implementação de .NET Framework e o .NET Framework para a implementação do Silverlight de qualquer assembly .NET Framework que exista em ambas as implementações. A `/appconfig` opção do compilador deve ser usada para especificar o local desse app.config arquivo.  
   
 ```xml  
 <configuration>  
@@ -83,4 +83,4 @@ O exemplo a seguir permite que um aplicativo tenha referências para a implement
 ## <a name="see-also"></a>Confira também
 
 - [-AppConfig (opções do compilador C#)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
-- [Visão Geral da Unificação de Assemblies no .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))
+- [Visão Geral da Unificação de Assemblies no .NET Framework](/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))
