@@ -8,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 3eba676a4134415f0e2981d5094c0b0f6a1651be
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 15350f93ffabb10136af1b9a4d12d5301e661b29
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559018"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551706"
 ---
 # <a name="whats-new-in-net-framework"></a>O que há de novo no .NET Framework
 
 Este artigo resume os novos recursos-chave e melhorias nas seguintes versões do .NET Framework:
 
-- [.NET Framework 4,8](#v48)
+- [.NET Framework 4.8](#v48)
 - [.NET Framework 4.7.2](#v472)
 - [.NET Framework 4.7.1](#v471)
 - [.NET Framework 4,7](#v47)
@@ -350,7 +350,7 @@ A compatibilidade para descompactação por meio das APIs do Windows está habil
 
 **APIs de coleção adicionais**
 
-O .NET Framework 4.7.2 adiciona uma série de novas APIs aos tipos <xref:System.Collections.Generic.SortedSet%601> e <xref:System.Collections.Generic.HashSet%601>. Eles incluem:
+O .NET Framework 4.7.2 adiciona uma série de novas APIs aos tipos <xref:System.Collections.Generic.SortedSet%601> e <xref:System.Collections.Generic.HashSet%601>. Elas incluem:
 
 - métodos `TryGetValue`, o que estende o padrão try usado em outros tipos de coleção. Os métodos são:
 
@@ -389,9 +389,9 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 A [DI (injeção de dependência)](/aspnet/core/fundamentals/dependency-injection#overview-of-dependency-injection) separa os objetos de suas dependências para que o código do objeto não precise mais ser alterado somente porque uma dependência foi modificada. Ao desenvolver aplicativos ASP.NET direcionados para o .NET Framework 4.7.2, é possível:
 
-- Use uma injeção baseada em setter, interfaces e construtores nos [manipuladores e módulos](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [instâncias Página](xref:System.Web.UI.Page) e [controles de usuário](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) de projetos de aplicativo Web ASP.NET.
+- Use uma injeção baseada em setter, interfaces e construtores nos [manipuladores e módulos](/previous-versions/aspnet/bb398986(v=vs.100)), [instâncias Página](xref:System.Web.UI.Page) e [controles de usuário](/previous-versions/aspnet/y6wb1a0e(v=vs.100)) de projetos de aplicativo Web ASP.NET.
 
-- Use uma injeção baseada em setter e interface nos [manipuladores e módulos](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [instâncias Página](xref:System.Web.UI.Page) e [controles de usuário](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) de projetos de site da Web do ASP.NET.
+- Use uma injeção baseada em setter e interface nos [manipuladores e módulos](/previous-versions/aspnet/bb398986(v=vs.100)), [instâncias Página](xref:System.Web.UI.Page) e [controles de usuário](/previous-versions/aspnet/y6wb1a0e(v=vs.100)) de projetos de site da Web do ASP.NET.
 
 - Conecte estruturas de injeção de dependência diferentes.
 
@@ -517,9 +517,9 @@ O método retorna um Enumerable vazio, a menos que  <xref:System.Windows.Diagno
 
 **Localizar os proprietários de ResourceDictionary**
 
-A partir do .NET Framework 4.7.2, um assistente de diagnóstico pode localizar os proprietários de um determinado <xref:Windows.UI.Xaml.ResourceDictionary>.(O recurso é para uso por assistentes de diagnóstico e não por aplicativos de produção.) Sempre que uma alteração é feita em um <xref:Windows.UI.Xaml.ResourceDictionary> , o WPF localiza automaticamente todas as referências [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) que podem ser afetadas pela alteração.
+A partir do .NET Framework 4.7.2, um assistente de diagnóstico pode localizar os proprietários de um determinado <xref:Windows.UI.Xaml.ResourceDictionary>.(O recurso é para uso por assistentes de diagnóstico e não por aplicativos de produção.) Sempre que uma alteração é feita em um <xref:Windows.UI.Xaml.ResourceDictionary> , o WPF localiza automaticamente todas as referências [DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension) que podem ser afetadas pela alteração.
 
-Um assistente de diagnóstico como a facilidade de "Editar e continuar" do Visual Studio pode querer estendê-lo para manipular referências [StaticResource](../wpf/advanced/staticresource-markup-extension.md) . A primeira etapa nesse processo é localizar os proprietários do dicionário; ou seja, para localizar todos os objetos cuja propriedade `Resources` se refere ao dicionário (direta ou indiretamente por meio da propriedade <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType>). Três novos métodos estáticos implementados na classe <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType>, um para cada um dos tipos base que tem uma propriedade `Resources`, compatível com esta etapa:
+Um assistente de diagnóstico como a facilidade de "Editar e continuar" do Visual Studio pode querer estendê-lo para manipular referências [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) . A primeira etapa nesse processo é localizar os proprietários do dicionário; ou seja, para localizar todos os objetos cuja propriedade `Resources` se refere ao dicionário (direta ou indiretamente por meio da propriedade <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType>). Três novos métodos estáticos implementados na classe <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType>, um para cada um dos tipos base que tem uma propriedade `Resources`, compatível com esta etapa:
 
 - [`public static IEnumerable<FrameworkElement> GetFrameworkElementOwners(ResourceDictionary dictionary);`](xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetFrameworkElementOwners%2A)
 
@@ -531,7 +531,7 @@ Esses métodos retornam um Enumerable vazio, a menos que  <xref:System.Windows.
 
 **Localizar referências StaticResource**
 
-Agora, um assistente de diagnóstico pode receber uma notificação sempre que uma referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md) for resolvida.(O recurso é para uso pelos assistentes de diagnóstico, não por aplicativos de produção.) Um assistente de diagnóstico como o recurso "Editar e continuar" do Visual Studio pode querer atualizar todos os usos de um recurso quando seu valor em uma <xref:Windows.UI.Xaml.ResourceDictionary> alteração. O WPF faz isso automaticamente para referências [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md), mas ele intencionalmente não o faz para referências [StaticResource](../wpf/advanced/staticresource-markup-extension.md). A partir do .NET Framework 4.7.2, o assistente de diagnóstico pode usar essas notificações para localizar os usos do recurso estático.
+Agora, um assistente de diagnóstico pode receber uma notificação sempre que uma referência [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) for resolvida.(O recurso é para uso pelos assistentes de diagnóstico, não por aplicativos de produção.) Um assistente de diagnóstico como o recurso "Editar e continuar" do Visual Studio pode querer atualizar todos os usos de um recurso quando seu valor em uma <xref:Windows.UI.Xaml.ResourceDictionary> alteração. O WPF faz isso automaticamente para referências [DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension), mas ele intencionalmente não o faz para referências [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension). A partir do .NET Framework 4.7.2, o assistente de diagnóstico pode usar essas notificações para localizar os usos do recurso estático.
 
 A notificação é implementada pelo novo evento <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType>:
 
@@ -543,7 +543,7 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
-Esse evento é gerado sempre que o runtime resolve uma referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md).Os argumentos <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> descrevem a resolução e indicam o objeto e a propriedade que hospedam a referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md), o  <xref:Windows.UI.Xaml.ResourceDictionary> e a chave usada para a resolução:
+Esse evento é gerado sempre que o runtime resolve uma referência [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension).Os argumentos <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> descrevem a resolução e indicam o objeto e a propriedade que hospedam a referência [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension), o  <xref:Windows.UI.Xaml.ResourceDictionary> e a chave usada para a resolução:
 
 ```csharp
 public class StaticResourceResolvedEventArgs : EventArgs
@@ -741,7 +741,7 @@ A partir do .NET Framework 4.7, o WCF permite que você configure o TSL 1.1 ou o
 
 **Confiabilidade aprimorada de aplicativos WCF e serialização do WCF**
 
-O WCF inclui diversas alterações de código que eliminam as condições de corrida, melhorando o desempenho e a confiabilidade das opções de serialização. Eles incluem:
+O WCF inclui diversas alterações de código que eliminam as condições de corrida, melhorando o desempenho e a confiabilidade das opções de serialização. Elas incluem:
 
 - Suporte aprimorado para combinação de código síncrono e assíncrono em chamadas para **SocketConnection.BeginRead** e **SocketConnection.Read**.
 - Confiabilidade aprimorada ao anular uma conexão com **SharedConnectionListener** e **DuplexChannelBinder**.
@@ -758,7 +758,7 @@ No .NET Framework 4.7, o Windows Forms melhora o suporte para monitores com alto
 
 A partir dos aplicativos direcionados ao .NET Framework 4.7, o .NET Framework apresenta suporte para alto DPI e DPI dinâmico em aplicativos do Windows Forms. O suporte para DPI alto melhora o layout e a aparência de formulários e controles em monitores com alto DPI. O DPI dinâmico altera o layout e a aparência de formulários e controles quando o usuário altera o DPI ou o fator de escala de exibição de um aplicativo em execução.
 
-O suporte a DPI alto é um recurso opcional que você configura definindo uma [\<System.Windows.Forms.ConfigurationSection>](../configure-apps/file-schema/winforms/index.md) seção no arquivo de configuração do aplicativo. Para saber mais sobre como adicionar suporte ao DPI alto e suporte ao DPI dinâmico para seu aplicativo Windows Forms, confira [Suporte a DPI alto no Windows Forms](../winforms/high-dpi-support-in-windows-forms.md).
+O suporte a DPI alto é um recurso opcional que você configura definindo uma [\<System.Windows.Forms.ConfigurationSection>](../configure-apps/file-schema/winforms/index.md) seção no arquivo de configuração do aplicativo. Para saber mais sobre como adicionar suporte ao DPI alto e suporte ao DPI dinâmico para seu aplicativo Windows Forms, confira [Suporte a DPI alto no Windows Forms](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms).
 
 <a name="WPF47"></a>
 
@@ -768,7 +768,7 @@ No .NET Framework 4.7, o WPF inclui os seguintes aprimoramentos:
 
 **Suporte para uma pilha de toque/caneta com base em mensagens WM_POINTER do Windows**
 
-Agora você tem a opção de usar uma pilha de toque/caneta com base em [mensagens WM_POINTER](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) em vez de WISP (Plataforma de Serviços do Windows Ink). Esse é um recurso opcional no .NET Framework. Para obter mais informações, consulte a seção [compatibilidade de aplicativos](../migration-guide/application-compatibility.md) .
+Agora você tem a opção de usar uma pilha de toque/caneta com base em [mensagens WM_POINTER](/previous-versions/windows/desktop/InputMsg/messages) em vez de WISP (Plataforma de Serviços do Windows Ink). Esse é um recurso opcional no .NET Framework. Para obter mais informações, consulte a seção [compatibilidade de aplicativos](../migration-guide/application-compatibility.md) .
 
 **Nova implementação para APIs de impressão do WPF**
 
@@ -841,7 +841,7 @@ End Class
 
 Você pode criar um arquivo de recurso, DataAnnotation.Localization.fr.resx, cuja chave é a cadeia de caracteres da mensagem de erro e cujo valor é a mensagem de erro localizada. O arquivo deve ser encontrado na pasta `App.LocalResources`. Por exemplo, veja a seguir a chave e seu valor em uma mensagem de erro localizada no idioma francês (fr):
 
-| Nome                                 | Valor                                     |
+| Name                                 | Valor                                     |
 | ------------------------------------ | ----------------------------------------- |
 | A classificação deve estar entre 1 e 10. | La note doit être comprise entre 1 et 10. |
 
@@ -955,7 +955,7 @@ O .NET Framework 3.5 adicionou suporte para o Contrato de chave Diffie-Hellman d
 
 Para lidar com isso no .NET Framework 4.6.2, os três métodos a seguir foram adicionados à classe base <xref:System.Security.Cryptography.ECDiffieHellman> para representar mais claramente essas rotinas KDF e suas entradas:
 
-|Método ECDiffieHellman|Descrição|
+|Método ECDiffieHellman|Description|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva o material da chave usando a fórmula<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> em que *x* é o resultado calculado do algoritmo EC Diffie-Hellman.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva o material da chave usando a fórmula<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> em que *x* é o resultado calculado do algoritmo EC Diffie-Hellman.|
@@ -1196,7 +1196,7 @@ No .NET Framework 4.6.2, o Windows Workflow Foundation foi aprimorado na seguint
 
 **Suporte para expressões C# e IntelliSense no designer do WF rehospedado**
 
-A partir do .NET Framework 4,5, o WF dá suporte a expressões C# no Visual Studio Designer e em fluxos de trabalho de código. A Designer de Fluxo de Trabalho rehospedada é um recurso-chave do WF que permite que o Designer de Fluxo de Trabalho esteja em um aplicativo fora do Visual Studio (por exemplo, no WPF).  Windows Workflow Foundation fornece a capacidade de dar suporte a expressões C# e IntelliSense no Designer de Fluxo de Trabalho rehospedado. Para saber mais, confira o [blog do Windows Workflow Foundation](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer).
+A partir do .NET Framework 4,5, o WF dá suporte a expressões C# no Visual Studio Designer e em fluxos de trabalho de código. A Designer de Fluxo de Trabalho rehospedada é um recurso-chave do WF que permite que o Designer de Fluxo de Trabalho esteja em um aplicativo fora do Visual Studio (por exemplo, no WPF).  Windows Workflow Foundation fornece a capacidade de dar suporte a expressões C# e IntelliSense no Designer de Fluxo de Trabalho rehospedado. Para saber mais, confira o [blog do Windows Workflow Foundation](/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer).
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` Em versões do .NET Framework antes do 4.6.2, o WF designer IntelliSense é interrompido quando um cliente recria um projeto de fluxo de trabalho do Visual Studio. Embora a compilação do projeto seja bem-sucedida, os tipos de fluxo de trabalho não são encontrados no designer, e surgem avisos do IntelliSense para os tipos de fluxo de trabalho ausentes na janela **Lista de Erros**. .NET Framework 4.6.2 resolve esse problema e disponibiliza o IntelliSense.
 
@@ -1886,7 +1886,7 @@ Os aprimoramentos para Windows Forms incluem:
 
 Entre os aperfeiçoamentos durante a depuração de seus aplicativos do .NET Framework no Visual Studio 2013 estão:
 
-- Valores de retorno no depurador do Visual Studio. Quando você depura um aplicativo gerenciado no Visual Studio 2013, a janela Autos exibe valores e tipos de retorno para os métodos. Essas informações estão disponíveis para aplicativos de área de trabalho, Windows Store e Windows Phone. Confira mais informações em [Examinar valores de retorno de chamadas de método](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn323257(v=vs.120)).
+- Valores de retorno no depurador do Visual Studio. Quando você depura um aplicativo gerenciado no Visual Studio 2013, a janela Autos exibe valores e tipos de retorno para os métodos. Essas informações estão disponíveis para aplicativos de área de trabalho, Windows Store e Windows Phone. Confira mais informações em [Examinar valores de retorno de chamadas de método](/previous-versions/visualstudio/visual-studio-2013/dn323257(v=vs.120)).
 
 - Editar e continuar para aplicativos 64 bits. O Visual Studio 2013 dá suporte ao recurso Editar e continuar para aplicativos gerenciados de 64 bits para área de trabalho, Windows Store e Windows Phone. As limitações existentes permanecem em vigor para aplicativos 32 e 64 bits (confira a última seção do artigo [Alterações de código compatíveis (C#)](/visualstudio/debugger/supported-code-changes-csharp)).
 
@@ -1972,7 +1972,7 @@ O .NET Framework 4.5 fornece vários recursos e aperfeiçoamentos novos para com
 
 ASP.NET 4.5 e 4.5.1 adicionam model binding para formulários da Web, suporte WebSocket, manipuladores assíncronos, aperfeiçoamentos de desempenho e muitos outros recursos. Para saber mais, consulte os recursos a seguir:
 
-- [ASP.NET 4.5 e Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
+- [ASP.NET 4.5 e Visual Studio 2012](/previous-versions/aspnet/hh420390(v=vs.110))
 
 - [Notas de versão do ASP.NET and Web Tools para Visual Studio 2013](/aspnet/visual-studio/overview/2013/release-notes)
 
@@ -2066,7 +2066,7 @@ Para saber mais, confira [Novidades no Windows Communication Foundation](../wcf/
 
 No .NET Framework 4.5, vários recursos novos foram adicionados ao Windows Workflow Foundation (WF), incluindo:
 
-- Os fluxos de trabalho da máquina de estado, que foram introduzidos pela primeira vez como parte do .NET Framework 4.0.1 ([Atualização 1 da Plataforma .NET Framework 4](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)). Essa atualização incluiu várias classes e atividades novas que permitiram que os desenvolvedores criassem fluxos de trabalho de computador do estado. Essas classes e atividades foram atualizadas para que o .NET Framework 4.5 inclua:
+- Os fluxos de trabalho da máquina de estado, que foram introduzidos pela primeira vez como parte do .NET Framework 4.0.1 ([Atualização 1 da Plataforma .NET Framework 4](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)). Essa atualização incluiu várias classes e atividades novas que permitiram que os desenvolvedores criassem fluxos de trabalho de computador do estado. Essas classes e atividades foram atualizadas para que o .NET Framework 4.5 inclua:
 
   - A capacidade de definir pontos de interrupção em estados.
 
@@ -2118,7 +2118,7 @@ Para saber mais, confira [Novidades no Windows Workflow Foundation](../windows-w
 
 ### <a name="net-for-windows-8x-store-apps"></a>.NET para aplicativos da Windows 8.x Store
 
-Os aplicativos Windows 8.x Store foram projetados para fatores forma específicos e aproveitam a capacidade do sistema operacional Windows. Um subconjunto do .NET Framework 4.5 ou 4.5.1 está disponível para compilar aplicativos Windows 8.x Store para o Windows usando o C# ou o Visual Basic. Esse subconjunto é chamado .NET para aplicativos da loja do Windows 8. x e é discutido em uma [visão geral](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
+Os aplicativos Windows 8.x Store foram projetados para fatores forma específicos e aproveitam a capacidade do sistema operacional Windows. Um subconjunto do .NET Framework 4.5 ou 4.5.1 está disponível para compilar aplicativos Windows 8.x Store para o Windows usando o C# ou o Visual Basic. Esse subconjunto é chamado .NET para aplicativos da loja do Windows 8. x e é discutido em uma [visão geral](/previous-versions/windows/apps/br230302(v=vs.140)).
 
 ### <a name="portable-class-libraries"></a>Bibliotecas de Classe Portáteis <a name="portable"></a>
 

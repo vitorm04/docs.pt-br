@@ -10,7 +10,7 @@ ms.locfileid: "88557992"
 
 A <xref:System.Security.Cryptography.Oid?displayProperty=fullName> classe, que é usada para representar valores de identificador de objeto ASN. 1 e seus nomes "amigáveis", anteriormente era totalmente mutável. Essa imutabilidade costuma ser despercebida ou surgiu como uma surpresa. Os setters de propriedade agora lançam um <xref:System.PlatformNotSupportedException> quando você tenta alterar o valor depois que ele já foi atribuído.
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 Em versões anteriores, os setters de propriedade em <xref:System.Security.Cryptography.Oid> podem ser usados para alterar o valor das <xref:System.Security.Cryptography.Oid.FriendlyName> <xref:System.Security.Cryptography.Oid.Value> Propriedades e.
 

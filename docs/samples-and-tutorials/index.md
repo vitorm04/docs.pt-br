@@ -4,12 +4,12 @@ description: Informações sobre exemplos e tutoriais para .NET Core, ASP.NET Co
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/19/2020
-ms.openlocfilehash: 587365aae1c2069c3e94ad0452da9c31dc6e89f0
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 7e477683834b46439626e03e6ff411fabc52672d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656951"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557184"
 ---
 # <a name="net-samples-and-tutorials"></a>Exemplos e tutoriais do .NET
 
@@ -107,7 +107,7 @@ Muitos tópicos mostram código-fonte e exemplos que estão disponíveis para ex
 
 1. Baixe o repositório que contém o código de exemplo executando um dos seguintes procedimentos:
    * Baixe um ZIP do repositório para o sistema local. Descompacte o arquivamento compactado.
-   * [Bifurque](https://help.github.com/articles/fork-a-repo/) o repositório e [clone](https://help.github.com/articles/cloning-a-repository/) a bifurcação no sistema local. A bifurcação e a clonagem permitem que você colabore com a documentação confirmando alterações na sua bifurcação e criando uma solicitação pull para o repositório de documentos oficiais. Para obter mais informações, consulte o [Guia de colaboração de documentação do .net](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute) e o guia de colaboração do [ASP.NET Core docs](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md).
+   * [Bifurque](https://help.github.com/articles/fork-a-repo/) o repositório e [clone](https://help.github.com/articles/cloning-a-repository/) a bifurcação no sistema local. A bifurcação e a clonagem permitem que você colabore com a documentação confirmando alterações na sua bifurcação e criando uma solicitação pull para o repositório de documentos oficiais. Para obter mais informações, consulte o [Guia de colaboração de documentação do .net](/contribute/dotnet/dotnet-contribute) e o guia de colaboração do [ASP.NET Core docs](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md).
    * Clone o repositório localmente. Se você clonar um repositório de documentos diretamente em seu sistema local, não será possível confirmar diretamente no repositório oficial, de modo que não será possível colaborar na documentação posteriormente. Use o procedimento de bifurcação e clonagem anteriormente descrito se quiser preservar a oportunidade de colaborar na documentação posteriormente.
 1. Navegue nas pastas do repositório para o local do exemplo. O caminho relativo até o local do exemplo aparece na barra de endereços do navegador quando você segue o link para o exemplo.
 1. Há várias opções para executar um exemplo:

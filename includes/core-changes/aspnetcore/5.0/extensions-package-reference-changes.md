@@ -30,7 +30,7 @@ As políticas de empacotamento foram atualizadas para se alinharem melhor ao rep
 
 Os consumidores dos pacotes afetados devem adicionar uma dependência direta da dependência do pacote removido em seu projeto se as APIs da dependência de pacote removido forem usadas. A tabela a seguir lista os pacotes afetados e as alterações correspondentes.
 
-|Nome do pacote|Descrição da alteração|
+|Nome do pacote|Descrição das alterações|
 |------------|------------------|
 |[Microsoft.Extensions.Configuração. Associador](https://nuget.org/packages/Microsoft.Extensions.Configuration.Binder)|Referência removida para `Microsoft.Extensions.Configuration`|
 |[Microsoft.Extensions.Configuration.Jsem](https://nuget.org/packages/Microsoft.Extensions.Configuration.Json)    |Referência removida para `System.Threading.Tasks.Extensions`|

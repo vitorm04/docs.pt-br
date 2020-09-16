@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: b2924a49816b2c7d097cc12ddd5b30ad8aed5a14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 50355fd5a502771ce88e1f329ec7effdaf380d48
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555439"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679423"
 ---
 # <a name="net-framework-4-migration-issues"></a>Problemas de migração do .NET Framework 4
 
@@ -224,7 +224,7 @@ Assemblies: PresentationFramework (no PresentationFramework.dll)
 | **Dicionários de recursos** | Para melhorar os dicionários de recurso de nível de tema e impedir que eles mudem, agora os recursos congeláveis definidos em um dicionário de recurso e mesclados em um dicionário de nível de tema são sempre marcados como congelados e são imutáveis. Esse é o comportamento esperado para recursos congeláveis. | Os aplicativos que modificam um recurso definido em um dicionário mesclado de nível de tema devem clonar o recurso e modificar a cópia clonada. Como alternativa, o recurso poderá ser marcado `x:Shared="false"` para que o <xref:System.Windows.ResourceDictionary> crie uma nova cópia toda vez que o recurso for consultado. |
 | **Windows 7** | Para fazer os aplicativos WPF funcionarem melhor no Windows 7, as seguintes melhorias foram feitas para corrigir o comportamento de uma janela:<br><br>\* Os Estados de encaixe e gesto agora funcionam conforme o esperado com base nas interações do usuário.<br>\* Os comandos da barra de tarefas **dispõem de janelas em cascata, mostrar janelas empilhadas**e **Mostrar janelas lado a lado** agora têm o comportamento correto e atualizam as propriedades apropriadas.<br>\* As `Top` `Left` Propriedades,, e `Width` `Height` para uma janela maximizada ou minimizada agora contêm o local de restauração correto da janela em vez de outros valores, dependendo do monitor. | Nenhum. |
 | **Transparência e estilo do Windows** | Um <xref:System.InvalidOperationException> será gerado se você tentar definir <xref:System.Windows.Window.WindowStyle> como um valor diferente de <xref:System.Windows.WindowStyle> quando <xref:System.Windows.Window.AllowsTransparency> for `true` e <xref:System.Windows.WindowState> for <xref:System.Windows.WindowState>. | Se for necessário alterar o <xref:System.Windows.Window.WindowStyle> quando <xref:System.Windows.Window.AllowsTransparency> for `true`, será possível chamar a função `SetWindowLongPtr` Win32. |
-| **Visualizador XPS** | O WPF não inclui o XPSEP (Microsoft XML Paper Specification Essentials Pack). O XPSEP é incluído com o Windows 7 e o Windows Vista.<br><br>Em um computador que esteja executando o Windows XP sem .NET Framework 3,5 SP1 instalado, a impressão usando uma API do WPF diferente daquela em dependerá <xref:System.Windows.Controls.PrintDialog> do winspool. Alguns recursos da impressora não serão relatados e algumas configurações da impressora não serão aplicadas durante a impressão. | Se necessário, instale o [Microsoft XML Paper Specification Essentials Pack](https://www.microsoft.com/en-us/download/details.aspx?id=11816). |
+| **Visualizador XPS** | O WPF não inclui o XPSEP (Microsoft XML Paper Specification Essentials Pack). O XPSEP é incluído com o Windows 7 e o Windows Vista.<br><br>Em um computador que esteja executando o Windows XP sem .NET Framework 3,5 SP1 instalado, a impressão usando uma API do WPF diferente daquela em dependerá <xref:System.Windows.Controls.PrintDialog> do winspool. Alguns recursos da impressora não serão relatados e algumas configurações da impressora não serão aplicadas durante a impressão. | Se necessário, instale o Microsoft XML Paper Specification Essentials Pack. |
 
 ### <a name="controls"></a>Controles
 

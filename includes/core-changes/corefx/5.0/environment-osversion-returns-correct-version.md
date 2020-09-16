@@ -10,7 +10,7 @@ ms.locfileid: "88558161"
 
 <xref:System.Environment.OSVersion?displayProperty=nameWithType> Retorna a versão real do sistema operacional (SO) em vez de, por exemplo, o sistema operacional selecionado para compatibilidade de aplicativos.
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 Nas versões anteriores do .NET, <xref:System.Environment.OSVersion?displayProperty=nameWithType> retorna uma versão do sistema operacional que pode estar incorreta quando um aplicativo é executado no modo de compatibilidade do Windows. Para obter mais informações, consulte [comentários da função GetVersionExA](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversionexa#remarks).
 
@@ -22,7 +22,7 @@ Os usuários dessa propriedade esperam que ele retorne a versão real do sistema
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-5.0
+5,0
 
 #### <a name="recommended-action"></a>Ação recomendada
 

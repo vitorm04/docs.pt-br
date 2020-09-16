@@ -2,12 +2,12 @@
 title: Implementação de Gateways de API com o Ocelot
 description: Saiba como implementar Gateways de API com o Ocelot e como usar o Ocelot em um ambiente baseado em contêiner.
 ms.date: 03/02/2020
-ms.openlocfilehash: cd776b2fa31a630d9b58530605966ed2431912a2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5cee56e6b68bc08f9e1de41605951989a55dc0df
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539548"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679221"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementar Gateways de API com o Ocelot
 
@@ -373,7 +373,7 @@ Devido a motivos de teste ou depuração, se você quisesse acessar diretamente 
 
 **Figura 6-36**. Acesso direto a um microsserviço para fins de teste
 
-Mas o aplicativo está configurado para que ele acesse todos os microserviços por meio dos gateways de API, não apesar da porta direta "atalhos".
+Mas o aplicativo está configurado para que ele acesse todos os microserviços por meio dos gateways de API, não por meio da porta direta "atalhos".
 
 ### <a name="the-gateway-aggregation-pattern-in-eshoponcontainers"></a>O padrão de agregação do Gateway em eShopOnContainers
 

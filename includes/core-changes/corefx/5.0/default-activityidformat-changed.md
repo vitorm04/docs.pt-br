@@ -10,7 +10,7 @@ ms.locfileid: "86281284"
 
 O formato de identificador padrão para atividade ( <xref:System.Diagnostics.Activity.DefaultIdFormat?displayProperty=nameWithType> ) agora é <xref:System.Diagnostics.ActivityIdFormat.W3C?displayProperty=nameWithType> .
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 O formato da ID da atividade W3C foi introduzido no .NET Core 3,0 como uma alternativa ao formato de ID hierárquica. No entanto, para preservar a compatibilidade, o formato W3C não foi tornado o padrão até o .NET 5,0. O padrão foi alterado no .NET 5,0 porque o [formato W3C foi ratificado](https://www.w3.org/TR/trace-context/) e ganhou força em várias implementações de idioma.
 

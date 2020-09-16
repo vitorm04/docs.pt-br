@@ -8,9 +8,9 @@ ms.locfileid: "87302694"
 ---
 ### <a name="vectort-always-throws-notsupportedexception-for-unsupported-types"></a>Vetor \<T> sempre gera NotSupportedException para tipos sem suporte
 
-<xref:System.Numerics.Vector%601?displayProperty=nameWithType>Agora sempre gera um <xref:System.NotSupportedException> para parâmetros de tipo sem suporte.
+<xref:System.Numerics.Vector%601?displayProperty=nameWithType> Agora sempre gera um <xref:System.NotSupportedException> para parâmetros de tipo sem suporte.
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 Anteriormente, os membros de <xref:System.Numerics.Vector%601> nem sempre geraram um <xref:System.NotSupportedException> quando `T` era um [tipo sem suporte](#unsupported-types). A exceção nem sempre foi acionada devido a caminhos de código com suporte para aceleração de hardware. Por exemplo, `Vector<bool> + Vector<bool>` retornado `default` em vez de lançar uma exceção em plataformas que não têm aceleração de hardware, como ARM32. Para tipos sem suporte, <xref:System.Numerics.Vector%601> os membros exibiram comportamento inconsistente em diferentes plataformas e configurações de hardware.
 
@@ -47,7 +47,7 @@ Bibliotecas principais do .NET
 
 #### <a name="affected-apis"></a>APIs afetadas
 
-- <xref:System.Numerics.Vector%601?displayProperty=fullName>e todos os seus membros
+- <xref:System.Numerics.Vector%601?displayProperty=fullName> e todos os seus membros
 
 <!--
 

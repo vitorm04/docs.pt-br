@@ -10,7 +10,7 @@ ms.locfileid: "87556315"
 
 O <xref:System.Security.Permissions.PrincipalPermissionAttribute> Construtor é obsoleto e produz um erro de tempo de compilação. Não é possível instanciar esse atributo ou aplicá-lo a um método.
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 No .NET Framework e no .NET Core, você pode anotar métodos com o <xref:System.Security.Permissions.PrincipalPermissionAttribute> atributo. Por exemplo:
 

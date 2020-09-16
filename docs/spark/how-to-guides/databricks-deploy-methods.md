@@ -4,12 +4,12 @@ description: Saiba como enviar um .NET para Apache Spark trabalho para o databri
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: bebd170a689d8ae56aa6c55486d70354da2437ea
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 88dc321a08f805ef8c3bf8d4d01d32dd890548d2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617763"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557171"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Enviar um trabalho .NET para Apache Spark para o databricks
 
@@ -19,7 +19,7 @@ Você pode executar o .NET para Apache Spark trabalhos em clusters do databricks
 
 ## <a name="deploy-using-spark-submit"></a>Implantar usando Spark-Submit
 
-Você pode usar o comando [Spark-Submit](https://spark.apache.org/docs/latest/submitting-applications.html) para enviar o .net para trabalhos do Apache Spark para o databricks. `spark-submit`permite o envio somente para um cluster que é criado sob demanda.
+Você pode usar o comando [Spark-Submit](https://spark.apache.org/docs/latest/submitting-applications.html) para enviar o .net para trabalhos do Apache Spark para o databricks. `spark-submit` permite o envio somente para um cluster que é criado sob demanda.
 
 1. Navegue até o espaço de trabalho do databricks e crie um trabalho. Escolha um título para seu trabalho e, em seguida, selecione **Configurar Spark-Submit**. Cole os seguintes parâmetros na configuração do trabalho e, em seguida, selecione **confirmar**.
 
@@ -36,7 +36,7 @@ Você pode usar o comando [Spark-Submit](https://spark.apache.org/docs/latest/su
 
 ## <a name="deploy-using-set-jar"></a>Implantar usando Set jar
 
-Como alternativa, você pode usar [set jar](https://docs.microsoft.com/azure/databricks/jobs#--create-a-job) em seu espaço de trabalho do databricks para enviar Apache Spark trabalhos do .net para o databricks. *Set jar* permite o envio de trabalhos para um cluster ativo existente.
+Como alternativa, você pode usar [set jar](/azure/databricks/jobs#--create-a-job) em seu espaço de trabalho do databricks para enviar Apache Spark trabalhos do .net para o databricks. *Set jar* permite o envio de trabalhos para um cluster ativo existente.
 
 ### <a name="one-time-setup"></a>Configuração única
 
@@ -57,7 +57,7 @@ Como alternativa, você pode usar [set jar](https://docs.microsoft.com/azure/dat
 
 1. Verifique se você publicou seu aplicativo e se o código do aplicativo não usa `SparkSession.Stop()` .
 
-2. Use a [CLI do databricks](https://docs.microsoft.com/azure/databricks/dev-tools/databricks-cli) para carregar seu aplicativo em seu cluster do databricks. Por exemplo, use o seguinte comando para carregar seu aplicativo publicado em seu cluster:
+2. Use a [CLI do databricks](/azure/databricks/dev-tools/databricks-cli) para carregar seu aplicativo em seu cluster do databricks. Por exemplo, use o seguinte comando para carregar seu aplicativo publicado em seu cluster:
 
     ```console
     cd <path-to-your-app-publish-directory>
@@ -86,4 +86,4 @@ Como alternativa, você pode usar [set jar](https://docs.microsoft.com/azure/dat
 
 * [Introdução ao .NET para Apache Spark](../tutorials/get-started.md)
 * [Implantar um aplicativo .NET para Apache Spark no Databricks](../tutorials/databricks-deployment.md)
-* [Documentação do Azure Databricks](https://docs.microsoft.com/azure/azure-databricks/)
+* [Documentação do Azure Databricks](/azure/azure-databricks/)

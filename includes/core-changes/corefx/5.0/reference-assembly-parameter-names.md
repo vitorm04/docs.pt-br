@@ -10,7 +10,7 @@ ms.locfileid: "88720171"
 
 Alguns nomes de parâmetro de assembly de referência foram alterados para corresponder nomes de parâmetro nos assemblies de implementação.
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 Nas versões anteriores do .NET, alguns nomes de parâmetro do [assembly de referência](../../../../docs/standard/assembly/reference-assemblies.md) são diferentes para seus parâmetros correspondentes no assembly de implementação. Isso pode causar problemas ao usar argumentos nomeados e reflexão.
 

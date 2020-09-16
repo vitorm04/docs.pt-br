@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: eb11f0b8ddd34df7c6970c275d4b83cb95f59a53
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6a8fd644e6f9132bf93277ae9928788f236a7bd1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84287487"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558193"
 ---
 # <a name="serialization-guidelines"></a>Diretrizes de serialização
 Este documento lista as diretrizes a serem consideradas na criação de uma API a ser serializado.  
@@ -144,6 +144,6 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
 - [Serializador de contrato de dados](../../framework/wcf/feature-details/data-contract-serializer.md)
 - [Tipos com suporte fornecido pelo serializador de contrato de dados](../../framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [Serialização binária](binary-serialization.md)
-- [Comunicação remota .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
+- [Comunicação remota .NET](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [Serialização de XML e SOAP](xml-and-soap-serialization.md)
 - [Segurança e serialização](../../framework/misc/security-and-serialization.md)

@@ -12,7 +12,7 @@ A codificação UTF-7 não está mais em uso amplo entre aplicativos, e muitas e
 
 Consequentemente, a <xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> propriedade e os <xref:System.Text.UTF7Encoding.%23ctor%2A> construtores agora são obsoletos. Além disso, <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> e <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> não permite mais que você especifique `UTF-7` .
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 Anteriormente, você poderia criar uma instância da codificação UTF-7 usando as <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> APIs. Por exemplo:
 
@@ -134,7 +134,7 @@ Na maioria dos casos, você não precisa realizar nenhuma ação. No entanto, pa
   </Project>
   ```
 
-  Naruntimeconfig.template.jsdo aplicativo *no* arquivo:
+  Naruntimeconfig.template.jsdo aplicativo * no* arquivo:
 
   ```json
   {

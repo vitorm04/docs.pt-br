@@ -2,12 +2,12 @@
 title: Criando um microsserviço de CRUD simples controlado por dados
 description: Arquitetura de microserviços .NET para aplicativos .NET em contêineres | Entenda a criação de um microserviço CRUD (controlado por dados) simples no contexto de um aplicativo de microserviços.
 ms.date: 08/14/2020
-ms.openlocfilehash: 4d475ba42cb0f86b57b2467549635556cab1136d
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 46654b9e6283d913910b62621d056e034c18870e
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267952"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679143"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Criando um microsserviço de CRUD simples controlado por dados
 
@@ -288,7 +288,7 @@ O controle de versão permite que uma API Web indique as funcionalidades e os re
 
 - Controle de versão de cabeçalho
 
-O controle de versão de cadeia de caracteres de consulta e de URI são os mais simples de implementar. O controle de versão de cabeçalho é uma boa abordagem. No entanto, o controle de versão de cabeçalho não é tão explícito e simples como o controle de versão de URI. Como o controle de versão de URL é o mais simples e o mais explícito, o aplicativo de exemplo eShopOnContainers usa esse o controle de versão de URI.
+O controle de versão de cadeia de caracteres de consulta e de URI são os mais simples de implementar. O controle de versão de cabeçalho é uma boa abordagem. No entanto, o controle de versão de cabeçalho não é tão explícito e direto como controle de versão de URI. Como o controle de versão de URL é o mais simples e o mais explícito, o aplicativo de exemplo eShopOnContainers usa esse o controle de versão de URI.
 
 Com o controle de versão de URI, como no aplicativo de exemplo eShopOnContainers, sempre que você modificar a API Web ou alterar o esquema de recursos, você adicionará um número de versão ao URI de cada recurso. Os URIs existentes devem continuar a operar como antes, retornando os recursos que estão em conformidade com o esquema que corresponde à versão solicitada.
 

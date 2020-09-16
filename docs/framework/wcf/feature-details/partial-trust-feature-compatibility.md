@@ -2,12 +2,12 @@
 title: Compatibilidade da funcionalidade de confiança parcial
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 85e34e365d125fe4f00756549ba5bda4311b78f8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6d009482037efac8e0f90d255e198f10a1234187
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579157"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551966"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilidade da funcionalidade de confiança parcial
 O Windows Communication Foundation (WCF) dá suporte a um subconjunto limitado de funcionalidade durante a execução em um ambiente parcialmente confiável. Os recursos com suporte em confiança parcial são projetados em um conjunto específico de cenários, conforme descrito no tópico [cenários de implantação com suporte](supported-deployment-scenarios.md) .  
@@ -28,7 +28,7 @@ O Windows Communication Foundation (WCF) dá suporte a um subconjunto limitado d
   
 - Ao usar o `[ServiceKnownType]` atributo, o método especificado deve ser `public` .  
   
-- `[MessageContract]`as classes e seus membros podem ser `public` . Se a `[MessageContract]` classe for definida no assembly do aplicativo, ela poderá ser `internal` e ter `internal` Membros.  
+- `[MessageContract]` as classes e seus membros podem ser `public` . Se a `[MessageContract]` classe for definida no assembly do aplicativo, ela poderá ser `internal` e ter `internal` Membros.  
   
 ## <a name="system-provided-bindings"></a>Associações fornecidas pelo sistema  
  O <xref:System.ServiceModel.BasicHttpBinding> e o <xref:System.ServiceModel.WebHttpBinding> têm suporte total em um ambiente de confiança parcial. O <xref:System.ServiceModel.WSHttpBinding> tem suporte apenas para o modo de segurança de transporte.  
@@ -67,7 +67,7 @@ O Windows Communication Foundation (WCF) dá suporte a um subconjunto limitado d
   
 - `[Serializable]`Não há suporte para o modelo de programação/ISerializable em um ambiente de confiança parcial.  
   
-- Tipos conhecidos devem ser especificados no código ou na configuração no nível do computador (Machine. config). Tipos conhecidos não podem ser especificados na configuração em nível de aplicativo por motivos de segurança.  
+- Tipos conhecidos devem ser especificados no código ou na configuração no nível do computador (machine.config). Tipos conhecidos não podem ser especificados na configuração em nível de aplicativo por motivos de segurança.  
   
 - Os tipos que implementam <xref:System.Runtime.Serialization.IObjectReference> geram uma exceção em um ambiente parcialmente confiável.  
   
@@ -90,12 +90,12 @@ O Windows Communication Foundation (WCF) dá suporte a um subconjunto limitado d
   
 - Marque seu comportamento comum com o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo para que ele possa ser executado quando implantado como um aplicativo de confiança parcial. Observe que uma entrada de registro pode ser definida no computador para impedir a execução de assemblies marcados com APTCA. .  
   
-- Certifique-se de que, se o aplicativo for implantado como um aplicativo totalmente confiável, que os usuários não possam modificar as configurações de segurança de acesso ao código para executar o aplicativo em um ambiente de confiança parcial. Se puderem fazer isso, o comportamento não é executado e nenhuma exceção é lançada. Para garantir isso, consulte a opção **LevelFinal** usando [Caspol. exe (ferramenta de política de segurança de acesso do código)](../../tools/caspol-exe-code-access-security-policy-tool.md).  
+- Certifique-se de que, se o aplicativo for implantado como um aplicativo totalmente confiável, que os usuários não possam modificar as configurações de segurança de acesso ao código para executar o aplicativo em um ambiente de confiança parcial. Se puderem fazer isso, o comportamento não é executado e nenhuma exceção é lançada. Para garantir isso, consulte a opção **LevelFinal** usando [Caspol.exe (ferramenta de política de segurança de acesso do código)](../../tools/caspol-exe-code-access-security-policy-tool.md).  
   
  Para obter um exemplo de comportamento comum, consulte [como bloquear pontos de extremidade na empresa](../extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Configuração  
- Com uma exceção, o código parcialmente confiável só pode carregar seções de configuração do WCF no `app.config` arquivo local. Para carregar as seções de configuração do WCF que referenciam as seções do WCF em Machine. config ou em um arquivo Web. config de raiz requer ConfigurationPermission (Irrestrito). Sem essa permissão, as referências às seções de configuração do WCF (comportamentos, associações) fora do arquivo de configuração local resultam em uma exceção quando a configuração é carregada.  
+ Com uma exceção, o código parcialmente confiável só pode carregar seções de configuração do WCF no `app.config` arquivo local. Para carregar as seções de configuração do WCF que fazem referência a seções do WCF no machine.config ou em um arquivo de web.config raiz requer ConfigurationPermission (Irrestrito). Sem essa permissão, as referências às seções de configuração do WCF (comportamentos, associações) fora do arquivo de configuração local resultam em uma exceção quando a configuração é carregada.  
   
  A única exceção é a configuração de tipo conhecido para serialização, conforme descrito na seção serialização deste tópico.  
   
@@ -127,7 +127,7 @@ O Windows Communication Foundation (WCF) dá suporte a um subconjunto limitado d
   
 - <xref:System.IO.Log>  
 
-- [System. ServiceModel. Internal. TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
+- [System. ServiceModel. Internal. TransactionBridge](/previous-versions/aa346556(v=vs.110))]
   
  Os seguintes membros da <xref:System.Diagnostics.TraceOptions> enumeração não devem ser especificados:  
   
@@ -145,7 +145,7 @@ O Windows Communication Foundation (WCF) dá suporte a um subconjunto limitado d
   
 ## <a name="other-limitations"></a>Outras limitações  
 
-  O WCF é geralmente limitado às considerações de segurança impostas por ele pelo aplicativo de hospedagem. Por exemplo, se o WCF estiver hospedado em um aplicativo de navegador XAML (XBAP), ele estará sujeito a limitações do XBAP, conforme descrito em [Windows Presentation Foundation segurança de confiança parcial](../../wpf/wpf-partial-trust-security.md).  
+  O WCF é geralmente limitado às considerações de segurança impostas por ele pelo aplicativo de hospedagem. Por exemplo, se o WCF estiver hospedado em um aplicativo de navegador XAML (XBAP), ele estará sujeito a limitações do XBAP, conforme descrito em [Windows Presentation Foundation segurança de confiança parcial](/dotnet/desktop/wpf/wpf-partial-trust-security).  
   
  Os seguintes recursos adicionais não estão habilitados ao executar o Indigo2 em um ambiente de confiança parcial:  
   
@@ -160,7 +160,7 @@ O Windows Communication Foundation (WCF) dá suporte a um subconjunto limitado d
 ## <a name="unlisted-features"></a>Recursos não listados  
  A melhor maneira de descobrir que uma informação ou ação está indisponível durante a execução em um ambiente de confiança parcial é tentar acessar o recurso ou fazer a ação dentro de um `try` bloco e, em seguida, `catch` a falha. Para evitar a inundação dos arquivos de rastreamento com erros duplicados, o WCF desabilita o rastreamento do recurso ou da ação após a primeira falha de segurança. Há um rastreamento de exceção para cada acesso de recurso com falha, a primeira vez que uma tentativa é feita para acessar o recurso ou executar a ação.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>

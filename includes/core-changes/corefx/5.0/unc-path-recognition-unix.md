@@ -10,7 +10,7 @@ ms.locfileid: "88720170"
 
 A <xref:System.Uri> classe agora reconhece cadeias de caracteres que começam com duas barras ( `//` ) como caminhos UNC (Convenção de nomenclatura universal) em sistemas operacionais UNIX. Essa alteração torna o comportamento de tais cadeias de caracteres consistentes em todas as plataformas.
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 Nas versões anteriores do .NET, a <xref:System.Uri> classe reconhece cadeias de caracteres que começam com com duas barras, por exemplo, `//contoso` como caminhos de arquivo absolutos em sistemas operacionais UNIX. No entanto, no Windows, essas cadeias de caracteres são reconhecidas como caminhos UNC.
 

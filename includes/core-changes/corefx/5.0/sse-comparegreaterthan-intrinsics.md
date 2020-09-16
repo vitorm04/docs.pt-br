@@ -19,7 +19,7 @@ Os métodos e a seguir foram <xref:System.Runtime.Intrinsics.X86.Sse?displayProp
 * `CompareScalarNotGreaterThan`
 * `CompareScalarNotGreaterThanOrEqual`
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 Anteriormente, `NaN` as entradas para os <xref:System.Runtime.Intrinsics.X86.Sse> métodos listados e <xref:System.Runtime.Intrinsics.X86.Sse2> retornaram um resultado incorreto. O resultado também é diferente do resultado gerado pelo método correspondente na <xref:System.Runtime.Intrinsics.X86.Avx> classe.
 

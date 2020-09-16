@@ -12,9 +12,9 @@ A `WinHttpHandler` classe foi removida do assembly *System.Net.Http.dll* . Agora
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-5.0
+5,0
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 Nas versões anteriores do .NET, a <xref:System.Net.Http.WinHttpHandler> classe está disponível como parte das principais bibliotecas do .net. A partir do .NET 5,0, a <xref:System.Net.Http.WinHttpHandler> classe só está disponível como um [pacote NuGet](https://www.nuget.org/packages/System.Net.Http.WinHttpHandler/)instalado separadamente.
 

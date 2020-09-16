@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Creating GenericPrincipal Objects
 - GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-ms.openlocfilehash: 903d636938c47850951330d7936d95470441607e
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 57ffe3fd2d446b4a7364aa531e785bfb79520a0a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557210"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558206"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Como: criar objetos GenericPrincipal e GenericIdentity
 
 > [!NOTE]
 > Este artigo aplica-se ao Windows.
 >
-> Para obter informações sobre ASP.NET Core, consulte [visão geral da segurança do ASP.NET Core](https://docs.microsoft.com/aspnet/core/security/).
+> Para obter informações sobre ASP.NET Core, consulte [visão geral da segurança do ASP.NET Core](/aspnet/core/security/).
 
 Você pode usar a <xref:System.Security.Principal.GenericIdentity> classe em conjunto com a <xref:System.Security.Principal.GenericPrincipal> classe para criar um esquema de autorização que existe independentemente de um domínio do Windows.
 

@@ -10,7 +10,7 @@ ms.locfileid: "87556128"
 
 A partir do .NET 5,0, alguns controles Windows Forms não estão mais disponíveis.
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 A partir do .NET 5,0, alguns dos controles de Windows Forms relacionados à barra de status não estão mais disponíveis. Os controles de substituição com design e suporte melhores foram introduzidos no .NET Framework 2,0. Os controles preteridos foram removidos anteriormente das caixas de ferramentas do designer, mas ainda estavam disponíveis para serem usados. Agora, eles foram completamente removidos.
 

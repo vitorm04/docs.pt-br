@@ -120,6 +120,6 @@ Para a plataforma Webassembly mais incrivelmente:
 
 -->
 
-#### <a name="see-also"></a>Veja também
+#### <a name="see-also"></a>Confira também
 
 - [Analisador de API do .NET](../../../../docs/standard/analyzers/api-analyzer.md)

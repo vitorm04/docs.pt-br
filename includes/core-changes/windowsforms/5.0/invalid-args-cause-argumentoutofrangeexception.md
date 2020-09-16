@@ -10,7 +10,7 @@ ms.locfileid: "84702424"
 
 Algumas propriedades de Windows Forms agora lançam um <xref:System.ArgumentOutOfRangeException> para argumentos inválidos, onde anteriormente não.
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 Anteriormente, essas propriedades lançavam várias exceções, como <xref:System.NullReferenceException> , <xref:System.IndexOutOfRangeException> ou, <xref:System.ArgumentException> quando passaram argumentos fora do intervalo. A partir do .NET 5,0, essas propriedades agora lançam <xref:System.ArgumentOutOfRangeException> argumentos When passados que estão fora do intervalo.
 

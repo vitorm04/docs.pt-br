@@ -3,12 +3,12 @@ title: Como escolher um algoritmo do ML.NET
 description: Saiba como escolher um algoritmo do ML.NET para seu modelo de machine learning
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8af89800485f8f8ac35ee17df10a5e3c039da42d
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75740000"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679632"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Como escolher um algoritmo do ML.NET
 
@@ -34,7 +34,7 @@ Antes do treinamento com um algoritmo linear, os recursos devem ser normalizados
 
 Em geral, algoritmos lineares são escalonáveis e rápidos, baratos de treinar e baratos de prever. Eles são dimensionados pelo número de recursos e aproximadamente pelo tamanho do conjunto de dados de treinamento.
 
-Algoritmos lineares fazem várias passagens sobre os dados de treinamento. Se seu conjunto de dados se encaixar na memória, adicionar um [ponto de verificação de cache](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint*) a seu pipeline do ML.NET antes de acrescentar o instrutor tornará a execução do treinamento mais rápida.
+Algoritmos lineares fazem várias passagens sobre os dados de treinamento. Se seu conjunto de dados se encaixar na memória, adicionar um [ponto de verificação de cache](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint%2A) a seu pipeline do ML.NET antes de acrescentar o instrutor tornará a execução do treinamento mais rápida.
 
 **Treinadores Lineares**
 

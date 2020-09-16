@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, Selection Item control pattern
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
-ms.openlocfilehash: 441417aa370563a9ce8b513be6ca4507b21e1e4a
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 671a18d43a297026e4264cc35412fb9d233b2f33
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163552"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551498"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>Implementando o padrão de controle SelectionItem de interface de usuário
 > [!NOTE]
@@ -57,4 +57,4 @@ ms.locfileid: "87163552"
 - [Implementando o padrão de controle Selection de automação de interface do usuário](implementing-the-ui-automation-selection-control-pattern.md)
 - [Visão geral da árvore de automação de interface do usuário](ui-automation-tree-overview.md)
 - [Usar armazenamento em cache em automação de interface do usuário](use-caching-in-ui-automation.md)
-- [Exemplo de provedor de fragmento](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))
+- [Exemplo de provedor de fragmento](/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))

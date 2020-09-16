@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: 36cd3a927d2fdf197e6b496d9308fc43a555d59b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b71c1eeaa136d01c701191f1bb145674efccbc56
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346161"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551035"
 ---
 # <a name="visual-basic-coding-conventions"></a>Convenções de codificação do Visual Basic
 A Microsoft desenvolve exemplos e documentação que seguem as diretrizes neste tópico. Se você seguir as mesmas convenções de codificação, poderá obter os seguintes benefícios:  
@@ -28,7 +28,7 @@ A Microsoft desenvolve exemplos e documentação que seguem as diretrizes neste 
   
 - Para obter informações sobre as diretrizes de nomenclatura, consulte o tópico [diretrizes de nomenclatura](../../../standard/design-guidelines/naming-guidelines.md) .  
   
-- Não use "My" ou "My" como parte de um nome de variável. Essa prática cria confusão com os objetos `My`.  
+- Não use "My" ou "My" como parte de um nome de variável. Essa prática cria confusão com os `My` objetos.  
   
 - Você não precisa alterar os nomes dos objetos no código gerado automaticamente para que eles se adaptem às diretrizes.  
   
@@ -67,7 +67,7 @@ A Microsoft desenvolve exemplos e documentação que seguem as diretrizes neste 
   
 ## <a name="program-structure"></a>Estrutura do programa  
   
-- Quando você usa o método `Main`, use a construção padrão para novos aplicativos de console e use `My` para argumentos de linha de comando.  
+- Ao usar o `Main` método, use a construção padrão para novos aplicativos de console e use `My` para argumentos de linha de comando.  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
@@ -75,13 +75,13 @@ A Microsoft desenvolve exemplos e documentação que seguem as diretrizes neste 
   
 ### <a name="string-data-type"></a>Tipo de dados da cadeia de caracteres  
   
-- Use a [interpolação de cadeia de caracteres](https://docs.microsoft.com/dotnet/visual-basic/programming-guide/language-features/strings/interpolated-strings) para concatenar cadeias de caracteres curtas, como é mostrado no código a seguir.
+- Use a [interpolação de cadeia de caracteres](../language-features/strings/interpolated-strings.md) para concatenar cadeias de caracteres curtas, como é mostrado no código a seguir.
   
      ```vb
      MsgBox($"hello{vbCrLf}goodbye")
      ```
   
-- Para acrescentar cadeias de caracteres em loops, use o objeto <xref:System.Text.StringBuilder>.  
+- Para acrescentar cadeias de caracteres em loops, use o <xref:System.Text.StringBuilder> objeto.  
   
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
@@ -92,7 +92,7 @@ A Microsoft desenvolve exemplos e documentação que seguem as diretrizes neste 
   
 ### <a name="unsigned-data-type"></a>Tipo de Dados Sem Sinal  
   
-- Use `Integer` em vez de tipos não assinados, exceto onde eles forem necessários.  
+- Use `Integer` tipos não assinados, exceto onde forem necessários.  
   
 ### <a name="arrays"></a>Matrizes  
   
@@ -121,7 +121,7 @@ A Microsoft desenvolve exemplos e documentação que seguem as diretrizes neste 
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
 ### <a name="use-the-with-keyword"></a>Usar a palavra-chave with  
- Quando você faz uma série de chamadas para um objeto, considere usar a palavra-chave `With`:  
+ Quando você faz uma série de chamadas para um objeto, considere usar a `With` palavra-chave:  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
@@ -129,7 +129,7 @@ A Microsoft desenvolve exemplos e documentação que seguem as diretrizes neste 
  Não use `On Error Goto`.  
   
 ### <a name="use-the-isnot-keyword"></a>Usar a palavra-chave IsNot  
- Use a palavra-chave `IsNot` em vez de `Not...Is Nothing`.  
+ Use a `IsNot` palavra-chave em vez de `Not...Is Nothing` .  
   
 ### <a name="new-keyword"></a>Nova palavra-chave  
   
@@ -147,11 +147,11 @@ A Microsoft desenvolve exemplos e documentação que seguem as diretrizes neste 
   
 ### <a name="event-handling"></a>Tratamento de Evento  
   
-- Use `Handles` em vez de `AddHandler`:  
+- Use `Handles` em vez de `AddHandler` :  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
-- Use `AddressOf`e não crie uma instância do delegado explicitamente:  
+- Use `AddressOf` e não instancie explicitamente o delegado:  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
@@ -159,10 +159,10 @@ A Microsoft desenvolve exemplos e documentação que seguem as diretrizes neste 
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- Não verifique se um evento é `Nothing` (nulo) antes de chamar o método `RaiseEvent`. `RaiseEvent` verifica `Nothing` antes de gerar o evento.  
+- Não verifique se um evento é `Nothing` (nulo) antes de chamar o `RaiseEvent` método. `RaiseEvent` verifica `Nothing` antes de gerar o evento.  
   
 ### <a name="using-shared-members"></a>Usando membros compartilhados  
- Chame membros de `Shared` usando o nome de classe, não de uma variável de instância.  
+ Chame `Shared` membros usando o nome da classe, não de uma variável de instância.  
   
 ### <a name="use-xml-literals"></a>Usar literais XML  
  Os literais XML simplificam as tarefas mais comuns que você encontrar ao trabalhar com XML (por exemplo, carregar, consultar e transformar). Ao desenvolver com XML, siga estas diretrizes:  
@@ -173,7 +173,7 @@ A Microsoft desenvolve exemplos e documentação que seguem as diretrizes neste 
   
 - Use as propriedades do eixo XML para acessar elementos e atributos em um documento XML.  
   
-- Use expressões inseridas para incluir valores e para criar XML a partir de valores existentes em vez de usar chamadas à API, como o método `Add`:  
+- Use expressões inseridas para incluir valores e para criar XML a partir de valores existentes em vez de usar chamadas de API, como o `Add` método:  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
@@ -195,18 +195,18 @@ A Microsoft desenvolve exemplos e documentação que seguem as diretrizes neste 
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
-- Alinhar cláusulas de consulta na instrução `From`:  
+- Alinhar cláusulas de consulta na `From` instrução:  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
-- Use cláusulas `Where` antes de outras cláusulas de consulta para que as cláusulas de consulta posteriores operem no conjunto de dados filtrado:  
+- Use `Where` cláusulas antes de outras cláusulas de consulta para que as cláusulas de consulta posteriores operem no conjunto de dados filtrado:  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
-- Use a cláusula `Join` para definir explicitamente uma operação JOIN em vez de usar a cláusula `Where` para definir implicitamente uma operação JOIN:  
+- Use a `Join` cláusula para definir explicitamente uma operação JOIN em vez de usar a `Where` cláusula para definir implicitamente uma operação JOIN:  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Diretrizes de codificação segura](../../../standard/security/secure-coding-guidelines.md)

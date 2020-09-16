@@ -2,12 +2,12 @@
 title: Windows Forms alterações significativas
 description: Lista as alterações significativas em Windows Forms para .NET Core e .NET 5.
 ms.date: 09/08/2020
-ms.openlocfilehash: c3d2d23601d6a2d9d44761c4371fe34d3d5ed1f3
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: 3e7d077d07203d9c231ae4a7805e593c5432c135
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656321"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678988"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Alterações recentes no Windows Forms
 
@@ -17,6 +17,7 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 | Alteração significativa | Versão introduzida |
 | - | :-: |
+| [OutputType definido como WinExe para aplicativos WPF e WinForms](#outputtype-set-to-winexe-for-wpf-and-winforms-apps) | 5,0 |
 | [APIs relacionadas a DataGridView agora lança InvalidOperationException](#datagridview-related-apis-now-throw-invalidoperationexception) | 5,0 |
 | [Os aplicativos WinForms e WPF usam Microsoft. NET. Sdk](#winforms-and-wpf-apps-use-microsoftnetsdk) | 5,0 |
 | [Controles da barra de status removidos](#removed-status-bar-controls) | 5,0 |
@@ -38,6 +39,10 @@ As seguintes alterações significativas estão documentadas nesta página:
 | [Não há suporte para a opção de compatibilidade UseLegacyImages](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [automatically-infer-winexe-output-type](../../../includes/core-changes/windowsforms/5.0/automatically-infer-winexe-output-type.md)]
+
+***
 
 [!INCLUDE [null-owner-causes-invalidoperationexception](../../../includes/core-changes/windowsforms/5.0/null-owner-causes-invalidoperationexception.md)]
 

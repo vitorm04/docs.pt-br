@@ -14,7 +14,7 @@ O suporte interno para consumo de APIs do [tempo de execução do Windows (WinRT
 
 5,0 Preview 6
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 Anteriormente, o CoreCLR poderia consumir [arquivos de metadados do Windows (WinMD)](/uwp/winrt-cref/winmd-files) para ativar e consumir tipos de WinRT. A partir do .NET 5,0, o CoreCLR não pode mais consumir arquivos WinMD diretamente.
 

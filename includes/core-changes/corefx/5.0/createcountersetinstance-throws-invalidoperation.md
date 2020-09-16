@@ -10,7 +10,7 @@ ms.locfileid: "84144469"
 
 A partir do .NET 5,0, <xref:System.Diagnostics.PerformanceData.CounterSet.CreateCounterSetInstance(System.String)?displayProperty=nameWithType> o lançará um <xref:System.InvalidOperationException> em vez de um <xref:System.ArgumentException> se o conjunto de contadores já existir.
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 No .NET Framework e no .NET Core 1,0 a 3,1, você pode criar uma instância do conjunto de contadores chamando <xref:System.Diagnostics.PerformanceData.CounterSet.CreateCounterSetInstance%2A> . No entanto, se o conjunto de contadores já existir, o método lançará uma <xref:System.ArgumentException> exceção.
 

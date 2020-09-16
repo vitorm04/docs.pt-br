@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: d93bdee8d5a057be0f405fe4334d7edbdc0649ec
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 214a368ba269103093a90431cdf9e77ab5989c07
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174400"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557210"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Tutorial: prever a demanda de serviço de aluguel de bicicletas com análise de série temporal e ML.NET
 
@@ -73,7 +73,7 @@ O conjunto de conteúdo original contém várias colunas correspondentes ao sazo
 
 O DataSet original é mapeado para uma tabela de banco de dados com o esquema a seguir em um banco de dados SQL Server.
 
-```SQL
+```sql
 CREATE TABLE [Rentals] (
     [RentalDate] DATE NOT NULL,
     [Year] INT NOT NULL,
@@ -83,7 +83,7 @@ CREATE TABLE [Rentals] (
 
 Veja a seguir um exemplo dos dados:
 
-| RentalDate | Ano | TotalRentals |
+| RentalDate | Year | TotalRentals |
 | --- | --- | --- |
 |1/1/2011|0|985|
 |1/2/2011|0|801|
@@ -217,7 +217,7 @@ Avalie como o modelo é executado prevendo os dados do próximo ano e comparando
 
 Se você estiver satisfeito com seu modelo, salve-o para uso posterior em outros aplicativos.
 
-1. No `Main` método, crie um [`TimeSeriesPredictionEngine`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602) . [`TimeSeriesPredictionEngine`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602)é um método de conveniência para fazer previsões únicas.
+1. No `Main` método, crie um [`TimeSeriesPredictionEngine`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602) . [`TimeSeriesPredictionEngine`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602) é um método de conveniência para fazer previsões únicas.
 
     [!code-csharp [CreateTimeSeriesEngine](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L51)]
 
