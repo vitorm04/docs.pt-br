@@ -8,9 +8,9 @@ ms.locfileid: "88024687"
 ---
 ### <a name="intptr-and-uintptr-implement-iformattable"></a>IntPtr e UIntPtr implementam IFormattable
 
-<xref:System.IntPtr>e <xref:System.UIntPtr> agora implemente <xref:System.IFormattable> . As funções que verificam o <xref:System.IFormattable> suporte agora podem retornar resultados diferentes para esses tipos, pois eles podem passar um especificador de formato e uma cultura.
+<xref:System.IntPtr> e <xref:System.UIntPtr> agora implemente <xref:System.IFormattable> . As funções que verificam o <xref:System.IFormattable> suporte agora podem retornar resultados diferentes para esses tipos, pois eles podem passar um especificador de formato e uma cultura.
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 Em versões anteriores do .NET, <xref:System.IntPtr> e <xref:System.UIntPtr> não implemente <xref:System.IFormattable> . As funções que verificam <xref:System.IFormattable> podem retornar a apenas chamar <xref:System.IntPtr.ToString%2A?displayProperty=nameWithType> ou <xref:System.UIntPtr.ToString%2A?displayProperty=nameWithType> , o que significa que especificadores de formato e culturas não são respeitados.
 
@@ -20,7 +20,7 @@ Essa alteração afeta cenários como cadeias de caracteres interpoladas e <xref
 
 #### <a name="reason-for-change"></a>Motivo da alteração
 
-<xref:System.IntPtr>e <xref:System.UIntPtr> agora tem suporte a idiomas em C# por meio das `nint` `nuint` palavras-chave e. Os tipos de suporte foram atualizados para fornecer paridade próxima (quando possível) com a funcionalidade exposta por outros tipos primitivos, como <xref:System.Int32?displayProperty=nameWithType> .
+<xref:System.IntPtr> e <xref:System.UIntPtr> agora tem suporte a idiomas em C# por meio das `nint` `nuint` palavras-chave e. Os tipos de suporte foram atualizados para fornecer paridade próxima (quando possível) com a funcionalidade exposta por outros tipos primitivos, como <xref:System.Int32?displayProperty=nameWithType> .
 
 #### <a name="version-introduced"></a>Versão introduzida
 

@@ -14,7 +14,7 @@ Os tempos de execução do .NET não adicionam mais um `A` `W` sufixo ou aos nom
 
 5,0 versão prévia 4
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 O [Windows tem uma convenção](/windows/win32/intl/conventions-for-function-prototypes) de adicionar `A` um `W` sufixo ou para SDK do Windows nomes de função, que correspondem à página de código do Windows e às versões Unicode, respectivamente.
 

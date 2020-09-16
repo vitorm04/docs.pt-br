@@ -10,7 +10,7 @@ ms.locfileid: "88137488"
 
 A implementação de <xref:System.Linq.Enumerable.OrderBy%2A> `.` <xref:System.Linq.Enumerable.First%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> e <xref:System.Linq.Enumerable.OrderBy%2A> `.` <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> foi alterada, resultando em maior complexidade para a operação.
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 No .NET Core 1. x-3. x, chamando <xref:System.Linq.Enumerable.OrderBy%2A> ou <xref:System.Linq.Enumerable.OrderByDescending%2A> seguido por <xref:System.Linq.Enumerable.First%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> ou <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> opera com a `O(N)` complexidade. Como apenas o primeiro elemento (ou padrão) é necessário, apenas uma enumeração é necessária para encontrá-lo. No entanto, o predicado que é fornecido para <xref:System.Linq.Enumerable.First%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> ou <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> é invocado exatamente `N` vezes, em que `N` é o comprimento da sequência.
 
@@ -25,7 +25,7 @@ O benefício de invocar o predicado menos vezes supera uma complexidade geral ma
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-5.0
+5,0
 
 #### <a name="recommended-action"></a>Ação recomendada
 

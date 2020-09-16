@@ -3,12 +3,12 @@ title: Específicos de recurso do Windows Workflow Foundation
 description: Este artigo descreve os novos recursos que .NET Framework 4 adiciona a Windows Workflow Foundation e cenários nos quais os recursos podem ser úteis.
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: fb490b3dd368710bf2ed98f7c53b7b184fa15b0b
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: ae15f3ed536967cb15d1a5913f9ca1eab8a510d9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419948"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554600"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Específicos de recurso do Windows Workflow Foundation
 
@@ -16,7 +16,7 @@ ms.locfileid: "83419948"
 
 ## <a name="messaging-activities"></a>Atividades de mensagem
 
-As atividades de mensagens ( <xref:System.ServiceModel.Activities.Receive> , <xref:System.ServiceModel.Activities.SendReply> , <xref:System.ServiceModel.Activities.Send> , <xref:System.ServiceModel.Activities.ReceiveReply> ) são usadas para enviar e receber mensagens do WCF de seu fluxo de trabalho. <xref:System.ServiceModel.Activities.Receive>e <xref:System.ServiceModel.Activities.SendReply> as atividades são usadas para formar uma operação de serviço Windows Communication Foundation (WCF) que é exposta por meio do WSDL, assim como os serviços Web WCF padrão. <xref:System.ServiceModel.Activities.Send>e <xref:System.ServiceModel.Activities.ReceiveReply> são usados para consumir um serviço Web semelhante a um WCF <xref:System.ServiceModel.ChannelFactory> ; uma experiência de **Adicionar referência de serviço** também existe para o Workflow Foundation que gera atividades pré-configuradas.
+As atividades de mensagens ( <xref:System.ServiceModel.Activities.Receive> , <xref:System.ServiceModel.Activities.SendReply> , <xref:System.ServiceModel.Activities.Send> , <xref:System.ServiceModel.Activities.ReceiveReply> ) são usadas para enviar e receber mensagens do WCF de seu fluxo de trabalho. <xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.SendReply> as atividades são usadas para formar uma operação de serviço Windows Communication Foundation (WCF) que é exposta por meio do WSDL, assim como os serviços Web WCF padrão. <xref:System.ServiceModel.Activities.Send> e <xref:System.ServiceModel.Activities.ReceiveReply> são usados para consumir um serviço Web semelhante a um WCF <xref:System.ServiceModel.ChannelFactory> ; uma experiência de **Adicionar referência de serviço** também existe para o Workflow Foundation que gera atividades pré-configuradas.
 
 ### <a name="getting-started-with-messaging-activities"></a>Guia de introdução com atividades de mensagem
 
@@ -54,7 +54,7 @@ O <xref:System.ServiceModel.WorkflowServiceHost> é o host de fluxo de trabalho 
 
 Um serviço BestPriceFinder chama vários serviços de companhia aérea para encontrar o melhor preço de tíquete para uma rota específica. A implementação desse cenário exigiria que você hospede o fluxo de trabalho no <xref:System.ServiceModel.WorkflowServiceHost> . Ele também usaria as atividades da mensagem para receber a solicitação de preço, recuperar os preços dos serviços de back-end e responder à solicitação de preço com o melhor preço.
 
-## <a name="correlation"></a>Correlation
+## <a name="correlation"></a>Correlação
 
 Uma correlação é uma das duas coisas:
 
@@ -86,7 +86,7 @@ Um fluxo de trabalho de processamento de pedidos é usado para lidar com a cria�
 
 O esquema de configuração do WCF é complexo e fornece aos usuários muitos recursos difíceis de encontrar. No [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] , nos concentramos em ajudar os usuários do WCF a configurar seus serviços com os seguintes recursos:
 
-- Eliminando a necessidade para a configuração explícita por serviço. Se você não configurar nenhum \< elemento de> de serviço para o serviço e seu serviço não definir nenhum ponto de extremidade programaticamente, um conjunto de pontos de extremidade será adicionado automaticamente ao seu serviço, um por endereço base de serviço e por contrato implementado pelo seu serviço.
+- Eliminando a necessidade para a configuração explícita por serviço. Se você não configurar nenhum \<service> elemento para o serviço e seu serviço não definir nenhum ponto de extremidade programaticamente, um conjunto de pontos de extremidade será adicionado automaticamente ao seu serviço, um por endereço base de serviço e por contrato implementado pelo seu serviço.
 
 - Permite que o usuário para definir valores padrão para associações e comportamentos de WCF, que serão aplicados aos serviços sem a configuração explícita.
 
@@ -96,15 +96,15 @@ O esquema de configuração do WCF é complexo e fornece aos usuários muitos re
 
 ### <a name="getting-started"></a>Introdução
 
-- [O guia de um desenvolvedor a WCF 4,0](https://docs.microsoft.com/previous-versions/dotnet/articles/ee354381(v=msdn.10))
+- [O guia de um desenvolvedor a WCF 4,0](/previous-versions/dotnet/articles/ee354381(v=msdn.10))
 
-- [Fábrica de canais de configuração](xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601)
+- [Factory do canal de configuração](xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601)
 
 - [Elemento padrão de ponto de extremidade](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [Aprimoramentos de configuração de serviço no .NET Framework 4](https://docs.microsoft.com/archive/blogs/endpoint/service-configuration-improvements-in-net-4)
+- [Aprimoramentos de configuração de serviço no .NET Framework 4](/archive/blogs/endpoint/service-configuration-improvements-in-net-4)
 
-- [Erro comum de usuário em .NET 4: Mistyping o nome da configuração de serviço de WF/WCF](https://docs.microsoft.com/archive/blogs/endpoint/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name)
+- [Erro comum de usuário em .NET 4: Mistyping o nome da configuração de serviço de WF/WCF](/archive/blogs/endpoint/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name)
 
 ### <a name="simplified-configuration-scenarios"></a>Cenários simplificados de configuração
 
@@ -128,7 +128,7 @@ O [DataContractResolver](../wcf/samples/datacontractresolver.md) resolve esses p
 
 - [Documentação da API de resolução do contrato de dados](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [Introdução ao resolvedor do contrato de dados](https://docs.microsoft.com/archive/blogs/youssefm/configuring-known-types-dynamically-introducing-the-datacontractresolver)
+- [Introdução ao resolvedor do contrato de dados](/archive/blogs/youssefm/configuring-known-types-dynamically-introducing-the-datacontractresolver)
 
 - Exemplos:
 
@@ -206,7 +206,7 @@ As atividades procedurais fornecem um mecanismo para o fluxo de controle em um m
 
   - [Designer de atividade Parallel](/visualstudio/workflow-designer/parallel-activity-designer)
 
-  - [Designer de atividade do ParallelForEach \< T>](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
+  - [Designer de atividade\<T> ParallelForEach](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
 
 ### <a name="procedural-activity-scenarios"></a>Cenários procedurais de atividades
 
@@ -288,7 +288,7 @@ O serviço de roteamento no .NET 4 foi projetado para facilitar a solução dess
 
 2. Exemplos: [serviços de roteamento &#91;exemplos do WCF&#93;](../wcf/samples/routing-services.md)
 
-3. Blog: [regras de roteamento!](https://docs.microsoft.com/archive/blogs/RoutingRules/)
+3. Blog: [regras de roteamento!](/archive/blogs/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>Cenários de roteamento
 
@@ -328,7 +328,7 @@ Um desenvolvedor não deseja para pontos de extremidade difícil de código, des
 
 ## <a name="tracking"></a>Acompanhamento
 
-O rastreamento de fluxo de trabalho fornece informações sobre a execução de uma instância de fluxo de trabalho. Os eventos de rastreamento são emitidos de um fluxo de trabalho no nível da instância do fluxo de trabalho e quando as atividades no fluxo de trabalho são executadas. Um participante de acompanhamento de fluxo de trabalho precisa ser adicionado ao host de fluxo de trabalho para assinar a acompanhar registros. Os registros de rastreamento são filtrados utilizando um perfil de rastreamento. O .NET Framework fornece um participante de acompanhamento de ETW (rastreamento de eventos para Windows) e um perfil básico é instalado no arquivo Machine. config.
+O rastreamento de fluxo de trabalho fornece informações sobre a execução de uma instância de fluxo de trabalho. Os eventos de rastreamento são emitidos de um fluxo de trabalho no nível da instância do fluxo de trabalho e quando as atividades no fluxo de trabalho são executadas. Um participante de acompanhamento de fluxo de trabalho precisa ser adicionado ao host de fluxo de trabalho para assinar a acompanhar registros. Os registros de rastreamento são filtrados utilizando um perfil de rastreamento. O .NET Framework fornece um participante de acompanhamento de ETW (rastreamento de eventos para Windows) e um perfil básico é instalado no arquivo de machine.config.
 
 ### <a name="getting-started"></a>Introdução
 

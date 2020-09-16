@@ -18,12 +18,12 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-ms.openlocfilehash: 76b1a87c4513fdee21c5c3d5eba533b11e022e3a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: e83979e5843c52fc3a446a5b669ae8822b32ddad
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622153"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555582"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Criando protótipos em código gerenciado
 Este tópico descreve como acessar funções não gerenciadas e apresenta vários campos de atributo que anotam a definição de método no código gerenciado. Para obter exemplos que demonstram como construir declarações baseadas no .NET a serem usadas com a invocação de plataforma, consulte [Realizando marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md).  
@@ -230,13 +230,13 @@ interface IDemandStubsItf
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Consumindo funções de DLL não gerenciadas](consuming-unmanaged-dll-functions.md)
 - [Especificando um ponto de entrada](specifying-an-entry-point.md)
 - [Especificando um conjunto de caracteres](specifying-a-character-set.md)
 - [Exemplos de invocação de plataforma](platform-invoke-examples.md)
-- [Considerações sobre Segurança da Invocação de Plataforma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
+- [Considerações sobre Segurança da Invocação de Plataforma](/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
 - [Identificando funções em DLLs](identifying-functions-in-dlls.md)
 - [Criando uma classe para conter funções de DLL](creating-a-class-to-hold-dll-functions.md)
 - [Chamando uma função de DLL](calling-a-dll-function.md)

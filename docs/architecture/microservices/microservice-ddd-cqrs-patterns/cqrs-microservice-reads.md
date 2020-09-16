@@ -2,12 +2,12 @@
 title: Implementando leituras/consultas em um microsserviço CQRS
 description: Arquitetura de Microsserviços do .NET para aplicativos .NET em contêineres | Entenda a implementação do lado de consultas do CQRS no microsserviço de ordenação no eShopOnContainers usando o Dapper.
 ms.date: 10/08/2018
-ms.openlocfilehash: 41932122326cf4c49b9c9e2c344d2ac17da7466b
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: e6ea7b4b7b37df9ee972319f597ab045bf3bd215
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358889"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678797"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementando leituras/consultas em um microsserviço CQRS
 
@@ -173,7 +173,7 @@ public class OrderSummary
 }
 ```
 
-Essa é outra razão pela qual tipos retornados explícitos são melhores que tipos dinâmicos no longo prazo. Ao usar o atributo `ProducesResponseType`, também é possível especificar qual é o resultado esperado no que diz respeito a possíveis erros/códigos HTTP, como 200, 400, etc.
+Essa é outra razão pela qual tipos retornados explícitos são melhores que tipos dinâmicos no longo prazo. Ao usar o `ProducesResponseType` atributo, você também pode especificar qual é o resultado esperado em relação aos possíveis erros/códigos http, como 200, 400, etc.
 
 Na imagem a seguir, você pode ver como a interface do usuário Swagger mostra as informações de ResponseType.
 

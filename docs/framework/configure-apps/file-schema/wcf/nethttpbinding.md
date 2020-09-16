@@ -2,12 +2,12 @@
 title: <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: b0d81ca0-87c5-4090-8baa-e390fd3656d2
-ms.openlocfilehash: 815ee3993a2f2b2819210b225c0cb0b3d3fd8b87
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f788849a9b11b81b4542eb2c6f855a8d4db4dd44
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84201022"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555478"
 ---
 # \<netHttpBinding>
 Representa uma associação que um serviço Windows Communication Foundation (WCF) pode usar para configurar e expor pontos de extremidade que são capazes de se comunicar via HTTP. Quando usado com um contrato duplex, os Web Sockets serão usados; caso contrário, HTTP será usado.  
@@ -17,7 +17,7 @@ Representa uma associação que um serviço Windows Communication Foundation (WC
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<netHttpBinding>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <netHttpBinding>
@@ -53,7 +53,7 @@ Representa uma associação que um serviço Windows Communication Foundation (WC
 </netHttpBinding>
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>Tipo  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -86,7 +86,7 @@ Representa uma associação que um serviço Windows Communication Foundation (WC
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<security>](security-of-basichttpbinding.md)|Define as configurações de segurança para a associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement> .|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições sobre a complexidade de mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> .|  
+|[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições sobre a complexidade de mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> .|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 7eb9aa9714dcb920118a6422b9f6c78775bf1a5c
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: cf2137c2ebd2f4901401ed25746febaa440a08f5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662921"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554756"
 ---
 # <a name="net-class-library-overview"></a>Visão geral da biblioteca de classes do .NET
 
@@ -85,20 +85,20 @@ As implementações do .NET incluem classes, interfaces, delegados e tipos de va
   
  A tabela a seguir lista os tipos base que o .NET fornece, descreve resumidamente cada tipo e indica o tipo correspondente em Visual Basic, C#, C++ e F#.  
   
-|Categoria|Nome da classe|Descrição|Tipo de dados do Visual Basic|Tipo de dados em C#|Tipo de dados de C++/CLI|Tipo de dados de F#|  
+|Categoria|Nome da classe|Description|Tipo de dados do Visual Basic|Tipo de dados em C#|Tipo de dados de C++/CLI|Tipo de dados de F#|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
-|Inteiro|<xref:System.Byte>|Um inteiro sem sinal de 8 bits.|**Minuciosa**|**byte**|**unsigned char**|**byte**|  
-||<xref:System.SByte>|Um inteiro com sinal de 8 bits.<br /><br /> Não compatível com CLS.|**SByte**|**sbyte**|**char**<br /> -ou-<br /> **signed** **char**|**sbyte**|  
-||<xref:System.Int16>|Um inteiro com sinal de 16 bits.|**Baixo**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|Um inteiro de 32 bytes com sinal.|**Inteiro**|**int**|**int**<br /><br /> -ou-<br /><br /> **long**|**int**|  
-||<xref:System.Int64>|Um inteiro de 64 bytes com sinal.|**Long**|**long**|**__int64**|**int64**|  
+|Integer|<xref:System.Byte>|Um inteiro de 8 bits sem sinal.|**Byte**|**byte**|**unsigned char**|**byte**|  
+||<xref:System.SByte>|Um inteiro com sinal de 8 bits.<br /><br /> Não compatível com CLS.|**SByte**|**sbyte**|**char**<br /> - ou -<br /> **signed** **char**|**sbyte**|  
+||<xref:System.Int16>|Um inteiro de 16 bits com sinal.|**Baixo**|**short**|**short**|**int16**|  
+||<xref:System.Int32>|Um inteiro com sinal de 32 bits.|**Inteiro**|**int**|**int**<br /><br /> - ou -<br /><br /> **longo**|**int**|  
+||<xref:System.Int64>|Um inteiro com sinal de 64 bits.|**Long**|**longo**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|Um inteiro sem sinal de 16 bits.<br /><br /> Não compatível com CLS.|**Num**|**ushort**|**unsigned short**|**UInt16**|  
-||<xref:System.UInt32>|Um inteiro não assinado de 32 bits.<br /><br /> Não compatível com CLS.|**UInteger**|**uint**|**unsigned int**<br /> -ou-<br /> **unsigned long**|**uint32**|  
-||<xref:System.UInt64>|Um inteiro não assinado de 64 bits.<br /><br /> Não compatível com CLS.|**ULong**|**ULONG**|**unsigned __int64**|**uint64**|  
-|Ponto flutuante|<xref:System.Single>|Um número de ponto flutuante de precisão simples (32 bits).|**Exclusivo**|**float**|**float**|**float32**<br> ou<br>**single**|  
-||<xref:System.Double>|Um número de ponto flutuante de precisão dupla (64 bits).|**Clique**|**double**|**double**|**float**<br> ou <br> **double**|  
-|Logical|<xref:System.Boolean>|Um valor booliano (verdadeiro ou falso).|**Booliano**|**bool**|**bool**|**bool**|  
-|Outros|<xref:System.Char>|Um caractere Unicode (16 bits).|**º**|**char**|**wchar_t**|**char**|  
+||<xref:System.UInt32>|Um inteiro sem sinal de 32 bits.<br /><br /> Não compatível com CLS.|**UInteger**|**uint**|**unsigned int**<br /> - ou -<br /> **unsigned long**|**uint32**|  
+||<xref:System.UInt64>|Um inteiro sem sinal de 64 bits.<br /><br /> Não compatível com CLS.|**ULong**|**ULONG**|**unsigned __int64**|**uint64**|  
+|Ponto flutuante|<xref:System.Single>|Um número de ponto flutuante de precisão simples (32 bits).|**Single**|**float**|**float**|**float32**<br> ou<br>**single**|  
+||<xref:System.Double>|Um número de ponto flutuante de precisão dupla (64 bits).|**Double**|**double**|**double**|**float**<br> ou <br> **double**|  
+|Lógico|<xref:System.Boolean>|Um valor booliano (verdadeiro ou falso).|**Booliano**|**bool**|**bool**|**bool**|  
+|Outro|<xref:System.Char>|Um caractere Unicode (16 bits).|**º**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|Um valor decimal (128 bits).|**Decimal**|**decimal**|**Decimal**|**decimal**|  
 ||<xref:System.IntPtr>|Um inteiro com sinal cujo tamanho dependa da plataforma subjacente (um valor de 32 bits em uma plataforma de 32 bits e um valor de 64 bits em uma plataforma de 64 bits).|**IntPtr**<br /><br /> Nenhum tipo interno.|**IntPtr**<br /><br /> Nenhum tipo interno.|**IntPtr**<br /><br /> Nenhum tipo interno.|**unativeint**|  
 ||<xref:System.UIntPtr>|Um inteiro sem sinal cujo tamanho dependa da plataforma subjacente (um valor de 32 bits em uma plataforma de 32 bits e um valor de 64 bits em uma plataforma de 64 bits).<br /><br /> Não compatível com CLS.|**UIntPtr**<br /><br /> Nenhum tipo interno.|**UIntPtr**<br /><br /> Nenhum tipo interno.|**UIntPtr**<br /><br /> Nenhum tipo interno.|**unativeint**|  
@@ -107,10 +107,10 @@ As implementações do .NET incluem classes, interfaces, delegados e tipos de va
   
  Além dos tipos de dados base, o namespace <xref:System> contém mais de 100 classes, que vão desde classes que identificam exceções até classes que lidam com os conceitos de runtime, como domínios de aplicativo e o coletor de lixo. O namespace <xref:System> também contém vários namespaces de segundo nível.  
   
- Para obter mais informações sobre namespaces, use o [Navegador de API do .NET](https://docs.microsoft.com/dotnet/api) para procurar a Biblioteca de classes do .NET. A documentação de referência de API fornece informações sobre cada namespace, seus tipos e cada um dos seus membros.  
+ Para obter mais informações sobre namespaces, use o [Navegador de API do .NET](../../api/index.md) para procurar a Biblioteca de classes do .NET. A documentação de referência de API fornece informações sobre cada namespace, seus tipos e cada um dos seus membros.  
   
 ## <a name="see-also"></a>Confira também
 
 - [Sistema de tipos comum](base-types/common-type-system.md)
-- [Navegador de API do .NET](../../api/index.md)
+- [Navegador de API .NET](../../api/index.md)
 - [Visão geral](../framework/get-started/overview.md)

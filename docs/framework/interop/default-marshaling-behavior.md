@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: 0469874d016725eb6423bb8453e9657b2be923d4
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: f2a508b87d2f4a9ad92bc0f27fc44d74d8e916d3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618565"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555270"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamento de marshaling padrão
 O marshaling de interoperabilidade opera em regras que determinam como os dados associados aos parâmetros de método se comportam, conforme eles passam entre a memória gerenciada e não gerenciada. Essas regras internas controlam atividades de marshaling como transformações de tipo de dados, se um receptor pode alterar os dados passados para ele e retornar essas alterações ao chamador e em quais circunstâncias o marshaler fornece otimizações de desempenho.  
@@ -23,7 +23,7 @@ O marshaling de interoperabilidade opera em regras que determinam como os dados 
  Esta seção identifica as características comportamentais padrão do serviço de marshaling de interoperabilidade. Ela apresenta informações detalhadas sobre o marshaling de matrizes, tipos boolianos, tipos char, representantes, classes, objetos, cadeias de caracteres e estruturas.  
   
 > [!NOTE]
-> Não há suporte para o marshaling de tipos genéricos. Para obter mais informações, consulte [Interoperando com tipos genéricos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
+> Não há suporte para o marshaling de tipos genéricos. Para obter mais informações, consulte [Interoperando com tipos genéricos](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Gerenciamento de memória com o marshaler de interoperabilidade  
  O marshaler de interoperabilidade sempre tenta liberar a memória alocada pelo código não gerenciado. Esse comportamento está em conformidade com as regras de gerenciamento da memória COM, mas é diferente das regras que regem o C++ nativo.  
@@ -40,7 +40,7 @@ BSTR MethodOne (BSTR b) {
   
  No entanto, se você definir o método como um protótipo de invocação de plataforma, substituir cada tipo **BSTR** por um tipo <xref:System.String> e chamar `MethodOne`, o Common Language Runtime tentará liberar `b` duas vezes. Altere o comportamento de marshaling usando tipos <xref:System.IntPtr>, em vez de tipos **String**.  
   
- O runtime sempre usa o método **CoTaskMemFree** para liberar memória. Se a memória com a qual você está trabalhando não foi alocada com o método **CoTaskMemAlloc**, use um **IntPtr** e libere a memória manualmente usando o método apropriado. Da mesma forma, evite a liberação automática de memória em situações em que a memória nunca deve ser liberada, como ao usar a função **GetCommandLine** no Kernel32.dll, que retorna um ponteiro para a memória do kernel. Para obter detalhes sobre como liberar a memória manualmente, consulte a [Amostra de buffers](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100)).  
+ O runtime sempre usa o método **CoTaskMemFree** para liberar memória. Se a memória com a qual você está trabalhando não foi alocada com o método **CoTaskMemAlloc**, use um **IntPtr** e libere a memória manualmente usando o método apropriado. Da mesma forma, evite a liberação automática de memória em situações em que a memória nunca deve ser liberada, como ao usar a função **GetCommandLine** no Kernel32.dll, que retorna um ponteiro para a memória do kernel. Para obter detalhes sobre como liberar a memória manualmente, consulte a [Amostra de buffers](/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Marshaling padrão para classes  
  As classes podem ter o marshaling realizado somente pela interoperabilidade COM e sempre têm o marshaling realizado como interfaces. Em alguns casos, a interface usada para realizar marshaling da classe é conhecida como a interface de classe. Para obter informações sobre como substituir a interface de classe por uma interface de sua preferência, confira [Apresentando a interface de classe](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).  
@@ -378,8 +378,8 @@ interface _Graphics {
 |Tipo de valor do sistema|Tipo de IDL|  
 |-----------------------|--------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
-|<xref:System.Decimal?displayProperty=nameWithType>|**VÍRGULA**|  
-|<xref:System.Guid?displayProperty=nameWithType>|**VOLUME**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  O código a seguir mostra a definição dos tipos não gerenciados **DATE**, **GUID**, **DECIMAL** e **OLE_COLOR** na biblioteca de tipos Stdole2.  
@@ -438,7 +438,7 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Tipos blittable e não blittable](blittable-and-non-blittable-types.md)
 - [Copiando e fixando](copying-and-pinning.md)

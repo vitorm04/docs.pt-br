@@ -12,9 +12,9 @@ ms.locfileid: "88557953"
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-5.0
+5,0
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 Nas versões anteriores do .NET, você pode definir a <xref:System.Net.Sockets.MulticastOption.Group?displayProperty=nameWithType> propriedade como `null` . Se o <xref:System.Net.Sockets.MulticastOption> for passado posteriormente para <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType> , o tempo de execução lançará um <xref:System.NullReferenceException> .
 

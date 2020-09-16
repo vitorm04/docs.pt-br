@@ -10,7 +10,7 @@ ms.locfileid: "88558160"
 
 Nenhuma nova versão do [pacote NuGet Microsoft. dotnet. PlatformAbstractions](https://www.nuget.org/packages/Microsoft.DotNet.PlatformAbstractions/) será produzida.
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 Anteriormente, novas versões da <xref:Microsoft.DotNet.PlatformAbstractions?displayProperty=fullName> biblioteca foram produzidas junto com as novas versões do .NET Core. No futuro, nenhuma nova funcionalidade será adicionada à biblioteca e nenhuma nova versão principal será lançada. No entanto, as versões existentes da biblioteca continuarão funcionando e serão atendidas.
 

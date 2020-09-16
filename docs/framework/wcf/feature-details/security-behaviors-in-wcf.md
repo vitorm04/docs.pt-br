@@ -2,12 +2,12 @@
 title: Comportamentos de segurança no WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: b25d476e9c9b4a70834274c6970dad1b056cecb9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1f15a5aec2f5da89e4069deec946cc20b54f414e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595200"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554059"
 ---
 # <a name="security-behaviors-in-wcf"></a>Comportamentos de segurança no WCF
 No Windows Communication Foundation (WCF), os comportamentos modificam o comportamento de tempo de execução no nível de serviço ou no nível do ponto de extremidade. (Para obter mais informações sobre comportamentos em geral, consulte [especificando o comportamento de tempo de execução do serviço](../specifying-service-run-time-behavior.md).) Os *comportamentos de segurança* permitem o controle sobre credenciais, autenticação, autorização e logs de auditoria. Você pode usar comportamentos por programação ou por meio de configuração. Este tópico se concentra na configuração dos seguintes comportamentos relacionados às funções de segurança:  
@@ -55,10 +55,10 @@ No Windows Communication Foundation (WCF), os comportamentos modificam o comport
   
  Para obter mais informações sobre como usar o elemento, consulte [como especificar valores de credencial do cliente](../how-to-specify-client-credential-values.md).  
   
-### <a name="certificate-of-clientcertificate-element"></a>\<certificate>do \<clientCertificate> elemento  
+### <a name="certificate-of-clientcertificate-element"></a>\<certificate> do \<clientCertificate> elemento  
  Use o [\<certificate>](../../configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) elemento quando o serviço precisar ter o certificado do cliente com antecedência para se comunicar com segurança com o cliente. Isso ocorre ao usar o padrão de comunicação duplex. No padrão de solicitação-resposta mais comum, o cliente inclui seu certificado na solicitação, que o serviço usa para proteger sua resposta de volta para o cliente. No entanto, o padrão de comunicação duplex não tem solicitações e respostas. O serviço não pode inferir o certificado do cliente da comunicação e, portanto, o serviço requer o certificado do cliente com antecedência para proteger as mensagens para o cliente. Você deve obter o certificado do cliente em um modo fora de banda e especificar o certificado usando esse elemento. Para obter mais informações sobre os serviços duplex, consulte [como: criar um contrato duplex](how-to-create-a-duplex-contract.md).  
   
-### <a name="authentication-of-clientcertificate-element"></a>\<authentication>do \<clientCertificate> elemento  
+### <a name="authentication-of-clientcertificate-element"></a>\<authentication> do \<clientCertificate> elemento  
  O [\<authentication>](../../configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) elemento permite que você personalize como os clientes são autenticados. Você pode definir o `CertificateValidationMode` atributo como `None` ,,, `ChainTrust` `PeerOrChainTrust` `PeerTrust` ou `Custom` . Por padrão, o nível é definido como `ChainTrust` , que especifica que cada certificado deve ser encontrado em uma hierarquia de certificados que terminam em uma *autoridade raiz* na parte superior da cadeia. Esse é o modo mais seguro. Você também pode definir o valor como `PeerOrChainTrust` , que especifica que os certificados emitidos por conta própria (peer Trust) são aceitos, bem como certificados que estão em uma cadeia confiável. Esse valor é usado ao desenvolver e depurar clientes e serviços porque certificados emitidos por conta própria não precisam ser comprados de uma autoridade confiável. Ao implantar um cliente, use o `ChainTrust` valor em vez disso. Você também pode definir o valor como `Custom` . Quando definido como o `Custom` valor, você também deve definir o `CustomCertificateValidatorType` atributo para um assembly e tipo usado para validar o certificado. Para criar seu próprio validador personalizado, você deve herdar da <xref:System.IdentityModel.Selectors.X509CertificateValidator> classe abstrata.  
   
 ### <a name="issuedtokenauthentication-element"></a>Elemento \<issuedTokenAuthentication>  
@@ -119,7 +119,7 @@ No Windows Communication Foundation (WCF), os comportamentos modificam o comport
  Defina o certificado usado para autenticar o cliente com este elemento. Para obter mais informações, consulte [como especificar valores de credenciais de cliente](../how-to-specify-client-credential-values.md).  
   
 #### \<httpDigest>  
- Esse recurso deve ser habilitado com Active Directory no Windows e no Serviços de Informações da Internet (IIS). Para obter mais informações, consulte [autenticação Digest no IIS 6,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10)).  
+ Esse recurso deve ser habilitado com Active Directory no Windows e no Serviços de Informações da Internet (IIS). Para obter mais informações, consulte [autenticação Digest no IIS 6,0](/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10)).  
   
 #### <a name="issuedtoken-element"></a>Elemento \<issuedToken>  
  O [\<issuedToken>](../../configure-apps/file-schema/wcf/issuedtoken.md) contém os elementos usados para configurar um emissor local de tokens ou comportamentos usados com um serviço de token de segurança. Para obter instruções sobre como configurar um cliente para usar um emissor local, consulte [como: configurar um emissor local](how-to-configure-a-local-issuer.md).  
@@ -221,7 +221,7 @@ No Windows Communication Foundation (WCF), os comportamentos modificam o comport
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Auditoria](auditing-security-events.md)
-- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.openlocfilehash: c735d30920fd3c8cd13243b4a5a29489ce05b262
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2ede74dd8a48735a7ded450d1da6d9cda8fc5ae6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289688"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554489"
 ---
 # <a name="binary-serialization"></a>Serialização binária
 
@@ -350,8 +350,8 @@ Descreve o mecanismo de serialização de XML que está incluído com o Common L
 - [Segurança e serialização](../../framework/misc/security-and-serialization.md)\
 Descreve as diretrizes para codificação segura para seguir ao escrever o código que executa a serialização.
 
-- [Comunicação remota do .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+- [Comunicação remota do .NET](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
 Descreve os vários métodos que começam no .NET Framework para comunicação remota.
 
-- [Serviços Web XML criados usando ASP.NET e clientes de serviço Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
+- [Serviços Web XML criados usando ASP.NET e clientes de serviço Web XML](/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
 Artigos que descrevem e explicam como programar serviços Web XML criados usando o ASP.NET.

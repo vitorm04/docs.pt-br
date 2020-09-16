@@ -10,7 +10,7 @@ ms.locfileid: "88720172"
 
 Um bug foi corrigido na <xref:System.Uri?displayProperty=fullName> classe, de modo que os caminhos de URI absolutos que contêm caracteres não-ASCII agora são analisados corretamente em plataformas UNIX.
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 Nas versões anteriores do .NET, caminhos de URI absolutos que contêm caracteres não ASCII são analisados incorretamente em plataformas UNIX e os segmentos do caminho são duplicados. (Caminhos absolutos são aqueles que começam com "/".) O problema de análise foi corrigido para o .NET 5,0. Se você mudar de uma versão anterior do .NET para o .NET 5,0 ou posterior, você obterá valores diferentes produzidos por <xref:System.Uri.AbsoluteUri?displayProperty=nameWithType> , <xref:System.Uri.ToString?displayProperty=nameWithType> e outros <xref:System.Uri> Membros.
 

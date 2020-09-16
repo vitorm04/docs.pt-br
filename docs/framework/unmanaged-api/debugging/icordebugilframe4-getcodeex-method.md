@@ -12,12 +12,12 @@ api_type:
 ms.assetid: aeda0e42-29ee-4ca8-9f21-ac4641677a62
 topic_type:
 - apiref
-ms.openlocfilehash: 582e28c18f36b253425b1e0a2034cdd262fddd57
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 06a0a4c788155d6fb909e4537b980f0ba740f21a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213732"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554808"
 ---
 # <a name="icordebugilframe4getcodeex-method"></a>ICorDebugILFrame4::Método GetCodeEx
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
@@ -56,4 +56,4 @@ HRESULT GetCodeEx(
 
 - [Interface ICorDebugILFrame4](icordebugilframe4-interface.md)
 - [Depurando interfaces](debugging-interfaces.md)
-- [ReJIT: um guia de instruções](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: um guia de instruções](/archive/blogs/davbr/rejit-a-how-to-guide)

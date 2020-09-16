@@ -7,12 +7,12 @@ ms.date: 09/12/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: de186cd6da83ffef8a5cd59df581e88b24bc474d
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: e1b1f75154431f61885d79db62b9ec289b69446e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325794"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555517"
 ---
 # <a name="create-a-style-for-a-control-in-wpf"></a>Criar um estilo para um controle no WPF
 
@@ -60,7 +60,7 @@ Aqui está o estilo da seção anterior, mas declarado com o `x:Key` atributo.
 
 [!code-xaml[ExplicitStyleDeclare](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/WindowExplicitStyle.xaml#ExplicitStyleDeclare)]
 
-Para aplicar o estilo, defina a <xref:System.Windows.FrameworkElement.Style%2A> propriedade no elemento como o `x:Key` valor, usando uma [extensão de marcação StaticResource](../../framework/wpf/advanced/staticresource-markup-extension.md), como mostrado aqui.
+Para aplicar o estilo, defina a <xref:System.Windows.FrameworkElement.Style%2A> propriedade no elemento como o `x:Key` valor, usando uma [extensão de marcação StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension), como mostrado aqui.
 
 [!code-xaml[ExplicitStyleReference](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/WindowExplicitStyle.xaml#ExplicitStyleReference)]
 
@@ -103,7 +103,7 @@ Além de fornecer um valor padrão para o `x:Key` , a `TargetType` propriedade e
 
 Observe também que muitos controles WPF consistem em uma combinação de outros controles WPF. Caso você crie um estilo que se aplica a todos os controles de um tipo, pode obter resultados inesperados. Por exemplo, se você criar um estilo que tenha como alvo o <xref:System.Windows.Controls.TextBlock> tipo em um <xref:System.Windows.Window> , o estilo será aplicado a todos os `TextBlock` controles na janela, mesmo que o `TextBlock` faça parte de outro controle, como um <xref:System.Windows.Controls.ListBox> .
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 <!-- - [Create a style for a control](styles-templates-create-apply-template.md) -->
 - [Visão geral dos recursos XAML](xaml-resources-define.md)

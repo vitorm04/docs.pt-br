@@ -3,12 +3,12 @@ title: O que é o Construtor de Modelo e como ele funciona?
 description: Como usar o Construtor de Modelo do ML.NET para treinar automaticamente um modelo de machine learning
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 2ed4a0c3c94ae9f46bb1cf6ddb1e9774baf82367
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 80f5f5d064c4e0c4097dacc6022d4624c1516ab9
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289493"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679671"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>O que é o Construtor de Modelo e como ele funciona?
 
@@ -109,9 +109,9 @@ Se você ainda não tiver seus próprios dados, experimente um desses conjuntos 
 
 |Cenário|Exemplo|Dados|Rotular|Recursos|
 |-|-|-|-|-|
-|classificação|Prever anomalias de vendas|[dados de vendas do produto](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Vendas do Produto|Month|
+|classificação|Prever anomalias de vendas|[dados de vendas do produto](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Vendas do Produto|Mês|
 ||Prever sentimentos de comentários do site|[dados de comentário do site](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Rótulo (0 quando o sentimento é negativo, 1 quando é positivo)|Comentário, ano|
-||Prever transações de cartão de crédito fraudulentas|[dados do cartão de crédito](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Classe (1 quando fraudulenta, caso contrário, 0)|Quantidade, V1-V28 (recursos anônimos)|
+||Prever transações de cartão de crédito fraudulentas|[dados do cartão de crédito](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CCFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Classe (1 quando fraudulenta, caso contrário, 0)|Quantidade, V1-V28 (recursos anônimos)|
 ||Prever o tipo de problema em um repositório GitHub|[dados de problema do GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Área|Título, Descrição|
 |Previsão de valor|Preço de Tarifa de táxi|[dados de tarifas de táxi](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Tarifa|Tempo da corrida, distância|
 |Classificação de imagens|Prever a categoria de uma flor |[imagens flor](http://download.tensorflow.org/example_images/flower_photos.tgz)|O tipo de flor: Margarida, dandelion, rosas, flores, tulips|Os próprios dados da imagem|
@@ -205,7 +205,7 @@ Após a fase de avaliação, o Construtor de Modelo gera um arquivo de modelo e 
 
 Além disso, o Construtor de Modelo cria o código que gerou o modelo para que você possa entender as etapas usadas na geração do modelo. Você também pode usar o código de treinamento do modelo para treinar novamente seu modelo com novos dados.
 
-## <a name="whats-next"></a>O que vem a seguir?
+## <a name="whats-next"></a>E agora?
 
 [Instalar](how-to-guides/install-model-builder.md) a extensão do Visual Studio do Construtor de Modelos
 

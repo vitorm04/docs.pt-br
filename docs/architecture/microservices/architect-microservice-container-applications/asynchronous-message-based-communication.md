@@ -2,12 +2,12 @@
 title: Comunicação assíncrona baseada em mensagens
 description: Arquitetura de Microsserviços do .NET para Aplicativos .NET em Contêineres | A comunicação assíncrona baseada em mensagens é um conceito essencial na arquitetura de microsserviços, porque ela é a melhor maneira de manter microsserviços independentes uns dos outros, estando também simultaneamente sincronizados no fim das contas.
 ms.date: 09/20/2018
-ms.openlocfilehash: a8af94540a7906c474b9b784c28aa60ebae0a6e3
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 2bd79935cad3d62e488a57da6b40a0c87349960b
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306962"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679169"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicação assíncrona baseada em mensagens
 
@@ -84,7 +84,7 @@ Tópicos adicionais a serem considerados ao usar comunicação assíncrona são 
 ## <a name="additional-resources"></a>Recursos adicionais
 
 - **Mensagens controladas por evento** \
-  <https://soapatterns.org/design_patterns/event_driven_messaging>
+  <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
 - **Canal de publicação/assinatura** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>

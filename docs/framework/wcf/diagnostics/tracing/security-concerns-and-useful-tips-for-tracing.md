@@ -2,12 +2,12 @@
 title: Preocupações de segurança e dicas úteis para rastreamento
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 0a09e387a4f964441f11d07a84bd492345d5b691
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 91a1b4bab3ac47f41821ad69228310c3993cf037
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578871"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555036"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Preocupações de segurança e dicas úteis para rastreamento
 Este tópico descreve como você pode proteger informações confidenciais de serem expostas, bem como dicas úteis ao usar o webhost.  
@@ -28,7 +28,7 @@ Este tópico descreve como você pode proteger informações confidenciais de se
   
 - Especifique um caminho absoluto para o local do arquivo de log, que deve estar fora do diretório público do Webhost vroot para impedir que ele seja acessado por uma parte externa usando um navegador da Web.  
   
- Por padrão, as chaves e as informações de identificação pessoal (PII), como nome de usuário e senha, não são registradas em rastreamentos e mensagens registradas. Um administrador de máquina, no entanto, pode usar o `enableLoggingKnownPII` atributo no `machineSettings` elemento do arquivo Machine. config para permitir que os aplicativos em execução no computador registrem PII (informações de identificação pessoal) conhecidas da seguinte maneira:  
+ Por padrão, as chaves e as informações de identificação pessoal (PII), como nome de usuário e senha, não são registradas em rastreamentos e mensagens registradas. Um administrador de máquina, no entanto, pode usar o `enableLoggingKnownPII` atributo no `machineSettings` elemento do arquivo de Machine.config para permitir que os aplicativos em execução no computador registrem PII (informações de identificação pessoal) conhecidas da seguinte maneira:  
   
 ```xml  
 <configuration>  
@@ -38,7 +38,7 @@ Este tópico descreve como você pode proteger informações confidenciais de se
 </configuration>
 ```  
   
- Um implantador de aplicativo pode usar o `logKnownPii` atributo no arquivo app. config ou Web. config para habilitar o log de PII da seguinte maneira:  
+ Um implantador de aplicativo pode usar o `logKnownPii` atributo no arquivo App.config ou Web.config para habilitar o log de PII da seguinte maneira:  
   
 ```xml  
 <system.diagnostics>  
@@ -57,7 +57,7 @@ Este tópico descreve como você pode proteger informações confidenciais de se
   
  Somente quando as duas configurações são o `true` log de PII habilitado. A combinação de duas opções permite a flexibilidade de registrar PII conhecida para cada aplicativo.  
   
- Você deve estar ciente de que, se você especificar duas ou mais fontes personalizadas em um arquivo de configuração, somente os atributos da primeira fonte serão lidos. Os outros são ignorados. Isso significa que, para o seguinte app. config, o arquivo, PII não é registrado para ambas as fontes, embora o log de PII esteja explicitamente habilitado para a segunda fonte.  
+ Você deve estar ciente de que, se você especificar duas ou mais fontes personalizadas em um arquivo de configuração, somente os atributos da primeira fonte serão lidos. Os outros são ignorados. Isso significa que, para o seguinte App.config, File, PII não é registrado para ambas as fontes, mesmo que o log de PII seja explicitamente habilitado para a segunda fonte.  
   
 ```xml  
 <system.diagnostics>  
@@ -80,16 +80,16 @@ Este tópico descreve como você pode proteger informações confidenciais de se
 </system.diagnostics>  
 ```  
   
- Se o `<machineSettings enableLoggingKnownPii="Boolean"/>` elemento existir fora do arquivo Machine. config, o sistema lançará um <xref:System.Configuration.ConfigurationErrorsException> .  
+ Se o `<machineSettings enableLoggingKnownPii="Boolean"/>` elemento existir fora do arquivo de Machine.config, o sistema lançará um <xref:System.Configuration.ConfigurationErrorsException> .  
   
  As alterações entram em vigor somente quando o aplicativo é iniciado ou reiniciado. Um evento é registrado na inicialização quando ambos os atributos são definidos como `true` . Um evento também será registrado se `logKnownPii` for definido como `true` , mas `enableLoggingKnownPii` for `false` .  
   
  Para obter mais informações sobre o log de PII, consulte exemplo de [bloqueio de segurança de PII](../../samples/pii-security-lockdown.md) .  
   
- O administrador do computador e o implantador de aplicativos devem ter muito cuidado ao usar essas duas opções. Se o log de PII estiver habilitado, as chaves de segurança e PII serão registradas. Se estiver desabilitado, os dados confidenciais e específicos do aplicativo ainda serão registrados em cabeçalhos e corpos de mensagens. Para obter uma discussão mais completa sobre privacidade e proteger a PII de ser exposta, consulte [privacidade do usuário](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10)).  
+ O administrador do computador e o implantador de aplicativos devem ter muito cuidado ao usar essas duas opções. Se o log de PII estiver habilitado, as chaves de segurança e PII serão registradas. Se estiver desabilitado, os dados confidenciais e específicos do aplicativo ainda serão registrados em cabeçalhos e corpos de mensagens. Para obter uma discussão mais completa sobre privacidade e proteger a PII de ser exposta, consulte [privacidade do usuário](/previous-versions/dotnet/articles/aa480490(v=msdn.10)).  
   
  Além disso, o endereço IP do remetente da mensagem é registrado uma vez por conexão para transportes orientados por conexão e uma vez por mensagem enviada de outra forma. Isso é feito sem o consentimento do remetente. No entanto, esse log só ocorre nas informações ou níveis de rastreamento detalhados, que não são os níveis de rastreamento padrão ou recomendados na produção, exceto para a depuração dinâmica.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Rastreamento](index.md)

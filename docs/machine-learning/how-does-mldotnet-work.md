@@ -4,12 +4,12 @@ description: O ML.NET oferece a capacidade de adicionar aprendizado de máquina 
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 761be4001c1a7e6be8e6aeb32b1d44f0100d0bd1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d9a218e57756ad8b95248193325e902c1798cc37
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540816"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679658"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>O que é ML.NET e como ele funciona?
 
@@ -262,7 +262,7 @@ Todos os algoritmos também criam novas colunas depois que executaram uma previs
 
 Você pode encontrar mais informações sobre colunas de saída das diferentes tarefas de aprendizado de máquina na guia [Tarefas de Aprendizado de Máquina](resources/tasks.md).
 
-Uma propriedade importante de objetos DataView é que eles são avaliados **lentamente**. Exibições de dados só são carregadas e operadas durante o treinamento e a avaliação do modelo e a previsão de dados. Enquanto você está escrevendo e testando seu aplicativo do ML.NET, pode usar o depurador do Visual Studio para dar uma espiada em qualquer objeto de exibição de dados chamando o método [Preview](xref:Microsoft.ML.DebuggerExtensions.Preview*).
+Uma propriedade importante de objetos DataView é que eles são avaliados **lentamente**. Exibições de dados só são carregadas e operadas durante o treinamento e a avaliação do modelo e a previsão de dados. Enquanto você está escrevendo e testando seu aplicativo do ML.NET, pode usar o depurador do Visual Studio para dar uma espiada em qualquer objeto de exibição de dados chamando o método [Preview](xref:Microsoft.ML.DebuggerExtensions.Preview%2A).
 
 ```csharp
     var debug = testPriceDataView.Preview();

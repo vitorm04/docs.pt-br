@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: dcb311523c6ec41b62f6e69fe6bc7635b9d49708
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c87583bec908c3465dedf7c542e30ce264cd7b47
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595226"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553773"
 ---
 # <a name="message-security-with-a-windows-client"></a>Segurança de mensagem com um cliente do Windows
 Esse cenário mostra um cliente Windows Communication Foundation (WCF) e um servidor protegido pelo modo de segurança da mensagem. O cliente e o serviço são autenticados usando as credenciais do Windows.  
@@ -119,4 +119,4 @@ Esse cenário mostra um cliente Windows Communication Foundation (WCF) e um serv
 ## <a name="see-also"></a>Confira também
 
 - [Visão geral de segurança](security-overview.md)
-- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

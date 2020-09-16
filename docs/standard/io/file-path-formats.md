@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 8cbb687b0c7cfb69d3f3807c083f1c25e9d39594
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: 36ecbe763ed47e95d9339d1d748b3faab100c15e
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271783"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679593"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de caminho de arquivo em sistemas Windows
 
@@ -43,7 +43,7 @@ Se todos os três componentes estiverem presentes, o caminho será absoluto. Se 
 > [!IMPORTANT]
 > Observe a diferença entre os últimos dois caminhos. Ambos especificam o especificador de volume opcional ( `C:` em ambos os casos), mas o primeiro começa com a raiz do volume especificado, enquanto o segundo não. Como resultado, o primeiro é um caminho absoluto do diretório raiz da unidade `C:` , enquanto o segundo é um caminho relativo do diretório atual da unidade `C:` . Uso do segundo formulário quando o primeiro é uma fonte comum de bugs que envolvem caminhos de arquivo do Windows.
 
-É possível determinar se um caminho de arquivo é totalmente qualificado (ou seja, se o caminho é independente do diretório atual e não se altera quando o diretório atual é alterado) chamando o método <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType>. Esse tipo de caminho poderá incluir segmentos de diretório relativo (`.` e `..`) e ainda ser totalmente qualificado se o caminho resolvido sempre apontar para o mesmo local.
+É possível determinar se um caminho de arquivo é totalmente qualificado (ou seja, se o caminho é independente do diretório atual e não se altera quando o diretório atual é alterado) chamando o método <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWithType>. Esse tipo de caminho poderá incluir segmentos de diretório relativo (`.` e `..`) e ainda ser totalmente qualificado se o caminho resolvido sempre apontar para o mesmo local.
 
 O exemplo a seguir ilustra a diferença entre caminhos absolutos e relativos. Ele pressupõe que o diretório `D:\FY2018\` existe e que você não definiu nenhum diretório atual para `D:\` o no prompt de comando antes de executar o exemplo.
 

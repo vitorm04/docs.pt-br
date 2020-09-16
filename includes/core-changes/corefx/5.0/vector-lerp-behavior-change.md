@@ -10,7 +10,7 @@ ms.locfileid: "86281285"
 
 A implementação de <xref:System.Numerics.Vector2.Lerp(System.Numerics.Vector2,System.Numerics.Vector2,System.Single)?displayProperty=nameWithType> e <xref:System.Numerics.Vector4.Lerp(System.Numerics.Vector4,System.Numerics.Vector4,System.Single)?displayProperty=nameWithType> mudou para uma conta correta para um erro de arredondamento de ponto flutuante.
 
-#### <a name="change-description"></a>Descrição da alteração
+#### <a name="change-description"></a>Descrição das alterações
 
 Anteriormente, <xref:System.Numerics.Vector2.Lerp(System.Numerics.Vector2,System.Numerics.Vector2,System.Single)?displayProperty=nameWithType> e <xref:System.Numerics.Vector4.Lerp(System.Numerics.Vector4,System.Numerics.Vector4,System.Single)?displayProperty=nameWithType> foram implementados como `value1 + (value2 - value1) * amount` . No entanto, devido a um erro de arredondamento de ponto flutuante, esse algoritmo nem sempre retorna `value2` quando `amount` é `1.0f` .
 

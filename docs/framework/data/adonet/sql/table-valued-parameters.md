@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 7b1f0a6c416f660f06cea099197ba136f84407f9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0d62c8d3c4669673d26f2d5535d7940fce702f66
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286191"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547441"
 ---
 # <a name="table-valued-parameters"></a>Parâmetros com valor de tabela
 Os parâmetros com valor de tabela fornecem uma maneira fácil de realizar marshaling em várias linhas de dados de um aplicativo cliente do SQL Server sem exigir várias viagens de ida e volta ou uma lógica especial do lado do servidor para processar os dados. Você pode usar parâmetros com valor de tabela para encapsular linhas de dados em um aplicativo cliente e enviar os dados para o servidor em um único comando parametrizado. As linhas de dados de entrada são armazenadas em uma variável de tabela, as quais você poderá operar usando o Transact-SQL.  
@@ -26,7 +26,7 @@ Os parâmetros com valor de tabela fornecem uma maneira fácil de realizar marsh
 |Recurso|DESCRIÇÃO|  
 |--------------|-----------------|  
 |[Usar parâmetros com valor de tabela (Mecanismo de Banco de Dados)](/sql/relational-databases/tables/use-table-valued-parameters-database-engine)|Descreve como criar e usar parâmetros com valor de tabela.|  
-|[Tipos de tabela definidos pelo usuário](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|Descreve os tipos de tabela definidos pelo usuário usados para declarar parâmetros com valor de tabela.|  
+|[Tipos de tabela definidos pelo usuário](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|Descreve os tipos de tabela definidos pelo usuário usados para declarar parâmetros com valor de tabela.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Passando várias linhas em versões anteriores do SQL Server  
  Antes de os parâmetros de valores de tabela serem introduzidos no SQL Server 2008, as opções para passar várias linhas de dados para um procedimento armazenado ou um comando SQL parametrizado eram limitadas. Um desenvolvedor pode escolher entre as seguintes opções para passar várias linhas para o servidor:  
@@ -40,7 +40,7 @@ Os parâmetros com valor de tabela fornecem uma maneira fácil de realizar marsh
 - Usar o programa utilitário `bcp` ou o objeto <xref:System.Data.SqlClient.SqlBulkCopy> para carregar várias linhas de dados em uma tabela. Embora essa técnica seja muito eficiente, ela não dá suporte ao processamento do lado do servidor, a menos que os dados sejam carregados em uma tabela temporária ou variável de tabela.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Criando tipos de parâmetro com valor de tabela  
- Os parâmetros com valor de tabela se baseiam em estruturas de tabela fortemente tipadas que são definidas usando instruções Transact-SQL CREATE TYPE. Você precisa criar um tipo de tabela e definir a estrutura no SQL Server antes de poder usar parâmetros de valores de tabela em seus aplicativos cliente. Para obter mais informações sobre como criar tipos de tabela, consulte [tipos de tabela definidos pelo usuário](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)).  
+ Os parâmetros com valor de tabela se baseiam em estruturas de tabela fortemente tipadas que são definidas usando instruções Transact-SQL CREATE TYPE. Você precisa criar um tipo de tabela e definir a estrutura no SQL Server antes de poder usar parâmetros de valores de tabela em seus aplicativos cliente. Para obter mais informações sobre como criar tipos de tabela, consulte [tipos de tabela definidos pelo usuário](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)).  
   
  A seguinte instrução cria um tipo de tabela chamado CategoryTableType que é composto pelas colunas CategoryID e CategoryName:  
   
@@ -129,7 +129,7 @@ Dim tvpParam As SqlParameter = _
 tvpParam.SqlDbType = SqlDbType.Structured  
 ```  
   
-## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a>Passando um parâmetro com valor de tabela para um procedimento armazenado  
+## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a> Passando um parâmetro com valor de tabela para um procedimento armazenado  
  Este exemplo demonstra como passar dados de parâmetro com valor de tabela para um procedimento armazenado. O código extrai linhas adicionadas em um novo <xref:System.Data.DataTable> usando o método <xref:System.Data.DataTable.GetChanges%2A>. Em seguida, o código define um <xref:System.Data.SqlClient.SqlCommand>, configurando a propriedade <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> como <xref:System.Data.CommandType.StoredProcedure>. O <xref:System.Data.SqlClient.SqlParameter> é preenchido usando o método <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> e o <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> é definido como `Structured`. Em seguida, o <xref:System.Data.SqlClient.SqlCommand> é executado usando o método <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>.  
   
 ```csharp  
@@ -273,9 +273,9 @@ tvpParam.SqlDbType = SqlDbType.Structured
 insertCommand.ExecuteNonQuery()  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Configurando parâmetros e tipos de dados de parâmetro](../configuring-parameters-and-parameter-data-types.md)
+- [Configurar parâmetros e tipos de dados de parâmetro](../configuring-parameters-and-parameter-data-types.md)
 - [Comandos e parâmetros](../commands-and-parameters.md)
 - [Parâmetros DataAdapter](../dataadapter-parameters.md)
 - [SQL Server operações de dados no ADO.NET](sql-server-data-operations.md)

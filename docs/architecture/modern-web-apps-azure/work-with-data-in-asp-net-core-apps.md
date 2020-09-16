@@ -7,12 +7,12 @@ ms.date: 08/12/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: f2f2a4706ea4deba39465d8697f78be58506a09c
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 826f9003852e47c093193bbbb717fd9e1f2e61c6
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515859"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678934"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabalhando com os dados em aplicativos ASP.NET Core
 
@@ -373,7 +373,7 @@ Além das opções de armazenamento relacional e NoSQL, os aplicativos ASP.NET C
 
 **Referências – Armazenamento do Azure**
 
-- Introdução ao armazenamento do Azure <https://docs.microsoft.com/azure/storage/storage-introduction>
+- Introdução ao armazenamento do Azure <https://docs.microsoft.com/azure/storage/common/storage-introduction>
 
 ## <a name="caching"></a>Cache
 
