@@ -7,16 +7,16 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: b5b480016d2183268422dea861510c6a169ac27b
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 3de02702e6fd2be63bc2d099dad11f896b281ad1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "82071335"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543492"
 ---
 # <a name="xuid-directive"></a>Diretiva x:Uid
 
-Fornece um identificador exclusivo para elementos de marcação. Em muitos cenários, este identificador exclusivo é usado por processos e ferramentas de localização XAML.
+Fornece um identificador exclusivo para elementos de marcação. Em muitos cenários, esse identificador exclusivo é usado por ferramentas e processos de localização XAML.
 
 ## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML
 
@@ -28,24 +28,24 @@ Fornece um identificador exclusivo para elementos de marcação. Em muitos cená
 
 |||
 |-|-|
-|`identifier`|Uma seqüência de string criada manualmente ou autogerada que `x:Uid` deve ser única em um arquivo quando é interpretada por um consumidor.|
+|`identifier`|Uma cadeia de caracteres criada manualmente ou automaticamente que deve ser exclusiva em um arquivo quando é interpretada por um `x:Uid` consumidor.|
 
 ## <a name="remarks"></a>Comentários
 
-Em [MS-XAML], `x:Uid` é definido como uma diretiva. Para obter mais informações, consulte [ \[\] MS-XAML Seção 5.3.6](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).
+Em [MS-XAML], `x:Uid` é definido como uma diretiva. Para obter mais informações, consulte [ \[ a \] seção MS-XAML 5.3.6](/previous-versions/msp-n-p/ff650760(v=pandp.10)).
 
-`x:Uid`é discreta tanto `x:Name` por causa do cenário de localização XAML declarado quanto para que os identificadores utilizados para `x:Name`localização não tenham dependências das implicações do modelo de programação de . Além `x:Name` disso, é regido pelo namescope XAML; no `x:Uid` entanto, não é regido por qualquer conceito de linguagem XAML definido de aplicação da exclusividade. Os processadores XAML em um sentido amplo (processadores que não fazem parte do `x:Uid` processo de localização) não são esperados para impor a singularidade dos valores. Essa responsabilidade é conceitualmente sobre o criador dos valores. A expectativa de `x:Uid` singularidade de valores dentro de uma única fonte XAML é razoável para os consumidores dos valores, como processos ou ferramentas dedicadas de globalização. O modelo típico de `x:Uid` exclusividade é que os valores são únicos dentro de um arquivo codificado por XML que representa XAML.
+`x:Uid` é discreto de `x:Name` ambos devido ao cenário de localização XAML declarado e, portanto, os identificadores que são usados para localização não têm dependências sobre as implicações do modelo de programação do `x:Name` . Além disso, `x:Name` o é regido pelo NAMESCOPE XAML; no entanto, `x:Uid` não é regido por nenhum conceito de linguagem XAML definido de imposição de exclusividade. Os processadores XAML em um sentido amplo (processadores que não fazem parte do processo de localização) não devem impor a exclusividade dos `x:Uid` valores. Essa responsabilidade é conceitualmente no originador dos valores. A expectativa de exclusividade de `x:Uid` valores em uma única fonte XAML é razoável para os consumidores dos valores, como processos ou ferramentas de globalização dedicados. O modelo de exclusividade típico é que os `x:Uid` valores são exclusivos em um arquivo codificado em XML que representa o XAML.
 
-Ferramentas que tenham conhecimento significativo de um esquema XAML específico podem optar por aplicar `x:Uid` apenas para cadeias localizadas verdadeiras, em vez de para todos os casos em que um valor de seqüência de texto é encontrado na marcação.
+As ferramentas que têm um conhecimento significativo de um esquema XAML específico podem optar por se aplicar `x:Uid` somente a cadeias de caracteres localizáveis verdadeiras, em vez de para todos os casos em que um valor de cadeia de caracteres de texto é encontrado na marcação.
 
-Os frameworks podem especificar uma propriedade específica em `x:Uid` seu modelo <xref:System.Windows.Markup.UidPropertyAttribute> de objeto para ser um alias aplicando o atributo ao tipo definidor. Se uma estrutura especificar uma propriedade específica, `x:Uid` não é válido especificar tanto o membro com aliasno no mesmo objeto. Se `x:Uid` ambos e o membro de suinoxidade forem especificados, a API de Serviços .NET XAML normalmente será aoferecida <xref:System.Xaml.XamlDuplicateMemberException> para este caso.
+As estruturas podem especificar uma propriedade específica em seu modelo de objeto para ser um alias para `x:Uid` , aplicando o atributo <xref:System.Windows.Markup.UidPropertyAttribute> ao tipo de definição. Se uma estrutura especificar uma determinada propriedade, ela não será válida para especificar ambos `x:Uid` e o membro com alias no mesmo objeto. Se ambos `x:Uid` e o membro com alias forem especificados, a API de serviços XAML .net normalmente será lançada <xref:System.Xaml.XamlDuplicateMemberException> para esse caso.
 
 ## <a name="wpf-usage-notes"></a>Notas de uso do WPF
 
-Para obter mais informações `x:Uid` sobre o papel do processo de localização do WPF e na forma BAML de XAML, consulte [Globalização para WPF](../../framework/wpf/advanced/globalization-for-wpf.md) ou<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
+Para obter mais informações sobre a função do `x:Uid` no processo de localização do WPF e na forma de BAML do XAML, consulte [globalização para WPF](/dotnet/desktop/wpf/advanced/globalization-for-wpf) ou <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
 
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
 - <xref:Microsoft.Build.Tasks.Windows.UidManager>
-- [Globalização do WPF](../../framework/wpf/advanced/globalization-for-wpf.md)
+- [Globalização do WPF](/dotnet/desktop/wpf/advanced/globalization-for-wpf)

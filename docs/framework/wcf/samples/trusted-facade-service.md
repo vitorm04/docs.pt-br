@@ -2,12 +2,12 @@
 title: Serviço de fachada confiável
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: e7aa5e96fb8104c8140a8cebc6be45d2000821aa
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e9459b4cc26ef85adcc59c308d92491fd2d3acba
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591287"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544174"
 ---
 # <a name="trusted-facade-service"></a>Serviço de fachada confiável
 Este exemplo de cenário demonstra como fluir informações de identidade do chamador de um serviço para outro usando a infraestrutura de segurança do Windows Communication Foundation (WCF).  
@@ -230,13 +230,13 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- O arquivo em lotes setup. bat incluído com o exemplo de cenário fachada confiável permite que você configure o servidor com um certificado relevante para executar o serviço de fachada que requer segurança baseada em certificado para se autenticar no cliente. Consulte o procedimento de instalação no final deste tópico para obter detalhes.  
+ O arquivo em lote Setup.bat incluído com o exemplo de cenário fachada confiável permite que você configure o servidor com um certificado relevante para executar o serviço de fachada que requer segurança baseada em certificado para se autenticar no cliente. Consulte o procedimento de instalação no final deste tópico para obter detalhes.  
   
  Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lotes.  
   
 - Criando o certificado do servidor.  
   
-     As linhas a seguir do arquivo em lotes setup. bat criam o certificado do servidor a ser usado.  
+     As linhas a seguir do arquivo de Setup.bat lote criam o certificado do servidor a ser usado.  
   
     ```console  
     echo ************  
@@ -252,7 +252,7 @@ Press <ENTER> to terminate client.
   
 - Instalar o certificado do serviço de fachada no repositório de certificados confiáveis do cliente.  
   
-     A linha a seguir copia o certificado do serviço de fachada para o repositório de pessoas confiáveis do cliente. Essa etapa é necessária porque os certificados gerados pelo MakeCert. exe não são implicitamente confiáveis pelo sistema cliente. Se você já tiver um certificado com raiz em um certificado raiz confiável do cliente — por exemplo, um certificado emitido pela Microsoft — essa etapa de popular o repositório de certificados do cliente com o certificado do servidor não será necessária.  
+     A linha a seguir copia o certificado do serviço de fachada para o repositório de pessoas confiáveis do cliente. Essa etapa é necessária porque os certificados gerados por Makecert.exe não são implicitamente confiáveis pelo sistema cliente. Se você já tiver um certificado com raiz em um certificado raiz confiável do cliente — por exemplo, um certificado emitido pela Microsoft — essa etapa de popular o repositório de certificados do cliente com o certificado do servidor não será necessária.  
   
     ```console  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
@@ -266,21 +266,21 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-run-the-sample-on-the-same-machine"></a>Para executar o exemplo no mesmo computador  
   
-1. Verifique se o caminho inclui a pasta onde o MakeCert. exe está localizado.  
+1. Verifique se o caminho inclui a pasta onde Makecert.exe está localizado.  
   
-2. Execute setup. bat na pasta de instalação de exemplo. Isso instala todos os certificados necessários para executar o exemplo.  
+2. Execute Setup.bat na pasta de instalação de exemplo. Isso instala todos os certificados necessários para executar o exemplo.  
   
-3. Iniciar o BackendService. exe do diretório \BackendService\bin em uma janela de console separada  
+3. Iniciar o BackendService.exe do diretório \BackendService\bin em uma janela de console separada  
   
-4. Iniciar o FacadeService. exe do diretório \FacadeService\bin em uma janela de console separada  
+4. Iniciar o FacadeService.exe do diretório \FacadeService\bin em uma janela de console separada  
   
-5. Inicie o Client. exe em \client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.  
+5. Iniciar Client.exe de \client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.  
   
-6. Se o cliente e o serviço não puderem se comunicar, consulte [dicas de solução de problemas para exemplos do WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+6. Se o cliente e o serviço não puderem se comunicar, consulte [dicas de solução de problemas para exemplos do WCF](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Para limpar após o exemplo  
   
-1. Execute o Cleanup. bat na pasta Samples depois de concluir a execução do exemplo.  
+1. Execute Cleanup.bat na pasta Samples depois de concluir a execução do exemplo.  
   
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
@@ -289,4 +289,4 @@ Press <ENTER> to terminate client.
 >
 > Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >
-> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`

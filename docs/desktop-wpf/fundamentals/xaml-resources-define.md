@@ -4,12 +4,12 @@ description: Saiba mais sobre os recursos XAML no WPF para .NET Core. Entenda os
 author: adegeo
 ms.author: adegeo
 ms.date: 08/21/2019
-ms.openlocfilehash: f8eaf3fd931aa6804b0b9a9c19c6bcc042678ebf
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 2393b3b2fabd0e900a99bf950d30e1744c754da5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325711"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541819"
 ---
 # <a name="overview-of-xaml-resources"></a>Visão geral dos recursos XAML
 
@@ -40,9 +40,9 @@ No exemplo anterior, quando o carregador XAML processa o valor da `{StaticResour
 
 ## <a name="static-and-dynamic-resources"></a>Recursos estáticos e dinâmicos
 
-Um recurso pode ser referenciado como estático ou dinâmico. As referências são criadas usando a [extensão de marcação StaticResource](../../framework/wpf/advanced/staticresource-markup-extension.md) ou a [extensão de marcação DynamicResource](../../framework/wpf/advanced/dynamicresource-markup-extension.md). Uma extensão de marcação é um recurso XAML que permite especificar uma referência de objeto fazendo com que a extensão de marcação processe a cadeia de caracteres de atributo e retorne o objeto para um carregador XAML. Para obter mais informações sobre o comportamento de extensão de marcação, consulte [Markup Extensions e WPF XAML](../../framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).
+Um recurso pode ser referenciado como estático ou dinâmico. As referências são criadas usando a [extensão de marcação StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) ou a [extensão de marcação DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension). Uma extensão de marcação é um recurso XAML que permite especificar uma referência de objeto fazendo com que a extensão de marcação processe a cadeia de caracteres de atributo e retorne o objeto para um carregador XAML. Para obter mais informações sobre o comportamento de extensão de marcação, consulte [Markup Extensions e WPF XAML](/dotnet/desktop/wpf/advanced/markup-extensions-and-wpf-xaml).
 
-Quando você usa uma extensão de marcação, normalmente fornece um ou mais parâmetros no formulário de cadeia de caracteres que são processados por essa extensão de marcação específica. A [extensão de marcação StaticResource](../../framework/wpf/advanced/staticresource-markup-extension.md) processa uma chave procurando o valor dessa chave em todos os dicionários de recursos disponíveis. O processamento ocorre durante o carregamento, que é quando o processo de carregamento precisa atribuir o valor da propriedade. Em vez disso, a [extensão de marcação DynamicResource](../../framework/wpf/advanced/dynamicresource-markup-extension.md) processa uma chave criando uma expressão, e essa expressão permanece não avaliada até que o aplicativo seja executado, no momento em que a expressão é avaliada e fornece um valor.
+Quando você usa uma extensão de marcação, normalmente fornece um ou mais parâmetros no formulário de cadeia de caracteres que são processados por essa extensão de marcação específica. A [extensão de marcação StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) processa uma chave procurando o valor dessa chave em todos os dicionários de recursos disponíveis. O processamento ocorre durante o carregamento, que é quando o processo de carregamento precisa atribuir o valor da propriedade. Em vez disso, a [extensão de marcação DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension) processa uma chave criando uma expressão, e essa expressão permanece não avaliada até que o aplicativo seja executado, no momento em que a expressão é avaliada e fornece um valor.
 
 Quando você referencia um recurso, as seguintes considerações podem influenciar se uma referência de recurso estático ou dinâmico será usada:
 
@@ -138,7 +138,7 @@ As referências de recursos dinâmicos têm algumas restrições importantes. Pe
 
 - A propriedade que está sendo definida deve ser uma propriedade em um <xref:System.Windows.Freezable> que é fornecida como um valor de <xref:System.Windows.FrameworkElement> uma <xref:System.Windows.FrameworkContentElement> propriedade ou, ou um <xref:System.Windows.Setter> valor.
 
-Como a propriedade que está sendo definida deve ser uma <xref:System.Windows.DependencyProperty> <xref:System.Windows.Freezable> propriedade ou, a maioria das alterações de propriedade pode ser propagada para a interface do usuário porque uma alteração de propriedade (o valor de recurso dinâmico alterado) é confirmada pelo sistema de propriedades. A maioria dos controles inclui lógica que forçará outro layout de um controle se uma <xref:System.Windows.DependencyProperty> alteração e essa propriedade puderem afetar o layout. No entanto, nem todas as propriedades que têm uma [extensão de marcação DynamicResource](../../framework/wpf/advanced/dynamicresource-markup-extension.md) como seu valor têm a garantia de fornecer atualizações em tempo real na interface do usuário. Essa funcionalidade ainda pode variar dependendo da propriedade, bem como dependendo do tipo que possui a propriedade, ou até mesmo da estrutura lógica do seu aplicativo.
+Como a propriedade que está sendo definida deve ser uma <xref:System.Windows.DependencyProperty> <xref:System.Windows.Freezable> propriedade ou, a maioria das alterações de propriedade pode ser propagada para a interface do usuário porque uma alteração de propriedade (o valor de recurso dinâmico alterado) é confirmada pelo sistema de propriedades. A maioria dos controles inclui lógica que forçará outro layout de um controle se uma <xref:System.Windows.DependencyProperty> alteração e essa propriedade puderem afetar o layout. No entanto, nem todas as propriedades que têm uma [extensão de marcação DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension) como seu valor têm a garantia de fornecer atualizações em tempo real na interface do usuário. Essa funcionalidade ainda pode variar dependendo da propriedade, bem como dependendo do tipo que possui a propriedade, ou até mesmo da estrutura lógica do seu aplicativo.
 
 ## <a name="styles-datatemplates-and-implicit-keys"></a>Estilos, DataTemplates e chaves implícitas
 
@@ -154,17 +154,17 @@ Esse estilo realmente tem uma chave: a chave implícita `typeof(System.Windows.C
 
 Por meio dos mecanismos de estilo de tema padrão usados pelo WPF, esse estilo é aplicado como o estilo de tempo de execução de a <xref:System.Windows.Controls.Button> na página, mesmo que a <xref:System.Windows.Controls.Button> si não tente especificar sua <xref:System.Windows.FrameworkElement.Style%2A> propriedade ou uma referência de recurso específica ao estilo. Seu estilo definido na página é encontrado anteriormente na sequência de pesquisa do que o estilo de dicionário do tema, usando a mesma chave que o estilo do dicionário do tema. Você poderia apenas especificar `<Button>Hello</Button>` qualquer lugar na página, e o estilo que você definiu a <xref:System.Windows.Style.TargetType%2A> `Button` ser aplicado a esse botão. Se desejar, você ainda poderá chavear explicitamente o estilo com o mesmo valor de tipo <xref:System.Windows.Style.TargetType%2A> para fins de clareza na sua marcação, mas isso é opcional.
 
-As chaves implícitas para estilos não se aplicam a um controle se <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> for `true` . (Observe também que <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> pode ser definido como parte do comportamento nativo da classe Control, em vez de explicitamente em uma instância do controle.) Além disso, para dar suporte a chaves implícitas para cenários de classe derivada, o controle deve substituir <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (todos os controles existentes fornecidos como parte do WPF incluem essa substituição). Para obter mais informações sobre estilos, temas e design de controle, consulte [diretrizes para criar controles stylable](../../framework/wpf/controls/guidelines-for-designing-stylable-controls.md).
+As chaves implícitas para estilos não se aplicam a um controle se <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> for `true` . (Observe também que <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> pode ser definido como parte do comportamento nativo da classe Control, em vez de explicitamente em uma instância do controle.) Além disso, para dar suporte a chaves implícitas para cenários de classe derivada, o controle deve substituir <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (todos os controles existentes fornecidos como parte do WPF incluem essa substituição). Para obter mais informações sobre estilos, temas e design de controle, consulte [diretrizes para criar controles stylable](/dotnet/desktop/wpf/controls/guidelines-for-designing-stylable-controls).
 
-<xref:System.Windows.DataTemplate>também tem uma chave implícita. A chave implícita para um <xref:System.Windows.DataTemplate> é o <xref:System.Windows.DataTemplate.DataType%2A> valor da propriedade. <xref:System.Windows.DataTemplate.DataType%2A>também pode ser especificado como o nome do tipo em vez de explicitamente usar [{x:Type...}](../xaml-services/xtype-markup-extension.md). Para obter detalhes, consulte [visão geral de modelagem de dados](../../framework/wpf/data/data-templating-overview.md).
+<xref:System.Windows.DataTemplate> também tem uma chave implícita. A chave implícita para um <xref:System.Windows.DataTemplate> é o <xref:System.Windows.DataTemplate.DataType%2A> valor da propriedade. <xref:System.Windows.DataTemplate.DataType%2A> também pode ser especificado como o nome do tipo em vez de explicitamente usar [{x:Type...}](../xaml-services/xtype-markup-extension.md). Para obter detalhes, consulte [visão geral de modelagem de dados](/dotnet/desktop/wpf/data/data-templating-overview).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.ResourceDictionary>
-- [Recursos do aplicativo](../../framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Recursos e código](../../framework/wpf/advanced/resources-and-code.md)
-- [Definir e referenciar um recurso](../../framework/wpf/advanced/how-to-define-and-reference-a-resource.md)
-- [Visão geral do gerenciamento de aplicativos](../../framework/wpf/app-development/application-management-overview.md)
+- [Recursos do aplicativo](/dotnet/desktop/wpf/advanced/optimizing-performance-application-resources)
+- [Recursos e código](/dotnet/desktop/wpf/advanced/resources-and-code)
+- [Definir e referenciar um recurso](/dotnet/desktop/wpf/advanced/how-to-define-and-reference-a-resource)
+- [Visão geral do gerenciamento de aplicativos](/dotnet/desktop/wpf/app-development/application-management-overview)
 - [extensão de marcação x:Type](../xaml-services/xtype-markup-extension.md)
-- [Extensão de marcação StaticResource](../../framework/wpf/advanced/staticresource-markup-extension.md)
-- [Extensão de marcação DynamicResource](../../framework/wpf/advanced/dynamicresource-markup-extension.md)
+- [Extensão de marcação StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension)
+- [Extensão de marcação DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension)
