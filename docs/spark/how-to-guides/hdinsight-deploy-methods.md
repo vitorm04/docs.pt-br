@@ -4,12 +4,12 @@ description: Saiba como enviar um trabalho .NET para Apache Spark para o Azure H
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 50611b1f62934a446e5b80a8c53698efe23cd1fc
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 560822783b57b2419595cb15efa097591db8d600
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617685"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557158"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>Enviar um trabalho .NET para Apache Spark para o Azure HDInsight
 
@@ -25,7 +25,7 @@ Você pode usar o comando [spark-submit](https://spark.apache.org/docs/latest/su
 
 2. Copie as informações de logon SSH e cole o logon em um terminal. Entre no cluster usando a senha que você definiu durante a criação do cluster. Você deve ver as mensagens com boas-vindas ao Ubuntu e ao Spark.
 
-3. Use o comando **Spark-Submit** para executar seu aplicativo em seu cluster HDInsight. Lembre-se de substituir **MyContainer** e **mystorageaccount** no script de exemplo pelos nomes reais do contêiner de BLOB e da conta de armazenamento. Além disso, certifique-se de substituir `microsoft-spark-2.3.x-0.6.0.jar` pelo arquivo JAR apropriado que você está usando para a implantação. `2.3.x`representa a versão do Apache Spark e `0.6.0` representa a versão do [.net para o trabalho do Apache Spark](https://github.com/dotnet/spark/releases).
+3. Use o comando **Spark-Submit** para executar seu aplicativo em seu cluster HDInsight. Lembre-se de substituir **MyContainer** e **mystorageaccount** no script de exemplo pelos nomes reais do contêiner de BLOB e da conta de armazenamento. Além disso, certifique-se de substituir `microsoft-spark-2.3.x-0.6.0.jar` pelo arquivo JAR apropriado que você está usando para a implantação. `2.3.x` representa a versão do Apache Spark e `0.6.0` representa a versão do [.net para o trabalho do Apache Spark](https://github.com/dotnet/spark/releases).
 
    ```bash
    $SPARK_HOME/bin/spark-submit \
@@ -37,7 +37,7 @@ Você pode usar o comando [spark-submit](https://spark.apache.org/docs/latest/su
 
 ## <a name="deploy-using-apache-livy"></a>Implantar usando o Apache Livy
 
-Você pode usar o [Apache Livy](https://livy.incubator.apache.org/), a API REST do Apache Spark, para enviar trabalhos do .NET para Apache Spark a um cluster do Azure HDInsight Spark. Para obter mais informações, consulte [Trabalhos remotos com o Apache Livy](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface).
+Você pode usar o [Apache Livy](https://livy.incubator.apache.org/), a API REST do Apache Spark, para enviar trabalhos do .NET para Apache Spark a um cluster do Azure HDInsight Spark. Para obter mais informações, consulte [Trabalhos remotos com o Apache Livy](/azure/hdinsight/spark/apache-spark-livy-rest-interface).
 
 Você pode executar o comando a seguir no Linux usando `curl`:
 
@@ -60,4 +60,4 @@ EOF
 
 * [Introdução ao .NET para Apache Spark](../tutorials/get-started.md)
 * [Implantar um aplicativo .NET para Apache Spark no Azure HDInsight](../tutorials/hdinsight-deployment.md)
-* [Documentação do HDInsight](https://docs.microsoft.com/azure/hdinsight/)
+* [Documentação do HDInsight](/azure/hdinsight/)

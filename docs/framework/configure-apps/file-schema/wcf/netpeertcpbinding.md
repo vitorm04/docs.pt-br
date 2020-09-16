@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-ms.openlocfilehash: 921da4d0b010672585a045d58d03182e480a255a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5fe221c5ec6c51afb199b2c66eab9d72cdfd750b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140737"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556135"
 ---
 # \<netPeerTcpBinding>
 Define uma associação para mensagens TCP específicas do canal par.  
@@ -19,7 +19,7 @@ Define uma associação para mensagens TCP específicas do canal par.
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<netPeerTcpBinding>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <netPeerBinding>
@@ -60,7 +60,7 @@ Define uma associação para mensagens TCP específicas do canal par.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições sobre a complexidade de mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> .|  
+|[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições sobre a complexidade de mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> .|  
 |[\<resolver>](resolver.md)|Especifica um resolvedor de pares usado por essa associação para resolver uma ID de malha de mesmo nível para os endereços IP do ponto de extremidade de nós na malha do par.|  
 |[\<security>](security-of-netpeerbinding.md)|Define as configurações de segurança para a mensagem. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PeerSecurityElement> .|  
   
@@ -74,7 +74,7 @@ Define uma associação para mensagens TCP específicas do canal par.
  Essa associação fornece suporte para a criação de aplicativos ponto a ponto ou com várias partes usando o transporte de mesmo nível sobre TCP. Cada nó de mesmo nível pode hospedar vários canais de pares definidos com esse tipo de associação.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar a associação NetPeerTcpBinding, que fornece comunicação multiparter usando um canal par. Para obter um cenário detalhado de como usar essa associação, consulte [net peer TCP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90)).  
+ O exemplo a seguir demonstra como usar a associação NetPeerTcpBinding, que fornece comunicação multiparter usando um canal par. Para obter um cenário detalhado de como usar essa associação, consulte [net peer TCP](/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90)).  
   
 ```xml  
 <configuration>
@@ -109,5 +109,5 @@ Define uma associação para mensagens TCP específicas do canal par.
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)
-- [TCP de mesmo nível de rede](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))
-- [Rede ponto a ponto](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [TCP de mesmo nível de rede](/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))
+- [Rede peer-to-peer](../../../wcf/feature-details/peer-to-peer-networking.md)

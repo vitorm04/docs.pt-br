@@ -2,12 +2,12 @@
 title: Coleções
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: f264a0f9ee15707daf4bece5651b9f5f07ebbc39
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 91c6048caf622f21a02032bac31cb2ba5565c54c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400649"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551061"
 ---
 # <a name="collections-visual-basic"></a>Coleções (Visual Basic)
 
@@ -458,7 +458,7 @@ End Class
 
 ## <a name="defining-a-custom-collection"></a>Definindo uma coleção personalizada
 
-Você pode definir uma coleção implementando a interface <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Collections.IEnumerable>. Para obter informações adicionais, consulte [enumerando uma coleção](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
+Você pode definir uma coleção implementando a interface <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Collections.IEnumerable>. Para obter informações adicionais, consulte [enumerando uma coleção](/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
 
 Embora seja possível definir uma coleção personalizada, é melhor usar as coleções que estão incluídas no .NET Framework, que estão descritas em [Tipos de coleções](#kinds-of-collections) anteriormente neste tópico.
 

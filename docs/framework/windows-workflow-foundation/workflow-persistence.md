@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: 1178bd3800fce95be96e601a17bfeff2c05cfceb
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c609ec5e67ce3bb0605f543806085f893acba37c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419298"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557522"
 ---
 # <a name="workflow-persistence"></a>Persistência de fluxo de trabalho
 Persistência de fluxo de trabalho é a captura durável do estado de uma instância de fluxo de trabalho, independente de processo ou de informações do computador. Isso é feito para fornecer um ponto conhecido de recuperação para a instância de fluxo de trabalho no caso de falha do sistema, ou para preservar a memória descarregando as instâncias de fluxo de trabalho que não estão fazendo ativamente o trabalho, ou para mover o estado da instância de fluxo de trabalho de um nó para outro nó em um farm de servidores.  
@@ -23,7 +23,7 @@ Persistência de fluxo de trabalho é a captura durável do estado de uma instâ
   
  Para armazenar e carregar os dados específicos do aplicativo junto com informações relacionadas instância de fluxo de trabalho, você pode criar os participantes de persistência que estendem a classe de <xref:System.Activities.Persistence.PersistenceParticipant> . Um participante de persistência participa no processo de persistência para salvar dados serializados personalizados no armazenamento de persistência, para carregar os dados da instância na memória, e executar qualquer lógica adicional em uma transação de persistência. Para obter mais informações, consulte [participantes da persistência](persistence-participants.md).  
   
- A tela de aplicativo Windows Server simplifica o processo de configurar a persistência. Para obter mais informações, consulte [conceitos de persistência com o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))  
+ A tela de aplicativo Windows Server simplifica o processo de configurar a persistência. Para obter mais informações, consulte [conceitos de persistência com o Windows Server app Fabric](/previous-versions/appfabric/ee677272(v=azure.10))  
   
 ## <a name="implicit-persistence-points"></a>Pontos implícitos de persistência  
  A lista a seguir contém exemplos das circunstâncias na qual um fluxo de trabalho é mantido quando um armazenamento de instância é associado com um fluxo de trabalho.  
@@ -44,14 +44,14 @@ Persistência de fluxo de trabalho é a captura durável do estado de uma instâ
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-- [Repositório de instâncias de fluxo de trabalho do SQL](sql-workflow-instance-store.md)  
+- [Store instância de fluxo de trabalho do SQL](sql-workflow-instance-store.md)  
   
 - [Armazenamentos de instância](instance-stores.md)  
   
-- [Participantes da persistência](persistence-participants.md)  
+- [Participantes de persistência](persistence-participants.md)  
   
 - [Práticas recomendadas de persistência](persistence-best-practices.md)  
   
-- [Instâncias de fluxo de trabalho não persistentes](non-persisted-workflow-instances.md)  
+- [Instâncias são persistentes de fluxo de trabalho](non-persisted-workflow-instances.md)  
   
 - [Pausando e continuando um fluxo de trabalho](pausing-and-resuming-a-workflow.md)

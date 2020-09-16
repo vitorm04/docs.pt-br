@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 273c688d7e9d3fb86d4baece75193ce6d112b62f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 97602b7341636219382b6a405c678bc458ef146a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404908"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556740"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introdução a LINQ no Visual Basic
 A consulta integrada à linguagem (LINQ) adiciona funcionalidades de consulta para Visual Basic e fornece recursos simples e poderosos quando você trabalha com todos os tipos de dados. Em vez de enviar uma consulta para um banco de dados a ser processado ou trabalhar com sintaxe de consulta diferente para cada tipo de dado que você está pesquisando, o LINQ apresenta consultas como parte da linguagem de Visual Basic. Ele usa uma sintaxe unificada, independentemente do tipo de dados.  
@@ -180,7 +180,7 @@ Você pode usar recursos adicionais de consulta LINQ chamando membros dos tipos 
  Para obter exemplos de instruções passo a passo, consulte [como consultar um banco de dados](how-to-query-a-database-by-using-linq.md) e [como: chamar um procedimento armazenado](how-to-call-a-stored-procedure-by-using-linq.md).  
   
 ## <a name="visual-basic-features-that-support-linq"></a>Visual Basic recursos que dão suporte ao LINQ  
- O Visual Basic inclui outros recursos notáveis que tornam o uso do LINQ simples e reduzem a quantidade de código que você deve escrever para executar consultas LINQ. Entre elas estão as seguintes:  
+ O Visual Basic inclui outros recursos notáveis que tornam o uso do LINQ simples e reduzem a quantidade de código que você deve escrever para executar consultas LINQ. Isso inclui o seguinte:  
   
 - **Tipos anônimos**, que permitem que você crie um novo tipo com base em um resultado de consulta.  
   
@@ -221,7 +221,7 @@ Você pode usar recursos adicionais de consulta LINQ chamando membros dos tipos 
 |[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)|Inclui informações gerais, diretrizes de programação e exemplos para LINQ to SQL.|  
 |[Objetos LINQ to](../../concepts/linq/linq-to-objects.md)|Inclui informações gerais, diretrizes de programação e exemplos para LINQ to Objects.|  
 |[LINQ to ADO.NET (página do portal)](../../concepts/linq/linq-to-adonet-portal-page.md)|Inclui links para informações gerais, diretrizes de programação e exemplos para LINQ to ADO.NET.|  
-|[LINQ to XML](../../concepts/linq/linq-to-xml.md)|Inclui informações gerais, diretrizes de programação e exemplos para LINQ to XML.|  
+|[LINQ to XML](../../../../standard/linq/linq-xml-overview.md)|Inclui informações gerais, diretrizes de programação e exemplos para LINQ to XML.|  
   
 ## <a name="how-to-and-walkthrough-topics"></a>Tópicos de instruções e instruções
  [Como consultar um banco de dados](how-to-query-a-database-by-using-linq.md)  
@@ -243,7 +243,7 @@ Você pode usar recursos adicionais de consulta LINQ chamando membros dos tipos 
  [Como atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (Designer Relacional de Objetos)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)  
   
 ## <a name="featured-book-chapters"></a>Capítulos do livro em destaque  
- [Capítulo 17: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) em [programação Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
+ [Capítulo 17: LINQ](/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) em [programação Visual Basic 2008](/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
 ## <a name="see-also"></a>Confira também
 
@@ -251,5 +251,5 @@ Você pode usar recursos adicionais de consulta LINQ chamando membros dos tipos 
 - [Visão geral de LINQ to XML no Visual Basic](../xml/overview-of-linq-to-xml.md)
 - [LINQ para visão geral do DataSet](../../../../framework/data/adonet/linq-to-dataset-overview.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
-- [Ferramentas de LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
-- [Métodos DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [Ferramentas LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
+- [Métodos de DataContext (Designer de Objeto Relacional)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

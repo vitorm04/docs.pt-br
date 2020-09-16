@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 587cb84faa09b686361c255c413ad852780b8971
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e3e2b6173a36490328801afd7fe711f1a003e2ae
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410290"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557470"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Declaração de variável no Visual Basic
 Você declara uma variável para especificar seu nome e suas características. A instrução de declaração para variáveis é a [instrução Dim](../../../language-reference/statements/dim-statement.md). Sua localização e seu conteúdo determinam as características da variável.  
@@ -42,15 +42,15 @@ Você declara uma variável para especificar seu nome e suas características. A
 ## <a name="declaring-data-type"></a>Tipo de dados declarativo  
  A [cláusula as na instrução de declaração](../../../language-reference/statements/as-clause.md) permite que você defina o tipo de dados ou o tipo de objeto da variável que está declarando. Você pode especificar qualquer um dos seguintes tipos para uma variável:  
   
-- Um tipo de dados elementar, como `Boolean` , `Long` ou`Decimal`  
+- Um tipo de dados elementar, como `Boolean` , `Long` ou `Decimal`  
   
 - Um tipo de dados composto, como uma matriz ou estrutura  
   
 - Um tipo de objeto, ou classe, definido em seu aplicativo ou em outro aplicativo  
   
-- Uma classe .NET Framework, como <xref:System.Windows.Forms.Label> ou<xref:System.Windows.Forms.TextBox>  
+- Uma classe .NET Framework, como <xref:System.Windows.Forms.Label> ou <xref:System.Windows.Forms.TextBox>  
   
-- Um tipo de interface, como <xref:System.IComparable> ou<xref:System.IDisposable>  
+- Um tipo de interface, como <xref:System.IComparable> ou <xref:System.IDisposable>  
   
  Você pode declarar várias variáveis em uma instrução sem precisar repetir o tipo de dados. Nas instruções a seguir, as variáveis `i` , `j` , e `k` são declaradas como tipo `Integer` , `l` e `m` as `Long` `x` `y` `Single` e como:  
   
@@ -61,7 +61,7 @@ Dim l, m As Long, x, y As Single
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- Para obter mais informações sobre tipos de dados, consulte [tipos de dados](../data-types/index.md). Para obter mais informações sobre objetos, consulte [objetos e classes](../objects-and-classes/index.md) e [programação com componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
+ Para obter mais informações sobre tipos de dados, consulte [tipos de dados](../data-types/index.md). Para obter mais informações sobre objetos, consulte [objetos e classes](../objects-and-classes/index.md) e [programação com componentes](/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
 ## <a name="local-type-inference"></a>Inferência de tipo local  
  A *inferência de tipos* é usada para determinar os tipos de dados de variáveis locais declarados sem uma `As` cláusula. O compilador infere o tipo da variável do tipo da expressão de inicialização. Isso permite que você declare variáveis sem explicitamente indicar um tipo. No exemplo a seguir, `num1` e `num2` são fortemente tipadas como inteiros.  
@@ -81,9 +81,9 @@ Dim l, m As Long, x, y As Single
 
 - [Como criar uma nova variável](how-to-create-a-new-variable.md)
 - [Como inserir e remover dados de uma variável](how-to-move-data-into-and-out-of-a-variable.md)
-- [Tipos de dados](../../../language-reference/data-types/index.md)
+- [Data Types](../../../language-reference/data-types/index.md)
 - [Protected](../../../language-reference/modifiers/protected.md)
-- [Público](../../../language-reference/modifiers/friend.md)
+- [Friend](../../../language-reference/modifiers/friend.md)
 - [Estático](../../../language-reference/modifiers/static.md)
 - [Características do Elemento Declarado](../declared-elements/declared-element-characteristics.md)
 - [Inferência de Tipo de Variável Local](local-type-inference.md)

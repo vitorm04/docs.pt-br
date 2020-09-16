@@ -2,12 +2,12 @@
 title: <wsHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1e40b5c9-0df2-4d66-afc5-a99d0e4ae7a4
-ms.openlocfilehash: aca1a3fb6415975deec42ec418878e20c974caed
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e6ac5c9627c87f9307e4666ab5415e13cfca9e0c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140379"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557249"
 ---
 # \<wsHttpContextBinding>
 Fornece um contexto para o <xref:System.ServiceModel.WSHttpBinding> que requer que o nível de proteção seja assinado.  
@@ -17,7 +17,7 @@ Fornece um contexto para o <xref:System.ServiceModel.WSHttpBinding> que requer q
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<wsHttpContextBinding>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <wsHttpContextBinding>
@@ -90,8 +90,8 @@ Fornece um contexto para o <xref:System.ServiceModel.WSHttpBinding> que requer q
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<security>](security-of-wshttpbinding.md)|Define as configurações de segurança para a associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.WSHttpSecurityElement> .|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições sobre a complexidade de mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> .|  
-|[\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Especifica se as sessões confiáveis são estabelecidas entre os pontos de extremidade do canal.|  
+|[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições sobre a complexidade de mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> .|  
+|[\<reliableSession>](/previous-versions/ms731375(v=vs.90))|Especifica se as sessões confiáveis são estabelecidas entre os pontos de extremidade do canal.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   

@@ -3,12 +3,12 @@ title: Dados grandes e streaming
 description: Saiba mais sobre as considerações sobre a comunicação baseada em XML do WCF, codificadores e dados de streaming, incluindo a transferência de dados binários.
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 2eb57e2f57bebb2e765ea798b3dff27e0187e8c7
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 58ef2ea1fd4f9aa800a91edbaabeb80f989b38f4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246578"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555023"
 ---
 # <a name="large-data-and-streaming"></a>Dados grandes e streaming
 
@@ -58,7 +58,7 @@ O Windows Communication Foundation (WCF) é uma infraestrutura de comunicação 
   
  Para dados que não têm essas restrições, normalmente é melhor enviar sequências de mensagens no escopo de uma sessão do que uma grande mensagem. Para obter mais informações, consulte a seção "dados de streaming" mais adiante neste tópico.  
   
- Ao enviar grandes quantidades de dados, você precisará definir a `maxAllowedContentLength` configuração do IIS (para obter mais informações, consulte [Configurando limites de solicitação do IIS](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)) e a `maxReceivedMessageSize` configuração de associação (por exemplo, [System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) ou <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A> ). A `maxAllowedContentLength` propriedade assume o padrão de 28,6 MB e a `maxReceivedMessageSize` propriedade assume o padrão de 64 KB.  
+ Ao enviar grandes quantidades de dados, você precisará definir a `maxAllowedContentLength` configuração do IIS (para obter mais informações, consulte [Configurando limites de solicitação do IIS](/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)) e a `maxReceivedMessageSize` configuração de associação (por exemplo, [System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) ou <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A> ). A `maxAllowedContentLength` propriedade assume o padrão de 28,6 MB e a `maxReceivedMessageSize` propriedade assume o padrão de 64 KB.  
   
 ## <a name="encodings"></a>Codificações  
  Uma *codificação* define um conjunto de regras sobre como apresentar mensagens na conexão. Um *codificador* implementa tal codificação e é responsável, no lado do remetente, para transformar uma memória em <xref:System.ServiceModel.Channels.Message> um fluxo de bytes ou um buffer de bytes que pode ser enviado pela rede. No lado do destinatário, o codificador transforma uma sequência de bytes em uma mensagem na memória.  
@@ -240,6 +240,6 @@ public class UploadStreamMessage
 > [!NOTE]
 > A decisão de usar transferência em buffer ou em streaming é uma decisão local do ponto de extremidade. Para transportes HTTP, o modo de transferência não se propaga para uma conexão ou para servidores proxy e outros intermediários. A definição do modo de transferência não é refletida na descrição da interface de serviço. Depois de gerar um cliente WCF para um serviço, você deve editar o arquivo de configuração para serviços destinados a serem usados com transferências transmitidas para definir o modo. Para transportes TCP e pipe nomeado, o modo de transferência é propagado como uma declaração de política.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Como habilitar transmissão](how-to-enable-streaming.md)
+- [Como: habilitar a transmissão](how-to-enable-streaming.md)

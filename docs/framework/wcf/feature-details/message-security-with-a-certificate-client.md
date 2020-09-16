@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 2b2717bc68da9f07cd38e10a5d75b2a7df9add45
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6221f253746ac304115fe844966e2cf552263d04
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602629"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551139"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Segurança da mensagens com um cliente de certificado
 O cenário a seguir mostra um cliente Windows Communication Foundation (WCF) e um serviço protegido usando o modo de segurança da mensagem. O cliente e o serviço são autenticados com certificados. Para obter mais informações, consulte [segurança de aplicativo distribuído](distributed-application-security.md).
@@ -25,8 +25,8 @@ O cenário a seguir mostra um cliente Windows Communication Foundation (WCF) e u
 |Interoperabilidade|Somente WCF|  
 |Autenticação (servidor)|Usando o certificado de serviço|  
 |Autenticação (cliente)|Usando o certificado do cliente|  
-|Integridade|Sim|  
-|Confidencialidade|Sim|  
+|Integridade|Yes|  
+|Confidencialidade|Yes|  
 |Transport|HTTP|  
 |Associação|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -143,9 +143,9 @@ O cenário a seguir mostra um cliente Windows Communication Foundation (WCF) e u
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral de segurança](security-overview.md)
 - [Identidade e autenticação de serviço](service-identity-and-authentication.md)
 - [Trabalhando com certificados](working-with-certificates.md)
-- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

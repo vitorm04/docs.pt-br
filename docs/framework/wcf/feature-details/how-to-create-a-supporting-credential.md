@@ -1,19 +1,19 @@
 ---
-title: Como criar uma credencial de suporte
+title: 'Como: criar uma credencial de suporte'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: b8e7ddcd6118c77e14e090a0b1fa8d65aeb8e3df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b181ac72c9f197e9e404f7aa0f04e254abac10da
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597144"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557392"
 ---
-# <a name="how-to-create-a-supporting-credential"></a>Como criar uma credencial de suporte
+# <a name="how-to-create-a-supporting-credential"></a>Como: criar uma credencial de suporte
 É possível ter um esquema de segurança personalizado que exija mais de uma credencial. Por exemplo, um serviço pode exigir do cliente não apenas um nome de usuário e uma senha, mas também uma credencial que comprova que o cliente está acima da idade de 18. A segunda credencial é uma *credencial de suporte*. Este tópico explica como implementar essas credenciais em um cliente Windows Communication Foundation (WCF).  
   
 > [!NOTE]
-> A especificação para dar suporte a credenciais faz parte da especificação WS-SecurityPolicy. Para obter mais informações, consulte [especificações de especificação Web Services Security](https://docs.microsoft.com/previous-versions/dotnet/articles/ms951273(v=msdn.10)).  
+> A especificação para dar suporte a credenciais faz parte da especificação WS-SecurityPolicy. Para obter mais informações, consulte [especificações de especificação Web Services Security](/previous-versions/dotnet/articles/ms951273(v=msdn.10)).  
   
 ## <a name="supporting-tokens"></a>Tokens com suporte  
  Em resumo, quando você usa a segurança da mensagem, uma *credencial primária* é sempre usada para proteger a mensagem (por exemplo, um certificado X. 509 ou um tíquete Kerberos).  
@@ -27,7 +27,7 @@ ms.locfileid: "84597144"
 ## <a name="endorsing-signing-and-encrypting"></a>Endossando, assinando e criptografando  
  Uma credencial de suporte resulta em um *token de suporte* transmitido dentro da mensagem. A especificação WS-SecurityPolicy define quatro maneiras de anexar um token de suporte à mensagem, conforme descrito na tabela a seguir.  
   
-|Finalidade|Descrição|  
+|Finalidade|Description|  
 |-------------|-----------------|  
 |Com sinal|O token de suporte é incluído no cabeçalho de segurança e é assinado pela assinatura da mensagem.|  
 |Endosso|Um *token de endosso* assina a assinatura da mensagem.|  
@@ -80,6 +80,6 @@ ms.locfileid: "84597144"
 ### <a name="code"></a>Código  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Como criar uma associação personalizada utilizando o SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Como: criar uma associação personalizada utilizando o SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md)

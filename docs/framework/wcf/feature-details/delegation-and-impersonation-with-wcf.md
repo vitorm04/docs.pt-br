@@ -9,12 +9,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 7f8d3695a36a43ca6bf796b141c07f6d2d088354
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 91e7ea8df5c32329f0eb8d12943ce5f816ff0e5a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245070"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557587"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegação e representação com o WCF
 A *representação* é uma técnica comum que os serviços usam para restringir o acesso do cliente aos recursos de um domínio de serviço. Os recursos de domínio de serviço podem ser recursos de máquina, como arquivos locais (representação) ou um recurso em outra máquina, como um compartilhamento de arquivos (delegação). Para um aplicativo de exemplo, consulte [personificando o cliente](../samples/impersonating-the-client.md). Para obter um exemplo de como usar a representação, consulte [como: representar um cliente em um serviço](../how-to-impersonate-a-client-on-a-service.md).  
@@ -40,7 +40,7 @@ A *representação* é uma técnica comum que os serviços usam para restringir 
   
 - <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding> e <xref:System.ServiceModel.NetTcpBinding> com uma credencial de cliente do Windows.  
   
-- <xref:System.ServiceModel.BasicHttpBinding>com um <xref:System.ServiceModel.BasicHttpSecurityMode> conjunto para a <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> credencial ou qualquer outra associação padrão em que o cliente apresenta uma credencial de nome de usuário que o serviço pode mapear para uma conta válida do Windows.  
+- <xref:System.ServiceModel.BasicHttpBinding> com um <xref:System.ServiceModel.BasicHttpSecurityMode> conjunto para a <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> credencial ou qualquer outra associação padrão em que o cliente apresenta uma credencial de nome de usuário que o serviço pode mapear para uma conta válida do Windows.  
   
 - Qualquer <xref:System.ServiceModel.Channels.CustomBinding> que usa uma credencial de cliente do Windows com o `requireCancellation` definido como `true` . (A propriedade está disponível nas seguintes classes: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> , <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> e <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters> .) Se uma conversa segura for usada na associação, ela também deverá ter a `requireCancellation` propriedade definida como `true` .  
   
@@ -93,7 +93,7 @@ A *representação* é uma técnica comum que os serviços usam para restringir 
   
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|Comportamento|  
 |---------------------------|------------------------------------------------|--------------|  
-|Obrigatório|n/d|O WCF representa o chamador|  
+|Obrigatório|N/D|O WCF representa o chamador|  
 |Permitido|false|O WCF não representa o chamador|  
 |Permitido|true|O WCF representa o chamador|  
 |NotAllowed|false|O WCF não representa o chamador|  
@@ -112,32 +112,32 @@ A *representação* é uma técnica comum que os serviços usam para restringir 
   
  A tabela a seguir especifica o nível de representação que o serviço obtém ao representar um token armazenado em cache.  
   
-|`AllowedImpersonationLevel` valor|O serviço tem`SeImpersonatePrivilege`|O serviço e o cliente são capazes de delegação|Token em cache`ImpersonationLevel`|  
+|`AllowedImpersonationLevel` valor|O serviço tem `SeImpersonatePrivilege`|O serviço e o cliente são capazes de delegação|Token em cache `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Anônima|Sim|n/d|Representação|  
 |Anônima|Não|n/d|Identificação|  
 |Identificação|n/d|n/d|Identificação|  
 |Representação|Sim|n/d|Representação|  
 |Representação|Não|n/d|Identificação|  
-|Delegação|Yes|Yes|Delegação|  
-|Delegação|Yes|No|Representação|  
+|Delegação|Sim|Sim|Delegação|  
+|Delegação|Sim|Não|Representação|  
 |Delegação|Não|n/d|Identificação|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Nível de representação obtido de credenciais de nome de usuário e representação de token em cache  
  Ao passar o serviço seu nome de usuário e senha, um cliente permite que o WCF faça logon como esse usuário, o que equivale a definir a `AllowedImpersonationLevel` propriedade como <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> . (O `AllowedImpersonationLevel` está disponível nas <xref:System.ServiceModel.Security.WindowsClientCredential> classes e <xref:System.ServiceModel.Security.HttpDigestClientCredential> .) A tabela a seguir fornece o nível de representação obtido quando o serviço recebe credenciais de nome de usuário.  
   
-|`AllowedImpersonationLevel`|O serviço tem`SeImpersonatePrivilege`|O serviço e o cliente são capazes de delegação|Token em cache`ImpersonationLevel`|  
+|`AllowedImpersonationLevel`|O serviço tem `SeImpersonatePrivilege`|O serviço e o cliente são capazes de delegação|Token em cache `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|n/d|Yes|Yes|Delegação|  
-|n/d|Yes|No|Representação|  
-|n/d|Não|n/d|Identificação|  
+|N/D|Sim|Sim|Delegação|  
+|N/D|Sim|Não|Representação|  
+|N/D|Não|n/d|Identificação|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>Nível de representação obtido da representação baseada em S4U  
   
-|O serviço tem`SeTcbPrivilege`|O serviço tem`SeImpersonatePrivilege`|O serviço e o cliente são capazes de delegação|Token em cache`ImpersonationLevel`|  
+|O serviço tem `SeTcbPrivilege`|O serviço tem `SeImpersonatePrivilege`|O serviço e o cliente são capazes de delegação|Token em cache `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Yes|Sim|n/d|Representação|  
-|Yes|Não|n/d|Identificação|  
+|Sim|Sim|n/d|Representação|  
+|Sim|Não|n/d|Identificação|  
 |Não|n/d|n/d|Identificação|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>Mapeando um certificado de cliente para uma conta do Windows  
@@ -171,7 +171,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ```  
   
 ## <a name="delegation"></a>Delegação  
- Para delegar a um serviço de back-end, um serviço deve executar o Kerberos multi-perna (SSPI sem o fallback de NTLM) ou a autenticação Kerberos direta para o serviço de back-end usando a identidade do Windows do cliente. Para delegar a um serviço de back-end, crie um <xref:System.ServiceModel.ChannelFactory%601> e um canal e, em seguida, comunique-se por meio do canal ao representar o cliente. Com essa forma de delegação, a distância na qual o serviço de back-end pode ser localizado do serviço de front-end depende do nível de representação obtido pelo serviço de front-end. Quando o nível de representação é <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> , os serviços de front-end e back-end devem estar em execução no mesmo computador. Quando o nível de representação é <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> , os serviços de front-end e back-end podem estar em computadores separados ou no mesmo computador. Habilitar a representação em nível de delegação requer que a política de domínio do Windows seja configurada para permitir a delegação. Para obter mais informações sobre como configurar Active Directory para suporte à delegação, consulte [habilitando a autenticação delegada](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780217(v=ws.10)).  
+ Para delegar a um serviço de back-end, um serviço deve executar o Kerberos multi-perna (SSPI sem o fallback de NTLM) ou a autenticação Kerberos direta para o serviço de back-end usando a identidade do Windows do cliente. Para delegar a um serviço de back-end, crie um <xref:System.ServiceModel.ChannelFactory%601> e um canal e, em seguida, comunique-se por meio do canal ao representar o cliente. Com essa forma de delegação, a distância na qual o serviço de back-end pode ser localizado do serviço de front-end depende do nível de representação obtido pelo serviço de front-end. Quando o nível de representação é <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> , os serviços de front-end e back-end devem estar em execução no mesmo computador. Quando o nível de representação é <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> , os serviços de front-end e back-end podem estar em computadores separados ou no mesmo computador. Habilitar a representação em nível de delegação requer que a política de domínio do Windows seja configurada para permitir a delegação. Para obter mais informações sobre como configurar Active Directory para suporte à delegação, consulte [habilitando a autenticação delegada](/previous-versions/windows/it-pro/windows-server-2003/cc780217(v=ws.10)).  
   
 > [!NOTE]
 > Quando um cliente é autenticado no serviço de front-end usando um nome de usuário e senha que correspondem a uma conta do Windows no serviço de back-end, o serviço de front-end pode se autenticar no serviço de back-end reutilizando o nome de usuário e a senha do cliente. Essa é uma forma particularmente poderosa de fluxo de identidade, pois passar o nome de usuário e a senha para o serviço de back-end permite que o serviço de back-end execute a representação, mas não constitui a delegação porque o Kerberos não é usado. Os controles de Active Directory na delegação não se aplicam ao nome de usuário e à autenticação de senha.  
@@ -180,9 +180,9 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 |Nível de representação|O serviço pode executar a delegação entre processos|O serviço pode executar a delegação entre computadores|  
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|No|Não|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|Sim|No|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|Sim|Yes|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|Não|Não|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|Sim|Não|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|Sim|Sim|  
   
  O exemplo de código a seguir demonstra como usar a delegação.  
   
@@ -190,7 +190,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
  [!code-vb[c_delegation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_delegation/vb/source.vb#1)]  
   
 ### <a name="how-to-configure-an-application-to-use-constrained-delegation"></a>Como configurar um aplicativo para usar a delegação restrita  
- Antes de poder usar a delegação restrita, o remetente, o destinatário e o controlador de domínio devem ser configurados para fazer isso. O procedimento a seguir lista as etapas que habilitam a delegação restrita. Para obter detalhes sobre as diferenças entre delegação e delegação restrita, consulte a parte das [extensões Kerberos do Windows Server 2003](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc738207(v=ws.10)) que aborda a discussão restrita.  
+ Antes de poder usar a delegação restrita, o remetente, o destinatário e o controlador de domínio devem ser configurados para fazer isso. O procedimento a seguir lista as etapas que habilitam a delegação restrita. Para obter detalhes sobre as diferenças entre delegação e delegação restrita, consulte a parte das [extensões Kerberos do Windows Server 2003](/previous-versions/windows/it-pro/windows-server-2003/cc738207(v=ws.10)) que aborda a discussão restrita.  
   
 1. No controlador de domínio, desmarque a caixa de seleção a **conta é confidencial e não pode ser delegada** para a conta sob a qual o aplicativo cliente está sendo executado.  
   
@@ -200,9 +200,9 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 4. No controlador de domínio, configure o computador de camada intermediária para usar a delegação restrita, clicando na opção **confiar neste computador para delegação a serviços especificados** .  
   
- Para obter instruções mais detalhadas sobre como configurar a delegação restrita, consulte [transição de protocolo Kerberos e delegação restrita](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10)).
+ Para obter instruções mais detalhadas sobre como configurar a delegação restrita, consulte [transição de protocolo Kerberos e delegação restrita](/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10)).
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>
@@ -217,7 +217,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.ChannelFactory%601>
 - <xref:System.Security.Principal.TokenImpersonationLevel.Identification>
-- [Usando a representação com segurança de transporte](using-impersonation-with-transport-security.md)
+- [Utilizando Personificação com segurança de transporte](using-impersonation-with-transport-security.md)
 - [Representando o cliente](../samples/impersonating-the-client.md)
-- [Como personificar um cliente em um serviço](../how-to-impersonate-a-client-on-a-service.md)
-- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Como: representar um cliente em um serviço](../how-to-impersonate-a-client-on-a-service.md)
+- [Ferramenta Utilitário de Metadados ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)

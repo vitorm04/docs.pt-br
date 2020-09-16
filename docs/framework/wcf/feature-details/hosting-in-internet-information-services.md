@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: baf13af39fe575a75f1304b21f3b4ad70dd370ab
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7bfdf2b057c791da7e15619d69c0314557944093
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597313"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555829"
 ---
 # <a name="host-in-internet-information-services"></a>Host no Serviços de Informações da Internet
 
@@ -25,7 +25,7 @@ O WCF pode ser hospedado nas seguintes versões do IIS nos seguintes sistemas op
 
 - IIS 7,0 no Windows Vista e no Windows Server 2008. O IIS 7,0 fornece o mesmo modelo de processo avançado que o IIS 6,0, mas usa o WAS (serviço de ativação de processos do Windows) para permitir a ativação e a comunicação de rede por meio de protocolos diferentes de HTTP. Esse ambiente é adequado para o desenvolvimento de serviços WCF que se comunicam em qualquer protocolo de rede com suporte do WCF (incluindo HTTP, net. TCP, net. pipe e net. MSMQ). Para obter mais informações sobre o WAS, consulte [hospedagem no serviço de ativação de processos do Windows](hosting-in-windows-process-activation-service.md).
 
-- O [Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)) funciona com o IIS 7,0 e o WAS (serviço de ativação de processos do Windows) para fornecer um ambiente de Hospedagem de aplicativos avançado para serviços WCF e WF do NET4. Esses benefícios incluem gerenciamento do ciclo de vida do processo, reciclagem de processo, hospedagem compartilhada, proteção rápida de falhas, órfão de processo, ativação sob demanda e monitoramento de integridade. Para obter informações detalhadas, consulte [recursos de hospedagem do AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10)) e conceitos de hospedagem do [AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10)).
+- O [Windows Server AppFabric](/previous-versions/appfabric/ff384253(v=azure.10)) funciona com o IIS 7,0 e o WAS (serviço de ativação de processos do Windows) para fornecer um ambiente de Hospedagem de aplicativos avançado para serviços WCF e WF do NET4. Esses benefícios incluem gerenciamento do ciclo de vida do processo, reciclagem de processo, hospedagem compartilhada, proteção rápida de falhas, órfão de processo, ativação sob demanda e monitoramento de integridade. Para obter informações detalhadas, consulte [recursos de hospedagem do AppFabric](/previous-versions/appfabric/ee677189(v=azure.10)) e conceitos de hospedagem do [AppFabric](/previous-versions/appfabric/ee677371(v=azure.10)).
 
 ## <a name="benefits-of-iis-hosting"></a>Benefícios da hospedagem do IIS
 
@@ -61,11 +61,11 @@ Para obter uma discussão sobre cada uma dessas tarefas, consulte [implantando u
 
 Os serviços WCF podem ser hospedados lado a lado com o ASP.NET ou no modo de compatibilidade ASP.NET, no qual os serviços podem aproveitar ao máximo os recursos fornecidos pela plataforma de aplicativo Web ASP.NET. Para obter uma discussão sobre esses recursos, consulte [Serviços WCF e ASP.net](wcf-services-and-aspnet.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Estendendo a hospedagem usando ServiceHostFactory](../extending/extending-hosting-using-servicehostfactory.md)
-- [Implantando um serviço WCF hospedado em Serviços de Informações da Internet](deploying-an-internet-information-services-hosted-wcf-service.md)
+- [Estendendo a hospedagem com ServiceHostFactory](../extending/extending-hosting-using-servicehostfactory.md)
+- [Implantando um Serviço WCF hospedado do Internet Information Services dos Serviços de Informações da Internet](deploying-an-internet-information-services-hosted-wcf-service.md)
 - [Serviços WCF e ASP.NET](wcf-services-and-aspnet.md)
-- [Práticas recomendadas de hospedagem de Serviços de Informações da Internet](internet-information-services-hosting-best-practices.md)
-- [Configurando os Serviços de Informações da Internet 7.0 para Windows Communication Foundation](configuring-iis-for-wcf.md)
-- [Recursos de hospedagem do Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Práticas recomendadas de hospedagem dos Serviços de Informações da Internet](internet-information-services-hosting-best-practices.md)
+- [Configurando os Serviços de informação da internet 7.0 para o Windows Communication Foundation](configuring-iis-for-wcf.md)
+- [Recursos de hospedagem do Windows Server AppFabric](/previous-versions/appfabric/ee677189(v=azure.10))

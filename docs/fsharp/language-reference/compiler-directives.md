@@ -4,12 +4,12 @@ description: 'Saiba mais sobre as diretivas de pré-processador de linguagem F #
 ms.date: 12/10/2018
 f1_keywords:
 - '#endif_FS'
-ms.openlocfilehash: aee307eb7bccc8d91b5162f3f43db3b806b761d0
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: c3e1a07e0e09b5ae090c550368f8a9f8ee575bfb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855368"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557314"
 ---
 # <a name="compiler-directives"></a>Diretivas de compilador
 
@@ -40,7 +40,7 @@ O código que é desativado por uma dessas diretivas aparece esmaecido no editor
 > [!NOTE]
 > O comportamento das diretivas de compilação condicional não é o mesmo que em outros idiomas. Por exemplo, você não pode usar expressões boolianas que envolvam símbolos e `true` `false` não têm nenhum significado especial. Os símbolos que você usa na `if` diretiva devem ser definidos pela linha de comando ou nas configurações do projeto; não há nenhuma `define` diretiva de pré-processador.
 
-O código a seguir ilustra o uso das `#if` `#else` diretivas, e `#endif` . Neste exemplo, o código contém duas versões da definição de `function1` . Quando `VERSION1` é definido usando a [opção-define do compilador](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04), o código entre a `#if` diretiva e a `#else` diretiva é ativado. Caso contrário, o código entre `#else` e `#endif` é ativado.
+O código a seguir ilustra o uso das `#if` `#else` diretivas, e `#endif` . Neste exemplo, o código contém duas versões da definição de `function1` . Quando `VERSION1` é definido usando a [opção-define do compilador](./compiler-options.md), o código entre a `#if` diretiva e a `#else` diretiva é ativado. Caso contrário, o código entre `#else` e `#endif` é ativado.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7301.fs)]
 
@@ -76,7 +76,7 @@ A tabela a seguir lista a diretiva de compilador que está disponível em F #.
 
 |Diretiva|Descrição|
 |---------|-----------|
-|`#light`["on" &#124; "off"]|Habilita ou desabilita a sintaxe leve, para compatibilidade com outras versões do ML. Por padrão, a sintaxe leve está habilitada. A sintaxe detalhada está sempre habilitada. Portanto, você pode usar a sintaxe leve e a sintaxe detalhada. A diretiva `#light` por si só é equivalente a `#light "on"` . Se você especificar `#light "off"` , deverá usar a sintaxe detalhada para todas as construções de linguagem. A sintaxe na documentação para F # é apresentada com a suposição de que você está usando a sintaxe leve. Para obter mais informações, consulte [sintaxe detalhada](verbose-syntax.md).|
+|`#light` ["on" &#124; "off"]|Habilita ou desabilita a sintaxe leve, para compatibilidade com outras versões do ML. Por padrão, a sintaxe leve está habilitada. A sintaxe detalhada está sempre habilitada. Portanto, você pode usar a sintaxe leve e a sintaxe detalhada. A diretiva `#light` por si só é equivalente a `#light "on"` . Se você especificar `#light "off"` , deverá usar a sintaxe detalhada para todas as construções de linguagem. A sintaxe na documentação para F # é apresentada com a suposição de que você está usando a sintaxe leve. Para obter mais informações, consulte [sintaxe detalhada](verbose-syntax.md).|
 
 Para diretivas do interpretador (fsi.exe), consulte [programação interativa com F #](../tutorials/fsharp-interactive/index.md).
 

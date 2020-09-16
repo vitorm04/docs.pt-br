@@ -7,12 +7,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 84cb45d62409769a79fa6a401fdb1aa6934c4099
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 898211ec4504225413769f2f0dbf2f2c70110c14
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245603"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556057"
 ---
 # <a name="what-is-windows-communication-foundation"></a>O que é o Windows Communication Foundation
 O Windows Communication Foundation (WCF) é uma estrutura para a criação de aplicativos orientados a serviços. Usando o WCF, você pode enviar dados como mensagens assíncronas de um ponto de extremidade de serviço para outro. Um ponto de extremidade de serviço pode ser parte de um serviço disponível continuamente hospedado pelo IIS, ou pode ser um serviço hospedado em um aplicativo. Um ponto de extremidade pode ser um cliente de um serviço que solicita dados de um ponto de extremidade de serviço. As mensagens podem ser simples como um único caractere ou uma palavra enviada como XML ou complexo como um fluxo de dados binários. Alguns cenários de exemplo incluem:
@@ -95,13 +95,13 @@ O Microsoft Silverlight é uma plataforma para criar aplicativos Web interoperá
 
 Os recursos de hospedagem do servidor de aplicativos do Windows Server AppFabric foram projetados especificamente para implantar e gerenciar aplicativos que usam o WCF para comunicação. Os recursos de hospedagem incluem ferramentas avançadas e opções de configuração projetadas especificamente para aplicativos habilitados para WCF.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel>
 - [Conceitos fundamentais do Windows Communication Foundation](fundamental-concepts.md)
 - [Arquitetura do Windows Communication Foundation](architecture.md)
 - [Diretrizes e práticas recomendadas](guidelines-and-best-practices.md)
-- [Tutorial de Introdução](getting-started-tutorial.md)
-- [Guia da documentação](guide-to-the-documentation.md)
-- [Programação básica do WCF](basic-wcf-programming.md)
-- [Exemplos do Windows Communication Foundation](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751514%28v=vs.90%29)
+- [Guia de introdução ao tutorial](getting-started-tutorial.md)
+- [Guia para a documentação](guide-to-the-documentation.md)
+- [Programação de WCF básica](basic-wcf-programming.md)
+- [Exemplos do Windows Communication Foundation](/previous-versions/dotnet/netframework-3.5/ms751514(v=vs.90))

@@ -2,12 +2,12 @@
 title: Consultas de agregação
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: 8defefb39974bea150fed84b0e7404b43882c41c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 2085808d631d1d9f97573c557e9e66e07113df52
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634736"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554215"
 ---
 # <a name="aggregate-queries"></a>Consultas de agregação
 O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte aos operadores de agregação `Average`, `Count`, `Max`, `Min` e `Sum`. Observe as seguintes características dos operadores de agregação no [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
@@ -18,7 +18,7 @@ O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suport
   
 - As consultas de agregação geralmente retornam um número em vez de uma coleção.  
   
-     Para obter mais informações, consulte [operações de agregação](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120)).  
+     Para obter mais informações, consulte [operações de agregação](/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120)).  
   
 - Você não pode chamar agregações em tipos anônimos.  
   
@@ -28,7 +28,7 @@ O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suport
  [Retornar o valor médio de uma sequência numérica](return-the-average-value-from-a-numeric-sequence.md)  
  Demonstra como usar o operador <xref:System.Linq.Enumerable.Average%2A>.  
   
- [Contar o número de elementos em uma sequência](count-the-number-of-elements-in-a-sequence.md)  
+ [Conta todas o número de elementos em uma sequência](count-the-number-of-elements-in-a-sequence.md)  
  Demonstra como usar o operador <xref:System.Linq.Enumerable.Count%2A>.  
   
  [Localizar o valor máximo em uma sequência numérica](find-the-maximum-value-in-a-numeric-sequence.md)  
@@ -40,12 +40,12 @@ O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suport
  [Calcular a soma dos valores em uma sequência numérica](compute-the-sum-of-values-in-a-numeric-sequence.md)  
  Demonstra como usar o operador <xref:System.Linq.Enumerable.Sum%2A>.  
   
-## <a name="related-sections"></a>Seções Relacionadas  
+## <a name="related-sections"></a>Seções relacionadas  
  [Exemplos de consulta](query-examples.md)  
  Fornece links para consultas do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no Visual Basic e no C#.  
   
- [Conceitos de consulta](query-concepts.md)  
- Fornece links para tópicos que explicam os conceitos para criar consultas LINQ no [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ [Consulte conceitos](query-concepts.md)  
+ Fornece links para tópicos que explicam conceitos para criar consultas LINQ no [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
  [Introdução a consultas LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
  Explica como as consultas funcionam no LINQ.

@@ -4,12 +4,12 @@ description: Descubra como implantar um aplicativo do .NET para Apache Spark no 
 ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e6b2fdd1818250c47ce6cb64439ecab58ae99ad8
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 9a4ca80463de41a50d103c696b2108d0cef023fc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617633"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548371"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Tutorial: implantar um aplicativo .NET para Apache Spark no Azure HDInsight
 
@@ -62,7 +62,7 @@ Antes de começar, execute as seguintes tarefas:
     |Propriedade  |Descrição  |
     |---------|---------|
     |Subscription  | Na lista suspensa, escolha uma das suas assinaturas ativas do Azure. |
-    |Grupo de recursos | Especifique se deseja criar um novo grupo de recursos ou usar um existente. Um grupo de recursos é um contêiner que mantém os recursos relacionados a uma solução do Azure. |
+    |Resource group | Especifique se deseja criar um novo grupo de recursos ou usar um existente. Um grupo de recursos é um contêiner que mantém os recursos relacionados a uma solução do Azure. |
     |Nome do cluster | Dê um nome para seu cluster HDInsight Spark.|
     |Location   | Selecione um local para o grupo de recursos. O modelo usa esse local para criar o cluster, bem como para o armazenamento de cluster padrão. |
     |Tipo de cluster| Selecione **Spark** como o tipo de cluster.|
@@ -160,7 +160,7 @@ Depois que o cluster estiver em execução e você carregou seus arquivos no Azu
 
 3. Selecione **criar** para enviar o script.
 
-## <a name="run-your-app"></a>Executar seu aplicativo
+## <a name="run-your-app"></a>Executar o aplicativo
 
 1. Navegue até o cluster HDInsight Spark no portal do Azure e, em seguida, selecione **SSH + logon do cluster**.
 
@@ -178,7 +178,7 @@ Depois que o cluster estiver em execução e você carregou seus arquivos no Azu
 
    Quando seu aplicativo for executado, você verá a mesma tabela de contagem de palavras da execução local de introdução gravada no console. Parabéns, você executou seu primeiro .NET para Apache Spark aplicativo na nuvem!
 
-## <a name="clean-up-resources"></a>Limpar recursos
+## <a name="clean-up-resources"></a>Limpar os recursos
 
 O HDInsight salva seus dados no armazenamento do Azure, para que você possa excluir um cluster com segurança quando ele não estiver em uso. Você também é cobrado por um cluster HDInsight, mesmo quando ele não está em uso. Como os encargos para o cluster são muitas vezes maiores do que os encargos para armazenamento, faz sentido, do ponto de vista econômico, excluir os clusters quando não estiverem em uso.
 
@@ -189,4 +189,4 @@ Também é possível selecionar o nome do grupo de recursos para abrir a página
 Neste tutorial, você implantou seu aplicativo .NET para Apache Spark para o Azure HDInsight. Para saber mais sobre o HDInsight, continue na Documentação do Azure HDInsight.
 
 > [!div class="nextstepaction"]
-> [Documentação do HDInsight do Azure](https://docs.microsoft.com/azure/hdinsight/)
+> [Documentação do HDInsight do Azure](/azure/hdinsight/)

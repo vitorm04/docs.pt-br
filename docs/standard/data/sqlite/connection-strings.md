@@ -2,12 +2,12 @@
 title: Cadeias de conexão
 ms.date: 12/13/2019
 description: As palavras-chave e os valores com suporte das cadeias de conexão.
-ms.openlocfilehash: bb54d152bac62a86c2a49192cf678a745159164e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3c50b31689abf6d47aa8f83a6f6f755bcfec0ea3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400445"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555387"
 ---
 # <a name="connection-strings"></a>Cadeias de conexão
 
@@ -25,19 +25,19 @@ O SQLite trata caminhos relativos ao diretório de trabalho atual. Caminhos abso
 
 Se **estiver vazio**, o SQLite criará um banco de dados temporário em disco que é excluído quando a conexão é fechada.
 
-Se `:memory:`, um banco de dados na memória é usado. Para obter mais informações, consulte [bancos de dados na memória](in-memory-databases.md).
+Se `:memory:` , um banco de dados na memória é usado. Para obter mais informações, consulte [bancos de dados na memória](in-memory-databases.md).
 
-Os caminhos que começam com `|DataDirectory|` a cadeia de caracteres de substituição são tratados da mesma forma que os caminhos relativos. Se definido, os caminhos são feitos em relação ao valor da propriedade de domínio do aplicativo DataDirectory.
+Os caminhos que começam com a `|DataDirectory|` cadeia de caracteres de substituição são tratados da mesma forma que os caminhos relativos. Se definido, os caminhos são feitos em relação ao valor da propriedade de domínio do aplicativo DataDirectory.
 
 Essa palavra-chave também dá suporte a [nomes de fileuri](https://www.sqlite.org/uri.html).
 
-### <a name="mode"></a>Mode
+### <a name="mode"></a>Modo
 
 O modo de conexão.
 
 | Valor           | Descrição                                                                                        |
 | --------------- | -------------------------------------------------------------------------------------------------- |
-| ReadWriteCreate | Abre o banco de dados para leitura e gravação e cria-o se ele não existir. Esse é o padrão. |
+| ReadWriteCreate | Abre o banco de dados para leitura e gravação e cria-o se ele não existir. Este é o padrão. |
 | ReadWrite       | Abre o banco de dados para leitura e gravação.                                                        |
 | ReadOnly        | Abre o banco de dados no modo somente leitura.                                                              |
 | Memória          | Abre um banco de dados na memória.                                                                       |
@@ -48,8 +48,8 @@ O modo de cache usado pela conexão.
 
 | Valor   | Descrição                                                                                    |
 | ------- | ---------------------------------------------------------------------------------------------- |
-| Padrão | Usa o modo padrão da biblioteca SQLite subjacente. Esse é o padrão.                   |
-| Privado | Cada conexão usa um cache privado.                                                          |
+| Padrão | Usa o modo padrão da biblioteca SQLite subjacente. Este é o padrão.                   |
+| Particular | Cada conexão usa um cache privado.                                                          |
 | Compartilhado  | As conexões compartilham um cache. Esse modo pode alterar o comportamento do bloqueio de transação e tabela. |
 
 ### <a name="password"></a>Senha
@@ -63,11 +63,11 @@ A chave de criptografia. Quando especificado, `PRAGMA key` é enviado imediatame
 
 Um valor que indica se as restrições de chave estrangeira devem ser habilitadas.
 
-| Valor   | Descrição
+| Valor   | DESCRIÇÃO
 | ------- | --- |
 | True    | Envia `PRAGMA foreign_keys = 1` imediatamente após a abertura da conexão.
 | Falso   | Envia `PRAGMA foreign_keys = 0` imediatamente após a abertura da conexão.
-| (vazio) | Não envia `PRAGMA foreign_keys`. Esse é o padrão. |
+| (vazio) | Não envia `PRAGMA foreign_keys` . Este é o padrão. |
 
 Não há necessidade de habilitar chaves estrangeiras se, como em e_sqlite3, SQLITE_DEFAULT_FOREIGN_KEYS foi usado para compilar a biblioteca SQLite nativa.
 
@@ -75,10 +75,10 @@ Não há necessidade de habilitar chaves estrangeiras se, como em e_sqlite3, SQL
 
 Um valor que indica se os gatilhos recursivos devem ser habilitados.
 
-| Valor | Descrição                                                                 |
+| Valor | DESCRIÇÃO                                                                 |
 | ----- | --------------------------------------------------------------------------- |
 | True  | Envia `PRAGMA recursive_triggers` imediatamente após a abertura da conexão. |
-| Falso | Não envia `PRAGMA recursive_triggers`. Esse é o padrão.              |
+| Falso | Não envia `PRAGMA recursive_triggers` . Este é o padrão.              |
 
 ## <a name="connection-string-builder"></a>Construtor de cadeia de conexão
 
@@ -92,7 +92,7 @@ Você pode usar <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> como 
 
 Uma cadeia de conexão básica com um cache compartilhado para simultaneidade aprimorada.
 
-```ConnectionString
+```connectionstring
 Data Source=Application.db;Cache=Shared
 ```
 
@@ -100,7 +100,7 @@ Data Source=Application.db;Cache=Shared
 
 Um banco de dados criptografado.
 
-```ConnectionString
+```connectionstring
 Data Source=Encrypted.db;Password=MyEncryptionKey
 ```
 
@@ -108,7 +108,7 @@ Data Source=Encrypted.db;Password=MyEncryptionKey
 
 Um banco de dados somente leitura que não pode ser modificado pelo aplicativo.
 
-```ConnectionString
+```connectionstring
 Data Source=Reference.db;Mode=ReadOnly
 ```
 
@@ -116,7 +116,7 @@ Data Source=Reference.db;Mode=ReadOnly
 
 Um banco de dados privado na memória.
 
-```ConnectionString
+```connectionstring
 Data Source=:memory:
 ```
 
@@ -124,12 +124,12 @@ Data Source=:memory:
 
 Um banco de dados compartilhável e na memória identificado pelo nome *compartilhável*.
 
-```ConnectionString
+```connectionstring
 Data Source=Sharable;Mode=Memory;Cache=Shared
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 * [Cadeias de caracteres de conexão no ADO.NET](../../../framework/data/adonet/connection-strings.md)
 * [Bancos de dados na memória](in-memory-databases.md)
-* [Transactions](transactions.md)
+* [Transações](transactions.md)

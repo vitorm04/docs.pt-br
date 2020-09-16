@@ -2,12 +2,12 @@
 title: Visão geral da segurança
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 8a036a40d2b1728f39037018c3672551b8b67bd9
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 4222dd36fe2f693bb16216e01d5e06a8176a7801
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545029"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550684"
 ---
 # <a name="security-overview"></a>Visão geral da segurança
 
@@ -25,9 +25,9 @@ Proteger um aplicativo é um processo contínuo. Nunca haverá um ponto em que u
 
  A modelagem de ameaças é uma abordagem iterativa para avaliar vulnerabilidades em seu aplicativo para encontrar as que são mais perigosas porque expõem os dados mais confidenciais. Depois de identificar as vulnerabilidades, você as classifica em ordem de gravidade e cria um conjunto priorizado de contramedidas para combater as ameaças.
 
-Para obter mais informações, consulte os seguintes recursos:
+Para saber mais, consulte os recursos a seguir:
 
-|Resource|Descrição|
+|Recurso|Descrição|
 |--------------|-----------------|
 |O site de [modelagem de ameaças](https://www.microsoft.com/securityengineering/sdl/threatmodeling) no portal de engenharia de segurança|Os recursos nesta página ajudarão você a entender o processo de modelagem de ameaças e a criar modelos de ameaças que você pode usar para proteger seus próprios aplicativos|
 
@@ -40,11 +40,11 @@ Para obter mais informações, consulte os seguintes recursos:
 
 Para obter mais informações sobre como proteger seus aplicativos, consulte os seguintes recursos:
 
-|Resource|Descrição|
+|Recurso|Descrição|
 |--------------|-----------------|
 |[Protegendo aplicativos](/visualstudio/ide/securing-applications)|Contém links para tópicos de segurança geral. Também contém links para tópicos para proteger aplicativos distribuídos, aplicativos Web, aplicativos móveis e aplicativos de área de trabalho.|
 
-## <a name="code-access-security-cas"></a>CAS (Segurança de Acesso do Código)
+## <a name="code-access-security-cas"></a>CAS (segurança de acesso ao código)
 
 A CAS (segurança de acesso ao código) é um mecanismo que ajuda a limitar o acesso que o código tem a recursos e operações protegidos. No .NET Framework, o CAS executa as seguintes funções:
 
@@ -64,9 +64,9 @@ A CAS (segurança de acesso ao código) é um mecanismo que ajuda a limitar o ac
 
 Para minimizar a quantidade de danos que podem ocorrer se um ataque for realizado com sucesso, escolha um contexto de segurança para seu código que conceda acesso apenas aos recursos de que ele precisa para realizar seu trabalho e não mais.
 
-Para obter mais informações, consulte os seguintes recursos:
+Para saber mais, consulte os recursos a seguir:
 
-|Resource|Descrição|
+|Recurso|Descrição|
 |--------------|-----------------|
 |[Segurança de acesso do código e o ADO.NET](code-access-security.md)|Descreve as interações entre a segurança de acesso ao código, a segurança baseada em função e os ambientes parcialmente confiáveis da perspectiva de um aplicativo ADO.NET.|
 |[Segurança de acesso do código](../../misc/code-access-security.md)|Contém links para tópicos adicionais que descrevem o CAS no .NET Framework.|
@@ -87,27 +87,27 @@ O princípio de menos privilégios também se aplica à fonte de dados. Algumas 
 
 - Habilite a auditoria de segurança e o log do banco de dados que você está usando para que você seja alertado sobre violações de segurança.
 
-Para obter mais informações, consulte os seguintes recursos:
+Para saber mais, consulte os recursos a seguir:
 
-|Resource|Descrição|
+|Recurso|Descrição|
 |--------------|-----------------|
-|[SQL Server Security](./sql/sql-server-security.md) (Segurança do SQL Server)|Fornece uma visão geral de SQL Server segurança com cenários de aplicativo que fornecem diretrizes para criar aplicativos ADO.NET seguros direcionados SQL Server.|
-|[Recomendações para estratégias de acesso a dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Fornece recomendações para o acesso a dados e a execução de operações de Database.|
+|[Segurança de SQL Server](./sql/sql-server-security.md)|Fornece uma visão geral de SQL Server segurança com cenários de aplicativo que fornecem diretrizes para criar aplicativos ADO.NET seguros direcionados SQL Server.|
+|[Recomendações para estratégias de acesso a dados](/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Fornece recomendações para o acesso a dados e a execução de operações de Database.|
 
 ## <a name="security-policy-and-administration"></a>Política de segurança e administração
 
 Administrar incorretamente a política de CAS (segurança de acesso do código) pode potencialmente criar pontos fracos de segurança. Depois que um aplicativo é implantado, as técnicas para segurança de monitoramento devem ser usadas e os riscos avaliados à medida que novas ameaças surgem.
 
-Para obter mais informações, consulte os seguintes recursos:
+Para saber mais, consulte os recursos a seguir:
 
-|Resource|Descrição|
+|Recurso|Descrição|
 |--------------|-----------------|
-|[Gerenciamento de política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Fornece informações sobre como criar e administrar a política de segurança.|
-|[Práticas recomendadas de política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Fornece links que descrevem como administrar a política de segurança.|
+|[Gerenciamento de política de segurança](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Fornece informações sobre como criar e administrar a política de segurança.|
+|[Práticas recomendadas de política de segurança](/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Fornece links que descrevem como administrar a política de segurança.|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Securing ADO.NET Applications](securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+- [Protegendo aplicativos ADO.NET](securing-ado-net-applications.md)
 - [Segurança no .NET](../../../standard/security/index.md)
-- [SQL Server Security](./sql/sql-server-security.md) (Segurança do SQL Server)
-- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)
+- [Segurança de SQL Server](./sql/sql-server-security.md)
+- [Visão geral do ADO.NET](ado-net-overview.md)

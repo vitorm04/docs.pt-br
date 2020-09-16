@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a9f5d50ad78b2b0bef0ece3c4fce47d2925aca5
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: d74c7b8d80f02283cd681ed0118257ed926bdc83
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063751"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555244"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escrevendo aplicativos .NET Framework grandes e dinâmicos
 
@@ -282,7 +282,7 @@ A consulta integrada à linguagem (LINQ), em conjunto com expressões lambda, é
   
  **Exemplo 5: lambdas, lista \<T> e IEnumerable\<T>**  
   
- Esse exemplo usa [o LINQ e um código de estilo funcional](https://docs.microsoft.com/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming) para localizar um símbolo no modelo do compilador, considerando uma cadeia de caracteres de nome:  
+ Esse exemplo usa [o LINQ e um código de estilo funcional](/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming) para localizar um símbolo no modelo do compilador, considerando uma cadeia de caracteres de nome:  
   
 ```csharp  
 class Symbol {  
@@ -306,7 +306,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- Na primeira linha, a [expressão lambda](../../csharp/language-reference/operators/lambda-expressions.md) `s => s.Name == name` [fecha](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures) a variável local `name`. Isso significa que, além de alocar um objeto para o [representante](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) que `predicate` mantém, o código aloca uma classe estática para manter o ambiente que captura o valor `name`. O compilador gera um código semelhante ao seguinte:  
+ Na primeira linha, a [expressão lambda](../../csharp/language-reference/operators/lambda-expressions.md) `s => s.Name == name` [fecha](/archive/blogs/ericlippert/what-are-closures) a variável local `name`. Isso significa que, além de alocar um objeto para o [representante](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) que `predicate` mantém, o código aloca uma classe estática para manter o ambiente que captura o valor `name`. O compilador gera um código semelhante ao seguinte:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -441,7 +441,7 @@ class Compilation { /*...*/
 ### <a name="additional-considerations"></a>Considerações adicionais  
  Aqui estão mais alguns pontos sobre possíveis problemas em aplicativos grandes ou em aplicativos que processam muitos dados.
   
- **OldValues**  
+ **Dicionários**  
   
  Os dicionários são amplamente usados em muitos programas, e bons dicionários são muito práticos e naturalmente eficientes. Porém, eles costumam ser usados incorretamente. No Visual Studio e nos novos compiladores, a análise mostra que muitos dos dicionários apresentavam um único elemento ou estavam vazios. Um <xref:System.Collections.Generic.Dictionary%602> vazio tem dez campos e ocupa 48 bytes no heap em um computador x86. Os dicionários são ótimos quando você precisa de um mapeamento ou de uma estrutura de dados associativa com pesquisa constante. No entanto, quando tem apenas alguns elementos, você perde muito espaço usando um dicionário. Em vez disso, por exemplo, você pode analisar iterativamente um `List<KeyValuePair\<K,V>>` com a mesma rapidez. Se você usa um dicionário apenas para carregá-lo com dados e, em seguida, lê-lo (um padrão muito comum), o uso de uma matriz classificada com uma pesquisa N(log(N)) pode ter praticamente a mesma velocidade, dependendo do número de elementos que você estiver usando.
   
@@ -463,12 +463,12 @@ class Compilation { /*...*/
   
 - É tudo uma questão de alocação – é onde a equipe da plataforma do compilador passa boa parte do tempo melhorando o desempenho dos novos compiladores.
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Vídeo de apresentação deste tópico](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [Guia do iniciante à criação de perfil do desempenho](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [Desempenho](index.md)
-- [Dicas de desempenho do .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
+- [Dicas de desempenho do .NET](/previous-versions/dotnet/articles/ms973839(v=msdn.10))
 - [Tutoriais do PerfView no Channel 9](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [O SDK do .NET Compiler Platform](../../csharp/roslyn-sdk/index.md)
 - [repositório dotnet/Roslyn no GitHub](https://github.com/dotnet/roslyn)

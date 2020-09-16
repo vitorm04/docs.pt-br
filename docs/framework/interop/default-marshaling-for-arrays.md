@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-ms.openlocfilehash: eafed0e0a0150923aae0fa68a1b96e6d9d66b07a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 6bfe95576a6460efac75fd392e24acf42e36f2de
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622556"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555257"
 ---
 # <a name="default-marshaling-for-arrays"></a>Marshaling padrão para matrizes
 Em um aplicativo que consiste inteiramente em um código gerenciado, o Common Language Runtime passa tipos de matriz como parâmetros de Entrada/Saída. Por outro lado, o marshaler de interoperabilidade passa uma matriz como parâmetros de Entrada, por padrão.  
@@ -30,10 +30,10 @@ Em um aplicativo que consiste inteiramente em um código gerenciado, o Common La
   
  Como mostra a tabela a seguir, qualquer instância de uma matriz gerenciada deve ser de um tipo de elemento, classificação e limite inferior específicos.  
   
-|Tipo de matriz gerenciada|Tipo de elemento|Classificação|Limite inferior|Notação de assinatura|  
+|Tipo de matriz gerenciada|Tipo de elemento|Rank|Limite inferior|Notação de assinatura|  
 |------------------------|------------------|----------|-----------------|------------------------|  
 |**ELEMENT_TYPE_ARRAY**|Especificado pelo tipo.|Especificado pela classificação.|Opcionalmente, especificado pelos limites.|*tipo* **[** *n*,*m* **]**|  
-|**ELEMENT_TYPE_CLASS**|Unknown (desconhecido)|Unknown (desconhecido)|Unknown (desconhecido)|**System.Array**|  
+|**ELEMENT_TYPE_CLASS**|Unknown|Unknown|Unknown|**System.Array**|  
 |**ELEMENT_TYPE_SZARRAY**|Especificado pelo tipo.|1|0|*tipo* **[** *n* **]**|  
   
 ## <a name="unmanaged-arrays"></a>Matrizes não gerenciadas  
@@ -79,7 +79,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- As matrizes seguras multidimensionais ou com limite diferente de zero, poderão ter o marshaling realizado em código gerenciado se a assinatura do método produzida por Tlbimp.exe for modificada para indicar um tipo de elemento **ELEMENT_TYPE_ARRAY** em vez de **ELEMENT_TYPE_SZARRAY**. Como alternativa, você pode usar a opção **/sysarray** com Tlbimp.exe para importar todas as matrizes como objetos <xref:System.Array?displayProperty=nameWithType>. Nos casos em que a matriz que está sendo passada é conhecida como multidimensional, é possível editar o código MSIL (Microsoft Intermediate Language) produzido por Tlbimp.exe e, em seguida, recompilá-lo. Para obter detalhes sobre como modificar o código MSIL, consulte [Personalizando RCWs (Runtime Callable Wrappers)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)).  
+ As matrizes seguras multidimensionais ou com limite diferente de zero, poderão ter o marshaling realizado em código gerenciado se a assinatura do método produzida por Tlbimp.exe for modificada para indicar um tipo de elemento **ELEMENT_TYPE_ARRAY** em vez de **ELEMENT_TYPE_SZARRAY**. Como alternativa, você pode usar a opção **/sysarray** com Tlbimp.exe para importar todas as matrizes como objetos <xref:System.Array?displayProperty=nameWithType>. Nos casos em que a matriz que está sendo passada é conhecida como multidimensional, é possível editar o código MSIL (Microsoft Intermediate Language) produzido por Tlbimp.exe e, em seguida, recompilá-lo. Para obter detalhes sobre como modificar o código MSIL, consulte [Personalizando RCWs (Runtime Callable Wrappers)](/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)).  
   
 ### <a name="c-style-arrays"></a>Matrizes C-style  
  Quando uma matriz C-style é importada de uma biblioteca de tipos para um assembly .NET, a matriz é convertida em **ELEMENT_TYPE_SZARRAY**.  
@@ -143,7 +143,7 @@ void New2(ref double ar);
 void New3(ref String ar);
 ```  
   
- É possível fornecer ao marshaler o tamanho da matriz editando o código MSIL (Microsoft Intermediate Language) produzido pelo Tlbimp.exe e, em seguida, recompilá-lo. Para obter detalhes sobre como modificar o código MSIL, consulte [Personalizando RCWs (Runtime Callable Wrappers)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)). Para indicar o número de elementos na matriz, aplique o tipo <xref:System.Runtime.InteropServices.MarshalAsAttribute> ao parâmetro de matriz da definição de método gerenciado de uma das seguintes maneiras:  
+ É possível fornecer ao marshaler o tamanho da matriz editando o código MSIL (Microsoft Intermediate Language) produzido pelo Tlbimp.exe e, em seguida, recompilá-lo. Para obter detalhes sobre como modificar o código MSIL, consulte [Personalizando RCWs (Runtime Callable Wrappers)](/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)). Para indicar o número de elementos na matriz, aplique o tipo <xref:System.Runtime.InteropServices.MarshalAsAttribute> ao parâmetro de matriz da definição de método gerenciado de uma das seguintes maneiras:  
   
 - Identifique outro parâmetro que contém o número de elementos na matriz. Os parâmetros são identificados por posição, começando com o primeiro parâmetro como o número 0.
   
@@ -187,7 +187,7 @@ void New3(ref String ar);
 |**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>**[**\<** *bounds* **>**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> O tipo, a classificação e os limites são fornecidos na assinatura. O tamanho é sempre conhecido em tempo de execução.|  
 |**ELEMENT_TYPE_CLASS****\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> O tipo, a classificação, os limites e o tamanho são sempre conhecidos em tempo de execução.|  
   
- Há uma limitação na Automação OLE relativa a matrizes de estruturas que contêm LPSTR ou LPWSTR.  Portanto, os campos **String** precisam ter o marshaling realizado como **UnmanagedType.BSTR**. Caso contrário, será gerada uma exceção.  
+ Há uma limitação na Automação OLE relativa a matrizes de estruturas que contêm LPSTR ou LPWSTR.  Portanto, os campos **String** precisam ter o marshaling realizado como **UnmanagedType.BSTR**. Caso contrário, uma exceção será gerada.  
   
 ### <a name="element_type_szarray"></a>ELEMENT_TYPE_SZARRAY  
  Quando um método que contém um parâmetro **ELEMENT_TYPE_SZARRAY** (matriz unidimensional) é exportado de um assembly .NET para uma biblioteca de tipos, o parâmetro de matriz é convertido em uma **SAFEARRAY** de determinado tipo. As mesmas regras de conversão se aplicam a tipos de elemento da matriz. O conteúdo da matriz gerenciada é copiado automaticamente da memória gerenciada para a **SAFEARRAY**. Por exemplo:  
@@ -310,7 +310,7 @@ Sub [New](ar()()() As Long)
 void New(long [][][] ar );  
 ```  
   
-### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS\<System.Array>  
+### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
  Quando um método que contém um parâmetro <xref:System.Array?displayProperty=nameWithType> é exportado de um assembly .NET para uma biblioteca de tipos, o parâmetro da matriz é convertido em uma interface **_Array**. O conteúdo da matriz gerenciada é acessível somente por meio dos métodos e das propriedades da interface **_Array**. **System.Array** também pode ter o marshaling realizado como uma **SAFEARRAY** usando o atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Ao ter o marshaling realizado como uma matriz segura, os elementos da matriz têm o marshaling realizado como variantes. Por exemplo:  
   
 #### <a name="managed-signature"></a>Assinatura gerenciada  
@@ -359,9 +359,9 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Comportamento de marshaling padrão](default-marshaling-behavior.md)
 - [Tipos blittable e não blittable](blittable-and-non-blittable-types.md)
-- [Atributos direcionais](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
+- [Atributos direcionais](/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Copiando e fixando](copying-and-pinning.md)

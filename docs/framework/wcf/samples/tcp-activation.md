@@ -2,12 +2,12 @@
 title: Ativação TCP
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 0fa737adbdc7acc51511557877799c89849149bc
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e6f40b31656746d3db37545709c4e4813a7422cf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598652"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555179"
 ---
 # <a name="tcp-activation"></a>Ativação TCP
 
@@ -69,7 +69,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
-O exemplo usa uma variante da Associação net. TCP com compartilhamento de porta TCP habilitada e segurança desativada. Se você quiser usar uma associação TCP segura, altere o modo de segurança do servidor para a configuração desejada e execute novamente svcutil. exe no cliente para gerar um arquivo de configuração de cliente de atualização.
+O exemplo usa uma variante da Associação net. TCP com compartilhamento de porta TCP habilitada e segurança desativada. Se você quiser usar uma associação TCP segura, altere o modo de segurança do servidor para a configuração desejada e execute novamente Svcutil.exe no cliente para gerar um arquivo de configuração de cliente de atualização.
 
 O exemplo a seguir mostra a configuração para o serviço:
 
@@ -159,7 +159,7 @@ Press <ENTER> to terminate client.
 
     Como uma conveniência, as duas etapas a seguir são implementadas em um arquivo em lotes chamado AddNetTcpSiteBinding. cmd localizado no diretório de exemplo.
 
-    1. Para dar suporte à ativação net. TCP, o site padrão deve primeiro ser associado a uma porta Net. TCP. Isso pode ser feito usando o Appcmd. exe, que é instalado com o conjunto de ferramentas de gerenciamento do Serviços de Informações da Internet 7,0 (IIS). Em um prompt de comando de nível de administrador, execute o seguinte comando:
+    1. Para dar suporte à ativação net. TCP, o site padrão deve primeiro ser associado a uma porta Net. TCP. Isso pode ser feito usando Appcmd.exe, que é instalado com o conjunto de ferramentas de gerenciamento do Serviços de Informações da Internet 7,0 (IIS). Em um prompt de comando de nível de administrador, execute o seguinte comando:
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']
@@ -206,6 +206,6 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         > Esse comando deve ser digitado como uma única linha de texto.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Hospedagem de AppFabric e persistência Exemplos](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [Hospedagem de AppFabric e persistência Exemplos](/previous-versions/appfabric/ff383418(v=azure.10))

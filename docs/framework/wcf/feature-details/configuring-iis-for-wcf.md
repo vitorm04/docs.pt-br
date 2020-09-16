@@ -2,12 +2,12 @@
 title: Configurando os Serviços de informação da internet 7.0 para o Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-ms.openlocfilehash: 6343049e2a21b06965a8c7851d891303a49c82b5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6b0cc48c7a817f71339fb6d7eea35baf1d97b245
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597560"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556649"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Configurando os Serviços de informação da internet 7.0 para o Windows Communication Foundation
 
@@ -54,7 +54,7 @@ O Serviços de Informações da Internet (IIS) 7,0 tem um design modular que per
  Com essa instalação, você tem tudo o que é necessário para usar os recursos do IIS 7,0, ASP.NET e WCF e exemplos disponíveis na Web.
 
 ## <a name="request-limits"></a>Limites de solicitações
- No Windows Vista com IIS 7, o valor padrão das `maxUri` `maxQueryStringSize` configurações e foi alterado. Por padrão, a filtragem de solicitações no IIS 7,0 permite um comprimento de URL de 4096 caracteres e um comprimento de cadeia de caracteres de consulta de 2048 caracteres. Para alterar esses padrões, adicione o seguinte XML ao seu arquivo app. config.
+ No Windows Vista com IIS 7, o valor padrão das `maxUri` `maxQueryStringSize` configurações e foi alterado. Por padrão, a filtragem de solicitações no IIS 7,0 permite um comprimento de URL de 4096 caracteres e um comprimento de cadeia de caracteres de consulta de 2048 caracteres. Para alterar esses padrões, adicione o seguinte XML ao arquivo de App.config.
 
 ```xml
  <system.webServer>
@@ -66,9 +66,9 @@ O Serviços de Informações da Internet (IIS) 7,0 tem um design modular que per
  </system.webServer>
  ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Arquitetura de ativação do WAS](was-activation-architecture.md)
 - [Configurar o WAS para uso com o WCF](configuring-the-wpa--service-for-use-with-wcf.md)
-- [Como instalar e configurar os componentes de ativação do WCF](how-to-install-and-configure-wcf-activation-components.md)
-- [Recursos de hospedagem do Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Como: instalar e configurar componentes de ativação do WCF](how-to-install-and-configure-wcf-activation-components.md)
+- [Recursos de hospedagem do Windows Server AppFabric](/previous-versions/appfabric/ee677189(v=azure.10))

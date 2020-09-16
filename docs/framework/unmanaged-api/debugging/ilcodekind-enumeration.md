@@ -12,19 +12,19 @@ api_type:
 ms.assetid: b91765e4-82db-46f9-a6dc-6b80610276af
 topic_type:
 - apiref
-ms.openlocfilehash: 0586b9e184a0958b978837601db002e035881cbc
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b9d27c3e3cd42039aeefcb517ecc81eadeb5c183
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421027"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557418"
 ---
 # <a name="ilcodekind-enumeration"></a>Enumeração ILCodeKind
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
   
  Fornece valores que especificam se o depurador é capaz de acessar variáveis locais ou o código incluído na instrumentação ReJIT do criador de perfis.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp
 typedef enum ILCodeKind {  
@@ -35,7 +35,7 @@ typedef enum ILCodeKind {
   
 ## <a name="members"></a>Membros  
   
-|Nome do membro|Descrição|  
+|Nome do membro|Description|  
 |-----------------|-----------------|  
 |`ILCODE_ORIGINAL_IL`|O depurador não tem acesso a informações de instrumentação ReJIT.|  
 |`ILCODE_REJIT_IL`|O depurador tem acesso a informações de instrumentação ReJIT.|  
@@ -52,8 +52,8 @@ typedef enum ILCodeKind {
   
  **.NET Framework versões:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Declarando enumerações](debugging-enumerations.md)
 - [Interface ICorDebugILFrame4](icordebugilframe4-interface.md)
-- [ReJIT: um guia de instruções](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: um guia de instruções](/archive/blogs/davbr/rejit-a-how-to-guide)
