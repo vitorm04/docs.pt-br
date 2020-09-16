@@ -18,12 +18,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: e36ae21e1e03c8c5c688b7446f660ab1bb666a94
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 466a0dd8a827cd869894106a0901bdab89601e25
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904371"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559090"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Implementando o padrão assíncrono baseado em evento
 
@@ -33,7 +33,7 @@ O Padrão assíncrono baseado em evento fornece uma maneira padronizada de empac
 
 Para obter um exemplo que implementa o Padrão assíncrono baseado em evento, consulte [Como implementar um componente compatível com o padrão assíncrono baseado em evento](component-that-supports-the-event-based-asynchronous-pattern.md).
 
-Para operações assíncronas simples, você pode obter o componente <xref:System.ComponentModel.BackgroundWorker> adequado. Para saber mais sobre <xref:System.ComponentModel.BackgroundWorker>, consulte [Como executar uma operação em segundo plano](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md).
+Para operações assíncronas simples, você pode obter o componente <xref:System.ComponentModel.BackgroundWorker> adequado. Para saber mais sobre <xref:System.ComponentModel.BackgroundWorker>, consulte [Como executar uma operação em segundo plano](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background).
 
 A lista a seguir descreve os recursos do padrão assíncrono baseado em evento discutidos neste tópico.
 
@@ -217,9 +217,9 @@ Embora o uso de `out` e `ref` seja, em geral, desencorajado no .NET Framework, e
 
 Em um método síncrono *MethodName*:
 
-- `out`os parâmetros para *MethodName* não devem fazer parte de _MethodName_**Async**. Em vez disso, eles devem fazer parte de _MethodName_**CompletedEventArgs** com o mesmo nome que seu parâmetro equivalente em *MethodName* (a menos que haja um nome mais apropriado).
+- `out` os parâmetros para *MethodName* não devem fazer parte de _MethodName_**Async**. Em vez disso, eles devem fazer parte de _MethodName_**CompletedEventArgs** com o mesmo nome que seu parâmetro equivalente em *MethodName* (a menos que haja um nome mais apropriado).
 
-- `ref`os parâmetros *para MethodName* devem aparecer como parte _de MethodName_**Async**e como parte de _MethodName_**CompletedEventArgs** com o mesmo nome que seu parâmetro equivalente em *MethodName* (a menos que haja um nome mais apropriado).
+- `ref` os parâmetros *para MethodName* devem aparecer como parte _de MethodName_**Async**e como parte de _MethodName_**CompletedEventArgs** com o mesmo nome que seu parâmetro equivalente em *MethodName* (a menos que haja um nome mais apropriado).
 
 Por exemplo, considerando que:
 
@@ -262,9 +262,9 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [Como implementar um componente compatível com o padrão assíncrono baseado em evento](component-that-supports-the-event-based-asynchronous-pattern.md)
-- [Como executar uma operação no plano de fundo](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Como implementar um formulário que usa uma operação em segundo plano](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Como: Implementar um componente compatível com o padrão assíncrono baseado em evento](component-that-supports-the-event-based-asynchronous-pattern.md)
+- [Como: Executar uma operação em segundo plano](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background)
+- [Como: Implementar um formulário que usa uma operação em segundo plano](/dotnet/desktop/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation)
 - [Decidindo quando implementar o padrão assíncrono baseado em evento](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
 - [Práticas recomendadas para a implementação do padrão assíncrono baseado em evento](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [EAP (Padrão Assíncrono baseado em Evento)](event-based-asynchronous-pattern-eap.md)
+- [Padrão assíncrono baseado em evento (EAP)](event-based-asynchronous-pattern-eap.md)

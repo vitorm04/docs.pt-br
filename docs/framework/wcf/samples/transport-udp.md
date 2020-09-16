@@ -2,12 +2,12 @@
 title: 'Transporte: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 44e47dd2d291ffc27d1777a04b645d57984919cd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: dcf2d9896ab7c95101e224521174b54c88ca3fc2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591430"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558988"
 ---
 # <a name="transport-udp"></a>Transporte: UDP
 O exemplo de transporte UDP demonstra como implementar UDP unicast e multicast como um transporte de Windows Communication Foundation (WCF) personalizado. O exemplo descreve o procedimento recomendado para criar um transporte personalizado no WCF, usando a estrutura de canal e as práticas recomendadas do WCF a seguir. As etapas para criar um transporte personalizado são as seguintes:  
@@ -141,7 +141,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  Ele também contém membros para clonar `BindingElement` e retornar nosso esquema (SOAP. UDP).  
   
 ## <a name="adding-metadata-support-for-a-transport-binding-element"></a>Adicionando suporte de metadados para um elemento de associação de transporte  
- Para integrar nosso transporte ao sistema de metadados, devemos dar suporte à importação e à exportação da política. Isso nos permite gerar clientes de nossa ligação por meio da [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Para integrar nosso transporte ao sistema de metadados, devemos dar suporte à importação e à exportação da política. Isso nos permite gerar clientes de nossa ligação por meio da [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ### <a name="adding-wsdl-support"></a>Adicionando suporte a WSDL  
  O elemento de associação de transporte em uma associação é responsável por exportar e importar informações de endereçamento nos metadados. Ao usar uma associação SOAP, o elemento de associação de transporte também deve exportar um URI de transporte correto nos metadados.  
@@ -167,7 +167,7 @@ if (soapBinding != null)
 ```  
   
 #### <a name="wsdl-import"></a>Importação de WSDL  
- Para estender o sistema de importação WSDL para lidar com a importação dos endereços, devemos adicionar a configuração a seguir ao arquivo de configuração para SvcUtil. exe, conforme mostrado no arquivo svcutil. exe. config.  
+ Para estender o sistema de importação WSDL para lidar com a importação dos endereços, devemos adicionar a configuração a seguir ao arquivo de configuração para Svcutil.exe, conforme mostrado no arquivo Svcutil.exe.config.  
   
 ```xml
 <configuration>  
@@ -183,11 +183,11 @@ if (soapBinding != null)
 </configuration>  
 ```  
   
- Ao executar svcutil. exe, há duas opções para obter svcutil. exe para carregar as extensões de importação WSDL:  
+ Ao executar Svcutil.exe, há duas opções para obter Svcutil.exe carregar as extensões de importação WSDL:  
   
-1. Aponte para o SvcUtil. exe para nosso arquivo de configuração usando o/SvcutilConfig: \<file> .  
+1. Aponte Svcutil.exe para nosso arquivo de configuração usando o/SvcutilConfig: \<file> .  
   
-2. Adicione a seção de configuração a svcutil. exe. config no mesmo diretório que svcutil. exe.  
+2. Adicione a seção de configuração a Svcutil.exe.config no mesmo diretório que Svcutil.exe.  
   
  O `UdpBindingElementImporter` tipo implementa a `IWsdlImportExtension` interface. O `ImportEndpoint` método importa o endereço da porta WSDL.  
   
@@ -229,7 +229,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ```  
   
 #### <a name="policy-import"></a>Importação de política  
- Para estender o sistema de importação de política, devemos adicionar a configuração a seguir ao arquivo de configuração para SvcUtil. exe, conforme mostrado no arquivo svcutil. exe. config.  
+ Para estender o sistema de importação de política, devemos adicionar a configuração a seguir ao arquivo de configuração para Svcutil.exe, conforme mostrado no arquivo Svcutil.exe.config.  
   
 ```xml
 <configuration>  
@@ -245,11 +245,11 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 </configuration>  
 ```  
   
- Em seguida, implementamos a `IPolicyImporterExtension` partir de nossa classe registrada ( `UdpBindingElementImporter` ). No `ImportPolicy()` , examinamos as asserções em nosso namespace e processamos aquelas para gerar o transporte e verificar se ele é multicast. Também devemos remover as asserções que manipulamos da lista de asserções de associação. Novamente, ao executar svcutil. exe, há duas opções de integração:  
+ Em seguida, implementamos a `IPolicyImporterExtension` partir de nossa classe registrada ( `UdpBindingElementImporter` ). No `ImportPolicy()` , examinamos as asserções em nosso namespace e processamos aquelas para gerar o transporte e verificar se ele é multicast. Também devemos remover as asserções que manipulamos da lista de asserções de associação. Novamente, ao executar Svcutil.exe, há duas opções de integração:  
   
-1. Aponte para o SvcUtil. exe para nosso arquivo de configuração usando o/SvcutilConfig: \<file> .  
+1. Aponte Svcutil.exe para nosso arquivo de configuração usando o/SvcutilConfig: \<file> .  
   
-2. Adicione a seção de configuração a svcutil. exe. config no mesmo diretório que svcutil. exe.  
+2. Adicione a seção de configuração a Svcutil.exe.config no mesmo diretório que Svcutil.exe.  
   
 <a name="AddingAStandardBinding"></a>
 ## <a name="adding-a-standard-binding"></a>Adicionando uma associação padrão  
@@ -277,7 +277,7 @@ public override BindingElementCollection CreateBindingElements()
 ```  
   
 ### <a name="adding-a-custom-standard-binding-importer"></a>Adicionando um importador de associação padrão personalizado  
- O SvcUtil. exe e o `WsdlImporter` tipo, por padrão, reconhecem e importam associações definidas pelo sistema. Caso contrário, a associação será importada como uma `CustomBinding` instância. Para habilitar svcutil. exe e o `WsdlImporter` para importar o `SampleProfileUdpBinding` `UdpBindingElementImporter` também atua como um importador de associação padrão personalizado.  
+ Svcutil.exe e o `WsdlImporter` tipo, por padrão, reconhecem e importam associações definidas pelo sistema. Caso contrário, a associação será importada como uma `CustomBinding` instância. Para habilitar Svcutil.exe e o `WsdlImporter` para importar o `SampleProfileUdpBinding` `UdpBindingElementImporter` também atua como um importador de associação padrão personalizado.  
   
  Um importador de associação padrão personalizado implementa o `ImportEndpoint` método na `IWsdlImportExtension` interface para examinar a `CustomBinding` instância importada de metadados para ver se ela pode ter sido gerada por uma associação padrão específica.  
   
@@ -394,7 +394,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>O cliente e o serviço de teste UDP  
- O código de teste para usar esse transporte de exemplo está disponível nos diretórios UdpTestService e UdpTestClient. O código de serviço consiste em dois testes – um teste define associações e pontos de extremidade do código e o outro faz isso por meio da configuração. Ambos os testes usam dois pontos de extremidade. Um ponto de extremidade usa o `SampleUdpProfileBinding` com [\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) definido como `true` . O outro ponto de extremidade usa uma associação personalizada com `UdpTransportBindingElement` . Isso é equivalente a usar `SampleUdpProfileBinding` with [\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) definido como `false` . Ambos os testes criam um serviço, adicionam um ponto de extremidade para cada associação, abrem o serviço e aguardam que o usuário pressione ENTER antes de fechar o serviço.  
+ O código de teste para usar esse transporte de exemplo está disponível nos diretórios UdpTestService e UdpTestClient. O código de serviço consiste em dois testes – um teste define associações e pontos de extremidade do código e o outro faz isso por meio da configuração. Ambos os testes usam dois pontos de extremidade. Um ponto de extremidade usa o `SampleUdpProfileBinding` com [\<reliableSession>](/previous-versions/ms731375(v=vs.90)) definido como `true` . O outro ponto de extremidade usa uma associação personalizada com `UdpTransportBindingElement` . Isso é equivalente a usar `SampleUdpProfileBinding` with [\<reliableSession>](/previous-versions/ms731375(v=vs.90)) definido como `false` . Ambos os testes criam um serviço, adicionam um ponto de extremidade para cada associação, abrem o serviço e aguardam que o usuário pressione ENTER antes de fechar o serviço.  
   
  Ao iniciar o aplicativo de teste de serviço, você deverá ver a saída a seguir.  
   
@@ -443,13 +443,13 @@ Press <ENTER> to terminate the service and exit...
   
  Executar o cliente novamente produz o mesmo resultado dos resultados anteriores.  
   
- Para regenerar o código do cliente e a configuração usando svcutil. exe, inicie o aplicativo de serviço e execute o SvcUtil. exe a seguir do diretório raiz do exemplo.  
+ Para regenerar o código do cliente e a configuração usando Svcutil.exe, inicie o aplicativo de serviço e execute o seguinte Svcutil.exe a partir do diretório raiz do exemplo.  
   
 ```console
 svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
 ```  
   
- Observe que svcutil. exe não gera a configuração de extensão de associação para o `SampleProfileUdpBinding` , portanto, você deve adicioná-lo manualmente.  
+ Observe que Svcutil.exe não gera a configuração de extensão de associação para o `SampleProfileUdpBinding` , portanto, você deve adicioná-la manualmente.  
   
 ```xml
 <configuration>  

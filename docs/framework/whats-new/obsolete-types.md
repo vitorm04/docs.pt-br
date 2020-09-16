@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-ms.openlocfilehash: 29df80fcefc2565850b026bebd30802dc77e1896
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 795735b66c7568dada0196a6426a0a9aaf52398a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925807"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558531"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipos obsoletos no .NET Framework
 
@@ -88,52 +88,52 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|A classe <xref:System.Configuration.Assemblies.AssemblyHash> foi substituída.|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5. Em vez disso, use a classe <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> no namespace System.Runtime.CompilerServices.|
 |<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Uma API alternativa está disponível: emita o atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> em seu lugar.|
-|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=nameWithType> em vez disso.|
+|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=nameWithType> em seu lugar.|
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=nameWithType>|Esse atributo foi substituído e será removido em uma versão futura.|
 |<xref:System.Runtime.InteropServices.IDispatchImplType?displayProperty=nameWithType>|O <xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=nameWithType> foi substituído.|
-|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=nameWithType> em vez disso.|
+|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=nameWithType> em seu lugar.|
 |<xref:System.Runtime.InteropServices.SetWin32ContextInIDispatchAttribute?displayProperty=nameWithType>|Esse atributo foi substituído. Domínios de aplicativo não respeitam mais limites do contexto de ativação em chamadas IDispatch.|
-|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType> em vez disso.|
-|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> em vez disso.|
+|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> em seu lugar.|
 |<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> só é usado na compatibilidade de transparência do .NET 2.0.|
 |<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> só é usado na compatibilidade de transparência do .NET 2.0. Use <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType> em seu lugar.|
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=nameWithType>|Esse tipo é obsoleto e será removido em uma versão futura do .NET Framework.|
@@ -188,7 +188,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 |Tipo|Mensagem|
 |----------|-------------|
-|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|Essa classe foi substituída. Use <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType> em vez disso.|
+|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|Essa classe foi substituída. Use <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType> em seu lugar.|
 |<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=nameWithType>|O uso desse tipo não é recomendado porque a edição de DataBindings é iniciada por meio de <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType> em vez da grade de propriedade.|
 |<xref:System.Web.UI.Design.DataBindingCollectionEditor?displayProperty=nameWithType>|O uso desse tipo não é recomendado porque a edição de DataBindings é iniciada por meio de <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType> em vez da grade de propriedade.|
 |<xref:System.Web.UI.Design.IControlDesignerBehavior?displayProperty=nameWithType>|A alternativa recomendada é <xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=nameWithType> e <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=nameWithType>.|
@@ -213,7 +213,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 |----------|-------------|
 |<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|Essa interface foi substituída. Adicione um <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> ao tipo de identificador <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType> em vez disso.|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|Use <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType> em seu lugar para trabalhar com o novo modelo de configurações.|
-|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|Esse atributo foi substituído. Use <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType> em vez disso.|
+|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|Esse atributo foi substituído. Use <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType> em seu lugar.|
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=nameWithType>|Essa classe foi substituída.|
 |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|Essa classe foi substituída. Use os contadores de desempenho por meio da classe <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType> em seu lugar.|
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|Essa classe foi substituída. Use <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType> em seu lugar para acessar e definir o proxy padrão global. Use 'null' em lugar de <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType>.|
@@ -658,7 +658,7 @@ Os assemblies IEHost.dll e IEExec.exe foram removidos do .NET Framework. Todos o
 
 ### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Assembly: Microsoft.VisualBasic.Compatibility.dll
 
-Para obter informações sobre a migração do Visual Basic 6, consulte [Centro de Recursos do Visual Basic 6.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation).
+Para obter informações sobre a migração do Visual Basic 6, consulte [Centro de Recursos do Visual Basic 6.0](/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation).
 
 |Tipo|Mensagem|
 |----------|-------------|
@@ -807,7 +807,7 @@ Para obter informações sobre a migração do Visual Basic 6, consulte [Centro 
 |<xref:Microsoft.VisualC.NeedsCopyConstructorModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll é um assembly obsoleto e existe somente para compatibilidade com versões anteriores.|
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll é um assembly obsoleto e existe somente para compatibilidade com versões anteriores.|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [O que está obsoleto na biblioteca de classes](whats-obsolete.md)
 - [Membros obsoletos](obsolete-members.md)

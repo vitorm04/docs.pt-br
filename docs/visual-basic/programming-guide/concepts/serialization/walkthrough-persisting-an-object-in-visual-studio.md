@@ -2,12 +2,12 @@
 title: persistir um objeto no Visual Studio
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: e4eaf87c99ea1577d7f3ca40e628c00cc2700511
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3febd3f74510d11a7103edbd52bcae8043a5edc0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413123"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558596"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Passo a passo: mantendo um objeto no Visual Studio (Visual Basic)
 Embora você possa definir as propriedades de um objeto para os valores padrão em tempo de design, qualquer valor inserido em tempo de execução será perdido quando o objeto for destruído. Você pode usar a serialização para manter os dados de um objeto entre instâncias, o que permite armazenar valores e recuperá-los na próxima vez que o objeto for instanciado.  
@@ -31,7 +31,7 @@ Embora você possa definir as propriedades de um objeto para os valores padrão 
   
 ### <a name="to-create-the-loan-class"></a>Para criar a classe Loan  
   
-1. Crie um novo projeto de Biblioteca de classes e denomine-o “LoanClass". Para obter mais informações, consulte [Criando soluções e projetos](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
+1. Crie um novo projeto de Biblioteca de classes e denomine-o “LoanClass". Para obter mais informações, consulte [Criando soluções e projetos](/visualstudio/ide/creating-solutions-and-projects).  
   
 2. No **Gerenciador de Soluções**, abra o menu de atalho para o arquivo Class1 e escolha **Renomear**. Renomeie o arquivo como `Loan` e pressione ENTER. Renomear o arquivo também renomeará a classe para `Loan`.  
   

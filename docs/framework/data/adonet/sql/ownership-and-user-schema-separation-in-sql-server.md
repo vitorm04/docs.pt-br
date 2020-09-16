@@ -3,12 +3,12 @@ title: Propriedade e separação do esquema do usuário no SQL Server
 description: Saiba como a separação de esquema de usuário permite flexibilidade no gerenciamento de permissões de objeto de banco de dados SQL Server. Os esquemas agrupam objetos em namespaces separados.
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 97e742979785fedd922dc887295b63e2d93bd147
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 27c37816353ca47c3f96867adc6186b0162feb20
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286256"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558830"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Propriedade e separação do esquema do usuário no SQL Server
 Um conceito central de segurança do SQL Server é que os proprietários de objetos têm permissões irrevogáveis administrá-los. Você não pode remover os privilégios de um proprietário de objeto e não pode eliminar usuários de um banco de dados se eles possuírem objetos nele.  
@@ -56,13 +56,13 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Separação do Esquema de Usuário](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Descreve as alterações introduzidas pela separação do esquema do usuário. Inclui o novo comportamento, o seu impacto na propriedade, as exibições do catálogo e as permissões.|  
+|[Separação do Esquema de Usuário](/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Descreve as alterações introduzidas pela separação do esquema do usuário. Inclui o novo comportamento, o seu impacto na propriedade, as exibições do catálogo e as permissões.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Protegendo aplicativos ADO.NET](../securing-ado-net-applications.md)
 - [Cenários de Segurança de Aplicativo no SQL Server](application-security-scenarios-in-sql-server.md)
 - [Autenticação no SQL Server](authentication-in-sql-server.md)
-- [Servidor e funções de banco de dados no SQL Server](server-and-database-roles-in-sql-server.md)
+- [Funções de servidor e banco de dados no SQL Server](server-and-database-roles-in-sql-server.md)
 - [Autorização e permissões no SQL Server](authorization-and-permissions-in-sql-server.md)
 - [Visão geral do ADO.NET](../ado-net-overview.md)

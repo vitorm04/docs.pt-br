@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: 28360b8b5b07c7c532dd2406ca98604870b8335f
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: bab29d738c7562753a826b47c03867eeebac4372
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921070"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558973"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Trabalhando com NATs e firewalls
 O cliente e o servidor de uma conexão de rede geralmente não têm um caminho direto e aberto para comunicação. Os pacotes são filtrados, roteados, analisados e transformados nos computadores do ponto de extremidade e por máquinas intermediárias na rede. As NATs (conversões de endereço de rede) e os firewalls são exemplos comuns de aplicativos intermediários que podem participar da comunicação de rede.  
@@ -33,7 +33,7 @@ O cliente e o servidor de uma conexão de rede geralmente não têm um caminho d
   
 ## <a name="using-teredo"></a>Usando Teredo  
 
- O Teredo é uma tecnologia de transição IPv6 que permite a endereçamento direto de computadores por trás de um NAT. O Teredo conta com o uso de um servidor que pode ser roteado de forma pública e global para anunciar possíveis conexões. O servidor Teredo fornece ao cliente de aplicativo e ao servidor um ponto de reunião comum no qual eles podem trocar informações de conexão. Em seguida, os computadores solicitam um endereço Teredo temporário e os pacotes são encapsulados por meio da rede existente. O suporte a Teredo no WCF requer a habilitação do suporte a IPv6 e Teredo no sistema operacional. Os sistemas operacionais Windows XP e posteriores dão suporte a Teredo. O Windows Vista e sistemas operacionais posteriores dão suporte a IPv6 por padrão e só exigem que o usuário habilite o Teredo. O Windows XP SP2 e o Windows Server 2003 exigem que o usuário habilite o IPv6 e o Teredo. Para obter mais informações, consulte a [visão geral do Teredo](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10)).  
+ O Teredo é uma tecnologia de transição IPv6 que permite a endereçamento direto de computadores por trás de um NAT. O Teredo conta com o uso de um servidor que pode ser roteado de forma pública e global para anunciar possíveis conexões. O servidor Teredo fornece ao cliente de aplicativo e ao servidor um ponto de reunião comum no qual eles podem trocar informações de conexão. Em seguida, os computadores solicitam um endereço Teredo temporário e os pacotes são encapsulados por meio da rede existente. O suporte a Teredo no WCF requer a habilitação do suporte a IPv6 e Teredo no sistema operacional. Os sistemas operacionais Windows XP e posteriores dão suporte a Teredo. O Windows Vista e sistemas operacionais posteriores dão suporte a IPv6 por padrão e só exigem que o usuário habilite o Teredo. O Windows XP SP2 e o Windows Server 2003 exigem que o usuário habilite o IPv6 e o Teredo. Para obter mais informações, consulte a [visão geral do Teredo](/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10)).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Escolhendo um padrão de troca de mensagens e transporte  
  Selecionar um transporte e MEP é um processo de três etapas:  
@@ -56,14 +56,14 @@ O cliente e o servidor de uma conexão de rede geralmente não têm um caminho d
   
 |Endereçabilidade|Servidor direto|Servidor direto com passagem NAT|NAT do servidor|NAT de servidor com passagem NAT|  
 |--------------------|-------------------|--------------------------------------|----------------|-----------------------------------|  
-|Cliente direto|Qualquer transporte e MEP|Qualquer transporte e MEP|{1&gt;Sem suporte.&lt;1}|{1&gt;Sem suporte.&lt;1}|  
-|Cliente direto com passagem NAT|Qualquer transporte e MEP.|Qualquer transporte e MEP.|{1&gt;Sem suporte.&lt;1}|TCP com Teredo e qualquer MEP. O Windows Vista tem uma opção de configuração de todo o computador para dar suporte a HTTP com Teredo.|  
-|NAT de cliente|Qualquer transporte não duplo e MEP. O duplex MEP requer transporte TCP.|Qualquer transporte não duplo e MEP. O duplex MEP requer transporte TCP.|{1&gt;Sem suporte.&lt;1}|{1&gt;Sem suporte.&lt;1}|  
-|NAT de cliente com passagem NAT|Qualquer transporte não duplo e MEP. O duplex MEP requer transporte TCP.|Todos, exceto HTTP duplo e qualquer MEP. O duplex MEP requer transporte TCP. O transporte TCP duplo requer Teredo. O Windows Vista tem uma opção de configuração de todo o computador para dar suporte a HTTP com Teredo.|{1&gt;Sem suporte.&lt;1}|TCP com Teredo e qualquer MEP. O Windows Vista tem uma opção de configuração de todo o computador para dar suporte a HTTP com Teredo.|  
+|Cliente direto|Qualquer transporte e MEP|Qualquer transporte e MEP|Não há suporte.|Não há suporte.|  
+|Cliente direto com passagem NAT|Qualquer transporte e MEP.|Qualquer transporte e MEP.|Não há suporte.|TCP com Teredo e qualquer MEP. O Windows Vista tem uma opção de configuração de todo o computador para dar suporte a HTTP com Teredo.|  
+|NAT de cliente|Qualquer transporte não duplo e MEP. O duplex MEP requer transporte TCP.|Qualquer transporte não duplo e MEP. O duplex MEP requer transporte TCP.|Não há suporte.|Não há suporte.|  
+|NAT de cliente com passagem NAT|Qualquer transporte não duplo e MEP. O duplex MEP requer transporte TCP.|Todos, exceto HTTP duplo e qualquer MEP. O duplex MEP requer transporte TCP. O transporte TCP duplo requer Teredo. O Windows Vista tem uma opção de configuração de todo o computador para dar suporte a HTTP com Teredo.|Não há suporte.|TCP com Teredo e qualquer MEP. O Windows Vista tem uma opção de configuração de todo o computador para dar suporte a HTTP com Teredo.|  
   
 |Restrições de firewall|Servidor aberto|Servidor com Firewall gerenciado|Servidor com firewall somente HTTP|Servidor com firewall somente de saída|  
 |---------------------------|-----------------|----------------------------------|-------------------------------------|-----------------------------------------|  
-|Cliente aberto|Qualquer transporte e MEP.|Qualquer transporte e MEP.|Qualquer transporte HTTP e MEP.|{1&gt;Sem suporte.&lt;1}|  
-|Cliente com Firewall gerenciado|Qualquer transporte não duplo e MEP. O duplex MEP requer transporte TCP.|Qualquer transporte não duplo e MEP. O duplex MEP requer transporte TCP.|Qualquer transporte HTTP e MEP.|{1&gt;Sem suporte.&lt;1}|  
-|Cliente com firewall somente HTTP|Qualquer transporte HTTP e MEP.|Qualquer transporte HTTP e MEP.|Qualquer transporte HTTP e MEP.|{1&gt;Sem suporte.&lt;1}|  
-|Cliente com firewall somente de saída|Qualquer transporte não duplo e MEP. O duplex MEP requer transporte TCP.|Qualquer transporte não duplo e MEP. O duplex MEP requer transporte TCP.|Qualquer transporte HTTP e qualquer MEP não duplex.|{1&gt;Sem suporte.&lt;1}|
+|Cliente aberto|Qualquer transporte e MEP.|Qualquer transporte e MEP.|Qualquer transporte HTTP e MEP.|Não há suporte.|  
+|Cliente com Firewall gerenciado|Qualquer transporte não duplo e MEP. O duplex MEP requer transporte TCP.|Qualquer transporte não duplo e MEP. O duplex MEP requer transporte TCP.|Qualquer transporte HTTP e MEP.|Não há suporte.|  
+|Cliente com firewall somente HTTP|Qualquer transporte HTTP e MEP.|Qualquer transporte HTTP e MEP.|Qualquer transporte HTTP e MEP.|Não há suporte.|  
+|Cliente com firewall somente de saída|Qualquer transporte não duplo e MEP. O duplex MEP requer transporte TCP.|Qualquer transporte não duplo e MEP. O duplex MEP requer transporte TCP.|Qualquer transporte HTTP e qualquer MEP não duplex.|Não há suporte.|

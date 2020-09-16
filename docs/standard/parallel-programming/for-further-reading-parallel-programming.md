@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - tasks, further reading
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
-ms.openlocfilehash: 8aadb491c5a8c339b4d8df73202ee717900ef775
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a9a18d5709a1e157d4454362758d4a622880ea72
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447154"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553643"
 ---
 # <a name="for-further-reading-parallel-programming"></a>Para leitura adicional (programação paralela)
 
@@ -18,7 +18,7 @@ Os recursos a seguir contêm informações adicionais sobre programação parale
 
 - O documento [Padrões de programação paralela: compreendendo e aplicando padrões paralelos com o .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222) descreve padrões paralelos comuns e melhores práticas para o desenvolvimento de componentes paralelos utilizando esses padrões.
 
-- O livro [Padrões de design para decomposição e coordenação em arquiteturas multicore](https://docs.microsoft.com/previous-versions/msp-n-p/ff963553(v=pandp.10)) descreve padrões de programação paralela que usam o suporte de programação paralela introduzido no .NET Framework 4.
+- O livro [Padrões de design para decomposição e coordenação em arquiteturas multicore](/previous-versions/msp-n-p/ff963553(v=pandp.10)) descreve padrões de programação paralela que usam o suporte de programação paralela introduzido no .NET Framework 4.
 
 - O blog [Programação paralela com .NET](https://devblogs.microsoft.com/pfxteam/) contém muitos artigos detalhados sobre programação paralela no .NET.
 
@@ -26,5 +26,5 @@ Os recursos a seguir contêm informações adicionais sobre programação parale
 
 ## <a name="see-also"></a>Confira também
 
-- [Central de desenvolvedores de computação paralela](https://docs.microsoft.com/previous-versions/bb964701(v=msdn.10))
+- [Central de desenvolvedores de computação paralela](/previous-versions/bb964701(v=msdn.10))
 - [Programação em paralelo no Visual C++](/cpp/parallel/parallel-programming-in-visual-cpp)

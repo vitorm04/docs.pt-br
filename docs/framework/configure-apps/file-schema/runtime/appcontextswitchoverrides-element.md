@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 394523e81da96d596a00010a393b9a034c0d552f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 0ead35559a17eb06304e6c251d2fe388ca178a30
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558745"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552278"
 ---
 # <a name="appcontextswitchoverrides-element"></a>Elemento \<AppContextSwitchOverrides>
 
@@ -22,7 +22,7 @@ Define uma ou mais opções usadas pela classe <xref:System.AppContext> para for
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<AppContextSwitchOverrides>**
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <AppContextSwitchOverrides value="name1=value1[[;name2=value2];...]" />
@@ -60,7 +60,7 @@ Define uma ou mais opções usadas pela classe <xref:System.AppContext> para for
 
 O .NET Framework dá suporte às seguintes opções:
 
-|Nome do comutador|Descrição|Incluída|
+|Nome do comutador|Description|Incluída|
 |-----------------|-----------------|----------------|
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|Controla se Windows Presentation Foundation usa um algoritmo herdado para o layout de controle. Para saber mais, confira [Mitigação: layout de WPF](../../../migration-guide/mitigation-wpf-layout.md).|.NET Framework 4.6|
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|Controla se o algoritmo padrão usado para assinar partes de um pacote por PackageDigitalSignatureManager é SHA1 ou SHA256.<br>Em razão de problemas de colisão com SHA1, a Microsoft recomenda SHA256.|.NET Framework 4.7.1|
@@ -70,7 +70,7 @@ O .NET Framework dá suporte às seguintes opções:
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|Controla se os rastreamentos de pilha obtêm ao usar PDBs portáteis podem incluir informações de arquivo e linha de origem. `false` para incluir informações de arquivo e linha de origem; caso contrário, `true` .|.NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|Controla se o <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> método gera uma exceção quando um <xref:System.Drawing.Icon> objeto tem quadros png. Para saber mais, confira [Mitigation: PNG Frames in Icon Objects](../../../migration-guide/mitigation-png-frames-in-icon-objects.md) (Mitigação: quadros PNG em objetos de ícone).|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|Determina se <xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType> os objetos são descartados corretamente quando adicionados à coleção pelo <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> método. `true` para manter o comportamento herdado; `false` para descartar todos os objetos de fonte privada. |.NET Framework 4.7.2|
-|`Switch.System.Drawing.Printing.`<br>`OptimizePrintPreview`|Controla se o desempenho do <xref:System.Windows.Forms.PrintPreviewDialog> é otimizado para impressoras de rede. Para obter mais informações, consulte [visão geral do controle PrintPreviewDialog](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md).|.NET Framework 4.6|
+|`Switch.System.Drawing.Printing.`<br>`OptimizePrintPreview`|Controla se o desempenho do <xref:System.Windows.Forms.PrintPreviewDialog> é otimizado para impressoras de rede. Para obter mais informações, consulte [visão geral do controle PrintPreviewDialog](/dotnet/desktop/winforms/controls/printpreviewdialog-control-overview-windows-forms).|.NET Framework 4.6|
 |`Switch.System.Globalization.EnforceJapaneseEraYearRanges`|Controla se o intervalo de ano verifica se o calendário japonês apagar está imposto. `true` para impor verificações de intervalo de ano e `false` para desabilitá-las (o comportamento padrão). Para obter mais informações, consulte [trabalhando com calendários](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|
 |`Switch.System.Globalization.EnforceLegacyJapaneseDateParsing`|Controla se apenas "1" é reconhecido como o primeiro ano de uma era do calendário japonês em operações de análise. `true` para reconhecer apenas "1"; `false` para reconhecer "1" ou Gannen (o comportamento padrão). Para obter mais informações, consulte [trabalhando com calendários](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|
 |`Switch.System.Globalization.FormatJapaneseFirstYearAsANumber`|Controla se o primeiro ano de uma era do calendário japonês é representado como "1" ou Gannen nas operações de formatação. `true` para formatar o primeiro ano da era como "1"; `false` para formatá-lo como Gannen (o comportamento padrão). Para obter mais informações, consulte [trabalhando com calendários](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|

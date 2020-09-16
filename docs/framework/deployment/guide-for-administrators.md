@@ -6,12 +6,12 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-ms.openlocfilehash: d58eac4f21e4f1069ac392aacb4e9818831e914c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: b358f0909147e52293fd802bc98caa31b284d7b1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622647"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558713"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guia de implantação do .NET Framework para administradores
 
@@ -27,7 +27,7 @@ Este tópico contém as seguintes seções:
 - [O processo de implantação](#the_deployment_process)
 - [Implantando o .NET Framework](#deploying_in_a_test_environment)
 - [Criar uma coleção](#creating_a_collection)
-- [Crie um pacote e programa](#creating_a_package)
+- [Para criar um pacote e programa](#creating_a_package)
 - [Selecionar um ponto de distribuição](#select_dist_point)
 - [Implantar o pacote](#deploying_package)
 - [Recursos](#resources)
@@ -39,16 +39,16 @@ Este tópico contém as seguintes seções:
 
 Quando você tem a infraestrutura de suporte em vigor, usa Configuration Manager para implantar o pacote redistribuível .NET Framework em computadores na rede. Estabelecer uma infraestrutura envolve criar e definir cinco áreas principais: coleções, um pacote e programa para o software, pontos de distribuição e implantações.
 
-- **Coleções** são grupos de recursos do Configuration Manager, como usuários, grupos de usuários ou computadores, nos quais o .NET Framework é implantado. Para obter mais informações, consulte [introdução às coleções em Configuration Manager](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections) na biblioteca de documentação do Configuration Manager.
+- **Coleções** são grupos de recursos do Configuration Manager, como usuários, grupos de usuários ou computadores, nos quais o .NET Framework é implantado. Para obter mais informações, consulte [introdução às coleções em Configuration Manager](/configmgr/core/clients/manage/collections/introduction-to-collections) na biblioteca de documentação do Configuration Manager.
 
-- **Pacotes e programas** geralmente representam aplicativos de software a serem instalados em um computador cliente, mas também podem conter arquivos individuais, atualizações ou até mesmo comandos individuais. Para obter mais informações, consulte [pacotes e programas em Configuration Manager](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs) na biblioteca de documentação do Configuration Manager.
+- **Pacotes e programas** geralmente representam aplicativos de software a serem instalados em um computador cliente, mas também podem conter arquivos individuais, atualizações ou até mesmo comandos individuais. Para obter mais informações, consulte [pacotes e programas em Configuration Manager](/configmgr/apps/deploy-use/packages-and-programs) na biblioteca de documentação do Configuration Manager.
 
-- **Pontos de distribuição** são funções do sistema de sites do Configuration Manager que armazenam os arquivos necessários para que o software seja executado em computadores cliente. Quando o cliente do Configuration Manager recebe e processa uma implantação de software, ele contata um ponto de distribuição para baixar o conteúdo associado ao software e iniciar o processo de instalação. Para obter mais informações, veja [Conceitos fundamentais para gerenciamento de conteúdo no Configuration Manager](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management) na biblioteca de documentação do Configuration Manager.
+- **Pontos de distribuição** são funções do sistema de sites do Configuration Manager que armazenam os arquivos necessários para que o software seja executado em computadores cliente. Quando o cliente do Configuration Manager recebe e processa uma implantação de software, ele contata um ponto de distribuição para baixar o conteúdo associado ao software e iniciar o processo de instalação. Para obter mais informações, veja [Conceitos fundamentais para gerenciamento de conteúdo no Configuration Manager](/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management) na biblioteca de documentação do Configuration Manager.
 
 - **Implantações** instruem os membros aplicáveis da coleção de destino especificada a instalarem o pacote de software.
 
 > [!IMPORTANT]
-> Os procedimentos neste tópico contém configurações comuns para criar e implantar um pacote e um programa e podem não abranger todas as configurações possíveis. Para obter outras opções de implantação do Configuration Manager, consulte a [Biblioteca de documentação do Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682041%28v=technet.10%29).
+> Os procedimentos neste tópico contém configurações comuns para criar e implantar um pacote e um programa e podem não abranger todas as configurações possíveis. Para obter outras opções de implantação do Configuration Manager, consulte a [Biblioteca de documentação do Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682041(v=technet.10)).
 
 <a name="deploying_in_a_test_environment"></a>
 
@@ -68,7 +68,7 @@ Você pode usar Configuration Manager para implantar uma instalação silenciosa
 
 ### <a name="create-a-collection"></a>Criar uma coleção
 
-Nesta etapa, você selecionará os computadores nos quais pacote e o programa serão implantados e os agrupará em uma coleção de dispositivos. Para criar uma coleção no Configuration Manager, você pode usar regras de associação diretas (onde você especifica manualmente os membros da coleção) ou regras de consulta (onde o Configuration Manager determina os membros da coleção com base em critérios especificados). Para obter mais informações sobre regras de associação, incluindo consultas e regras diretas, consulte [introdução às coleções em Configuration Manager](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections) na biblioteca de documentação do Configuration Manager.
+Nesta etapa, você selecionará os computadores nos quais pacote e o programa serão implantados e os agrupará em uma coleção de dispositivos. Para criar uma coleção no Configuration Manager, você pode usar regras de associação diretas (onde você especifica manualmente os membros da coleção) ou regras de consulta (onde o Configuration Manager determina os membros da coleção com base em critérios especificados). Para obter mais informações sobre regras de associação, incluindo consultas e regras diretas, consulte [introdução às coleções em Configuration Manager](/configmgr/core/clients/manage/collections/introduction-to-collections) na biblioteca de documentação do Configuration Manager.
 
 Para criar uma coleção:
 
@@ -136,7 +136,7 @@ A tabela a seguir descreve as opções de linha de comando especificadas na etap
 |**/norestart**|Impede que o programa de instalação reinicialize automaticamente. Se você usar essa opção, o Configuration Manager deverá processar a reinicialização do computador.|
 |**/chainingpackage** *PackageName*|Especifica o nome do pacote que está fazendo o encadeamento. Essa informação é relatada com outras informações da sessão de instalação para aqueles que se inscreveram no Programa de Aperfeiçoamento da Experiência do Usuário da Microsoft (CEIP). Se o nome do pacote contiver espaços, use aspas duplas como delimitadores: **/chainingpackage "Chaining Product"**.|
 
-Estas etapas criam um pacote chamado .NET Framework 4.5. O programa implanta uma instalação silenciosa do .NET Framework 4.5. Em uma instalação silenciosa, os usuários não interagem com o processo de instalação e o aplicativo de encadeamento precisa capturar o código de retorno e manipular a reinicialização; consulte [Obtendo informações de progresso de um pacote de instalação](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).
+Estas etapas criam um pacote chamado .NET Framework 4.5. O programa implanta uma instalação silenciosa do .NET Framework 4.5. Em uma instalação silenciosa, os usuários não interagem com o processo de instalação e o aplicativo de encadeamento precisa capturar o código de retorno e manipular a reinicialização; consulte [Obtendo informações de progresso de um pacote de instalação](/previous-versions/cc825975(v=vs.100)).
 
 <a name="select_dist_point"></a>
 
@@ -162,7 +162,7 @@ Use as etapas a seguir para selecionar um ponto de distribuição para o pacote 
 
 8. Conclua o assistente.
 
-O pacote agora conterá todas as informações que você precisa para implantar silenciosamente o .NET Framework 4.5. Antes de implantar o pacote e o programa, verifique se ele foi instalado no ponto de distribuição; consulte a seção "monitoramento de status de conteúdo" do [Monitor de conteúdo que você distribui com o Configuration Manager](https://docs.microsoft.com/configmgr/core/servers/deploy/configure/monitor-content-you-have-distributed) na biblioteca de documentação Configuration Manager.
+O pacote agora conterá todas as informações que você precisa para implantar silenciosamente o .NET Framework 4.5. Antes de implantar o pacote e o programa, verifique se ele foi instalado no ponto de distribuição; consulte a seção "monitoramento de status de conteúdo" do [Monitor de conteúdo que você distribui com o Configuration Manager](/configmgr/core/servers/deploy/configure/monitor-content-you-have-distributed) na biblioteca de documentação Configuration Manager.
 
 <a name="deploying_package"></a>
 
@@ -189,7 +189,7 @@ Para implantar o pacote e o programa .NET Framework 4.5:
 9. Na página **Experiência do Usuário** do assistente, use os valores padrão e escolha **Avançar**.
 
     > [!WARNING]
-    > O ambiente de produção pode ter políticas que exijam diferentes seleções de agendamento de implantação. Para obter informações sobre essas opções, confira [Propriedades de nome de anúncio: guia Agendamento](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
+    > O ambiente de produção pode ter políticas que exijam diferentes seleções de agendamento de implantação. Para obter informações sobre essas opções, confira [Propriedades de nome de anúncio: guia Agendamento](/previous-versions/system-center/configuration-manager-2007/bb694016(v=technet.10)).
 
 10. Na página **Pontos de Distribuição** do assistente, use os valores padrão e escolha **Avançar**.
 
@@ -213,19 +213,19 @@ Para obter mais informações sobre a infraestrutura para testar a implantação
 
 **SQL Server 2008:**
 
-- [Instalando o SQL Server 2008 (vídeo do SQL Server)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd299415(v=sql.100))
+- [Instalando o SQL Server 2008 (vídeo do SQL Server)](/previous-versions/sql/sql-server-2008/dd299415(v=sql.100))
 
 - [Visão geral de segurança do SQL Server 2008 para administradores de banco de dados](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)
 
 **System Center 2012 Configuration Manager (ponto de gerenciamento, ponto de distribuição):**
 
-- [Administração de site do System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)
+- [Administração de site do System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg681983(v=technet.10))
 
-- [Planejando e implantando site único do Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)
+- [Planejando e implantando site único do Configuration Manager](/previous-versions/system-center/configuration-manager-2007/bb680961(v=technet.10))
 
 **Cliente do System Center 2012 Configuration Manager para computadores Windows:**
 
-- [Implantação de clientes do System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)
+- [Implantação de clientes do System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699391(v=technet.10))
 
 <a name="troubleshooting"></a>
 
@@ -267,7 +267,7 @@ Para obter links para informações detalhadas, consulte a próxima seção [Có
 
 - [Códigos de erro do BITS (Serviço de Transferência Inteligente em Segundo Plano)](/windows/desktop/Bits/bits-return-values)
 
-- [Códigos de erro do moniker de URL](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)
+- [Códigos de erro do moniker de URL](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145(v=vs.85))
 
 - [Códigos de erro WinHttp](/windows/desktop/WinHttp/error-messages)
 
@@ -275,9 +275,9 @@ Outros códigos de erro:
 
 - [Códigos de erro do Windows Installer](/windows/desktop/msi/error-codes)
 
-- [Códigos de resultado do Windows Update Agent](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
+- [Códigos de resultado do Windows Update Agent](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Guia de implantação para desenvolvedores](deployment-guide-for-developers.md)
 - [Requisitos do sistema](../get-started/system-requirements.md)

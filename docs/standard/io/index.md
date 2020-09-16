@@ -11,12 +11,12 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-ms.openlocfilehash: 2761d17846009ba06a2ffb1fc58b430f3ec9a949
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 2f7da6bd967abce8c2fefdc54a0043b5505e22e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662713"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558934"
 ---
 # <a name="file-and-stream-io"></a>E/S de arquivo e de fluxo
 
@@ -46,7 +46,7 @@ Você sempre deve fornecer tratamento de exceção robusto ao chamar métodos de
 
 Além de usar essas classes, os usuários do Visual Basic podem usar os métodos e as propriedades fornecidas pela classe <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> para E/S de arquivo.
 
-Confira [Como copiar diretórios](how-to-copy-directories.md), [Como criar uma listagem de diretórios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100)) e [Como enumerar diretórios e arquivos](how-to-enumerate-directories-and-files.md).
+Confira [Como copiar diretórios](how-to-copy-directories.md), [Como criar uma listagem de diretórios](/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100)) e [Como enumerar diretórios e arquivos](how-to-enumerate-directories-and-files.md).
 
 ## <a name="streams"></a>Fluxos
 
@@ -128,7 +128,7 @@ Confira [How to: Compress and Extract Files](how-to-compress-and-extract-files.m
 
 Um armazenamento isolado é um mecanismo de armazenamento de dados que fornece isolamento e segurança ao definir maneiras padronizadas de associar códigos a dados salvos. O armazenamento fornece um sistema de arquivos virtual que é isolado por usuário, assembly e (opcionalmente) domínio. O armazenamento isolado é particularmente útil quando o aplicativo não tem permissão para acessar arquivos de usuários. Você pode salvar configurações ou arquivos para seu aplicativo de modo que ele seja controlado pela política de segurança do computador.
 
-O armazenamento isolado não está disponível para aplicativos da loja do Windows 8. x; em vez disso, use classes de dados de aplicativo no <xref:Windows.Storage?displayProperty=nameWithType> namespace. Para saber mais, veja [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).
+O armazenamento isolado não está disponível para aplicativos da loja do Windows 8. x; em vez disso, use classes de dados de aplicativo no <xref:Windows.Storage?displayProperty=nameWithType> namespace. Para saber mais, veja [Dados de aplicativo](/previous-versions/windows/apps/hh464917(v=win.10)).
 
 As classes a seguir são usadas com frequência na implementação do armazenamento isolado:
 
@@ -148,7 +148,7 @@ Algumas diferenças importantes a serem observadas ao usar operações de e/s em
 
 - Tipos especificamente relacionados a operações de arquivo, como <xref:System.IO.File> , <xref:System.IO.FileInfo> <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo> , não estão incluídos no .net para aplicativos da loja do Windows 8. x. Em vez disso, use os tipos no namespace <xref:Windows.Storage?displayProperty=nameWithType> do Windows Runtime, como <xref:Windows.Storage.StorageFile> e <xref:Windows.Storage.StorageFolder>.
 
-- O armazenamento isolado não está disponível. Use [dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
+- O armazenamento isolado não está disponível. Use [dados de aplicativo](/previous-versions/windows/apps/hh464917(v=win.10)).
 
 - Use métodos assíncronos, como <xref:System.IO.Stream.ReadAsync%2A> e <xref:System.IO.Stream.WriteAsync%2A>, para evitar o bloqueio do thread da interface do usuário.
 
@@ -156,13 +156,13 @@ Algumas diferenças importantes a serem observadas ao usar operações de e/s em
 
 É possível converter entre fluxos do .NET Framework e fluxos do Windows Runtime, se necessário. Para obter mais informações, consulte [como converter entre fluxos de .NET Framework e fluxos de Windows Runtime](how-to-convert-between-dotnet-streams-and-winrt-streams.md) ou <xref:System.IO.WindowsRuntimeStreamExtensions> .
 
-Para obter mais informações sobre operações de e/s em um aplicativo da loja do Windows 8. x, consulte [início rápido: lendo e gravando arquivos](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
+Para obter mais informações sobre operações de e/s em um aplicativo da loja do Windows 8. x, consulte [início rápido: lendo e gravando arquivos](/previous-versions/windows/apps/hh758325(v=win.10)).
 
 ## <a name="io-and-security"></a>E/S e segurança
 
 Ao usar as classes no namespace <xref:System.IO?displayProperty=nameWithType>, você deve atender aos requisitos de segurança do sistema operacional, como ACLs (listas de controle de acesso) para controlar o acesso a arquivos e diretórios. Esse é um requisito adicional aos requisitos de <xref:System.Security.Permissions.FileIOPermission>. As ACLs podem ser gerenciadas por meio de programação. Para saber mais, confira [Como adicionar ou remover entradas da lista de controle de acesso](how-to-add-or-remove-access-control-list-entries.md).
 
-As políticas de segurança padrão impedem que aplicativos da Internet ou intranet acessem arquivos no computador do usuário. Consequentemente, não use classes de E/S que exijam um caminho para um arquivo físico ao escrever código que será baixado via Internet ou intranet. Em vez disso, use o [armazenamento isolado](isolated-storage.md) para aplicativos .NET Framework tradicionais ou use [dados de aplicativos](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) para aplicativos da loja do Windows 8. x.
+As políticas de segurança padrão impedem que aplicativos da Internet ou intranet acessem arquivos no computador do usuário. Consequentemente, não use classes de E/S que exijam um caminho para um arquivo físico ao escrever código que será baixado via Internet ou intranet. Em vez disso, use o [armazenamento isolado](isolated-storage.md) para aplicativos .NET Framework tradicionais ou use [dados de aplicativos](/previous-versions/windows/apps/hh464917(v=win.10)) para aplicativos da loja do Windows 8. x.
 
 Uma verificação de segurança é executada somente quando o fluxo é construído. Consequentemente, não abra um fluxo para depois passá-lo para código ou domínios de aplicativos menos confiáveis.
 

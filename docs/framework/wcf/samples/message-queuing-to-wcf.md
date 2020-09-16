@@ -2,12 +2,12 @@
 title: Enfileiramento de mensagens para o Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: 82e71afc911bff2504be15f7f9f2e736d943972b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5132e0380aebd595e79429fab9df8a7fb94574a0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584955"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558687"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Enfileiramento de mensagens para o Windows Communication Foundation
 
@@ -139,11 +139,11 @@ Console.ReadLine();
 
 2. Copie os arquivos de programas do cliente da pasta \client\bin\, na pasta específica do idioma, para o computador cliente.
 
-3. No arquivo client. exe. config, altere o orderQueueName para especificar o nome do computador de serviço em vez de ".".
+3. No arquivo Client.exe.config, altere o orderQueueName para especificar o nome do computador de serviço em vez de ".".
 
-4. No computador do serviço, inicie o Service. exe em um prompt de comando.
+4. No computador do serviço, inicie o Service.exe em um prompt de comando.
 
-5. No computador cliente, inicie o Client. exe em um prompt de comando.
+5. No computador cliente, inicie o Client.exe em um prompt de comando.
 
 > [!IMPORTANT]
 > Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.
@@ -154,8 +154,8 @@ Console.ReadLine();
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Filas no WCF](../feature-details/queues-in-wcf.md)
-- [Como trocar mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [Enfileiramento de Mensagens](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))
+- [Como: fazer intercâmbio de mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Enfileiramento de Mensagens](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

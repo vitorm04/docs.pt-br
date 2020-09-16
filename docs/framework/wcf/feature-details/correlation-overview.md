@@ -2,12 +2,12 @@
 title: Visão geral de correlação
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: 65f87195fde0c3dbda610804260f0ebfbf599073
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8d33022524a4619a57b04e7774918fd73d0bdef3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586969"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552551"
 ---
 # <a name="correlation-overview"></a>Visão geral de correlação
 A correlação é o mecanismo para relacionar mensagens do serviço de fluxo de trabalho entre si ou com o estado de instância do aplicativo, como uma resposta a uma solicitação inicial ou uma ID de ordem específica para o estado persistente de um fluxo de trabalho de processamento de pedidos. Este tópico fornece uma visão geral da correlação. Os outros tópicos nesta seção fornecem informações adicionais para cada tipo de correlação.  
@@ -19,14 +19,14 @@ A correlação é o mecanismo para relacionar mensagens do serviço de fluxo de 
   
 ## <a name="protocol-based-correlation"></a>Correlação baseada em protocolo
 
-A correlação baseada em protocolo usa o mecanismo de transporte para relacionar mensagens entre si e a instância apropriada. Algumas correlações de protocolo fornecidas pelo sistema incluem correlação de solicitação-resposta e correlação baseada em contexto. Uma correlação de solicitação-resposta é usada para correlacionar um único par de atividades de mensagens para formar uma operação bidirecional, como um <xref:System.ServiceModel.Activities.Send> emparelhado com um <xref:System.ServiceModel.Activities.ReceiveReply> ou um <xref:System.ServiceModel.Activities.Receive> emparelhado com um <xref:System.ServiceModel.Activities.SendReply> . O Designer de Fluxo de Trabalho do Visual Studio também fornece um conjunto de modelos de atividade para implementar rapidamente esse padrão. Uma correlação baseada em contexto é baseada no mecanismo de troca de contexto descrito na [especificação de protocolo do Exchange de contexto do .net](https://docs.microsoft.com/openspecs/windows_protocols/mc-netcex/a7f26280-491f-465b-9914-c5eb5322dbb4). Para usar a correlação baseada em contexto, uma associação baseada em contexto, como <xref:System.ServiceModel.BasicHttpContextBinding> , <xref:System.ServiceModel.WSHttpContextBinding> ou <xref:System.ServiceModel.NetTcpContextBinding> deve ser usada no ponto de extremidade.  
+A correlação baseada em protocolo usa o mecanismo de transporte para relacionar mensagens entre si e a instância apropriada. Algumas correlações de protocolo fornecidas pelo sistema incluem correlação de solicitação-resposta e correlação baseada em contexto. Uma correlação de solicitação-resposta é usada para correlacionar um único par de atividades de mensagens para formar uma operação bidirecional, como um <xref:System.ServiceModel.Activities.Send> emparelhado com um <xref:System.ServiceModel.Activities.ReceiveReply> ou um <xref:System.ServiceModel.Activities.Receive> emparelhado com um <xref:System.ServiceModel.Activities.SendReply> . O Designer de Fluxo de Trabalho do Visual Studio também fornece um conjunto de modelos de atividade para implementar rapidamente esse padrão. Uma correlação baseada em contexto é baseada no mecanismo de troca de contexto descrito na [especificação de protocolo do Exchange de contexto do .net](/openspecs/windows_protocols/mc-netcex/a7f26280-491f-465b-9914-c5eb5322dbb4). Para usar a correlação baseada em contexto, uma associação baseada em contexto, como <xref:System.ServiceModel.BasicHttpContextBinding> , <xref:System.ServiceModel.WSHttpContextBinding> ou <xref:System.ServiceModel.NetTcpContextBinding> deve ser usada no ponto de extremidade.  
   
-Para obter mais informações sobre correlação de protocolo, consulte [duplex durável](durable-duplex-correlation.md) e [solicitação-resposta](request-reply-correlation.md). Para obter mais informações sobre como usar os modelos de atividade de Designer de Fluxo de Trabalho do Visual Studio, consulte [atividades de mensagens](messaging-activities.md). Para obter o código de exemplo, consulte o exemplo [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29) .  
+Para obter mais informações sobre correlação de protocolo, consulte [duplex durável](durable-duplex-correlation.md) e [solicitação-resposta](request-reply-correlation.md). Para obter mais informações sobre como usar os modelos de atividade de Designer de Fluxo de Trabalho do Visual Studio, consulte [atividades de mensagens](messaging-activities.md). Para obter o código de exemplo, consulte o exemplo [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963(v=vs.100)) .  
   
 ## <a name="content-based-correlation"></a>Correlação conteudo base
 
 A correlação baseada em conteúdo usa alguma informação na mensagem para associá-la a uma instância específica. Diferentemente da correlação baseada em protocolo, a correlação baseada em conteúdo exige que o autor do aplicativo declare explicitamente onde esses dados podem ser encontrados em cada mensagem relacionada. As atividades que usam a correlação baseada em conteúdo especificam esses dados de mensagem usando um <xref:System.ServiceModel.MessageQuerySet> . A correlação baseada em conteúdo é útil ao se comunicar com serviços que não usam uma das associações de contexto, como <xref:System.ServiceModel.BasicHttpContextBinding> .
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)
+- [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963(v=vs.100))

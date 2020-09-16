@@ -1,15 +1,15 @@
 ---
-title: Provedor de WMI
+title: Provedor WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: a01b4b70d4c497d1efb93bb53a7339f5f7f29ef9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3fc982bcec563d5e4b90ba3b25989859d7d86281
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591040"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552870"
 ---
-# <a name="wmi-provider"></a>Provedor de WMI
+# <a name="wmi-provider"></a>Provedor WMI
 Este exemplo demonstra como coletar dados de serviços Windows Communication Foundation (WCF) em tempo de execução usando o provedor de Instrumentação de Gerenciamento do Windows (WMI) que é incorporado ao WCF. Além disso, este exemplo demonstra como adicionar um objeto WMI definido pelo usuário a um serviço. O exemplo ativa o provedor WMI para o [introdução](getting-started-sample.md) e demonstra como coletar dados do `ICalculator` serviço em tempo de execução.  
   
  O WMI é a implementação do padrão Web-Based Enterprise Management (WBEM) da Microsoft. Para obter mais informações sobre o SDK do WMI, consulte [Instrumentação de gerenciamento do Windows](/windows/desktop/WmiSdk/wmi-start-page). O WBEM é um padrão do setor para a forma como os aplicativos expõem a instrumentação de gerenciamento para ferramentas de gerenciamento externas.  
@@ -29,7 +29,7 @@ Este exemplo demonstra como coletar dados de serviços Windows Communication Fou
  Essa entrada de configuração expõe uma interface WMI. Os aplicativos de gerenciamento agora podem se conectar por meio dessa interface e acessar a instrumentação de gerenciamento do aplicativo.  
   
 ## <a name="custom-wmi-object"></a>Objeto WMI personalizado  
- Adicionar objetos WMI a um serviço torna possível revelar informações definidas pelo usuário juntamente com as informações internas do provedor WMI. Isso é feito por meio da publicação do esquema do serviço no WMI usando o aplicativo InstallUtil. exe. Instruções para fazer isso, juntamente com mais detalhes, podem ser encontradas nas instruções de instalação no final do tópico.  
+ Adicionar objetos WMI a um serviço torna possível revelar informações definidas pelo usuário juntamente com as informações internas do provedor WMI. Isso é feito por meio da publicação do esquema do serviço no WMI usando o aplicativo Installutil.exe. Instruções para fazer isso, juntamente com mais detalhes, podem ser encontradas nas instruções de instalação no final do tópico.  
   
 ## <a name="accessing-wmi-information"></a>Acessando informações do WMI  
 
@@ -126,7 +126,7 @@ cscript EnumerateCustomObjects.js
   
 2. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).  
   
-3. Publique o esquema de serviços no WMI executando o InstallUtil. exe (os locais padrão para InstallUtil. exe são "%WINDIR%\Microsoft.NET\Framework\v4.0.30319") no arquivo Service. dll no diretório de hospedagem. Esta etapa só precisa ser executada quando foram feitas alterações no arquivo Service. dll.
+3. Publique o esquema de serviços no WMI executando a InstallUtil.exe (os locais padrão para InstallUtil.exe é "%WINDIR%\Microsoft.NET\Framework\v4.0.30319") no arquivo service.dll no diretório de hospedagem. Esta etapa só precisa ser executada quando foram feitas alterações no arquivo de service.dll.
   
 4. Para executar o exemplo em uma configuração de computador único ou entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).  
   
@@ -146,4 +146,4 @@ cscript EnumerateCustomObjects.js
   
 ## <a name="see-also"></a>Confira também
 
-- [AppFabric que monitora Exemplos](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric que monitora Exemplos](/previous-versions/appfabric/ff383407(v=azure.10))

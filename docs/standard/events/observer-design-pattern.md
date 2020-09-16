@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 4edcd2645b28095f4bd18f4918b9afa5c893bd39
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 80dac36199dd13abeab295d4b53a52615e7ae625
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662726"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559155"
 ---
 # <a name="observer-design-pattern"></a>Padrão de design do observador
 
@@ -47,7 +47,7 @@ A implementação do padrão exige que você forneça o seguinte:
 - Um objeto que contém os dados que o provedor envia para seus observadores. O tipo desse objeto corresponde ao parâmetro de tipo genérico das interfaces <xref:System.IObservable%601> e <xref:System.IObserver%601>. Embora esse objeto possa ser o mesmo que a implementação de <xref:System.IObservable%601>, geralmente ele é um tipo separado.
 
 > [!NOTE]
-> Além de implementar o padrão de design do observador, pode ser interessante explorar bibliotecas que são criadas usando as interfaces <xref:System.IObservable%601> e <xref:System.IObserver%601>. Por exemplo, [Extensões Reativas para .NET (Rx)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) consistem em um conjunto de métodos de extensão e operadores de sequência padrão LINQ para oferecer suporte à programação assíncrona.
+> Além de implementar o padrão de design do observador, pode ser interessante explorar bibliotecas que são criadas usando as interfaces <xref:System.IObservable%601> e <xref:System.IObserver%601>. Por exemplo, [Extensões Reativas para .NET (Rx)](/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) consistem em um conjunto de métodos de extensão e operadores de sequência padrão LINQ para oferecer suporte à programação assíncrona.
 
 ## <a name="implementing-the-pattern"></a>Implementando o padrão
 
@@ -92,7 +92,7 @@ O exemplo a seguir contém o ponto de entrada do aplicativo que instancia a clas
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Title|Descrição|
+|Título|Descrição|
 |-----------|-----------------|
 |[Práticas recomendadas para o padrão de design do observador](observer-design-pattern-best-practices.md)|São descritas as práticas recomendadas ao desenvolver aplicativos que implementam o padrão de design do observador.|
 |[Como implementar um provedor](how-to-implement-a-provider.md)|É fornecida uma implementação passo a passo de um provedor para uma aplicativo de monitoramento de temperatura.|

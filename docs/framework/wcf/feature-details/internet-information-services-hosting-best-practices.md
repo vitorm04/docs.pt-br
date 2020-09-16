@@ -2,12 +2,12 @@
 title: Práticas recomendadas de hospedagem dos Serviços de Informações da Internet
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: e62fed4f6a711ecc317b8f758d4948a477d136e1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c875920ed70ea8bd35642d0b7725b2dfad08f2b1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595265"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558869"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Práticas recomendadas de hospedagem dos Serviços de Informações da Internet
 Este tópico descreve algumas práticas recomendadas para hospedar serviços de Windows Communication Foundation (WCF).  
@@ -30,7 +30,7 @@ Este tópico descreve algumas práticas recomendadas para hospedar serviços de 
 ## <a name="optimizing-performance-in-middle-tier-scenarios"></a>Otimizando o desempenho em cenários de camada intermediária  
  Para um desempenho ideal em um *cenário de camada intermediária*— um serviço que chama outros serviços em resposta a mensagens de entrada — instancie o cliente do serviço WCF para o serviço remoto uma vez e reutilize-o em várias solicitações de entrada. A instanciação de clientes de serviço WCF é uma operação cara em relação à criação de uma chamada de serviço em uma instância de cliente pré-existente, e os cenários de camada intermediária produzem ganhos de desempenho distintos ao armazenar em cache clientes remotos entre solicitações. Os clientes de serviço WCF são thread-safe, portanto não é necessário sincronizar o acesso a um cliente em vários threads.  
   
- Cenários de camada intermediária também produzem ganhos de desempenho usando as APIs assíncronas geradas pela `svcutil /a` opção. A `/a` opção faz com que a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) gere `BeginXXX/EndXXX` métodos para cada operação de serviço, o que permite que as chamadas de longa duração para serviços remotos sejam feitas em threads em segundo plano.  
+ Cenários de camada intermediária também produzem ganhos de desempenho usando as APIs assíncronas geradas pela `svcutil /a` opção. A `/a` opção faz com que a [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) gere `BeginXXX/EndXXX` métodos para cada operação de serviço, o que permite que as chamadas de longa duração para serviços remotos sejam feitas em threads em segundo plano.  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>WCF em cenários de hospedagem múltipla ou vários nomes  
  Você pode implantar serviços WCF dentro de um Web farm do IIS, em que um conjunto de computadores compartilha um nome externo comum (como `http://www.contoso.com` ), mas que é endereçado individualmente por diferentes nomes de host (por exemplo, `http://www.contoso.com` pode direcionar o tráfego para dois computadores diferentes denominados `http://machine1.internal.contoso.com` e `http://machine2.internal.contoso.com` ). Esse cenário de implantação tem suporte total do WCF, mas requer configuração especial do site do IIS que hospeda serviços WCF para exibir o nome de host correto (externo) nos metadados do serviço (linguagem de descrição dos serviços Web).  
@@ -42,12 +42,12 @@ Este tópico descreve algumas práticas recomendadas para hospedar serviços de 
 ## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>Pools de aplicativos em execução em diferentes contextos de usuário substituem assemblies de outras contas na pasta temporária  
  Para garantir que os pools de aplicativos executados em diferentes contextos de usuário não possam substituir assemblies de outras contas na pasta Temporary ASP.NET Files, use diferentes identidades e pastas temporárias para aplicativos diferentes. Por exemplo, se você tiver dois aplicativos virtuais/Application1 e/Application2, poderá criar dois pools de aplicativos, A e B, com duas identidades diferentes. O pool de aplicativos A pode ser executado em uma identidade de usuário (Usuário1), enquanto o pool de aplicativos B pode ser executado em outra identidade de usuário (Usuário2) e configurar o/Application1 para usar um e/Application2 para usar B.  
   
- Em Web. config, você pode configurar a pasta temporária usando \<system.web/compilation/@tempFolder> . Para/Application1, ele pode ser "c:\tempForUser1" e, para Application2, pode ser "c:\tempForUser2". Conceda permissão de gravação correspondente a essas pastas para as duas identidades.  
+ No Web.config, você pode configurar a pasta temporária usando \<system.web/compilation/@tempFolder> . Para/Application1, ele pode ser "c:\tempForUser1" e, para Application2, pode ser "c:\tempForUser2". Conceda permissão de gravação correspondente a essas pastas para as duas identidades.  
   
  Em seguida, o User2 não pode alterar a pasta de geração de código para/Application2 (em c:\tempForUser1).  
   
 ## <a name="enabling-asynchronous-processing"></a>Habilitando o processamento assíncrono  
- Por padrão, as mensagens enviadas para um serviço WCF hospedados no IIS 6,0 e versões anteriores são processadas de maneira síncrona. ASP.NET chama o WCF em seu próprio thread (o thread de trabalho do ASP.NET) e o WCF usa outro thread para processar a solicitação. O WCF mantém-se no thread de trabalho do ASP.NET até concluir seu processamento. Isso leva ao processamento síncrono de solicitações. O processamento de solicitações assincronamente permite maior escalabilidade porque reduz o número de threads necessários para processar uma solicitação – o WCF não mantém o thread ASP.NET durante o processamento da solicitação. O uso do comportamento assíncrono não é recomendado para computadores que executam o IIS 6,0 porque não há nenhuma maneira de limitar as solicitações de entrada que abrem o servidor para ataques de dos ( *negação de serviço* ). A partir do IIS 7,0, foi introduzido um limite de solicitação simultâneo: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ASP.NET\2.0.50727.0]"MaxConcurrentRequestsPerCpu` . Com essa nova limitação, é seguro usar o processamento assíncrono.  Por padrão, no IIS 7,0, o manipulador assíncrono e o módulo são registrados. Se isso tiver sido desativado, você poderá habilitar manualmente o processamento assíncrono de solicitações no arquivo Web. config do seu aplicativo. As configurações usadas dependem de sua `aspNetCompatibilityEnabled` configuração. Se você tiver `aspNetCompatibilityEnabled` definido como `false` , configure o `System.ServiceModel.Activation.ServiceHttpModule` conforme mostrado no trecho de configuração a seguir.  
+ Por padrão, as mensagens enviadas para um serviço WCF hospedados no IIS 6,0 e versões anteriores são processadas de maneira síncrona. ASP.NET chama o WCF em seu próprio thread (o thread de trabalho do ASP.NET) e o WCF usa outro thread para processar a solicitação. O WCF mantém-se no thread de trabalho do ASP.NET até concluir seu processamento. Isso leva ao processamento síncrono de solicitações. O processamento de solicitações assincronamente permite maior escalabilidade porque reduz o número de threads necessários para processar uma solicitação – o WCF não mantém o thread ASP.NET durante o processamento da solicitação. O uso do comportamento assíncrono não é recomendado para computadores que executam o IIS 6,0 porque não há nenhuma maneira de limitar as solicitações de entrada que abrem o servidor para ataques de dos ( *negação de serviço* ). A partir do IIS 7,0, foi introduzido um limite de solicitação simultâneo: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ASP.NET\2.0.50727.0]"MaxConcurrentRequestsPerCpu` . Com essa nova limitação, é seguro usar o processamento assíncrono.  Por padrão, no IIS 7,0, o manipulador assíncrono e o módulo são registrados. Se isso tiver sido desativado, você poderá habilitar manualmente o processamento assíncrono de solicitações no arquivo de Web.config do seu aplicativo. As configurações usadas dependem de sua `aspNetCompatibilityEnabled` configuração. Se você tiver `aspNetCompatibilityEnabled` definido como `false` , configure o `System.ServiceModel.Activation.ServiceHttpModule` conforme mostrado no trecho de configuração a seguir.  
   
 ```xml  
 <system.serviceModel>  
@@ -84,4 +84,4 @@ Este tópico descreve algumas práticas recomendadas para hospedar serviços de 
 ## <a name="see-also"></a>Confira também
 
 - [Exemplos de Hospedagem de serviço](../samples/hosting.md)
-- [Recursos de hospedagem do Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Recursos de hospedagem do Windows Server AppFabric](/previous-versions/appfabric/ee677189(v=azure.10))

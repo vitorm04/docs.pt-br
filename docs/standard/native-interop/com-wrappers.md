@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
-ms.openlocfilehash: f1cf84b8f15de1e3bd19a391767f5573f01ff806
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: cde574be6d4fadb78805548cff1b42ee354bf36f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420507"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558947"
 ---
 # <a name="com-wrappers"></a>Wrappers COM
 O COM difere do modelo de objeto de runtime do .NET de várias maneiras importantes:  
@@ -32,10 +32,10 @@ O COM difere do modelo de objeto de runtime do .NET de várias maneiras importan
   
  Na maioria dos casos, o RCW (Runtime Callable Wrapper) padrão ou o CCW gerado pelo tempo de execução fornece o marshaling adequado para chamadas que cruzam o limite entre o COM e o tempo de execução do .NET. Usando atributos personalizados, opcionalmente, você pode ajustar a maneira como o runtime representa o código gerenciado e não gerenciado.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Interoperabilidade COM avançada no .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [Interoperabilidade COM avançada no .NET Framework](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [RCW (Runtime Callable Wrapper)](runtime-callable-wrapper.md)
 - [COM Callable Wrapper](com-callable-wrapper.md)
-- [Como personalizar wrappers padrão no .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
-- [Como personalizar wrappers callable em tempo de execução no .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))
+- [Como personalizar wrappers padrão no .NET Framework](/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
+- [Como personalizar wrappers callable em tempo de execução no .NET Framework](/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))

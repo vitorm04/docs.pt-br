@@ -2,12 +2,12 @@
 title: Suporte para novos recursos do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 1c554c60bf2e50a8eb89764a21ad15b95343b182
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: b561e580f0d7f2d77847d91612e8b06bc57a2a45
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937735"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558427"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Suporte para novos recursos do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
 O Windows Workflow Foundation (WF) no .NET Framework 4,5 introduziu muitos recursos novos, incluindo vários aprimoramentos na experiência do designer de fluxo de trabalho. Este tópico detalha quais desses recursos têm suporte no designer hospedado novamente e que não têm suporte no momento.
@@ -19,7 +19,7 @@ O Windows Workflow Foundation (WF) no .NET Framework 4,5 introduziu muitos recur
  A biblioteca de atividades embutida contém novas atividades e novos recursos para atividades existentes. Todas essas novas atividades têm suporte no designer hospedado novamente. Para obter mais informações sobre essas novas atividades, consulte a seção [atividades](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) do [que há de novo no Windows Workflow Foundation no .NET 4,5](whats-new-in-wf-in-dotnet.md).
 
 ## <a name="c-expressions"></a>Expressões C#
- Antes do .NET Framework 4,5, todas as expressões em fluxos de trabalho só podiam ser gravadas em Visual Basic. No .NET Framework 4,5, Visual Basic expressões são usadas somente para projetos criados usando Visual Basic. Os projetos do Visual C# agora usam o C# para expressões. Ao criar fluxos de trabalho no Visual Studio 2012, um editor de C# expressão totalmente funcional fornece os recursos como realce de gramática e IntelliSense. Os projetos do fluxo de trabalho C# criados em versões anteriores que usam expressões do Visual Basic continuarão funcionando.
+ Antes do .NET Framework 4,5, todas as expressões em fluxos de trabalho só podiam ser gravadas em Visual Basic. No .NET Framework 4,5, Visual Basic expressões são usadas somente para projetos criados usando Visual Basic. Os projetos do Visual C# agora usam o C# para expressões. Ao criar fluxos de trabalho no Visual Studio 2012, um editor de expressão C# totalmente funcional fornece os recursos como realce de gramática e IntelliSense. Os projetos do fluxo de trabalho C# criados em versões anteriores que usam expressões do Visual Basic continuarão funcionando.
 
 > [!WARNING]
 > As expressões C# não têm suporte no designer hospedado novamente.
@@ -40,7 +40,7 @@ O Windows Workflow Foundation (WF) no .NET Framework 4,5 introduziu muitos recur
  ![Menu de contexto do designer de argumento e variável](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>Envolvimento automático com sequência
- Como um fluxo de trabalho ou algumas atividades do contêiner (como <xref:System.Activities.Statements.NoPersistScope>) só podem conter uma única atividade do corpo, adicionar uma segunda atividade exigia que o desenvolvedor excluísse a primeira atividade, adicionasse uma atividade <xref:System.Activities.Statements.Sequence> e, em seguida, adicionasse as duas atividades para a atividade de sequência. A partir do .NET Framework 4,5, ao adicionar uma segunda atividade à superfície do designer, uma atividade de `Sequence` será criada automaticamente para encapsular as duas atividades. Esse recurso tem suporte no designer hospedado novamente.
+ Como um fluxo de trabalho ou algumas atividades do contêiner (como <xref:System.Activities.Statements.NoPersistScope>) só podem conter uma única atividade do corpo, adicionar uma segunda atividade exigia que o desenvolvedor excluísse a primeira atividade, adicionasse uma atividade <xref:System.Activities.Statements.Sequence> e, em seguida, adicionasse as duas atividades para a atividade de sequência. A partir do .NET Framework 4,5, ao adicionar uma segunda atividade à superfície do designer, uma `Sequence` atividade será criada automaticamente para encapsular as duas atividades. Esse recurso tem suporte no designer hospedado novamente.
 
  A captura de tela a seguir mostra uma atividade de `WriteLine` no `Body` de um `NoPersistScope`.
 
@@ -72,7 +72,7 @@ O Windows Workflow Foundation (WF) no .NET Framework 4,5 introduziu muitos recur
  ![Captura de tela da exibição de estrutura de tópicos com um fluxo de trabalho Sequencial no Visual Studio](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Mais controle da visibilidade da barra de shell e dos itens de cabeçalho
- Em um designer hospedado novamente, alguns dos controles padrão de interface do usuário não podem ter o significado de um fluxo de trabalho específico, e podem ser desativados. No .NET Framework 4, essa personalização só é suportada pela barra de Shell na parte inferior do designer. No .NET Framework 4,5, a visibilidade dos itens de cabeçalho do Shell na parte superior do designer pode ser ajustada definindo <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> com o valor de <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> apropriado.
+ Em um designer hospedado novamente, alguns dos controles padrão de interface do usuário não podem ter o significado de um fluxo de trabalho específico, e podem ser desativados. No .NET Framework 4, essa personalização só é suportada pela barra de Shell na parte inferior do designer. No .NET Framework 4,5, a visibilidade dos itens de cabeçalho do Shell na parte superior do designer pode ser ajustada Configurando <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> com o <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> valor apropriado.
 
 ### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>Conexão automática e inserção automática em fluxograma e fluxos de trabalho de máquina de estado
  No .NET Framework 4, as conexões entre os nós em um fluxo de trabalho de fluxograma tinham que ser adicionadas manualmente. No .NET Framework 4,5, os nós de máquina de estado e fluxograma têm pontos de conexão automática que se tornam visíveis quando uma atividade é arrastada da caixa de ferramentas para a superfície do designer. Soltar uma atividade em um destes pontos adiciona automaticamente a atividade junto com a conexão necessária.
@@ -95,7 +95,7 @@ O Windows Workflow Foundation (WF) no .NET Framework 4,5 introduziu muitos recur
  As anotações do designer não têm suporte no designer hospedado novamente.
 
 ### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>Definir e consumir objetos ActivityDelegate no designer
- As atividades no .NET Framework 4 usaram <xref:System.Activities.ActivityDelegate> objetos para expor pontos de execução em que outras partes do fluxo de trabalho poderiam interagir com a execução de um fluxo de trabalho, mas usar esses pontos de execução geralmente exigia uma quantidade razoável de código. Nesta versão, os desenvolvedores podem definir e consumir representantes de atividade usando o designer de fluxo de trabalho. Para obter mais informações, consulte [como: definir e consumir delegados de atividade no designer de fluxo de trabalho](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
+ As atividades em .NET Framework 4 <xref:System.Activities.ActivityDelegate> objetos usados para expor pontos de execução em que outras partes do fluxo de trabalho poderiam interagir com a execução de um fluxo de trabalho, mas usar esses pontos de execução geralmente exigia uma quantidade razoável de código. Nesta versão, os desenvolvedores podem definir e consumir representantes de atividade usando o designer de fluxo de trabalho. Para obter mais informações, consulte [como: definir e consumir delegados de atividade no designer de fluxo de trabalho](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
 
  Os delegados de atividade não têm suporte no designer hospedado novamente.
 
@@ -122,7 +122,7 @@ O Windows Workflow Foundation (WF) no .NET Framework 4,5 introduziu muitos recur
  Além do fluxograma e de modelos sequenciais de desenvolvimento de fluxo de trabalho, esta versão inclui fluxos de trabalho da Máquina de Estado e serviços de fluxo de trabalho de primeiro contrato.  
   
 ### <a name="state-machine-workflows"></a>Fluxo de trabalho de máquina de estado  
- Os fluxos de trabalho de máquina de estado foram introduzidos como parte do .NET Framework 4.0.1 na [atualização 1 da plataforma Microsoft .NET Framework 4](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1). Essa atualização incluiu várias novas classes e atividades que permitiram que os desenvolvedores criassem fluxos de trabalho de máquina do estado. Essas classes e atividades foram atualizadas para o .NET Framework 4,5. As atualizações incluem:  
+ Os fluxos de trabalho de máquina de estado foram introduzidos como parte do .NET Framework 4.0.1 na [atualização 1 da plataforma Microsoft .NET Framework 4](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1). Essa atualização incluiu várias novas classes e atividades que permitiram que os desenvolvedores criassem fluxos de trabalho de máquina do estado. Essas classes e atividades foram atualizadas para o .NET Framework 4,5. As atualizações incluem:  
   
 1. A capacidade de definir pontos de interrupção em estados  
   

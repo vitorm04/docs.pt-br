@@ -25,12 +25,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 444d3700f36a2928b79f40dd5265d6166de762da
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 92ecc4a430aa3c238a7cd8705dc0cec5a9d0cb11
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105363"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559285"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurando aplicativos usando arquivos de configuração 
 O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolvedores e administradores controle e flexibilidade sobre a maneira de executar aplicativos. Os arquivos de configuração são arquivos XML que podem ser alterados quando necessário. Um administrador pode controlar quais recursos protegidos um aplicativo pode acessar, quais versões de assemblies um aplicativo usará e onde os aplicativos e objetos remotos são localizados. Os desenvolvedores podem colocar definições em arquivos de configuração, eliminando a necessidade de recompilar um aplicativo sempre que uma configuração é alterada. Esta seção descreve o que pode ser configurado e por que a configuração de um aplicativo pode ser útil.  
@@ -53,7 +53,7 @@ O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolve
 ```  
   
 ## <a name="machine-configuration-files"></a>Arquivos de configuração de computador  
- O arquivo de configuração do computador, Machine.config, contém configurações que se aplicam a um computador inteiro. Esse arquivo está localizado no diretório %*runtime install path*%\Config. Machine.config contém as definições de configuração para associação de assembly em todo o computador, [canais remotos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) internos e ASP.NET.  
+ O arquivo de configuração do computador, Machine.config, contém configurações que se aplicam a um computador inteiro. Esse arquivo está localizado no diretório %*runtime install path*%\Config. Machine.config contém as definições de configuração para associação de assembly em todo o computador, [canais remotos](/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) internos e ASP.NET.  
   
  O sistema de configuração primeiro procura no arquivo de configuração do computador o [ **\<appSettings>** elemento](./file-schema/appsettings/index.md) e outras seções de configuração que um desenvolvedor pode definir. Em seguida, ele examina o arquivo de configuração de aplicativo. Para manter o arquivo de configuração do computador gerenciável, é melhor colocar essas configurações no arquivo de configuração de aplicativo. No entanto, colocar as configurações no arquivo de configuração do computador pode tornar seu sistema mais sustentável. Por exemplo, se você tiver um componente de terceiros que seu aplicativo para cliente e servidor use, será mais fácil colocar as configurações para esse componente em um local. Nesse caso, o arquivo de configuração do computador será o local apropriado para as configurações de forma que você não terá as mesmas configurações em dois arquivos diferentes.  
   
@@ -77,7 +77,7 @@ O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolve
   
 - Aplicativo hospedado no ASP.NET.  
   
-     Para obter mais informações sobre arquivos de configuração do ASP.NET, consulte [definições de configuração do ASP.net](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
+     Para obter mais informações sobre arquivos de configuração do ASP.NET, consulte [definições de configuração do ASP.net](/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
   
 - Aplicativo hospedado no Internet Explorer.  
   
@@ -117,15 +117,15 @@ O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolve
  [Como: Criar uma política de editor](how-to-create-a-publisher-policy.md)  
  Descreve quando e como você deve adicionar um arquivo de política de editor para especificar as configurações de base de redirecionamento e código de assembly.  
   
- [Esquema de arquivos de configuração](./file-schema/index.md)  
+ [Esquema do arquivo de configuração](./file-schema/index.md)  
  Descreve a hierarquia de esquema de inicialização, runtime, rede e outros tipos de parâmetros de configuração.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Esquema de arquivos de configuração](./file-schema/index.md)
+- [Esquema do arquivo de configuração](./file-schema/index.md)
 - [Especificando o local de um assembly](specify-assembly-location.md)
 - [Redirecionando versões de assembly](redirect-assembly-versions.md)
-- [Administração de site ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
-- [Gerenciamento de política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
+- [Administração de site ASP.NET](/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [Gerenciamento de política de segurança](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe (ferramenta de política de segurança de acesso do código)](../tools/caspol-exe-code-access-security-policy-tool.md)
 - [Assemblies no .NET](../../standard/assembly/index.md)

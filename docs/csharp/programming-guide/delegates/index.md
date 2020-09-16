@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 2c1be56b67528c17a6cf1d8d8517817ff93b2aa5
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: cf6b90a606d13e3196e3114e84971451a9a322c9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063632"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553565"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegados (Guia de Programação em C#)
 Um [delegado](../../language-reference/builtin-types/reference-types.md) é um tipo que representa referências aos métodos com lista de parâmetros e tipo de retorno específicos. Ao instanciar um delegado, você pode associar sua instância a qualquer método com assinatura e tipo de retorno compatíveis. Você pode invocar (ou chamar) o método através da instância de delegado.  
@@ -46,7 +46,7 @@ Um [delegado](../../language-reference/builtin-types/reference-types.md) é um t
   
 - [Usando delegados](./using-delegates.md)  
   
-- [Quando usar delegados em vez de interfaces (Guia de Programação em C#)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
+- [Quando usar delegados em vez de interfaces (Guia de Programação em C#)](/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
 - [Delegados com Métodos Nomeados vs. Métodos anônimos](./delegates-with-named-vs-anonymous-methods.md)  
   
@@ -61,11 +61,11 @@ Um [delegado](../../language-reference/builtin-types/reference-types.md) é um t
 Para obter mais informações, veja [Delegados](~/_csharplang/spec/delegates.md) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
 ## <a name="featured-book-chapters"></a>Capítulos do Livro em Destaque  
- [Expressões lambda, eventos e delegados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) em [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
+ [Expressões lambda, eventos e delegados](/previous-versions/visualstudio/visual-studio-2008/ff518994(v=orm.10)) em [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](/previous-versions/visualstudio/visual-studio-2008/ff518995(v=orm.10))  
   
- [Delegados e eventos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29) em [Learning C# 3.0: Master the fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)  
+ [Delegados e eventos](/previous-versions/visualstudio/visual-studio-2008/ff652490(v=orm.10)) em [Learning C# 3.0: Master the fundamentals of C# 3.0](/previous-versions/visualstudio/visual-studio-2008/ff652493(v=orm.10))  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Delegate>
 - [Guia de programação C#](../index.md)

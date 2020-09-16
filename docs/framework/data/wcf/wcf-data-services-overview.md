@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: e4c5bc03038a3df9df2b7629da762caee175b6e8
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: c75e26ea083f8144bfaf2f67872004ef33365377
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202144"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558752"
 ---
 # <a name="wcf-data-services-overview"></a>Visão geral do WCF Data Services
 WCF Data Services habilita a criação e o consumo de serviços de dados para a Web ou uma intranet usando o Protocolo Open Data (OData). O OData permite que você exponha seus dados como recursos que são endereçáveis por URIs. Isso permite que você acesse e altere dados usando a semântica da REST (transferência de estado de reapresentação), especificamente os verbos HTTP padrão de GET, PUT, POST e DELETE. Este tópico fornece uma visão geral dos padrões e das práticas definidas pelo OData e também dos recursos fornecidos pelo WCF Data Services para aproveitar o OData em aplicativos baseados em .NET Framework.  
@@ -18,7 +18,7 @@ WCF Data Services habilita a criação e o consumo de serviços de dados para a 
 ## <a name="address-data-as-resources"></a>Dados de endereço como recursos  
  OData expõem dados como recursos que são endereçáveis por URIs. Os caminhos de recurso são construídos com base nas convenções de relacionamento de entidade do Modelo de Dados de Entidade. Nesse modelo, as entidades representam unidades operacionais de dados em um domínio do aplicativo, como clientes, pedidos, itens e produtos. Para obter mais informações, consulte [modelo de dados de entidade](../adonet/entity-data-model.md).  
   
- No OData, você endereça recursos de entidade como um conjunto de entidades que contém instâncias de tipos de entidade. Por exemplo, o URI `https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders` retorna todos os pedidos do serviço de `Northwind` dados que estão relacionados ao cliente com um `CustomerID` valor de`ALFKI.`  
+ No OData, você endereça recursos de entidade como um conjunto de entidades que contém instâncias de tipos de entidade. Por exemplo, o URI `https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders` retorna todos os pedidos do serviço de `Northwind` dados que estão relacionados ao cliente com um `CustomerID` valor de `ALFKI.`  
   
  As expressões de consulta permitem executar operações tradicionais de consulta em recursos, como filtragem, classificação e paginação. Por exemplo, o URI `https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=Freight gt 50` filtra os recursos para retornar somente os pedidos com um custo de frete superior a US$ 50. Para obter mais informações, consulte [acessando recursos do serviço de dados](accessing-data-service-resources-wcf-data-services.md).  
   
@@ -55,11 +55,11 @@ O OData define um conjunto de extensões para o protocolo de publicação Atom (
   
  ![Captura de tela mostrando um diagrama de arquitetura de WCF Data Services.](./media/wcf-data-services-overview/windows-communication-foundation-data-services-architecture.gif)  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [WCF Data Services 4.5](index.md)
 - [Introdução](getting-started-with-wcf-data-services.md)
 - [Configurando WCF Data Services](defining-wcf-data-services.md)
-- [Acessando recursos do serviço de dados (WCF Data Services)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
+- [Acessando recursos do serviço de dados (WCF Data Services)](/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
 - [Biblioteca de cliente do WCF Data Services](wcf-data-services-client-library.md)
 - [Representational State Transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) [REST (Transferência de Estado Representacional)]

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: c61e960078557282de39bdc30f1d614ce8a77f29
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 264c639656b592c0cc660d3745528df7cc89c851
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405113"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559331"
 ---
 # <a name="events-visual-basic"></a>Eventos (Visual Basic)
 Embora você possa visualizar um projeto do Visual Studio como uma série de procedimentos executados em uma sequência, na realidade, a maioria dos programas são controlados por eventos, o que significa que o fluxo de execução é determinado por ocorrências externas chamadas de *eventos*.  
@@ -97,7 +97,7 @@ Embora você possa visualizar um projeto do Visual Studio como uma série de pro
   
 ## <a name="related-sections"></a>Seções relacionadas  
   
-|Title|Descrição|  
+|Título|Descrição|  
 |-----------|-----------------|  
 |[Instruções passo a passo: declarando e acionando eventos](walkthrough-declaring-and-raising-events.md)|Fornece uma descrição passo a passo de como declarar e acionar eventos para uma classe.|  
 |[Instruções passo a passo: tratando eventos](walkthrough-handling-events.md)|Demonstra como escrever um procedimento de manipulador de eventos.|  
@@ -105,5 +105,5 @@ Embora você possa visualizar um projeto do Visual Studio como uma série de pro
 |[Como declarar eventos personalizados para conservar memória](how-to-declare-custom-events-to-conserve-memory.md)|Demonstra como definir um evento personalizado que utiliza memória somente quando o evento é manipulado.|  
 |[Solucionando problemas de manipuladores de eventos herdados no Visual Basic](troubleshooting-inherited-event-handlers.md)|Lista problemas comuns que ocorrem com os manipuladores de eventos em componentes herdados.|  
 |[Eventos](../../../../standard/events/index.md)|Apresenta uma visão geral do modelo de evento no .NET Framework.|  
-|[Criando manipuladores de eventos no Windows Forms](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Descreve como trabalhar com eventos associados aos objetos do Windows Forms.|  
-|[Delegados](../delegates/index.md)|Fornece uma visão geral de delegados no Visual Basic.|
+|[Criando manipuladores de eventos no Windows Forms](/dotnet/desktop/winforms/creating-event-handlers-in-windows-forms)|Descreve como trabalhar com eventos associados aos objetos do Windows Forms.|  
+|[Representantes](../delegates/index.md)|Fornece uma visão geral de delegados no Visual Basic.|

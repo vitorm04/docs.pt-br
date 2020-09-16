@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 55d701ee6769099698d2fd869a1502d94237b5a8
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 7b0cc58975ee145e5234adf51e24109898853e1c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245343"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558895"
 ---
 # <a name="configuring-tracing"></a>Configurando o rastreamento
 Este tópico descreve como você pode habilitar o rastreamento, configurar fontes de rastreamento para emitir rastreamentos e definir níveis de rastreamento, definir rastreamento de atividade e propagação para dar suporte à correlação de rastreamento de ponta a ponta e definir ouvintes de rastreamento para acessar rastreamentos.  
@@ -143,7 +143,7 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar fonte
   
  Você pode configurar um ouvinte de rastreamento personalizado para enviar rastreamentos na conexão, por exemplo, para um banco de dados remoto. Como um implantador de aplicativos, você deve impor o controle de acesso apropriado nos logs de rastreamento no computador remoto.  
   
- Você também pode configurar um ouvinte de rastreamento programaticamente. Para obter mais informações, consulte [como: criar e inicializar ouvintes de rastreamento](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) e [criar um TraceListener personalizado](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics).  
+ Você também pode configurar um ouvinte de rastreamento programaticamente. Para obter mais informações, consulte [como: criar e inicializar ouvintes de rastreamento](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) e [criar um TraceListener personalizado](/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics).  
   
 > [!CAUTION]
 > Como `System.Diagnostics.XmlWriterTraceListener` o não é thread-safe, a origem do rastreamento pode bloquear recursos exclusivamente durante a saída de rastreamentos. Quando muitos threads geram rastreamentos para uma origem de rastreamento configurada para usar esse ouvinte, pode ocorrer contenção de recursos, o que resulta em um problema de desempenho significativo. Para resolver esse problema, você deve implementar um ouvinte personalizado que seja thread-safe.  
@@ -181,9 +181,9 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar fonte
   
  Você não pode usar o `propagateActivity` atributo com fontes de rastreamento definidas pelo usuário. Para a propagação da ID da atividade de código do usuário, certifique-se de não definir ServiceModel `ActivityTracing` , enquanto ainda tem o `propagateActivity` atributo ServiceModel definido como `true` .  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Rastreamento](index.md)
 - [Administração e diagnóstico](../index.md)
-- [Como criar e inicializar ouvintes de rastreamento](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)
-- [Criando um TraceListener personalizado](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)
+- [Como: criar e inicializar ouvintes de rastreamento](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)
+- [Criando um TraceListener personalizado](/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-ms.openlocfilehash: 90d471888950347c041b4824b659ce33fda512d7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: fc9cd8ac3819c6a02019c871e7bd45ceb4c2cef7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81242823"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552304"
 ---
 # <a name="application-settings-schema"></a>Esquema de configurações do aplicativo
 
 As configurações de aplicativo permitem que um aplicativo Windows Forms ou ASP.NET armazene e recupere as configurações no escopo do aplicativo e em escopo do usuário. Nesse contexto, uma *configuração* é qualquer informação que possa ser específica para o aplicativo ou específica para o usuário atual — tudo, desde uma cadeia de conexão de banco de dados até o tamanho de janela padrão preferencial do usuário.
 
-Por padrão, as configurações do aplicativo em um aplicativo Windows Forms usam a <xref:System.Configuration.LocalFileSettingsProvider> classe, que usa o sistema de configuração do .net para armazenar as configurações em um arquivo de configuração XML. Para obter mais informações sobre os arquivos usados pelas configurações do aplicativo, consulte [arquitetura de configurações do aplicativo](../../winforms/advanced/application-settings-architecture.md).
+Por padrão, as configurações do aplicativo em um aplicativo Windows Forms usam a <xref:System.Configuration.LocalFileSettingsProvider> classe, que usa o sistema de configuração do .net para armazenar as configurações em um arquivo de configuração XML. Para obter mais informações sobre os arquivos usados pelas configurações do aplicativo, consulte [arquitetura de configurações do aplicativo](/dotnet/desktop/winforms/advanced/application-settings-architecture).
 
 Configurações de aplicativo define os seguintes elementos como parte dos arquivos de configuração que ele usa.
 
@@ -90,5 +90,5 @@ O exemplo a seguir mostra um arquivo de configurações do aplicativo que define
 
 ## <a name="see-also"></a>Confira também
 
-- [Visão geral das configurações do aplicativo](../../winforms/advanced/application-settings-overview.md)
-- [Arquitetura das configurações do aplicativo](../../winforms/advanced/application-settings-architecture.md)
+- [Visão geral sobre configurações do aplicativo](/dotnet/desktop/winforms/advanced/application-settings-overview)
+- [Arquitetura das configurações do aplicativo](/dotnet/desktop/winforms/advanced/application-settings-architecture)

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
-ms.openlocfilehash: 7c68be91deb59ea9439e81561f50b7cc40766a45
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: d1ccf3d3ac966e35e1708f0639785a2760eb8287
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865106"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559181"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Como: Definir e executar métodos dinâmicos
-Os procedimentos a seguir mostram como definir e executar um método dinâmico simples e um método dinâmico ligado a uma instância de uma classe. Para obter mais informações sobre métodos dinâmicos, consulte a classe <xref:System.Reflection.Emit.DynamicMethod> e [Cenários de métodos dinâmicos para a emissão de reflexão](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
+Os procedimentos a seguir mostram como definir e executar um método dinâmico simples e um método dinâmico ligado a uma instância de uma classe. Para obter mais informações sobre métodos dinâmicos, consulte a classe <xref:System.Reflection.Emit.DynamicMethod> e [Cenários de métodos dinâmicos para a emissão de reflexão](/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>Para definir e executar um método dinâmico  
   
@@ -34,7 +34,7 @@ Os procedimentos a seguir mostram como definir e executar um método dinâmico s
      [!code-csharp[DynamicMethodHowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#3)]
      [!code-vb[DynamicMethodHowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#3)]  
   
-3. Crie um <xref:System.Reflection.Emit.DynamicMethod>. Neste exemplo, o método é chamado `SquareIt`.  
+3. Criará um <xref:System.Reflection.Emit.DynamicMethod>. Neste exemplo, o método é chamado `SquareIt`.  
   
     > [!NOTE]
     > Não é necessário atribuir nomes aos métodos dinâmicos e eles não podem ser invocados por nome. Vários métodos dinâmicos podem ter o mesmo nome. No entanto, o nome aparece em pilhas de chamadas e pode ser útil para depuração.  
@@ -73,7 +73,7 @@ Os procedimentos a seguir mostram como definir e executar um método dinâmico s
      [!code-csharp[DynamicMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#13)]
      [!code-vb[DynamicMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#13)]  
   
-3. Crie um <xref:System.Reflection.Emit.DynamicMethod>. Neste exemplo, o método não tem nenhum nome. O tipo do valor retornado é especificado como `int` (`Integer` no Visual Basic). O método tem acesso aos membros particulares e protegidos da classe `Example`.  
+3. Criará um <xref:System.Reflection.Emit.DynamicMethod>. Neste exemplo, o método não tem nenhum nome. O tipo do valor retornado é especificado como `int` (`Integer` no Visual Basic). O método tem acesso aos membros particulares e protegidos da classe `Example`.  
   
      [!code-cpp[DynamicMethodHowTo#14](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#14)]
      [!code-csharp[DynamicMethodHowTo#14](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#14)]
@@ -113,8 +113,8 @@ Os procedimentos a seguir mostram como definir e executar um método dinâmico s
  [!code-csharp[DynamicMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#1)]
  [!code-vb[DynamicMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Reflection.Emit.DynamicMethod>
-- [Usando a emissão de reflexão](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
-- [Cenários de métodos dinâmicos para a emissão de reflexão](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))
+- [Usando a emissão de reflexão](/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
+- [Cenários de métodos dinâmicos para a emissão de reflexão](/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))

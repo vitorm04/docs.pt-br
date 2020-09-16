@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: a07d7c6da71f4195cb1641ae8ac7585b4158ed63
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8941350e46680c4ecaeb9b89fe9e6910c5830bcb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600965"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553285"
 ---
 # <a name="wcf-security-terminology"></a>Terminologia de segurança do WCF
 Parte da terminologia usada para discutir a segurança pode não ser familiar. Este tópico fornece breves explicações de alguns termos de segurança, mas não pretende fornecer uma documentação abrangente para cada item.  
@@ -181,8 +181,8 @@ Parte da terminologia usada para discutir a segurança pode não ser familiar. E
  X.509  
  Um padrão reconhecido internacionalmente para certificados que define suas partes necessárias.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Conceitos fundamentais do Windows Communication Foundation](../fundamental-concepts.md)
 - [Conceitos de segurança](security-concepts.md)
-- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))
