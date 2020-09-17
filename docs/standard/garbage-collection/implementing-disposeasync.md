@@ -3,25 +3,25 @@ title: Implementar um método DisposeAsync
 description: Saiba como implementar os métodos DisposeAsync e DisposeAsyncCore para executar a limpeza assíncrona de recursos.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/10/2020
+ms.date: 09/16/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 88adf9e484baa0e65e2ff093b4649cf35b8c86dc
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: 6ddfd860571d883e20fdb18985fe2bc2d9477dec
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022903"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720277"
 ---
 # <a name="implement-a-disposeasync-method"></a>Implementar um método DisposeAsync
 
 A <xref:System.IAsyncDisposable?displayProperty=nameWithType> interface foi introduzida como parte do C# 8,0. Você implementa o <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> método quando precisa executar a limpeza de recursos, assim como faria ao [implementar um método Dispose](implementing-dispose.md). No entanto, uma das principais diferenças é que essa implementação permite operações de limpeza assíncronas. O <xref:System.IAsyncDisposable.DisposeAsync> retorna um <xref:System.Threading.Tasks.ValueTask> que representa a operação de descarte assíncrona.
 
-É comum ao implementar a <xref:System.IAsyncDisposable> interface que as classes também implementarão a <xref:System.IDisposable> interface. Um bom padrão de implementação da <xref:System.IAsyncDisposable> interface é estar preparado para o descarte síncrono ou assíncrono. Todas as diretrizes para implementar o padrão Dispose também se aplicam à implementação assíncrona. Este artigo pressupõe que você já esteja familiarizado com a forma de [implementar um método Dispose](implementing-dispose.md).
+É comum ao implementar a <xref:System.IAsyncDisposable> interface que as classes também implementarão a <xref:System.IDisposable> interface. Um bom padrão de implementação da <xref:System.IAsyncDisposable> interface é estar preparado para descarte síncrono ou assíncrono. Todas as diretrizes para implementar o padrão Dispose também se aplicam à implementação assíncrona. Este artigo pressupõe que você já esteja familiarizado com a forma de [implementar um método Dispose](implementing-dispose.md).
 
 ## <a name="disposeasync-and-disposeasynccore"></a>DisposeAsync () e DisposeAsyncCore ()
 
@@ -54,7 +54,7 @@ public async ValueTask DisposeAsync()
 ```
 
 > [!NOTE]
-> Uma diferença principal no padrão de descarte assíncrono comparado ao padrão Dispose é que a chamada de <xref:System.IAsyncDisposable.DisposeAsync> para o `Dispose(bool)` método Overload é fornecida `false` como um argumento. <xref:System.IDisposable.Dispose?displayProperty=nameWithType>No entanto, ao implementar o método, `true` será passado. Isso ajuda a garantir a equivalência funcional com o padrão de descarte síncrono e garante ainda mais que os caminhos de código do finalizador ainda sejam invocados. Em outras palavras, o `DisposeAsyncCore()` método descartará os recursos gerenciados de forma assíncrona, de modo que você não deseje descartar também de maneira síncrona. Portanto, chame `Dispose(false)` em vez de `Dispose(true)` .
+> Uma diferença principal no padrão de descarte assíncrono comparado ao padrão Dispose é que a chamada de <xref:System.IAsyncDisposable.DisposeAsync> para o `Dispose(bool)` método Overload é fornecida `false` como um argumento. Ao implementar o <xref:System.IDisposable.Dispose?displayProperty=nameWithType> método, no entanto, `true` é passado em vez disso. Isso ajuda a garantir a equivalência funcional com o padrão de descarte síncrono e garante ainda mais que os caminhos de código do finalizador ainda sejam invocados. Em outras palavras, o `DisposeAsyncCore()` método descartará os recursos gerenciados de forma assíncrona, de modo que você não deseje descartar também de maneira síncrona. Portanto, chame `Dispose(false)` em vez de `Dispose(true)` .
 
 ### <a name="the-disposeasynccore-method"></a>O método DisposeAsyncCore ()
 
@@ -77,15 +77,15 @@ Talvez seja necessário implementar as <xref:System.IDisposable> <xref:System.IA
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/dispose-and-disposeasync.cs":::
 
-As <xref:System.IDisposable.Dispose?displayProperty=nameWithType> <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> implementações e são código clichê simples. Os `Dispose(bool)` `DisposeAsyncCore()` métodos e começam verificando se `_disposed` é `true` e serão executados somente quando for `false` .
+As <xref:System.IDisposable.Dispose?displayProperty=nameWithType> <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> implementações e são código clichê simples.
 
-No `Dispose(bool)` método Overload, a <xref:System.IDisposable> instância é descartada condicionalmente de se não for `null` . A <xref:System.IAsyncDisposable> instância é convertida como <xref:System.IDisposable> e, se também não estiver `null` descartada. As duas instâncias são então atribuídas a `null` .
+No `Dispose(bool)` método Overload, a <xref:System.IDisposable> instância é descartada condicionalmente de se não for `null` . A <xref:System.IAsyncDisposable> instância é convertida como <xref:System.IDisposable> e, se também não for `null` , ela será descartada. As duas instâncias são então atribuídas a `null` .
 
 Com o `DisposeAsyncCore()` método, a mesma abordagem lógica é seguida. Se a <xref:System.IAsyncDisposable> instância não for `null` , sua chamada para `DisposeAsync().ConfigureAwait(false)` será esperada. Se a <xref:System.IDisposable> instância também for uma implementação do <xref:System.IAsyncDisposable> , ela também será descartada de forma assíncrona. As duas instâncias são então atribuídas a `null` .
 
 ## <a name="using-async-disposable"></a>Usando o descartável assíncrono
 
-Para consumir corretamente um objeto que implementa a <xref:System.IAsyncDisposable> interface, use o [Await](../../csharp/language-reference/operators/await.md)e o [uso](../../csharp/language-reference/keywords/using-statement.md) de palavras-chave juntas. Considere o exemplo a seguir, em que a `ExampleAsyncDisposable` classe é instanciada e, em seguida, encapsulada em uma `await using` instrução.
+Para consumir corretamente um objeto que implementa a <xref:System.IAsyncDisposable> interface, use as palavras-chave [Await](../../csharp/language-reference/operators/await.md) e [using](../../csharp/language-reference/keywords/using-statement.md) juntas. Considere o exemplo a seguir, em que a `ExampleAsyncDisposable` classe é instanciada e, em seguida, encapsulada em uma `await using` instrução.
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/proper-await-using.cs":::
 

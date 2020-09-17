@@ -1,22 +1,22 @@
 ---
-ms.openlocfilehash: e3c9f23ca73ed9b85d09680ec15251ebe02c7f8e
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: cd7860a5dfff1eb595625665382689733cffc94a
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065124"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90721256"
 ---
 ### <a name="ca1416-platform-compatibility"></a>CA1416: compatibilidade de plataforma
 
-A regra do analisador de código .NET CA1416 está habilitada, por padrão, a partir do .NET 5,0. Ele produz um aviso de compilação para chamadas a APIs específicas da plataforma de sites de chamada que não verificam o sistema operacional.
+A regra do analisador de código .NET [CA1416](/visualstudio/code-quality/ca1416) está habilitada, por padrão, a partir do .NET 5,0. Ele produz um aviso de compilação para chamadas a APIs específicas da plataforma de sites de chamada que não verificam o sistema operacional.
 
 #### <a name="change-description"></a>Descrição das alterações
 
-A partir do .NET 5,0, o SDK do .NET inclui [analisadores de código-fonte .net](../../../../docs/fundamentals/productivity/code-analysis.md). Várias dessas regras estão habilitadas, por padrão, incluindo CA1416. Se o seu projeto contiver código que viole essa regra e estiver configurado para tratar avisos como erros, essa alteração poderá interromper sua compilação. A regra CA1416 informa quando você está usando APIs específicas da plataforma de locais onde o contexto da plataforma não é verificado.
+A partir do .NET 5,0, o SDK do .NET inclui [analisadores de código-fonte .net](../../../../docs/fundamentals/productivity/code-analysis.md). Várias dessas regras estão habilitadas, por padrão, incluindo [CA1416](/visualstudio/code-quality/ca1416). Se o seu projeto contiver código que viole essa regra e estiver configurado para tratar avisos como erros, essa alteração poderá interromper sua compilação. A regra CA1416 informa quando você está usando APIs específicas da plataforma de locais onde o contexto da plataforma não é verificado.
 
-A regra CA1416, o analisador de compatibilidade de plataforma, trabalha em conjunto com alguns outros recursos que são novos no .NET 5,0. O .NET 5,0 `SupportedOSPlatformAttribute` apresenta `UnsupportedOSPlatformAttribute` atributos e (chamados <xref:System.Runtime.Versioning.MinimumOSPlatformAttribute> e <xref:System.Runtime.Versioning.RemovedInOSPlatformAttribute> em uma versão prévia anterior), que permitem especificar as plataformas em que uma API *tem* ou *não* tem suporte. Na ausência desses atributos, pressupõe-se que uma API tenha suporte em todas as plataformas. Esses atributos foram aplicados a APIs específicas da plataforma nas principais bibliotecas do .NET.
+A regra [CA1416](/visualstudio/code-quality/ca1416), o analisador de compatibilidade de plataforma, trabalha em conjunto com alguns outros recursos que são novos no .NET 5,0. O .NET 5,0 apresenta o <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> e o <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> , que permitem especificar as plataformas nas quais uma API *é* ou *não* tem suporte. Na ausência desses atributos, pressupõe-se que uma API tenha suporte em todas as plataformas. Esses atributos foram aplicados a APIs específicas da plataforma nas principais bibliotecas do .NET.
 
-Em projetos que visam plataformas para as quais as APIs que eles usam não estão disponíveis, a regra CA1416 sinaliza qualquer chamada de API específica da plataforma onde o contexto da plataforma não é verificado. A maioria das APIs que agora estão decoradas com `SupportedOSPlatformAttribute` os `UnsupportedOSPlatformAttribute` atributos e gera <xref:System.PlatformNotSupportedException> exceções quando elas são invocadas em um sistema operacional sem suporte. Agora que essas APIs estão marcadas como específicas da plataforma, a regra CA1416 ajuda você a evitar exceções em tempo de execução <xref:System.PlatformNotSupportedException> adicionando verificações do sistema operacional aos seus sites de chamada.
+Em projetos que visam plataformas para as quais as APIs que eles usam não estão disponíveis, a regra [CA1416](/visualstudio/code-quality/ca1416) sinaliza qualquer chamada de API específica da plataforma onde o contexto da plataforma não é verificado. A maioria das APIs que agora estão decoradas com <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> os <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> atributos e gera <xref:System.PlatformNotSupportedException> exceções quando elas são invocadas em um sistema operacional sem suporte. Agora que essas APIs estão marcadas como específicas da plataforma, a regra [CA1416](/visualstudio/code-quality/ca1416) ajuda você a evitar exceções em tempo de execução <xref:System.PlatformNotSupportedException> adicionando verificações do sistema operacional aos seus sites de chamada.
 
 #### <a name="examples"></a>Exemplos
 
@@ -44,7 +44,7 @@ RC1 5,0
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Verifique se as APIs específicas da plataforma são chamadas apenas quando o código está sendo executado em uma plataforma apropriada. Você pode verificar o sistema operacional atual usando um dos `Is<Platform>` métodos na classe, <xref:System.OperatingSystem?displayProperty=nameWithType> por exemplo,, `System.OperatingSystem.IsWindows()` antes de chamar uma API específica da plataforma.
+Verifique se as APIs específicas da plataforma são chamadas apenas quando o código está sendo executado em uma plataforma apropriada. Você pode verificar o sistema operacional atual usando um dos `Is<Platform>` métodos na classe, <xref:System.OperatingSystem?displayProperty=nameWithType> por exemplo,, <xref:System.OperatingSystem.IsWindows?displayProperty=nameWithType> antes de chamar uma API específica da plataforma.
 
 Você pode usar um dos `Is<Platform>` métodos na condição de uma `if` instrução:
 
@@ -122,4 +122,5 @@ Para a plataforma Webassembly mais incrivelmente:
 
 #### <a name="see-also"></a>Confira também
 
+- [CA1416: validar a compatibilidade da plataforma](/visualstudio/code-quality/ca1416)
 - [Analisador de API do .NET](../../../../docs/standard/analyzers/api-analyzer.md)
