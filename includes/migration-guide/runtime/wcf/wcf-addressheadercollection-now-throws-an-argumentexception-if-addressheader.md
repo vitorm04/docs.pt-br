@@ -1,28 +1,35 @@
 ---
-ms.openlocfilehash: 200c22a1b83149d833a083365ebb65d0e80bc31a
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: e8b98e465228afd07432e737bb16aefb1b979973
+ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89496298"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90770857"
 ---
 ### <a name="wcf-addressheadercollection-now-throws-an-argumentexception-if-an-addressheader-element-is-null"></a>AddressHeaderCollection do WCF agora gera ArgumentException se um elemento addressHeader for nulo
 
 #### <a name="details"></a>Detalhes
 
-A partir do .NET Framework 4.7.1, o construtor <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> gera <xref:System.ArgumentException> se um elemento for <code>null</code>. No .NET Framework 4.7 e versões anteriores, nenhuma exceção é gerada.
+A partir do .NET Framework 4.7.1, o construtor <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> gera <xref:System.ArgumentException> se um elemento for `null`. No .NET Framework 4.7 e versões anteriores, nenhuma exceção é gerada.
 
 #### <a name="suggestion"></a>Sugestão
 
-Se houver problemas de compatibilidade com essa alteração no .NET Framework 4.7.1 ou uma versão anterior, será possível recusá-la adicionando a seguinte linha à seção <code>&lt;runtime&gt;</code> do arquivo app.config:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.ServiceModel.DisableAddressHeaderCollectionValidation=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+Se você encontrar problemas de compatibilidade com essa alteração no .NET Framework 4.7.1 ou em uma versão posterior, poderá recusar isso adicionando a seguinte linha à `<runtime>` seção do arquivo app.config:
 
-| Nome    | Valor       |
-|:--------|:------------|
-| Escopo   |Secundária|
-|Versão|4.7.1|
-|Tipo|Runtime|
+```xml
+<configuration>
+  <runtime>
+    <AppContextSwitchOverrides value="Switch.System.ServiceModel.DisableAddressHeaderCollectionValidation=true" />
+  </runtime>
+</configuration>
 
-#### <a name="affected-apis"></a>APIs afetadas
+| Name    | Value   |
+|:--------|:--------|
+| Scope   | Minor   |
+| Version | 4.7.1   |
+| Type    | Runtime |
+
+#### Affected APIs
 
 - <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})>
 

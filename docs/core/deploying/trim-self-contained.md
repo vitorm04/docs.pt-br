@@ -4,12 +4,12 @@ description: Saiba como cortar aplicativos independentes para reduzir seu tamanh
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 9c2994c98a2ebe6f45b056256c2bda28db017fbf
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 1ebcac51331407069e26b49e40bb6e071cefb752
+ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465475"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90770449"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Cortar implantações e executáveis autossuficientes
 
@@ -24,7 +24,7 @@ O mecanismo de análise de tempo de compilação fornece avisos ao desenvolvedor
 O modo de corte para os aplicativos é configurado com a `TrimMode` configuração. O valor padrão é `copyused` e agrupa os assemblies referenciados com o aplicativo. O `link` valor é usado com aplicativos Webassembly mais podestas e corta código não utilizado em assemblies. Avisos de análise de corte fornecem informações sobre padrões de código em que uma análise de dependência completa não era possível. Esses avisos são suprimidos por padrão e podem ser ativados definindo o sinalizador `SuppressTrimAnalysisWarnings` como `false` . Para obter mais informações sobre as opções de corte disponíveis, consulte [Opções de corte](trimming-options.md).
 
 > [!NOTE]
-> O corte é um recurso experimental no .NET Core 3,1, 5,0 e está disponível _somente_ para aplicativos que são publicados internamente.
+> O corte é um recurso experimental no .NET Core 3,1 e no .NET 5,0. O corte _só_ está disponível para aplicativos que são publicados internamente.
 
 ## <a name="prevent-assemblies-from-being-trimmed"></a>Impedir que os assemblies sejam cortados
 
@@ -99,7 +99,7 @@ Para obter mais informações, consulte [publicar aplicativos .NET Core com o Vi
 
 Visual Studio para Mac não fornece opções para cortar seu aplicativo durante a publicação. Você precisará publicar manualmente seguindo as instruções da seção [cortar sua app-CLI](#trim-your-app---cli) . Para obter mais informações, consulte [publicar aplicativos .NET Core com CLI do .NET Core](deploy-with-cli.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Implantação de aplicativo .NET Core](index.md).
 - [Publicar aplicativos .NET Core com CLI do .NET Core](deploy-with-cli.md).

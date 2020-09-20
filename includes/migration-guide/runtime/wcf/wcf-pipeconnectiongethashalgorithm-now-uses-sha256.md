@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d32725b0d3063d3320b73e02039ff567090da932
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 3cf1740565343558a85fdfa68957773468c28231
+ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89497941"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90770916"
 ---
 ### <a name="wcf-pipeconnectiongethashalgorithm-now-uses-sha256"></a>PipeConnection.GetHashAlgorithm do WCF agora usa o SHA256
 
@@ -14,17 +14,24 @@ A partir do .NET Framework 4.7.1, o Windows Communication Foundation usa o hash 
 
 #### <a name="suggestion"></a>Sugestão
 
-Se houver problemas de compatibilidade com essa alteração no .NET Framework 4.7.1 ou uma versão posterior, é possível recusá-la adicionando a seguinte linha à seção <code>&lt;runtime&gt;</code> do arquivo app.config:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.ServiceModel.UseSha1InPipeConnectionGetHashAlgorithm=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+Se houver problemas de compatibilidade com essa alteração no .NET Framework 4.7.1 ou uma versão posterior, é possível recusá-la adicionando a seguinte linha à seção `<runtime>` do arquivo app.config:
 
-| Nome    | Valor       |
-|:--------|:------------|
-| Escopo   |Secundária|
-|Versão|4.7.1|
-|Tipo|Runtime|
+```xml
+<configuration>
+  <runtime>
+    <AppContextSwitchOverrides value="Switch.System.ServiceModel.UseSha1InPipeConnectionGetHashAlgorithm=true" />
+  </runtime>
+</configuration>
 
-#### <a name="affected-apis"></a>APIs afetadas
+| Name    | Value   |
+|:--------|:--------|
+| Scope   | Minor   |
+| Version | 4.7.1   |
+| Type    | Runtime |
 
-Não detectável via análise de API.
+#### Affected APIs
+
+Not detectable via API analysis.
 
 <!--
 

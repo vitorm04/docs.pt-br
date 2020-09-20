@@ -4,12 +4,12 @@ description: 'Saiba como F# Interativo (dotNet FSI) é usado para executar o có
 ms.date: 08/20/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 760b096c8a3ee0d495b893ab66fa6f9007cdbbf9
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: ae8d68140ddec8e18ee23e9a43b548907e1ab5c4
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867614"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720316"
 ---
 # <a name="interactive-programming-with-f"></a>Programação interativa com F\#
 
@@ -120,4 +120,3 @@ ou de maneira mais explícita:
 |Título|Descrição|
 |-----|-----------|
 |[Opções do F# Interativo](../../language-reference/fsharp-interactive-options.md)|Descreve a sintaxe de linha de comando e as opções para o F# Interativo, fsi.exe.|
-|[Referência da biblioteca do F# Interativo](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Descreve a funcionalidade de biblioteca disponível ao executar o código em F# interativo.|

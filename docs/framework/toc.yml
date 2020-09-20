@@ -383,8 +383,6 @@ items:
         href: interop/
       - name: Referência de API não gerenciada
         href: unmanaged-api/
-      - name: Serviços XAML
-        href: ../desktop-wpf/xaml-services/
   - name: Ferramentas
     items:
       - name: Visão geral
