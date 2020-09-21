@@ -696,11 +696,24 @@ items:
   - name: Extensões da Microsoft
     items:
       - name: Configuração
-        href: /aspnet/core/fundamentals/configuration/
+        items:
+          - name: Visão geral
+            href: ../core/extensions/configuration.md
+            displayName: 'configuration,config,configuration sources,config sources'
+          - name: Provedores de configuração
+            href: ../core/extensions/configuration-providers.md
+            displayName: 'configuration providers,config providers'
+          - name: Implementar um provedor de configuração personalizado
+            href: ../core/extensions/custom-configuration-provider.md
+            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
       - name: Injeção de dependência
-        href: /aspnet/core/fundamentals/dependency-injection/
-      - name: Registro em log
-        href: /aspnet/core/fundamentals/logging/
+        href: /aspnet/core/fundamentals/dependency-injection
+      - name: Host Genérico
+        href: /aspnet/core/fundamentals/host/generic-host
+      - name: Registrando em log
+        href: /aspnet/core/fundamentals/logging
+      - name: Padrão de opções
+        href: /aspnet/core/fundamentals/configuration/options
   - name: Acesso de dados
     items:
       - name: LINQ
