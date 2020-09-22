@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
-ms.openlocfilehash: 8e53d036ead114d828d9035cef76cee72bf6b1db
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 77d23fff518cb3b0768264ddd07728e3ad6b9f91
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400286"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872215"
 ---
 # <a name="type-of-optional-value-for-optional-parameter-parametername-is-not-cls-compliant"></a>O tipo de valor opcional para o parâmetro opcional \<parametername> não é compatível com CLS
+
 Um procedimento é marcado como `<CLSCompliant(True)>` , mas declara um parâmetro [opcional](../modifiers/optional.md) com o valor padrão de um tipo não compatível.  
   
  Para que um procedimento seja compatível com a [independência de linguagem e com os componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), ele deve usar somente tipos em conformidade com CLS. Isso se aplica aos tipos de parâmetros, ao tipo de retorno e aos tipos de todas as suas variáveis locais. Ele também se aplica aos valores padrão de parâmetros opcionais.  

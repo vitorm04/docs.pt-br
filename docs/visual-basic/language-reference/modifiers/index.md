@@ -2,18 +2,20 @@
 title: Modificadores
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 80adc4521dcb1bb0c65981dae6f842168194eae7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6ee477e8d09ea7c8ea559ff8245784b2d0123141
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372889"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875443"
 ---
 # <a name="modifiers-visual-basic"></a>Modificadores (Visual Basic)
+
 Os tópicos nesta seção documentam modificadores de tempo de execução do Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Ansi](ansi.md)  
+
+ [ANSI](ansi.md)  
   
  [Assembly](assembly.md)  
   
@@ -27,15 +29,15 @@ Os tópicos nesta seção documentam modificadores de tempo de execução do Vis
   
  [Default](default.md)  
   
- [Público](friend.md)  
+ [Friend](friend.md)  
   
- [Em](in-generic-modifier.md)  
+ [In](in-generic-modifier.md)  
   
  [Iterador](iterator.md)  
   
  [Chave](key.md)  
   
- [Modulo\<keyword>](module-keyword.md)  
+ [Modulo \<keyword>](module-keyword.md)  
   
  [MustInherit](mustinherit.md)  
   
@@ -61,7 +63,7 @@ Os tópicos nesta seção documentam modificadores de tempo de execução do Vis
   
  [Parcial](partial.md)  
   
- [Privada](private.md)  
+ [Privado](private.md)  
   
  [Particular protegido](private-protected.md)  
   
@@ -71,7 +73,7 @@ Os tópicos nesta seção documentam modificadores de tempo de execução do Vis
   
  [Pública](public.md)  
   
- [Leitura](readonly.md)  
+ [ReadOnly (somente-leitura)](readonly.md)  
   
  [Sombras](shadows.md)  
   
@@ -88,4 +90,5 @@ Os tópicos nesta seção documentam modificadores de tempo de execução do Vis
  [WriteOnly](writeonly.md)  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Referência de linguagem de Visual Basic](../index.md)  
+
+ [Referência da linguagem Visual Basic](../index.md)  

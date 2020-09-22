@@ -10,17 +10,19 @@ helpviewer_keywords:
 - Assembly keyword [Visual Basic]
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
-ms.openlocfilehash: 7d313dee1015362bd0215ed98ab7e898312cfbcd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 34d6b94f31336e3e99b8ca981a9c4899e5a3d912
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373154"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875522"
 ---
 # <a name="assembly-visual-basic"></a>Assembly (Visual Basic)
+
 Especifica que um atributo no início de um arquivo de origem se aplica a todo o assembly.  
   
 ## <a name="remarks"></a>Comentários  
+
  Muitos atributos pertencem a um elemento de programação individual, como uma classe ou propriedade. Você aplica esse atributo, anexando o bloco de atributo, entre colchetes angulares ( `< >` ), diretamente à instrução de declaração.  
   
  Se um atributo pertencer não apenas ao elemento a seguir, mas ao assembly inteiro, você coloca o bloco de atributo no início do arquivo de origem e identifica o atributo com a `Assembly` palavra-chave. Se se aplicar ao módulo do assembly atual, você usará a palavra-chave do [módulo](module-keyword.md) .  
@@ -29,5 +31,5 @@ Especifica que um atributo no início de um arquivo de origem se aplica a todo o
   
 ## <a name="see-also"></a>Confira também
 
-- [Modulo\<keyword>](module-keyword.md)
+- [Modulo \<keyword>](module-keyword.md)
 - [Visão geral de atributos](../../programming-guide/concepts/attributes/index.md)

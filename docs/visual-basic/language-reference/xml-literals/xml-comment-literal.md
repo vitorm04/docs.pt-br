@@ -9,14 +9,15 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 93c1346e54106b93f3932a494dea85d082ec994d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3272cc0f976d6e8819e51bb5d5fce73066007963
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400209"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875186"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>Literal de comentário XML (Visual Basic)
+
 Um literal que representa um <xref:System.Xml.Linq.XComment> objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -29,14 +30,16 @@ Um literal que representa um <xref:System.Xml.Linq.XComment> objeto.
   
 |Termo|Definição|  
 |---|---|  
-|`<!--`|Obrigatórios. Denota o início do comentário XML.|  
-|`content`|Obrigatórios. Texto a ser exibido no comentário XML. Não pode conter uma série de dois hifens (--) ou terminar com um hífen adjacente à marca de fechamento.|  
-|`-->`|Obrigatórios. Denota o final do comentário XML.|  
+|`<!--`|Necessário. Denota o início do comentário XML.|  
+|`content`|Necessário. Texto a ser exibido no comentário XML. Não pode conter uma série de dois hifens (--) ou terminar com um hífen adjacente à marca de fechamento.|  
+|`-->`|Necessário. Denota o final do comentário XML.|  
   
 ## <a name="return-value"></a>Valor Retornado  
+
  Um objeto <xref:System.Xml.Linq.XComment>.  
   
 ## <a name="remarks"></a>Comentários  
+
  Literais de comentário XML não contêm conteúdo de documento; Eles contêm informações sobre o documento. A seção de comentário XML termina com a sequência "-->". Isso implica nos seguintes pontos:  
   
 - Você não pode usar uma expressão inserida em um literal de comentário XML porque os delimitadores de expressão inseridos são conteúdo de comentário XML válido.  
@@ -51,6 +54,7 @@ Um literal que representa um <xref:System.Xml.Linq.XComment> objeto.
  O compilador Visual Basic converte o literal de comentário XML em uma chamada para o <xref:System.Xml.Linq.XComment.%23ctor%2A> Construtor.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir cria um comentário XML que contém o texto "Este é um comentário".  
   
  [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  

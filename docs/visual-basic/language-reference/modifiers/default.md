@@ -10,17 +10,19 @@ helpviewer_keywords:
 - Default keyword [Visual Basic]
 - default properties
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
-ms.openlocfilehash: 0c2808795d6fcbad7892369fd7f460ebf0406093
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bc213c3b5564d1833136df8f5b8dab1c6b012296
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372966"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875492"
 ---
 # <a name="default-visual-basic"></a>Padrão (Visual Basic)
+
 Identifica uma propriedade como a propriedade padrão de sua classe, estrutura ou interface.  
   
 ## <a name="remarks"></a>Comentários  
+
  Uma classe, estrutura ou interface pode designar, no máximo, uma de suas propriedades como a *propriedade padrão*, desde que a propriedade aceite pelo menos um parâmetro. Se o código fizer uma referência a uma classe ou estrutura sem especificar um membro, Visual Basic resolverá essa referência à propriedade padrão.  
   
  As propriedades padrão podem resultar em uma pequena redução em caracteres de código-fonte, mas podem tornar seu código mais difícil de ler. Se o código de chamada não estiver familiarizado com sua classe ou estrutura, quando ele fizer uma referência ao nome da classe ou da estrutura, ele não poderá ter certeza se essa referência acessa a classe ou estrutura em si ou uma propriedade padrão. Isso pode levar a erros de compilador ou erros de lógica de tempo de execução sutis.  

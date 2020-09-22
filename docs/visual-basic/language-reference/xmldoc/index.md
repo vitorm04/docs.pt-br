@@ -8,14 +8,15 @@ helpviewer_keywords:
 - XML comments, recommended tags [Visual Basic]
 - comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
-ms.openlocfilehash: af57fc7d55c5cfda24a2fd9406b17dedee898760
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9f877ee3fc9d616dc1e946293489a8aab96ac2e1
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400093"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872796"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>marcações XML recomendadas para comentários da documentação (Visual Basic)
+
 O compilador Visual Basic pode processar comentários de documentação em seu código para um arquivo XML. Você pode usar ferramentas adicionais para processar o arquivo XML na documentação do.  
   
  Comentários XML são permitidos em construções de código, como tipos e membros de tipo. Para tipos parciais, apenas uma parte do tipo pode ter comentários XML, embora não haja nenhuma restrição ao comentar seus membros.  
@@ -42,5 +43,5 @@ O compilador Visual Basic pode processar comentários de documentação em seu c
 ## <a name="see-also"></a>Confira também
 
 - [Documentando o código com XML](../../programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [-doc](../../reference/command-line-compiler/doc.md)
+- [-Doc](../../reference/command-line-compiler/doc.md)
 - [Como criar documentação XML](../../programming-guide/program-structure/how-to-create-xml-documentation.md)

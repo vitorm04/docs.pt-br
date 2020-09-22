@@ -12,14 +12,15 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 0cce36073b53442bce63f966f3bd94bd5d70d2a8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0a01b49cf1e0bf9ad7b2ce541cee39cba83025ca
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406313"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875309"
 ---
 # <a name="typeof-operator-visual-basic"></a>Operador TypeOf (Visual Basic)
+
 Verifica se o tipo de tempo de execução do resultado de uma expressão é compatível com tipo com o tipo especificado.
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,29 +34,32 @@ result = TypeOf objectexpression IsNot typename
 ```  
   
 ## <a name="parts"></a>Partes  
+
  `result`  
  Exibido. Um valor `Boolean`.  
   
  `objectexpression`  
- Obrigatórios. Qualquer expressão que seja avaliada como um tipo de referência.  
+ Necessário. Qualquer expressão que seja avaliada como um tipo de referência.  
   
  `typename`  
- Obrigatórios. Qualquer nome de tipo de dados.  
+ Necessário. Qualquer nome de tipo de dados.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `TypeOf` operador determina se o tipo de tempo de execução do `objectexpression` é compatível com `typename` . A compatibilidade depende da categoria de tipo de `typename` . A tabela a seguir mostra como a compatibilidade é determinada.  
   
-|Categoria de tipo de`typename`|Critério de compatibilidade|  
+|Categoria de tipo de `typename`|Critério de compatibilidade|  
 |---------------------------------|-----------------------------|  
-|Classe|`objectexpression`é do tipo `typename` ou herda de`typename`|  
-|Estrutura|`objectexpression`é do tipo`typename`|  
-|Interface|`objectexpression`implementa `typename` ou herda de uma classe que implementa`typename`|  
+|Classe|`objectexpression` é do tipo `typename` ou herda de `typename`|  
+|Estrutura|`objectexpression` é do tipo `typename`|  
+|Interface|`objectexpression` implementa `typename` ou herda de uma classe que implementa `typename`|  
   
  Se o tipo de tempo de execução `objectexpression` atende ao critério de compatibilidade, `result` é `True` . Caso contrário, `result` é `False`.  Se `objectexpression` for NULL, então `TypeOf` ... `Is` retorna `False` e... `IsNot` retorna `True` .  
   
- `TypeOf`é sempre usado com a `Is` palavra-chave para construir uma `TypeOf` expressão... `Is` ou com a `IsNot` palavra-chave para construir uma `TypeOf` expressão... `IsNot` .  
+ `TypeOf` é sempre usado com a `Is` palavra-chave para construir uma `TypeOf` expressão... `Is` ou com a `IsNot` palavra-chave para construir uma `TypeOf` expressão... `IsNot` .  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir usa `TypeOf` expressões... `Is` para testar a compatibilidade de tipo de duas variáveis de referência de objeto com vários tipos de dados.  
   
  [!code-vb[VbVbalrOperators#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#39)]  

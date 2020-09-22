@@ -4,17 +4,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [Visual Basic]
 ms.assetid: 1cbd7703-8d3b-48fd-831e-14c9cc85675a
-ms.openlocfilehash: 8c7d5de52632a8482d19dda60f56eadeb750406c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f083ca24d200ec25fe859567de72b3cd3b312dd6
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404506"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875243"
 ---
 # <a name="statements-visual-basic"></a>Instruções (Visual Basic)
+
 Os tópicos nesta seção contêm tabelas da declaração do Visual Basic e instruções executáveis e de listas importantes que se aplicam a muitas instruções.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Instruções A-E](a-e-statements.md)  
   
  [Instruções F-P](f-p-statements.md)  
@@ -32,5 +34,6 @@ Os tópicos nesta seção contêm tabelas da declaração do Visual Basic e inst
  [Lista de Tipos](type-list.md)  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Referência de linguagem de Visual Basic](../index.md)  
+
+ [Referência da linguagem Visual Basic](../index.md)  
   
