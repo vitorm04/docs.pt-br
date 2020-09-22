@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-ms.openlocfilehash: dfe96cd6eaa673438849fe8f799d46fa2617bfdd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 70de8f9cb33ab3d889f4916ae3d5de48cd218092
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387251"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871189"
 ---
 # <a name="pathfile-access-error"></a>Erro de acesso ao demarcador/arquivo
+
 Durante uma operação de acesso a arquivo ou de acesso a disco, o sistema operacional não pôde estabelecer uma conexão entre o caminho e o nome do arquivo.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: 326c3306368ceca2122e912556efd84e4bfef1f1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: be2e401c7931b2637c14a3ea3b742a2c09917939
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84412995"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869984"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Cláusula Aggregate (Visual Basic)
+
 Aplica uma ou mais funções de agregação a uma coleção.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,13 +34,14 @@ Aggregate element [As type] In collection _
   
 |Termo|Definição|  
 |---|---|  
-|`element`|Obrigatórios. Variável usada para iterar pelos elementos da coleção.|  
+|`element`|Necessário. Variável usada para iterar pelos elementos da coleção.|  
 |`type`|Opcional. O tipo de `element`. Se nenhum tipo for especificado, o tipo de `element` será inferido de `collection` .|  
-|`collection`|Obrigatórios. Refere-se à coleção na qual operar.|  
+|`collection`|Necessário. Refere-se à coleção na qual operar.|  
 |`clause`|Opcional. Uma ou mais cláusulas de consulta, como uma `Where` cláusula, para refinar o resultado da consulta para aplicar a cláusula ou cláusulas de agregação ao.|  
-|`expressionList`|Obrigatórios. Uma ou mais expressões delimitadas por vírgula que identificam uma função de agregação a ser aplicada à coleção. Você pode aplicar um alias a uma função de agregação para especificar um nome de membro para o resultado da consulta. Se nenhum alias for fornecido, o nome da função de agregação será usado. Para obter exemplos, consulte a seção sobre funções de agregação mais adiante neste tópico.|  
+|`expressionList`|Necessário. Uma ou mais expressões delimitadas por vírgula que identificam uma função de agregação a ser aplicada à coleção. Você pode aplicar um alias a uma função de agregação para especificar um nome de membro para o resultado da consulta. Se nenhum alias for fornecido, o nome da função de agregação será usado. Para obter exemplos, consulte a seção sobre funções de agregação mais adiante neste tópico.|  
   
 ## <a name="remarks"></a>Comentários  
+
  A `Aggregate` cláusula pode ser usada para incluir funções de agregação em suas consultas. As funções de agregação executam verificações e computações em um conjunto de valores e retornam um único valor. Você pode acessar o valor computado usando um membro do tipo de resultado da consulta. As funções de agregação padrão que você pode usar são as `All` funções,,,,,, `Any` `Average` `Count` `LongCount` `Max` `Min` e `Sum` . Essas funções são familiares aos desenvolvedores que estão familiarizados com agregações no SQL. Eles são descritos na seção a seguir deste tópico.  
   
  O resultado de uma função de agregação é incluído no resultado da consulta como um campo do tipo de resultado da consulta. Você pode fornecer um alias para o resultado da função de agregação para especificar o nome do membro do tipo de resultado da consulta que conterá o valor de agregação. Se nenhum alias for fornecido, o nome da função de agregação será usado.  
@@ -52,29 +54,29 @@ A seguir estão as funções de agregação padrão que podem ser usadas com a `
   
 ### <a name="all"></a>Tudo
 
-Retorna `true` se todos os elementos na coleção atendem a uma condição especificada; caso contrário, retorna `false` . A seguir, é mostrado um exemplo:
+Retorna `true` se todos os elementos na coleção atendem a uma condição especificada; caso contrário, retorna `false` . Veja um exemplo a seguir:
 
  [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
 ### <a name="any"></a>Qualquer
 
-Retorna `true` se qualquer elemento na coleção satisfizer uma condição especificada; caso contrário, retornará `false` . A seguir, é mostrado um exemplo:
+Retorna `true` se qualquer elemento na coleção satisfizer uma condição especificada; caso contrário, retornará `false` . Veja um exemplo a seguir:
 
  [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
 ### <a name="average"></a>Média
 
-Calcula a média de todos os elementos na coleção ou computa uma expressão fornecida para todos os elementos na coleção. A seguir, é mostrado um exemplo:
+Calcula a média de todos os elementos na coleção ou computa uma expressão fornecida para todos os elementos na coleção. Veja um exemplo a seguir:
 
  [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
 ### <a name="count"></a>Contagem
 
-Conta o número de elementos na coleção. Você pode fornecer uma `Boolean` expressão opcional para contar apenas o número de elementos na coleção que atendem a uma condição. A seguir, é mostrado um exemplo:
+Conta o número de elementos na coleção. Você pode fornecer uma `Boolean` expressão opcional para contar apenas o número de elementos na coleção que atendem a uma condição. Veja um exemplo a seguir:
 
  [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
-### <a name="group"></a>Agrupar
+### <a name="group"></a>Grupo
 
 Refere-se aos resultados da consulta que são agrupados como resultado de uma `Group By` `Group Join` cláusula or. A `Group` função é válida somente na `Into` cláusula de uma `Group By` cláusula or `Group Join` . Para obter mais informações e exemplos, consulte cláusula [Group by](group-by-clause.md) e Group [Join](group-join-clause.md).
 
@@ -82,21 +84,21 @@ Refere-se aos resultados da consulta que são agrupados como resultado de uma `G
 
 Conta o número de elementos na coleção. Você pode fornecer uma `Boolean` expressão opcional para contar apenas o número de elementos na coleção que atendem a uma condição. Retorna o resultado como um `Long` . Para obter um exemplo, consulte a `Count` função de agregação.
 
-### <a name="max"></a>Max
+### <a name="max"></a>Máx
 
-Computa o valor máximo da coleção ou computa uma expressão fornecida para todos os elementos na coleção. A seguir, é mostrado um exemplo:
+Computa o valor máximo da coleção ou computa uma expressão fornecida para todos os elementos na coleção. Veja um exemplo a seguir:
 
  [!code-vb[VbSimpleQuerySamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#9)]
 
 ### <a name="min"></a>Mín
 
-Computa o valor mínimo da coleção ou computa uma expressão fornecida para todos os elementos na coleção. A seguir, é mostrado um exemplo:
+Computa o valor mínimo da coleção ou computa uma expressão fornecida para todos os elementos na coleção. Veja um exemplo a seguir:
 
  [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
-### <a name="sum"></a>Soma
+### <a name="sum"></a>SUM
 
-Computa a soma de todos os elementos na coleção ou computa uma expressão fornecida para todos os elementos na coleção. A seguir, é mostrado um exemplo:
+Computa a soma de todos os elementos na coleção ou computa uma expressão fornecida para todos os elementos na coleção. Veja um exemplo a seguir:
 
  [!code-vb[VbSimpleQuerySamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#15)]
 

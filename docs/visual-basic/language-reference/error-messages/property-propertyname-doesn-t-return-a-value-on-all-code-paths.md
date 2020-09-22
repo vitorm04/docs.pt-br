@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-ms.openlocfilehash: 21a1c4dbab6e26cd1cb848e270bbda9a544c2a67
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6a80a8275a7b9c5e3cbfa410ee219e0d16ce5918
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400416"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870942"
 ---
 # <a name="property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>A propriedade '\<propertyname>' não retorna um valor em todos os caminhos de código
+
 A propriedade ' \<propertyname> ' não retorna um valor em todos os caminhos de código. Uma exceção de referência nula pode ocorrer em tempo de execução quando o resultado é usado.  
   
  Um procedimento de propriedade `Get` tem pelo menos um caminho possível por meio de seu código que não retorna um valor.  

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 087735722fcd4dd789e25aacf6eeefffb490dac5
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 73fce70c0740992e2e9159946d428d214576e163
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198197"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870289"
 ---
-# <a name="unable-to-write-to-output-file-filename-error"></a>Não é possível gravar no arquivo de saída '\<filename > ': erro \<
+# <a name="unable-to-write-to-output-file-filename-error"></a>Não é possível gravar no arquivo de saída '\<filename>': \<error>
+
 Ocorreu um problema na criação do arquivo.  
   
  Não foi possível abrir um arquivo de saída para gravação. O arquivo (ou a pasta que contém o arquivo) pode estar aberto para uso exclusivo por outro processo ou pode ter seu atributo definido como somente leitura.  
@@ -57,6 +58,6 @@ Ocorreu um problema na criação do arquivo.
   
 3. Pressione **OK**.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Fale conosco](/visualstudio/ide/feedback-options)

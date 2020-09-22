@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
-ms.openlocfilehash: 9d791ae699f369ebe69e03fc5019d3ca58554224
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4793c7282043edb46b3d2f77a0f0a955c43ab34c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406476"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870194"
 ---
 # <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>URI de namespace XML `http://www.w3.org/XML/1998/namespace` ; pode ser associado somente a ' xmlns '
+
 O URI `http://www.w3.org/XML/1998/namespace` é usado em uma declaração de namespace XML. Este URI é um namespace reservado e não pode ser incluído em uma declaração de namespace XML.  
   
  **ID do erro:** BC31183  

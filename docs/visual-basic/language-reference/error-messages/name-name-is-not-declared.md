@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
-ms.openlocfilehash: 6fa4639b97e4314d8752ae520e94a58a189b7cbb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 76c1ab4fb5f1f8e4c76a06110f4b0f9026cca201
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397162"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871542"
 ---
 # <a name="name-name-is-not-declared"></a>O nome '\<name>' não é declarado
+
 Uma instrução refere-se a um elemento de programação, mas o compilador não pode localizar um elemento com esse nome exato.  
   
  **ID do erro:** BC30451  
@@ -31,7 +32,7 @@ Uma instrução refere-se a um elemento de programação, mas o compilador não 
 
 5. Se você não estiver usando um tipo totalmente qualificado ou um nome de membro (por exemplo, seu código se refere a uma propriedade como `MethodInfo.Name` em vez de `System.Reflection.MethodInfo.Name` ), adicione uma [instrução Imports](../statements/imports-statement-net-namespace-and-type.md).
 
-6. Se você estiver tentando compilar um projeto no estilo SDK (um projeto com um \* arquivo. vbproj que começa com a linha `<Project Sdk="Microsoft.NET.Sdk">` ) e a mensagem de erro se referir a um tipo ou membro no assembly Microsoft. VisualBasic. dll, configure seu aplicativo para compilar com uma referência à biblioteca de tempo de execução Visual Basic. Por padrão, um subconjunto da biblioteca é inserido em seu assembly em um projeto no estilo SDK.
+6. Se você estiver tentando compilar um projeto no estilo SDK (um projeto com um \* arquivo. vbproj que começa com a linha `<Project Sdk="Microsoft.NET.Sdk">` ) e a mensagem de erro se referir a um tipo ou membro no assembly Microsoft.VisualBasic.dll, configure seu aplicativo para compilar com uma referência à biblioteca de tempo de execução de Visual Basic. Por padrão, um subconjunto da biblioteca é inserido em seu assembly em um projeto no estilo SDK.
 
    Por exemplo, o exemplo a seguir falha na compilação porque o <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ChangeType%2A?displayProperty=fullName> método não pode ser encontrado. Ele não é inserido no subconjunto do Visual Basic Runtime incluído com seu aplicativo.  
 
