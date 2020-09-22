@@ -7,63 +7,68 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: c905ff85c8e9729dd4d6068f0d34f729962bbb57
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f3348e9eea5bdd7f4fd911150877c9aefdd66bcc
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372395"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867294"
 ---
-# <a name="mysettings-object"></a><span data-ttu-id="fe616-102">Objeto My.Settings</span><span class="sxs-lookup"><span data-stu-id="fe616-102">My.Settings Object</span></span>
-<span data-ttu-id="fe616-103">Fornece propriedades e métodos para acessar as configurações do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="fe616-103">Provides properties and methods for accessing the application's settings.</span></span>  
+# <a name="mysettings-object"></a><span data-ttu-id="10f71-102">Objeto My.Settings</span><span class="sxs-lookup"><span data-stu-id="10f71-102">My.Settings Object</span></span>
+
+<span data-ttu-id="10f71-103">Fornece propriedades e métodos para acessar as configurações do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="10f71-103">Provides properties and methods for accessing the application's settings.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fe616-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="fe616-104">Remarks</span></span>  
- <span data-ttu-id="fe616-105">O `My.Settings` objeto fornece acesso às configurações do aplicativo e permite que você armazene e recupere dinamicamente as configurações de propriedade e outras informações para seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="fe616-105">The `My.Settings` object provides access to the application's settings and allows you to dynamically store and retrieve property settings and other information for your application.</span></span> <span data-ttu-id="fe616-106">Para obter mais informações, consulte [Gerenciando configurações de aplicativo (.NET)](/visualstudio/ide/managing-application-settings-dotnet).</span><span class="sxs-lookup"><span data-stu-id="fe616-106">For more information, see [Managing Application Settings (.NET)](/visualstudio/ide/managing-application-settings-dotnet).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="10f71-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="10f71-104">Remarks</span></span>  
+
+ <span data-ttu-id="10f71-105">O `My.Settings` objeto fornece acesso às configurações do aplicativo e permite que você armazene e recupere dinamicamente as configurações de propriedade e outras informações para seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="10f71-105">The `My.Settings` object provides access to the application's settings and allows you to dynamically store and retrieve property settings and other information for your application.</span></span> <span data-ttu-id="10f71-106">Para obter mais informações, consulte [Gerenciando configurações de aplicativo (.NET)](/visualstudio/ide/managing-application-settings-dotnet).</span><span class="sxs-lookup"><span data-stu-id="10f71-106">For more information, see [Managing Application Settings (.NET)](/visualstudio/ide/managing-application-settings-dotnet).</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="fe616-107">Propriedades</span><span class="sxs-lookup"><span data-stu-id="fe616-107">Properties</span></span>  
- <span data-ttu-id="fe616-108">As propriedades do objeto `My.Settings` fornecem acesso às configurações do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="fe616-108">The properties of the `My.Settings` object provide access to your application's settings.</span></span> <span data-ttu-id="fe616-109">Para adicionar ou remover configurações, use o **Designer de configurações**.</span><span class="sxs-lookup"><span data-stu-id="fe616-109">To add or remove settings, use the **Settings Designer**.</span></span>  
+## <a name="properties"></a><span data-ttu-id="10f71-107">Propriedades</span><span class="sxs-lookup"><span data-stu-id="10f71-107">Properties</span></span>  
+
+ <span data-ttu-id="10f71-108">As propriedades do objeto `My.Settings` fornecem acesso às configurações do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="10f71-108">The properties of the `My.Settings` object provide access to your application's settings.</span></span> <span data-ttu-id="10f71-109">Para adicionar ou remover configurações, use o **Designer de configurações**.</span><span class="sxs-lookup"><span data-stu-id="10f71-109">To add or remove settings, use the **Settings Designer**.</span></span>  
   
- <span data-ttu-id="fe616-110">Cada configuração tem um **nome**, **tipo**, **escopo**e **valor**, e essas configurações determinam como a propriedade para acessar cada configuração aparece no `My.Settings` objeto:</span><span class="sxs-lookup"><span data-stu-id="fe616-110">Each setting has a **Name**, **Type**, **Scope**, and **Value**, and these settings determine how the property to access each setting appears in the `My.Settings` object:</span></span>  
+ <span data-ttu-id="10f71-110">Cada configuração tem um **nome**, **tipo**, **escopo**e **valor**, e essas configurações determinam como a propriedade para acessar cada configuração aparece no `My.Settings` objeto:</span><span class="sxs-lookup"><span data-stu-id="10f71-110">Each setting has a **Name**, **Type**, **Scope**, and **Value**, and these settings determine how the property to access each setting appears in the `My.Settings` object:</span></span>  
   
-- <span data-ttu-id="fe616-111">**Nome** determina o nome da propriedade.</span><span class="sxs-lookup"><span data-stu-id="fe616-111">**Name** determines the name of the property.</span></span>  
+- <span data-ttu-id="10f71-111">**Nome** determina o nome da propriedade.</span><span class="sxs-lookup"><span data-stu-id="10f71-111">**Name** determines the name of the property.</span></span>  
   
-- <span data-ttu-id="fe616-112">**Tipo** determina o tipo da propriedade.</span><span class="sxs-lookup"><span data-stu-id="fe616-112">**Type** determines the type of the property.</span></span>  
+- <span data-ttu-id="10f71-112">**Tipo** determina o tipo da propriedade.</span><span class="sxs-lookup"><span data-stu-id="10f71-112">**Type** determines the type of the property.</span></span>  
   
-- <span data-ttu-id="fe616-113">**Escopo** indica se a propriedade é somente leitura.</span><span class="sxs-lookup"><span data-stu-id="fe616-113">**Scope** indicates if the property is read-only.</span></span> <span data-ttu-id="fe616-114">Se o valor for **Application**, a propriedade será somente leitura; Se o valor for **User**, a propriedade será Read-Write.</span><span class="sxs-lookup"><span data-stu-id="fe616-114">If the value is **Application**, the property is read-only; if the value is **User**, the property is read-write.</span></span>  
+- <span data-ttu-id="10f71-113">**Escopo** indica se a propriedade é somente leitura.</span><span class="sxs-lookup"><span data-stu-id="10f71-113">**Scope** indicates if the property is read-only.</span></span> <span data-ttu-id="10f71-114">Se o valor for **Application**, a propriedade será somente leitura; Se o valor for **User**, a propriedade será Read-Write.</span><span class="sxs-lookup"><span data-stu-id="10f71-114">If the value is **Application**, the property is read-only; if the value is **User**, the property is read-write.</span></span>  
   
-- <span data-ttu-id="fe616-115">**Value** é o valor padrão da propriedade.</span><span class="sxs-lookup"><span data-stu-id="fe616-115">**Value** is the default value of the property.</span></span>  
+- <span data-ttu-id="10f71-115">**Value** é o valor padrão da propriedade.</span><span class="sxs-lookup"><span data-stu-id="10f71-115">**Value** is the default value of the property.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="fe616-116">Métodos</span><span class="sxs-lookup"><span data-stu-id="fe616-116">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="10f71-116">Métodos</span><span class="sxs-lookup"><span data-stu-id="10f71-116">Methods</span></span>  
   
-|<span data-ttu-id="fe616-117">Método</span><span class="sxs-lookup"><span data-stu-id="fe616-117">Method</span></span>|<span data-ttu-id="fe616-118">Descrição</span><span class="sxs-lookup"><span data-stu-id="fe616-118">Description</span></span>|  
+|<span data-ttu-id="10f71-117">Método</span><span class="sxs-lookup"><span data-stu-id="10f71-117">Method</span></span>|<span data-ttu-id="10f71-118">Descrição</span><span class="sxs-lookup"><span data-stu-id="10f71-118">Description</span></span>|  
 |---|---|  
-|`Reload`|<span data-ttu-id="fe616-119">Recarrega as configurações de usuário dos últimos valores salvos.</span><span class="sxs-lookup"><span data-stu-id="fe616-119">Reloads the user settings from the last saved values.</span></span>|  
-|`Save`|<span data-ttu-id="fe616-120">Salva as configurações atuais do usuário.</span><span class="sxs-lookup"><span data-stu-id="fe616-120">Saves the current user settings.</span></span>|  
+|`Reload`|<span data-ttu-id="10f71-119">Recarrega as configurações de usuário dos últimos valores salvos.</span><span class="sxs-lookup"><span data-stu-id="10f71-119">Reloads the user settings from the last saved values.</span></span>|  
+|`Save`|<span data-ttu-id="10f71-120">Salva as configurações atuais do usuário.</span><span class="sxs-lookup"><span data-stu-id="10f71-120">Saves the current user settings.</span></span>|  
   
- <span data-ttu-id="fe616-121">O `My.Settings` objeto também fornece propriedades e métodos avançados, herdados da <xref:System.Configuration.ApplicationSettingsBase> classe.</span><span class="sxs-lookup"><span data-stu-id="fe616-121">The `My.Settings` object also provides advanced properties and methods, inherited from the <xref:System.Configuration.ApplicationSettingsBase> class.</span></span>  
+ <span data-ttu-id="10f71-121">O `My.Settings` objeto também fornece propriedades e métodos avançados, herdados da <xref:System.Configuration.ApplicationSettingsBase> classe.</span><span class="sxs-lookup"><span data-stu-id="10f71-121">The `My.Settings` object also provides advanced properties and methods, inherited from the <xref:System.Configuration.ApplicationSettingsBase> class.</span></span>  
   
-## <a name="tasks"></a><span data-ttu-id="fe616-122">Tarefas</span><span class="sxs-lookup"><span data-stu-id="fe616-122">Tasks</span></span>  
- <span data-ttu-id="fe616-123">A tabela a seguir lista exemplos de tarefas que envolvem o `My.Settings` objeto.</span><span class="sxs-lookup"><span data-stu-id="fe616-123">The following table lists examples of tasks involving the `My.Settings` object.</span></span>  
+## <a name="tasks"></a><span data-ttu-id="10f71-122">Tarefas</span><span class="sxs-lookup"><span data-stu-id="10f71-122">Tasks</span></span>  
+
+ <span data-ttu-id="10f71-123">A tabela a seguir lista exemplos de tarefas que envolvem o `My.Settings` objeto.</span><span class="sxs-lookup"><span data-stu-id="10f71-123">The following table lists examples of tasks involving the `My.Settings` object.</span></span>  
   
-|<span data-ttu-id="fe616-124">Para</span><span class="sxs-lookup"><span data-stu-id="fe616-124">To</span></span>|<span data-ttu-id="fe616-125">Consulte</span><span class="sxs-lookup"><span data-stu-id="fe616-125">See</span></span>|  
+|<span data-ttu-id="10f71-124">Para</span><span class="sxs-lookup"><span data-stu-id="10f71-124">To</span></span>|<span data-ttu-id="10f71-125">Consulte</span><span class="sxs-lookup"><span data-stu-id="10f71-125">See</span></span>|  
 |---|---|  
-|<span data-ttu-id="fe616-126">Ler uma configuração de aplicativo</span><span class="sxs-lookup"><span data-stu-id="fe616-126">Read an application setting</span></span>|[<span data-ttu-id="fe616-127">Como ler configurações do aplicativo no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fe616-127">How to: Read Application Settings in Visual Basic</span></span>](../../developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
-|<span data-ttu-id="fe616-128">Alterar uma configuração de usuário</span><span class="sxs-lookup"><span data-stu-id="fe616-128">Change a user setting</span></span>|[<span data-ttu-id="fe616-129">Como alterar configurações do usuário no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fe616-129">How to: Change User Settings in Visual Basic</span></span>](../../developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|<span data-ttu-id="fe616-130">Manter configurações de usuário</span><span class="sxs-lookup"><span data-stu-id="fe616-130">Persist user settings</span></span>|[<span data-ttu-id="fe616-131">Como persistir configurações de usuário no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fe616-131">How to: Persist User Settings in Visual Basic</span></span>](../../developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|<span data-ttu-id="fe616-132">Criar uma grade de propriedades para as configurações do usuário</span><span class="sxs-lookup"><span data-stu-id="fe616-132">Create a property grid for user settings</span></span>|[<span data-ttu-id="fe616-133">Como criar grades de propriedades para configurações de usuário no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fe616-133">How to: Create Property Grids for User Settings in Visual Basic</span></span>](../../developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|<span data-ttu-id="10f71-126">Ler uma configuração de aplicativo</span><span class="sxs-lookup"><span data-stu-id="10f71-126">Read an application setting</span></span>|[<span data-ttu-id="10f71-127">Como ler configurações do aplicativo no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="10f71-127">How to: Read Application Settings in Visual Basic</span></span>](../../developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|<span data-ttu-id="10f71-128">Alterar uma configuração de usuário</span><span class="sxs-lookup"><span data-stu-id="10f71-128">Change a user setting</span></span>|[<span data-ttu-id="10f71-129">Como alterar configurações do usuário no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="10f71-129">How to: Change User Settings in Visual Basic</span></span>](../../developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|<span data-ttu-id="10f71-130">Manter configurações de usuário</span><span class="sxs-lookup"><span data-stu-id="10f71-130">Persist user settings</span></span>|[<span data-ttu-id="10f71-131">Como persistir configurações de usuário no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="10f71-131">How to: Persist User Settings in Visual Basic</span></span>](../../developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|<span data-ttu-id="10f71-132">Criar uma grade de propriedades para as configurações do usuário</span><span class="sxs-lookup"><span data-stu-id="10f71-132">Create a property grid for user settings</span></span>|[<span data-ttu-id="10f71-133">Como criar grades de propriedades para configurações de usuário no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="10f71-133">How to: Create Property Grids for User Settings in Visual Basic</span></span>](../../developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
-## <a name="example"></a><span data-ttu-id="fe616-134">Exemplo</span><span class="sxs-lookup"><span data-stu-id="fe616-134">Example</span></span>  
- <span data-ttu-id="fe616-135">Este exemplo exibe o valor da configuração `Nickname`.</span><span class="sxs-lookup"><span data-stu-id="fe616-135">This example displays the value of the `Nickname` setting.</span></span>  
+## <a name="example"></a><span data-ttu-id="10f71-134">Exemplo</span><span class="sxs-lookup"><span data-stu-id="10f71-134">Example</span></span>  
+
+ <span data-ttu-id="10f71-135">Este exemplo exibe o valor da configuração `Nickname`.</span><span class="sxs-lookup"><span data-stu-id="10f71-135">This example displays the value of the `Nickname` setting.</span></span>  
   
  [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  
   
- <span data-ttu-id="fe616-136">Para que esse exemplo funcione, seu aplicativo deve ter uma configuração `Nickname`, do tipo `String`.</span><span class="sxs-lookup"><span data-stu-id="fe616-136">For this example to work, your application must have a `Nickname` setting, of type `String`.</span></span>  
+ <span data-ttu-id="10f71-136">Para que esse exemplo funcione, seu aplicativo deve ter uma configuração `Nickname`, do tipo `String`.</span><span class="sxs-lookup"><span data-stu-id="10f71-136">For this example to work, your application must have a `Nickname` setting, of type `String`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fe616-137">Confira também</span><span class="sxs-lookup"><span data-stu-id="fe616-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10f71-137">Confira também</span><span class="sxs-lookup"><span data-stu-id="10f71-137">See also</span></span>
 
 - <xref:System.Configuration.ApplicationSettingsBase>
-- [<span data-ttu-id="fe616-138">Como ler configurações do aplicativo no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fe616-138">How to: Read Application Settings in Visual Basic</span></span>](../../developing-apps/programming/app-settings/how-to-read-application-settings.md)
-- [<span data-ttu-id="fe616-139">Como alterar configurações do usuário no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fe616-139">How to: Change User Settings in Visual Basic</span></span>](../../developing-apps/programming/app-settings/how-to-change-user-settings.md)
-- [<span data-ttu-id="fe616-140">Como persistir configurações de usuário no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fe616-140">How to: Persist User Settings in Visual Basic</span></span>](../../developing-apps/programming/app-settings/how-to-persist-user-settings.md)
-- [<span data-ttu-id="fe616-141">Como criar grades de propriedades para configurações de usuário no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fe616-141">How to: Create Property Grids for User Settings in Visual Basic</span></span>](../../developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
-- [<span data-ttu-id="fe616-142">Gerenciando configurações de aplicativo (.NET)</span><span class="sxs-lookup"><span data-stu-id="fe616-142">Managing Application Settings (.NET)</span></span>](/visualstudio/ide/managing-application-settings-dotnet)
+- [<span data-ttu-id="10f71-138">Como ler configurações do aplicativo no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="10f71-138">How to: Read Application Settings in Visual Basic</span></span>](../../developing-apps/programming/app-settings/how-to-read-application-settings.md)
+- [<span data-ttu-id="10f71-139">Como alterar configurações do usuário no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="10f71-139">How to: Change User Settings in Visual Basic</span></span>](../../developing-apps/programming/app-settings/how-to-change-user-settings.md)
+- [<span data-ttu-id="10f71-140">Como persistir configurações de usuário no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="10f71-140">How to: Persist User Settings in Visual Basic</span></span>](../../developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [<span data-ttu-id="10f71-141">Como criar grades de propriedades para configurações de usuário no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="10f71-141">How to: Create Property Grids for User Settings in Visual Basic</span></span>](../../developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [<span data-ttu-id="10f71-142">Gerenciando configurações de aplicativo (.NET)</span><span class="sxs-lookup"><span data-stu-id="10f71-142">Managing Application Settings (.NET)</span></span>](/visualstudio/ide/managing-application-settings-dotnet)
