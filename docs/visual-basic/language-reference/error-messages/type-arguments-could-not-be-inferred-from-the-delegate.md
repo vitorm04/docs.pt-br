@@ -7,28 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
-ms.openlocfilehash: f29e92c8245e33c0418d9a387070b03f645c331e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 51b0bbf2e346acdd84a1bc2283db4a71adc9f7dc
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84362742"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870424"
 ---
-# <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a><span data-ttu-id="27b98-102">Não foi possível inferir argumentos de tipo a partir do delegado</span><span class="sxs-lookup"><span data-stu-id="27b98-102">Type arguments could not be inferred from the delegate</span></span>
-<span data-ttu-id="27b98-103">Uma instrução de atribuição usa `AddressOf` para atribuir o endereço de um procedimento genérico a um delegado, mas não fornece nenhum argumento de tipo para o procedimento genérico.</span><span class="sxs-lookup"><span data-stu-id="27b98-103">An assignment statement uses `AddressOf` to assign the address of a generic procedure to a delegate, but it does not supply any type arguments to the generic procedure.</span></span>  
-  
- <span data-ttu-id="27b98-104">Normalmente, quando você invoca um tipo genérico, você fornece um argumento de tipo para cada parâmetro de tipo que o tipo genérico define.</span><span class="sxs-lookup"><span data-stu-id="27b98-104">Normally, when you invoke a generic type, you supply a type argument for each type parameter that the generic type defines.</span></span> <span data-ttu-id="27b98-105">Se você não fornecer nenhum argumento de tipo, o compilador tentará inferir os tipos a serem passados para os parâmetros de tipo.</span><span class="sxs-lookup"><span data-stu-id="27b98-105">If you do not supply any type arguments, the compiler attempts to infer the types to be passed to the type parameters.</span></span> <span data-ttu-id="27b98-106">Se o contexto não fornecer informações suficientes para que o compilador inferir os tipos, um erro será gerado.</span><span class="sxs-lookup"><span data-stu-id="27b98-106">If the context does not provide enough information for the compiler to infer the types, an error is generated.</span></span>  
-  
- <span data-ttu-id="27b98-107">**ID do erro:** BC36564</span><span class="sxs-lookup"><span data-stu-id="27b98-107">**Error ID:** BC36564</span></span>  
-  
-## <a name="to-correct-this-error"></a><span data-ttu-id="27b98-108">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="27b98-108">To correct this error</span></span>  
-  
-- <span data-ttu-id="27b98-109">Especifique os argumentos de tipo para o procedimento genérico na `AddressOf` expressão.</span><span class="sxs-lookup"><span data-stu-id="27b98-109">Specify the type arguments for the generic procedure in the `AddressOf` expression.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="27b98-110">Confira também</span><span class="sxs-lookup"><span data-stu-id="27b98-110">See also</span></span>
+# <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a><span data-ttu-id="cb08d-102">Não foi possível inferir argumentos de tipo a partir do delegado</span><span class="sxs-lookup"><span data-stu-id="cb08d-102">Type arguments could not be inferred from the delegate</span></span>
 
-- [<span data-ttu-id="27b98-111">Tipos genéricos no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="27b98-111">Generic Types in Visual Basic</span></span>](../../programming-guide/language-features/data-types/generic-types.md)
-- [<span data-ttu-id="27b98-112">Operador AddressOf</span><span class="sxs-lookup"><span data-stu-id="27b98-112">AddressOf Operator</span></span>](../operators/addressof-operator.md)
-- [<span data-ttu-id="27b98-113">Procedimentos genéricos no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="27b98-113">Generic Procedures in Visual Basic</span></span>](../../programming-guide/language-features/data-types/generic-procedures.md)
-- [<span data-ttu-id="27b98-114">Lista de Tipos</span><span class="sxs-lookup"><span data-stu-id="27b98-114">Type List</span></span>](../statements/type-list.md)
-- [<span data-ttu-id="27b98-115">Métodos de Extensão</span><span class="sxs-lookup"><span data-stu-id="27b98-115">Extension Methods</span></span>](../../programming-guide/language-features/procedures/extension-methods.md)
+<span data-ttu-id="cb08d-103">Uma instrução de atribuição usa `AddressOf` para atribuir o endereço de um procedimento genérico a um delegado, mas não fornece nenhum argumento de tipo para o procedimento genérico.</span><span class="sxs-lookup"><span data-stu-id="cb08d-103">An assignment statement uses `AddressOf` to assign the address of a generic procedure to a delegate, but it does not supply any type arguments to the generic procedure.</span></span>  
+  
+ <span data-ttu-id="cb08d-104">Normalmente, quando você invoca um tipo genérico, você fornece um argumento de tipo para cada parâmetro de tipo que o tipo genérico define.</span><span class="sxs-lookup"><span data-stu-id="cb08d-104">Normally, when you invoke a generic type, you supply a type argument for each type parameter that the generic type defines.</span></span> <span data-ttu-id="cb08d-105">Se você não fornecer nenhum argumento de tipo, o compilador tentará inferir os tipos a serem passados para os parâmetros de tipo.</span><span class="sxs-lookup"><span data-stu-id="cb08d-105">If you do not supply any type arguments, the compiler attempts to infer the types to be passed to the type parameters.</span></span> <span data-ttu-id="cb08d-106">Se o contexto não fornecer informações suficientes para que o compilador inferir os tipos, um erro será gerado.</span><span class="sxs-lookup"><span data-stu-id="cb08d-106">If the context does not provide enough information for the compiler to infer the types, an error is generated.</span></span>  
+  
+ <span data-ttu-id="cb08d-107">**ID do erro:** BC36564</span><span class="sxs-lookup"><span data-stu-id="cb08d-107">**Error ID:** BC36564</span></span>  
+  
+## <a name="to-correct-this-error"></a><span data-ttu-id="cb08d-108">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="cb08d-108">To correct this error</span></span>  
+  
+- <span data-ttu-id="cb08d-109">Especifique os argumentos de tipo para o procedimento genérico na `AddressOf` expressão.</span><span class="sxs-lookup"><span data-stu-id="cb08d-109">Specify the type arguments for the generic procedure in the `AddressOf` expression.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="cb08d-110">Confira também</span><span class="sxs-lookup"><span data-stu-id="cb08d-110">See also</span></span>
+
+- [<span data-ttu-id="cb08d-111">Tipos genéricos no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="cb08d-111">Generic Types in Visual Basic</span></span>](../../programming-guide/language-features/data-types/generic-types.md)
+- [<span data-ttu-id="cb08d-112">Operador AddressOf</span><span class="sxs-lookup"><span data-stu-id="cb08d-112">AddressOf Operator</span></span>](../operators/addressof-operator.md)
+- [<span data-ttu-id="cb08d-113">Procedimentos genéricos no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="cb08d-113">Generic Procedures in Visual Basic</span></span>](../../programming-guide/language-features/data-types/generic-procedures.md)
+- [<span data-ttu-id="cb08d-114">Lista de Tipos</span><span class="sxs-lookup"><span data-stu-id="cb08d-114">Type List</span></span>](../statements/type-list.md)
+- [<span data-ttu-id="cb08d-115">Métodos de Extensão</span><span class="sxs-lookup"><span data-stu-id="cb08d-115">Extension Methods</span></span>](../../programming-guide/language-features/procedures/extension-methods.md)
