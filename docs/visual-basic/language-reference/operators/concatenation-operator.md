@@ -10,14 +10,15 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-ms.openlocfilehash: d778c0c99d6d074fe8b73aaf3660074643e7e136
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 20c2e2088691e68221872cc1dfc5486413515a4d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371603"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867158"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp;Operador (Visual Basic)
+# <a name="amp-operator-visual-basic"></a>&amp; Operador (Visual Basic)
+
 Gera uma concatenação de cadeia de caracteres de duas expressões.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -27,16 +28,18 @@ result = expression1 & expression2
 ```  
   
 ## <a name="parts"></a>Partes  
+
  `result`  
- Obrigatórios. Qualquer `String` `Object` variável ou.  
+ Necessário. Qualquer `String` `Object` variável ou.  
   
  `expression1`  
- Obrigatórios. Qualquer expressão com um tipo de dados que amplia para `String` .  
+ Necessário. Qualquer expressão com um tipo de dados que amplia para `String` .  
   
  `expression2`  
- Obrigatórios. Qualquer expressão com um tipo de dados que amplia para `String` .  
+ Necessário. Qualquer expressão com um tipo de dados que amplia para `String` .  
   
 ## <a name="remarks"></a>Comentários  
+
  Se o tipo de dados de `expression1` ou `expression2` não for, mas se `String` expandir para `String` , ele será convertido em `String` . Se um dos tipos de dados não for ampliado para `String` , o compilador gerará um erro.  
   
  O tipo de dados de `result` é `String` . Se uma ou ambas as expressões forem avaliadas como [Nothing](../nothing.md) ou se tiverem um valor de <xref:System.DBNull.Value?displayProperty=nameWithType> , elas serão tratadas como uma cadeia de caracteres com um valor de "".  
@@ -48,13 +51,14 @@ result = expression1 & expression2
 > O caractere de e comercial (&) também pode ser usado para identificar variáveis como tipo `Long` . Para obter mais informações, consulte [tipos de caracteres](../../programming-guide/language-features/data-types/type-characters.md).  
   
 ## <a name="example"></a>Exemplo  
+
  Este exemplo usa o `&` operador para forçar a concatenação de cadeia de caracteres. O resultado é um valor de cadeia de caracteres que representa a concatenação dos dois operandos de cadeia de caracteres.  
   
  [!code-vb[VbVbalrOperators#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#2)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Operador&=](and-assignment-operator.md)
+- [ Operador&=](and-assignment-operator.md)
 - [Operadores de concatenação](concatenation-operators.md)
 - [Precedência do operador no Visual Basic](operator-precedence.md)
 - [Operadores Listados por Funcionalidade](operators-listed-by-functionality.md)

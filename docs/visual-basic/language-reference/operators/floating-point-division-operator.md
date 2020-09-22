@@ -16,14 +16,15 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-ms.openlocfilehash: e9400b50a84522f87a9a2ea4cd05b479d7a4538e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 765a80d45908e0ecf17e4c21b748dbf6b2a4c0f5
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371162"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867030"
 ---
 # <a name="-operator-visual-basic"></a>Operador / (Visual Basic)
+
 Divide dois números e retorna um resultado de ponto flutuante.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,6 +34,7 @@ expression1 / expression2
 ```  
   
 ## <a name="parts"></a>Partes  
+
  `expression1`  
  Obrigatórios. Qualquer expressão numérica.  
   
@@ -40,14 +42,17 @@ expression1 / expression2
  Obrigatórios. Qualquer expressão numérica.  
   
 ## <a name="supported-types"></a>Tipos com suporte  
+
  Todos os tipos numéricos, incluindo os tipos de ponto flutuante e não assinados e `Decimal` .  
   
-## <a name="result"></a>Result  
+## <a name="result"></a>Resultado  
+
  O resultado é o quociente completo de `expression1` dividido por `expression2` , incluindo qualquer restante.  
   
  O [operador \ (Visual Basic)](integer-division-operator.md) retorna o quociente inteiro, que remove o resto.  
   
 ## <a name="remarks"></a>Comentários  
+
  O tipo de dados do resultado depende dos tipos dos operandos. A tabela a seguir mostra como o tipo de dados do resultado é determinado.  
   
 |Tipos de dados do operando|Tipo de dados de resultado|  
@@ -62,18 +67,20 @@ expression1 / expression2
  Se `expression1` ou `expression2` for avaliado como [Nothing](../nothing.md), ele será tratado como zero.  
   
 ## <a name="attempted-division-by-zero"></a>Tentativa de divisão por zero  
+
  Se `expression2` for avaliada como zero, o `/` operador se comporta de forma diferente para diferentes tipos de dados de operando. A tabela a seguir mostra os possíveis comportamentos.  
   
 |Tipos de dados do operando|Comportamento se `expression2` for zero|  
 |------------------------|---------------------------------------|  
 |Ponto flutuante ( `Single` ou `Double` )|Retorna infinito ( <xref:System.Double.PositiveInfinity> ou <xref:System.Double.NegativeInfinity> ) ou <xref:System.Double.NaN> (não é um número) se `expression1` também for zero|  
-|`Decimal`|Emite<xref:System.DivideByZeroException>|  
-|Integral (assinada ou não assinada)|Tentativa de conversão de volta para tipo integral gera <xref:System.OverflowException> porque tipos integrais não podem aceitar <xref:System.Double.PositiveInfinity> , <xref:System.Double.NegativeInfinity> , ou<xref:System.Double.NaN>|  
+|`Decimal`|Emite <xref:System.DivideByZeroException>|  
+|Integral (assinada ou não assinada)|Tentativa de conversão de volta para tipo integral gera <xref:System.OverflowException> porque tipos integrais não podem aceitar <xref:System.Double.PositiveInfinity> , <xref:System.Double.NegativeInfinity> , ou <xref:System.Double.NaN>|  
   
 > [!NOTE]
 > O `/` operador pode ser *sobrecarregado*, o que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo dessa classe ou estrutura. Se o seu código usar esse operador em uma classe ou estrutura desse tipo, certifique-se de entender seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemplo  
+
  Este exemplo usa o `/` operador para executar a divisão de ponto flutuante. O resultado é o quociente dos dois operandos.  
   
  [!code-vb[VbVbalrOperators#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#16)]  

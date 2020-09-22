@@ -7,17 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: a52f9f5f5b044273a45da5ef9478e2212def57a5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0b63b44c2cd9d55094fb83fed6c04e4de528a25c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372356"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867200"
 ---
 # <a name="mywebservices-object"></a>Objeto My.WebServices
+
 Fornece propriedades para criar e acessar uma única instância de cada serviço Web XML referenciado pelo projeto atual.  
   
 ## <a name="remarks"></a>Comentários  
+
  O objeto `My.WebServices` fornece uma instância de cada serviço Web referenciado pelo projeto atual. Cada instância é instanciada sob demanda. É possível acessar esses serviços Web por meio das propriedades do objeto `My.WebServices`. O nome da propriedade é igual ao nome do serviço Web acessado pela propriedade. Qualquer classe que herda de <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> é um serviço Web. Para obter informações sobre como adicionar serviços Web a um projeto, consulte [acessando serviços Web de aplicativos](../../developing-apps/programming/accessing-application-web-services.md).  
   
  O `My.WebServices` objeto expõe apenas os serviços Web associados ao projeto atual. Ele não fornece acesso a serviços Web declarados em DLLs referenciadas. Para acessar um serviço Web que uma DLL fornece, você deve usar o nome qualificado do serviço Web, no formato *DllName*. *WebServiceName*. Para obter mais informações, consulte [acessando serviços Web de aplicativos](../../developing-apps/programming/accessing-application-web-services.md).  
@@ -25,6 +27,7 @@ Fornece propriedades para criar e acessar uma única instância de cada serviço
  O objeto e suas propriedades não estão disponíveis para aplicativos Web.  
   
 ## <a name="properties"></a>Propriedades  
+
  Cada propriedade do `My.WebServices` objeto fornece acesso a uma instância de um serviço Web referenciado pelo projeto atual. O nome da propriedade é o mesmo que o nome do serviço Web que a propriedade acessa, e o tipo de propriedade é o mesmo que o tipo do serviço Web.  
   
 > [!NOTE]
@@ -40,6 +43,7 @@ Fornece propriedades para criar e acessar uma única instância de cada serviço
 > Normalmente, o `Is` operador OR precisa `IsNot` ler o valor da propriedade para executar a comparação. No entanto, se a propriedade atualmente armazena `Nothing` , a propriedade cria uma nova instância do serviço Web e, em seguida, retorna essa instância. No entanto, o compilador de Visual Basic trata as propriedades do `My.WebServices` objeto especialmente e permite que o `Is` `IsNot` operador OR Verifique o status da propriedade sem alterar seu valor.  
   
 ## <a name="example"></a>Exemplo  
+
  Este exemplo chama o `FahrenheitToCelsius` método do `TemperatureConverter` serviço Web XML e retorna o resultado.  
   
  [!code-vb[VbVbalrMyWebService#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWebService/VB/Form1.vb#1)]  
@@ -59,7 +63,7 @@ Fornece propriedades para criar e acessar uma única instância de cada serviço
 |Aplicativo do Console|**Sim**|  
 |Biblioteca de controle do Windows|**Sim**|  
 |Biblioteca de controle da Web|**Sim**|  
-|Windows Service|**Sim**|  
+|Serviço do Windows|**Sim**|  
 |Site|Não|  
   
 ## <a name="see-also"></a>Confira também

@@ -8,18 +8,20 @@ helpviewer_keywords:
 - ParamArray keyword [Visual Basic]
 - ParamArray keyword [Visual Basic], syntax
 ms.assetid: a5f18789-92bd-488f-9c7e-cf3719963635
-ms.openlocfilehash: e3c24818ea87884a0dd9b42c604e13e16ca6d3d7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: baf9303101eea9eed27e8a4eee9e04d255c798e9
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84391814"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867816"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
-Especifica que um parâmetro de procedimento usa uma matriz opcional de elementos do tipo especificado. `ParamArray`pode ser usado somente no último parâmetro de uma lista de parâmetros.  
+
+Especifica que um parâmetro de procedimento usa uma matriz opcional de elementos do tipo especificado. `ParamArray` pode ser usado somente no último parâmetro de uma lista de parâmetros.  
   
 ## <a name="remarks"></a>Comentários  
- `ParamArray`permite que você passe um número arbitrário de argumentos para o procedimento. Um `ParamArray` parâmetro é sempre declarado usando [ByVal](byval.md).  
+
+ `ParamArray` permite que você passe um número arbitrário de argumentos para o procedimento. Um `ParamArray` parâmetro é sempre declarado usando [ByVal](byval.md).  
   
  Você pode fornecer um ou mais argumentos a um `ParamArray` parâmetro passando uma matriz do tipo de dados apropriado, uma lista de valores separados por vírgula ou nada. Para obter detalhes, consulte "chamando um ParamArray" em [matrizes de parâmetros](../../programming-guide/language-features/procedures/parameter-arrays.md).  
   

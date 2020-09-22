@@ -2,12 +2,12 @@
 title: O que há de novo no C# 9,0 – Guia C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 9,0.
 ms.date: 09/04/2020
-ms.openlocfilehash: a8b66d21514b57d8bee3ff54b2a707af391fe7a9
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: 13da712e9421bbfe593e5945b80bb3636ebe05f3
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738717"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866441"
 ---
 # <a name="whats-new-in-c-90"></a>Novidades do C# 9.0
 
@@ -224,15 +224,15 @@ Outro bom uso para esse recurso é combiná-lo com propriedades init somente par
 
 Você pode retornar uma instância criada pelo construtor padrão usando uma `return new();` expressão.
 
-Um recurso semelhante melhora a resolução de tipo de destino de expressões condicionais. Com essa alteração, as duas expressões não precisam ter uma conversão implícita de uma para a outra, mas podem ter conversões implícitas em um tipo de destino. Você provavelmente não perceberá essa alteração. O que você observará é que algumas expressões condicionais que antes exigiam conversões ou que não compilaram agora só funcionam.
+Um recurso semelhante melhora a resolução de tipo de destino de [expressões condicionais](../language-reference/operators/conditional-operator.md). Com essa alteração, as duas expressões não precisam ter uma conversão implícita de uma para a outra, mas podem ter conversões implícitas em um tipo de destino. Você provavelmente não perceberá essa alteração. O que você observará é que algumas expressões condicionais que antes exigiam conversões ou que não compilaram agora só funcionam.
 
 A partir do C# 9,0, você pode adicionar o `static` modificador a expressões lambda ou a métodos anônimos. As expressões lambda estáticas são análogas às `static` funções locais: uma função lambda ou anônima estática não pode capturar variáveis locais ou estado de instância. O `static` modificador impede a captura acidental de outras variáveis.
 
 Os tipos de retorno covariantes fornecem flexibilidade para os tipos de retorno de funções substituídas. Uma função virtual substituída pode retornar um tipo derivado do tipo de retorno declarado no método de classe base. Isso pode ser útil para registros e para outros tipos que dão suporte a métodos de clonagem ou de alocador virtual.
 
-Além disso, o `foreach` loop reconhecerá e usará um método de extensão `GetEnumerator` que, de outra forma, atende ao `foreach` padrão. Essa alteração significa `foreach` ser consistente com outras construções baseadas em padrão, como o padrão assíncrono e a desconstrução baseada em padrões. Na prática, essa alteração significa que você pode adicionar `foreach` suporte a qualquer tipo. Você deve limitar seu uso ao ao enumerar um objeto faz sentido em seu design.
+Além disso, o [ `foreach` loop](../language-reference/keywords/foreach-in.md) reconhecerá e usará um método de extensão `GetEnumerator` que, de outra forma, atende ao `foreach` padrão. Essa alteração significa `foreach` ser consistente com outras construções baseadas em padrão, como o padrão assíncrono e a desconstrução baseada em padrões. Na prática, essa alteração significa que você pode adicionar `foreach` suporte a qualquer tipo. Você deve limitar seu uso ao ao enumerar um objeto faz sentido em seu design.
 
-Em seguida, você pode usar os descartes como parâmetros para expressões lambda. Essa conveniência permite que você evite nomear o argumento, e o compilador pode evitar usá-lo. Você usa o `_` para qualquer argumento.
+Em seguida, você pode usar os descartes como parâmetros para expressões lambda. Essa conveniência permite que você evite nomear o argumento, e o compilador pode evitar usá-lo. Você usa o `_` para qualquer argumento. Para obter mais informações, consulte a seção [parâmetros de entrada de uma expressão lambda](../language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression) do artigo [expressões lambda](../language-reference/operators/lambda-expressions.md) .
 
 Por fim, agora você pode aplicar atributos a funções locais. Por exemplo, você pode aplicar anotações de atributo anulável a funções locais.
 

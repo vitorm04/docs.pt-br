@@ -11,14 +11,15 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: 3095a11523eeb8ec531c7f312fca74d2a070c92f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: edac3eeaef5d0127f10a0d570ca27c8158806ff3
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401401"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866726"
 ---
 # <a name="orelse-operator-visual-basic"></a>Operador OrElse (Visual Basic)
+
 Executa uma disjunção lógica inclusiva de curto-circuito em duas expressões.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -28,6 +29,7 @@ result = expression1 OrElse expression2
 ```  
   
 ## <a name="parts"></a>Partes  
+
  `result`  
  Obrigatórios. Qualquer expressão de `Boolean` .  
   
@@ -38,6 +40,7 @@ result = expression1 OrElse expression2
  Obrigatórios. Qualquer expressão de `Boolean` .  
   
 ## <a name="remarks"></a>Comentários  
+
  Uma operação lógica é chamada de *curto-circuito* se o código compilado puder ignorar a avaliação de uma expressão, dependendo do resultado de outra expressão. Se o resultado da primeira expressão avaliada determinar o resultado final da operação, não será necessário avaliar a segunda expressão, pois ela não pode alterar o resultado final. O curto circuito pode melhorar o desempenho se a expressão ignorada for complexa ou se envolver chamadas de procedimento.  
   
  Se uma ou ambas as expressões forem avaliadas como `True` , `result` será `True` . A tabela a seguir ilustra como o `result` é determinado.  
@@ -49,13 +52,16 @@ result = expression1 OrElse expression2
 |`False`|`False`|`False`|  
   
 ## <a name="data-types"></a>Tipos de dados  
+
  O `OrElse` operador é definido somente para o [tipo de dados booliano](../data-types/boolean-data-type.md). Visual Basic converte cada operando conforme necessário `Boolean` antes de avaliar a expressão. Se você atribuir o resultado a um tipo numérico, Visual Basic o converterá de `Boolean` para esse tipo, isso `False` se tornará `0` e `True` se tornará `-1` .
 Para obter mais informações, consulte [conversões de tipo booliano](../data-types/boolean-data-type.md#type-conversions).
   
 ## <a name="overloading"></a>Sobrecarga  
+
  O [operador OR](or-operator.md) e o [operador IsTrue](istrue-operator.md) podem ser *sobrecarregados*, o que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo dessa classe ou estrutura. Sobrecarregar os `Or` operadores e `IsTrue` afeta o comportamento do `OrElse` operador. Se o seu código usa `OrElse` em uma classe ou estrutura que sobrecarrega `Or` e, certifique-se de `IsTrue` entender seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir usa o `OrElse` operador para executar a disjunção lógica em duas expressões. O resultado é um `Boolean` valor que representa se uma das duas expressões é true. Se a primeira expressão for `True` , a segunda não será avaliada.  
   
  [!code-vb[VbVbalrOperators#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#37)]  
@@ -63,6 +69,7 @@ Para obter mais informações, consulte [conversões de tipo booliano](../data-t
  O exemplo anterior produz resultados de `True` , `True` e `False` respectivamente. No cálculo de `firstCheck` , a segunda expressão não é avaliada porque a primeira já é `True` . No entanto, a segunda expressão é avaliada no cálculo de `secondCheck` .  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra uma `If` instrução... `Then` que contém duas chamadas de procedimento. Se a primeira chamada retornar `True` , o segundo procedimento não será chamado. Isso poderá produzir resultados inesperados se o segundo procedimento executar tarefas importantes que sempre devem ser executadas quando esta seção do código for executada.  
   
  [!code-vb[VbVbalrOperators#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#38)]  

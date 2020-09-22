@@ -8,14 +8,15 @@ helpviewer_keywords:
 - iterators [Visual Basic]
 - Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
-ms.openlocfilehash: cc89e6f9bc2ccb4fff9a9fe12cd190a6b2d212dc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 783785f2a078b6ad8f975846c44ee4e716a12773
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401362"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866499"
 ---
 # <a name="yield-statement-visual-basic"></a>Instrução Yield (Visual Basic)
+
 Envia o próximo elemento de uma coleção para uma `For Each...Next` instrução.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -28,9 +29,10 @@ Yield expression
   
 |Termo|Definição|  
 |---|---|  
-|`expression`|Obrigatórios. Uma expressão que é conversível implicitamente no tipo da função de iterador ou `Get` acessador que contém a `Yield` instrução.|  
+|`expression`|Necessário. Uma expressão que é conversível implicitamente no tipo da função de iterador ou `Get` acessador que contém a `Yield` instrução.|  
   
 ## <a name="remarks"></a>Comentários  
+
  A `Yield` instrução retorna um elemento de uma coleção por vez. A `Yield` instrução é incluída em uma função ou `Get` acessador de iterador, que executa iterações personalizadas em uma coleção.  
   
  Você consome uma função de iterador usando um [para cada... Próxima instrução](for-each-next-statement.md) ou uma consulta LINQ. Cada iteração do `For Each` loop chama a função Iterator. Quando uma `Yield` instrução é alcançada na função de iterador, `expression` é retornada e o local atual no código é retido. A execução será reiniciada desse local na próxima vez que a função iteradora for chamada.  
@@ -44,6 +46,7 @@ Yield expression
  Para obter mais informações sobre funções e `Get` acessadores iteradores, consulte [iteradores](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="iterator-functions-and-get-accessors"></a>Funções de iterador e get acessadores  
+
  A declaração de uma função de iterador ou `Get` acessador deve atender aos seguintes requisitos:  
   
 - Ele deve incluir um modificador de [iterador](../modifiers/iterator.md) .  
@@ -56,7 +59,8 @@ Yield expression
   
  Uma função de iterador pode ser uma função anônima. Para obter mais informações, consulte [Iteradores](../../programming-guide/concepts/iterators.md).  
   
-## <a name="exception-handling"></a>Tratamento de exceção  
+## <a name="exception-handling"></a>Tratamento de Exceção  
+
  Uma `Yield` instrução pode estar dentro de um `Try` bloco de um [try... Capturar... Instrução Finally](try-catch-finally-statement.md). Um `Try` bloco que tem uma `Yield` instrução pode ter `Catch` blocos e pode ter um `Finally` bloco.  
   
  Uma `Yield` instrução não pode estar dentro de um `Catch` bloco ou `Finally` bloco.  
@@ -64,6 +68,7 @@ Yield expression
  Se o `For Each` corpo (fora da função de iterador) gerar uma exceção, um `Catch` bloco na função de iterador não será executado, mas um `Finally` bloco na função de iterador será executado. Um `Catch` bloco dentro de uma função de iterador captura apenas as exceções que ocorrem dentro da função de iterador.  
   
 ## <a name="technical-implementation"></a>Implementação Técnica  
+
  O código a seguir retorna um `IEnumerable (Of String)` de uma função de iterador e, em seguida, itera pelos elementos do `IEnumerable (Of String)` .  
   
 ```vb  
@@ -80,6 +85,7 @@ Next
  Em cada iteração subsequente do loop `For Each`, a execução do corpo do iterador continuará de onde parou, parando novamente quando atingir uma instrução `Yield`. O `For Each` loop é concluído quando o final da função de iterador ou `Return` uma `Exit Function` instrução or é atingido.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir tem uma `Yield` instrução que está dentro de um [para... Próximo](for-next-statement.md) loop. Cada iteração do corpo [de cada](for-each-next-statement.md) instrução no `Main` cria uma chamada para a `Power` função de iterador. Cada chamada à função iteradora prossegue para a próxima execução da instrução `Yield` que ocorre durante a próxima iteração do loop `For…Next`.  
   
  O tipo de retorno do método iterador é <xref:System.Collections.Generic.IEnumerable%601> , um tipo de interface do iterador. Quando o método iterador é chamado, ele retorna um objeto enumerável que contém as potências de um número.  
@@ -87,6 +93,7 @@ Next
  [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir demonstra um acessador `Get` que é um iterador. A declaração de propriedade inclui um `Iterator` modificador.  
   
  [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  
