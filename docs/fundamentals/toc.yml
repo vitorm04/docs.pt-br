@@ -55,8 +55,10 @@ items:
         href: ../standard/components.md
       - name: Bibliotecas de classes do .NET
         href: ../standard/class-libraries.md
-      - name: Visão geral do .NET Core
+      - name: Introdução ao .NET Core
         href: ../core/introduction.md
+      - name: Visão geral do .NET Core
+        href: ../core/about.md
       - name: Visão geral do .NET Standard
         href: ../standard/net-standard.md
       - name: Glossário do .NET
@@ -432,8 +434,12 @@ items:
         href: ../core/deploying/runtime-patch-selection.md
       - name: Implantação de arquivo único e executável
         href: ../core/deploying/single-file.md
-      - name: Cortar implantações e executáveis autossuficientes
-        href: ../core/deploying/trim-self-contained.md
+      - name: Cortar implantações autossuficientes
+        items:
+          - name: Visão geral e instruções
+            href: ../core/deploying/trim-self-contained.md
+          - name: Opções
+            href: ../core/deploying/trimming-options.md
       - name: Repositório de pacotes de runtime
         href: ../core/deploying/runtime-store.md
       - name: Catálogo de RID (Identificador de Runtime)
