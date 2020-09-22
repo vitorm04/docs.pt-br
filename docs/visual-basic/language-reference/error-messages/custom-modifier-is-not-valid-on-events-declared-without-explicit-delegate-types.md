@@ -7,41 +7,43 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: 0c5a4188fedf9685afdd1cde4c1de93a0b43b919
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 88cdeccd7a3411b57a77116bde64d0a2cf8e537d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409771"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874536"
 ---
-# <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a><span data-ttu-id="e5eb2-102">O modificador 'Custom' não é válido em eventos declarados sem tipos delegados explícitos</span><span class="sxs-lookup"><span data-stu-id="e5eb2-102">'Custom' modifier is not valid on events declared without explicit delegate types</span></span>
-<span data-ttu-id="e5eb2-103">Ao contrário de um evento não personalizado, uma `Custom Event` declaração requer uma `As` cláusula após o nome do evento que especifica explicitamente o tipo delegado para o evento.</span><span class="sxs-lookup"><span data-stu-id="e5eb2-103">Unlike a non-custom event, a `Custom Event` declaration requires an `As` clause following the event name that explicitly specifies the delegate type for the event.</span></span>  
+# <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a><span data-ttu-id="d7dd2-102">O modificador 'Custom' não é válido em eventos declarados sem tipos delegados explícitos</span><span class="sxs-lookup"><span data-stu-id="d7dd2-102">'Custom' modifier is not valid on events declared without explicit delegate types</span></span>
+
+<span data-ttu-id="d7dd2-103">Ao contrário de um evento não personalizado, uma `Custom Event` declaração requer uma `As` cláusula após o nome do evento que especifica explicitamente o tipo delegado para o evento.</span><span class="sxs-lookup"><span data-stu-id="d7dd2-103">Unlike a non-custom event, a `Custom Event` declaration requires an `As` clause following the event name that explicitly specifies the delegate type for the event.</span></span>  
   
- <span data-ttu-id="e5eb2-104">Eventos não personalizados podem ser definidos com uma `As` cláusula e um tipo de delegado explícito, ou com uma lista de parâmetros imediatamente após o nome do evento.</span><span class="sxs-lookup"><span data-stu-id="e5eb2-104">Non-custom events can be defined either with an `As` clause and an explicit delegate type, or with a parameter list immediately following the event name.</span></span>  
+ <span data-ttu-id="d7dd2-104">Eventos não personalizados podem ser definidos com uma `As` cláusula e um tipo de delegado explícito, ou com uma lista de parâmetros imediatamente após o nome do evento.</span><span class="sxs-lookup"><span data-stu-id="d7dd2-104">Non-custom events can be defined either with an `As` clause and an explicit delegate type, or with a parameter list immediately following the event name.</span></span>  
   
- <span data-ttu-id="e5eb2-105">**ID do erro:** BC31122</span><span class="sxs-lookup"><span data-stu-id="e5eb2-105">**Error ID:** BC31122</span></span>  
+ <span data-ttu-id="d7dd2-105">**ID do erro:** BC31122</span><span class="sxs-lookup"><span data-stu-id="d7dd2-105">**Error ID:** BC31122</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="e5eb2-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="e5eb2-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d7dd2-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="d7dd2-106">To correct this error</span></span>  
   
-1. <span data-ttu-id="e5eb2-107">Defina um delegado com a mesma lista de parâmetros que o evento personalizado.</span><span class="sxs-lookup"><span data-stu-id="e5eb2-107">Define a delegate with the same parameter list as the custom event.</span></span>  
+1. <span data-ttu-id="d7dd2-107">Defina um delegado com a mesma lista de parâmetros que o evento personalizado.</span><span class="sxs-lookup"><span data-stu-id="d7dd2-107">Define a delegate with the same parameter list as the custom event.</span></span>  
   
-     <span data-ttu-id="e5eb2-108">Por exemplo, se o `Custom Event` foi definido por `Custom Event Test(ByVal sender As Object, ByVal i As Integer)` , o delegado correspondente seria o seguinte.</span><span class="sxs-lookup"><span data-stu-id="e5eb2-108">For example, if the `Custom Event` was defined by `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, then the corresponding delegate would be the following.</span></span>  
+     <span data-ttu-id="d7dd2-108">Por exemplo, se o `Custom Event` foi definido por `Custom Event Test(ByVal sender As Object, ByVal i As Integer)` , o delegado correspondente seria o seguinte.</span><span class="sxs-lookup"><span data-stu-id="d7dd2-108">For example, if the `Custom Event` was defined by `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, then the corresponding delegate would be the following.</span></span>  
   
      [!code-vb[VbVbalrEventError#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#18)]  
   
-2. <span data-ttu-id="e5eb2-109">Substitua a lista de parâmetros do evento personalizado por uma `As` cláusula especificando o tipo delegado.</span><span class="sxs-lookup"><span data-stu-id="e5eb2-109">Replace the parameter list of the custom event with an `As` clause specifying the delegate type.</span></span>  
+2. <span data-ttu-id="d7dd2-109">Substitua a lista de parâmetros do evento personalizado por uma `As` cláusula especificando o tipo delegado.</span><span class="sxs-lookup"><span data-stu-id="d7dd2-109">Replace the parameter list of the custom event with an `As` clause specifying the delegate type.</span></span>  
   
-     <span data-ttu-id="e5eb2-110">Continuando com o exemplo, a `Custom Event` declaração seria reescrita da seguinte maneira.</span><span class="sxs-lookup"><span data-stu-id="e5eb2-110">Continuing with the example, `Custom Event` declaration would be rewritten as follows.</span></span>  
+     <span data-ttu-id="d7dd2-110">Continuando com o exemplo, a `Custom Event` declaração seria reescrita da seguinte maneira.</span><span class="sxs-lookup"><span data-stu-id="d7dd2-110">Continuing with the example, `Custom Event` declaration would be rewritten as follows.</span></span>  
   
      [!code-vb[VbVbalrEventError#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#19)]  
   
-## <a name="example"></a><span data-ttu-id="e5eb2-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e5eb2-111">Example</span></span>  
- <span data-ttu-id="e5eb2-112">Este exemplo declara um `Custom Event` e especifica a cláusula necessária `As` com um tipo delegate.</span><span class="sxs-lookup"><span data-stu-id="e5eb2-112">This example declares a `Custom Event` and specifies the required `As` clause with a delegate type.</span></span>  
+## <a name="example"></a><span data-ttu-id="d7dd2-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d7dd2-111">Example</span></span>  
+
+ <span data-ttu-id="d7dd2-112">Este exemplo declara um `Custom Event` e especifica a cláusula necessária `As` com um tipo delegate.</span><span class="sxs-lookup"><span data-stu-id="d7dd2-112">This example declares a `Custom Event` and specifies the required `As` clause with a delegate type.</span></span>  
   
  [!code-vb[VbVbalrEventError#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="e5eb2-113">Confira também</span><span class="sxs-lookup"><span data-stu-id="e5eb2-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d7dd2-113">Confira também</span><span class="sxs-lookup"><span data-stu-id="d7dd2-113">See also</span></span>
 
-- [<span data-ttu-id="e5eb2-114">Instrução Event</span><span class="sxs-lookup"><span data-stu-id="e5eb2-114">Event Statement</span></span>](../statements/event-statement.md)
-- [<span data-ttu-id="e5eb2-115">Instrução Delegate</span><span class="sxs-lookup"><span data-stu-id="e5eb2-115">Delegate Statement</span></span>](../statements/delegate-statement.md)
-- [<span data-ttu-id="e5eb2-116">Eventos</span><span class="sxs-lookup"><span data-stu-id="e5eb2-116">Events</span></span>](../../programming-guide/language-features/events/index.md)
+- [<span data-ttu-id="d7dd2-114">Instrução Event</span><span class="sxs-lookup"><span data-stu-id="d7dd2-114">Event Statement</span></span>](../statements/event-statement.md)
+- [<span data-ttu-id="d7dd2-115">Instrução Delegate</span><span class="sxs-lookup"><span data-stu-id="d7dd2-115">Delegate Statement</span></span>](../statements/delegate-statement.md)
+- [<span data-ttu-id="d7dd2-116">Eventos</span><span class="sxs-lookup"><span data-stu-id="d7dd2-116">Events</span></span>](../../programming-guide/language-features/events/index.md)
