@@ -1,7 +1,7 @@
 ---
 title: Expressões lambda-referência C#
 description: Saiba mais sobre expressões lambda. Há lambdas de expressão que têm uma expressão como seu corpo, ou lambdas de instrução que têm um bloco de instrução como seu corpo.
-ms.date: 07/29/2019
+ms.date: 09/22/2020
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 7f80c1a5d9136609935b25b5cce3792e80b9ac94
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: afabca0b4ba4d5f7c6f4a7ba8aa97301456b0941
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536438"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871717"
 ---
 # <a name="lambda-expressions-c-reference"></a>Expressões lambda (referência C#)
 
@@ -50,33 +50,17 @@ Quando você usa a sintaxe baseada em método para chamar o método <xref:System
   
 ## <a name="expression-lambdas"></a>Lambdas de expressão
 
-Uma expressão lambda com uma expressão no lado direito do operador `=>` é chamada de *lambda de expressão*. Os lambdas de expressão são usados amplamente na construção de [árvores de expressão](../../programming-guide/concepts/expression-trees/index.md). Uma expressão lambda retorna o resultado da expressão e tem o seguinte formato básico:
+Uma expressão lambda com uma expressão no lado direito do operador `=>` é chamada de *lambda de expressão*. Uma expressão lambda retorna o resultado da expressão e tem o seguinte formato básico:
 
 ```csharp
 (input-parameters) => expression
 ```
 
-Os parênteses serão opcionais somente se o lambda tiver um parâmetro de entrada; caso contrário, eles serão obrigatórios.
-
-Especifique parâmetros de entrada zero com parênteses vazios:  
-
-[!code-csharp[zero parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ZeroParameters)]
-
-Dois ou mais parâmetros de entrada são separados por vírgulas e envolvidos por parênteses:
-
-[!code-csharp[two parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#TwoParameters)]
-
-Às vezes, é difícil ou impossível para o compilador inferir os tipos de entrada. Você pode especificar os tipos de maneira explícita conforme mostrado neste exemplo:
-
-[!code-csharp[explicitly typed parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ExplicitlyTypedParameters)]
-
-Os tipos de parâmetro de entrada devem ser todos explícitos ou implícitos; caso contrário, ocorrerá o erro [CS0748](../../misc/cs0748.md) de compilador.
-
-O corpo de um lambda de expressão pode consistir em uma chamada de método. No entanto, se você estiver criando árvores de expressão que serão avaliadas fora contexto do .NET Common Language Runtime, como no SQL Server, você não deverá usar chamadas de método em lambdas de expressão. Os métodos não terão significado fora do contexto do .NET Common Language Runtime.
+O corpo de um lambda de expressão pode consistir em uma chamada de método. No entanto, se você estiver criando [árvores de expressão](../../programming-guide/concepts/expression-trees/index.md) que são avaliadas fora do contexto do Common Language Runtime do .net, como no SQL Server, você não deve usar chamadas de método em expressões lambda. Os métodos não terão significado fora do contexto do .NET Common Language Runtime.
 
 ## <a name="statement-lambdas"></a>Lambdas de instrução
 
-Um lambda de instrução lembra um lambda de expressão, exceto que as instruções estão incluídas entre chaves:
+Uma instrução lambda é semelhante a uma expressão lambda, exceto que suas instruções são colocadas entre chaves:
 
 ```csharp  
 (input-parameters) => { <sequence-of-statements> }
@@ -84,10 +68,39 @@ Um lambda de instrução lembra um lambda de expressão, exceto que as instruç�
 
 O corpo de uma instrução lambda pode consistir de qualquer número de instruções; no entanto, na prática, normalmente não há mais de duas ou três.
 
-[!code-csharp-interactive[statement lambda](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#StatementLambda)]
+:::code interactive="try-dotnet" source="snippets/lambda-expressions/ExpressionAndStatementLambdas.cs" id="SnippetStatementLambda":::
 
-Os lambdas de instrução não podem ser usados para criar árvores de expressão.
-  
+Você não pode usar lambdas de instrução para criar árvores de expressão.
+
+## <a name="input-parameters-of-a-lambda-expression"></a>Parâmetros de entrada de uma expressão lambda
+
+Você coloca os parâmetros de entrada de uma expressão lambda entre parênteses. Especifique parâmetros de entrada zero com parênteses vazios:  
+
+[!code-csharp[zero parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ZeroParameters)]
+
+Se uma expressão lambda tiver apenas um parâmetro de entrada, os parênteses serão opcionais:
+
+[!code-csharp[one parameter](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#OneParameter)]
+
+Dois ou mais parâmetros de entrada são separados por vírgulas:
+
+[!code-csharp[two parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#TwoParameters)]
+
+Às vezes, o compilador não pode inferir os tipos de parâmetros de entrada. Você pode especificar os tipos de maneira explícita conforme mostrado neste exemplo:
+
+[!code-csharp[explicitly typed parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ExplicitlyTypedParameters)]
+
+Os tipos de parâmetro de entrada devem ser todos explícitos ou implícitos; caso contrário, ocorrerá o erro [CS0748](../../misc/cs0748.md) de compilador.
+
+A partir do C# 9,0, você pode usar os [Descartes](../../discards.md) para especificar dois ou mais parâmetros de entrada de uma expressão lambda que não são usados na expressão:
+
+:::code language="csharp" source="snippets/lambda-expressions/ExpressionAndStatementLambdas.cs" id="SnippetDiscards":::
+
+Os parâmetros de descarte lambda podem ser úteis quando você usa uma expressão lambda para [fornecer um manipulador de eventos](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+
+> [!NOTE]
+> Para compatibilidade com versões anteriores, se apenas um único parâmetro de entrada for nomeado `_` , em seguida, dentro de uma expressão lambda, `_` será tratado como o nome desse parâmetro.
+
 ## <a name="async-lambdas"></a>Lambdas assíncronos
 
 Você pode facilmente criar expressões e instruções lambda que incorporem processamento assíncrono, ao usar as palavras-chaves [async](../keywords/async.md) e [await](await.md). Por exemplo, o exemplo do Windows Forms a seguir contém um manipulador de eventos que chama e espera um método assíncrono `ExampleMethodAsync`.
@@ -222,10 +235,8 @@ As seguintes regras se aplicam ao escopo variável em expressões lambda:
 
 Para obter mais informações, confira a seção [Expressões de função anônima](~/_csharplang/spec/expressions.md#anonymous-function-expressions) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="featured-book-chapter"></a>Capítulo do livro em destaque
+Para obter mais informações sobre os parâmetros de descarte de lambda, consulte a [Nota de proposta de recurso](~/_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md)
 
-[Expressões lambda, eventos e delegados](/previous-versions/visualstudio/visual-studio-2008/ff518994(v=orm.10)) em [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](/previous-versions/visualstudio/visual-studio-2008/ff518995(v=orm.10))  
-  
 ## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)

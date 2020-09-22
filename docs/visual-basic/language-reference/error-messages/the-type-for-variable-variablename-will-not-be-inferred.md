@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: 98aeb5699fdd5e5e538a205acd37436019c3fc03
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1ad7b9d0a610842dd6c50ee198f5bb5fa3eb68cf
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363040"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870484"
 ---
 # <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>O tipo da variável '\<variablename>' não será inferido porque está associado a um campo em um escopo delimitador
 
@@ -64,6 +64,7 @@ Por padrão, esta mensagem é um aviso. Para obter informações sobre como ocul
   ```
 
 ## <a name="example"></a>Exemplo
+
  O código a seguir mostra o exemplo anterior com a primeira correção em vigor.
 
 ```vb

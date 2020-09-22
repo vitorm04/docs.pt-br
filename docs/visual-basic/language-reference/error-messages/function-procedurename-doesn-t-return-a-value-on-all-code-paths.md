@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-ms.openlocfilehash: edb2195f4e83c2315aa929936aff8af88ca8556c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5295775b2541219e611e167e304ca8ef99cf6bd8
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374129"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874133"
 ---
 # <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>A função '\<procedurename>' não retorna um valor em todos os caminhos de código
+
 A função ' \<procedurename> ' não retorna um valor em todos os caminhos de código. Você está perdendo uma instrução ' Return '?  
   
  Um `Function` procedimento tem pelo menos um caminho possível por meio de seu código que não retorna um valor.  

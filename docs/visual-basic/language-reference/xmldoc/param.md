@@ -5,14 +5,15 @@ helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: d325d5f9fbfd132630cf280653be214a267a7a80
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 19300a928a59c7259f81b282bd28d9bdd447d76b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400054"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872631"
 ---
 # <a name="param-visual-basic"></a>\<param> (Visual Basic)
+
 Define um nome de parâmetro e uma descrição.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -22,6 +23,7 @@ Define um nome de parâmetro e uma descrição.
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `name`  
  O nome do parâmetro de um método. Coloque o nome entre aspas duplas (" ").  
   
@@ -29,6 +31,7 @@ Define um nome de parâmetro e uma descrição.
  Uma descrição do parâmetro.  
   
 ## <a name="remarks"></a>Comentários  
+
  A `<param>` marca deve ser usada no comentário para uma declaração de método para descrever um dos parâmetros para o método.  
   
  O texto da `<param>` marca aparecerá nos seguintes locais:  
@@ -40,6 +43,7 @@ Define um nome de parâmetro e uma descrição.
  Compile com [-Doc](../../reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
+
  Este exemplo usa a `<param>` marca para descrever o `id` parâmetro.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: 08f7cd9dd95a10cad0df6539ba43122495347bae
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9f200ea44e7505c407c7df56e596435024394875
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397357"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873874"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>As expressões lambda não são válidas na primeira expressão de uma instrução 'Select Case'
+
 Você não pode usar uma expressão lambda para a expressão de teste em uma `Select Case` instrução. As definições de expressão lambda retornam funções e a expressão de teste de uma `Select Case` instrução deve ser um tipo de dados elementar.  
   
  O código a seguir causa esse erro:  

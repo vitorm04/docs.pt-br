@@ -10,14 +10,15 @@ helpviewer_keywords:
 - multiplication operator [Visual Basic], syntax
 - math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
-ms.openlocfilehash: f1a7653fb3006ab3c9736ec168a8c5ea028f4763
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7038fef4258d190b726a851b26f2a2840ff3c0ea
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409304"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873361"
 ---
 # <a name="-operator-visual-basic"></a>Operador * (Visual Basic)
+
 Multiplica dois números.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,13 +34,16 @@ number1 * number2
 |`number1`|Obrigatórios. Qualquer expressão numérica.|  
 |`number2`|Obrigatórios. Qualquer expressão numérica.|  
   
-## <a name="result"></a>Result  
+## <a name="result"></a>Resultado  
+
  O resultado é o produto do `number1` e do `number2` .  
   
 ## <a name="supported-types"></a>Tipos com suporte  
+
  Todos os tipos numéricos, incluindo os tipos de ponto flutuante e não assinados e `Decimal` .  
   
 ## <a name="remarks"></a>Comentários  
+
  O tipo de dados do resultado depende dos tipos dos operandos. A tabela a seguir mostra como o tipo de dados do resultado é determinado.  
   
 |Tipos de dados do operando|Tipo de dados de resultado|  
@@ -52,9 +56,11 @@ number1 * number2
  Se uma expressão for avaliada como [Nothing](../nothing.md), ela será tratada como zero.  
   
 ## <a name="overloading"></a>Sobrecarga  
+
  O `*` operador pode ser *sobrecarregado*, o que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo dessa classe ou estrutura. Se o seu código usar esse operador em uma classe ou estrutura desse tipo, certifique-se de entender seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemplo  
+
  Este exemplo usa o `*` operador para multiplicar dois números. O resultado é o produto dos dois operandos.  
   
  [!code-vb[VbVbalrOperators#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#4)]  

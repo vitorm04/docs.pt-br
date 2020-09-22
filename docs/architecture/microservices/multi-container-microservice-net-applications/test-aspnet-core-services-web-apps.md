@@ -2,12 +2,12 @@
 title: Testar serviços e aplicativos Web do ASP.NET Core
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Explorar uma arquitetura para testar serviços e aplicativos Web do ASP.NET Core em contêineres.
 ms.date: 08/07/2020
-ms.openlocfilehash: a27b3b8d392c5e1a7d1961307e6de95659cd823e
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: f76f502adf8321c9015cc6cfd0e12214a7576b5c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024596"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872455"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testar serviços e aplicativos Web do ASP.NET Core
 
@@ -140,7 +140,7 @@ Os testes do aplicativo (eShopOnContainers) de referência foram recentemente re
 
 3. **Testes funcionais/de integração do aplicativo**, que se concentram na integração de microserviços, com casos de teste que exercem vários microserviços. Esses testes estão localizados no projeto **Application.FunctionalTests**.
 
-Os testes de unidade e de integração por microsserviço estão contidos em uma pasta de teste em cada microsserviço e o testes de carga e de aplicativo estão contidos na pasta teste da pasta da solução, conforme mostrado na Figura 6-25.
+Enquanto os testes de unidade e de integração são organizados em uma pasta de teste dentro do projeto de microserviço, os testes de carga e de aplicativo são gerenciados separadamente na pasta raiz, como mostra a Figura 6-25.
 
 ![Captura de tela do VS apontando alguns dos projetos de teste na solução.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
 

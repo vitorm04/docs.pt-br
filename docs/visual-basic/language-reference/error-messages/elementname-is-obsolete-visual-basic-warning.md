@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
-ms.openlocfilehash: 7914bc859966e17f3da41c9a13a01573b31baf91
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: faad25c08a012674e9d5ba569025bead8ffdec90
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409667"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874434"
 ---
 # <a name="elementname-is-obsolete-visual-basic-warning"></a>'\<elementname>' está obsoleto (aviso do Visual Basic)
+
 Uma instrução tenta acessar um elemento de programação que foi marcado com o <xref:System.ObsoleteAttribute> atributo e a diretiva para tratá-lo como um aviso.  
   
  Você pode marcar qualquer elemento de programação como não sendo mais usado aplicando <xref:System.ObsoleteAttribute> -se a ele. Se você fizer isso, poderá definir a propriedade do atributo <xref:System.ObsoleteAttribute.IsError%2A> como `True` ou `False` . Se você defini-lo como `True` , o compilador tratará uma tentativa de usar o elemento como um erro. Se você defini-lo como `False` , ou deixá-lo como padrão `False` , o compilador emitirá um aviso se houver uma tentativa de usar o elemento.  

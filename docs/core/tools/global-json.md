@@ -4,12 +4,12 @@ description: Saiba como usar o arquivo global.json para definir a versão do SDK
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: a9558090b1ef48f376334fbc826f6265a58908da
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 7e372c75812e79f85bb8965895d5fef694d9af1a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062789"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872387"
 ---
 # <a name="globaljson-overview"></a>Visão geral do global.json
 
@@ -31,7 +31,7 @@ Digite: `object`
 
 Especifica as informações sobre o SDK do .NET Core a ser selecionado.
 
-#### <a name="version"></a>version
+#### <a name="version"></a>Versão
 
 - Digite: `string`
 
@@ -67,10 +67,10 @@ A política de roll-forward a ser usada ao selecionar uma versão do SDK, seja c
 
 Para entender as políticas disponíveis e seu comportamento, considere as seguintes definições para uma versão do SDK no formato `x.y.znn` :
 
-- `x`é a versão principal.
-- `y`é a versão secundária.
-- `z`é a faixa de recursos.
-- `nn`é a versão do patch.
+- `x` é a versão principal.
+- `y` é a versão secundária.
+- `z` é a faixa de recursos.
+- `nn` é a versão do patch.
 
 A tabela a seguir mostra os valores possíveis para a `rollForward` chave:
 
@@ -81,9 +81,9 @@ A tabela a seguir mostra os valores possíveis para a `rollForward` chave:
 | `minor`       | Usa o nível de patch mais recente para a faixa primária, secundária e de recurso especificada. <br> Se não for encontrado, roll forward para a próxima faixa de recursos mais alta na mesma versão principal/secundária e usa o nível de patch mais recente para essa faixa de recurso. <br> Se não for encontrado, roll forward para a próxima faixa secundária e de recurso na mesma principal e usa o nível de patch mais recente para essa faixa de recurso. <br> Se não for encontrado, falhará. |
 | `major`       | Usa o nível de patch mais recente para a faixa primária, secundária e de recurso especificada. <br> Se não for encontrado, roll forward para a próxima faixa de recursos mais alta na mesma versão principal/secundária e usa o nível de patch mais recente para essa faixa de recurso. <br> Se não for encontrado, roll forward para a próxima faixa secundária e de recurso na mesma principal e usa o nível de patch mais recente para essa faixa de recurso. <br> Se não for encontrado, rola para a próxima faixa mais alta, secundária e de recurso e usa o nível de patch mais recente para essa faixa de recurso. <br> Se não for encontrado, falhará. |
 | `latestPatch` | Usa o nível de patch mais recente instalado que corresponde à faixa principal, secundária e de recursos solicitada com um nível de patch e maior ou igual ao valor especificado. <br> Se não for encontrado, falhará. |
-| `latestFeature` | Usa a faixa de recursos e o nível de patch mais alto instalados que coincidem com o principal e o secundário solicitados com uma faixa de recursos maior ou igual ao valor especificado. <br> Se não for encontrado, falhará. |
-| `latestMinor` | Usa a maior versão instalada, a faixa de recursos e o nível de patch que corresponde à principal solicitada com um secundário que é maior ou igual ao valor especificado. <br> Se não for encontrado, falhará. |
-| `latestMajor` | Usa o SDK do .NET Core mais alto instalado com uma grande maior ou igual ao valor especificado. <br> Se não for encontrado, falha. |
+| `latestFeature` | Usa a faixa de recursos e o nível de patch mais alto instalados que corresponde ao principal e secundário solicitados com uma faixa de recursos e um nível de patch que é maior ou igual ao valor especificado. <br> Se não for encontrado, falhará. |
+| `latestMinor` | Usa a maior versão instalada, a faixa de recursos e o nível de patch que corresponde à principal solicitada com um nível secundário, de faixa de recursos e de patch que é maior ou igual ao valor especificado. <br> Se não for encontrado, falhará. |
+| `latestMajor` | Usa o SDK do .NET Core mais alto instalado com uma versão maior ou igual à do valor especificado. <br> Se não for encontrado, falha. |
 | `disable`     | Não rola para frente. Correspondência exata necessária. |
 
 ### <a name="msbuild-sdks"></a>MSBuild-SDKs
@@ -172,10 +172,10 @@ A partir do .NET Core 3,0, as seguintes regras se aplicam ao determinar qual ver
 - Se nenhum *global.jsno* arquivo for encontrado ou *global.jsem* não especificar uma versão do SDK nem um `allowPrerelease` valor, a versão mais recente do SDK será usada (equivalente a definir `rollForward` como `latestMajor` ). Se as versões de pré-lançamento do SDK são consideradas depende de como o `dotnet` está sendo invocado.
   - Se você **não** estiver no Visual Studio, as versões de pré-lançamento serão consideradas.
   - Se você estiver no Visual Studio, ele usará o status de pré-lançamento solicitado. Ou seja, se você estiver usando uma versão prévia do Visual Studio ou se definir a opção **usar visualizações da SDK do .NET Core** (em **ferramentas**  >  **Opções**  >  recursos de visualização do**ambiente**  >  **Preview Features**), as versões de pré-lançamento serão consideradas; caso contrário, apenas as versões de lançamento serão consideradas.
-- Se um *global.jsno* arquivo for encontrado e não especificar uma versão do SDK, mas especificar um `allowPrerelease` valor, a versão mais recente do SDK instalada será usada (equivalente a definir `rollForward` como `latestMajor` ). Se a versão mais recente do SDK pode ser Release ou pré-lançamento depende do valor de `allowPrerelease` . `true`indica que as versões de pré-lançamento são consideradas; `false`indica que apenas versões de lançamento são consideradas.
+- Se um *global.jsno* arquivo for encontrado e não especificar uma versão do SDK, mas especificar um `allowPrerelease` valor, a versão mais recente do SDK instalada será usada (equivalente a definir `rollForward` como `latestMajor` ). Se a versão mais recente do SDK pode ser Release ou pré-lançamento depende do valor de `allowPrerelease` . `true` indica que as versões de pré-lançamento são consideradas; `false` indica que apenas versões de lançamento são consideradas.
 - Se um *global.jsno* arquivo for encontrado e ele especificar uma versão do SDK:
 
-  - Se nenhum `rollFoward` valor for definido, ele será usado `latestPatch` como a `rollForward` política padrão. Caso contrário, verifique cada valor e seu comportamento na seção [avanço](#rollforward) .
+  - Se nenhum `rollForward` valor for definido, ele será usado `latestPatch` como a `rollForward` política padrão. Caso contrário, verifique cada valor e seu comportamento na seção [avanço](#rollforward) .
   - Se as versões de pré-lançamento são consideradas e qual é o comportamento padrão quando `allowPrerelease` não está definido, é descrito na seção [allowPrerelease](#allowprerelease) .
 
 ## <a name="net-core-2x"></a>[.NET Core 2.x](#tab/netcore2x)
@@ -214,6 +214,6 @@ As versões do SDK do .NET Core `2.1.100` até `2.1.201` foram lançadas durante
 
   A partir do SDK do .NET Core 2.1 (versão 2.1.300), o comando `dotnet ef` vem incluído no SDK. Para compilar seu projeto, instale o SDK do .NET Core 2,0 (versão 2.1.201) ou anterior em seu computador e defina a versão do SDK desejada usando o *global.jsno* arquivo. Para saber mais sobre o comando `dotnet ef`, confira [Ferramentas da linha de comando do .NET EF Core](/ef/core/miscellaneous/cli/dotnet).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Como os SDKs de projeto são resolvidos](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

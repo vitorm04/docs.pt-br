@@ -2,13 +2,13 @@
 title: Descartes – Guia do C#
 description: Descreve o suporte do C# a descartes, que são variáveis descartáveis não atribuídas, além das maneiras em que descartes podem ser usados.
 ms.technology: csharp-fundamentals
-ms.date: 07/21/2017
-ms.openlocfilehash: a76e7fc13f92ec0de87153bb35eb3924bb317616
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 09/22/2020
+ms.openlocfilehash: 4de48aebaeb896b198b2e9f2431c6a38ba11469e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73100634"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869325"
 ---
 # <a name="discards---c-guide"></a>Descartes – Guia do C#
 
@@ -20,12 +20,14 @@ Você indica que uma variável é um descarte atribuindo a ela o sublinhado (`_`
 (_, _, area) = city.GetCityInformation(cityName);
 ```
 
-No C# 7.0, há suporte para descartes em atribuições nos seguintes contextos:
+No C# 7,0 e posterior, os descartes têm suporte em atribuições nos seguintes contextos:
 
-- Tuple e [desconstrução de objetos.](deconstruct.md)
+- Desconstrução de [deconstruction](deconstruct.md)tupla e objeto.
 - Correspondência de padrões com [is](language-reference/keywords/is.md) e [switch](language-reference/keywords/switch.md).
 - Chamadas para métodos com parâmetros `out`.
 - Um `_` autônomo quando nenhum `_` está no escopo.
+
+A partir do C# 9,0, você pode usar os descartes para especificar parâmetros de entrada não utilizados de uma expressão lambda. Para obter mais informações, consulte a seção [parâmetros de entrada de uma expressão lambda](language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression) do artigo [expressões lambda](language-reference/operators/lambda-expressions.md) .
 
 Quando `_` é um descarte válido, tentar recuperar seu valor ou usá-lo em uma operação de atribuição gera o erro do compilador CS0301, "O nome '\_' não existe no contexto atual". Isso ocorre porque não há um valor atribuído a `_` e pode não haver nem mesmo um local de armazenamento atribuído a ela. Se ela fosse uma variável real, você não poderia descartar mais de um valor, tal como ocorreu no exemplo anterior.
 
@@ -67,20 +69,20 @@ Você pode usar um descarte autônomo para indicar qualquer variável que você 
 
 Observe que `_` também é um identificador válido. Quando usado fora de um contexto com suporte, `_` não é tratado como um descarte, mas como uma variável válida. Se um identificador chamado `_` já está no escopo, o uso de `_` como um descarte autônomo pode resultar em:
 
-- A modificação acidental do valor da variável `_` no escopo atribuindo a ela o valor do descarte pretendido. Por exemplo: 
+- A modificação acidental do valor da variável `_` no escopo atribuindo a ela o valor do descarte pretendido. Por exemplo:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
 
-- Um erro do compilador por violação de segurança de tipo. Por exemplo: 
+- Um erro do compilador por violação de segurança de tipo. Por exemplo:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
 
-- Erro do compilador CS0136, "Um local ou um parâmetro denominado '\_' não pode ser declarado neste escopo porque esse nome é usado em um escopo delimitador de local para definir um local ou parâmetro." Por exemplo: 
+- Erro do compilador CS0136, "Um local ou um parâmetro denominado '\_' não pode ser declarado neste escopo porque esse nome é usado em um escopo delimitador de local para definir um local ou parâmetro." Por exemplo:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 
 ## <a name="see-also"></a>Confira também
 
 - [Desconstruindo tuplas e outros tipos](deconstruct.md)
-- [`is`Palavra](language-reference/keywords/is.md)
-- [`switch`Palavra](language-reference/keywords/switch.md)
+- [`is` chaves](language-reference/keywords/is.md)
+- [`switch` chaves](language-reference/keywords/switch.md)

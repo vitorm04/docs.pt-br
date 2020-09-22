@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30157
 ms.assetid: 70daaee1-14f9-45b7-9f30-53794310b95e
-ms.openlocfilehash: 149acc2baac0f45fa971a11f254d694526d140d7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c39339a49c4aad4ba643facc2372333e7379ffa7
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397318"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873852"
 ---
 # <a name="leading--or--can-only-appear-inside-a-with-statement"></a>'.' ou '!' à esquerda só podem aparecer dentro de uma instrução 'With'
+
 Um período (.) ou ponto de exclamação (!) que não está dentro de um `With` bloco ocorre sem uma expressão à esquerda. O acesso de membro ( `.` ) e o acesso de membro de dicionário ( `!` ) exigem uma expressão especificando o elemento que contém o membro. Isso deve aparecer imediatamente à esquerda do acessador ou como o destino de um `With` bloco que contém o acesso de membro.  
   
  **ID do erro:** BC30157  

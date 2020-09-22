@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30830
 ms.assetid: 4734bc1d-882e-4555-b498-1f1ec0399d16
-ms.openlocfilehash: a3d243f39f3fc45ca6b1ba0d26892d4c3db56f59
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4ca1538dbde0d585b7b421d60cde4531c00e9145
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397292"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873839"
 ---
 # <a name="line-statements-are-no-longer-supported-visual-basic-compiler-error"></a>Instruções 'Line' não são mais compatíveis (erro de compilador do Visual Basic)
+
 Não há mais suporte para instruções de linha. A funcionalidade de e/s de arquivo está disponível `Microsoft.VisualBasic.FileSystem.LineInput` e a funcionalidade de gráficos está disponível como `System.Drawing.Graphics.DrawLine` .  
   
  **ID do erro:** BC30830  

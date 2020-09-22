@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: e3a9f4cf2f4105d2c449813bf0c593860df7d1f0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c05a7d9b021192d53a30e49f52abc08d9b153156
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409498"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874252"
 ---
 # <a name="expression-recursively-calls-the-containing-property-propertyname"></a>A expressão chama recursivamente a propriedade que contém '\<propertyname>'
+
 Uma instrução no `Set` procedimento de uma definição de propriedade armazena um valor no nome da propriedade.  
   
  A abordagem recomendada para manter o valor de uma propriedade é definir uma `Private` variável no contêiner da propriedade e usá-la nos `Get` `Set` procedimentos e. O `Set` procedimento deve armazenar o valor de entrada nessa `Private` variável.  

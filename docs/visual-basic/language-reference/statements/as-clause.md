@@ -8,17 +8,19 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: 4afc2800a98ceeda8eeb3a1fada0b82c2e8bcedb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2f0b217fb299a9c7c05f211c17d10efd80168ab5
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408452"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873319"
 ---
 # <a name="as-clause-visual-basic"></a>Cláusula As (Visual Basic)
+
 Apresenta uma `As` cláusula, que identifica um tipo de dados em uma instrução de declaração ou uma lista de restrições em um parâmetro de tipo genérico.  
   
 ## <a name="remarks"></a>Comentários  
+
  A `As` palavra-chave pode ser usada nesses contextos:  
   
  [Cláusula Aggregate](../queries/aggregate-clause.md)  
@@ -62,7 +64,7 @@ Apresenta uma `As` cláusula, que identifica um tipo de dados em uma instrução
 ## <a name="see-also"></a>Confira também
 
 - [Como criar uma nova variável](../../programming-guide/language-features/variables/how-to-create-a-new-variable.md)
-- [Tipos de dados](../../programming-guide/language-features/data-types/index.md)
+- [Data Types](../../programming-guide/language-features/data-types/index.md)
 - [Declaração de Variável](../../programming-guide/language-features/variables/variable-declaration.md)
 - [Lista de Tipos](type-list.md)
 - [Tipos genéricos no Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
