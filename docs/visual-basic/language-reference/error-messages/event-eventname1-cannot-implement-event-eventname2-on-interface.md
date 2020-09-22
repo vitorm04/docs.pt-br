@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31423
 ms.assetid: 2e754b66-5836-48ff-9697-b9c0d7085f18
-ms.openlocfilehash: 32d6733580de8798a66c30d486b8439befd2af19
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b1e0728a4f865b432b142df4ded1efddb376201e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409602"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874326"
 ---
 # <a name="event-eventname1-cannot-implement-event-eventname2-on-interface-interface-because-their-delegate-types-delegate1-and-delegate2-do-not-match"></a>O evento '\<eventname1>' não pode implementar o evento '\<eventname2>' na interface '\<interface>' porque seus tipos delegados '\<delegate1>' e '\<delegate2>' não correspondem.
+
 Visual Basic não pode implementar um evento porque o tipo delegado do evento não corresponde ao tipo delegado do evento na interface. Esse erro pode ocorrer quando você define vários eventos em uma interface e, em seguida, tenta implementá-los junto com o mesmo evento. Um evento pode implementar dois ou mais eventos somente se todos os eventos implementados forem declarados usando a `As` sintaxe e especificarem o mesmo tipo de delegado.  
   
  **ID do erro:** BC31423  

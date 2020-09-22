@@ -7,14 +7,15 @@ helpviewer_keywords:
 - = assignment statements [Visual Basic]
 - assignment operators [Visual Basic]
 ms.assetid: 43b7e40c-b7af-45f6-b100-198a90f2561e
-ms.openlocfilehash: 881295f511600cd02e9bf9c9846cf876793a0d8b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 29b0083508d10758f0fbb75b3d0e8ee5f9dd2591
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371837"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874815"
 ---
 # <a name="assignment-operators-visual-basic"></a>Operadores de atribuição (Visual Basic)
+
 A seguir estão os operadores de atribuição definidos em Visual Basic.  
   
  [= Operador](assignment-operator.md)  
@@ -33,9 +34,9 @@ A seguir estão os operadores de atribuição definidos em Visual Basic.
   
  [<\<= Operador](left-shift-assignment-operator.md)  
   
- [Operador>>=](right-shift-assignment-operator.md)  
+ [ Operador>>=](right-shift-assignment-operator.md)  
   
- [Operador&=](and-assignment-operator.md)  
+ [ Operador&=](and-assignment-operator.md)  
   
 ## <a name="see-also"></a>Confira também
 

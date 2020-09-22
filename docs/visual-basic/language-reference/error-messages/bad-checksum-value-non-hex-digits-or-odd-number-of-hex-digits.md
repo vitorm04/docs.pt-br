@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: 1ae4113505ca63df9b20e6e71aa0b418da4ef924
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 612f0b273bacab541e2d634612a104eff1f4a796
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197354"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875163"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>Valor de soma de verificação incorreto, dígitos não hexadecimais ou número ímpar de dígitos hexadecimais
+
 Um valor de soma de verificação contém dígitos hexadecimais inválidos ou um número ímpar de dígitos.  
   
  Quando o ASP.NET gera um arquivo de origem do Visual Basic (extensão .vb), ele calcula uma soma de verificação e a coloca em um arquivo de origem oculto identificado por `#externalchecksum`. Um usuário também pode gerar um arquivo .vb para isso, mas é melhor deixar esse processo para uso interno.  
@@ -31,7 +32,7 @@ Um valor de soma de verificação contém dígitos hexadecimais inválidos ou um
   
 3. Se o aviso ainda persistir, ou se você não estiver usando o ASP.NET, reúna informações sobre as circunstâncias e notifique o Microsoft Product Support Services.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral do ASP.NET](/aspnet/overview)
 - [Fale conosco](/visualstudio/ide/feedback-options)

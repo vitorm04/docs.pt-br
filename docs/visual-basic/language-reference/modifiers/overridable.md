@@ -16,17 +16,19 @@ helpviewer_keywords:
 - Overridable keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-ms.openlocfilehash: dcbabde8464dd8a0ce5fad24d7d72b1e780270d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8506aba7e64f2dbd975cc275cefb7b5bb1aefda5
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392113"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875004"
 ---
 # <a name="overridable-visual-basic"></a>Substituível (Visual Basic)
+
 Especifica que uma propriedade ou procedimento pode ser substituído por uma propriedade nomeada de forma idêntica ou um procedimento em uma classe derivada.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `Overridable` modificador permite que uma propriedade ou método em uma classe seja substituído em uma classe derivada. O modificador [NotOverridable](notoverridable.md) impede que uma propriedade ou um método seja substituído em uma classe derivada.  Para obter mais informações, consulte [Noções básicas de herança](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
  Se o `Overridable` `NotOverridable` modificador ou não for especificado, a configuração padrão dependerá se a propriedade ou o método substituirá uma propriedade ou método de classe base. Se a propriedade ou o método substituir uma propriedade ou método de classe base, a configuração padrão será `Overridable` ; caso contrário, será `NotOverridable` .  
@@ -38,6 +40,7 @@ Especifica que uma propriedade ou procedimento pode ser substituído por uma pro
  Você pode usar `Overridable` somente em uma instrução de declaração de propriedade ou de procedimento.  
   
 ## <a name="combined-modifiers"></a>Modificadores combinados  
+
  Você não pode especificar `Overridable` ou `NotOverridable` para um `Private` método.  
   
  Você não pode especificar `Overridable` juntos com `MustOverride` , `NotOverridable` ou `Shared` na mesma declaração.  
@@ -45,6 +48,7 @@ Especifica que uma propriedade ou procedimento pode ser substituído por uma pro
  Como um elemento de substituição é implicitamente substituível, você não pode combinar `Overridable` com `Overrides` .  
   
 ## <a name="usage"></a>Uso  
+
  O `Overridable` modificador pode ser usado nesses contextos:  
   
  [Instrução Function](../statements/function-statement.md)  

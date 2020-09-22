@@ -4,12 +4,12 @@ description: Saiba como a API do provedor de configuração é usada para config
 author: IEvangelist
 ms.author: dapine
 ms.date: 09/16/2020
-ms.openlocfilehash: fe90ba9aee08ec9c1316335a5b3fd8dd6e90a811
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: d5333e8e52feb7d28e2149a988dc7ce53a926a50
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720753"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874747"
 ---
 # <a name="configuration-providers-in-net"></a>Provedores de configuração no .NET
 
@@ -203,8 +203,9 @@ set CustomPrefix_TransientFaultHandlingOptions__AutoRetryDelay=00:00:21
 dotnet run
 ```
 
-A configuração padrão carrega variáveis de ambiente e argumentos de linha de comando prefixados com `DOTNET_` . O `DOTNET_` prefixo é usado pelo .net para a configuração de host e aplicativo, mas não para a configuração do usuário.
-<!-- For more information on host and app configuration, see .NET Generic Host. -->
+A configuração padrão carrega variáveis de ambiente e argumentos de linha de comando prefixados com `DOTNET_` . O `DOTNET_` prefixo é usado pelo .net para a configuração de [host](generic-host.md#host-configuration) e [aplicativo](generic-host.md#app-configuration), mas não para a configuração do usuário.
+
+Para obter mais informações sobre a configuração de host e aplicativo, consulte [host genérico .net](generic-host.md).
 
 Em [Azure app serviço](https://azure.microsoft.com/services/app-service), selecione **nova configuração de aplicativo** na página **configurações > configuração** . Azure App configurações do aplicativo de serviço são:
 
@@ -313,4 +314,5 @@ No código anterior, <xref:Microsoft.Extensions.Configuration.MemoryConfiguratio
 ## <a name="see-also"></a>Confira também
 
 - [Configuração no .NET](configuration.md)
+- [Host Genérico .NET](generic-host.md)
 - [Implementar um provedor de configuração personalizado](custom-configuration-provider.md)

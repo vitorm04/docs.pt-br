@@ -3,12 +3,12 @@ title: Modelos personalizados para dotnet new
 description: Saiba mais sobre modelos personalizados para qualquer tipo de projeto ou de arquivos do .NET.
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 1d2e5ffcb0b279f1686855834c2357827a4dc7d5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 55091ef9bb9f7a2aa24f585c94aa2a47960b1829
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538089"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874722"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelos personalizados para dotnet new
 
@@ -55,7 +55,7 @@ Os arquivos gerados pelo modelo podem ser modificados com base na lógica e nas 
 
 O arquivo *template.json* é colocado em uma pasta *.template.config* no diretório raiz do modelo. O arquivo fornece informações de configuração para o mecanismo de modelo. A configuração mínima requer os membros mostrados na tabela a seguir, suficiente para criar um modelo funcional.
 
-| Membro            | Type          | Description |
+| Membro            | Type          | Descrição |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | O esquema JSON do arquivo *template.json*. Os editores que dão suporte a esquemas JSON habilitam recursos de edição de JSON quando o esquema é especificado. Por exemplo, o [Visual Studio Code](https://code.visualstudio.com/) requer que esse membro habilite o IntelliSense. Use um valor de `http://json.schemastore.org/template`. |
 | `author`          | string        | O autor do modelo. |
@@ -63,6 +63,8 @@ O arquivo *template.json* é colocado em uma pasta *.template.config* no diretó
 | `identity`        | string        | Um nome exclusivo para este modelo. |
 | `name`            | string        | O nome do modelo que os usuários devem ver. |
 | `shortName`       | string        | Um nome abreviado padrão para seleção do modelo aplicável aos ambientes em que o nome do modelo é especificado pelo usuário, não selecionado por uma GUI. Por exemplo, o nome curto é útil ao usar os modelos em um prompt de comando com comandos CLI. |
+| `sourceName`       | string        | O nome na árvore de origem a ser substituído pelo nome especificado pelo usuário. O mecanismo de modelo procurará qualquer ocorrência de `sourceName` mencionado no arquivo de configuração e o substituirá em nomes de arquivo e conteúdo do arquivo. O valor a ser substituído por pode ser fornecido usando as `-n` `--name` Opções ou ao executar um modelo. Se nenhum nome for especificado, o diretório atual será usado.|
+| `preferNameDirectory`       | booleano        | Indica se deve ser criado um diretório para o modelo se o nome for especificado, mas um diretório de saída não estiver definido (em vez de criar o conteúdo diretamente no diretório atual). O valor padrão é false.|
 
 O esquema completo do arquivo *template.json* é encontrado no [Repositório de Esquema JSON](http://json.schemastore.org/template). Para saber mais sobre o arquivo *template.json*, veja o [wiki de modelagem dotnet](https://github.com/dotnet/templating/wiki).
 

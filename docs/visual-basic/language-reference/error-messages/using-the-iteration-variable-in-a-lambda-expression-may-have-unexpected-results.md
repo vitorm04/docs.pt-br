@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: aa3e1d6281af22b301a4697b265ed3fbf23e3de4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e7975dc767ae652359c904271d6610be34e4cb80
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373908"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870242"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>O uso de uma variável de iteração em uma expressão lambda pode ter resultados inesperados
+
 O uso da variável de iteração em uma expressão lambda pode ter resultados inesperados. Em vez disso, crie uma variável local dentro do loop e atribua a ela o valor da variável de iteração.  
   
  Esse aviso aparece quando você usa uma variável de iteração de loop em uma expressão lambda que é declarada dentro do loop. Por exemplo, o exemplo a seguir faz com que o aviso apareça.  

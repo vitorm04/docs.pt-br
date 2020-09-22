@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 474a920c9cfdfba7a8157320d9c88b8677958425
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 04538be3431fb06518051db4378e986ea5711219
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406515"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875062"
 ---
 # <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>A variável '\<variablename>' oculta uma variável em bloco delimitador
+
 Uma variável colocada em um bloco tem o mesmo nome que outra variável local.  
   
  **ID do erro:** BC30616  

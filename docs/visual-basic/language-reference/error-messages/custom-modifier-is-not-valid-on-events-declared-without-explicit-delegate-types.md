@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: 0c5a4188fedf9685afdd1cde4c1de93a0b43b919
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 88cdeccd7a3411b57a77116bde64d0a2cf8e537d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409771"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874536"
 ---
 # <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>O modificador 'Custom' não é válido em eventos declarados sem tipos delegados explícitos
+
 Ao contrário de um evento não personalizado, uma `Custom Event` declaração requer uma `As` cláusula após o nome do evento que especifica explicitamente o tipo delegado para o evento.  
   
  Eventos não personalizados podem ser definidos com uma `As` cláusula e um tipo de delegado explícito, ou com uma lista de parâmetros imediatamente após o nome do evento.  
@@ -36,6 +37,7 @@ Ao contrário de um evento não personalizado, uma `Custom Event` declaração r
      [!code-vb[VbVbalrEventError#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#19)]  
   
 ## <a name="example"></a>Exemplo  
+
  Este exemplo declara um `Custom Event` e especifica a cláusula necessária `As` com um tipo delegate.  
   
  [!code-vb[VbVbalrEventError#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#2)]  

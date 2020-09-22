@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID430
 ms.assetid: d985bb7e-e48e-443e-86f2-ddb86758757c
-ms.openlocfilehash: 856c3f5ef503a7e5919e9e602532c56d9557482f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aa97ae420a0a289979fe86db373c635361dc6475
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415395"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874639"
 ---
 # <a name="class-does-not-support-automation-or-does-not-support-expected-interface"></a>A classe não dá suporte à automação ou à interface esperada
+
 A classe especificada na chamada de função `GetObject` ou `CreateObject` não expôs uma interface de programação ou você alterou um projeto de .dll para .exe, ou vice-versa.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  

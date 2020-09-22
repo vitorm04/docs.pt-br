@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: bac5f9a88df719bc64a8b0541f65e5912275866e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 971110c505800b0ceba73506f2b2702516a7a23a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409745"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874546"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>A cópia do parâmetro '\<parametername>' do valor 'ByRef' de volta para o argumento correspondente é restrita do tipo '\<typename1>' para o tipo '\<typename2>'
+
 Um procedimento é chamado com um argumento que amplia o tipo de parâmetro correspondente e a conversão do parâmetro para o argumento é restrita.  
   
  Quando você define uma classe ou estrutura, pode definir um ou mais operadores de conversão para converter essa classe ou tipo de estrutura em outros tipos. Você também pode definir operadores de conversão reverso para converter esses outros tipos de volta para o tipo de classe ou estrutura. Quando você usa seu tipo de classe ou estrutura em uma chamada de procedimento, Visual Basic pode usar esses operadores de conversão para converter o tipo de um argumento para o tipo de seu parâmetro correspondente.  

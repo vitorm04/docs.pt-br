@@ -10,14 +10,15 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: 46b93c060a12d82b34dafdf3aa4ea677df6f54cd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 13d86aad8b68391f7effe2f6637adc68d8a3b59a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404285"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872019"
 ---
 # <a name="raiseevent-statement"></a>Instrução RaiseEvent
+
 Dispara um evento declarado no nível de módulo dentro de uma classe, formulário ou documento.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -27,13 +28,15 @@ RaiseEvent eventname[( argumentlist )]
 ```  
   
 ## <a name="parts"></a>Partes  
+
  `eventname`  
- Obrigatórios. Nome do evento a ser disparado.  
+ Necessário. Nome do evento a ser disparado.  
   
  `argumentlist`  
  Opcional. Lista delimitada por vírgula de variáveis, matrizes ou expressões. O `argumentlist` argumento deve ser colocado entre parênteses. Se não houver argumentos, os parênteses deverão ser omitidos.  
   
 ## <a name="remarks"></a>Comentários  
+
  O necessário `eventname` é o nome de um evento declarado dentro do módulo. Ele segue Visual Basic convenções de nomenclatura de variáveis.  
   
  Se o evento não tiver sido declarado dentro do módulo no qual ele é gerado, ocorrerá um erro. O fragmento de código a seguir ilustra uma declaração de evento e um procedimento no qual o evento é gerado.  
@@ -51,6 +54,7 @@ RaiseEvent eventname[( argumentlist )]
 > Você pode alterar o comportamento padrão de eventos definindo um evento personalizado. Para eventos personalizados, a `RaiseEvent` instrução invoca o `RaiseEvent` acessador do evento. Para obter mais informações sobre eventos personalizados, consulte [Event Statement](event-statement.md).  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir usa eventos para contar os segundos de 10 a 0. O código ilustra vários dos métodos, propriedades e instruções relacionados ao evento, incluindo a `RaiseEvent` instrução.  
   
  A classe que gera um evento é a origem do evento, e os métodos que processam o evento são os manipuladores de eventos. Uma origem de evento pode ter vários manipuladores para os eventos que ele gera. Quando a classe gera o evento, esse evento é gerado em todas as classes que escolheram manipular eventos para essa instância do objeto.  
@@ -66,6 +70,7 @@ RaiseEvent eventname[( argumentlist )]
  [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Exemplo  
+
  Adicione o código a seguir ao código para `Form1` . Substitua quaisquer procedimentos duplicados que possam existir, como `Form_Load` ou `Button_Click` .  
   
  [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  

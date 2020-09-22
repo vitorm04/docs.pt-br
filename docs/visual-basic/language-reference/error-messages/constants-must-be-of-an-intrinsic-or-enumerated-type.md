@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30424
 ms.assetid: 2d402c2f-27ad-428b-b699-d45cd62f7196
-ms.openlocfilehash: 9e36b84252c3d8762308e95323b8e284977df8c0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a9bbf27615233f4282e481710a0234b2fa589f63
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409758"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874563"
 ---
 # <a name="constants-must-be-of-an-intrinsic-or-enumerated-type-not-a-class-structure-type-parameter-or-array-type"></a>As constantes devem ser do tipo intrínseco ou enumerado, e não classe, estrutura, parâmetro de tipo ou tipo de matriz
+
 Você tentou declarar uma constante como uma classe, estrutura ou tipo de matriz, ou como um parâmetro de tipo definido por um tipo genérico recipiente.  
   
  Constantes devem ser de um tipo intrínseco (,,,,,,,, `Boolean` `Byte` `Date` `Decimal` `Double` `Integer` `Long` `Object` `SByte` , `Short` , `Single` ,,, `String` `UInteger` `ULong` , ou `UShort` ), ou um `Enum` tipo com base em um dos tipos integrais.  
@@ -30,5 +31,5 @@ Você tentou declarar uma constante como uma classe, estrutura ou tipo de matriz
 ## <a name="see-also"></a>Confira também
 
 - [Constantes e enumerações](../constants-and-enumerations.md)
-- [Tipos de dados](../../programming-guide/language-features/data-types/index.md)
-- [Tipos de dados](../data-types/index.md)
+- [Data Types](../../programming-guide/language-features/data-types/index.md)
+- [Data Types](../data-types/index.md)

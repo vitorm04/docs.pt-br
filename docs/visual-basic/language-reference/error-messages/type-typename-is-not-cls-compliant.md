@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40041
 ms.assetid: 634132c2-5646-44aa-98c6-f773e2e63882
-ms.openlocfilehash: eacf5036ebc6fc31dfa0e8de39c4fb574c9072b3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 369516fb12b24981eaecfe467bf421dec279aa01
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84386952"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875094"
 ---
 # <a name="type-typename-is-not-cls-compliant"></a>O tipo \<typename> não é compatível com CLS
+
 Uma variável, propriedade ou retorno de função é declarada com um tipo de dados que não tem conformidade com CLS.  
   
  Para que um aplicativo seja compatível com a [independência de linguagem e com os componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), ele deve usar somente tipos em conformidade com CLS.  

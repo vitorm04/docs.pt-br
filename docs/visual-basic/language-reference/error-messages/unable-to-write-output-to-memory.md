@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31020
 ms.assetid: 23996dca-250f-4320-8211-1560e90172df
-ms.openlocfilehash: 65e63ddf15534ac83480bca3a9a01c97b629ee08
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 0312281b11def32cc795cfb9d2b9306ae5f751ae
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198171"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873501"
 ---
 # <a name="unable-to-write-output-to-memory"></a>Não foi possível gravar a saída na memória
+
 Houve um problema ao gravar a saída na memória.  
   
  **ID do erro:** BC31020  
@@ -29,6 +30,6 @@ Houve um problema ao gravar a saída na memória.
   
 4. Se o erro persistir após a reinstalação, notifique o Microsoft Product Support Services.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Fale conosco](/visualstudio/ide/feedback-options)

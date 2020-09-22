@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
-ms.openlocfilehash: 11e866d9a8da7ad1ecc5f788fc31f6ac96d32f2c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d57a9e78e6ae179d3050e5a92399ca731fa16ba7
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409823"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874896"
 ---
 # <a name="bad-file-name-or-number"></a>Nome ou número de arquivo inválido
+
 Ocorreu um erro ao tentar acessar o arquivo especificado. Entre as possíveis causas desse erro estão:  
   
 - Uma instrução refere-se a um arquivo com um nome de arquivo ou número que não foi especificado na `FileOpen` instrução ou que foi especificado em uma `FileOpen` instrução, mas foi fechado posteriormente.  

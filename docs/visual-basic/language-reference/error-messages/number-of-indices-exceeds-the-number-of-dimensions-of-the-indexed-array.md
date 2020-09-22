@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-ms.openlocfilehash: 4d8ffd2c4ad0a386053ced0f98503969723c7168
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3fc2744bb471eabd9345994b28fbef3ebc76f00d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409368"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873671"
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>O número de índices excede o número de dimensões da matriz indexada
+
 O número de índices usados para acessar um elemento de matriz deve ser exatamente o mesmo que a classificação da matriz, ou seja, o número de dimensões declaradas para ele.  
   
  **ID do erro:** BC30106  
@@ -37,4 +38,4 @@ O número de índices usados para acessar um elemento de matriz deve ser exatame
   
 ## <a name="see-also"></a>Confira também
 
-- [Matrizes](../../programming-guide/language-features/arrays/index.md)
+- [matrizes](../../programming-guide/language-features/arrays/index.md)

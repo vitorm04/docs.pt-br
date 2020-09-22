@@ -15,14 +15,15 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-ms.openlocfilehash: 657b2a473b23789a8ba25fbd11c6b83538fa7803
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f6cfd1073ada42aa2db8be9b14c81319bc0db294
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401414"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874754"
 ---
 # <a name="or-operator-visual-basic"></a>Operador Or (Visual Basic)
+
 Executa uma disjunção lógica em duas `Boolean` expressões ou uma disjunção bit a bit em duas expressões numéricas.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -32,6 +33,7 @@ result = expression1 Or expression2
 ```  
   
 ## <a name="parts"></a>Partes  
+
  `result`  
  Obrigatórios. Qualquer `Boolean` ou expressão numérica. Para `Boolean` comparação, `result` é a disjunção lógica inclusiva de dois `Boolean` valores. No caso de operações bit-ais, `result` é um valor numérico que representa a disjunção de bits inclusiva de dois padrões de bit numérico.  
   
@@ -42,6 +44,7 @@ result = expression1 Or expression2
  Obrigatórios. Qualquer `Boolean` ou expressão numérica.  
   
 ## <a name="remarks"></a>Comentários  
+
  Para `Boolean` comparação, `result` é `False` se e somente se for `expression1` e `expression2` for avaliado como `False` . A tabela a seguir ilustra como o `result` é determinado.  
   
 |Se `expression1` for |E `expression2` é|O valor de `result` é|  
@@ -67,14 +70,17 @@ result = expression1 Or expression2
 > Uma vez que os operadores lógicos e bit-a-or têm uma precedência mais baixa do que outros operadores aritméticos e relacionais, todas as operações de bit-nte devem ser colocadas entre parênteses para garantir a execução  
   
 ## <a name="data-types"></a>Tipos de dados  
+
  Se os operandos contiverem uma `Boolean` expressão e uma expressão numérica, Visual Basic converterá a `Boolean` expressão em um valor numérico (– 1 para `True` e 0 para `False` ) e executará uma operação bit a bit.  
   
  Para uma `Boolean` comparação, o tipo de dados do resultado é `Boolean` . Para uma comparação de bits, o tipo de dados de resultado é um tipo numérico apropriado para os tipos de dados de `expression1` e `expression2` . Consulte a tabela "comparações relacionais e de bits-bit" em [tipos de dados de resultados do operador](data-types-of-operator-results.md).  
   
 ## <a name="overloading"></a>Sobrecarga  
+
  O `Or` operador pode ser *sobrecarregado*, o que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo dessa classe ou estrutura. Se o seu código usar esse operador em uma classe ou estrutura desse tipo, certifique-se de entender seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir usa o `Or` operador para executar uma disjunção lógica inclusiva em duas expressões. O resultado é um `Boolean` valor que representa se uma das duas expressões é `True` .  
   
  [!code-vb[VbVbalrOperators#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#35)]  
@@ -82,6 +88,7 @@ result = expression1 Or expression2
  O exemplo anterior produz resultados de `True` , `True` , e `False` , respectivamente.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir usa o `Or` operador para executar uma disjunção lógica inclusiva em bits individuais de duas expressões numéricas. O bit no padrão de resultado será definido se qualquer um dos bits correspondentes nos operandos for definido como 1.  
   
  [!code-vb[VbVbalrOperators#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#36)]  

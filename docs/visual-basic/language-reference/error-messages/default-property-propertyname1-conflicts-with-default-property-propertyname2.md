@@ -7,17 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: 37f98ce8120d5861552819690f9d5f22c9959a0e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b857a9ae7875a156179602cbe77558333d07b7b9
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409719"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874509"
 ---
 # <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>A propriedade padrão '\<propertyname1>' está em conflito com a propriedade padrão '\<propertyname2>' em '\<classname>' e por isso deve ser declarada como 'Shadows'
+
 Uma propriedade é declarada com o mesmo nome de uma propriedade definida na classe base. Nessa situação, a propriedade nessa classe deve sombrear a propriedade da classe base.  
   
- Esta mensagem é um aviso. `Shadows`é assumido por padrão. Para obter mais informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Esta mensagem é um aviso. `Shadows` é assumido por padrão. Para obter mais informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **ID do erro:** BC40007  
   

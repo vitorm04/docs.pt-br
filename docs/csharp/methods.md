@@ -4,12 +4,12 @@ description: Visão geral dos métodos, parâmetros de método e valores retorna
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 879c553f8df560a3e2f3dccdbbf0d7e8a05c50cd
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 520aeed85ee00127c2bd3eee681b980d05f46d05
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495532"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874700"
 ---
 # <a name="methods-in-c"></a>Métodos em (C#)
 
@@ -121,13 +121,14 @@ Passar um parâmetro de tipo de referência permite que você altere o valor da 
 
 Às vezes, o requisito de que você especifique o número exato de argumentos para o método é restritivo. Usando a palavra-chave `params` para indicar que um parâmetro é uma matriz de parâmetros, você permite que o método seja chamado com um número variável de argumentos. O parâmetro marcado com a palavra-chave `params` deve ser um tipo de matriz e ele deve ser o último parâmetro na lista de parâmetros do método.
 
-Um chamador pode, então, invocar o método de uma das três maneiras:
+Um chamador pode invocar o método de uma das quatro maneiras:
 
 - Passando uma matriz do tipo apropriado que contém o número de elementos desejado.
 - Passando uma lista separada por vírgulas de argumentos individuais do tipo apropriado para o método.
+- Passando `null` .
 - Não fornecendo um argumento para a matriz de parâmetros.
 
-O exemplo a seguir define um método chamado `GetVowels` que retorna todas as vogais de uma matriz de parâmetros. O método `Main` ilustra todas as três maneiras de invocar o método. Os chamadores não precisam fornecer argumentos para parâmetros que incluem o modificador `params`. Nesse caso, o parâmetro é `null`.
+O exemplo a seguir define um método chamado `GetVowels` que retorna todas as vogais de uma matriz de parâmetros. O `Main` método ilustra todas as quatro maneiras de invocar o método. Os chamadores não precisam fornecer argumentos para parâmetros que incluem o modificador `params`. Nesse caso, o parâmetro é uma matriz vazia.
 
 [!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 
@@ -282,7 +283,7 @@ O tipo de retorno de um iterador pode ser <xref:System.Collections.IEnumerable>,
 
 Para obter mais informações, consulte [Iteradores](programming-guide/concepts/iterators.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Modificadores de acesso](language-reference/keywords/access-modifiers.md)
 - [Classes static e membros de classes static](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
@@ -292,4 +293,4 @@ Para obter mais informações, consulte [Iteradores](programming-guide/concepts/
 - [fora](language-reference/keywords/out-parameter-modifier.md)
 - [ref](language-reference/keywords/ref.md)
 - [Em](language-reference/keywords/in-parameter-modifier.md)
-- [Passar parâmetros](programming-guide/classes-and-structs/passing-parameters.md)
+- [Passando parâmetros](programming-guide/classes-and-structs/passing-parameters.md)

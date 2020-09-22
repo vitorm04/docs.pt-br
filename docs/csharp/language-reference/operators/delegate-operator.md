@@ -1,16 +1,16 @@
 ---
 description: operador delegate – referência do C#
 title: operador delegate – referência do C#
-ms.date: 07/18/2019
+ms.date: 09/22/2020
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: 1dfaaf40c0f5a19534adef3be7e3c917bc95c4a8
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6c087d9bdb2f526cf7d94c3a0f2c1a929b0343ef
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89122245"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874915"
 ---
 # <a name="delegate-operator-c-reference"></a>operador delegate (referência do C#)
 
@@ -30,6 +30,12 @@ Você pode omitir a lista de parâmetros quando usa o operador `delegate`. Se vo
 [!code-csharp-interactive[no parameter list](snippets/shared/DelegateOperator.cs#WithoutParameterList)]
 
 Essa é a única funcionalidade de métodos anônimos que não tem suporte por expressões lambda. Em todos os outros casos, uma expressão lambda é a forma preferida de gravar código embutido.
+
+A partir do C# 9,0, você pode usar os [Descartes](../../discards.md) para especificar dois ou mais parâmetros de entrada de um método anônimo que não são usados pelo método:
+
+:::code language="csharp" source="snippets/shared/DelegateOperator.cs" id="SnippetDiscards" :::
+
+Para compatibilidade com versões anteriores, se apenas um único parâmetro for nomeado `_` , `_` será tratado como o nome desse parâmetro dentro de um método anônimo.
 
 Você também usa a palavra-chave `delegate` para declarar um [tipo delegado](../builtin-types/reference-types.md#the-delegate-type).
 

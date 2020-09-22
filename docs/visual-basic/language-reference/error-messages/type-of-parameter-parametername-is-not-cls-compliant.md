@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
-ms.openlocfilehash: edbcadf271c4ccafc11e5b64eb103a0290976179
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a4617d3550cfb48f32a19a4c70809141173c6147
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413008"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875125"
 ---
 # <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>O tipo de parâmetro '\<parametername>' não é compatível com CLS
+
 Um procedimento é marcado como, `<CLSCompliant(True)>` mas declara um parâmetro com um tipo marcado como `<CLSCompliant(False)>` , não está marcado ou não está qualificado porque é um tipo não compatível.  
   
  Para que um procedimento seja compatível com a [independência de linguagem e com os componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), ele deve usar somente tipos em conformidade com CLS. Isso se aplica aos tipos de parâmetros, ao tipo de retorno e aos tipos de todas as suas variáveis locais.  

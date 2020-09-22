@@ -7,22 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC31026
 ms.assetid: 5dd09785-bc10-4ae7-ba24-b795057aca31
-ms.openlocfilehash: df6de037cf7cd5b41ed417a8ebfa6f9586e4ebb4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db89f4cbaa7008e59f3698eec0f2603cfc06439e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764173"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873575"
 ---
-# <a name="unable-to-create-strong-named-assembly-from-key-file-filename-error"></a>Não é possível criar o assembly de nome forte do arquivo de chave '\<filename >': \<erro >
-Não foi possível criar um assembly de nome forte do arquivo de chave especificado.  
+# <a name="unable-to-create-strong-named-assembly-from-key-file-filename-error"></a>Não foi possível criar um assembly de nome forte a partir do arquivo '\<filename>': \<error>
+
+Um assembly de nome forte não pôde ser criado a partir do arquivo de chave especificado.  
   
  **ID do erro:** BC31026  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1. Verifique se que o arquivo de chave correto foi especificado e que ele não está bloqueado por outro aplicativo.  
+1. Verifique se o arquivo de chave correto foi especificado e se ele não está bloqueado por outro aplicativo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Sn.exe (ferramenta nome forte)](../../../framework/tools/sn-exe-strong-name-tool.md))
+- [Sn.exe (ferramenta de nome forte)](../../../framework/tools/sn-exe-strong-name-tool.md))

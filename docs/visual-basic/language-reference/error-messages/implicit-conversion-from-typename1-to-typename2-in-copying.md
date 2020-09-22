@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: 4d0f9aac795f683cf58210ea38b3783e451ccfc3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fced95fe24d42d4af2118706bcaf3337429fea91
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402856"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873991"
 ---
 # <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>Conversão implícita de '\<typename1>' em '\<typename2>' ao copiar o valor do parâmetro 'ByRef' '\<parametername>' para o argumento correspondente.
+
 Um procedimento é chamado com um argumento [ByRef](../modifiers/byref.md) de um tipo diferente daquele do parâmetro correspondente.  
   
  Se você passar um argumento `ByRef` , o Visual Basic às vezes copiará o valor do argumento em uma variável local no procedimento em vez de passar uma referência. Nesse caso, quando o procedimento retorna, Visual Basic deve copiar o valor da variável local de volta para o argumento no código de chamada.  
