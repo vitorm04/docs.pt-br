@@ -26,14 +26,15 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 3b1f47250453c32735d633b98da0bd0ddb1ed5b9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 268daf333dc5463e5436304cec188a9e6d477166
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393851"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077118"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Como definir uma classe capaz de fornecer uma funcionalidade idêntica em tipos de dados diferentes (Visual Basic)
+
 Você pode definir uma classe na qual é possível criar objetos que fornecem funcionalidade idêntica em diferentes tipos de dados. Para fazer isso, você deve especificar um ou mais *parâmetros de tipo* na definição. A classe pode servir como um modelo para objetos que usam vários tipos de dados. Uma classe definida dessa maneira é chamada de *classe genérica*.  
   
  A vantagem de definir uma classe genérica é que você a define apenas uma vez, e seu código pode usá-la para criar vários objetos que usam uma ampla variedade de tipos de dados. Isso resulta em um melhor desempenho do que definir a classe com o `Object` tipo.  
@@ -76,9 +77,9 @@ Você pode definir uma classe na qual é possível criar objetos que fornecem fu
   
 ## <a name="see-also"></a>Confira também
 
-- [Tipos de dados](index.md)
+- [Data Types](index.md)
 - [Tipos genéricos no Visual Basic](generic-types.md)
-- [Componentes de independência de linguagem e componentes independentes da linguagem](../../../../standard/language-independence-and-language-independent-components.md)
+- [Independência da linguagem e componentes independentes da linguagem](../../../../standard/language-independence-and-language-independent-components.md)
 - [Desse](../../../language-reference/statements/of-clause.md)
 - [Lista de Tipos](../../../language-reference/statements/type-list.md)
 - [Como: Usar uma classe genérica](how-to-use-a-generic-class.md)

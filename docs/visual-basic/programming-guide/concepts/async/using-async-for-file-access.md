@@ -2,14 +2,15 @@
 title: Usando o Async para acessar arquivos
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-ms.openlocfilehash: 2ee1efa69f4b13224be65fe802ebf5f834c941aa
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2e7fa4a78363a08f2ff25e6a961868e85994e200
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400765"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077352"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>Usando o Async para acessar arquivos (Visual Basic)
+
 Você pode usar o recurso assíncrono para acessar arquivos. Usando o recurso Async, você pode chamar os métodos assíncronos sem usar retornos de chamada ou dividir seu código em vários métodos ou expressões lambda. Para tornar síncrono um código assíncrono, basta chamar um método assíncrono em vez de um método síncrono e adicionar algumas palavras-chave ao código.  
   
  Você pode considerar seguintes motivos para adicionar a assincronia às chamadas de acesso ao arquivo:  
@@ -25,6 +26,7 @@ Você pode usar o recurso assíncrono para acessar arquivos. Usando o recurso As
 - As tarefas assíncronas podem facilmente ser executadas em paralelo.  
   
 ## <a name="running-the-examples"></a>Executando os exemplos  
+
  Para executar os exemplos neste tópico, você pode criar um **Aplicativo WPF** ou um **Aplicativo do Windows Forms** e, em seguida, adicionar um **Botão**. No evento `Click` do botão, adicione uma chamada para o primeiro método em cada exemplo.  
   
  Nos exemplos a seguir, inclua as seguintes instruções `Imports`.  
@@ -39,11 +41,13 @@ Imports System.Threading.Tasks
 ```  
   
 ## <a name="use-of-the-filestream-class"></a>Uso da classe FileStream  
+
  Os exemplos neste tópico usam a classe <xref:System.IO.FileStream>, que tem uma opção que faz com que a E/S assíncrona ocorra no nível do sistema operacional. Usando essa opção, você pode evitar o bloqueio de um thread de ThreadPool em muitos casos. Para habilitar essa opção, você deve especificar o argumento `useAsync=true` ou `options=FileOptions.Asynchronous` na chamada do construtor.  
   
  Você não pode usar essa opção com <xref:System.IO.StreamReader> e <xref:System.IO.StreamWriter> se você os abrir diretamente especificando um caminho de arquivo. No entanto, você poderá usar essa opção se fornecer um <xref:System.IO.Stream> que a classe <xref:System.IO.FileStream> abriu. Observe que as chamadas assíncronas serão mais rápidas em aplicativos de interface do usuário mesmo se um thread de ThreadPool estiver bloqueado, porque o thread de interface do usuário não é bloqueado durante a espera.  
   
 ## <a name="writing-text"></a>Gravando texto  
+
  O exemplo a seguir grava um texto em um arquivo. A cada instrução await, o método sai imediatamente. Quando o arquivo de E/S for concluído, o método continuará na instrução após a instrução await. Observe que o modificador async é a definição de métodos que usam a instrução await.  
   
 ```vb  
@@ -73,9 +77,10 @@ Dim theTask As Task = sourceStream.WriteAsync(encodedText, 0, encodedText.Length
 Await theTask  
 ```  
   
- A primeira instrução retorna uma tarefa e faz com que o processamento do arquivo seja iniciado. A segunda instrução com o await faz com que o método saia imediatamente e retorne uma tarefa diferente. Quando o processamento do arquivo é concluído posteriormente, a execução retorna para a instrução após a await. Para obter mais informações, consulte [fluxo de controle em programas assíncronos (Visual Basic)](control-flow-in-async-programs.md).  
+ A primeira instrução retorna uma tarefa e faz com que o processamento do arquivo seja iniciado. A segunda instrução com o await faz com que o método saia imediatamente e retorne uma tarefa diferente. Quando o processamento do arquivo é concluído posteriormente, a execução retorna para a instrução após a await. Para obter mais informações, consulte  [fluxo de controle em programas assíncronos (Visual Basic)](control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>Lendo texto  
+
  O exemplo a seguir lê o texto de um arquivo. O texto é armazenado em buffer e, nesse caso, colocado em um <xref:System.Text.StringBuilder>. Diferentemente do exemplo anterior, a avaliação de await produz um valor. O método <xref:System.IO.Stream.ReadAsync%2A> retorna um <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, portanto, a avaliação do await produz um valor `Int32` (`numRead`) após a conclusão da operação. Para obter mais informações, consulte [tipos de retorno assíncronos (Visual Basic)](async-return-types.md).  
   
 ```vb  
@@ -118,6 +123,7 @@ End Function
 ```  
   
 ## <a name="parallel-asynchronous-io"></a>E/S assíncrona paralela  
+
  O exemplo a seguir demonstra o processamento paralelo escrevendo dez arquivos de texto. Para cada arquivo, o método <xref:System.IO.Stream.WriteAsync%2A> retorna uma tarefa que é então adicionada a uma lista de tarefas. A instrução `Await Task.WhenAll(tasks)` sai do método e retoma no método quando o processamento do arquivo é concluído para todas as tarefas.  
   
  O exemplo fecha todas as instâncias de <xref:System.IO.FileStream> em um bloco `Finally` após as tarefas serem concluídas. Se cada `FileStream` foi criado em uma instrução `Imports`, o `FileStream` pode ter sido descartado antes de a tarefa ter sido concluída.  

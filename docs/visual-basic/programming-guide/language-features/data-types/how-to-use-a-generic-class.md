@@ -21,14 +21,15 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-ms.openlocfilehash: 01f1f7ef5963feeb3fe2b5390244e4e516773bad
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 87ba5132afe9f5a7cd6fb33d716c670f4812c7e2
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393838"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077105"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>Como usar uma classe genérica (Visual Basic)
+
 Uma classe que usa *parâmetros de tipo* é chamada de *classe genérica*. Se você estiver usando uma classe genérica, poderá gerar uma *classe construída* a partir dela fornecendo um argumento de *tipo* para cada um desses parâmetros. Você pode então declarar uma variável do tipo de classe construída e pode criar uma instância da classe construída e atribuí-la a essa variável.  
   
  Além das classes, você também pode definir e usar estruturas genéricas, interfaces, procedimentos e delegados.  
@@ -47,9 +48,9 @@ Uma classe que usa *parâmetros de tipo* é chamada de *classe genérica*. Se vo
   
 ## <a name="see-also"></a>Confira também
 
-- [Tipos de dados](index.md)
+- [Data Types](index.md)
 - [Tipos genéricos no Visual Basic](generic-types.md)
-- [Componentes de independência de linguagem e componentes independentes da linguagem](../../../../standard/language-independence-and-language-independent-components.md)
+- [Independência da linguagem e componentes independentes da linguagem](../../../../standard/language-independence-and-language-independent-components.md)
 - [Desse](../../../language-reference/statements/of-clause.md)
 - [Instrução Imports (tipo e namespace .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Como: Definir uma classe capaz de fornecer uma funcionalidade idêntica em tipos de dados diferentes](how-to-define-a-class-that-can-provide-identical-functionality.md)

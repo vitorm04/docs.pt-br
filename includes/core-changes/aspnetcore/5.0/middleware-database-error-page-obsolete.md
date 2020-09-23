@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f1129500c9b779256b2650fe6fa855152cb3ae80
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 10521759d31c3183232cdb1793d78d139f13ce41
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811245"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077560"
 ---
 ### <a name="middleware-database-error-page-marked-as-obsolete"></a>Middleware: página de erro do banco de dados marcada como obsoleta
 
@@ -30,7 +30,7 @@ Para obter uma discussão, consulte o problema do GitHub em [dotnet/aspnetcore #
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Conclua as seguintes etapas:
+Concluir as seguintes etapas:
 
 1. Pare `DatabaseErrorPageMiddleware` de usar no seu projeto. Por exemplo, remova a `UseDatabaseErrorPage` chamada de método de `Startup.Configure` :
 
@@ -55,6 +55,8 @@ Conclua as seguintes etapas:
         }
     }
     ```
+
+1. Adicione o pacote NuGet [Microsoft. AspNetCore. Diagnostics. EntityFrameworkCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore) ao arquivo de projeto.
 
 1. Adicione o filtro de exceção da página do desenvolvedor de banco de dados à coleção de serviços. Por exemplo, chame o `AddDatabaseDeveloperPageExceptionFilter` método em `Startup.ConfigureServices` :
 

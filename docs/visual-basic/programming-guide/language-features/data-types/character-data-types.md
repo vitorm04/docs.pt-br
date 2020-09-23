@@ -8,19 +8,21 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-ms.openlocfilehash: 33dd4c62776ae8c5ec0ce0a6d0858a7ed0d047fb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5fde5eff40d83bdd7d90cd611bd6749106db6e16
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401986"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077170"
 ---
 # <a name="character-data-types-visual-basic"></a>Tipos de dados de caractere (Visual Basic)
+
 Visual Basic fornece *tipos de dados de caractere* para lidar com caracteres imprimíveis e exibíveis. Embora ambos lidem com caracteres Unicode, `Char` o mantém um único caractere, enquanto `String` contém um número indefinido de caracteres.  
   
  Para uma tabela que exibe uma comparação lado a lado do Visual Basic tipos de dados, consulte tipos de [dados](../../../language-reference/data-types/index.md).  
   
 ## <a name="char-type"></a>Tipo de caractere  
+
  O `Char` tipo de dados é um caractere Unicode único de dois bytes (16 bits). Se uma variável sempre armazenar exatamente um caractere, declare-a como `Char` . Por exemplo:  
   
  [!code-vb[VbVbalrCharTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#1)]
@@ -33,6 +35,7 @@ Visual Basic fornece *tipos de dados de caractere* para lidar com caracteres imp
  Para obter mais informações, consulte [Char Data Type](../../../language-reference/data-types/char-data-type.md).  
   
 ## <a name="string-type"></a>Tipo de cadeia de caracteres  
+
  O `String` tipo de dados é uma sequência de zero ou mais caracteres Unicode de dois bytes (16 bits). Se uma variável puder conter um número indefinido de caracteres, declare-a como `String` . Por exemplo:  
   
  [!code-vb[VbVbalrCharTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#2)]
