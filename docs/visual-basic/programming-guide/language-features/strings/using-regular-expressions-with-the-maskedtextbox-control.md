@@ -5,17 +5,19 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 1bb5ac5381dc85f598ef46638fbc8cd1a8643825
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 493da7b8583b5cc73a9832afa81b7b1d84742f2d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555738"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072425"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Usando expressões regulares com o controle MaskedTextBox no Visual Basic
+
 Este exemplo demonstra como converter expressões regulares simples para trabalhar com o <xref:System.Windows.Forms.MaskedTextBox> controle.  
   
 ## <a name="description-of-the-masking-language"></a>Descrição da linguagem de mascaramento  
+
  A <xref:System.Windows.Forms.MaskedTextBox> linguagem de mascaramento padrão baseia-se na usada pelo `Masked Edit` controle no Visual Basic 6,0 e deve ser familiar aos usuários que estão migrando dessa plataforma.  
   
  A <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Propriedade do <xref:System.Windows.Forms.MaskedTextBox> controle Especifica qual máscara de entrada usar. A máscara deve ser uma cadeia de caracteres composta de um ou mais elementos de mascaramento da tabela a seguir.  
@@ -44,6 +46,7 @@ Este exemplo demonstra como converter expressões regulares simples para trabalh
  Os símbolos decimal (.), milésimos (,), tempo (:), data (/) e moeda ($) são padrão para exibir esses símbolos, conforme definido pela cultura do aplicativo. Você pode forçá-los a Exibir símbolos para outra cultura usando a <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> propriedade.  
   
 ## <a name="regular-expressions-and-masks"></a>Expressões regulares e máscaras  
+
  Embora você possa usar expressões regulares e máscaras para validar a entrada do usuário, elas não são completamente equivalentes. As expressões regulares podem expressar padrões mais complexos do que as máscaras, mas as máscaras podem expressar as mesmas informações de forma mais sucinta e em um formato culturalmente relevante.  
   
  A tabela a seguir compara quatro expressões regulares e a máscara equivalente para cada uma.  
