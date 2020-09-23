@@ -5,17 +5,19 @@ helpviewer_keywords:
 - Visual Basic code, enumerations
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
-ms.openlocfilehash: 8262cc2742435abef0a05fefd7a40d5be2ec3e88
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7d0f28ff8b7f773b8b4ecc68320fbfa34c263136
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414486"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095649"
 ---
 # <a name="enumerations-overview-visual-basic"></a>Visão geral de enumerações (Visual Basic)
+
 As enumerações fornecem uma maneira conveniente de trabalhar com conjuntos de constantes relacionadas e associar valores constantes a nomes. Por exemplo, é possível declarar uma enumeração de um conjunto de constantes de inteiros associados aos dias da semana e, em seguida, usar os nomes de dias em vez de seus valores de inteiros em seu código.  
   
 ## <a name="tasks-involving-enumerations"></a>Tarefas envolvendo enumerações  
+
  A tabela a seguir lista tarefas comuns envolvendo enumerações.  
   
 |Para fazer isto|Consulte|  
