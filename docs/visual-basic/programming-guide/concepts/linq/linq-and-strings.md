@@ -2,14 +2,15 @@
 title: LINQ e cadeias de caracteres
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
-ms.openlocfilehash: ee2a44175e8546f879473a3af6bf1a2de92d2501
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 28c11dcc3c788ea85516e8b3fbafe2677b6d9b54
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549843"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075337"
 ---
 # <a name="linq-and-strings-visual-basic"></a>LINQ e cadeias de caracteres (Visual Basic)
+
 A LINQ pode ser usada para consultar e transformar as cadeias de caracteres e coleções de cadeias de caracteres. Ele pode ser especialmente útil com os dados semiestruturados em arquivos de texto. Consultas LINQ podem ser combinadas com expressões regulares e funções de cadeia de caracteres tradicionais. Por exemplo, você pode usar o método <xref:System.String.Split%2A> ou <xref:System.Text.RegularExpressions.Regex.Split%2A> para criar uma matriz de cadeias de caracteres que você pode consultar ou modificar usando o LINQ. Você pode usar o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> na cláusula `where` de uma consulta LINQ. E você pode usar o LINQ para consultar ou modificar os resultados de <xref:System.Text.RegularExpressions.MatchCollection> retornados por uma expressão regular.  
   
  Você também pode usar as técnicas descritas nessa seção para transformar dados de texto semiestruturados em XML. Para obter mais informações, consulte [Como gerar um XML de arquivos CSV](../../../../standard/linq/generate-xml-csv-files.md).  
@@ -17,6 +18,7 @@ A LINQ pode ser usada para consultar e transformar as cadeias de caracteres e co
  Os exemplos nesta seção se enquadram em duas categorias:  
   
 ## <a name="querying-a-block-of-text"></a>Consultando um bloco de texto  
+
  Consultar, analisar e modificar os blocos de texto dividindo-os em uma matriz de cadeias de caracteres menores consultáveis usando o método <xref:System.String.Split%2A> ou o método <xref:System.Text.RegularExpressions.Regex.Split%2A>. Você pode dividir o texto de origem em palavras, frases, parágrafos, páginas ou quaisquer outros critérios e, em seguida, executar divisões adicionais se elas forem necessárias em sua consulta.  
   
  [Como: contar ocorrências de uma palavra em uma cadeia de caracteres (LINQ) (Visual Basic)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
@@ -33,6 +35,7 @@ A LINQ pode ser usada para consultar e transformar as cadeias de caracteres e co
  Mostra como usar expressões regulares em consultas LINQ para correspondência de padrões complexos em resultados de consulta filtrados.  
   
 ## <a name="querying-semi-structured-data-in-text-format"></a>Consultando dados semiestruturados em formato de texto  
+
  Muitos tipos diferentes de arquivos de texto consistem em uma série de linhas, geralmente com formatação semelhante, como arquivos delimitados por tabulação ou vírgula ou linhas de comprimento fixo. Depois de ler um arquivo de texto na memória, você pode usar a LINQ para consultar e/ou modificar as linhas. As consultas LINQ também simplificam a tarefa de combinar dados de várias fontes.  
   
  [Como localizar a diferença de conjunto entre duas listas (LINQ) (Visual Basic)](how-to-find-the-set-difference-between-two-lists-linq.md)  

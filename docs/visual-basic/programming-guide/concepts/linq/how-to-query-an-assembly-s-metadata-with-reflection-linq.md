@@ -2,14 +2,15 @@
 title: 'Como: consultar metadados de um assembly com reflexão (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 53caa336-ab83-4181-b0f6-5c87c5f9e4ee
-ms.openlocfilehash: a4f73bd2c8c01cbf92fac67991f01a1cb3dee932
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fda27f41d31bf8aa3931bf5923ff4011628107fe
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396448"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075324"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-visual-basic"></a>Como consultar metadados de um assembly com reflexão (LINQ) (Visual Basic)
+
 O exemplo a seguir mostra como o LINQ pode ser usado com a reflexão para recuperar metadados específicos sobre os métodos que correspondem a um critério de pesquisa especificado. Nesse caso, a consulta localizará os nomes de todos os métodos no assembly que retornam tipos enumeráveis como matrizes.  
   
 ## <a name="example"></a>Exemplo  

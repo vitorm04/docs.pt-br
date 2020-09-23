@@ -2,14 +2,15 @@
 title: Particionar dados
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-ms.openlocfilehash: 34749f9d7b137bade66b6103650871246c3cc532
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 07e33c4ce0d062a0f083d8970c0ad01f98923a52
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406840"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075311"
 ---
 # <a name="partitioning-data-visual-basic"></a>Dados de particionamento (Visual Basic)
+
 Particionamento em LINQ refere-se à operação de dividir uma sequência de entrada em duas seções sem reorganizar os elementos e, depois, retornar uma das seções.  
   
  A ilustração a seguir mostra os resultados de três operações de particionamento diferentes em uma sequência de caracteres. A primeira operação retorna os três primeiros elementos na sequência. A segunda operação ignora os três primeiros elementos e retorna os elementos restantes. A terceira operação ignora os dois primeiros elementos na sequência e retorna os três elementos seguintes.  
@@ -30,21 +31,25 @@ Particionamento em LINQ refere-se à operação de dividir uma sequência de ent
 ## <a name="query-expression-syntax-examples"></a>Exemplos de sintaxe de expressão de consulta  
   
 ### <a name="skip"></a>Ignorar  
+
  O exemplo de código a seguir usa a `Skip` cláusula em Visual Basic para ignorar as primeiras quatro cadeias de caracteres em uma matriz de cadeias de caracteres antes de retornar as cadeias de caracteres restantes na matriz.  
   
  [!code-vb[CsLINQPartitioning#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#1)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
+
  O exemplo de código a seguir usa a `Skip While` cláusula em Visual Basic para ignorar as cadeias de caracteres em uma matriz, enquanto a primeira letra da cadeia é "a". As cadeias de caracteres restantes na matriz são retornadas.  
   
  [!code-vb[CsLINQPartitioning#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#2)]  
   
 ### <a name="take"></a>Take  
+
  O exemplo de código a seguir usa a `Take` cláusula em Visual Basic para retornar as duas primeiras cadeias de caracteres em uma matriz de cadeias de caracteres.  
   
  [!code-vb[CsLINQPartitioning#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#3)]  
   
 ### <a name="takewhile"></a>TakeWhile  
+
  O exemplo de código a seguir usa a `Take While` cláusula em Visual Basic para retornar cadeias de caracteres de uma matriz, enquanto o comprimento da cadeia de caracteres é de cinco ou menos.  
   
  [!code-vb[CsLINQPartitioning#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#4)]  
