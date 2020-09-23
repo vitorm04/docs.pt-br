@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_GTZero1
 ms.assetid: f9939fbd-6c4f-4871-9452-9ea0267e948e
-ms.openlocfilehash: c44d2cde5f8b78971d1f54cb5ea1eea42c4fdd7e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 41d56616abc7782dd4beed44e5bb083eba09a76c
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84382127"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91079874"
 ---
 # <a name="argument-argumentname-must-be-greater-than-zero"></a>O argumento '\<argumentname>' deve ser maior que zero
+
 Um argumento não é válido porque é menor ou igual a zero.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
