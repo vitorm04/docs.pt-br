@@ -14,23 +14,27 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: 162bd71eaebdf55f6be89e0c5dce7acc1b975d79
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 95bafcaca98e1a0fbdd62a550291c8ece932c1ba
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403298"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075025"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Diferenças entre propriedades e variáveis no Visual Basic
+
 Variáveis e propriedades representam valores que você pode acessar. No entanto, há diferenças no armazenamento e na implementação.  
   
 ## <a name="variables"></a>Variáveis  
+
  Uma *variável* corresponde diretamente a um local da memória. Você define uma variável com uma única instrução de declaração. Uma variável pode ser uma *variável local*, definida dentro de um procedimento e disponível somente dentro desse procedimento, ou pode ser uma *variável de membro*, definida em um módulo, classe ou estrutura, mas não dentro de nenhum procedimento. Uma variável de membro também é chamada de *campo*.  
   
 ## <a name="properties"></a>Propriedades  
+
  Uma *Propriedade* é um elemento de dados definido em um módulo, classe ou estrutura. Você define uma propriedade com um bloco de código entre `Property` as `End Property` instruções e. O bloco de código contém um `Get` procedimento, um `Set` procedimento ou ambos. Esses procedimentos são chamados de *procedimentos de propriedade* ou *acessadores de propriedade*. Além de recuperar ou armazenar o valor da propriedade, eles também podem executar ações personalizadas, como atualizar um contador de acesso.  
   
 ## <a name="differences"></a>Diferenças  
+
  A tabela a seguir mostra algumas diferenças importantes entre variáveis e propriedades.  
   
 |Ponto de diferença|Variável|Propriedade|  
