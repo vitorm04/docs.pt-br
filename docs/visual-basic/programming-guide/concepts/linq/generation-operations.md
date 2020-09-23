@@ -2,14 +2,15 @@
 title: Operações de geração
 ms.date: 07/20/2015
 ms.assetid: 22b8e380-8eb0-4c93-b4ff-7ac21caf27d5
-ms.openlocfilehash: da1b49a8ee153419fdbc89bca1cf12eef7d65c6c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 89e5c6b05d4912835210f39295fd390a2c573d93
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398416"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078275"
 ---
 # <a name="generation-operations-visual-basic"></a>Operações de geração (Visual Basic)
+
 Geração refere-se à criação de uma nova sequência de valores.  
   
  Os métodos de operador de consulta padrão que realizam a geração estão listados na seção a seguir.  

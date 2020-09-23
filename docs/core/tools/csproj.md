@@ -3,12 +3,12 @@ title: Adições ao formato csproj para .NET Core
 description: Saiba mais sobre as diferenças entre arquivos existentes e de csproj do .NET Core
 ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: 7760dc095fa894b1f356c939eb030e675f58a876
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3ef6a89a8cd4f811bcdd41b9c9bedbc45da78098
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810879"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078210"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -364,9 +364,11 @@ Uma lista delimitada por ponto e vírgula de marcas que designam o pacote.
 Determina o caminho de saída no qual o pacote empacotado será solto. O padrão é `$(OutputPath)`.
 
 ### <a name="includesymbols"></a>IncludeSymbols
+
 Esse valor booliano indica se o pacote deve criar um pacote de símbolos adicionais quando o projeto é empacotado. O formato do pacote de símbolos é controlado pela propriedade `SymbolPackageFormat`.
 
 ### <a name="symbolpackageformat"></a>SymbolPackageFormat
+
 Especifica o formato do pacote de símbolos. Se "symbols.nupkg", um pacote legado de símbolos será criado com uma extensão *.symbols.nupkg* contendo PDBs, DLLs e outros arquivos de saída. Se "snupkg", um pacote de símbolos do snupkg será criado contendo os PDBs portáveis. O padrão é "symbols.nupkg".
 
 ### <a name="includesource"></a>IncludeSource
@@ -386,9 +388,11 @@ Especifica a URL para o repositório em que reside o código-fonte do pacote e/o
 Especifica o tipo do repositório. O padrão é “git”.
 
 ### <a name="repositorybranch"></a>RepositoryBranch
+
 Especifica o nome da ramificação de origem no repositório. Quando o projeto é empacotado em um pacote NuGet, ele é adicionado aos metadados do pacote.
 
 ### <a name="repositorycommit"></a>RepositoryCommit
+
 Confirmação opcional do repositório ou conjunto de alterações para indicar de qual fonte o pacote foi criado. `RepositoryUrl` também deve ser especificado para que essa propriedade seja incluída. Quando o projeto é empacotado em um pacote NuGet, esse Commit ou conjunto de alterações é adicionado aos metadados do pacote.
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis

@@ -2,15 +2,15 @@
 title: ASP.NET Core alterações significativas
 titleSuffix: ''
 description: Lista as alterações significativas em ASP.NET Core.
-ms.date: 09/11/2020
+ms.date: 09/18/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 4c3167e9cad193b6a5a11be399e8be529df3be55
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 33d8d1f7a6179229b3218d0102550a64bfc35a87
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539561"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078860"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core alterações significativas
 
@@ -37,6 +37,8 @@ As seguintes alterações significativas no ASP.NET Core 3,0, 3,1 e 5,0 estão d
 - [Azure: pacotes de integração do Azure prefixados da Microsoft removidos](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [Os métodos de serialização BinaryFormatter são obsoletos e proibidos em aplicativos ASP.NET](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
 - [Mais grande: espaço em branco insignificado cortado de componentes em tempo de compilação](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
+- [Mais de: JSObjectReference e tipos JSInProcessObjectReference alterados para interno](#blazor-jsobjectreference-and-jsinprocessobjectreference-types-changed-to-internal)
+- [Mais incrivelmente: o recurso ProtectedBrowserStorage mudou para a estrutura compartilhada](#blazor-protectedbrowserstorage-feature-moved-to-shared-framework)
 - [Mais do que: RenderTreeFrame campos públicos ReadOnly se tornaram Propriedades](#blazor-rendertreeframe-readonly-public-fields-have-become-properties)
 - [Mais incrivelmente: estrutura de destino de pacotes NuGet alterada](#blazor-target-framework-of-nuget-packages-changed)
 - [Caching: Propriedade CompactOnMemoryPressure removida](#caching-compactonmemorypressure-property-removed)
@@ -123,6 +125,14 @@ As seguintes alterações significativas no ASP.NET Core 3,0, 3,1 e 5,0 estão d
 ***
 
 [!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
+
+***
+
+[!INCLUDE[Blazor: JSObjectReference and JSInProcessObjectReference types changed to internal](~/includes/core-changes/aspnetcore/5.0/blazor-jsobjectreference-to-internal.md)]
+
+***
+
+[!INCLUDE[Blazor: ProtectedBrowserStorage feature moved to shared framework](~/includes/core-changes/aspnetcore/5.0/blazor-protectedbrowserstorage-moved.md)]
 
 ***
 

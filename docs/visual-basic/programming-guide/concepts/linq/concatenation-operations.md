@@ -2,14 +2,15 @@
 title: Operações de concatenação
 ms.date: 07/20/2015
 ms.assetid: 4021e019-a8f7-477b-879e-07dd7f44feb9
-ms.openlocfilehash: 32e7cc8234fa4aa3289eaae33f487b45a08b84db
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 24897f6d17974adffd9e00831e00244baceb09ae
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410884"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078327"
 ---
 # <a name="concatenation-operations-visual-basic"></a>Operações de concatenação (Visual Basic)
+
 A concatenação refere-se a operação de acrescentar uma sequência à outra.  
   
  A ilustração a seguir mostra uma operação de concatenação em duas sequências de caracteres.  

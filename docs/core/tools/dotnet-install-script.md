@@ -1,17 +1,17 @@
 ---
 title: Scripts dotnet-install
 description: Saiba mais sobre os scripts dotnet-install para instalar o SDK do .NET Core e o tempo de execução compartilhado.
-ms.date: 04/30/2020
-ms.openlocfilehash: 8f27b8a7794e84e6e2b288d6cc2ec33ffcb7600f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 09/22/2020
+ms.openlocfilehash: 35161edd2a4862e064373d75f1e19396983f3a64
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538036"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078197"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referência de scripts dotnet-install
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nome
 
 `dotnet-install.ps1` | `dotnet-install.sh` -Script usado para instalar o SDK do .NET Core e o tempo de execução compartilhado.
 
@@ -46,7 +46,7 @@ dotnet-install.sh --help
 
 O script de bash também lê comutadores do PowerShell. Portanto, você pode usar comutadores do PowerShell com o script nos sistemas Linux/macOS.
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Os `dotnet-install` scripts executam uma instalação não administrativa do SDK do .NET Core, que inclui o CLI do .NET Core e o tempo de execução compartilhado. Há dois scripts:
 
@@ -185,7 +185,6 @@ Os scripts de instalação não atualizam o registro no Windows. Eles apenas bai
   Representa uma versão específica do build. Os valores possíveis são:
 
   - `latest`: build mais recente no canal (usado com a opção `-Channel`).
-  - `coherent`: build coerente mais recente no canal; usa a combinação de pacotes estáveis mais recente (usado com as opções `-Channel` do nome do Branch).
   - Versão de três partes no formato X.Y.Z que representa uma determinada versão do build; substitui a opção `-Channel`. Por exemplo: `2.0.0-preview2-006120`.
 
   Se não for especificada, a `-Version` assumirá o padrão `latest`.
