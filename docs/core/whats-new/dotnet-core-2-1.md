@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 94f3db14046ad5d63975d0ca44425abed5d52062
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: f125a6a8d9287cb515478a10c2679c07817ae9a6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281531"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087356"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novidades do .NET Core 2.1
 
@@ -79,13 +79,13 @@ Uma vez instalada, a ferramenta pode ser executada a partir da linha de comando,
 
 No SDK do .NET Core 2.1, todas as operações de ferramentas usam o comando `dotnet tool`. As seguintes opções estão disponíveis:
 
-- [`dotnet tool install`](../tools/dotnet-tool-install.md)para instalar uma ferramenta.
+- [`dotnet tool install`](../tools/dotnet-tool-install.md) para instalar uma ferramenta.
 
-- [`dotnet tool update`](../tools/dotnet-tool-update.md)para desinstalar e reinstalar uma ferramenta, que a atualiza efetivamente.
+- [`dotnet tool update`](../tools/dotnet-tool-update.md) para desinstalar e reinstalar uma ferramenta, que a atualiza efetivamente.
 
-- [`dotnet tool list`](../tools/dotnet-tool-list.md)para listar as ferramentas atualmente instaladas.
+- [`dotnet tool list`](../tools/dotnet-tool-list.md) para listar as ferramentas atualmente instaladas.
 
-- [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md)para desinstalar as ferramentas atualmente instaladas.
+- [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md) para desinstalar as ferramentas atualmente instaladas.
 
 ## <a name="roll-forward"></a>Efetuar roll forward
 
@@ -131,6 +131,7 @@ A publicação independente depende das versões de tempo de execução no NuGet
 Com o uso do SDK do .NET Core 2.0, os aplicativos autocontidos são publicados com o runtime do .NET Core 2.0.0, a menos que uma versão diferente seja especificada por meio da propriedade `RuntimeFrameworkVersion`. Com esse novo comportamento, você não precisará mais definir essa propriedade para selecionar uma versão de tempo de execução maior para um aplicativo independente. A abordagem mais fácil daqui para frente é sempre publicar com o SDK do .NET Core 2.1 (v 2.1.300).
 
 Veja mais informações em [Efetuar roll forward de runtime de implantação autossuficiente](../deploying/runtime-patch-selection.md).
+
 ## <a name="windows-compatibility-pack"></a>Pacote de Compatibilidade do Windows
 
 Ao transmitir código existente do .NET Framework para o .NET Core, você pode usar o [Pacote de Compatibilidade do Windows](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). Ele fornece acesso 20.000 APIs a mais do que as disponíveis no .NET Core. Essas APIs incluem tipos no namespace <xref:System.Drawing?displayProperty=nameWithType>, a classe <xref:System.Diagnostics.EventLog>, WMI, contadores de desempenho, Windows Services e os tipos de registro e membros do Windows.
@@ -245,7 +246,7 @@ No Windows, você também pode escolher usar <xref:System.Net.Http.WinHttpHandle
 
 No Linux e no macOS, só é possível configurar <xref:System.Net.Http.HttpClient> por processo. No Linux, você precisa implantar [libcurl](https://curl.haxx.se/libcurl/) se quiser usar a implementação <xref:System.Net.Http.HttpClient> antiga. (Ele é instalado com .NET Core 2.0.)
 
-### <a name="breaking-changes"></a>Alterações da falha
+### <a name="breaking-changes"></a>Alterações de quebra
 
 Para obter informações sobre alterações significativas, consulte [alterações recentes de migração da versão 2,0 para 2,1](../compatibility/2.0-2.1.md).
 
