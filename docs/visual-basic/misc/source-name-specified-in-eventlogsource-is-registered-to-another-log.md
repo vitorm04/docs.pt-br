@@ -2,14 +2,15 @@
 title: O nome da fonte especificado em EventLogSource está registrado em um log diferente daquele especificado em EventLogName
 ms.date: 07/20/2015
 ms.assetid: 7317e100-098b-408d-86e5-7c74cf8558c7
-ms.openlocfilehash: da9f1756909d1c37e28f2dde62a7f8a73bb19f37
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1b577e3b0613001b6241dcfdc59c8c84029197d2
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555634"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058924"
 ---
 # <a name="source-name-specified-in-eventlogsource-is-registered-to-a-log-other-than-that-specified-in-eventlogname"></a>O nome da fonte especificado em EventLogSource está registrado em um log diferente daquele especificado em EventLogName
+
 O `EventLog` está tentando se referir a uma fonte que está registrada em um log diferente. Se você estiver gravando entradas em um log de eventos, deverá especificar a <xref:System.Diagnostics.EventLog.Source%2A> propriedade. A <xref:System.Diagnostics.EventLog.Source%2A> Propriedade registra seu componente com o log de eventos como uma fonte de entradas válida. Uma única fonte pode ser associada (e, portanto, gravar entradas em) apenas um log de eventos por vez.  
   
  Por padrão, se você tentar gravar uma entrada sem primeiro registrar seu componente como uma fonte válida, o sistema registrará automaticamente a origem com o log de eventos, usando o valor da <xref:System.Diagnostics.EventLog.Source%2A> propriedade como a cadeia de caracteres de origem.  

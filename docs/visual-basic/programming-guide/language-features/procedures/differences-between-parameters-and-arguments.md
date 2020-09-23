@@ -11,19 +11,21 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: dd0a62b6567f3e74763b7f2e9b96803c193c7976
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0ad9104f347205cebc6e078aac246a413c0d9b78
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403350"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91057839"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Diferenças entre parâmetros e argumentos (Visual Basic)
+
 Na maioria dos casos, um procedimento deve ter algumas informações sobre as circunstâncias em que ele foi chamado. Um procedimento que executa tarefas repetidas ou compartilhadas usa informações diferentes para cada chamada. Essas informações consistem em variáveis, constantes e expressões que você passa para o procedimento ao chamá-lo.  
   
  Para comunicar essas informações ao procedimento, o procedimento define um *parâmetro*e o código de chamada passa um *argumento* para esse parâmetro. Você pode considerar o parâmetro como um espaço de estacionamento e o argumento como um automóvel. Assim como os automóveis diferentes podem estacionar em um espaço de estacionamento em momentos diferentes, o código de chamada pode passar um argumento diferente para o mesmo parâmetro toda vez que ele chama o procedimento.  
   
 ## <a name="parameters"></a>Parâmetros  
+
  Um *parâmetro* representa um valor que o procedimento espera que você passe ao chamá-lo. A declaração do procedimento define seus parâmetros.  
   
  Ao definir um `Function` procedimento ou `Sub` , você especifica uma *lista de parâmetros* entre parênteses imediatamente após o nome do procedimento. Para cada parâmetro, você especifica um nome, um tipo de dados e um mecanismo de passagem ([ByVal](../../../language-reference/modifiers/byval.md) ou [ByRef](../../../language-reference/modifiers/byref.md)). Você também pode indicar que um parâmetro é opcional. Isso significa que o código de chamada não precisa passar um valor para ele.  
@@ -31,6 +33,7 @@ Na maioria dos casos, um procedimento deve ter algumas informações sobre as ci
  O nome de cada parâmetro serve como uma *variável local* no procedimento. Você usa o nome do parâmetro da mesma maneira que usa qualquer outra variável.  
   
 ## <a name="arguments"></a>Argumentos  
+
  Um *argumento* representa o valor que você passa para um parâmetro de procedimento quando chama o procedimento. O código de chamada fornece os argumentos ao chamar o procedimento.  
   
  Ao chamar um `Function` procedimento ou `Sub` , você inclui uma *lista de argumentos* entre parênteses imediatamente após o nome do procedimento. Cada argumento corresponde ao parâmetro na mesma posição na lista.  

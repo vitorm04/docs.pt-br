@@ -6,14 +6,15 @@ helpviewer_keywords:
 - enumerations [Visual Basic], iterating
 - ListBox control [Windows Forms], populating from an enumeration
 ms.assetid: e5aa10eb-cfcd-4a3b-8e76-f06b8f2002be
-ms.openlocfilehash: fb6fbdd45ca0e84ccb9fc55296d78e3867d5fe25
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 21c170d4708b90987a3f1e9c18969b8803fcdbe0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414421"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058710"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>Como iterar em uma enumeração no Visual Basic
+
 Enumerações fornecem uma maneira conveniente para trabalhar com conjuntos de constantes relacionadas e para associar valores de constante a nomes. Para iterar por meio de uma enumeração, você pode movê-lo para uma matriz usando o <xref:System.Enum.GetValues%2A> método. Você também pode iterar por meio de uma enumeração usando uma `For...Each` instrução, usando o <xref:System.Enum.GetNames%2A> <xref:System.Enum.GetValues%2A> método ou para extrair a cadeia de caracteres ou o valor numérico.  
   
 ### <a name="to-iterate-through-an-enumeration"></a>Para iterar por meio de uma enumeração  
@@ -30,4 +31,4 @@ Enumerações fornecem uma maneira conveniente para trabalhar com conjuntos de c
 - [Como determinar a cadeia de caracteres associada a um valor de enumeração](how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [Como fazer referência a um membro de enumeração](how-to-refer-to-an-enumeration-member.md)
 - [Enumerações e qualificação de nome](enumerations-and-name-qualification.md)
-- [Matrizes](../arrays/index.md)
+- [matrizes](../arrays/index.md)

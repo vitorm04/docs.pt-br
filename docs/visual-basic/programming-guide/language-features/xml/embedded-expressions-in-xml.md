@@ -8,14 +8,15 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: d4ff9442aa82a3eb46d56500159562174646ea58
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 44a6c3408b57fa7f89e2834aa677fe8801ef21f3
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410251"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058307"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Expressões inseridas no XML (Visual Basic)
+
 As expressões inseridas permitem que você crie literais XML que contêm expressões que são avaliadas em tempo de execução. A sintaxe para uma expressão inserida é `<%=` `expression` `%>` , que é igual à sintaxe usada em ASP.net.  
   
  Por exemplo, você pode criar um literal de elemento XML, combinando expressões inseridas com conteúdo de texto literal.  
@@ -31,16 +32,17 @@ As expressões inseridas permitem que você crie literais XML que contêm expres
 ```  
   
 ## <a name="embedded-expression-location-and-validation"></a>Local e validação da expressão inserida  
+
  As expressões inseridas podem aparecer apenas em determinados locais dentro de expressões literais XML. O local da expressão controla quais tipos a expressão pode retornar e como `Nothing` é manipulada. A tabela a seguir descreve os locais permitidos e os tipos de expressões inseridas.  
   
-|Local em literal|Tipo de expressão|Manipulação de`Nothing`|  
+|Local em literal|Tipo de expressão|Manipulação de `Nothing`|  
 |---|---|---|  
 |Nome do elemento XML|<xref:System.Xml.Linq.XName>|Erro|  
-|Conteúdo do elemento XML|`Object`ou matriz de`Object`|Ignored|  
-|Nome do atributo do elemento XML|<xref:System.Xml.Linq.XName>|Erro, a menos que o valor do atributo também seja`Nothing`|  
+|Conteúdo do elemento XML|`Object` ou matriz de `Object`|Ignored|  
+|Nome do atributo do elemento XML|<xref:System.Xml.Linq.XName>|Erro, a menos que o valor do atributo também seja `Nothing`|  
 |Valor de atributo de elemento XML|`Object`|Declaração de atributo ignorada|  
-|Atributo de elemento XML|<xref:System.Xml.Linq.XAttribute>ou uma coleção de<xref:System.Xml.Linq.XAttribute>|Ignored|  
-|Elemento raiz do documento XML|<xref:System.Xml.Linq.XElement>ou uma coleção de um <xref:System.Xml.Linq.XElement> objeto e um número arbitrário de <xref:System.Xml.Linq.XProcessingInstruction> <xref:System.Xml.Linq.XComment> objetos e|Ignored|  
+|Atributo de elemento XML|<xref:System.Xml.Linq.XAttribute> ou uma coleção de <xref:System.Xml.Linq.XAttribute>|Ignored|  
+|Elemento raiz do documento XML|<xref:System.Xml.Linq.XElement> ou uma coleção de um <xref:System.Xml.Linq.XElement> objeto e um número arbitrário de <xref:System.Xml.Linq.XProcessingInstruction> <xref:System.Xml.Linq.XComment> objetos e|Ignored|  
   
 - Exemplo de uma expressão incorporada em um nome de elemento XML:  
   
@@ -73,6 +75,7 @@ As expressões inseridas permitem que você crie literais XML que contêm expres
  Para obter mais informações sobre como usar uma expressão inserida em um tipo específico de literal, consulte [literal de documento XML](../../../language-reference/xml-literals/xml-document-literal.md), [literal de elemento XML](../../../language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="scoping-rules"></a>Regras de escopo  
+
  O compilador converte cada literal XML em uma chamada de construtor para o tipo literal apropriado. O conteúdo literal e as expressões inseridas em um literal XML são passados como argumentos para o construtor. Isso significa que todos os elementos de programação de Visual Basic disponíveis para um literal XML também estão disponíveis para suas expressões inseridas.  
   
  Em um literal XML, você pode acessar os prefixos de namespace XML declarados com a `Imports` instrução. Você pode declarar um novo prefixo de namespace XML ou sombrear um prefixo de namespace XML existente, em um elemento usando o `xmlns` atributo. O novo namespace está disponível para os nós filho desse elemento, mas não para literais XML em expressões inseridas.  

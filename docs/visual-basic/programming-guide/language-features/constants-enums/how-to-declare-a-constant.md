@@ -23,14 +23,15 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: ffaa98f6af3d4b276f5c0b1153841acdea0809d7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 138dd58dac9d1983e35e61f8b98a77810fc6e38b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414473"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058840"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Como declarar uma constante (Visual Basic)
+
 Você usa a `Const` instrução para declarar uma constante e definir seu valor. Ao declarar uma constante, você atribui um nome significativo a um valor. Depois que uma constante é declarada, ela não pode ser modificada ou atribuída um novo valor.  
   
  Você declara uma constante em um procedimento ou na seção declarações de um módulo, classe ou estrutura. As constantes de nível de classe ou estrutura são `Private` por padrão, mas também podem ser declaradas como `Public` , `Friend` , `Protected` ou `Protected Friend` para o nível apropriado de acesso ao código.  

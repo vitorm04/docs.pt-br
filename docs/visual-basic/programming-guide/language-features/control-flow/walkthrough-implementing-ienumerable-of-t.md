@@ -7,14 +7,15 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 582957c91eac63cf7f72dd2f6c0cf40e627be686
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f1f0036c38299f2392f8c8705e67b7bb6b7db068
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402025"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058632"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Instruções passo a passo: implementando IEnumerable(Of T) no Visual Basic
+
 A <xref:System.Collections.Generic.IEnumerable%601> interface é implementada por classes que podem retornar uma sequência de valores de um item por vez. A vantagem de retornar dados de um item por vez é que você não precisa carregar o conjunto completo de dados na memória para trabalhar com ele. Você só precisa usar memória suficiente para carregar um único item dos dados. As classes que implementam a `IEnumerable(T)` interface podem ser usadas com `For Each` loops ou consultas LINQ.  
   
  Por exemplo, considere um aplicativo que deve ler um arquivo de texto grande e retornar cada linha do arquivo que corresponde a critérios de pesquisa específicos. O aplicativo usa uma consulta LINQ para retornar linhas do arquivo que correspondem aos critérios especificados. Para consultar o conteúdo do arquivo usando uma consulta LINQ, o aplicativo pode carregar o conteúdo do arquivo em uma matriz ou em uma coleção. No entanto, carregar o arquivo inteiro em uma matriz ou coleção consumiria muito mais memória do que o necessário. Em vez disso, a consulta LINQ poderia consultar o conteúdo do arquivo usando uma classe enumerável, retornando apenas os valores que correspondem aos critérios de pesquisa. As consultas que retornam apenas alguns valores correspondentes consumirão muito menos memória.  
@@ -96,6 +97,6 @@ A <xref:System.Collections.Generic.IEnumerable%601> interface é implementada po
 ## <a name="see-also"></a>Confira também
 
 - [Introdução a LINQ no Visual Basic](../linq/introduction-to-linq.md)
-- [Fluxo de controle](index.md)
+- [Fluxo de Controle](index.md)
 - [Estruturas de Loop](loop-structures.md)
 - [Instrução For Each...Next](../../../language-reference/statements/for-each-next-statement.md)

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: a6b70d0973e92db90e35e61b7fed2279c5b0bac3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bffdc5974eff6b71e0abc4780a61aa300769eed6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393968"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058541"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Como declarar uma estrutura (Visual Basic)
+
 Você começa uma declaração de estrutura com a [instrução Structure](../../../language-reference/statements/structure-statement.md)e a encerra com a `End Structure` instrução. Entre essas duas instruções, você deve declarar pelo menos um *elemento*. Os elementos podem ser de qualquer tipo de dados, mas pelo menos um deve ser uma variável não compartilhada ou um evento não compartilhado e não-personalizado.  
   
  Você não pode inicializar nenhum dos elementos de estrutura na declaração de estrutura. Quando você declara uma variável para ser de um tipo de estrutura, você atribui valores aos elementos acessando-os por meio da variável.  
@@ -57,7 +58,7 @@ Você começa uma declaração de estrutura com a [instrução Structure](../../
   
 ## <a name="see-also"></a>Confira também
 
-- [Tipos de dados](index.md)
+- [Data Types](index.md)
 - [Tipos de dados elementares](elementary-data-types.md)
 - [Tipos de dados compostos](composite-data-types.md)
 - [Tipos de valor e referência](value-types-and-reference-types.md)

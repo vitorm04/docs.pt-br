@@ -6,17 +6,18 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: c8f228c205c93adf7f2f555dc840a7daac61950b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 752b425ba32efe41a1ab1aa75de20039d36f5e50
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414447"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058892"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Como declarar enumerações (Visual Basic)
+
 Você cria uma enumeração com a `Enum` instrução na seção declarações de uma classe ou módulo. Você não pode declarar uma enumeração dentro de um método. Para especificar o nível apropriado de acesso, use `Private` , `Protected` , `Friend` ou `Public` .  
   
- Um `Enum` tipo tem um nome, um tipo subjacente e um conjunto de campos, cada um representando uma constante. O nome deve ser um qualificador de Visual Basic .NET válido. O tipo subjacente deve ser um dos tipos inteiros — `Byte` , `Short` `Long` ou `Integer` . O padrão é `Integer`. As enumerações são sempre fortemente tipadas e não são intercambiáveis com tipos de números inteiros.  
+ Um `Enum` tipo tem um nome, um tipo subjacente e um conjunto de campos, cada um representando uma constante. O nome deve ser um qualificador de Visual Basic .NET válido. O tipo subjacente deve ser um dos tipos inteiros — `Byte` , `Short` `Long` ou `Integer` . `Integer` é o padrão. As enumerações são sempre fortemente tipadas e não são intercambiáveis com tipos de números inteiros.  
   
  Enumerações não podem ter valores de ponto flutuante. Se uma enumeração for atribuída a um valor de ponto flutuante com `Option Strict On` , ocorrerá um erro de compilador. Se `Option Strict` for `Off` , o valor será convertido automaticamente para o `Enum` tipo.  
   
