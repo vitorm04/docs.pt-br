@@ -6,14 +6,15 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: a6226b73d5d5d4d48a71afe39e8a546019d4c0bc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 488a1da6b25bcb4b42f0d355c6faee542046d0f5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352339"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098885"
 ---
 # <a name="-platform-visual-basic"></a>-plataforma (Visual Basic)
+
 Especifica qual versão de plataforma do common language runtime (CLR) pode executar o arquivo de saída.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ Especifica qual versão de plataforma do common language runtime (CLR) pode exec
 |`anycpu32bitpreferred`|Compila o assembly para ser executado em qualquer plataforma. O aplicativo será executado como um aplicativo de 32 bits em versões de 32 bits e 64 bits do Windows. Esse sinalizador é válido somente para executáveis (. EXE) e requer .NET Framework 4,5.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Use a opção `-platform` para especificar o tipo de processador direcionada pelo arquivo de saída.  
   
  Em geral, os assemblies do .NET Framework gravados no Visual Basic serão executados da mesma maneira, independentemente da plataforma. No entanto, existem alguns casos em que se comportam de formas diferentes em plataformas distintas. Esses casos comuns são:  
@@ -75,13 +77,14 @@ Especifica qual versão de plataforma do common language runtime (CLR) pode exec
      Para obter mais informações, consulte [Compilar página, designer de projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como usar a opção do compilador `-platform`.  
   
 ```console
 vbc -platform:x86 myFile.vb  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [-Target (Visual Basic)](target.md)
 - [Compilador de linha de comando do Visual Basic](index.md)

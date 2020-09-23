@@ -2,14 +2,15 @@
 title: O arquivo está atualmente aberto para leitura
 ms.date: 07/20/2015
 ms.assetid: 7f662a68-021a-4432-947a-6bde48061257
-ms.openlocfilehash: 8796bfebd48336c4142d2b67381484b7c859720f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b31c13061066f3ab620db724bf770fbad83d90b4
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552031"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100172"
 ---
 # <a name="the-file-is-currently-open-for-reading"></a>O arquivo está atualmente aberto para leitura
+
 Foi feita uma tentativa de acessar um arquivo que está aberto para leitura no momento.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  

@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID325
 ms.assetid: e986ab45-e3ce-430e-8704-5882e5da1104
-ms.openlocfilehash: 42cccaf6c8539a2d5e8e081bfe0c0c5cec0e02e9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 91c7528eca03faf91b7d072032c80903590581b0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84358314"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100419"
 ---
 # <a name="format-not-valid-in-resource-file"></a>Formato inválido no arquivo de recurso
+
 Um arquivo de recurso em seu projeto não segue o formato padrão para um arquivo de recurso do Windows ou há uma incompatibilidade entre o arquivo de recurso e o Visual Basic projeto.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  

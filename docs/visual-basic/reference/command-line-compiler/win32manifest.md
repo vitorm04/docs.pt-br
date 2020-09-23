@@ -6,14 +6,15 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: 6f77649365f8ca7b163cd55854aa9960d88f2984
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f8329ce2e7597f802d75ec85a580f1a3bd5cfc97
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414253"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098872"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
+
 Identifica um arquivo de manifesto do aplicativo Win32 definido pelo usuário para ser inserido no arquivo executável portátil (PE) de um projeto.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -29,6 +30,7 @@ Identifica um arquivo de manifesto do aplicativo Win32 definido pelo usuário pa
 |`fileName`|O caminho do arquivo de manifesto personalizado.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Por padrão, o compilador Visual Basic insere um manifesto do aplicativo que especifica um nível de execução solicitado de asInvoker. Ele cria o manifesto na mesma pasta em que o arquivo executável é compilado, normalmente a pasta bin\Debug ou bin\Release quando você usa o Visual Studio. Se você quiser fornecer um manifesto personalizado, por exemplo, para especificar um nível de execução solicitado de highestAvailable ou requireAdministrator, use essa opção para especificar o nome do arquivo.  
   
 > [!NOTE]
@@ -47,6 +49,7 @@ Identifica um arquivo de manifesto do aplicativo Win32 definido pelo usuário pa
  Você pode fornecer o manifesto do aplicativo como uma etapa de pós-compilação personalizada ou como parte de um arquivo de recurso do Win32 usando a `-nowin32manifest` opção. Use essa mesma opção se quiser que o aplicativo seja sujeito à virtualização de arquivo ou Registro no Windows Vista. Isso impedirá que o compilador crie e incorpore um manifesto padrão no arquivo PE.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra o manifesto padrão que o Visual Basic compilador insere em um PE.  
   
 > [!NOTE]
