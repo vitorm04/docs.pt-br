@@ -2,21 +2,22 @@
 title: 'Como: localizar a diferença de conjunto entre duas listas (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: f533b63b40325b34c5881c1e2f14aa4e576191c7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1671cd32c0c0b8a3ff7fa6be87bd43dde9750776
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396591"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100211"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a><span data-ttu-id="a0923-102">Como localizar a diferença de conjunto entre duas listas (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0923-102">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="a0923-103">Este exemplo mostra como usar o LINQ para comparar duas listas de cadeias de caracteres e retornar as linhas que estão no names1.txt, mas não no names2.txt.</span><span class="sxs-lookup"><span data-stu-id="a0923-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a><span data-ttu-id="2038b-102">Como localizar a diferença de conjunto entre duas listas (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2038b-102">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span></span>
+
+<span data-ttu-id="2038b-103">Este exemplo mostra como usar o LINQ para comparar duas listas de cadeias de caracteres e retornar as linhas que estão no names1.txt, mas não no names2.txt.</span><span class="sxs-lookup"><span data-stu-id="2038b-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="a0923-104">Para criar os arquivos de dados</span><span class="sxs-lookup"><span data-stu-id="a0923-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="2038b-104">Para criar os arquivos de dados</span><span class="sxs-lookup"><span data-stu-id="2038b-104">To create the data files</span></span>  
   
-1. <span data-ttu-id="a0923-105">Copie names1. txt e names2. txt para a pasta da solução, conforme mostrado em [como: combinar e comparar as coleções de cadeias de caracteres (LINQ) (Visual Basic)](how-to-combine-and-compare-string-collections-linq.md).</span><span class="sxs-lookup"><span data-stu-id="a0923-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](how-to-combine-and-compare-string-collections-linq.md).</span></span>  
+1. <span data-ttu-id="2038b-105">Copie names1.txt e names2.txt para a pasta da solução, conforme mostrado em [como: combinar e comparar as coleções de cadeias de caracteres (LINQ) (Visual Basic)](how-to-combine-and-compare-string-collections-linq.md).</span><span class="sxs-lookup"><span data-stu-id="2038b-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](how-to-combine-and-compare-string-collections-linq.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a0923-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a0923-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2038b-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="2038b-106">Example</span></span>  
   
 ```vb  
 Class CompareLists  
@@ -51,11 +52,12 @@ End Class
 ' Garcia, Debra  
 ```  
   
- <span data-ttu-id="a0923-107">Alguns tipos de operações de consulta no Visual Basic, como <xref:System.Linq.Enumerable.Except%2A> , <xref:System.Linq.Enumerable.Distinct%2A> , <xref:System.Linq.Enumerable.Union%2A> e <xref:System.Linq.Enumerable.Concat%2A> , só podem ser expressos na sintaxe baseada em método.</span><span class="sxs-lookup"><span data-stu-id="a0923-107">Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
+ <span data-ttu-id="2038b-107">Alguns tipos de operações de consulta no Visual Basic, como <xref:System.Linq.Enumerable.Except%2A> , <xref:System.Linq.Enumerable.Distinct%2A> , <xref:System.Linq.Enumerable.Union%2A> e <xref:System.Linq.Enumerable.Concat%2A> , só podem ser expressos na sintaxe baseada em método.</span><span class="sxs-lookup"><span data-stu-id="2038b-107">Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
   
-## <a name="compile-the-code"></a><span data-ttu-id="a0923-108">Compilar o código</span><span class="sxs-lookup"><span data-stu-id="a0923-108">Compile the code</span></span>  
-<span data-ttu-id="a0923-109">Crie um projeto de aplicativo de console Visual Basic, com uma `Imports` instrução para o namespace System. Linq.</span><span class="sxs-lookup"><span data-stu-id="a0923-109">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
-  
-## <a name="see-also"></a><span data-ttu-id="a0923-110">Confira também</span><span class="sxs-lookup"><span data-stu-id="a0923-110">See also</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="2038b-108">Compilar o código</span><span class="sxs-lookup"><span data-stu-id="2038b-108">Compile the code</span></span>  
 
-- [<span data-ttu-id="a0923-111">LINQ e cadeias de caracteres (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0923-111">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
+<span data-ttu-id="2038b-109">Crie um projeto de aplicativo de console Visual Basic, com uma `Imports` instrução para o namespace System. Linq.</span><span class="sxs-lookup"><span data-stu-id="2038b-109">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+  
+## <a name="see-also"></a><span data-ttu-id="2038b-110">Confira também</span><span class="sxs-lookup"><span data-stu-id="2038b-110">See also</span></span>
+
+- [<span data-ttu-id="2038b-111">LINQ e cadeias de caracteres (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2038b-111">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
