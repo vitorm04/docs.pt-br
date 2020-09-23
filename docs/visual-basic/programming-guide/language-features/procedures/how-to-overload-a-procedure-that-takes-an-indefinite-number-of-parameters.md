@@ -10,14 +10,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: ddff8c8cd82593b7d89fb0847e56123c287e364b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 10cd7d11b0efe9fa5eb3ae24269a4cdbe33bc08a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387875"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071541"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Como sobrecarregar um procedimento que use um número indefinido de parâmetros (Visual Basic)
+
 Se um procedimento tiver um parâmetro [ParamArray](../../../language-reference/modifiers/paramarray.md) , você não poderá definir uma versão sobrecarregada usando uma matriz unidimensional para a matriz de parâmetros. Para obter mais informações, consulte "sobrecargas implícitas para um parâmetro ParamArray" em [Considerações sobre procedimentos de sobrecarga](./considerations-in-overloading-procedures.md).  
   
 ### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>Para sobrecarregar um procedimento que usa um número variável de parâmetros  
@@ -35,6 +36,7 @@ Se um procedimento tiver um parâmetro [ParamArray](../../../language-reference/
 6. Encerre cada procedimento com a `End Sub` `End Function` instrução ou conforme apropriado.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra um procedimento definido com um parâmetro [ParamArray](../../../language-reference/modifiers/paramarray.md) e, em seguida, um conjunto equivalente de procedimentos sobrecarregados.  
   
  [!code-vb[VbVbcnProcedures#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#69)]  
@@ -48,16 +50,18 @@ Se um procedimento tiver um parâmetro [ParamArray](../../../language-reference/
  O código nas versões sobrecarregadas não tem que testar se o código de chamada forneceu um ou mais valores para o `ParamArray` parâmetro, ou se for, quantos. Visual Basic passa o controle para a versão que corresponde à lista de argumentos de chamada.  
   
 ## <a name="compile-the-code"></a>Compilar o código  
+
  Como um procedimento com um `ParamArray` parâmetro é equivalente a um conjunto de versões sobrecarregadas, não é possível sobrecarregar esse procedimento com uma lista de parâmetros correspondente a qualquer uma dessas sobrecargas implícitas. Para obter mais informações, consulte [Considerações sobre sobrecarga de procedimentos](./considerations-in-overloading-procedures.md).  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
+
  Sempre que você lida com uma matriz que pode ser indefinidamente grande, há um risco de sobreexecutar alguma capacidade interna de seu aplicativo. Se você aceitar uma matriz de parâmetros, deverá testar o comprimento da matriz que o código de chamada passou e tomar as medidas apropriadas se for muito grande para seu aplicativo.  
   
 ## <a name="see-also"></a>Confira também
 
 - [Procedimentos](./index.md)
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
-- [Parâmetros Opcionais](./optional-parameters.md)
+- [Parâmetros opcionais](./optional-parameters.md)
 - [Matrizes de parâmetros](./parameter-arrays.md)
 - [Sobrecarga de procedimento](./procedure-overloading.md)
 - [Solucionando problemas de procedimentos](./troubleshooting-procedures.md)

@@ -2,12 +2,12 @@
 title: Introdução ao Azure e ao .NET
 description: Conheça o básico que você precisa saber sobre o Azure e o .NET.
 ms.date: 06/20/2020
-ms.openlocfilehash: c64de800f47035b22cc62b6d08cb7b71246984a7
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 9f1766176740ede5aa40dd894497f2aa719efe23
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174316"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071099"
 ---
 # <a name="introduction-to-azure-and-net"></a>Introdução ao Azure e ao .NET
 
@@ -28,7 +28,7 @@ Este documento fornece uma visão geral dos principais conceitos e serviços que
 
 **Serviços gerenciados**: o Azure fornece alguns serviços em que você fornece dados ou informações ao Azure e a implementação do Azure executa a ação apropriada. Um exemplo é o Armazenamento de Blobs do Azure, em que você fornece arquivos e o Azure lida com a leitura, a gravação e a persistência.
 
-**SDK do Azure para .net**: às vezes conhecido como **bibliotecas do Azure para .net**, isso se refere coletivamente aos [pacotes NuGet](https://www.nuget.org/profiles/azure-sdk) que você instala em seu projeto que fornecem várias interações e funcionalidades com os serviços do Azure. Esses pacotes também incluem bibliotecas de gerenciamento usadas para provisionar e administrar os recursos.
+O **SDK do Azure para .net** se refere coletivamente aos [pacotes NuGet](packages.md) que você instala em seu projeto, que fornecem várias interações e funcionalidades com os serviços do Azure. Esses pacotes também incluem bibliotecas de gerenciamento usadas para provisionar e administrar os recursos.
 
 ## <a name="choosing-a-hosting-option"></a>Escolhendo uma opção de hospedagem
 

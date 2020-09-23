@@ -10,14 +10,15 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: 20531e379ddf9b93a278795e9b3c0eb91b47e077
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b25d246bd31147b7a9ba2c72214926fdb5ca8895
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398338"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072139"
 ---
 # <a name="visual-basic-naming-conventions"></a>Convenções de nomenclatura do Visual Basic
+
 Quando você nomear um elemento em seu aplicativo Visual Basic, o primeiro caractere desse nome deverá ser um caractere alfabético ou um sublinhado. Observe, no entanto, que os nomes que começam com um sublinhado não são compatíveis com a [independência de idioma e com os componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
   
  As sugestões a seguir se aplicam à nomenclatura.  
@@ -46,4 +47,4 @@ Quando você nomear um elemento em seu aplicativo Visual Basic, o primeiro carac
 - [Me, My, MyBase e MyClass](me-my-mybase-and-myclass.md)
 - [Nomes de elementos declarados](../language-features/declared-elements/declared-element-names.md)
 - [Estrutura do programa e convenções de código](program-structure-and-code-conventions.md)
-- [Referência de linguagem de Visual Basic](../../language-reference/index.md)
+- [Referência da linguagem Visual Basic](../../language-reference/index.md)

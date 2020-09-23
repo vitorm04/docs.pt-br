@@ -4,14 +4,15 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 533d3da2f76854d311262ce97b43f240acab5f7d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 77a130b684d26cf7e4b9df9382348a371a60bc5d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408745"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072035"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic opções de compilador listadas por categoria
+
 O compilador de linha de comando Visual Basic é fornecido como uma alternativa à compilação de programas de dentro do ambiente de desenvolvimento integrado (IDE) do Visual Studio. Veja a seguir uma lista de Visual Basic opções do compilador de linha de comando classificadas por categoria funcional.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
@@ -37,13 +38,13 @@ O compilador de linha de comando Visual Basic é fornecido como uma alternativa 
   
 |Opção|Finalidade|  
 |---|---|  
-|[-doc](doc.md)|Processa comentários de documentação em um arquivo XML.|  
-|[-deterministic](deterministic.md)|Faz com que o compilador gere um assembly de conteúdo binário idêntico entre compilações se as entradas são idênticas.|
+|[-Doc](doc.md)|Processa comentários de documentação em um arquivo XML.|  
+|[-determinístico](deterministic.md)|Faz com que o compilador gere um assembly de conteúdo binário idêntico entre compilações se as entradas são idênticas.|
 |[-netcf](netcf.md)|Define o compilador para o .NET Compact Framework de destino.|  
 |[-out](out.md)|Especifica um arquivo de saída.|  
 |[-refonly](refonly-compiler-option.md)|Gera apenas um assembly de referência.|
 |[-refout](refout-compiler-option.md)|Especifica o caminho de saída de um assembly de referência.|
-|[-target](target.md)|Especifica o formato da saída.|  
+|[-destino](target.md)|Especifica o formato da saída.|  
   
 ## <a name="net-assemblies"></a>Assemblies .NET  
   
@@ -67,7 +68,7 @@ O compilador de linha de comando Visual Basic é fornecido como uma alternativa 
 |[-bugreport](bugreport.md)|Cria um arquivo que contém informações que tornam mais fácil relatar um bug.|  
 |[-Depurar](debug.md)|Produz informações de depuração.|  
 |[-nowarn](nowarn.md)|Suprime a capacidade do compilador de gerar avisos.|  
-|[-quiet](quiet.md)|Impede que o compilador exiba código para erros e avisos relacionados à sintaxe.|  
+|[-Quiet](quiet.md)|Impede que o compilador exiba código para erros e avisos relacionados à sintaxe.|  
 |[-removeintchecks](removeintchecks.md)|Desabilita a verificação de estouro de inteiros.|  
 |[-warnaserror](warnaserror.md)|Promove avisos a erros.|  
 |`-ruleset:<file>`|Especifique um arquivo de conjunto de regras que desabilita o diagnóstico específico.|  
@@ -79,7 +80,7 @@ O compilador de linha de comando Visual Basic é fornecido como uma alternativa 
 |[-?](help.md)|Exibe as opções do compilador. Esse comando é o mesmo que especificar a `-help` opção. Nenhuma compilação ocorre.|  
 |[-ajuda](help.md)|Exibe as opções do compilador. Esse comando é o mesmo que especificar a `-?` opção. Nenhuma compilação ocorre.|  
   
-## <a name="language"></a>Idioma  
+## <a name="language"></a>Linguagem  
   
 |Opção|Finalidade|  
 |---|---|  
@@ -93,7 +94,7 @@ O compilador de linha de comando Visual Basic é fornecido como uma alternativa 
   
 |Opção|Finalidade|  
 |---|---|  
-|[-define](define.md)|Define os símbolos para a compilação condicional.|  
+|[-definir](define.md)|Define os símbolos para a compilação condicional.|  
   
 ## <a name="resources"></a>Recursos  
   
@@ -110,7 +111,7 @@ O compilador de linha de comando Visual Basic é fornecido como uma alternativa 
 |---|---|  
 |[@ (especificar arquivo de resposta)](specify-response-file.md)|Especifica um arquivo de resposta.|  
 |[-baseaddress](baseaddress.md)|Especifica o endereço base de uma DLL.|  
-|[-codepage](codepage.md)|Especifica a página de código a ser usada para todos os arquivos de código-fonte na compilação.|  
+|[-página de código](codepage.md)|Especifica a página de código a ser usada para todos os arquivos de código-fonte na compilação.|  
 |[-errorreport](errorreport.md)|Especifica como o compilador de Visual Basic deve relatar erros internos do compilador.|  
 |[-highentropyva](highentropyva.md)|Informa ao kernel do Windows se um executável específico dá suporte a alta (randomização de layout de espaço de endereço) de entropia.|  
 |[-main](main.md)|Especifica a classe que contém o `Sub Main` procedimento a ser usado na inicialização.|  
@@ -120,7 +121,7 @@ O compilador de linha de comando Visual Basic é fornecido como uma alternativa 
 |[-plataforma](platform.md)|Especifica a plataforma do processador que o compilador tem como destino para o arquivo de saída.|  
 |[-recurse](recurse.md)|Pesquisa em subdiretórios arquivos de código-fonte a serem compilados.|  
 |[-rootnamespace](rootnamespace.md)|Especifica um namespace para todas as declarações de tipo.|  
-|[-sdkpath](sdkpath.md)|Especifica o local de mscorlib. dll e Microsoft. VisualBasic. dll.|  
+|[-sdkpath](sdkpath.md)|Especifica o local de Mscorlib.dll e Microsoft.VisualBasic.dll.|  
 |[-vbruntime](vbruntime.md)|Especifica que o compilador deve compilar sem uma referência para a biblioteca de tempo de execução Visual Basic ou com uma referência a uma biblioteca de tempo de execução específica.|  
 |[-win32manifest](win32manifest.md)|Identifica um arquivo de manifesto do aplicativo Win32 definido pelo usuário para ser inserido no arquivo executável portátil (PE) de um projeto.|  
 |`-parallel[+&#124;-]`|Especifica se deve o build simultâneo deve ser usado (+).|  

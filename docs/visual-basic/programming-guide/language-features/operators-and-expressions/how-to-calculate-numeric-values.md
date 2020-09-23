@@ -11,14 +11,15 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 94b02693f308dcfcfa6983f2750a26d9d419f7be
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 452a8392b46f0c25b6ad2a8a30c51071f2ae1d93
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403453"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071710"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Como calcular valores numéricos (Visual Basic)
+
 Você pode calcular valores numéricos com o uso de expressões numéricas. Uma *expressão numérica* é uma expressão que contém literais, constantes e variáveis que representam valores numéricos e operadores que atuam nesses valores.  
   
 ## <a name="calculating-numeric-values"></a>Calculando valores numéricos  
@@ -50,6 +51,7 @@ Você pode calcular valores numéricos com o uso de expressões numéricas. Uma 
      Para obter mais informações, consulte [Instruções](../../../language-reference/statements/index.md).  
   
 ## <a name="multiple-operators"></a>Vários operadores  
+
  Se a expressão numérica contiver mais de um operador, a ordem na qual eles são avaliados será determinada pelas regras de precedência de operador. Para substituir as regras de precedência de operador, você deve colocar expressões entre parênteses, como no exemplo acima; as expressões embutidas são avaliadas primeiro.  
   
 #### <a name="to-override-normal-operator-precedence"></a>Para substituir a precedência de operador normal  

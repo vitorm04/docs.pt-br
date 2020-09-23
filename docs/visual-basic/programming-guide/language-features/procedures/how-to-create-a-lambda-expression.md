@@ -5,14 +5,15 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: 7affc84fa501ba98bdfa93835f0b0e381580b9bd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cc2de38f7375848d104edff6f419656d9caa9cb2
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388381"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071918"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Como criar uma expressão lambda (Visual Basic)
+
 Uma *expressão lambda* é uma função ou sub-rotina que não tem um nome. Uma expressão lambda pode ser usada sempre que um tipo delegado é válido.  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>Para criar uma função de expressão lambda de linha única  
@@ -96,6 +97,7 @@ Uma *expressão lambda* é uma função ou sub-rotina que não tem um nome. Uma 
      [!code-vb[VbVbalrLambdas#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#22)]  
   
 ## <a name="example"></a>Exemplo  
+
  Um uso comum de expressões lambda é definir uma função que possa ser passada como o argumento para um parâmetro cujo tipo é `Delegate` . No exemplo a seguir, o <xref:System.Diagnostics.Process.GetProcesses%2A> método retorna uma matriz dos processos em execução no computador local. O <xref:System.Linq.Enumerable.Where%2A> método da <xref:System.Linq.Enumerable> classe requer um `Boolean` delegado como argumento. A expressão lambda no exemplo é usada para essa finalidade. Ele retorna `True` para cada processo que tem apenas um thread, e eles são selecionados em `filteredList` .  
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
@@ -110,7 +112,7 @@ Uma *expressão lambda* é uma função ou sub-rotina que não tem um nome. Uma 
 - [Expressões lambda](./lambda-expressions.md)
 - [Instrução Function](../../../language-reference/statements/function-statement.md)
 - [Instrução Sub](../../../language-reference/statements/sub-statement.md)
-- [Delegados](../delegates/index.md)
+- [Representantes](../delegates/index.md)
 - [Como passar procedimentos para outro procedimento no Visual Basic](../delegates/how-to-pass-procedures-to-another-procedure.md)
 - [Instrução Delegate](../../../language-reference/statements/delegate-statement.md)
 - [Introdução a LINQ no Visual Basic](../linq/introduction-to-linq.md)

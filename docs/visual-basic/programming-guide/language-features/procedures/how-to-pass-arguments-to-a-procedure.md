@@ -11,14 +11,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 903e05facccd1f2afdf4bb51b200531feb64aa79
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 816d6388a0dbb7ae346074d258ff651c793c5e0e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387771"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071502"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Como passar argumentos para um procedimento (Visual Basic)
+
 Ao chamar um procedimento, você segue o nome do procedimento com uma lista de argumentos entre parênteses. Você fornece um argumento correspondente a cada parâmetro necessário que o procedimento define e, opcionalmente, pode fornecer argumentos para os `Optional` parâmetros. Se você não fornecer um `Optional` parâmetro na chamada, deverá incluir uma vírgula para marcar seu lugar na lista de argumentos, se você estiver fornecendo argumentos subsequentes.  
   
  Se você pretende passar um argumento de um tipo de dados diferente daquele de seu parâmetro correspondente, como `Byte` para `String` , você pode definir a opção de verificação de tipo ([instrução Option Strict](../../../language-reference/statements/option-strict-statement.md)) para `Off` . Se `Option Strict` for `On` , você deve usar conversões de alargamento ou palavras-chave de conversão explícita. Para obter mais informações, consulte [conversões de ampliação e estreitamento](../data-types/widening-and-narrowing-conversions.md) e [funções de conversão de tipo](../../../language-reference/functions/type-conversion-functions.md).  

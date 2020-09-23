@@ -8,14 +8,15 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: 006961a0f1d4be6b0d52be5bc273dad9733bfe56
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0b35751136937d4cee5b3ca9669b43d3fbdf71a1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388693"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071944"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Como chamar um procedimento de propriedade (Visual Basic)
+
 Você chama um procedimento de propriedade armazenando um valor na propriedade ou recuperando seu valor. Você acessa uma propriedade da mesma maneira que acessa uma variável.  
   
  O procedimento da propriedade `Set` armazena um valor e seu `Get` procedimento recupera o valor. No entanto, você não chama explicitamente esses procedimentos por nome. Você usa a propriedade em uma instrução de atribuição ou uma expressão, assim como você armazenaria ou recuperaria o valor de uma variável. Visual Basic faz as chamadas para os procedimentos da propriedade.  
@@ -24,7 +25,7 @@ Você chama um procedimento de propriedade armazenando um valor na propriedade o
   
 1. Use o nome da propriedade em uma expressão da mesma maneira que usaria um nome de variável. Você pode usar uma propriedade em qualquer lugar em que possa usar uma variável ou uma constante.  
   
-     -ou-  
+     - ou -  
   
      Use o nome da propriedade após o sinal de igual ( `=` ) em uma instrução de atribuição.  
   
