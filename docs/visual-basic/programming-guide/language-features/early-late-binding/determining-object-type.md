@@ -9,17 +9,19 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 3b1c4ad0ab4fd8d2897aff6ad9097cdc81272455
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ae338bc9bad9646abc045a652d4ef33a8863354b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410638"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086056"
 ---
 # <a name="determining-object-type-visual-basic"></a>Determinando o tipo de objeto (Visual Basic)
+
 Variáveis de objeto genérico (ou seja, variáveis declaradas como `Object` ) podem conter objetos de qualquer classe. Ao usar variáveis do tipo `Object` , talvez seja necessário executar ações diferentes com base na classe do objeto; por exemplo, alguns objetos podem não dar suporte a uma propriedade ou um método específico. Visual Basic fornece dois meios de determinar qual tipo de objeto é armazenado em uma variável de objeto: a `TypeName` função e o `TypeOf...Is` operador.  
   
 ## <a name="typename-and-typeofis"></a>TypeName e TypeOf... For  
+
  A `TypeName` função retorna uma cadeia de caracteres e é a melhor opção quando você precisa armazenar ou exibir o nome de classe de um objeto, conforme mostrado no fragmento de código a seguir:  
   
  [!code-vb[VbVbalrOOP#92](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#92)]  
@@ -51,4 +53,4 @@ Variáveis de objeto genérico (ou seja, variáveis declaradas como `Object` ) p
 - [Tipo de dados Object](../../../language-reference/data-types/object-data-type.md)
 - [Instrução If...Then...Else](../../../language-reference/statements/if-then-else-statement.md)
 - [Tipo de dados da cadeia de caracteres](../../../language-reference/data-types/string-data-type.md)
-- [Tipo de Dados Integer](../../../language-reference/data-types/integer-data-type.md)
+- [Tipo de dados Integer](../../../language-reference/data-types/integer-data-type.md)

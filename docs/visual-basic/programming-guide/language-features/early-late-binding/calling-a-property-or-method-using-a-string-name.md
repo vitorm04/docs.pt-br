@@ -12,17 +12,19 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 29072479db36f9f8a81ffd7f3f5b10208ebaa984
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9f28548c27545d94dde38cef3e9c56f98a69b259
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410651"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086082"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Chamando uma propriedade ou um método usando o nome de uma cadeia de caracteres (Visual Basic)
+
 Na maioria dos casos, você pode descobrir as propriedades e os métodos de um objeto em tempo de design e escrever código para tratá-los. No entanto, em alguns casos, talvez você não saiba sobre as propriedades e os métodos de um objeto com antecedência, ou talvez queira apenas a flexibilidade de permitir que um usuário final especifique propriedades ou execute métodos em tempo de execução.  
   
 ## <a name="callbyname-function"></a>Função CallByName  
+
  Considere, por exemplo, um aplicativo cliente que avalia as expressões inseridas pelo usuário, passando um operador para um componente COM. Suponha que você esteja constantemente adicionando novas funções ao componente que exigem novos operadores. Ao usar técnicas de acesso de objeto padrão, você deve recompilar e redistribuir o aplicativo cliente antes de poder usar os novos operadores. Para evitar isso, você pode usar a `CallByName` função para passar os novos operadores como cadeias de caracteres, sem alterar o aplicativo.  
   
  A `CallByName` função permite que você use uma cadeia de caracteres para especificar uma propriedade ou um método em tempo de execução. A assinatura da `CallByName` função é parecida com esta:  

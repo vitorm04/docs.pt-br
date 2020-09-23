@@ -5,14 +5,15 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: 36f623068372614ae034a8a7b31bffb7496f98b1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3a7a653bbf238b50e3c7339da76df0f68ab9b59f
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410689"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085783"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Como passar procedimentos para outro procedimento no Visual Basic
+
 Este exemplo mostra como usar delegados para passar um procedimento para outro procedimento.  
   
  Um delegado é um tipo que você pode usar como qualquer outro tipo em Visual Basic. O `AddressOf` operador retorna um objeto delegado quando aplicado a um nome de procedimento.  
@@ -47,7 +48,7 @@ Este exemplo mostra como usar delegados para passar um procedimento para outro p
   
 ## <a name="see-also"></a>Confira também
 
-- [Delegados](index.md)
+- [Representantes](index.md)
 - [Operador AddressOf](../../../language-reference/operators/addressof-operator.md)
 - [Instrução Delegate](../../../language-reference/statements/delegate-statement.md)
 - [Como invocar um método delegado](how-to-invoke-a-delegate-method.md)

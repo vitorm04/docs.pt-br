@@ -6,14 +6,15 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: 575b337c262fbb36a9e118aa293916c296cc2db3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 243583e55dcf278f951b813cca8384246d2d6db9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408556"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085224"
 ---
 # <a name="-keycontainer"></a>-keycontainer
+
 Especifica um nome de contêiner de chave para um par de chaves para dar a um assembly um nome forte.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -26,10 +27,11 @@ Especifica um nome de contêiner de chave para um par de chaves para dar a um as
   
 |Termo|Definição|  
 |---|---|  
-|`container`|Obrigatórios. Arquivo de contêiner que contém a chave. Coloque o nome do arquivo entre aspas ("") se o nome contiver um espaço.|  
+|`container`|Necessário. Arquivo de contêiner que contém a chave. Coloque o nome do arquivo entre aspas ("") se o nome contiver um espaço.|  
   
 ## <a name="remarks"></a>Comentários  
- O compilador cria o componente compartilhável inserindo uma chave pública no manifesto do assembly e assinando o assembly final com a chave privada. Para gerar um arquivo de chave, digite `sn -k file` na linha de comando. A `-i` opção instala o par de chaves em um contêiner. Para obter mais informações, consulte [sn. exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
+
+ O compilador cria o componente compartilhável inserindo uma chave pública no manifesto do assembly e assinando o assembly final com a chave privada. Para gerar um arquivo de chave, digite `sn -k file` na linha de comando. A `-i` opção instala o par de chaves em um contêiner. Para obter mais informações, consulte [Sn.exe (ferramenta de nome forte)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
  Se você compilar with `-target:module` , o nome do arquivo de chave será mantido no módulo e incorporado ao assembly criado quando você compilar um assembly com o [módulo-](addmodule.md)Add.  
   
@@ -43,6 +45,7 @@ Especifica um nome de contêiner de chave para um par de chaves para dar a um as
 > A `-keycontainer` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ela está disponível somente durante a compilação na linha de comando.  
   
 ## <a name="example"></a>Exemplo  
+
  O código a seguir compila o arquivo `Input.vb` de origem e especifica um contêiner de chave.  
   
 ```console  
