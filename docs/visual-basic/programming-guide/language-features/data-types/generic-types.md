@@ -36,14 +36,15 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: b14c7a3f1f667e7c13ec0ae46185ed3ece92beb8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f9b343c664baaf316e5cd6df72da8dcf56222382
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84394046"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090255"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipos genéricos no Visual Basic (Visual Basic)
+
 Um *tipo genérico* é um único elemento de programação que se adapta para executar a mesma funcionalidade para uma variedade de tipos de dados. Quando você define uma classe ou procedimento genérico, não é necessário definir uma versão separada para cada tipo de dados para o qual você talvez queira executar essa funcionalidade.  
   
  Uma analogia é um conjunto de chave de fenda com cabeçotes removíveis. Você inspeciona o parafuso que precisa ativar e seleciona a cabeça correta para esse parafuso (com fenda, cruzada, estrelado). Depois de inserir a cabeça correta no identificador da chave de fenda, você executará exatamente a mesma função com a chave de fenda, ou seja, virando o parafuso.  
@@ -61,6 +62,7 @@ Um *tipo genérico* é um único elemento de programação que se adapta para ex
  Para obter mais informações sobre como usar um tipo genérico, consulte [como: usar uma classe genérica](how-to-use-a-generic-class.md).  
   
 ## <a name="example-of-a-generic-class"></a>Exemplo de uma classe genérica  
+
  O exemplo a seguir mostra uma definição de esqueleto de uma classe genérica.  
   
  [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
@@ -76,11 +78,13 @@ Um *tipo genérico* é um único elemento de programação que se adapta para ex
  Para obter um exemplo mais completo, consulte [como: definir uma classe que pode fornecer funcionalidade idêntica em diferentes tipos de dados](how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Elementos de programação qualificados  
+
  Você pode definir e usar classes, estruturas, interfaces, procedimentos e delegados genéricos. Observe que a .NET Framework define várias classes, estruturas e interfaces genéricas que representam elementos genéricos comumente usados. O <xref:System.Collections.Generic?displayProperty=nameWithType> namespace fornece dicionários, listas, filas e pilhas. Antes de definir seu próprio elemento genérico, confira se ele já está disponível em <xref:System.Collections.Generic?displayProperty=nameWithType> .  
   
  Os procedimentos não são tipos, mas você pode definir e usar procedimentos genéricos. Consulte [procedimentos genéricos em Visual Basic](generic-procedures.md).  
   
 ## <a name="advantages-of-generic-types"></a>Vantagens dos tipos genéricos  
+
  Um tipo genérico serve como base para declarar vários elementos de programação diferentes, cada um operando em um tipo de dados específico. As alternativas para um tipo genérico são:  
   
 1. Um único tipo operando no `Object` tipo de dados.  
@@ -104,9 +108,11 @@ Um *tipo genérico* é um único elemento de programação que se adapta para ex
 - **Algoritmos genéricos.** Os algoritmos abstratos que são independentes de tipo são bons candidatos para tipos genéricos. Por exemplo, um procedimento genérico que classifica itens usando a <xref:System.IComparable> interface pode ser usado com qualquer tipo de dados que implementa <xref:System.IComparable> .  
   
 ## <a name="constraints"></a>Restrições  
+
  Embora o código em uma definição de tipo genérico deva ser o mais independente de tipo possível, talvez seja necessário exigir um determinado recurso de qualquer tipo de dados fornecido ao seu tipo genérico. Por exemplo, se você quiser comparar dois itens com a finalidade de classificar ou agrupar, seu tipo de dados deve implementar a <xref:System.IComparable> interface. Você pode impor esse requisito adicionando uma *restrição* ao parâmetro de tipo.  
   
 ### <a name="example-of-a-constraint"></a>Exemplo de uma restrição  
+
  O exemplo a seguir mostra uma definição de esqueleto de uma classe com uma restrição que requer que o argumento de tipo seja implementado <xref:System.IComparable> .  
   
  [!code-vb[VbVbalrDataTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#5)]  
@@ -114,6 +120,7 @@ Um *tipo genérico* é um único elemento de programação que se adapta para ex
  Se o código subsequente tentar construir uma classe a partir do `itemManager` fornecimento de um tipo que não implementa <xref:System.IComparable> , o compilador sinalizará um erro.  
   
 ### <a name="types-of-constraints"></a>Tipos de restrições  
+
  Sua restrição pode especificar os seguintes requisitos em qualquer combinação:  
   
 - O argumento de tipo deve implementar uma ou mais interfaces  
@@ -129,11 +136,13 @@ Um *tipo genérico* é um único elemento de programação que se adapta para ex
  Para obter mais informações sobre restrições, consulte [lista de tipos](../../../language-reference/statements/type-list.md).  
   
 ### <a name="example-of-multiple-constraints"></a>Exemplo de várias restrições  
+
  O exemplo a seguir mostra uma definição de esqueleto de uma classe genérica com uma lista de restrições no parâmetro de tipo. No código que cria uma instância dessa classe, o argumento de tipo deve implementar as <xref:System.IComparable> <xref:System.IDisposable> interfaces e, ser um tipo de referência, e expor um construtor sem parâmetros acessível.  
   
  [!code-vb[VbVbalrDataTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#6)]  
   
 ## <a name="important-terms"></a>Termos importantes  
+
  Os tipos genéricos apresentam e usam os seguintes termos:  
   
 - *Tipo genérico*. Uma definição de uma classe, estrutura, interface, procedimento ou delegado para o qual você fornece pelo menos um tipo de dados ao declará-lo.  
@@ -148,12 +157,12 @@ Um *tipo genérico* é um único elemento de programação que se adapta para ex
   
 ## <a name="see-also"></a>Confira também
 
-- [Tipos de dados](index.md)
+- [Data Types](index.md)
 - [Caracteres de tipo](type-characters.md)
 - [Tipos de valor e referência](value-types-and-reference-types.md)
 - [Conversões de tipo no Visual Basic](type-conversions.md)
 - [Solução de problemas de tipos de dados](troubleshooting-data-types.md)
-- [Tipos de dados](../../../language-reference/data-types/index.md)
+- [Data Types](../../../language-reference/data-types/index.md)
 - [Desse](../../../language-reference/statements/of-clause.md)
 - [Como](../../../language-reference/statements/as-clause.md)
 - [Tipo de dados Object](../../../language-reference/data-types/object-data-type.md)

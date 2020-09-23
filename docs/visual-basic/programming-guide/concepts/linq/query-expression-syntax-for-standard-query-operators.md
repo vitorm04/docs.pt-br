@@ -2,17 +2,19 @@
 title: Sintaxe de expressão da consulta para operadores de consulta padrão
 ms.date: 07/20/2015
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
-ms.openlocfilehash: 69bb50007c04bf8d1ee1553a37aca542afbffab0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 57a08f6540cbf3e091ee1b2e202e0e181487e3be
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396279"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090242"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>Sintaxe de expressão de consulta para operadores de consulta padrão (Visual Basic)
+
 Alguns dos operadores de consulta padrão usados com mais frequência têm uma sintaxe de palavra-chave de linguagem Visual Basic dedicada que permite que eles sejam chamados como parte de uma *expressão de consulta*. Uma expressão de consulta é uma maneira diferente e mais legível de expressar uma consulta do que seu equivalente *baseado em método*. As cláusulas de expressão de consulta são convertidas em chamadas para os métodos de consulta em tempo de compilação.  
   
 ## <a name="query-expression-syntax-table"></a>Tabela de sintaxe de expressão de consulta  
+
  A tabela a seguir lista os operadores de consulta padrão que têm cláusulas de expressão de consulta equivalentes.  
   
 |Método|Visual Basic sintaxe de expressão de consulta|  
@@ -25,7 +27,7 @@ Alguns dos operadores de consulta padrão usados com mais frequência têm uma s
 |<xref:System.Linq.Enumerable.Distinct%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|`Distinct`<br /><br /> (Para obter mais informações, consulte a [cláusula DISTINCT](../../../language-reference/queries/distinct-clause.md).)|  
 |<xref:System.Linq.Enumerable.GroupBy%2A>|`Group … By … Into …`<br /><br /> (Para obter mais informações, consulte [a cláusula Group by](../../../language-reference/queries/group-by-clause.md).)|  
 |<xref:System.Linq.Enumerable.GroupJoin%60%604%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2CSystem.Func%7B%60%600%2C%60%602%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%2CSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2C%60%603%7D%29>|`Group Join … In … On …`<br /><br /> (Para obter mais informações, consulte [Group Join Clause](../../../language-reference/queries/group-join-clause.md).)|  
-|<xref:System.Linq.Enumerable.Join%60%604%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2CSystem.Func%7B%60%600%2C%60%602%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%603%7D%29>|`From x In …, y In … Where x.a = b.a`<br /><br /> -ou-<br /><br /> `Join … [As …]In … On …`<br /><br /> (Para obter mais informações, consulte a [cláusula JOIN](../../../language-reference/queries/join-clause.md).)|  
+|<xref:System.Linq.Enumerable.Join%60%604%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2CSystem.Func%7B%60%600%2C%60%602%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%603%7D%29>|`From x In …, y In … Where x.a = b.a`<br /><br /> - ou -<br /><br /> `Join … [As …]In … On …`<br /><br /> (Para obter mais informações, consulte a [cláusula JOIN](../../../language-reference/queries/join-clause.md).)|  
 |<xref:System.Linq.Enumerable.LongCount%2A>|`Aggregate … In … Into LongCount()`<br /><br /> (Para obter mais informações, consulte [cláusula Aggregate](../../../language-reference/queries/aggregate-clause.md).)|  
 |<xref:System.Linq.Enumerable.Max%2A>|`Aggregate … In … Into Max()`<br /><br /> (Para obter mais informações, consulte [cláusula Aggregate](../../../language-reference/queries/aggregate-clause.md).)|  
 |<xref:System.Linq.Enumerable.Min%2A>|`Aggregate … In … Into Min()`<br /><br /> (Para obter mais informações, consulte [cláusula Aggregate](../../../language-reference/queries/aggregate-clause.md).)|  

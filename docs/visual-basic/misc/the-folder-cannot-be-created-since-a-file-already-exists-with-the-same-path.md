@@ -2,14 +2,15 @@
 title: A pasta não pode ser criada porque já existe um arquivo com o mesmo caminho
 ms.date: 07/20/2015
 ms.assetid: 1085c60d-4d38-4d67-a149-d3923eef0cfd
-ms.openlocfilehash: 3407d7e85cfeb406d17fd05850c293604188fece
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 216b39bbbd4da478ba1dc4796a0b183d4eb1d9d9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398611"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090450"
 ---
 # <a name="the-folder-cannot-be-created-since-a-file-already-exists-with-the-same-path"></a>A pasta não pode ser criada porque já existe um arquivo com o mesmo caminho
+
 Foi feita uma tentativa de criar um diretório, mas já existe um arquivo com esse caminho. Isso pode ser resultado da análise incorreta de caminhos, especialmente ao trabalhar com caminhos relativos.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
