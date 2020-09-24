@@ -31,6 +31,8 @@
       href: how-to-guides/udf-guide.md
     - name: Depurar seu aplicativo
       href: how-to-guides/debug.md
+    - name: Enviar trabalhos para o Azure Synapse Analytics
+      href: 'https://docs.microsoft.com/azure/synapse-analytics/spark/spark-dotnet'
     - name: Enviar trabalhos para o HDInsight
       href: how-to-guides/hdinsight-deploy-methods.md
     - name: Enviar trabalhos para o Databricks
