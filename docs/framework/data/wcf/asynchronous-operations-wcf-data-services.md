@@ -6,14 +6,15 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: d1f45979dba5c3ab0dccc8d0a61a7abaa9913e11
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cf3a81914d78e8f08c06602600ce5dcef4f4d35b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556857"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91191639"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Operações assíncronas (WCF Data Services)
+
 Os aplicativos Web devem acomodar uma latência maior entre cliente e servidor do que os aplicativos que são executados dentro das redes internas. Para otimizar o desempenho e a experiência do usuário do seu aplicativo, é recomendável usar os métodos assíncronos das <xref:System.Data.Services.Client.DataServiceContext> <xref:System.Data.Services.Client.DataServiceQuery%601> classes e ao acessar WCF Data Services servidores pela Web.  
   
  Embora os servidores de WCF Data Services processem solicitações HTTP de forma assíncrona, alguns métodos das bibliotecas de cliente do WCF Data Services são síncronos e aguardam até que toda a troca de solicitação-resposta seja concluída antes de continuar a execução. Os métodos assíncronos do WCF Data Services bibliotecas de cliente não esperam que essa troca seja concluída e pode permitir que seu aplicativo mantenha uma interface do usuário responsiva enquanto isso.  
@@ -34,8 +35,9 @@ Os aplicativos Web devem acomodar uma latência maior entre cliente e servidor d
 |Salvando alterações nos objetos no <xref:System.Data.Services.Client.DataServiceContext>|-   <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>|  
   
 ## <a name="threading-considerations-for-asynchronous-operations"></a>Considerações de threads para operações assíncronas  
+
  Em um aplicativo multi-threaded, o delegado registrado como um retorno de chamada para a operação assíncrona não é necessariamente invocado no mesmo thread que foi usado para chamar o método *begin* , que cria a solicitação inicial. Em um aplicativo em que o retorno de chamada deve ser invocado em um thread específico, você deve realizar marshaling explicitamente da execução do método *end* , que manipula a resposta, para o thread desejado. Por exemplo, em aplicativos baseados no Windows Presentation Foundation (WPF) e aplicativos baseados no Silverlight, a resposta deverá ser lido de volta para o thread de interface de usuário usando o método <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> no objeto <xref:System.Windows.Threading.Dispatcher>. Para obter mais informações, consulte [consultando o serviço de dados (WCF Data Services/Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc903932(v=vs.95)).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Biblioteca de cliente do WCF Data Services](wcf-data-services-client-library.md)

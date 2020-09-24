@@ -3,14 +3,15 @@ title: Chamando funções em consultas no LINQ to Entities
 description: Use estes artigos para ver como as classes EntityFunctions e SqlFunctions fornecem acesso às funções canônicas e de banco de dados como parte do Entity Framework.
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: eb206e9b331da1ae442c1f310e78fec5c6b57e82
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8c771c93e0c3ed82f3ad550613dd855fd06b6f48
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546042"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177482"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Chamando funções em consultas no LINQ to Entities
+
 Os tópicos nesta seção descrevem como chamar funções em consultas LINQ to Entities.  
   
  As classes <xref:System.Data.Objects.EntityFunctions> e <xref:System.Data.Objects.SqlClient.SqlFunctions> fornecem acesso às funções canônicas e de banco de dados como parte do Entity Framework. Para obter mais informações, consulte [como: chamar funções canônicas](how-to-call-canonical-functions.md) e [como chamar funções de banco de dados](how-to-call-database-functions.md).  
@@ -26,6 +27,7 @@ Os tópicos nesta seção descrevem como chamar funções em consultas LINQ to E
  Para obter mais informações, consulte os tópicos nesta seção.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Como: Funções canônicas de chamada](how-to-call-canonical-functions.md)  
   
  [Como: Funções de base de dados de chamada](how-to-call-database-functions.md)  
@@ -36,7 +38,7 @@ Os tópicos nesta seção descrevem como chamar funções em consultas LINQ to E
   
  [Como: o chamar funções definidas como métodos de objeto](how-to-call-model-defined-functions-as-object-methods.md)  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Consultas no LINQ to Entities](queries-in-linq-to-entities.md)
 - [Funções canônicas](canonical-functions.md)

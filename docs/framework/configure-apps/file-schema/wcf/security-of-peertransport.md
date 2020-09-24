@@ -2,14 +2,15 @@
 title: <security> de <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-ms.openlocfilehash: 270ca844f586be256b6483653c868d1cc4396657
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f37c336b0e42993e1eef3f06e2f919705f425a2e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399777"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169954"
 ---
 # <a name="security-of-peertransport"></a>\<security> de \<peerTransport>
+
 Contém as definições de segurança associadas a um canal de pares, incluindo o tipo de autenticação utilizada e a segurança usada para o transporte de mensagens.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -29,6 +30,7 @@ Contém as definições de segurança associadas a um canal de pares, incluindo 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  

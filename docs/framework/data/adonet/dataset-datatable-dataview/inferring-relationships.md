@@ -2,15 +2,16 @@
 title: Inferir relações
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: 4c9c13453e4a830fcda337e8163649ba6491a995
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ee691eee95c34afdb6374cdd7448d4b44ece3055
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785369"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177560"
 ---
 # <a name="inferring-relationships"></a>Inferir relações
-Se um elemento que é inferido como uma tabela tiver um elemento filho que também é inferido como uma tabela, um <xref:System.Data.DataRelation> será criado entre as duas tabelas. Uma nova coluna com um nome de **ParentTableName_Id** será adicionada à tabela criada para o elemento pai e a tabela criada para o elemento filho. A propriedade **ColumnMapping** dessa coluna de identidade será definida como **MappingType. Hidden**. A coluna será uma chave primária de incremento automático para a tabela pai e será usada para a **DataRelation** entre as duas tabelas. O tipo de dados da coluna de identidade adicionada será **System. Int32**, ao contrário do tipo de dados de todas as outras colunas inferidas, que é **System. String**. Um <xref:System.Data.ForeignKeyConstraint> with **DeleteRule** = **Cascade** também será criado usando a nova coluna nas tabelas pai e filho.  
+
+Se um elemento que é inferido como uma tabela tiver um elemento filho que também é inferido como uma tabela, um <xref:System.Data.DataRelation> será criado entre as duas tabelas. Uma nova coluna com um nome de **ParentTableName_Id** será adicionada à tabela criada para o elemento pai e a tabela criada para o elemento filho. A propriedade **ColumnMapping** dessa coluna de identidade será definida como **MappingType. Hidden**. A coluna será uma chave primária de incremento automático para a tabela pai e será usada para a **DataRelation** entre as duas tabelas. O tipo de dados da coluna de identidade adicionada será **System. Int32**, ao contrário do tipo de dados de todas as outras colunas inferidas, que é **System. String**. Um <xref:System.Data.ForeignKeyConstraint> with **DeleteRule**  =  **Cascade** também será criado usando a nova coluna nas tabelas pai e filho.  
   
  Por exemplo, considere o seguinte XML:  
   
@@ -31,21 +32,21 @@ Se um elemento que é inferido como uma tabela tiver um elemento filho que tamb�
   
  Uma **DataRelation** e **ForeignKeyConstraint** serão criadas usando as colunas **Element1_Id** de ambas as tabelas.  
   
- **DataSet** DocumentElement  
+ **Conjunto** de um: DocumentElement  
   
- **Tabela** Element1  
+ **Tabela:** Element1  
   
 |Element1_Id|ChildElement2|  
 |------------------|-------------------|  
-|0|Empresa2|  
+|0|Text2|  
   
- **Tabela** ChildElement1  
+ **Tabela:** ChildElement1  
   
 |attr1|attr2|Element1_Id|  
 |-----------|-----------|------------------|  
 |value1|value2|0|  
   
- **DataRelation** Element1_ChildElement1  
+ **DataRelation:** Element1_ChildElement1  
   
  **ParentTable:** Element1  
   
@@ -55,26 +56,26 @@ Se um elemento que é inferido como uma tabela tiver um elemento filho que tamb�
   
  **ChildColumn:** Element1_Id  
   
- **Construção** verdadeiro  
+ **Aninhado:** True  
   
  **ForeignKeyConstraint:** Element1_ChildElement1  
   
- **Pilha** Element1_Id  
+ **Coluna:** Element1_Id  
   
  **ParentTable:** Element1  
   
  **ChildTable:** ChildElement1  
   
- **DeleteRule:** Cascata  
+ **DeleteRule:** Cascade  
   
- **AcceptRejectRule:** Nenhum  
+ **AcceptRejectRule:** None  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Derivando a estrutura relacional do DataSet do esquema XML](inferring-dataset-relational-structure-from-xml.md)
-- [Carregar um conjunto de dados do XML](loading-a-dataset-from-xml.md)
-- [Carregando informações de esquema de conjunto de dados de XML](loading-dataset-schema-information-from-xml.md)
+- [Inferir a estrutura relacional do DataSet do esquema XML](inferring-dataset-relational-structure-from-xml.md)
+- [Carregando um DataSet a partir de XML](loading-a-dataset-from-xml.md)
+- [Carregando informações do esquema de DataSet do XML](loading-dataset-schema-information-from-xml.md)
 - [Aninhamento de DataRelations](nesting-datarelations.md)
-- [Using XML in a DataSet](using-xml-in-a-dataset.md) (Usando XML em um DataSet)
-- [DataSets, DataTables, and DataViews](index.md) (DataSets, DataTables e DataViews)
-- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)
+- [Usando XML em um DataSet](using-xml-in-a-dataset.md)
+- [DataSets, DataTables e DataViews](index.md)
+- [Visão geral do ADO.NET](../ado-net-overview.md)

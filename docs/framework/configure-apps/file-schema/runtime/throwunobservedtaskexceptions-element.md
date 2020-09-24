@@ -8,14 +8,15 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-ms.openlocfilehash: de5a686bcbd88fc52173b488103f033575623d62
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 012c2e70e66015bc317606a7eea07812b5df26e7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153809"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183917"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>Elemento \<ThrowUnobservedTaskExceptions>
+
 Especifica se as exceções de tarefas sem tratamento devem encerrar um processo em execução.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,6 +31,7 @@ Especifica se as exceções de tarefas sem tratamento devem encerrar um processo
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -42,10 +44,11 @@ Especifica se as exceções de tarefas sem tratamento devem encerrar um processo
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|Não encerra o processo em execução para uma exceção de tarefa sem tratamento. Este é o padrão.|  
+|`false`|Não encerra o processo em execução para uma exceção de tarefa sem tratamento. Esse é o padrão.|  
 |`true`|Encerra o processo em execução para uma exceção de tarefa sem tratamento.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -57,6 +60,7 @@ Especifica se as exceções de tarefas sem tratamento devem encerrar um processo
 |||  
   
 ## <a name="remarks"></a>Comentários  
+
  Se uma exceção associada a um <xref:System.Threading.Tasks.Task> não tiver sido observada, não há nenhuma <xref:System.Threading.Tasks.Task.Wait%2A> operação, o pai não está anexado e a <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> propriedade não foi lida, a exceção da tarefa é considerada não observada.  
   
  No .NET Framework 4, por padrão, se um <xref:System.Threading.Tasks.Task> que tem uma exceção não observada for lixo coletado, o finalizador lançará uma exceção e encerrará o processo. O encerramento do processo é determinado pelo tempo de coleta e finalização de lixo.  
@@ -72,6 +76,7 @@ Especifica se as exceções de tarefas sem tratamento devem encerrar um processo
 - Definindo o valor DWORD do registro ThrowUnobservedTaskExceptions = 1 no HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft \\ . Chave NETFramework.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como habilitar o lançamento de exceções em tarefas usando um arquivo de configuração de aplicativo.  
   
 ```xml  
@@ -83,12 +88,13 @@ Especifica se as exceções de tarefas sem tratamento devem encerrar um processo
 ```  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir demonstra como uma exceção não observada é gerada de uma tarefa. O código deve ser executado como um programa liberado para funcionar corretamente.  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Esquema de configurações do runtime](index.md)
 - [Esquema do arquivo de configuração](../index.md)
