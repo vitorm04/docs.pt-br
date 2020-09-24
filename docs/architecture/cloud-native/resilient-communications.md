@@ -3,12 +3,12 @@ title: Comunicação resiliente
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Comunicação resiliente
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 33e4c03c1f3d8c01f72c588326fbb0bdfa512cdd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 18b26223634efc5c05f680d0cbb7c8cbc2490a59
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613740"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166034"
 ---
 # <a name="resilient-communications"></a>Comunicações resilientes
 
@@ -30,7 +30,7 @@ Você pode resolver essas preocupações com diferentes bibliotecas e estruturas
 
 ## <a name="service-mesh"></a>Malha de serviço
 
-Uma abordagem melhor é uma tecnologia em evolução chamada *malha de serviço*. Uma [malha de serviço](https://www.nginx.com/blog/what-is-a-service-mesh/) é uma camada de infraestrutura configurável com recursos internos para lidar com a comunicação do serviço e os outros desafios mencionados acima. Ele dissocia essas preocupações movendo-as para um proxy de serviço. O proxy é implantado em um processo separado (chamado de [sidecar](https://docs.microsoft.com/azure/architecture/patterns/sidecar)) para fornecer isolamento do código comercial. No entanto, o sidecar está vinculado ao serviço – ele é criado com ele e compartilha seu ciclo de vida. A Figura 6-7 mostra esse cenário.
+Uma abordagem melhor é uma tecnologia em evolução chamada *malha de serviço*. Uma [malha de serviço](https://www.nginx.com/blog/what-is-a-service-mesh/) é uma camada de infraestrutura configurável com recursos internos para lidar com a comunicação do serviço e os outros desafios mencionados acima. Ele dissocia essas preocupações movendo-as para um proxy de serviço. O proxy é implantado em um processo separado (chamado de [sidecar](/azure/architecture/patterns/sidecar)) para fornecer isolamento do código comercial. No entanto, o sidecar está vinculado ao serviço – ele é criado com ele e compartilha seu ciclo de vida. A Figura 6-7 mostra esse cenário.
 
 ![Malha de serviço com um carro lateral](./media/service-mesh-with-side-car.png)
 
@@ -74,28 +74,28 @@ Conforme discutido anteriormente, o Envoy é implantado como um sidecar para cad
 
 A nuvem do Azure adota o İSTİO e fornece suporte direto para ele nos serviços Kubernetess do Azure. Os links a seguir podem ajudá-lo a começar:
 
-- [Instalando o İSTİO no AKS](https://docs.microsoft.com/azure/aks/istio-install)
-- [Usando AKS e İSTİO](https://docs.microsoft.com/azure/aks/istio-scenario-routing)
+- [Instalando o İSTİO no AKS](/azure/aks/istio-install)
+- [Usando AKS e İSTİO](/azure/aks/istio-scenario-routing)
 
 ### <a name="references"></a>Referências
 
 - [Polly](http://www.thepollyproject.org/)
 
-- [Padrão de repetição](https://docs.microsoft.com/azure/architecture/patterns/retry)
+- [Padrão de repetição](/azure/architecture/patterns/retry)
 
-- [Padrão de disjuntor](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
+- [Padrão de interruptor de circuito](/azure/architecture/patterns/circuit-breaker)
 
 - [White paper sobre resiliência no Azure](https://azure.microsoft.com/mediahandler/files/resourcefiles/resilience-in-azure-whitepaper/Resilience%20in%20Azure.pdf)
 
 - [latência de rede](https://www.techopedia.com/definition/8553/network-latency)
 
-- [Redundância](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy)
+- [Redundância](/azure/architecture/guide/design-principles/redundancy)
 
-- [replicação geográfica](https://docs.microsoft.com/azure/sql-database/sql-database-active-geo-replication)
+- [replicação geográfica](/azure/sql-database/sql-database-active-geo-replication)
 
-- [Gerenciador de Tráfego do Azure](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)
+- [Gerenciador de Tráfego do Azure](/azure/traffic-manager/traffic-manager-overview)
 
-- [Diretrizes de dimensionamento automático](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling)
+- [Diretrizes de dimensionamento automático](/azure/architecture/best-practices/auto-scaling)
 
 - [İSTİO](https://istio.io/docs/concepts/what-is-istio/)
 

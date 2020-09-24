@@ -2,14 +2,15 @@
 title: Para analisar o código-fonte LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: cba3eef8-e108-4478-b588-ad59580e133e
-ms.openlocfilehash: dda19800a9aea0d644740c5378f6d5065181993e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e39b1686269442044beb73bb7e572738832bec27
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248075"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164578"
 ---
 # <a name="analyzing-linq-to-sql-source-code"></a>Para analisar o código-fonte LINQ to SQL
+
 Usando as seguintes etapas, você pode produzir o código-fonte de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de base de dados de exemplo Northwind. Você pode comparar elementos modelo de objeto com os elementos de base de dados melhor para ver como os itens diferentes são mapeados.  
   
 > [!NOTE]
@@ -23,7 +24,7 @@ Usando as seguintes etapas, você pode produzir o código-fonte de [!INCLUDE[vbt
   
     - `sqlmetal /code:northwind.cs /language:csharp "c:\northwnd.mdf" /sprocs /functions /pluralize`  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência](reference.md)
 - [Informações gerais](background-information.md)

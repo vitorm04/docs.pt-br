@@ -6,14 +6,15 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-ms.openlocfilehash: ea2b735b2c98b588903c4393f21c6b743910854a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2de2c50f5adb9e9fa36ea015ef498e9953c83005
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552369"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165215"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Permissão de segurança para redirecionamento de associações de assemblies
+
 O redirecionamento de associação de assembly explícito em um arquivo de configuração do aplicativo requer uma permissão de segurança. Isso se aplica ao redirecionamento de assemblies do .NET Framework e assemblies de terceiros. A permissão é concedida definindo o <xref:System.Security.Permissions.SecurityPermissionFlag> sinalizador no <xref:System.Security.Permissions.SecurityPermission> . Os assemblies gerenciados não têm permissões por padrão.  
   
  A permissão de segurança é concedida a aplicativos executados na zona de zona confiável (computador local) e na intranet. Os aplicativos executados na zona da Internet são estritamente proibidos de executar o redirecionamento de associação de assembly.  

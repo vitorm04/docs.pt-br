@@ -2,12 +2,12 @@
 title: DevOps
 description: Considerações sobre o DevOps para aplicativos nativos de nuvem
 ms.date: 05/13/2020
-ms.openlocfilehash: ce814595245d49e409e780cb0f63c436299c2e4e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e6e093a1847d3aec37ac5d4ca56f64e0091a9b6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614105"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163993"
 ---
 # <a name="devops"></a>DevOps
 
@@ -154,7 +154,7 @@ Os estágios nas placas não são a única ferramenta organizacional. Dependendo
 
 O campo Descrição dá suporte aos estilos normais esperados (negrito, sublinhado e tachado) e a capacidade de inserir imagens. Isso o torna uma ferramenta poderosa para uso ao especificar trabalho ou bugs.
 
-As tarefas podem ser acumuladas em recursos, que definem uma unidade maior de trabalho. Os recursos, por sua vez, podem ser [acumulados em Epics](https://docs.microsoft.com/azure/devops/boards/backlogs/define-features-epics?view=azure-devops). A classificação de tarefas nessa hierarquia facilita muito a compreensão de como um recurso grande é para ser implantado.
+As tarefas podem ser acumuladas em recursos, que definem uma unidade maior de trabalho. Os recursos, por sua vez, podem ser [acumulados em Epics](/azure/devops/boards/backlogs/define-features-epics?view=azure-devops). A classificação de tarefas nessa hierarquia facilita muito a compreensão de como um recurso grande é para ser implantado.
 
 ![Figura 10-6 tipos de item de trabalho configurados por padrão no modelo de processo básico](./media/board-issue-types.png)
 

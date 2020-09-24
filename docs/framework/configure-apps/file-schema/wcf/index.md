@@ -2,14 +2,15 @@
 title: Esquema de configuração do WCF
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: 160be2ea43d1530cdb2ccd3de1f9e6a2e4d0aca3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab64b41e6e79c934ac0145dd7eec0a943f5dc473
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536386"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165124"
 ---
 # <a name="wcf-configuration-schema"></a>Esquema de configuração do WCF
+
 Os elementos de configuração do Windows Communication Foundation (WCF) permitem configurar aplicativos cliente e serviço WCF. Você pode usar a [Ferramenta Editor de Configuração (SvcConfigEditor.exe)](../../../wcf/configuration-editor-tool-svcconfigeditor-exe.md) para criar e modificar arquivos de configuração para clientes e serviços. Como os arquivos de configuração são formatados como XML, você deverá estar familiarizado com XML se desejar editá-los manualmente usando um editor de texto. Caso contrário, você pode ter problemas, como uma marca de elemento XML unfound ou atributo. Isso ocorre porque marcas de elementos XML e atributos diferenciam maiúsculas de minúsculas.  
   
  O sistema de configuração do WCF é baseado no <xref:System.Configuration> namespace. Portanto, você pode usar todos os recursos padrão fornecidos pelo namespace <xref:System.Configuration>, como bloqueio de configuração, criptografia e mesclagem para aumentar a segurança de seu aplicativo e de sua configuração. Para obter mais informações sobre esses conceitos, consulte os tópicos a seguir.  
@@ -26,6 +27,7 @@ Os elementos de configuração do Windows Communication Foundation (WCF) permite
 > Você deve proteger as seções de configuração do WCF em seus arquivos de configuração de aplicativo (app.config) com ACLs (listas de controle de acesso) apropriadas para evitar possíveis ameaças à segurança.  Por exemplo, você deve garantir que somente pessoas apropriadas possam acessar ou modificar as configurações de segurança em associações de aplicativo ou a seção do modelo de serviço no arquivo de configuração de um serviço.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [\<system.serviceModel>](system-servicemodel.md)  
  Descreve o `ServiceModel` elemento.  
   
@@ -36,5 +38,6 @@ Os elementos de configuração do Windows Communication Foundation (WCF) permite
  O elemento de nível superior para definir opções ao usar serializadores como o <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Configuring Windows Communication Foundation Applications](../../../wcf/configuring-services.md) (Configurando aplicativos do Windows Communication Foundation)  
  Descreve como configurar clientes e serviços WCF.

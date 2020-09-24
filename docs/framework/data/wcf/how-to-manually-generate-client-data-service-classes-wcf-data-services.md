@@ -5,14 +5,15 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: 31bf2e543bf20199fbeeaa8d00f808650092ff00
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 368f2546652d21be44c0ffb4cc5f279c56beda51
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546953"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165986"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>Como: gerar manualmente classes de serviço de dados do cliente (WCF Data Services)
+
 O WCF Data Services integra-se com o Visual Studio para permitir que você gere automaticamente classes de serviço de dados do cliente quando você usa a caixa de diálogo **Adicionar referência de serviço** para adicionar uma referência a um serviço de dados em um projeto do Visual Studio. Para obter mais informações, consulte [como: adicionar uma referência de serviço de dados](how-to-add-a-data-service-reference-wcf-data-services.md). Você também pode gerar manualmente as mesmas classes de serviço de dados do cliente usando a ferramenta de geração de código, `DataSvcUtil.exe` . Essa ferramenta, que é incluída com o WCF Data Services, gera .NET Framework classes da definição do serviço de dados. Ele também pode ser usado para gerar classes de serviço de dados do arquivo de modelo conceitual (. CSDL) e do arquivo. edmx que representa um modelo de Entity Framework em um projeto do Visual Studio.
 
  O exemplo neste tópico cria classes de serviço de dados do cliente com base no serviço de dados de exemplo Northwind. Esse serviço é criado quando você conclui o guia de [início rápido do WCF Data Services](quickstart-wcf-data-services.md). Alguns exemplos neste tópico exigem o arquivo de modelo conceitual para o modelo Northwind. Para obter mais informações, consulte [como: usar EdmGen.exe para gerar o modelo e os arquivos de mapeamento](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md). Alguns exemplos neste tópico exigem o arquivo. edmx para o modelo Northwind. Para obter mais informações, consulte [visão geral do arquivo. edmx](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).
