@@ -2,14 +2,15 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 15c9e38a141fc294c47863b1a932711444ac079a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bb9468b6005361a2a480f7c0ebfb2cbb9e9199c2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855146"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157376"
 ---
 # \<identity>
+
 O elemento Identity permite que um desenvolvedor cliente especifique em tempo de design a identidade esperada do serviço. No processo de handshake entre o cliente e o serviço, a infraestrutura Windows Communication Foundation (WCF) garantirá que a identidade do serviço esperado corresponda aos valores desse elemento e, portanto, possa ser autenticada. Para obter mais informações, consulte [identidade de serviço e autenticação](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -18,7 +19,7 @@ O elemento Identity permite que um desenvolvedor cliente especifique em tempo de
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpoint>**](endpoint-of-client.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<identity>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <identity>
@@ -36,9 +37,11 @@ O elemento Identity permite que um desenvolvedor cliente especifique em tempo de
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
+
  Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -58,7 +61,7 @@ O elemento Identity permite que um desenvolvedor cliente especifique em tempo de
 |-------------|-----------------|  
 |[\<custom>](custom.md)|Especifica um resolvedor de pares personalizado para um netPeerTcpBinding.|  
 |[\<endpoint>](endpoint-element.md)|Configura os pontos de extremidade de serviço.|  
-|[\<endpoint>desse\<client>](endpoint-of-client.md)|Configura os pontos de extremidade do canal.|  
+|[\<endpoint> desse \<client>](endpoint-of-client.md)|Configura os pontos de extremidade do canal.|  
 |[\<issuer>](issuer.md)|Especifica o serviço de token de segurança (STS) para o serviço federado.|  
 |[\<issuerMetadata>](issuermetadata.md)|Especifica o ponto de extremidade de metadados para o serviço de token de segurança (STS) de um serviço federado.|  
 |[\<issuedTokenParameters>](issuedtokenparameters.md)|Define parâmetros para um token emitido em uma associação personalizada.|  
