@@ -2,14 +2,15 @@
 title: Transportes
 ms.date: 03/30/2017
 ms.assetid: 5c064c51-5863-4fe7-a772-e298841b62ff
-ms.openlocfilehash: c89e0b8ea124919956d07d51b52bf6e878eef166
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 54d320213dbf330ad19077b523a77ea86d29e1ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69941146"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162004"
 ---
 # <a name="transports"></a>Transportes
+
 A camada de transporte está no nível mais baixo da pilha de canais. Os transportes principais usados no Windows Communication Foundation (WCF) são HTTP, HTTPS, TCP e pipes nomeados. Esta seção lista todos os elementos de configuração que permitem configurar diferentes tipos de transportes.  
   
 ## <a name="see-also"></a>Confira também

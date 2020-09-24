@@ -2,12 +2,12 @@
 title: Segurança do Azure para aplicativos nativos de nuvem
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Segurança do Azure para aplicativos nativos de nuvem
 ms.date: 05/13/2020
-ms.openlocfilehash: 7780b005d84124f202049deeb5be876364e6c5fa
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: e6f91cc4c240dd3349faed2f87db1ba99b2780a9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358967"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160990"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Segurança do Azure para aplicativos nativos de nuvem
 
@@ -24,7 +24,7 @@ Não importa se as vantagens superam as desvantagens dos aplicativos nativos de 
 - Quem deve ter acesso a esses dados?
 - Há políticas de auditoria em vigor em relação ao processo de desenvolvimento e versão?
 
-Todas essas perguntas fazem parte de um processo chamado [modelagem de ameaças](https://docs.microsoft.com/azure/security/azure-security-threat-modeling-tool). Esse processo tenta responder à pergunta de quais ameaças existem no sistema, quão prováveis são as ameaças e os possíveis danos deles.
+Todas essas perguntas fazem parte de um processo chamado [modelagem de ameaças](/azure/security/azure-security-threat-modeling-tool). Esse processo tenta responder à pergunta de quais ameaças existem no sistema, quão prováveis são as ameaças e os possíveis danos deles.
 
 Depois que a lista de ameaças tiver sido estabelecida, você precisará decidir se vale a pena mitigar. Às vezes, uma ameaça é tão improvável e dispendiosa de planejar que não vale a pena gastar energia. Por exemplo, algum ator de nível de Estado poderia injetar alterações no design de um processo que é usado por milhões de dispositivos. Agora, em vez de executar um determinado trecho de código no [anel 3](https://en.wikipedia.org/wiki/Protection_ring), esse código é executado no anel 0. Isso permite uma exploração que pode ignorar o hipervisor e executar o código de ataque nos computadores bare-metal, permitindo ataques em todas as máquinas virtuais em execução nesse hardware.
 
@@ -94,11 +94,11 @@ Com a rede estabelecida, recursos internos, como contas de armazenamento, podem 
 
 Os nós em um cluster kubernetes do Azure podem participar de uma rede virtual, assim como outros recursos mais nativos do Azure. Essa funcionalidade é chamada de [interface de rede de contêiner do Azure](https://github.com/Azure/azure-container-networking/blob/master/docs/cni.md). Na verdade, ele aloca uma sub-rede dentro da rede virtual na qual as máquinas virtuais e as imagens de contêiner são distribuídas.
 
-Continuando o caminho para ilustrar o princípio de menos privilégios, nem todos os recursos em uma rede virtual precisam se comunicar com todos os outros recursos. Por exemplo, em um aplicativo que fornece uma API Web em uma conta de armazenamento e um banco de dados SQL, é improvável que o banco de dados e a conta de armazenamento precisem se comunicar entre si. Qualquer compartilhamento de dados entre eles passaria pelo aplicativo Web. Assim, um [NSG (grupo de segurança de rede)](https://docs.microsoft.com/azure/virtual-network/security-overview) poderia ser usado para negar o tráfego entre os dois serviços.
+Continuando o caminho para ilustrar o princípio de menos privilégios, nem todos os recursos em uma rede virtual precisam se comunicar com todos os outros recursos. Por exemplo, em um aplicativo que fornece uma API Web em uma conta de armazenamento e um banco de dados SQL, é improvável que o banco de dados e a conta de armazenamento precisem se comunicar entre si. Qualquer compartilhamento de dados entre eles passaria pelo aplicativo Web. Assim, um [NSG (grupo de segurança de rede)](/azure/virtual-network/security-overview) poderia ser usado para negar o tráfego entre os dois serviços.
 
 Uma política de negação de comunicação entre recursos pode ser irritante de ser implementada, especialmente proveniente de uma experiência de uso do Azure sem restrições de tráfego. Em algumas outras nuvens, o conceito de grupos de segurança de rede é muito mais predominante. Por exemplo, a política padrão em AWS é que os recursos não podem se comunicar entre si até serem habilitados por regras em um NSG. Embora seja mais lento para desenvolver isso, um ambiente mais restritivo fornece um padrão mais seguro. Fazer uso de práticas DevOps adequadas, especialmente usando [Azure Resource Manager ou Terraform](infrastructure-as-code.md) para gerenciar permissões pode facilitar o controle das regras.
 
-As redes virtuais também podem ser úteis ao configurar a comunicação entre recursos locais e na nuvem. Uma rede virtual privada pode ser usada para conectar diretamente as duas redes. Isso permite a execução de uma rede virtual sem qualquer tipo de gateway para cenários em que todos os usuários estejam no local. Há várias tecnologias que podem ser usadas para estabelecer essa rede. A mais simples é usar uma [VPN site a site](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%2fazure%2fvirtual-network%2ftoc.json#s2smulti) que possa ser estabelecida entre vários roteadores e o Azure. O tráfego é criptografado e encapsulado pela Internet no mesmo custo por byte que qualquer outro tráfego. Para cenários em que mais largura de banda ou mais segurança são desejáveis, o Azure oferece um serviço chamado [rota expressa](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%2fazure%2fvirtual-network%2ftoc.json#ExpressRoute) que usa um circuito privado entre uma rede local e o Azure. É mais dispendioso e difícil de estabelecer, mas também mais seguro.
+As redes virtuais também podem ser úteis ao configurar a comunicação entre recursos locais e na nuvem. Uma rede virtual privada pode ser usada para conectar diretamente as duas redes. Isso permite a execução de uma rede virtual sem qualquer tipo de gateway para cenários em que todos os usuários estejam no local. Há várias tecnologias que podem ser usadas para estabelecer essa rede. A mais simples é usar uma [VPN site a site](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#s2smulti) que possa ser estabelecida entre vários roteadores e o Azure. O tráfego é criptografado e encapsulado pela Internet no mesmo custo por byte que qualquer outro tráfego. Para cenários em que mais largura de banda ou mais segurança são desejáveis, o Azure oferece um serviço chamado [rota expressa](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#ExpressRoute) que usa um circuito privado entre uma rede local e o Azure. É mais dispendioso e difícil de estabelecer, mas também mais seguro.
 
 ## <a name="role-based-access-control-for-restricting-access-to-azure-resources"></a>Controle de acesso baseado em função para restringir o acesso aos recursos do Azure
 
@@ -129,7 +129,7 @@ Uma entidade de segurança pode assumir muitas funções ou, usando uma analogia
 
 O integrado ao Azure também é uma série de funções de alto nível, como proprietário, colaborador, leitor e administrador de conta de usuário. Com a função de proprietário, uma entidade de segurança pode acessar todos os recursos e atribuir permissões a outros. Um colaborador tem o mesmo nível de acesso a todos os recursos, mas não pode atribuir permissões. Um leitor só pode exibir recursos existentes do Azure e um administrador de conta de usuário pode gerenciar o acesso aos recursos do Azure.
 
-Funções internas mais granulares, como [colaborador de zona DNS](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#dns-zone-contributor) , têm direitos limitados a um único serviço. As entidades de segurança podem assumir qualquer número de funções.
+Funções internas mais granulares, como [colaborador de zona DNS](/azure/role-based-access-control/built-in-roles#dns-zone-contributor) , têm direitos limitados a um único serviço. As entidades de segurança podem assumir qualquer número de funções.
 
 ## <a name="scopes"></a>Escopos
 
@@ -147,7 +147,7 @@ As regras de negação têm precedência sobre regras de permissão. Agora que r
 
 ## <a name="checking-access"></a>Verificando o acesso
 
-Como você pode imaginar, ter um grande número de funções e escopos pode tornar a descoberta da permissão efetiva de uma entidade de serviço muito difícil. Empilhando regras de negação além disso, serve apenas para aumentar a complexidade. Felizmente, há uma [calculadora de permissões](https://docs.microsoft.com/azure/role-based-access-control/check-access) que pode mostrar as permissões efetivas para qualquer entidade de serviço. Normalmente, ele é encontrado na guia IAM no portal, como mostra a Figura 10-3.
+Como você pode imaginar, ter um grande número de funções e escopos pode tornar a descoberta da permissão efetiva de uma entidade de serviço muito difícil. Empilhando regras de negação além disso, serve apenas para aumentar a complexidade. Felizmente, há uma [calculadora de permissões](/azure/role-based-access-control/check-access) que pode mostrar as permissões efetivas para qualquer entidade de serviço. Normalmente, ele é encontrado na guia IAM no portal, como mostra a Figura 10-3.
 
 ![Figura 9-4 calculadora de permissão para um serviço de aplicativo](./media/check-rbac.png)
 
@@ -231,9 +231,9 @@ Em qualquer aplicativo, há vários locais em que os dados são colocados no dis
 
 A base de grande parte do Azure é o mecanismo de armazenamento do Azure. Os discos de máquina virtual são montados sobre o armazenamento do Azure. Os serviços Kubernetess do Azure são executados em máquinas virtuais que, por sua conta, são hospedadas no armazenamento do Azure. Mesmo as tecnologias sem servidor, como Azure Functions aplicativos e instâncias de contêiner do Azure, ficam fora do disco que faz parte do armazenamento do Azure.
 
-Se o armazenamento do Azure estiver bem criptografado, ele fornecerá uma base para que a maioria das outras coisas também seja criptografada. O armazenamento do Azure [é criptografado](https://docs.microsoft.com/azure/storage/common/storage-service-encryption) com o [AES de 256 bits](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)compatível com [FIPS 140-2](https://en.wikipedia.org/wiki/FIPS_140) . Essa é uma tecnologia de criptografia bem considerada que tem sido o assunto de uma ampla investigação acadêmica nos últimos 20 anos. No momento, não há nenhum ataque prático conhecido que permitisse alguém sem conhecimento da chave para ler os dados criptografados pelo AES.
+Se o armazenamento do Azure estiver bem criptografado, ele fornecerá uma base para que a maioria das outras coisas também seja criptografada. O armazenamento do Azure [é criptografado](/azure/storage/common/storage-service-encryption) com o [AES de 256 bits](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)compatível com [FIPS 140-2](https://en.wikipedia.org/wiki/FIPS_140) . Essa é uma tecnologia de criptografia bem considerada que tem sido o assunto de uma ampla investigação acadêmica nos últimos 20 anos. No momento, não há nenhum ataque prático conhecido que permitisse alguém sem conhecimento da chave para ler os dados criptografados pelo AES.
 
-Por padrão, as chaves usadas para criptografar o armazenamento do Azure são gerenciadas pela Microsoft. Há proteções extensivas em vigor para garantir o acesso mal-intencionado a essas chaves. No entanto, os usuários com requisitos de criptografia específicos também podem [fornecer suas próprias chaves de armazenamento](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-powershell) que são gerenciadas em Azure Key Vault. Essas chaves podem ser revogadas a qualquer momento, o que efetivamente renderizaria o conteúdo da conta de armazenamento usando-os inacessíveis.
+Por padrão, as chaves usadas para criptografar o armazenamento do Azure são gerenciadas pela Microsoft. Há proteções extensivas em vigor para garantir o acesso mal-intencionado a essas chaves. No entanto, os usuários com requisitos de criptografia específicos também podem [fornecer suas próprias chaves de armazenamento](/azure/storage/common/storage-encryption-keys-powershell) que são gerenciadas em Azure Key Vault. Essas chaves podem ser revogadas a qualquer momento, o que efetivamente renderizaria o conteúdo da conta de armazenamento usando-os inacessíveis.
 
 As máquinas virtuais usam o armazenamento criptografado, mas é possível fornecer outra camada de criptografia usando tecnologias como BitLocker no Windows ou DM-cript no Linux. Essas tecnologias significam que, mesmo que a imagem do disco tenha sido vazada fora do armazenamento, ela permaneceria quase impossível de ler.
 
@@ -243,7 +243,7 @@ Os bancos de dados hospedados no SQL do Azure usam uma tecnologia chamada [Trans
 
 Os parâmetros de criptografia são armazenados no `master` banco de dados e, na inicialização, são lidos na memória para as operações restantes. Isso significa que o `master` banco de dados deve permanecer sem criptografia. A chave real é gerenciada pela Microsoft. No entanto, os usuários com requisitos de segurança de reação podem fornecer sua própria chave em Key Vault praticamente da mesma forma como é feito para o armazenamento do Azure. O Key Vault fornece serviços como rotação de chaves e revogação.
 
-A parte "transparente" do TDS é proveniente do fato de que não há alterações do cliente necessárias para usar um banco de dados criptografado. Embora essa abordagem forneça uma boa segurança, o vazamento da senha do banco de dados é suficiente para que os usuários possam descriptografá-los. Há outra abordagem que criptografa colunas individuais ou tabelas em um banco de dados. [Always Encrypted](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault) garante que, sem nenhum momento, os dados criptografados apareçam em texto sem formatação dentro do banco de dados.
+A parte "transparente" do TDS é proveniente do fato de que não há alterações do cliente necessárias para usar um banco de dados criptografado. Embora essa abordagem forneça uma boa segurança, o vazamento da senha do banco de dados é suficiente para que os usuários possam descriptografá-los. Há outra abordagem que criptografa colunas individuais ou tabelas em um banco de dados. [Always Encrypted](/azure/sql-database/sql-database-always-encrypted-azure-key-vault) garante que, sem nenhum momento, os dados criptografados apareçam em texto sem formatação dentro do banco de dados.
 
 A configuração dessa camada de criptografia requer a execução por meio de um assistente no SQL Server Management Studio para selecionar o tipo de criptografia e onde em Key Vault armazenar as chaves associadas.
 

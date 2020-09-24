@@ -2,14 +2,15 @@
 title: <transport> de <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 0cd20c607b0c4ddd3ecfd806d38ba63b4a5c5a25
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 60e8758d653848176ca3f287e253bd7990e78470
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732767"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162043"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<transport> de \<ws2007HttpBinding>
+
 Define as configurações de autenticação para o transporte HTTP.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ Define as configurações de autenticação para o transporte HTTP.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-ws2007httpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
@@ -28,10 +29,12 @@ Define as configurações de autenticação para o transporte HTTP.
            realm="string" />
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>Tipo  
+
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -65,6 +68,7 @@ Define as configurações de autenticação para o transporte HTTP.
 |Certificado|Usa certificados X. 509 para autenticar o cliente.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum  
   
 ### <a name="parent-elements"></a>Elementos pai  

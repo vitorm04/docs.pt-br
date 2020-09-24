@@ -2,14 +2,15 @@
 title: <transport> de <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: e8016eb9058f132722587368f1f8c7c03220af4a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b9efc732832a8862373b14f657796a59fb52c1a1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732795"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162108"
 ---
 # <a name="transport-of-webhttpbinding"></a>\<transport> de \<webHttpBinding>
+
 Define as configurações de segurança no nível de transporte para um ponto de extremidade de serviço configurado para receber solicitações HTTP.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ Define as configurações de segurança no nível de transporte para um ponto de
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-webhttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <webHttpBinding>
@@ -40,10 +41,12 @@ Define as configurações de segurança no nível de transporte para um ponto de
 </webHttpBinding>
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>Tipo  
+
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -77,6 +80,7 @@ Define as configurações de segurança no nível de transporte para um ponto de
 |`Windows`|Usa a autenticação integrada do Windows.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  

@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: ba6dbfdf9a4fa9973dfe84cf5d58f1300f5d0cb4
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 853358fbf534ee7501412259c61efe054b4757a7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557536"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161198"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>Migrar do ASP.NET Web Forms para Blazor
 
@@ -636,7 +636,7 @@ Como o Blazor é criado no .NET Core, há considerações sobre como garantir o 
 - CAS (segurança de acesso ao código)
 - Transparência de Segurança
 
-Para obter mais informações sobre técnicas para identificar as alterações necessárias para dar suporte à execução no .NET Core, consulte [portar seu código do .NET Framework para o .NET Core](/dotnet/core/porting).
+Para obter mais informações sobre técnicas para identificar as alterações necessárias para dar suporte à execução no .NET Core, consulte [portar seu código do .NET Framework para o .NET Core](../../core/porting/index.md).
 
 ASP.NET Core é uma versão reimaginada do ASP.NET e tem algumas alterações que podem não parecer óbvias inicialmente. As principais alterações são:
 

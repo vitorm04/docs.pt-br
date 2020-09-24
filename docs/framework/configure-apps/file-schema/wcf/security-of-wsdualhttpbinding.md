@@ -2,14 +2,15 @@
 title: <security> de <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: 4969c041678bbf3490975bc0ec53507b6cf762bb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7398cd538bb240e78413575f7c28abe7f797d05c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738611"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162199"
 ---
 # <a name="security-of-wsdualhttpbinding"></a>\<security> de \<wsDualHttpBinding>
+
 Define os recursos de segurança do [\<wsDualHttpBinding>](wsdualhttpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Define os recursos de segurança do [\<wsDualHttpBinding>](wsdualhttpbinding.md)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <security mode="Message/None">
@@ -30,6 +31,7 @@ Define os recursos de segurança do [\<wsDualHttpBinding>](wsdualhttpbinding.md)
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -58,6 +60,7 @@ Define os recursos de segurança do [\<wsDualHttpBinding>](wsdualhttpbinding.md)
 |[\<binding>](bindings.md)|Define todos os recursos de associação do [\<wsDualHttpBinding>](wsdualhttpbinding.md) .|  
   
 ## <a name="remarks"></a>Comentários  
+
  Uma associação dupla expõe o endereço IP do cliente para o serviço. O cliente deve usar a segurança para garantir que ele se conecte apenas aos serviços que confia.  
   
 ## <a name="see-also"></a>Confira também

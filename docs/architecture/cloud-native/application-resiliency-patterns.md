@@ -3,12 +3,12 @@ title: Padrões de resiliência de aplicativo
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Padrões de resiliência do aplicativo
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: bb72e47704c833a2ce86f103a66b0414ce3a37ff
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e81d6e1d6b95cf0053de3ba557068ff458a59dc9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614312"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161146"
 ---
 # <a name="application-resiliency-patterns"></a>Padrões de resiliência de aplicativo
 
@@ -33,7 +33,7 @@ Observe como, na figura anterior, as políticas de resiliência se aplicam a men
 | 408 | Tempo limite da solicitação |
 | 429 | Muitas solicitações (você provavelmente foi limitado) |
 | 502 | Gateway inválido |
-| 503 | Serviço não disponível |
+| 503 | Serviço indisponível |
 | 504 | Tempo limite do gateway |
 
 Pergunta: você tentaria novamente um código de status HTTP de 403-Proibido? Não. Aqui, o sistema está funcionando corretamente, mas informando ao chamador que eles não estão autorizados a executar a operação solicitada. Deve-se ter cuidado para repetir apenas as operações causadas por falhas.
@@ -46,7 +46,7 @@ Em seguida, vamos expandir em padrões de repetição e de disjuntor.
 
 Em um ambiente de nuvem nativa distribuída, as chamadas para serviços e recursos de nuvem podem falhar devido a falhas transitórias (de curta duração), que normalmente se corrigem após um breve período de tempo. A implementação de uma estratégia de repetição ajuda um serviço nativo de nuvem a mitigar esses cenários.
 
-O [padrão de repetição](https://docs.microsoft.com/azure/architecture/patterns/retry) permite que um serviço Repita uma operação de solicitação com falha a um número (configurável) de vezes com um tempo de espera crescente exponencialmente. A Figura 6-2 mostra uma nova tentativa em ação.
+O [padrão de repetição](/azure/architecture/patterns/retry) permite que um serviço Repita uma operação de solicitação com falha a um número (configurável) de vezes com um tempo de espera crescente exponencialmente. A Figura 6-2 mostra uma nova tentativa em ação.
 
 ![Padrão de repetição em ação](./media/retry-pattern.png)
 
@@ -70,7 +70,7 @@ Para piorar as coisas, a execução de operações contínuas de repetição em 
 
 Nessas situações, seria preferível para a operação falhar imediatamente e tentar invocar o serviço apenas se for provável que tenha êxito.
 
-O [padrão de disjuntor](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker) pode impedir que um aplicativo tente executar repetidamente uma operação que provavelmente falhará. Após um número predefinido de chamadas com falha, ele bloqueia todo o tráfego para o serviço. Periodicamente, ele permitirá uma chamada de avaliação para determinar se a falha foi resolvida. A Figura 6-3 mostra o padrão de disjuntor em ação.
+O [padrão de disjuntor](/azure/architecture/patterns/circuit-breaker) pode impedir que um aplicativo tente executar repetidamente uma operação que provavelmente falhará. Após um número predefinido de chamadas com falha, ele bloqueia todo o tráfego para o serviço. Periodicamente, ele permitirá uma chamada de avaliação para determinar se a falha foi resolvida. A Figura 6-3 mostra o padrão de disjuntor em ação.
 
 ![Padrão de disjuntor em ação](./media/circuit-breaker-pattern.png)
 

@@ -2,12 +2,12 @@
 title: Como implantar o eShopOnContainers no Azure
 description: Implantando o aplicativo eShopOnContainers usando o serviço kubernetes do Azure, o Helm e o DevSpaces.
 ms.date: 05/13/2020
-ms.openlocfilehash: 93a2848f095d7593e1e169f4a6c6c1818a76217d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b3871dae2b414709bfe24b6f7bdbf06de1689d12
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614091"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160717"
 ---
 # <a name="deploying-eshoponcontainers-to-azure"></a>Como implantar o eShopOnContainers no Azure
 
@@ -62,7 +62,7 @@ Cada componente individual é instalado usando um `helm install` comando. o eSho
 
 > Observe que a versão 3 do Helm remove oficialmente a necessidade do componente de servidor da gaveta. Mais informações sobre esse aprimoramento podem ser encontradas [aqui](https://medium.com/better-programming/why-is-tiller-missing-in-helm-3-2347c446714).
 
-## <a name="azure-dev-spaces"></a>Espaços de Desenvolvimento do Azure
+## <a name="azure-dev-spaces"></a>Azure Dev Spaces
 
 Os aplicativos nativos de nuvem podem crescer de forma rápida e complexa, exigindo recursos de computação significativos para serem executados. Nesses cenários, o aplicativo inteiro não pode ser hospedado em um computador de desenvolvimento (especialmente um laptop). Azure Dev Spaces foi projetado para resolver esse problema usando AKS. Ele permite que os desenvolvedores trabalhem com uma versão local de seus serviços enquanto hospedam o restante do aplicativo em um cluster de desenvolvimento AKS.
 
@@ -78,7 +78,7 @@ Ao mesmo tempo, o desenvolvedor John está Personalizando o microserviço de res
 ![Arquitetura eShopOnContainers ](./media/azure-devspaces-two.png)
  **Figura 2-8**. O desenvolvedor John implanta sua própria versão do microserviço de reservas e a testa sem entrar em conflito com outros desenvolvedores.
 
-Usando Azure Dev Spaces, as equipes podem trabalhar diretamente com o AKS enquanto alteram, implantam e testam suas alterações de forma independente. Essa abordagem reduz a necessidade de ambientes hospedados dedicados separados, pois cada desenvolvedor efetivamente tem seu próprio ambiente AKS. Os desenvolvedores podem trabalhar com Azure Dev Spaces usando sua CLI ou iniciar seu aplicativo para Azure Dev Spaces diretamente do Visual Studio. [Saiba mais sobre como Azure Dev Spaces funciona e está configurado.](https://docs.microsoft.com/azure/dev-spaces/how-dev-spaces-works)
+Usando Azure Dev Spaces, as equipes podem trabalhar diretamente com o AKS enquanto alteram, implantam e testam suas alterações de forma independente. Essa abordagem reduz a necessidade de ambientes hospedados dedicados separados, pois cada desenvolvedor efetivamente tem seu próprio ambiente AKS. Os desenvolvedores podem trabalhar com Azure Dev Spaces usando sua CLI ou iniciar seu aplicativo para Azure Dev Spaces diretamente do Visual Studio. [Saiba mais sobre como Azure Dev Spaces funciona e está configurado.](/azure/dev-spaces/how-dev-spaces-works)
 
 ## <a name="azure-functions-and-logic-apps-serverless"></a>Azure Functions e aplicativos lógicos (sem servidor)
 
