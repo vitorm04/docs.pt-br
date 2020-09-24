@@ -11,14 +11,15 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: af08938b6b8f169ded2180529c2b4aadebefef55
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2fb4166b9dbcecebf06b9dc3a780b02751dd4dc7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558804"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159144"
 ---
 # <a name="data-transformations-with-linq-c"></a>Transformações de dados com LINQ (C#)
+
 A consulta integrada à linguagem (LINQ) não se refere apenas à recuperação de dados. Também é uma ferramenta poderosa para transformação de dados. Usando uma consulta LINQ, você pode usar uma sequência de origem como entrada e modificá-la de várias maneiras para criar uma nova sequência de saída. Você pode modificar a própria sequência sem modificar os respectivos elementos, classificando-os e agrupando-os. Mas talvez o recurso mais poderoso das consultas LINQ seja a capacidade de criar novos tipos. Isso é feito na cláusula [select](../../../language-reference/keywords/select-clause.md). Por exemplo, é possível executar as seguintes tarefas:  
   
 - Mesclar várias sequências de entrada em uma única sequência de saída que tenha um novo tipo.  
@@ -32,6 +33,7 @@ A consulta integrada à linguagem (LINQ) não se refere apenas à recuperação 
  Esses são apenas alguns exemplos. É claro que essas transformações podem ser combinadas de diversas maneiras na mesma consulta. Além disso, a sequência de saída de uma consulta pode ser usada como a sequência de entrada de uma nova consulta.  
   
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>Ingressando Várias Entradas em uma Única Sequência de Saída  
+
  Você pode usar uma consulta LINQ para criar uma sequência de saída que contenha elementos de mais de uma sequência de entrada. O exemplo a seguir mostra como combinar duas estruturas de dados na memória, mas os mesmos princípios podem ser aplicados para combinar dados de origens de XML, SQL ou DataSet. Considere os dois tipos de classe a seguir:  
   
  [!code-csharp[CsLINQGettingStarted#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#7)]  
@@ -43,6 +45,7 @@ A consulta integrada à linguagem (LINQ) não se refere apenas à recuperação 
  Para obter mais informações, consulte [cláusula join](../../../language-reference/keywords/join-clause.md) e [cláusula select](../../../language-reference/keywords/select-clause.md).  
   
 ## <a name="selecting-a-subset-of-each-source-element"></a>Selecionando um Subconjunto de Cada Elemento de Origem  
+
  Há duas maneiras principais de selecionar um subconjunto de cada elemento na sequência de origem:  
   
 1. Para selecionar apenas um membro do elemento de origem, use a operação de ponto. No exemplo a seguir, suponha que um objeto `Customer` contém várias propriedades públicas, incluindo uma cadeia de caracteres denominada `City`. Quando executada, essa consulta produzirá uma sequência de saída de cadeias de caracteres.  
@@ -62,6 +65,7 @@ A consulta integrada à linguagem (LINQ) não se refere apenas à recuperação 
  Para obter mais informações, consulte [Inicializadores de coleção e de objeto](../../classes-and-structs/object-and-collection-initializers.md) e [Tipos anônimos](../../classes-and-structs/anonymous-types.md).  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>Transformando Objetos na Memória em XML  
+
  As consultas do LINQ facilitam a transformação de dados entre estruturas de dados na memória, bancos de dados SQL, ADO.NET e fluxos XML ou documentos. O exemplo a seguir transforma objetos de uma estrutura de dados na memória em elementos XML.  
   
  [!code-csharp[CsLINQGettingStarted#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#9)]  
@@ -91,6 +95,7 @@ A consulta integrada à linguagem (LINQ) não se refere apenas à recuperação 
  Para obter mais informações, consulte [Criando árvores XML em C# (LINQ to XML)](../../../../standard/linq/create-xml-trees.md).  
   
 ## <a name="performing-operations-on-source-elements"></a>Realizando Operações em Elementos de Origem  
+
  Uma sequência de saída pode não conter os elementos ou propriedades de elementos da sequência de origem. Em vez disso, a saída pode ser uma sequência de valores que é calculada usando os elementos de origem como argumentos de entrada.
 
  A consulta a seguir usará uma sequência de números que representam raios de círculos, calculará a área para cada raio e retornará uma sequência de saída contendo cadeias de caracteres formatadas com a área calculada.

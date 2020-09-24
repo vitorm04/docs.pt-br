@@ -2,14 +2,15 @@
 title: <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-ms.openlocfilehash: 102e220ad01410568a18ce4ea6fac06ca8c15230
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5f35029806172c3abe639052798c0a018e8514f0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558726"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158598"
 ---
 # \<ws2007HttpBinding>
+
 Define uma associação interoperável que fornece suporte para as versões corretas <xref:System.ServiceModel.WSHttpBinding.Security%2A> dos <xref:System.ServiceModel.ReliableSession> elementos de <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> associação, e.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -59,6 +60,7 @@ Define uma associação interoperável que fornece suporte para as versões corr
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -96,6 +98,7 @@ Define uma associação interoperável que fornece suporte para as versões corr
 |[\<bindings>](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O `WS2007HttpBinding` adiciona uma associação fornecida pelo sistema semelhante a `WSHttpBinding` , mas usa a organização para o avanço das versões padrão do Oasis (padrões de informações estruturadas) dos protocolos ReliableSession, Security e TransactionFlow. Nenhuma alteração no modelo de objeto ou nas configurações padrão é necessária ao usar essa associação.  
   
 ## <a name="example"></a>Exemplo  

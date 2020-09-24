@@ -5,14 +5,15 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: 11592b055641c0fa2d2b968547dcc5aa40c94600
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 506e7873fab8e41fce121587c22d85600a8b1760
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541778"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158767"
 ---
 # <a name="generatepublisherevidence-element"></a>Elemento \<generatePublisherEvidence>
+
 Especifica se o tempo de execução cria <xref:System.Security.Policy.Publisher> evidências para a CAS (segurança de acesso do código).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,6 +28,7 @@ Especifica se o tempo de execução cria <xref:System.Security.Policy.Publisher>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -43,6 +45,7 @@ Especifica se o tempo de execução cria <xref:System.Security.Policy.Publisher>
 |`true`|Cria <xref:System.Security.Policy.Publisher> evidências. Este é o padrão.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -63,9 +66,11 @@ Especifica se o tempo de execução cria <xref:System.Security.Policy.Publisher>
 > Recomendamos que os serviços usem o `<generatePublisherEvidence>` elemento para melhorar o desempenho de inicialização.  O uso desse elemento também pode ajudar a evitar atrasos que podem causar um tempo limite e o cancelamento da inicialização do serviço.  
   
 ## <a name="configuration-file"></a>Arquivo de configuração  
+
  Esse elemento só pode ser usado no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como usar o `<generatePublisherEvidence>` elemento para desabilitar a verificação da política de editor de CAS para um aplicativo.  
   
 ```xml  
@@ -78,5 +83,5 @@ Especifica se o tempo de execução cria <xref:System.Security.Policy.Publisher>
   
 ## <a name="see-also"></a>Confira também
 
-- [Esquema de configurações de tempo de execução](index.md)
+- [Esquema de configurações do runtime](index.md)
 - [Esquema do arquivo de configuração](../index.md)

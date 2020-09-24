@@ -3,14 +3,15 @@ title: <claimsAuthorizationManager>
 ms.date: 03/30/2017
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
 author: BrucePerlerMS
-ms.openlocfilehash: ddbe8a862940272e4192a3f4c0abdc1f9e8b5d48
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0718f789ff4d99fb4e2651a9a704da4248cd5f49
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70252077"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158429"
 ---
 # \<claimsAuthorizationManager>
+
 Registra um Gerenciador de autorização de declarações para as declarações de entrada.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -18,7 +19,7 @@ Registra um Gerenciador de autorização de declarações para as declarações 
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<claimsAuthorizationManager>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.identityModel>  
@@ -31,6 +32,7 @@ Registra um Gerenciador de autorização de declarações para as declarações 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -40,6 +42,7 @@ Registra um Gerenciador de autorização de declarações para as declarações 
 |type|Um tipo personalizado que deriva da <xref:System.Security.Claims.ClaimsAuthorizationManager> classe. Para obter mais informações sobre como especificar o `type` atributo, consulte [referências de tipo personalizado](../windows-workflow-foundation/index.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Se não houver nenhum `type` atributo ou se o `type` atributo fizer referência à <xref:System.Security.Claims.ClaimsAuthenticationManager> classe, o `<claimsAuthorizationManager>` elemento não assumirá elementos filho; no entanto, as classes derivadas de <xref:System.Security.Claims.ClaimsAuthorizationManager> podem definir elementos de configuração filho.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -49,6 +52,7 @@ Registra um Gerenciador de autorização de declarações para as declarações 
 |[\<identityConfiguration>](identityconfiguration.md)|Especifica as configurações de identidade de nível de serviço.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O comportamento padrão fornecido por meio da <xref:System.Security.Claims.ClaimsAuthorizationManager> classe sempre autoriza as declarações de entrada. Se nenhum `type` atributo for especificado ou se o `type` atributo especificar a <xref:System.Security.Claims.ClaimsAuthorizationManager> classe, o `<claimsAuthorizationManager>` elemento não assumirá elementos filho. Você pode especificar o `type` atributo para registrar um tipo derivado da <xref:System.Security.Claims.ClaimsAuthorizationManager> classe para implementar o comportamento personalizado. Classes derivadas podem dar suporte à configuração por meio de elementos filho do `<claimsAuthorizationManager>` elemento, substituindo o <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> método para lidar com esses elementos. O esquema definido para os elementos filho é até o designer da classe.  
   
 > [!IMPORTANT]
@@ -57,6 +61,7 @@ Registra um Gerenciador de autorização de declarações para as declarações 
  Esse elemento define a <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType> propriedade.  
   
 ## <a name="example"></a>Exemplo  
+
  O XML a seguir mostra a configuração de um Gerenciador de autorização de declarações que implementa a política composta por pares de recurso-ação, cada um dos quais especifica combinações booleanas das declarações que um solicitante deve ter para executar a ação no recurso. O código que implementa o Gerenciador de autorização de declarações capaz de usar essa política pode ser encontrado no `ClaimsBasedAuthorization` exemplo.  
   
 ```xml  

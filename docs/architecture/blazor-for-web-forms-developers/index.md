@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 1c869cce6ab8a0ab7c4b83817fe1afc3d6a4a7fd
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 3ac9a02a2f5c93cbfd9377a9f6fff4b6c5f45e93
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267458"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158169"
 ---
 # <a name="no-locblazor-for-aspnet-web-forms-developers"></a>Blazor para desenvolvedores de Web Forms ASP.NET
 
@@ -74,7 +74,7 @@ A primeira parte deste livro aborda o que Blazor é o e o compara com o desenvol
 
 ## <a name="what-this-book-doesnt-cover"></a>O que este livro não abrange
 
-Este livro é uma introdução ao Blazor , não um guia de migração abrangente. Embora inclua orientações sobre como abordar a migração de um projeto do ASP.NET Web Forms para o Blazor , ele não tenta cobrir todas as nuances e os detalhes. Para obter diretrizes mais gerais sobre como migrar do ASP.NET para o ASP.NET Core, consulte as [diretrizes de migração](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/) na documentação do ASP.NET Core.
+Este livro é uma introdução ao Blazor , não um guia de migração abrangente. Embora inclua orientações sobre como abordar a migração de um projeto do ASP.NET Web Forms para o Blazor , ele não tenta cobrir todas as nuances e os detalhes. Para obter diretrizes mais gerais sobre como migrar do ASP.NET para o ASP.NET Core, consulte as [diretrizes de migração](/aspnet/core/migration/proper-to-2x/) na documentação do ASP.NET Core.
 
 ### <a name="additional-resources"></a>Recursos adicionais
 

@@ -3,12 +3,12 @@ title: Comunicação front-end de cliente
 description: Saiba como os clientes front-end se comunicam com sistemas nativos de nuvem
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 97421e9b90b19c720b1ab0ff8dd1e5f029cba5e4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 147adb3d0375f8bf5dadf14e1237aa93e9e42908
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614052"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158104"
 ---
 # <a name="front-end-client-communication"></a>Comunicação front-end de cliente
 
@@ -41,7 +41,7 @@ Na figura anterior, observe como o serviço de gateway de API abstrai os microse
 
 O gateway isola o cliente do particionamento e refatoração de serviço interno. Se você alterar um serviço de back-end, você poderá acomodá-lo no gateway sem interromper o cliente. Também é sua primeira linha de defesa para preocupações abrangentes, como identidade, Caching, resiliência, medição e limitação. Muitas dessas preocupações abrangentes podem ser descarregadas dos serviços principais de back-end para o gateway, simplificando os serviços de back-end.
 
-É necessário tomar cuidado para manter o gateway de API simples e rápido. Normalmente, a lógica de negócios é mantida fora do gateway. Os riscos complexos de gateway se tornam um afunilamento e, eventualmente, um próprio monolítico. Os sistemas maiores geralmente expõem vários gateways de API segmentados por tipo de cliente (móvel, Web, área de trabalho) ou funcionalidade de back-end. O padrão [back-end para front-ends](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends) fornece a direção para implementar vários gateways. O padrão é mostrado na Figura 4-4.
+É necessário tomar cuidado para manter o gateway de API simples e rápido. Normalmente, a lógica de negócios é mantida fora do gateway. Os riscos complexos de gateway se tornam um afunilamento e, eventualmente, um próprio monolítico. Os sistemas maiores geralmente expõem vários gateways de API segmentados por tipo de cliente (móvel, Web, área de trabalho) ou funcionalidade de back-end. O padrão [back-end para front-ends](/azure/architecture/patterns/backends-for-frontends) fornece a direção para implementar vários gateways. O padrão é mostrado na Figura 4-4.
 
 ![Padrão de gateway de API](./media/backend-for-frontend-pattern.png)
 
@@ -62,7 +62,7 @@ Como qualquer gateway de API, sua principal funcionalidade é encaminhar solicit
 | Roteamento | Autenticação |
 | Agregação de solicitação | Autorização |
 | Descoberta de serviço (com Consul e Eureka) | Limitação |
-| Balanceamento de Carga | Registro em log, rastreamento |
+| Balanceamento de carga | Registro em log, rastreamento |
 | Cache | Cabeçalhos/transformação de cadeia de consulta |
 | Passagem de correlação | Middleware personalizado |
 | Qualidade de Serviço | Políticas de repetição |
@@ -75,7 +75,7 @@ Considere o Ocelot para aplicativos nativos de nuvem simples que não exigem o r
 
 ## <a name="azure-application-gateway"></a>Gateway de Aplicativo do Azure
 
-Para obter os requisitos de gateway simples, você pode considerar [aplicativo Azure gateway](https://docs.microsoft.com/azure/application-gateway/overview). Disponível como um [serviço de PaaS](https://azure.microsoft.com/overview/what-is-paas/)do Azure, ele inclui recursos básicos de gateway, como roteamento de URL, terminação de SSL e um firewall do aplicativo Web. O serviço oferece suporte a recursos [de balanceamento de carga de camada 7](https://www.nginx.com/resources/glossary/layer-7-load-balancing/) . Com a camada 7, você pode rotear solicitações com base no conteúdo real de uma mensagem HTTP, não apenas em pacotes de rede TCP de nível baixo.
+Para obter os requisitos de gateway simples, você pode considerar [aplicativo Azure gateway](/azure/application-gateway/overview). Disponível como um [serviço de PaaS](https://azure.microsoft.com/overview/what-is-paas/)do Azure, ele inclui recursos básicos de gateway, como roteamento de URL, terminação de SSL e um firewall do aplicativo Web. O serviço oferece suporte a recursos [de balanceamento de carga de camada 7](https://www.nginx.com/resources/glossary/layer-7-load-balancing/) . Com a camada 7, você pode rotear solicitações com base no conteúdo real de uma mensagem HTTP, não apenas em pacotes de rede TCP de nível baixo.
 
 Ao longo deste livro, evangelizarmos a hospedagem de sistemas nativos de nuvem no [kubernetes](https://www.infoworld.com/article/3268073/what-is-kubernetes-your-next-application-platform.html). Um orquestrador de contêineres, o kubernetes automatiza a implantação, o dimensionamento e as preocupações operacionais de cargas de trabalho em contêineres. Aplicativo Azure gateway pode ser configurado como um gateway de API para o cluster do [serviço kubernetes do Azure](https://azure.microsoft.com/services/kubernetes-service/) .
 
@@ -99,7 +99,7 @@ Para começar, o gerenciamento de API expõe um servidor gateway que permite o a
 
 Para desenvolvedores, o gerenciamento de API oferece um portal do desenvolvedor que fornece acesso a serviços, documentação e código de exemplo para chamá-los. Os desenvolvedores podem usar o Swagger/Open API para inspecionar pontos de extremidade de serviço e analisar seu uso. O serviço funciona nas principais plataformas de desenvolvimento: .NET, Java, Golang e muito mais.
 
-O portal do editor expõe um painel de gerenciamento em que os administradores expõem APIs e gerenciam seu comportamento. O acesso ao serviço pode ser concedido, integridade do serviço monitorado e telemetria de serviço coletada. Os administradores aplicam *políticas* a cada ponto de extremidade para afetar o comportamento. [As políticas](https://docs.microsoft.com/azure/api-management/api-management-howto-policies) são instruções predefinidas que são executadas em sequência para cada chamada de serviço.  As políticas são configuradas para uma chamada de entrada, chamada de saída ou chamadas após um erro. As políticas podem ser aplicadas em diferentes escopos de serviço como para habilitar a ordenação determinística ao combinar políticas. O produto é fornecido com um grande número de [políticas](https://docs.microsoft.com/azure/api-management/api-management-policies)predefinidas.
+O portal do editor expõe um painel de gerenciamento em que os administradores expõem APIs e gerenciam seu comportamento. O acesso ao serviço pode ser concedido, integridade do serviço monitorado e telemetria de serviço coletada. Os administradores aplicam *políticas* a cada ponto de extremidade para afetar o comportamento. [As políticas](/azure/api-management/api-management-howto-policies) são instruções predefinidas que são executadas em sequência para cada chamada de serviço.  As políticas são configuradas para uma chamada de entrada, chamada de saída ou chamadas após um erro. As políticas podem ser aplicadas em diferentes escopos de serviço como para habilitar a ordenação determinística ao combinar políticas. O produto é fornecido com um grande número de [políticas](/azure/api-management/api-management-policies)predefinidas.
 
 Aqui estão exemplos de como as políticas podem afetar o comportamento de seus serviços nativos de nuvem:  
 
@@ -120,13 +120,13 @@ O gerenciamento de API do Azure está disponível em [quatro camadas diferentes]
 - Standard
 - Premium
 
-A camada de desenvolvedor destina-se a cargas de trabalho e avaliação de não produção. As outras camadas oferecem progressivamente mais energia, recursos e SLAs (contratos de nível de serviço) mais altos. A camada Premium fornece [suporte a várias regiões e à](https://docs.microsoft.com/azure/api-management/api-management-howto-deploy-multi-region) [rede virtual do Azure](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) . Todas as camadas têm um preço fixo por hora.
+A camada de desenvolvedor destina-se a cargas de trabalho e avaliação de não produção. As outras camadas oferecem progressivamente mais energia, recursos e SLAs (contratos de nível de serviço) mais altos. A camada Premium fornece [suporte a várias regiões e à](/azure/api-management/api-management-howto-deploy-multi-region) [rede virtual do Azure](/azure/virtual-network/virtual-networks-overview) . Todas as camadas têm um preço fixo por hora.
 
 A nuvem do Azure também oferece uma [camada sem servidor](https://azure.microsoft.com/blog/announcing-azure-api-management-for-serverless-architectures/) para o gerenciamento de API do Azure. Referido como o *tipo de preço de consumo*, o serviço é uma variante do gerenciamento de API projetado em relação ao modelo de computação sem servidor. Ao contrário dos tipos de preço "pré-alocados" mostrados anteriormente, o nível de consumo fornece provisionamento instantâneo e preços de pagamento por ação.
 
 Ele habilita recursos de gateway de API para os seguintes casos de uso:
 
-- Os microserviços implementados usando tecnologias sem servidor, como [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview) e [aplicativos lógicos do Azure](https://azure.microsoft.com/services/logic-apps/).
+- Os microserviços implementados usando tecnologias sem servidor, como [Azure Functions](/azure/azure-functions/functions-overview) e [aplicativos lógicos do Azure](https://azure.microsoft.com/services/logic-apps/).
 - Recursos de serviço de backup do Azure, como filas e tópicos do barramento de serviço, armazenamento do Azure e outros.
 - Microserviços em que o tráfego tem picos ocasionais grandes, mas permanece com pouca maior parte do tempo.
 

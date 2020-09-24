@@ -2,14 +2,15 @@
 title: Elemento <localClientSettings>
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: 3ec0394943c030a8866087c98a912682a2a2112e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 19eaea71fdaad1b945524cca5cf15634e0b0fa14
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400315"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158728"
 ---
 # <a name="localclientsettings-element"></a>Elemento \<localClientSettings>
+
 Especifica as configurações de segurança de um cliente local para esta associação.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ Especifica as configurações de segurança de um cliente local para esta associ
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<localClientSettings>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <security>
@@ -39,6 +40,7 @@ Especifica as configurações de segurança de um cliente local para esta associ
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -58,6 +60,7 @@ Especifica as configurações de segurança de um cliente local para esta associ
 |`timestampValidityDuration`|Um positivo <xref:System.TimeSpan> que especifica a duração em que um carimbo de data/hora é válido. O padrão é "00:15:00".|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -68,6 +71,7 @@ Especifica as configurações de segurança de um cliente local para esta associ
 |[\<secureConversationBootstrap>](secureconversationbootstrap.md)|Especifica os valores padrão usados para iniciar um serviço de conversa segura.|  
   
 ## <a name="remarks"></a>Comentários  
+
  As configurações são locais no sentido de que elas não são configurações derivadas da política de segurança do serviço.  
   
 ## <a name="see-also"></a>Confira também
@@ -81,5 +85,5 @@ Especifica as configurações de segurança de um cliente local para esta associ
 - [Estendendo associações](../../../wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [Como criar uma associação personalizada utilizando o SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Como: criar uma associação personalizada utilizando o SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Segurança de associação personalizada](../../../wcf/samples/custom-binding-security.md)

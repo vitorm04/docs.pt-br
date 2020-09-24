@@ -3,12 +3,12 @@ title: Sinalizadores de recurso
 description: Implementar sinalizadores de recurso em aplicativos nativos de nuvem utilizando Azure App config
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: be4ab307069065975dc22d6bd984e12a2ea1457d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ee45c9f187b056887ea6dd3a08da508afca51987
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540459"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158091"
 ---
 # <a name="feature-flags"></a>Sinalizadores de recurso
 
@@ -43,9 +43,9 @@ Observe como essa abordagem separa a lógica de decisão do código de recurso.
 
 No capítulo 1, discutimos o `Twelve-Factor App` . As diretrizes recomendadas para manter as definições de configuração externas do código executável do aplicativo. Quando necessário, as configurações podem ser lidas na fonte externa. Os valores de configuração do sinalizador de recurso também devem ser independentes da base de código. Ao externalizar a configuração do sinalizador em um repositório separado, você pode alterar o estado do sinalizador sem modificar e reimplantar o aplicativo.
 
-[Azure app configuração](https://docs.microsoft.com/azure/azure-app-configuration/overview) fornece um repositório centralizado para sinalizadores de recursos. Com ele, você define diferentes tipos de sinalizadores de recursos e manipula seus Estados de forma rápida e confiável. Você adiciona as bibliotecas de cliente de configuração de aplicativo ao seu aplicativo para habilitar a funcionalidade de sinalizador de recurso. Há suporte para várias estruturas de linguagem de programação.
+[Azure app configuração](/azure/azure-app-configuration/overview) fornece um repositório centralizado para sinalizadores de recursos. Com ele, você define diferentes tipos de sinalizadores de recursos e manipula seus Estados de forma rápida e confiável. Você adiciona as bibliotecas de cliente de configuração de aplicativo ao seu aplicativo para habilitar a funcionalidade de sinalizador de recurso. Há suporte para várias estruturas de linguagem de programação.
 
-Os sinalizadores de recurso podem ser facilmente implementados em um [serviço ASP.NET Core](https://docs.microsoft.com/azure/azure-app-configuration/use-feature-flags-dotnet-core). A instalação das bibliotecas de gerenciamento de recursos do .NET e do provedor de configuração de aplicativo permite que você adicione sinalizadores de recurso declarativamente ao seu código. Eles habilitam `FeatureGate` atributos para que você não precise gravar manualmente as instruções if na base de código.
+Os sinalizadores de recurso podem ser facilmente implementados em um [serviço ASP.NET Core](/azure/azure-app-configuration/use-feature-flags-dotnet-core). A instalação das bibliotecas de gerenciamento de recursos do .NET e do provedor de configuração de aplicativo permite que você adicione sinalizadores de recurso declarativamente ao seu código. Eles habilitam `FeatureGate` atributos para que você não precise gravar manualmente as instruções if na base de código.
 
 Uma vez configurado em sua classe de inicialização, você pode adicionar a funcionalidade de sinalizador de recurso no nível do controlador, da ação ou do middleware. A Figura 10-12 apresenta a implementação do controlador e da ação:
 

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: a6b86ccb870da0262bcbc516e176e00d17724f9f
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: c6048424128b462bfc56d9c7c3cf8f75cca9298d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864053"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159339"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Construtores particulares (Guia de Programação em C#)
+
 Um construtor particular é um construtor de instância especial. Normalmente, ele é usado em classes que contêm apenas membros estáticos. Se uma classe tiver um ou mais construtores particulares e nenhum construtor público, outras classes (exceto as classes aninhadas) não poderão criar instâncias dessa classe. Por exemplo:  
   
  [!code-csharp[csProgGuideObjects#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#11)]  
@@ -23,6 +24,7 @@ Um construtor particular é um construtor de instância especial. Normalmente, e
  Construtores particulares são usados para impedir a criação de instâncias de uma classe quando não há métodos ou campos de instância, como a classe <xref:System.Math> ou quando um método é chamado para obter uma instância de uma classe. Se todos os métodos na classe forem estáticos, considere deixar toda a classe estática. Para obter mais informações [, consulte classes estáticas e membros de classe estática](./static-classes-and-static-class-members.md).  
   
 ## <a name="example"></a>Exemplo  
+
  A seguir, temos um exemplo de uma classe usando um construtor particular.  
   
  [!code-csharp[csProgGuideObjects#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#12)]  
@@ -35,11 +37,11 @@ Um construtor particular é um construtor de instância especial. Normalmente, e
 
 Para obter mais informações, veja [Construtores privados](~/_csharplang/spec/classes.md#private-constructors) na [Especificação da Linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de programação C#](../index.md)
 - [Classes e structs](./index.md)
 - [Construtores](./constructors.md)
 - [Finalizadores](./destructors.md)
-- [pessoal](../../language-reference/keywords/private.md)
-- [público](../../language-reference/keywords/public.md)
+- [particulares](../../language-reference/keywords/private.md)
+- [public](../../language-reference/keywords/public.md)

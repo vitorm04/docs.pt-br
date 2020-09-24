@@ -2,14 +2,15 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 987dcad5e239b35f5ff367ab668d40526593f970
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6d4302e1840f58e2daad855942493cc96b7d5e34
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556454"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158663"
 ---
 # \<tcpTransport>
+
 Define um transporte TCP que pode ser usado por um canal para transferir mensagens para uma associação personalizada.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -44,6 +45,7 @@ Define um transporte TCP que pode ser usado por um canal para transferir mensage
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -67,6 +69,7 @@ Define um transporte TCP que pode ser usado por um canal para transferir mensage
 |connectionPoolSettings|Especifica configurações de pool de conexões adicionais para uma associação de pipe nomeado.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -76,6 +79,7 @@ Define um transporte TCP que pode ser usado por um canal para transferir mensage
 |[\<binding>](bindings.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Esse transporte usa URIs no formato "net. TCP://hostname: port/path". Outros componentes de URI são opcionais.  
   
  O `tcpTransport` elemento é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte TCP. Esse transporte é otimizado para comunicação WCF para WCF.  
