@@ -2,14 +2,15 @@
 title: <add> de <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: adf4cd7f02db6535c5950443d09476a9a5ff63fb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9bef44ed39ee892080342058206f779b38fb460d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850312"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151149"
 ---
 # <a name="add-of-transportconfigurationtype"></a>\<add> de \<transportConfigurationType>
+
 Esse elemento é um par chave/valor, que identifica o tipo de um transporte específico.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -18,7 +19,7 @@ Esse elemento é um par chave/valor, que identifica o tipo de um transporte espe
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<transportConfigurationTypes>**](transportconfigurationtypes.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <serviceHostingEnvironment>
@@ -30,6 +31,7 @@ Esse elemento é um par chave/valor, que identifica o tipo de um transporte espe
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -40,6 +42,7 @@ Esse elemento é um par chave/valor, que identifica o tipo de um transporte espe
 |transportConfigurationType|Uma cadeia de caracteres que contém o tipo que implementa o transporte específico.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum  
   
 ### <a name="parent-elements"></a>Elementos pai  

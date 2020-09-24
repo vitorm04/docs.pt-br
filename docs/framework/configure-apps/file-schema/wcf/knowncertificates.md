@@ -2,14 +2,15 @@
 title: <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 678e21b4-6493-47c3-8359-fcf0d37e2138
-ms.openlocfilehash: 23fe19258e09e9e8a5e05a94ccef0e40ee1cb5fd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7ddb292b8f0ffe38133c7f142be751a87d2be11c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400330"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150902"
 ---
 # \<knownCertificates>
+
 Representa uma coleção de certificados X. 509 que são fornecidos para autenticar credenciais de segurança emitidas de um serviço de token de segurança (STS).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -21,7 +22,7 @@ Representa uma coleção de certificados X. 509 que são fornecidos para autenti
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<issuedTokenAuthentication>**](issuedtokenauthentication-of-servicecredentials.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<knownCertificates>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <knownCertificates>
@@ -33,9 +34,11 @@ Representa uma coleção de certificados X. 509 que são fornecidos para autenti
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
+
  Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -51,6 +54,7 @@ Representa uma coleção de certificados X. 509 que são fornecidos para autenti
 |[\<issuedTokenAuthentication>](issuedtokenauthentication-of-servicecredentials.md)|Especifica um token emitido como uma credencial de serviço.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O cenário de token emitido tem três estágios. No primeiro estágio, um cliente que tenta acessar um serviço é chamado de um *serviço de token seguro*. O serviço de token seguro autentica o cliente e subsequentemente emite um token do cliente, normalmente um token SAML (Security Assertion Markup Language). O cliente retorna ao serviço com o token. O serviço examina o token de dados que permite que o serviço autentique o token e, portanto, o cliente. Para autenticar o token, o certificado que o serviço de token seguro usa deve ser conhecido pelo serviço.  
   
  O [\<issuedTokenAuthentication>](issuedtokenauthentication-of-servicecredentials.md) elemento é o repositório para qualquer certificado de serviço de token seguro. Para adicionar certificados, use o [ \<knownCertificates> elemento](knowncertificates.md). Insira um [\<add>](add-of-knowncertificates.md) para cada certificado, conforme mostrado no exemplo a seguir.  
@@ -84,7 +88,7 @@ Representa uma coleção de certificados X. 509 que são fornecidos para autenti
 - [\<add>](add-of-knowncertificates.md)
 - [\<issuedTokenAuthentication>](issuedtokenauthentication-of-servicecredentials.md)
 - [Comportamentos de segurança](../../../wcf/feature-details/security-behaviors-in-wcf.md)
-- [Como configurar credenciais em um serviço de federação](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Como: configurar credenciais em um serviço de federação](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Trabalhando com certificados](../../../wcf/feature-details/working-with-certificates.md)
 - [Federação e tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [\<add>](add-of-knowncertificates.md)

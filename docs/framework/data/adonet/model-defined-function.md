@@ -2,19 +2,20 @@
 title: função definida por modelo
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
-ms.openlocfilehash: 973d7ff9f7b76650782d62dcdcab60c8cedde18f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 04d27387c30d5fe09d31c1b2cc94741f21ffe8e0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735584"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150772"
 ---
 # <a name="model-defined-function"></a>função definida por modelo
+
 Uma *função definida pelo modelo* é uma função que é definida em um modelo conceitual. O corpo de uma função definida pelo modelo é expresso em [Entity SQL](./ef/language-reference/entity-sql-language.md), o que permite que a função seja expressa independentemente das regras ou idiomas com suporte na fonte de dados.  
   
  Uma definição de uma função definida modelo contém as informações a seguir:  
   
-- Um nome de função. (Necessário)  
+- Um nome de função. (Obrigatória)  
   
 - O tipo do valor de retorno. (Opcional)  
   
@@ -28,6 +29,7 @@ Uma *função definida pelo modelo* é uma função que é definida em um modelo
  Observe que as funções definidas modelo não suportam parâmetros de saída. Essa limitação é no lugar de modo que as funções definidas modelo podem ser compostos.  
   
 ## <a name="example"></a>Exemplo  
+
  O diagrama a seguir mostra um modelo conceitual com três tipos de entidade: `Book`, `Publisher`, e `Author`.  
   
  ![Captura de tela que mostra um modelo com a data de publicação.](./media/model-defined-function/model-published-date-three-entity-types.gif)  
@@ -36,8 +38,8 @@ Uma *função definida pelo modelo* é uma função que é definida em um modelo
   
  [!code-xml[EDM_Example_Model#ModelDefinedFunction](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#modeldefinedfunction)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Principais conceitos do Modelo de Dados de Entidade](entity-data-model-key-concepts.md)
+- [Conceitos chave do Modelo de Dados de Entidade](entity-data-model-key-concepts.md)
 - [Modelo de Dados de Entidade](entity-data-model.md)
-- [Modelo de Dados de Entidade: tipos de dados primitivos](entity-data-model-primitive-data-types.md)
+- [Modelo de Dados de Entidade: Tipos de dados primitivos](entity-data-model-primitive-data-types.md)

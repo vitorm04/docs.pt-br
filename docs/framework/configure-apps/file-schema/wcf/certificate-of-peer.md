@@ -2,14 +2,15 @@
 title: <certificate> de <peer>
 ms.date: 03/30/2017
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
-ms.openlocfilehash: ed24e9061f57798197ad41c1f556ce612a357e9e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8ec839df02af4a01d31192eebc96e4c5e58313e9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555309"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151110"
 ---
 # <a name="certificate-of-peer"></a>\<certificate> de \<peer>
+
 Especifica um certificado usado por um par.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,6 +32,7 @@ Especifica um certificado usado por um par.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -43,6 +45,7 @@ Especifica um certificado usado por um par.
 |`X509FindType`|Define o tipo de pesquisa de X.509 a ser executada. Os valores válidos incluem os seguintes:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />- FindBySubjectDistinguishedName<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />- FindBySerialNumber<br />- FindByTimeValid<br />- FindByTimeNotYetValid<br />- FindByTemplateName<br />- FindByApplicationPolicy<br />- FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />- FindBySubjectKeyIdentifier<br /><br /> O tipo contido no `findValue` atributo deve atender aos requisitos do especificado `X509FindType` .<br /><br /> O valor padrão é FindBySubjectDistinguishedName.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -52,6 +55,7 @@ Especifica um certificado usado por um par.
 |[\<peer>](peer-of-servicecredentials.md)|Especifica as credenciais atuais para um nó par.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Este elemento de configuração contém uma `X509Certificate2` instância usada ao autenticar vizinhos na malha par.  
   
  Para obter mais informações sobre a programação ponto a ponto, consulte [rede ponto a ponto](../../../wcf/feature-details/peer-to-peer-networking.md).  

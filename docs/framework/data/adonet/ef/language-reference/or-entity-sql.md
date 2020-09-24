@@ -2,14 +2,15 @@
 title: '|| (OU) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
-ms.openlocfilehash: 8c93e68095a0e0ff63532f53152f166d6c3d047c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89c0a92030f2f067d5e5d45b58d475414a224ce4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150087"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150798"
 ---
 # <a name="-or-entity-sql"></a>|| (OU) (Entity SQL)
+
 Combina duas expressões de `Boolean` .  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -21,13 +22,16 @@ boolean_expression || boolean_expression
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `boolean_expression`  
  Qualquer expressão válida que retorna `Boolean`.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  `true` quando uma das condições for `true`; caso contrário, `false`.  
   
 ## <a name="remarks"></a>Comentários  
+
  OR é um operador lógico de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . É usada para combinar duas condições. Quando mais de um operador lógico é usado em uma instrução, operadores OR são avaliados depois de operadores AND. Entretanto, é possível alterar a ordem de avaliação usando parênteses.  
   
  As barras verticais duplas (&#124;&#124;) têm a mesma funcionalidade que o operador OR.  
@@ -41,9 +45,10 @@ boolean_expression || boolean_expression
 |`NULL`|TRUE|NULO|NULO|  
   
 ## <a name="example"></a>Exemplo  
+
  A seguinte consulta SQL Entity usa o operador OR para combinar duas expressões de `Boolean` . A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [Como: Executar uma consulta que retorna resultados do tipo estrutural](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga o procedimento em [como executar uma consulta que retorna resultados de estruturaistype](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   

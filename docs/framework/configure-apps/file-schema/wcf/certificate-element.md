@@ -2,14 +2,15 @@
 title: Elemento <certificate>
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
-ms.openlocfilehash: c5fd156904ed30035991a8391c8f975da2a97ea7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8cc0404a5896dd23cffce6f1f77b91a2f01f23d2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554365"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151084"
 ---
 # <a name="certificate-element"></a>Elemento \<certificate>
+
 Especifica um certificado X. 509 a ser usado para assinar e criptografar mensagens para clientes ponto a ponto.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,6 +32,7 @@ Especifica um certificado X. 509 a ser usado para assinar e criptografar mensage
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -43,6 +45,7 @@ Especifica um certificado X. 509 a ser usado para assinar e criptografar mensage
 |`X509FindType`|Define o tipo de pesquisa de X.509 a ser executada. Os valores válidos incluem os seguintes:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />- FindBySubjectDistinguishedName<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />- FindBySerialNumber<br />- FindByTimeValid<br />- FindByTimeNotYetValid<br />- FindByTemplateName<br />- FindByApplicationPolicy<br />- FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />- FindBySubjectKeyIdentifier<br /><br /> O tipo contido no `findValue` atributo deve atender aos requisitos do especificado `X509FindType` .<br /><br /> O valor padrão é FindBySubjectDistinguishedName.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -52,11 +55,13 @@ Especifica um certificado X. 509 a ser usado para assinar e criptografar mensage
 |[\<peer>](peer-of-clientcredentials-element.md)|Especifica as credenciais usadas ao autenticar clientes ponto a ponto.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Este elemento de configuração contém uma instância X509Certificate2 usada ao autenticar vizinhos na malha par.  
   
  Para obter mais informações sobre a programação ponto a ponto, consulte [rede ponto a ponto](../../../wcf/feature-details/peer-to-peer-networking.md).  
   
 ## <a name="example"></a>Exemplo  
+
  O código a seguir especifica como localizar o certificado usado em um cenário ponto a ponto.  
   
 ```xml  
