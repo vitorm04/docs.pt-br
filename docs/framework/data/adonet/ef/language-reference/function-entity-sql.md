@@ -2,14 +2,15 @@
 title: FUNÇÃO (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: a3cc843c7f16f667508aeaea65879de6842478bc
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e06b5bf8a2ca62630666ab3e8ba35f0425e3988
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544486"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148029"
 ---
 # <a name="function-entity-sql"></a>FUNÇÃO (Entity SQL)
+
 Define uma função no escopo de um comando de consulta Entity SQL.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -29,6 +30,7 @@ FUNCTION function-name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `function-name`  
  Nome da função.  
   
@@ -51,6 +53,7 @@ FUNCTION function-name
  Uma expressão que retorna registros anônimos, tipados estrutural de um ou mais valores. Para obter mais informações, consulte [linha](row-entity-sql.md).  
   
 ## <a name="remarks"></a>Comentários  
+
  Várias funções com o mesmo nome podem ser declarados embutidos, como as assinaturas de função são diferentes. Para obter mais informações, consulte [resolução de sobrecarga de função](function-overload-resolution-entity-sql.md).  
   
  Uma função in-line pode ser chamado em um comando de Entity SQL somente após foi definida no comando. No entanto, uma função in-line pode ser chamada dentro de outra função in-line tanto antes ou após a função chamada foi definido. No exemplo a seguir, funciona a função B de chamadas de antes que a função B é definida:  
@@ -66,11 +69,13 @@ FUNCTION function-name
  As funções podem também ser declaradas no próprio modelo. As funções declaradas no modelo são executadas da mesma forma como as funções está embutido no comando. Para obter mais informações, consulte [funções definidas pelo usuário](user-defined-functions-entity-sql.md).  
   
 ## <a name="example"></a>Exemplo  
+
  O seguinte comando de Entity SQL define uma função `Products` que recebe um valor inteiro para filtrar os produtos retornados.  
   
  [!code-sql[DP EntityServices Concepts#FUNCTION1](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function1)]  
   
 ## <a name="example"></a>Exemplo  
+
  O seguinte comando de Entity SQL define uma função `StringReturnsCollection` que utiliza uma coleção de cadeias de caracteres para filtrar os contatos retornados.  
   
  [!code-sql[DP EntityServices Concepts#FUNCTION2](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function2)]  
@@ -78,4 +83,4 @@ FUNCTION function-name
 ## <a name="see-also"></a>Confira também
 
 - [Referência de Entity SQL](entity-sql-reference.md)
-- [Entity SQL Language](entity-sql-language.md) (Linguagem SQL de entidade)
+- [Linguagem Entity SQL](entity-sql-language.md)

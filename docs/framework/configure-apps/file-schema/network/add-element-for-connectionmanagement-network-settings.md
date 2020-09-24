@@ -10,14 +10,15 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 093b68d31e03094bedefa96a2f2d53eb3d84edf0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 05e4a1bc42dc39c7d2b56e30c98bdeefd31e4416
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155005"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149472"
 ---
 # <a name="add-element-for-connectionmanagement-network-settings"></a>Elemento \<add> para connectionManagement (Configurações de Rede)
+
 Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -25,7 +26,7 @@ Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<connectionManagement>**](connectionmanagement-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <add
@@ -35,6 +36,7 @@ Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -45,23 +47,27 @@ Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.
 |`maxconnection`|O número máximo de conexões permitidas a um servidor. Se não for fornecido, o padrão será 2.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
-|**Elemento**|**Descrição**|  
+|**Element**|**Descrição**|  
 |-----------------|---------------------|  
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica o número máximo de conexões com um host de rede.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O valor do `address` atributo deve ser um asterisco para indicar todas as conexões ou uma cadeia de caracteres do formulário `<schema>://<idn_hostname>[:<port>]` .  
   
  Se o URI passado para qualquer API HTTP contiver Unicode, o nome será convertido internamente usando o <xref:System.Uri.DnsSafeHost%2A> que pode retornar uma cadeia de caracteres Punicode (comportamento dependente da configuração de IDN atual).  
   
-## <a name="configuration-files"></a>Arquivos de configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
+## <a name="configuration-files"></a>Arquivos de Configuração  
+
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine.config).  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir configura um aplicativo para usar quatro conexões com o servidor `www.contoso.com` e duas conexões com todos os outros servidores.  
   
 ```xml  

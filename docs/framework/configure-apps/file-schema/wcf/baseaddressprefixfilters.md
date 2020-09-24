@@ -2,14 +2,15 @@
 title: <baseAddressPrefixFilters>
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 635e4f02f4d286b63c4f4845563ba1953d23592a
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: ce224a2a1d6d96f2bc72e9291e7256d264d86d50
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811893"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149021"
 ---
 # \<baseAddressPrefixFilters>
+
 Representa uma coleção de elementos de configuração que especificam filtros de passagem, que fornecem um mecanismo para escolher as associações de Serviços de Informações da Internet (IIS) apropriadas ao hospedar o aplicativo de Windows Communication Foundation (WCF) no IIS.  
   
 > [!WARNING]
@@ -20,7 +21,7 @@ Representa uma coleção de elementos de configuração que especificam filtros 
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceHostingEnvironment>**](servicehostingenvironment.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<baseAddressPrefixFilters>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <serviceHostingEnvironment>
@@ -31,9 +32,11 @@ Representa uma coleção de elementos de configuração que especificam filtros 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
+
  Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -49,6 +52,7 @@ Representa uma coleção de elementos de configuração que especificam filtros 
 |[\<serviceHostingEnvironment>](servicehostingenvironment.md)|Define o tipo que o ambiente de Hospedagem de serviço instancia para um transporte específico.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Um filtro de prefixo fornece uma maneira de provedores de hospedagem compartilhados especificar quais URIs devem ser usados pelo serviço. Ele permite que hosts compartilhados hospedem vários aplicativos com endereços base diferentes para o mesmo esquema no mesmo site.  
   
  Os sites da Web do IIS são contêineres para aplicativos virtuais que contêm diretórios virtuais. O aplicativo em um site pode ser acessado por meio de uma ou mais associações do IIS. As associações do IIS fornecem duas informações: vinculação de protocolo e informações de associação. O protocolo de associação (por exemplo, HTTP) define o esquema sobre o qual ocorre a comunicação e as informações de associação (por exemplo, endereço IP, porta, cabeçalho) contêm os dados usados para acessar o site.  

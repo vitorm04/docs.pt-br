@@ -5,19 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: 571904d36293caa6d4330b2ffda2cff5aca8e6b2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de925afd071a5c92dfa3f6a5e35e62a8ba734cd8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174453"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147613"
 ---
 # <a name="windows-applications-using-callbacks"></a>Aplicativos do Windows que usam retornos de chamada
+
 Na maioria dos cenários de processamento assíncrono, você deseja iniciar uma operação de banco de dados e continuar executando outros processos sem esperar a conclusão da operação de banco de dados. No entanto, muitos cenários exigem fazer algo depois que a operação do banco de dados termina. Em aplicativos do Windows, por exemplo, você pode querer delegar a operação demorada para um thread em segundo plano enquanto permite que o thread de interface do usuário permaneça responsivo. No entanto, quando a operação de banco de dados é concluída, você deseja usar os resultados para preencher o formulário. A implementação desse tipo de cenário é melhor com um retorno de chamada.  
   
  Você define um retorno de chamada especificando um <xref:System.AsyncCallback> delegado no método <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> ou <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. O delegado é chamado quando a operação é concluída. Você pode passar o delegado uma referência para o <xref:System.Data.SqlClient.SqlCommand> em si, facilitando o acesso ao objeto <xref:System.Data.SqlClient.SqlCommand>, e chamar o método `End` apropriado sem precisar usar uma variável global.  
   
 ## <a name="example"></a>Exemplo  
+
  O aplicativo do Windows a seguir demonstra o uso do método <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, executando uma instrução Transact-SQL que inclui um atraso de alguns segundos (emulando um comando de longa execução).  
   
  Este exemplo demonstra uma série de técnicas importantes, incluindo a chamada de um método que interage com o formulário de um thread separado. Além disso, este exemplo demonstra como você deve impedir que os usuários executem simultaneamente um comando várias vezes e como você deve garantir que o formulário não seja fechado antes que o procedimento de retorno de chamada seja chamado.  

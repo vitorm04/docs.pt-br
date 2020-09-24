@@ -2,14 +2,15 @@
 title: <add> de <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-ms.openlocfilehash: 8328b6d08c1b57ad7a899c8cb489e07037e5af09
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 11be233d846f9025f041a26174e5b3bd2abdab55
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558155"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149186"
 ---
 # <a name="add-of-commonparameters"></a>\<add> de \<commonParameters>
+
 Especifica um par de nome-valor de parâmetros que são usados globalmente em vários serviços. Normalmente, esse parâmetro inclui a cadeia de conexão de banco de dados que pode ser compartilhada por serviços duráveis.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,6 +33,7 @@ Especifica um par de nome-valor de parâmetros que são usados globalmente em v�
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -42,6 +44,7 @@ Especifica um par de nome-valor de parâmetros que são usados globalmente em v�
 |value|O valor do parâmetro especificado para um serviço.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -51,6 +54,7 @@ Especifica um par de nome-valor de parâmetros que são usados globalmente em v�
 |[\<commonParameters>](commonparameters.md)|Uma coleção de parâmetros comuns usados por serviços. Normalmente, essa coleção inclui a cadeia de conexão do banco de dados que pode ser compartilhada por serviços duráveis.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O `<commonParameters>` elemento define todos os parâmetros que são usados globalmente em vários serviços, por exemplo, `ConnectionString` ao usar o <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService> .  
   
  Para serviços que confirmam lotes de trabalho para repositórios de persistência, como <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> e <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> , você pode habilitá-los para repetir sua transação usando o `EnableRetries` parâmetro, conforme mostrado no exemplo a seguir:  

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - configuration settings [.NET Framework], cryptography
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-ms.openlocfilehash: c632a15552c8ba5743aac1309098b7d7ef949bbd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0215851f83a13ee48547144f08c5c693ec2d90bf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088002"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149524"
 ---
 # <a name="cryptography-settings-schema"></a>Esquema de configurações de criptografia
+
 O esquema de configurações de criptografia contém elementos que especificam como mapear nomes de algoritmo amigáveis para classes que implementam algoritmos de criptografia.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -43,5 +44,5 @@ O esquema de configurações de criptografia contém elementos que especificam c
   
 ## <a name="see-also"></a>Confira também
 
-- [Esquema de arquivos de configuração](../index.md)
-- [Serviços de Criptografia](../../../../standard/security/cryptographic-services.md)
+- [Esquema do arquivo de configuração](../index.md)
+- [Serviços criptográficos](../../../../standard/security/cryptographic-services.md)
