@@ -2,14 +2,15 @@
 title: Linguagem Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
-ms.openlocfilehash: 2600b7626ebc5196c702f2d1e3159fd9549227f7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 721a4cd9d4e5618c083392bbe1ae203f285f8feb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553376"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148107"
 ---
 # <a name="entity-sql-language"></a>Linguagem Entity SQL
+
 O Entity SQL é uma linguagem de consulta independente de armazenamento semelhante ao SQL. O Entity SQL permite que você consulte dados de entidade, como objetos ou em forma de tabela. Você deve considerar o uso do Entity SQL nos seguintes casos:  
   
 - Quando uma consulta deve ser construída dinamicamente em runtime. Nesse caso, você também deve considerar o uso dos métodos do construtor de consultas de <xref:System.Data.Objects.ObjectQuery%601>, em vez de construir uma cadeia de caracteres de consulta Entity SQL em runtime.  
@@ -21,6 +22,7 @@ O Entity SQL é uma linguagem de consulta independente de armazenamento semelhan
 - Se você já for um especialista em linguagens de consulta baseadas em SQL, o Entity SQL poderá parecer a opção mais natural para você.  
   
 ## <a name="using-entity-sql-with-the-entityclient-provider"></a>Usando Entity SQL com o provedor EntityClient  
+
  Se você desejar usar o Entity SQL com o provedor EntityClient, consulte os seguintes tópicos para obter mais informações:  
   
  [Provedor EntityClient para Entity Framework](../entityclient-provider-for-the-entity-framework.md)  
@@ -46,6 +48,7 @@ O Entity SQL é uma linguagem de consulta independente de armazenamento semelhan
  [Como: navegar em relações com o operador navegar](../how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="using-entity-sql-with-object-queries"></a>Usando o Entity SQL com consultas de objetos  
+
  Se você desejar usar o Entity SQL com consultas de objetos, consulte os seguintes tópicos para obter mais informações:  
   
  [Como executar uma consulta que retorna objetos de tipo de entidade](/previous-versions/dotnet/netframework-4.0/bb738694(v=vs.100))  
@@ -75,6 +78,7 @@ O Entity SQL é uma linguagem de consulta independente de armazenamento semelhan
  [Como: paginar os resultados da consulta](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Visão geral da Entity SQL](entity-sql-overview.md)  
   
  [Referência de Entity SQL](entity-sql-reference.md)  

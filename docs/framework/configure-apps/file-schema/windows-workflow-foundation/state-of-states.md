@@ -3,14 +3,15 @@ title: <state> de <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ab483c7f-a091-4933-ba6b-708d96846d38
-ms.openlocfilehash: 391e552bce34d637a324c78702cb0e7121f2c999
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 058480c29d6c5b554d5187a1a12a0c2e54587428
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398658"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169746"
 ---
 # <a name="state-of-states"></a>\<state> de \<states>
+
 Um elemento de configuração que contém o estado da atividade inscrito para que um registro de rastreamento deve ser emitido.  
   
  Para obter mais informações sobre consultas de perfil de rastreamento, consulte [perfis de rastreamento](../../../windows-workflow-foundation/tracking-profiles.md).  
@@ -43,6 +44,7 @@ Um elemento de configuração que contém o estado da atividade inscrito para qu
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -52,6 +54,7 @@ Um elemento de configuração que contém o estado da atividade inscrito para qu
 |name|Uma cadeia de caracteres que especifica o estado da atividade inscrito para que um registro de rastreamento deve ser emitido.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -61,6 +64,7 @@ Um elemento de configuração que contém o estado da atividade inscrito para qu
 |[\<states>](states-of-activitystatequery.md)|Uma coleção de elementos de configuração que contêm os estados da atividade inscrito para que um registro de rastreamento deve ser emitido.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Um recurso exclusivo de um ActivityStateQuery é a capacidade de extrair dados para controlar a execução de um fluxo de trabalho. Isso fornece contexto adicional ao acessar o rastreamento registra pós execução. Você pode usar os [\<arguments>](arguments.md) [\<states>](states.md) elementos e [\<states>](states.md) para extrair qualquer variável ou argumento de qualquer atividade em um fluxo de trabalho. O exemplo a seguir mostra uma consulta de estado da atividade que extrai variáveis e argumentos quando `Closed` de atividade que controla o registro é emitida. Variáveis e argumentos podem ser extraídos apenas com um ActivityStateRecord e, portanto, são assinados em um perfil de controle usando [\<activityStateQuery>](activitystatequery.md) .  
   
 ```xml  
@@ -81,5 +85,5 @@ Um elemento de configuração que contém o estado da atividade inscrito para qu
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
-- [Acompanhamento e rastreamento de fluxo de trabalho](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Acompanhando perfis](../../../windows-workflow-foundation/tracking-profiles.md)
+- [Rastreamento e rastreamento de fluxo de trabalho](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Controlando perfis](../../../windows-workflow-foundation/tracking-profiles.md)

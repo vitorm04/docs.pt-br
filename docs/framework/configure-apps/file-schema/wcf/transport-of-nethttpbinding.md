@@ -2,14 +2,15 @@
 title: <transport> de <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: b975015a9c9a0af53117900c45d917ce1c1a53e9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 996b3655b0698595256c9a7197f705d46e6e9fcf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732816"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169811"
 ---
 # <a name="transport-of-nethttpbinding"></a>\<transport> de \<netHttpBinding>
+
 Define as propriedades que controlam os parâmetros de autenticação para o transporte HTTP.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -41,6 +42,7 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -75,6 +77,7 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
 |Certificado|Executa a autenticação de cliente usando um certificado. Essa opção só funcionará se o `Mode` atributo do `security` elemento pai estiver definido como transporte e não funcionará se estiver definido como TransportCredentialOnly.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -84,6 +87,7 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
 |[\<security>](security-of-nethttpbinding.md)|Define os recursos de segurança para o [\<netHttpBinding>](nethttpbinding.md) .|  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir demonstra o uso de segurança de transporte SSL com a associação básica. Por padrão, a associação básica dá suporte à comunicação HTTP.  
   
 ```xml  

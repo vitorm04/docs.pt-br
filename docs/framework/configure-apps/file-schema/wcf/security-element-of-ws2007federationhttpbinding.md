@@ -1,15 +1,16 @@
 ---
-title: <security>elemento de<ws2007FederationHttpBinding>
+title: <security> elemento de <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
-ms.openlocfilehash: b85c54c6507313522286e0c66504cfd0c8afb2b0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 943ccc241aef15b58661699408b085d98cf86c3b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738729"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183696"
 ---
-# <a name="security-element-of-ws2007federationhttpbinding"></a>\<security>elemento de\<ws2007FederationHttpBinding>
+# <a name="security-element-of-ws2007federationhttpbinding"></a>\<security> elemento de \<ws2007FederationHttpBinding>
+
 Define as configurações de segurança do [\<ws2007FederationHttpBinding>](ws2007federationhttpbinding.md) elemento.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,6 +38,7 @@ Define as configurações de segurança do [\<ws2007FederationHttpBinding>](ws20
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -65,13 +67,13 @@ Define as configurações de segurança do [\<ws2007FederationHttpBinding>](ws20
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|Define todos os recursos de associação do [\<wsDualHttpBinding>](wsdualhttpbinding.md) .|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.WSFederationHttpSecurity>
 - <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>
-- [Como criar um WSFederationHttpBinding](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Como: criar uma WSFederationHttpBinding](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
 - [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)
 - [Selecionando um tipo de credencial](../../../wcf/feature-details/selecting-a-credential-type.md)
 - [Associações](../../../wcf/bindings.md)

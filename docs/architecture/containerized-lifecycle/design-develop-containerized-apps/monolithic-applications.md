@@ -2,12 +2,12 @@
 title: Aplicativos monolíticos
 description: Entenda os principais conceitos da implantação de aplicativos monolíticos em contêineres.
 ms.date: 08/06/2020
-ms.openlocfilehash: f188a2ff576436d9378030e0a858ffb8110dad17
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c9a5baf209a47f62f421a236c0b04fe5dae37e3a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915439"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163538"
 ---
 # <a name="monolithic-applications"></a>Aplicativos monolíticos
 
@@ -37,7 +37,7 @@ De uma perspectiva de infraestrutura, cada servidor pode executar vários aplica
 
 Por fim, de uma perspectiva de disponibilidade, os aplicativos monolíticos devem ser implantados como um todo. Isso significa que se você precisar *parar e iniciar*, todas as funcionalidades e todos os usuários serão afetados durante a janela de implantação. Em certos casos, o uso do Azure e dos contêineres pode minimizar essas situações e reduzir a probabilidade de tempo de inatividade do aplicativo, como você pode ver na Figura 4-3.
 
-Os aplicativos monolíticos no Microsoft Azure podem ser implantados por meio de VMs dedicadas a cada instância. Com os [Conjuntos de Dimensionamento de VMs do Azure](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), é possível dimensionar as VMs com facilidade.
+Os aplicativos monolíticos no Microsoft Azure podem ser implantados por meio de VMs dedicadas a cada instância. Com os [Conjuntos de Dimensionamento de VMs do Azure](/azure/virtual-machine-scale-sets/), é possível dimensionar as VMs com facilidade.
 
 Também é possível usar os [Serviços de Aplicativos do Azure](https://azure.microsoft.com/services/app-service/) para executar aplicativos monolíticos e dimensionar instâncias com facilidade, sem a necessidade de gerenciar as VMs. Os Serviços de Aplicativos do Azure também podem executar instâncias únicas de contêineres do Docker, simplificando a implantação.
 

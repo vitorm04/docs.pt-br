@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: 73523297454be37716acedad13498954ef9a89a0
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 5eb2ee16712be5ccd5e9aa0af4dde22dcaaeea09
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040342"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148380"
 ---
 # <a name="navigating-datarelations"></a>Navegando em DataRelations
-Uma das principais funções de um <xref:System.Data.DataRelation> é permitir a navegação de um <xref:System.Data.DataTable> para outro em um <xref:System.Data.DataSet>. Isso permite que você recupere todos os objetos de <xref:System.Data.DataRow> relacionados em uma **DataTable** quando recebe uma única **DataRow** de uma **DataTable**relacionada. Por exemplo, depois de estabelecer uma **DataRelation** entre uma tabela de clientes e uma tabela de pedidos, você pode recuperar todas as linhas de ordem de uma linha de cliente específica usando **GetChildRows**.  
+
+Uma das principais funções de um <xref:System.Data.DataRelation> é permitir a navegação de um <xref:System.Data.DataTable> para outro em um <xref:System.Data.DataSet>. Isso permite que você recupere todos os <xref:System.Data.DataRow> objetos relacionados em uma **DataTable** quando recebe uma única **DataRow** de uma **DataTable**relacionada. Por exemplo, depois de estabelecer uma **DataRelation** entre uma tabela de clientes e uma tabela de pedidos, você pode recuperar todas as linhas de ordem de uma linha de cliente específica usando **GetChildRows**.  
   
  O exemplo de código a seguir cria uma **DataRelation** entre a tabela **Customers** e a tabela **Orders** de um **DataSet** e retorna todos os pedidos para cada cliente.  
   
@@ -24,7 +25,7 @@ Uma das principais funções de um <xref:System.Data.DataRelation> é permitir a
   
  O exemplo expandido também retorna os valores das tabelas **OrderDetails** e **Products** . A tabela **pedidos** está relacionada à tabela **OrderDetails** usando **OrderID** para determinar, para cada pedido de cliente, quais produtos e quantidades foram ordenados. Como a tabela **OrderDetails** contém apenas a **ProductID** de um produto ordenado, o **OrderDetails** está relacionado aos **produtos** que usam **ProductID** para retornar o **NomeDoProduto**. Nessa relação, a tabela **produtos** é o pai e a tabela **detalhes do pedido** é o filho. Como resultado, ao iterar pela tabela **OrderDetails** , **GetParentRow** é chamado para recuperar o valor de **NomeDoProduto** relacionado.  
   
- Observe que, quando a **DataRelation** é criada para as tabelas **Customers** e **Orders** , nenhum valor é especificado para o sinalizador **createConstraints** (o padrão é **true**). Isso pressupõe que todas as linhas na tabela **Orders** têm um valor **CustomerID** que existe na tabela Parent **Customers** . Se um **CustomerID** existir na tabela **Orders** que não existe na tabela **Customers** , uma <xref:System.Data.ForeignKeyConstraint> fará com que uma exceção seja gerada.  
+ Observe que, quando a **DataRelation** é criada para as tabelas **Customers** e **Orders** , nenhum valor é especificado para o sinalizador **createConstraints** (o padrão é **true**). Isso pressupõe que todas as linhas na tabela **Orders** têm um valor **CustomerID** que existe na tabela Parent **Customers** . Se um **CustomerID** existir na tabela **Orders** que não existe na tabela **Customers** , um <xref:System.Data.ForeignKeyConstraint> fará com que uma exceção seja gerada.  
   
  Quando a coluna filho pode conter valores que a coluna pai não contém, defina o sinalizador **createConstraints** como **false** ao adicionar a **DataRelation**. No exemplo, o sinalizador **createConstraints** é definido como **false** para a **DataRelation** entre a tabela **Orders** e a tabela **OrderDetails** . Isso permite que o aplicativo retorne todos os registros da tabela **OrderDetails** e apenas um subconjunto de registros da tabela **Orders** sem gerar uma exceção em tempo de execução. O exemplo expandido gera saída no formato a seguir.  
   
@@ -49,7 +50,7 @@ Customer ID: NORTS
  [!code-csharp[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/CS/source.cs#1)]
  [!code-vb[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [DataSets, DataTables, and DataViews](index.md) (DataSets, DataTables e DataViews)
-- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)
+- [DataSets, DataTables e DataViews](index.md)
+- [Visão geral do ADO.NET](../ado-net-overview.md)

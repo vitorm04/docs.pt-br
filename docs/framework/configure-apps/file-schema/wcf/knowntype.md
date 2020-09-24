@@ -2,14 +2,15 @@
 title: <knownType>
 ms.date: 03/30/2017
 ms.assetid: ee2b7be3-7148-4a3a-b861-48e7330615e5
-ms.openlocfilehash: 61f51b2ecd572ba254317a01e0f514503c7cc9e4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6bb6a419d863172951d82a67de044cb8cfc30f49
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70397880"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183787"
 ---
 # \<knownType>
+
 Especifica um tipo a ser usado pelo <xref:System.Runtime.Serialization.DataContractSerializer> durante a desserialização. O elemento especifica um "tipo conhecido" que é retornado por um campo ou propriedade de um "tipo declarado". Para obter mais informações, consulte [tipos conhecidos de contrato de dados](../../../wcf/feature-details/data-contract-known-types.md).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,10 +29,12 @@ Especifica um tipo a ser usado pelo <xref:System.Runtime.Serialization.DataContr
 </knownType>
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>Tipo  
+
  `string`  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -53,6 +56,7 @@ Especifica um tipo a ser usado pelo <xref:System.Runtime.Serialization.DataContr
 |[\<add>](add-of-declaredtypes-element.md)|Adiciona um tipo declarado à coleção de tipos declarados.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Para obter mais informações sobre tipos conhecidos, consulte [tipos conhecidos de contrato de dados](../../../wcf/feature-details/data-contract-known-types.md) e <xref:System.Runtime.Serialization.DataContractSerializer> .  
   
  Consulte o [\<dataContractSerializer>](datacontractserializer-element.md) para obter um exemplo de como usar esse elemento.  
@@ -73,6 +77,6 @@ Especifica um tipo a ser usado pelo <xref:System.Runtime.Serialization.DataContr
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [Tipos conhecidos de contrato de dados](../../../wcf/feature-details/data-contract-known-types.md)
+- [Tipos de contratos de dados conhecidos](../../../wcf/feature-details/data-contract-known-types.md)
 - [\<dataContractSerializer>](datacontractserializer-element.md)
 - [\<add>](add-of-declaredtypes-element.md)

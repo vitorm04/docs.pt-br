@@ -2,14 +2,15 @@
 title: <secureConversationBootstrap>
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-ms.openlocfilehash: b3187cb51b6fd32797c9ad401c704d5f16c6f7e8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 02072c55e299d9e3a5d53b61c891a9ee9837ada0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399922"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183709"
 ---
 # \<secureConversationBootstrap>
+
 Especifica os valores padrão usados para iniciar um serviço de conversa segura.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -38,10 +39,12 @@ Especifica os valores padrão usados para iniciar um serviço de conversa segura
                              includeTimestamp="Boolean" />
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>Tipo  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -74,7 +77,7 @@ Especifica os valores padrão usados para iniciar um serviço de conversa segura
 |-------------|-----------------|  
 |[\<security>](security-of-custombinding.md)|Especifica as opções de segurança para uma associação personalizada.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
@@ -84,5 +87,5 @@ Especifica os valores padrão usados para iniciar um serviço de conversa segura
 - [Estendendo associações](../../../wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [Como criar uma associação personalizada utilizando o SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Como: criar uma associação personalizada utilizando o SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Segurança de associação personalizada](../../../wcf/samples/custom-binding-security.md)
