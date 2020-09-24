@@ -2,12 +2,12 @@
 title: Como registrar em log com a pilha elástica
 description: Registro em log usando Stack elástico, Logstash e Kibana
 ms.date: 05/13/2020
-ms.openlocfilehash: 32d9d0dae175d8d45d48b56d17f133b4cc432363
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3f10b0d06c87b7bed6d3e302742b1dc52e2c9d3b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811165"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155335"
 ---
 # <a name="logging-with-elastic-stack"></a>Como registrar em log com a pilha elástica
 
@@ -105,7 +105,7 @@ O componente final da pilha é Kibana. Essa ferramenta é usada para fornecer vi
 
 ## <a name="installing-elastic-stack-on-azure"></a>Instalando a pilha elástica no Azure
 
-A pilha elástica pode ser instalada no Azure de várias maneiras. Como sempre, é possível [provisionar máquinas virtuais e instalar a pilha elástica diretamente](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)nelas. Essa opção é preferida por alguns usuários experientes, pois oferece o mais alto grau de personalização. A implantação na infraestrutura como um serviço introduz uma sobrecarga de gerenciamento significativa, forçando aqueles que tomam esse caminho para apropriar-se de todas as tarefas associadas à infraestrutura como um serviço, como proteger os computadores e manter-se atualizado com os patches.
+A pilha elástica pode ser instalada no Azure de várias maneiras. Como sempre, é possível [provisionar máquinas virtuais e instalar a pilha elástica diretamente](/azure/virtual-machines/linux/tutorial-elasticsearch)nelas. Essa opção é preferida por alguns usuários experientes, pois oferece o mais alto grau de personalização. A implantação na infraestrutura como um serviço introduz uma sobrecarga de gerenciamento significativa, forçando aqueles que tomam esse caminho para apropriar-se de todas as tarefas associadas à infraestrutura como um serviço, como proteger os computadores e manter-se atualizado com os patches.
 
 Uma opção com menos sobrecarga é fazer uso de um dos muitos contêineres do Docker nos quais a pilha elástica já foi configurada. Esses contêineres podem ser descartados em um cluster kubernetes existente e executados junto com o código do aplicativo. O contêiner [sebp/Elk](https://elk-docker.readthedocs.io/) é um contêiner de pilha elástico bem documentado e testado.
 
@@ -113,7 +113,7 @@ Outra opção é uma [oferta Elk como serviço anunciada recentemente](https://d
 
 ## <a name="references"></a>Referências
 
-- [Instalar pilha elástica no Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)
+- [Instalar pilha elástica no Azure](/azure/virtual-machines/linux/tutorial-elasticsearch)
 
 >[!div class="step-by-step"]
 >[Anterior](observability-patterns.md) 

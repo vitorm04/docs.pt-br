@@ -2,20 +2,21 @@
 title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
-ms.openlocfilehash: c93a1f482882cc8cd9d229d82597efa64ba209bc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 84ced06691ce3b3c9c9573fc9d114335096a849d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152964"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157103"
 ---
 # \<system.runtime.serialization>
+
 Representa o elemento raiz da <xref:System.Runtime.Serialization> seção namespace e contém elementos para definir as opções do <xref:System.Runtime.Serialization.DataContractSerializer> .  
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;**\<system.runtime.serialization>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <configuration>
@@ -35,9 +36,11 @@ Representa o elemento raiz da <xref:System.Runtime.Serialization> seção namesp
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
+
  Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -50,10 +53,10 @@ Representa o elemento raiz da <xref:System.Runtime.Serialization> seção namesp
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<configuration>Elementos](../configuration-element.md)|O elemento de nível superior para configuração.|  
+|[\<configuration> Elementos](../configuration-element.md)|O elemento de nível superior para configuração.|  
   
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.Serialization>
 - [Usando contratos de dados](../../../wcf/feature-details/using-data-contracts.md)
-- [Tipos conhecidos de contrato de dados](../../../wcf/feature-details/data-contract-known-types.md)
+- [Tipos de contratos de dados conhecidos](../../../wcf/feature-details/data-contract-known-types.md)

@@ -3,14 +3,15 @@ title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: 017309436660991c69da569e9cc4219e842ecaa3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d892fbd802ed366ca7af9b85fbf5c23d4d27e0f1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251871"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156999"
 ---
 # \<securityTokenHandlers>
+
 Especifica uma coleção de manipuladores de token de segurança que são registrados com o ponto de extremidade.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -18,7 +19,7 @@ Especifica uma coleção de manipuladores de token de segurança que são regist
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<securityTokenHandlers>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.identityModel>  
@@ -30,6 +31,7 @@ Especifica uma coleção de manipuladores de token de segurança que são regist
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -54,6 +56,7 @@ Especifica uma coleção de manipuladores de token de segurança que são regist
 |[\<identityConfiguration>](identityconfiguration.md)|Especifica as configurações de identidade de nível de serviço.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Você pode especificar uma ou mais coleções nomeadas de manipuladores de token de segurança em uma configuração de serviço. Você pode especificar um nome para uma coleção usando o `name` atributo. Os únicos nomes que a estrutura manipula são "ActAs" e "OnBehalfOf". Se houver manipuladores nessas coleções, eles serão usados por um serviço de token de segurança (STS) em vez dos manipuladores padrão durante o processamento `ActAs` e os `OnBehalfOf` tokens.  
   
  Por padrão, a coleção é populada com os seguintes tipos de manipuladores:,,,,, <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler> <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler> <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler> <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> e <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler> . Você pode modificar a coleção usando os `<add>` elementos, `<remove>` e `<clear>` . Você deve garantir que apenas um único manipulador de qualquer tipo específico exista na coleção. Por exemplo, se você derivar um manipulador da <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe, o manipulador ou o <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> poderá ser configurado em uma única coleção, mas não em ambos.  

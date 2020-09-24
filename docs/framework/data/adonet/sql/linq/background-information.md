@@ -2,14 +2,15 @@
 title: Informações gerais
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: fc7c68fe2dba266e056feb459038a060a055e175
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 56ba323aee3b559fbb8afd506be4c23595df6d2d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542105"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156089"
 ---
 # <a name="background-information"></a>Informações gerais
+
 Os tópicos nesta seção são pertinentes aos conceitos e procedimentos que estendem além dos fundamentos sobre o uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  Siga estas etapas para localizar exemplos adicionais de código e aplicativos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
@@ -21,6 +22,7 @@ Os tópicos nesta seção são pertinentes aos conceitos e procedimentos que est
 - Estude o white paper que detalha a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, completo com os exemplos de código Visual Basic e C#. Para obter mais informações, consulte [LINQ to SQL: consulta integrada à linguagem .net para dados relacionais](/previous-versions/dotnet/articles/bb425822(v=msdn.10)).  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [O ADO.NET e LINQ to SQL](ado-net-and-linq-to-sql.md)  
  Descreve a relação de ADO.NET e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
@@ -82,5 +84,6 @@ Os tópicos nesta seção são pertinentes aos conceitos e procedimentos que est
  Descreve como mapear em tempo de design funções definidas pelo usuário e como chamá-los do seu aplicativo.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Guia de programação](programming-guide.md)  
  Inclui links para seções que explicam vários aspectos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].

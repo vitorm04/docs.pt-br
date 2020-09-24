@@ -2,14 +2,15 @@
 title: <transport> de <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 3b2c7716727f58abb81bf4d58b13189ac170cf7c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7328d67c4649010dce3e1c866238d1e0067e4990
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399297"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157064"
 ---
 # <a name="transport-of-peertransport"></a>\<transport> de \<peerTransport>
+
 Especifica o tipo de transporte para mensagens protegidas enviadas por pares configurados com essa associação.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -21,7 +22,7 @@ Especifica o tipo de transporte para mensagens protegidas enviadas por pares con
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-peertransport.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <security>
@@ -30,6 +31,7 @@ Especifica o tipo de transporte para mensagens protegidas enviadas por pares con
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
@@ -46,6 +48,7 @@ Especifica o tipo de transporte para mensagens protegidas enviadas por pares con
 |Senha|A autenticação do transporte de canal par requer uma senha correta.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -55,6 +58,7 @@ Especifica o tipo de transporte para mensagens protegidas enviadas por pares con
 |[\<security>](security-of-peertransport.md)|Define as configurações de segurança para um transporte de mesmo nível.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Esse elemento será definido somente se o atributo mode de [\<security>](security-of-peertransport.md) for definido como `Transport` ou `TransportWithMessageCredential` .  
   
 ## <a name="see-also"></a>Confira também

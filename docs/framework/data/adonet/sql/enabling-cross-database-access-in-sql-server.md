@@ -2,17 +2,19 @@
 title: Habilitando o acesso entre bancos de dados no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 62b0bffd5e77cccdb49913428005c4f0036abd46
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6ea1ed9a6faa39df0a4f9a4a353bf34c7f5ba601
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554899"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156258"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Habilitando o acesso entre bancos de dados no SQL Server
+
 O encadeamento de propriedade entre bancos de dados ocorre quando um procedimento em um banco de dados depende dos objetos em outro banco de dados. Uma cadeia de propriedade entre bancos de dados funciona como a cadeia de propriedade dentro de um único banco de dados, exceto que uma cadeia de propriedade exige que todos os proprietários de objetos sejam mapeados para a mesma conta de logon. Se o objeto de origem no banco de dados de origem e os objetos de destino nos bancos de dados de destino forem de propriedade da mesma conta de logon, o SQL Server não verificará permissões nos objetos de destino.  
   
 ## <a name="off-by-default"></a>Desativado por padrão  
+
  A cadeia de propriedade nos bancos de dados é desativada por padrão. A Microsoft recomenda que você desabilite a propriedade do banco de dados porque o encadeamento expõe você aos seguintes riscos de segurança:  
   
 - Os proprietários de banco de dados e os membros de `db_ddladmin` ou das funções de banco de dados de `db_owners` podem criar os objetos pertencentes a outros usuários. Esses objetos podem potencialmente ser destinados a objetos em outros bancos de dados. Isso significa que, se você habilitar o encadeamento de propriedades entre banco de dados, deverá confiar completamente nesses usuários com dados em todos os bancos de dados.  
@@ -20,6 +22,7 @@ O encadeamento de propriedade entre bancos de dados ocorre quando um procediment
 - Os usuários com a permissão CREATE DATABASE podem criar novos bancos de dados e anexar bancos de dados existentes. Se o encadeamento de propriedades entre banco de dados estiver habilitado, esses usuários poderão acessar objetos em outros bancos de dados que possam não ter privilégios nos bancos de dados recém-criados ou anexados.  
   
 ## <a name="enabling-cross-database-ownership-chaining"></a>Habilitando o encadeamento de propriedades entre banco de dados  
+
  O encadeamento de propriedades entre banco de dados deve ser habilitado apenas em ambientes onde você possa confiar completamente em usuários altamente privilegiados. Ele pode ser configurado durante a instalação para todos os bancos de dados ou seletivamente para bancos de dados específicos usando os comandos Transact-SQL `sp_configure` e `ALTER DATABASE` .  
   
  Para configurar seletivamente o encadeamento de propriedades entre banco de dados, use `sp_configure` para desativá-lo para o servidor. Use o comando ALTER DATABASE com SET DB_CHAINING ON para configurar o encadeamento de propriedades entre banco de dados para somente os bancos de dados que exigirem isso.  
@@ -41,9 +44,11 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
 ```  
   
 ### <a name="dynamic-sql"></a>SQL dinâmico  
+
  O encadeamento de propriedades entre bancos de dados não funciona nos casos em que as instruções SQL criadas dinamicamente são executadas a menos que o mesmo usuário exista em ambos os bancos de dados. Você pode solucionar isso no SQL Server criando um procedimento armazenado que acessa dados em outro banco de dados e assinando o procedimento armazenado com um certificado existente em ambos os bancos de dados. Isso dá aos usuários acesso aos recursos do banco de dados usados pelo procedimento, sem conceder a eles permissões nem acesso ao banco de dados.  
   
 ## <a name="external-resources"></a>Recursos externos  
+
  Para obter mais informações, consulte os recursos a seguir.  
   
 |Recurso|Descrição|  

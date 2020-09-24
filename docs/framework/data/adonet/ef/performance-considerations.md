@@ -3,24 +3,26 @@ title: Considerações sobre desempenho (Entity Framework)
 description: Saiba mais sobre as características de desempenho do ADO.NET Entity Framework e considerações para ajudar a melhorar o desempenho de aplicativos Entity Framework.
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 2bdf088309dd178c1eef4cfb0b7e093b1f6be606
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 799ceff8b0bc370e929f2a4ad99b64a4fde4226a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557457"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156714"
 ---
 # <a name="performance-considerations-entity-framework"></a>Considerações sobre desempenho (Entity Framework)
+
 Este tópico descreve as características de desempenho do ADO.NET Entity Framework e fornece algumas considerações para ajudar a melhorar o desempenho de aplicativos do Entity Framework.  
   
 ## <a name="stages-of-query-execution"></a>Fases da execução da consulta  
+
  Para compreender melhor o desempenho de consultas no Entity Framework, é útil entender as operações que ocorrem quando uma consulta é executada em um modelo conceitual e retorna dados como objetos. A tabela a seguir descreve esta série de operações.  
   
 |Operação|Custo relativo|Frequência|Comentários|  
 |---------------|-------------------|---------------|--------------|  
 |Carregando metadados|Moderado|Uma vez em cada domínio de aplicativo.|Os metadados de modelo e de mapeamento usados pelo Entity Framework são carregados em uma <xref:System.Data.Metadata.Edm.MetadataWorkspace>. Esses metadados são armazenados em cache globalmente e estão disponíveis para outras instâncias do <xref:System.Data.Objects.ObjectContext> no mesmo domínio do aplicativo.|  
 |Abrindo a conexão de banco de dados|Moderado<sup>1</sup>|Conforme o necessário.|Como uma conexão aberta com o banco de dados consome um recurso valioso, o Entity Framework é aberto e fecha a conexão de banco de dados somente conforme necessário. Você também pode explicitamente abrir a conexão. Para obter mais informações, consulte [Managing Connections and Transactions](/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).|  
-|Gerando exibições|Alta|Uma vez em cada domínio de aplicativo. (Pode ser pré-gerado.)|Antes que o Entity Framework possa executar uma consulta em um modelo conceitual ou salvar alterações na fonte de dados, ele deverá gerar um conjunto de exibições de consultas locais para acessar o banco de dados. Devido a custo alto de gerar essas exibições, você poderá pré-gerar as exibições e adicioná-las ao projeto em tempo de design. Para obter mais informações, consulte [como: gerar previamente modos de exibição para melhorar o desempenho da consulta](/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100)).|  
+|Gerando exibições|Alto|Uma vez em cada domínio de aplicativo. (Pode ser pré-gerado.)|Antes que o Entity Framework possa executar uma consulta em um modelo conceitual ou salvar alterações na fonte de dados, ele deverá gerar um conjunto de exibições de consultas locais para acessar o banco de dados. Devido a custo alto de gerar essas exibições, você poderá pré-gerar as exibições e adicioná-las ao projeto em tempo de design. Para obter mais informações, consulte [como: gerar previamente modos de exibição para melhorar o desempenho da consulta](/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100)).|  
 |Preparando a consulta|Moderado<sup>2</sup>|Uma vez para cada consulta exclusiva.|Inclui o custo para compor o comando de consulta, gerar uma árvore de comando com base em metadados de modelo e mapeamento, e definir o formato dos dados retornados. Como agora os comandos de consulta Entity SQL e as consultas LINQ são armazenados em cache, as execuções posteriores da mesma consulta são realizadas em menos tempo. Você ainda pode usar consultas LINQ para reduzir esse custo em execuções posteriores e consultas compiladas podem ser mais eficientes que consultas LINQ que são automaticamente armazenadas em cache. Para obter mais informações, consulte [consultas compiladas (LINQ to Entities)](./language-reference/compiled-queries-linq-to-entities.md). Para obter informações gerais sobre a execução de consulta LINQ, consulte [LINQ to Entities](./language-reference/linq-to-entities.md). **Observação:**  LINQ to Entities consultas que aplicam o `Enumerable.Contains` operador a coleções na memória não são armazenadas em cache automaticamente. Além disso, não é permitido parametrizar coleções na memória em consultas LINQ compiladas.|  
 |Executando a consulta|Baixo<sup>2</sup>|Uma vez para cada consulta.|O custo de executar o comando na fonte de dados usando o provedor de dados do ADO.NET. Como a maioria das fontes de dados armazenam em cache os planos de consulta, as executa posteriores da mesma consulta podem levar ainda menos tempo.|  
 |Carregando e validando tipos|Baixo<sup>3</sup>|Uma vez para cada instância <xref:System.Data.Objects.ObjectContext>.|Os tipos são carregados e validados nos tipos que o modelo conceitual define.|  
@@ -36,24 +38,31 @@ Este tópico descreve as características de desempenho do ADO.NET Entity Framew
  <sup>4</sup> essa sobrecarga não é necessária para consultas EntityClient porque as consultas EntityClient retornam um <xref:System.Data.EntityClient.EntityDataReader> em vez de objetos. Para obter mais informações, consulte [EntityClient Provider para o Entity Framework](entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="additional-considerations"></a>Considerações adicionais  
+
  Veja a seguir as outras considerações que podem afetar o desempenho de aplicativos do Entity Framework.  
   
 ### <a name="query-execution"></a>Execução da consulta  
+
  Como as consultas podem consumir recursos intensivamente, considere em qual ponto no seu código e em qual computador a consulta será executada.  
   
 #### <a name="deferred-versus-immediate-execution"></a>Execução adiada versus imediata  
+
  Quando você cria uma consulta <xref:System.Data.Objects.ObjectQuery%601> ou LINQ, a consulta pode não ser executada imediatamente. A execução da consulta é adiada até que os resultados sejam necessários, como durante uma enumeração `foreach` (C#) ou `For Each` (Visual Basic) ou quando ela é atribuída para preencher uma coleção de <xref:System.Collections.Generic.List%601>. A execução da consulta começa imediatamente quando você chama o método <xref:System.Data.Objects.ObjectQuery%601.Execute%2A> em um <xref:System.Data.Objects.ObjectQuery%601> ou quando você chama um método LINQ que retorna uma consulta singleton, como <xref:System.Linq.Enumerable.First%2A> ou <xref:System.Linq.Enumerable.Any%2A>. Para obter mais informações, consulte [consultas de objeto](/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)) e [execução de consulta (LINQ to Entities)](./language-reference/query-execution.md).  
   
 #### <a name="client-side-execution-of-linq-queries"></a>Execução do lado do cliente de consultas LINQ  
+
  Embora a execução de uma consulta LINQ ocorra no computador que hospeda a fonte de dados, algumas partes de uma consulta LINQ podem ser avaliadas no computador cliente. Para obter mais informações, consulte a seção Store Execution da [execução da consulta (LINQ to Entities)](./language-reference/query-execution.md).  
   
 ### <a name="query-and-mapping-complexity"></a>Complexidade da consulta e de mapeamento  
+
  A complexidade de consultas individuais e de mapeamento no modelo de entidade terá um efeito significativo no desempenho da consulta.  
   
 #### <a name="mapping-complexity"></a>Complexidade de mapeamento  
+
  Os modelos que são mais complexos do que um mapeamento de um-para-um simples entre entidades no modelo conceitual e as tabelas no modelo de armazenamento geram comandos mais complexos que modelos que têm um mapeamento um-para-um.  
   
 #### <a name="query-complexity"></a>Complexidade da consulta  
+
  As consultas que exigem um grande número junções nos comandos que são executados na fonte de dados ou que retornam uma grande quantidade de dados podem afetar o desempenho das seguintes maneiras:  
   
 - As consulta em um modelo conceitual que parecem simples podem resultar na execução de consultas mais complexas na fonte de dados. Isso pode ocorrer porque o Entity Framework converte uma consulta em um modelo conceitual em uma consulta equivalente na fonte de dados. Quando um único conjunto de entidades no modelo conceitual mapeia para mais de uma tabela na fonte de dados, ou quando uma relação entre entidades é mapeada para uma tabela de junção, o comando de consulta executado na consulta da fonte de dados pode exigir um ou mais junções.  
@@ -78,9 +87,11 @@ Este tópico descreve as características de desempenho do ADO.NET Entity Framew
  Todos os comandos gerados automaticamente pelo Entity Framework podem ser mais complexos que os comandos semelhantes escritos explicitamente por um desenvolvedor de banco de dados. Se você precisar de um controle explícito sobre os comandos executados em sua fonte de dados, defina um mapeamento para uma função de valores de tabela ou procedimento armazenado.  
   
 #### <a name="relationships"></a>Relações  
+
  Para obter um desempenho otimizado da consulta, você deverá definir relacionamentos entre as entidades como associações no modelo de entidade e como relacionamentos lógicos na fonte de dados.  
   
 ### <a name="query-paths"></a>Caminhos de consulta  
+
  Por padrão, quando você executa um <xref:System.Data.Objects.ObjectQuery%601>, os objetos relacionados não são retornados (embora os objetos que representam as próprias relações sejam). Você pode carregar os objetos relacionados de uma das três maneiras:  
   
 1. Defina o caminho de consulta antes que <xref:System.Data.Objects.ObjectQuery%601> seja executado.  
@@ -92,6 +103,7 @@ Este tópico descreve as características de desempenho do ADO.NET Entity Framew
  Quando você considera qual opção usar, esteja ciente de que há uma escolha entre o número de solicitações no banco de dados e a quantidade de dados retornados em uma única consulta. Para obter mais informações, consulte [carregando objetos relacionados](/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100)).  
   
 #### <a name="using-query-paths"></a>Usando caminhos de consulta  
+
  Os caminhos de consulta definem o gráfico de objetos que uma consulta retorna. Quando você define um caminho de consulta, somente uma única solicitação no banco de dados é necessária para retornar todos os objetos que o caminho define. Usar caminhos de consulta pode fazer comandos complexos serem executados na fonte de dados de consultas de objetos aparentemente simples. Isso ocorre porque uma ou mais junções são necessárias para retornar objetos relacionados em uma única consulta. Esta complexidade é maior em consultas em um modelo complexo de entidade, como uma entidade com herança ou um caminho que inclui relações muitos-para-muitos.  
   
 > [!NOTE]
@@ -100,6 +112,7 @@ Este tópico descreve as características de desempenho do ADO.NET Entity Framew
  Quando um caminho de consulta inclui muitos objetos relacionados ou os objetos contêm muitos dados de linha, a fonte de dados pode ser incapaz de concluir a consulta. Isso ocorre se a consulta exigir um armazenamento temporário intermediário que excede os recursos da fonte de dados. Quando isso ocorre, você pode reduzir a complexidade da consulta da fonte de dados explicitamente carregando objetos relacionados.  
   
 #### <a name="explicitly-loading-related-objects"></a>Carregando objetos relacionados explicitamente  
+
  Você pode carregar objetos relacionados explicitamente chamando o método `Load` em uma propriedade de navegação que retorna um <xref:System.Data.Objects.DataClasses.EntityCollection%601> ou <xref:System.Data.Objects.DataClasses.EntityReference%601>. Carregar objetos explicitamente exige uma viagem de ida e volta ao banco de dados toda vez que `Load` é chamado.  
   
 > [!NOTE]
@@ -110,9 +123,11 @@ Este tópico descreve as características de desempenho do ADO.NET Entity Framew
  Embora carregar objetos relacionados explicitamente reduza o número de junções e diminua a quantidade de dados redundantes, `Load` exige conexões repetidas ao banco de dados, o que podem se tornar caro ao carregar explicitamente um grande número de objetos.  
   
 ### <a name="saving-changes"></a>Salvando alterações  
+
  Quando você chama o método <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> em um <xref:System.Data.Objects.ObjectContext>, um comando create, update ou delete é gerado para cada objeto adicionado, atualizado ou excluído no contexto. Esses comandos são executados na fonte de dados em uma única transação. Assim como ocorre com as consultas, o desempenho de operações create, update e delete dependem da complexidade do mapeamento no modelo conceitual.  
   
 ### <a name="distributed-transactions"></a>Transações distribuídas  
+
  As operações em uma transação explícita que exigem recursos que são gerenciados pelo coordenador de transações distribuídas (DTC) serão muito mais caras que uma operação semelhante que não exige DTC. A promoção para o DTC ocorrerá nas seguintes situações:  
   
 - Uma transação explícita com uma operação em um banco de dados do SQL Server 2000 ou outra fonte de dados que sempre promova transações explícitas para o DTC.  
@@ -122,9 +137,11 @@ Este tópico descreve as características de desempenho do ADO.NET Entity Framew
  Uma transação explícita é usada quando uma ou mais operações são executadas dentro de uma transação <xref:System.Transactions>. Para obter mais informações, consulte [Managing Connections and Transactions](/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
 ## <a name="strategies-for-improving-performance"></a>Estratégias para melhorar o desempenho  
+
  Você pode melhorar o desempenho geral das consultas no Entity Framework usando as seguintes estratégias.  
   
 #### <a name="pre-generate-views"></a>Pré-gerar exibições  
+
  Gerar exibições com base em um modelo de entidade é um custo significativo na primeira vez que um aplicativo executa uma consulta. Use o utilitário EdmGen.exe para pré-gerar exibições como um arquivo de código do Visual Basic ou C# que pode ser adicionado ao projeto durante o design. Você também pode usar o Kit de ferramentas de transformação do modelo de texto para gerar exibições pré-compiladas. Exibições pré-geradas são validadas em runtime para garantir que sejam consistentes com a versão atual do modelo de entidade especificado. Para obter mais informações, consulte [como: gerar previamente modos de exibição para melhorar o desempenho da consulta](/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100)).
   
  Ao trabalhar com modelos muito grandes, a consideração a seguir se aplica:  
@@ -132,20 +149,25 @@ Este tópico descreve as características de desempenho do ADO.NET Entity Framew
  O formato de metadados do .NET limita o número de caracteres de uma cadeia de caracteres de usuário em um determinado binário a 16.777.215 (0xFFFFFF). Se você estiver gerando exibições para um modelo muito grande e o arquivo de exibição atingir esse limite de tamanho, você receberá "não há espaço lógico restante para criar mais cadeias de caracteres de usuário". erro de compilação. Essa limitação de tamanho aplica-se a todos os binários gerenciados. Para obter mais informações, consulte o [blog](/archive/blogs/appfabriccat/solving-the-no-logical-space-left-to-create-more-user-strings-error-and-improving-performance-of-pre-generated-views-in-visual-studio-net4-entity-framework) que demonstra como evitar o erro ao trabalhar com modelos grandes e complexos.  
   
 #### <a name="consider-using-the-notracking-merge-option-for-queries"></a>Use a opção de mesclagem NoTracking para consultas  
+
  Há um custo necessário para controlar objetos retornados no contexto do objeto. Detectar alterações aos objetos e garantir que as várias solicitações para a mesma entidade lógica retorne a mesma instância de objeto exige que os objetos sejam anexados a uma instância <xref:System.Data.Objects.ObjectContext>. Se você não planeja fazer atualizações ou exclusões para objetos e não precisa de gerenciamento de identidade, considere usar as <xref:System.Data.Objects.MergeOption.NoTracking> Opções de mesclagem ao executar consultas.  
   
 #### <a name="return-the-correct-amount-of-data"></a>Retornar a quantidade correta de dados  
+
  Em alguns cenários, especificar um caminho de consulta usando o método <xref:System.Data.Objects.ObjectQuery%601.Include%2A> é muito mais rápido porque exige menos viagens de ida e volta para o banco de dados. No entanto, em outros cenários, as viagens de ida e volta adicionais ao banco de dados para carregar objetos relacionados podem ser mais rápidas porque as consultas mais simples com menos junções resultam em menos redundância de dados. Por causa disso, recomendamos que você testar o desempenho de várias maneiras para recuperar objetos relacionados. Para obter mais informações, consulte [carregando objetos relacionados](/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100)).  
   
  Para evitar retornar dados demais em uma única consulta, pagine os resultados da consulta em grupos mais gerenciáveis. Para obter mais informações, consulte [como: paginar por meio de resultados da consulta](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)).  
   
 #### <a name="limit-the-scope-of-the-objectcontext"></a>Limitar o escopo do ObjectContext  
+
  Na maioria dos casos, você deverá criar uma instância <xref:System.Data.Objects.ObjectContext> dentro de uma instrução `using` (`Using…End Using` no Visual Basic). Isso poderá aumentar o desempenho garantindo que os recursos associados com o contexto do objeto sejam descartados automaticamente quando o código sair do bloco de instruções. No entanto, quando os controles estão associados a objetos gerenciados pelo contexto do objeto, a instância <xref:System.Data.Objects.ObjectContext> deve ser mantida contanto que a associação seja necessária e descartada manualmente. Para obter mais informações, consulte [Managing Connections and Transactions](/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
 #### <a name="consider-opening-the-database-connection-manually"></a>Abrir a conexão de banco de dados manualmente  
+
  Quando o aplicativo executa uma série de consultas de objeto ou chamadas frequentemente <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> para persistir as operações de criação, atualização e exclusão para a fonte de dados, o Entity Framework deve abrir e fechar continuamente a conexão com a fonte de dados. Nessas situações, abra manualmente a conexão no início dessas operações e feche ou descarte a conexão quando as operações estiverem concluídas. Para obter mais informações, consulte [Managing Connections and Transactions](/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
 ## <a name="performance-data"></a>Dados de Desempenho  
+
  Alguns dados de desempenho para o Entity Framework são publicados nas seguintes postagens no [blog da equipe do ADO.net](/archive/blogs/adonet/):  
   
 - [Explorando o desempenho do ADO.NET Entity Framework - parte 1](/archive/blogs/adonet/exploring-the-performance-of-the-ado-net-entity-framework-part-1)  

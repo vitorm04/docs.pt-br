@@ -2,19 +2,21 @@
 title: Métodos de System.TimeSpan
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: 9a7eb3c979219003d497ec752b36ec54ef081b43
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15b6c8bd5c9cce8e6d1bac030c6b7f6b40df6cd4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781048"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155582"
 ---
 # <a name="systemtimespan-methods"></a>Métodos de System.TimeSpan
+
 Suporte de membro para <xref:System.TimeSpan?displayProperty=nameWithType> depende das versões do .NET Framework e do Microsoft SQL Server que você está usando.  
   
  Quando um método, um operador, ou uma propriedade são sem suporte; significa que LINQ to SQL não pode converter o membro para execução no SQL Server. Você pode ainda seja possível usar esses membros no seu código. No entanto, devem ser avaliado antes que a consulta seja convertida a Transact-SQL ou após os resultados foram recuperados de base de dados.  
   
 ## <a name="previous-limitations"></a>Limitações anteriores  
+
  Ao usar LINQ to SQL com versões do .NET Framework antes do .NET Framework 3.5 SP1, você não pode mapear campos de base de dados SQL Server a <xref:System.TimeSpan?displayProperty=nameWithType>. No entanto, as operações no <xref:System.TimeSpan> têm suporte porque os valores <xref:System.TimeSpan> podem ser retornados da subtração de <xref:System.DateTime> ou introduzidos em uma expressão como um literal ou uma variável associada.  
   
 ## <a name="supported-systemtimespan-member-support"></a>Suporte ao membro System. TimeSpan com suporte
@@ -34,11 +36,12 @@ Suporte de membro para <xref:System.TimeSpan?displayProperty=nameWithType> depen
 > A capacidade de mapear <xref:System.TimeSpan?displayProperty=nameWithType> para uma coluna do SQL `TIME` com LINQ to SQL requer o .NET Framework 3.5 SP1 e além. O tipo de dados SQL `TIME` só está disponível no Microsoft SQL Server 2008 e além.  
   
 ### <a name="addition-and-subtraction"></a>Adição e subtração  
+
  Embora o tipo de CLR <xref:System.TimeSpan?displayProperty=nameWithType> suporte a adição e subtração, o tipo do SQL `TIME` não. Devido a isso, as consultas LINQ to SQL gerarão erros se tentam a adição e subtração quando eles são mapeadas para o tipo do SQL `TIME` . Você pode encontrar outras considerações para trabalhar com tipos de data e hora SQL no [mapeamento de tipo SQL-CLR](sql-clr-type-mapping.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Conceitos de consulta](query-concepts.md)
+- [Consulte conceitos](query-concepts.md)
 - [Criando o modelo de objeto](creating-the-object-model.md)
-- [Mapeamento de tipo CLR do SQL](sql-clr-type-mapping.md)
-- [Funções e tipos de dados](data-types-and-functions.md)
+- [Mapeamento de tipo SQL-CLR](sql-clr-type-mapping.md)
+- [Tipos de dados e funções](data-types-and-functions.md)

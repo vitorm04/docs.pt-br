@@ -2,12 +2,12 @@
 title: Como aproveitar contêineres e orquestradores
 description: Aproveitando contêineres do Docker e orquestradores kubernetes no Azure
 ms.date: 05/31/2020
-ms.openlocfilehash: f9e8672b742217388bd719262ffdfee63618fd14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4d1dfa17fe9b4a683ab71ef2c9f97373579197af
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540537"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155543"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Como aproveitar contêineres e orquestradores
 
@@ -27,7 +27,7 @@ Embora eles tenham o benefício da simplicidade, as arquiteturas monolíticos en
 
 Os aplicativos monolíticos exigem uma implantação completa de todo o aplicativo, mesmo que apenas uma pequena alteração tenha sido feita. As implantações completas podem ser caras e sujeitas a erros. Além disso, eles exigem uma reinicialização do aplicativo, o que afeta temporariamente a indisponibilidade.
 
-### <a name="scaling"></a>Scaling
+### <a name="scaling"></a>Dimensionamento
 
 Um aplicativo monolítico é totalmente hospedado em uma única instância de computador, muitas vezes exigindo hardware de alta capacidade. Se qualquer parte do monolítica exigir o dimensionamento, outra cópia do aplicativo inteiro deverá ser implantada em outro computador. Com um monolítico, você não pode dimensionar componentes de aplicativos individualmente – é tudo ou nada. O dimensionamento de componentes que não exigem dimensionamento resulta em um uso de recursos ineficiente e dispendioso.
 
@@ -156,7 +156,7 @@ O que é o Minikube? O projeto Minikube diz "Minikube implementa um cluster kube
 - DNS
 - NodePorts
 - ConfigMaps e segredos
-- Painéis
+- Dashboards
 - Tempos de execução de contêiner: Docker, RKT, CRI-O e em contêineres
 - Habilitando o CNI (interface de rede de contêiner)
 - Entrada
@@ -214,7 +214,7 @@ O comportamento padrão quando o aplicativo é executado é configurado para usa
 
 **Figura 3-7**. Opções de execução do Docker do Visual Studio
 
-Além do desenvolvimento local, o [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) fornece uma maneira conveniente para vários desenvolvedores trabalharem com suas próprias configurações de kubernetes no Azure. Como você pode ver na Figura 3-7, você também pode executar o aplicativo em Azure Dev Spaces.
+Além do desenvolvimento local, o [Azure dev Spaces](/azure/dev-spaces/) fornece uma maneira conveniente para vários desenvolvedores trabalharem com suas próprias configurações de kubernetes no Azure. Como você pode ver na Figura 3-7, você também pode executar o aplicativo em Azure Dev Spaces.
 
 Além disso, a qualquer momento você pode adicionar o suporte do Docker a um aplicativo ASP.NET Core existente. No Gerenciador de soluções do Visual Studio, clique com o botão direito do mouse no projeto e **adicione**  >  **suporte ao Docker**, conforme mostrado na Figura 3-8.
 

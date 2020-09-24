@@ -3,14 +3,15 @@ title: <securityTokenHandlerConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
 author: BrucePerlerMS
-ms.openlocfilehash: e3e65820fa4dc341371d4f67689a288cd3f63951
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4c6affbc24a58424158e466fb732e9a3b3d6f1ed
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152561"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157012"
 ---
 # \<securityTokenHandlerConfiguration>
+
 Fornece a configuração para a coleção de manipuladores de token.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Fornece a configuração para a coleção de manipuladores de token.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<securityTokenHandlerConfiguration>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.identityModel>  
@@ -34,6 +35,7 @@ Fornece a configuração para a coleção de manipuladores de token.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -62,6 +64,7 @@ Fornece a configuração para a coleção de manipuladores de token.
 |[\<securityTokenHandlers>](securitytokenhandlers.md)|Especifica uma coleção de manipuladores de token de segurança que são registrados com o ponto de extremidade.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Esta seção fornece valores de propriedade para um <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> objeto. As configurações definidas nesta seção substituem aquelas configuradas no serviço. Por sua vez, algumas dessas configurações podem ser substituídas pelas configurações que são especificadas quando um manipulador é adicionado à coleção do manipulador de token de segurança.  
   
 ## <a name="example"></a>Exemplo  

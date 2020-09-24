@@ -2,14 +2,15 @@
 title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 0157105290a297eff2c1bf799a2065872082e40e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b9ef2276f988923fe83cefce910e8c3685cb9da9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735644"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156440"
 ---
 # <a name="facet"></a>facet
+
 Uma *faceta* é usada para adicionar detalhes a uma definição de propriedade de tipo primitivo. Uma definição de [Propriedade](property.md) contém informações sobre o tipo de propriedade, mas geralmente é necessário mais detalhes. Por exemplo, um tipo de entidade em um modelo conceitual pode ter uma propriedade do tipo `String` cujo valor pode não ser definido como nulo. As facetas permitem que você especifique esse nível de detalhe.  
   
  A tabela a seguir descreve as facetas que são suportadas em EDM.  
@@ -17,7 +18,7 @@ Uma *faceta* é usada para adicionar detalhes a uma definição de propriedade d
 > [!NOTE]
 > Os valores precisos e os comportamentos de facetas são determinados pelo ambiente de tempo de execução usando uma implementação de EDM.  
   
-|Aspecto|Descrição|Aplica-se a|  
+|Faceta|Description|Aplica-se a|  
 |-----------|-----------------|----------------|  
 |`Collation`|Especifica a sequência de agrupamento (ou sequência de classificação) a ser usadas para executar a comparação e em ordenação operações em valores de propriedade.|`String`|  
 |`ConcurrencyMode`|Indica que o valor da propriedade deve ser usado para verificação de simultaneidade otimista.|As propriedades do tipo primitivo|  
@@ -30,11 +31,12 @@ Uma *faceta* é usada para adicionar detalhes a uma definição de propriedade d
 |`Unicode`|Indica se o valor da propriedade é armazenado como Unicode.|`String`|  
   
 ## <a name="example"></a>Exemplo  
+
  O [Entity Framework ADO.net](./ef/index.md) usa uma DSL (linguagem específica de domínio) chamada[CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)(linguagem de definição de esquema conceitual) para definir modelos conceituais. CSDL seguir define um tipo de entidade de `Book` . Observe que as facetas são implementadas como atributos XML. Os valores de aspecto indica que nenhuma propriedade pode ser definida para nulo, e que `Scale` e `Precision` de propriedade de cada `Revision` são definidas como 29.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Principais conceitos do Modelo de Dados de Entidade](entity-data-model-key-concepts.md)
+- [Conceitos chave do Modelo de Dados de Entidade](entity-data-model-key-concepts.md)
 - [Modelo de Dados de Entidade](entity-data-model.md)

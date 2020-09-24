@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: 693e67b4d369eb69b8e0a9dded6decb2d3928459
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e9b3a2e1f176a9d01e983bc469cc4032fa5d730
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554873"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156167"
 ---
 # <a name="enabling-query-notifications"></a>Habilitando notificações de consulta
+
 Os aplicativos que consomem notificações de consulta têm um conjunto comum de requisitos. Sua fonte de dados deve ser configurada corretamente para dar suporte a notificações de consulta SQL e o usuário deve ter as permissões corretas de cliente e servidor.  
   
  Para usar as notificações de consulta, você deve:  
@@ -26,6 +27,7 @@ Os aplicativos que consomem notificações de consulta têm um conjunto comum de
 - Fornecer o código para processar a notificação se os dados que estão sendo monitorados forem alterados.  
   
 ## <a name="query-notifications-requirements"></a>Requisitos de notificações de consulta  
+
  As notificações de consulta são compatíveis apenas com instruções SELECT que atendem a uma lista de requisitos específicos. A tabela a seguir fornece links para a documentação do Service Broker e das notificações de consulta nos Manuais Online do SQL Server.  
   
  **Documentação do SQL Server**  
@@ -49,6 +51,7 @@ Os aplicativos que consomem notificações de consulta têm um conjunto comum de
 - [Guia do desenvolvedor (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>Habilitando notificações de consulta para executar código de exemplo  
+
  Para habilitar o Service Broker no banco de dados **AdventureWorks** usando o SQL Server Management Studio, execute a seguinte instrução Transact-SQL:  
   
  `ALTER DATABASE AdventureWorks SET ENABLE_BROKER;`  
@@ -64,6 +67,7 @@ CREATE SERVICE ContactChangeNotifications
 ```  
   
 ## <a name="query-notifications-permissions"></a>Permissões de notificações de consulta  
+
  Os usuários que executam comandos solicitando notificação devem ter a permissão de banco de dados SUBSCRIBE QUERY NOTIFICATIONS no servidor.  
   
  O código do lado do cliente que é executado em uma situação de confiança parcial requer o <xref:System.Data.SqlClient.SqlClientPermission>.  
@@ -74,14 +78,17 @@ CREATE SERVICE ContactChangeNotifications
  [!code-vb[DataWorks SqlNotification.Perms#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlNotification.Perms/VB/source.vb#1)]  
   
 ## <a name="choosing-a-notification-object"></a>Escolhendo um objeto de notificação  
+
  A API de notificações de consulta fornece dois objetos para processar notificações: <xref:System.Data.SqlClient.SqlDependency> e <xref:System.Data.Sql.SqlNotificationRequest>. Em geral, a maioria dos aplicativos que não sejam ASP.NET devem usar o objeto <xref:System.Data.SqlClient.SqlDependency>. Os aplicativos ASP.NET devem usar o <xref:System.Web.Caching.SqlCacheDependency> de nível mais alto, que envolve <xref:System.Data.SqlClient.SqlDependency> e fornece uma estrutura para administrar os objetos de notificação e cache.  
   
 ### <a name="using-sqldependency"></a>Como usar SqlDependency  
+
  Para usar <xref:System.Data.SqlClient.SqlDependency>, o Service Broker deverá ser habilitado para o Banco de Dados do SQL Server usado e os usuários devem ter permissões para receber notificações. Os objetos do Service Broker, como a fila de notificação, são predefinidos.  
   
  Além disso, o <xref:System.Data.SqlClient.SqlDependency> inicia automaticamente um thread de trabalho para processar as notificações à medida que elas são postadas na fila. Ele também analisa a mensagem do Service Broker, expondo as informações como dados de argumento do evento. O <xref:System.Data.SqlClient.SqlDependency> deve ser inicializado chamando o método `Start` para estabelecer uma dependência com o banco de dados. Esse é um método estático que precisa ser chamado apenas uma vez durante a inicialização do aplicativo para cada conexão de banco de dados necessária. O método `Stop` deve ser chamado na terminação do aplicativo para cada conexão de dependência que foi feita.  
   
 ### <a name="using-sqlnotificationrequest"></a>Como usar SqlNotificationRequest  
+
  Por outro lado, o <xref:System.Data.Sql.SqlNotificationRequest> exige que você implemente toda a infraestrutura de escuta por conta própria. Além disso, todos os objetos do Service Broker de suporte, como os tipos de fila, serviço e mensagem compatíveis com a fila, devem ser definidos. Essa abordagem manual será útil se o aplicativo exigir mensagens de notificação especiais ou comportamentos de notificação ou se o aplicativo fizer parte de um aplicativo de Service Broker maior.  
   
 ## <a name="see-also"></a>Confira também
