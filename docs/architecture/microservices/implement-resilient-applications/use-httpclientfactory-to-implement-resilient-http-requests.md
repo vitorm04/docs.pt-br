@@ -2,12 +2,12 @@
 title: Use o IHttpClientFactory para implementar solicitações HTTP resilientes
 description: Saiba como usar o IHttpClientFactory, disponível desde o .NET Core 2,1, para criar `HttpClient` instâncias, facilitando seu uso em seus aplicativos.
 ms.date: 08/31/2020
-ms.openlocfilehash: c54965a9bbb700cfb1f14150773c2df45d109c39
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: ae093ef960b2540bf4916bf72ad3bec51fa33ebe
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678810"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152566"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>Use o IHttpClientFactory para implementar solicitações HTTP resilientes
 
@@ -23,7 +23,7 @@ Portanto, `HttpClient` deve ser instanciado uma única vez e reutilizado durante
 
 Outro problema que os desenvolvedores executam é ao usar uma instância compartilhada do `HttpClient` em processos de execução longa. Em uma situação em que o HttpClient é instanciado como um singleton ou um objeto estático, ele não lida com as alterações de DNS, conforme descrito neste [problema](https://github.com/dotnet/runtime/issues/18348) do repositório do GitHub de dotnet/tempo de execução.
 
-No entanto, o problema não é realmente com `HttpClient` o por si, mas com o [construtor padrão para HttpClient](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor), porque ele cria uma nova instância concreta do <xref:System.Net.Http.HttpMessageHandler> , que é aquela que tem os problemas de *esgotamento de soquetes* e alterações de DNS mencionados acima.
+No entanto, o problema não é realmente com `HttpClient` o por si, mas com o [construtor padrão para HttpClient](/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor), porque ele cria uma nova instância concreta do <xref:System.Net.Http.HttpMessageHandler> , que é aquela que tem os problemas de *esgotamento de soquetes* e alterações de DNS mencionados acima.
 
 Para resolver os problemas mencionados acima e tornar as `HttpClient` instâncias gerenciáveis, o .NET Core 2,1 introduziu a <xref:System.Net.Http.IHttpClientFactory> interface que pode ser usada para configurar e criar `HttpClient` instâncias em um aplicativo por meio de injeção de dependência (di). Ele também fornece extensões para que o middleware baseado em Polly Aproveite a delegação de manipuladores no HttpClient.
 

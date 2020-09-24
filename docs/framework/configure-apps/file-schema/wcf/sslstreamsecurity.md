@@ -2,14 +2,15 @@
 title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: c5c7ec2b18143ff4d71540a60e24b8225ca4db16
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: aa6bc7f5a94afc8a190d3d9d2d71ea8b38d8c25b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738597"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153567"
 ---
 # \<sslStreamSecurity>
+
 Representa um elemento de associação personalizado que suporta segurança de canal usando um fluxo SSL.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Representa um elemento de associação personalizado que suporta segurança de c
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sslStreamSecurity>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <sslStreamSecurity requireClientCertificate="Boolean"
@@ -27,6 +28,7 @@ Representa um elemento de associação personalizado que suporta segurança de c
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -37,6 +39,7 @@ Representa um elemento de associação personalizado que suporta segurança de c
 |sslProtocols|Um valor de sinalizador de enumeração SslProtocols que especifica quais SslProtocols têm suporte. O padrão é Ssl3&#124;TLS&#124;Tls11&#124;Tls12.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: f3270147f0cf38a646efac603f058173daa78547
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b8bed63cda505ad8c26c9c69d880a077053b8d2e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541129"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153047"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Consultas compiladas (LINQ to Entities)
 
@@ -23,42 +23,49 @@ Quando um aplicativo executa muitas vezes consultas estruturalmente similares no
  A LINQ to Entities expressão de consulta que <xref:System.Data.Objects.CompiledQuery> o `Compile` método do compila é representada por um dos `Func` delegados genéricos, como <xref:System.Func%605> . No máximo, a expressão de consulta pode encapsular um parâmetro `ObjectContext`, um parâmetro de retorno e 16 parâmetros de consulta. Se mais de 16 parâmetros de consulta forem necessários, você poderá criar uma estrutura cujas propriedades representem parâmetros de consulta. Será possível usar, então, as propriedades da estrutura na expressão de consulta depois de definir as propriedades.  
   
 ## <a name="example-1"></a>Exemplo 1  
+
  O exemplo a seguir compila e invoca uma consulta que aceita um parâmetro de entrada <xref:System.Decimal> e retorna uma sequência de pedidos em que o total devido é maior ou igual a US$ 200:  
   
  [!code-csharp[DP L2E Conceptual Examples - compiled query 2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery2)]
  [!code-vb[DP L2E Conceptual Examples - compiled query2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery2)]  
   
 ## <a name="example-2"></a>Exemplo 2  
+
  O exemplo a seguir compila e invoca uma consulta que retorna uma instância <xref:System.Data.Objects.ObjectQuery%601>:  
   
  [!code-csharp[DP L2E Conceptual Examples - compiled query1_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery1_mq)]
  [!code-vb[DP L2E Conceptual Examples - compiled query1_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery1_mq)]  
   
 ## <a name="example-3"></a>Exemplo 3  
+
  O exemplo a seguir compila e invoca uma consulta que retorna a média dos preços na lista de produtos como um valor <xref:System.Decimal>:  
   
  [!code-csharp[DP L2E Conceptual Examples - compiled query3_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery3_mq)]
  [!code-vb[DP L2E Conceptual Examples - compiled query3_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery3_mq)]  
   
 ## <a name="example-4"></a>Exemplo 4  
+
  O exemplo a seguir compila e, em seguida, invoca uma consulta que aceita um <xref:System.String> parâmetro de entrada e, em seguida, retorna um `Contact` cujo endereço de email começa com a cadeia de caracteres especificada:  
   
  [!code-csharp[DP L2E Conceptual Examples - compiled query4_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery4_mq)]
  [!code-vb[DP L2E Conceptual Examples - compiled query4_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery4_mq)]  
   
 ## <a name="example-5"></a>Exemplo 5  
+
  O exemplo a seguir compila e invoca uma consulta que aceita os parâmetros de entrada <xref:System.DateTime> e <xref:System.Decimal> e retorna uma sequência de pedidos em que a data do pedido é posterior a 8 de março de 2003 e o total devido é menor que US$ 300:  
   
  [!code-csharp[DP L2E Conceptual Examples - compiled query5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery5)]
  [!code-vb[DP L2E Conceptual Examples - compiled query5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery5)]  
   
 ## <a name="example-6"></a>Exemplo 6  
+
  O exemplo a seguir compila e invoca uma consulta que aceita um parâmetro de entrada <xref:System.DateTime> e retorna uma sequência de pedidos em que a data do pedido é posterior a 8 de março de 2004. Essa consulta retorna informações de pedidos como uma sequência de tipos anônimos. Os tipos anônimos são inferidos pelo compilador. Assim, não é possível especificar parâmetros de tipo no método <xref:System.Data.Objects.CompiledQuery> de `Compile` e o tipo é definido na própria consulta.  
   
  [!code-csharp[DP L2E Conceptual Examples - compiled query6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery6)]
  [!code-vb[DP L2E Conceptual Examples - compiled query6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery6)]  
   
 ## <a name="example-7"></a>Exemplo 7  
+
  O exemplo a seguir compila e invoca uma consulta que aceita um parâmetro de entrada de estrutura definida pelo usuário e retorna uma sequência de pedidos. A estrutura define a data de início, a data de término e os parâmetros de consulta do total devido, e a consulta retorna os pedidos enviados entre 3 de março e 8 de março de 2003 com um total devido maior que US$ 700.  
   
  [!code-csharp[DP L2E Conceptual Examples - compiled query7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery7)]

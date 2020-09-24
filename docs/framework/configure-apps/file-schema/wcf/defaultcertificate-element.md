@@ -2,14 +2,15 @@
 title: Elemento <defaultCertificate>
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: cce236bf80fa00f01a3b5f4680d975f83fde0c16
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2eaec4f4296f90579ca32d817f0a20da4ccc9a37
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400423"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153892"
 ---
 # <a name="defaultcertificate-element"></a>Elemento \<defaultCertificate>
+
 Especifica um certificado X. 509 a ser usado quando um serviço ou STS não fornecer um por meio de um protocolo de negociação.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -21,7 +22,7 @@ Especifica um certificado X. 509 a ser usado quando um serviço ou STS não forn
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceCertificate>**](servicecertificate-of-clientcredentials-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<defaultCertificate>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <defaultCertificate findValue="String"
@@ -31,13 +32,14 @@ Especifica um certificado X. 509 a ser usado quando um serviço ou STS não forn
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|findValue|Cadeia de caracteres. O valor a ser procurado.|  
+|findValue|Cadeia. O valor a ser procurado.|  
 |x509FindType|Enumeração. Um dos campos de certificado a serem pesquisados.|  
 |storeLocation|Enumeração. Um dos dois locais de armazenamento do sistema para pesquisar.|  
 |storeName|Enumeração. Uma das lojas de sistema para pesquisa.|  
@@ -67,6 +69,7 @@ Especifica um certificado X. 509 a ser usado quando um serviço ou STS não forn
 |Enumeração|Os valores incluem: catálogo, AuthRoot, CertificateAuthority, não permitido, My, root, TrustedPeople e TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -76,9 +79,11 @@ Especifica um certificado X. 509 a ser usado quando um serviço ou STS não forn
 |[\<serviceCertificate>](servicecertificate-of-clientcredentials-element.md)|Especifica um certificado a ser usado ao autenticar um serviço para o cliente.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Para associações que usam segurança de mensagem baseada em certificado, o certificado especificado por esse elemento de configuração é usado para criptografar mensagens para o serviço e deve ser usado pelo serviço para assinar respostas para o cliente. Ele armazena um único certificado a ser usado quando nenhum certificado é especificado por um serviço.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir especifica um certificado a ser usado para pontos de extremidade cujo URI começa com `http://www.contoso.com` e um certificado a ser usado para todos os outros pontos de extremidade que não executam a negociação de certificado.  
   
 ```xml  

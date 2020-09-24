@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: 14e7e1ccb051410c351e49afee9f2d6809264833
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bce90c1d310178e66da7c758c6df2cd357199c8b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151293"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153281"
 ---
 # <a name="datarows-and-datarowviews"></a>DataRows e DataRowViews
-Um <xref:System.Data.DataView> expõe uma coleção enumerada de <xref:System.Data.DataRowView> objetos. Os objetos **DataRowView** expõem valores como matrizes de objetos indexadas pelo nome ou pela referência ordinal da coluna na tabela subjacente. Você pode <xref:System.Data.DataRow> acessar o que é exposto pelo <xref:System.Data.DataRowView.Row%2A> **DataRowView** usando a propriedade do **DataRowView**.  
+
+Um <xref:System.Data.DataView> expõe uma coleção enumerável de <xref:System.Data.DataRowView> objetos. Os objetos **DataRowView** expõem valores como matrizes de objetos que são indexados pelo nome ou pela referência ordinal da coluna na tabela subjacente. Você pode acessar o <xref:System.Data.DataRow> que é exposto pelo **DataRowView** usando a <xref:System.Data.DataRowView.Row%2A> propriedade de **DataRowView**.  
   
- Quando você visualiza valores usando um <xref:System.Data.DataView.RowStateFilter%2A> **DataRowView,** a propriedade do **DataView** determina qual versão da linha do **DataRow** subjacente é exposta. Para obter informações sobre como acessar diferentes versões de linha usando um **DataRow,** consulte [Estados de linha e versões de linha](row-states-and-row-versions.md).  
+ Quando você exibe valores usando um **DataRowView**, a <xref:System.Data.DataView.RowStateFilter%2A> propriedade de **DataView** determina qual versão de linha da **DataRow** subjacente é exposta. Para obter informações sobre como acessar versões de linha diferentes usando uma **DataRow**, consulte [Estados de linha e versões de linha](row-states-and-row-versions.md).  
   
  O exemplo de código a seguir exibe todos os valores atuais e originais em uma tabela.  
   

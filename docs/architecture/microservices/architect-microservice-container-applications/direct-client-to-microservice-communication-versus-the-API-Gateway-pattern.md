@@ -2,12 +2,12 @@
 title: Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 description: Entenda as diferenças e os usos do padrão de gateway de API e da comunicação direta de cliente com microsserviço.
 ms.date: 01/07/2019
-ms.openlocfilehash: 089b6302132437e4bb733653b3edb401ff81a164
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 90761605dde197e44658e3ba0b0a3a2c06b5942c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306949"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152696"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 
@@ -25,7 +25,7 @@ Nessa abordagem, cada microsserviço tem um ponto de extremidade público, às v
 
 `http://eshoponcontainers.westus.cloudapp.azure.com:88/`
 
-Em um ambiente de produção com base em um cluster, essa URL mapearia para o balanceador de carga usado no cluster, que, por sua vez, distribui as solicitações entre os microsserviços. Em ambientes de produção, você pode ter um ADC (Controlador de Entrega de Aplicativo) como o [Gateway de Aplicativo do Azure](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) entre os microsserviços e a Internet. Isso funciona como uma camada transparente que não executa balanceamento de carga, mas protege seus serviços ao oferecer terminação SSL. Isso aumenta a carga de seus hosts descarregando terminação SSL com uso intensivo de CPU e outras tarefas de roteamento para o Gateway de Aplicativo do Azure. Em qualquer caso, um balanceador de carga e ADC são transparentes de um ponto de vista da arquitetura do aplicativo lógico.
+Em um ambiente de produção com base em um cluster, essa URL mapearia para o balanceador de carga usado no cluster, que, por sua vez, distribui as solicitações entre os microsserviços. Em ambientes de produção, você pode ter um ADC (Controlador de Entrega de Aplicativo) como o [Gateway de Aplicativo do Azure](/azure/application-gateway/application-gateway-introduction) entre os microsserviços e a Internet. Isso funciona como uma camada transparente que não executa balanceamento de carga, mas protege seus serviços ao oferecer terminação SSL. Isso aumenta a carga de seus hosts descarregando terminação SSL com uso intensivo de CPU e outras tarefas de roteamento para o Gateway de Aplicativo do Azure. Em qualquer caso, um balanceador de carga e ADC são transparentes de um ponto de vista da arquitetura do aplicativo lógico.
 
 Uma arquitetura de comunicação direta de cliente com microsserviço pode ser boa o bastante para um aplicativo baseado em microsserviço pequeno, especialmente se o aplicativo cliente for um aplicativo Web do lado do servidor como um aplicativo ASP.NET MVC. No entanto, quando você cria aplicativos grandes e complexos baseados em microsserviço (por exemplo, ao lidar com dezenas de tipos de microsserviço), e especialmente quando os aplicativos cliente são aplicativos móveis remotos ou aplicativos Web do SPA, essa abordagem enfrenta alguns problemas.
 
@@ -95,13 +95,13 @@ Um Gateway de API pode oferecer vários recursos. Dependendo do produto, ele pod
 
 **Proxy reverso ou roteamento de gateway.** O Gateway de API oferece um proxy reverso para redirecionar ou encaminhar solicitações (roteamento da camada 7, geralmente solicitações HTTP) para os pontos de extremidade dos microsserviços internos. O gateway fornece um único ponto de extremidade ou URL para os aplicativos clientes e, em seguida, mapeia internamente as solicitações para um grupo de microsserviços internos. Esse recurso de roteamento ajuda a desacoplar os aplicativos cliente dos microserviços, mas também é conveniente ao modernizar uma API monolítica posicionando o gateway de API entre a API monolítica e os aplicativos cliente, então você pode adicionar novas APIs como novos microserviços enquanto ainda usa a API monolítica herdada até que ela seja dividida em muitos microserviços no futuro. Devido ao Gateway de API, os aplicativos cliente não notarão se as APIs em uso forem implementadas como microsserviços internos ou uma API monolítica. O mais importante é o fato que, ao evoluir e refatorar a API monolítica em microsserviços, graças ao roteamento do Gateway de API, os aplicativos cliente não serão afetados por nenhuma alteração de URI.
 
-Para saber mais, confira [Padrão de roteamento do gateway](https://docs.microsoft.com/azure/architecture/patterns/gateway-routing).
+Para saber mais, confira [Padrão de roteamento do gateway](/azure/architecture/patterns/gateway-routing).
 
 **Solicitações de agregação.** Como parte do padrão de gateway, é possível agregar várias solicitações de cliente (geralmente solicitações HTTP) direcionadas a vários microsserviços internos em uma única solicitação de cliente. Esse padrão é especialmente conveniente quando uma página/tela do cliente precisa de informações de vários microsserviços. Com essa abordagem, o aplicativo cliente envia uma única solicitação ao Gateway da API, que envia várias solicitações aos microsserviços internos e, em seguida, agrega os resultados e envia tudo de volta ao aplicativo cliente. O principal benefício e o objetivo desse padrão de design é reduzir a informação entre os aplicativos cliente e a API de back-end, que é especialmente importante para aplicativos remotos do datacenter em que os microserviços residem, como aplicativos móveis ou solicitações provenientes de aplicativos de SPA provenientes do JavaScript em navegadores remotos do cliente. Para aplicativos Web comuns que executam as solicitações no ambiente do servidor (como um aplicativo Web ASP.NET Core MVC), esse padrão não é tão importante, já que a latência é muito menor do que em aplicativos cliente remotos.
 
 Dependendo do produto do Gateway de API usado, ele poderá executar essa agregação. No entanto, em muitos casos, é mais flexível criar microsserviços de agregação no escopo do Gateway de API, de modo que você defina a agregação no código (ou seja, o código C#):
 
-Para saber mais, confira o [Padrão de agregação de Gateway](https://docs.microsoft.com/azure/architecture/patterns/gateway-aggregation).
+Para saber mais, confira o [Padrão de agregação de Gateway](/azure/architecture/patterns/gateway-aggregation).
 
 **Interesses paralelos ou descarregamento de gateway.** Dependendo dos recursos oferecidos por cada produto do Gateway de API, você pode descarregar a funcionalidade de microsserviços individuais para o gateway, o que simplifica a implementação de cada microsserviço ao consolidar interesses paralelos em uma camada. Isso é especialmente conveniente para recursos especializados que podem ser complexos de implementar adequadamente em cada microsserviço interno, como as seguintes funcionalidades:
 
@@ -115,7 +115,7 @@ Para saber mais, confira o [Padrão de agregação de Gateway](https://docs.micr
 - Cabeçalhos, cadeias de caracteres de consulta e transformação de declarações
 - Lista de permissões de IP
 
-Para saber mais, confira o [Padrão de descarregamento de Gateway](https://docs.microsoft.com/azure/architecture/patterns/gateway-offloading).
+Para saber mais, confira o [Padrão de descarregamento de Gateway](/azure/architecture/patterns/gateway-offloading).
 
 ## <a name="using-products-with-api-gateway-features"></a>Uso de produtos com recursos do Gateway de API
 

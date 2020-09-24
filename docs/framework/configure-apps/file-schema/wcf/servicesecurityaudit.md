@@ -2,14 +2,15 @@
 title: <serviceSecurityAudit>
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-ms.openlocfilehash: 10888f26053014ffb1fec49d1dfe87c7fd09ab54
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6cec3373dae3127f16bb8a418a91a684554f2b0c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399574"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153658"
 ---
 # \<serviceSecurityAudit>
+
 Especifica as configurações que habilitam a auditoria de eventos de segurança durante operações de serviço.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Especifica as configurações que habilitam a auditoria de eventos de segurança
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceSecurityAudit>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <serviceSecurityAudit auditLogLocation="Default/Application/Security"
@@ -29,6 +30,7 @@ Especifica as configurações que habilitam a auditoria de eventos de segurança
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -41,6 +43,7 @@ Especifica as configurações que habilitam a auditoria de eventos de segurança
 |messageAuthenticationAuditLevel|Especifica o tipo de eventos de auditoria de autenticação de mensagem registrados. Os valores válidos incluem os seguintes:<br /><br /> -Nenhum: nenhum evento de auditoria é gerado.<br />-Êxito: somente a segurança bem-sucedida (validação completa, incluindo validação de assinatura de mensagem, codificação e validação de token), os eventos são registrados.<br />-Failure: somente os eventos de falha são registrados.<br />-SuccessOrFailure: os eventos Success e Failure são registrados em log.<br /><br /> O valor padrão é Nenhum. Para obter mais informações, consulte <xref:System.ServiceModel.AuditLevel>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -50,6 +53,7 @@ Especifica as configurações que habilitam a auditoria de eventos de segurança
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Este elemento de configuração é usado para auditar eventos de autenticação Windows Communication Foundation (WCF). Quando a auditoria está habilitada, as tentativas de autenticação bem-sucedidas ou com falha (ou ambas) podem ser auditadas. Os eventos são gravados em um dos três logs de eventos: aplicativo, segurança ou o log padrão para a versão do sistema operacional. Os logs de eventos podem ser exibidos usando o Visualizador de eventos do Windows.  
   
  Para obter um exemplo detalhado de como usar esse elemento de configuração, consulte [comportamento de auditoria de serviço](../../../wcf/samples/service-auditing-behavior.md).  
@@ -85,5 +89,5 @@ Especifica as configurações que habilitam a auditoria de eventos de segurança
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - [Comportamentos de segurança](../../../wcf/feature-details/security-behaviors-in-wcf.md)
 - [Auditoria](../../../wcf/feature-details/auditing-security-events.md)
-- [Como fazer auditoria de eventos de segurança](../../../wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [Como: auditar eventos de segurança](../../../wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [Comportamento de auditoria de serviço](../../../wcf/samples/service-auditing-behavior.md)

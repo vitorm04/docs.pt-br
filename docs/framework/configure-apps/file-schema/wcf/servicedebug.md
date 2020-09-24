@@ -2,14 +2,15 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: 4eb79cc91ef489501c4c8bb6311f240d855ed053
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8236e581ee754a39ae32fa97084b8e2bfbaee652
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399624"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153866"
 ---
 # \<serviceDebug>
+
 Especifica recursos de depuração e de informações de ajuda para um serviço Windows Communication Foundation (WCF).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Especifica recursos de depuração e de informações de ajuda para um serviço 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceDebug>**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <serviceDebug httpHelpPageBinding="String"
@@ -34,6 +35,7 @@ Especifica recursos de depuração e de informações de ajuda para um serviço 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -51,6 +53,7 @@ Especifica recursos de depuração e de informações de ajuda para um serviço 
 |includeExceptionDetailInFaults|Um valor que especifica se as informações de exceção gerenciadas devem ser incluídas nos detalhes de falhas de SOAP retornadas ao cliente para fins de depuração. O padrão é `false`.<br /><br /> Se você definir esse atributo como `true` , poderá habilitar o fluxo de informações de exceção gerenciadas para o cliente para fins de depuração, bem como a publicação de arquivos de informações HTML para usuários que navegam no serviço em navegadores da Web. **Cuidado:**  Retornar informações de exceção gerenciada aos clientes pode ser um risco de segurança. Isso ocorre porque os detalhes da exceção expõem informações sobre a implementação do serviço interno que pode ser usada por clientes não autorizados.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -60,6 +63,7 @@ Especifica recursos de depuração e de informações de ajuda para um serviço 
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Configuração `includeExceptionDetailInFaults` para `true` permite que o serviço retorne qualquer exceção que é lançada pelo código do aplicativo, mesmo se a exceção não for declarada usando o <xref:System.ServiceModel.FaultContractAttribute> . Essa configuração é útil ao depurar casos em que o servidor está lançando uma exceção inesperada. Usando esse atributo, uma forma serializada da exceção desconhecida é retornada e você pode examinar mais detalhes da exceção.  
   
 > [!CAUTION]
@@ -76,5 +80,5 @@ Especifica recursos de depuração e de informações de ajuda para um serviço 
 - <xref:System.ServiceModel.Configuration.ServiceDebugElement>
 - <xref:System.ServiceModel.Description.ServiceDebugBehavior>
 - [Especificando e lidando com falhas em contratos e serviços](../../../wcf/specifying-and-handling-faults-in-contracts-and-services.md)
-- [Tratamento de exceções e falhas](../../../wcf/extending/handling-exceptions-and-faults.md)
+- [Lidando com exceções e falhas](../../../wcf/extending/handling-exceptions-and-faults.md)
 - [Comportamento de depuração de serviço](../../../wcf/samples/service-debug-behavior.md)

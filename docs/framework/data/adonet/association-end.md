@@ -2,31 +2,33 @@
 title: extremidade de associação
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-ms.openlocfilehash: 489802ca18708e076c0cd5dd380ad1361916ad5f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 00e3a7d855957ae539ea652dc8cde3ed8841dda5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732364"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153437"
 ---
 # <a name="association-end"></a>extremidade de associação
+
 Uma *extremidade de associação* identifica o [tipo de entidade](entity-type.md) em uma extremidade de uma [Associação](association-type.md) e o número de instâncias de tipo de entidade que podem existir no final de uma associação. Termina de associação são definidas como parte de uma associação; uma associação deve ter exatamente duas termina de associação. [As propriedades de navegação](navigation-property.md) permitem a navegação de uma extremidade de associação para a outra.  
   
  Uma definição de fim de associação contém as informações a seguir:  
   
-- Um dos tipos de entidade envolvidos na associação. (Necessário)  
+- Um dos tipos de entidade envolvidos na associação. (Obrigatória)  
   
     > [!NOTE]
     > Para uma associação determinada, o tipo de entidade especificada para cada o final da associação pode ser o mesmo. Isso cria uma dica associação.  
   
-- Uma [multiplicidade de extremidade de associação](association-end-multiplicity.md) que indica o número de instâncias de tipo de entidade que podem estar em uma extremidade da associação. Uma multiplicidade de extremidade de associação pode ter um valor de um (1), zero ou um (0.. 1) ou muitos (\*).  
+- Uma [multiplicidade de extremidade de associação](association-end-multiplicity.md) que indica o número de instâncias de tipo de entidade que podem estar em uma extremidade da associação. Uma multiplicidade de extremidade de associação pode ter um valor de um (1), zero ou um (0.. 1) ou muitos ( \* ).  
   
 - Um nome para o final da associação. (Opcional)  
   
 - Informações sobre as operações que são executadas no final da associação, como em cascata exclusão. (Opcional)  
   
 ## <a name="example"></a>Exemplo  
- O diagrama a seguir mostra um modelo conceitual com duas associações: `PublishedBy` e `WrittenBy`. Terminar a associação para associação de `PublishedBy` são os tipos de entidade de `Book` e de `Publisher` . A multiplicidade do `Publisher` end é um (1) e a multiplicidade do `Book` end é Many (\*), indicando que um Publicador publica muitos livros e um livro é publicado por um Publicador.  
+
+ O diagrama a seguir mostra um modelo conceitual com duas associações: `PublishedBy` e `WrittenBy`. Terminar a associação para associação de `PublishedBy` são os tipos de entidade de `Book` e de `Publisher` . A multiplicidade do `Publisher` final é um (1) e a multiplicidade do `Book` final é Many ( \* ), indicando que um Publicador publica muitos livros e um livro é publicado por um Publicador.  
   
  ![Modelo de exemplo com três tipos de entidade](./media/association-end/example-model-three-entity-types.gif)  
   
@@ -34,7 +36,7 @@ Uma *extremidade de associação* identifica o [tipo de entidade](entity-type.md
   
  [!code-xml[EDM_Example_Model#AssociationEnd](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#associationend)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Principais conceitos do Modelo de Dados de Entidade](entity-data-model-key-concepts.md)
+- [Conceitos chave do Modelo de Dados de Entidade](entity-data-model-key-concepts.md)
 - [Modelo de Dados de Entidade](entity-data-model.md)

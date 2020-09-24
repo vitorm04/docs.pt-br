@@ -2,17 +2,19 @@
 title: Composta consultas aninhadas Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: b28c46ba9a89ffffe8cd95ad55eb502eb8ea48a6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0c9a6a99ff49cfa847f4c1e7ea693fbb2611debd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541090"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153060"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Composta consultas aninhadas Entity SQL
+
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] é uma linguagem funcional rico. O bloco de construção de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] é uma expressão. Ao contrário do SQL convencional, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] o não está limitado a um conjunto de resultados de tabela: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] dá suporte à composição de expressões complexas que podem ter literais, parâmetros ou expressões aninhadas. Um valor na expressão pode ser parametrizada ou composta de alguma outra expressão.  
   
 ## <a name="nested-expressions"></a>Expressões aninhadas  
+
  Uma expressão aninhada pode ser colocadas em qualquer lugar um valor de tipo que retorna é aceito. Por exemplo:  
   
 ```sql  
@@ -49,6 +51,7 @@ FROM … );
  O exemplo a seguir demonstra como aninhar expressões corretamente em [!INCLUDE[esql](../../../../../../includes/esql-md.md)] : [como ordenar a União de duas consultas](/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).  
   
 ## <a name="nested-queries-in-projection"></a>Consultas aninhadas na projeção  
+
  Consultas aninhadas na cláusula de projeto podem obter convertido em consultas de produto cartesiano no servidor. Em alguns servidores de back-end, incluindo SQL Server, isso pode fazer com que a tabela TempDB fique muito grande, o que pode afetar negativamente o desempenho do servidor.  
   
  O seguinte é um exemplo de tal consulta:  
@@ -58,6 +61,7 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="ordering-nested-queries"></a>Ordenando consultas aninhadas  
+
  Em Entity Framework, uma expressão aninhada pode ser colocadas em qualquer lugar na consulta. Porque Entity SQL permite grande flexibilidade em consultas de escrita, é possível escrever uma consulta que contém a ordem das consultas aninhadas. No entanto, a ordem de uma consulta aninhada não é preservada.  
   
 ```sql  

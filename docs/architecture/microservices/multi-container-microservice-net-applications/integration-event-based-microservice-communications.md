@@ -2,12 +2,12 @@
 title: Implementando comunicação baseada em evento entre microsserviços (eventos de integração)
 description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Entender eventos de integração para implementar comunicação baseada em evento entre microsserviços.
 ms.date: 10/02/2018
-ms.openlocfilehash: cbc9d28f9fbcaea528eabc4930476545cb919bb4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a778acba3e17b084840b77d903533f9180ca01d9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539340"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152527"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementando comunicação baseada em evento entre microsserviços (eventos de integração)
 
@@ -76,7 +76,7 @@ No [padrão Observador](https://en.wikipedia.org/wiki/Observer_pattern), seu obj
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>Padrão Pub/Sub (Publicar/Assinar)
 
-O objetivo do [padrão Publicar/Assinar](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) é o mesmo que o padrão Observador: você deseja notificar outros serviços quando determinados eventos ocorrem. Mas há uma diferença importante entre os padrões de Observador e Pub/Sub. No padrão observador, a difusão é executada diretamente do observável para os observadores, para que eles "saibam" uns aos outros. Porém, ao usar um padrão Pub/Sub, há um terceiro componente, chamado de agente, agente de mensagem ou barramento de evento, que é conhecido tanto pelo publicador quanto pelo assinante. Portanto, ao usar o padrão Pub/Sub, o publicador e os assinantes são precisamente desacoplados graças ao agente de mensagem ou barramento de evento mencionado.
+O objetivo do [padrão Publicar/Assinar](/previous-versions/msp-n-p/ff649664(v=pandp.10)) é o mesmo que o padrão Observador: você deseja notificar outros serviços quando determinados eventos ocorrem. Mas há uma diferença importante entre os padrões de Observador e Pub/Sub. No padrão observador, a difusão é executada diretamente do observável para os observadores, para que eles "saibam" uns aos outros. Porém, ao usar um padrão Pub/Sub, há um terceiro componente, chamado de agente, agente de mensagem ou barramento de evento, que é conhecido tanto pelo publicador quanto pelo assinante. Portanto, ao usar o padrão Pub/Sub, o publicador e os assinantes são precisamente desacoplados graças ao agente de mensagem ou barramento de evento mencionado.
 
 ### <a name="the-middleman-or-event-bus"></a>O barramento de evento ou intermediário
 
