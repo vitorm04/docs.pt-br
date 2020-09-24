@@ -3,12 +3,13 @@ title: Introdução ao armazenamento de Filas do Azure usando F#
 description: As filas do Azure fornecem uma mensagem assíncrona e confiável entre os componentes do aplicativo. A mensagem na nuvem permite que os componentes do aplicativo se dimensionem de modo independente.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 0b360348ce6966ce49a2ac0abd839844bdbe55f2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: 5d6074751f226f0587c4c73bfa9ff56d9aca2bc1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548358"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100081"
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>Introdução ao armazenamento de filas do Azure usando F\#
 

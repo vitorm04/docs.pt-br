@@ -3,12 +3,13 @@ title: Introdução ao armazenamento de Arquivos do Azure usando F#
 description: Armazene dados de arquivos na nuvem com o armazenamento de Arquivos do Azure e monte seu compartilhamento de arquivos na nuvem de uma VM (máquina virtual) do Azure ou de um aplicativo local que executa o Windows.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 04bee82fd9d3c652cd99b9c951880f6ba89610ee
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: dd19b156e73774f4eca63afd3f4c10a4a7b8d46c
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548456"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100120"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>Introdução ao armazenamento de arquivos do Azure usando o F\#
 

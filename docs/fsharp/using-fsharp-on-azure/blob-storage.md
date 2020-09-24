@@ -3,12 +3,13 @@ title: Introdução ao armazenamento de Blobs do Azure usando F#
 description: Armazene dados não estruturados na nuvem com o armazenamento de BLOBs do Azure.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 0dda2e04f0052823e9ea35051855d677cd19ea92
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: d9c587cdd21a1b81205d182652b3690b976687c0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548469"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100146"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Introdução ao armazenamento de BLOBs do Azure usando o F\#
 

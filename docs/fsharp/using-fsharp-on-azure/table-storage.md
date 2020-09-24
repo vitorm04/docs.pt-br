@@ -3,12 +3,13 @@ title: Introdução ao armazenamento de Tabelas do Azure usando F#
 description: Armazene dados estruturados na nuvem usando o Armazenamento de Tabelas do Azure ou o Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: eb25fda0bb3c658eed2f675d6ba79c689a9080a9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: f4a22ec14de6c92414fbcf3cca435e2b5c0805f1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548345"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100094"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introdução ao armazenamento de tabelas do Azure e ao Azure Cosmos DB API de Tabela usando F\#
 
