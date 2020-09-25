@@ -1,16 +1,16 @@
 ---
 description: operador delegate – referência do C#
 title: operador delegate – referência do C#
-ms.date: 09/22/2020
+ms.date: 09/25/2020
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: 6c087d9bdb2f526cf7d94c3a0f2c1a929b0343ef
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: db2bf673db12e4a10741a26112820726a4b8aaee
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874915"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247651"
 ---
 # <a name="delegate-operator-c-reference"></a>operador delegate (referência do C#)
 
@@ -36,6 +36,12 @@ A partir do C# 9,0, você pode usar os [Descartes](../../discards.md) para espec
 :::code language="csharp" source="snippets/shared/DelegateOperator.cs" id="SnippetDiscards" :::
 
 Para compatibilidade com versões anteriores, se apenas um único parâmetro for nomeado `_` , `_` será tratado como o nome desse parâmetro dentro de um método anônimo.
+
+Além de começar com o C# 9,0, você pode usar o `static` modificador na declaração de um método anônimo:
+
+:::code language="csharp" source="snippets/shared/DelegateOperator.cs" id="SnippetStatic" :::
+
+Um método anônimo estático não pode capturar variáveis locais ou estado de instância de escopos delimitadores.
 
 Você também usa a palavra-chave `delegate` para declarar um [tipo delegado](../builtin-types/reference-types.md#the-delegate-type).
 

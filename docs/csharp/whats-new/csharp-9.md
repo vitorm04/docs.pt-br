@@ -2,12 +2,12 @@
 title: O que há de novo no C# 9,0 – Guia C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 9,0.
 ms.date: 09/04/2020
-ms.openlocfilehash: f309f5fb2e705d220b8b0b743ec2f68901ee8f53
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6a0227b408b894fe450c2a6bb6017d9059d229c0
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178392"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247612"
 ---
 # <a name="whats-new-in-c-90"></a>Novidades do C# 9.0
 
@@ -48,7 +48,6 @@ A definição de registro cria um `Person` tipo que contém duas propriedades Re
 - Substituir para <xref:System.Object.GetHashCode>
 - Copiar e clonar Membros
 - `PrintMembers` e <xref:System.Object.ToString>
-- Método `Deconstruct`
 
 Registra o suporte à herança. Você pode declarar um novo registro derivado do da `Person` seguinte maneira:
 
@@ -64,7 +63,6 @@ O compilador sintetiza versões diferentes dos métodos acima. As assinaturas de
 - Os registros têm uma representação de cadeia de caracteres consistente gerada para você.
 - Os registros dão suporte à construção de cópia. A construção correta da cópia deve incluir hierarquias de herança e propriedades adicionadas por desenvolvedores.
 - Os registros podem ser copiados com modificações. Essas operações de cópia e modificação oferecem suporte a mutação não destrutiva.
-- Todos os registros dão suporte à desconstrução.
 
 Além das `Equals` sobrecargas conhecidas, `operator ==` e `operator !=` , o compilador sintetiza uma nova `EqualityContract` propriedade. A propriedade retorna um `Type` objeto que corresponde ao tipo do registro. Se o tipo base for `object` , a propriedade será `virtual` . Se o tipo base for outro tipo de registro, a propriedade será um `override` . Se o tipo de registro for `sealed` , a propriedade será `sealed` . O sintetizado `GetHashCode` usa o `GetHashCode` de todas as propriedades e campos declarados no tipo base e no tipo de registro. Esses métodos sintetizados impõem a igualdade baseada em valor em uma hierarquia de herança. Isso significa que um `Student` nunca será considerado igual a um `Person` com o mesmo nome. Os tipos dos dois registros devem corresponder e todas as propriedades compartilhadas entre os tipos de registro são iguais.
 
@@ -226,7 +224,7 @@ Você pode retornar uma instância criada pelo construtor padrão usando uma `re
 
 Um recurso semelhante melhora a resolução de tipo de destino de [expressões condicionais](../language-reference/operators/conditional-operator.md). Com essa alteração, as duas expressões não precisam ter uma conversão implícita de uma para a outra, mas podem ter conversões implícitas em um tipo de destino. Você provavelmente não perceberá essa alteração. O que você observará é que algumas expressões condicionais que antes exigiam conversões ou que não compilaram agora só funcionam.
 
-A partir do C# 9,0, você pode adicionar o `static` modificador a expressões lambda ou a métodos anônimos. As expressões lambda estáticas são análogas às `static` funções locais: uma função lambda ou anônima estática não pode capturar variáveis locais ou estado de instância. O `static` modificador impede a captura acidental de outras variáveis.
+A partir do C# 9,0, você pode adicionar o `static` modificador a [expressões lambda](../language-reference/operators/lambda-expressions.md) ou a [métodos anônimos](../language-reference/operators/delegate-operator.md). As expressões lambda estáticas são análogas às `static` funções locais: um método lambda ou anônimo estático não pode capturar variáveis locais ou estado de instância. O `static` modificador impede a captura acidental de outras variáveis.
 
 Os tipos de retorno covariantes fornecem flexibilidade para os tipos de retorno de funções substituídas. Uma função virtual substituída pode retornar um tipo derivado do tipo de retorno declarado no método de classe base. Isso pode ser útil para registros e para outros tipos que dão suporte a métodos de clonagem ou de alocador virtual.
 
