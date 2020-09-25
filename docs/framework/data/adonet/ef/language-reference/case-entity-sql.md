@@ -2,14 +2,15 @@
 title: CASO (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 58b21d3be8e13a0a2204a4fd6d355f734207c509
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65efedd36401db402a32748afaebff0f2af9f2a7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150461"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185217"
 ---
 # <a name="case-entity-sql"></a>CASO (Entity SQL)
+
 Avalia um conjunto de expressões de `Boolean` para determinar o resultado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -25,6 +26,7 @@ END
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `n`  
  É um espaço reservado que indica que várias QUANDO as cláusulas de `Boolean_expression` ENTÃO `result_expression` podem ser usadas.  
   
@@ -37,27 +39,30 @@ END
  QUANDO `Boolean_expression`  
  A expressão é avaliada de `Boolean` quando o formato pesquisada de CASOS é usado. `Boolean_expression` é qualquer expressão válida de `Boolean` .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Retorna o tipo mais alto de precedência de conjunto de tipos em `result_expression` e `else_result_expression`opcional.  
   
 ## <a name="remarks"></a>Comentários  
- A [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expressão do caso se assemelha à expressão do caso Transact-SQL. Você usa a expressão dos casos para fazer uma série de teste condicional para determinar qual expressão renderá o resultado apropriado. Este formulário da expressão dos casos se aplica a uma série de uma ou mais expressões de `Boolean` para determinar a expressão resultante correta.  
+
+ A [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expressão CASE é semelhante à expressão de caso Transact-SQL. Você usa a expressão dos casos para fazer uma série de teste condicional para determinar qual expressão renderá o resultado apropriado. Este formulário da expressão dos casos se aplica a uma série de uma ou mais expressões de `Boolean` para determinar a expressão resultante correta.  
   
  A função de CASOS avaliar `Boolean_expression` para o QUANDO cada cláusula na ordem especificada, e retornar `result_expression` de primeiro `Boolean_expression` que avalia para `true`. As expressões restantes não são avaliadas. Se nenhum `Boolean_expression` avalia a `true`, o mecanismo de base de dados retorna `else_result_expression` se uma cláusula OUTRA for especificada, ou um valor nulo se nenhuma cláusula OUTRA é especificado.  
   
  Uma declaração de CASOS não pode retornar um multiset.  
   
 ## <a name="example"></a>Exemplo  
+
  A seguinte consulta SQL Entity usa a expressão de CASOS para avaliar um conjunto de expressões de `Boolean` para determinar o resultado. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [Como: Executar uma consulta que retorna resultados do PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Siga o procedimento em [como executar uma consulta que retorna os resultados de primitivatype](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecutePrimitiveTypeQuery`:  
   
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [THEN](then-entity-sql.md)
-- [Selecione](select-entity-sql.md)
+- [SELECT](select-entity-sql.md)
 - [Referência de Entity SQL](entity-sql-reference.md)
