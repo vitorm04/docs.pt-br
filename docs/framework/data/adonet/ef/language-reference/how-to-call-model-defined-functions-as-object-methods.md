@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: f53577b9cee640a4a13bd61f60bdbaa695130576
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5e5ae2fd838a34d7f665b23a14db2a599367e801
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542510"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197788"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Como: o chamar funções definidas como métodos de objeto
+
 Este tópico descreve como chamar uma função o definida como um método em um objeto de <xref:System.Data.Objects.ObjectContext> ou como um método estático em uma classe personalizada. Uma *função definida pelo modelo* é uma função que é definida no modelo conceitual. O tópico descrevem como chamar essas funções diretamente em vez de chamá-los de consultas LINQ to Entities. Para obter informações sobre como chamar funções definidas pelo modelo em consultas LINQ to Entities, consulte [como: chamar funções definidas pelo modelo em consultas](how-to-call-model-defined-functions-in-queries.md).  
   
  Se você chamar uma função o definida como um método de <xref:System.Data.Objects.ObjectContext> ou como um método estático em uma classe personalizada, primeiro você deve mapear o método à função definida com o <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. No entanto, quando você define um método na classe de <xref:System.Data.Objects.ObjectContext> , você deve usar a propriedade de <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> para expor o provedor LINQ, enquanto quando você define um método estático em uma classe personalizada, você deve usar a propriedade de <xref:System.Linq.IQueryable.Provider%2A> para expor o provedor LINQ. Para obter mais informações, consulte os exemplos a seguir os procedimentos abaixo.  
@@ -44,6 +45,7 @@ Este tópico descreve como chamar uma função o definida como um método em um 
 2. Chame o método como um membro um método estático na classe personalizada  
   
 ## <a name="example"></a>Exemplo  
+
  **Chamando uma função o definida como um método em um objeto de ObjectContext**  
   
  O exemplo a seguir demonstra como chamar uma função o definida como um método em um objeto de <xref:System.Data.Objects.ObjectContext> . O exemplo usa o [modelo de vendas AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
@@ -53,35 +55,41 @@ Este tópico descreve como chamar uma função o definida como um método em um 
  [!code-xml[DP L2E Methods on ObjectContext#4](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#4)]  
 
 ## <a name="example"></a>Exemplo  
+
  O código a seguir adiciona um método à classe de `AdventureWorksEntities` que mapeia à função de modelo conceitual anterior.  
   
  [!code-csharp[DP L2E Methods on ObjectContext#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e methods on objectcontext/cs/program.cs#2)]
  [!code-vb[DP L2E Methods on ObjectContext#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/class1.vb#2)]  
   
 ## <a name="example"></a>Exemplo  
+
  O código a seguir chama o método anterior para exibir o rendimento de produto para um produto especificado:  
   
  [!code-csharp[DP L2E Methods on ObjectContext#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e methods on objectcontext/cs/program.cs#3)]
  [!code-vb[DP L2E Methods on ObjectContext#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#3)]  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir demonstra como chamar uma função definida modelo que retorna uma coleção (como um objeto de <xref:System.Linq.IQueryable%601> ). Considere a função do modelo conceitual abaixo dos retornos qualquer `SalesOrderDetails` para uma determinada identificação de produto  
   
  [!code-xml[DP L2E Methods on ObjectContext#7](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#7)]  
   
 ## <a name="example"></a>Exemplo  
+
  O código a seguir adiciona um método à classe de `AdventureWorksEntities` que mapeia à função de modelo conceitual anterior.  
   
  [!code-csharp[DP L2E Methods on ObjectContext#8](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e methods on objectcontext/cs/program.cs#8)]
  [!code-vb[DP L2E Methods on ObjectContext#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/class1.vb#8)]  
   
 ## <a name="example"></a>Exemplo  
+
  O código a seguir chama o método. Observe que a consulta é retornado de <xref:System.Linq.IQueryable%601> mais refinados a linha de retorno totais para cada `SalesOrderDetail`.  
   
  [!code-csharp[DP L2E Methods on ObjectContext#9](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e methods on objectcontext/cs/program.cs#9)]
  [!code-vb[DP L2E Methods on ObjectContext#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#9)]  
   
 ## <a name="example"></a>Exemplo  
+
  **Chamando uma função o definida como um método estático em uma classe personalizada**  
   
  O exemplo a seguir demonstra como chamar uma função o definida como um método estático em uma classe personalizada. O exemplo usa o [modelo de vendas AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
@@ -94,18 +102,20 @@ Este tópico descreve como chamar uma função o definida como um método em um 
  [!code-xml[DP L2E Methods on ObjectContext#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#1)]
   
 ## <a name="example"></a>Exemplo  
+
  O código a seguir adiciona uma classe ao seu aplicativo que contém um método estático que os mapeamentos para o modelo conceitual funcionem anterior.  
   
  [!code-csharp[DP L2E Methods on ObjectContext#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e methods on objectcontext/cs/program.cs#5)]
  [!code-vb[DP L2E Methods on ObjectContext#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/class1.vb#5)]  
   
 ## <a name="example"></a>Exemplo  
+
  O código a seguir chama o método anterior para exibir o rendimento de produto para uma coleção de SalesOrderDetail:  
   
  [!code-csharp[DP L2E Methods on ObjectContext#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e methods on objectcontext/cs/program.cs#6)]
  [!code-vb[DP L2E Methods on ObjectContext#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#6)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral do arquivo. edmx](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Consultas no LINQ to Entities](queries-in-linq-to-entities.md)

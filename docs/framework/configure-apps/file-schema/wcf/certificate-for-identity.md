@@ -2,14 +2,15 @@
 title: <certificate> para <identity>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-ms.openlocfilehash: 1cfd207afc72cc71359d9d262e30b0696ba63d2b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 24c39b5efaee7f8db12088d272efeb3783efab04
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850018"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198854"
 ---
 # <a name="certificate-for-identity"></a>\<certificate> para \<identity>
+
 Especifica um certificado X. 509 usado para validar um servidor para um cliente.  
   
 Para obter mais informações sobre como definir o valor do elemento, consulte [identidade e autenticação de serviço](../../../wcf/feature-details/service-identity-and-authentication.md).  
@@ -28,6 +29,7 @@ Para obter mais informações sobre como definir o valor do elemento, consulte [
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -37,6 +39,7 @@ Para obter mais informações sobre como definir o valor do elemento, consulte [
 |codificado|Uma codificação base64 do certificado.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -46,6 +49,7 @@ Para obter mais informações sobre como definir o valor do elemento, consulte [
 |[\<identity>](identity.md)|Especifica a identidade do serviço a ser autenticado pelo cliente.|  
   
 ## <a name="example"></a>Exemplo  
+
  O código a seguir especifica a representação codificada de um certificado usado para validar um servidor para um cliente.  
   
 ```xml  
@@ -54,7 +58,7 @@ Para obter mais informações sobre como definir o valor do elemento, consulte [
 </identity>
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>

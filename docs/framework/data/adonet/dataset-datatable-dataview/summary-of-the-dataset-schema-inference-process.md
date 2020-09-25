@@ -2,15 +2,16 @@
 title: Resumo do processo de inferência de esquema de DataSet
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-ms.openlocfilehash: 35e9b67d2d0a47aa69eabdb4b7e94f95b0b9589f
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8d517487b96aa7f204ea9f25d326500db7df413a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833974"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198503"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>Resumo do processo de inferência de esquema de DataSet
-O processo de inferência determina primeiro, a partir do documento XML, quais elementos serão inferidos como tabelas. Do XML restante, o processo de inferência determina as colunas para essas tabelas. Para tabelas aninhadas, o processo de inferência gera objetos <xref:System.Data.DataRelation> e <xref:System.Data.ForeignKeyConstraint> aninhados.  
+
+O processo de inferência determina primeiro, a partir do documento XML, quais elementos serão inferidos como tabelas. Do XML restante, o processo de inferência determina as colunas para essas tabelas. Para tabelas aninhadas, o processo de inferência gera objetos aninhados <xref:System.Data.DataRelation> e <xref:System.Data.ForeignKeyConstraint> .  
   
  Veja a seguir um breve resumo das regras de inferência:  
   
@@ -20,7 +21,7 @@ O processo de inferência determina primeiro, a partir do documento XML, quais e
   
 - Elementos que se repetem são inferidos como uma única tabela.  
   
-- Se o documento, ou raiz, o elemento não tiver atributos e nenhum elemento filho que fosse inferido como colunas, ele será inferido como um <xref:System.Data.DataSet>. Caso contrário, o elemento Document é inferido como uma tabela.  
+- Se o documento, ou raiz, o elemento não tiver atributos e nenhum elemento filho que fosse inferido como colunas, ele será inferido como um <xref:System.Data.DataSet> . Caso contrário, o elemento Document é inferido como uma tabela.  
   
 - Os atributos são inferidos como colunas.  
   
@@ -30,11 +31,11 @@ O processo de inferência determina primeiro, a partir do documento XML, quais e
   
 - Para elementos que são inferidos como tabelas e que contêm texto, mas não têm elementos filho, uma nova coluna chamada **TableName_Text** é criada para o texto de cada um dos elementos. Se um elemento for inferido como uma tabela e tiver texto, mas também tiver elementos filho, o texto será ignorado.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Derivando a estrutura relacional do DataSet do esquema XML](inferring-dataset-relational-structure-from-xml.md)
-- [Carregar um conjunto de dados do XML](loading-a-dataset-from-xml.md)
-- [Carregando informações de esquema de conjunto de dados de XML](loading-dataset-schema-information-from-xml.md)
-- [Using XML in a DataSet](using-xml-in-a-dataset.md) (Usando XML em um DataSet)
-- [DataSets, DataTables, and DataViews](index.md) (DataSets, DataTables e DataViews)
-- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)
+- [Inferir a estrutura relacional do DataSet do esquema XML](inferring-dataset-relational-structure-from-xml.md)
+- [Carregando um DataSet a partir de XML](loading-a-dataset-from-xml.md)
+- [Carregando informações do esquema de DataSet do XML](loading-dataset-schema-information-from-xml.md)
+- [Usando XML em um DataSet](using-xml-in-a-dataset.md)
+- [DataSets, DataTables e DataViews](index.md)
+- [Visão geral do ADO.NET](../ado-net-overview.md)

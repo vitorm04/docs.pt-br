@@ -6,14 +6,15 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 4db71721495857c634e8090b986704d8a592b4e2
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 01af1446097bbed25874b45d57a5dde85ae63891
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864391"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91199153"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Como definir propriedades abstratas (guia de programação C#)
+
 O exemplo a seguir mostra como definir propriedades [abstract](../../language-reference/keywords/abstract.md). Uma declaração de propriedade abstract não fornece uma implementação dos acessadores da propriedade – ela declara que a classe dá suporte às propriedades, mas deixa a implementação do acessador para classes derivadas. O exemplo a seguir demonstra como implementar as propriedades abstract herdadas de uma classe base.  
   
  Esse exemplo consiste em três arquivos, cada um deles é compilado individualmente e seu assembly resultante é referenciado pela próxima compilação:  
@@ -31,6 +32,7 @@ O exemplo a seguir mostra como definir propriedades [abstract](../../language-re
  Isso criará o arquivo executável shapetest.exe.  
   
 ## <a name="example"></a>Exemplo  
+
  Esse arquivo declara a classe `Shape` que contém a propriedade `Area` do tipo `double`.  
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
@@ -44,11 +46,13 @@ O exemplo a seguir mostra como definir propriedades [abstract](../../language-re
 - Ao declarar uma propriedade abstract (como `Area` neste exemplo), você simplesmente indica quais acessadores de propriedade estão disponíveis, mas não os implementa. Neste exemplo, apenas um acessador [get](../../language-reference/keywords/get.md) está disponível, assim, a propriedade é somente leitura.  
   
 ## <a name="example"></a>Exemplo  
+
  O código a seguir mostra três subclasses de `Shape` e como elas substituem a propriedade `Area` para fornecer sua própria implementação.  
   
  [!code-csharp[csProgGuideInheritance#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#2)]  
   
 ## <a name="example"></a>Exemplo  
+
  O código a seguir mostra um programa de teste que cria uma quantidade de objetos derivados de `Shape` e imprime suas áreas.  
   
  [!code-csharp[csProgGuideInheritance#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#3)]  

@@ -2,14 +2,15 @@
 title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 7ac067e84f2a4d2724e3d8f2d0af9b220fd15538
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b38496b77d80fcb66b1b48485a9eef6abfd72299
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399629"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198815"
 ---
 # \<serviceDiscovery>
+
 Especifica a descoberta de pontos de extremidade de serviço.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -41,9 +42,11 @@ Especifica a descoberta de pontos de extremidade de serviço.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
+
  Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -60,9 +63,11 @@ Especifica a descoberta de pontos de extremidade de serviço.
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Quando adicionado à configuração de comportamento do serviço, esse elemento de configuração torna todos os pontos de extremidade desse serviço detectáveis. Você pode configurar ainda mais os recursos de descoberta desses pontos de extremidade usando os [\<discoveryEndpoint>](discoveryendpoint.md) [\<announcementEndpoint>](announcementendpoint.md) elementos filho ou. Use a [\<announcementEndpoint>](announcementendpoint.md) seção para configurar os comunicados especificando a configuração do ponto de extremidade a ser usada para enviar comunicados de serviço (online/Olá e offline/adeus). Use a [\<discoveryEndpoint>](discoveryendpoint.md) seção para especificar manualmente o ponto de extremidade no qual escutar as mensagens de descoberta.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo de configuração a seguir especifica que o CalculatorService a ser descoberto e, opcionalmente, especifica o ponto de extremidade de anúncio a ser usado.  
   
 ```xml  

@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: bf303f9a79fbcab85d33fcb3ebb132d1d3e2041d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 778cc73575ffc7421854fd89592f1c4eaa284678
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781103"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203547"
 ---
 # <a name="serialization"></a>Serialização
-Este tópico descreve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] os recursos de serialização. Os parágrafos que seguem fornecem informações sobre como adicionar em tempo de design a serialização durante a geração de código e o comportamento de serialização de tempo de execução de classes de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
+
+Este tópico descreve os [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] recursos de serialização. Os parágrafos que seguem fornecem informações sobre como adicionar em tempo de design a serialização durante a geração de código e o comportamento de serialização de tempo de execução de classes de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
  Você pode adicionar código de serialização em tempo de design por qualquer um dos seguintes métodos:  
   
@@ -22,6 +23,7 @@ Este tópico descreve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlin
 - Na linha de comando SqlMetal, adicione a opção **/Serialization** . Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Visão geral  
+
  O código gerado pelo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece recursos de carregamento adiados por padrão. A carga adiada é muito conveniente na camada de- mid para o carregamento transparente de dados sob demanda. No entanto, é problemática para serialização, porque o serializador dispara o carregamento adiada se a carga adiada é destinada ou não. Na verdade, quando um objeto é serializado, o fechamento transitivo em todas as referências adiar- carregadas de saída é serializado.  
   
  O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] recurso de serialização aborda esse problema, principalmente por meio de dois mecanismos:  
@@ -32,13 +34,14 @@ Este tópico descreve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlin
   
 ### <a name="definitions"></a>Definições  
   
-- *Serializador DataContract*: Serializador padrão usado pelo componente Windows Communication Framework (WCF) do .NET Framework 3,0 ou versões posteriores.  
+- *Serializador DataContract*: serializador padrão usado pelo componente Windows Communication Framework (WCF) do .NET Framework 3,0 ou versões posteriores.  
   
-- *Serialização unidirecional*: A versão serializada de uma classe que contém apenas uma propriedade de associação unidirecional (para evitar um ciclo). Por convenção, a propriedade no lado pai de uma relação de chave estrangeira que é marcada para serialização. O outro lado em uma associação bidirecional não é serializado.  
+- *Serialização unidirecional*: a versão serializada de uma classe que contém apenas uma propriedade de associação unidirecional (para evitar um ciclo). Por convenção, a propriedade no lado pai de uma relação de chave estrangeira que é marcada para serialização. O outro lado em uma associação bidirecional não é serializado.  
   
      A serialização unidirecional é o único tipo de serialização suportados por [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
 ## <a name="code-example"></a>Exemplo de código  
+
  O código a seguir usa `Customer` e classes tradicionais de `Order` de base de dados de exemplo Northwind, e mostra como essas classes são decoradas com atributos de serialização.  
   
  [!code-csharp[DLinqSerialization#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#1)]
@@ -59,21 +62,23 @@ Este tópico descreve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlin
  [!code-vb[DLinqSerialization#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#5)]  
   
 ### <a name="how-to-serialize-the-entities"></a>Como serializar as entidades  
+
  Você pode serializar as entidades em código mostrados na seção anterior como segue;  
   
  [!code-csharp[DLinqSerialization#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/Program.cs#6)]
  [!code-vb[DLinqSerialization#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/Module1.vb#6)]  
   
 ### <a name="self-recursive-relationships"></a>Relações são recursivos  
+
  As relações são recursivos seguem o mesmo padrão. A propriedade de associação que corresponde à chave estrangeira não tem um atributo de <xref:System.Runtime.Serialization.DataMemberAttribute> , enquanto a propriedade pai faz.  
   
- Considere a seguinte classe que tem duas relações recursivas: Employee. Manager/Reports e Employees. Mentories.  
+ Considere a seguinte classe que tem duas relações recursivos são: Employee.Manager/Reports e Employee.Mentor/Mentees.  
   
  [!code-csharp[DLinqSerialization#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#7)]
  [!code-vb[DLinqSerialization#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#7)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Informações gerais](background-information.md)
-- [SqlMetal.exe (Ferramenta de Geração de Código)](../../../../tools/sqlmetal-exe-code-generation-tool.md)
-- [Como: Tornar as entidades serializáveis](how-to-make-entities-serializable.md)
+- [SqlMetal.exe (ferramenta de geração de código)](../../../../tools/sqlmetal-exe-code-generation-tool.md)
+- [Como: tornar a entidades serializáveis](how-to-make-entities-serializable.md)

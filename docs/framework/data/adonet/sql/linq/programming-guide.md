@@ -2,19 +2,21 @@
 title: Guia de Programação
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 0746d14d7be0b67bc9966ae0c5a4af0a3226c1e9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 50c4370e23faf8400eb23f1e8c0cc74cd4dce80e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546556"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203560"
 ---
 # <a name="programming-guide"></a>Guia de Programação
+
 Esta seção contém informações sobre como criar e usar o modelo de objeto do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Se você estiver usando o Visual Studio, também poderá usar o Object Relational Designer para executar muitas dessas mesmas tarefas.  
   
  Você também pode pesquisar Microsoft Docs problemas específicos e pode participar do [Fórum do LINQ](https://social.msdn.microsoft.com/forums/home?forum=linqtosql), no qual você pode discutir tópicos mais complexos em detalhes com especialistas. Por fim, a [LINQ to SQL: consulta integrada à linguagem .net para dados relacionais](/previous-versions/dotnet/articles/bb425822(v=msdn.10)) White Paper detalhes da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, completa com os exemplos de código do Visual Basic e do C#.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Criando o modelo de objeto](creating-the-object-model.md)  
  Descreve como gerar um modelo de objeto.  
   
@@ -34,6 +36,7 @@ Esta seção contém informações sobre como criar e usar o modelo de objeto do
  Inclui itens adicionais, como a resolução de conflitos de simultaneidade, criando novos bancos de dados e muito mais para usuários mais avançados.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [LINQ to SQL](index.md)  
  Fornece links para tópicos que explicam a tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e demonstram recursos.  
   

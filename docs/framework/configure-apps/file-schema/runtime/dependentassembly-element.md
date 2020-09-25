@@ -9,14 +9,15 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-ms.openlocfilehash: 2de8c752867d00708173d11d1851f415a2e8518d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6a924b1998651c923c64429029a118dd1e9ede69
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154199"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198997"
 ---
 # <a name="dependentassembly-element"></a>Elemento \<dependentAssembly>
+
 Encapsula local do assembly e política de associação para cada assembly. Use um `dependentAssembly` elemento para cada assembly.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,9 +33,11 @@ Encapsula local do assembly e política de associação para cada assembly. Use 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
+
  Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -55,6 +58,7 @@ Encapsula local do assembly e política de associação para cada assembly. Use 
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como encapsular informações de assembly para dois assemblies.  
   
 ```xml  
@@ -78,8 +82,8 @@ Encapsula local do assembly e política de associação para cada assembly. Use 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Esquema de configurações do runtime](index.md)
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema do arquivo de configuração](../index.md)
 - [Redirecionando versões de assembly](../../redirect-assembly-versions.md)

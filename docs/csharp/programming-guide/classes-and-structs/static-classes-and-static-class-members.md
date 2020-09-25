@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 019b36a328d4e9fb01b112ec79d8d8e0548142f7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cbfe4b63dc27cf0a0b6aad87c4f011151bacd4e5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541871"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91199010"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Classes static e membros de classes static (Guia de Programação em C#)
 
@@ -58,11 +58,13 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Classes estáticas são lacradas e, portanto, não podem ser herdadas. Elas não podem herdar de qualquer classe, exceto por <xref:System.Object>. Classes estáticas não podem conter um construtor de instância. No entanto, eles podem conter um construtor estático. Classes não estáticas também devem definir um construtor estático se a classe contiver membros estáticos que exigem inicialização não trivial. Para obter mais informações, consulte [Construtores estáticos](./static-constructors.md).  
   
 ## <a name="example"></a>Exemplo  
+
  Temos aqui um exemplo de uma classe estática que contém dois métodos que convertem a temperatura de Celsius em Fahrenheit e de Fahrenheit em Celsius:  
   
  [!code-csharp[csProgGuideObjects#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#31)]  
   
 ## <a name="static-members"></a>Membros Estáticos  
+
  Uma classe não estática não pode conter métodos, campos, propriedades ou eventos estáticos. O membro estático pode ser chamado em uma classe, mesmo quando nenhuma instância da classe foi criada. O membro estático sempre é acessado pelo nome de classe, não pelo nome da instância. Existe apenas uma cópia de um membro estático, independentemente de quantas instâncias da classe forem criadas. Métodos estáticos e propriedades não podem acessar campos e eventos não estáticos em seu tipo recipiente e não podem acessar uma variável de instância de qualquer objeto, a menos que seja explicitamente passado em um parâmetro de método.  
   
  É mais comum declarar uma classe não estática com alguns membros estáticos do que declarar uma classe inteira como estática. Dois usos comuns dos campos estáticos são manter uma contagem do número de objetos que foram instanciados ou armazenar um valor que deve ser compartilhado entre todas as instâncias.  
@@ -89,7 +91,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 
 Para saber mais, confira [Classes estáticas](~/_csharplang/spec/classes.md#static-classes) e [Membros estáticos e de instância](~/_csharplang/spec/classes.md#static-and-instance-members) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação C#](../index.md)
 - [static](../../language-reference/keywords/static.md)

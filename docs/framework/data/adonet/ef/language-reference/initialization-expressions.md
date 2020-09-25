@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
-ms.openlocfilehash: 5d6656ab77f7ad0f7366a230d98b95cff5b2677b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 93f590e1c177adf541baca85a48fee5f9eb8d1d0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854437"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203625"
 ---
 # <a name="initialization-expressions"></a>Expressões de inicialização
+
 Uma expressão de inicialização inicializa um novo objeto. A maioria das expressões de inicialização são suportadas, incluindo a maioria novo C# 3,0 e Visual Basic 9,0 expressões de inicialização. Os seguintes tipos podem ser inicializados e retornado por uma consulta LINQ to Entities:  
   
 - Uma coleção de zero ou mais objetos de entidade tipados ou uma projeção de tipos complexos que são definidos no modelo conceitual.  
@@ -46,6 +47,6 @@ Uma expressão de inicialização inicializa um novo objeto. A maioria das expre
  [!code-csharp[DP L2E Conceptual Examples#TypeInitialization_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#typeinitialization_mq)]
  [!code-vb[DP L2E Conceptual Examples#TypeInitialization_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#typeinitialization_mq)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Expressões em consultas LINQ to Entities](expressions-in-linq-to-entities-queries.md)

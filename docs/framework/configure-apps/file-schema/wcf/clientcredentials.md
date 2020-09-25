@@ -2,14 +2,15 @@
 title: <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
-ms.openlocfilehash: f295fe48e194611c80b78c0c23ab3e66ea1c0b64
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6094006df24ee824c419a783ab29d7604757577c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400507"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201454"
 ---
 # \<clientCredentials>
+
 Especifica as credenciais usadas para autenticar o cliente para um serviço.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -40,6 +41,7 @@ Especifica as credenciais usadas para autenticar o cliente para um serviço.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -67,9 +69,10 @@ Especifica as credenciais usadas para autenticar o cliente para um serviço.
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica um comportamento de ponto de extremidade.|  
   
 ## <a name="remarks"></a>Comentários  
+
  As credenciais do cliente são usadas para autenticar o cliente para serviços em casos em que a autenticação mútua é necessária. Esta seção de configuração também pode ser usada para especificar certificados de serviço para cenários em que o cliente deve proteger mensagens para um serviço com o certificado do serviço.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Description.ClientCredentials>
