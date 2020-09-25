@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 0ead35559a17eb06304e6c251d2fe388ca178a30
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab74886edcc86c900c56017867a3b81c9cb7886e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552278"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176143"
 ---
 # <a name="appcontextswitchoverrides-element"></a>Elemento \<AppContextSwitchOverrides>
 
@@ -22,13 +22,14 @@ Define uma ou mais opções usadas pela classe <xref:System.AppContext> para for
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<AppContextSwitchOverrides>**
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
 
 ```xml
 <AppContextSwitchOverrides value="name1=value1[[;name2=value2];...]" />
 ```
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 ### <a name="attributes"></a>Atributos
@@ -44,6 +45,7 @@ Define uma ou mais opções usadas pela classe <xref:System.AppContext> para for
 |"nome = valor"|Um nome de opção predefinido junto com seu valor ( `true` ou `false` ). Vários pares de nome/valor de comutador são separados por ponto e vírgula (";"). Para obter uma lista de nomes de comutador predefinidos com suporte pelo .NET Framework, consulte a seção comentários.|
 
 ### <a name="child-elements"></a>Elementos filho
+
  Nenhum.
 
 ### <a name="parent-elements"></a>Elementos pai
@@ -54,13 +56,14 @@ Define uma ou mais opções usadas pela classe <xref:System.AppContext> para for
 |`runtime`|Contém informações sobre opções de inicialização do runtime.|
 
 ## <a name="remarks"></a>Comentários
+
  A partir do .NET Framework 4,6, o `<AppContextSwitchOverrides>` elemento em um arquivo de configuração permite que os chamadores de uma API determinem se seu aplicativo pode aproveitar a nova funcionalidade ou preservar a compatibilidade com versões anteriores de uma biblioteca. Por exemplo, se o comportamento de uma API tiver sido alterado entre duas versões de uma biblioteca, o `<AppContextSwitchOverrides>` elemento permitirá que os chamadores dessa API recusem o novo comportamento nas versões da biblioteca que dão suporte à nova funcionalidade. Para aplicativos que chamam APIs no .NET Framework, o `<AppContextSwitchOverrides>` elemento também pode permitir chamadores cujos aplicativos se destinam a uma versão anterior do .NET Framework para aceitar novas funcionalidades se seu aplicativo estiver em execução em uma versão do .NET Framework que inclui essa funcionalidade.
 
  O `value` atributo do `<AppContextSwitchOverrides>` elemento consiste em uma única cadeia de caracteres que consiste em um ou mais pares de nome/valor delimitados por ponto e vírgula.  Cada nome identifica uma opção de compatibilidade e seu valor correspondente é um booliano ( `true` ou `false` ) que indica se a opção está definida. Por padrão, o comutador é `false` , e as bibliotecas fornecem a nova funcionalidade. Eles só fornecem a funcionalidade anterior se a opção for definida (ou seja, seu valor for `true` ). Isso permite que as bibliotecas forneçam um novo comportamento para uma API existente, permitindo aos chamadores que dependem do comportamento anterior para recusar a nova funcionalidade.
 
 O .NET Framework dá suporte às seguintes opções:
 
-|Nome do comutador|Description|Incluída|
+|Nome do comutador|Descrição|Incluída|
 |-----------------|-----------------|----------------|
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|Controla se Windows Presentation Foundation usa um algoritmo herdado para o layout de controle. Para saber mais, confira [Mitigação: layout de WPF](../../../migration-guide/mitigation-wpf-layout.md).|.NET Framework 4.6|
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|Controla se o algoritmo padrão usado para assinar partes de um pacote por PackageDigitalSignatureManager é SHA1 ou SHA256.<br>Em razão de problemas de colisão com SHA1, a Microsoft recomenda SHA256.|.NET Framework 4.7.1|

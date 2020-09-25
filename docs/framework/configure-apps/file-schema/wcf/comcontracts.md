@@ -2,17 +2,19 @@
 title: <comContracts>
 ms.date: 03/30/2017
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
-ms.openlocfilehash: d061d48374a8745dc61e1ca156e4fcbbccee5ef7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 404cc66ce423ba947c2817b56bebb4daf341ef0b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69919482"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176039"
 ---
 # \<comContracts>
+
 A `comContracts` seção de configuração contém elementos que permitem especificar várias propriedades de um contrato de serviço de integração com+.  
   
 ## <a name="specifying-namespace-and-contract"></a>Especificando o namespace e o contrato  
+
  Os contratos do serviço de integração COM+ estão atualmente restritos ao `http://tempuri.org` namespace e o nome do contrato é derivado da interface com de suporte. No entanto, você pode especificar alternativas usando a `comContracts` seção no arquivo de configuração.  
   
  Por exemplo, você pode usar a configuração a seguir para especificar o namespace e o nome do contrato do contrato de serviço, bem como uma opção para impor o uso em associações de sessão.  
@@ -42,4 +44,4 @@ A `comContracts` seção de configuração contém elementos que permitem especi
 - [\<userDefinedType>](userdefinedtype.md)
 - [\<comContract>](comcontract.md)
 - [Integração com aplicativos COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Como configurar configurações de serviço de COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Como: definir configurações de serviço de COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

@@ -2,14 +2,15 @@
 title: <transport> de <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: c563339e4f854cc4e60f92dd5b8c0b39112dc000
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d575b7e282775e2e2c498ac94bb54a563b8d125e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736113"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201389"
 ---
 # <a name="transport-of-basichttpbinding"></a>\<transport> de \<basicHttpBinding>
+
 Define as propriedades que controlam os parâmetros de autenticação para o transporte HTTP.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -41,6 +42,7 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -75,6 +77,7 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
 |Certificado|Executa a autenticação de cliente usando um certificado. Essa opção só funcionará se o `Mode` atributo do `security` elemento pai estiver definido como transporte e não funcionará se estiver definido como TransportCredentialOnly.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -84,6 +87,7 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
 |[\<security>](security-of-basichttpbinding.md)|Define os recursos de segurança para o [\<basicHttpBinding>](basichttpbinding.md) .|  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir demonstra o uso de segurança de transporte SSL com a associação básica. Por padrão, a associação básica dá suporte à comunicação HTTP.  
   
 ```xml  
@@ -118,7 +122,7 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>

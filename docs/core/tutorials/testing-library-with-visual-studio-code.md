@@ -2,12 +2,12 @@
 title: Testar um .NET Standard biblioteca de classes com o .NET Core usando Visual Studio Code
 description: Crie um projeto de teste de unidade para uma biblioteca de classes do .NET Core. Verifique se uma biblioteca de classes do .NET Core funciona corretamente com testes de unidade.
 ms.date: 06/08/2020
-ms.openlocfilehash: f49974e1b918424ae5b5d7f3969f52c371e37154
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 6ae8f6637319cd2c8c24f3e673fb6094f36b9f2f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359162"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180446"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>Tutorial: testar uma biblioteca de classes .NET Standard com o .NET Core usando Visual Studio Code
 
@@ -21,7 +21,7 @@ Este tutorial mostra como automatizar o teste de unidade adicionando um projeto 
 
 As unidade de teste fornecem testes de software automatizados durante o desenvolvimento e a publicação. A estrutura de teste que você usa neste tutorial é MSTest. [MSTest](https://github.com/Microsoft/testfx-docs) é uma das três estruturas de teste que você pode escolher. Os outros são [xUnit](https://xunit.net/) e [NUnit](https://nunit.org/).
 
-1. Iniciar o Visual Studio Code.
+1. Inicie o Visual Studio Code.
 
 1. Abra a `ClassLibraryProjects` solução que você criou em [criar uma .net Standard biblioteca usando Visual Studio Code](library-with-visual-studio-code.md).
 
@@ -102,7 +102,7 @@ Para criar os métodos de teste:
 
    O teste de caracteres maiúsculos no `TestStartsWithUpper` método inclui a letra maiúscula grega alfa (u + 0391) e a letra maiúscula cirílica em (u + 041C). O teste de caracteres minúsculos no `TestDoesNotStartWithUpper` método inclui a letra grega pequena alfa (u + 03B1) e a letra cirílica minúscula Ghe (u + 0433).
 
-1. Salve suas alterações.
+1. Salve as alterações.
 
 1. Execute os testes:
 
@@ -120,7 +120,7 @@ Para criar os métodos de teste:
    Test Run Successful.
    Total tests: 3
         Passed: 3
-   Total time: 5.1116 Seconds
+    Total time: 5.1116 Seconds
    ```
 
 ## <a name="handle-test-failures"></a>Lidar com falhas de teste
@@ -150,14 +150,14 @@ Se você estiver fazendo o TDD (desenvolvimento controlado por teste), você esc
      Error Message:
       Assert.IsFalse failed. Expected for 'Error': false; Actual: True
      Stack Trace:
-     at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper()
-       in C:\Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
+        at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper() in C:\
+   Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
 
    Test Run Failed.
    Total tests: 3
         Passed: 2
         Failed: 1
-   Total time: 1.7825 Seconds
+    Total time: 1.7825 Seconds
    ```
 
 1. Remova a cadeia de caracteres "Error" que você adicionou na etapa 1. Execute novamente o teste e os testes são aprovados.
@@ -173,6 +173,12 @@ Agora que todos os testes passaram durante a execução da compilação de depur
    ```
 
    Os testes são aprovados.
+
+## <a name="debug-tests"></a>Depurar testes
+
+Se você estiver usando Visual Studio Code como o IDE, poderá usar o mesmo processo mostrado em [depurar um aplicativo de console do .NET Core usando Visual Studio Code](debugging-with-visual-studio-code.md) para depurar o código usando o projeto de teste de unidade. Em vez de iniciar o projeto de aplicativo de *demonstração* , abra *StringLibraryTest/UnitTest1. cs*e selecione **executar todos os testes** entre as linhas 7 e 8. Se você não conseguir encontrá-lo, pressione <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> para abrir a paleta de comandos e digite **recarregar janela**.
+
+Visual Studio Code inicia o projeto de teste com o depurador anexado. A execução será interrompida em qualquer ponto de interrupção que você adicionou ao projeto de teste ou ao código de biblioteca subjacente.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 

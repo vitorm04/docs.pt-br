@@ -5,22 +5,25 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: 49e5ad2e6ae3dc50a0f48fcc3df2f7ec49ed7f88
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b921e78c1b3d3d90d9ac8b4a459df496cf6d14dd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544395"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180576"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Usando um serviço de dados em um aplicativo cliente (WCF Data Services)
+
 Você pode acessar um serviço que expõe um feed Protocolo Open Data (OData) fornecendo um URI para um navegador da Web. O URI fornece o endereço de um recurso e, em seguida, são enviadas a esses endereços mensagens de solicitação para acessar ou alterar os dados subjacentes que o recurso representa. O navegador emite um comando HTTP GET e retorna o recurso solicitado como um feed OData. Para obter mais informações, consulte [acessando o serviço em um navegador da Web](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
   
  Embora um navegador da Web possa ser útil para testar se um serviço OData retorna os dados esperados, os serviços OData de produção que permitem que você também crie, atualize e exclua dados são geralmente acessados pelo código do aplicativo ou por linguagens de script em uma página da Web. Este tópico fornece uma visão geral de como acessar feeds OData de um aplicativo cliente.  
   
 ## <a name="accessing-and-changing-data-using-rest-semantics"></a>Acessando e alterando dados usando a semântica REST  
+
  O OData ajuda a garantir a interoperabilidade entre serviços que expõem feeds OData e aplicativos que consomem feeds OData. Os aplicativos acessam e alteram dados em um serviço baseado em OData enviando mensagens de solicitação de uma ação HTTP específica e com um URI que resolve um recurso de entidade no qual a ação deve ser executada. Quando os dados de entidade devem ser fornecidos, eles são fornecidos como uma carga especificamente codificada no corpo da mensagem.  
   
 ### <a name="http-actions"></a>Ações HTTP  
+
  O OData dá suporte às seguintes ações HTTP para executar operações de criação, leitura, atualização e exclusão nos dados da entidade que o recurso endereçado representa:  
   
 - **Http Get** -essa é a ação padrão quando um recurso é acessado de um navegador. Nenhuma carga é fornecida na mensagem de solicitação, e é retornado um método de resposta com uma carga que contém os dados solicitados.  
@@ -36,6 +39,7 @@ Você pode acessar um serviço que expõe um feed Protocolo Open Data (OData) fo
  Para obter mais informações, consulte [OData: Operations](https://www.odata.org/documentation/odata-version-2-0/operations/).
   
 ### <a name="payload-formats"></a>Formatos de carga  
+
  Para uma solicitação HTTP PUT, HTTP POST ou HTTP MERGE, a carga de uma mensagem de solicitação contém os dados de entidade que você envia ao serviço de dados. O conteúdo da carga depende do formato de dados da mensagem. As respostas HTTP a todas as ações, exceto DELETE, também contêm tal carga. O OData dá suporte aos seguintes formatos de carga para acessar e alterar dados com o serviço:  
   
 - **Atom** – uma codificação de mensagem baseada em XML que é definida pelo OData como uma extensão para o protocolo de publicação Atom (AtomPub) para habilitar a troca de dados por http para Web feeds, podcasts, wikis e funcionalidade de Internet baseada em XML. Para obter mais informações, consulte [OData: Atom Format](https://www.odata.org/documentation/odata-version-2-0/atom-format/).
@@ -45,13 +49,14 @@ Você pode acessar um serviço que expõe um feed Protocolo Open Data (OData) fo
  O formato de mensagem da carga é solicitado no cabeçalho da mensagem de solicitação HTTP. Para obter mais informações, consulte [OData: Operations](https://www.odata.org/documentation/odata-version-2-0/operations/).
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>Acessando e alterando dados usando bibliotecas de cliente  
+
  O WCF Data Services inclui bibliotecas de cliente que permitem consumir com mais facilidade um feed OData de aplicativos cliente baseados em .NET Framework e Silverlight. Essas bibliotecas simplificam o envio e o recebimento de mensagens HTTP. Elas também convertem a carga da mensagem em objetos CLR que representam dados de entidade. As bibliotecas de cliente apresentam as duas classes principais <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601>. Essas classes permitem que você consulte um serviço de dados e depois trabalhe com os dados de entidade retornados como objetos CLR. Para obter mais informações, consulte [WCF Data Services biblioteca de cliente](wcf-data-services-client-library.md) e [WCF Data Services (Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)).  
   
  Você pode usar a caixa de diálogo **Adicionar referência de serviço** no Visual Studio para adicionar uma referência a um serviço de dados. Essa ferramenta solicita os metadados de serviço de um serviço de dados referenciado e gera o <xref:System.Data.Services.Client.DataServiceContext> que representa um serviço de dados, além de gerar as classes de serviço de dados cliente que representam entidades. Para obter mais informações, consulte [gerando a biblioteca de cliente do serviço de dados](generating-the-data-service-client-library-wcf-data-services.md).  
   
  Há bibliotecas de programação disponíveis que você pode usar para consumir um feed OData em outros tipos de aplicativos cliente. Para obter mais informações sobre o SDK do OData, consulte [SDK do OData – código de exemplo](https://www.odata.org/ecosystem/#sdk).
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Acessar recursos do serviço de dados](accessing-data-service-resources-wcf-data-services.md)
 - [Início rápido](quickstart-wcf-data-services.md)

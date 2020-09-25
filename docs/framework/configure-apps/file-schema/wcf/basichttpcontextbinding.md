@@ -2,14 +2,15 @@
 title: <basicHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
-ms.openlocfilehash: d7d825e4fb17c3d864f0ac40daaee9d492c7f8e8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 038841c2710466e8cddd0909804b01af6f03b2c1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557652"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201506"
 ---
 # \<basicHttpContextBinding>
+
 Especificar uma associação que fornece contexto para o <xref:System.ServiceModel.BasicHttpBinding> a ser trocado habilitando cookies http como o mecanismo de troca.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ Especificar uma associação que fornece contexto para o <xref:System.ServiceMod
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<basicHttpContextBinding>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <basicHttpContextBinding>
@@ -54,6 +55,7 @@ Especificar uma associação que fornece contexto para o <xref:System.ServiceMod
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -92,9 +94,10 @@ Especificar uma associação que fornece contexto para o <xref:System.ServiceMod
 |[\<bindings>](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Esse elemento de associação fornece um nível de proteção e um mecanismo de troca como parte do contexto para um `BasicHttpBinding` .  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.BasicHttpContextBinding>

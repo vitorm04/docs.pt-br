@@ -2,14 +2,15 @@
 title: TRATAR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 566ac875aec17e4d0aa22ec1962053aeb6ae2a2e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bb41c0fed944ce4db11878b9213a62c6f851418e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558843"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201038"
 ---
 # <a name="treat-entity-sql"></a>TRATAR (Entity SQL)
+
 Trata um objeto de um tipo base específico como um objeto do tipo derivado especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -19,6 +20,7 @@ TREAT ( expression as type)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `expression`  
  Qualquer expressão de consulta válida que retorna uma entidade.  
   
@@ -32,9 +34,11 @@ TREAT ( expression as type)
 > A expressão especificada deve ser um subtipo do tipo de dados especificado, ou o tipo de dados deve ser um subtipo da expressão.  
   
 ## <a name="return-value"></a>Valor Retornado  
+
  Um valor de tipo de dados especificado.  
   
 ## <a name="remarks"></a>Comentários  
+
  O DELEITE é usado para executar upcasting entre classes relacionadas. Por exemplo, se `Employee` deriva de `Person` e p é do tipo `Person`, upcasts de `TREAT(p AS NamespaceName.Employee)` uma instância genérica de `Person` a `Employee`; isto é, permite que você trate p como `Employee`.  
   
  O DELEITE é usado em cenários de herança onde você pode fazer uma consulta como o seguinte:  
@@ -62,11 +66,12 @@ WHERE p IS OF (NamespaceName.Employee)
 |`TREAT (RowType AS RowType)`|Gerencie uma exceção.|  
   
 ## <a name="example"></a>Exemplo  
+
  A seguinte consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usa o operador de DELEITE para converter um objeto do traço de tipo a uma coleção de objetos do tipo OnsiteCourse. A consulta é baseada no [modelo escolar](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)).  
   
  [!code-sql[DP EntityServices Concepts#TREAT_ISOF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#treat_isof)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Referência de Entity SQL](entity-sql-reference.md)
 - [Tipos estruturados que permitem valor nulo](nullable-structured-types-entity-sql.md)

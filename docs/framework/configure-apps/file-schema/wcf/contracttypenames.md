@@ -2,14 +2,15 @@
 title: <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 5ec5efc6-87f8-4160-9be0-dcd2e01df3df
-ms.openlocfilehash: c67e5b9e82b96e27ce73512680bd4236b26ef4dd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f1626983d34a7b66ee23c3a2d9a3c2107812e136
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855445"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175974"
 ---
 # \<contractTypeNames>
+
 Uma seção de configuração que especifica uma lista de nomes de tipo de contrato, que são os nomes de contrato dos serviços que estão sendo pesquisados e os critérios normalmente usados ao pesquisar um serviço. Se mais de um nome de contrato for especificado, somente os pontos de extremidade de serviço correspondentes a todos os contratos serão respondidos. Observe que no Windows Communication Foundation (WCF), um ponto de extremidade só pode dar suporte a um contrato.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -49,9 +50,11 @@ Uma seção de configuração que especifica uma lista de nomes de tipo de contr
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
+
  Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  

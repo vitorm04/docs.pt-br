@@ -2,14 +2,15 @@
 title: Considerações de implantação (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-ms.openlocfilehash: bdc7a6211681c78d81ba750844611b35e779abd2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 034fb48050fb0e6a9aabf6c183f8721f0a7115e4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542686"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181122"
 ---
 # <a name="deployment-considerations-entity-framework"></a>Considerações de implantação (Entity Framework)
+
 Este tópico fornece informações sobre como implantar aplicativos que usam o ADO.NET Entity Framework para acesso a dados. Para obter mais informações sobre o Entity Framework, consulte [introdução](getting-started.md).  
   
  Entity Framework fornece um conjunto de ferramentas que se integram com e facilitam ficar no Visual Studio. Para obter mais informações, consulte [ADO.NET modelo de dados de entidade Tools](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)). Este tópico não descreve como usar tecnologias específicas para implantar um aplicativo baseado no objeto.  
@@ -28,7 +29,7 @@ Este tópico fornece informações sobre como implantar aplicativos que usam o A
   
 - Porque Entity Framework é um componente.NET Framework, pode ser redistribuído com o seu aplicativo como permitido pelo contrato de licença do .NET Framework.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [ADO.NET Entity Framework](index.md)
 - [Considerações de desenvolvimento e implantação](development-and-deployment-considerations.md)

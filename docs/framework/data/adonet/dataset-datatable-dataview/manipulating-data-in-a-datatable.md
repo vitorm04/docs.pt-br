@@ -2,17 +2,19 @@
 title: Manipulando dados em uma DataTable
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 421680a4f39dd68c09dfe20e62f2eec86259b9f0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3f98832b4aa9361346d06830f2f004fa374222ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786157"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201324"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Manipulando dados em uma DataTable
+
 Após criar i, <xref:System.Data.DataTable> em um <xref:System.Data.DataSet>, você pode executar as mesmas atividades que faria ao usar uma tabela em um banco de dados. Você pode adicionar, exibir, editar e excluir dados na tabela; você pode monitorar erros e eventos; e pode consultar os dados na tabela. Ao modificar dados em uma **DataTable**, você também pode verificar se as alterações são precisas e determinar se as alterações devem ser aceitas ou rejeitadas programaticamente.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Adicionando dados a um DataTable](adding-data-to-a-datatable.md)  
  Explica como criar novas linhas e adicioná-las a uma tabela.  
   
@@ -25,7 +27,7 @@ Após criar i, <xref:System.Data.DataTable> em um <xref:System.Data.DataSet>, vo
  [Edições de DataTable](datatable-edits.md)  
  Explica como alterar os dados em uma linha, incluindo suspensão das alterações em uma linha até que as alterações propostas sejam verificadas e aceitas.  
   
- [Estados e versões de linha](row-states-and-row-versions.md)  
+ [Estados de linha e versões de linha](row-states-and-row-versions.md)  
  Fornece informações sobre os estados diferentes de uma linha.  
   
  [Exclusão de DataRow](datarow-deletion.md)  
@@ -37,8 +39,8 @@ Após criar i, <xref:System.Data.DataTable> em um <xref:System.Data.DataSet>, vo
  [AcceptChanges e RejectChanges](acceptchanges-and-rejectchanges.md)  
  Explica como aceitar ou rejeitar alterações feitas em uma linha.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [DataTables](datatables.md)
 - [Manipulação de eventos de DataTable](handling-datatable-events.md)
-- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)
+- [Visão geral do ADO.NET](../ado-net-overview.md)
