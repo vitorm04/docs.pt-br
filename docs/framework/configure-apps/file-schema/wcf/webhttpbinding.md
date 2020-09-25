@@ -2,14 +2,15 @@
 title: <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: e5a0e482cb391cf1440c9392bcd3a39a18955c6b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 26e0c707422518fbdaf289faa64bb73875f62a58
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551758"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177989"
 ---
 # \<webHttpBinding>
+
 Define um elemento de associação que é usado para configurar pontos de extremidade para serviços da Web Windows Communication Foundation (WCF) que respondem a solicitações HTTP em vez de mensagens SOAP.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ Define um elemento de associação que é usado para configurar pontos de extrem
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webHttpBinding>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <webHttpBinding>
@@ -51,6 +52,7 @@ Define um elemento de associação que é usado para configurar pontos de extrem
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
@@ -87,11 +89,12 @@ Define um elemento de associação que é usado para configurar pontos de extrem
 |[\<bindings>](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O modelo de programação Web do WCF permite que os desenvolvedores exponham os serviços Web WCF por meio de solicitações HTTP que usam mensagens de estilo "de" XML antigo "(POX) em vez de mensagens baseadas em SOAP. Para que os clientes se comuniquem com um serviço usando solicitações HTTP, um ponto de extremidade do serviço deve ser configurado com o [\<webHttpBinding>](webhttpbinding.md) que está \<WebHttpBehavior> anexado a ele.  
   
  Suporte no WCF para distribuição e ASP. A integração do AJAX é criada com base no modelo de programação da Web. Para obter mais informações sobre o modelo, consulte [modelo de programação do WCF Web http](../../../wcf/feature-details/wcf-web-http-programming-model.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Configuration.WebHttpBindingElement>

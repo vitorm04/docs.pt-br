@@ -1,15 +1,16 @@
 ---
-title: <windows>do <clientCredentials> elemento
+title: <windows> do <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: 61ca99213f0b83a5af5df0184a8c1de405366288
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 115e1822659c04ee37a7364f7b25616b52dc5efe
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399124"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177820"
 ---
-# <a name="windows-of-clientcredentials-element"></a>\<windows>do \<clientCredentials> elemento
+# <a name="windows-of-clientcredentials-element"></a>\<windows> do \<clientCredentials> elemento
+
 Especifica as configurações para uma credencial do Windows a ser usada para representar o cliente.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,6 +29,7 @@ Especifica as configurações para uma credencial do Windows a ser usada para re
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -38,6 +40,7 @@ Especifica as configurações para uma credencial do Windows a ser usada para re
 |`allowNtlm`|Definir essa propriedade como `true` permite que a autenticação faça downgrade para NTLM se o Kerberos não estiver disponível.<br /><br /> Definir essa propriedade como `false` faz com que o Windows Communication Foundation (WCF) faça um melhor esforço para gerar uma exceção se o NTLM for usado. Observe que a definição dessa propriedade como `false` pode não impedir que credenciais NTLM sejam enviadas pela conexão.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -46,7 +49,7 @@ Especifica as configurações para uma credencial do Windows a ser usada para re
 |-------------|-----------------|  
 |[\<clientCredentials>](clientcredentials.md)|Especifica as credenciais usadas para autenticar o cliente para o serviço.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.WindowsClientElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>

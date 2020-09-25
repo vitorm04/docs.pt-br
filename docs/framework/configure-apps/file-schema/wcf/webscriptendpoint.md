@@ -2,14 +2,15 @@
 title: <webScriptEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 85cb5ecf-351b-45f3-aa29-aa2e4b64bcdd
-ms.openlocfilehash: b4bc33cf8ff4e703973efe7df49e9f1d2189302e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5e3ca9c4a43432d7f5da6d8816b6a2b984851050
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854806"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177833"
 ---
 # \<webScriptEndpoint>
+
 Este elemento de configuração define um ponto de extremidade padrão com uma [\<webHttpBinding>](webhttpbinding.md) Associação fixa que adiciona automaticamente o [\<enableWebScript>](enablewebscript.md) comportamento. Use esse ponto de extremidade quando estiver escrevendo um serviço que é chamado de um aplicativo ASP.NET AJAX.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,6 +31,7 @@ Este elemento de configuração define um ponto de extremidade padrão com uma [
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -39,6 +41,7 @@ Este elemento de configuração define um ponto de extremidade padrão com uma [
 |WebEndpointType|Uma cadeia de caracteres que especifica o tipo do ponto de extremidade.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  

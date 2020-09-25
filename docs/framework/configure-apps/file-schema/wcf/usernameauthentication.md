@@ -2,14 +2,15 @@
 title: <userNameAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: dc5c00a2204646863ae2570bb97b8d70e22a72d4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 30fd78d6c56e8b22e0e744a38f18ac076dc70162
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399182"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178028"
 ---
 # \<userNameAuthentication>
+
 Especifica as credenciais de um serviço com base no nome de usuário e senha.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,6 +34,7 @@ Especifica as credenciais de um serviço com base no nome de usuário e senha.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -48,6 +50,7 @@ Especifica as credenciais de um serviço com base no nome de usuário e senha.
 |`userNamePasswordValidationMode`|Especifica a maneira como a senha de nome de usuário é validada. Os valores válidos são:<br /><br /> -Windows<br />-MembershipProvider<br />-Personalizado<br /><br /> O padrão é Windows. Esse atributo é do tipo <xref:System.ServiceModel.Security.UserNamePasswordValidationMode> .|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -57,6 +60,7 @@ Especifica as credenciais de um serviço com base no nome de usuário e senha.
 |[\<serviceCredentials>](servicecredentials.md)|Especifica a credencial a ser usada na autenticação do serviço e as configurações relacionadas à validação de credenciais do cliente.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Se nenhuma das associações usadas por um serviço estiver configurada para autenticação baseada em nome de usuário/senha, os atributos desse elemento serão ignorados. Isso inclui `customUserNamePasswordValidatorType` , `includeWindowsGroups` , `membershipProviderName` e `userNamePasswordValidationMode` .  
   
  Se nenhuma das associações usadas por um serviço estiver configurada para usar a autenticação do Windows para nome de usuário/senha, as configurações relacionadas ao cache de tokens de logon serão ignoradas. Isso inclui o `cacheLogonTokenLifetime` , o `cacheLogonTokens` e o `maxCacheLogonTokens` .  

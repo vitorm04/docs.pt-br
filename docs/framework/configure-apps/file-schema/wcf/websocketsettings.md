@@ -2,14 +2,15 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6cfddfb9ebfc7c3447af977e14738baabebc8fe9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732558"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177838"
 ---
 # \<webSocketSettings>
+
 Um elemento de configuração usado para especificar as configurações de soquete da Web.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,6 +38,7 @@ Um elemento de configuração usado para especificar as configurações de soque
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -61,6 +63,7 @@ Um elemento de configuração usado para especificar as configurações de soque
 |Nunca|Nunca use o protocolo de soquete da Web.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -70,6 +73,7 @@ Um elemento de configuração usado para especificar as configurações de soque
 |\<netHttpBinding>|Especifica o NetHttpBinding|  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como usar o elemento \<webSocketSettings>.  
   
 ```xml  
@@ -87,7 +91,7 @@ Um elemento de configuração usado para especificar as configurações de soque
 </netHttpBinding>
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>

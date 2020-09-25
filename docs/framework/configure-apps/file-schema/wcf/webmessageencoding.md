@@ -2,14 +2,15 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: 1cdce48f51b25732c256d3c867f1bba801ec4d8c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b250b64e1f073e00e4047ab6931a00d0b93b55b5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545448"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177872"
 ---
 # \<webMessageEncoding>
+
 Habilita XML de texto simples, codificações mensagem JSON (JavaScript Object Notation) e conteúdo binário "bruto" para ser lido e gravado quando usado em uma associação WCF (Windows Communication Foundation).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Habilita XML de texto simples, codificações mensagem JSON (JavaScript Object N
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webMessageEncoding>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <webMessageEncoding maxReadPoolSize="Integer"
@@ -28,6 +29,7 @@ Habilita XML de texto simples, codificações mensagem JSON (JavaScript Object N
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -51,6 +53,7 @@ Habilita XML de texto simples, codificações mensagem JSON (JavaScript Object N
 |[\<binding>](bindings.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
+
  A codificação é o processo de transformar uma mensagem em uma sequência de bytes. A decodificação é o processo reverso. Esses processos exigem a especificação de uma codificação de caracteres.  
   
  O `webMessageEncoding` elemento funciona delegando a uma série de codificadores internos para manipular as codificações XML e JSON de texto sem formatação e dados binários "brutos". Essa delegação é feita por um codificador de mensagem composta.  

@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-ms.openlocfilehash: 3e32539900893297d2bac232138f9940a8ab100b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 114543e43306e4195f92ca625e894a532084be6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557639"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177768"
 ---
 # \<wsDualHttpBinding>
+
 Define uma associação segura, confiável e interoperável adequada para contratos de serviço duplex ou comunicação por meio de intermediários SOAP.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Define uma associação segura, confiável e interoperável adequada para contra
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<wsDualHttpBinding>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <wsDualHttpBinding>
@@ -55,6 +56,7 @@ Define uma associação segura, confiável e interoperável adequada para contra
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
@@ -92,6 +94,7 @@ Define uma associação segura, confiável e interoperável adequada para contra
 |[\<bindings>](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O `WSDualHttpBinding` fornece o mesmo suporte para protocolos de serviço Web como o `WSHttpBinding` , mas para uso com contratos duplex. `WSDualHttpBinding` dá suporte apenas à segurança SOAP e requer mensagens confiáveis. Essa associação requer que o cliente tenha um URI público que forneça um ponto de extremidade de retorno de chamada para o serviço. Isso é fornecido pelo `clientBaseAddress` atributo. Uma associação dupla expõe o endereço IP do cliente para o serviço. O cliente deve usar a segurança para garantir que ele se conecte apenas aos serviços que confia.  
   
  Essa associação pode ser usada para se comunicar de forma confiável por meio de um ou mais intermediários SOAP.  

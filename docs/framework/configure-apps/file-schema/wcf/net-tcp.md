@@ -2,14 +2,15 @@
 title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 4a3a17655f5469fe84c0b684ebdac9848bbfba84
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 12709d58d9192825598b15a50baa10a54450226e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70397690"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178067"
 ---
 # \<net.tcp>
+
 Especifica as definições de configuração para a rede. O serviço de compartilhamento de porta TCP, que permite que vários processos compartilhem a mesma porta TCP.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -43,10 +44,12 @@ Especifica as definições de configuração para a rede. O serviço de comparti
 </configuration>
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>Tipo  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -69,12 +72,13 @@ Especifica as definições de configuração para a rede. O serviço de comparti
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](system-servicemodel-activation.md)|Contém definições de configuração para o processo de ouvinte SMSvcHost. exe.|  
+|[\<system.serviceModel.activation>](system-servicemodel-activation.md)|Contém definições de configuração para o processo de ouvinte SMSvcHost.exe.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Para obter mais informações sobre compartilhamento de porta, consulte [net. TCP Port Sharing](../../../wcf/feature-details/net-tcp-port-sharing.md). Para entender como configurar o serviço de compartilhamento de porta, consulte [Configurando o serviço de compartilhamento de porta Net. TCP](../../../wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>
 - [Compartilhamento de porta Net.TCP](../../../wcf/feature-details/net-tcp-port-sharing.md)

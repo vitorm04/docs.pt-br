@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-ms.openlocfilehash: c537fa808fc6ba4c740e71bfd70fe9cd1f3bd31a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e29d2404d6d593b9a5b905206af3cdd3bc1a3e51
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785565"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177586"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChanges e RejectChanges
-Depois de verificar a precisão das alterações feitas nos dados em um <xref:System.Data.DataTable>, você pode aceitar as alterações usando o <xref:System.Data.DataRow.AcceptChanges%2A> método do <xref:System.Data.DataRow>, <xref:System.Data.DataTable>ou <xref:System.Data.DataSet>, que definirá os valores da linha **atual** como oOs valores originais e definirão a propriedade **RowState** como **inalterado**. Aceitar ou rejeitar alterações limpa todas as informações de linhas de **erro** e define a propriedade **HasErrors** como **false**. Aceitar ou rejeitar alterações também pode afetar a atualização de dados na fonte de dados. Para obter mais informações, consulte [Atualizando fontes de dados com DataAdapters](../updating-data-sources-with-dataadapters.md).  
+
+Depois de verificar a precisão das alterações feitas nos dados em um <xref:System.Data.DataTable> , você pode aceitar as alterações usando o <xref:System.Data.DataRow.AcceptChanges%2A> método de <xref:System.Data.DataRow> , <xref:System.Data.DataTable> ou <xref:System.Data.DataSet> , que definirá os valores de linha **atuais** como os valores **originais** e definirá a propriedade **RowState** como **inalterado**. Aceitar ou rejeitar alterações limpa todas as informações de linhas de **erro** e define a propriedade **HasErrors** como **false**. Aceitar ou rejeitar alterações também pode afetar a atualização de dados na fonte de dados. Para obter mais informações, consulte [Atualizando fontes de dados com DataAdapters](../updating-data-sources-with-dataadapters.md).  
   
- Se houver restrições de chave estrangeira na **DataTable**, as alterações aceitas ou rejeitadas usando **AcceptChanges** e **RejectChanges** serão propagadas para as linhas filho da **DataRow** de acordo com o  **ForeignKeyConstraint. AcceptRejectRule**. Para obter mais informações, consulte as [restrições de DataTable](datatable-constraints.md).  
+ Se houver restrições de chave estrangeira na **DataTable**, as alterações aceitas ou rejeitadas usando **AcceptChanges** e **RejectChanges** serão propagadas para as linhas filho da **DataRow** de acordo com o **ForeignKeyConstraint. AcceptRejectRule**. Para obter mais informações, consulte as [restrições de DataTable](datatable-constraints.md).  
   
  O exemplo a seguir verifica as linhas com erros, resolve os erros quando aplicável e rejeita as linhas em que o erro não pode ser resolvido. Observe que, para erros resolvidos, o valor de **Usererror** é redefinido como uma cadeia de caracteres vazia, fazendo com que a propriedade **HasErrors** seja definida como **false**. Quando todas as linhas com erros tiverem sido resolvidas ou rejeitadas, **AcceptChanges** será chamado para aceitar todas as alterações de toda a **DataTable**.  
   
@@ -56,10 +57,10 @@ if (workTable.HasErrors)
 workTable.AcceptChanges();  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
-- [Manipulação de dados em uma DataTable](manipulating-data-in-a-datatable.md)
-- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)
+- [Manipulando dados em uma DataTable](manipulating-data-in-a-datatable.md)
+- [Visão geral do ADO.NET](../ado-net-overview.md)
