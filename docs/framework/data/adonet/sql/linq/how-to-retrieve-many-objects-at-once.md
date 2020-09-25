@@ -5,22 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 18aff4d8-bde8-461b-9960-ccabb24e9d22
-ms.openlocfilehash: 48cdb47bec35b5315e03629d3a01657136bf7ed2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 98827989f72b7922a325a9e13b5f46cb18ac5395
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781676"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197307"
 ---
-# <a name="how-to-retrieve-many-objects-at-once"></a><span data-ttu-id="54905-102">Como: recuperar vários objetos por vez</span><span class="sxs-lookup"><span data-stu-id="54905-102">How to: Retrieve Many Objects At Once</span></span>
-<span data-ttu-id="54905-103">Você pode recuperar vários objetos em uma consulta usando <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.</span><span class="sxs-lookup"><span data-stu-id="54905-103">You can retrieve many objects in one query by using <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.</span></span>  
+# <a name="how-to-retrieve-many-objects-at-once"></a><span data-ttu-id="ac3a0-102">Como: recuperar vários objetos por vez</span><span class="sxs-lookup"><span data-stu-id="ac3a0-102">How to: Retrieve Many Objects At Once</span></span>
+
+<span data-ttu-id="ac3a0-103">Você pode recuperar vários objetos em uma consulta usando <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.</span><span class="sxs-lookup"><span data-stu-id="ac3a0-103">You can retrieve many objects in one query by using <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="54905-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="54905-104">Example</span></span>  
- <span data-ttu-id="54905-105">O código a seguir usa o método de <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> para recuperar `Customer` e objetos de `Order` .</span><span class="sxs-lookup"><span data-stu-id="54905-105">The following code uses the <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> method to retrieve both `Customer` and `Order` objects.</span></span>  
+## <a name="example"></a><span data-ttu-id="ac3a0-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="ac3a0-104">Example</span></span>  
+
+ <span data-ttu-id="ac3a0-105">O código a seguir usa o método de <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> para recuperar `Customer` e objetos de `Order` .</span><span class="sxs-lookup"><span data-stu-id="ac3a0-105">The following code uses the <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> method to retrieve both `Customer` and `Order` objects.</span></span>  
   
  [!code-csharp[DLinqQueryConcepts#9](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#9)]
  [!code-vb[DLinqQueryConcepts#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#9)]  
   
-## <a name="see-also"></a><span data-ttu-id="54905-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="54905-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ac3a0-106">Veja também</span><span class="sxs-lookup"><span data-stu-id="ac3a0-106">See also</span></span>
 
-- [<span data-ttu-id="54905-107">Conceitos de consulta</span><span class="sxs-lookup"><span data-stu-id="54905-107">Query Concepts</span></span>](query-concepts.md)
+- [<span data-ttu-id="ac3a0-107">Consulte conceitos</span><span class="sxs-lookup"><span data-stu-id="ac3a0-107">Query Concepts</span></span>](query-concepts.md)
