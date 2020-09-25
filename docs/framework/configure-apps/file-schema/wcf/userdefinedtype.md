@@ -2,14 +2,15 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 7a76e5a90fe3218bc0302501b71daa9de0b098bc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a4bbd677aba27d93389f8d2f99aadd801c86b65f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854839"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172834"
 ---
 # \<userDefinedType>
+
 Representa um tipo definido pelo usuário (UDT) que deve ser incluído no contrato de serviço.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -36,6 +37,7 @@ Representa um tipo definido pelo usuário (UDT) que deve ser incluído no contra
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -48,6 +50,7 @@ Representa um tipo definido pelo usuário (UDT) que deve ser incluído no contra
 |`TypeLibVersion`|Uma cadeia de caracteres que identifica a versão da biblioteca de tipos que define o tipo.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -57,6 +60,7 @@ Representa um tipo definido pelo usuário (UDT) que deve ser incluído no contra
 |`userDefinedTypes`|Uma coleção de elementos `userDefinedType`.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O Integration Runtime do COM+ cria serviços inspecionando a biblioteca de tipos. Quando um componente COM+ contém métodos que passam por uma variante, o sistema não pode determinar os tipos reais a serem passados antes do tempo de execução. Portanto, quando você tenta passar um UDT (tipo definido pelo usuário) em uma variante, ele falha porque não é um tipo conhecido para serialização.  
   
  Para evitar esse problema, você pode adicionar os UDTs ao arquivo de configuração para que eles possam ser incluídos como tipos conhecidos no contrato de serviço apropriado. Para fazer isso, você precisa identificar exclusivamente o UDT e os contratos, ou seja, as interfaces COM originais que o usam....  
@@ -99,4 +103,4 @@ Representa um tipo definido pelo usuário (UDT) que deve ser incluído no contra
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
 - [\<comContracts>](comcontracts.md)
 - [Integração com aplicativos COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Como configurar configurações de serviço de COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Como: definir configurações de serviço de COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

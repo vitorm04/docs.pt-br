@@ -13,14 +13,15 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 366bad1029904b3571be0a76d827ff0213d776bb
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: b1d7fbbe98aaad16454fdd71c161f2a17a2f4f2e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125742"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173250"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (opções do compilador C#)
+
 A opção **-doc** permite colocar comentários de documentação em um arquivo XML.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -30,10 +31,12 @@ A opção **-doc** permite colocar comentários de documentação em um arquivo 
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `file`  
  O arquivo de saída para XML, que é populado com os comentários nos arquivos de código-fonte da compilação.  
   
 ## <a name="remarks"></a>Comentários  
+
  Nos arquivos de código-fonte, os comentários de documentação que precedem o seguinte podem ser processados e adicionados ao arquivo XML:  
   
 - Tipos definidos pelo usuário, como [classe](../keywords/class.md), [delegado](../builtin-types/reference-types.md#the-delegate-type) ou [interface](../keywords/interface.md)  
@@ -63,5 +66,5 @@ A opção **-doc** permite colocar comentários de documentação em um arquivo 
   
 ## <a name="see-also"></a>Confira também
 
-- [Opções do compilador C#](./index.md)
+- [Opções do compilador de C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

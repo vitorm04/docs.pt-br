@@ -4,12 +4,12 @@ description: Aprenda como escrever código para examinar a estrutura de um árvo
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: ea205d42b02ea7b38c04cb70d322329cf7c1d495
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 960d72384a7e5f570fc1f94200a7d3b2179343fd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004641"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173302"
 ---
 # <a name="interpreting-expressions"></a>Interpretando Expressões
 
@@ -22,6 +22,7 @@ Esse design torna visitar todos os nós em uma árvore de expressão uma operaç
 Se o tipo de nó tiver filhos, visite os filhos recursivamente. Em cada nó filho, repita o processo usado no nó raiz: determine o tipo e, se o tipo tiver filhos, visite cada um dos filhos.
 
 ## <a name="examining-an-expression-with-no-children"></a>Examinando uma expressão sem filhos
+
 Vamos começar visitando cada nó em uma árvore de expressão simples.
 Este é o código que cria uma expressão constante e, em seguida, examina suas propriedades:
 

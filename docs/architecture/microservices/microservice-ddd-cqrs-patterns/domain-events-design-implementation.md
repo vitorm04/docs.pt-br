@@ -2,12 +2,12 @@
 title: Eventos de domínio. design e implementação
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Obtenha uma visão detalhada dos eventos de domínio, um conceito fundamental para estabelecer a comunicação entre agregações.
 ms.date: 10/08/2018
-ms.openlocfilehash: e786af9b5cd005573dcc9d08a3ccd19f25f13813
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: 651d9cb98444c0729b97f523cc3d688f0f8d51d5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738769"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173361"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de domínio: design e implementação
 
@@ -342,7 +342,7 @@ Por fim, é importante mencionar que, às vezes, convém propagar eventos entre 
 
 Conforme mencionado, use eventos de domínio para implementar explicitamente os efeitos colaterais de alterações em seu domínio. Para usar a terminologia DDD, use eventos de domínio para implementar explicitamente efeitos colaterais entre uma ou várias agregações. Além disso e para melhor escalabilidade e menor impacto em bloqueios de banco de dados, use consistência eventual entre agregações dentro do mesmo domínio.
 
-O aplicativo de referência usa [mediador](https://github.com/jbogard/MediatR) para propagar eventos de domínio de forma síncrona entre agregações em uma única transação. No entanto, você também pode usar alguma implementação de AMQP como [RabbitMQ](https://www.rabbitmq.com/) ou [barramento de serviço do Azure](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) para propagar eventos de domínio de forma assíncrona, usando a consistência eventual, mas, como mencionado acima, você precisa considerar a necessidade de ações de compensação em caso de falhas.
+O aplicativo de referência usa [mediador](https://github.com/jbogard/MediatR) para propagar eventos de domínio de forma síncrona entre agregações em uma única transação. No entanto, você também pode usar alguma implementação de AMQP como [RabbitMQ](https://www.rabbitmq.com/) ou [barramento de serviço do Azure](/azure/service-bus-messaging/service-bus-messaging-overview) para propagar eventos de domínio de forma assíncrona, usando a consistência eventual, mas, como mencionado acima, você precisa considerar a necessidade de ações de compensação em caso de falhas.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 

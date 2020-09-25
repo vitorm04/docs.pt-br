@@ -8,14 +8,15 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: afee69eb894518b1c88483e34a1d64d452019244
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3eb32b7ae643efdb19892410b669c1e7ff80e0ad
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74802132"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174154"
 ---
 # <a name="requestcaching-element-network-settings"></a>Elemento \<requestCaching> (Configurações de Rede)
+
 Controla o mecanismo de cache para solicitações de rede.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -36,6 +37,7 @@ Controla o mecanismo de cache para solicitações de rede.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -65,7 +67,7 @@ Controla o mecanismo de cache para solicitações de rede.
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[DefaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Descreve se o cache HTTP está ativo e descreve a política de cache padrão.|  
-|[\<defaultFtpCachePolicy>Elemento (configurações de rede)](defaultftpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Descreve se o cache FTP está ativo e descreve a política de cache padrão.|  
+|[\<defaultFtpCachePolicy> Elemento (configurações de rede)](defaultftpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Descreve se o cache FTP está ativo e descreve a política de cache padrão.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -74,6 +76,7 @@ Controla o mecanismo de cache para solicitações de rede.
 |[system.net](system-net-element-network-settings.md)|Contém configurações que especificam como o .NET Framework se conecta à rede.|  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como desabilitar todo o cache.  
   
 ```xml  

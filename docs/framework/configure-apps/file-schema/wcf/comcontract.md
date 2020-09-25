@@ -2,14 +2,15 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 35596f32bf0e0de9081bc0d4c33fb370c7ab708b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850033"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173777"
 ---
 # \<comContract>
+
 Especifica um contrato de serviço de integração COM+.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -45,6 +46,7 @@ Especifica um contrato de serviço de integração COM+.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -71,6 +73,7 @@ Especifica um contrato de serviço de integração COM+.
 |comContracts|Contém uma coleção de `comContract` elementos.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Os contratos do serviço de integração COM+ estão atualmente restritos ao `http://tempuri.org` namespace e o nome do contrato é derivado da interface com de suporte. No entanto, você pode especificar alternativas usando a `comContracts` seção, bem como o `comContract` elemento no arquivo de configuração. Por exemplo, você pode usar a configuração a seguir para especificar o namespace, o nome do contrato e os tipos definidos pelo usuário a serem incluídos, bem como outras configurações para um contrato de serviço.  
   
 ```xml  
@@ -96,4 +99,4 @@ Especifica um contrato de serviço de integração COM+.
 - <xref:System.ServiceModel.Configuration.ComContractElement>
 - [\<comContracts>](comcontracts.md)
 - [Integração com aplicativos COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Como configurar configurações de serviço de COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Como: definir configurações de serviço de COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

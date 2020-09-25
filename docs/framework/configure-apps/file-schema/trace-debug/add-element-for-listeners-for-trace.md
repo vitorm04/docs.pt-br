@@ -1,5 +1,5 @@
 ---
-title: <add>Elemento para <listeners> para<trace>
+title: <add> Elemento para <listeners> para <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-ms.openlocfilehash: c64673908dc9afe67d97c08f93e5b9d9533bd34d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: da5c0ccae08a32c324a1633b5a7ff7592efa6e2d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153666"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174037"
 ---
-# <a name="add-element-for-listeners-for-trace"></a>\<add>Elemento para \<listeners> para\<trace>
+# <a name="add-element-for-listeners-for-trace"></a>\<add> Elemento para \<listeners> para \<trace>
+
 Adiciona um ouvinte à coleção de **ouvintes** .  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -33,6 +34,7 @@ Adiciona um ouvinte à coleção de **ouvintes** .
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -59,6 +61,7 @@ Adiciona um ouvinte à coleção de **ouvintes** .
 |`trace`|Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.|  
   
 ## <a name="remarks"></a>Comentários  
+
  As <xref:System.Diagnostics.Debug> <xref:System.Diagnostics.Trace> classes e compartilham a mesma coleção de **ouvintes** . Se você adicionar um objeto de ouvinte à coleção em uma dessas classes, a outra classe usará o mesmo ouvinte. As classes de ouvinte derivam de <xref:System.Diagnostics.TraceListener> .  
   
  Se você não especificar o `name` atributo do ouvinte de rastreamento, o <xref:System.Diagnostics.TraceListener.Name%2A> do ouvinte de rastreamento assume como padrão uma cadeia de caracteres vazia (""). Se seu aplicativo tiver apenas um ouvinte, você poderá adicioná-lo sem especificar um nome e removê-lo especificando uma cadeia de caracteres vazia para o nome. No entanto, se seu aplicativo tiver mais de um ouvinte, você deverá especificar nomes exclusivos para cada ouvinte de rastreamento, o que permite identificar e gerenciar ouvintes de rastreamento individuais nas <xref:System.Diagnostics.Debug.Listeners%2A> <xref:System.Diagnostics.Trace.Listeners%2A> coleções e.  
@@ -83,7 +86,8 @@ Adiciona um ouvinte à coleção de **ouvintes** .
 |<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|O nome do arquivo no qual as <xref:System.Diagnostics.XmlWriterTraceListener> gravações são gravadas.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar **\<add>** elementos para adicionar os ouvintes `MyListener` e a `MyEventListener` coleção de **ouvintes** . `MyListener`Cria um arquivo chamado `MyListener.log` e grava a saída no arquivo. `MyEventListener`Cria uma entrada no log de eventos.  
+
+ O exemplo a seguir mostra como usar **\<add>** elementos para adicionar os ouvintes `MyListener` e a `MyEventListener` coleção de **ouvintes** . `MyListener` Cria um arquivo chamado `MyListener.log` e grava a saída no arquivo. `MyEventListener` Cria uma entrada no log de eventos.  
   
 ```xml  
 <configuration>  
@@ -101,7 +105,7 @@ Adiciona um ouvinte à coleção de **ouvintes** .
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>

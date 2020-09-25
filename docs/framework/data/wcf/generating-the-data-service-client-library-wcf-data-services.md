@@ -6,14 +6,15 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: a6a388f837d00d63a39212843c3fa88b28482b26
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 050a791736e90b5daf46fd272197ca21a220afb0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545801"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172613"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Gerando a biblioteca do cliente de serviço de dados (serviços de dados WCF)
+
 Um serviço de dados que implementa o Protocolo Open Data (OData) pode retornar um documento de metadados de serviço que descreve o modelo de dados exposto pelo feed OData. Para obter mais informações, consulte a seção documento de metadados de serviço no artigo [OData: Overview](https://www.odata.org/documentation/odata-version-2-0/overview/) . Você pode usar a caixa de diálogo **Adicionar referência de serviço** no Visual Studio para adicionar uma referência a um serviço baseado em OData. Quando você usa essa ferramenta para adicionar uma referência aos metadados retornados por um feed OData em um projeto cliente, ele executa as seguintes ações:  
   
 - Solicita o documento de metadados de serviço do serviço de dados e interpreta os metadados retornados.  
@@ -32,6 +33,7 @@ Um serviço de dados que implementa o Protocolo Open Data (OData) pode retornar 
  As classes de serviço de dados do cliente também podem ser geradas usando a ferramenta [DataSvcUtil.exe](wcf-data-service-client-utility-datasvcutil-exe.md) no prompt de comando. Para obter mais informações, consulte [como: gerar manualmente classes de serviço de dados do cliente](how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
   
 ## <a name="client-data-type-mapping"></a>Mapeamento de tipo de dados de cliente  
+
  Quando você usa a caixa de diálogo **Adicionar referência de serviço** no Visual Studio ou a `DataSvcUtil.exe` ferramenta para gerar classes de dados de cliente baseadas em um feed OData, os tipos de dados .NET Framework são mapeados para os tipos primitivos do modelo de dados da seguinte maneira:  
   
 |Tipo do modelo de dados|Tipo de dados do .NET Framework|  

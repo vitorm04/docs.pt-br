@@ -1,5 +1,5 @@
 ---
-title: <filter>Elemento para <add> para<sharedListeners>
+title: <filter> Elemento para <add> para <sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,14 +10,15 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 6fb52cdfa5792ab6059b60d8dbb91c107cd666ca
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e140148a342e31d6ade7def8849d8a7738301704
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153447"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173920"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<filter>Elemento para \<add> para\<sharedListeners>
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<filter> Elemento para \<add> para \<sharedListeners>
+
 Adiciona um filtro a um ouvinte na coleção `sharedListeners`.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -34,6 +35,7 @@ Adiciona um filtro a um ouvinte na coleção `sharedListeners`.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -44,6 +46,7 @@ Adiciona um filtro a um ouvinte na coleção `sharedListeners`.
 |**initializeData**|Atributo opcional.<br /><br /> A cadeia de caracteres passada para o construtor para a classe especificada.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -56,11 +59,13 @@ Adiciona um filtro a um ouvinte na coleção `sharedListeners`.
 |`add`|Adiciona um ouvinte à coleção **sharedListeners** .|  
   
 ## <a name="remarks"></a>Comentários  
+
  Se um ouvinte for definido em um `<add>` elemento do `<sharedListeners>` elemento, o filtro desse ouvinte deverá ser definido em um `<filter>` elemento que seja filho do `<add>` elemento.  
   
- Esse elemento pode ser usado no arquivo de configuração da máquina (Machine. config) e no arquivo de configuração do aplicativo.  
+ Esse elemento pode ser usado no arquivo de configuração da máquina (Machine.config) e no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como usar o `<filter>` elemento para adicionar um filtro ao ouvinte de rastreamento `console` na `sharedListeners` coleção.  
   
 ```xml  

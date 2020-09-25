@@ -8,15 +8,16 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-ms.openlocfilehash: 5588892ec75a791eda1eb043936c0af95e79354e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f0ede5f9dc19e9589afc888e7fcd01785bc1840c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153601"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174024"
 ---
 # <a name="add-element-for-sharedlisteners"></a>Elemento \<add> para \<sharedListeners>
-Adiciona um ouvinte na coleção `sharedListeners`. `sharedListeners`é uma coleção de ouvintes que qualquer [\<source>](source-element.md) ou [\<trace>](trace-element.md) pode referenciar.  Por padrão, os ouvintes na `sharedListeners` coleção não são colocados em uma `Listeners` coleção. Eles devem ser adicionados pelo nome ao [\<source>](source-element.md) ou ao [\<trace>](trace-element.md) . Não é possível obter os ouvintes na `sharedListeners` coleção no código em tempo de execução.  
+
+Adiciona um ouvinte na coleção `sharedListeners`. `sharedListeners` é uma coleção de ouvintes que qualquer [\<source>](source-element.md) ou [\<trace>](trace-element.md) pode referenciar.  Por padrão, os ouvintes na `sharedListeners` coleção não são colocados em uma `Listeners` coleção. Eles devem ser adicionados pelo nome ao [\<source>](source-element.md) ou ao [\<trace>](trace-element.md) . Não é possível obter os ouvintes na `sharedListeners` coleção no código em tempo de execução.  
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
@@ -34,6 +35,7 @@ Adiciona um ouvinte na coleção `sharedListeners`. `sharedListeners`é uma cole
 ```
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -60,6 +62,7 @@ Adiciona um ouvinte na coleção `sharedListeners`. `sharedListeners`é uma cole
 |`sharedListeners`|Uma coleção de ouvintes que qualquer elemento de origem ou de rastreamento pode referenciar.|  
   
 ## <a name="remarks"></a>Comentários  
+
  As classes de ouvinte fornecidas com o .NET Framework derivam da <xref:System.Diagnostics.TraceListener> classe. O valor para o `name` atributo é usado para adicionar o ouvinte compartilhado a uma `Listeners` coleção para um rastreamento ou uma origem de rastreamento. O valor para o `initializeData` atributo depende do tipo de ouvinte que você criar. Nem todos os ouvintes de rastreamento exigem que você especifique `initializeData` .  
   
 > [!NOTE]
@@ -77,10 +80,12 @@ Adiciona um ouvinte na coleção `sharedListeners`. `sharedListeners`é uma cole
 |<xref:System.Diagnostics.XmlWriterTraceListener>|O nome do arquivo no qual as <xref:System.Diagnostics.XmlWriterTraceListener> gravações são gravadas.|  
   
 ## <a name="configuration-file"></a>Arquivo de configuração  
- Esse elemento pode ser usado no arquivo de configuração da máquina (Machine. config) e no arquivo de configuração do aplicativo.  
+
+ Esse elemento pode ser usado no arquivo de configuração da máquina (Machine.config) e no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar `<add>` elementos para adicionar o <xref:System.Diagnostics.TextWriterTraceListener> `textListener` à `sharedListeners` coleção.   `textListener`é adicionado pelo nome à `Listeners` coleção para a origem do rastreamento `TraceSourceApp` . O `textListener` ouvinte grava a saída de rastreamento no arquivo myListener. log.  
+
+ O exemplo a seguir mostra como usar `<add>` elementos para adicionar o <xref:System.Diagnostics.TextWriterTraceListener> `textListener` à `sharedListeners` coleção.   `textListener` é adicionado pelo nome à `Listeners` coleção para a origem do rastreamento `TraceSourceApp` . O `textListener` ouvinte grava a saída de rastreamento no arquivo myListener. log.  
   
 ```xml  
 <configuration>  

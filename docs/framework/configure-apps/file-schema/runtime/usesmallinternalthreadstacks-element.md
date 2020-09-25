@@ -5,14 +5,15 @@ helpviewer_keywords:
 - UseSmallInternalThreadStacks element
 - <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
-ms.openlocfilehash: 2fd776ce8605e6dcf288dcb3852ded16638a1873
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4917b47e9e8196eabe691f74531d12308ef80311
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73114920"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174076"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>Elemento \<UseSmallInternalThreadStacks>
+
 Solicita que o Common Language Runtime (CLR) reduza o uso de memória especificando tamanhos de pilha explícitos ao criar determinados threads que ele usa internamente, em vez de usar o tamanho de pilha padrão para esses threads.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,6 +27,7 @@ Solicita que o Common Language Runtime (CLR) reduza o uso de memória especifica
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -42,6 +44,7 @@ Solicita que o Common Language Runtime (CLR) reduza o uso de memória especifica
 |false|Use o tamanho de pilha padrão. Esse é o padrão para o .NET Framework 4.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -52,6 +55,7 @@ Solicita que o Common Language Runtime (CLR) reduza o uso de memória especifica
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Esse elemento de configuração é usado para solicitar o uso reduzido de memória virtual em um processo, pois os tamanhos de thread explícitos usados pelo CLR para seus threads internos, se a solicitação for respeitada, serão menores do que o tamanho padrão.  
   
 > [!IMPORTANT]
@@ -60,6 +64,7 @@ Solicita que o Common Language Runtime (CLR) reduza o uso de memória especifica
  A especificação desse elemento de configuração compensa a confiabilidade para uso menor de memória virtual se o CLR honrar a solicitação, porque tamanhos de pilha menores poderiam potencialmente causar estouros de pilha mais prováveis.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como solicitar que o CLR use tamanhos de pilha explícitos para determinados threads que ele usa internamente.  
   
 ```xml  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: fe96673b95f48cb75d36662a680bf56a59363f9f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 19fa1561ca3acd845918d952379c5227121465b4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71697494"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174063"
 ---
 # <a name="requiredruntime-element"></a>Elemento \<requiredRuntime>
 
@@ -62,6 +62,7 @@ Nenhum.
 |`startup`|Contém o `<requiredRuntime>` elemento.|
 
 ## <a name="remarks"></a>Comentários
+
  Os aplicativos criados para dar suporte apenas à versão 1,0 do tempo de execução devem usar o `<requiredRuntime>` elemento. Os aplicativos criados usando a versão 1,1 ou posterior do tempo de execução devem usar o `<supportedRuntime>` elemento.
 
 > [!NOTE]
@@ -87,5 +88,5 @@ O exemplo a seguir mostra como especificar a versão de tempo de execução em u
 ## <a name="see-also"></a>Confira também
 
 - [Esquema de configurações de inicialização](index.md)
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema do arquivo de configuração](../index.md)
 - [Como configurar um aplicativo para dar suporte a .NET Framework 4 ou versões posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

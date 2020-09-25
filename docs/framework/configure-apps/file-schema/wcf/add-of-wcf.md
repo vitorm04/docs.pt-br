@@ -1,15 +1,16 @@
 ---
-title: <add>do WCF
+title: <add> do WCF
 ms.date: 03/30/2017
 ms.assetid: c196f6d7-77f6-4266-973c-305b2b4dd8a2
-ms.openlocfilehash: 0b21bdabc76ec4853a0f2664cdd3cead149417a1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b3b2883e711cea036ed8a61631e698a9d41fcadd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850306"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172925"
 ---
-# <a name="add-of-wcf"></a>\<add>do WCF
+# <a name="add-of-wcf"></a>\<add> do WCF
+
 Configure um participante de rastreamento que escuta para registros de rastreamento emissores de runtime diretamente e processá-los de forma que ele foi configurado. Isso inclui a escrita em uma saída específica (por exemplo, arquivo, Console, ETW), processamento/agregando os registros ou qualquer outra combinação que pode ser necessária.  
   
  Para obter mais informações sobre os participantes de rastreamento e rastreamento de fluxo de trabalho, consulte [rastreamento de fluxo de trabalho e rastreamento](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) e [participantes](../../../windows-workflow-foundation/tracking-participants.md)de rastreamento.  
@@ -33,6 +34,7 @@ Configure um participante de rastreamento que escuta para registros de rastreame
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -41,9 +43,10 @@ Configure um participante de rastreamento que escuta para registros de rastreame
 |-------------|-----------------|  
 |name|Uma cadeia de caracteres que especifica o nome de um participante de rastreamento.|  
 |profileName|Uma cadeia de caracteres que especifica o nome do perfil de rastreamento que define os registros de rastreamento o participante de rastreamento tiver assinado.|  
-|type|Uma cadeia de caracteres que especifica o tipo de um participante de rastreamento.|  
+|tipo|Uma cadeia de caracteres que especifica o tipo de um participante de rastreamento.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -53,6 +56,7 @@ Configure um participante de rastreamento que escuta para registros de rastreame
 |[\<participants>](../windows-workflow-foundation/participants.md)|Uma lista de participantes de rastreamento|  
   
 ## <a name="remarks"></a>Comentários  
+
  Os participantes de rastreamento são usados para obter os dados de rastreamento emissores de fluxo de trabalho e armazená-lo em mídias diferentes. Da mesma forma, qualquer pós-processamento no controle de que registros também podem ser realizados o participante de rastreamento.  
   
  Vários participantes de rastreamento podem consumir os eventos de rastreamento simultaneamente. Cada participante de rastreamento pode ser associado um perfil de controle diferentes.  
@@ -60,6 +64,7 @@ Configure um participante de rastreamento que escuta para registros de rastreame
  Um participante de rastreamento padrão é fornecido, que grava os registros de rastreamento em uma sessão do ETW. O participante é configurado em um serviço de fluxo de trabalho adicionando um comportamento acompanhamento- específico em um arquivo de configuração. Ativar um participante de rastreamento de ETW permite controlar os registros a serem exibidos no visualizador de eventos. Se isso não atender aos requisitos, você também poderá escrever um participante de rastreamento personalizado.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo de configuração a seguir mostra o participante de rastreamento ETW padrão que está sendo configurado no arquivo Web. config.  
   
  A Id de provedor que usa o participante de rastreamento ETW para gravar os registros de rastreamento ETW é definida na `<diagnostics>` seção. O participante de rastreamento tem um perfil associado a ele para especificar os registros de rastreamento que tiver assinado. Isso é definido pelo `profileName` atributo o `<add>` elemento. Depois que eles são definidos, o participante de rastreamento é adicionado para o `<etwTracking>` comportamento de serviço. Isso adicionará os participantes de rastreamento selecionado para extensões da instância de fluxo de trabalho, para que eles começam a receber os registros de rastreamento.  
@@ -94,5 +99,5 @@ Configure um participante de rastreamento que escuta para registros de rastreame
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
-- [Acompanhamento e rastreamento de fluxo de trabalho](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Acompanhando participantes](../../../windows-workflow-foundation/tracking-participants.md)
+- [Rastreamento e rastreamento de fluxo de trabalho](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Participantes de rastreamento](../../../windows-workflow-foundation/tracking-participants.md)

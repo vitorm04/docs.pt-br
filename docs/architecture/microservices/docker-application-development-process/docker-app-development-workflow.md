@@ -2,12 +2,12 @@
 title: Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 description: Entenda os detalhes do fluxo de trabalho para o desenvolvimento de aplicativos baseados no Docker. Comece o passo a passo e obtenha alguns detalhes para otimizar Dockerfiles e concluir com o fluxo de trabalho simplificado disponível ao usar o Visual Studio.
 ms.date: 01/30/2020
-ms.openlocfilehash: d32134a10fb9b56e874bbc6218ca2c4d822adb90
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 04b59a6c30b4fb8f34fe1d0e5cd5328ac77ecb4e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678843"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172548"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 
@@ -557,7 +557,7 @@ Além disso, será necessário executar a etapa 2 (adicionar suporte do Docker a
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Usando comandos do PowerShell em um DockerFile para configurar contêineres do Windows
 
-Os [contêineres do Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/index) permitem converter seus aplicativos existentes do Windows em imagens do Docker e implantá-los com as mesmas ferramentas que o resto do ecossistema do Docker. Para usar contêineres do Windows, você executa comandos do PowerShell no Dockerfile, conforme mostrado no exemplo a seguir:
+Os [contêineres do Windows](/virtualization/windowscontainers/about/index) permitem converter seus aplicativos existentes do Windows em imagens do Docker e implantá-los com as mesmas ferramentas que o resto do ecossistema do Docker. Para usar contêineres do Windows, você executa comandos do PowerShell no Dockerfile, conforme mostrado no exemplo a seguir:
 
 ```dockerfile
 FROM mcr.microsoft.com/windows/servercore

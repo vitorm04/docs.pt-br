@@ -7,14 +7,15 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: fd12be1b775d7611ef3f16d23147470313bf9866
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 59d078f8dc573a1ce949d225f497dd4500fe808f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153367"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173855"
 ---
 # <a name="listeners-element-for-trace"></a>Elemento \<listeners> para \<trace>
+
 Especifica um ouvinte que coleta, armazena e roteia mensagens. Os ouvintes direcionam a saída de rastreamento para um destino apropriado.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -33,9 +34,11 @@ Especifica um ouvinte que coleta, armazena e roteia mensagens. Os ouvintes direc
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
+
  Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -55,13 +58,16 @@ Especifica um ouvinte que coleta, armazena e roteia mensagens. Os ouvintes direc
 |`trace`|Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.|  
   
 ## <a name="remarks"></a>Comentários  
+
  As <xref:System.Diagnostics.Debug> <xref:System.Diagnostics.Trace> classes e compartilham a mesma coleção de **ouvintes** . Se você adicionar um objeto de ouvinte à coleção em uma dessas classes, a outra classe usará o mesmo ouvinte. As classes de ouvinte fornecidas com o .NET Framework derivam da <xref:System.Diagnostics.TraceListener> classe.  
   
 ## <a name="configuration-file"></a>Arquivo de configuração  
- Esse elemento pode ser usado no arquivo de configuração da máquina (Machine. config) e no arquivo de configuração do aplicativo.  
+
+ Esse elemento pode ser usado no arquivo de configuração da máquina (Machine.config) e no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o **\<listeners>** elemento para adicionar os ouvintes `MyListener` e a `MyEventListener` coleção de **ouvintes** . `MyListener`Cria um arquivo chamado `MyListener.log` e grava a saída no arquivo. `MyEventListener`Cria uma entrada no log de eventos.  
+
+ O exemplo a seguir mostra como usar o **\<listeners>** elemento para adicionar os ouvintes `MyListener` e a `MyEventListener` coleção de **ouvintes** . `MyListener` Cria um arquivo chamado `MyListener.log` e grava a saída no arquivo. `MyEventListener` Cria uma entrada no log de eventos.  
   
 ```xml  
 <configuration>  

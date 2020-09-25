@@ -2,12 +2,12 @@
 title: Implementando a camada de aplicativos de microsserviço usando a API Web
 description: Entenda a injeção de dependência e os padrões de mediador e seus detalhes de implementação na camada de aplicativo da API Web.
 ms.date: 08/17/2020
-ms.openlocfilehash: 72395acafb403a4e34858eb2b982ec83b9f3cee1
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 56d4eecb2831a57460b01ff4da8150d6dcce5bc5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608115"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173413"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementar a camada de aplicativos de microsserviço usando a API Web
 
@@ -23,7 +23,7 @@ O Gerenciador de Soluções exibição do microserviço de classificação. API,
 
 **Figura 7-23**. A camada de aplicativo no projeto Ordering.API da API Web ASP.NET Core
 
-O ASP.NET Core inclui um [contêiner interno de IoC](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) simples (representado pela interface IServiceProvider) que é compatível com a injeção de construtor por padrão, e o ASP.NET disponibiliza alguns serviços por meio da DI (injeção de dependência). O ASP.NET Core usa o termo *serviço* para qualquer um dos tipos que você registra e que serão injetados pela DI. Você configura os serviços internos do contêiner no método ConfigureServices na classe Startup do seu aplicativo. As dependências são implementadas nos serviços que são necessários para um tipo e que você registra no contêiner de IoC.
+O ASP.NET Core inclui um [contêiner interno de IoC](/aspnet/core/fundamentals/dependency-injection) simples (representado pela interface IServiceProvider) que é compatível com a injeção de construtor por padrão, e o ASP.NET disponibiliza alguns serviços por meio da DI (injeção de dependência). O ASP.NET Core usa o termo *serviço* para qualquer um dos tipos que você registra e que serão injetados pela DI. Você configura os serviços internos do contêiner no método ConfigureServices na classe Startup do seu aplicativo. As dependências são implementadas nos serviços que são necessários para um tipo e que você registra no contêiner de IoC.
 
 Normalmente, você deseja injetar dependências que implementam objetos de infraestrutura. Uma dependência típica para injetar é um repositório. Mas você poderá injetar qualquer outra dependência de infraestrutura que tiver. Para implementações mais simples, você injeta diretamente o objeto de padrão da Unidade de Trabalho (o objeto DbContext do EF), porque o DBContext também é a implementação dos objetos de persistência da sua infraestrutura.
 

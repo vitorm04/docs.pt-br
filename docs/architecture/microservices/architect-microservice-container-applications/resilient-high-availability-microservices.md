@@ -2,12 +2,12 @@
 title: Resiliência e a alta disponibilidade em microsserviços
 description: Microsserviços precisam ser projetados para resistir a falhas de dependências e de rede transitória e precisam ser resilientes para alcançar alta disponibilidade.
 ms.date: 09/20/2018
-ms.openlocfilehash: 28f8b124cd59b2c3d621267cb437872af42c9ea8
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 601255c1e6941b2de9fdb34098dea7edf6d8b987
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988915"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172444"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resiliência e a alta disponibilidade em microsserviços
 
@@ -31,8 +31,8 @@ Na seção [Implementação de verificações de integridade nos serviços ASP.N
 
 Você também tem a opção de usar uma excelente biblioteca de código-fonte aberto chamada Pulse vencer, disponível no [GitHub](https://github.com/Xabaril/BeatPulse) e como um [pacote do NuGet](https://www.nuget.org/packages/BeatPulse/). Essa biblioteca também faz verificações de integridade, mas com uma diferença, pois ela lida com dois tipos de verificação:
 
-- **Viva :** Verifique se o microserviço está vivo, ou seja, se ele é capaz de aceitar pedidos e responder.
-- **Prontidão**: Verifique se as dependências do microserviço (Banco de Dados, serviços de fila, etc.) estão prontas, para que o microserviço possa fazer o que é suposto fazer.
+- **Vida**: verifica se o microserviço está ativo, ou seja, se é capaz de aceitar solicitações e responder.
+- **Preparação**: verifica se as dependências do microserviço (banco de dados, serviços de fila, etc.) estão prontas, para que o microserviço possa fazer o que deveria fazer.
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Usando fluxos de eventos de logs e diagnóstico
 
@@ -40,13 +40,13 @@ Logs fornecem informações sobre como um aplicativo ou serviço está sendo exe
 
 Em aplicativos baseados em servidor monolíticos, você pode simplesmente gravar logs de um arquivo no disco (um arquivo de log) e então analisá-lo com qualquer ferramenta. Uma vez que a execução do aplicativo está limitada a um servidor ou VM fixo, geralmente não é complexo demais analisar o fluxo de eventos. No entanto, em um aplicativo distribuído em que vários serviços são executados em vários nós em um cluster do orquestrador, poder correlacionar eventos distribuídos é um desafio.
 
-Um aplicativo baseado em microsserviço não deve tentar armazenar o fluxo de saída de eventos nem arquivos de log por si só, nem tentar gerenciar o roteamento de eventos para um local central. Ele deve ser transparente, o que significa que cada processo deve gravar apenas seu fluxo de eventos em uma saída padrão que, por baixo, será coletado pela infraestrutura do ambiente de execução em que está sendo executado. Um exemplo desses roteadores do fluxo de evento é [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), que coleta os fluxos de eventos de várias fontes e publica-os em sistemas de saída. Eles podem incluir uma saída simples padrão para um ambiente de desenvolvimento ou sistemas de nuvem como o [Azure Monitor](https://azure.microsoft.com/services/monitor//) e o [Diagnóstico do Azure](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostics-extension-overview). Também há boas plataformas e ferramentas de análise de log de terceiros que podem pesquisar, alertar, relatar e monitorar logs, inclusive em tempo real, como [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
+Um aplicativo baseado em microsserviço não deve tentar armazenar o fluxo de saída de eventos nem arquivos de log por si só, nem tentar gerenciar o roteamento de eventos para um local central. Ele deve ser transparente, o que significa que cada processo deve gravar apenas seu fluxo de eventos em uma saída padrão que, por baixo, será coletado pela infraestrutura do ambiente de execução em que está sendo executado. Um exemplo desses roteadores do fluxo de evento é [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), que coleta os fluxos de eventos de várias fontes e publica-os em sistemas de saída. Eles podem incluir uma saída simples padrão para um ambiente de desenvolvimento ou sistemas de nuvem como o [Azure Monitor](https://azure.microsoft.com/services/monitor//) e o [Diagnóstico do Azure](/azure/azure-monitor/platform/diagnostics-extension-overview). Também há boas plataformas e ferramentas de análise de log de terceiros que podem pesquisar, alertar, relatar e monitorar logs, inclusive em tempo real, como [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Orquestradores gerenciando informações de integridade e diagnóstico
 
 Quando você cria um aplicativo baseado em microsserviço, precisa lidar com a complexidade. Logicamente, é simples lidar com um único microsserviço, mas dezenas ou centenas de tipos e milhares de instâncias de microsserviços são um problema complexo. Não envolve apenas criar sua arquitetura de microsserviço: você também precisará de alta disponibilidade, capacidade de endereçamento, resiliência, integridade e diagnóstico se você quiser ter um sistema estável e coeso.
 
-![Diagrama de clusters que fornecem uma plataforma de suporte para microsserviços.](./media/resilient-high-availability-microservices/microservice-platform.png)
+![Diagrama de clusters que fornecem uma plataforma de suporte para microservices.](./media/resilient-high-availability-microservices/microservice-platform.png)
 
 **Figura 4-22**. Uma Plataforma de Microsserviço é fundamental para o gerenciamento de integridade do aplicativo
 
@@ -56,19 +56,19 @@ Orquestradores diferentes podem parecer semelhantes, mas o diagnóstico e as ver
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **O Aplicativo de Doze Fatores. XI. Logs: Trate logs como fluxos de eventos** \
+- **O app. XI de doze fatores. Logs: tratar logs como fluxos de eventos** \
   <https://12factor.net/logs>
 
 - Repositório do GitHub da **Biblioteca EventFlow de Diagnóstico da Microsoft**. \
   <https://github.com/Azure/diagnostics-eventflow>
 
-- **O que é a Azure Diagnostics** \
+- **O que é Diagnóstico do Azure** \
   <https://docs.microsoft.com/azure/azure-diagnostics>
 
-- **Conecte computadores Windows ao serviço Azure Monitor** \
+- **Conectar computadores Windows ao serviço de Azure Monitor** \
   <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
-- **Registrando o que você quer dizer: usando o bloco de aplicativos de registro semântico** \
+- **Registrando em log o que você quer dizer: usando o bloco de aplicativo de log semântico** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - Site oficial do **Splunk**. \
@@ -78,5 +78,5 @@ Orquestradores diferentes podem parecer semelhantes, mas o diagnóstico e as ver
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]
->[Próximo](microservice-based-composite-ui-shape-layout.md)
->[anterior](scalable-available-multi-container-microservice-applications.md)
+>[Anterior](microservice-based-composite-ui-shape-layout.md) 
+> [Avançar](scalable-available-multi-container-microservice-applications.md)

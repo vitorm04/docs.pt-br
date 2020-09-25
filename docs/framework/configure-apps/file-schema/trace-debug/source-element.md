@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: 417722ce2f3865350158413307495e3ab435d386
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e9c6a06ca9e481ecc2277e1d1ea76a0b99edb158
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153289"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173816"
 ---
 # <a name="source-element"></a>Elemento \<source>
+
 Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -31,6 +32,7 @@ Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -57,9 +59,11 @@ Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.
 |`sources`|Contém as origens de rastreamento que iniciam as mensagens de rastreamento.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse elemento pode ser usado no arquivo de configuração da máquina (Machine. config) e no arquivo de configuração do aplicativo.  
+
+ Esse elemento pode ser usado no arquivo de configuração da máquina (Machine.config) e no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como usar o `<source>` elemento para adicionar a origem de rastreamento `mySource` e definir o nível para a opção de origem denominada `sourceSwitch` . Um ouvinte de rastreamento de console é adicionado que grava informações de rastreamento no console do.  
   
 ```xml  

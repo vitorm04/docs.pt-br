@@ -2,12 +2,12 @@
 title: Implementando a camada de persistência da infraestrutura com o Entity Framework Core
 description: Arquitetura de microserviços .NET para aplicativos .NET em contêineres | Explore os detalhes de implementação da camada de persistência de infraestrutura, usando Entity Framework Core.
 ms.date: 01/30/2020
-ms.openlocfilehash: f9d97319d378b6fd3eb681fd2873e5fbeead787f
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: 878d4d64e92ca92fd2393d60d496f1c5671e7029
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100990"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172346"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementar a camada de persistência de infraestrutura com o Entity Framework Core
 
@@ -367,7 +367,7 @@ Você pode fazer isso com campos únicos ou também com coleções, como um camp
 
 ### <a name="use-shadow-properties-in-ef-core-hidden-at-the-infrastructure-level"></a>Usar propriedades de sombra no EF Core, ocultas no nível da infraestrutura
 
-As propriedades de sombra no EF Core são propriedades que não existem no modelo de classe de entidade. Os valores e os estados dessas propriedades são mantidos unicamente na classe [ChangeTracker](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker) no nível da infraestrutura.
+As propriedades de sombra no EF Core são propriedades que não existem no modelo de classe de entidade. Os valores e os estados dessas propriedades são mantidos unicamente na classe [ChangeTracker](/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker) no nível da infraestrutura.
 
 ## <a name="implement-the-query-specification-pattern"></a>Implementar o padrão de especificação de consulta
 

@@ -1,5 +1,5 @@
 ---
-title: <remove>Elemento para <listeners> para<source>
+title: <remove> Elemento para <listeners> para <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - remove element for <listeners> for <source>
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-ms.openlocfilehash: 657e6db2af9b99b3bbf03afc6aab02c58a830f2d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 53ba773ea1cb31955e59c1f57e1c0cc807227402
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153329"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173867"
 ---
-# <a name="remove-element-for-listeners-for-source"></a>\<remove>Elemento para \<listeners> para\<source>
+# <a name="remove-element-for-listeners-for-source"></a>\<remove> Elemento para \<listeners> para \<source>
+
 Remove um ouvinte da coleção `Listeners` de uma origem de rastreamento.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -31,6 +32,7 @@ Remove um ouvinte da coleção `Listeners` de uma origem de rastreamento.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -40,6 +42,7 @@ Remove um ouvinte da coleção `Listeners` de uma origem de rastreamento.
 |`name`|Atributo obrigatório.<br /><br /> O nome do ouvinte a ser removido da `Listeners` coleção.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -53,13 +56,15 @@ Remove um ouvinte da coleção `Listeners` de uma origem de rastreamento.
 |`listeners`|Especifica os ouvintes que coletam, armazenam e roteiam mensagens.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O `<remove>` elemento remove um ouvinte especificado da `Listeners` coleção para uma origem de rastreamento.  
   
  Você pode remover um elemento da `Listeners` coleção para uma fonte de rastreamento programaticamente chamando o <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> método na <xref:System.Diagnostics.TraceSource.Listeners%2A> propriedade da <xref:System.Diagnostics.TraceSource> instância.  
   
- Esse elemento pode ser usado no arquivo de configuração da máquina (Machine. config) e no arquivo de configuração do aplicativo.  
+ Esse elemento pode ser usado no arquivo de configuração da máquina (Machine.config) e no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como usar o `<remove>` elemento antes de usar o `<add>` elemento para adicionar o ouvinte `console` à `Listeners` coleção para a origem do rastreamento `TraceSourceApp` .  
   
 ```xml  

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: 2a76816ee73f516b3c7544877a77531acaa8e09c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 670fb359f892d83feac56c849361c4b980d9a922
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153263"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173803"
 ---
 # <a name="sources-element"></a>Elemento \<sources>
+
 Especifica fontes de rastreamento que iniciam mensagens de rastreamento.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -32,9 +33,11 @@ Especifica fontes de rastreamento que iniciam mensagens de rastreamento.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
+
  Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -51,9 +54,11 @@ Especifica fontes de rastreamento que iniciam mensagens de rastreamento.
 |`system.diagnostics`|Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse elemento pode ser usado no arquivo de configuração da máquina (Machine. config) e no arquivo de configuração do aplicativo.  
+
+ Esse elemento pode ser usado no arquivo de configuração da máquina (Machine.config) e no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como usar o `<sources>` elemento para adicionar a origem de rastreamento `mySource` e definir o nível para a opção de origem denominada `sourceSwitch` . Um ouvinte de rastreamento de console é adicionado que grava informações de rastreamento no console do.  
   
 ```xml  
