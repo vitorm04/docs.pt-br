@@ -2,23 +2,24 @@
 title: Operadores de sequência
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: 4feca030d3c398f4286fe9d126cae884afe7945b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a2394ed57335431fe0246f66219392af5cc0e6b1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792675"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173426"
 ---
-# <a name="sequence-operators"></a><span data-ttu-id="e700c-102">Operadores de sequência</span><span class="sxs-lookup"><span data-stu-id="e700c-102">Sequence Operators</span></span>
-<span data-ttu-id="e700c-103">Em termos gerais, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não suporta os operadores de sequência que têm uma ou mais das seguintes qualidades:</span><span class="sxs-lookup"><span data-stu-id="e700c-103">Generally speaking, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not support sequence operators that have one or more of the following qualities:</span></span>  
+# <a name="sequence-operators"></a><span data-ttu-id="b2a57-102">Operadores de sequência</span><span class="sxs-lookup"><span data-stu-id="b2a57-102">Sequence Operators</span></span>
+
+<span data-ttu-id="b2a57-103">Em termos gerais, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não suporta os operadores de sequência que têm uma ou mais das seguintes qualidades:</span><span class="sxs-lookup"><span data-stu-id="b2a57-103">Generally speaking, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not support sequence operators that have one or more of the following qualities:</span></span>  
   
-- <span data-ttu-id="e700c-104">Leva um método com um parâmetro de índice.</span><span class="sxs-lookup"><span data-stu-id="e700c-104">Take a lambda with an index parameter.</span></span>  
+- <span data-ttu-id="b2a57-104">Leva um método com um parâmetro de índice.</span><span class="sxs-lookup"><span data-stu-id="b2a57-104">Take a lambda with an index parameter.</span></span>  
   
-- <span data-ttu-id="e700c-105">Confie nas propriedades de linhas sequenciais, como o <xref:System.Linq.Queryable.TakeWhile%2A>.</span><span class="sxs-lookup"><span data-stu-id="e700c-105">Rely on the properties of sequential rows, such as <xref:System.Linq.Queryable.TakeWhile%2A>.</span></span>  
+- <span data-ttu-id="b2a57-105">Confie nas propriedades de linhas sequenciais, como o <xref:System.Linq.Queryable.TakeWhile%2A>.</span><span class="sxs-lookup"><span data-stu-id="b2a57-105">Rely on the properties of sequential rows, such as <xref:System.Linq.Queryable.TakeWhile%2A>.</span></span>  
   
-- <span data-ttu-id="e700c-106">Confie em uma implementação arbitrária de CLR, como <xref:System.Collections.Generic.IComparer%601>.</span><span class="sxs-lookup"><span data-stu-id="e700c-106">Rely on an arbitrary CLR implementation, such as <xref:System.Collections.Generic.IComparer%601>.</span></span>  
+- <span data-ttu-id="b2a57-106">Confie em uma implementação arbitrária de CLR, como <xref:System.Collections.Generic.IComparer%601>.</span><span class="sxs-lookup"><span data-stu-id="b2a57-106">Rely on an arbitrary CLR implementation, such as <xref:System.Collections.Generic.IComparer%601>.</span></span>  
   
-|<span data-ttu-id="e700c-107">Exemplos de sem suporte</span><span class="sxs-lookup"><span data-stu-id="e700c-107">Examples of Unsupported</span></span>|  
+|<span data-ttu-id="b2a57-107">Exemplos de sem suporte</span><span class="sxs-lookup"><span data-stu-id="b2a57-107">Examples of Unsupported</span></span>|  
 |-----------------------------|  
 |<xref:System.Linq.Enumerable.Where%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Boolean%7D%29?displayProperty=nameWithType>|  
 |<xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2C%60%601%7D%29?displayProperty=nameWithType>|  
@@ -42,9 +43,10 @@ ms.locfileid: "70792675"
 |<xref:System.Linq.Enumerable.Aggregate%60%603%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2C%60%601%2CSystem.Func%7B%60%601%2C%60%600%2C%60%601%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%29?displayProperty=nameWithType>|  
 |<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
-## <a name="differences-from-net"></a><span data-ttu-id="e700c-108">Diferenças do .NET</span><span class="sxs-lookup"><span data-stu-id="e700c-108">Differences from .NET</span></span>  
- <span data-ttu-id="e700c-109">Todos os operadores suporte a sequência funciona como esperado em Common Language Runtime (CLR) a exceção de `Average`.</span><span class="sxs-lookup"><span data-stu-id="e700c-109">All supported sequence operators work as expected in the common language runtime (CLR) except for `Average`.</span></span> <span data-ttu-id="e700c-110">`Average` retorna um valor do mesmo tipo que o tipo que está sendo especificado média, enquanto em CLR `Average` sempre retorna <xref:System.Double> ou <xref:System.Decimal>.</span><span class="sxs-lookup"><span data-stu-id="e700c-110">`Average` returns a value of the same type as the type being averaged, whereas in the CLR `Average` always returns either a <xref:System.Double> or a <xref:System.Decimal>.</span></span> <span data-ttu-id="e700c-111">Se o argumento de origem é dobrar explicitamente convertida/decimal ou o seletor converte dobrar/decimal, o SQL resultante também terá uma conversão e o resultado será como esperado.</span><span class="sxs-lookup"><span data-stu-id="e700c-111">If the source argument is explicitly cast to double / decimal or the selector casts to double / decimal, the resulting SQL will also have such a conversion and the result will be as expected.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="e700c-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e700c-112">See also</span></span>
+## <a name="differences-from-net"></a><span data-ttu-id="b2a57-108">Diferenças do .NET</span><span class="sxs-lookup"><span data-stu-id="b2a57-108">Differences from .NET</span></span>  
 
-- [<span data-ttu-id="e700c-113">Funções e tipos de dados</span><span class="sxs-lookup"><span data-stu-id="e700c-113">Data Types and Functions</span></span>](data-types-and-functions.md)
+ <span data-ttu-id="b2a57-109">Todos os operadores suporte a sequência funciona como esperado em Common Language Runtime (CLR) a exceção de `Average`.</span><span class="sxs-lookup"><span data-stu-id="b2a57-109">All supported sequence operators work as expected in the common language runtime (CLR) except for `Average`.</span></span> <span data-ttu-id="b2a57-110">`Average` retorna um valor do mesmo tipo que o tipo que está sendo especificado média, enquanto em CLR `Average` sempre retorna <xref:System.Double> ou <xref:System.Decimal>.</span><span class="sxs-lookup"><span data-stu-id="b2a57-110">`Average` returns a value of the same type as the type being averaged, whereas in the CLR `Average` always returns either a <xref:System.Double> or a <xref:System.Decimal>.</span></span> <span data-ttu-id="b2a57-111">Se o argumento de origem é dobrar explicitamente convertida/decimal ou o seletor converte dobrar/decimal, o SQL resultante também terá uma conversão e o resultado será como esperado.</span><span class="sxs-lookup"><span data-stu-id="b2a57-111">If the source argument is explicitly cast to double / decimal or the selector casts to double / decimal, the resulting SQL will also have such a conversion and the result will be as expected.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="b2a57-112">Veja também</span><span class="sxs-lookup"><span data-stu-id="b2a57-112">See also</span></span>
+
+- [<span data-ttu-id="b2a57-113">Tipos de dados e funções</span><span class="sxs-lookup"><span data-stu-id="b2a57-113">Data Types and Functions</span></span>](data-types-and-functions.md)
