@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: 17bca4f03c75f7d617e4e99ebab4d1602bb3214e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 76da496f7045f12778bba273947b913be1b94e3e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537242"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91196839"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress (opções do compilador C#)
+
 A opção **-baseaddress** permite especificar o endereço básico preferido em que uma DLL será carregada. Para obter mais informações sobre quando e por que usar essa opção, consulte o [Blog do Larry Osterman](/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -26,10 +27,12 @@ A opção **-baseaddress** permite especificar o endereço básico preferido em 
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `address`  
  O endereço básico da DLL. Esse endereço pode ser especificado como um número decimal, hexadecimal ou octal.  
   
 ## <a name="remarks"></a>Comentários  
+
  O endereço base padrão de uma DLL é definido pelo Common Language Runtime .NET.  
   
  Lembre-se de que a palavra de ordem inferior nesse endereço será arredondada. Por exemplo, se 0x11110001 for especificado, será arredondado para 0x11110000.  
@@ -48,8 +51,8 @@ A opção **-baseaddress** permite especificar o endereço básico preferido em 
   
      Para definir programaticamente essa opção do compilador, confira <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>
-- [Opções do compilador C#](./index.md)
+- [Opções do compilador de C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
