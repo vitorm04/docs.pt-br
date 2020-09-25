@@ -2,14 +2,15 @@
 title: <security> de <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-ms.openlocfilehash: e88f55f3651d1ccd55631dce13a0349ac2772624
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 48b49bf69f791f90ed5b2eea8e6d412438cd9519
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736396"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169837"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<security> de \<ws2007HttpBinding>
+
 Representa as configurações de segurança usadas com o [\<ws2007HttpBinding>](ws2007httpbinding.md) elemento.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -39,6 +40,7 @@ Representa as configurações de segurança usadas com o [\<ws2007HttpBinding>](
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -70,6 +72,7 @@ Representa as configurações de segurança usadas com o [\<ws2007HttpBinding>](
 |[\<ws2007HttpBinding>](ws2007httpbinding.md)|Uma associação segura para aplicativos de transporte HTTP.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Esse elemento foi projetado para interoperação com serviços que implementam especificações WS-*. A segurança de transporte para essa associação é protocolo SSL (SSL) sobre HTTP ou HTTPS.  
   
 ## <a name="see-also"></a>Confira também

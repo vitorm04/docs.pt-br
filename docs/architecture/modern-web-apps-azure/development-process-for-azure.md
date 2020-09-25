@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Pr
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 640cfebea3c70314be4a597bc07b0dc6854f5848
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 8907c63f8dcd57ec22c3c196cbb1db52d91a3b5f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607887"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169031"
 ---
 # <a name="development-process-for-azure"></a>Processo de desenvolvimento para o Azure
 
@@ -26,7 +26,7 @@ ms.locfileid: "81607887"
 
 Seja qual for sua preferência, um IDE avançado e completo ou um editor leve e ágil, a Microsoft oferece as ferramentas que você pode usar para desenvolver aplicativos ASP.NET Core.
 
-**Visual Studio 2019.** O Visual Studio 2019 é o melhor IDE da classe para o desenvolvimento de aplicações para ASP.NET Core. Ele oferece uma série de recursos que aumentam a produtividade do desenvolvedor. Você pode usá-lo para desenvolver o aplicativo, em seguida, analisar seu desempenho e outras características. O depurador integrado permite pausar a execução do código e dar um passo para frente e para trás através do código em tempo real enquanto ele está em execução. O corredor de teste incorporado permite que você organize seus testes e seus resultados e pode até mesmo realizar testes de unidade ao vivo enquanto você está codificando. Usando o Live Share, você pode colaborar em tempo real com outros desenvolvedores, compartilhando sua sessão de código perfeitamente pela rede. E quando você estiver pronto, o Visual Studio inclui tudo o que você precisa para publicar seu aplicativo no Azure ou onde você pode hospedá-lo.
+**Visual Studio 2019.** O Visual Studio 2019 é o melhor IDE para desenvolver aplicativos para ASP.NET Core. Ele oferece uma série de recursos que aumentam a produtividade do desenvolvedor. Você pode usá-lo para desenvolver o aplicativo e, em seguida, analisar seu desempenho e outras características. O depurador integrado permite pausar a execução de código e avançar e voltar pelo código imediatamente conforme ele está em execução. O executor de teste interno permite organizar seus testes e seus resultados e pode até mesmo executar testes de unidade ao vivo enquanto você está codificando. Usando Live Share, você pode colaborar em tempo real com outros desenvolvedores, compartilhando sua sessão de código diretamente pela rede. E quando estiver pronto, o Visual Studio incluirá tudo o que você precisa para publicar seu aplicativo no Azure ou onde quer que possa hospedá-lo.
 
 [Baixar o Visual Studio 2019](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
@@ -42,13 +42,13 @@ O ciclo de vida de desenvolvimento do aplicativo começa no computador de cada d
 
 Para começar a desenvolver um aplicativo ASP.NET Core usando a CI/CD, use o Azure DevOps Services ou o próprio TFS (Team Foundation Server) de sua organização.
 
-### <a name="initial-setup"></a>Configuração inicial
+### <a name="initial-setup"></a>Instalação inicial
 
 Para criar um pipeline de lançamento para seu aplicativo, você precisa ter o código do aplicativo no controle do código-fonte. Configure um repositório local e conecte-o a um repositório remoto em um projeto de equipe. Siga estas instruções:
 
-- [Compartilhar o código com o GIT e o Visual Studio](https://docs.microsoft.com/azure/devops/git/share-your-code-in-git-vs) ou
+- [Compartilhar o código com o GIT e o Visual Studio](/azure/devops/git/share-your-code-in-git-vs) ou
 
-- [Compartilhar o código com o TFVC e o Visual Studio](https://docs.microsoft.com/azure/devops/tfvc/share-your-code-in-tfvc-vs)
+- [Compartilhar o código com o TFVC e o Visual Studio](/azure/devops/tfvc/share-your-code-in-tfvc-vs)
 
 Crie um Serviço de Aplicativo do Azure no qual você implantará o aplicativo. Crie um aplicativo Web acessando a folha Serviços de Aplicativos no Portal do Azure. Clique em +Adicionar, selecione o modelo de Aplicativo Web, clique em Criar e forneça um nome e outros detalhes. O aplicativo Web estará acessível em {name}.azurewebsites.net.
 
@@ -58,19 +58,19 @@ Crie um Serviço de Aplicativo do Azure no qual você implantará o aplicativo. 
 
 O processo de build de CI executará um build automatizado sempre que o novo código for confirmado no repositório de controle do código-fonte do projeto. Isso fornece a você um feedback imediato de que o código é compilado (e, de preferência, é aprovado em testes automatizados) e potencialmente pode ser implantado. Esse build de CI produzirá um artefato de pacote de implantação da Web e o publicará para consumo pelo processo de CD.
 
-[Definir o processo de build de CI](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/dotnet-core)
+[Definir o processo de build de CI](/azure/devops/pipelines/ecosystems/dotnet-core)
 
 Lembre-se de habilitar a integração contínua para que o sistema coloque na fila um build sempre que alguém de sua equipe confirmar um novo código. Teste o build e verifique se ele está produzindo um pacote de implantação da Web como um de seus artefatos.
 
 Quando um build for bem-sucedido, o processo de CD implantará os resultados do build de CI no aplicativo Web do Azure. Para configurar isso, crie e configure uma *Versão*, que será implantada no Serviço de Aplicativo do Azure.
 
-[Implantar um aplicativo web do Azure](https://docs.microsoft.com/azure/devops/pipelines/targets/webapp)
+[Implantar um aplicativo Web do Azure](/azure/devops/pipelines/targets/webapp)
 
 Depois que o pipeline de CI/CD for configurado, basta fazer atualizações no aplicativo Web e confirmá-las no controle do código-fonte para implantá-las.
 
 ### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>Fluxo de trabalho de desenvolvimento para aplicativos ASP.NET Core hospedados no Azure
 
-Depois de configurar sua conta do Azure e o processo de CI/CD, o desenvolvimento de aplicativos ASP.NET Core hospedados no Azure é simples. A seguir, os passos básicos que você geralmente toma ao construir um aplicativo ASP.NET Core, hospedado no Azure App Service como um Aplicativo web, conforme ilustrado na Figura 10-2.
+Depois de configurar sua conta do Azure e o processo de CI/CD, o desenvolvimento de aplicativos ASP.NET Core hospedados no Azure é simples. A seguir estão as etapas básicas que você geralmente adota ao criar um aplicativo ASP.NET Core, hospedado no serviço Azure App como um aplicativo Web, como ilustrado na Figura 10-2.
 
 ![EndToEndDevDeployWorkflow](./media/image10-3.png)
 
@@ -82,7 +82,7 @@ O desenvolvimento de seu aplicativo ASP.NET Core para implantação no Azure nã
 
 #### <a name="step-2-application-code-repository"></a>Etapa 2. Repositório de código do aplicativo
 
-Sempre que estiver pronto para compartilhar o código com sua equipe, envie por push as alterações do repositório de origem local para o repositório de origem compartilhado de sua equipe. Se você estiver trabalhando em um branch personalizado, esta etapa geralmente envolverá a mesclagem do código em um branch compartilhado (talvez por meio de uma [solicitação de pull](https://docs.microsoft.com/azure/devops/git/pull-requests)).
+Sempre que estiver pronto para compartilhar o código com sua equipe, envie por push as alterações do repositório de origem local para o repositório de origem compartilhado de sua equipe. Se você estiver trabalhando em um branch personalizado, esta etapa geralmente envolverá a mesclagem do código em um branch compartilhado (talvez por meio de uma [solicitação de pull](/azure/devops/git/pull-requests)).
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Etapa 3. Servidor de build: integração contínua. compilar, testar, agrupar
 
@@ -106,5 +106,5 @@ Durante a execução do Aplicativo Web, você pode monitorar a integridade do ap
 <https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
->[Próximo](test-asp-net-core-mvc-apps.md)
->[anterior](azure-hosting-recommendations-for-asp-net-web-apps.md)
+>[Anterior](test-asp-net-core-mvc-apps.md) 
+> [Avançar](azure-hosting-recommendations-for-asp-net-web-apps.md)

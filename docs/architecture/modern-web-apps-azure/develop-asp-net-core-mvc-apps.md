@@ -7,12 +7,12 @@ ms.date: 08/12/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: 255a7f9b34752b3480ba5a8ffc5d506e6d7b05d3
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: e746362657a25487e98ddac09fa4337b00dfe805
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515964"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169122"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desenvolver aplicativos ASP.NET Core MVC
 
@@ -241,7 +241,7 @@ Outra abordagem para desacoplar o aplicativo dos detalhes de implementação é 
 
 ### <a name="feature-organization"></a>Organização do recurso
 
-Por padrão, os aplicativos ASP.NET Core organizam sua estrutura de pastas para incluir Controladores e Exibições e, frequentemente, ViewModels. Em geral, o código do lado do cliente para dar suporte a essas estruturas do lado do servidor é armazenado separadamente na pasta wwwroot. No entanto, os aplicativos grandes podem enfrentar problemas com essa organização, pois o trabalho em um recurso específico geralmente exige o salto entre essas pastas. Isso fica cada vez mais difícil à medida que aumenta o número de arquivos e subpastas em cada pasta, resultando em uma grande quantidade de rolagem pelo Gerenciador de Soluções. Uma solução para esse problema é organizar o código do aplicativo por _recurso_, em vez de por tipo de arquivo. Esse estilo organizacional é normalmente chamado de pastas de recursos ou [fatias de recursos](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) (consulte também: [fatias verticais](https://deviq.com/vertical-slices/)).
+Por padrão, os aplicativos ASP.NET Core organizam sua estrutura de pastas para incluir Controladores e Exibições e, frequentemente, ViewModels. Em geral, o código do lado do cliente para dar suporte a essas estruturas do lado do servidor é armazenado separadamente na pasta wwwroot. No entanto, os aplicativos grandes podem enfrentar problemas com essa organização, pois o trabalho em um recurso específico geralmente exige o salto entre essas pastas. Isso fica cada vez mais difícil à medida que aumenta o número de arquivos e subpastas em cada pasta, resultando em uma grande quantidade de rolagem pelo Gerenciador de Soluções. Uma solução para esse problema é organizar o código do aplicativo por _recurso_, em vez de por tipo de arquivo. Esse estilo organizacional é normalmente chamado de pastas de recursos ou [fatias de recursos](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) (consulte também: [fatias verticais](https://deviq.com/vertical-slices/)).
 
 O ASP.NET Core MVC é compatível com Áreas para essa finalidade. Usando áreas, você pode criar conjuntos separados de pastas de Controladores e Exibições (bem como os modelos associados) em cada pasta de Área. A Figura 7-1 mostra uma estrutura de pastas de exemplo, usando Áreas.
 
@@ -301,7 +301,7 @@ Em seguida, especifique essa convenção como uma opção quando você adicionar
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-O ASP.NET Core MVC também usa uma convenção para localizar exibições. Você pode substituí-la por uma convenção personalizada, de modo que as exibições estejam localizadas nas pastas de recurso (usando o nome de recurso fornecido pela FeatureConvention, acima). Você pode aprender mais sobre essa abordagem e baixar um exemplo funcional do artigo da MSDN Magazine, [fatias de recursos para ASP.NET Core MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
+O ASP.NET Core MVC também usa uma convenção para localizar exibições. Você pode substituí-la por uma convenção personalizada, de modo que as exibições estejam localizadas nas pastas de recurso (usando o nome de recurso fornecido pela FeatureConvention, acima). Você pode aprender mais sobre essa abordagem e baixar um exemplo funcional do artigo da MSDN Magazine, [fatias de recursos para ASP.NET Core MVC](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
 
 ### <a name="apis-and-no-locblazor-applications"></a>APIs e Blazor aplicativos
 
@@ -313,7 +313,7 @@ A adição de uma Blazor WebAssembly interface de administrador a eShopOnWeb exi
 
 Alguém pode perguntar, por que adicionar um `BlazorShared` projeto separado quando já existe um `ApplicationCore` projeto comum que poderia ser usado para compartilhar qualquer tipo exigido por ambos `PublicApi` e `BlazorAdmin` ? A resposta é que esse projeto inclui toda a lógica de negócios do aplicativo e, portanto, é muito maior do que o necessário e também é muito mais provável que precise ser mantido seguro no servidor. Lembre-se de que qualquer biblioteca referenciada pelo `BlazorAdmin` será baixada nos navegadores dos usuários quando eles carregarem o Blazor aplicativo.
 
-Dependendo se um estiver usando o padrão de [back-ends (BFF)](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends), as APIs consumidas pelo Blazor WebAssembly aplicativo podem não compartilhar seus tipos de 100% com Blazor . Em particular, uma API pública que deve ser consumida por muitos clientes diferentes pode definir seus próprios tipos de solicitação e resultado, em vez de compartilhá-los em um projeto compartilhado específico do cliente. No exemplo de eShopOnWeb, pressupõe-se que o `PublicApi` projeto esteja, de fato, hospedando uma API pública, portanto, nem todos os seus tipos de solicitação e resposta vêm do `BlazorShared` projeto.
+Dependendo se um estiver usando o padrão de [back-ends (BFF)](/azure/architecture/patterns/backends-for-frontends), as APIs consumidas pelo Blazor WebAssembly aplicativo podem não compartilhar seus tipos de 100% com Blazor . Em particular, uma API pública que deve ser consumida por muitos clientes diferentes pode definir seus próprios tipos de solicitação e resultado, em vez de compartilhá-los em um projeto compartilhado específico do cliente. No exemplo de eShopOnWeb, pressupõe-se que o `PublicApi` projeto esteja, de fato, hospedando uma API pública, portanto, nem todos os seus tipos de solicitação e resposta vêm do `BlazorShared` projeto.
 
 ### <a name="cross-cutting-concerns"></a>Interesses paralelos
 
@@ -387,7 +387,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Você pode ler mais sobre como implementar filtros e baixar um exemplo funcional do artigo da MSDN Magazine, [ASP.NET Core os filtros do MVC do mundo real](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters).
+Você pode ler mais sobre como implementar filtros e baixar um exemplo funcional do artigo da MSDN Magazine, [ASP.NET Core os filtros do MVC do mundo real](/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters).
 
 > ### <a name="references--structuring-applications"></a>Referências – estruturando aplicativos
 >
@@ -510,7 +510,7 @@ Blazor Os aplicativos de servidor podem aproveitar os mesmos recursos de autenti
 > - **Segurança: autenticação e autorização no ASP.NET Web Forms e Blazor**
 >   <https://docs.microsoft.com/dotnet/architecture/blazor-for-web-forms-developers/security-authentication-authorization>
 
-### <a name="authorization"></a>Authorization
+### <a name="authorization"></a>Autorização
 
 A forma mais simples de autorização envolve a restrição do acesso a usuários anônimos. Para fazer isso, basta aplicar o atributo \[Authorize\] a determinados controladores ou ações. Se funções estiverem sendo usadas, o atributo poderá ser estendido ainda mais para restringir o acesso a usuários que pertencem a determinadas funções, conforme mostrado:
 

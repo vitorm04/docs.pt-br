@@ -3,12 +3,12 @@ title: Migrar um aplicativo Web ASP.NET para uma VM do Azure
 description: Saiba como migrar um aplicativo Web ASP.NET do local para uma Máquina Virtual do Azure.
 ms.topic: how-to
 ms.date: 06/20/2020
-ms.openlocfilehash: 5ef340d020b72bebe46fe598fe68e7d02d0c0363
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 940243310c5e6ed13d2a42c8d9d87244200479f5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174238"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171553"
 ---
 # <a name="migrate-an-aspnet-web-application-to-an-azure-virtual-machine"></a>Migrar um aplicativo Web ASP.NET para uma Máquina Virtual do Azure
 
@@ -60,6 +60,7 @@ As Redes Virtuais do Azure permitem:
 Para começar, confira a [documentação da Rede Virtual](/azure/virtual-network/)
 
 ### <a name="active-directory"></a>Active Directory
+
 Muitos aplicativos usam o Active Directory para a autenticação e o gerenciamento das identidades.
 
 - O Azure AD Connect permite integrar seus diretórios locais no Azure Active Directory. Para começar, confira [Integrar seus diretórios locais no Azure Active Directory](/azure/active-directory/connect/active-directory-aadconnect).
@@ -75,11 +76,13 @@ Se seu aplicativo estiver usando um banco de dados local, o aplicativo não cons
 ### <a name="high-availability-and-scalability"></a>Alta disponibilidade e escalabilidade
 
 #### <a name="virtual-machine-scale-sets"></a>Conjuntos de Dimensionamento de Máquinas Virtuais
+
 Se você quiser verificar se seu aplicativo tem alta disponibilidade e pode ser dimensionado, migre sua imagem da VM para um conjunto de dimensionamento da máquina virtual para melhorar a disponibilidade e a escalabilidade do aplicativo. Os conjuntos de dimensionamento de VM fornecem a capacidade de usar uma VM existente que você já configurou ou configurou um pipeline de compilação para criar uma imagem com seu aplicativo.
 
 Para começar, confira [Implantar seu aplicativo nos conjuntos de dimensionamento da máquina virtual](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app).
 
 #### <a name="centralized-logging"></a>Log Centralizado
+
 Ao executar seu aplicativo em várias instâncias, considere armazenar os logs em um local centralizado, como o [Armazenamento do Azure](/azure/storage/).
 
 ## <a name="next-steps"></a>Próximas etapas

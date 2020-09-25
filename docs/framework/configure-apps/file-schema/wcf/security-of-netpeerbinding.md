@@ -2,14 +2,15 @@
 title: <security> de <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: 3d1ac85073c44f683fe0c054737c5ec7ed1cbf52
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 543c57d6b2dba1ff5934b49e0e219cf2e5cad153
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738666"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170019"
 ---
 # <a name="security-of-netpeerbinding"></a>\<security> de \<netPeerBinding>
+
 Define as configurações de segurança do [\<netPeerTcpBinding>](netpeertcpbinding.md) , incluindo o tipo de autenticação usado e a segurança usada para o transporte de mensagens.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,6 +33,7 @@ Define as configurações de segurança do [\<netPeerTcpBinding>](netpeertcpbind
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
@@ -62,6 +64,7 @@ Define as configurações de segurança do [\<netPeerTcpBinding>](netpeertcpbind
 |[\<binding>](bindings.md)|Define todos os recursos de associação do [\<netPeerTcpBinding>](netpeertcpbinding.md) .|  
   
 ## <a name="remarks"></a>Comentários  
+
  A segurança pode ser específica de mensagens ou de transporte.  
   
 ## <a name="see-also"></a>Confira também

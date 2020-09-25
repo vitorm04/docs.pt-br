@@ -2,14 +2,15 @@
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 07fa410109a7bd2fa315132c4737301698bb3a93
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2ef674dc8601bc9afaf6b547265988bb8a99f943
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400108"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170162"
 ---
 # \<parameter>
+
 Especifica o parâmetro genérico quando um tipo declarado é um tipo genérico.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,6 +29,7 @@ Especifica o parâmetro genérico quando um tipo declarado é um tipo genérico.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -35,7 +37,7 @@ Especifica o parâmetro genérico quando um tipo declarado é um tipo genérico.
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |índice|Quando o tipo declarado é um tipo genérico, especifica o parâmetro genérico que retornará o tipo conhecido.|  
-|type|Uma cadeia de caracteres que descreve o tipo conhecido usado para serialização e desserialização.|  
+|tipo|Uma cadeia de caracteres que descreve o tipo conhecido usado para serialização e desserialização.|  
   
 ## <a name="index-attribute"></a>Atributo de índice  
   
@@ -45,6 +47,7 @@ Especifica o parâmetro genérico quando um tipo declarado é um tipo genérico.
 |"1"|O segundo parâmetro em um tipo genérico. Por exemplo, um <xref:System.Collections.Generic.Dictionary%602> tem dois parâmetros. Se o tipo conhecido for retornado pelo segundo parâmetro, defina o atributo de índice como "1".|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -54,6 +57,7 @@ Especifica o parâmetro genérico quando um tipo declarado é um tipo genérico.
 |[\<knownType>](knowntype.md)|Especifica um tipo conhecido que pode ser retornado por um campo ou Propriedade do tipo declarado.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Para obter mais informações sobre tipos conhecidos, consulte [tipos conhecidos de contrato de dados](../../../wcf/feature-details/data-contract-known-types.md) e <xref:System.Runtime.Serialization.DataContractSerializer> .  
   
  Consulte o [\<dataContractSerializer>](datacontractserializer-element.md) para obter um exemplo de como usar esse elemento.  
@@ -63,6 +67,6 @@ Especifica o parâmetro genérico quando um tipo declarado é um tipo genérico.
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [Tipos conhecidos de contrato de dados](../../../wcf/feature-details/data-contract-known-types.md)
+- [Tipos de contratos de dados conhecidos](../../../wcf/feature-details/data-contract-known-types.md)
 - [\<dataContractSerializer>](datacontractserializer-element.md)
 - [\<add>](add-of-declaredtypes-element.md)

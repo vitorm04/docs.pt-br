@@ -8,14 +8,15 @@ helpviewer_keywords:
 - assemblyBinding element
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
-ms.openlocfilehash: 202b063ad3f0f9696cdc12aff434d61fe5a813e6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b6a39bcecfd2485481677496adcf026d986c283b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154316"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170240"
 ---
 # <a name="assemblybinding-element-for-runtime"></a>Elemento \<assemblyBinding> para \<runtime>
+
 Contém informações sobre o redirecionamento de versão e os locais dos assemblies.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,6 +32,7 @@ Contém informações sobre o redirecionamento de versão e os locais dos assemb
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -57,6 +59,7 @@ Contém informações sobre o redirecionamento de versão e os locais dos assemb
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como redirecionar uma versão do assembly para outra e fornecer uma codebase.  
   
 ```xml  
@@ -93,5 +96,5 @@ Contém informações sobre o redirecionamento de versão e os locais dos assemb
 ## <a name="see-also"></a>Confira também
 
 - [Esquema de configurações do runtime](index.md)
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema do arquivo de configuração](../index.md)
 - [Redirecionando versões de assembly](../../redirect-assembly-versions.md)

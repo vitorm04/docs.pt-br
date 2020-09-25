@@ -4,17 +4,17 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Re
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 547654e77812481daffc9a03ccd28d3d2f6b5f09
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 19626aea07fb26222af575a709b54577ca12589b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164429"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169213"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Recomendações de hospedagem do Azure para aplicativos Web ASP.NET Core
 
 > "Líderes de linha de negócios do mundo todo estão passando por cima dos departamentos de TI para obter aplicativos da nuvem (também conhecidos como SaaS) e pagando por eles como se fossem uma assinatura de revista. E quando o serviço não é mais necessário, eles podem cancelar a assinatura sem nenhum equipamento deixado inutilizado no canto."  
-> _\-Daryl Plummer, analista da Gartner_
+> _\- Daryl Plummer, analista da Gartner_
 
 Quaisquer que sejam as necessidades e a arquitetura de seu aplicativo, o Microsoft Azure pode dar suporte a elas. Suas necessidades de hospedagem podem variar de um simples site estático até aplicativos extremamente sofisticados compostos por dezenas de serviços. Para aplicativos Web ASP.NET Core monolíticos e os serviços de suporte, há várias configurações bem conhecidas que são recomendadas. As recomendações neste artigo são agrupadas com base no tipo de recurso a ser hospedado, seja para aplicativos completos, processos individuais ou dados.
 
@@ -54,7 +54,7 @@ Além dos aplicativos não otimizados para a nuvem, os Aplicativos Web do Servi�
 
 ![Arquitetura básica do Azure](./media/image1-5.png)
 
-Um pequeno número de recursos de um único grupo geralmente é suficiente para gerenciar esse aplicativo. Aplicativos que normalmente são implantados como uma única unidade, em vez serem compostos de muitos processos separados, são bons candidatos para essa [abordagem arquitetural básica](https://docs.microsoft.com/azure/architecture/reference-architectures/app-service-web-app/basic-web-app). Embora tenha uma arquitetura simples, essa abordagem ainda permite que o aplicativo hospedado seja expandido verticalmente (mais recursos por nó) e horizontalmente (mais nós hospedados), para atender a qualquer aumento de demanda. Com dimensionamento automático, o aplicativo pode ser configurado para ajustar automaticamente o número de nós que hospedam o aplicativo com base na demanda e na carga média nos nós.
+Um pequeno número de recursos de um único grupo geralmente é suficiente para gerenciar esse aplicativo. Aplicativos que normalmente são implantados como uma única unidade, em vez serem compostos de muitos processos separados, são bons candidatos para essa [abordagem arquitetural básica](/azure/architecture/reference-architectures/app-service-web-app/basic-web-app). Embora tenha uma arquitetura simples, essa abordagem ainda permite que o aplicativo hospedado seja expandido verticalmente (mais recursos por nó) e horizontalmente (mais nós hospedados), para atender a qualquer aumento de demanda. Com dimensionamento automático, o aplicativo pode ser configurado para ajustar automaticamente o número de nós que hospedam o aplicativo com base na demanda e na carga média nos nós.
 
 ### <a name="app-service-web-apps-for-containers"></a>Aplicativos Web do Serviço de Aplicativo para Contêineres
 
@@ -74,7 +74,7 @@ Como partes de aplicativos maiores são divididas em seus próprios *microsservi
 
 ![Exemplo de arquitetura de microsserviços com vários padrões de design comuns observados.](./media/image1-10.png)
 
-[Saiba mais sobre os padrões de design a serem considerados ao criar sistemas baseados em microsserviço.](https://docs.microsoft.com/azure/architecture/microservices/design/patterns)
+[Saiba mais sobre os padrões de design a serem considerados ao criar sistemas baseados em microsserviço.](/azure/architecture/microservices/design/patterns)
 
 ### <a name="azure-kubernetes-service"></a>Serviço de Kubernetes do Azure
 
@@ -100,7 +100,7 @@ Azure Dev Spaces:
 - Reduzir o número de ambientes de integração exigidos pela equipe
 - Remover a necessidade de simular determinados serviços em um sistema distribuído durante o desenvolvimento/teste
 
-[Saiba mais sobre o Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about)
+[Saiba mais sobre o Azure Dev Spaces](/azure/dev-spaces/about)
 
 ### <a name="azure-virtual-machines"></a>Máquinas Virtuais do Azure
 

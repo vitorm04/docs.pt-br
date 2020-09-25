@@ -2,14 +2,15 @@
 title: <security> de <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: 7877fd59aff581eee5b62a1ca224dbf51c956069
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 32b066fdf4d8edbbd36fdff7b14bdec87ddc970d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738671"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170071"
 ---
 # <a name="security-of-netmsmqbinding"></a>\<security> de \<netMsmqBinding>
+
 Define as configurações de segurança para uma associação MSMQ. Especifica se a segurança de transporte ou de SOAP está habilitada e, em caso afirmativo, qual modo de autenticação e níveis de proteção estão em uso.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,6 +34,7 @@ Define as configurações de segurança para uma associação MSMQ. Especifica s
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -52,7 +54,7 @@ Define as configurações de segurança para uma associação MSMQ. Especifica s
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|associação|O elemento Binding da[\<netMsmqBinding>](netmsmqbinding.md)|  
+|associação|O elemento Binding da [\<netMsmqBinding>](netmsmqbinding.md)|  
   
 ## <a name="see-also"></a>Confira também
 

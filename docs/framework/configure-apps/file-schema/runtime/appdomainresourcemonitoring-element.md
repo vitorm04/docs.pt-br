@@ -5,14 +5,15 @@ helpviewer_keywords:
 - appDomainResourceMonitoring element
 - <appDomainResourceMonitoring> element
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
-ms.openlocfilehash: 3c6092b6c34bb13c0ad0e66df2d3b7e65ac3de7e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9ecf2e382b5d483377df871835793219b3f74760
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154370"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170266"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>Elemento \<appDomainResourceMonitoring>
+
 Instrui o runtime a coletar estatísticas sobre todos os domínios de aplicativos no processo durante toda a vida do processo.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,6 +28,7 @@ Instrui o runtime a coletar estatísticas sobre todos os domínios de aplicativo
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -43,6 +45,7 @@ Instrui o runtime a coletar estatísticas sobre todos os domínios de aplicativo
 |`false`|As estatísticas para o monitoramento de recursos de domínio de aplicativo não são coletadas.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -53,6 +56,7 @@ Instrui o runtime a coletar estatísticas sobre todos os domínios de aplicativo
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O monitoramento de recursos de domínio de aplicativo está disponível por meio da classe de domínio do aplicativo gerenciado, da interface [ICLRAppDomainResourceMonitor](../../../unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) de hospedagem e do ETW (rastreamento de eventos para Windows). Quando o monitoramento está habilitado, as estatísticas são coletadas para todos os domínios de aplicativo no processo durante a vida útil do processo.  
   
  Para habilitar o monitoramento do código gerenciado, use a <xref:System.AppDomain.MonitoringIsEnabled%2A> propriedade.  
@@ -60,6 +64,7 @@ Instrui o runtime a coletar estatísticas sobre todos os domínios de aplicativo
  Este elemento de configuração está disponível apenas no .NET Framework 4 e posterior.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como habilitar o monitoramento de recursos de domínio do aplicativo.  
   
 ```xml  
