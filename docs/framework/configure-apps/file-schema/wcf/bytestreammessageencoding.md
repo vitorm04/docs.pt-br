@@ -2,14 +2,15 @@
 title: <byteStreamMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: e2b92b88c3e2a8abb14f58af90aab6e2e58ce14a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ceb40558cd979a54f72c2e9aa88f3af47bee9b68
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557288"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183891"
 ---
 # \<byteStreamMessageEncoding>
+
 Especifica a codificação de mensagem como um fluxo de bytes, com a opção de especificar a codificação de caracteres.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,13 +20,14 @@ Especifica a codificação de mensagem como um fluxo de bytes, com a opção de 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<byteStreamMessageEncoding>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <byteStreamMessageEncoding />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -46,7 +48,7 @@ Especifica a codificação de mensagem como um fluxo de bytes, com a opção de 
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|Define todos os recursos de associação da associação personalizada.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

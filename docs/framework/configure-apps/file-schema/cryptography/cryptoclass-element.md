@@ -8,14 +8,15 @@ helpviewer_keywords:
 - cryptoClass element
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-ms.openlocfilehash: 4872fbd6fa043902e8c69f158bee5d0c915ec83a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f7fe6d02b4697af3a1d0d04471a2736045fc9ecc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088657"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181798"
 ---
 # <a name="cryptoclass-element"></a>Elemento \<cryptoClass>
+
 Contém uma classe de criptografia que tem um mapeamento para um nome amigável no [\<nameEntry>](nameentry-element.md) elemento.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -32,6 +33,7 @@ Contém uma classe de criptografia que tem um mapeamento para um nome amigável 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -41,6 +43,7 @@ Contém uma classe de criptografia que tem um mapeamento para um nome amigável 
 |`customClassName`|Atributo obrigatório.<br /><br /> Contém as informações para a classe de criptografia. Use esse atributo para fornecer um nome curto para sua classe. Você deve especificar uma cadeia de caracteres que atenda aos requisitos especificados na [especificação de nomes de tipo totalmente qualificados](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -54,6 +57,7 @@ Contém uma classe de criptografia que tem um mapeamento para um nome amigável 
 |`mscorlib`|Contém o [\<cryptographySettings>](cryptographysettings-element.md) elemento.|  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como usar o **\<cryptoClass>** elemento para fazer referência a uma classe de criptografia e configurar o tempo de execução. Em seguida, você pode passar a cadeia de caracteres "RSA" para o <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> método e usar o <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> método para retornar um `MyCryptoRSAClass` objeto.  
   
 ```xml  
@@ -75,9 +79,9 @@ Contém uma classe de criptografia que tem um mapeamento para um nome amigável 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema do arquivo de configuração](../index.md)
 - [Esquema de configurações de criptografia](index.md)
-- [Serviços de Criptografia](../../../../standard/security/cryptographic-services.md)
+- [Serviços criptográficos](../../../../standard/security/cryptographic-services.md)
 - [Configurando classes de criptografia](../../configure-cryptography-classes.md)

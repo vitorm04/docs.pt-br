@@ -2,12 +2,12 @@
 title: Testar um .NET Standard biblioteca de classes com o .NET Core usando Visual Studio para Mac
 description: Crie um projeto de teste de unidade para uma biblioteca de classes do .NET Core. Verifique se uma biblioteca de classes do .NET Core funciona corretamente com testes de unidade.
 ms.date: 06/08/2020
-ms.openlocfilehash: d3c8a5e01d16047949e977f3af6a429970d996d0
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 3adcddc96abf77012f89a28c1cf60ea57ae506a2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359214"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180524"
 ---
 # <a name="test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Testar um .NET Standard biblioteca de classes com o .NET Core usando o Visual Studio
 
@@ -165,7 +165,9 @@ Para testar a compilação de Lançamento:
 
 ## <a name="debug-tests"></a>Depurar testes
 
-Você pode usar o mesmo processo mostrado no [tutorial: Depurar um aplicativo de console do .NET Core usando Visual Studio para Mac](debugging-with-visual-studio-mac.md) para depurar código usando seu projeto de teste de unidade. Em vez de iniciar o projeto de aplicativo de demonstração, <kbd>pressione CTRL</kbd>e clique no projeto **StringLibraryTests** e selecione **Iniciar Depuração de projeto** no menu de contexto. O Visual Studio inicia o projeto de teste com o depurador anexado. A execução será interrompida em qualquer ponto de interrupção que você adicionou ao projeto de teste ou ao código de biblioteca subjacente.
+Se você estiver usando Visual Studio para Mac como o IDE, poderá usar o mesmo processo mostrado no [tutorial: Depurar um aplicativo de console do .NET Core usando Visual Studio para Mac](debugging-with-visual-studio-mac.md) para depurar o código usando o projeto de teste de unidade. Em vez de iniciar o projeto de aplicativo de *demonstração* , <kbd>pressione CTRL</kbd>e clique no projeto **StringLibraryTests** e selecione **Iniciar Depuração de projeto** no menu de contexto.
+
+O Visual Studio inicia o projeto de teste com o depurador anexado. A execução será interrompida em qualquer ponto de interrupção que você adicionou ao projeto de teste ou ao código de biblioteca subjacente.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 

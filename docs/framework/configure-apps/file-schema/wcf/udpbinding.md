@@ -2,14 +2,15 @@
 title: <udpBinding>
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: b2ff39e1292cfaad1165e14e693acda2518477a6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 730a051e6823a89c05f8eb894b261e93c0511dcc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559038"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183631"
 ---
 # \<udpBinding>
+
 Um elemento de configuração usado para configurar a <xref:System.ServiceModel.UdpBinding> associação.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ Um elemento de configuração usado para configurar a <xref:System.ServiceModel.
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<udpBinding>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <udpBinding>
@@ -45,6 +46,7 @@ Um elemento de configuração usado para configurar a <xref:System.ServiceModel.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -79,9 +81,11 @@ Um elemento de configuração usado para configurar a <xref:System.ServiceModel.
 |[\<bindings>](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O UdpBinding permite que os serviços WCF se comuniquem por meio do transporte UDP. Ele permite trocas de mensagens de "incêndio e esquecido" onde um cliente envia uma mensagem a um serviço e não espera resposta.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como configurar o <xref:System.ServiceModel.UdpBinding> usando o `udpBinding` elemento <>.  
   
 ```xml  
@@ -104,7 +108,7 @@ Um elemento de configuração usado para configurar a <xref:System.ServiceModel.
 </udpBinding>
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>

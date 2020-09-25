@@ -2,14 +2,15 @@
 title: <workflowRuntime>
 ms.date: 03/30/2017
 ms.assetid: 304c70fa-78d1-4d0f-b89f-0ca23d734c6f
-ms.openlocfilehash: 43cdec2403e8d80256279388a1adf7cf3cedbb73
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4a450fb6f02bbf0f1681f7b2fabea9da7b65cbea
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558778"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183592"
 ---
 # \<workflowRuntime>
+
 Especifica as configurações para uma instância do <xref:System.Workflow.Runtime.WorkflowRuntime> para hospedar serviços de Windows Communication Foundation baseado em fluxo de trabalho (WCF).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Especifica as configurações para uma instância do <xref:System.Workflow.Runti
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<workflowRuntime>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <workflowRuntime cachedInstanceExpiration="TimeSpan"
@@ -37,6 +38,7 @@ Especifica as configurações para uma instância do <xref:System.Workflow.Runti
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -46,7 +48,7 @@ Especifica as configurações para uma instância do <xref:System.Workflow.Runti
 |cachedInstanceExpiration|Um <xref:System.TimeSpan> valor opcional que especifica a duração máxima em que uma instância de fluxo de trabalho pode permanecer na memória no estado ocioso antes de ser descarregada ou anulada de modo forçado. Se o WorkflowRuntime tiver `PersistenceService` que executar UnloadOnIdle, esse atributo será ignorado.|  
 |enablePerformanceCounters|Um valor booliano opcional que especifica se os contadores de desempenho estão habilitados. Os contadores de desempenho fornecem informações sobre várias estatísticas relacionadas ao fluxo de trabalho, mas causam uma penalidade de desempenho quando o mecanismo de tempo de execução do fluxo de trabalho é iniciado e quando as instâncias de fluxo de trabalho estão em execução. O valor padrão é `true`.|  
 |name|Uma cadeia de caracteres que contém o nome do mecanismo de tempo de execução do fluxo de trabalho. O nome é usado na saída para distinguir esse tempo de execução de outros tempos de execução que podem estar em execução no sistema, por exemplo, em contadores de desempenho.<br /><br /> O padrão é uma cadeia de caracteres vazia.|  
-|validateOnCreate|Um valor booliano opcional que especifica se a validação da definição de fluxo de trabalho ocorrerá quando o WorkflowServiceHost for aberto.  Quando esse atributo é definido como `true` , a validação do fluxo de trabalho é executada toda vez que `WorkflowServiceHost.Open` é chamada. Se forem encontrados erros de validação, um <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> erro será gerado.<br /><br /> Quando essa propriedade é definida como `false` , nenhuma validação de definição de fluxo de trabalho ocorrerá.<br /><br /> O valor padrão para essa propriedade é `true`.|  
+|validateOnCreate|Um valor booliano opcional que especifica se a validação da definição de fluxo de trabalho ocorrerá quando o WorkflowServiceHost for aberto.  Quando esse atributo é definido como `true` , a validação do fluxo de trabalho é executada toda vez que `WorkflowServiceHost.Open` é chamada. Se forem encontrados erros de validação, um <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> erro será gerado.<br /><br /> Quando essa propriedade é definida como `false` , nenhuma validação de definição de fluxo de trabalho ocorrerá.<br /><br /> O valor padrão desta propriedade é `true`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -62,6 +64,7 @@ Especifica as configurações para uma instância do <xref:System.Workflow.Runti
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Para obter mais informações sobre como usar um arquivo de configuração para controlar o comportamento de um <xref:System.Workflow.Runtime.WorkflowRuntime> objeto de um aplicativo host Windows Workflow Foundation, consulte [arquivos de configuração de fluxo de trabalho](/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
   
 ## <a name="example"></a>Exemplo  
