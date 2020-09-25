@@ -5,25 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
-ms.openlocfilehash: e42f48a188741c3ddff44f6444fa351192c8175f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b6f9b0308bcbf53a89ae0690ed44db0a364aef0c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793342"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91191691"
 ---
 # <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>Como: resolver conflitos mantendo valores de banco de dados
-Para reconciliar diferenças entre valores esperados e reais de base de dados antes que você submeter tente novamente suas alterações, você pode usar <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> para manter os valores localizados na base de dados. Os valores atuais no modelo de objeto são substituídos em seguida. Para obter mais informações, [consulte simultaneidade otimista: Visão](optimistic-concurrency-overview.md)geral.  
+
+Para reconciliar diferenças entre valores esperados e reais de base de dados antes que você submeter tente novamente suas alterações, você pode usar <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> para manter os valores localizados na base de dados. Os valores atuais no modelo de objeto são substituídos em seguida. Para obter mais informações, consulte [simultaneidade otimista: visão geral](optimistic-concurrency-overview.md).  
   
 > [!NOTE]
 > Em todos os casos, o registro no cliente é atualizado primeiro recuperando os dados atualizados de base de dados. Esta ação certifique-se de que a seguir tentativa de atualização não falhará nas mesmas verificação de simultaneidade.  
   
 ## <a name="example"></a>Exemplo  
+
  Nesse cenário, uma exceção é lançada de <xref:System.Data.Linq.ChangeConflictException> quando tenta User1 para enviar alterações, porque Usuário2 tiver alterado entretanto as colunas do assistente e departamento. A tabela a seguir mostra a situação.  
   
-||Manager|Assistente|Departamento|  
+||Gerente|Assistente|department|  
 |------|-------------|---------------|----------------|  
-|Estado original de base de dados quando consultado por User1 e por Usuário2.|Alfreds|Maria|Vendas|  
+|Estado original de base de dados quando consultado por User1 e por Usuário2.|Alfreds|Maria|Sales|  
 |User1 prepara-se para enviar essas alterações.|Alfred||Marketing|  
 |Usuário2 já tiver enviado essas alterações.||Mary|Serviço|  
   
@@ -31,7 +33,7 @@ Para reconciliar diferenças entre valores esperados e reais de base de dados an
   
  Quando User1 resolver o conflito usando <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues>, o resultado na base de dados é o seguinte na tabela:  
   
-||Manager|Assistente|Departamento|  
+||Gerente|Assistente|department|  
 |------|-------------|---------------|----------------|  
 |Novo estado após a resolução do conflito.|Alfreds<br /><br /> (original)|Mary<br /><br /> (de Usuário2)|Serviço<br /><br /> (de Usuário2)|  
   
@@ -40,6 +42,6 @@ Para reconciliar diferenças entre valores esperados e reais de base de dados an
  [!code-csharp[System.Data.Linq.RefreshMode#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.refreshmode/cs/program.cs#1)]
  [!code-vb[System.Data.Linq.RefreshMode#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Como: Gerenciar conflitos de alterações](how-to-manage-change-conflicts.md)
+- [Como: gerenciar conflitos de alteração](how-to-manage-change-conflicts.md)

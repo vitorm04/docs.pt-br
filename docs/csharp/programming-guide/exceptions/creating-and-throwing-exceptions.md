@@ -8,14 +8,15 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 8ab10dbf686def8d169ef3239492e3b618e9d297
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 77a1e8eb4d442e66f8b9ed17a5881661a5990a35
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302042"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195487"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Criando e lançando exceções (Guia de Programação em C#)
+
 As exceções são usadas para indicar que ocorreu um erro durante a execução do programa. Objetos de exceção que descrevem um erro são criados e, em seguida, *lançados* com a palavra-chave [throw](../../language-reference/keywords/throw.md). Então, o runtime procura o manipulador de exceção mais compatível.  
   
  Os programadores devem lançar exceções quando uma ou mais das seguintes condições forem verdadeiras:  
@@ -45,6 +46,7 @@ As exceções são usadas para indicar que ocorreu um erro durante a execução 
  Os métodos públicos e protegidos devem lançar exceções sempre que não puderem concluir suas funções pretendidas. A classe de exceção que é lançada deve ser a exceção mais específica disponível que se adapta às condições do erro. Essas exceções devem ser documentadas como parte da funcionalidade de classe e as classes derivadas ou as atualizações da classe original devem manter o mesmo comportamento para compatibilidade com versões anteriores.  
   
 ## <a name="things-to-avoid-when-throwing-exceptions"></a>Coisas a serem evitadas ao lançar exceções  
+
  A lista a seguir identifica as práticas a serem evitadas ao lançar exceções:  
   
 - As exceções não devem ser usadas para alterar o fluxo de um programa, como parte da execução normal. As exceções só devem ser usadas para relatar e tratar condições de erro.  
@@ -56,6 +58,7 @@ As exceções são usadas para indicar que ocorreu um erro durante a execução 
 - Não crie exceções que podem ser lançadas no modo de depuração, mas não no modo de versão. Em vez disso, use o Debug Assert para identificar erros em tempo de execução durante a fase de desenvolvimento.  
   
 ## <a name="defining-exception-classes"></a>Definindo classes de exceção  
+
  Os programas podem lançar uma classe de exceção predefinida no namespace <xref:System> (exceto quando observado anteriormente) ou criar suas próprias classes de exceção, derivando de <xref:System.Exception>. As classes derivadas devem definir pelo menos quatro construtores: um construtor sem parâmetros, um que define a propriedade de mensagem e um que define as propriedades <xref:System.Exception.Message%2A> e <xref:System.Exception.InnerException%2A>. O quarto construtor é usado para serializar a exceção. Novas classes de exceção devem ser serializáveis. Por exemplo:  
   
  [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
@@ -69,6 +72,6 @@ Para obter mais informações, veja [Exceções](~/_csharplang/spec/exceptions.m
 ## <a name="see-also"></a>Veja também
 
 - [Guia de programação C#](../index.md)
-- [Exceções e tratamento de exceções](./index.md)
+- [Exceções e manipulação de exceções](./index.md)
 - [Hierarquia de exceções](../../../standard/exceptions/index.md)
-- [Tratamento de exceção](./exception-handling.md)
+- [Tratamento de Exceção](./exception-handling.md)

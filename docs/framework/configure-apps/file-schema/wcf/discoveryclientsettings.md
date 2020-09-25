@@ -2,14 +2,15 @@
 title: <discoveryClientSettings>
 ms.date: 03/30/2017
 ms.assetid: 02e1b823-a8bb-4074-90d5-8599f71e8f9d
-ms.openlocfilehash: 929c5d170bfc27160e3e15b8bd2f9f26e0ed8975
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6e3f273af807eb362f005fef63246013ecc88581
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855406"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192237"
 ---
 # \<discoveryClientSettings>
+
 Contém as configurações necessárias para um aplicativo participar do processo de descoberta de serviço como um cliente.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -47,6 +48,7 @@ Contém as configurações necessárias para um aplicativo participar do process
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  

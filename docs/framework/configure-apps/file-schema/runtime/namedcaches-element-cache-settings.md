@@ -6,14 +6,15 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: e0640ca18d386141f3c03135019eb4fe959b5bf8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ad76c01bba859934be399d73262bd974309efe98
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153952"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192393"
 ---
 # <a name="namedcaches-element-cache-settings"></a>Elemento \<namedCaches> (Configurações de cache)
+
 Especifica uma coleção de definições de configuração para as <xref:System.Runtime.Caching.MemoryCache> instâncias nomeadas. A <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> propriedade faz referência à coleção de definições de configuração de um ou mais `namedCaches` elementos do arquivo de configuração.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -29,10 +30,12 @@ Especifica uma coleção de definições de configuração para as <xref:System.
 </namedCaches>  
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>Tipo  
+
  `None`  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -61,13 +64,15 @@ Especifica uma coleção de definições de configuração para as <xref:System.
 |[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|Contém tipos que permitem implementar o cache de saída em aplicativos que são criados no .NET Framework.|  
   
 ## <a name="remarks"></a>Comentários  
- A seção de configuração de cache de memória do arquivo Web. config pode conter `add` `remove` atributos, e `clear` para a `namedCaches` coleção. Cada `namedCaches` entrada é identificada exclusivamente pelo `name` atributo.  
+
+ A seção de configuração do cache de memória do arquivo Web.config pode conter `add` `remove` atributos, e `clear` para a `namedCaches` coleção. Cada `namedCaches` entrada é identificada exclusivamente pelo `name` atributo.  
   
  Você pode recuperar instâncias de entradas de cache de memória referenciando as informações nos arquivos de configuração do aplicativo. Por padrão, somente a instância de cache padrão tem uma entrada no arquivo de configuração. A instância de cache padrão é a instância que é retornada da <xref:System.Runtime.Caching.MemoryCache.Default%2A> propriedade.  
   
  Se você definir o atributo Name como "default", o elemento usará a instância de cache de memória padrão.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como definir o nome do cache para o nome de entrada de cache padrão, definindo o `name` atributo como "default".  
   
  O `cacheMemoryLimitMegabytes` atributo e o `physicalMemoryPercentage` atributo são definidos como zero. Definir esses atributos como zero significa que a heurística de dimensionamento automático da <xref:System.Runtime.Caching.MemoryCache> classe é usada. A implementação de cache compara a carga de memória atual com os limites de memória absolutos e baseados em porcentagem a cada dois minutos.  
@@ -89,6 +94,6 @@ Especifica uma coleção de definições de configuração para as <xref:System.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [\<memoryCache>Elemento (configurações de cache)](memorycache-element-cache-settings.md)
+- [\<memoryCache> Elemento (configurações de cache)](memorycache-element-cache-settings.md)

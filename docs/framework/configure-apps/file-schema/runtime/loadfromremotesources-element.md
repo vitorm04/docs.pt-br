@@ -5,14 +5,15 @@ helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-ms.openlocfilehash: 48da852bd1e209aed5ed5e75d8e510027a96d6d7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 568c0c814dcc57be0f5be435bb7750c970ffec19
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558003"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192445"
 ---
 # <a name="loadfromremotesources-element"></a>Elemento \<loadFromRemoteSources>
+
 Especifica se os assemblies carregados de fontes remotas devem receber confiança total no .NET Framework 4 e posterior.
   
 > [!NOTE]
@@ -22,7 +23,7 @@ Especifica se os assemblies carregados de fontes remotas devem receber confianç
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<loadFromRemoteSources>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <loadFromRemoteSources
@@ -30,6 +31,7 @@ Especifica se os assemblies carregados de fontes remotas devem receber confianç
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -42,10 +44,11 @@ Especifica se os assemblies carregados de fontes remotas devem receber confianç
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|Não conceda confiança total a aplicativos de fontes remotas. Este é o padrão.|  
+|`false`|Não conceda confiança total a aplicativos de fontes remotas. Esse é o padrão.|  
 |`true`|Conceda confiança total a aplicativos de fontes remotas.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -113,10 +116,10 @@ O exemplo a seguir mostra como conceder confiança total a assemblies carregados
 </configuration>  
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Mais usos implícitos da política de CAS: loadFromRemoteSources](/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)
 - [Como: executar código parcialmente confiável em uma área restrita](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
-- [Esquema de configurações de tempo de execução](index.md)
+- [Esquema de configurações do runtime](index.md)
 - [Esquema do arquivo de configuração](../index.md)
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

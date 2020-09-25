@@ -2,14 +2,15 @@
 title: <httpsTransport>
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: 09b0b8500ca93649c814c00739210343bfe1424c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 07f7b07815454983b0e8f09a5f242a12f4d4bdb3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73739030"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192211"
 ---
 # \<httpsTransport>
+
 Especifica um transporte HTTP para transmissão de mensagens SOAP para uma associação personalizada.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -40,6 +41,7 @@ Especifica um transporte HTTP para transmissão de mensagens SOAP para uma assoc
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -63,6 +65,7 @@ Especifica um transporte HTTP para transmissão de mensagens SOAP para uma assoc
 |useDefaultWebProxy|Um valor booliano que especifica se as configurações de proxy de todo o computador são usadas em vez das configurações específicas do usuário. O padrão é `true`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -72,9 +75,10 @@ Especifica um transporte HTTP para transmissão de mensagens SOAP para uma assoc
 |[\<binding>](bindings.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O `httpsTransport` elemento é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte HTTPS. HTTPS é o transporte primário usado para fins de interoperabilidade segura. O Windows Communication Foundation (WCF) dá suporte ao HTTPS para garantir a interoperabilidade com outras pilhas de serviços da Web.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.HttpsTransportElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>

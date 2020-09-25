@@ -2,14 +2,15 @@
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 2749bc6c66d491a8a160d98b508fb43aa027b806
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 775ec3a4d3dd8709c61fb46155b5085a3343d218
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398049"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192263"
 ---
 # \<diagnostics>
+
 O `diagnostics` elemento define as configurações que podem ser usadas por um administrador para inspeção e controle de tempo de execução.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -41,6 +42,7 @@ O `diagnostics` elemento define as configurações que podem ser usadas por um a
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -65,6 +67,7 @@ O `diagnostics` elemento define as configurações que podem ser usadas por um a
 |serviceModel|O elemento raiz de todos os elementos de configuração do WCF.|  
   
 ## <a name="remarks"></a>Comentários  
+
  A `diagnostics` seção define as configurações de diagnóstico para todos os serviços localizados em um assembly. Não é possível definir configurações de diagnóstico separadas no nível de serviço, a menos que haja apenas um serviço no assembly. Os atributos são definidos de acordo com os requisitos da seção.  
   
 ## <a name="example"></a>Exemplo  
