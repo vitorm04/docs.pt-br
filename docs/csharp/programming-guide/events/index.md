@@ -7,19 +7,21 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 86ded81de4b9191c50b993c08b0e87712ff69020
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 14c18006e393dece5d32d30c2a727d797515c779
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545487"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167451"
 ---
 # <a name="events-c-programming-guide"></a>Eventos (Guia de Programação em C#)
+
 Eventos permitem que uma [classe](../../language-reference/keywords/class.md) ou objeto notifique outras classes ou objetos quando algo interessante ocorre. A classe que envia (ou *aciona*) o evento é chamada de *editor* e as classes que recebem (ou *manipulam*) os eventos são chamadas *assinantes*.  
   
 Em um aplicativo Windows Forms em C# ou Web típico, você assina eventos acionados pelos controles, como botões e caixas de listagem. Você pode usar o IDE (ambiente de desenvolvimento integrado) do Visual C# para procurar os eventos que um controle publica e selecionar aqueles que você deseja manipular. O IDE oferece uma maneira fácil de adicionar automaticamente um método de manipulador de eventos vazio e o código para assinar o evento. Para obter mais informações, consulte [como assinar e cancelar a assinatura de eventos](./how-to-subscribe-to-and-unsubscribe-from-events.md).
   
 ## <a name="events-overview"></a>Visão geral sobre eventos  
+
  Os eventos têm as seguintes propriedades:  
   
 - O editor determina quando um evento é acionado. Os assinantes determinam a ação que é executada em resposta ao evento.  
@@ -35,6 +37,7 @@ Em um aplicativo Windows Forms em C# ou Web típico, você assina eventos aciona
 - Na biblioteca de classes .NET, os eventos são baseados no <xref:System.EventHandler> delegado e na <xref:System.EventArgs> classe base.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  Para obter mais informações, consulte:  
   
 - [Como realizar e cancelar a assinatura de eventos](./how-to-subscribe-to-and-unsubscribe-from-events.md)
@@ -52,6 +55,7 @@ Em um aplicativo Windows Forms em C# ou Web típico, você assina eventos aciona
 Para obter mais informações, veja [Eventos](~/_csharplang/spec/classes.md#events) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
 ## <a name="featured-book-chapters"></a>Capítulos do Livro em Destaque  
+
  [Expressões lambda, eventos e delegados](/previous-versions/visualstudio/visual-studio-2008/ff518994(v=orm.10)) em [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](/previous-versions/visualstudio/visual-studio-2008/ff518995(v=orm.10))  
   
  [Delegados e eventos](/previous-versions/visualstudio/visual-studio-2008/ff652490(v=orm.10)) em [Learning C# 3.0: Master the fundamentals of C# 3.0](/previous-versions/visualstudio/visual-studio-2008/ff652493(v=orm.10))  

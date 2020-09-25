@@ -2,14 +2,15 @@
 title: <serviceCertificate> de <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-ms.openlocfilehash: 513dcad7f4325d653df87fe9cc27572c25e153c5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 936661595813d7b8f3e894efb7bf6cf3aab7e89e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399667"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167088"
 ---
 # <a name="servicecertificate-of-servicecredentials"></a>\<serviceCertificate> de \<serviceCredentials>
+
 Especifique um certificado X. 509 que será usado para autenticar o serviço para clientes usando o modo de segurança da mensagem.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,6 +31,7 @@ Especifique um certificado X. 509 que será usado para autenticar o serviço par
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -42,6 +44,7 @@ Especifique um certificado X. 509 que será usado para autenticar o serviço par
 |`x509FindType`|Define o tipo de pesquisa de X.509 a ser executada. Os valores válidos incluem os seguintes:<br /><br /> -FindByThumbprint<br />-FindBySubjectName<br />- FindBySubjectDistinguishedName<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />- FindBySerialNumber<br />- FindByTimeValid<br />- FindByTimeNotYetValid<br />- FindByTemplateName<br />- FindByApplicationPolicy<br />- FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />- FindBySubjectKeyIdentifier<br /><br /> O tipo contido no `findValue` atributo deve atender aos requisitos do X509FindType especificado.<br /><br /> O valor padrão é FindBySubjectDistinguishedName.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -51,6 +54,7 @@ Especifique um certificado X. 509 que será usado para autenticar o serviço par
 |[\<serviceCredentials>](servicecredentials.md)|Especifica a credencial a ser usada na autenticação do serviço e as configurações relacionadas à validação de credenciais do cliente.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Use este elemento para especificar um certificado X. 509 que será usado para autenticar o serviço para clientes usando o modo de segurança da mensagem. Se você estiver usando um certificado que será renovado periodicamente, sua impressão digital será alterada. Nesse caso, use o nome da entidade como o `x509FindType` porque o certificado pode ser reemitido com o mesmo nome de assunto.  
   
  Para obter mais informações sobre como usar o elemento, consulte [como especificar valores de credencial do cliente](../../../wcf/how-to-specify-client-credential-values.md).  
@@ -61,5 +65,5 @@ Especifique um certificado X. 509 que será usado para autenticar o serviço par
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
 - <xref:System.ServiceModel.Description.ServiceCredentials.ServiceCertificate%2A>
-- [Como especificar valores de credenciais do cliente](../../../wcf/how-to-specify-client-credential-values.md)
+- [Como: especificar valores de credenciais de cliente](../../../wcf/how-to-specify-client-credential-values.md)
 - [Comportamentos de segurança](../../../wcf/feature-details/security-behaviors-in-wcf.md)

@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 77715913c24423c1dc95478977f4e3821e4c247b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0920acac2c82677cfce37703b7027dedce91a535
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545305"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166801"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Carregando um DataSet a partir de XML
+
 O conteúdo de um <xref:System.Data.DataSet> ADO.NET pode ser criado de um fluxo ou documento XML. Além disso, com o .NET Framework, você tem grande flexibilidade sobre quais informações são carregadas do XML e como o esquema ou estrutura relacional do <xref:System.Data.DataSet> é criado.  
   
  Para preencher um <xref:System.Data.DataSet> com dados do XML, use o método **ReadXml** do <xref:System.Data.DataSet> objeto. O método **ReadXml** lê de um arquivo, de um fluxo ou de um **XmlReader**e usa como argumentos a origem do XML, além de um argumento **XmlReadMode** opcional. Para obter mais informações sobre o **XmlReader**, consulte [lendo dados XML com XmlTextReader](/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100)). O método **ReadXml** lê o conteúdo do fluxo ou do documento XML e carrega o <xref:System.Data.DataSet> com os dados. Ele também criará o esquema relacional do <xref:System.Data.DataSet> dependendo do **XmlReadMode** especificado e se um esquema relacional já existe ou não.  
@@ -33,6 +34,7 @@ O conteúdo de um <xref:System.Data.DataSet> ADO.NET pode ser criado de um fluxo
 > Se você passar um **XmlReader** para **ReadXml** que está posicionado parte do caminho em um documento XML, o **ReadXml** lerá para o próximo nó do elemento e tratará isso como o elemento raiz, lendo até o final do nó do elemento. Isso não se aplicará se você especificar **XmlReadMode. Fragment**.  
   
 ## <a name="dtd-entities"></a>Entidades DTD  
+
  Se o XML contiver entidades definidas em um esquema de definição de tipo de documento (DTD), uma exceção será gerada se você tentar carregar um <xref:System.Data.DataSet> passando um nome de arquivo, um fluxo ou um **XmlReader** de não validação para **ReadXml**. Em vez disso, você deve criar um **XmlValidatingReader**, com **EntityHandling** definido como **EntityHandling. ExpandEntities**e passar seu **XmlValidatingReader** para **ReadXml**. O **XmlValidatingReader** expandirá as entidades antes de serem lidas pelo <xref:System.Data.DataSet> .  
   
  Os seguintes exemplos de código mostram como carregar um <xref:System.Data.DataSet> de um fluxo XML. O primeiro exemplo mostra um nome de arquivo que está sendo passado para o método **ReadXml** . O segundo exemplo mostra uma cadeia de caracteres que contém o XML que está sendo carregado usando um <xref:System.IO.StringReader>.  
@@ -114,6 +116,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 ## <a name="merging-data-from-xml"></a>Mesclando dados de XML  
+
  Se o <xref:System.Data.DataSet> já contiver dados, os novos dados XML serão adicionados aos dados já presentes no <xref:System.Data.DataSet>. A **ReadXml** não faz a mesclagem do XML <xref:System.Data.DataSet> com as informações de linha com chaves primárias correspondentes. Para substituir as informações de linha existentes por novas informações de XML, use o **ReadXml** para criar um novo <xref:System.Data.DataSet> e, em seguida, <xref:System.Data.DataSet.Merge%2A> o novo <xref:System.Data.DataSet> no existente <xref:System.Data.DataSet> . Observe que o carregamento de um DiffGram usando **ReadXml** com um **XmlReadMode** de **DiffGram** mesclará as linhas que têm o mesmo identificador exclusivo.  
   
 ## <a name="see-also"></a>Confira também
