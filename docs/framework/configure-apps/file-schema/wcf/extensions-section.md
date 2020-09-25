@@ -1,15 +1,16 @@
 ---
-title: <extensions>Section
+title: <extensions> Section
 ms.date: 03/30/2017
 ms.assetid: 53a59fb6-dede-47ec-9384-b3c2e8f0c1fa
-ms.openlocfilehash: 35621acaf96a80ffa3ffe4a3c6605143c48995a5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f3eb5d446291dfa6b7c8e0f1ee2b6a5cf53c2162
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855361"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185776"
 ---
-# <a name="extensions-section"></a>\<extensions>Section
+# <a name="extensions-section"></a>\<extensions> Section
+
 Esta seção de configuração contém uma coleção de extensões, que permitem ao usuário criar associações definidas pelo usuário, comportamentos e outros aspectos de extensões.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -34,9 +35,11 @@ Esta seção de configuração contém uma coleção de extensões, que permitem
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
+
  Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  

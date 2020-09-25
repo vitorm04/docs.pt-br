@@ -5,14 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: b741b3bc9c03faaa5fa2c01bd8f70d4be9b099c2
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 83dbd2dc497fafaf1922f8ad53208d0ab14f14a9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063660"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185893"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Como declarar, instanciar e usar um delegado (guia de programação C#)
+
 No C# 1.0 e versões posteriores, é possível declarar delegados conforme mostrado no exemplo a seguir.  
   
  [!code-csharp[csProgGuideDelegates#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#13)]  
@@ -38,6 +39,7 @@ No C# 1.0 e versões posteriores, é possível declarar delegados conforme mostr
  O uso de delegados promove uma boa separação de funcionalidade entre o banco de dados da livraria e o código de cliente. O código de cliente não tem conhecimento de como os livros são armazenados ou como o código da livraria localiza os livros de bolso. O código da livraria não tem conhecimento do processamento executado nos livros de bolso após a localização.  
   
 ## <a name="example"></a>Exemplo  
+
  [!code-csharp[csProgGuideDelegates#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#12)]  
   
 ## <a name="robust-programming"></a>Programação robusta  
@@ -72,7 +74,7 @@ No C# 1.0 e versões posteriores, é possível declarar delegados conforme mostr
   
      Um delegado pode ser chamado de forma síncrona, como neste exemplo ou de forma assíncrona, usando os métodos `BeginInvoke` e `EndInvoke`.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação C#](../index.md)
 - [Eventos](../events/index.md)

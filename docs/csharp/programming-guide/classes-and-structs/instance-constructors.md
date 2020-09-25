@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: d70e786446fb198afb4e0311757cacb65b706f47
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: f1845601f2a0237206d05e3cc3cbbca68492020c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864196"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186127"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Construtores de instâncias (Guia de Programação em C#)
 
@@ -41,11 +41,13 @@ Os construtores de instância são usados para criar e inicializar quaisquer var
  Neste exemplo, a classe `Circle` passa valores que representam o raio e a altura do construtor fornecido pelo `Shape` do qual `Circle` é derivado. Um exemplo completo que usa `Shape` e `Circle` é exibido neste tópico como Exemplo 3.  
   
 ## <a name="example-1"></a>Exemplo 1  
+
  O exemplo a seguir demonstra uma classe com dois construtores de classe, um sem argumentos e outro com dois argumentos.  
   
  [!code-csharp[csProgGuideObjects#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#4)]  
   
 ## <a name="example-2"></a>Exemplo 2  
+
  Neste exemplo, a classe `Person` não tem nenhum construtor. Nesse caso, um construtor sem parâmetros é fornecido automaticamente e os campos são inicializados com seus valores padrão.  
   
  [!code-csharp[csProgGuideObjects#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#8)]  
@@ -53,6 +55,7 @@ Os construtores de instância são usados para criar e inicializar quaisquer var
  Observe que o valor padrão de `age` é `0` e o valor padrão de `name` é `null`.
   
 ## <a name="example-3"></a>Exemplo 3  
+
  O exemplo a seguir demonstra como usar o inicializador de classe base. A classe `Circle` é derivada da classe geral `Shape` e a classe `Cylinder` é derivada da classe `Circle`. O construtor em cada classe derivada está usando seu inicializador de classe base.  
   
  [!code-csharp[csProgGuideObjects#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#9)]  
