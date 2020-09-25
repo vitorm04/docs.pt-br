@@ -2,14 +2,15 @@
 title: DOTIPO (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
-ms.openlocfilehash: 375fe9ce52ae290c175e42276b6b526766f6699c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b5600b4cee23945fe60142b370feb35ac1a2efa1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547506"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175675"
 ---
 # <a name="oftype-entity-sql"></a>DOTIPO (Entity SQL)
+
 Retorna uma coleção de objetos de uma expressão de consulta que é de um tipo específico.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -19,6 +20,7 @@ OFTYPE ( expression, [ONLY] test_type )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `expression`  
  Qualquer expressão de consulta válida que retorna uma coleção de objetos.  
   
@@ -26,9 +28,11 @@ OFTYPE ( expression, [ONLY] test_type )
  O tipo para testar cada objeto retornado por `expression` contra. O tipo deve ser qualificado por um namespace.  
   
 ## <a name="return-value"></a>Valor Retornado  
+
  Uma coleção de objetos que são do tipo `test_type`, ou um tipo base ou um tipo derivado de `test_type`. Se for especificado SOMENTE, somente as instâncias de `test_type` ou de uma coleção vazia serão retornadas.  
   
 ## <a name="remarks"></a>Comentários  
+
  Uma expressão de `OFTYPE` especifica uma expressão que é emitida para executar um teste de tipo versus cada elemento de uma coleção.  A expressão de `OFTYPE` gerencia uma nova coleção do tipo especificado que contém somente os elementos que foram qualquer equivalente a esse tipo ou um subpropriedades tipo deles.  
   
  Uma expressão de `OFTYPE` é uma abreviação de expressão de consulta a seguir:  
@@ -60,10 +64,11 @@ OfType(executives, NamespaceName.Manager)
 |OFTYPE (coleção (RowType), RowType)|Gera|  
   
 ## <a name="example"></a>Exemplo  
+
  A consulta a seguir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usa o operador OfType para retornar uma coleção de objetos OnsiteCourse de uma coleção de objetos Course. A consulta é baseada no [modelo escolar](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)).  
   
  [!code-sql[DP EntityServices Concepts#OFTYPE](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#oftype)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Referência de Entity SQL](entity-sql-reference.md)
