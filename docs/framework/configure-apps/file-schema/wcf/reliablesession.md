@@ -2,14 +2,15 @@
 title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: 95f6646041dc2dd7bae7691a0a9f748c844f50b6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ec69d9194d98302a4744e290f23fbb150b2e87cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738751"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181305"
 ---
 # \<reliableSession>
+
 Define a configuração para mensagens WS-Reliable. Quando esse elemento é adicionado a uma associação personalizada, o canal resultante pode dar suporte a garantias de entrega exatamente uma vez.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,6 +34,7 @@ Define a configuração para mensagens WS-Reliable. Quando esse elemento é adic
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -49,6 +51,7 @@ Define a configuração para mensagens WS-Reliable. Quando esse elemento é adic
 |reliableMessagingVersion|Um valor válido de <xref:System.ServiceModel.ReliableMessagingVersion> que especifica a versão WS-ReliableMessaging a ser usada.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -58,6 +61,7 @@ Define a configuração para mensagens WS-Reliable. Quando esse elemento é adic
 |[\<binding>](bindings.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
+
  As sessões confiáveis fornecem recursos para mensagens e sessões confiáveis. A Reliable Messaging repete a comunicação em caso de falha e permite que as garantias de entrega, como a chegada da ordem das mensagens a serem especificadas. As sessões mantêm o estado para clientes entre chamadas. Esse elemento também fornece opcionalmente a entrega de mensagens ordenadas. Essa sessão implementada pode cruzar o SOAP e transportar intermediários.  
   
  Cada elemento de associação representa uma etapa de processamento ao enviar ou receber mensagens. Em tempo de execução, os elementos de associação criam fábricas e ouvintes de canal que são necessários para criar pilhas de canal de entrada e de saída necessárias para enviar e receber mensagens. O `reliableSession` fornece uma camada opcional na pilha que pode estabelecer uma sessão confiável entre pontos de extremidade e configurar o comportamento dessa sessão.  
@@ -65,6 +69,7 @@ Define a configuração para mensagens WS-Reliable. Quando esse elemento é adic
  Para obter mais informações, consulte [sessões confiáveis](../../../wcf/feature-details/reliable-sessions.md).  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir demonstra como configurar uma associação personalizada com vários elementos de codificação de transporte e de mensagem, especialmente permitindo sessões confiáveis, que mantém o estado do cliente e especifica garantias de entrega em ordem. Esse recurso é configurado nos arquivos de configuração do aplicativo para o cliente e o serviço. O exemplo mostra a configuração do serviço.  
   
 ```xml  
@@ -120,7 +125,7 @@ Define a configuração para mensagens WS-Reliable. Quando esse elemento é adic
 </configuration>
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.ReliableSessionElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

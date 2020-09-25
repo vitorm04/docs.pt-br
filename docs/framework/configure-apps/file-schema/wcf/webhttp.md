@@ -2,14 +2,15 @@
 title: <webHttp>
 ms.date: 03/30/2017
 ms.assetid: 1f9d0754-d41e-44ce-a298-e51cb3096c64
-ms.openlocfilehash: 00644d248e6fb85d7cf712620e6ac74405e6b0c3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 716d960e2d5f896976c22a60d419d9b165b36178
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399162"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202455"
 ---
 # \<webHttp>
+
 Esse elemento Especifica o <xref:System.ServiceModel.Description.WebHttpBehavior> em um ponto de extremidade por meio da configuração. Esse comportamento, quando usado em conjunto com a [\<webHttpBinding>](webhttpbinding.md) associação padrão, habilita o modelo de programação da Web para um serviço Windows Communication Foundation (WCF).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,6 +27,7 @@ Esse elemento Especifica o <xref:System.ServiceModel.Description.WebHttpBehavior
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -39,6 +41,7 @@ Esse elemento Especifica o <xref:System.ServiceModel.Description.WebHttpBehavior
 |helpEnabled|Obtém ou define um valor que determina se a página de ajuda está habilitada.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -47,9 +50,9 @@ Esse elemento Especifica o <xref:System.ServiceModel.Description.WebHttpBehavior
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica o conjunto de comportamentos de ponto de extremidade.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.WebHttpElement>
 - <xref:System.ServiceModel.Description.WebHttpBehavior>
-- [Integração AJAX e suporte para JSON](../../../wcf/feature-details/ajax-integration-and-json-support.md)
+- [Integração de AJAX e suporte para JSON](../../../wcf/feature-details/ajax-integration-and-json-support.md)
 - [\<webHttpBinding>](webhttpbinding.md)

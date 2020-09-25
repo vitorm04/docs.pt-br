@@ -2,14 +2,15 @@
 title: <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: 74b9d51b7400469c96fc9c8b36e4b0fb1d46969b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3432d33c0cd65af03d2b1ac1302ca2c8ff3e0f43
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398411"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201636"
 ---
 # \<allowAccounts>
+
 Contém uma coleção de elementos de configuração que especificam contas de usuário para processos que hospedam serviços Windows Communication Foundation (WCF) e recebem acesso de conexão ao serviço de compartilhamento.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,9 +27,11 @@ Contém uma coleção de elementos de configuração que especificam contas de u
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
+
  Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -41,7 +44,7 @@ Contém uma coleção de elementos de configuração que especificam contas de u
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<net.pipe>](net-pipe.md)or[\<net.tcp>](net-tcp.md)|Especifica as definições de configuração para o pipe de rede ou para os serviços de compartilhamento de TCP.|  
+|[\<net.pipe>](net-pipe.md) or [\<net.tcp>](net-tcp.md)|Especifica as definições de configuração para o pipe de rede ou para os serviços de compartilhamento de TCP.|  
   
 ## <a name="see-also"></a>Confira também
 

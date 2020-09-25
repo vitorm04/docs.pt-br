@@ -5,14 +5,15 @@ helpviewer_keywords:
 - <PreferComInsteadOfManagedRemoting> element
 - PreferComInsteadOfManagedRemoting element
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
-ms.openlocfilehash: 1376df4efd56734f2b8da9bd76033afcce8a285b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2fb0d94f91d28f9d9d4f247411d273f786f7b63b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77452247"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195279"
 ---
 # <a name="prefercominsteadofmanagedremoting-element"></a>Elemento \<PreferComInsteadOfManagedRemoting>
+
 Especifica se o tempo de execução usará a interoperabilidade COM em vez de comunicação remota para todas as chamadas entre limites de domínio do aplicativo.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,6 +27,7 @@ Especifica se o tempo de execução usará a interoperabilidade COM em vez de co
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -38,10 +40,11 @@ Especifica se o tempo de execução usará a interoperabilidade COM em vez de co
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|O tempo de execução usará a comunicação remota entre os limites do domínio do aplicativo. Este é o padrão.|  
+|`false`|O tempo de execução usará a comunicação remota entre os limites do domínio do aplicativo. Esse é o padrão.|  
 |`true`|O tempo de execução usará a interoperabilidade COM entre limites de domínio do aplicativo.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -52,6 +55,7 @@ Especifica se o tempo de execução usará a interoperabilidade COM em vez de co
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Quando você define o `enabled` atributo como `true` , o tempo de execução se comporta da seguinte maneira:  
   
 - O tempo de execução não chama [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) para uma interface [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) quando uma interface [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) entra no domínio por meio de uma interface com. Em vez disso, ele constrói um RCW ( [Runtime Callable Wrapper](../../../../standard/native-interop/runtime-callable-wrapper.md) ) em volta do objeto.  
@@ -61,6 +65,7 @@ Especifica se o tempo de execução usará a interoperabilidade COM em vez de co
  Esses dois comportamentos garantem que todas as chamadas sobre interfaces COM entre objetos gerenciados entre os limites de domínio do aplicativo usem a interoperabilidade com e COM em vez de comunicação remota.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como especificar que o tempo de execução deve usar a interoperabilidade COM entre limites de isolamento:  
   
 ```xml  
@@ -71,7 +76,7 @@ Especifica se o tempo de execução usará a interoperabilidade COM em vez de co
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Esquema de configurações do runtime](index.md)
 - [Esquema do arquivo de configuração](../index.md)

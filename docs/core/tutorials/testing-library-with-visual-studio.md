@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 049f0636b1c2c2df33461714aea5a11810ef00ad
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 04d0120622697d1e0c84fc169dfc50951cb8aa3c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359188"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177287"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Tutorial: testar uma biblioteca de classes de .NET Standard com o .NET Core usando o Visual Studio
 
@@ -186,6 +186,12 @@ Para testar a compilação de Lançamento:
    > ![Menu de contexto de StringLibrary com comando de build](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
 1. Execute os testes de unidade escolhendo **testar executar**  >  **todos os testes** na barra de menus. Os testes são aprovados.
+
+## <a name="debug-tests"></a>Depurar testes
+
+Se você estiver usando o Visual Studio como seu IDE, poderá usar o mesmo processo mostrado no [tutorial: Depurar um aplicativo de console do .NET Core usando o Visual Studio](debugging-with-visual-studio.md) para depurar o código usando seu projeto de teste de unidade. Em vez de iniciar o projeto de aplicativo de *demonstração* , clique com o botão direito do mouse no projeto **StringLibraryTests** e selecione **depurar testes** no menu de contexto.
+
+O Visual Studio inicia o projeto de teste com o depurador anexado. A execução será interrompida em qualquer ponto de interrupção que você adicionou ao projeto de teste ou ao código de biblioteca subjacente.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
-ms.openlocfilehash: b62f5fbb6b964ed70f6bf7fc08b62a74a7c06c45
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a209cfe4142ad8ebdbce1d715a76ac27300f4e19
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554717"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202390"
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>Consultas em tabelas cruzadas (LINQ to DataSet)
+
 Além de consultar uma única tabela, você também pode executar consultas de tabela cruzada no LINQ to DataSet. Isso é feito usando uma *junção*. Uma junção é a associação de objetos em uma fonte de dados com objetos que compartilham um atributo comum em outra fonte de dados, como um produto ou ID de contato. Na programação orientada a objeto, as relações entre objetos são relativamente fáceis de navegar, pois cada objeto tem um membro que faz referência a outro objeto. No entanto, em tabelas de banco de dados externas, as relações de navegação não são tão simples. As tabelas de banco de dados não contêm relações internas. Nesses casos, a operação de junção pode ser usada para corresponder elementos de cada fonte. Por exemplo, considerando duas tabelas que contêm informações de produto e de vendas, você pode usar uma operação de união para corresponder as informações de vendas e produtos para a mesma ordem de venda.  
   
  A estrutura de consulta integrada à linguagem (LINQ) fornece dois operadores de junção <xref:System.Linq.Enumerable.Join%2A> e <xref:System.Linq.Enumerable.GroupJoin%2A> . Esses operadores executam *junções de equivalência*: ou seja, junções que correspondem a duas fontes de dados somente quando suas chaves são iguais. (Por outro lado, o Transact-SQL dá suporte a operadores de junção diferentes de `equals` , como o `less than` operador.)  
@@ -24,12 +25,13 @@ Além de consultar uma única tabela, você também pode executar consultas de t
  Para obter mais informações sobre junções, consulte [operações de junção](/previous-versions/visualstudio/visual-studio-2013/bb397908(v=vs.120)).  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir executa um junção tradicional de tabelas `SalesOrderHeader` e `SalesOrderDetail` do banco de dados de exemplo AdventureWorks para obter pedidos online do mês de agosto.  
   
  [!code-csharp[DP LINQ to DataSet Examples#Join](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#join)]
  [!code-vb[DP LINQ to DataSet Examples#Join](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#join)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Consultar DataSets](querying-datasets-linq-to-dataset.md)
 - [Consultas de tabela única](single-table-queries-linq-to-dataset.md)

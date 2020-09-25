@@ -8,14 +8,15 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: fe6de09213c6f980e8eb205a318aae50033b2a84
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3c3513c05485550202f2fc5bcae1faabb0e75d47
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155226"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201805"
 ---
 # <a name="cryptographysettings-element"></a>Elemento \<cryptographySettings>
+
 Contém configurações de criptografia.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -30,9 +31,11 @@ Contém configurações de criptografia.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
+
  Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -50,6 +53,7 @@ Contém configurações de criptografia.
 |`mscorlib`|Contém o `cryptographySettings` elemento.|  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como usar o **\<cryptographySettings>** elemento para conter mapeamentos de nome de criptografia e mapeamentos de OID. Este exemplo configura o tempo de execução para que <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> o retorne um `MyHashClass` objeto e a `MyCryptoClass` classe seja mapeada para o identificador de objeto 1.3.36.2.1.  
   
 ```xml  
@@ -76,8 +80,8 @@ Contém configurações de criptografia.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema do arquivo de configuração](../index.md)
 - [Esquema de configurações de criptografia](index.md)
-- [Serviços de Criptografia](../../../../standard/security/cryptographic-services.md)
+- [Serviços criptográficos](../../../../standard/security/cryptographic-services.md)

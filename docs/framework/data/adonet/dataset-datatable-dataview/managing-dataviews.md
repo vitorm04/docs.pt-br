@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: 5e85fccddf6359791ea702667a36b44f611815dc
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c07f521b94f23b479281b0314d6b89a095ee9624
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784497"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181238"
 ---
 # <a name="managing-dataviews"></a>Gerenciar DataViews
-Você pode usar um <xref:System.Data.DataViewManager> para gerenciar as configurações de exibição de todas as tabelas <xref:System.Data.DataView>em um. Se você tiver um controle que deseja associar a várias tabelas, como uma grade que navega em relações, um **DataViewManager** é ideal.  
+
+Você pode usar um <xref:System.Data.DataViewManager> para gerenciar as configurações de exibição de todas as tabelas em um <xref:System.Data.DataView> . Se você tiver um controle que deseja associar a várias tabelas, como uma grade que navega em relações, um **DataViewManager** é ideal.  
   
- O **DataViewManager** contém uma coleção de <xref:System.Data.DataViewSetting> objetos que são usados para definir a configuração de exibição das tabelas no. <xref:System.Data.DataSet> O <xref:System.Data.DataViewSettingCollection> contém um <xref:System.Data.DataViewSetting> objeto para cada tabela em um **conjunto**de um DataSet. Você pode definir as propriedades padrão **ApplyDefaultSort**, **Sort**, **telefilter**e **RowStateFilter** da tabela referenciada usando seu **DataViewSetting**. Você pode fazer referência a **DataViewSetting** para uma tabela específica por nome ou referência ordinal ou passando uma referência para esse objeto de tabela específico. Você pode acessar a coleção de objetos **DataViewSetting** em um **DataViewManager** usando a propriedade **DataViewSettings** .  
+ O **DataViewManager** contém uma coleção de <xref:System.Data.DataViewSetting> objetos que são usados para definir a configuração de exibição das tabelas no <xref:System.Data.DataSet> . O <xref:System.Data.DataViewSettingCollection> contém um <xref:System.Data.DataViewSetting> objeto para cada tabela em um **conjunto**de um DataSet. Você pode definir as propriedades padrão **ApplyDefaultSort**, **Sort**, **telefilter**e **RowStateFilter** da tabela referenciada usando seu **DataViewSetting**. Você pode fazer referência a **DataViewSetting** para uma tabela específica por nome ou referência ordinal ou passando uma referência para esse objeto de tabela específico. Você pode acessar a coleção de objetos **DataViewSetting** em um **DataViewManager** usando a propriedade **DataViewSettings** .  
   
- O exemplo de código a seguir preenche um **conjunto** de dados com as SQL Server tabelas do banco de dados **Northwind** **clientes**, **pedidos**e **detalhes do pedido**, cria as relações entre as tabelas, usa um **DataViewManager** para Defina as configurações padrão de **DataView** e associe um **DataGrid** ao **DataViewManager**. O exemplo define as configurações padrão de **DataView** para todas as tabelas no **conjunto** de linhas para classificar pela chave primária da tabela (**ApplyDefaultSort** = **true**) e, em seguida, modifica a ordem de classificação da tabela **Customers** para classificar por **CompanyName**.  
+ O exemplo de código a seguir preenche um **conjunto** de dados com o SQL Server **Northwind** Database Tables, **pedidos**e **detalhes do pedido**, cria as relações entre **as tabelas,** usa um **DataViewManager** para definir as configurações padrão de **DataView** e associa um **DataGrid** ao **DataViewManager**. O exemplo define as configurações padrão de **DataView** para todas as tabelas no **conjunto** de valores para classificar pela chave primária da tabela **(ApplyDefaultSort**  =  **true**) e, em seguida, modifica a ordem de classificação da tabela **Customers** para classificar por **CompanyName**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  
@@ -119,11 +120,11 @@ System.Windows.Forms.DataGrid grid = new System.Windows.Forms.DataGrid();
 grid.SetDataBinding(viewManager, "Customers");  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataViewManager>
 - <xref:System.Data.DataViewSetting>
 - <xref:System.Data.DataViewSettingCollection>
 - [DataViews](dataviews.md)
-- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)
+- [Visão geral do ADO.NET](../ado-net-overview.md)

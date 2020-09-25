@@ -8,12 +8,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: 4517aab98235ec2172da355ad0e05d95ebee46c5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 79b49cbc9b122e6591d07643a341841b262edff4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554033"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201701"
 ---
 # <a name="supportedruntime-element"></a>Elemento \<supportedRuntime>
 
@@ -23,7 +23,7 @@ Especifica qual versão de Common Language Runtime e, opcionalmente, .NET Framew
 &nbsp;&nbsp;[\<startup>](startup-element.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
 
 ```xml
 <supportedRuntime version="runtime version" sku="sku id"/>
@@ -55,14 +55,16 @@ Se o **\<supportedRuntime>** elemento com o `sku` atributo estiver presente no a
 Recomendamos que você teste aplicativos com todas as versões do .NET Framework na qual eles podem ser executados.
 
 <a name="version"></a>
+
 ## <a name="runtime-version-values"></a>valores de "versão de tempo de execução"
+
 O `runtime` atributo especifica a versão do CLR (Common Language Runtime) necessária para um determinado aplicativo. Observe que todas as versões .NET Framework v4. x especificam o `v4.0` CLR. A tabela a seguir lista os valores válidos para o valor de *versão de tempo de execução* do `version` atributo.
 
 |Versão do .NET Framework|Atributo `version`|
 |----------------------------|-------------------------|
-|1,0|"v 1.0.3705"|
+|1.0|"v 1.0.3705"|
 |1,1|"v 1.1.4322"|
-|2.0|"v 2.0.50727"|
+|2,0|"v 2.0.50727"|
 |3.0|"v 2.0.50727"|
 |3,5|"v 2.0.50727"|
 |4.0-4.8|"v 4.0"|
@@ -108,7 +110,7 @@ O exemplo a seguir mostra como especificar a versão de tempo de execução com 
 
 Este elemento pode ser usado no arquivo de configuração do aplicativo.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Esquema de configurações de inicialização](index.md)
 - [Esquema do arquivo de configuração](../index.md)

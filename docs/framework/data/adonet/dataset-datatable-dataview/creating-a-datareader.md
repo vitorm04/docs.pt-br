@@ -5,18 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d4422a-7464-4ab8-8ec7-90185fde3ecf
-ms.openlocfilehash: 696eb4dfc334390e1968dd317d441f3c987a1f77
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3af6ae3a8f4ecc3ec34c186ce55c1c77c27514a9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040116"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202325"
 ---
 # <a name="creating-a-datareader"></a>Criar um DataReader
-As classes <xref:System.Data.DataTable> e <xref:System.Data.DataSet> têm um método <xref:System.Data.DataTable.CreateDataReader%2A> que retorna o conteúdo do <xref:System.Data.DataTable> ou o conteúdo da coleção <xref:System.Data.DataSet> do objeto <xref:System.Data.DataSet.Tables%2A> como um ou mais conjuntos de resultados somente de encaminhamento e somente leitura.  
+
+As <xref:System.Data.DataTable> <xref:System.Data.DataSet> classes e têm um <xref:System.Data.DataTable.CreateDataReader%2A> método que retorna o conteúdo do <xref:System.Data.DataTable> ou o conteúdo da <xref:System.Data.DataSet> coleção do objeto <xref:System.Data.DataSet.Tables%2A> como um ou mais conjuntos de resultados somente de encaminhamento e somente leitura.  
   
 ## <a name="example"></a>Exemplo  
- O aplicativo de console a seguir cria uma instância de <xref:System.Data.DataTable>. Em seguida, o exemplo passa o <xref:System.Data.DataTable> preenchido para um procedimento que chama o método <xref:System.Data.DataTable.CreateDataReader%2A>, que itera pelos resultados contidos no <xref:System.Data.DataTableReader>.  
+
+ O aplicativo de console a seguir cria uma <xref:System.Data.DataTable> instância do. Em seguida, o exemplo passa o preenchido <xref:System.Data.DataTable> para um procedimento que chama o <xref:System.Data.DataTable.CreateDataReader%2A> método, que itera pelos resultados contidos no <xref:System.Data.DataTableReader> .  
   
  [!code-csharp[DataWorks DataTable.CreateDataReader#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTable.CreateDataReader/CS/source.cs#1)]
  [!code-vb[DataWorks DataTable.CreateDataReader#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTable.CreateDataReader/VB/source.vb#1)]  
@@ -30,9 +32,9 @@ As classes <xref:System.Data.DataTable> e <xref:System.Data.DataSet> têm um mé
 4 Russ  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Data.DataTable.CreateDataReader%2A>
 - <xref:System.Data.DataSet.CreateDataReader%2A>
 - [DataTableReaders](datatablereaders.md)
-- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)
+- [Visão geral do ADO.NET](../ado-net-overview.md)
