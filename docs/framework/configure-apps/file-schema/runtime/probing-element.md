@@ -9,14 +9,15 @@ helpviewer_keywords:
 - container tags, <probing> element
 - probing element
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
-ms.openlocfilehash: e9e48ea97e1b70fef7fcc78a113e18c5fec23b7c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1435ee8ea887b5d7d3e785eef0f25ffed14b1b97
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73115857"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195266"
 ---
 # <a name="probing-element"></a>Elemento \<probing>
+
 Especifica subdiretórios base do aplicativo para a Common Language Runtime Pesquisar ao carregar assemblies.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,6 +32,7 @@ Especifica subdiretórios base do aplicativo para a Common Language Runtime Pesq
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -52,6 +54,7 @@ Nenhum.
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como especificar subdiretórios base do aplicativo em que o tempo de execução deve pesquisar assemblies.  
   
 ```xml  
@@ -64,7 +67,7 @@ Nenhum.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Esquema de configurações de tempo de execução](index.md)
 - [Esquema do arquivo de configuração](../index.md)

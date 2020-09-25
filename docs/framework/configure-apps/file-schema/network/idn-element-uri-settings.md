@@ -2,12 +2,12 @@
 title: Elemento <idn> (Configurações de URI)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 533b2562f6e5c8d6c2bf452e56dff9a8bf8ab376
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f45922ecd5f7476362aab5348d91415d8e31c53f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71698167"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195396"
 ---
 # <a name="idn-element-uri-settings"></a>Elemento \<idn> (Configurações de URI)
 
@@ -26,11 +26,12 @@ Especifica se a análise de IDN (nome de domínio internacionalizado) é aplicad
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
 
-|**Elemento**|**Descrição**|  
+|**Element**|**Descrição**|  
 |-----------------|---------------------|  
 |`enabled`|Especifica se a análise de IDN (nome de domínio internacionalizado) é aplicada a um nome de domínio, o valor padrão é nenhum.|  
 
@@ -40,9 +41,9 @@ Nenhum
   
 ### <a name="parent-elements"></a>Elementos pai
 
-|**Elemento**|**Descrição**|  
+|**Element**|**Descrição**|  
 |-----------------|---------------------|  
-|[URI](uri-element-uri-settings.md)|Contém configurações que especificam como o .NET Framework trata os endereços da Web expressos usando URIs (identificadores de recursos uniformes).|  
+|[uri](uri-element-uri-settings.md)|Contém configurações que especificam como o .NET Framework trata os endereços da Web expressos usando URIs (identificadores de recursos uniformes).|  
 
 ## <a name="remarks"></a>Comentários
 
@@ -50,7 +51,7 @@ A <xref:System.Uri> classe existente foi estendida no .NET Framework 3,5. 3,0 SP
 
 Para habilitar o suporte para IRI, as duas alterações a seguir são necessárias:
 
-1. Adicione a seguinte linha ao arquivo Machine. config no diretório .NET Framework 2,0:
+1. Adicione a seguinte linha ao arquivo de machine.config no diretório .NET Framework 2,0:
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
@@ -76,7 +77,7 @@ Para habilitar o suporte para IRI, as duas alterações a seguir são necessári
 
 ### <a name="configuration-files"></a>Arquivos de configuração
 
-Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).
+Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine.config).
 
 ## <a name="example"></a>Exemplo
 
@@ -91,7 +92,7 @@ O exemplo a seguir mostra uma configuração usada pela <xref:System.Uri> classe
 </configuration>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

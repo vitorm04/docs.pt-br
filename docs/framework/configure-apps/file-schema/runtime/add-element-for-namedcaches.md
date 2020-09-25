@@ -5,14 +5,15 @@ helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-ms.openlocfilehash: c1345022b79df371ad9c89a39a0a8b625e26608c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: cd920b58290050fcc30ea5d0a1ac113a333902fa
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154499"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195357"
 ---
 # <a name="add-element-for-namedcaches"></a>Elemento \<add> para \<namedCaches>
+
 Adiciona uma `namedCache` entrada à `namedCaches` coleção para um cache de memória.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,10 +31,12 @@ Adiciona uma `namedCache` entrada à `namedCaches` coleção para um cache de me
  </namedCaches>  
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>Tipo  
+
  `None`  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -46,6 +49,7 @@ Adiciona uma `namedCache` entrada à `namedCaches` coleção para um cache de me
 |`PollingInterval`|Um valor que indica o intervalo de tempo após o qual a implementação de cache compara a carga de memória atual com os limites de memória absolutos e baseados em percentual que são definidos para a instância de cache. Esse valor é inserido no formato "HH: MM: SS".|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  `None`  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -55,9 +59,11 @@ Adiciona uma `namedCache` entrada à `namedCaches` coleção para um cache de me
 |[\<namedCaches>](namedcaches-element-cache-settings.md)|Contém uma coleção de definições de configuração para as <xref:System.Runtime.Caching.MemoryCache> instâncias nomeadas.|  
   
 ## <a name="remarks"></a>Comentários  
- O `add` elemento adiciona uma entrada à `namedCaches` coleção para um cache de memória. Você pode usar o elemento [Clear](clear-element-for-namedcaches.md) antes de usar o `add` elemento para ter certeza de que não há outros caches nomeados na coleção. Esse elemento pode ser usado no arquivo Machine. config e no arquivo Web. config.  
+
+ O `add` elemento adiciona uma entrada à `namedCaches` coleção para um cache de memória. Você pode usar o elemento [Clear](clear-element-for-namedcaches.md) antes de usar o `add` elemento para ter certeza de que não há outros caches nomeados na coleção. Esse elemento pode ser usado no arquivo de machine.config e no arquivo Web.config.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como definir configurações para a `namedCache` entrada padrão para a `namedCaches` coleção de um cache de memória.  
   
 ```xml  
@@ -77,6 +83,6 @@ Adiciona uma `namedCache` entrada à `namedCaches` coleção para um cache de me
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [\<namedCaches>Elemento (configurações de cache)](namedcaches-element-cache-settings.md)
+- [\<namedCaches> Elemento (configurações de cache)](namedcaches-element-cache-settings.md)
