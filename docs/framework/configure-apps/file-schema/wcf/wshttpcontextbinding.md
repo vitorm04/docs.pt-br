@@ -2,14 +2,15 @@
 title: <wsHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1e40b5c9-0df2-4d66-afc5-a99d0e4ae7a4
-ms.openlocfilehash: e6ac5c9627c87f9307e4666ab5415e13cfca9e0c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4b611443e836773ad615f919921c8e7ddb29cba9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557249"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181278"
 ---
 # \<wsHttpContextBinding>
+
 Fornece um contexto para o <xref:System.ServiceModel.WSHttpBinding> que requer que o nível de proteção seja assinado.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ Fornece um contexto para o <xref:System.ServiceModel.WSHttpBinding> que requer q
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<wsHttpContextBinding>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <wsHttpContextBinding>
@@ -62,6 +63,7 @@ Fornece um contexto para o <xref:System.ServiceModel.WSHttpBinding> que requer q
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
@@ -99,7 +101,7 @@ Fornece um contexto para o <xref:System.ServiceModel.WSHttpBinding> que requer q
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSHttpContextBinding>

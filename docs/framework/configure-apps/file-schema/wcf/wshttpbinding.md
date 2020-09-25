@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-ms.openlocfilehash: 27b506a53aba3e7c58f850c7b3adb8a763c80b39
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 33d7c40faa0bf8b78ebc6f79c7db341bb44887ec
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557262"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202429"
 ---
 # \<wsHttpBinding>
+
 Define uma associação segura, confiável e interoperável adequada para contratos de serviço não duplex. A associação implementa as seguintes especificações: WS-Reliable Messaging for fiabilidade e WS-Security para segurança e autenticação de mensagens. O transporte é HTTP e a codificação de mensagem é codificação de texto/XML.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ Define uma associação segura, confiável e interoperável adequada para contra
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<wsHttpBinding>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <wsHttpBinding>
@@ -61,6 +62,7 @@ Define uma associação segura, confiável e interoperável adequada para contra
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
@@ -98,6 +100,7 @@ Define uma associação segura, confiável e interoperável adequada para contra
 |[\<bindings>](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O `WSHttpBinding` é semelhante ao `BasicHttpBinding` , mas fornece mais recursos de serviço Web. Ele usa o transporte HTTP e fornece segurança de mensagem, como a BasicHttpBinding, mas também fornece transações, mensagens confiáveis e WS-Addressing, habilitado por padrão ou disponível por meio de uma configuração de controle único.  
   
 ## <a name="example"></a>Exemplo  
