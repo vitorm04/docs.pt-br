@@ -2,14 +2,15 @@
 title: <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: c1a5013a-9dd4-4a27-b114-795b8b323177
-ms.openlocfilehash: 99fb013e052329ae4b99c4db89565ace8935c456
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 68832c3a5bd4cc423642a6272e70cbecab86d6a8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736515"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181538"
 ---
 # \<peerTransport>
+
 Define um transporte de mesmo nível para uma associação personalizada.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,6 +33,7 @@ Define um transporte de mesmo nível para uma associação personalizada.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -56,9 +58,10 @@ Define um transporte de mesmo nível para uma associação personalizada.
 |[\<binding>](bindings.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Esse transporte não pode ser usado com contratos que têm operações de solicitação/resposta.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.PeerTransportElement>
 - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>

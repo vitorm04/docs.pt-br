@@ -3,14 +3,15 @@ title: <bookmarkResumptionQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 226de75d-d25c-48d5-b069-4b7d80a6852b
-ms.openlocfilehash: b2a81a42a17474bdb0124bec6d3c3eeefa514411
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: efd1e4e54223ff9f5d60b4087fbe5b6bebf1af2f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398844"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189578"
 ---
 # \<bookmarkResumptionQuery>
+
 Representa uma consulta que é usada para controlar a continuação de um indicador dentro de uma instância de fluxo de trabalho. A consulta é necessária para um participante de rastreamento assinar os registros de continuação do indicador.  
   
  Para obter mais informações sobre consultas de perfil de rastreamento, consulte [perfis de rastreamento](../../../windows-workflow-foundation/tracking-profiles.md)  
@@ -38,6 +39,7 @@ Representa uma consulta que é usada para controlar a continuação de um indica
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -47,6 +49,7 @@ Representa uma consulta que é usada para controlar a continuação de um indica
 |name|Uma cadeia de caracteres que especifica o nome do registro para assinar o indicador.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -55,9 +58,9 @@ Representa uma consulta que é usada para controlar a continuação de um indica
 |-------------|-----------------|  
 |[\<bookmarkResumptionQueries>](bookmarkresumptionqueries.md)|Representa uma coleção de consultas que são usados para controlar a continuação de um indicador dentro de uma instância de fluxo de trabalho.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>
-- [Acompanhamento e rastreamento de fluxo de trabalho](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Acompanhando perfis](../../../windows-workflow-foundation/tracking-profiles.md)
+- [Rastreamento e rastreamento de fluxo de trabalho](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Controlando perfis](../../../windows-workflow-foundation/tracking-profiles.md)

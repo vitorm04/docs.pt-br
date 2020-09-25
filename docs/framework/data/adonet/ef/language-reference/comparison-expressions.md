@@ -1,18 +1,19 @@
 ---
-title: Expressões de comparação
+title: Expressões de Comparação
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ec7637a9-01d5-4a95-8bb0-478311cd263b
-ms.openlocfilehash: d0926bb1a0e35caa058f268f0a0c414e805a8674
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d92020f353393eee683e578f4306cd4a2f214152
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251167"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197840"
 ---
-# <a name="comparison-expressions"></a>Expressões de comparação
+# <a name="comparison-expressions"></a>Expressões de Comparação
+
 Uma expressão de comparação verifica se um valor, um valor de propriedade, ou um resultado constante do método sejam iguais, não iguais, maior do que, ou menor que outro valor. Se uma comparação específica não for válida para LINQ to Entities, uma exceção será lançada. Todas as comparações, explícita e implícita, exigem que todos os componentes são comparáveis na fonte de dados. As expressões de comparação são usados nas cláusulas de `Where` para os resultados da consulta.  
   
  O exemplo a seguir na sintaxe da expressão de consulta a seguir mostra uma consulta que retorna os resultados onde o número de ordem de venda é igual a “SO43663”:  
@@ -53,6 +54,6 @@ Uma expressão de comparação verifica se um valor, um valor de propriedade, ou
  [!code-csharp[DP L2E Conceptual Examples#MethodAsConstantFails](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#methodasconstantfails)]
  [!code-vb[DP L2E Conceptual Examples#MethodAsConstantFails](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#methodasconstantfails)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Expressões em consultas LINQ to Entities](expressions-in-linq-to-entities-queries.md)

@@ -2,14 +2,15 @@
 title: Elemento <peerAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 093b0c4b6a7fbf54455ec523b52c1f3a9884cfa8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7e4f86c361dc3ade5dedf4017921516357bb9a58
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536009"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181577"
 ---
 # <a name="peerauthentication-element"></a>Elemento \<peerAuthentication>
+
 Especifica opções de autenticação para clientes ponto a ponto.  
   
  Para obter mais informações sobre a programação ponto a ponto, consulte [rede ponto a ponto](../../../wcf/feature-details/peer-to-peer-networking.md).  
@@ -23,7 +24,7 @@ Especifica opções de autenticação para clientes ponto a ponto.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<peer>**](peer-of-clientcredentials-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<peerAuthentication>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <peerAuthentication customCertificateValidatorType="namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"
@@ -33,6 +34,7 @@ Especifica opções de autenticação para clientes ponto a ponto.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
@@ -69,6 +71,7 @@ Especifica opções de autenticação para clientes ponto a ponto.
 |Enumeração|Um dos seguintes valores: `LocalMachine` ou `CurrentUser`. O padrão é `CurrentUser`. Se o aplicativo cliente estiver sendo executado em uma conta do sistema, o certificado geralmente estará abaixo de `LocalMachine` . Se o aplicativo cliente estiver sendo executado sob uma conta de usuário, o certificado normalmente estará em `CurrentUser` .|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -78,9 +81,11 @@ Especifica opções de autenticação para clientes ponto a ponto.
 |[\<peer>](peer-of-clientcredentials-element.md)|Especifica uma credencial usada para autenticar o cliente para um serviço de mesmo nível.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O `<authentication>` elemento corresponde à <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> classe. Esse elemento especifica um validador, que é invocado durante a autenticação de vizinho para vizinho na malha. Quando um novo par tenta estabelecer uma conexão vizinha, ele passa sua própria credencial para o par de resposta. O validador do respondente é chamado para verificar a credencial da parte remota. Sempre que uma conexão de mesmo nível é estabelecida na malha, ambos os pares são mutuamente autenticados, o que significa que os validadores em ambas as extremidades são invocados.  
   
 ## <a name="example"></a>Exemplo  
+
  O código a seguir define o modo de validação de certificado como `PeerOrChainTrust` .  
   
 ```xml  
@@ -101,7 +106,7 @@ Especifica opções de autenticação para clientes ponto a ponto.
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>

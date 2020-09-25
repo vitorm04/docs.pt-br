@@ -2,17 +2,18 @@
 title: <policyImporters>
 ms.date: 03/30/2017
 ms.assetid: f8267a6f-bc09-4ec1-9b26-9445f137f663
-ms.openlocfilehash: 4125a351d4b0832c7c91362aa488370d01a60d65
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e32a2b9bbb7a8ea98cb43d3404f57641c60647d0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69933759"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181356"
 ---
 # \<policyImporters>
+
 Este elemento de configuração especifica todos os importadores de política que controlam a importação de declarações de política personalizada sobre associações. Cada elemento filho é um <`policyImporter`> que é usado para pesquisar declarações de política personalizadas sobre recursos de associação, bem como anexar um elemento de ligação personalizado que implementa os recursos exigidos pela declaração.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>

@@ -2,23 +2,25 @@
 title: Visão geral da segurança
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 4222dd36fe2f693bb16216e01d5e06a8176a7801
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ede9b24828da74c043bed103595073c4607c51f2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550684"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91188987"
 ---
 # <a name="security-overview"></a>Visão geral da segurança
 
 Proteger um aplicativo é um processo contínuo. Nunca haverá um ponto em que um desenvolvedor possa garantir que um aplicativo seja protegido contra todos os ataques, pois é impossível prever que tipos de ataques futuros novas tecnologias irão trazer. Por outro lado, apenas porque ninguém ainda descobriu (ou publicou) falhas de segurança em um sistema não significa que nenhum exista ou que possa existir. Você precisa planejar a segurança durante a fase de design do projeto, bem como planejar como a segurança será mantida durante o tempo de vida do aplicativo.
 
 ## <a name="design-for-security"></a>Design de segurança
+
  Um dos maiores problemas no desenvolvimento de aplicativos seguros é que a segurança é, com freqüência, uma prioridade, algo a ser implementado após a conclusão do código do projeto. A não criação de segurança em um aplicativo no início leva a aplicativos inseguros porque poucas idéias foram dadas ao que torna um aplicativo seguro.
 
  A implementação de segurança de último minuto leva a mais bugs, pois o software é interrompido sob as novas restrições ou precisa ser reescrito para acomodar a funcionalidade inesperada. Cada linha de código revisado contém a possibilidade de introduzir um novo bug. Por esse motivo, você deve considerar a segurança no início do processo de desenvolvimento para que possa prosseguir em conjunto com o desenvolvimento de novos recursos.
 
 ### <a name="threat-modeling"></a>Modelagem de ameaças
+
  Não é possível proteger um sistema contra ataques, a menos que você compreenda todos os ataques potenciais aos quais ele está exposto. O processo de avaliação de ameaças de segurança, chamado de *modelagem de ameaças*, é necessário para determinar a probabilidade e as ramificações de violações de segurança em seu aplicativo ADO.net.
 
  A modelagem de risco é composta de três etapas de alto nível: compreendendo a exibição do adversário, caracterizando a segurança do sistema e determinando as ameaças.
@@ -32,6 +34,7 @@ Para saber mais, consulte os recursos a seguir:
 |O site de [modelagem de ameaças](https://www.microsoft.com/securityengineering/sdl/threatmodeling) no portal de engenharia de segurança|Os recursos nesta página ajudarão você a entender o processo de modelagem de ameaças e a criar modelos de ameaças que você pode usar para proteger seus próprios aplicativos|
 
 ## <a name="the-principle-of-least-privilege"></a>O princípio de privilégios mínimos
+
  Ao projetar, criar e implantar seu aplicativo, você deve pressupor que seu aplicativo será atacado. Geralmente, esses ataques são provenientes de código mal-intencionado que é executado com as permissões do usuário que está executando o código. Outras podem se originar com código bem intencional que foi explorado por um invasor. Ao planejar a segurança, sempre presuma que o cenário de pior caso ocorrerá.
 
  Uma medida de contador que você pode empregar é tentar colocar o máximo possível de paredes em seu código executando com privilégios mínimos. O princípio de menos privilégios diz que qualquer privilégio concedido deve ser concedido à quantidade mínima de código necessária para a duração mais curta necessária para realizar o trabalho.
@@ -69,7 +72,7 @@ Para saber mais, consulte os recursos a seguir:
 |Recurso|Descrição|
 |--------------|-----------------|
 |[Segurança de acesso do código e o ADO.NET](code-access-security.md)|Descreve as interações entre a segurança de acesso ao código, a segurança baseada em função e os ambientes parcialmente confiáveis da perspectiva de um aplicativo ADO.NET.|
-|[Segurança de acesso do código](../../misc/code-access-security.md)|Contém links para tópicos adicionais que descrevem o CAS no .NET Framework.|
+|[Segurança de Acesso do Código](../../misc/code-access-security.md)|Contém links para tópicos adicionais que descrevem o CAS no .NET Framework.|
 
 ## <a name="database-security"></a>Segurança do Banco de Dados
 
@@ -105,7 +108,7 @@ Para saber mais, consulte os recursos a seguir:
 |[Gerenciamento de política de segurança](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Fornece informações sobre como criar e administrar a política de segurança.|
 |[Práticas recomendadas de política de segurança](/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Fornece links que descrevem como administrar a política de segurança.|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Protegendo aplicativos ADO.NET](securing-ado-net-applications.md)
 - [Segurança no .NET](../../../standard/security/index.md)
