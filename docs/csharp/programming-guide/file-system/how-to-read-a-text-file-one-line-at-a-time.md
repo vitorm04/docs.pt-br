@@ -7,17 +7,18 @@ helpviewer_keywords:
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 1e29013b1008e1000c23804dc3056014cc7c104b
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 93645ef78f1ceb3cc4cf1d20ac73112e86957293
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301951"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178509"
 ---
-# <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a><span data-ttu-id="10d90-104">Como ler um arquivo de texto uma linha de cada vez (guia de programação C#)</span><span class="sxs-lookup"><span data-stu-id="10d90-104">How to read a text file one line at a time (C# Programming Guide)</span></span>
-<span data-ttu-id="10d90-105">Este exemplo lê o conteúdo de um arquivo de texto, uma linha por vez, em uma cadeia de caracteres usando o método `ReadLine` da classe `StreamReader`.</span><span class="sxs-lookup"><span data-stu-id="10d90-105">This example reads the contents of a text file, one line at a time, into a string using the `ReadLine` method of the `StreamReader` class.</span></span> <span data-ttu-id="10d90-106">Cada linha de texto é armazenada na cadeia de caracteres `line` e exibida na tela.</span><span class="sxs-lookup"><span data-stu-id="10d90-106">Each text line is stored into the string `line` and displayed on the screen.</span></span>  
+# <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a><span data-ttu-id="05309-104">Como ler um arquivo de texto uma linha de cada vez (guia de programação C#)</span><span class="sxs-lookup"><span data-stu-id="05309-104">How to read a text file one line at a time (C# Programming Guide)</span></span>
+
+<span data-ttu-id="05309-105">Este exemplo lê o conteúdo de um arquivo de texto, uma linha por vez, em uma cadeia de caracteres usando o método `ReadLine` da classe `StreamReader`.</span><span class="sxs-lookup"><span data-stu-id="05309-105">This example reads the contents of a text file, one line at a time, into a string using the `ReadLine` method of the `StreamReader` class.</span></span> <span data-ttu-id="05309-106">Cada linha de texto é armazenada na cadeia de caracteres `line` e exibida na tela.</span><span class="sxs-lookup"><span data-stu-id="05309-106">Each text line is stored into the string `line` and displayed on the screen.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="10d90-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="10d90-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="05309-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="05309-107">Example</span></span>  
   
 ```csharp
 int counter = 0;  
@@ -38,21 +39,24 @@ System.Console.WriteLine("There were {0} lines.", counter);
 System.Console.ReadLine();  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="10d90-108">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="10d90-108">Compiling the Code</span></span>  
- <span data-ttu-id="10d90-109">Copie o código e cole-o no método `Main` de um aplicativo de console.</span><span class="sxs-lookup"><span data-stu-id="10d90-109">Copy the code and paste it into the `Main` method of a console application.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="05309-108">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="05309-108">Compiling the Code</span></span>  
+
+ <span data-ttu-id="05309-109">Copie o código e cole-o no método `Main` de um aplicativo de console.</span><span class="sxs-lookup"><span data-stu-id="05309-109">Copy the code and paste it into the `Main` method of a console application.</span></span>  
   
- <span data-ttu-id="10d90-110">Substitua `"c:\test.txt"` pelo nome do arquivo real.</span><span class="sxs-lookup"><span data-stu-id="10d90-110">Replace `"c:\test.txt"` with the actual file name.</span></span>  
+ <span data-ttu-id="05309-110">Substitua `"c:\test.txt"` pelo nome do arquivo real.</span><span class="sxs-lookup"><span data-stu-id="05309-110">Replace `"c:\test.txt"` with the actual file name.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="10d90-111">Programação robusta</span><span class="sxs-lookup"><span data-stu-id="10d90-111">Robust Programming</span></span>  
- <span data-ttu-id="10d90-112">As seguintes condições podem causar uma exceção:</span><span class="sxs-lookup"><span data-stu-id="10d90-112">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="05309-111">Programação robusta</span><span class="sxs-lookup"><span data-stu-id="05309-111">Robust Programming</span></span>  
+
+ <span data-ttu-id="05309-112">As seguintes condições podem causar uma exceção:</span><span class="sxs-lookup"><span data-stu-id="05309-112">The following conditions may cause an exception:</span></span>  
   
-- <span data-ttu-id="10d90-113">O arquivo pode não existir.</span><span class="sxs-lookup"><span data-stu-id="10d90-113">The file may not exist.</span></span>  
+- <span data-ttu-id="05309-113">O arquivo pode não existir.</span><span class="sxs-lookup"><span data-stu-id="05309-113">The file may not exist.</span></span>  
   
-## <a name="net-security"></a><span data-ttu-id="10d90-114">Segurança do .NET</span><span class="sxs-lookup"><span data-stu-id="10d90-114">.NET Security</span></span>  
- <span data-ttu-id="10d90-115">Não tome decisões sobre o conteúdo do arquivo com base no nome do arquivo.</span><span class="sxs-lookup"><span data-stu-id="10d90-115">Do not make decisions about the contents of the file based on the name of the file.</span></span> <span data-ttu-id="10d90-116">Por exemplo, o arquivo `myFile.cs` pode não ser um arquivo de origem do C#.</span><span class="sxs-lookup"><span data-stu-id="10d90-116">For example, the file `myFile.cs` may not be a C# source file.</span></span>  
+## <a name="net-security"></a><span data-ttu-id="05309-114">Segurança do .NET</span><span class="sxs-lookup"><span data-stu-id="05309-114">.NET Security</span></span>  
+
+ <span data-ttu-id="05309-115">Não tome decisões sobre o conteúdo do arquivo com base no nome do arquivo.</span><span class="sxs-lookup"><span data-stu-id="05309-115">Do not make decisions about the contents of the file based on the name of the file.</span></span> <span data-ttu-id="05309-116">Por exemplo, o arquivo `myFile.cs` pode não ser um arquivo de origem do C#.</span><span class="sxs-lookup"><span data-stu-id="05309-116">For example, the file `myFile.cs` may not be a C# source file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10d90-117">Veja também</span><span class="sxs-lookup"><span data-stu-id="10d90-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="05309-117">Veja também</span><span class="sxs-lookup"><span data-stu-id="05309-117">See also</span></span>
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [<span data-ttu-id="10d90-118">Guia de programação C#</span><span class="sxs-lookup"><span data-stu-id="10d90-118">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="10d90-119">Sistema de arquivos e o Registro (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="10d90-119">File System and the Registry (C# Programming Guide)</span></span>](./index.md)
+- [<span data-ttu-id="05309-118">Guia de programação C#</span><span class="sxs-lookup"><span data-stu-id="05309-118">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="05309-119">Sistema de arquivos e o Registro (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="05309-119">File System and the Registry (C# Programming Guide)</span></span>](./index.md)
