@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: d14b15f72bd196d8b3a61f22c614516e17d2e95b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 457e11ddad16ca3be55f53f03c480b0e464ab38f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781233"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200388"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Recuperando objetos de cache de identidade
+
 Este tópico descreve os tipos LINQ to SQL consulta que retornam um objeto de cache de identidade que é gerenciado por <xref:System.Data.Linq.DataContext>.  
   
  Em LINQ to SQL, uma das maneiras em que <xref:System.Data.Linq.DataContext> gerencia objetos é autorizando identidades de objeto em um cache de identidade como consultas é executado. Em alguns casos, LINQ to SQL tentará recuperar um objeto de cache de identidade antes de executar uma consulta na base de dados.  
@@ -20,7 +21,7 @@ Este tópico descreve os tipos LINQ to SQL consulta que retornam um objeto de ca
  Em geral, porque uma consulta LINQ to SQL para retornar um objeto de cache de identidade, a consulta deve ser baseado a chave primária de um objeto e deve retornar um único objeto. Em particular, a consulta deve estar em um dos formulários gerais mostrados abaixo.  
   
 > [!NOTE]
-> Consultas pré-compilação compiladas não irão retornar objetos de cache de identidade. Para obter mais informações sobre consultas previamente compiladas, <xref:System.Data.Linq.CompiledQuery> consulte [e como: Armazene e reutilize consultas](how-to-store-and-reuse-queries.md).  
+> Consultas pré-compilação compiladas não irão retornar objetos de cache de identidade. Para obter mais informações sobre consultas previamente compiladas, consulte <xref:System.Data.Linq.CompiledQuery> e [como armazenar e reutilizar consultas](how-to-store-and-reuse-queries.md).  
   
  Uma consulta deve estar em um das seguintes formas gerais para recuperar um objeto de cache de identidade:  
   
@@ -59,14 +60,15 @@ Este tópico descreve os tipos LINQ to SQL consulta que retornam um objeto de ca
 - `c => c.PK1 == constant_value1 && c=> c.PK2 == constant_value2`  
   
 ## <a name="example"></a>Exemplo  
+
  O código a seguir fornece exemplos dos tipos de consultas LINQ to SQL que recuperam um objeto de cache de identidade.  
   
  [!code-csharp[L2S_QueryCache#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/l2s_querycache/cs/program.cs#1)]
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Conceitos de consulta](query-concepts.md)
+- [Consulte conceitos](query-concepts.md)
 - [Identidade do objeto](object-identity.md)
 - [Informações gerais](background-information.md)
 - [Identidade do objeto](object-identity.md)

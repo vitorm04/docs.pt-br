@@ -5,20 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-ms.openlocfilehash: 8d6f5f76787c1110e91b245a3dd2425450b4db7e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1f113a475bb350640aef7a6b4d7a70b32509d1e0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781399"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200401"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>Retornar o valor médio de uma sequência numérica
+
 O operador de <xref:System.Linq.Enumerable.Average%2A> calcula a média de uma sequência de valores numéricos.  
   
 > [!NOTE]
 > A conversão de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de `Average` de valores inteiros é calculada apenas como um número inteiro, não como um double.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir retorna média dos valores de `Freight` na tabela de `Orders` .  
   
  Os resultados de base de dados de exemplo Northwind é `78.2442`.  
@@ -27,6 +29,7 @@ O operador de <xref:System.Linq.Enumerable.Average%2A> calcula a média de uma s
  [!code-vb[DLinqQueryExamples#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#1)]  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir retorna a média de preço unitário de qualquer `Products` na tabela de `Products` .  
   
  Os resultados de base de dados de exemplo Northwind é `28.8663`.  
@@ -35,6 +38,7 @@ O operador de <xref:System.Linq.Enumerable.Average%2A> calcula a média de uma s
  [!code-vb[DLinqQueryExamples#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#2)]  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir usa o operador de `Average` para localizar apenas `Products` cujo preço unitário é maior do que o preço unitário médio da categoria que pertence. O exemplo exibe os resultados em grupos.  
   
  Observe que esse exemplo requer o uso da palavra-chave de `var` em C#, porque o tipo de retorno é anônimo.  
@@ -114,6 +118,6 @@ O operador de <xref:System.Linq.Enumerable.Average%2A> calcula a média de uma s
   
  `Gravad lax`  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Consultas agregadas](aggregate-queries.md)
+- [Consultas de agregação](aggregate-queries.md)

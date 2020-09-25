@@ -2,14 +2,15 @@
 title: Funções canônicas
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: f8ca9e2027e82db89e91287fda02d2014d53f325
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 11e22d527c4266f45ea5d26f2ec95926ebe46332
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854513"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185230"
 ---
 # <a name="canonical-functions"></a>Funções canônicas
+
 Essa seção discute as funções canônicas que têm suporte por todos os provedores de dados e podem ser usadas por todas as tecnologias de consulta. As funções canônicas não podem ser estendidas por um provedor.  
   
  Essas funções canônicas serão convertidas à funcionalidade da fonte de dados correspondente para o provedor. Isso permite as invocações da função expressas em um formulário comum nas fontes de dados.  
@@ -23,16 +24,18 @@ Essa seção discute as funções canônicas que têm suporte por todos os prove
  Para cenários LINQ, as consultas no Entity Framework envolvem o mapeamento de métodos CLR para métodos na fonte de dados subjacente. Os métodos CLR mapeiam para funções canônicas, de modo que um conjunto específico de métodos mapeará corretamente, independentemente da fonte de dados.  
   
 ## <a name="canonical-functions-namespace"></a>Namespace de funções canônicas  
+
  O namespace para a função canônica é <xref:System.Data.Metadata.Edm>. O namespace <xref:System.Data.Metadata.Edm> é incluído automaticamente em todas as consultas. No entanto, se outro namespace for importado e contiver uma função com o mesmo nome de uma função canônica (no namespace <xref:System.Data.Metadata.Edm>), você deverá especificar o namespace.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Funções canônicas agregadas](aggregate-canonical-functions.md)  
+
+ [Funções agregadas canônicas](aggregate-canonical-functions.md)  
  Discute funções canônicas de agregação de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
  [Funções canônicas matemáticas](math-canonical-functions.md)  
  Discute funções canônicas matemáticas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
- [Funções canônicas de cadeia de caracteres](string-canonical-functions.md)  
+ [Funções canônicas de cadeias de caracteres](string-canonical-functions.md)  
  Discute funções canônicas de cadeias de caracteres de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
  [Funções canônicas de data e hora](date-and-time-canonical-functions.md)  
@@ -47,9 +50,9 @@ Essa seção discute as funções canônicas que têm suporte por todos os prove
  [Outras funções canônicas](other-canonical-functions.md)  
  Discute as funções não classificadas como bit a bit, data/hora, cadeia de caracteres, matemática ou de agregação.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Visão geral do Entity SQL](entity-sql-overview.md)
+- [Visão geral da Entity SQL](entity-sql-overview.md)
 - [Referência de Entity SQL](entity-sql-reference.md)
-- [Mapeamento de funções canônicas de modelo conceitual para o SQL Server](../conceptual-model-canonical-to-sql-server-functions-mapping.md)
+- [Modelo conceitual canônico a mapeamento de funções do SQL Server](../conceptual-model-canonical-to-sql-server-functions-mapping.md)
 - [Funções definidas pelo usuário](user-defined-functions-entity-sql.md)

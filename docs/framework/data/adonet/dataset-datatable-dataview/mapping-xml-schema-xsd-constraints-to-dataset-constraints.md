@@ -2,15 +2,16 @@
 title: Mapeamento de restrições de esquema XML (XSD) para restrições de DataSet
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-ms.openlocfilehash: b44c3193e1b9e2e52e086111eab0ab0b0cae5c97
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a2b28b0dcb2e2858c7328854650667f51e83166a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786081"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185282"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapeamento de restrições de esquema XML (XSD) para restrições de DataSet
-A linguagem de definição de esquema XML (XSD) permite que as restrições sejam especificadas nos elementos e atributos que ele define. Ao mapear um esquema XML para o esquema relacional <xref:System.Data.DataSet>em um, as restrições de esquema XML são mapeadas para as restrições relacionais apropriadas nas tabelas e colunas dentro do **conjunto**de um.  
+
+A linguagem de definição de esquema XML (XSD) permite que as restrições sejam especificadas nos elementos e atributos que ele define. Ao mapear um esquema XML para o esquema relacional em um <xref:System.Data.DataSet> , as restrições de esquema XML são mapeadas para as restrições relacionais apropriadas nas tabelas e colunas dentro do **conjunto**de um.  
   
  Esta seção discute o mapeamento das seguintes restrições de esquema XML:  
   
@@ -27,22 +28,24 @@ A linguagem de definição de esquema XML (XSD) permite que as restrições seja
  O processo de mapeamento converte essas restrições de esquema em restrições apropriadas nas tabelas criadas no **conjunto**de um.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Mapear restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados](map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+
+ [Mapear de restrições de esquema XML (XSD) exclusivas para restrições de DataSet](map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Descreve os elementos de esquema XML usados para criar restrições exclusivas em um **DataSet**.  
   
- [Mapear restrições de esquema XML (XSD) para restrições de conjunto de dados](map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Mapear restrições de esquema XML (XSD) chave para restrições de DataSet](map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Descreve os elementos de esquema XML usados para criar restrições de chave (restrições exclusivas em que valores NULL não são permitidos) em um **DataSet**.  
   
- [Mapear restrições de keyref do esquema XML (XSD) para restrições de conjunto de dados](map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Mapear restrições de esquema XML (XSD) keyref para restrições de DataSet](map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Descreve os elementos de esquema XML usados para criar restrições keyref (Foreign Key) em um **DataSet**.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Derivando a estrutura relacional do conjunto de dados de esquema XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+
+ [Derivando a estrutura relacional do DataSet do esquema XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  Descreve a estrutura relacional, ou esquema, de um **conjunto** de dados que é criado a partir do esquema XSD.  
   
- [Gerando relações de conjunto de dados do esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)  
+ [Gerar relações de DataSet do esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)  
  Descreve os elementos de esquema XML usados para criar relações entre colunas de tabela em um **conjunto**de uma.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)
+- [Visão geral do ADO.NET](../ado-net-overview.md)

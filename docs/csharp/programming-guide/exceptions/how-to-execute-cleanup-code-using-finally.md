@@ -7,19 +7,21 @@ helpviewer_keywords:
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: 148c1f9fba67659a07c667bb15619d6f3f7c3b2f
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 283c36ab9b976a92e339000a982340148c2480a8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302016"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178639"
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Como executar o código de limpeza usando finally (guia de programação C#)
+
 O propósito de uma instrução `finally` é garantir que a limpeza necessária de objetos, normalmente objetos que estão mantendo recursos externos, ocorra imediatamente, mesmo que uma exceção seja lançada. Um exemplo dessa limpeza é chamar <xref:System.IO.Stream.Close%2A> em um <xref:System.IO.FileStream> imediatamente após o uso, em vez de esperar que o objeto passe pela coleta de lixo feita pelo Common Language Runtime, da seguinte maneira:  
   
  [!code-csharp[csProgGuideExceptions#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#16)]  
   
 ## <a name="example"></a>Exemplo  
+
  Para transformar o código anterior em uma instrução `try-catch-finally`, o código de limpeza é separado do código funcional, da seguinte maneira.  
   
  [!code-csharp[csProgGuideExceptions#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#17)]  
@@ -31,9 +33,9 @@ O propósito de uma instrução `finally` é garantir que a limpeza necessária 
 ## <a name="see-also"></a>Veja também
 
 - [Guia de programação C#](../index.md)
-- [Exceções e tratamento de exceções](./index.md)
-- [Tratamento de exceção](./exception-handling.md)
+- [Exceções e manipulação de exceções](./index.md)
+- [Tratamento de Exceção](./exception-handling.md)
 - [Instrução using](../../language-reference/keywords/using-statement.md)
 - [try-catch](../../language-reference/keywords/try-catch.md)
-- [try-finally](../../language-reference/keywords/try-finally.md)
-- [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)
+- [Experimente-finalmente](../../language-reference/keywords/try-finally.md)
+- [try – catch-finally](../../language-reference/keywords/try-catch-finally.md)
