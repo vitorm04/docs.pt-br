@@ -1,15 +1,16 @@
 ---
-title: <message>elemento de<netTcpBinding>
+title: <message> elemento de <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 76c4a0a30b637bc168855b091029a959b858401e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ab767a5a1179de81bf9a8adc61799ede2d915ac1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73739013"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204899"
 ---
-# <a name="message-element-of-nettcpbinding"></a>\<message>elemento de\<netTcpBinding>
+# <a name="message-element-of-nettcpbinding"></a>\<message> elemento de \<netTcpBinding>
+
 Define o tipo de requisitos de segurança no nível de mensagem para um ponto de extremidade configurado com o [\<netTcpBinding>](nettcpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,13 +29,14 @@ Define o tipo de requisitos de segurança no nível de mensagem para um ponto de
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`algorithmSuite`|Define a criptografia de mensagem e os algoritmos de encapsulamento de chaves. Os algoritmos e os tamanhos de chave são determinados pela <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> classe. Esses algoritmos são mapeados para aqueles especificados na especificação do WS-SecurityPolicy (Security Policy Language).<br /><br /> Os valores possíveis são mostrados na tabela a seguir. O valor padrão é `Basic256`.<br /><br /> Se a associação de serviço especificar um `algorithmSuite` valor que não seja igual ao padrão, e você gerar o arquivo de configuração usando svcutil. exe, ele não será gerado corretamente e você deverá editar manualmente o arquivo de configuração para definir esse atributo para o valor desejado.|  
+|`algorithmSuite`|Define a criptografia de mensagem e os algoritmos de encapsulamento de chaves. Os algoritmos e os tamanhos de chave são determinados pela <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> classe. Esses algoritmos são mapeados para aqueles especificados na especificação do WS-SecurityPolicy (Security Policy Language).<br /><br /> Os valores possíveis são mostrados na tabela a seguir. O valor padrão é `Basic256`.<br /><br /> Se a associação de serviço especificar um `algorithmSuite` valor que não seja igual ao padrão, e você gerar o arquivo de configuração usando Svcutil.exe, ele não será gerado corretamente e você deverá editar manualmente o arquivo de configuração para definir esse atributo para o valor desejado.|  
 |`clientCredentialType`|Especifica o tipo de credencial a ser usado ao executar a autenticação de cliente usando a segurança baseada em mensagem. Os valores possíveis são mostrados na tabela a seguir. O valor padrão é `UserName`. Esse atributo é do tipo <xref:System.ServiceModel.MessageCredentialType> .|  
   
 ## <a name="algorithmsuite-attribute"></a>Atributo algorithmSuite  
@@ -69,6 +71,7 @@ Define o tipo de requisitos de segurança no nível de mensagem para um ponto de
 |IssuedToken|Especifica um token personalizado, geralmente emitido por um serviço de token de segurança (STS).|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -78,9 +81,10 @@ Define o tipo de requisitos de segurança no nível de mensagem para um ponto de
 |[\<security>](security-of-nettcpbinding.md)|Define os recursos de segurança para o <xref:System.ServiceModel.Configuration.NetTcpBindingElement> .|  
   
 ## <a name="remarks"></a>Comentários  
+
  A mensagem usa segurança em nível de mensagem para a integridade e a confidencialidade da mensagem SOAP e para a autenticação mútua dos pares de comunicação. Se esse modo de segurança for selecionado em uma associação, a pilha de canais será configurada com elementos de ligação de segurança de mensagem e as mensagens SOAP serão protegidas em conformidade com os padrões WS-Security *.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.MessageSecurityOverTcp>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>

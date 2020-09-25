@@ -2,14 +2,15 @@
 title: Elemento <localServiceSettings>
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 4883fd563ecf989d67c369085df4fc43d0c5f078
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3043c07afd316d90cc5525a67bef144f33d9b136
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400311"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204925"
 ---
 # <a name="localservicesettings-element"></a>Elemento \<localServiceSettings>
+
 Especifica as configurações de segurança de um serviço local para esta associação.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -42,6 +43,7 @@ Especifica as configurações de segurança de um serviço local para esta assoc
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -64,6 +66,7 @@ Especifica as configurações de segurança de um serviço local para esta assoc
 |`timestampValidityDuration`|Um positivo <xref:System.TimeSpan> que especifica a duração em que um carimbo de data/hora é válido. O padrão é "00:15:00".|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -74,6 +77,7 @@ Especifica as configurações de segurança de um serviço local para esta assoc
 |[\<secureConversationBootstrap>](secureconversationbootstrap.md)|Especifica os valores padrão usados para iniciar um serviço de conversa segura.|  
   
 ## <a name="remarks"></a>Comentários  
+
  As configurações são locais porque não são publicadas como parte da política de segurança do serviço e não afetam a associação do cliente.  
   
  Os seguintes atributos do `localServiceSecuritySettings` elemento podem ajudar a mitigar um ataque de segurança de negação de serviço (dos):  
@@ -88,7 +92,7 @@ Especifica as configurações de segurança de um serviço local para esta assoc
   
  Em uma sessão de conversa segura, observe que ambos `inactivityTimeout` e os `receiveTimeout` atributos na associação afetam o tempo limite da sessão. O menor dos dois determina quando ocorre o tempo limite.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>
@@ -99,5 +103,5 @@ Especifica as configurações de segurança de um serviço local para esta assoc
 - [Estendendo associações](../../../wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [Como criar uma associação personalizada utilizando o SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Como: criar uma associação personalizada utilizando o SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Segurança de associação personalizada](../../../wcf/samples/custom-binding-security.md)

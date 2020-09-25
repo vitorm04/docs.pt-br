@@ -2,14 +2,15 @@
 title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: 9291c38af28c18d20e23e34e8316b4a9fe523123
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: fd4d678b1e861a47762d8a64f85dcc052a30fe2b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855126"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204795"
 ---
 # \<messageLogging>
+
 Esse elemento define as configurações para os recursos de log de mensagens do Windows Communication Foundation (WCF).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,6 +38,7 @@ Esse elemento define as configurações para os recursos de log de mensagens do 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -63,6 +65,7 @@ Esse elemento define as configurações para os recursos de log de mensagens do 
 |diagnóstico|Define as configurações do WCF para inspeção e controle de tempo de execução para o administrador.|  
   
 ## <a name="remarks"></a>Comentários  
+
  As mensagens são registradas em três níveis diferentes na pilha: serviço, transporte e malformados. Cada nível pode ser ativado separadamente.  
   
  Os filtros XPath podem ser adicionados para registrar mensagens específicas de log nos níveis de transporte e de serviço. Se nenhum filtro for definido, todas as mensagens serão registradas. Os filtros são aplicados somente aos cabeçalhos da mensagem. O corpo é ignorado. O WCF ignora o corpo da mensagem para melhorar o desempenho. Se você quiser filtrar com base no conteúdo do corpo, poderá criar um ouvinte personalizado com um filtro que faça isso.  

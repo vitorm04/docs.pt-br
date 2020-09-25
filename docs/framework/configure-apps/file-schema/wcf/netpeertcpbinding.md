@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-ms.openlocfilehash: 5fe221c5ec6c51afb199b2c66eab9d72cdfd750b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0f702788cf623651fd980b0443821b37acc7387c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556135"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204548"
 ---
 # \<netPeerTcpBinding>
+
 Define uma associação para mensagens TCP específicas do canal par.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Define uma associação para mensagens TCP específicas do canal par.
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<netPeerTcpBinding>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <netPeerBinding>
@@ -40,6 +41,7 @@ Define uma associação para mensagens TCP específicas do canal par.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
@@ -71,9 +73,11 @@ Define uma associação para mensagens TCP específicas do canal par.
 |[\<bindings>](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Essa associação fornece suporte para a criação de aplicativos ponto a ponto ou com várias partes usando o transporte de mesmo nível sobre TCP. Cada nó de mesmo nível pode hospedar vários canais de pares definidos com esse tipo de associação.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir demonstra como usar a associação NetPeerTcpBinding, que fornece comunicação multiparter usando um canal par. Para obter um cenário detalhado de como usar essa associação, consulte [net peer TCP](/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90)).  
   
 ```xml  
@@ -101,7 +105,7 @@ Define uma associação para mensagens TCP específicas do canal par.
 </configuration>
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.NetPeerTcpBinding>
 - <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>

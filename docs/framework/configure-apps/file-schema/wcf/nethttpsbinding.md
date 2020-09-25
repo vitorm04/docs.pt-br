@@ -2,14 +2,15 @@
 title: <netHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
-ms.openlocfilehash: d13800ea5d8fe23909fd1af1ac790e28633650ef
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f6eca792f9bae6712a327fbcb5bdf47be9699062
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555465"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204587"
 ---
 # \<netHttpsBinding>
+
 Representa uma associação que um serviço Windows Communication Foundation (WCF) pode usar para configurar e expor pontos de extremidade que são capazes de se comunicar por HTTPS. Quando usado com um contrato duplex, os Web Sockets serão usados; caso contrário, o HTTPS será usado.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -54,9 +55,11 @@ Representa uma associação que um serviço Windows Communication Foundation (WC
 ```  
   
 ## <a name="type"></a>Tipo  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -95,11 +98,13 @@ Representa uma associação que um serviço Windows Communication Foundation (WC
 |[\<bindings>](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O nethttpsbinding usa HTTPS como o transporte para enviar mensagens. Quando usado com um contrato duplex, os Web Sockets serão usados.  Quando usado com um contrato de solicitação-resposta, nethttpsbinding se comportará como um BasicHttpsBinding com um codificador binário.  
   
  A segurança é desativada por padrão, mas pode ser adicionada definindo o atributo mode do [\<security>](security-of-basichttpbinding.md) elemento filho com um valor diferente de `None` . Ele usa uma codificação de mensagem "texto" e codificação de texto UTF-8 por padrão.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir demonstra o uso do <xref:System.ServiceModel.NetHttpBinding> que fornece comunicação HTTPS e a interoperabilidade máxima com serviços Web de primeira e segunda geração. A associação é especificada nos arquivos de configuração para o cliente e o serviço. O tipo de associação é especificado usando o `binding` atributo do `<endpoint>` elemento. Se você quiser configurar a ligação básica e alterar algumas de suas configurações, será necessário definir uma configuração de associação. O ponto de extremidade deve referenciar a configuração de associação por nome usando o `bindingConfiguration` atributo do `<endpoint>` elemento, conforme mostrado no código de configuração a seguir para o serviço.  
   
 ```xml  
@@ -137,6 +142,7 @@ Representa uma associação que um serviço Windows Communication Foundation (WC
 ```  
   
 ## <a name="example"></a>Exemplo  
+
  A partir do .NET Framework 4, associações e comportamentos não precisam ter um nome. A funcionalidade do exemplo anterior pode ser realizada removendo o bindingConfiguration do endereço do ponto de extremidade e o nome da associação.  
   
 ```xml  
@@ -173,7 +179,7 @@ Representa uma associação que um serviço Windows Communication Foundation (WC
   
  Para obter mais informações sobre configurações padrão e associações e comportamentos do sem nome, consulte [configuração simplificada](../../../wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>

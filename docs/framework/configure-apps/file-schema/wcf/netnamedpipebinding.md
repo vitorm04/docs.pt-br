@@ -2,14 +2,15 @@
 title: <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-ms.openlocfilehash: 2364eb9d82fd17bd0b80b01070a0f1d789be3d90
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f1ec6091d72c1d1c6d75c44dd1f98d6d4e10ea12
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556148"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204561"
 ---
 # \<netNamedPipeBinding>
+
 Define uma associação que é segura, confiável e otimizada para comunicação entre processos no computador. Por padrão, ele gera uma pilha de comunicação de tempo de execução com WS-ReliableMessaging para confiabilidade, segurança de transporte para segurança de transferência, pipes nomeados para entrega de mensagem e codificação de mensagem binária.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ Define uma associação que é segura, confiável e otimizada para comunicação
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<netNamedPipeBinding>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <netNamedPipeBinding>
@@ -47,6 +48,7 @@ Define uma associação que é segura, confiável e otimizada para comunicação
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
@@ -81,11 +83,13 @@ Define uma associação que é segura, confiável e otimizada para comunicação
 |[\<bindings>](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O `NetNamedPipeBinding` gera uma pilha de comunicação de tempo de execução por padrão, que usa segurança de transporte, pipes nomeados para entrega de mensagem e uma codificação de mensagem binária. Essa associação é uma opção apropriada fornecida pelo sistema Windows Communication Foundation (WCF) para comunicação no computador. Ele também dá suporte a transações.  
   
  A configuração padrão do `NetNamedPipeBinding` é semelhante à configuração fornecida pelo `NetTcpBinding` , mas é mais simples porque a implementação do WCF destina-se apenas ao uso no computador e, consequentemente, há menos recursos expostos. A diferença mais notável é que a `securityMode` configuração só oferece as `None` `Transport` Opções e. O suporte à segurança SOAP não é uma opção incluída. O comportamento de segurança é configurável usando o `securityMode` atributo opcional.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir demonstra a associação netNamedPipeBinding, que fornece comunicação entre processos no mesmo computador. Pipes nomeados não funcionam entre computadores.  
   
  A associação é especificada nos arquivos de configuração para o cliente e o serviço. O tipo de associação é especificado no `binding` atributo do `<endpoint>` elemento. Se você quiser configurar a associação netNamedPipeBinding e alterar algumas de suas configurações, deverá definir uma configuração de associação. O ponto de extremidade deve referenciar a configuração de associação por nome com um `bindingConfiguration` atributo. Neste exemplo, a configuração de associação é denominada Binding1.  
@@ -144,7 +148,7 @@ Define uma associação que é segura, confiável e otimizada para comunicação
 </configuration>
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>
 - <xref:System.ServiceModel.NetNamedPipeBinding>

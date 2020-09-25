@@ -2,14 +2,15 @@
 title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: 00631ad88d771ed8f45638f28c84df05917fd3a0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4582066098feaf50b33b083de56bcb8c3e04df0f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736589"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204613"
 ---
 # \<namedPipeTransport>
+
 Define um transporte que faz com que um canal transfira mensagens usando pipes nomeados quando ele é incluído em uma associação personalizada.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -40,9 +41,11 @@ Define um transporte que faz com que um canal transfira mensagens usando pipes n
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
 As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
+
 Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -60,7 +63,7 @@ Nenhum.
 |maxPendingConnections|Obtém ou define o número máximo de conexões aguardando a expedição no serviço.|  
 |maxReceivedMessageSize|Obtém e define o tamanho de mensagem máximo permitido, em bytes, que pode ser recebido.|  
 |transferMode|Obtém ou define um valor que indica se as mensagens são armazenadas em buffer ou transmitidas com o transporte voltado para a conexão.|  
-|[\<connectionPoolSettings>desse\<namedPipeTransport>](connectionpoolsettings.md)|Especifica configurações de pool de conexões adicionais para uma associação de pipe nomeado.|  
+|[\<connectionPoolSettings> desse \<namedPipeTransport>](connectionpoolsettings.md)|Especifica configurações de pool de conexões adicionais para uma associação de pipe nomeado.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -69,11 +72,12 @@ Nenhum.
 |[\<binding>](bindings.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
+
 Esse transporte usa URIs no formato "net. pipe://hostname/Path". Outros componentes de URI são opcionais.  
   
 O `namedPipeTransport` elemento é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte de pipes nomeados. Esse transporte é usado para a comunicação WCF (Windows Communication Foundation no computador) para WCF.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.NamedPipeTransportElement>
 - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>

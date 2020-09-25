@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: ba28a81dd2ea0684ed863821afd3a8f31c0fb064
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bc2b1648ad404ba13920d9f276c299756554b5d4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140773"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204665"
 ---
 # \<msmqIntegrationBinding>
+
 Define uma associação que fornece suporte ao enfileiramento Roteando mensagens por meio do MSMQ.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -49,6 +50,7 @@ Define uma associação que fornece suporte ao enfileiramento Roteando mensagens
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
@@ -98,6 +100,7 @@ Define uma associação que fornece suporte ao enfileiramento Roteando mensagens
 |[\<bindings>](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Esse elemento de associação pode ser usado para permitir que aplicativos Windows Communication Foundation (WCF) enviem mensagens para e recebam mensagens de aplicativos MSMQ existentes que usam COM, APIs nativas do MSMQ ou os tipos definidos no <xref:System.Messaging?displayProperty=nameWithType> namespace você pode usar esse elemento de configuração para especificar maneiras de endereçar a fila, garantir a transferência, se as mensagens devem ser permanentemente armazenadas e como as mensagens devem ser protegidas e autenticadas Para obter mais informações, consulte [como: trocar mensagens com pontos de extremidade WCF e aplicativos de enfileiramento de mensagens](../../../wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
   
 ## <a name="example"></a>Exemplo  

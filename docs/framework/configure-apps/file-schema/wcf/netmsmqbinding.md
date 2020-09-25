@@ -2,14 +2,15 @@
 title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 4070b9659b6d3936dec38fc6a30cf7cd673691f5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7dca85e4095e581c262611f0120ffb85e2174fee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556161"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204574"
 ---
 # \<netMsmqBinding>
+
 Define uma associação em fila adequada para comunicação entre computadores.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ Define uma associação em fila adequada para comunicação entre computadores.
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<netMsmqBinding>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <netMsmqBinding>
@@ -61,6 +62,7 @@ Define uma associação em fila adequada para comunicação entre computadores.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -102,6 +104,7 @@ Define uma associação em fila adequada para comunicação entre computadores.
 |[\<bindings>](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
+
  A `netMsmqBinding` associação fornece suporte para enfileiramento aproveitando o MSMQ (Microsoft Message Queuing) como um transporte e habilita o suporte para aplicativos livremente acoplados, isolamento de falha, nivelamento de carga e operações desconectadas. Para obter uma discussão sobre esses recursos, consulte [filas no WCF](../../../wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="example"></a>Exemplo  

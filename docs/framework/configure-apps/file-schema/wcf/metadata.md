@@ -2,14 +2,15 @@
 title: <metadata>
 ms.date: 03/30/2017
 ms.assetid: d09653eb-e355-4c73-b87b-28f93d56480d
-ms.openlocfilehash: 028e4d3fbe7bce06caa7497c8f95f3b293a4b068
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: aad0bbde964644448fbafc6c628c00c9faaad497
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855233"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204756"
 ---
 # \<metadata>
+
 Especifica como os metadados de serviço podem ser processados.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -35,9 +36,11 @@ Especifica como os metadados de serviço podem ser processados.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
+
  Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -53,7 +56,7 @@ Especifica como os metadados de serviço podem ser processados.
 |-------------|-----------------|  
 |[\<client>](client.md)|A seção cliente define uma lista de pontos de extremidade aos quais um cliente pode se conectar.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>

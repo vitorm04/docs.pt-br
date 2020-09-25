@@ -3,18 +3,18 @@ title: Telemetria do SDK do .NET Core
 description: Descubra os recursos de telemetria do SDK do .NET Core que coletam informações de uso para análise, quais dados são coletados e como desabilitá-los.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 01376cabc4f59f64c59a78dcff061fb6ec11e3c3
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: bad6de138b9c35bcd8c5556df82103f959508b52
+ms.sourcegitcommit: d04388f94dbcd756ffd608536c869aee3242cdb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359227"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91206348"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria do SDK do .NET Core
 
 O [SDK do .NET Core](index.md) inclui um recurso de telemetria que coleta dados de uso e informações de exceção em caso de falha da CLI do .NET Core. A CLI do .NET Core é fornecida com o SDK do .NET Core e consiste no conjunto de verbos que permitem criar, testar e publicar os aplicativos .NET Core. É importante que a equipe do .NET entenda como as ferramentas são usadas para poder melhorá-las. As informações sobre falhas ajudam a equipe a resolver problemas e corrigir bugs.
 
-Os dados coletados são anônimos e publicados em agregação sob a [Licença de Atribuição da Creative Commons](https://creativecommons.org/licenses/by/4.0/).
+Os dados coletados são publicados em agregação sob a [licença de atribuição do Creative Commons](https://creativecommons.org/licenses/by/4.0/).
 
 ## <a name="scope"></a>Escopo
 
@@ -41,7 +41,7 @@ O SDK do .NET Core exibe um texto semelhante ao mostrado a seguir quando você e
 ```console
 Telemetry
 ---------
-The .NET Core tools collect usage data in order to help us improve your experience. The data is anonymous. It is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+The .NET Core tools collect usage data in order to help us improve your experience. The data is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
 
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
@@ -68,7 +68,7 @@ O recurso de telemetria coleta os seguintes dados:
 | >=2.0        | Opções e argumentos de comando: várias opções e vários argumentos são coletados (não cadeias de caracteres arbitrárias). Confira [Opções coletadas](#collected-options). Com hash após 2.1.300. |
 | >=2.0         | Se o SDK está em execução em um contêiner. |
 | >=2.0         | Estruturas de destino (do evento `TargetFramework`), com hash começando em 2.1. |
-| >=2.0         | Endereço MAC (controle de acesso à mídia) com hash: uma ID exclusiva e criptograficamente anônima (SHA256) para um computador. |
+| >=2.0         | Endereço MAC (controle de acesso à mídia) com hash (SHA256). |
 | >=2.0         | Diretório de trabalho atual com hash. |
 | >=2.0         | Instale o relatório de êxito com o nome de arquivo exe do instalador com hash. |
 | >=2.1.300     | Versão do kernel. |
@@ -136,7 +136,7 @@ Os colaboradores do .NET Core e qualquer outra pessoa que estejam executando uma
 
 Por isso, os builds personalizados do SDK do .NET Core não devem estar localizados em diretórios cujos nomes de caminho exponham informações pessoais ou confidenciais.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [CLI do .NET Core dados de telemetria](https://dotnet.microsoft.com/platform/telemetry)
 - [Fonte de referência de telemetria (repositório dotnet/SDK)](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)

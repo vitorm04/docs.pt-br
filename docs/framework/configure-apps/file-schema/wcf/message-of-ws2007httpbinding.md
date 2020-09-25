@@ -2,14 +2,15 @@
 title: <message> de <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: 3396f74f76d790759f4c32de2907607486701b1a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0979bd1c74061bb13a240bb46e1a37cd7ea1129c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738950"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204834"
 ---
 # <a name="message-of-ws2007httpbinding"></a>\<message> de \<ws2007HttpBinding>
+
 Define as configurações de segurança no nível de mensagem do [\<ws2007HttpBinding>](ws2007httpbinding.md) elemento.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -36,10 +37,12 @@ Define as configurações de segurança no nível de mensagem do [\<ws2007HttpBi
 </ws2007HttpBinding>
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>Tipo  
+
  <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -83,6 +86,7 @@ Define as configurações de segurança no nível de mensagem do [\<ws2007HttpBi
 |`Windows`|Permite que as trocas SOAP estejam sob o contexto autenticado de uma `Windows` credencial. Se o `negotiateServiceCredential` atributo for definido como `true` , isso executará uma negociação SSPI ou o Kerberos (um padrão interoperável).|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -91,7 +95,7 @@ Define as configurações de segurança no nível de mensagem do [\<ws2007HttpBi
 |-------------|-----------------|  
 |[\<security>](security-of-ws2007httpbinding.md)|Define as configurações de segurança para um [\<ws2007HttpBinding>](ws2007httpbinding.md) .|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Message%2A>

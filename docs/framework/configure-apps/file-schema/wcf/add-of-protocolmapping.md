@@ -2,14 +2,15 @@
 title: <add> de <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: 6197d01665d49a7c97ac9e44251abf15faf80a8f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 46ba21b65f524f88bfce81739f0cd73040a2ad45
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850382"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91205003"
 ---
 # <a name="add-of-protocolmapping"></a>\<add> de \<protocolMapping>
+
 Representa um mapeamento de protocolo padrão entre um esquema de protocolo de transporte (por exemplo, http, net. TCP, net. pipe, etc.) e uma associação de Windows Communication Foundation (WCF). Ao criar pontos de extremidade padrão em tempo de execução, o WCF examina os mapeamentos configurados e decide qual associação usar para um endereço baseado em particular.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,6 +29,7 @@ Representa um mapeamento de protocolo padrão entre um esquema de protocolo de t
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -39,6 +41,7 @@ Representa um mapeamento de protocolo padrão entre um esquema de protocolo de t
 |scheme|O esquema do protocolo de transporte a ser usado para o ponto de extremidade padrão.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -48,7 +51,8 @@ Representa um mapeamento de protocolo padrão entre um esquema de protocolo de t
 |[\<protocolMapping>](protocolmapping.md)|Representa uma seção de configuração para definir mapeamentos de protocolo padrão entre esquemas de protocolo de transporte (por exemplo, http, net. TCP, net. pipe, etc.) e associações de Windows Communication Foundation (WCF).|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de configuração a seguir mostra o mapeamento de protocolo padrão no arquivo Machine. config. Você pode substituir esse mapeamento padrão no nível do computador modificando o arquivo Machine. config. Ou, se você quiser apenas substituí-lo no escopo de um aplicativo, poderá substituir esta seção no arquivo de configuração do aplicativo e alterar o mapeamento para esquemas de protocolo individuais.  
+
+ O exemplo de configuração a seguir mostra o mapeamento de protocolo padrão no arquivo de machine.config. Você pode substituir esse mapeamento padrão no nível do computador modificando o arquivo de machine.config. Ou, se você quiser apenas substituí-lo no escopo de um aplicativo, poderá substituir esta seção no arquivo de configuração do aplicativo e alterar o mapeamento para esquemas de protocolo individuais.  
   
 ```xml  
 <protocolMapping>
