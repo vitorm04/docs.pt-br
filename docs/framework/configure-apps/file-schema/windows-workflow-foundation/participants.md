@@ -3,24 +3,25 @@ title: <participants>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 560dd0bb-f9fb-423c-8857-2101a3654b06
-ms.openlocfilehash: e6e996bd1cc32258167e30287e9338a4773ce921
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 51c7824a4dcbd95eac098d25e9a971514e2a1e0b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152022"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167035"
 ---
 # \<participants>
-<span data-ttu-id="d4474-101">Configure uma lista de participantes que ouça em registros de rastreamento emissores de runtime diretamente e processá-los de forma que eles são configurados de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="d4474-101">Configure a list of tracking participants that listen to the tracking records being emitted from the runtime directly and process them in whatever way they are configured.</span></span> <span data-ttu-id="d4474-102">Isso inclui a escrita em uma saída específica (por exemplo, arquivo, Console, ETW), processamento/agregando os registros ou qualquer outra combinação que pode ser necessária.</span><span class="sxs-lookup"><span data-stu-id="d4474-102">This includes writing to a specific output (e.g., file, Console, ETW), processing/aggregating the records, or any other combination that might be required.</span></span>  
+
+<span data-ttu-id="5a077-101">Configure uma lista de participantes que ouça em registros de rastreamento emissores de runtime diretamente e processá-los de forma que eles são configurados de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="5a077-101">Configure a list of tracking participants that listen to the tracking records being emitted from the runtime directly and process them in whatever way they are configured.</span></span> <span data-ttu-id="5a077-102">Isso inclui a escrita em uma saída específica (por exemplo, arquivo, Console, ETW), processamento/agregando os registros ou qualquer outra combinação que pode ser necessária.</span><span class="sxs-lookup"><span data-stu-id="5a077-102">This includes writing to a specific output (e.g., file, Console, ETW), processing/aggregating the records, or any other combination that might be required.</span></span>  
   
- <span data-ttu-id="d4474-103">Para obter mais informações sobre os participantes de rastreamento e rastreamento de fluxo de trabalho, consulte [rastreamento de fluxo de trabalho e rastreamento](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) e [participantes](../../../windows-workflow-foundation/tracking-participants.md)de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="d4474-103">For more information in workflow tracking and tracking participants, see [Workflow Tracking and Tracing](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Participants](../../../windows-workflow-foundation/tracking-participants.md).</span></span>  
+ <span data-ttu-id="5a077-103">Para obter mais informações sobre os participantes de rastreamento e rastreamento de fluxo de trabalho, consulte [rastreamento de fluxo de trabalho e rastreamento](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) e [participantes](../../../windows-workflow-foundation/tracking-participants.md)de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="5a077-103">For more information in workflow tracking and tracking participants, see [Workflow Tracking and Tracing](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Participants](../../../windows-workflow-foundation/tracking-participants.md).</span></span>  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<participants>**  
   
-## <a name="syntax"></a><span data-ttu-id="d4474-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d4474-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a077-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5a077-104">Syntax</span></span>  
   
 ```xml
 <tracking>
@@ -32,35 +33,39 @@ ms.locfileid: "79152022"
 </tracking>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d4474-105">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="d4474-105">Attributes and Elements</span></span>  
- <span data-ttu-id="d4474-106">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="d4474-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5a077-105">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="5a077-105">Attributes and Elements</span></span>  
+
+ <span data-ttu-id="5a077-106">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="5a077-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d4474-107">Atributos</span><span class="sxs-lookup"><span data-stu-id="d4474-107">Attributes</span></span>  
- <span data-ttu-id="d4474-108">Nenhum.</span><span class="sxs-lookup"><span data-stu-id="d4474-108">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="5a077-107">Atributos</span><span class="sxs-lookup"><span data-stu-id="5a077-107">Attributes</span></span>  
+
+ <span data-ttu-id="5a077-108">Nenhum.</span><span class="sxs-lookup"><span data-stu-id="5a077-108">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="d4474-109">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="d4474-109">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="5a077-109">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="5a077-109">Child Elements</span></span>  
   
-|<span data-ttu-id="d4474-110">Elemento</span><span class="sxs-lookup"><span data-stu-id="d4474-110">Element</span></span>|<span data-ttu-id="d4474-111">Descrição</span><span class="sxs-lookup"><span data-stu-id="d4474-111">Description</span></span>|  
+|<span data-ttu-id="5a077-110">Elemento</span><span class="sxs-lookup"><span data-stu-id="5a077-110">Element</span></span>|<span data-ttu-id="5a077-111">Descrição</span><span class="sxs-lookup"><span data-stu-id="5a077-111">Description</span></span>|  
 |-------------|-----------------|  
-|[\<add>](add-of-participants.md)|<span data-ttu-id="d4474-112">Contém configurações para um participante de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="d4474-112">Contains settings for a tracking participant.</span></span>|  
+|[\<add>](add-of-participants.md)|<span data-ttu-id="5a077-112">Contém configurações para um participante de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="5a077-112">Contains settings for a tracking participant.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="d4474-113">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="d4474-113">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="5a077-113">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="5a077-113">Parent Elements</span></span>  
   
-|<span data-ttu-id="d4474-114">Elemento</span><span class="sxs-lookup"><span data-stu-id="d4474-114">Element</span></span>|<span data-ttu-id="d4474-115">Descrição</span><span class="sxs-lookup"><span data-stu-id="d4474-115">Description</span></span>|  
+|<span data-ttu-id="5a077-114">Elemento</span><span class="sxs-lookup"><span data-stu-id="5a077-114">Element</span></span>|<span data-ttu-id="5a077-115">Descrição</span><span class="sxs-lookup"><span data-stu-id="5a077-115">Description</span></span>|  
 |-------------|-----------------|  
-|[\<tracking>](tracking.md)|<span data-ttu-id="d4474-116">Representa uma seção de configuração para definir configurações de controle para um serviço de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="d4474-116">Represents a configuration section for defining tracking settings for a workflow service.</span></span>|  
+|[\<tracking>](tracking.md)|<span data-ttu-id="5a077-116">Representa uma seção de configuração para definir configurações de controle para um serviço de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="5a077-116">Represents a configuration section for defining tracking settings for a workflow service.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d4474-117">Comentários</span><span class="sxs-lookup"><span data-stu-id="d4474-117">Remarks</span></span>  
- <span data-ttu-id="d4474-118">Os participantes de rastreamento são usados para obter os dados de rastreamento emissores de fluxo de trabalho e armazená-lo em mídias diferentes.</span><span class="sxs-lookup"><span data-stu-id="d4474-118">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="d4474-119">Da mesma forma, qualquer pós-processamento no controle de que registros também podem ser realizados o participante de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="d4474-119">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5a077-117">Comentários</span><span class="sxs-lookup"><span data-stu-id="5a077-117">Remarks</span></span>  
+
+ <span data-ttu-id="5a077-118">Os participantes de rastreamento são usados para obter os dados de rastreamento emissores de fluxo de trabalho e armazená-lo em mídias diferentes.</span><span class="sxs-lookup"><span data-stu-id="5a077-118">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="5a077-119">Da mesma forma, qualquer pós-processamento no controle de que registros também podem ser realizados o participante de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="5a077-119">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
   
- <span data-ttu-id="d4474-120">Vários participantes de rastreamento podem consumir os eventos de rastreamento simultaneamente.</span><span class="sxs-lookup"><span data-stu-id="d4474-120">Multiple tracking participants can consume the tracking events simultaneously.</span></span> <span data-ttu-id="d4474-121">Cada participante de rastreamento pode ser associado um perfil de controle diferentes.</span><span class="sxs-lookup"><span data-stu-id="d4474-121">Each tracking participant can be associated with a different tracking profile.</span></span>  
+ <span data-ttu-id="5a077-120">Vários participantes de rastreamento podem consumir os eventos de rastreamento simultaneamente.</span><span class="sxs-lookup"><span data-stu-id="5a077-120">Multiple tracking participants can consume the tracking events simultaneously.</span></span> <span data-ttu-id="5a077-121">Cada participante de rastreamento pode ser associado um perfil de controle diferentes.</span><span class="sxs-lookup"><span data-stu-id="5a077-121">Each tracking participant can be associated with a different tracking profile.</span></span>  
   
- <span data-ttu-id="d4474-122">Um participante de rastreamento padrão é fornecido, que grava os registros de rastreamento em uma sessão do ETW.</span><span class="sxs-lookup"><span data-stu-id="d4474-122">A standard tracking participant is provided which writes the tracking records to an ETW session.</span></span> <span data-ttu-id="d4474-123">O participante é configurado em um serviço de fluxo de trabalho adicionando um comportamento acompanhamento- específico em um arquivo de configuração.</span><span class="sxs-lookup"><span data-stu-id="d4474-123">The participant is configured on a workflow service by adding a tracking-specific behavior in a configuration file.</span></span> <span data-ttu-id="d4474-124">Ativar um participante de rastreamento de ETW permite controlar os registros a serem exibidos no visualizador de eventos.</span><span class="sxs-lookup"><span data-stu-id="d4474-124">Enabling an ETW tracking participant allows tracking records to be viewed in the event viewer.</span></span> <span data-ttu-id="d4474-125">Se isso não atender aos requisitos, você também poderá escrever um participante de rastreamento personalizado.</span><span class="sxs-lookup"><span data-stu-id="d4474-125">If that does not meet your requirements, you can also write a custom tracking participant.</span></span>  
+ <span data-ttu-id="5a077-122">Um participante de rastreamento padrão é fornecido, que grava os registros de rastreamento em uma sessão do ETW.</span><span class="sxs-lookup"><span data-stu-id="5a077-122">A standard tracking participant is provided which writes the tracking records to an ETW session.</span></span> <span data-ttu-id="5a077-123">O participante é configurado em um serviço de fluxo de trabalho adicionando um comportamento acompanhamento- específico em um arquivo de configuração.</span><span class="sxs-lookup"><span data-stu-id="5a077-123">The participant is configured on a workflow service by adding a tracking-specific behavior in a configuration file.</span></span> <span data-ttu-id="5a077-124">Ativar um participante de rastreamento de ETW permite controlar os registros a serem exibidos no visualizador de eventos.</span><span class="sxs-lookup"><span data-stu-id="5a077-124">Enabling an ETW tracking participant allows tracking records to be viewed in the event viewer.</span></span> <span data-ttu-id="5a077-125">Se isso não atender aos requisitos, você também poderá escrever um participante de rastreamento personalizado.</span><span class="sxs-lookup"><span data-stu-id="5a077-125">If that does not meet your requirements, you can also write a custom tracking participant.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d4474-126">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d4474-126">Example</span></span>  
- <span data-ttu-id="d4474-127">O exemplo de configuração a seguir mostra o participante de rastreamento ETW padrão que está sendo configurado no arquivo Web. config.</span><span class="sxs-lookup"><span data-stu-id="d4474-127">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
+## <a name="example"></a><span data-ttu-id="5a077-126">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5a077-126">Example</span></span>  
+
+ <span data-ttu-id="5a077-127">O exemplo de configuração a seguir mostra o participante de rastreamento ETW padrão que está sendo configurado no arquivo Web. config.</span><span class="sxs-lookup"><span data-stu-id="5a077-127">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
   
- <span data-ttu-id="d4474-128">A ID do provedor que o participante de rastreamento ETW usa para gravar os registros de rastreamento no ETW é definida na **\<diagnostics>** seção.</span><span class="sxs-lookup"><span data-stu-id="d4474-128">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the **\<diagnostics>** section.</span></span> <span data-ttu-id="d4474-129">O participante de rastreamento tem um perfil associado a ele para especificar os registros de rastreamento que tiver assinado.</span><span class="sxs-lookup"><span data-stu-id="d4474-129">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="d4474-130">Isso é definido pelo atributo **ProfileName** do **\<add>** elemento.</span><span class="sxs-lookup"><span data-stu-id="d4474-130">This is defined by the **profileName** attribute of the **\<add>** element.</span></span> <span data-ttu-id="d4474-131">Depois que elas são definidas, o participante de rastreamento é adicionado ao **\<etwTracking>** comportamento do serviço.</span><span class="sxs-lookup"><span data-stu-id="d4474-131">Once these are defined, the Tracking Participant is added to the **\<etwTracking>** service behavior.</span></span> <span data-ttu-id="d4474-132">Isso adicionará os participantes de rastreamento selecionado para extensões da instância de fluxo de trabalho, para que eles começam a receber os registros de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="d4474-132">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
+ <span data-ttu-id="5a077-128">A ID do provedor que o participante de rastreamento ETW usa para gravar os registros de rastreamento no ETW é definida na **\<diagnostics>** seção.</span><span class="sxs-lookup"><span data-stu-id="5a077-128">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the **\<diagnostics>** section.</span></span> <span data-ttu-id="5a077-129">O participante de rastreamento tem um perfil associado a ele para especificar os registros de rastreamento que tiver assinado.</span><span class="sxs-lookup"><span data-stu-id="5a077-129">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="5a077-130">Isso é definido pelo atributo **ProfileName** do **\<add>** elemento.</span><span class="sxs-lookup"><span data-stu-id="5a077-130">This is defined by the **profileName** attribute of the **\<add>** element.</span></span> <span data-ttu-id="5a077-131">Depois que elas são definidas, o participante de rastreamento é adicionado ao **\<etwTracking>** comportamento do serviço.</span><span class="sxs-lookup"><span data-stu-id="5a077-131">Once these are defined, the Tracking Participant is added to the **\<etwTracking>** service behavior.</span></span> <span data-ttu-id="5a077-132">Isso adicionará os participantes de rastreamento selecionado para extensões da instância de fluxo de trabalho, para que eles começam a receber os registros de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="5a077-132">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
   
 ```xml
 <configuration>
@@ -87,10 +92,10 @@ ms.locfileid: "79152022"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d4474-133">Confira também</span><span class="sxs-lookup"><span data-stu-id="d4474-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a077-133">Confira também</span><span class="sxs-lookup"><span data-stu-id="5a077-133">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
-- [<span data-ttu-id="d4474-134">Acompanhamento e rastreamento de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="d4474-134">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="d4474-135">Acompanhando participantes</span><span class="sxs-lookup"><span data-stu-id="d4474-135">Tracking Participants</span></span>](../../../windows-workflow-foundation/tracking-participants.md)
+- [<span data-ttu-id="5a077-134">Rastreamento e rastreamento de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="5a077-134">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="5a077-135">Participantes de rastreamento</span><span class="sxs-lookup"><span data-stu-id="5a077-135">Tracking Participants</span></span>](../../../windows-workflow-foundation/tracking-participants.md)

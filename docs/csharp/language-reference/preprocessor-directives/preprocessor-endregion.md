@@ -7,15 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - '#endregion directive [C#]'
 ms.assetid: 16099660-91b2-49e5-9646-77f9ef069526
-ms.openlocfilehash: 5bf95d499dc61c74a2474d47deb76ada21763538
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 1b173c7c3af4e6bbfc8a57a2c06c4ad035dcedde
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89138144"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168576"
 ---
-# <a name="endregion-c-reference"></a><span data-ttu-id="b8d93-103">#endregion (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="b8d93-103">#endregion (C# Reference)</span></span>
-<span data-ttu-id="b8d93-104">O `#endregion` marca o fim de um bloco [#region](./preprocessor-region.md).</span><span class="sxs-lookup"><span data-stu-id="b8d93-104">`#endregion` marks the end of a [#region](./preprocessor-region.md) block.</span></span> <span data-ttu-id="b8d93-105">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="b8d93-105">For example:</span></span>  
+# <a name="endregion-c-reference"></a><span data-ttu-id="a45f2-103">#endregion (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="a45f2-103">#endregion (C# Reference)</span></span>
+
+<span data-ttu-id="a45f2-104">O `#endregion` marca o fim de um bloco [#region](./preprocessor-region.md).</span><span class="sxs-lookup"><span data-stu-id="a45f2-104">`#endregion` marks the end of a [#region](./preprocessor-region.md) block.</span></span> <span data-ttu-id="a45f2-105">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="a45f2-105">For example:</span></span>  
   
 ```csharp
 #region MyClass definition  
@@ -28,8 +29,8 @@ class MyClass
 #endregion  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b8d93-106">Confira também</span><span class="sxs-lookup"><span data-stu-id="b8d93-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a45f2-106">Confira também</span><span class="sxs-lookup"><span data-stu-id="a45f2-106">See also</span></span>
 
-- [<span data-ttu-id="b8d93-107">Referência do C#</span><span class="sxs-lookup"><span data-stu-id="b8d93-107">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="b8d93-108">Guia de programação C#</span><span class="sxs-lookup"><span data-stu-id="b8d93-108">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="b8d93-109">Diretivas de pré-processador do C#</span><span class="sxs-lookup"><span data-stu-id="b8d93-109">C# Preprocessor Directives</span></span>](./index.md)
+- [<span data-ttu-id="a45f2-107">Referência do C#</span><span class="sxs-lookup"><span data-stu-id="a45f2-107">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="a45f2-108">Guia de programação C#</span><span class="sxs-lookup"><span data-stu-id="a45f2-108">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="a45f2-109">Diretivas de pré-processador do C#</span><span class="sxs-lookup"><span data-stu-id="a45f2-109">C# Preprocessor Directives</span></span>](./index.md)
