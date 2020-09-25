@@ -3,14 +3,15 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 7c2b6bdc62da63905d7ff33a9984808e7b7d114f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2f37019fa0787f5c5553dbd3debc173ec0a047ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544534"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189949"
 ---
 # \<add>
+
 Adiciona o manipulador de token de segurança especificado à coleção de manipulador de token.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Adiciona o manipulador de token de segurança especificado à coleção de manip
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <system.identityModel>  
@@ -35,6 +36,7 @@ Adiciona o manipulador de token de segurança especificado à coleção de manip
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -59,6 +61,7 @@ Adiciona o manipulador de token de segurança especificado à coleção de manip
 |[\<securityTokenHandlers>](securitytokenhandlers.md)|Especifica uma coleção de manipuladores de token de segurança que são registrados com o ponto de extremidade.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O `<add>` elemento pode pegar um único elemento filho que especifica a configuração para o manipulador de token. Isso depende de se a classe de manipulador referenciada por meio do `type` atributo do `<add>` elemento fornece suporte para esse recurso. Classes de manipulador de token que fornecem esse recurso devem expor um construtor que usa um <xref:System.Xml.XmlElement> objeto.  
 
 ```csharp  
@@ -78,6 +81,7 @@ public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHa
  As configurações especificadas em um manipulador substituem as configurações equivalentes especificadas na coleção do manipulador de tokens no [\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md) elemento e aquelas especificadas no nível de serviço sob o [\<identityConfiguration>](identityconfiguration.md) elemento.  
   
 ## <a name="example"></a>Exemplo  
+
  O XML a seguir mostra o uso dos `<add>` `<remove>` elementos e para substituir o manipulador de token de sessão padrão por um manipulador de token de sessão personalizado. O XML é extraído do `ClaimsAwareWebFarm` exemplo.  
   
 ```xml  

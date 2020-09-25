@@ -5,14 +5,15 @@ helpviewer_keywords:
 - supportPortability element
 - <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
-ms.openlocfilehash: 99fa51238040f21d998a8c6c2aef7c13d288104a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 05ce6943b9456d4fd380ea8d6cf354d197b92f96
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551579"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183943"
 ---
 # <a name="supportportability-element"></a>Elemento \<supportPortability>
+
 Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas implementações diferentes do .NET Framework, desabilitando o comportamento padrão que trata os assemblies como equivalentes para fins de portabilidade do aplicativo.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas im
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<supportPortability>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <supportPortability PKT="public_key_token" enabled="true|false"/>  
@@ -41,7 +42,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|true|Habilite o suporte para portabilidade entre implementações do assembly de .NET Framework especificado. Este é o padrão.|  
+|true|Habilite o suporte para portabilidade entre implementações do assembly de .NET Framework especificado. Esse é o padrão.|  
 |false|Desabilite o suporte para portabilidade entre implementações do assembly de .NET Framework especificado. Isso permite que o aplicativo tenha referências a várias implementações do assembly especificado.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -80,7 +81,7 @@ O exemplo a seguir permite que um aplicativo tenha referências para a implement
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [-AppConfig (opções do compilador C#)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
 - [Visão Geral da Unificação de Assemblies no .NET Framework](/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

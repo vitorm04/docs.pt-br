@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: 9261a430642cb4d5ac4507835bd0fd3561bd8c02
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e081882aa8df89c0a1bf5d4c60f1395a3319c417
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088436"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190365"
 ---
 # <a name="defaultftpcachepolicy-element-network-settings"></a>Elemento \<defaultFtpCachePolicy> (Configurações de Rede)
+
 Descreve se o cache FTP está ativo e descreve a política de cache padrão.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -32,6 +33,7 @@ Descreve se o cache FTP está ativo e descreve a política de cache padrão.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -54,6 +56,7 @@ Descreve se o cache FTP está ativo e descreve a política de cache padrão.
 |`Revalidate`|Atende a uma solicitação usando a cópia do recurso armazenada em cache se o carimbo de data/hora for igual ao do recurso no servidor; caso contrário, o recurso será baixado do servidor, apresentado ao chamador e armazenado no cache.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -65,6 +68,7 @@ Descreve se o cache FTP está ativo e descreve a política de cache padrão.
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como especificar uma política de cache de FTP do `NoCacheNoStore` .  
   
 ```xml  
@@ -79,7 +83,7 @@ Descreve se o cache FTP está ativo e descreve a política de cache padrão.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>

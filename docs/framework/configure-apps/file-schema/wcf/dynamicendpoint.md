@@ -2,14 +2,15 @@
 title: <dynamicEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 929f223d-176d-4205-9505-234ddb6dbff4
-ms.openlocfilehash: da57ca3ba3bc0036727a749f1cab9ec3657a4fda
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6f9cb127deb5651ed27a0ef5802512fb5b6c7b54
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855348"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190092"
 ---
 # \<dynamicEndpoint>
+
 Este elemento de configuração define um ponto de extremidade padrão que contém informações para permitir que um aplicativo funcione como um programa cliente que pode encontrar o endereço do ponto de extremidade dinamicamente no tempo de execução.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -45,9 +46,11 @@ Este elemento de configuração define um ponto de extremidade padrão que cont�
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
+
  Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  

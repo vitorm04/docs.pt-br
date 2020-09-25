@@ -8,14 +8,15 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: c5029a7d1e53c28d0abb232efdc3e0bd2c9658d4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4120c57fbb65da1c124414cbe9cfba7ae64388f8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088412"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190313"
 ---
 # <a name="defaulthttpcachepolicy-element-network-settings"></a>Elemento \<defaultHttpCachePolicy> (Configurações de Rede)
+
 Descreve se o cache HTTP está ativo e descreve a política de cache padrão.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -35,6 +36,7 @@ Descreve se o cache HTTP está ativo e descreve a política de cache padrão.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -47,6 +49,7 @@ Descreve se o cache HTTP está ativo e descreve a política de cache padrão.
 |`policyLevel`|Especifica se a política de cache é automática ou se o cache é ignorado. O valor padrão é `BypassCache`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -56,14 +59,17 @@ Descreve se o cache HTTP está ativo e descreve a política de cache padrão.
 |[requestCaching](requestcaching-element-network-settings.md)|Controla o mecanismo de cache para solicitações de rede.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O valor do `policyLevel` atributo é `BypassCache` ou `Default` .  
   
  Os valores para `maximumAge` os `maximumStale` elementos, e `minimumFresh` são um intervalo de tempo explícito com um formato de *d*.* HH*:*mm*:*SS* (dias, horas, minutos e segundos) ou as constantes `minValue` ou `maxValue` , conforme apropriado.  
   
-## <a name="configuration-files"></a>Arquivos de configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
+## <a name="configuration-files"></a>Arquivos de Configuração  
+
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine.config).  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como especificar uma hora de atualização mínima de seis horas, um tempo de vida máximo de dois dias e um tempo máximo de obsoleto de quatro horas.  
   
 ```xml  
@@ -80,7 +86,7 @@ Descreve se o cache HTTP está ativo e descreve a política de cache padrão.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>

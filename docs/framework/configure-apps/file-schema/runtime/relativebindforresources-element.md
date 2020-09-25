@@ -5,14 +5,15 @@ helpviewer_keywords:
 - RelativeBindForResources element
 - <relativeBindForResources> element
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
-ms.openlocfilehash: cd49d424019a4e8422fee0ae16217d49cfc456b1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: daf576488e38bed28c7c0e5222bc053659372ff0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153900"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183995"
 ---
 # <a name="relativebindforresources-element"></a>Elemento \<relativeBindForResources>
+
 Otimiza o teste para assemblies satélites.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,6 +28,7 @@ Otimiza o teste para assemblies satélites.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -43,6 +45,7 @@ Otimiza o teste para assemblies satélites.
 |`true`|O tempo de execução otimiza a investigação para assemblies satélite.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -53,6 +56,7 @@ Otimiza o teste para assemblies satélites.
 |`runtime`|Contém informações sobre opções de inicialização do runtime.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Em geral, as investigações do Resource Manager para recursos, conforme documentado no tópico [empacotando e implantando recursos](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md) . Isso significa que quando o Gerenciador de recursos investiga uma versão localizada específica de um recurso, ele pode procurar no cache de assembly global, examinar uma pasta específica de cultura na base de código do aplicativo, consultar Windows Installer para assemblies satélites e gerar o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> evento. O `<relativeBindForResources>` elemento otimiza a maneira como as investigações do Gerenciador de recursos para assemblies satélite. Ele pode melhorar o desempenho ao investigar os recursos sob as seguintes condições:  
   
 - Quando o assembly satélite é implantado no mesmo local que o assembly de código. Em outras palavras, se o assembly de código estiver instalado no cache de assembly global, os assemblies satélite também deverão ser instalados lá. Se o assembly de código estiver instalado na base de código do aplicativo, os assemblies satélite também deverão ser instalados em uma pasta específica de cultura na base de código.  
@@ -69,7 +73,7 @@ Otimiza o teste para assemblies satélites.
   
 - Ele não gera o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> evento.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Empacotando e implantando recursos](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [Esquema de configurações do runtime](index.md)
