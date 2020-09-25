@@ -1,15 +1,16 @@
 ---
-title: <add>do <scopedCertificates> elemento
+title: <add> do <scopedCertificates> elemento
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: b00a342108beca69a906fbf6212915768e98778f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 28777ecac130295a8ba82a8e4d67cc519d088d8a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398340"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195136"
 ---
-# <a name="add-of-scopedcertificates-element"></a>\<add>do \<scopedCertificates> elemento
+# <a name="add-of-scopedcertificates-element"></a>\<add> do \<scopedCertificates> elemento
+
 Adiciona um certificado X. 509 à coleção de certificados com escopo.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,14 +34,15 @@ Adiciona um certificado X. 509 à coleção de certificados com escopo.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|targetUri|Cadeia de caracteres. Especifica o URI do serviço associado ao certificado.|  
-|findValue|Cadeia de caracteres. O valor a ser procurado.|  
+|targetUri|Cadeia. Especifica o URI do serviço associado ao certificado.|  
+|findValue|Cadeia. O valor a ser procurado.|  
 |x509FindType|Enumeração. Um dos campos de certificado a serem pesquisados.|  
 |storeLocation|Enumeração. Um dos dois locais de armazenamento para pesquisar.|  
 |storeName|Enumeração. Uma das lojas de sistema para pesquisa.|  
@@ -70,6 +72,7 @@ Adiciona um certificado X. 509 à coleção de certificados com escopo.
 |Enumeração|Os valores incluem: catálogo, AuthRoot, CertificateAuthority, não permitido, My, root, TrustedPeople e TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -79,6 +82,7 @@ Adiciona um certificado X. 509 à coleção de certificados com escopo.
 |[\<scopedCertificates>](scopedcertificates-element.md)|Representa uma coleção de certificados X. 509 fornecidos por serviços específicos (com escopo) para autenticação.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Esse elemento permite que o cliente configure um certificado de serviço para usar com base na URL do serviço com o qual se comunica. Isso é especialmente útil em cenários de token emitidos em que um cliente pode se comunicar com vários serviços (o serviço final, bem como os serviços de token de segurança intermediários). Para associações que usam segurança de mensagem baseada em certificado, esse certificado é usado para criptografar mensagens para o serviço e deve ser usado pelo serviço para assinar respostas para o cliente.  
   
  Se uma associação exigir um certificado para o serviço e nenhum certificado específico para a URL do serviço for encontrado no ScopedCertificates, o certificado padrão será usado.  
@@ -86,6 +90,7 @@ Adiciona um certificado X. 509 à coleção de certificados com escopo.
  Para obter mais informações, consulte a seção "certificados com escopo" de [como: criar um cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir adiciona um certificado X. 509 à coleção.  
   
 ```xml  
@@ -108,14 +113,14 @@ Adiciona um certificado X. 509 à coleção de certificados com escopo.
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
-- [Como criar um cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [Como: criar um cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md)
 - [Trabalhando com certificados](../../../wcf/feature-details/working-with-certificates.md)
 - [Protegendo clientes](../../../wcf/securing-clients.md)
 - [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)

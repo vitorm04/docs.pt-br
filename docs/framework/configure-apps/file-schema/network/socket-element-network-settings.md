@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 0e2b369eccfbc658a790ef61a961315a88361669
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b8df32745007b2a145d35b8cfcc4cbd2bd17eb33
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74089084"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201727"
 ---
 # <a name="socket-element-network-settings"></a>Elemento \<socket> (Configurações de Rede)
+
 Especifica se as operações de soquete usam portas de conclusão.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -34,6 +35,7 @@ Especifica se as operações de soquete usam portas de conclusão.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -45,15 +47,17 @@ Especifica se as operações de soquete usam portas de conclusão.
 |`ipProtectionLevel`|Especifica o padrão <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> a ser usado para um soquete. O valor padrão depende da versão do Windows.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
-|**Elemento**|**Descrição**|  
+|**Element**|**Descrição**|  
 |-----------------|---------------------|  
 |[configurações](settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Os `alwaysUseCompletionPortsForAccept` `alwaysUseCompletionPortsForConnect` atributos e são usados para especificar o comportamento padrão em relação ao uso de portas de conclusão pelas classes no <xref:System.Net.Sockets?displayProperty=nameWithType> namespace. As portas de conclusão são recomendadas para aplicativos de servidor de alto desempenho.  
   
  O valor padrão para os `alwaysUseCompletionPortsForAccept` `alwaysUseCompletionPortsForConnect` atributos e é **false**.  
@@ -83,10 +87,12 @@ Especifica se as operações de soquete usam portas de conclusão.
   
  A <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> propriedade pode ser usada para obter o valor atual do `ipProtectionLevel` atributo dos arquivos de configuração aplicáveis.  
   
-## <a name="configuration-files"></a>Arquivos de configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
+## <a name="configuration-files"></a>Arquivos de Configuração  
+
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine.config).  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como especificar que as portas de conclusão devem ser usadas e que o padrão <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> deve ser irrestrito.  
   
 ```xml  
@@ -103,7 +109,7 @@ Especifica se as operações de soquete usam portas de conclusão.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Net?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>

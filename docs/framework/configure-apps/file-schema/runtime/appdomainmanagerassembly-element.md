@@ -5,14 +5,15 @@ helpviewer_keywords:
 - <appDomainManagerAssembly> element
 - appDomainManagerAssembly element
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
-ms.openlocfilehash: 4c4ea35bff17a0e5188f26884e93cf77173a7df8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1716b11106775bed2c0d6ccb62e8d5b032b6e8be
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154415"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176130"
 ---
 # <a name="appdomainmanagerassembly-element"></a>Elemento \<appDomainManagerAssembly>
+
 Especifica o assembly que fornece o gerenciador do domínio do aplicativo para o domínio do aplicativo padrão no processo.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,6 +28,7 @@ Especifica o assembly que fornece o gerenciador do domínio do aplicativo para o
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -36,6 +38,7 @@ Especifica o assembly que fornece o gerenciador do domínio do aplicativo para o
 |`value`|Atributo obrigatório. Especifica o nome de exibição do assembly que fornece o Gerenciador de domínio do aplicativo para o domínio de aplicativo padrão no processo.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -46,6 +49,7 @@ Especifica o assembly que fornece o gerenciador do domínio do aplicativo para o
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Para especificar o tipo de Gerenciador de domínio do aplicativo, você deve especificar esse elemento e o [\<appDomainManagerType>](appdomainmanagertype-element.md) elemento. Se um desses elementos não for especificado, o outro será ignorado.  
   
  Quando o domínio de aplicativo padrão for carregado, <xref:System.TypeLoadException> será gerado se o assembly especificado não existir ou se o assembly não contiver o tipo especificado pelo [\<appDomainManagerType>](appdomainmanagertype-element.md) elemento; e o processo não for iniciado. Se o assembly for encontrado, mas as informações de versão não corresponderem, um <xref:System.IO.FileLoadException> será lançado.  
@@ -59,6 +63,7 @@ Especifica o assembly que fornece o gerenciador do domínio do aplicativo para o
  Este elemento de configuração está disponível apenas no .NET Framework 4 e posterior.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir mostra como especificar que o Gerenciador de domínio do aplicativo para o domínio de aplicativo padrão de um processo é o `MyMgr` tipo no `AdMgrExample` assembly.  
   
 ```xml  
@@ -75,7 +80,7 @@ Especifica o assembly que fornece o gerenciador do domínio do aplicativo para o
 
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
-- [\<appDomainManagerType>Elementos](appdomainmanagertype-element.md)
+- [\<appDomainManagerType> Elementos](appdomainmanagertype-element.md)
 - [Esquema de configurações do runtime](index.md)
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema do arquivo de configuração](../index.md)
 - [Método SetAppDomainManagerType](../../../unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)
