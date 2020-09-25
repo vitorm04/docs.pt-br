@@ -6,14 +6,15 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 8e55b44573c40f594e567fc5a4501689e66c7af4
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 8f7dc027396e327f08a591ced6bd6df176a17606
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302029"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178678"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Manipulação de exceções (Guia de Programação em C#)
+
 Um bloco [try](../../language-reference/keywords/try-catch.md) é usado por programadores de C# para particionar o código que pode ser afetado por uma exceção. Os blocos [catch](../../language-reference/keywords/try-catch.md) associados são usados para tratar qualquer exceção resultante. Um bloco [finally](../../language-reference/keywords/try-finally.md) contém código que será executado independentemente de uma exceção ser ou não ser lançada no bloco `try`, como a liberação de recursos que estão alocados no bloco `try`. Um bloco `try` exige um ou mais blocos `catch` associados ou um bloco `finally` ou ambos.  
   
  Os exemplos a seguir mostram uma instrução `try-catch`, uma instrução `try-finally` e um instrução `try-catch-finally`.  
@@ -27,6 +28,7 @@ Um bloco [try](../../language-reference/keywords/try-catch.md) é usado por prog
  Um bloco `try` sem um bloco `catch` ou `finally` causa um erro do compilador.  
   
 ## <a name="catch-blocks"></a>Blocos catch  
+
  Um bloco `catch` pode especificar o tipo de exceção a ser capturado. A especificação de tipo é chamada de *filtro de exceção*. O tipo de exceção deve ser derivado de <xref:System.Exception>. Em geral, não especifique <xref:System.Exception> como o filtro de exceção, a menos que você saiba como tratar todas as exceções que podem ser lançadas no bloco `try` ou incluiu uma instrução [throw](../../language-reference/keywords/throw.md) no final do seu bloco `catch`.  
   
  Vários blocos `catch` com filtros de exceção diferentes podem ser encadeados. Os blocos `catch` são avaliados de cima para baixo no seu código, mas somente um bloco `catch` será executado para cada exceção que é lançada. O primeiro bloco `catch` que especifica o tipo exato ou uma classe base da exceção lançada será executado. Se nenhum bloco `catch` especificar um filtro de exceção correspondente, um bloco `catch` que não tem um filtro será selecionado, caso haja algum na instrução. É importante posicionar os blocos `catch` com os tipos de exceção mais específicos (ou seja, os mais derivados) em primeiro.  
@@ -44,6 +46,7 @@ Um bloco [try](../../language-reference/keywords/try-catch.md) é usado por prog
      [!code-csharp[csProgGuideExceptions#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#10)]  
   
 ## <a name="finally-blocks"></a>Blocos Finally  
+
  Um bloco `finally` permite que você limpe as ações que são realizadas em um bloco `try`. Se estiver presente, o bloco `finally` será executado por último, depois do bloco `try` e de qualquer bloco `catch` de correspondência. Um bloco `finally` é sempre executado, independentemente de uma exceção ser lançada ou de um bloco `catch` correspondente ao tipo de exceção ser encontrado.  
   
  O bloco `finally` pode ser usado para liberar recursos, como fluxos de arquivos, conexões de banco de dados e identificadores de gráficos, sem esperar que o coletor de lixo no runtime finalize os objetos. Consulte a [Instrução using](../../language-reference/keywords/using-statement.md) para obter mais informações.  
@@ -60,8 +63,8 @@ Para obter mais informações, veja [Exceções](~/_csharplang/spec/exceptions.m
 
 - [Referência do C#](../../language-reference/index.md)
 - [Guia de programação C#](../index.md)
-- [Exceções e tratamento de exceções](./index.md)
+- [Exceções e manipulação de exceções](./index.md)
 - [try-catch](../../language-reference/keywords/try-catch.md)
-- [try-finally](../../language-reference/keywords/try-finally.md)
-- [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)
+- [Experimente-finalmente](../../language-reference/keywords/try-finally.md)
+- [try – catch-finally](../../language-reference/keywords/try-catch-finally.md)
 - [Instrução using](../../language-reference/keywords/using-statement.md)

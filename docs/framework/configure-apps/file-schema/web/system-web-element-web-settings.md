@@ -8,14 +8,15 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: b37b05bdf90630251cbfcf86751243a3a8b77663
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c8b01ec217fc1b6b91ccf36c8667922b57f26852
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152835"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185581"
 ---
 # <a name="systemweb-element-web-settings"></a>Elemento \<system.web> (configurações da Web)
+
 Contém informações sobre como a camada de hospedagem ASP.NET gerencia o comportamento de todo o processo.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -40,7 +41,7 @@ Nenhum.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<applicationPool>](applicationpool-element-web-settings.md)|Especifica as definições de configuração para pools de aplicativos do IIS em um arquivo Aspnet. config.|  
+|[\<applicationPool>](applicationpool-element-web-settings.md)|Especifica as definições de configuração para pools de aplicativos do IIS em um arquivo aspnet.config.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -54,7 +55,7 @@ O `system.web` elemento e seu `applicationPool` elemento filho foram adicionados
   
 ## <a name="example"></a>Exemplo  
 
-O exemplo a seguir mostra como configurar o comportamento do ASP.NET em todo o processo no arquivo Aspnet. config quando o ASP.NET está hospedado em um pool de aplicativos do IIS. O exemplo supõe que o IIS está sendo executado no modo integrado e que o aplicativo está usando o .NET Framework 3,5 SP1 ou uma versão posterior. Esse comportamento não ocorre em versões do .NET Framework anteriores ao .NET Framework 3,5 SP1. Os valores no exemplo são os valores padrão.  
+O exemplo a seguir mostra como configurar o comportamento do ASP.NET em todo o processo no arquivo de aspnet.config quando o ASP.NET está hospedado em um pool de aplicativos do IIS. O exemplo supõe que o IIS está sendo executado no modo integrado e que o aplicativo está usando o .NET Framework 3,5 SP1 ou uma versão posterior. Esse comportamento não ocorre em versões do .NET Framework anteriores ao .NET Framework 3,5 SP1. Os valores no exemplo são os valores padrão.  
   
 ```xml  
 <configuration>  
@@ -76,6 +77,6 @@ O exemplo a seguir mostra como configurar o comportamento do ASP.NET em todo o p
 |Arquivo de validação||  
 |Pode estar vazio||  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [\<applicationPool>Elemento (configurações da Web)](applicationpool-element-web-settings.md)
+- [\<applicationPool> Elemento (configurações da Web)](applicationpool-element-web-settings.md)

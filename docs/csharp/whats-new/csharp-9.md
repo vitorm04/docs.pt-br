@@ -2,21 +2,21 @@
 title: O que há de novo no C# 9,0 – Guia C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 9,0.
 ms.date: 09/04/2020
-ms.openlocfilehash: 13da712e9421bbfe593e5945b80bb3636ebe05f3
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f309f5fb2e705d220b8b0b743ec2f68901ee8f53
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866441"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178392"
 ---
 # <a name="whats-new-in-c-90"></a>Novidades do C# 9.0
 
 O c# 9,0 adiciona os seguintes recursos e aprimoramentos à linguagem C#:
 
-- Registros
-- Setters somente init
-- Instruções de nível superior
-- Melhorias na correspondência de padrões
+- [Registros](#record-types)
+- [Setters somente init](#init-only-setters)
+- [Instruções de nível superior](#top-level-statements)
+- [Melhorias na correspondência de padrões](#pattern-matching-enhancements)
 - Inteiros de tamanho nativo
 - Ponteiros de função
 - Suprimir emissão do sinalizador localsinit

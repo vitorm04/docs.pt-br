@@ -5,14 +5,15 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: ca474cdcaeaac7b1c32efa5c58f4b5bb5b7f7895
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 963b25e57ae8c2cc59dcc3e50ae2a52cc04f54a8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557236"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185633"
 ---
 # <a name="applicationpool-element-web-settings"></a>Elemento \<applicationPool> (configurações da Web)
+
 Especifica as definições de configuração que são usadas pelo ASP.NET para gerenciar o comportamento de todo o processo quando um aplicativo ASP.NET está sendo executado no modo integrado no IIS 7,0 ou em uma versão posterior.  
   
 > [!IMPORTANT]
@@ -22,7 +23,7 @@ Especifica as definições de configuração que são usadas pelo ASP.NET para g
 &nbsp;&nbsp;[**\<system.web>**](system-web-element-web-settings.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;**\<applicationPool>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <applicationPool
@@ -44,6 +45,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 |`requestQueueLimit`|Especifica o número máximo de solicitações que podem ser enfileiradas para ASP.NET em um único processo. Quando dois ou mais aplicativos ASP.NET são executados em um único pool de aplicativos, o conjunto cumulativo de solicitações que estão sendo feitas a qualquer aplicativo no pool de aplicativos está sujeito a essa configuração.|  
   
 ### <a name="child-elements"></a>Elementos filho  
+
  Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -97,6 +99,6 @@ Os valores no exemplo são os valores padrão.
 |Arquivo de validação||  
 |Pode estar vazio||  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [\<system.web> Elemento (configurações da Web)](system-web-element-web-settings.md)

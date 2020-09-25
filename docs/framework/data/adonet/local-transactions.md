@@ -5,33 +5,37 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 979d51a97245bc9616349679ec8cf05cae8c595a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a0b713ab0b81cb2f0661212dae22db34b7f9f3ae
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783710"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175389"
 ---
 # <a name="local-transactions"></a>Transações locais
+
 As transações em ADO.NET são usadas quando você deseja associar várias tarefas para que elas sejam executadas como uma única unidade de trabalho. Por exemplo, imagine que um aplicativo executa duas tarefas. Primeiro, ele atualiza uma tabela com informações sobre pedidos. Em seguida, ele atualiza uma tabela que contém informações de inventário, debitando os itens pedidos. Se uma das tarefas falhar, as duas atualizações serão revertidas.  
   
 ## <a name="determining-the-transaction-type"></a>Determinando o tipo de transação  
+
  Uma transação é considerada uma transação local quando é uma transação de fase única e é manipulada diretamente pelo banco de dados. Uma transação é considerada como uma transação distribuída quando é coordenada por um monitor de transação e usa mecanismos à prova de falhas (como confirmação em duas fases) para a resolução da transação.  
   
- Cada um dos provedores de dados de .NET Framework tem `Transaction` seu próprio objeto para executar transações locais. Se você precisar executar uma transação em um banco de dados do SQL Server, selecione uma transação <xref:System.Data.SqlClient>. Para uma transação Oracle, use o provedor <xref:System.Data.OracleClient>. Além disso, há uma <xref:System.Data.Common.DbTransaction> classe que está disponível para escrever código independente de provedor que requer transações.  
+ Cada um dos provedores de dados de .NET Framework tem seu próprio `Transaction` objeto para executar transações locais. Se você precisar executar uma transação em um banco de dados do SQL Server, selecione uma transação <xref:System.Data.SqlClient>. Para uma transação Oracle, use o provedor <xref:System.Data.OracleClient>. Além disso, há uma <xref:System.Data.Common.DbTransaction> classe que está disponível para escrever código independente de provedor que requer transações.  
   
 > [!NOTE]
 > As transações são mais eficientes quando são executadas no servidor. Se você estiver trabalhando com um banco de dados do SQL Server que faz uso extensivo de transações explícitas, considere criá-las como procedimentos armazenados usando a instrução Transact-SQL BEGIN TRANSACTION.
   
 ## <a name="performing-a-transaction-using-a-single-connection"></a>Executando uma transação com uma única conexão  
- No ADO.net, você controla as transações com `Connection` o objeto. É possível iniciar uma transação local com o método `BeginTransaction`. Depois de iniciar uma transação, você pode inscrever um comando nessa transação com a propriedade `Transaction` de um objeto `Command`. Em seguida, você poderá confirmar ou reverter todas as modificações feitas na fonte de dados com base no êxito ou na falha dos componentes de transação.  
+
+ No ADO.NET, você controla as transações com o `Connection` objeto. É possível iniciar uma transação local com o método `BeginTransaction`. Depois de iniciar uma transação, você pode inscrever um comando nessa transação com a propriedade `Transaction` de um objeto `Command`. Em seguida, você poderá confirmar ou reverter todas as modificações feitas na fonte de dados com base no êxito ou na falha dos componentes de transação.  
   
 > [!NOTE]
 > O método `EnlistDistributedTransaction` não deve ser usado para uma transação local.  
   
- O escopo da transação é limitado à conexão. O exemplo a seguir executa uma transação explícita que consiste em dois comandos separados no bloco `try`. Os comandos executam instruções INSERT na tabela Production. ScrapReason da AdventureWorks SQL Server banco de dados de exemplo, que são confirmadas se nenhuma exceção for gerada. O código no bloco `catch` reverte a transação se uma exceção é gerada. Se a transação for anulada ou a conexão for fechada antes de a transação ser concluída, a transação será automaticamente revertida.  
+ O escopo da transação é limitado à conexão. O exemplo a seguir executa uma transação explícita que consiste em dois comandos separados no bloco `try`. Os comandos executam instruções INSERT na tabela Production. ScrapReason da AdventureWorks SQL Server banco de dados de exemplo, que são confirmadas se nenhuma exceção for gerada. O código no bloco `catch` reverterá a transação se uma exceção for lançada. Se a transação for anulada ou a conexão for fechada antes de a transação ser concluída, a transação será automaticamente revertida.  
   
 ## <a name="example"></a>Exemplo  
+
  Siga estas etapas para executar uma transação.  
   
 1. Chame o método <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> do objeto <xref:System.Data.SqlClient.SqlConnection> para marcar o início da transação. O método <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> retorna uma referência à transação. Essa referência é atribuída aos objetos <xref:System.Data.SqlClient.SqlCommand> inscritos na transação.  
@@ -47,9 +51,9 @@ As transações em ADO.NET são usadas quando você deseja associar várias tare
  [!code-csharp[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Transações e simultaneidade](transactions-and-concurrency.md)
 - [Transações distribuídas](distributed-transactions.md)
 - [Integração de System.Transactions com o SQL Server](system-transactions-integration-with-sql-server.md)
-- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)
+- [Visão geral do ADO.NET](ado-net-overview.md)
