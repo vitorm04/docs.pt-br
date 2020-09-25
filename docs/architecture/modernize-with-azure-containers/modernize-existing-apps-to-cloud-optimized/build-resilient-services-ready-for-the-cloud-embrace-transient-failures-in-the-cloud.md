@@ -2,14 +2,14 @@
 title: Crie serviços resilientes prontos para a nuvem. adote as falhas transitórias na nuvem
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | Crie serviços resilientes prontos para a nuvem. adote as falhas transitórias na nuvem
 ms.date: 04/30/2018
-ms.openlocfilehash: 899084ac00d9be0df47ef88c026f4e8c19722bb6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 8e9f1eda71e4b98a56cbfc1c7a4ff34e67bee3f4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144246"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172151"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Compilar serviços resilientes prontos para a nuvem: adotar falhas transitórias na nuvem 
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Crie serviços resilientes prontos para a nuvem: adote as falhas transitórias na nuvem
 
 A resiliência é a capacidade de se recuperar de falhas e continuar funcionando. A resiliência não está prestes a evitar falhas, mas aceitando o fato de que as falhas ocorrerão e, em seguida, respondendo a elas de uma forma que evite tempo de inatividade ou perda de dados. A meta de resiliência é retornar o aplicativo para um estado totalmente funcional após uma falha.
 
@@ -33,7 +33,7 @@ Um aplicativo resiliente como o mostrado na Figura 4-9 deve implementar técnica
 
 Você pode usar essas técnicas tanto em recursos HTTP quanto em recursos de banco de dados. Na Figura 4-9, o aplicativo é baseado em uma arquitetura de três camadas, portanto, você precisa dessas técnicas no nível de serviços (HTTP) e no nível de camada de dados (TCP). Em um aplicativo monolítico que usa uma única camada de aplicativo além do banco de dados (sem serviços ou microserviços adicionais), lidar com falhas transitórias no nível de conexão do banco de dados pode ser suficiente. Nesse cenário, apenas uma configuração específica da conexão de banco de dados é necessária.
 
-Ao implementar comunicações resilientes que acessam o banco de dados, dependendo da versão do .NET que você está usando, pode ser simples (por exemplo, [com o Entity Framework 6 ou posterior](/ef/ef6/fundamentals/connection-resiliency/retry-logic). É apenas uma questão de configurar a conexão de banco de dados. Ou talvez você precise usar bibliotecas adicionais, como o [bloco de aplicativo de tratamento de falhas transitórias](https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)) (para versões anteriores do .net), ou até mesmo implementar sua própria biblioteca.
+Ao implementar comunicações resilientes que acessam o banco de dados, dependendo da versão do .NET que você está usando, pode ser simples (por exemplo, [com o Entity Framework 6 ou posterior](/ef/ef6/fundamentals/connection-resiliency/retry-logic). É apenas uma questão de configurar a conexão de banco de dados. Ou talvez você precise usar bibliotecas adicionais, como o [bloco de aplicativo de tratamento de falhas transitórias](/previous-versions/msp-n-p/hh680934(v=pandp.50)) (para versões anteriores do .net), ou até mesmo implementar sua própria biblioteca.
 
 Ao implementar repetições de HTTP e disparadores de circuito, a recomendação para o .NET é usar a biblioteca [Polly](https://github.com/App-vNext/Polly) , que tem como alvo .NET Framework 4,0, .NET Framework 4,5 e .net Standard 1,1, que inclui o suporte do .NET Core.
 

@@ -2,12 +2,12 @@
 title: Visão geral de tutoriais passo a passo e introduções técnicas
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | Visão geral de orientações técnicas e de introdução técnica
 ms.date: 04/28/2018
-ms.openlocfilehash: 4db6d449d27dcd4316d61305c8c2a8c2aa0bc65b
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 98d33b13d2b28bfe1c35894df45e525cff0520c1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516119"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172138"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Visão geral de tutoriais passo a passo e introduções técnicas
 
@@ -190,7 +190,7 @@ A explicação técnica completa está disponível no wiki do repositório GitHu
 
 ### <a name="overview"></a>Visão geral
 
-[ACI (instâncias de contêiner do Azure)](https://docs.microsoft.com/azure/container-instances/) é a maneira mais rápida de ter um ambiente de desenvolvimento/teste/preparo de contêineres no qual você pode implantar instâncias únicas de contêineres.
+[ACI (instâncias de contêiner do Azure)](/azure/container-instances/) é a maneira mais rápida de ter um ambiente de desenvolvimento/teste/preparo de contêineres no qual você pode implantar instâncias únicas de contêineres.
 
 ### <a name="goals"></a>Metas
 
