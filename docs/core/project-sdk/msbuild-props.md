@@ -4,12 +4,12 @@ description: Referência para as propriedades e os itens do MSBuild que são com
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: faa0dc0e94800a49b56af8810562ee0540f118d2
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: ac5d082acae582352680782deadb71a86f977f3b
+ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247560"
+ms.locfileid: "91354447"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>Referência do MSBuild para projetos do SDK do .NET
 
@@ -190,7 +190,7 @@ A tabela a seguir mostra as opções disponíveis.
 
 ### <a name="analysismode"></a>Analysismode
 
-A partir do .NET 5,0 RC2, o SDK do .NET é fornecido com todas as [regras de qualidade de código "CA"](../../fundamentals/code-analysis/rules/quality-rules-reference.md). Por padrão, somente [algumas regras são habilitadas](../../fundamentals/code-analysis/overview.md#enabled-rules) como avisos de compilação. A `AnalysisMode` propriedade permite que você personalize o conjunto de regras habilitadas por padrão. Você pode alternar para um modo de análise mais agressivo (recusar) ou um modo de análise mais conservador (opcional). Por exemplo, se você quiser habilitar todas as regras por padrão como avisos de compilação, defina o valor como `AllEnabledByDefault` .
+A partir do .NET 5,0 RC2, o SDK do .NET é fornecido com todas as [regras de qualidade de código "CA"](../../fundamentals/code-analysis/quality-rules/index.md). Por padrão, somente [algumas regras são habilitadas](../../fundamentals/code-analysis/overview.md#enabled-rules) como avisos de compilação. A `AnalysisMode` propriedade permite que você personalize o conjunto de regras habilitadas por padrão. Você pode alternar para um modo de análise mais agressivo (recusar) ou um modo de análise mais conservador (opcional). Por exemplo, se você quiser habilitar todas as regras por padrão como avisos de compilação, defina o valor como `AllEnabledByDefault` .
 
 ```xml
 <PropertyGroup>
