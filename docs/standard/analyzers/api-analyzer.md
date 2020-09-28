@@ -4,12 +4,12 @@ description: Saiba como o analisador de API do .NET pode ajudar a detectar probl
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 8da4b2add206daa431124a7d24efc2676cbcaa69
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: f1268d5f208e19f1b69ed487370fb4c96723a204
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598097"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406239"
 ---
 # <a name="net-api-analyzer"></a>Analisador de API do .NET
 
@@ -85,6 +85,9 @@ A supressão global é a maneira recomendada de garantir a consistência do uso 
 
 ## <a name="discover-cross-platform-issues"></a>Descobrir problemas entre plataformas
 
+> [!NOTE]
+> O .NET 5,0 apresenta o [analisador de compatibilidade de plataforma](platform-compat-analyzer.md) como uma substituição desse recurso. O analisador de compatibilidade de plataforma está incluído no SDK do .NET (sem necessidade de instalá-lo separadamente) e está ativado por padrão.
+
 De forma semelhante a APIs preteridas, o analisador identifica todas as APIs que não são entre plataformas. Por exemplo, <xref:System.Console.WindowWidth?displayProperty=nameWithType> funciona no Windows, mas não no Linux ou no macOS. A ID de diagnóstico é mostrada na janela **Lista de Erros**. Você pode suprimir esse aviso clicando e selecionando **Ações Rápidas e Refatorações**. Diferentemente de casos de preterição em que você tem duas opções (continuar usando o membro preterido e suprimir avisos ou não o utilizar), aqui, se estiver desenvolvendo o código apenas para algumas plataformas, você poderá suprimir todos os avisos para todas as outras plataformas em que não planejar executar o código. Para fazer isso, basta editar o arquivo de projeto e adicionar a propriedade `PlatformCompatIgnore` que lista todas as plataformas a serem ignoradas. Os valores aceitos são: `Linux`, `macOS` e `Windows`.
 
 ```xml
@@ -129,3 +132,4 @@ O usuário decide como o diagnóstico deve ser tratado: como avisos, erros, suge
 
 - Postagem de blog [Introduzindo o analisador de API](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/).
 - Vídeo de demonstração no YouTube [Analisador de API](https://youtu.be/eeBEahYXGd0).
+- [Analisador de compatibilidade de plataforma](platform-compat-analyzer.md)

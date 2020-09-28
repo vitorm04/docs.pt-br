@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cd7860a5dfff1eb595625665382689733cffc94a
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 4a7616d2ffaabab5279342ebc1082c93a174a52d
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90721256"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406161"
 ---
 ### <a name="ca1416-platform-compatibility"></a>CA1416: compatibilidade de plataforma
 
@@ -20,7 +20,7 @@ Em projetos que visam plataformas para as quais as APIs que eles usam não estã
 
 #### <a name="examples"></a>Exemplos
 
-- <xref:System.Console.Beep(System.Int32,System.Int32)?displayProperty=nameWithType>Só há suporte para o método no Windows (ele é decorado com `[SupportedOSPlatform("windows")]` ). O código a seguir produzirá um aviso de CA1416 no momento da compilação se o projeto tiver como [destino](../../../../docs/standard/frameworks.md) `net5.0` (mas não `net5.0-windows` ). Para ações que você pode executar para evitar o aviso, consulte a [ação recomendada](#recommended-action).
+- O <xref:System.Console.Beep(System.Int32,System.Int32)?displayProperty=nameWithType> método só tem suporte no Windows e é decorado com `[SupportedOSPlatform("windows")]` . O código a seguir produzirá um aviso de CA1416 no momento da compilação se o projeto tiver como [destino](../../../../docs/standard/frameworks.md) `net5.0` (mas não `net5.0-windows` ). Para ações que você pode executar para evitar o aviso, consulte a [ação recomendada](#recommended-action).
 
   ```csharp
   public void PlayCMajor()
@@ -29,7 +29,7 @@ Em projetos que visam plataformas para as quais as APIs que eles usam não estã
   }
   ```
 
-- <xref:System.Drawing.Image.FromFile(System.String)?displayProperty=nameWithType>Não há suporte para o método no navegador (ele está decorado com `[UnsupportedOSPlatform("browser")]` ). O código a seguir produzirá um aviso de CA1416 no momento da compilação se o projeto usar o SDK do Webassembly mais elaborado ( `<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">` ) ou incluir `browser` como uma plataforma com suporte ( `<SupportedPlatform Include="browser" />` ) no arquivo de projeto.
+- O <xref:System.Drawing.Image.FromFile(System.String)?displayProperty=nameWithType> método não tem suporte no navegador e é decorado com `[UnsupportedOSPlatform("browser")]` . O código a seguir produzirá um aviso de CA1416 no momento da compilação se o projeto der suporte à plataforma do navegador.
 
   ```csharp
   public void CreateImage()
@@ -37,6 +37,17 @@ Em projetos que visam plataformas para as quais as APIs que eles usam não estã
       Image newImage = Image.FromFile("SampImag.jpg");
   }
   ```
+
+  > [!TIP]
+  >
+  > - Os projetos de Webassembly mais incrivelmente e projetos de biblioteca de classes Razor incluem suporte de navegador automaticamente.
+  > - Para adicionar manualmente o navegador como uma plataforma com suporte para seu projeto, adicione a seguinte entrada ao arquivo de projeto:
+  >
+  >  ```xml
+  >  <ItemGroup>
+  >    <SupportedPlatform Include="browser" />
+  >  </ItemGroup>
+  >  ```
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -68,7 +79,7 @@ public void PlayCMajor()
 }
 ```
 
-Você também pode marcar sua API como específica da plataforma, caso em que a carga dos requisitos de verificação cai em seus chamadores. Você pode marcar métodos ou tipos específicos ou um assembly inteiro.
+Se você estiver criando uma biblioteca, poderá marcar sua API como específica da plataforma. Nesse caso, a carga dos requisitos de verificação cai nos seus chamadores. Você pode marcar métodos ou tipos específicos ou um assembly inteiro.
 
 ```csharp
 [SupportedOSPlatform("windows")]

@@ -5,12 +5,12 @@ description: Lista as alterações significativas em ASP.NET Core.
 ms.date: 09/18/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 33d8d1f7a6179229b3218d0102550a64bfc35a87
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a4534367184127604ed53bf1fdafabbf8ff575d1
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078860"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406187"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core alterações significativas
 
@@ -104,6 +104,7 @@ As seguintes alterações significativas no ASP.NET Core 3,0, 3,1 e 5,0 estão d
 - [SPAs: SpaServices e Nodeservices console agente de fallback alterar padrão](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
 - [SPAs: SpaServices e Nodeservices marcados como obsoletos](#spas-spaservices-and-nodeservices-marked-obsolete)
 - [Arquivos estáticos: tipo de conteúdo CSV alterado para compatível com padrões](#static-files-csv-content-type-changed-to-standards-compliant)
+- [APIs de System. Security. Cryptography não têm suporte no Webassembly de mais incrivelmente](#systemsecuritycryptography-apis-not-supported-on-blazor-webassembly)
 - [Estrutura de destino: .NET Framework sem suporte](#target-framework-net-framework-support-dropped)
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5,0
@@ -216,6 +217,10 @@ As seguintes alterações significativas no ASP.NET Core 3,0, 3,1 e 5,0 estão d
 ***
 
 [!INCLUDE[SignalR: UseSignalR and UseConnections methods removed](~/includes/core-changes/aspnetcore/5.0/signalr-usesignalr-useconnections-removed.md)]
+
+***
+
+[!INCLUDE[Cryptography APIs not supported on Blazor WebAssembly](~/includes/core-changes/cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md)]
 
 ***
 
