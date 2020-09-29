@@ -1,17 +1,17 @@
 ---
-title: Usar o recurso de correspondência de padrões para estender padrões de dados
+title: 'Tutorial: criar algoritmos com correspondência de padrões'
 description: Este tutorial avançado demonstra como usar as técnicas de correspondência de padrões para criar a funcionalidade usando dados e algoritmos que são criados separadamente.
 ms.date: 03/13/2019
-ms-technology: csharp-whats-new
-ms.custom: mvc
-ms.openlocfilehash: df1054d8e0ec2b2539e6a1d00bf353d8ca927397
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.technology: csharp-whats-new
+ms.custom: contperfq1
+ms.openlocfilehash: 9fff9f286bd0aa7baf7632f9144dfe693bab0c32
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156526"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437988"
 ---
-# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Usando recursos de correspondência de padrões para ampliar os tipos de dados
+# <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>Tutorial: usar a correspondência de padrões para criar algoritmos orientados a dados e baseados em tipos.
 
 O C#7 introduziu recursos básicos de correspondência de padrões. Esses recursos foram estendidos no C# 8 com novos padrões e expressões. É possível escrever uma funcionalidade que se comporte como se você tivesse estendido tipos que poderiam estar em outras bibliotecas. Outro uso dos padrões é criar a funcionalidade de que seu aplicativo precisa, mas que não é um recurso fundamental do tipo que está sendo estendido.
 
@@ -25,7 +25,7 @@ Neste tutorial, você aprenderá como:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você precisará configurar sua máquina para executar o .NET Core, incluindo o compilador C# 8.0. O compilador C# 8 está disponível a partir da [versão 16.3 do Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download).
+Você precisará configurar seu computador para executar o .NET Core, incluindo o compilador C# 8,0. O compilador C# 8 está disponível a partir do [Visual Studio 2019 versão 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou do [SDK do .NET Core 3,0](https://dotnet.microsoft.com/download).
 
 Este tutorial pressupõe que você esteja familiarizado com o C# e .NET, incluindo o Visual Studio ou a CLI do .NET Core.
 
@@ -138,7 +138,7 @@ namespace toll_calculator
 }
 ```
 
-Esse código está incluído no projeto inicial, mas é comentado. Remova os comentários e você pode testar o que escreveu.
+Esse código é incluído no projeto inicial, mas é comentado. Remova os comentários e você pode testar o que escreveu.
 
 Você está começando a ver como os padrões podem ajudar a criar algoritmos em que o código e os dados estão separados. A expressão `switch` testa o tipo e produz valores diferentes com base nos resultados. Mas isso é somente o começo.
 

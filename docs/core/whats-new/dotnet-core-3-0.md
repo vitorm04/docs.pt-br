@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: ac2b4193849c56002c5bba35932f2882b987a0d6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: fae6ffc56c90ef8f5340d3d7fd34cda82e3b4ca4
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537490"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437965"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novidades do .NET Core 3.0
 
@@ -27,7 +27,13 @@ O .NET Core RC1 foi considerado pronto para produção pela Microsoft e foi tota
 
 ## <a name="language-improvements-c-80"></a>Aprimoramentos na linguagem C# 8,0
 
-O C# 8,0 também faz parte desta versão, que inclui o recurso de [tipos de referência anulável](../../csharp/tutorials/nullable-reference-types.md) , [fluxos assíncronos](../../csharp/tutorials/generate-consume-asynchronous-stream.md)e [mais padrões](../../csharp/tutorials/pattern-matching.md). Para obter mais informações sobre recursos do C# 8.0, consulte [Novidades do C# 8.0](../../csharp/whats-new/csharp-8.md).
+O C# 8,0 também faz parte desta versão, que inclui o recurso de [tipos de referência anulável](../../csharp/language-reference/builtin-types/nullable-reference-types.md) , fluxos assíncronos e mais padrões. Para obter mais informações sobre recursos do C# 8.0, consulte [Novidades do C# 8.0](../../csharp/whats-new/csharp-8.md).
+
+Tutoriais relacionados aos recursos de linguagem C# 8,0:
+
+- [Tutorial: Expressar sua intenção de design mais claramente com tipos de referência que permitem valor nulo e tipos que não permitem valor nulo](../../csharp/tutorials/nullable-reference-types.md)
+- [Tutorial: gerar e consumir fluxos assíncronos usando C# 8,0 e .NET Core 3,0](../../csharp/tutorials/generate-consume-asynchronous-stream.md)
+- [Tutorial: usar a correspondência de padrões para criar algoritmos orientados a dados e baseados em tipos](../../csharp/tutorials/pattern-matching.md)
 
 Foram adicionados aprimoramentos de linguagem para dar suporte aos seguintes recursos de API detalhados abaixo:
 

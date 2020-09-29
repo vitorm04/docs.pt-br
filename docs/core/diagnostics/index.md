@@ -3,12 +3,12 @@ title: Visão geral das ferramentas de diagnóstico – .NET Core
 description: Uma visão geral das ferramentas e das técnicas disponíveis para diagnosticar aplicativos .NET Core.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: e97acccbe3bdd577ee600cefb9f1f0528d3c1ac0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d78b73e53637927ecb877dd69054f75a1f5ac91f
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538521"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437997"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>Quais ferramentas de diagnóstico estão disponíveis no .NET Core?
 
@@ -27,6 +27,10 @@ O [registro em log e o rastreamento](logging-tracing.md) são técnicas relacion
 ## <a name="unit-testing"></a>Teste de unidade
 
 O [teste de unidade](../testing/index.md) é um componente fundamental da integração e da implantação contínuas de software de alta qualidade. Os testes de unidade são projetados para fornecer um aviso antecipado quando você interrompe algo.
+
+## <a name="collect-diagnostics-in-containers"></a>Coletar diagnósticos em contêineres
+
+As mesmas ferramentas de diagnóstico usadas em ambientes Linux não-contêineres também podem ser usadas para [coletar diagnósticos em contêineres](diagnostics-in-containers.md). Há apenas algumas alterações de uso necessárias para garantir que as ferramentas funcionem em um contêiner do Docker.
 
 ## <a name="debug-linux-dumps"></a>Depurar despejos do Linux
 
