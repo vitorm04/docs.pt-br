@@ -331,6 +331,8 @@ items:
             href: ../core/diagnostics/event-counters.md
           - name: Registro em log e rastreamento
             href: ../core/diagnostics/logging-tracing.md
+          - name: Coletar diagnósticos em contêineres
+            href: ../core/diagnostics/diagnostics-in-containers.md
           - name: Ferramentas globais da CLI do .NET Core
             items:
               - name: dotnet-counters
