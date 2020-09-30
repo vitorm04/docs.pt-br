@@ -2,12 +2,12 @@
 title: 'Funções recursivas: a palavra-chave rec'
 description: "Saiba como a palavra-chave ' Rec ' do F # é usada com a palavra-chave ' Let ' para definir uma função recursiva."
 ms.date: 08/12/2020
-ms.openlocfilehash: 389357bd13cef39b1d07972c1a3167320b61612b
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 1ab00ff9400129e531fd7320861b3d9625cad08c
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558706"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438078"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Funções recursivas: a palavra-chave rec
 
@@ -36,7 +36,7 @@ Funções recursivas – funções que chamam a si mesmas – são identificadas
 O exemplo a seguir mostra uma função recursiva que computa o número *n*<sup>th</sup> Fibonacci usando a definição matemática.
 
 ```fsharp
-let fib n =
+let rec fib n =
     match n with
     | 0 | 1 -> 1
     | n -> fib (n-1) + fib (n-2)
