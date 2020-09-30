@@ -4,12 +4,12 @@ description: Saiba o que é um aplicativo de arquivo único e por que você deve
 author: lakshanf
 ms.author: lakshanf
 ms.date: 08/28/2020
-ms.openlocfilehash: 795ea98a9fd9d672b199eb2d9b24151340ef8246
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 8149f912c2d92c3eff8d248353e11c01bcfc24ba
+ms.sourcegitcommit: 665f8fc55258356f4d2f4a6585b750c974b26675
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495784"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91573664"
 ---
 # <a name="single-file-deployment-and-executable"></a>Implantação de arquivo único e executável
 
@@ -17,9 +17,39 @@ Agrupar todos os arquivos dependentes do aplicativo em um único binário fornec
 
 A implantação de arquivo único está disponível tanto para o [modelo de implantação dependente de estrutura](index.md#publish-framework-dependent) quanto para [aplicativos independentes](index.md#publish-self-contained). O tamanho do único arquivo em um aplicativo independente será grande, já que incluirá o tempo de execução e as bibliotecas de estrutura. A opção de implantação de arquivo único pode ser combinada com as opções de publicação [ReadyToRun](../tools/dotnet-publish.md) e [Trim (um recurso experimental no .NET 5,0)](trim-self-contained.md) .
 
-Há algumas advertências que você precisa estar ciente para o uso de arquivo único, primeiro do qual é o uso de informações de caminho para localizar um arquivo relativo ao local do seu aplicativo. A <xref:System.Reflection.Assembly.Location?displayProperty=nameWithType> API retornará uma cadeia de caracteres vazia, que é o comportamento padrão para assemblies carregados da memória. O compilador fornecerá um aviso para essa API durante o tempo de compilação para alertar o desenvolvedor sobre o comportamento específico. Se o caminho para o diretório do aplicativo for necessário, a <xref:System.AppContext.BaseDirectory?displayProperty=nameWithType> API retornará o diretório onde o AppHost (o próprio pacote de arquivo único) reside. Os aplicativos C++ gerenciados não são adequados para implantação de arquivo único e recomendamos que você escreva aplicativos em C# para ser compatível com um único arquivo.
+## <a name="api-incompatibility"></a>Incompatibilidade de API
+
+Algumas APIs não são compatíveis com a implantação de arquivo único e os aplicativos podem exigir modificações se usarem essas APIs. Se você usar uma estrutura ou pacote de terceiros, é possível que eles também possam usar uma dessas APIs e precisar de modificação. A causa mais comum de problemas é a dependência de caminhos de arquivo para arquivos ou DLLs fornecidos com o aplicativo.
+
+A tabela a seguir tem os detalhes relevantes da API da biblioteca de tempo de execução para uso de arquivo único.
+
+| API                            | Observação                                                                   |
+|--------------------------------|------------------------------------------------------------------------|
+| `Assembly.Location`            | Retorna uma cadeia de caracteres vazia.                                               |
+| `Module.FullyQualifiedName`    | Retorna uma cadeia de caracteres com o valor de `<Unknown>` ou gera uma exceção. |
+| `Module.Name`                  | Retorna uma cadeia de caracteres com o valor de `<Unknown>` .                        |
+| `Assembly.GetFile`             | Gera <xref:System.IO.IOException>.                                   |
+| `Assembly.GetFiles`            | Gera <xref:System.IO.IOException>.                                   |
+| `Assembly.CodeBase`            | Gera <xref:System.PlatformNotSupportedException>.                    |
+| `Assembly.EscapedCodeBase`     | Gera <xref:System.PlatformNotSupportedException>.                    |
+| `AssemblyName.CodeBase`        | Retorna `null`.                                                        |
+| `AssemblyName.EscapedCodeBase` | Retorna `null`.                                                        |
+
+Temos algumas recomendações para corrigir cenários comuns:
+
+* Para acessar arquivos ao lado do executável, use <xref:System.AppContext.BaseDirectory?displayProperty=nameWithType>
+
+* Para localizar o nome de arquivo do executável, use o primeiro elemento de <xref:System.Environment.GetCommandLineArgs()?displayProperty=nameWithType>
+
+* Para evitar inteiramente o envio de arquivos flexíveis, considere o uso de [recursos incorporados](https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps)
+
+## <a name="other-considerations"></a>Outras considerações
 
 Por padrão, o arquivo único não agrupa bibliotecas nativas. No Linux, vinculamos o tempo de execução ao pacote e somente as bibliotecas nativas do aplicativo são implantadas no mesmo diretório que o aplicativo de arquivo único. No Windows, previnculo apenas o código de hospedagem e as bibliotecas nativas de tempo de execução e aplicativo são implantadas no mesmo diretório que o aplicativo de arquivo único. Isso é para garantir uma boa experiência de depuração, que exige que os arquivos nativos sejam excluídos do único arquivo. Há uma opção para definir um sinalizador, `IncludeNativeLibrariesForSelfExtract` , para incluir bibliotecas nativas no único pacote de arquivo, mas esses arquivos serão extraídos para um diretório temporário no computador cliente quando o aplicativo de arquivo único for executado.
+
+O aplicativo de arquivo único terá todos os arquivos PDB relacionados juntamente com ele e não será agrupado por padrão. Se você quiser incluir PDBs dentro do assembly para projetos que você criar, defina o `DebugType` como `embedded` conforme descrito [abaixo](#include-pdb-files-inside-the-bundle) em detalhes.
+
+Os componentes C++ gerenciados não são adequados para implantação de arquivo único e recomendamos que você escreva aplicativos em C# ou em outra linguagem C++ não gerenciada para que seja compatível com arquivo único.
 
 ## <a name="exclude-files-from-being-embedded"></a>Excluir arquivos de serem inseridos
 
@@ -38,6 +68,22 @@ Por exemplo, para posicionar alguns arquivos no diretório de publicação, mas 
     <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
   </Content>
 </ItemGroup>
+```
+
+## <a name="include-pdb-files-inside-the-bundle"></a>Incluir arquivos PDB dentro do pacote
+
+O arquivo PDB de um assembly pode ser inserido no próprio assembly (o `.dll` ) usando a configuração abaixo. Como os símbolos fazem parte do assembly, eles também serão parte do aplicativo de arquivo único:
+
+```xml
+<DebugType>embedded</DebugType>
+```
+
+Por exemplo, adicione a seguinte propriedade ao arquivo de projeto de um assembly para inserir o arquivo PDB nesse assembly:
+
+```xml
+<PropertyGroup>
+  <DebugType>embedded</DebugType>
+</PropertyGroup>
 ```
 
 ## <a name="publish-a-single-file-app---cli"></a>Publicar um aplicativo de arquivo único-CLI
@@ -73,7 +119,7 @@ O Visual Studio cria perfis de publicação reutilizáveis que controlam como se
 
 01. Escolha **Editar**.
 
-    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="Perfil de publicação do Visual Studio com o botão Editar.":::
+    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="Gerenciador de Soluções com um menu de clique com o botão direito do mouse, realçando a opção publicar.":::
 
 01. Na caixa de diálogo **configurações de perfil** , defina as seguintes opções:
 
@@ -83,7 +129,7 @@ O Visual Studio cria perfis de publicação reutilizáveis que controlam como se
 
     Escolha **salvar** para salvar as configurações e retornar para a caixa de diálogo de **publicação** .
 
-    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="Caixa de diálogo Configurações de perfil com modo de implantação, tempo de execução de destino e opções de arquivo único realçadas.":::
+    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="Gerenciador de Soluções com um menu de clique com o botão direito do mouse, realçando a opção publicar.":::
 
 01. Escolha **publicar** para publicar seu aplicativo como um único arquivo.
 
@@ -93,7 +139,7 @@ Para obter mais informações, consulte [publicar aplicativos .NET Core com o Vi
 
 Visual Studio para Mac não fornece opções para publicar seu aplicativo como um único arquivo. Você precisará publicar manualmente seguindo as instruções da seção [publicar um único arquivo app-CLI](#publish-a-single-file-app---cli) . Para obter mais informações, consulte [publicar aplicativos .NET Core com CLI do .NET Core](deploy-with-cli.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Implantação de aplicativo .NET Core](index.md).
 - [Publicar aplicativos .NET Core com CLI do .NET Core](deploy-with-cli.md).
