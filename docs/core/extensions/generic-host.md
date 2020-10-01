@@ -4,12 +4,12 @@ author: IEvangelist
 description: Saiba mais sobre o host genérico do .NET, que é responsável pela inicialização do aplicativo e pelo gerenciamento do tempo de vida.
 ms.author: dapine
 ms.date: 09/18/2020
-ms.openlocfilehash: c1b22b4490dc54d462482976d1c2e512f812c9a9
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a1f82f6c6b5d250d6e81351aa02e50e23636280b
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875849"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608269"
 ---
 # <a name="net-generic-host"></a>Host Genérico .NET
 
@@ -142,3 +142,4 @@ Para obter mais informações, consulte [Configuration in .net](configuration.md
 
 - [Configuração no .NET](configuration.md)
 - [Host da Web do ASP.NET Core](/aspnet/core/fundamentals/host/web-host)
+- Os bugs de host genéricos devem ser criados no repositório [github.com/dotnet/Extensions](https://github.com/dotnet/extensions/issues)

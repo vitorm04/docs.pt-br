@@ -13,13 +13,12 @@ helpviewer_keywords:
 - application event logs, service applications
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
-author: ghogen
-ms.openlocfilehash: 6ebce5464dc25ba4101b3898ee791714f8efc5d6
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 0d6c245e3defb7d518093cca904572d3db00fcf8
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925742"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608550"
 ---
 # <a name="how-to-log-information-about-services"></a>Como: Registrar em log informações sobre serviços
 Por padrão, todos os projetos de Serviço Windows têm a capacidade de interagir com o log de eventos do aplicativo e gravar informações e exceções. A propriedade <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> é usada para indicar se você deseja essa funcionalidade em seu aplicativo. Por padrão, o registro em log é habilitado para qualquer serviço criado com o modelo de projeto de Serviço Windows. Você pode usar uma forma estática da classe <xref:System.Diagnostics.EventLog> para gravar informações de serviço em um log sem precisar criar uma instância de um componente <xref:System.Diagnostics.EventLog> nem registrar uma fonte manualmente.  
@@ -70,6 +69,6 @@ Por padrão, todos os projetos de Serviço Windows têm a capacidade de interagi
     [!code-csharp[VbRadconService#15](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#15)]
     [!code-vb[VbRadconService#15](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#15)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Introdução a aplicativos do Serviço Windows](introduction-to-windows-service-applications.md)

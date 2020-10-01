@@ -11,13 +11,12 @@ helpviewer_keywords:
 - ServiceInstaller class, adding installers to services
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
-author: ghogen
-ms.openlocfilehash: f82dd6635555ccb8fcbcdf63cba2495084194731
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 9a6954c75595f5297a31dcaf37e744e655733df4
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925638"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608680"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Como: Adicionar instaladores ao aplicativo de serviço
 O Visual Studio tem componentes de instalação que podem instalar recursos associados com seus aplicativos de serviço. Os componentes de instalação registram um serviço individual no sistema em que ele está sendo instalado e informam o Gerenciador de Controle de Serviços que o serviço existe. Ao trabalhar com um aplicativo de serviço, você pode selecionar um link na janela Propriedades para adicionar automaticamente os instaladores apropriados ao projeto.  

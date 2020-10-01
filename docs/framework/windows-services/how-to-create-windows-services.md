@@ -6,13 +6,12 @@ helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
-author: ghogen
-ms.openlocfilehash: 6918225e39c15a52710fd0d56342aae869b42325
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 35d78acd4fae7bf98a2b3f4ce6ac8a32393c35d4
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925768"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608589"
 ---
 # <a name="how-to-create-windows-services"></a>Como: Criar serviços Windows
 Ao criar um serviço, você pode usar um modelo de projeto Visual Studio chamado **Serviço Windows**. Esse modelo realiza automaticamente muito do trabalho para você referenciando as classes e namespaces apropriados, configurando a herança de classe base para serviços, e substituindo muitos dos métodos que você provavelmente desejará substituir.  
@@ -68,7 +67,7 @@ Ao criar um serviço, você pode usar um modelo de projeto Visual Studio chamado
   
 8. Instale o serviço. Para obter mais informações, confira [Como instalar e desinstalar serviços](how-to-install-and-uninstall-services.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Introdução a aplicativos do Serviço Windows](introduction-to-windows-service-applications.md)
 - [Como: Escrever serviços de forma programática](how-to-write-services-programmatically.md)

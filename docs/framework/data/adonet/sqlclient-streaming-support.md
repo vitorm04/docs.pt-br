@@ -2,12 +2,12 @@
 title: Suporte de streaming do SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 9dc7ee573bd011bd18d6c4b8bbd2d147b1fe907f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a396e3e172c63b0b71b085d4694184c42cc42f3e
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791401"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609239"
 ---
 # <a name="sqlclient-streaming-support"></a>Suporte de streaming do SqlClient
 
@@ -20,11 +20,11 @@ O suporte a streaming também habilitará aplicativos da camada intermediária p
 > [!WARNING]
 > As chamadas assíncronas não têm suporte se um aplicativo também usa a palavra-chave da cadeia de conexão `Context Connection`.
 >
-> Os membros adicionados para dar suporte a streaming são usados para recuperar dados de consultas e passar parâmetros para consultas e procedimentos armazenados. O recurso de streaming aborda cenários básicos de migração de dados e de OLTP e é aplicável ambientes de migrações de dados locais e externos.
+> Os membros adicionados para dar suporte a streaming são usados para recuperar dados de consultas e passar parâmetros para consultas e procedimentos armazenados. O recurso de streaming aborda os cenários básicos de OLTP e de migração de dados e é aplicável a ambientes de migração de dados locais e fora do local.
 
 ## <a name="streaming-support-from-sql-server"></a>Suporte de streaming de SQL Server
 
-O suporte de streaming da SQL Server introduz uma <xref:System.Data.Common.DbDataReader> nova funcionalidade no e <xref:System.Data.SqlClient.SqlDataReader> nas classes para obter <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>e <xref:System.IO.TextReader> , objetos e reagir a eles. Essas classes são usadas para recuperar dados de consultas. Como resultado, o suporte de streaming da SQL Server trata dos cenários OLTP e se aplica a ambientes locais e fora do local.
+O suporte de streaming da SQL Server introduz uma nova funcionalidade no <xref:System.Data.Common.DbDataReader> e nas <xref:System.Data.SqlClient.SqlDataReader> classes para obter <xref:System.IO.Stream> , e, <xref:System.Xml.XmlReader> <xref:System.IO.TextReader> objetos e reagir a eles. Essas classes são usadas para recuperar dados de consultas. Como resultado, o suporte a streaming de SQL Server trata dos cenários OLTP e se aplica a ambientes locais e fora do local.
 
 Os seguintes membros foram adicionados ao <xref:System.Data.SqlClient.SqlDataReader> para habilitar o suporte de streaming do SQL Server:
 
@@ -50,7 +50,7 @@ Os seguintes membros foram adicionados ao <xref:System.Data.Common.DbDataReader>
 
 ## <a name="streaming-support-to-sql-server"></a>Suporte de streaming para SQL Server
 
-O suporte de streaming para <xref:System.Data.SqlClient.SqlParameter> SQL Server introduz uma nova funcionalidade na classe para que ela possa aceitar e reagir a <xref:System.IO.TextReader> <xref:System.Xml.XmlReader>objetos, <xref:System.IO.Stream>e. <xref:System.Data.SqlClient.SqlParameter> é usado para transmitir parâmetros para consultas e procedimentos armazenados.
+O suporte de streaming para SQL Server introduz uma nova funcionalidade na <xref:System.Data.SqlClient.SqlParameter> classe para que ela possa aceitar e reagir a <xref:System.Xml.XmlReader> <xref:System.IO.Stream> objetos, e <xref:System.IO.TextReader> . <xref:System.Data.SqlClient.SqlParameter> é usado para transmitir parâmetros para consultas e procedimentos armazenados.
 
 Descartar um objeto <xref:System.Data.SqlClient.SqlCommand> ou chamar <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> deve cancelar qualquer operação de streaming. Se um aplicativo enviar <xref:System.Threading.CancellationToken>, o cancelamento não será garantido.
 
@@ -70,7 +70,7 @@ Os seguintes tipos de <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> ace
 
 - **Xml**
 
-O tipo **XML** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> aceitará um <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.Xml.XmlReader>.
+O tipo **XML** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> aceitará um <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.Xml.XmlReader> .
 
 <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> pode aceitar valores do tipo <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> e <xref:System.IO.Stream>.
 
@@ -522,6 +522,6 @@ namespace StreamingFromServerToAnother {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Retrieving and Modifying Data in ADO.NET](retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
+- [Recuperando e modificando dados no ADO.NET](retrieving-and-modifying-data.md)

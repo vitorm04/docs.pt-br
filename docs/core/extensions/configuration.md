@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 09/16/2020
 ms.topic: overview
-ms.openlocfilehash: f6b3bcd6633665d837360384f3610fe51b7fd8cd
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f5dc7c99b209b16dfb8595f9d50dcb1428bbde84
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874726"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91607992"
 ---
 # <a name="configuration-in-net"></a>Configuração no .NET
 
@@ -68,3 +68,4 @@ Para obter mais informações sobre vários provedores de configuração, consul
 
 - [Provedores de configuração no .NET](configuration-providers.md)
 - [Implementar um provedor de configuração personalizado](custom-configuration-provider.md)
+- Os bugs de configuração devem ser criados no repositório [github.com/dotnet/Extensions](https://github.com/dotnet/extensions/issues)

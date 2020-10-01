@@ -22,13 +22,12 @@ helpviewer_keywords:
 - Win32ShareProcess service type
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
-author: ghogen
-ms.openlocfilehash: 13bd1f42776ac76a43a83667465ac0ca277e3452
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: b177673d8904a3c40e41cd0f92b1ea7408641186
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925664"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609311"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Introdução a aplicativos do Serviço Windows
 Os serviços do Microsoft Windows, anteriormente conhecidos como serviços do NT, permitem que você crie aplicativos executáveis de longa execução que são executados em suas próprias sessões do Windows. Esses serviços podem ser iniciados automaticamente quando o computador é inicializado, podem ser colocados em pausa e reiniciados e não exibem nenhuma interface do usuário. Esses recursos fazem com que os serviços sejam ideais para serem usados em um servidor ou sempre que você precisar de uma funcionalidade de longa execução que não interfira em outros usuários que trabalham no mesmo computador. Você também pode executar serviços no contexto de segurança de uma conta de usuário específica diferente do usuário conectado ou da conta padrão do computador. Para obter mais informações sobre serviços e sessões do Windows, confira a documentação do SDK do Windows.  
@@ -81,7 +80,7 @@ Os serviços do Microsoft Windows, anteriormente conhecidos como serviços do NT
   
 - Os projetos que contêm serviços Windows precisam ter os componentes de instalação para o projeto e seus serviços. Isso pode ser conseguido facilmente pela janela **Propriedades**. Para obter mais informações, confira [Como adicionar instaladores no seu aplicativo de serviço](how-to-add-installers-to-your-service-application.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Aplicativos do serviço Windows](index.md)
 - [Arquitetura de programação do aplicativo de serviço](service-application-programming-architecture.md)

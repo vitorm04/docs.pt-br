@@ -15,13 +15,12 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-author: ghogen
-ms.openlocfilehash: c59ccc5a8b2f11fda9c4734487092c1aabb74908
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 386311228abb08600acc249e80702c724c137900
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925573"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609259"
 ---
 # <a name="service-application-programming-architecture"></a>Arquitetura de programação do aplicativo de serviço
 Os aplicativos de Serviço Windows baseiam-se em uma classe que é herdada da classe <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Você substitui os métodos dessa classe e define funcionalidades para eles para determinar o comportamento do seu serviço.  
@@ -67,7 +66,7 @@ Os aplicativos de Serviço Windows baseiam-se em uma classe que é herdada da cl
   
  Você também pode usar um componente chamado <xref:System.ServiceProcess.ServiceController> para comunicar-se com um serviço existente e controlar seu comportamento.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Introdução a aplicativos do Serviço Windows](introduction-to-windows-service-applications.md)
 - [Como: Criar serviços Windows](how-to-create-windows-services.md)

@@ -9,13 +9,12 @@ helpviewer_keywords:
 - Windows Service applications, debugging
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
-author: ghogen
-ms.openlocfilehash: fb58f2ff4f480347f0f233ecd9a619cf287cfdfd
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 2657d83f39b60be84846fb784a06e71f6dd46179
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925755"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609727"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Como: Depurar aplicativos do serviço Windows
 Um serviço deve ser executado de dentro do contexto do Gerenciador de Controle de Serviços, em vez de dentro do Visual Studio. Por esse motivo, depurar um serviço não é tão simples como depurar outros tipos de aplicativos do Visual Studio. Para depurar um serviço, você deve iniciar o serviço e, em seguida, anexar um depurador ao processo no qual ele está sendo executado. Em seguida, você pode depurar seu aplicativo usando todas as funcionalidades de depuração padrão do Visual Studio.  
@@ -114,7 +113,7 @@ Um serviço deve ser executado de dentro do contexto do Gerenciador de Controle 
   
  Em alguns casos, como quando você deseja depurar um problema ocorre apenas na inicialização do sistema, é necessário usar o depurador do Windows. [Baixe o Windows Driver Kit (WDK)](/windows-hardware/drivers/download-the-wdk) e consulte [Como depurar serviços Windows](https://support.microsoft.com/kb/824344).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Introdução a aplicativos do Serviço Windows](introduction-to-windows-service-applications.md)
 - [Como: instalar e desinstalar serviços](how-to-install-and-uninstall-services.md)

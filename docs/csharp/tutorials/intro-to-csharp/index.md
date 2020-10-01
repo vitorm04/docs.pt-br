@@ -3,12 +3,12 @@ title: Introdução ao C# – tutoriais interativos
 description: Aprenda C# em seu navegador e comece a trabalhar com seu próprio ambiente de desenvolvimento
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 9a93e34f7b54d12b3f69589d7bb2181fc240403c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52b680ffe8c477624f3b5e085b7f2de13c271d81
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554561"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609174"
 ---
 # <a name="introduction-to-c"></a>Introdução ao C\#
 
@@ -52,7 +52,13 @@ Este tutorial pressupõe que você concluiu as lições listadas acima.
 
 ## <a name="introduction-to-classes"></a>[Introdução às classes](introduction-to-classes.md)
 
-Este tutorial final está disponível apenas para execução no seu computador usando seu próprio ambiente de desenvolvimento local e o .NET Core.
+Este tutorial só está disponível para ser executado em seu computador, usando seu próprio ambiente de desenvolvimento local e o .NET Core.
 Você compilará um aplicativo de console e verá os recursos básicos orientados para objeto que fazem parte da linguagem C#.
 
 Este tutorial pressupõe a conclusão dos tutoriais de introdução online e a instalação do [SDK do .NET Core](https://dotnet.microsoft.com/download) e do [Visual Studio Code](https://code.visualstudio.com/).
+
+## <a name="object-oriented-programming"></a>[Programação orientada a objeto](object-oriented-programming.md)
+
+Este tutorial ensina os conceitos usados na programação orientada a objeto. Você aprenderá os conceitos de *abstração*, *encapsulamento*, *herança*e *polimorfismo* usando exemplos de C#.
+
+Este tutorial pressupõe que você concluiu os tutoriais de introdução online e instalou [SDK do .NET Core](https://dotnet.microsoft.com/download) e [Visual Studio Code](https://code.visualstudio.com/) ou o [Visual Studio](https://visualstudio.com) em seu computador de desenvolvimento.

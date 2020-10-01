@@ -2,12 +2,12 @@
 title: O que há de novo no C# 9,0 – Guia C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 9,0.
 ms.date: 09/04/2020
-ms.openlocfilehash: 6a0227b408b894fe450c2a6bb6017d9059d229c0
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: e109deaa26b33a7780df11031c1f3e0477cd5431
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247612"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609187"
 ---
 # <a name="whats-new-in-c-90"></a>Novidades do C# 9.0
 
@@ -204,11 +204,11 @@ Esses recursos podem melhorar o desempenho em alguns cenários. Eles devem ser u
 
 ## <a name="fit-and-finish-features"></a>Recursos de ajuste e término
 
-Muitos dos outros recursos ajudam a escrever código com mais eficiência. No C# 9,0, você pode omitir o tipo em uma nova expressão quando o tipo do objeto criado já é conhecido. O uso mais comum está em declarações de campo:
+Muitos dos outros recursos ajudam a escrever código com mais eficiência. No C# 9,0, você pode omitir o tipo em uma [ `new` expressão](../language-reference/operators/new-operator.md) quando o tipo do objeto criado já é conhecido. O uso mais comum está em declarações de campo:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="WeatherStationField":::
 
-O tipo de destino New também pode ser usado quando você precisa criar um novo objeto para passar como um parâmetro para um método. Considere um `ForecastFor()` método com a seguinte assinatura:
+O tipo de destino `new` também pode ser usado quando você precisa criar um novo objeto para passar como um argumento para um método. Considere um `ForecastFor()` método com a seguinte assinatura:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="ForecastSignature":::
 
@@ -220,7 +220,7 @@ Outro bom uso para esse recurso é combiná-lo com propriedades init somente par
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="InitWeatherStation":::
 
-Você pode retornar uma instância criada pelo construtor padrão usando uma `return new();` expressão.
+Você pode retornar uma instância criada pelo construtor padrão usando uma `return new();` instrução.
 
 Um recurso semelhante melhora a resolução de tipo de destino de [expressões condicionais](../language-reference/operators/conditional-operator.md). Com essa alteração, as duas expressões não precisam ter uma conversão implícita de uma para a outra, mas podem ter conversões implícitas em um tipo de destino. Você provavelmente não perceberá essa alteração. O que você observará é que algumas expressões condicionais que antes exigiam conversões ou que não compilaram agora só funcionam.
 
