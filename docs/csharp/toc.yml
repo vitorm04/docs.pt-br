@@ -56,7 +56,7 @@
       href: tutorials/upgrade-to-nullable-references.md
     - name: Gerar e consumir fluxos assíncronos
       href: tutorials/generate-consume-asynchronous-stream.md
-    - name: Estender as funcionalidades de dados usando a correspondência de padrões
+    - name: Criar algoritmos controlados por dados com correspondência de padrões
       href: tutorials/pattern-matching.md
     - name: Aplicativo do Console
       href: tutorials/console-teleprompter.md
