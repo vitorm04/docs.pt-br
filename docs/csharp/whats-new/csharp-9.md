@@ -2,12 +2,12 @@
 title: O que há de novo no C# 9,0 – Guia C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 9,0.
 ms.date: 09/04/2020
-ms.openlocfilehash: e109deaa26b33a7780df11031c1f3e0477cd5431
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: c165ca764d93b74aac21028ed3e55e80f2a23ee0
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609187"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654901"
 ---
 # <a name="whats-new-in-c-90"></a>Novidades do C# 9.0
 
@@ -194,7 +194,7 @@ Qualquer um desses padrões pode ser usado em qualquer contexto em que os padrõ
 
 Três novos recursos melhoram o suporte para a interoperabilidade nativa e bibliotecas de nível baixo que exigem alto desempenho: inteiros de tamanho nativo, ponteiros de função e omissão do `localsinit` sinalizador.
 
-Inteiros de tamanho nativo `nint` e `nuint` , são tipos inteiros. Eles são expressos pelos tipos subjacentes <xref:System.IntPtr?displayProperty=nameWithType> e <xref:System.UIntPtr?displayProperty=nameWithType> . O compilador superfícies de conversões e operações adicionais para esses tipos como ints nativas. Os ints de tamanho nativo não têm constantes para `MaxValue` ou `MinValue` , exceto para `nuint.MinValue` , que tem um `MinValue` de `0` . Outros valores não podem ser expressos como constantes porque depende do tamanho nativo de um inteiro no computador de destino. Você pode usar valores constantes para `nint` no intervalo [ `int.MinValue` .. `int.MaxValue`]. Você pode usar valores constantes para `nuint` no intervalo [ `uint.MinValue` .. `uint.MaxValue`]. O compilador executa o dobramento constante para todos os operadores unários e binários usando os <xref:System.Int32?displayProperty=nameWithType> <xref:System.UInt32?displayProperty=nameWithType> tipos e. Se o resultado não couber em 32 bits, a operação será executada em tempo de execução e não será considerada uma constante. Os inteiros de tamanho nativo podem aumentar o desempenho em cenários em que a matemática de inteiros é usada extensivamente e precisa ter o desempenho mais rápido possível.
+Inteiros de tamanho nativo `nint` e `nuint` , são tipos inteiros. Eles são expressos pelos tipos subjacentes <xref:System.IntPtr?displayProperty=nameWithType> e <xref:System.UIntPtr?displayProperty=nameWithType> . O compilador superfícies de conversões e operações adicionais para esses tipos como ints nativas. Os inteiros de tamanho nativo definem propriedades para `MaxValue` ou `MinValue` . Esses valores não podem ser expressos como constantes de tempo de compilação porque dependem do tamanho nativo de um inteiro no computador de destino. Esses valores são ReadOnly no tempo de execução. Você pode usar valores constantes para `nint` no intervalo [ `int.MinValue` .. `int.MaxValue`]. Você pode usar valores constantes para `nuint` no intervalo [ `uint.MinValue` .. `uint.MaxValue`]. O compilador executa o dobramento constante para todos os operadores unários e binários usando os <xref:System.Int32?displayProperty=nameWithType> <xref:System.UInt32?displayProperty=nameWithType> tipos e. Se o resultado não couber em 32 bits, a operação será executada em tempo de execução e não será considerada uma constante. Os inteiros de tamanho nativo podem aumentar o desempenho em cenários em que a matemática de inteiros é usada extensivamente e precisa ter o desempenho mais rápido possível.
 
 Ponteiros de função fornecem uma sintaxe fácil para acessar os opcodes de IL `ldftn` e `calli` . Você pode declarar ponteiros de função usando a nova `delegate*` sintaxe. Um `delegate*` tipo é um tipo de ponteiro. Invocar o `delegate*` tipo usa `calli` , em contraste com um delegado que usa `callvirt` no `Invoke()` método. Sintaticamente, as invocações são idênticas. Invocação de ponteiro de função usa a `managed` Convenção de chamada. Você adiciona a `unmanaged` palavra-chave após a `delegate*` sintaxe para declarar que deseja a `unmanaged` Convenção de chamada. Outras convenções de chamada podem ser especificadas usando atributos na `delegate*` declaração.
 

@@ -1,15 +1,15 @@
 ---
 title: Funções locais – Guia de Programação em C#
 description: As funções locais em C# são métodos privados que são aninhados em outro membro e podem ser chamados de seus membros que os contêm.
-ms.date: 06/14/2017
+ms.date: 10/02/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: c1c6c6becb3894b05cb9ed89f7f33dcf249b20eb
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: a91995757048c8c54253d7f4b923d5194f69bc7b
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656179"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654914"
 ---
 # <a name="local-functions-c-programming-guide"></a>Funções locais (Guia de Programação em C#)
 
@@ -36,17 +36,19 @@ Funções locais tornam a intenção do seu código clara. Qualquer pessoa que l
 Uma função local é definida como um método aninhado dentro de um membro recipiente. Sua definição tem a seguinte sintaxe:
 
 ```csharp
-<modifiers: async | unsafe> <return-type> <method-name> <parameter-list>
+<modifiers> <return-type> <method-name> <parameter-list>
 ```
 
-Funções locais podem usar os modificadores [async](../../language-reference/keywords/async.md) e [unsafe](../../language-reference/keywords/unsafe.md).
+Você pode usar os seguintes modificadores com uma função local:
 
-Observe que todas as variáveis locais que estão definidas no membro recipiente, incluindo seus parâmetros de método, são acessíveis na função local.
+- [`async`](../../language-reference/keywords/async.md)
+- [`unsafe`](../../language-reference/keywords/unsafe.md)
+- [`static`](../../language-reference/keywords/static.md) (em C# 8,0 e posterior). Uma função local estática não pode capturar variáveis locais ou estado de instância.
+- [`extern`](../../language-reference/keywords/extern.md) (em C# 9,0 e posterior). Uma função local externa deve ser `static` .
+
+Todas as variáveis locais que são definidas no membro recipiente, incluindo seus parâmetros de método, são acessíveis em uma função local não estática.
 
 Ao contrário de uma definição de método, uma definição de função local não pode incluir o modificador de acesso de membro. Já que todas as funções locais são privadas, incluir um modificador de acesso como a palavra-chave `private` gera o erro do compilador CS0106, "O modificador 'private' não é válido para este item".
-
-> [!NOTE]
-> Antes do C# 8,0, as funções locais não podem incluir o `static` modificador. A inclusão da `static` palavra-chave gera o erro CS0106 do compilador, "o modificador ' static ' não é válido para este item.", ou um erro do compilador informando que você deve usar C# 8,0 ou superior.
 
 Além disso, os atributos não podem ser aplicados à função local ou aos respectivos parâmetros e parâmetros de tipo.
 
@@ -128,6 +130,6 @@ Uma vantagem final não demonstrada neste exemplo é que as funções locais pod
 
 Embora as funções locais possam parecer redundantes para expressões lambda, elas realmente têm finalidades e usos diferentes. As funções locais são mais eficientes para quando você deseja escrever uma função que é chamada apenas do contexto de outro método.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Métodos](methods.md)

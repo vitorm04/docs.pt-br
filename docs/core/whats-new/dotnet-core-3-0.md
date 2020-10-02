@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: fae6ffc56c90ef8f5340d3d7fd34cda82e3b4ca4
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 60b511adecf37855de91f45245fc55911ba281dc
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437965"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654765"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novidades do .NET Core 3.0
 
@@ -69,7 +69,7 @@ Durante `dotnet build` ou `dotnet publish` , um executável (conhecido como **ap
 
 ### <a name="macos-apphost-and-notarization"></a>macOS appHost e notarization
 
-*somente macOS*
+*Somente macOS*
 
 A partir do notarized SDK do .NET Core 3,0 para macOS, a configuração para produzir um executável padrão (conhecida como appHost) é desabilitada por padrão. Para obter mais informações, consulte [o notarization Catalina do MacOS e o impacto sobre os downloads e projetos do .NET Core](../install/macos-notarization-issues.md).
 
@@ -108,7 +108,7 @@ Para publicar um único arquivo executável, defina o `PublishSingleFile` em seu
 </PropertyGroup>
 ```
 
-- ou -
+- ou -
 
 ```dotnetcli
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
@@ -211,6 +211,8 @@ Exceções ao direcionamento cruzado:
 - O Windows x64 pode ser usado para compilar imagens do Windows ARM32, ARM64 e x86.
 - O Windows x86 pode ser usado para compilar imagens do Windows ARM32.
 - O Linux x64 pode ser usado para compilar imagens do Linux ARM32 e ARM64.
+
+Para obter mais informações, consulte [pronto para executar](../deploying/ready-to-run.md).
 
 ## <a name="runtimesdk"></a>Tempo de execução/SDK
 

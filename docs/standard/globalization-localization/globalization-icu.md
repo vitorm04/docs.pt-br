@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: b52afd80c10afb6723679b2a74f11c7a4f59091f
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 60533fbb215ffe8baba7e2d200faa1c4937294b9
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608368"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654875"
 ---
 # <a name="net-globalization-and-icu"></a>Globalização e ICU do .NET
 
@@ -166,7 +166,7 @@ Não há suporte para as seguintes APIs:
 
 As seguintes APIs têm suporte com limitações:
 
-- <xref:System.String.Normalize(System.Text.NormalizationForm)?displayProperty=nameWithType> e <xref:System.String.IsNormalized(System.Text.NormalizationForm)?displayProperty=nameWithType> não dão suporte às raramente usadas <xref:System.Text.NormalizationForm.FormKC?displayProperty=nameWithType> e <xref:System.Text.NormalizationForm.FormKD?displayProperty=nameWithType> formulários.
+- <xref:System.String.Normalize(System.Text.NormalizationForm)?displayProperty=nameWithType> e <xref:System.String.IsNormalized(System.Text.NormalizationForm)?displayProperty=nameWithType> não dão suporte às raramente usadas <xref:System.Text.NormalizationForm.FormKC> e <xref:System.Text.NormalizationForm.FormKD> formulários.
 - <xref:System.Globalization.RegionInfo.CurrencyNativeName?displayProperty=nameWithType> retorna o mesmo valor que <xref:System.Globalization.RegionInfo.CurrencyEnglishName?displayProperty=nameWithType>.
 
-Além disso, uma lista de localidades com suporte pode ser encontrada no [repositório dotnet/ICU](https://github.com/dotnet/icu/blob/0f49268ddfd3331ca090f1c51d2baa2f75f6c6c0/icu-filters/optimal.json#L6-L54)
+Além disso, uma lista de localidades com suporte pode ser encontrada no [repositório dotnet/ICU](https://github.com/dotnet/icu/blob/0f49268ddfd3331ca090f1c51d2baa2f75f6c6c0/icu-filters/optimal.json#L6-L54).

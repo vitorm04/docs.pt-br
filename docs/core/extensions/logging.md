@@ -4,12 +4,12 @@ author: IEvangelist
 description: Saiba como usar a estrutura de registro em log fornecida pelo pacote do NuGet Microsoft.Extensions.Logging.
 ms.author: dapine
 ms.date: 09/30/2020
-ms.openlocfilehash: a742e192f8e080e2c76ebeb005168647e440d8ef
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 2e6d8710015d8e998a9710f2cdeb86d925236196
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614680"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654829"
 ---
 # <a name="logging-in-net"></a>Registro em log no .NET
 
@@ -433,7 +433,7 @@ class Program
 
 ## <a name="non-host-console-app"></a>Aplicativo de console não host
 
-O código de log para aplicativos sem um [host genérico](generic-host.md) difere na maneira como os [provedores são adicionados](#add-providers) e os [agentes são criados](#create-logs). Em um aplicativo de console não host, chame o método de extensão `Add{provider name}` do provedor ao criar um `LoggerFactory`:
+O código de log para aplicativos sem um [host genérico](generic-host.md) difere na maneira como os [provedores são adicionados](logging-providers.md#built-in-logging-providers) e os [agentes são criados](#create-logs). Em um aplicativo de console não host, chame o método de extensão `Add{provider name}` do provedor ao criar um `LoggerFactory`:
 
 ```csharp
 class Program
@@ -526,7 +526,7 @@ class Program
 - Nível `Information` de log e superior.
 - Todas as categorias que começam com `"Microsoft"` .
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Provedores de log no .NET](logging-providers.md)
 - [Implementar um provedor de log personalizado no .NET](custom-logging-provider.md)

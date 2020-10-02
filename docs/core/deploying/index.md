@@ -2,12 +2,12 @@
 title: Publicação de aplicativos
 description: Saiba mais sobre as maneiras de publicar um aplicativo .NET Core. O .NET Core pode publicar aplicativos específicos da plataforma ou de plataforma cruzada. Você pode publicar um aplicativo como independente ou dependente de estrutura. Cada modo afeta como um usuário executa seu aplicativo.
 ms.date: 04/01/2020
-ms.openlocfilehash: ece5e46162fd4a8de0b996ba239e89cceca4dbca
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 27206065c899e41a44685f72cfb35ae57986aa4c
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720105"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654666"
 ---
 # <a name="net-core-application-publishing-overview"></a>Visão geral da publicação de aplicativos do .NET Core
 
@@ -149,6 +149,34 @@ Publicar um aplicativo independente. Um executável do Windows de 64 bits é cri
 
 ```dotnet
 dotnet publish -r win-x64
+```
+
+## <a name="publish-with-readytorun-images"></a>Publicar com imagens ReadyToRun
+
+A publicação com imagens ReadyToRun melhorará o tempo de inicialização do seu aplicativo com o custo de aumentar o tamanho do seu aplicativo. Para publicar com ReadyToRun, consulte [ReadyToRun](ready-to-run.md) para obter mais detalhes.
+
+### <a name="advantages"></a>Vantagens
+
+- **Tempo de inicialização melhorado**\
+O aplicativo passará menos tempo executando o JIT.
+
+### <a name="disadvantages"></a>Desvantagens
+
+- **Tamanho maior**\
+O aplicativo será maior em disco.
+
+### <a name="examples"></a>Exemplos
+
+Publicar um aplicativo independente e ReadyToRun. Um executável macOS 64-bit é criado.
+
+```dotnet
+dotnet publish -c Release -r osx-x64 -p:PublishReadyToRun=true
+```
+
+Publicar um aplicativo independente e ReadyToRun. Um executável do Windows de 64 bits é criado.
+
+```dotnet
+dotnet publish -c Release -r win-x64 -p:PublishReadyToRun=true
 ```
 
 ## <a name="see-also"></a>Consulte também

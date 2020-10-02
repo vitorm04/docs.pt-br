@@ -4,12 +4,12 @@ description: Saiba como a API do provedor de log é usada em aplicativos .NET.
 author: IEvangelist
 ms.author: dapine
 ms.date: 09/25/2020
-ms.openlocfilehash: 936413be1514e6cea20e28a7d4431c572560d193
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 3bd10564f23744d4798d0a6a4b49a7a29be2bc19
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614679"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654679"
 ---
 # <a name="logging-providers-in-net"></a>Provedores de log no .NET
 
@@ -79,7 +79,7 @@ Os provedores de log a seguir são fornecidos pela Microsoft, mas não como part
 
 ### <a name="console"></a>Console
 
-O `Console` provedor registra a saída no console. Para obter mais informações sobre como exibir `Console` logs no desenvolvimento, consulte [log output of dotnet Run e Visual Studio](logging.md#logging-output-from-dotnet-run-and-visual-studio).
+O `Console` provedor registra a saída no console.
 
 ### <a name="debug"></a>Depurar
 
@@ -230,7 +230,7 @@ Usar uma estrutura de terceiros é semelhante ao uso de um dos provedores intern
 
 Para saber mais, consulte a documentação de cada provedor. Não há suporte para provedores de log de terceiros na Microsoft.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Registro em log no .net](logging.md).
 - [Implemente um provedor de log personalizado no .net](custom-logging-provider.md).

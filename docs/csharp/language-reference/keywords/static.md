@@ -8,18 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: ccd575748c2286fa7348e2880acbfadd036d9ccd
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 239163fc2f91ccbfe8b1c111a358db87d36a8308
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247716"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654633"
 ---
 # <a name="static-c-reference"></a>static (Referência de C#)
 
 Esta página aborda a `static` palavra-chave do modificador. A `static` palavra-chave também faz parte da [`using static`](using-static.md) diretiva.
 
 Use o modificador `static` para declarar um membro estático que pertença ao próprio tipo, em vez de um objeto específico. O `static` modificador pode ser usado para declarar `static` classes. Em classes, interfaces e structs, você pode adicionar o `static` modificador a campos, métodos, propriedades, operadores, eventos e construtores. O `static` modificador não pode ser usado com indexadores ou finalizadores. Para obter mais informações, consulte [classes estáticas e membros de classe estática](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
+
+A partir do C# 8,0, você pode adicionar o `static` modificador a uma [função local](../../programming-guide/classes-and-structs/local-functions.md). Uma função local estática não pode capturar variáveis locais ou estado de instância.
 
 A partir do C# 9,0, você pode adicionar o `static` modificador a uma [expressão lambda](../operators/lambda-expressions.md) ou a um [método anônimo](../operators/delegate-operator.md). Um método lambda ou anônimo estático não pode capturar variáveis locais ou estado de instância.
 
@@ -68,7 +70,7 @@ Este exemplo mostra que você pode inicializar um `static` campo usando outro `s
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Referência do C#](../index.md)
 - [Guia de programação C#](../../programming-guide/index.md)

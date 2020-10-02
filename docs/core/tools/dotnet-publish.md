@@ -2,18 +2,18 @@
 title: Comando dotnet publish
 description: O comando dotnet publish publica um projeto do .NET Core ou uma solução em um diretório.
 ms.date: 02/24/2020
-ms.openlocfilehash: 53dc6010352d92489017c3aa776bcb6a3601ec2d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2c33f99ce652dadc6e0c1a4c5e9e78fff9f54254
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537763"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654888"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nome
 
 `dotnet publish` – Publica o aplicativo e suas dependências em uma pasta para implantação em um sistema de hospedagem.
 
@@ -32,7 +32,7 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet publish -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 `dotnet publish` compila o aplicativo, lê suas dependências especificadas no arquivo de projeto e publica o conjunto de arquivos resultantes em um diretório. A saída inclui os seguintes ativos:
 
@@ -145,7 +145,7 @@ Para saber mais, consulte os recursos a seguir:
 
 - **`-p:PublishReadyToRun=true`**
 
-  Compila assemblies de aplicativo como o formato ReadyToRun (R2R). R2R é uma forma de compilação antecipada (AOT). Para obter mais informações, consulte [ReadyToRun images](../whats-new/dotnet-core-3-0.md#readytorun-images). Disponível desde o SDK do .NET Core 3.0.
+  Compila assemblies de aplicativo como o formato ReadyToRun (R2R). R2R é uma forma de compilação antecipada (AOT). Para obter mais informações, consulte [ReadyToRun images](../deploying/ready-to-run.md). Disponível desde o SDK do .NET Core 3.0.
 
   Recomendamos que você especifique essa opção em um perfil de publicação em vez de na linha de comando. Para mais informações, consulte [MSBuild](#msbuild).
 
@@ -229,7 +229,7 @@ Para saber mais, consulte os recursos a seguir:
   dotnet publish --no-dependencies
   ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral da publicação de aplicativos do .NET Core](../deploying/index.md)
 - [Publicar aplicativos .NET Core com o CLI do .NET Core](../deploying/deploy-with-cli.md)

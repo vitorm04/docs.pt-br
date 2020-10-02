@@ -4,12 +4,12 @@ description: Saiba o que é um aplicativo de arquivo único e por que você deve
 author: lakshanf
 ms.author: lakshanf
 ms.date: 08/28/2020
-ms.openlocfilehash: 8149f912c2d92c3eff8d248353e11c01bcfc24ba
-ms.sourcegitcommit: 665f8fc55258356f4d2f4a6585b750c974b26675
+ms.openlocfilehash: b7693d6c119d00a798ef03ed1019f2f04c1828cf
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91573664"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654646"
 ---
 # <a name="single-file-deployment-and-executable"></a>Implantação de arquivo único e executável
 
@@ -37,11 +37,11 @@ A tabela a seguir tem os detalhes relevantes da API da biblioteca de tempo de ex
 
 Temos algumas recomendações para corrigir cenários comuns:
 
-* Para acessar arquivos ao lado do executável, use <xref:System.AppContext.BaseDirectory?displayProperty=nameWithType>
+* Para acessar arquivos ao lado do executável, use <xref:System.AppContext.BaseDirectory?displayProperty=nameWithType> .
 
-* Para localizar o nome de arquivo do executável, use o primeiro elemento de <xref:System.Environment.GetCommandLineArgs()?displayProperty=nameWithType>
+* Para localizar o nome de arquivo do executável, use o primeiro elemento de <xref:System.Environment.GetCommandLineArgs?displayProperty=nameWithType> .
 
-* Para evitar inteiramente o envio de arquivos flexíveis, considere o uso de [recursos incorporados](https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps)
+* Para evitar inteiramente o envio de arquivos soltos, considere o uso de [recursos incorporados](../../framework/resources/creating-resource-files-for-desktop-apps.md).
 
 ## <a name="other-considerations"></a>Outras considerações
 
@@ -139,7 +139,7 @@ Para obter mais informações, consulte [publicar aplicativos .NET Core com o Vi
 
 Visual Studio para Mac não fornece opções para publicar seu aplicativo como um único arquivo. Você precisará publicar manualmente seguindo as instruções da seção [publicar um único arquivo app-CLI](#publish-a-single-file-app---cli) . Para obter mais informações, consulte [publicar aplicativos .NET Core com CLI do .NET Core](deploy-with-cli.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Implantação de aplicativo .NET Core](index.md).
 - [Publicar aplicativos .NET Core com CLI do .NET Core](deploy-with-cli.md).

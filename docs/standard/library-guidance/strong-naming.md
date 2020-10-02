@@ -2,18 +2,18 @@
 title: Nomenclatura forte e bibliotecas do .NET
 description: Recomendações de melhores práticas para dar um nome forte a bibliotecas do .NET.
 ms.date: 10/16/2018
-ms.openlocfilehash: db268093b07a2ece7cdb8329fd789b52da9c5c32
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b72d4a8c320ac857fbcd6abe44f467805f72b5b3
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76744527"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654554"
 ---
 # <a name="strong-naming"></a>Nomenclatura forte
 
 Nomenclatura forte refere-se a assinar um assembly com uma chave, produzindo um [assembly de nome forte](../assembly/strong-named.md). Quando um assembly tem um nome forte, ele cria uma identidade exclusiva com base no número de versão de nome e assembly e pode ajudar a evitar conflitos de assembly.
 
-A desvantagem de dar um nome forte é que o .NET Framework no Windows habilita carregamento estrito de assemblies depois que um assembly recebe um nome forte. Uma referência de assembly de nome forte deve corresponder exatamente à versão referenciada por um assembly, forçando os desenvolvedores a [configurar redirecionamentos de associação](../../framework/configure-apps/redirect-assembly-versions.md) ao usar o assembly:
+A desvantagem de dar um nome forte é que o .NET Framework no Windows habilita carregamento estrito de assemblies depois que um assembly recebe um nome forte. Uma referência de assembly de nome forte deve corresponder exatamente à versão do assembly carregado, forçando os desenvolvedores a [Configurar redirecionamentos de associação](../../framework/configure-apps/redirect-assembly-versions.md) ao usar o assembly:
 
 ```xml
 <configuration>
@@ -43,7 +43,7 @@ Os benefícios da nomenclatura forte são:
 Você deve dar um nome forte às suas bibliotecas do .NET de software livre. Dar um nome forte a um assembly garante que a maioria das pessoas possa usá-lo e o carregamento estrito do assembly afeta apenas o .NET Framework.
 
 > [!NOTE]
-> Essa orientação é específica para bibliotecas .NET distribuídas publicamente, como bibliotecas .NET publicadas em NuGet.org. A nomeação forte não é exigida pela maioria dos aplicativos .NET e não deve ser feita por padrão.
+> Essas diretrizes são específicas para bibliotecas .NET distribuídas publicamente, como bibliotecas .NET publicadas em NuGet.org. A nomeação forte não é exigida pela maioria dos aplicativos .NET e não deve ser feita por padrão.
 
 ✔️ CONSIDERE dar um nome forte aos assemblies da sua biblioteca.
 
@@ -60,14 +60,14 @@ Você deve dar um nome forte às suas bibliotecas do .NET de software livre. Dar
 
 > Leia mais sobre [controle de versão e versão do assembly](./versioning.md#assembly-version).
 
-❌NÃO adicione, remova ou altere a chave de nomeação forte.
+❌ Não adicione, remova ou altere a chave de nomenclatura forte.
 
 > Modificar a chave de nome forte do assembly muda a identidade do assembly e interrompe o código compilado que a utiliza. Para obter mais informações, veja [alteração da falha de binário](./breaking-changes.md#binary-breaking-change).
 
-❌NÃO publique versões fortes e não-fortes da sua biblioteca. Por exemplo, `Contoso.Api` e `Contoso.Api.StrongNamed`.
+❌ Não publique versões de nome forte e não forte da sua biblioteca. Por exemplo, `Contoso.Api` e `Contoso.Api.StrongNamed`.
 
 > Publicar dois pacotes bifurca o ecossistema do desenvolvedor. Além disso, se um aplicativo acabar dependendo de ambos os pacotes, o desenvolvedor poderá encontrar conflitos de nome de tipo. No que diz respeito ao .NET, há diferentes tipos em diferentes assemblies.
 
 >[!div class="step-by-step"]
->[Próximo](cross-platform-targeting.md)
->[anterior](nuget.md)
+>[Anterior](cross-platform-targeting.md) 
+> [Avançar](nuget.md)

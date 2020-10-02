@@ -4,12 +4,12 @@ description: Saiba como usar tokens de cancelamento para sinalizar uma solicita�
 ms.date: 08/19/2020
 ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 30bef5d1a5082fbd3757377dbedb8f9b9d17e218
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 84cd1bb413d20b6c13be8415c13c72b57873b1cf
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053087"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654699"
 ---
 # <a name="cancel-a-list-of-tasks-c"></a>Cancelar uma lista de tarefas (C#)
 
@@ -159,14 +159,14 @@ Adicione o seguinte `ProcessUrlAsync` método abaixo do `SumPageSizesAsync` mét
 static async Task<int> ProcessUrlAsync(string url, HttpClient client, CancellationToken token)
 {
     HttpResponseMessage response = await client.GetAsync(url, token);
-    byte[] content = await response.Content.ReadAsByteArrayAsync(token);
+    byte[] content = await response.Content.ReadAsByteArrayAsync();
     Console.WriteLine($"{url,-60} {content.Length,10:#,#}");
 
     return content.Length;
 }
 ```
 
-Para qualquer URL fornecida, o método usará a `client` instância fornecida para obter a resposta como um `byte[]` . A <xref:System.Threading.CancellationToken> instância é passada para os <xref:System.Net.Http.HttpClient.GetAsync(System.String,System.Threading.CancellationToken)?displayProperty=nameWithType> <xref:System.Net.Http.HttpContent.ReadAsByteArrayAsync(System.Threading.CancellationToken)?displayProperty=nameWithType> métodos e. O `token` é usado para se registrar para o cancelamento solicitado. O comprimento é retornado depois que a URL e o comprimento são gravados no console.
+Para qualquer URL fornecida, o método usará a `client` instância fornecida para obter a resposta como um `byte[]` . A <xref:System.Threading.CancellationToken> instância é passada para os <xref:System.Net.Http.HttpClient.GetAsync(System.String,System.Threading.CancellationToken)?displayProperty=nameWithType> <xref:System.Net.Http.HttpContent.ReadAsByteArrayAsync?displayProperty=nameWithType> métodos e. O `token` é usado para se registrar para o cancelamento solicitado. O comprimento é retornado depois que a URL e o comprimento são gravados no console.
 
 ### <a name="example-application-output"></a>Exemplo de saída de aplicativo
 
@@ -193,7 +193,7 @@ O código a seguir é o texto completo do arquivo *Program.cs* para o exemplo.
 
 :::code language="csharp" source="snippets/cancel-tasks/cancel-tasks/Program.cs":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Threading.CancellationToken>
 - <xref:System.Threading.CancellationTokenSource>

@@ -3,12 +3,12 @@ title: Como definir o que é nativo de nuvem
 description: Saiba mais sobre os pilares básicos que fornecem o Fundação para sistemas nativos de nuvem
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: dce8da57b90519880e322a26de403d8e7cb718c2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1f0d842a2369ae04ffc1c634f9de60398a88e86f
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160899"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654686"
 ---
 # <a name="defining-cloud-native"></a>Definindo a nuvem nativa
 
@@ -26,7 +26,7 @@ A base de computação nativa da nuvem fornece uma [definição oficial](https:/
 
 Os aplicativos se tornaram cada vez mais complexos com os usuários exigindo mais e mais. Os usuários esperam uma rápida capacidade de resposta, recursos inovadores e zero tempo de inatividade. Problemas de desempenho, erros recorrentes e a incapacidade de mover rapidamente não são mais aceitáveis. Eles mudarão facilmente para o seu concorrente.
 
-A nuvem nativa é muito sobre *velocidade* e *agilidade*. Os sistemas de negócios estão evoluindo da habilitação de recursos de negócios a armas de transformação estratégica, acelerando a velocidade e o crescimento dos negócios. É imperativo obter ideias para o mercado imediatamente.
+A nuvem nativa é sobre *velocidade* e *agilidade*. Os sistemas de negócios estão evoluindo de permitir que os recursos de negócios sejam armas de transformação estratégica que aceleram a velocidade e o crescimento dos negócios. É imperativo obter ideias para o mercado imediatamente.
 
 Aqui estão algumas empresas que implementaram essas técnicas. Pense na velocidade, na agilidade e na escalabilidade que eles atingiram.
 
@@ -227,7 +227,7 @@ A tabela a seguir descreve as tarefas de orquestração comuns.
 | Afinidade/antiafinidade | Provisione contêineres próximos ou distantes uns dos outros, ajudando a disponibilidade e o desempenho. |
 | Monitoramento da integridade | Detectar e corrigir automaticamente as falhas.|
 | Failover | Reprovisionar automaticamente a instância com falha para computadores íntegros.|
-| Dimensionamento | Adicione ou remova automaticamente a instância de contêiner para atender à demanda.|
+| Scaling | Adicione ou remova automaticamente a instância de contêiner para atender à demanda.|
 | Rede | Gerenciar uma sobreposição de rede para comunicação de contêiner.|
 | Descoberta de Serviços | Habilite os contêineres para localizar um ao outro.|
 | Atualizações sem interrupção | Coordene atualizações incrementais com uma implantação sem tempo de inatividade. Reverter alterações problemáticas automaticamente.|

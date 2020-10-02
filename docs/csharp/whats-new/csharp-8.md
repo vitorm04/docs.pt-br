@@ -2,12 +2,12 @@
 title: O que há de novo no C# 8,0 – Guia C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: eee395c33585028cd81861045f05f7790d8db949
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 43b9c69c649b83d4cf78ef4c7d131ce900a49d11
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414884"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654862"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
@@ -322,7 +322,7 @@ Em ambos os casos, o compilador gera a chamada para `Dispose()`. O compilador ge
 
 ## <a name="static-local-functions"></a>Funções locais estáticas
 
-Agora você pode adicionar o modificador `static` para funções locais a fim de garantir que essa função local não capture (faça referência) às variáveis no escopo delimitador. Isso gera `CS8421`, "Uma função local estática não pode conter uma referência a \<variable>".
+Agora você pode adicionar o `static` modificador a [funções locais](../programming-guide/classes-and-structs/local-functions.md) para garantir que a função local não Capture (referencie) nenhuma variável do escopo delimitador. Isso gera `CS8421`, "Uma função local estática não pode conter uma referência a \<variable>".
 
 Considere o código a seguir. A função local `LocalFunction` acessa a variável `y`, declarada no escopo delimitador (o método `M`). Portanto, `LocalFunction` não pode ser declarada com o modificador `static`:
 
