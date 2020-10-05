@@ -366,6 +366,8 @@ items:
             items:
               - name: Opções gerais
                 href: code-analysis/configuration-options.md
+              - name: Arquivos de configuração
+                href: code-analysis/configuration-files.md
               - name: Regras de qualidade de código
                 items:
                   - name: Opções de regra
@@ -1318,9 +1320,17 @@ items:
       - name: Host Genérico
         href: ../core/extensions/generic-host.md
       - name: Registrando em log
-        href: /aspnet/core/fundamentals/logging
+        items:
+          - name: Visão geral
+            href: ../core/extensions/logging.md
+          - name: Provedores de log
+            href: ../core/extensions/logging-providers.md
+          - name: Implementar um provedor de log personalizado
+            href: ../core/extensions/custom-logging-provider.md
+          - name: Registrar em log de alto desempenho
+            href: ../core/extensions/high-performance-logging.md
       - name: Padrão de opções
-        href: /aspnet/core/fundamentals/configuration/options
+        href: ../core/extensions/options.md
   - name: Acesso de dados
     items:
       - name: LINQ

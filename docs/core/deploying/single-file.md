@@ -4,12 +4,12 @@ description: Saiba o que é um aplicativo de arquivo único e por que você deve
 author: lakshanf
 ms.author: lakshanf
 ms.date: 08/28/2020
-ms.openlocfilehash: b7693d6c119d00a798ef03ed1019f2f04c1828cf
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 0167e62ea46e1c23c3d4ef6ea505ee051ffaf264
+ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654646"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91712639"
 ---
 # <a name="single-file-deployment-and-executable"></a>Implantação de arquivo único e executável
 
@@ -42,6 +42,16 @@ Temos algumas recomendações para corrigir cenários comuns:
 * Para localizar o nome de arquivo do executável, use o primeiro elemento de <xref:System.Environment.GetCommandLineArgs?displayProperty=nameWithType> .
 
 * Para evitar inteiramente o envio de arquivos soltos, considere o uso de [recursos incorporados](../../framework/resources/creating-resource-files-for-desktop-apps.md).
+
+## <a name="attaching-a-debugger"></a>Anexando um depurador
+
+No Linux, o único depurador que pode ser anexado a processos de arquivo único independentes ou despejos de memória de depuração é [SOS com LLDB](../diagnostics/dotnet-sos.md).
+
+No Windows e no Mac, o Visual Studio e o VS Code podem ser usados para depurar despejos de memória. Anexar a um executável de arquivo único autônomo em execução requer um arquivo extra: _MSCorDbi. { dll, portanto}_.
+
+Sem esse arquivo, o Visual Studio pode produzir o erro "não é possível anexar ao processo. Um componente de depuração não está instalado. " e VS Code podem produzir o erro "falha ao anexar ao processo: erro desconhecido: 0x80131c3c."
+
+Para corrigir esses erros, o _MSCorDbi_ precisa ser copiado ao lado do executável. o _MSCorDbi_ é `publish` Ed por padrão no subdiretório com a ID de tempo de execução do aplicativo. Portanto, por exemplo, se uma delas fosse publicar um executável de arquivo único independente usando a `dotnet` CLI para Windows usando os parâmetros `-r win-x64` , o executável seria colocado em _bin/Debug/NET 5.0/Win-x64/Publish_. Uma cópia de _mscordbi.dll_ estaria presente em _bin/Debug/NET 5.0/Win-x64_.
 
 ## <a name="other-considerations"></a>Outras considerações
 
@@ -139,7 +149,7 @@ Para obter mais informações, consulte [publicar aplicativos .NET Core com o Vi
 
 Visual Studio para Mac não fornece opções para publicar seu aplicativo como um único arquivo. Você precisará publicar manualmente seguindo as instruções da seção [publicar um único arquivo app-CLI](#publish-a-single-file-app---cli) . Para obter mais informações, consulte [publicar aplicativos .NET Core com CLI do .NET Core](deploy-with-cli.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Implantação de aplicativo .NET Core](index.md).
 - [Publicar aplicativos .NET Core com CLI do .NET Core](deploy-with-cli.md).

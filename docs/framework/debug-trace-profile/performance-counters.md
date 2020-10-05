@@ -7,12 +7,12 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 1b5ca6484f45dcee33009d8b8c12a43fa41f63de
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c5ee2fae9167dd508332d8e97a589a8ddb0394ac
+ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554443"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91712623"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contadores de desempenho no .NET Framework
 
@@ -131,7 +131,7 @@ A categoria Rede do .NET CLR do Console de desempenho inclui contadores que forn
 |**Datagramas recebidos**|Número total cumulativo de pacotes de datagrama recebidos por todos os objetos <xref:System.Net.Sockets.Socket> dentro do <xref:System.AppDomain> desde o início do processo.|  
 |**Datagramas enviados**|O número total cumulativo de pacotes de datagrama enviados por todos os objetos <xref:System.Net.Sockets.Socket> dentro do <xref:System.AppDomain> desde o início do processo.|  
 |**Tempo de vida médio de HttpWebRequest**|O tempo médio até a conclusão de todos os objetos <xref:System.Net.HttpWebRequest> que foram finalizados no último intervalo dentro do <xref:System.AppDomain> desde o início do processo.|  
-|**Tempo de espera médio de HttpWebRequest**|O tempo de espera médio de todos os objetos <xref:System.Net.HttpWebRequest> que deixaram a fila no último intervalo dentro do <xref:System.AppDomain> desde o início do processo.|  
+|**Tempo médio de fila de HttpWebRequests**|O tempo de espera médio de todos os objetos <xref:System.Net.HttpWebRequest> que deixaram a fila no último intervalo dentro do <xref:System.AppDomain> desde o início do processo.|  
 |**HttpWebRequests criadas/s**|O número de objetos <xref:System.Net.HttpWebRequest> criados por segundo dentro do <xref:System.AppDomain>.|  
 |**HttpWebRequests colocadas na fila/s**|O número de objetos <xref:System.Net.HttpWebRequest> que foram adicionados à fila por segundo dentro do <xref:System.AppDomain>.|  
 |**HttpWebRequests anuladas/s**|O número de objetos <xref:System.Net.HttpWebRequest> em que o aplicativo chamou o método <xref:System.Net.HttpWebRequest.Abort%2A> por segundo dentro do <xref:System.AppDomain>.|  
@@ -171,9 +171,9 @@ Os contadores de desempenho de rede para eventos incluem o seguinte:
   
 - **Tempo de vida médio de HttpWebRequest**  
   
-- **Tempo de espera médio de HttpWebRequest**  
+- **Tempo médio de fila de HttpWebRequests**  
   
- Para o contador **Tempo de vida médio de HttpWebRequest**, o tempo de vida da maioria dos objetos <xref:System.Net.HttpWebRequest> sempre começa com a hora em que o objeto é criado até o momento em que o fluxo de resposta é fechado pelo aplicativo. Há dois casos incomuns:  
+ Para o contador de **tempo de vida da média de HttpWebRequests** , o tempo de vida da maioria dos <xref:System.Net.HttpWebRequest> objetos sempre começa com a hora em que o objeto é criado até o momento em que o fluxo de resposta é fechado pelo aplicativo. Há dois casos incomuns:  
   
 - Se o aplicativo nunca chama os métodos <xref:System.Net.HttpWebRequest.GetResponse%2A> ou <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>, o tempo de vida do objeto <xref:System.Net.HttpWebRequest> é ignorado.  
   
@@ -228,7 +228,7 @@ for (int i = 0; i < Array.Length; i++)
 |**Extensão do exame da pilha**|Exibe a profundidade da pilha durante essa última verificação de segurança de acesso do código de runtime. Verificações de segurança de acesso do código de runtime são realizadas movimentando a pilha. Esse contador não é uma média, ele exibe apenas o último valor observado.|  
 |**Verificações de runtime total**|Exibe o número total de verificações de segurança de acesso do código de runtime realizadas desde que o aplicativo foi iniciado. Verificações de segurança de acesso de código de runtime são realizadas quando um chamador requer uma permissão específica. A verificação de runtime é feita em cada chamada pelo chamador e examina a pilha do thread atual do chamador. Quando usado com o contador **Extensão do exame da pilha**, esse contador indica a penalidade de desempenho que ocorre para verificações de segurança.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Contadores de desempenho](performance-counters.md)
-- [Criação de perfil de tempo de execução](runtime-profiling.md)
+- [Criação de perfil do runtime](runtime-profiling.md)
