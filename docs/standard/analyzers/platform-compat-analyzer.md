@@ -3,12 +3,12 @@ title: Analisador de compatibilidade de plataforma
 description: Um analisador de Roslyn que pode ajudar a detectar problemas de compatibilidade de plataforma em aplicativos e bibliotecas de plataforma cruzada.
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 4e842e5bbe90dd5006d9b27d0365f908b6441997
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: fcd5ec755789ff7f2472d8077dd52f321bf9f167
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406596"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756176"
 ---
 # <a name="platform-compatibility-analyzer"></a>Analisador de compatibilidade de plataforma
 
@@ -70,7 +70,7 @@ Para obter mais informações, consulte [exemplos de como os atributos funcionam
     ```
 
   - **Lista somente sem suporte**. Se a versão mais baixa de cada plataforma do sistema operacional for um `[UnsupportedOSPlatform]` atributo, a API será considerada como sem suporte nas plataformas listadas e com suporte de todas as outras plataformas. A lista pode ter `[SupportedOSPlatform]` um atributo com a mesma plataforma, mas uma versão superior, que indica que a API tem suporte a partir dessa versão.
-  
+
     ```csharp
     // The API was unsupported on Windows until version 10.0.19041.0.
     // The API is considered supported everywhere else without constraints.
@@ -79,16 +79,16 @@ Para obter mais informações, consulte [exemplos de como os atributos funcionam
     public void ApiSupportedFromWindows8UnsupportFromWindows10();
     ```
 
-  - **Lista inconsistente**. Se a versão mais baixa para algumas plataformas for `[SupportedOSPlatform]` `[UnsupportedOSPlatform]` para outras plataformas, será considerada inconsistente, o que não tem suporte para o analisador.
+  - **Lista inconsistente**. Se a versão mais baixa de algumas plataformas for `[SupportedOSPlatform]` `[UnsupportedOSPlatform]` para outras plataformas, será considerada inconsistente, o que não tem suporte para o analisador.
   - Se as versões mais baixas `[SupportedOSPlatform]` dos `[UnsupportedOSPlatform]` atributos e forem iguais, o analisador considerará a plataforma como parte da **lista somente com suporte**.
-- Atributos de plataforma podem ser aplicados a tipos, Membros (métodos, campos, propriedades e eventos) e assemblies com nome de plataforma e/ou versão diferentes.
+- Atributos de plataforma podem ser aplicados a tipos, Membros (métodos, campos, propriedades e eventos) e assemblies com diferentes nomes de plataforma ou versões.
   - Os atributos aplicados no nível superior `target` afetam todos os seus membros e tipos.
-  - Os atributos de nível filho se aplicam somente se eles aderem à regra "as anotações filhas podem restringir o suporte a plataformas, mas não podem ampliá-la".
-    - Quando o pai tem **suporte apenas para** a lista, os atributos de membro filho não podiam adicionar um novo suporte de plataforma, pois isso estaria estendendo o suporte pai, um novo suporte de plataforma só pode ser adicionado ao próprio pai. Mas ele pode ter `Supported` um atributo para a mesma plataforma com versões posteriores, pois isso restringirá o suporte. Ele também pode ter um `Unsupported` atributo com a mesma plataforma que também restringirá o suporte pai.
-    - Quando o pai tem uma lista **somente sem suporte** , os atributos de membro filho poderiam adicionar um novo suporte de plataforma, pois isso seria restringir o suporte pai, mas ele não pode ter o `Supported` atributo para a mesma plataforma que o pai, o que estenderia o suporte pai. O suporte para a mesma plataforma só pode ser adicionado ao nível pai em que o atributo original foi `Unsupported` aplicado.
-  - Se `[SupportedOSPlatform("platformVersion")]` for aplicado mais de uma vez para uma API com o mesmo `platform` nome, apenas aquela com a versão mínima será considerada pelo analisador.
-  - Se `[UnsupportedOSPlatform("platformVersion")]` for aplicado mais de duas vezes para uma API com o mesmo `platform` nome, somente as duas com as versões mais antigas serão consideradas pelo analisador.
-  
+  - Os atributos de nível filho só se aplicam se eles aderem à regra "as anotações filhas podem restringir o suporte a plataformas, mas não podem ampliá-la".
+    - Quando o pai tem **suporte apenas para** a lista, os atributos de membro filho não podem adicionar um novo suporte de plataforma, pois isso estaria estendendo o suporte pai. O suporte para uma nova plataforma só pode ser adicionado ao próprio pai. Mas o filho pode ter o `Supported` atributo para a mesma plataforma com versões posteriores que reduz o suporte. Além disso, o filho pode ter o `Unsupported` atributo com a mesma plataforma que também limita o suporte pai.
+    - Quando o pai tem uma lista **somente sem suporte** , os atributos de membro filho podem adicionar suporte para uma nova plataforma, pois isso limita o suporte pai. Mas ele não pode ter o `Supported` atributo para a mesma plataforma que o pai, pois isso estende o suporte pai. O suporte para a mesma plataforma só pode ser adicionado ao pai em que o `Unsupported` atributo original foi aplicado.
+  - Se `[SupportedOSPlatform("platformVersion")]` for aplicado mais de uma vez para uma API com o mesmo `platform` nome, o analisador apenas considerará aquela com a versão mínima.
+  - Se `[UnsupportedOSPlatform("platformVersion")]` for aplicado mais de duas vezes para uma API com o mesmo `platform` nome, o analisador apenas considerará as duas com as versões mais antigas.
+
   > [!NOTE]
   > Uma API que era suportada inicialmente, mas sem suporte (removida) em uma versão posterior não é esperada para ser suportada novamente em uma versão posterior.
 
@@ -123,7 +123,7 @@ Para obter mais informações, consulte [exemplos de como os atributos funcionam
       // warns: 'SupportedOnWindowsAndLinuxOnly' is supported on 'Linux'
       SupportedOnWindowsAndLinuxOnly();
 
-      // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is supported on 'windows' 8.0 and later  
+      // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is supported on 'windows' 8.0 and later
       // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is unsupported on 'windows' 10.0.19041.0 and later
       ApiSupportedFromWindows8UnsupportFromWindows10();
 
@@ -133,7 +133,7 @@ Para obter mais informações, consulte [exemplos de como os atributos funcionam
   }
 
   // an API not supported on android but supported on all other.
-  [UnsupportedOSPlatform("android")]  
+  [UnsupportedOSPlatform("android")]
   public void DoesNotWorkOnAndroid() { }
 
   // an API was unsupported on Windows until version 8.0.
@@ -154,11 +154,11 @@ Para obter mais informações, consulte [exemplos de como os atributos funcionam
   {
       DoesNotWorkOnAndroid(); // warns 'DoesNotWorkOnAndroid' is unsupported on 'android'
 
-      // warns:'StartedWindowsSupportFromVersion8' is unsupported on 'windows'  
+      // warns:'StartedWindowsSupportFromVersion8' is unsupported on 'windows'
       // warns:'StartedWindowsSupportFromVersion8' is supported on 'windows' 8.0 and later
       StartedWindowsSupportFromVersion8();
 
-      // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is unsupported on 'windows'  
+      // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is unsupported on 'windows'
       // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is supported on 'windows' 8.0 and later
       // even there were 3 diagnostics found analyzer warn only for the first 2.
       StartedWindowsSupportFrom8UnsupportedFrom10();
@@ -177,7 +177,7 @@ A maneira recomendada de lidar com esses diagnósticos é certificar-se de que v
 
 - **Exclua o código**. Geralmente, não é o que você deseja porque isso significa que você perde a fidelidade quando seu código é usado por usuários do Windows. Para casos em que existe uma alternativa de plataforma cruzada, você provavelmente é melhor usá-la em APIs específicas da plataforma.
 
-- **Suprimir o aviso**. Você também pode simplesmente suprimir o aviso, seja por meio de editor.config ou `#pragma warning disable ca1416` . No entanto, essa opção deve ser um último recurso ao usar APIs específicas da plataforma.
+- **Suprimir o aviso**. Você também pode simplesmente suprimir o aviso, seja por meio de uma entrada EditorConfig ou `#pragma warning disable ca1416` . No entanto, essa opção deve ser um último recurso ao usar APIs específicas da plataforma.
 
 ### <a name="guard-platform-specific-apis-with-guard-methods"></a>Proteger APIs específicas da plataforma com métodos de proteção
 
@@ -231,7 +231,7 @@ O nome da plataforma do método de proteção deve corresponder ao nome da plata
   }
   ```
 
-- Se você precisar proteger um código que tem como alvo netstandard ou netcoreapp, onde novas <xref:System.OperatingSystem> APIs não estão disponíveis <xref:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform%2A?displayProperty=nameWithType> , a API poderá ser usada e será respeitada pelo analisador. Mas não é tão otimizado quanto as novas APIs adicionadas no <xref:System.OperatingSystem> . Caso a plataforma não tenha suporte no <xref:System.Runtime.InteropServices.OSPlatform> struct, você pode usar <xref:System.Runtime.InteropServices.OSPlatform.Create%2A?displayProperty=nameWithType> ("plataforma"), que também é respeitado pelo analisador.
+- Se você precisar proteger código direcionado `netstandard` ou `netcoreapp` onde novas <xref:System.OperatingSystem> APIs não estão disponíveis, a <xref:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform%2A?displayProperty=nameWithType> API poderá ser usada e será respeitada pelo analisador. Mas não é tão otimizado quanto as novas APIs adicionadas no <xref:System.OperatingSystem> . Se a plataforma não tiver suporte na <xref:System.Runtime.InteropServices.OSPlatform> estrutura, você poderá chamar <xref:System.Runtime.InteropServices.OSPlatform.Create(System.String)?displayProperty=nameWithType> e passar o nome da plataforma, que o analisador também respeita.
 
   ```csharp
   public void CallingSupportedOnlyApis()
@@ -316,7 +316,7 @@ Os nomes de plataforma devem corresponder à API dependente de plataforma de cha
   }
 
   // an API not supported on Android but supported on all other.
-  [UnsupportedOSPlatform("android")]  
+  [UnsupportedOSPlatform("android")]
   public void DoesNotWorkOnAndroid() { }
 
   // an API was unsupported on Windows until version 8.0.

@@ -4,12 +4,12 @@ description: Saiba como o analisador de API do .NET pode ajudar a detectar probl
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: f1268d5f208e19f1b69ed487370fb4c96723a204
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: a689ae347efbc8c2dd933b2f6920ac6cc06cda7d
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406239"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756189"
 ---
 # <a name="net-api-analyzer"></a>Analisador de API do .NET
 
@@ -124,7 +124,7 @@ Todos esses diagnósticos estão disponíveis não só no IDE, mas também na li
 
 ## <a name="configuration"></a>Configuração
 
-O usuário decide como o diagnóstico deve ser tratado: como avisos, erros, sugestões ou ser desligado. Por exemplo, como arquiteto, você pode decidir que problemas de compatibilidade devem ser tratados como erros, chamadas a algumas APIs preteridas geram avisos, enquanto outras só geram sugestões. Você pode configurar isso separadamente por ID de diagnóstico e por projeto. Para fazer isso no **Gerenciador de Soluções**, navegue até o nó **Dependências** em seu projeto. Expanda os nós que os analisadores de **dependências**  >  **Analyzers**  >  **Microsoft. dotnet. Analyzers. Compatibility**. Clique com o botão direito do mouse na ID de diagnóstico, selecione **Definir Severidade de Conjunto de Regras** e selecione a opção desejada.
+O usuário decide como o diagnóstico deve ser tratado: como avisos, erros, sugestões ou ser desligado. Por exemplo, como arquiteto, você pode decidir que problemas de compatibilidade devem ser tratados como erros, chamadas a algumas APIs preteridas geram avisos, enquanto outras só geram sugestões. Você pode configurar isso separadamente por ID de diagnóstico e por projeto. Para fazer isso no **Gerenciador de Soluções**, navegue até o nó **Dependências** em seu projeto. Expanda os nós que os analisadores de **dependências**  >  **Analyzers**  >  **Microsoft. dotnet. Analyzers. Compatibility**. Clique com o botão direito do mouse na ID de diagnóstico, selecione **definir severidade do conjunto de regras**e escolha a opção desejada.
 
 ![Captura de tela de Gerenciador de Soluções mostrando o diagnóstico e a caixa de diálogo pop-up com a severidade do conjunto de regras.](media/api-analyzer/disable-notifications.jpg)
 

@@ -3,12 +3,12 @@ title: Tutorial Classes e objetos – introdução ao C#
 description: Crie seu primeiro programa em C# e explore os conceitos de orientado a objeto
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 57394ecb02745d69e22f4d9f1dbd4213f290cd5a
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 90abe3836292029ce7ebf26ae9be3253c4eface1
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609044"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756046"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Explorar programação orientada a objeto com classes e objetos
 
@@ -210,7 +210,7 @@ Execute o programa para ver os resultados.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Se você ficou preso, pode ver a origem deste tutorial [em nosso repositório GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/classes-quickstart/).
+Se você ficou preso, pode ver a origem deste tutorial [em nosso repositório GitHub](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/introduction-to-classes).
 
 Você pode continuar com o tutorial de [programação orientada a objeto](object-oriented-programming.md) .
 

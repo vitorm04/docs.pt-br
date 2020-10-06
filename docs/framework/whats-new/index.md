@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 15350f93ffabb10136af1b9a4d12d5301e661b29
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1e9657c60ef2ff0ef30ae1607a0e7f2cedd01187
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551706"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756072"
 ---
 # <a name="whats-new-in-net-framework"></a>O que há de novo no .NET Framework
 
@@ -22,7 +22,7 @@ Este artigo resume os novos recursos-chave e melhorias nas seguintes versões do
 - [.NET Framework 4.8](#v48)
 - [.NET Framework 4.7.2](#v472)
 - [.NET Framework 4.7.1](#v471)
-- [.NET Framework 4,7](#v47)
+- [.NET Framework 4.7](#v47)
 - [.NET Framework 4.6.2](#v462)
 - [.NET Framework 4.6.1](#v461)
 - [.NET 2015 e .NET Framework 4.6](#v46)
@@ -731,7 +731,7 @@ O Windows Communication Foundation (WCF) adiciona os seguintes recursos e altera
 
 **Capacidade de definir configurações de segurança de mensagem padrão para TLS 1.1 ou TLS 1.2**
 
-A partir do .NET Framework 4.7, o WCF permite que você configure o TSL 1.1 ou o TLS 1.2, além do SSL 3.0 e TSL 1.0, como o protocolo de segurança de mensagem padrão. Esta é uma configuração baseada no consentimento; para habilitá-la, você deve adicionar a seguinte entrada ao arquivo de configuração do aplicativo:
+A partir do .NET Framework 4,7, o WCF permite que você configure o TLS 1,1 ou o TLS 1,2, além do SSL 3,0 e do TLS 1,0 como o protocolo de segurança de mensagem padrão. Esta é uma configuração baseada no consentimento; para habilitá-la, você deve adicionar a seguinte entrada ao arquivo de configuração do aplicativo:
 
 ```xml
 <runtime>
@@ -841,7 +841,7 @@ End Class
 
 Você pode criar um arquivo de recurso, DataAnnotation.Localization.fr.resx, cuja chave é a cadeia de caracteres da mensagem de erro e cujo valor é a mensagem de erro localizada. O arquivo deve ser encontrado na pasta `App.LocalResources`. Por exemplo, veja a seguir a chave e seu valor em uma mensagem de erro localizada no idioma francês (fr):
 
-| Name                                 | Valor                                     |
+| Nome                                 | Valor                                     |
 | ------------------------------------ | ----------------------------------------- |
 | A classificação deve estar entre 1 e 10. | La note doit être comprise entre 1 et 10. |
 
@@ -955,7 +955,7 @@ O .NET Framework 3.5 adicionou suporte para o Contrato de chave Diffie-Hellman d
 
 Para lidar com isso no .NET Framework 4.6.2, os três métodos a seguir foram adicionados à classe base <xref:System.Security.Cryptography.ECDiffieHellman> para representar mais claramente essas rotinas KDF e suas entradas:
 
-|Método ECDiffieHellman|Description|
+|Método ECDiffieHellman|Descrição|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva o material da chave usando a fórmula<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> em que *x* é o resultado calculado do algoritmo EC Diffie-Hellman.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva o material da chave usando a fórmula<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> em que *x* é o resultado calculado do algoritmo EC Diffie-Hellman.|
@@ -1037,7 +1037,7 @@ A adição da nova `PoolBlockingPeriod` palavra-chave permite selecionar o perí
 
 <xref:System.Data.SqlClient.PoolBlockingPeriod.Auto>
 
-O período de bloqueio do pool de conexão de um aplicativo que se conecta a um Banco de Dados SQL do Azure está desabilitado, e período de bloqueio do pool de conexão de um aplicativo que se conecta a qualquer outra instância do SQL Server está habilitado. Este é o valor padrão. Se o nome de ponto de extremidade do Servidor terminar com qualquer uma das seguintes opções, será considerado um Banco de Dado SQL do Azure:
+O período de bloqueio do pool de conexão de um aplicativo que se conecta a um Banco de Dados SQL do Azure está desabilitado, e período de bloqueio do pool de conexão de um aplicativo que se conecta a qualquer outra instância do SQL Server está habilitado. Esse é o valor padrão. Se o nome de ponto de extremidade do Servidor terminar com qualquer uma das seguintes opções, será considerado um Banco de Dado SQL do Azure:
 
 - .database.windows.net
 
@@ -1431,7 +1431,7 @@ O .NET 2015 apresenta o .NET Framework 4.6 e o .NET Core. Alguns recursos novos 
 
     O HTTP/2 também é compatível e ativado por padrão em aplicativos UWP (Plataforma Universal do Windows) do Windows 10 que usam a API <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>.
 
-    Para fornecer uma maneira de usar o recurso [PUSH_PROMISE](https://http2.github.io/http2-spec/#PUSH_PROMISE) em aplicativos ASP.NET, um novo método com duas sobrecargas, <xref:System.Web.HttpResponse.PushPromise%28System.String%29> e <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>, foi adicionado à classe <xref:System.Web.HttpResponse>.
+    Para fornecer uma maneira de usar o recurso [PUSH_PROMISE](https://httpwg.github.io/http2-spec/#PUSH_PROMISE) em aplicativos ASP.NET, um novo método com duas sobrecargas, <xref:System.Web.HttpResponse.PushPromise%28System.String%29> e <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>, foi adicionado à classe <xref:System.Web.HttpResponse>.
 
     > [!NOTE]
     > Embora o ASP.NET Core dê suporte ao HTTP/2, o suporte para o recurso PUSH PROMISE ainda não foi adicionado.
@@ -2129,6 +2129,6 @@ O projeto Biblioteca de Classes Portátil no Visual Studio 2012 (e em versões p
 - [O .NET Framework e lançamentos fora da banda](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [Novidades na acessibilidade do .NET Framework](whats-new-in-accessibility.md)
 - [O que há de novo no Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
-- [O que há de novo no Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
+- [Novidades no Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [O que há de novo para C++ no Visual Studio](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

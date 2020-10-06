@@ -2,12 +2,12 @@
 title: Alterações significativas na biblioteca de classes base
 description: Lista as alterações significativas nas principais bibliotecas do .NET.
 ms.date: 07/27/2020
-ms.openlocfilehash: c3207ac7630d794f77c793cc6d1d52e158c0c084
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: b86ceab784fd295acf500986f7e64731eb8ed0a3
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738809"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756099"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Principais alterações significativas nas bibliotecas do .NET
 
@@ -17,6 +17,7 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 | Alteração significativa | Versão introduzida |
 | - | :-: |
+| [Ordem das marcas na atividade. as marcas são revertidas](#order-of-tags-in-activitytags-is-reversed) | 5,0 |
 | [Nomes de parâmetros alterados no RC1](#parameter-names-changed-in-rc1) | 5,0 |
 | [Atributos OSPlatform renomeados ou removidos](#osplatform-attributes-renamed-or-removed) | 5,0 |
 | [Thread. Abort é obsoleto](#threadabort-is-obsolete) | 5,0 |
@@ -55,6 +56,10 @@ As seguintes alterações significativas estão documentadas nesta página:
 | [Process. StartInfo gera InvalidOperationException para processos que você não iniciou](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1,0 |
 
 ## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [reverse-order-of-tags-in-activity-property](../../../includes/core-changes/corefx/5.0/reverse-order-of-tags-in-activity-property.md)]
+
+***
 
 [!INCLUDE [reference-assembly-parameter-names-rc1](../../../includes/core-changes/corefx/5.0/reference-assembly-parameter-names-rc1.md)]
 

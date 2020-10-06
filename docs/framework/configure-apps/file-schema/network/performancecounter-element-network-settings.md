@@ -1,21 +1,20 @@
 ---
-title: Elemento <performanceCounter> (Configurações de Rede)
+title: Elemento <performanceCounters> (Configurações de Rede)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/performanceCounters
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters
 helpviewer_keywords:
-- performanceCounter element
-- <performanceCounter> element
+- performanceCounters element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 4859f3a9e6de4f1bf8a56212bfe01f94d66f5650
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 584bdafbbd60303401cbc6ad96b8654fe11c7077
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91190235"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756254"
 ---
-# <a name="performancecounter-element-network-settings"></a>Elemento \<performanceCounter> (Configurações de Rede)
+# <a name="performancecounters-element-network-settings"></a>Elemento \<performanceCounters> (Configurações de Rede)
 
 Habilita ou desabilita os contadores de desempenho de rede.  
 
@@ -78,7 +77,7 @@ Habilita ou desabilita os contadores de desempenho de rede.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>

@@ -4,12 +4,12 @@ description: Saiba como a API do provedor de log é usada em aplicativos .NET.
 author: IEvangelist
 ms.author: dapine
 ms.date: 09/25/2020
-ms.openlocfilehash: 3bd10564f23744d4798d0a6a4b49a7a29be2bc19
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 96a5ece10068e39c991e67a36f22e725d6380af5
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654679"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91755883"
 ---
 # <a name="logging-providers-in-net"></a>Provedores de log no .NET
 
@@ -212,7 +212,7 @@ Aqui estão algumas estruturas de log de terceiros que funcionam com várias car
 
 - [elmah.io](https://elmah.io) ([repositório GitHub](https://github.com/elmahio/Elmah.Io.Extensions.Logging))
 - [Gelf](https://docs.graylog.org/en/2.3/pages/gelf.html) ([repositório do GitHub](https://github.com/mattwcole/gelf-extensions-logging))
-- [JSNLog](https://jsnlog.com) ([repositório GitHub](https://github.com/mperdeck/jsnlog))
+- [JSNLog](http://jsnlog.com) ([repositório GitHub](https://github.com/mperdeck/jsnlog))
 - [KissLog.net](https://kisslog.net) ([Repositório do GitHub](https://github.com/catalingavan/KissLog-net))
 - [Log4net](https://logging.apache.org/log4net) ([repositório GitHub](https://github.com/apache/logging-log4net))
 - [Loggr](https://loggr.net) ([repositório GitHub](https://github.com/imobile3/Loggr.Extensions.Logging))
@@ -230,7 +230,7 @@ Usar uma estrutura de terceiros é semelhante ao uso de um dos provedores intern
 
 Para saber mais, consulte a documentação de cada provedor. Não há suporte para provedores de log de terceiros na Microsoft.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Registro em log no .net](logging.md).
 - [Implemente um provedor de log personalizado no .net](custom-logging-provider.md).
