@@ -4,12 +4,12 @@ description: Saiba como usar tokens de cancelamento para sinalizar uma solicita�
 ms.date: 08/19/2020
 ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 84cd1bb413d20b6c13be8415c13c72b57873b1cf
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 79c9db53674182489c89d657786bf39e8bb44b21
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654699"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805246"
 ---
 # <a name="cancel-a-list-of-tasks-c"></a>Cancelar uma lista de tarefas (C#)
 
@@ -115,7 +115,7 @@ static async Task Main()
 }
 ```
 
-O `Main` método atualizado agora é considerado um [Async Main](../../../whats-new/csharp-7-1.md#async-main), que permite um ponto de entrada assíncrono no executável. Ele grava algumas mensagens instrutivas no console e, em seguida, declara uma <xref:System.Threading.Tasks.Task> instância chamada `cancelTask` , que lerá os traços de tecla do console. Se a tecla <kbd>Enter</kbd> for pressionada, será feita uma chamada para <xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType> . Isso sinalizará o cancelamento. Em seguida, a `sumPageSizesTask` variável é atribuída a partir do `SumPageSizesAsync` método. Em seguida, as duas tarefas são passadas para <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType> o, o que continuará quando qualquer uma das duas tarefas for concluída.
+O `Main` método atualizado agora é considerado um [Async Main](../../../whats-new/csharp-7.md#async-main), que permite um ponto de entrada assíncrono no executável. Ele grava algumas mensagens instrutivas no console e, em seguida, declara uma <xref:System.Threading.Tasks.Task> instância chamada `cancelTask` , que lerá os traços de tecla do console. Se a tecla <kbd>Enter</kbd> for pressionada, será feita uma chamada para <xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType> . Isso sinalizará o cancelamento. Em seguida, a `sumPageSizesTask` variável é atribuída a partir do `SumPageSizesAsync` método. Em seguida, as duas tarefas são passadas para <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType> o, o que continuará quando qualquer uma das duas tarefas for concluída.
 
 ## <a name="create-the-asynchronous-sum-page-sizes-method"></a>Criar o método de tamanhos de página de soma assíncrona
 
@@ -193,7 +193,7 @@ O código a seguir é o texto completo do arquivo *Program.cs* para o exemplo.
 
 :::code language="csharp" source="snippets/cancel-tasks/cancel-tasks/Program.cs":::
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.CancellationToken>
 - <xref:System.Threading.CancellationTokenSource>

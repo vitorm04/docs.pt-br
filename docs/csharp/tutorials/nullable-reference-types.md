@@ -4,12 +4,12 @@ description: Este tutorial avançado fornece uma introdução aos tipos de refer
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 70e6a7a906bc9a35918cf3e26c3e23bd0cfdafde
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: bd575b226a2ff61e938719b064ff5ede0cf66013
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755844"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805174"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expressar sua intenção de design mais claramente com tipos de referência que permitem valor nulo e tipos que não permitem valor nulo
 
@@ -223,4 +223,4 @@ Saiba mais migrando um aplicativo existente para usar tipos de referência anul�
 > [Atualizar um aplicativo a fim de usar tipos de referência anuláveis](upgrade-to-nullable-references.md)
 
 Saiba como usar o tipo de referência anulável ao usar Entity Framework:
-> [Conceitos básicos de Entity Framework Core: trabalhando com tipos de referência anuláveis](https://docs.microsoft.com/en-us/ef/core/miscellaneous/nullable-reference-types)
+> [Conceitos básicos de Entity Framework Core: trabalhando com tipos de referência anuláveis](/ef/core/miscellaneous/nullable-reference-types)

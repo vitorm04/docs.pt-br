@@ -4,12 +4,12 @@ author: IEvangelist
 description: Saiba como usar o LoggerMessage para criar representantes que podem ser armazenados em cache e exigem menos alocações de objeto para cenários de registro em log de alto desempenho.
 ms.author: dapine
 ms.date: 09/25/2020
-ms.openlocfilehash: d722a3a5cb38f33b6833a5c280687ce6c1e46bf9
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 9111b9553c913cff2937b574250b65e633250f4f
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614678"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804757"
 ---
 # <a name="high-performance-logging-in-net"></a>Registro em log de alto desempenho no .NET
 
@@ -93,7 +93,7 @@ info: WorkerServiceOptions.Example.Worker[1]
 
 O método [DefineScope (String)](xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A) cria um <xref:System.Func%601> delegado para definir um [escopo de log](logging.md#log-scopes). Sobrecargas de <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> permitem passar até três parâmetros de tipo para uma cadeia de caracteres de formato nomeada (modelo).
 
-Como é o caso com o método <xref:Microsoft.Extensions.Logging.LoggerMessage.Define%2A>, a cadeia de caracteres fornecida ao método <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> é um modelo e não uma cadeia de caracteres interpolada. Os espaços reservados são preenchidos na ordem em que os tipos são especificados. Os nomes do espaço reservado no modelo devem ser descritivos e consistentes em todos os modelos. Eles servem como nomes de propriedade em dados de log estruturado. Recomendamos o uso da [formatação Pascal Case](/dotnet/standard/design-guidelines/capitalization-conventions) para nomes de espaço reservado. Por exemplo, `{Item}`, `{DateTime}`.
+Como é o caso com o método <xref:Microsoft.Extensions.Logging.LoggerMessage.Define%2A>, a cadeia de caracteres fornecida ao método <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> é um modelo e não uma cadeia de caracteres interpolada. Os espaços reservados são preenchidos na ordem em que os tipos são especificados. Os nomes do espaço reservado no modelo devem ser descritivos e consistentes em todos os modelos. Eles servem como nomes de propriedade em dados de log estruturado. Recomendamos o uso da [formatação Pascal Case](../../standard/design-guidelines/capitalization-conventions.md) para nomes de espaço reservado. Por exemplo, `{Item}`, `{DateTime}`.
 
 Defina um [escopo de log](logging.md#log-scopes) a ser aplicado a uma série de mensagens de log usando o método <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A>.
 

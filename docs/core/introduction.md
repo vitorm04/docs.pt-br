@@ -4,12 +4,12 @@ description: Saiba mais sobre o .NET, uma plataforma de desenvolvimento de softw
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: c161daed58c94940734d057bb1b42f3b87caf97c
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 2b339db769c283ff21e6ad48d5b672794e43a76b
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756058"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804790"
 ---
 # <a name="introduction-to-net"></a>Introdução ao .NET
 
@@ -17,7 +17,7 @@ O .NET é uma plataforma de desenvolvimento de software livre gratuita para a cr
 
 * [Aplicativos Web, APIs da Web e microservices](/aspnet/core/introduction-to-aspnet-core#recommended-learning-path)
 * [Funções sem servidor na nuvem](/azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-csharp)
-* [Aplicativos nativos da nuvem](/dotnet/architecture/cloud-native/)
+* [Aplicativos nativos da nuvem](../architecture/cloud-native/index.md)
 * [Aplicativos móveis](https://dotnet.microsoft.com/learn/xamarin/hello-world-tutorial/intro)
 * Aplicativos da área de trabalho
   * [WPF do Windows](/dotnet/desktop/wpf/)

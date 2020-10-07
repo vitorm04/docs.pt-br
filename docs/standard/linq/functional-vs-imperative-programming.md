@@ -3,12 +3,12 @@ title: Programação funcional versus programação imperativa-LINQ to XML
 description: Saiba mais sobre a programação funcional e como ela difere da programação imperativa (procedimento) tradicional.
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: c7d16d61f9865cda7c625f91c2c822be1a327fd6
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: e99cffa9500c07c507962f41b17ab3f3b05c7781
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679364"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805285"
 ---
 # <a name="functional-programming-vs-imperative-programming-linq-to-xml"></a>Programação funcional versus programação imperativa (LINQ to XML)
 
@@ -57,5 +57,5 @@ Felizmente, o C# e o Visual Basic não exigem o salto completo para a programaç
 ## <a name="see-also"></a>Confira também
 
 - [Introdução às transformações funcionais puras](introduction-pure-functional-transformations.md)
-- [Transformações XSLT](/../../standard/data/xml/xslt-transformations.md)
+- [Transformações XSLT](../data/xml/xslt-transformations.md)
 - [Refatorar em funções puras](refactor-pure-functions.md)

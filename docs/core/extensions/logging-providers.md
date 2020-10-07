@@ -4,12 +4,12 @@ description: Saiba como a API do provedor de log é usada em aplicativos .NET.
 author: IEvangelist
 ms.author: dapine
 ms.date: 09/25/2020
-ms.openlocfilehash: 96a5ece10068e39c991e67a36f22e725d6380af5
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 4d4658b7ca892d101af32f5cf8ac48a4beabfb92
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755883"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804750"
 ---
 # <a name="logging-providers-in-net"></a>Provedores de log no .NET
 
@@ -98,7 +98,7 @@ O `EventSource` provedor grava em uma origem de evento de plataforma cruzada com
 
 A ferramenta [dotnet-Trace](../diagnostics/dotnet-trace.md) é uma ferramenta global da CLI de plataforma cruzada que habilita a coleta de rastreamentos do .NET Core de um processo em execução. A ferramenta coleta <xref:Microsoft.Extensions.Logging.EventSource> dados do provedor usando um <xref:Microsoft.Extensions.Logging.EventSource.LoggingEventSource> .
 
-Consulte [dotnet-Trace](../diagnostics/dotnet-trace.md) para obter instruções de instalação. Para obter um tutorial de diagnóstico usando o `dotnet-trace` , consulte [debug High CPU Usage in .NET Core](/../diagnostics/debug-highcpu.md).
+Consulte [dotnet-Trace](../diagnostics/dotnet-trace.md) para obter instruções de instalação. Para obter um tutorial de diagnóstico usando o `dotnet-trace` , consulte [debug High CPU Usage in .NET Core](../diagnostics/debug-highcpu.md).
 
 ### <a name="windows-eventlog"></a>EventLog do Windows
 

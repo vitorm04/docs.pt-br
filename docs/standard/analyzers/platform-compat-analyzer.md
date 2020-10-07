@@ -3,12 +3,12 @@ title: Analisador de compatibilidade de plataforma
 description: Um analisador de Roslyn que pode ajudar a detectar problemas de compatibilidade de plataforma em aplicativos e bibliotecas de plataforma cruzada.
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: fcd5ec755789ff7f2472d8077dd52f321bf9f167
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 44c2c2d9674b13f314a057f847df2d4d474cc2be
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756176"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805292"
 ---
 # <a name="platform-compatibility-analyzer"></a>Analisador de compatibilidade de plataforma
 
@@ -25,7 +25,7 @@ As novas APIs incluem:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-O analisador de compatibilidade de plataforma é um dos analisadores de qualidade de código Roslyn. A partir do .NET 5,0, esses analisadores estão [incluídos no SDK do .net](../../fundamentals/productivity/code-analysis.md). O analisador de compatibilidade de plataforma é habilitado por padrão somente para projetos direcionados `net5.0` ou para uma versão posterior. No entanto, você pode [habilitá](/visualstudio/code-quality/ca1416.md#configurability) -lo para projetos direcionados a outras estruturas.
+O analisador de compatibilidade de plataforma é um dos analisadores de qualidade de código Roslyn. A partir do .NET 5,0, esses analisadores estão [incluídos no SDK do .net](../../fundamentals/code-analysis/overview.md). O analisador de compatibilidade de plataforma é habilitado por padrão somente para projetos direcionados `net5.0` ou para uma versão posterior. No entanto, você pode [habilitá](/visualstudio/code-quality/ca1416.md#configurability) -lo para projetos direcionados a outras estruturas.
 
 ## <a name="how-the-analyzer-determines-platform-dependency"></a>Como o analisador determina a dependência da plataforma
 
@@ -381,5 +381,5 @@ Todas as verificações condicionais usadas nos [exemplos do Platform Guard](#gu
 - [Nomes de estrutura de destino no .NET 5](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
 - [Anotando APIs específicas da plataforma e detectando seu uso](https://github.com/dotnet/designs/blob/master/accepted/2020/platform-checks/platform-checks.md)
 - [Anotando APIs como sem suporte em plataformas específicas](https://github.com/dotnet/designs/blob/master/accepted/2020/platform-exclusion/platform-exclusion.md)
-- [Analisador de compatibilidade de plataforma CA1416](/visualstudio/code-quality/ca1416)
+- [Analisador de compatibilidade de plataforma CA1416](../../fundamentals/code-analysis/quality-rules/ca1416.md)
 - [Analisador de API do .NET](../../standard/analyzers/api-analyzer.md)

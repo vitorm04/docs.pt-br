@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: f2cb1004ef6316bc67189c4e00930f6086cf0dad
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 178d77c225144497982487afa00f4493e17d1744
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152917"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805207"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Associando dados a controles (WCF Data Services)
 
@@ -36,7 +36,7 @@ Com WCF Data Services, você pode associar controles como os `ComboBox` controle
   
 ## <a name="binding-data-to-windows-presentation-foundation-elements"></a>Associando dados aos elementos do Windows Presentation Foundation  
 
- Como a classe <xref:System.Data.Services.Client.DataServiceCollection%601> herda da classe <xref:System.Collections.ObjectModel.ObservableCollection%601>, você pode associar objetos a um elemento ou controle em um aplicativo WPF (Windows Presentation Foundation) como o faria ao usar a classe <xref:System.Collections.ObjectModel.ObservableCollection%601> para associação. Para obter mais informações, consulte [vinculação de dados (Windows Presentation Foundation)](../../../desktop-wpf/data/data-binding-overview.md). Uma maneira de associar dados do serviço de dados a controles WPF é definir a propriedade `DataContext` do elemento como a instância da classe <xref:System.Data.Services.Client.DataServiceCollection%601> que contém o resultado da consulta. Nesse caso, você usa a propriedade <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> para definir a origem do objeto para o controle. Use a propriedade <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> para especificar qual propriedade do objeto associado deve ser exibida. Se você estiver associando um elemento a um objeto relacionado que é retornado por uma propriedade de navegação, inclua o caminho na associação definida para a propriedade <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Esse caminho é relativo ao objeto raiz definido pela propriedade <xref:System.Windows.FrameworkElement.DataContext%2A> do controle pai. O exemplo a seguir define a propriedade <xref:System.Windows.FrameworkElement.DataContext%2A> de um elemento <xref:System.Windows.Controls.StackPanel> para associar o controle pai a um <xref:System.Data.Services.Client.DataServiceCollection%601> dos objetos de cliente:  
+ Como a classe <xref:System.Data.Services.Client.DataServiceCollection%601> herda da classe <xref:System.Collections.ObjectModel.ObservableCollection%601>, você pode associar objetos a um elemento ou controle em um aplicativo WPF (Windows Presentation Foundation) como o faria ao usar a classe <xref:System.Collections.ObjectModel.ObservableCollection%601> para associação. Para obter mais informações, consulte [vinculação de dados (Windows Presentation Foundation)](/dotnet/desktop/wpf/data/data-binding-overview). Uma maneira de associar dados do serviço de dados a controles WPF é definir a propriedade `DataContext` do elemento como a instância da classe <xref:System.Data.Services.Client.DataServiceCollection%601> que contém o resultado da consulta. Nesse caso, você usa a propriedade <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> para definir a origem do objeto para o controle. Use a propriedade <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> para especificar qual propriedade do objeto associado deve ser exibida. Se você estiver associando um elemento a um objeto relacionado que é retornado por uma propriedade de navegação, inclua o caminho na associação definida para a propriedade <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Esse caminho é relativo ao objeto raiz definido pela propriedade <xref:System.Windows.FrameworkElement.DataContext%2A> do controle pai. O exemplo a seguir define a propriedade <xref:System.Windows.FrameworkElement.DataContext%2A> de um elemento <xref:System.Windows.Controls.StackPanel> para associar o controle pai a um <xref:System.Data.Services.Client.DataServiceCollection%601> dos objetos de cliente:  
   
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]
