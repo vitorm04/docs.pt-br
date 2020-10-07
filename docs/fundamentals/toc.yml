@@ -49,16 +49,12 @@ items:
             href: ../core/install/localized-intellisense.md
   - name: Visão geral (1ª semana)
     items:
-      - name: Tour do .NET
-        href: ../standard/tour.md
+      - name: Introdução ao .NET
+        href: ../core/introduction.md
       - name: Componentes de arquitetura do .NET
         href: ../standard/components.md
       - name: Bibliotecas de classes do .NET
         href: ../standard/class-libraries.md
-      - name: Introdução ao .NET Core
-        href: ../core/introduction.md
-      - name: Visão geral do .NET Core
-        href: ../core/about.md
       - name: Visão geral do .NET Standard
         href: ../standard/net-standard.md
       - name: Glossário do .NET
