@@ -4,12 +4,12 @@ description: Armazene dados não estruturados na nuvem com o armazenamento de BL
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: d9c587cdd21a1b81205d182652b3690b976687c0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 91aec8fc2b57c71ce4ba47d62619912af6c71e59
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100146"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756241"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Introdução ao armazenamento de BLOBs do Azure usando o F\#
 
@@ -99,7 +99,7 @@ Para listar blobs em um contêiner, primeiro obtenha uma referência ao contêin
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L67-L80)]
 
-Você também pode nomear BLOBs com informações de caminho em seus nomes. Isso cria uma estrutura de diretório virtual que você pode organizar e percorrer como faria com um sistema de arquivos tradicional. Observe que a estrutura do diretório é virtual apenas - os somente os recursos disponíveis no armazenamento de Blob são contêineres e blobs. No entanto, a biblioteca de cliente de armazenamento oferece um `CloudBlobDirectory` objeto para se referir a um diretório virtual e simplificar o processo de trabalho com blobs que são organizados dessa maneira.
+Você também pode nomear BLOBs com informações de caminho em seus nomes. Isso cria uma estrutura de diretório virtual que você pode organizar e percorrer como faria com um sistema de arquivos tradicional. A estrutura de diretório é virtual somente-os únicos recursos disponíveis no armazenamento de BLOBs são contêineres e blobs. No entanto, a biblioteca de cliente de armazenamento oferece um `CloudBlobDirectory` objeto para se referir a um diretório virtual e simplificar o processo de trabalho com blobs que são organizados dessa maneira.
 
 Por exemplo, considere o seguinte conjunto de blobs de blocos em um contêiner chamado `photos`:
 
@@ -173,7 +173,7 @@ Agora, chame a rotina. Você usa `Async.RunSynchronously` para forçar a execuç
 
 ## <a name="writing-to-an-append-blob"></a>Gravar um blob de acréscimo
 
-Um blob de acréscimo é otimizado para operações de acréscimo, como o registro em log. Como um blob de blocos, um blob de acréscimo é composto por blocos; no entanto, quando você adiciona um novo bloco a um blob de acréscimo, ele sempre é acrescentado ao fim do blob. Não é possível atualizar ou excluir um bloco existente em um blob de acréscimo. As IDs de bloco de um blob de acréscimo não ficam expostas como em um blob de blocos.
+Um blob de acréscimo é otimizado para operações de acréscimo, como o registro em log. Como um blob de blocos, um blob de acréscimo é composto por blocos, mas quando você adiciona um novo bloco a um blob de acréscimo, ele é sempre acrescentado ao final do blob. Não é possível atualizar ou excluir um bloco existente em um blob de acréscimo. As IDs de bloco de um blob de acréscimo não ficam expostas como em um blob de blocos.
 
 Cada bloco em um blob de acréscimo pode ter um tamanho diferente, até no máximo 4 MB, e um blob de acréscimo pode incluir no máximo 50.000 blocos. O tamanho máximo de um blob de acréscimo, portanto, é de pouco mais de 195 GB (4 MB x 50.000 blocos).
 
@@ -189,7 +189,7 @@ Para suportar o acesso simultâneo a uma blob por meio de vários clientes ou v�
 
 - **Etag** – fornece uma maneira de detectar se o blob ou o contêiner foi modificado por outro processo
 
-- **Concessão** – fornece acesso exclusivo e renovável para a gravação ou a exclusão de um blob por determinado período
+- **Concessão** -fornece uma maneira de obter acesso exclusivo, renovável, gravar ou excluir a um blob por um período de tempo
 
 Para obter mais informações, consulte [Gerenciando a simultaneidade no armazenamento do Microsoft Azure](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/).
 
@@ -207,7 +207,7 @@ Um nome de contêiner deve ser um nome DNS válido e estar em conformidade com a
 1. Todas as letras do nome de um contêiner devem ser minúsculas.
 1. Os nomes de contêiner devem ter de 3 a 63 caracteres.
 
-Observe que o nome de um contêiner deve sempre estar em minúsculas. Se você incluir uma letra maiúscula em um nome de contêiner ou de alguma forma violar as regras de nomenclatura do contêiner, você receberá um erro 400 (solicitação incorreta).
+O nome de um contêiner deve estar sempre em minúsculas. Se você incluir uma letra maiúscula em um nome de contêiner ou de alguma forma violar as regras de nomenclatura do contêiner, você receberá um erro 400 (solicitação incorreta).
 
 ## <a name="managing-security-for-blobs"></a>Gerenciamento da segurança de blobs
 
@@ -228,7 +228,7 @@ Agora que você aprendeu os conceitos básicos do armazenamento de Blobs, siga e
 ### <a name="tools"></a>Ferramentas
 
 - [AzureStorageTypeProvider F #](https://fsprojects.github.io/AzureStorageTypeProvider/)\
-Um provedor de tipo F # que pode ser usado para explorar os ativos de armazenamento de BLOB, tabela e fila do Azure e aplicar facilmente as operações CRUD neles.
+Um provedor de tipo F # que pode ser usado para explorar os ativos de armazenamento de BLOBs, tabelas e filas do Azure e aplicar facilmente as operações CRUD neles.
 
 - [FSharp. Azure. Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
 Uma API F # para usar Microsoft Azure serviço de armazenamento de tabelas

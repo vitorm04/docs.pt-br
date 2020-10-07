@@ -4,12 +4,12 @@ description: Armazene dados estruturados na nuvem usando o Armazenamento de Tabe
 author: sylvanc
 ms.date: 03/26/2018
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: f4a22ec14de6c92414fbcf3cca435e2b5c0805f1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: bf4f2e63c847e18d253fe5b6cf5dd7773c320fb7
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100094"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756202"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introdução ao armazenamento de tabelas do Azure e ao Azure Cosmos DB API de Tabela usando F\#
 
@@ -55,7 +55,7 @@ Se você estiver se conectando ao serviço tabela de armazenamento do Azure, pre
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>Obter sua cadeia de conexão do Azure Cosmos DB
 
-Se estiver se conectando ao Azure Cosmos DB, você precisará da sua cadeia de conexão para este tutorial. Você pode copiar a cadeia de conexão do portal do Azure. Na portal do Azure, em sua conta do cosmos DB, vá para **configurações**  >  **cadeia de conexão**e clique no botão **copiar** para copiar a cadeia de conexão primária.
+Se estiver se conectando ao Azure Cosmos DB, você precisará da sua cadeia de conexão para este tutorial. Você pode copiar a cadeia de conexão do portal do Azure. Na portal do Azure, em sua conta do cosmos DB, vá para **configurações**  >  **cadeia de conexão**e selecione o botão **copiar** para copiar a cadeia de conexão primária.
 
 Para o tutorial, insira sua cadeia de conexão em seu script, como no exemplo a seguir:
 
@@ -162,7 +162,7 @@ Para atualizar uma entidade, recupere-a do serviço tabela, modifique o objeto d
 
 ### <a name="query-a-subset-of-entity-properties"></a>consultar um subconjunto de propriedades da entidade
 
-Uma consulta de tabela pode recuperar apenas algumas propriedades de uma entidade em vez de todas elas. Essa técnica, chamada projeção, pode melhorar o desempenho da consulta, especialmente para grandes entidades. Aqui, você retorna apenas endereços de email usando o `DynamicTableEntity` e o `EntityResolver` . Observe que a projeção não é compatível com o emulador de armazenamento local, portanto, esse código é executado somente ao usar uma conta no serviço Tabela.
+Uma consulta de tabela pode recuperar apenas algumas propriedades de uma entidade em vez de todas elas. Essa técnica, chamada projeção, pode melhorar o desempenho da consulta, especialmente para grandes entidades. Aqui, você retorna apenas endereços de email usando o `DynamicTableEntity` e o `EntityResolver` . Não há suporte para projeção no emulador de armazenamento local, portanto, esse código é executado somente quando você está usando uma conta no serviço tabela.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
 

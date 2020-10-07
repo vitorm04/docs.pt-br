@@ -4,12 +4,12 @@ description: As filas do Azure fornecem uma mensagem assíncrona e confiável en
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: 5d6074751f226f0587c4c73bfa9ff56d9aca2bc1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: daa5372b7903f10c0d966c5c92e35c8bf9d362d8
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100081"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756215"
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>Introdução ao armazenamento de filas do Azure usando F\#
 
@@ -117,7 +117,7 @@ Este exemplo mostra como usar um fluxo de trabalho assíncrono com APIs de armaz
 ## <a name="additional-options-for-de-queuing-messages"></a>Opções adicionais para remover mensagens da fila
 
 Há duas maneiras de personalizar a recuperação da mensagem de uma fila.
-Primeiro, você pode obter um lote de mensagens (até 32). Segundo, você pode definir um tempo limite de invisibilidade mais longo ou mais curto, permitindo mais ou menos tempo para seu código processar totalmente cada mensagem. O exemplo de código a seguir usa `GetMessages` para obter 20 mensagens em uma chamada e, em seguida, processa cada mensagem. Ele também define o tempo limite de invisibilidade de cinco minutos para cada mensagem. Observe que os 5 minutos começam para todas as mensagens ao mesmo tempo; portanto, após 5 minutos desde a chamada para `GetMessages` , todas as mensagens que não foram excluídas ficarão visíveis novamente.
+Primeiro, você pode obter um lote de mensagens (até 32). Segundo, você pode definir um tempo limite de invisibilidade mais longo ou mais curto, permitindo mais ou menos tempo para seu código processar totalmente cada mensagem. O exemplo de código a seguir usa `GetMessages` para obter 20 mensagens em uma chamada e, em seguida, processa cada mensagem. Ele também define o tempo limite de invisibilidade de cinco minutos para cada mensagem. Os 5 minutos começam para todas as mensagens ao mesmo tempo; portanto, depois de 5 minutos desde a chamada para `GetMessages` , todas as mensagens que não foram excluídas ficarão visíveis novamente.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L97-L99)]
 
