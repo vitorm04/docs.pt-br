@@ -2,12 +2,12 @@
 title: Criar ASP.NET Core aplicativos implantados como contêineres do Linux em clusters AKS/kubernetes
 description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
 ms.date: 08/06/2020
-ms.openlocfilehash: 4b04e5d56c73918c665ad6e2825205870aac9606
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 8b3141d79eeb252ec3721d57293bed0e335b41d3
+ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916439"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91844557"
 ---
 # <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Crie ASP.NET Core aplicativos implantados como contêineres do Linux em um orquestrador AKS/kubernetes
 
@@ -128,7 +128,7 @@ services:
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
 ```
 
-Para que seu aplicativo seja executado com Docker Compose você só precisa fazer alguns ajustes para`docker-compose.override.yml`
+Para que seu aplicativo seja executado com Docker Compose você só precisa fazer alguns ajustes para `docker-compose.override.yml`
 
 ```yml
 services:
@@ -198,6 +198,9 @@ Execute o seguinte comando na **CLI do AZ**:
 ```powershell
 az acr create --name exploredocker --resource-group explore-docker-aks-rg --sku basic --admin-enabled
 ```
+
+> [!NOTE]
+> O nome do registro de contêiner (por exemplo `exploredocker` ,) deve ser exclusivo no Azure e conter 5-50 caracteres alfanuméricos. Para obter mais detalhes, consulte [criar um registro de contêiner](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli#create-a-container-registry)
 
 ### <a name="create-the-image-in-release-mode"></a>Criar a imagem no modo de versão
 
