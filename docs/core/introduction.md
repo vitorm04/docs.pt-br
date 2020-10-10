@@ -4,12 +4,12 @@ description: Saiba mais sobre o .NET, uma plataforma de desenvolvimento de softw
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 2b339db769c283ff21e6ad48d5b672794e43a76b
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 0539519c2e1dd429983226065e8508ac148e25a8
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804790"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877555"
 ---
 # <a name="introduction-to-net"></a>Introdução ao .NET
 
@@ -72,7 +72,7 @@ O [Red Hat dá suporte ao .net](https://developers.redhat.com/topics/dotnet/) em
 
 O [tizen dá suporte ao .net](https://developer.tizen.org/development/training/.net-application) em plataformas tizen.
 
-Para obter mais informações, consulte a [política de suporte](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
+Para obter mais informações, consulte [versões e suporte para .NET Core e .NET 5](releases-and-support.md).
 
 ## <a name="tools-and-productivity"></a>Ferramentas e produtividade
 
@@ -201,7 +201,7 @@ O .NET Interactive é um grupo de ferramentas de CLI e APIs que permitem aos usu
 
 Para saber mais, consulte os recursos a seguir:
 
-* [Tutorial do .NET no navegador](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)
+* [Tutorial do .NET In-Browser](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)
 * [Usando blocos de anotações do .NET com o Jupyter em seu computador](https://github.com/dotnet/interactive/blob/main/docs/NotebooksLocalExperience.md)
 * [Documentação interativa do .NET](https://github.com/dotnet/interactive/blob/main/docs/README.md)
 

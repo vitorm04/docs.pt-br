@@ -2,12 +2,12 @@
 title: Como aproveitar contêineres e orquestradores
 description: Aproveitando contêineres do Docker e orquestradores kubernetes no Azure
 ms.date: 05/31/2020
-ms.openlocfilehash: b4bdbe5c6b3946658e6c11a40cbbb2feb07cc951
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 07e66ece1d1d1b3f252e56789461ae2922d9649a
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755903"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877568"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Como aproveitar contêineres e orquestradores
 
@@ -25,7 +25,7 @@ Embora eles tenham o benefício da simplicidade, as arquiteturas monolíticos en
 
 ### <a name="deployment"></a>Implantação
 
-Os aplicativos monolíticos exigem uma implantação completa de todo o aplicativo, mesmo que apenas uma pequena alteração tenha sido feita. As implantações completas podem ser caras e sujeitas a erros. Além disso, eles exigem uma reinicialização do aplicativo, o que afeta temporariamente a indisponibilidade.
+Além disso, eles exigem uma reinicialização do aplicativo, o que pode afetar temporariamente a disponibilidade se nenhuma técnica de tempo de inatividade for aplicada durante a implantação.
 
 ### <a name="scaling"></a>Scaling
 
@@ -139,7 +139,7 @@ As organizações que implantam e mantêm um grande número de aplicativos se be
 
 ## <a name="when-should-you-avoid-using-containers-and-orchestrators"></a>Quando você deve evitar o uso de contêineres e orquestradores?
 
-Se não for possível criar seu aplicativo seguindo os princípios do aplicativo de doze fatores, considere evitar contêineres e orquestradores. Nesses casos, considere uma plataforma de hospedagem baseada em VM ou possivelmente algum sistema híbrido. Com ele, você sempre pode girar determinadas partes de funcionalidade em contêineres separados ou mesmo em funções sem servidor.
+Se não for possível criar seu aplicativo seguindo os princípios de Twelve-Factor aplicativo, considere evitar contêineres e orquestradores. Nesses casos, considere uma plataforma de hospedagem baseada em VM ou possivelmente algum sistema híbrido. Com ele, você sempre pode girar determinadas partes de funcionalidade em contêineres separados ou mesmo em funções sem servidor.
 
 ## <a name="development-resources"></a>Recursos de desenvolvimento
 
