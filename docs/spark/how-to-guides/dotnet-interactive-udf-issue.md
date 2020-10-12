@@ -4,23 +4,23 @@ description: Saiba como escrever e chamar UDFs no .NET para Apache Spark shells 
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d02ce7ec92ac1758b490b66d241d4957082eb20e
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: 7f050b39b1d2f0e2f506c522259485d87c7a185a
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877847"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955004"
 ---
 # <a name="write-and-call-udfs-in-net-for-apache-spark-interactive-environments"></a>Escreva e chame UDFs no .NET para Apache Spark ambientes interativos
 
-Neste artigo, você aprenderá a usar as UDFs (funções definidas pelo usuário) em um .NET para Apache Spark ambiente interativo.
+Neste artigo, você aprenderá a usar as UDFs (funções definidas pelo usuário) em um ambiente do .NET para Apache Spark interativo.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 1. Instalar o [.net Interactive](https://github.com/dotnet/interactive)
 2. Instalar o [Jupyter Lab](https://jupyter.org/)
 
-## <a name="net-for-apach-spark-interactive-experience"></a>.NET para Apach Spark Interactive Experience
+## <a name="net-for-apache-spark-interactive-experience"></a>.NET para Apache Spark experiência interativa
 
 O [.net para Apache Spark](https://github.com/dotnet/spark) usa o [.net Interactive](https://devblogs.microsoft.com/dotnet/net-interactive-is-here-net-notebooks-preview-2/) para fornecer suporte ao .net para experiência interativa no Spark. Para entender como configurar o ambiente para experimentar o .NET Interactive com notebooks Jupyter, consulte o [repositório interativo do .net](https://github.com/dotnet/interactive).
 
@@ -51,23 +51,24 @@ Essas são algumas coisas importantes para se ter em mente ao implementar UDFs n
 
 ## <a name="faqs"></a>Perguntas frequentes
 
-1. **Por que meu UDF que faz referência a um objeto personalizado definido pelo usuário gera o erro `Type Submission#_ is not marked as serializable` ?**  
+1. **Por que meu UDF que faz referência a um objeto personalizado definido pelo usuário gera o erro `Type Submission#_ is not marked as serializable` ?**
     O .NET Interactive encapsula cada uma dessas células com uma classe wrapper do número de envio da célula para identificar exclusivamente cada célula que está sendo enviada. Agora, conforme explicado em detalhes neste [guia](udf-guide.md), quando um UDF que faz referência a um objeto personalizado está sendo serializado, seu destino também é selecionado para serialização, que, no caso do .net Interactive, é encapsulado pela classe wrapper da célula onde o objeto personalizado é definido.
-   Agora vamos ver como isso afeta nossa definição de UDF no bloco de anotações:
+    Agora vamos ver como isso afeta nossa definição de UDF no bloco de anotações:
 
     ![Erro de serialização UDF](./media/dotnet-interactive/udf-serialization-error.png)
 
-    Como pode ser visto no caso do `udf2_fails` , vemos a mensagem de erro que indica que o tipo `Submission#7` não está marcado como serializável, isso ocorre porque o funcionamento do .net Interactive é que ele encapsula todos os objetos definidos em uma célula com sua `Submission#` classe que é gerada imediatamente e, portanto, não é marcada como `Serializable` , portanto, o erro.
-    Por esse motivo, é **necessário que um UDF referenciando um objeto personalizado nele seja definido na mesma célula que o objeto**.
+    Como pode ser visto no caso do `udf2_fails` , vemos a mensagem de erro dizendo que o tipo `Submission#7` não está marcado como serializável, isso ocorre porque o .net Interactive encapsula cada objeto definido em uma célula com sua `Submission#` classe, que é gerada imediatamente e, portanto, não é marcada como `Serializable` .
 
-2. **Por que as variáveis de difusão não funcionam com o .NET interativo?**  
-    Pelos motivos explicados acima, as variáveis de difusão não funcionam com o .NET interativo. É uma boa ideia seguir [este guia sobre variáveis de difusão](broadcast-guide.md) para obter uma compreensão mais profunda de quais variáveis de difusão são e como usá-las. O motivo pelo qual as variáveis de difusão não funcionam com cenários interativos é devido ao design interativo do .NET de acrescentar cada objeto definido em uma célula com sua classe de envio de célula, que, como não está marcada como serializável, falha com a mesma exceção, conforme mostrado anteriormente.
-   Vamos nos aprofundar um pouco mais com o exemplo a seguir:
+    Por esse motivo, é **necessário que um UDF referenciando um objeto personalizado seja definido na mesma célula que o objeto**.
+
+2. **Por que não difundir variáveis funcionam com o .NET interativo?**
+    Pelos motivos explicados anteriormente, as variáveis de difusão não funcionam com o .NET Interactive. É uma boa ideia seguir [este guia sobre variáveis de difusão](broadcast-guide.md) para obter uma compreensão mais profunda de quais variáveis de difusão são e como usá-las. O motivo pelo qual as variáveis de difusão não funcionam com cenários interativos é devido ao design interativo do .NET de acrescentar cada objeto definido em uma célula com sua classe de envio de célula, que, como não está marcada como serializável, falha com a mesma exceção que foi mostrado anteriormente.
+    Vamos nos aprofundar um pouco mais com o exemplo a seguir:
 
     ![Falha nas variáveis de difusão](./media/dotnet-interactive/broadcast-fails.png)
 
-    Conforme recomendado nas seções anteriores, definimos o UDF e o objeto que ele está referenciando (variável de difusão, nesse caso) na mesma célula, mas ainda vemos o erro reclamando `SerializationException` `Microsoft.Spark.Sql.Session` não estar marcado como serializável. Isso ocorre porque, quando o compilador tenta serializar o objeto de variável de difusão `bv` , ele encontra seu nome a ser anexado ao [`SparkSession`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) objeto `spark` que ele requer que seja marcado como serializável. Isso pode ser demonstrado com mais facilidade fazendo uma inspeção no assembly descompilado deste envio de célula:
+    Conforme recomendado nas seções anteriores, definimos o UDF e o objeto que ele está referenciando (variável de difusão, nesse caso) na mesma célula, mas ainda vemos o erro reclamando `SerializationException` `Microsoft.Spark.Sql.Session` não estar marcado como serializável. Isso ocorre porque, quando o compilador tenta serializar o objeto de variável de difusão `bv` , ele encontra seu nome a ser anexado ao [`SparkSession`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) objeto `spark` , o que exige que seja marcado como serializável. Isso pode ser demonstrado com mais facilidade fazendo uma inspeção no assembly descompilado deste envio de célula:
 
     ![Código de assembly descompilado](./media/dotnet-interactive/decompiledAssembly.png)
 
-    Se marcarmos a [`SparkSession`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) classe como `[Serializable]` , podemos fazer com que isso funcione, mas essa não é uma solução ideal, pois não queremos dar ao usuário a capacidade de serializar um objeto SparkSession, pois isso poderia levar a um comportamento indesejável muito estranho. Esse é um problema conhecido e está sendo acompanhado [aqui](https://github.com/dotnet/spark/issues/619) e será resolvido em versões futuras.
+    Se marcarmos a [`SparkSession`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) classe como `[Serializable]` , podemos fazer com que isso funcione, mas essa não é uma solução ideal, pois não queremos dar ao usuário a capacidade de serializar um objeto SparkSession, pois isso poderia levar a um comportamento estranho e indesejável. Esse é um [problema conhecido](https://github.com/dotnet/spark/issues/619) e será resolvido em versões futuras.

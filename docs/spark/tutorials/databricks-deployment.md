@@ -1,21 +1,21 @@
 ---
 title: Implantar um aplicativo .NET para Apache Spark no Databricks
 description: Descubra como implantar um aplicativo do .NET para Apache Spark no Databricks.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 904aeea4fa8b134c8c36ebb83779dc044154e6f3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1f705878a577a7fa375346cae18010d8c8cc77e1
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552161"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955441"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Tutorial: implantar um aplicativo .NET para Apache Spark no databricks
 
 Este tutorial ensina como implantar seu aplicativo na nuvem por meio de Azure Databricks, uma plataforma de análise baseada em Apache Spark com instalação com um clique, fluxos de trabalho simplificados e espaço de trabalho interativo que permite a colaboração.
 
-Neste tutorial, você aprenderá como:
+Neste tutorial, você aprenderá a:
 
 > [!div class="checklist"]
 >
@@ -23,8 +23,6 @@ Neste tutorial, você aprenderá como:
 > - Publique seu aplicativo .NET para Apache Spark.
 > - Crie um trabalho do Spark e um cluster Spark.
 > - Execute seu aplicativo no cluster do Spark.
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -55,7 +53,7 @@ Nesta seção, você deve cria um workspace do Azure Databricks usando o Portal 
     |**Grupo de recursos**     | Especifique se deseja criar um novo grupo de recursos ou usar um existente. Um grupo de recursos é um contêiner que mantém os recursos relacionados a uma solução do Azure. Para obter mais informações, consulte [Visão geral do Grupo de Recursos do Azure](/azure/azure-resource-manager/resource-group-overview). |
     |**Localidade**     | Selecione sua região preferida. Para obter informações sobre regiões disponíveis, consulte [Serviços do Azure disponíveis por região](https://azure.microsoft.com/regions/services/).        |
     |**Tipo de preço**     |  Escolha entre o cluster **Standard**, **Premium** ou **Avaliação**. Para saber mais sobre essas camadas, confira [Página de preços do Databricks](https://azure.microsoft.com/pricing/details/databricks/).       |
-    |**Rede Virtual**     |   No       |
+    |**Rede Virtual**     |   Não       |
 
 3. Selecione **Criar**. A criação do workspace leva alguns minutos. Durante a criação do workspace, você pode exibir o status da implantação em **Notificações**.
 
@@ -210,7 +208,7 @@ Seu aplicativo é executado em Azure Databricks por meio de um trabalho que exec
 
    Parabéns, você executou seu primeiro .NET para Apache Spark aplicativo na nuvem!
 
-## <a name="clean-up-resources"></a>Limpar os recursos
+## <a name="clean-up-resources"></a>Limpar recursos
 
 Se você não precisar mais do espaço de trabalho do databricks, poderá excluir seu recurso de Azure Databricks no portal do Azure. Também é possível selecionar o nome do grupo de recursos para abrir a página do grupo de recursos, e depois selecionar **Excluir grupo de recursos**.
 

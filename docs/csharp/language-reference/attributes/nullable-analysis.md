@@ -2,18 +2,18 @@
 title: 'Atributos reservados do C#: análise estática anulável'
 ms.date: 04/14/2020
 description: Esses atributos são interpretados pelo compilador para fornecer uma análise estática melhor para tipos de referência anuláveis e não anuláveis.
-ms.openlocfilehash: d2405162ece3df209111de65fdef54f70cc86d45
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: 6678cd21de23d4ed391eff089e33939b5adff0fa
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656296"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955597"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>Atributos reservados contribuem para a análise estática do estado nulo do compilador
 
 Em um contexto anulável, o compilador executa a análise estática de código para determinar o estado nulo de todas as variáveis de tipo de referência:
 
-- *NOT NULL*: a análise estática determinou que a variável foi atribuída a um valor não nulo.
+- *NOT NULL*: a análise estática determina que uma variável é atribuída a um valor não nulo.
 - *talvez NULL*: a análise estática não pode determinar que uma variável é atribuída a um valor não nulo.
 
 Você pode aplicar um número de atributos que fornecem informações ao compilador sobre a semântica de suas APIs. Essas informações ajudam o compilador a executar análise estática e determinar quando uma variável não é nula. Este artigo fornece uma breve descrição de cada um desses atributos e como usá-los. Todos os exemplos pressupõem C# 8,0 ou mais recente e o código está em um contexto anulável.

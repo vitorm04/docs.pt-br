@@ -1,20 +1,20 @@
 ---
-title: A evolução do .NET Core para o .NET 5
+title: O que há de novo no .NET 5
 description: Saiba mais sobre o .NET 5, uma plataforma de desenvolvimento de plataforma cruzada e de software livre que é a próxima evolução do .NET Core.
 ms.date: 09/02/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 9318b1afbe22c97f056bd38732306c6a6b60ad00
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 9d4fc514c9de7a668f909286f10d6fe28ada7f90
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598121"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955200"
 ---
-# <a name="the-evolution-of-net-core-to-net-5"></a>A evolução do .NET Core para o .NET 5
+# <a name="whats-new-in-net-5"></a>O que há de novo no .NET 5
 
-Este artigo fornece detalhes sobre o que está incluído no .NET 5, que é a próxima versão do .NET Core a seguir 3,1. O número de versão é 5,0 para evitar confusão com .NET Framework 4. x. E "Core" é descartado do nome porque é a principal implementação do .NET em frente. ASP.NET Core retém o nome "Core" para evitar confusão com o ASP.NET MVC 5. Além disso, Entity Framework Core retém o nome "Core" para evitar confusão com Entity Framework 5 e 6. O .NET 5 dá suporte a mais tipos de aplicativos e mais plataformas do que o .NET Core ou o .NET Framework.
+O .NET 5 é a evolução do .NET Core. Este artigo fornece detalhes sobre o que está incluído no .NET 5, que é a próxima versão do .NET Core após a versão 3.1. O número de versão é 5,0 para evitar confusão com .NET Framework 4. x. E "Core" é descartado do nome porque é a principal implementação do .NET em frente. ASP.NET Core retém o nome "Core" para evitar confusão com o ASP.NET MVC 5. Além disso, Entity Framework Core retém o nome "Core" para evitar confusão com Entity Framework 5 e 6. O .NET 5 dá suporte a mais tipos de aplicativos e mais plataformas do que o .NET Core ou o .NET Framework.
 
 O advento do .NET Core evoluiu o ecossistema do .NET de maneiras atraentes. Ele amadureceu como um projeto de software livre no GitHub, comemorando contribuições da Comunidade e humildemente melhorando com o tempo.
 
@@ -46,13 +46,13 @@ O .NET 5 estende essas características, fazendo melhorias incrementais:
 
 ### <a name="what-net-5-is-not"></a>O que o .NET 5 não é
 
-O .NET 5 não é uma substituição para .NET Framework. Não há planos de portar as seguintes tecnologias de .NET Framework para o .NET 5, mas há alternativas com suporte incluídas no .NET 5:
+O .NET 5 não é uma substituição completa para .NET Framework. Não há planos de portar as seguintes tecnologias de .NET Framework para o .NET 5, mas há alternativas com suporte:
 
-| Tecnologia                             | Recomendação                                              |
-|----------------------------------------|-------------------------------------------------------------|
-| Web Forms                              | [ASP.NET Core mais](/aspnet/core/blazor)                  |
-| Windows Communication Foundation (WCF) | [gRPC](/aspnet/core/grpc)                                   |
-| Windows Workflow (WF)                  | [CoreWF de código-fonte aberto](https://github.com/UiPath-Open/corewf) |
+| Tecnologia                             | Alternativa recomendada                                                                         |
+|----------------------------------------|-------------------------------------------------------------------------------------------------|
+| Web Forms                              | ASP.NET Core [mais](/aspnet/core/blazor) ou [Razor Pages](/aspnet/core/tutorials/razor-pages) |
+| Windows Communication Foundation (WCF) | [gRPC](/aspnet/core/grpc)                                                                       |
+| Windows Workflow (WF)                  | [CoreWF de código-fonte aberto](https://github.com/UiPath-Open/corewf)                                     |
 
 ## <a name="net-standard"></a>.NET Standard
 
@@ -160,7 +160,7 @@ View body() => new StackLayout
 
 Para obter mais informações, consulte o [roteiro do .net Maui](https://github.com/dotnet/maui/wiki/Roadmap)e apresentando o artigo do [.net Maui](https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui) .
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [A jornada para um .NET](https://channel9.msdn.com/Events/Build/2020/BOD106)
 - [Melhorias de desempenho no .NET 5](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5)

@@ -1,26 +1,26 @@
 ---
 title: Implantar .NET para Apache Spark trabalho e binários de função definidos pelo usuário
 description: Saiba como implantar o .NET para Apache Spark o trabalho e os binários de função definidos pelo usuário.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 672a32c430bd702167a294d2b895ac1ac90bf67e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 001798bfda628ce979570bcd89e7c5553347b275
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617711"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91954952"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Implantar .NET para Apache Spark trabalho e binários de função definidos pelo usuário
 
 Este "como" fornece instruções gerais sobre como implantar .NET para Apache Spark trabalho e binários de função definidos pelo usuário. Você aprende quais variáveis de ambiente configurar, bem como alguns parâmetros comumente usados para iniciar aplicativos com o `spark-submit` .
 
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
-
 ## <a name="configurations"></a>Configurações
+
 As configurações mostram as variáveis de ambiente geral e as configurações de parâmetros para implantar o .NET para Apache Spark trabalho e os binários de função definidos pelo usuário.
 
 ### <a name="environment-variables"></a>Variáveis de ambiente
+
 Ao implantar trabalhadores e escrever UDFs, há algumas variáveis de ambiente usadas com frequência que talvez você precise definir:
 
 | Variável de ambiente         | Descrição
@@ -37,7 +37,7 @@ Depois que o aplicativo Spark for [agrupado](https://spark.apache.org/docs/lates
 | --classe               | O ponto de entrada para seu aplicativo.</br>_por exemplo, org. Apache. Spark. Deploy. dotnet. DotnetRunner_
 | --Mestre              | A <a href="https://spark.apache.org/docs/latest/submitting-applications.html#master-urls">URL mestra</a> do cluster.</br>_por exemplo, yarn_
 | --modo de implantação         | Se o driver deve ser implantado nos nós de trabalho ( <code>cluster</code> ) ou localmente como um cliente externo ( <code>client</code> ).</br>Padrão: <code>client</code>
-| --conf                | Propriedade de configuração do Spark arbitrária no <code>key=value</code> formato.</br>_por exemplo, Spark. yarn. appMasterEnv. DOTNET_WORKER_DIR = .\worker\Microsoft.Spark.Worker_
+| --conf                | Propriedade de configuração do Spark arbitrária no <code>key=value</code> formato.</br>_por exemplo, spark.yarn.appMasterEnv.DOTNET_WORKER_DIR = .\worker\Microsoft.Spark.Worker_
 | --arquivos               | Lista separada por vírgulas de arquivos a serem colocados no diretório de trabalho de cada executor.<br/><ul><li>Observe que essa opção só é aplicável ao modo yarn.</li><li>Ele dá suporte à especificação de nomes de arquivo com # semelhante ao Hadoop.</br></ul>_por exemplo, <code>myLocalSparkApp.dll#appSeen.dll</code> . Seu aplicativo deve usar o nome como <code>appSeen.dll</code> referência <code>myLocalSparkApp.dll</code> ao ser executado em yarn._</li>
 | --arquivos mortos          | Lista separada por vírgulas de arquivos mortos a serem extraídos no diretório de trabalho de cada executor.</br><ul><li>Observe que essa opção só é aplicável ao modo yarn.</li><li>Ele dá suporte à especificação de nomes de arquivo com # semelhante ao Hadoop.</br></ul>_por exemplo, <code>hdfs://&lt;path to your worker file&gt;/Microsoft.Spark.Worker.zip#worker</code> . Isso irá copiar e extrair o arquivo zip para a <code>worker</code> pasta._</li>
 | aplicativo-jar       | Caminho para um jar agrupado, incluindo seu aplicativo e todas as dependências.</br>_por exemplo, &lt; caminho HDFS://para seu jar &gt; /Microsoft-Spark- &lt; versão &gt; . jar_

@@ -2,12 +2,12 @@
 title: Alterações significativas na biblioteca de classes base
 description: Lista as alterações significativas nas principais bibliotecas do .NET.
 ms.date: 07/27/2020
-ms.openlocfilehash: b86ceab784fd295acf500986f7e64731eb8ed0a3
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: d4deef295479b1f32bd72a69369a11c7375835f4
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756099"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955546"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Principais alterações significativas nas bibliotecas do .NET
 
@@ -17,27 +17,28 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 | Alteração significativa | Versão introduzida |
 | - | :-: |
-| [Ordem das marcas na atividade. as marcas são revertidas](#order-of-tags-in-activitytags-is-reversed) | 5,0 |
-| [Nomes de parâmetros alterados no RC1](#parameter-names-changed-in-rc1) | 5,0 |
-| [Atributos OSPlatform renomeados ou removidos](#osplatform-attributes-renamed-or-removed) | 5,0 |
-| [Thread. Abort é obsoleto](#threadabort-is-obsolete) | 5,0 |
-| [Propriedades obsoletas em ConsoleLoggerOptions](#obsolete-properties-on-consoleloggeroptions) | 5,0 |
-| [Verificações IsSupported de hardware intrínsecas podem diferir para tipos aninhados](#hardware-intrinsic-issupported-checks-may-differ-for-nested-types) | 5,0 |
-| [Nomes de parâmetro alterados em assemblies de referência](#parameter-names-changed-in-reference-assemblies) | 5,0 |
-| [Caminhos de URI com caracteres não ASCII são analisados corretamente no UNIX](#uri-paths-with-non-ascii-characters-parse-correctly-on-unix) | 5,0 |
-| [Reconhecimento de URI de caminhos UNC no UNIX](#uri-recognition-of-unc-paths-on-unix) | 5,0 |
-| [Environment. OSVersion retorna a versão correta do sistema operacional](#environmentosversion-returns-the-correct-operating-system-version) | 5,0 |
-| [Complexidade do LINQ OrderBy. primeiro {OrDefault} aumentou](#complexity-of-linq-orderbyfirstordefault-increased) | 5,0 |
-| [IntPtr e UIntPtr implementam IFormattable](#intptr-and-uintptr-implement-iformattable) | 5,0 |
-| [PrincipalPermissionattribute está obsoleto como erro](#principalpermissionattribute-is-obsolete-as-error) | 5,0 |
-| [Os métodos de serialização BinaryFormatter são obsoletos e proibidos em aplicativos ASP.NET](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps) | 5,0 |
-| [Os caminhos de código UTF-7 estão obsoletos](#utf-7-code-paths-are-obsolete) | 5,0 |
-| [Vetor \<T> sempre gera NotSupportedException para tipos sem suporte](#vectort-always-throws-notsupportedexception-for-unsupported-types) | 5,0 |
-| [O ActivityIdFormat padrão é W3C](#default-activityidformat-is-w3c) | 5,0 |
-| [Alteração de comportamento para vector2. Lerp e Vector4. Lerp](#behavior-change-for-vector2lerp-and-vector4lerp) | 5,0 |
-| [Os métodos SSE e SSE2 CompareGreaterThan manipulam corretamente as entradas NaN](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5,0 |
-| [CounterSet. CreateCounterSetInstance agora gera InvalidOperationException se a instância já existir](#countersetcreatecountersetinstance-now-throws-invalidoperationexception-if-instance-already-exists) | 5,0 |
-| [Pacote Microsoft. DotNet. PlatformAbstractions removido](#microsoftdotnetplatformabstractions-package-removed) | 5,0 |
+| [Alterações de comportamento da API relacionadas ao assembly para o formato de publicação de arquivo único](#assembly-related-api-behavior-changes-for-single-file-publishing-format) | 5.0 |
+| [Ordem das marcas na atividade. as marcas são revertidas](#order-of-tags-in-activitytags-is-reversed) | 5.0 |
+| [Nomes de parâmetros alterados no RC1](#parameter-names-changed-in-rc1) | 5.0 |
+| [Atributos OSPlatform renomeados ou removidos](#osplatform-attributes-renamed-or-removed) | 5.0 |
+| [Thread. Abort é obsoleto](#threadabort-is-obsolete) | 5.0 |
+| [Propriedades obsoletas em ConsoleLoggerOptions](#obsolete-properties-on-consoleloggeroptions) | 5.0 |
+| [Verificações IsSupported de hardware intrínsecas podem diferir para tipos aninhados](#hardware-intrinsic-issupported-checks-may-differ-for-nested-types) | 5.0 |
+| [Nomes de parâmetro alterados em assemblies de referência](#parameter-names-changed-in-reference-assemblies) | 5.0 |
+| [Caminhos de URI com caracteres não ASCII são analisados corretamente no UNIX](#uri-paths-with-non-ascii-characters-parse-correctly-on-unix) | 5.0 |
+| [Reconhecimento de URI de caminhos UNC no UNIX](#uri-recognition-of-unc-paths-on-unix) | 5.0 |
+| [Environment. OSVersion retorna a versão correta do sistema operacional](#environmentosversion-returns-the-correct-operating-system-version) | 5.0 |
+| [Complexidade do LINQ OrderBy. primeiro {OrDefault} aumentou](#complexity-of-linq-orderbyfirstordefault-increased) | 5.0 |
+| [IntPtr e UIntPtr implementam IFormattable](#intptr-and-uintptr-implement-iformattable) | 5.0 |
+| [PrincipalPermissionattribute está obsoleto como erro](#principalpermissionattribute-is-obsolete-as-error) | 5.0 |
+| [Os métodos de serialização BinaryFormatter são obsoletos e proibidos em aplicativos ASP.NET](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps) | 5.0 |
+| [Os caminhos de código UTF-7 estão obsoletos](#utf-7-code-paths-are-obsolete) | 5.0 |
+| [Vetor \<T> sempre gera NotSupportedException para tipos sem suporte](#vectort-always-throws-notsupportedexception-for-unsupported-types) | 5.0 |
+| [O ActivityIdFormat padrão é W3C](#default-activityidformat-is-w3c) | 5.0 |
+| [Alteração de comportamento para vector2. Lerp e Vector4. Lerp](#behavior-change-for-vector2lerp-and-vector4lerp) | 5.0 |
+| [Os métodos SSE e SSE2 CompareGreaterThan manipulam corretamente as entradas NaN](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
+| [CounterSet. CreateCounterSetInstance agora gera InvalidOperationException se a instância já existir](#countersetcreatecountersetinstance-now-throws-invalidoperationexception-if-instance-already-exists) | 5.0 |
+| [Pacote Microsoft. DotNet. PlatformAbstractions removido](#microsoftdotnetplatformabstractions-package-removed) | 5.0 |
 | [As APIs que relatam versão agora relatam produto e não versão de arquivo](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
 | [Instâncias EncoderFallbackBuffer personalizadas não podem retornar recursivamente](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
 | [Alterações de comportamento de análise e formatação de ponto flutuante](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
@@ -56,6 +57,10 @@ As seguintes alterações significativas estão documentadas nesta página:
 | [Process. StartInfo gera InvalidOperationException para processos que você não iniciou](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1,0 |
 
 ## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [assembly-api-behavior-changes-for-single-file-publish](../../../includes/core-changes/corefx/5.0/assembly-api-behavior-changes-for-single-file-publish.md)]
+
+***
 
 [!INCLUDE [reverse-order-of-tags-in-activity-property](../../../includes/core-changes/corefx/5.0/reverse-order-of-tags-in-activity-property.md)]
 

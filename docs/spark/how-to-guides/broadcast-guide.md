@@ -1,23 +1,21 @@
 ---
 title: Usar variáveis de difusão no .NET para Apache Spark
 description: Saiba como usar variáveis de difusão no .NET para aplicativos Apache Spark.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d86b160855cc4d3f3a6502f5606d4766b7c06aa0
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3cf2215f59ce28878f44138386c01597ec852905
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617850"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955017"
 ---
 # <a name="use-broadcast-variables-in-net-for-apache-spark"></a>Usar variáveis de difusão no .NET para Apache Spark
 
 Neste artigo, você aprenderá a usar variáveis de difusão no .NET para Apache Spark. As [variáveis de difusão no Apache Spark](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables) são mecanismos para compartilhar variáveis em executores que se destinam a ser somente leitura. As variáveis de difusão permitem manter uma variável somente leitura armazenada em cache em cada máquina, em vez de enviar uma cópia dela com tarefas. Você pode usar variáveis de difusão para dar a cada nó uma cópia de um conjunto de dados de entrada grande de maneira eficiente.
 
 Como os dados são enviados apenas uma vez, as variáveis de difusão têm benefícios de desempenho quando comparadas com as variáveis locais que são enviadas aos executores com cada tarefa. Consulte a [documentação da variável de difusão oficial](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables) para obter uma compreensão mais profunda das variáveis de difusão e por que elas são usadas.
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="create-broadcast-variables"></a>Criar variáveis de difusão
 
@@ -41,7 +39,7 @@ A variável de difusão pode ser excluída de todos os executores chamando o `De
 bv.Destroy();
 ```
 
-`Destroy()`exclui todos os dados e metadados relacionados à variável de difusão e devem ser usados com cautela. Depois que uma variável de difusão é destruída, ela não pode ser usada novamente.
+`Destroy()` exclui todos os dados e metadados relacionados à variável de difusão e devem ser usados com cautela. Depois que uma variável de difusão é destruída, ela não pode ser usada novamente.
 
 ## <a name="limit-broadcast-variable-scope-in-udfs"></a>Limitar o escopo da variável de difusão em UDFs
 

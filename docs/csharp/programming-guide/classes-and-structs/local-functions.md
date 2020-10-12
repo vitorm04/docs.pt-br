@@ -1,15 +1,15 @@
 ---
 title: Funções locais – Guia de Programação em C#
 description: As funções locais em C# são métodos privados que são aninhados em outro membro e podem ser chamados de seus membros que os contêm.
-ms.date: 10/02/2020
+ms.date: 10/09/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: e7c49554da56d8682d37a236024922b3fa3ec600
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: a2d389c8b1c687dc4885004fcdc33e0ed7ada977
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877529"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955675"
 ---
 # <a name="local-functions-c-programming-guide"></a>Funções locais (Guia de Programação em C#)
 
@@ -50,11 +50,15 @@ Todas as variáveis locais que são definidas no membro recipiente, incluindo se
 
 Ao contrário de uma definição de método, uma definição de função local não pode incluir o modificador de acesso de membro. Já que todas as funções locais são privadas, incluir um modificador de acesso como a palavra-chave `private` gera o erro do compilador CS0106, "O modificador 'private' não é válido para este item".
 
-Além disso, os atributos não podem ser aplicados à função local ou aos respectivos parâmetros e parâmetros de tipo.
-
 O exemplo a seguir define uma função local chamada `AppendPathSeparator` que é privada para um método chamado `GetText`:
 
 :::code language="csharp" source="snippets/local-functions/Program.cs" id="Basic" :::
+
+A partir do C# 9,0, você pode aplicar atributos a uma função local, seus parâmetros e parâmetros de tipo, como mostra o exemplo a seguir:
+
+:::code language="csharp" source="snippets/local-functions/Program.cs" id="WithAttributes" :::
+
+O exemplo anterior usa um [atributo especial](../../language-reference/attributes/nullable-analysis.md) para auxiliar o compilador em análise estática em um contexto anulável.
 
 ## <a name="local-functions-and-exceptions"></a>Funções locais e exceções
 
@@ -130,6 +134,6 @@ Uma vantagem final não demonstrada neste exemplo é que as funções locais pod
 
 Embora as funções locais possam parecer redundantes para expressões lambda, elas realmente têm finalidades e usos diferentes. As funções locais são mais eficientes para quando você deseja escrever uma função que é chamada apenas do contexto de outro método.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Métodos](methods.md)

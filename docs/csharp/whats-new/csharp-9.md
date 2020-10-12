@@ -2,12 +2,12 @@
 title: O que há de novo no C# 9,0 – Guia C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 9,0.
 ms.date: 09/04/2020
-ms.openlocfilehash: c165ca764d93b74aac21028ed3e55e80f2a23ee0
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 0ac3b410cd9ba886ee55aede952700f145f1b31b
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654901"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955161"
 ---
 # <a name="whats-new-in-c-90"></a>Novidades do C# 9.0
 
@@ -232,7 +232,7 @@ Além disso, o [ `foreach` loop](../language-reference/keywords/foreach-in.md) r
 
 Em seguida, você pode usar os descartes como parâmetros para expressões lambda. Essa conveniência permite que você evite nomear o argumento, e o compilador pode evitar usá-lo. Você usa o `_` para qualquer argumento. Para obter mais informações, consulte a seção [parâmetros de entrada de uma expressão lambda](../language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression) do artigo [expressões lambda](../language-reference/operators/lambda-expressions.md) .
 
-Por fim, agora você pode aplicar atributos a funções locais. Por exemplo, você pode aplicar anotações de atributo anulável a funções locais.
+Por fim, agora você pode aplicar atributos a [funções locais](../programming-guide/classes-and-structs/local-functions.md). Por exemplo, você pode aplicar [anotações de atributo anulável](../language-reference/attributes/nullable-analysis.md) a funções locais.
 
 ## <a name="support-for-code-generators"></a>Suporte para geradores de código
 

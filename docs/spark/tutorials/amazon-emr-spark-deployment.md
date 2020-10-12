@@ -1,30 +1,28 @@
 ---
 title: Implantar um aplicativo .NET para Apache Spark no Amazon EMR Spark
 description: Descubra como implantar um aplicativo do .NET para Apache Spark no Amazon EMR Spark.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c6cf26044693c5d923d11e1bbc72232e7009fe73
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 0232896254e93525f2a6f0be05417107cf7f5432
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618253"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955467"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Implantar um aplicativo .NET para Apache Spark no Amazon EMR Spark
 
 Este tutorial ensina a implantar um aplicativo do .NET para Apache Spark no Amazon EMR Spark.
 
-Neste tutorial, você aprenderá como:
+Neste tutorial, você aprenderá a:
 
 > [!div class="checklist"]
 >
 > * Preparar o Microsoft.Spark.Worker
 > * Publicar seu aplicativo Spark .NET
 > * Implantar seu aplicativo no Amazon EMR Spark
-> * Executar seu aplicativo
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
+> * Executar o aplicativo
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -96,7 +94,7 @@ aws emr create-cluster \
 --bootstrap-actions Path=s3://mybucket/<some dir>/install-worker.sh,Name="Install Microsoft.Spark.Worker",Args=["aws","s3://mybucket/<some dir>/Microsoft.Spark.Worker.<release>.tar.gz","/usr/local/bin"]
 ```
 
-## <a name="run-your-app"></a>Executar seu aplicativo
+## <a name="run-your-app"></a>Executar o aplicativo
 
 Há duas maneiras de executar seu aplicativo no Amazon EMR Spark: spark-submit e Etapas do Amazon EMR.
 

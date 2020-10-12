@@ -3,20 +3,20 @@ title: Tutorial de análise de sentimentos com .NET para Apache Spark e ML.NET
 description: Neste tutorial, você aprenderá a usar o ML.NET com .NET para Apache Spark para análise de sentimentos.
 author: mamccrea
 ms.author: mamccrea
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 69deb30419b98536fa309547d94f59bb266e413c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 16b4d34e4c581da2cd0ba798d87e53ccfc49f0e9
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617568"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91954887"
 ---
 # <a name="tutorial-sentiment-analysis-with-net-for-apache-spark-and-mlnet"></a>Tutorial: análise de sentimentos com .NET para Apache Spark e ML.NET
 
 Este tutorial ensina como fazer uma análise de sentimentos das revisões online usando o ML.NET e o .NET para Apache Spark. O [ml.net](http://dot.net/ml) é uma estrutura de aprendizado de máquina livre, de plataforma cruzada e gratuita. Você pode usar o ML.NET com .NET para Apache Spark para dimensionar o treinamento e a previsão de algoritmos de aprendizado de máquina.
 
-Neste tutorial, você aprenderá como:
+Neste tutorial, você aprenderá a:
 
 > [!div class="checklist"]
 >
@@ -24,8 +24,6 @@ Neste tutorial, você aprenderá como:
 > * Crie um .NET para Apache Spark aplicativo de console.
 > * Escreva e implemente uma função definida pelo usuário.
 > * Execute um .NET para Apache Spark aplicativo de console.
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

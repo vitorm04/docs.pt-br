@@ -1,21 +1,19 @@
 ---
 title: Compilar um aplicativo .NET para Apache Spark no Ubuntu
 description: Saiba como criar seu .NET para Apache Spark aplicativo no Ubuntu
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: b5e06619611ac06c453df0314bcecb30e1b673a2
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: dfe105bb1549560ebdd2526a8441c4e2c5d141bf
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812192"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955056"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a>Saiba como criar seu .NET para Apache Spark aplicativo no Ubuntu
 
 Este artigo ensina como criar seu .NET para aplicativos Apache Spark no Ubuntu.
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

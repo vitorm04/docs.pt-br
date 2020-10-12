@@ -1,21 +1,21 @@
 ---
 title: Implantar um aplicativo .NET para Apache Spark no Azure HDInsight
 description: Descubra como implantar um aplicativo do .NET para Apache Spark no HDInsight.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9a4ca80463de41a50d103c696b2108d0cef023fc
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8ef1429d265c87347bb8771dc01b319fcb9e84d0
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548371"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955364"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Tutorial: implantar um aplicativo .NET para Apache Spark no Azure HDInsight
 
 Este tutorial ensina como implantar seu .NET para Apache Spark aplicativo na nuvem por meio de um cluster do Azure HDInsight. O HDInsight facilita a criação e a configuração de um cluster Spark no Azure, pois os clusters do Spark no HDInsight são compatíveis com o armazenamento do Azure e Azure Data Lake Storage.
 
-Neste tutorial, você aprenderá como:
+Neste tutorial, você aprenderá a:
 
 > [!div class="checklist"]
 >
@@ -24,8 +24,6 @@ Neste tutorial, você aprenderá como:
 > * Publique seu aplicativo .NET para Apache Spark.
 > * Crie e execute uma ação de script do HDInsight.
 > * Execute um aplicativo .NET para Apache Spark em um cluster HDInsight.
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -153,7 +151,7 @@ Depois que o cluster estiver em execução e você carregou seus arquivos no Azu
    |Propriedade  |Descrição  |
    |---------|---------|
    | Tipo de script |Personalizado|
-   | Name | Instalar trabalho|
+   | Nome | Instalar trabalho|
    | URI do script Bash |`https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh` </br> Para confirmar esse URI, clique com o botão direito do mouse em install-worker.sh em Gerenciador de Armazenamento do Azure e selecione Propriedades. |
    | Tipo(s) de nó| Trabalho|
    | Parâmetros | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
@@ -178,7 +176,7 @@ Depois que o cluster estiver em execução e você carregou seus arquivos no Azu
 
    Quando seu aplicativo for executado, você verá a mesma tabela de contagem de palavras da execução local de introdução gravada no console. Parabéns, você executou seu primeiro .NET para Apache Spark aplicativo na nuvem!
 
-## <a name="clean-up-resources"></a>Limpar os recursos
+## <a name="clean-up-resources"></a>Limpar recursos
 
 O HDInsight salva seus dados no armazenamento do Azure, para que você possa excluir um cluster com segurança quando ele não estiver em uso. Você também é cobrado por um cluster HDInsight, mesmo quando ele não está em uso. Como os encargos para o cluster são muitas vezes maiores do que os encargos para armazenamento, faz sentido, do ponto de vista econômico, excluir os clusters quando não estiverem em uso.
 

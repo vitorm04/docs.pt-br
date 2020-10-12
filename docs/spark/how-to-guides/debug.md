@@ -1,21 +1,19 @@
 ---
 title: Depurar um aplicativo .NET para Apache Spark no Windows
 description: Saiba como depurar seu aplicativo .NET para Apache Spark no Windows.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 249b4bccbf1378d8ef8c824f39151c33fb9f875a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 43531e6b2f9a79658f89b804dfa2bb97d6e9645b
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557145"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91954978"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>Depurar um aplicativo .NET para Apache Spark
 
 Este "como" fornece as etapas para depurar o aplicativo .NET para Apache Spark no Windows.
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="debug-your-application"></a>Depurar seu aplicativo
 
