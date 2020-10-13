@@ -1,7 +1,7 @@
 ---
 title: Como serializar e desserializar JSON usando C#-.NET
-description: Este artigo mostra como usar o System.Text.Json namespace para serializar e desserializar do JSON no .net. Ele inclui o código de exemplo.
-ms.date: 05/13/2020
+description: Saiba como usar o System.Text.Json namespace para serializar e desserializar do JSON no .net. Ele inclui o código de exemplo.
+ms.date: 10/09/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 72ba79784d3eb1beb43eab8db0a448a7e3b18eb6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0fda248b7d2e5a7cfa748447d0265565cb160b7e
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557834"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997771"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Como serializar e desserializar (empacotar e desempacotar) JSON no .NET
 
-Este artigo mostra como usar o <xref:System.Text.Json> namespace para serializar e desserializar de e para o JavaScript Object Notation (JSON). Se você estiver portando um código existente do `Newtonsoft.Json` , consulte [como migrar `System.Text.Json` para o ](system-text-json-migrate-from-newtonsoft-how-to.md).
+Este artigo mostra como usar o <xref:System.Text.Json?displayProperty=fullName> namespace para serializar e desserializar de JavaScript Object Notation (JSON). Se você estiver portando um código existente do `Newtonsoft.Json` , consulte [como migrar `System.Text.Json` para o ](system-text-json-migrate-from-newtonsoft-how-to.md).
 
 As direções e o código de exemplo usam a biblioteca diretamente, não por meio de uma estrutura como [ASP.NET Core](/aspnet/core/).
 
@@ -62,9 +62,12 @@ Os exemplos anteriores usam a inferência de tipos para o tipo que está sendo s
 
 ### <a name="serialization-example"></a>Exemplo de serialização
 
-Aqui está uma classe de exemplo que contém coleções e uma classe aninhada:
+Aqui está uma classe de exemplo que contém propriedades de tipo de coleção e um tipo definido pelo usuário:
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithPOCOs)]
+
+> [!TIP]
+> "POCO" significa [objeto CLR antigo](https://en.wikipedia.org/wiki/Plain_old_CLR_object). Um POCO é um tipo .NET que não depende de nenhum tipo específico de estrutura, por exemplo, por meio de herança ou atributos.
 
 A saída JSON da serialização de uma instância do tipo anterior é semelhante ao exemplo a seguir. A saída JSON é reduzidos por padrão:
 
@@ -72,7 +75,7 @@ A saída JSON da serialização de uma instância do tipo anterior é semelhante
 {"Date":"2019-08-01T00:00:00-07:00","TemperatureCelsius":25,"Summary":"Hot","DatesAvailable":["2019-08-01T00:00:00-07:00","2019-08-02T00:00:00-07:00"],"TemperatureRanges":{"Cold":{"High":20,"Low":-10},"Hot":{"High":60,"Low":20}},"SummaryWords":["Cool","Windy","Humid"]}
 ```
 
-O exemplo a seguir mostra o mesmo JSON, formatado (ou seja, muito impresso com espaço em branco e recuo):
+O exemplo a seguir mostra o mesmo JSON, mas formatado (ou seja, muito impresso com espaço em branco e recuo):
 
 ```json
 {
@@ -123,7 +126,7 @@ A serialização para UTF-8 é de cerca de 5-10% mais rápida do que usar os mé
 Os tipos com suporte incluem:
 
 * Primitivos .NET que mapeiam para primitivos JavaScript, como tipos numéricos, cadeias de caracteres e booliano.
-* [Pocos (objetos CLR antigos)](https://stackoverflow.com/questions/250001/poco-definition)definidos pelo usuário.
+* [Pocos (objetos CLR antigos)](https://en.wikipedia.org/wiki/Plain_old_CLR_object)definidos pelo usuário.
 * Matrizes unidimensionais e denteadas ( `ArrayName[][]` ).
 * `Dictionary<string,TValue>` onde `TValue` é `object` , `JsonElement` , ou um poco.
 * Coleções dos namespaces a seguir.
@@ -137,7 +140,7 @@ Você pode [implementar conversores personalizados](system-text-json-converters-
 
 Para desserializar de uma cadeia de caracteres ou de um arquivo, chame o <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> método.
 
-O exemplo a seguir lê JSON de uma cadeia de caracteres e cria uma instância da `WeatherForecast` classe mostrada anteriormente para o [exemplo de serialização](#serialization-example):
+O exemplo a seguir lê JSON de uma cadeia de caracteres e cria uma instância da `WeatherForecastWithPOCOs` classe mostrada anteriormente para o [exemplo de serialização](#serialization-example):
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripToString.cs?name=SnippetDeserialize)]
 
@@ -159,9 +162,13 @@ Para desserializar do UTF-8, chame uma <xref:System.Text.Json.JsonSerializer.Des
 
 ## <a name="deserialization-behavior"></a>Comportamento de desserialização
 
+Os seguintes comportamentos se aplicam ao desserializar JSON:
+
 * Por padrão, a correspondência de nome de propriedade diferencia maiúsculas de minúsculas. Você pode [especificar a não diferenciação de maiúsculas e minúsculas](#case-insensitive-property-matching).
 * Se o JSON contiver um valor para uma propriedade somente leitura, o valor será ignorado e nenhuma exceção será lançada.
-* Não há suporte para desserialização para tipos de referência sem um construtor com parâmetros.
+* Construtores para desserialização:
+  - No .NET Core 3,0 e 3,1, um construtor sem parâmetros, que pode ser público, interno ou privado, é usado para desserialização.
+  - No .NET 5,0 e posterior, os construtores não públicos são ignorados pelo serializador. No entanto, construtores com parâmetros podem ser usados se um construtor sem parâmetros não estiver disponível.
 * A desserialização para objetos imutáveis ou propriedades somente leitura não tem suporte.
 * Por padrão, há suporte para enums como números. Você pode [serializar nomes de enumeração como cadeias de caracteres](#enums-as-strings).
 * Não há suporte para campos.

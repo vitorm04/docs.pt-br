@@ -2,14 +2,14 @@
 title: Programação orientada a objeto (C#)
 description: O C# fornece suporte completo para a programação orientada a objeto, incluindo abstração, encapsulamento, herança e polimorfismo.
 ms.date: 09/30/2020
-ms.openlocfilehash: 8a8dc8dc6d40c539b988ea203654d994e88c357a
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 6e0155621be544b01453b8c107debb3a9b6c38f9
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614789"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997659"
 ---
-# <a name="object-oriented-programming-c"></a>Programação orientada a objeto (C#)
+# <a name="object-oriented-programming-c"></a>Programação de Object-Oriented (C#)
 
 O C# é uma linguagem orientada a objeto. Quatro das principais técnicas usadas na programação orientada a objeto são:
 
@@ -162,7 +162,7 @@ Substitua-o pelo seguinte código:
 
 :::code language="csharp" source="./snippets/object-oriented-programming/BankAccount.cs" ID="RefactoredMakeWithdrawal":::
 
-O método adicionado é, o que significa que ele pode ser chamado somente de classes derivadas. Essa declaração impede que outros clientes chamem o método. Também é `virtual` para que as classes derivadas possam alterar o comportamento. O tipo de retorno é um `Transaction?` . A `?` anotação indica que o método pode retornar `null` . Adicione a seguinte implementação no `LineOfCreditAccount` para cobrar uma taxa quando o limite de retirada for excedido:
+O método adicionado é `protected` , o que significa que ele pode ser chamado somente de classes derivadas. Essa declaração impede que outros clientes chamem o método. Também é `virtual` para que as classes derivadas possam alterar o comportamento. O tipo de retorno é um `Transaction?` . A `?` anotação indica que o método pode retornar `null` . Adicione a seguinte implementação no `LineOfCreditAccount` para cobrar uma taxa quando o limite de retirada for excedido:
 
 :::code language="csharp" source="./snippets/object-oriented-programming/LineOfCreditAccount.cs" ID="AddOverdraftFee":::
 
@@ -174,7 +174,7 @@ Execute o programa e verifique os resultados.
 
 ## <a name="summary"></a>Resumo
 
-Este tutorial demonstrou muitas das técnicas usadas na programação orientada a objeto:
+Este tutorial demonstrou muitas das técnicas usadas na programação de Object-Oriented:
 
 - Você usou a *abstração* quando manteve muitos detalhes `private` em cada classe.
 - Você usou o *encapsulamento* quando definiu classes para cada um dos tipos de conta diferentes. Essas classes descreveram o comportamento para esse tipo de conta.
