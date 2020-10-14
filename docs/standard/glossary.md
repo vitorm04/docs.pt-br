@@ -1,14 +1,14 @@
 ---
 title: Glossário .NET
 description: Descubra o significado de termos selecionados usados na documentação do .NET.
-ms.date: 01/22/2019
+ms.date: 10/13/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: b79580baa12cc8081346678f06d49a9d0455375c
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 1d9330b68f80da934777cb3aee6d2b3cb52c8256
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89415001"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050338"
 ---
 # <a name="net-glossary"></a>Glossário .NET
 
@@ -21,6 +21,18 @@ Compilador Ahead-of-Time.
 Semelhante ao [JIT](#jit), esse compilador também converte [IL](#il) em código de máquina. Diferentemente da compilação JIT, a compilação AOT acontece antes que o aplicativo seja executado e normalmente é executada em um computador diferente. Como as cadeias de ferramentas da AOT não são compiladas em tempo de execução, elas não precisam minimizar o tempo gasto na compilação. Isso significa que elas podem gastar mais tempo em otimização. Como o contexto da AOT é o aplicativo inteiro, o compilador AOT também executa a vinculação de módulo cruzado e a análise de programa inteiro, o que significa que todas as referências são seguidas e um único executável é produzido.
 
 Confira [CoreRT](#corert) e [.NET Native](#net-native).
+
+## <a name="app-model"></a>modelo de aplicativo
+
+Uma API específica da [carga de trabalho](#workload). Estes são alguns exemplos:
+
+* ASP.NET
+* ASP.NET Web API
+* Entity Framework (EF)
+* Windows Presentation Foundation (WPF)
+* Windows Communication Foundation (WCF)
+* Windows Workflow Foundation (WF)
+* Windows Forms (WinForms)
 
 ## <a name="aspnet"></a>ASP.NET
 
@@ -292,9 +304,15 @@ Plataforma Universal do Windows.
 
 Uma implementação do .NET que é usada para criar aplicativos do Windows modernos e sensíveis ao toque, bem como software para a IoT (Internet das Coisas). Ele foi projetado para unificar os diferentes tipos de dispositivos que você talvez queira direcionar, incluindo PCs, tablets, telefones e até mesmo o Xbox. A UWP fornece muitos serviços, como um repositório centralizado de aplicativos, um ambiente de execução (AppContainer) e um conjunto de APIs do Windows para usar em vez das APIS do Win32 (WinRT). Os aplicativos podem ser escritos em C++, C#, Visual Basic e JavaScript. Ao usar C# e Visual Basic, as APIs do .NET são fornecidas pelo .NET 5 (e .NET Core) e por versões posteriores.
 
-## <a name="see-also"></a>Confira também
+## <a name="workload"></a>workload
+
+Um tipo de aplicativo que alguém está criando. Mais genérico do que o [modelo de aplicativo](#app-model). Por exemplo, na parte superior de cada página de documentação do .NET, incluindo esta, é uma lista suspensa para **cargas**de trabalho, que permite que você alterne para a documentação de ** \& dados** **Web**, **móveis**, de **nuvem**, de **área de trabalho**e de Machine Learning.
+
+Em alguns contextos, a *carga de trabalho* refere-se a uma coleção de recursos do Visual Studio que você pode optar por instalar para dar suporte a um tipo específico de aplicativo. Para obter um exemplo, consulte [selecionar uma carga de trabalho](../core/install/windows.md#select-a-workload).
+
+## <a name="see-also"></a>Veja também
 
 - [Conceitos básicos do .NET](../fundamentals/index.yml)
-- [Guia de .NET Framework](../framework/index.yml)
+- [Guia do .NET Framework](../framework/index.yml)
 - [Visão geral do ASP.NET](/aspnet/index#pivot=aspnet)
 - [Visão geral de ASP.NET Core](/aspnet/index#pivot=core)

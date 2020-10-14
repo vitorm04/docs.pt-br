@@ -4,18 +4,18 @@ description: Saiba o que é um aplicativo de arquivo único e por que você deve
 author: lakshanf
 ms.author: lakshanf
 ms.date: 08/28/2020
-ms.openlocfilehash: 0167e62ea46e1c23c3d4ef6ea505ee051ffaf264
-ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
+ms.openlocfilehash: 16e9586cfc29072fa2ca70dc482272a5a0e7306a
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91712639"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050410"
 ---
 # <a name="single-file-deployment-and-executable"></a>Implantação de arquivo único e executável
 
 Agrupar todos os arquivos dependentes do aplicativo em um único binário fornece a um desenvolvedor de aplicativos a opção atrativa para implantar e distribuir o aplicativo como um único arquivo. Esse modelo de implantação está disponível desde o .NET Core 3,0 e foi aprimorado no .NET 5,0. Anteriormente no .NET Core 3,0, quando um usuário executa seu aplicativo de arquivo único, o host do .NET Core primeiro extrai todos os arquivos para um diretório temporário antes de executar o aplicativo. O .NET 5,0 melhora essa experiência executando diretamente o código sem a necessidade de extrair os arquivos do aplicativo.
 
-A implantação de arquivo único está disponível tanto para o [modelo de implantação dependente de estrutura](index.md#publish-framework-dependent) quanto para [aplicativos independentes](index.md#publish-self-contained). O tamanho do único arquivo em um aplicativo independente será grande, já que incluirá o tempo de execução e as bibliotecas de estrutura. A opção de implantação de arquivo único pode ser combinada com as opções de publicação [ReadyToRun](../tools/dotnet-publish.md) e [Trim (um recurso experimental no .NET 5,0)](trim-self-contained.md) .
+A implantação de arquivo único está disponível tanto para o [modelo de implantação dependente de estrutura](index.md#publish-framework-dependent) quanto para [aplicativos independentes](index.md#publish-self-contained). O tamanho do único arquivo em um aplicativo independente será grande, já que incluirá o tempo de execução e as bibliotecas de estrutura. A opção de implantação de arquivo único pode ser combinada com as opções de publicação [ReadyToRun](ready-to-run.md) e [Trim (um recurso experimental no .NET 5,0)](trim-self-contained.md) .
 
 ## <a name="api-incompatibility"></a>Incompatibilidade de API
 

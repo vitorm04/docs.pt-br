@@ -1,18 +1,18 @@
 ---
-title: O que há de novo no .NET 5
+title: Novidades do .NET 5
 description: Saiba mais sobre o .NET 5, uma plataforma de desenvolvimento de plataforma cruzada e de software livre que é a próxima evolução do .NET Core.
-ms.date: 09/02/2020
+ms.date: 10/13/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 9d4fc514c9de7a668f909286f10d6fe28ada7f90
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: cc86784e3fcac7e8a3b6f54c32f66763ae416d99
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955200"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050364"
 ---
-# <a name="whats-new-in-net-5"></a>O que há de novo no .NET 5
+# <a name="whats-new-in-net-5"></a>Novidades do .NET 5
 
 O .NET 5 é a evolução do .NET Core. Este artigo fornece detalhes sobre o que está incluído no .NET 5, que é a próxima versão do .NET Core após a versão 3.1. O número de versão é 5,0 para evitar confusão com .NET Framework 4. x. E "Core" é descartado do nome porque é a principal implementação do .NET em frente. ASP.NET Core retém o nome "Core" para evitar confusão com o ASP.NET MVC 5. Além disso, Entity Framework Core retém o nome "Core" para evitar confusão com Entity Framework 5 e 6. O .NET 5 dá suporte a mais tipos de aplicativos e mais plataformas do que o .NET Core ou o .NET Framework.
 
@@ -38,7 +38,7 @@ O .NET 5 estende essas características, fazendo melhorias incrementais:
   - [System.Text.RegularExpressions](https://devblogs.microsoft.com/dotnet/regex-performance-improvements-in-net-5)
   - [Pooling ValueTask assíncrona](https://devblogs.microsoft.com/dotnet/async-valuetask-pooling-in-net-5)
   - [Muito mais áreas](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5)
-- Otimizações de tamanho de contêiner
+- [Otimizações de tamanho de contêiner](https://github.com/dotnet/dotnet-docker/issues/1814#issuecomment-625294750)
 - [Corte de aplicativo](https://devblogs.microsoft.com/dotnet/app-trimming-in-net-5)
 - [Aprimoramentos do compilador C#](https://devblogs.microsoft.com/dotnet/automatically-find-latent-bugs-in-your-code-with-net-5)
 - Suporte de ferramentas para depuração de despejo
@@ -114,7 +114,7 @@ Isso é semelhante à [`sprintf`](https://fsharp.github.io/fsharp-core-docs/refe
 
 Não há novos recursos de linguagem para Visual Basic no .NET 5. No entanto, com o .NET 5, Visual Basic suporte é estendido para:
 
-| Descrição                            | Parâmetro `dotnet new` |
+| Description                            | Parâmetro `dotnet new` |
 |----------------------------------------|------------------------|
 | Aplicativo do Console                    | `console`              |
 | Biblioteca de classes                          | `classlib`             |

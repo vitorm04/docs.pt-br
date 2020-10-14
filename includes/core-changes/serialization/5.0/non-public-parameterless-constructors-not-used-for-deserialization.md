@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 572ebc47d26e30738fc4e5b8a8fab1f2643e3d83
-ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
+ms.openlocfilehash: 3692848a0cbd4bbbe3c7bb4d2c22a2b19de732e4
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997726"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050451"
 ---
 ### <a name="non-public-parameterless-constructors-not-used-for-deserialization"></a>Construtores não públicos sem parâmetros não usados para desserialização
 
@@ -12,9 +12,9 @@ Para consistência em todos os monikers de estrutura de destino com suporte (TFM
 
 #### <a name="change-description"></a>Descrição das alterações
 
-No .NET Core 3,0 e 3,1, construtores internos e privados podem ser usados para desserialização. Em .NET Standard 2,0 e 2,1, construtores internos e privados não são permitidos e um <xref:System.MissingMethodException> será gerado se nenhum construtor público sem parâmetros for definido.
+OsSystem.Text.Jsautônomos [ em pacotes NuGet](https://www.nuget.org/packages/System.Text.Json/) que dão suporte ao .net Standard 2,0 e superior, ou seja, as versões 4.6.0-4.7.2, se comportam de forma inconsistente com o comportamento interno no .net Core 3,0 e 3,1. No .NET Core 3. x, construtores internos e privados podem ser usados para desserialização. Nos pacotes autônomos, não são permitidos construtores não públicos, e um <xref:System.MissingMethodException> será gerado se nenhum construtor público sem parâmetros for definido.
 
-A partir do .NET 5,0, os construtores não públicos, incluindo construtores sem parâmetros, são ignorados pelo serializador por padrão. O serializador usa um dos seguintes construtores para desserialização:
+A partir do .NET 5,0 e System.Text.Jsno pacote NuGet 5.0.0, o comportamento é consistente entre o pacote NuGet e as APIs internas. Construtores não públicos, incluindo construtores sem parâmetros, são ignorados pelo serializador por padrão. O serializador usa um dos seguintes construtores para desserialização:
 
 - Construtor público anotado com <xref:System.Text.Json.Serialization.JsonConstructorAttribute> .
 - Construtor público sem parâmetros.
@@ -28,7 +28,7 @@ Se nenhum desses construtores estiver disponível, um <xref:System.NotSupportedE
 
 #### <a name="reason-for-change"></a>Motivo da alteração
 
-- Para impor um comportamento consistente entre todos os TFMs (monikers de estrutura de destino) que se <xref:System.Text.Json?displayProperty=fullName> baseiam para o (.NET Core 3,0 e versões posteriores e .NET Standard 2,0 e 2,1)
+- Para impor um comportamento consistente entre todos os TFMs (monikers de estrutura de destino) que se <xref:System.Text.Json?displayProperty=fullName> baseiam para o (.NET Core 3,0 e versões posteriores e .NET Standard 2,0)
 - Porque <xref:System.Text.Json.JsonSerializer> não deve chamar a área da superfície não pública de um tipo, seja um construtor, uma propriedade ou um campo.
 
 #### <a name="recommended-action"></a>Ação recomendada

@@ -2,12 +2,12 @@
 title: Alterações significativas na biblioteca de classes base
 description: Lista as alterações significativas nas principais bibliotecas do .NET.
 ms.date: 07/27/2020
-ms.openlocfilehash: d4deef295479b1f32bd72a69369a11c7375835f4
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 3ecf0e81a3adef097aafb760dc44498d7263f0b6
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955546"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050553"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Principais alterações significativas nas bibliotecas do .NET
 
@@ -17,6 +17,7 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 | Alteração significativa | Versão introduzida |
 | - | :-: |
+| [O valor de FrameworkDescription é .NET, em vez de .NET Core](#frameworkdescriptions-value-is-net-instead-of-net-core) | 5.0 |
 | [Alterações de comportamento da API relacionadas ao assembly para o formato de publicação de arquivo único](#assembly-related-api-behavior-changes-for-single-file-publishing-format) | 5.0 |
 | [Ordem das marcas na atividade. as marcas são revertidas](#order-of-tags-in-activitytags-is-reversed) | 5.0 |
 | [Nomes de parâmetros alterados no RC1](#parameter-names-changed-in-rc1) | 5.0 |
@@ -51,12 +52,16 @@ As seguintes alterações significativas estão documentadas nesta página:
 | [Campos privados adicionados aos tipos de struct internos](#private-fields-added-to-built-in-struct-types) | 2.1 |
 | [Alteração no valor padrão de UseShellExecute](#change-in-default-value-of-useshellexecute) | 2.1 |
 | [Versões do OpenSSL no macOS](#openssl-versions-on-macos) | 2.1 |
-| [UnauthorizedAccessException gerado por FileSystemInfo. Attributes](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1,0 |
-| [Tratamento de exceções de estado de processo corrompido não é suportado](#handling-corrupted-state-exceptions-is-not-supported) | 1,0 |
-| [As propriedades UriBuilder não precedem mais os caracteres à esquerda](#uribuilder-properties-no-longer-prepend-leading-characters) | 1,0 |
-| [Process. StartInfo gera InvalidOperationException para processos que você não iniciou](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1,0 |
+| [UnauthorizedAccessException gerado por FileSystemInfo. Attributes](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
+| [Tratamento de exceções de estado de processo corrompido não é suportado](#handling-corrupted-state-exceptions-is-not-supported) | 1.0 |
+| [As propriedades UriBuilder não precedem mais os caracteres à esquerda](#uribuilder-properties-no-longer-prepend-leading-characters) | 1.0 |
+| [Process. StartInfo gera InvalidOperationException para processos que você não iniciou](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [frameworkdescription-returns-net-not-net-core](../../../includes/core-changes/corefx/5.0/frameworkdescription-returns-net-not-net-core.md)]
+
+***
 
 [!INCLUDE [assembly-api-behavior-changes-for-single-file-publish](../../../includes/core-changes/corefx/5.0/assembly-api-behavior-changes-for-single-file-publish.md)]
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 1c260c349f035de67257adbca06fb447ff993329
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4491b83db195a8d0f5bbf4f4326d92ed9ebd24e7
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277668"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050436"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapes de caracteres em expressões regulares
 A barra invertida (\\) em uma expressão regular indica uma das situações a seguir:  
@@ -46,7 +46,7 @@ A barra invertida (\\) em uma expressão regular indica uma das situações a se
 |`\f`|Corresponde a um avanço de página, `\u000C`.|  
 |`\n`|Corresponde a uma nova linha, `\u000A`.|  
 |`\e`|Corresponde a um escape, `\u001B`.|  
-|`\` *nnn*|Corresponde a um caractere ASCII, em que *nnn* consiste em dois ou três dígitos que representam o código de caractere octal. Por exemplo, `\040` representa um caractere de espaço. Esse constructo é interpretado como referência inversa se tiver apenas um dígito (por exemplo, `\2`) ou se corresponder ao número de um grupo de captura. (Confira [Constructos de referência inversa](backreference-constructs-in-regular-expressions.md)).|  
+|`\`*nnn*|Corresponde a um caractere ASCII, em que *nnn* consiste em dois ou três dígitos que representam o código de caractere octal. Por exemplo, `\040` representa um caractere de espaço. Esse constructo é interpretado como referência inversa se tiver apenas um dígito (por exemplo, `\2`) ou se corresponder ao número de um grupo de captura. (Confira [Constructos de referência inversa](backreference-constructs-in-regular-expressions.md)).|  
 |`\x` *nn*|Corresponde a um caractere ASCII, em que *nn* é um código de caractere hexadecimal com dois dígitos.|  
 |`\c`*X*|Corresponde a um caractere de controle ASCII, em que X é a letra do caractere de controle. Por exemplo, `\cC` é CTRL-C.|  
 |`\u` *nnnn*|Corresponde a uma unidade de código UTF-16 cujo valor é *nnnn* hexadecimal. **Observação:**  O caractere de escape do Perl 5 que é usado para especificar o Unicode não tem suporte do .NET. O escape de caractere do Perl 5 tem o formulário `\x{` *####* `…}` , em que *####* `…` é uma série de dígitos hexadecimais. Em vez disso, use `\u`*nnnn*.|  
@@ -58,7 +58,7 @@ A barra invertida (\\) em uma expressão regular indica uma das situações a se
  [!code-csharp[RegularExpressions.Language.Escapes#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.escapes/cs/escape1.cs#1)]
  [!code-vb[RegularExpressions.Language.Escapes#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.escapes/vb/escape1.vb#1)]  
   
- A expressão regular `\G(.+)[\t|\u007c](.+)\r?\n` é interpretada conforme mostrado na tabela a seguir.  
+ A expressão regular `\G(.+)[\t\u007c](.+)\r?\n` é interpretada conforme mostrado na tabela a seguir.  
   
 |Padrão|Descrição|  
 |-------------|-----------------|  
