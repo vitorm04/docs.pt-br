@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 47f42305f4106f5e05e555a859f13c41bb950519
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: f1556fac0e8aa79c87cd5e74c1b603582ff5db1b
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811246"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160524"
 ---
 ### <a name="http-httpclient-instances-created-by-ihttpclientfactory-log-integer-status-codes"></a>HTTP: instâncias de HttpClient criadas por códigos de status de inteiro de log IHttpClientFactory
 
@@ -63,12 +63,7 @@ Se você precisar forçar a compatibilidade com o comportamento antigo e usar c�
         // Other service registrations go first. Code omitted for brevity.
 
         // Place the following after all AddHttpClient registrations.
-        var descriptors = services.Where(
-            s => s.ServiceType == typeof(IHttpMessageHandlerBuilderFilter));
-        foreach (var descriptor in descriptors)
-        {
-            services.Remove(descriptor);
-        }
+        services.RemoveAll<IHttpMessageHandlerBuilderFilter>();
 
         services.AddSingleton<IHttpMessageHandlerBuilderFilter,
                               MyLoggingHttpMessageHandlerBuilderFilter>();

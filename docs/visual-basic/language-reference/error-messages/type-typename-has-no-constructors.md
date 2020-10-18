@@ -7,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 8fc173182d062c80ffde15b1e7210644d37f8f66
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 249bcb7020f26c7c43d560e91ef7a34e4dc64470
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875104"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161173"
 ---
-# <a name="type-typename-has-no-constructors"></a>O tipo '\<typename>' não tem construtores
+# <a name="bc30251-type-typename-has-no-constructors"></a>BC30251: o tipo ' \<typename> ' não tem construtores
 
-Um tipo não suporta uma chamada para `Sub New()`. Uma possível causa é um compilador corrompido ou arquivo binário.  
-  
- **ID do erro:** BC30251  
-  
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
-1. Se o tipo estiver em um projeto diferente ou em um arquivo referenciado, reinstale o projeto ou arquivo.  
-  
-2. Se o tipo estiver no mesmo projeto, recompile o assembly que contém o tipo.  
-  
-3. Se o erro se repetir, reinstale o compilador Visual Basic.  
-  
-4. Se o erro persistir, reúna informações sobre as circunstâncias e notifique o Microsoft Product Support Services.  
-  
-## <a name="see-also"></a>Confira também
+Um tipo não suporta uma chamada para `Sub New()`. Uma possível causa é um compilador corrompido ou arquivo binário.
+
+ **ID do erro:** BC30251
+
+## <a name="to-correct-this-error"></a>Para corrigir este erro
+
+1. Se o tipo estiver em um projeto diferente ou em um arquivo referenciado, reinstale o projeto ou arquivo.
+
+2. Se o tipo estiver no mesmo projeto, recompile o assembly que contém o tipo.
+
+3. Se o erro se repetir, reinstale o compilador Visual Basic.
+
+4. Se o erro persistir, reúna informações sobre as circunstâncias e notifique o Microsoft Product Support Services.
+
+## <a name="see-also"></a>Veja também
 
 - [Objetos e classes](../../programming-guide/language-features/objects-and-classes/index.md)
 - [Fale conosco](/visualstudio/ide/feedback-options)
