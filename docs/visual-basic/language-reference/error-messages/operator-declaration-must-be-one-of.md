@@ -7,34 +7,34 @@ f1_keywords:
 helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-ms.openlocfilehash: c388b1b0762dd7475ca365a8a62228d0b5d59414
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a94e62e33427987a302a6244b2b8ce8d295e4f11
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873609"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159892"
 ---
-# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>A declaração do operador deve ser um destes: +,-, *, \, /, ^, &amp; , like, mod, and ou, Xor, not, \<\<, >>...
+# <a name="bc33000-operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>BC33000: a declaração do operador deve ser um destes: +,-, *, \, /, ^, &amp; , like, mod, and ou, Xor, not, \<\<, >>...
 
-Você pode declarar apenas um operador que seja elegível para sobrecarga. A tabela a seguir lista os operadores que você pode declarar.  
-  
-|Type|Operadores|  
-|----------|---------------|  
-|Unário|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|  
-|Binário|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|  
-|Conversão (unário)|`CType`|  
-  
- Observe que o operador `=` na lista binária é o operador de comparação, não o operador de atribuição.  
-  
- **ID do erro:** BC33000  
-  
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
-1. Selecione um operador do conjunto de operadores sobrecarregados.  
-  
-2. Se você precisar da funcionalidade de sobrecarregar um operador que você não pode sobrecarregar diretamente, crie um `Function` procedimento que aceite os parâmetros apropriados e retorne o valor apropriado.  
-  
-## <a name="see-also"></a>Confira também
+Você pode declarar apenas um operador que seja elegível para sobrecarga. A tabela a seguir lista os operadores que você pode declarar.
+
+|Tipo|Operadores|
+|----------|---------------|
+|Unário|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|
+|Binário|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|
+|Conversão (unário)|`CType`|
+
+ Observe que o operador `=` na lista binária é o operador de comparação, não o operador de atribuição.
+
+ **ID do erro:** BC33000
+
+## <a name="to-correct-this-error"></a>Para corrigir este erro
+
+- Selecione um operador do conjunto de operadores sobrecarregados.
+
+- Se você precisar da funcionalidade de sobrecarregar um operador que você não pode sobrecarregar diretamente, crie um `Function` procedimento que aceite os parâmetros apropriados e retorne o valor apropriado.
+
+## <a name="see-also"></a>Veja também
 
 - [Instrução Operator](../statements/operator-statement.md)
 - [Procedimentos do operador](../../programming-guide/language-features/procedures/operator-procedures.md)

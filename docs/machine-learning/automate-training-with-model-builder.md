@@ -3,12 +3,12 @@ title: O que é o Construtor de Modelo e como ele funciona?
 description: Como usar o Construtor de Modelo do ML.NET para treinar automaticamente um modelo de machine learning
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 80f5f5d064c4e0c4097dacc6022d4624c1516ab9
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: da6348fb5dde83827558b66b6115d681f08948db
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679671"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161134"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>O que é o Construtor de Modelo e como ele funciona?
 
@@ -54,9 +54,15 @@ A regressão é usada para prever números.
 
 #### <a name="image-classification"></a>Classificação de imagens
 
-A classificação de imagem pode ser usada para identificar imagens de diferentes categorias. Por exemplo, tipos diferentes de terrenos, animais ou defeitos de fabricação.
+A classificação de imagem é usada para identificar imagens de diferentes categorias. Por exemplo, tipos diferentes de terrenos, animais ou defeitos de fabricação.
 
 Você pode usar o cenário de classificação de imagem se tiver um conjunto de imagens e desejar classificar as imagens em categorias diferentes.
+
+#### <a name="object-detection"></a>Detecção de objetos
+
+A detecção de objeto é usada para localizar e categorizar entidades dentro de imagens.  Por exemplo, localizando e identificando carros e pessoas em uma imagem.
+
+Você pode usar a detecção de objeto quando as imagens contiverem vários objetos de tipos diferentes.
 
 #### <a name="recommendation"></a>Recomendação
 
@@ -66,13 +72,15 @@ Você pode usar o cenário de recomendação quando tiver um conjunto de usuári
 
 ## <a name="environment"></a>Ambiente
 
-Você pode treinar seu modelo de aprendizado de máquina localmente no seu computador ou na nuvem no Azure.
+Você pode treinar seu modelo de aprendizado de máquina localmente no seu computador ou na nuvem no Azure, dependendo do cenário.
 
 Ao treinar localmente, você trabalha dentro das restrições dos recursos do computador (CPU, memória e disco). Ao treinar na nuvem, você pode escalar verticalmente seus recursos para atender às demandas do seu cenário, especialmente para grandes conjuntos de altos.
 
-O treinamento local tem suporte para todos os cenários.
+O treinamento de CPU local tem suporte para todos os cenários, exceto para detecção de objetos.
 
-Há suporte para o treinamento do Azure para classificação de imagem.
+Há suporte para o treinamento de GPU local para classificação de imagem.
+
+Há suporte para o treinamento do Azure para classificação de imagem e detecção de objeto.
 
 ## <a name="data"></a>Dados
 
@@ -107,7 +115,7 @@ O rótulo é o preço histórico de casas para essa linha de valores de metro qu
 
 Se você ainda não tiver seus próprios dados, experimente um desses conjuntos de dados:
 
-|Cenário|Exemplo|Dados|Rotular|Recursos|
+|Cenário|Exemplo|Dados|Label|Recursos|
 |-|-|-|-|-|
 |classificação|Prever anomalias de vendas|[dados de vendas do produto](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Vendas do Produto|Mês|
 ||Prever sentimentos de comentários do site|[dados de comentário do site](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Rótulo (0 quando o sentimento é negativo, 1 quando é positivo)|Comentário, ano|

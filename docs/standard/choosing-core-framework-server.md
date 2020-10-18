@@ -1,14 +1,14 @@
 ---
-title: Escolha entre o .NET 5 e o .NET Framework para aplicativos de servidor
+title: Escolher entre o .NET 5 e o .NET Framework para aplicativos de servidor
 description: Um guia para ajudá-lo a decidir qual implementação do .NET usar ao criar um aplicativo de servidor.
 author: cartermp
 ms.date: 10/06/2020
-ms.openlocfilehash: 989a0f83968473523c3d77bed155d6841b240edc
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: d9dce0343f9d37e976472b818e896a5b0a661e76
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050488"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160445"
 ---
 # <a name="net-5-vs-net-framework-for-server-apps"></a>.NET 5 versus .NET Framework para aplicativos de servidor
 
@@ -92,6 +92,8 @@ Algumas tecnologias .NET Framework não estão disponíveis no .NET 5. A lista a
 - Serviços relacionados a fluxo de trabalho: Windows Workflow Foundation (WF), serviços de fluxo de trabalho (WCF + WF em um único serviço) e WCF Data Services (anteriormente conhecidos como "serviços de dados ADO.NET") estão disponíveis somente no .NET Framework.
 
 - Suporte a idiomas: atualmente, Visual Basic e F # têm suporte no .NET 5, mas não em todos os tipos de projeto. Para obter uma lista de modelos de projeto com suporte, consulte [Opções de modelo para o dotnet new](../core/tools/dotnet-new.md#arguments).
+
+Para obter mais informações, consulte [.NET Framework Technologies indisponível no .NET 5](../core/porting/net-framework-tech-unavailable.md).
 
 ### <a name="platform-doesnt-support-net-5"></a>A plataforma não dá suporte ao .NET 5
 

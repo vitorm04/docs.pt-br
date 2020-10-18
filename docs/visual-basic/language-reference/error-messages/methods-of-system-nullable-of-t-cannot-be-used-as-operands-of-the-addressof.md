@@ -7,62 +7,62 @@ f1_keywords:
 helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-ms.openlocfilehash: 421766918c03c2378bbf906f85c5855f44ffbdea
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 173cf19537e3f9ffc4cff6cef71f34b6d365e5d3
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873739"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160386"
 ---
-# <a name="methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a>Os métodos de 'System.Nullable(Of T)' não podem ser usados como operandos do operador 'AddressOf'
+# <a name="bc32126-methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a>BC32126: métodos de ' System. Nullable (Of T) ' não podem ser usados como operandos do operador ' AddressOf '
 
-Uma instrução usa o `AddressOf` operador com um operando que representa um procedimento da <xref:System.Nullable%601> estrutura.  
-  
- **ID do erro:** BC32126  
-  
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
-- Substitua o nome do procedimento na `AddressOf` cláusula por um operando que não seja membro de <xref:System.Nullable%601> .  
-  
-- Escreva uma classe que encapsula o método de <xref:System.Nullable%601> que você deseja usar. No exemplo a seguir, a `NullableWrapper` classe define um novo método chamado `GetValueOrDefault` . Como esse novo método não é um membro de <xref:System.Nullable%601> , ele pode ser aplicado a `nullInstance` uma instância de um tipo anulável para formar um argumento para `AddressOf` .  
-  
-```vb  
-Module Module1  
-  
-    Delegate Function Deleg() As Integer  
-  
-    Sub Main()  
-        Dim nullInstance As New Nullable(Of Integer)(1)  
-  
-        Dim del As Deleg  
-  
-        ' GetValueOrDefault is a method of the Nullable generic  
-        ' type. It cannot be used as an operand of AddressOf.  
-        ' del = AddressOf nullInstance.GetValueOrDefault  
-  
-        ' The following line uses the GetValueOrDefault method  
-        ' defined in the NullableWrapper class.  
-        del = AddressOf (New NullableWrapper(  
-            Of Integer)(nullInstance)).GetValueOrDefault  
-  
-        Console.WriteLine(del.Invoke())  
-    End Sub  
-  
-    Class NullableWrapper(Of T As Structure)  
-        Private m_Value As Nullable(Of T)  
-  
-        Sub New(ByVal Value As Nullable(Of T))  
-            m_Value = Value  
-        End Sub  
-  
-        Public Function GetValueOrDefault() As T  
-            Return m_Value.Value  
-        End Function  
-    End Class  
-End Module  
-```  
-  
-## <a name="see-also"></a>Confira também
+Uma instrução usa o `AddressOf` operador com um operando que representa um procedimento da <xref:System.Nullable%601> estrutura.
+
+ **ID do erro:** BC32126
+
+## <a name="to-correct-this-error"></a>Para corrigir este erro
+
+- Substitua o nome do procedimento na `AddressOf` cláusula por um operando que não seja membro de <xref:System.Nullable%601> .
+
+- Escreva uma classe que encapsula o método de <xref:System.Nullable%601> que você deseja usar. No exemplo a seguir, a `NullableWrapper` classe define um novo método chamado `GetValueOrDefault` . Como esse novo método não é um membro de <xref:System.Nullable%601> , ele pode ser aplicado a `nullInstance` uma instância de um tipo anulável para formar um argumento para `AddressOf` .
+
+```vb
+Module Module1
+
+    Delegate Function Deleg() As Integer
+
+    Sub Main()
+        Dim nullInstance As New Nullable(Of Integer)(1)
+
+        Dim del As Deleg
+
+        ' GetValueOrDefault is a method of the Nullable generic
+        ' type. It cannot be used as an operand of AddressOf.
+        ' del = AddressOf nullInstance.GetValueOrDefault
+
+        ' The following line uses the GetValueOrDefault method
+        ' defined in the NullableWrapper class.
+        del = AddressOf (New NullableWrapper(
+            Of Integer)(nullInstance)).GetValueOrDefault
+
+        Console.WriteLine(del.Invoke())
+    End Sub
+
+    Class NullableWrapper(Of T As Structure)
+        Private m_Value As Nullable(Of T)
+
+        Sub New(ByVal Value As Nullable(Of T))
+            m_Value = Value
+        End Sub
+
+        Public Function GetValueOrDefault() As T
+            Return m_Value.Value
+        End Function
+    End Class
+End Module
+```
+
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Nullable%601>
 - [Operador AddressOf](../operators/addressof-operator.md)

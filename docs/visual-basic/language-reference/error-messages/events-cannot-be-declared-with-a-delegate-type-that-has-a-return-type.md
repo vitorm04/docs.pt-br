@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC31084
 ms.assetid: 6111c5ca-d30b-490a-812e-dd422e221c7d
-ms.openlocfilehash: 8e2110327d0cc29d9654b6dd223efdd657187066
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 92469afc36dd54e679548d76f703c332331cc8fc
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874305"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161940"
 ---
-# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a>Os eventos não podem ser declarados com um tipo delegado que tenha um tipo de retorno
+# <a name="bc31084-events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a>BC31084: os eventos não podem ser declarados com um tipo delegate que tem um tipo de retorno
 
-Um delegado foi especificado para um procedimento de função.  
-  
- **ID do erro:** BC31084  
-  
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
-- Especifique um delegado para um `Sub` procedimento.  
-  
-## <a name="see-also"></a>Confira também
+Um delegado foi especificado para um procedimento de função.
+
+ **ID do erro:** BC31084
+
+## <a name="to-correct-this-error"></a>Para corrigir este erro
+
+- Especifique um delegado para um `Sub` procedimento.
+
+## <a name="see-also"></a>Veja também
 
 - [Eventos](../../programming-guide/language-features/events/index.md)

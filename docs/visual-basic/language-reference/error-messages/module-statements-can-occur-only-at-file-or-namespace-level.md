@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30617
 ms.assetid: 5e9de8e5-d26b-4fb2-9e28-814413fe9cef
-ms.openlocfilehash: 91e6c81bb64c259411cbef8a36629b8b320ea584
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: b946a527d3de3a030ac03691c77afcf440f518ee
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873756"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160308"
 ---
-# <a name="module-statements-can-occur-only-at-file-or-namespace-level"></a>Instruções 'Module' só podem ocorrer no nível de namespace ou arquivo
+# <a name="bc30617-module-statements-can-occur-only-at-file-or-namespace-level"></a>BC30617: instruções ' module ' só podem ocorrer em nível de arquivo ou de namespace
 
-`Module` as instruções devem aparecer na parte superior do arquivo de origem imediatamente após `Option` e `Imports` instruções, atributos globais e declarações de namespace, mas antes de todas as outras declarações.  
-  
- **ID do erro:** BC30617  
-  
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
-- Mova a `Module` instrução para a parte superior da sua declaração de namespace ou arquivo de origem.  
-  
-## <a name="see-also"></a>Confira também
+`Module` as instruções devem aparecer na parte superior do arquivo de origem imediatamente após `Option` e `Imports` instruções, atributos globais e declarações de namespace, mas antes de todas as outras declarações.
+
+ **ID do erro:** BC30617
+
+## <a name="to-correct-this-error"></a>Para corrigir este erro
+
+- Mova a `Module` instrução para a parte superior da sua declaração de namespace ou arquivo de origem.
+
+## <a name="see-also"></a>Veja também
 
 - [Instrução Module](../statements/module-statement.md)
