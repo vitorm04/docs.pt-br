@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC31168
 ms.assetid: 45707363-55e4-4151-892d-d8729106355b
-ms.openlocfilehash: caa0934ba4ab7e80ae9598b4772e5e49c1ec7f41
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 9eef245d6f83770ce26bc9e753711543241d57fb
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875019"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163279"
 ---
-# <a name="xml-axis-properties-do-not-support-late-binding"></a>As propriedades de eixo XML não dão suporte à associação tardia
+# <a name="bc31168-xml-axis-properties-do-not-support-late-binding"></a>BC31168: as propriedades do eixo XML não dão suporte à associação tardia
 
-Uma propriedade de eixo XML foi referenciada por um objeto não tipado.  
-  
- **ID do erro:** BC31168  
-  
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
-- Verifique se o objeto é um objeto de tipo forte <xref:System.Xml.Linq.XElement> antes de fazer referência à propriedade do eixo XML.  
-  
-## <a name="see-also"></a>Confira também
+Uma propriedade de eixo XML foi referenciada por um objeto não tipado.
+
+ **ID do erro:** BC31168
+
+## <a name="to-correct-this-error"></a>Para corrigir este erro
+
+- Verifique se o objeto é um objeto de tipo forte <xref:System.Xml.Linq.XElement> antes de fazer referência à propriedade do eixo XML.
+
+## <a name="see-also"></a>Veja também
 
 - [Propriedades do eixo XML](../xml-axis/index.md)
 - [XML](../../programming-guide/language-features/xml/index.md)

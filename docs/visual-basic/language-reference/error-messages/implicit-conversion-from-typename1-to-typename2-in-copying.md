@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: fced95fe24d42d4af2118706bcaf3337429fea91
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a95a4b792742efcc165f7c7a9592582d34618f11
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873991"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162798"
 ---
-# <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>Conversão implícita de '\<typename1>' em '\<typename2>' ao copiar o valor do parâmetro 'ByRef' '\<parametername>' para o argumento correspondente.
+# <a name="bc41999-implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>BC41999: conversão implícita de " \<typename1> " para " \<typename2> " ao copiar o valor do parâmetro "ByRef" " \<parametername> " de volta para o argumento correspondente.
 
-Um procedimento é chamado com um argumento [ByRef](../modifiers/byref.md) de um tipo diferente daquele do parâmetro correspondente.  
-  
- Se você passar um argumento `ByRef` , o Visual Basic às vezes copiará o valor do argumento em uma variável local no procedimento em vez de passar uma referência. Nesse caso, quando o procedimento retorna, Visual Basic deve copiar o valor da variável local de volta para o argumento no código de chamada.  
-  
- Se um `ByRef` valor de argumento for copiado para o procedimento e o argumento e o parâmetro forem do mesmo tipo, nenhuma conversão será necessária. Mas se os tipos forem diferentes, Visual Basic deverá converter em ambas as direções. Como você não pode usar `CType` ou qualquer uma das outras palavras-chave de conversão em um argumento ou parâmetro de procedimento, tal conversão é sempre implícita.  
-  
- Por padrão, esta mensagem é um aviso. Para obter informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
-  
- **ID do erro:** BC41999  
-  
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
-- Se possível, use um argumento de chamada do mesmo tipo que o parâmetro de procedimento, portanto Visual Basic não precisa fazer nenhuma conversão.  
-  
-- Se você precisar chamar o procedimento com um tipo de argumento diferente do tipo de parâmetro, mas não precisar retornar um valor para o argumento de chamada, defina o parâmetro como [ByVal](../modifiers/byval.md) em vez de `ByRef` .  
-  
-## <a name="see-also"></a>Confira também
+Um procedimento é chamado com um argumento [ByRef](../modifiers/byref.md) de um tipo diferente daquele do parâmetro correspondente.
+
+ Se você passar um argumento `ByRef` , o Visual Basic às vezes copiará o valor do argumento em uma variável local no procedimento em vez de passar uma referência. Nesse caso, quando o procedimento retorna, Visual Basic deve copiar o valor da variável local de volta para o argumento no código de chamada.
+
+ Se um `ByRef` valor de argumento for copiado para o procedimento e o argumento e o parâmetro forem do mesmo tipo, nenhuma conversão será necessária. Mas se os tipos forem diferentes, Visual Basic deverá converter em ambas as direções. Como você não pode usar `CType` ou qualquer uma das outras palavras-chave de conversão em um argumento ou parâmetro de procedimento, tal conversão é sempre implícita.
+
+ Por padrão, esta mensagem é um aviso. Para obter informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).
+
+ **ID do erro:** BC41999
+
+## <a name="to-correct-this-error"></a>Para corrigir este erro
+
+- Se possível, use um argumento de chamada do mesmo tipo que o parâmetro de procedimento, portanto Visual Basic não precisa fazer nenhuma conversão.
+
+- Se você precisar chamar o procedimento com um tipo de argumento diferente do tipo de parâmetro, mas não precisar retornar um valor para o argumento de chamada, defina o parâmetro como [ByVal](../modifiers/byval.md) em vez de `ByRef` .
+
+## <a name="see-also"></a>Veja também
 
 - [Procedimentos](../../programming-guide/language-features/procedures/index.md)
 - [Parâmetros e Argumentos de Procedimento](../../programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)

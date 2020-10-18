@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-ms.openlocfilehash: 8675d9c3b202200c89e12e7a5f51a19d9e3e0e64
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 284a8c71fee8835f78ca5435932819fded1b1f30
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409459"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160126"
 ---
-# <a name="namespace-or-type-specified-in-the-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>O namespace ou o tipo especificado em Imports '\<qualifiedelementname>' não contém nenhum membro público ou não pode ser localizado
+# <a name="bc40056-namespace-or-type-specified-in-the-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>BC40056: o namespace ou tipo especificado em Imports ' \<qualifiedelementname> ' não contém nenhum membro público ou não pode ser encontrado
 
 O namespace ou o tipo especificado em Imports ' \<qualifiedelementname> ' não contém nenhum membro público ou não pode ser encontrado. Verifique se o namespace ou o tipo está definido e contém pelo menos um membro público. Verifique se o nome do alias não contém outros aliases.
 
@@ -46,10 +46,10 @@ Imports behave = winfrm.Design.Behavior`
 
 3. Verifique se o elemento que o contém expõe pelo menos um `Public` membro.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Instrução Imports (tipo e namespace .NET)](../statements/imports-statement-net-namespace-and-type.md)
 - [Instrução Namespace](../statements/namespace-statement.md)
-- [Pública](../modifiers/public.md)
+- [Público](../modifiers/public.md)
 - [Namespaces no Visual Basic](../../programming-guide/program-structure/namespaces.md)
 - [Referências a elementos declarados](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

@@ -7,54 +7,54 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: a93dd0a5422ce2a01a01c6fc77224e3ee946910e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: bca9b74a68815b4e5a3bb2dc114b9031cdf24099
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874147"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162733"
 ---
-# <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>O primeiro operando em uma expressão 'If' binária deve ser um tipo que permite valor nulo ou um de referência
+# <a name="bc33107-first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>BC33107: o primeiro operando em uma expressão ' If ' binária deve ser anulável ou um tipo de referência
 
-Uma `If` expressão pode ter dois ou três argumentos. Quando você envia apenas dois argumentos, o primeiro argumento deve ser um tipo de referência ou um tipo de valor anulável. Se o primeiro argumento for avaliado como algo diferente de `Nothing` , seu valor será retornado. Se o primeiro argumento for avaliado como `Nothing` , o segundo argumento será avaliado e retornado.  
-  
- Por exemplo, o código a seguir contém duas `If` expressões, uma com três argumentos e outra com dois argumentos. As expressões calculam e retornam o mesmo valor.  
-  
-```vb  
-' firstChoice is a nullable value type.  
-Dim firstChoice? As Integer = Nothing  
-Dim secondChoice As Integer = 1128  
-' If expression with three arguments.  
-Console.WriteLine(If(firstChoice IsNot Nothing, firstChoice, secondChoice))  
-' If expression with two arguments.  
-Console.WriteLine(If(firstChoice, secondChoice))  
-```  
-  
- As expressões a seguir causam esse erro:  
-  
-```vb  
-Dim choice1 = 4  
-Dim choice2 = 5  
-Dim booleanVar = True  
-  
-' Not valid.  
-'Console.WriteLine(If(choice1 < choice2, 1))  
-' Not valid.  
-'Console.WriteLine(If(booleanVar, "Test returns True."))  
-```  
-  
- **ID do erro:** BC33107  
-  
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
-- Se você não puder alterar o código para que o primeiro argumento seja um tipo de valor anulável ou tipo de referência, considere converter para uma expressão de três argumentos `If` ou para uma `If...Then...Else` instrução.  
-  
-```vb  
-Console.WriteLine(If(choice1 < choice2, 1, 2))  
-Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))  
-```  
-  
-## <a name="see-also"></a>Confira também
+Uma `If` expressão pode ter dois ou três argumentos. Quando você envia apenas dois argumentos, o primeiro argumento deve ser um tipo de referência ou um tipo de valor anulável. Se o primeiro argumento for avaliado como algo diferente de `Nothing` , seu valor será retornado. Se o primeiro argumento for avaliado como `Nothing` , o segundo argumento será avaliado e retornado.
+
+ Por exemplo, o código a seguir contém duas `If` expressões, uma com três argumentos e outra com dois argumentos. As expressões calculam e retornam o mesmo valor.
+
+```vb
+' firstChoice is a nullable value type.
+Dim firstChoice? As Integer = Nothing
+Dim secondChoice As Integer = 1128
+' If expression with three arguments.
+Console.WriteLine(If(firstChoice IsNot Nothing, firstChoice, secondChoice))
+' If expression with two arguments.
+Console.WriteLine(If(firstChoice, secondChoice))
+```
+
+ As expressões a seguir causam esse erro:
+
+```vb
+Dim choice1 = 4
+Dim choice2 = 5
+Dim booleanVar = True
+
+' Not valid.
+'Console.WriteLine(If(choice1 < choice2, 1))
+' Not valid.
+'Console.WriteLine(If(booleanVar, "Test returns True."))
+```
+
+ **ID do erro:** BC33107
+
+## <a name="to-correct-this-error"></a>Para corrigir este erro
+
+- Se você não puder alterar o código para que o primeiro argumento seja um tipo de valor anulável ou tipo de referência, considere converter para uma expressão de três argumentos `If` ou para uma `If...Then...Else` instrução.
+
+```vb
+Console.WriteLine(If(choice1 < choice2, 1, 2))
+Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))
+```
+
+## <a name="see-also"></a>Veja também
 
 - [Operador If](../operators/if-operator.md)
 - [Instrução If...Then...Else](../statements/if-then-else-statement.md)

@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: 9e4dbaf2f2800454c673cd58ddec4cf0f6e5c6b9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cd23e6c2beb2f93578a350bc41a780c9ab785f26
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409501"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160887"
 ---
-# <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>Expressão é um valor e, por isso, não pode ser o destino de uma atribuição
+# <a name="bc30068-expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>BC30068: Expression é um valor e, portanto, não pode ser o destino de uma atribuição
 
 Uma instrução tenta atribuir um valor a uma expressão. Você pode atribuir um valor somente a uma variável, propriedade ou elemento de matriz gravável em tempo de execução. O exemplo a seguir ilustra como esse erro pode ocorrer.
 
@@ -58,7 +58,7 @@ exitButton.Location = exitLocation
 
 - Use a variável para acessar a propriedade para atribuir um valor a ela.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Operadores e expressões](../../programming-guide/language-features/operators-and-expressions/index.md)
 - [Instruções](../../programming-guide/language-features/statements.md)

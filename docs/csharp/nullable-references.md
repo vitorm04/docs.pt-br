@@ -3,12 +3,12 @@ title: Tipos de referência anuláveis
 description: Este artigo fornece uma visão geral dos tipos de referência anuláveis, adicionados ao C# 8,0. Você aprenderá como o recurso fornece segurança com relação a exceções de referência nula para projetos novos e existentes.
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: 6d068760805a21e41712a4f70735bef41ce2052f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9c253d02c287d7a113536ac148b352486d450cc2
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446666"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160874"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referência anuláveis
 
@@ -125,7 +125,85 @@ O compilador gera avisos ao desreferenciar uma variável ou expressão que **tal
 
 Você adiciona atributos a APIs que fornecem ao compilador mais informações sobre quando argumentos ou valores de retorno podem ou não ser nulos. Você pode aprender mais sobre esses atributos em nosso artigo na referência de linguagem que abrange os [atributos anuláveis](language-reference/attributes/nullable-analysis.md). Esses atributos estão sendo adicionados às bibliotecas do .NET em versões atuais e futuras. As APIs usadas com mais frequência estão sendo atualizadas primeiro.
 
-## <a name="see-also"></a>Confira também
+## <a name="known-pitfalls"></a>Armadilhas conhecidas
+
+Matrizes e structs que contêm tipos de referência são armadilhas conhecidas no recurso de tipos de referência anulável.
+
+### <a name="structs"></a>Estruturas
+
+Uma struct que contém tipos de referência não anuláveis permite atribuir `default` a ela sem nenhum aviso. Considere o seguinte exemplo:
+
+```csharp
+using System;
+
+#nullable enable
+
+public struct Student
+{
+    public string FirstName;
+    public string? MiddleName;
+    public string LastName;
+}
+
+public static class Program
+{
+    public static void PrintStudent(Student student)
+    {
+        Console.WriteLine($"First name: {student.FirstName.ToUpper()}");
+        Console.WriteLine($"Middle name: {student.MiddleName.ToUpper()}");
+        Console.WriteLine($"Last name: {student.LastName.ToUpper()}");
+    }
+
+    public static void Main() => PrintStudent(default);
+}
+```
+
+No exemplo anterior, não há nenhum aviso no `PrintStudent(default)` enquanto os tipos de referência não anuláveis `FirstName` e `LastName` são nulos.
+
+Outro caso mais comum é quando você lida com structs genéricos. Considere o seguinte exemplo:
+
+```csharp
+#nullable enable
+
+public struct Foo<T>
+{
+    public T Bar { get; set; }
+}
+
+public static class Program
+{
+    public static void Main()
+    {
+        string s = default(Foo<string>).Bar;
+    }
+}
+```
+
+No exemplo anterior, a propriedade será `Bar` `null` em tempo de execução e será atribuída a uma cadeia de caracteres não anulável sem nenhum aviso.
+
+### <a name="arrays"></a>Matrizes
+
+As matrizes são também uma armadilha conhecida em tipos de referência anuláveis. Considere o exemplo a seguir, que não produz nenhum aviso:
+
+```csharp
+using System;
+
+#nullable enable
+
+public static class Program
+{
+    public static void Main()
+    {
+        string[] values = new string[10];
+        string s = values[0];
+        Console.WriteLine(s.ToUpper());
+    }
+}
+```
+
+No exemplo anterior, a declaração da matriz mostra que ela contém cadeias de caracteres não anuláveis, enquanto seus elementos são todos inicializados como NULL. Em seguida, a variável `s` recebe um valor nulo (o primeiro elemento da matriz). Por fim, a variável `s` é desreferenciada causando uma exceção de tempo de execução.
+
+## <a name="see-also"></a>Veja também
 
 - [Especificação de tipos de referência Nullable de rascunho](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
 - [Introdução ao tutorial de referências que permitem valor nulo](tutorials/nullable-reference-types.md)

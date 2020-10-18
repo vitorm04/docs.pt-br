@@ -7,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - BC42017
 ms.assetid: 45f552c8-57c6-44c0-97d3-e510119b257a
-ms.openlocfilehash: 1c7b352c7bd61216ecce9901585945e740428ee3
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ef0fa295cadaaa0550be4809ec97c6da13b5e2db
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873857"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160425"
 ---
-# <a name="late-bound-resolution-runtime-errors-could-occur"></a>Resolução de associação tardia; poderiam ocorrer erros de runtime
+# <a name="bc42017-late-bound-resolution-runtime-errors-could-occur"></a>BC42017: resolução de associação tardia; podem ocorrer erros de tempo de execução
 
-Um objeto é atribuído a uma variável declarada para ser do [tipo de dados Object](../data-types/object-data-type.md).  
-  
- Quando você declara uma variável como `Object` , o compilador deve executar a *associação tardia*, o que causa operações extras em tempo de execução. Ele também expõe seu aplicativo a possíveis erros de tempo de execução. Por exemplo, se você atribuir um <xref:System.Windows.Forms.Form> à `Object` variável e, em seguida, tentar acessar a <xref:System.Xml.XmlDocument.NameTable%2A?displayProperty=nameWithType> propriedade, o tempo de execução lançará um <xref:System.MemberAccessException> porque a <xref:System.Windows.Forms.Form> classe não expõe uma `NameTable` propriedade.  
-  
- Se você declarar a variável para ser de um tipo específico, o compilador poderá executar a *ligação antecipada* no momento da compilação. Isso resulta em desempenho aprimorado, acesso controlado aos membros do tipo específico e melhor legibilidade do seu código.  
-  
- Por padrão, esta mensagem é um aviso. Para obter informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
-  
- **ID do erro:** BC42017  
-  
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
-- Se possível, declare a variável para ser de um tipo específico.  
-  
-## <a name="see-also"></a>Confira também
+Um objeto é atribuído a uma variável declarada para ser do [tipo de dados Object](../data-types/object-data-type.md).
+
+ Quando você declara uma variável como `Object` , o compilador deve executar a *associação tardia*, o que causa operações extras em tempo de execução. Ele também expõe seu aplicativo a possíveis erros de tempo de execução. Por exemplo, se você atribuir um <xref:System.Windows.Forms.Form> à `Object` variável e, em seguida, tentar acessar a <xref:System.Xml.XmlDocument.NameTable%2A?displayProperty=nameWithType> propriedade, o tempo de execução lançará um <xref:System.MemberAccessException> porque a <xref:System.Windows.Forms.Form> classe não expõe uma `NameTable` propriedade.
+
+ Se você declarar a variável para ser de um tipo específico, o compilador poderá executar a *ligação antecipada* no momento da compilação. Isso resulta em desempenho aprimorado, acesso controlado aos membros do tipo específico e melhor legibilidade do seu código.
+
+ Por padrão, esta mensagem é um aviso. Para obter informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).
+
+ **ID do erro:** BC42017
+
+## <a name="to-correct-this-error"></a>Para corrigir este erro
+
+- Se possível, declare a variável para ser de um tipo específico.
+
+## <a name="see-also"></a>Veja também
 
 - [Associação antecipada e tardia](../../programming-guide/language-features/early-late-binding/index.md)
 - [Declaração de Variável do Objeto](../../programming-guide/language-features/variables/object-variable-declaration.md)

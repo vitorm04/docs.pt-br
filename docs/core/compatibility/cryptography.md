@@ -2,12 +2,12 @@
 title: Alterações significativas de criptografia
 description: Lista alterações significativas relacionadas à criptografia no .NET Core.
 ms.date: 04/22/2020
-ms.openlocfilehash: c9405625cc4075c05468dc9b8502bf8c76587bad
-ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
+ms.openlocfilehash: 6f37e5caacadc276562e63a728162c6b26f2e435
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997764"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159541"
 ---
 # <a name="cryptography-breaking-changes"></a>Alterações significativas de criptografia
 
@@ -15,6 +15,7 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 | Alteração significativa | Versão introduzida |
 | - | :-: |
+| [Não há suporte para a instanciação de implementações padrão de abstrações criptográficas](#instantiating-default-implementations-of-cryptographic-abstractions-is-not-supported) | 5.0 |
 | [Conjuntos de codificação TLS padrão para .NET no Linux](#default-tls-cipher-suites-for-net-on-linux) | 5.0 |
 | [APIs de System. Security. Cryptography não têm suporte no Webassembly de mais incrivelmente](#systemsecuritycryptography-apis-not-supported-on-blazor-webassembly) | 5.0 |
 | [System. Security. Cryptography. OID é funcionalmente somente init](#systemsecuritycryptographyoid-is-functionally-init-only) | 5.0 |
@@ -26,6 +27,10 @@ As seguintes alterações significativas estão documentadas nesta página:
 | [O parâmetro booliano de SignedCms. ComputeSignature é respeitado](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
 
 ## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [instantiating-default-implementations-of-cryptographic-abstractions-not-supported](../../../includes/core-changes/cryptography/5.0/instantiating-default-implementations-of-cryptographic-abstractions-not-supported.md)]
+
+***
 
 [!INCLUDE [default-cipher-suites-for-tls-on-linux](../../../includes/core-changes/cryptography/5.0/default-cipher-suites-for-tls-on-linux.md)]
 

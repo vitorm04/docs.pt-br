@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: 612f0b273bacab541e2d634612a104eff1f4a796
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e380033f9353781ee7dc86696e93c8d0f18a1a73
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875163"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162967"
 ---
-# <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>Valor de soma de verificação incorreto, dígitos não hexadecimais ou número ímpar de dígitos hexadecimais
+# <a name="bc42033-bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>BC42033: valor de soma de verificação incorreto, dígitos não hexadecimais ou número ímpar de dígitos hexadecimais
 
-Um valor de soma de verificação contém dígitos hexadecimais inválidos ou um número ímpar de dígitos.  
-  
- Quando o ASP.NET gera um arquivo de origem do Visual Basic (extensão .vb), ele calcula uma soma de verificação e a coloca em um arquivo de origem oculto identificado por `#externalchecksum`. Um usuário também pode gerar um arquivo .vb para isso, mas é melhor deixar esse processo para uso interno.  
-  
- Por padrão, esta mensagem é um aviso. Para obter informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
-  
- **ID do erro:** BC42033  
-  
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
-1. Se o ASP.NET estiver gerando o arquivo de origem do Visual Basic, reinicie a compilação do projeto.  
-  
-2. Se esse aviso persistir após a reinicialização, reinstale o ASP.NET e tente compilar novamente.  
-  
-3. Se o aviso ainda persistir, ou se você não estiver usando o ASP.NET, reúna informações sobre as circunstâncias e notifique o Microsoft Product Support Services.  
-  
-## <a name="see-also"></a>Confira também
+Um valor de soma de verificação contém dígitos hexadecimais inválidos ou um número ímpar de dígitos.
+
+ Quando o ASP.NET gera um arquivo de origem do Visual Basic (extensão .vb), ele calcula uma soma de verificação e a coloca em um arquivo de origem oculto identificado por `#externalchecksum`. Um usuário também pode gerar um arquivo .vb para isso, mas é melhor deixar esse processo para uso interno.
+
+ Por padrão, esta mensagem é um aviso. Para obter informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).
+
+ **ID do erro:** BC42033
+
+## <a name="to-correct-this-error"></a>Para corrigir este erro
+
+1. Se o ASP.NET estiver gerando o arquivo de origem do Visual Basic, reinicie a compilação do projeto.
+
+2. Se esse aviso persistir após a reinicialização, reinstale o ASP.NET e tente compilar novamente.
+
+3. Se o aviso ainda persistir, ou se você não estiver usando o ASP.NET, reúna informações sobre as circunstâncias e notifique o Microsoft Product Support Services.
+
+## <a name="see-also"></a>Veja também
 
 - [Visão geral do ASP.NET](/aspnet/overview)
 - [Fale conosco](/visualstudio/ide/feedback-options)

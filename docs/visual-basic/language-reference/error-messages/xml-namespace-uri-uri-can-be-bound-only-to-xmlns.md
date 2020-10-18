@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
-ms.openlocfilehash: 4793c7282043edb46b3d2f77a0f0a955c43ab34c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 1aec6ac0a354bfe7e0378a2e46a70a7161bf6d36
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870194"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163240"
 ---
-# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>URI de namespace XML `http://www.w3.org/XML/1998/namespace` ; pode ser associado somente a ' xmlns '
+# <a name="bc31183-xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>BC31183: URI de namespace de XML `http://www.w3.org/XML/1998/namespace` ; pode ser associado somente a ' xmlns '
 
-O URI `http://www.w3.org/XML/1998/namespace` é usado em uma declaração de namespace XML. Este URI é um namespace reservado e não pode ser incluído em uma declaração de namespace XML.  
-  
- **ID do erro:** BC31183  
-  
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
-Remova a declaração de namespace XML ou substitua o URI `http://www.w3.org/XML/1998/namespace` por um URI de namespace válido.  
-  
-## <a name="see-also"></a>Confira também
+O URI `http://www.w3.org/XML/1998/namespace` é usado em uma declaração de namespace XML. Este URI é um namespace reservado e não pode ser incluído em uma declaração de namespace XML.
+
+ **ID do erro:** BC31183
+
+## <a name="to-correct-this-error"></a>Para corrigir este erro
+
+Remova a declaração de namespace XML ou substitua o URI `http://www.w3.org/XML/1998/namespace` por um URI de namespace válido.
+
+## <a name="see-also"></a>Veja também
 
 - [Instrução Imports (namespace XML)](../statements/imports-statement-xml-namespace.md)
 - [Literais XML](../xml-literals/index.md)
