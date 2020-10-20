@@ -3,11 +3,11 @@ title: Novidades no C# 6 – Guia do C#
 description: Aprenda os novos recursos da versão 6 do C#
 ms.date: 12/12/2018
 ms.openlocfilehash: da40b4c9d4af0094fdd907c542e971ba55086e0f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399388"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224230"
 ---
 # <a name="whats-new-in-c-6"></a>Novidades no C# 6
 
@@ -108,7 +108,7 @@ this.SomethingHappened?.Invoke(this, eventArgs);
 
 Garantir que o lado esquerdo seja avaliado apenas uma vez também permite que você use qualquer expressão, inclusive chamadas de método, no lado esquerdo do `?.`
 
-## <a name="string-interpolation"></a>Interpolação de cadeias de caracteres
+## <a name="string-interpolation"></a>Interpolação de cadeia de caracteres
 
 Com o C# 6, o novo recurso de [interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md) permite que você insira as expressões em uma cadeia de caracteres. Basta preceder a cadeia de caracteres com `$` e usar expressões entre `{` e `}` em vez de ordinais:
 
@@ -131,7 +131,7 @@ Para familiarizar-se com a interpolação de cadeia de caracteres, confira o tut
 
 ## <a name="exception-filters"></a>Filtros de exceção
 
-*Exceção Filtros* são cláusulas que determinam quando uma determinada cláusula de captura deve ser aplicada. Se a expressão usada para um filtro de exceção é avaliada como `true`, a cláusula catch realiza seu processamento normal em uma exceção. Se a expressão for avaliada como `false`, a cláusula `catch` será ignorada. Um uso é examinar informações sobre uma exceção para determinar se uma cláusula `catch` pode processar a exceção:
+*Filtros de exceção* são cláusulas que determinam quando uma determinada cláusula catch deve ser aplicada. Se a expressão usada para um filtro de exceção é avaliada como `true`, a cláusula catch realiza seu processamento normal em uma exceção. Se a expressão for avaliada como `false`, a cláusula `catch` será ignorada. Um uso é examinar informações sobre uma exceção para determinar se uma cláusula `catch` pode processar a exceção:
 
 [!code-csharp[ExceptionFilter](../../../samples/snippets/csharp/new-in-6/NetworkClient.cs#ExceptionFilter)]
 

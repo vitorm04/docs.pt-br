@@ -4,12 +4,12 @@ description: Aprenda como escrever código para examinar a estrutura de um árvo
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 960d72384a7e5f570fc1f94200a7d3b2179343fd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 39baf32c9c53d57227d52b9370f8165ff92d708d
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173302"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223681"
 ---
 # <a name="interpreting-expressions"></a>Interpretando Expressões
 
@@ -516,7 +516,7 @@ Primeiro, os visitantes lidam somente com constantes que são números inteiros.
 
 Até o último exemplo reconhece um subconjunto dos tipos de nó possíveis.
 Você ainda poderá alimentá-lo com muitas expressões que o fariam falhar.
-Uma implementação completa está incluída no .NET Standard com o nome <xref:System.Linq.Expressions.ExpressionVisitor> e pode lidar com todos os tipos de nó possíveis.
+Uma implementação completa é incluída em .NET Standard sob o nome <xref:System.Linq.Expressions.ExpressionVisitor> e pode lidar com todos os tipos de nó possíveis.
 
 Por fim, a biblioteca usada neste artigo foi desenvolvida para demonstração e aprendizado. Ela não está otimizada. Eu o escrevi para tornar as estruturas usadas claras e destacar as técnicas usadas para visitar os nós e analisar o que está lá. Uma implementação de produção dedicaria mais atenção ao desempenho do que eu dediquei.
 

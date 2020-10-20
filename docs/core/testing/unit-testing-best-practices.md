@@ -4,12 +4,12 @@ description: Conheça as melhores práticas para escrever testes de unidade que 
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: ffeaa1e11512cab64695c120f844594b8c5014a8
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 18f17839361d0cb60a52fbf4415665855f1d53be
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281102"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223483"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Melhores práticas de teste de unidade com .NET Core e .NET Standard
 
@@ -93,7 +93,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Renomeando a classe para `FakeOrder`, você tornou a classe muito mais genérica, a classe pode ser usada como uma simulação ou um stub. O que for melhor para o caso de teste. No exemplo acima, `FakeOrder` é usado como um stub. Você não está usando o `FakeOrder` em qualquer forma durante a declaração. `FakeOrder`foi passado para a `Purchase` classe para atender aos requisitos do construtor.
+Renomeando a classe para `FakeOrder`, você tornou a classe muito mais genérica, a classe pode ser usada como uma simulação ou um stub. O que for melhor para o caso de teste. No exemplo acima, `FakeOrder` é usado como um stub. Você não está usando o `FakeOrder` em qualquer forma durante a declaração. `FakeOrder` foi passado para a `Purchase` classe para atender aos requisitos do construtor.
 
 Para usá-lo como uma Simulação, você poderia fazer algo como isto
 
@@ -114,6 +114,8 @@ Nesse caso, você está verificando uma propriedade na Falsificação (declarand
 O ponto principal a lembrar sobre simulações versus stub é que simulações são como stubs, mas você declara com relação ao objeto fictício, enquanto você não declara com relação a um stub.
 
 ## <a name="best-practices"></a>Práticas recomendadas
+
+Tente não introduzir dependências na infraestrutura ao escrever testes de unidade. Isso torna os testes lentos e frágeis e deve ser reservado para testes de integração. Você pode evitar essas dependências no aplicativo seguindo o [Princípio de Dependências Explícitas](https://deviq.com/explicit-dependencies-principle) e usando a [Injeção de Dependência](../extensions/dependency-injection.md). Você também pode manter seus testes de unidade em um projeto separado de seus testes de integração. Isso garante que seu projeto de teste de unidade não tenha referências a ou dependências em pacotes de infraestrutura.
 
 ### <a name="naming-your-tests"></a>Nomeando seus testes
 

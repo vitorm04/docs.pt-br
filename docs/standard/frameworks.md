@@ -4,12 +4,12 @@ description: Saiba mais sobre estruturas de destino para aplicativos e bibliotec
 ms.date: 09/08/2020
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 22689f6c1f161a67978dc0f41c6bc9a6b5acfad7
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: 85bc05f07cfcc5f59a8a27790ee3d78a497cecdc
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065247"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223465"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Estruturas de destino em projetos no estilo SDK
 
@@ -25,13 +25,13 @@ Para estruturas de destino com base em pacote (por exemplo, .NET Standard e .NET
 
 ## <a name="latest-versions"></a>Versões mais recentes
 
-A tabela a seguir define as estruturas de destino mais comuns, como elas são referenciadas e qual versão do [.NET Standard](net-standard.md) elas implementam. Estas versões de estrutura de destino são as versões estáveis mais recentes. As versões de pré-lançamento não são mostradas. Um moniker de estrutura de destino (TFM) é um formato de token padronizado para especificar a estrutura de destino de um aplicativo ou biblioteca .NET.
+A tabela a seguir define as estruturas de destino mais comuns, como elas são referenciadas e qual versão do [.net Standard](net-standard.md) elas implementam. Estas versões de estrutura de destino são as versões estáveis mais recentes. As versões de pré-lançamento não são mostradas. Um moniker de estrutura de destino (TFM) é um formato de token padronizado para especificar a estrutura de destino de um aplicativo ou biblioteca .NET.
 
 | Estrutura de destino      | Última <br/> versão estável | Moniker da estrutura de destino (TFM) | Implementado <br/> Versão do .NET Standard |
 | :-: | :-: | :-: | :-: |
 | .NET Standard         | 2.1                         | netstandard 2.1                 | N/D                                     |
 | .NET Core             | 3.1                         | netcoreapp 3.1                  | 2.1                                     |
-| .NET Framework        | 4.8                         | net48                          | 2.0                                     |
+| .NET Framework        | 4.8                         | net48                          | 2,0                                     |
 
 ## <a name="supported-target-frameworks"></a>Estruturas de destino com suporte
 
@@ -116,7 +116,7 @@ public class MyClass
     {
 #if NET40
         Console.WriteLine("Target framework: .NET Framework 4.0");
-#elif NET45  
+#elif NET45
         Console.WriteLine("Target framework: .NET Framework 4.5");
 #else
         Console.WriteLine("Target framework: .NET Standard 1.4");
@@ -146,7 +146,7 @@ As seguintes estruturas de destino estão preteridas. Os pacotes direcionados a 
 | win10                                                                                      | uap10.0     |
 | winrt                                                                                      | netcore45   |
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Desenvolver bibliotecas com as ferramentas de plataforma cruzada](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)

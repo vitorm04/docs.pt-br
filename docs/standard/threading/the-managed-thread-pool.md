@@ -10,11 +10,11 @@ helpviewer_keywords:
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 ms.openlocfilehash: 2671ce7c9721b15de8a3805da27040e973a62804
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400627"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223790"
 ---
 # <a name="the-managed-thread-pool"></a>O pool de threads gerenciados
 
@@ -36,7 +36,7 @@ Exceções sem tratamento nos threads do pool de threads encerram o processo. H�
 - Um <xref:System.AppDomainUnloadedException?displayProperty=nameWithType> é gerado em um thread do pool de threads porque o domínio do aplicativo está sendo descarregado.  
 - O CLR ou um processo de host encerra o thread.  
   
-Para obter mais informações, consulte [Exceções em Tópicos Gerenciados](exceptions-in-managed-threads.md).  
+Para obter mais informações, consulte [exceções em threads gerenciados](exceptions-in-managed-threads.md).  
   
 ### <a name="maximum-number-of-thread-pool-threads"></a>Número máximo de threads do pool de threads
 
@@ -45,7 +45,7 @@ O número de operações que podem ser enfileiradas para o pool de threads é li
 Você pode controlar o número máximo de threads usando os métodos <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> e <xref:System.Threading.ThreadPool.SetMaxThreads%2A?displayProperty=nameWithType>.  
 
 > [!NOTE]
-> O código que hospeda o tempo de [`ICorThreadpool::CorSetMaxThreads`](../../framework/unmanaged-api/hosting/icorthreadpool-corsetmaxthreads-method.md) execução do idioma comum pode definir o tamanho usando o método.  
+> O código que hospeda o Common Language Runtime pode definir o tamanho usando o [`ICorThreadpool::CorSetMaxThreads`](../../framework/unmanaged-api/hosting/icorthreadpool-corsetmaxthreads-method.md) método.  
   
 ### <a name="thread-pool-minimums"></a>Valores mínimos no pool de threads
 
@@ -63,7 +63,7 @@ Quando o mínimo é atingido, o pool de threads pode criar threads adicionais ou
 
 A partir do .NET Framework 4, a maneira mais fácil de usar o pool de threads é usando a [TPL (Biblioteca de paralelismo de tarefas)](../parallel-programming/task-parallel-library-tpl.md). Por padrão, tipos de TPL como <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> usam threads do pool de threads para executar tarefas.
 
-Você também pode usar o <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> pool de segmentos ligando a partir de código gerenciado (ou [`ICorThreadpool::CorQueueUserWorkItem`](../../framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md) de código não gerenciado) e passando um <xref:System.Threading.WaitCallback?displayProperty=nameWithType> delegado representando o método que executa a tarefa.
+Você também pode usar o pool de threads chamando <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> de código gerenciado (ou [`ICorThreadpool::CorQueueUserWorkItem`](../../framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md) de código não gerenciado) e passando um <xref:System.Threading.WaitCallback?displayProperty=nameWithType> delegado que representa o método que executa a tarefa.
 
 Outra maneira de usar o pool de threads é enfileirando itens de trabalho relacionados a uma operação de espera usando o método <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> e passando um <xref:System.Threading.WaitHandle?displayProperty=nameWithType> que, quando sinalizado ou após tempo limite, chama o método representado pelo delegado <xref:System.Threading.WaitOrTimerCallback?displayProperty=nameWithType>. Os threads do pool de thread são usados para invocar métodos de retorno de chamada.  
 
@@ -83,14 +83,14 @@ Há várias situações nas quais é apropriado criar e gerenciar seus próprios
 - Você precisa colocar os threads em um apartamento de thread único. Todos os threads <xref:System.Threading.ThreadPool> estão no apartamento de vários threads.  
 - Você precisa ter uma identidade estável associada ao thread, ou dedicar um thread a uma tarefa.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Threading.ThreadPool?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
 - [Biblioteca de tarefas paralelas (TPL)](../parallel-programming/task-parallel-library-tpl.md)
-- [Como retornar um valor de uma tarefa](../parallel-programming/how-to-return-a-value-from-a-task.md)
-- [Objetos e recursos de rosca](threading-objects-and-features.md)
-- [Linhas e Roscas](threads-and-threading.md)
-- [E/S de arquivo assíncrona](../io/asynchronous-file-i-o.md)
+- [Como: Retornar um valor de uma tarefa](../parallel-programming/how-to-return-a-value-from-a-task.md)
+- [Threading de objetos e recursos](threading-objects-and-features.md)
+- [Threads e threading](threads-and-threading.md)
+- [E/s de arquivo assíncrono](../io/asynchronous-file-i-o.md)
 - [Temporizadores](timers.md)

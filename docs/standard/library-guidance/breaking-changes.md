@@ -3,11 +3,11 @@ title: Alterações da falha e bibliotecas do .NET
 description: Práticas recomendadas para navegar por alterações da falha ao criar bibliotecas .NET.
 ms.date: 10/02/2018
 ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400417"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223325"
 ---
 # <a name="breaking-changes"></a>Alterações de quebra
 
@@ -64,9 +64,9 @@ Uma alteração da falha binária acontece quando você altera a API pública de
 
 Um alteração da falha binária também pode interromper um **assembly inteiro**. Renomear um assembly com `AssemblyName` alterará a identidade do assembly, o que também ocorrerá ao adicionar, remover ou alterar a chave de nomenclatura forte do assembly. Uma alteração da identidade de um assembly interromperá todo o código compilado que o utiliza.
 
-❌NÃO mude um nome de montagem.
+❌ Não altere um nome de assembly.
 
-❌NÃO adicione, remova ou altere a chave de nomeação forte.
+❌ Não adicione, remova ou altere a chave de nomenclatura forte.
 
 ✔️ CONSIDERE a possibilidade de usar classes base abstratas em vez de interfaces.
 
@@ -96,11 +96,11 @@ public class Document
 
 > Remover APIs é uma alteração da falha binária. Considere a possibilidade de manter métodos e tipos obsoletos se mantê-los tem baixo custo e não adiciona muitas dívidas técnicas à sua biblioteca. Não remover tipos e métodos pode ajudar a evitar os piores cenários mencionados acima.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Considerações sobre versão e atualização para os desenvolvedores de C#](../../csharp/whats-new/version-update-considerations.md)
 - [Um guia definitivo para as alterações da falha de API no .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-- [.NET quebrando regras de mudança](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
+- [Regras de alteração significativa do .NET](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[Anterior](versioning.md)

@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: e2fd0237556f877af64708674f00e9efddf95869
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 35e408ed3552550f19879409128784b2513e56c8
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209637"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224265"
 ---
 # <a name="net-class-libraries"></a>Bibliotecas de classes do .NET
 
@@ -42,9 +42,9 @@ Muitos desenvolvedores de biblioteca mudam de produzir várias bibliotecas espec
 
 As bibliotecas do .NET Standard são uma substituição dos conceitos de bibliotecas específicas da plataforma e portáteis. Elas são específicas da plataforma no sentido de que expõem toda a funcionalidade da plataforma subjacente (sem plataformas sintéticas ou interseções de plataforma). Elas são portáteis no sentido de que funcionam em todas as plataformas de suporte.
 
-O .NET Standard expõe um conjunto de _contratos_ de biblioteca. As implementações do .NET devem dar suporte a cada contrato, completamente ou não dar nenhum suporte. Cada implementação, portanto, dá suporte a um conjunto de contratos do .NET Standard. O resultado é que há suporte para cada biblioteca de classes do .NET Standard nas plataformas compatíveis com suas dependências de contrato.
+.NET Standard expõe um conjunto de _contratos_de biblioteca. As implementações do .NET devem dar suporte a cada contrato, completamente ou não dar nenhum suporte. Cada implementação, portanto, dá suporte a um conjunto de contratos do .NET Standard. O resultado é que há suporte para cada biblioteca de classes do .NET Standard nas plataformas compatíveis com suas dependências de contrato.
 
-O .NET Standard não expõe toda a funcionalidade do .NET Framework (isso nem é uma meta), no entanto, ele expõe mais APIs que as Bibliotecas de classes portáteis. Mais APIs serão adicionadas ao longo do tempo.
+O .NET Standard não expõe toda a funcionalidade do .NET Framework (nem é uma meta), no entanto, eles expõem muitas APIs mais do que as bibliotecas de classes portáteis. Mais APIs serão adicionadas ao longo do tempo.
 
 As seguintes plataformas dão suporte às bibliotecas de classes do .NET Standard:
 
@@ -52,7 +52,7 @@ As seguintes plataformas dão suporte às bibliotecas de classes do .NET Standar
 * .NET Framework
 * Mono
 * Xamarin.iOS, Xamarin.Mac, Xamarin.Android
-* UWP (Plataforma Universal do Windows)
+* Plataforma Universal do Windows (UWP)
 * Windows
 * Windows Phone
 * Windows Phone Silverlight

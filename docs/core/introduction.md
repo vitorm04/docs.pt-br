@@ -4,12 +4,12 @@ description: Saiba mais sobre o .NET, uma plataforma de desenvolvimento de softw
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 0539519c2e1dd429983226065e8508ac148e25a8
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: d008fbeabf58a3dddf1ee96fc655b6a685f8edfd
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877555"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223575"
 ---
 # <a name="introduction-to-net"></a>Introdução ao .NET
 
@@ -292,7 +292,7 @@ As bibliotecas para algumas funcionalidades de aplicativos comumente usadas não
 
 Para obter mais informações, consulte o [repositório dotnet/extensões no GitHub](https://github.com/dotnet/extensions).
 
-## <a name="data-access"></a>Acesso de dados
+## <a name="data-access"></a>Acesso aos dados
 
 O .NET fornece um ORM (objeto/mapeador relacional) e uma maneira de escrever consultas SQL no código.
 
@@ -320,7 +320,7 @@ Em 2014, a Microsoft começou a escrever um sucessor de software livre entre pla
 
 Este artigo é sobre o .NET 5, mas grande parte da documentação do .NET 5 ainda tem referências a ".NET Core" ou ".NET Framework". Além disso, "Core" permanece nos nomes [ASP.NET Core](/aspnet/core/) e [Entity Framework Core](/ef/core/).
 
-A documentação também se refere a .NET Standard. O [.net Standard](../standard/net-standard.md) é uma especificação de API que permite desenvolver bibliotecas de classes para várias implementações do .net.
+A documentação também se refere a .NET Standard. [.Net Standard](../standard/net-standard.md) é uma especificação de API que permite desenvolver bibliotecas de classes para várias implementações do .net.
 
 Para obter mais informações, consulte [componentes arquitetônicos .net](../standard/components.md).
 
@@ -328,7 +328,7 @@ Para obter mais informações, consulte [componentes arquitetônicos .net](../st
 
 Algumas das terminologias do .NET podem ser confusas porque a mesma palavra é usada de maneiras diferentes em diferentes contextos. Aqui estão algumas das instâncias mais proeminentes:
 
-* **runtime**
+* **appmodel**
 
   |Contexto  |"tempo de execução" significando |
   |---------|---------|
@@ -344,7 +344,7 @@ Algumas das terminologias do .NET podem ser confusas porque a mesma palavra é u
   | estrutura de destino | A coleção de APIs da qual um aplicativo ou biblioteca do .NET depende. Exemplos: .NET Core 3,1, .NET Standard 2,0 |
   | TFM (Moniker de Estrutura de Destino)  | Um TFM é um formato de token padronizado para especificar a estrutura de destino de um aplicativo ou biblioteca .NET. Exemplo: `net462` para .NET Framework 4.6.2. |
   | aplicativo dependente de estrutura | Um aplicativo que só pode ser executado em um computador em que você instalou o tempo de execução da [página de download do .net](https://dotnet.microsoft.com/download/dotnet-core). "Estrutura" nesse uso é a mesma coisa que o "tempo de execução" que você baixa da página de download do .NET. |
-  
+
 * **SDK**
 
   |Contexto  | "SDK" significando |

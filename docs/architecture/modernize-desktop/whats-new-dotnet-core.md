@@ -2,12 +2,12 @@
 title: Novidades do .NET Core para Área de Trabalho
 description: Saiba mais sobre o .NET Core, as diferenças entre o .NET Core e o .NET Framework e os novos recursos que foram adicionados.
 ms.date: 05/12/2020
-ms.openlocfilehash: b4fc0cb2841fe13b000223aefc5eaf63bd911994
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 796facaf8cd4f0d23fbcd04b90cb78fb28ebc465
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144259"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223639"
 ---
 # <a name="whats-new-with-net-core-for-desktop"></a>Novidades do .NET Core para Área de Trabalho
 
@@ -83,9 +83,9 @@ Para seus aplicativos de área de trabalho novos, recomendamos iniciar diretamen
 
 ## <a name="net-standard-vs-pcl"></a>.NET Standard vs. PCL
 
-O [.NET Standard](../../standard/net-standard.md) é uma especificação formal de APIs do .NET que devem estar disponíveis em todas as implementações do .NET. A motivação por trás do .NET Standard é estabelecer maior uniformidade no ecossistema do .NET. .NET Standard é uma especificação de APIs do .NET que compõem um conjunto uniforme de contratos para compilar seu código. Esses contratos são implementados em cada tipo de .NET, permitindo assim a portabilidade entre diferentes implementações do .NET.
+[.Net Standard](../../standard/net-standard.md) é uma especificação formal das APIs do .NET que devem estar disponíveis em todas as implementações do .net. A motivação por trás .NET Standard está estabelecendo uma maior uniformidade no ecossistema do .NET. .NET Standard é uma especificação de APIs do .NET que compõem um conjunto uniforme de contratos para compilar seu código. Esses contratos são implementados em cada tipo de .NET, permitindo assim a portabilidade entre diferentes implementações do .NET.
 
-O .NET Standard permite os seguintes principais cenários:
+.NET Standard habilita os seguintes cenários principais:
 
 - Define o conjunto uniforme de APIs de bibliotecas de classes base para que todas as implementações do .NET implementem, independentemente da carga de trabalho.
 - Permite que os desenvolvedores criem bibliotecas portáteis, utilizáveis entre implementações do .NET, usando esse mesmo conjunto de APIs.

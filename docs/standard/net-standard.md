@@ -5,12 +5,12 @@ ms.date: 10/05/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: a4a59fea3ab1a6bc93a12e3f0aa13dea726d8121
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: a4736e46eb7c25b64278bed8f2c2457002936b81
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050385"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224156"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -78,7 +78,7 @@ Artefatos derivados são fornecidos para habilitar leitura mais conveniente e pe
 
 O meio de distribuição principal dos assemblies de referência do .NET Standard são os pacotes NuGet. As implementações são entregues de várias formas, apropriadas para cada implementação do .NET.
 
-Pacotes NuGet são direcionados a uma ou mais [estruturas](frameworks.md). Os pacotes do .NET Standard são direcionados à estrutura do ".NET Standard". Você pode direcionar a estrutura de .NET Standard usando o `netstandard` [Compact TFM](frameworks.md) (por exemplo, `netstandard1.4` ). As bibliotecas que se destinam a serem executadas em várias implementações do .NET devem ter como destino essa estrutura. Para obter o mais amplo conjunto de APIs, direcione `netstandard2.0`, pois o número de APIs disponíveis mais do que dobrou entre o .NET Standard 1.6 e 2.0.
+Pacotes NuGet são direcionados a uma ou mais [estruturas](frameworks.md). .NET Standard pacotes visam a estrutura ".NET Standard". Você pode direcionar a estrutura de .NET Standard usando o `netstandard` [Compact TFM](frameworks.md) (por exemplo, `netstandard1.4` ). As bibliotecas que se destinam a serem executadas em várias implementações do .NET devem ter como destino essa estrutura. Para obter o mais amplo conjunto de APIs, direcione `netstandard2.0`, pois o número de APIs disponíveis mais do que dobrou entre o .NET Standard 1.6 e 2.0.
 
 O [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) metapacote faz referência ao conjunto completo de pacotes NuGet que definem .net Standard.  A maneira mais comum de direcionar para `netstandard` é fazer referência a esse metapacote. Ele descreve e fornece acesso às ~40 bibliotecas .NET e APIs associadas, que definem a .NET Standard. Você pode referenciar pacotes adicionais destinados a `netstandard` para obter acesso a APIs adicionais.
 
@@ -163,7 +163,7 @@ Aqui estão alguns problemas com .NET Standard que ajudam a explicar por que o .
 * Use `netstandard2.0` para compartilhar código entre .NET Framework e todas as outras implementações do .net.
 * Use `netstandard2.1` para compartilhar código entre o mono, o Xamarin e o .NET Core 3. x.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [.NET Standard versões (origem)](https://github.com/dotnet/standard/blob/master/docs/versions.md)
 - [Versões do .NET Standard (interface do usuário interativa)](https://dotnet.microsoft.com/platform/dotnet-standard#versions)

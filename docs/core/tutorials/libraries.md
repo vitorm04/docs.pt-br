@@ -4,12 +4,12 @@ description: Saiba como criar bibliotecas do .NET Core usando o CLI do .NET Core
 author: cartermp
 ms.topic: how-to
 ms.date: 05/01/2017
-ms.openlocfilehash: 7aadaf7bf7819d52a57c3a137beff46d924d8cb0
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: e98ce9e08c8d92bb4c89348e21cece60de811848
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396207"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223697"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>Desenvolver bibliotecas com o CLI do .NET Core
 
@@ -33,7 +33,7 @@ Além disso, se você quiser dar suporte a destinos de .NET Framework mais antig
 | 4,0                    | SDK do Windows para Windows 7 e .NET Framework 4         |
 | 2.0, 3.0 e 3.5      | Runtime do .NET Framework 3.5 SP1 (ou versão do Windows 8 ou superior) |
 
-## <a name="how-to-target-the-net-standard"></a>Como direcionar para o .NET Standard
+## <a name="how-to-target-net-standard"></a>Como direcionar .NET Standard
 
 Se você não estiver familiarizado com .NET Standard, consulte [.net Standard](../../standard/net-standard.md) para saber mais.
 

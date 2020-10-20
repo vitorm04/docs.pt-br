@@ -3,12 +3,12 @@ title: Glossário .NET
 description: Descubra o significado de termos selecionados usados na documentação do .NET.
 ms.date: 10/13/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 1d9330b68f80da934777cb3aee6d2b3cb52c8256
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 3de9e0aea253b42d65199dc3d66f026dd023f4c7
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050338"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224406"
 ---
 # <a name="net-glossary"></a>Glossário .NET
 
@@ -98,7 +98,7 @@ Todos os softwares de runtime, as ferramentas de desenvolvimento e os recursos d
 
 O termo "Ecossistema do .NET" difere de termos semelhantes, como "Pilha do .NET", em relação à inclusão de bibliotecas e aplicativos de terceiros. Veja um exemplo em uma frase:
 
-- "A motivação por trás do [.NET Standard](#net-standard) é estabelecer maior uniformidade no ecossistema do .NET."
+- "A motivação por trás do [.net Standard](#net-standard) é estabelecer uma maior uniformidade no ecossistema do .net."
 
 ## <a name="framework"></a>estrutura
 
@@ -138,7 +138,7 @@ Semelhante ao [AOT](#aot), esse compilador converte a [IL](#il) em um código de
 Uma implementação do .NET inclui:
 
 - Um ou mais runtimes. Exemplos: [CLR](#clr), [CoreRT](#corert).
-- Uma biblioteca de classes que implemente uma versão do .NET Standard, podendo incluir APIs adicionais. Exemplos: o [BCLs](#bcl) para [.NET Framework](#net-framework) e o [.NET 5 (e .NET Core) e versões posteriores](#net-5-and-later-versions).
+- Uma biblioteca de classes que implementa uma versão do .NET Standard e pode incluir APIs adicionais. Exemplos: o [BCLs](#bcl) para [.NET Framework](#net-framework) e o [.NET 5 (e .NET Core) e versões posteriores](#net-5-and-later-versions).
 - Opcionalmente, uma ou mais estruturas de aplicativo. Exemplos: [ASP.net](#aspnet), Windows Forms e WPF estão incluídos no .NET Framework e no .NET 5.
 - Opcionalmente, ferramentas de desenvolvimento. Algumas ferramentas de desenvolvimento são compartilhadas entre várias implementações.
 
@@ -244,7 +244,7 @@ Um sistema operacional e o hardware em que ele é executado, como macOS, Windows
 Veja alguns exemplos de uso nessas frases:
 
 - "O .NET Core é uma implementação multiplataforma do .NET."
-- "Os perfis de PCL representam plataformas da Microsoft enquanto que o .NET Standard é independente de plataforma."
+- "Os perfis PCL representam plataformas da Microsoft, enquanto .NET Standard é independente da plataforma".
 
 A documentação .NET herdada às vezes usa "plataforma .NET" para significar uma [implementação do .net](#implementation-of-net) ou da [pilha](#stack) do .net, incluindo todas as implementações. Ambos os usos tendem a ficar confusos com o significado principal (so/hardware); portanto, tentamos evitar esses usos.
 
@@ -278,7 +278,7 @@ A documentação .NET herdada, às vezes, usa "Runtime" no sentido de uma [imple
 
 Um conjunto de tecnologias de programação que são usadas para compilar e executar aplicativos.
 
-"A pilha do .NET" refere-se ao .NET Standard e a todas as implementações do .NET. A frase "uma pilha do .NET" pode se referir a uma implementação do .NET.
+"A pilha do .NET" refere-se a .NET Standard e a todas as implementações do .NET. A frase "uma pilha do .NET" pode se referir a uma implementação do .NET.
 
 ## <a name="target-framework"></a>estrutura de destino
 
@@ -310,7 +310,7 @@ Um tipo de aplicativo que alguém está criando. Mais genérico do que o [modelo
 
 Em alguns contextos, a *carga de trabalho* refere-se a uma coleção de recursos do Visual Studio que você pode optar por instalar para dar suporte a um tipo específico de aplicativo. Para obter um exemplo, consulte [selecionar uma carga de trabalho](../core/install/windows.md#select-a-workload).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Conceitos básicos do .NET](../fundamentals/index.yml)
 - [Guia do .NET Framework](../framework/index.yml)

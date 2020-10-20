@@ -1,15 +1,17 @@
 ---
 title: Conectar o .NET para Apache Spark ao MongoDB
 description: Saiba como se conectar à sua instância do MongoDB de seu aplicativo .NET para Apache Spark.
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4cb78998ddb54621a84e9d224a814047e3c40246
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: 928cc8e3559e13af66268f3d1b3766cf2df9041f
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877829"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223973"
 ---
 # <a name="connect-net-for-apache-spark-to-mongodb"></a>Conectar o .NET para Apache Spark ao MongoDB
 
@@ -75,7 +77,7 @@ Para obter o .NET para Apache Spark se comunicar com sua instância do MongoDB, 
     }
     ```
 
-## <a name="run-your-application"></a>Execute seu aplicativo.
+## <a name="run-your-application"></a>Executar seu aplicativo
 
 Para executar seu .NET para Apache Spark aplicativo, você deve definir o `mongo-spark-connector` módulo como parte da definição de compilação em seu projeto do Spark, usando o `libraryDependency` no `build.sbt` para projetos SBT. Para ambientes Spark como `spark-submit` (ou `spark-shell` ), você deve usar a `--packages` opção de linha de comando da seguinte forma:
 

@@ -4,18 +4,18 @@ description: Descubra como implantar um aplicativo do .NET para Apache Spark no 
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 8ef1429d265c87347bb8771dc01b319fcb9e84d0
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c745231f76142c11002ac6663906c8c44c69cdae
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955364"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223359"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Tutorial: implantar um aplicativo .NET para Apache Spark no Azure HDInsight
 
 Este tutorial ensina como implantar seu .NET para Apache Spark aplicativo na nuvem por meio de um cluster do Azure HDInsight. O HDInsight facilita a criação e a configuração de um cluster Spark no Azure, pois os clusters do Spark no HDInsight são compatíveis com o armazenamento do Azure e Azure Data Lake Storage.
 
-Neste tutorial, você aprenderá a:
+Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
 >
@@ -60,7 +60,7 @@ Antes de começar, execute as seguintes tarefas:
     |Propriedade  |Descrição  |
     |---------|---------|
     |Subscription  | Na lista suspensa, escolha uma das suas assinaturas ativas do Azure. |
-    |Resource group | Especifique se deseja criar um novo grupo de recursos ou usar um existente. Um grupo de recursos é um contêiner que mantém os recursos relacionados a uma solução do Azure. |
+    |Grupo de recursos | Especifique se deseja criar um novo grupo de recursos ou usar um existente. Um grupo de recursos é um contêiner que mantém os recursos relacionados a uma solução do Azure. |
     |Nome do cluster | Dê um nome para seu cluster HDInsight Spark.|
     |Location   | Selecione um local para o grupo de recursos. O modelo usa esse local para criar o cluster, bem como para o armazenamento de cluster padrão. |
     |Tipo de cluster| Selecione **Spark** como o tipo de cluster.|
@@ -100,11 +100,11 @@ Em seguida, você publica o *mySparkApp* criado no [.net para Apache Spark-intro
    foo@bar:~/path/to/app$ dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
 
-2. Execute as seguintes tarefas para compactar seus arquivos de aplicativo publicados para que você possa carregá-los facilmente em seu cluster HDInsight.
+2. Execute as seguintes tarefas para compactar seus arquivos de aplicativo publicados para que você possa carregá-los facilmente em seu cluster HDInsight. Zip o conteúdo da pasta de publicação, *publish.zip* por exemplo, que foi criado como resultado da etapa 1. Todos os assemblies devem estar na primeira camada do arquivo ZIP e não deve haver nenhuma camada de pasta intermediária. Isso significa que, quando você descompactar *publish.zip*, todos os assemblies são extraídos em seu diretório de trabalho atual.
 
    **No Windows:**
 
-   Navegue até *mySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64*. Em seguida, clique com o botão direito do mouse em **publicar** pasta e selecione **Enviar para > pasta compactada (zipada)**. Nomeie a nova pasta **publish.zip**.
+   Use um programa de extração, como 7-zip ou WinZip, para extrair o arquivo para o diretório bin com todos os binários publicados.
 
    **No Linux, execute o seguinte comando:**
 
@@ -176,7 +176,7 @@ Depois que o cluster estiver em execução e você carregou seus arquivos no Azu
 
    Quando seu aplicativo for executado, você verá a mesma tabela de contagem de palavras da execução local de introdução gravada no console. Parabéns, você executou seu primeiro .NET para Apache Spark aplicativo na nuvem!
 
-## <a name="clean-up-resources"></a>Limpar recursos
+## <a name="clean-up-resources"></a>Limpar os recursos
 
 O HDInsight salva seus dados no armazenamento do Azure, para que você possa excluir um cluster com segurança quando ele não estiver em uso. Você também é cobrado por um cluster HDInsight, mesmo quando ele não está em uso. Como os encargos para o cluster são muitas vezes maiores do que os encargos para armazenamento, faz sentido, do ponto de vista econômico, excluir os clusters quando não estiverem em uso.
 

@@ -1,15 +1,17 @@
 ---
 title: Conectar-se ao armazenamento remoto do computador local
 description: Conecte-se às contas de armazenamento do Azure usando .NET para Apache Spark do computador local.
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 09e92b0cae848f9c98b691a11842f131f613396b
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: dc0c3b44279756596f3d456616821e690710ae04
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877827"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224012"
 ---
 # <a name="connect-to-azure-data-lake-storage-gen-2-or-wasb-account"></a>Conectar-se à conta do Azure Data Lake Storage Gen 2 ou WASB
 
