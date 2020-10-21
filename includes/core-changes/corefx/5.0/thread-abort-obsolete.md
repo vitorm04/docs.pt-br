@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 85488de561a2298f2ff4009ec78b9a6e294053f3
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: ee67b32b093ebd42f8ac685b34b12f2f6833be86
+ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598171"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92332907"
 ---
 ### <a name="threadabort-is-obsolete"></a>Thread. Abort é obsoleto
 
-As <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> APIs estão obsoletas. Os projetos direcionados ao .NET 5,0 ou uma versão posterior encontrarão avisos de tempo de compilação se esses métodos forem chamados. Se você suprimir os avisos, um <xref:System.PlatformNotSupportedException> será lançado em tempo de execução.
+As <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> APIs estão obsoletas. Os projetos que se destinam ao .NET 5,0 ou uma versão posterior encontrarão um aviso de tempo de compilação `SYSLIB0006` se esses métodos forem chamados.
 
 #### <a name="change-description"></a>Descrição das alterações
 
