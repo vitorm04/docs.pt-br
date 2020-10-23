@@ -3,12 +3,12 @@ title: Relacional versus Dados NoSQL
 description: Saiba mais sobre dados relacionais e NoSQL em aplicativos nativos de nuvem
 author: robvet
 ms.date: 05/17/2020
-ms.openlocfilehash: 6e7725c2d67452218d1c6bda89c2fec6aa4a2b96
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 11db5cdca06b9c2c8ce12598456c4b147ac379ba
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163629"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434861"
 ---
 # <a name="relational-vs-nosql-data"></a>Relacional versus Dados NoSQL
 
@@ -30,7 +30,7 @@ Os bancos de dados NoSQL incluem vários modelos diferentes para o acesso e o ge
 | :-------- | :-------- |
 | Repositório de documentos | Os dados e os metadados são armazenados hierarquicamente em documentos baseados em JSON no banco de dados. |
 | Repositório de valor de chave | A maneira mais simples dos bancos de dados NoSQL, que são representados como uma coleção de pares chave-valor. |
-| Armazenamento de coluna ampla | Os dados relacionados são armazenados como um conjunto de pares de chave/valor aninhados em uma única coluna. |
+| Wide-Column Store | Os dados relacionados são armazenados como um conjunto de pares de chave/valor aninhados em uma única coluna. |
 | Repositório de grafo | Os dados são armazenados em uma estrutura de gráfico como nó, borda e propriedades de dados. |
 
 ## <a name="the-cap-theorem"></a>Teorema CAP
@@ -65,7 +65,7 @@ Esse tipo de resultado é conhecido como consistência eventual, uma caracterís
 
 Alta disponibilidade e escalabilidade maciça geralmente são mais críticas para os negócios do que a consistência forte. Os desenvolvedores podem implementar técnicas e padrões como sagas, CQRS e mensagens assíncronas para adotar consistência eventual.
 
-> Hoje em dia, deve-se ter cuidado ao conideringr as restrições de teorema de CAP. Um novo tipo de banco de dados, chamado NewSQL, surgiu, que estende o mecanismo de banco de dados relacional para dar suporte à escalabilidade horizontal e ao desempenho escalonável dos sistemas NoSQL.
+> Hoje em dia, deve-se ter cuidado ao considerar as restrições de teorema CAP. Um novo tipo de banco de dados, chamado NewSQL, surgiu, que estende o mecanismo de banco de dados relacional para dar suporte à escalabilidade horizontal e ao desempenho escalonável dos sistemas NoSQL.
 
 ## <a name="considerations-for-relational-vs-nosql-systems"></a>Considerações para sistemas relacionais versus NoSQL
 
@@ -131,7 +131,7 @@ No entanto, a Microsoft continua seu compromisso de manter o Azure uma "platafor
 
 ### <a name="azure-database-for-mysql"></a>Banco de Dados do Azure para MySQL
 
-[MySQL](https://en.wikipedia.org/wiki/MySQL)   é um banco de dados relacional de código aberto e um pilar para aplicativos criados na [pilha de software da lâmpada](https://en.wikipedia.org/wiki/LAMP_(software_bundle)). Amplamente escolhido para cargas de trabalho de *leitura pesada* , ela é usada por muitas organizações de grande porte, incluindo Facebook, Twitter e YouTube. A Community Edition está disponível gratuitamente, enquanto a Enterprise Edition exige uma compra de licença. Criado originalmente em 1995, o produto foi adquirido pela Sun Microsystems em 2008. A Oracle adquiriu Sun e MySQL em 2010.
+O [MySQL](https://en.wikipedia.org/wiki/MySQL) é um banco de dados relacional de código aberto e um pilar para aplicativos criados na [pilha de software da lâmpada](https://en.wikipedia.org/wiki/LAMP_(software_bundle)). Amplamente escolhido para cargas de trabalho de *leitura pesada* , ela é usada por muitas organizações de grande porte, incluindo Facebook, Twitter e YouTube. A Community Edition está disponível gratuitamente, enquanto a Enterprise Edition exige uma compra de licença. Criado originalmente em 1995, o produto foi adquirido pela Sun Microsystems em 2008. A Oracle adquiriu Sun e MySQL em 2010.
 
 O [banco de dados do Azure para MySQL](https://azure.microsoft.com/services/mysql/) é um serviço de banco de dados relacional gerenciado baseado no mecanismo de servidor MySQL de código-fonte aberto. Ele usa o MySQL Community Edition. O servidor MySQL do Azure é o ponto administrativo para o serviço. É o mesmo mecanismo de servidor MySQL usado para implantações locais. O mecanismo pode criar um único banco de dados por servidor ou vários bancos por servidor que compartilham recursos. Você pode continuar a gerenciar dados usando as mesmas ferramentas de código-fonte aberto sem ter que aprender novas habilidades ou gerenciar máquinas virtuais.
 
@@ -207,7 +207,7 @@ Na tabela anterior, observe a opção [API de tabela](/azure/cosmos-db/table-int
 |  | Armazenamento de Tabelas do Azure  | Azure Cosmos DB  |
 | :-------- | :-------- |:-------- |
 | Latency | Rápido | Latência de milissegundo de dígito único para leituras e gravações em qualquer lugar do mundo |
-| Produtividade | Limite de 20.000 operações por tabela | 10 milhões operações por tabela |
+| Taxa de transferência | Limite de 20.000 operações por tabela | 10 milhões operações por tabela |
 | Distribuição Global | Região única com uma única região de leitura secundária opcional | Distribuições completas para todas as regiões com failover automático |
 | Indexação | Disponível somente para propriedades de chave de partição e de linha | Indexação automática de todas as propriedades |
 | Preços | Com base no armazenamento | Com base na taxa de transferência |
@@ -228,7 +228,7 @@ O Azure Cosmos DB oferece cinco modelos de [consistência](/azure/cosmos-db/cons
 
  Essas opções permitem que você faça opções precisas e compensações granulares para consistência, disponibilidade e desempenho para seus dados. Os níveis são apresentados na tabela a seguir.
 
-| Nível de coerência | Description  |
+| Nível de coerência | Descrição  |
 | :-------- | :-------- |
 | Eventual | Nenhuma garantia de classificação para leituras. Eventualmente, as réplicas convergirão. |
 | Prefixo de constante | As leituras ainda são eventuales, mas os dados são retornados na ordenação em que são gravadas. |
@@ -258,7 +258,7 @@ Internamente, Cosmos DB gerencia automaticamente o posicionamento de [partiçõe
 
 ## <a name="newsql-databases"></a>Bancos de dados NewSQL
 
-*NewSQL*   é uma tecnologia de banco de dados emergente que combina a escalabilidade distribuída do NoSQL com as garantias ACID de um banco de dados relacional. Os bancos de dados NewSQL são importantes para sistemas de negócios que devem processar altos volumes de data, em ambientes distribuídos, com suporte total transacional e conformidade com ACID. Enquanto um banco de dados NoSQL pode fornecer grande escalabilidade, ele não garante a consistência dos dados. Problemas intermitentes de dados inconsistentes podem fazer uma sobrecarga na equipe de desenvolvimento. Os desenvolvedores devem construir proteções em seu código de microserviço para gerenciar problemas causados por dados inconsistentes.
+O *NewSQL* é uma tecnologia de banco de dados emergente que combina a escalabilidade distribuída do NoSQL com as garantias acid de um banco de dados relacional. Os bancos de dados NewSQL são importantes para sistemas de negócios que devem processar altos volumes de data, em ambientes distribuídos, com suporte total transacional e conformidade com ACID. Enquanto um banco de dados NoSQL pode fornecer grande escalabilidade, ele não garante a consistência dos dados. Problemas intermitentes de dados inconsistentes podem fazer uma sobrecarga na equipe de desenvolvimento. Os desenvolvedores devem construir proteções em seu código de microserviço para gerenciar problemas causados por dados inconsistentes.
 
 A CNCF (nuvem Native Computing Foundation) apresenta vários projetos de banco de dados NewSQL.
 
@@ -279,7 +279,7 @@ O kubernetes usa uma *construção de serviços* para permitir que um cliente re
 
 Nesse cenário, todas as instâncias de banco de dados são iguais. Não há relações primárias ou secundárias. Técnicas como a *replicação de consenso* encontradas em CockroachDB permitem que qualquer nó de banco de dados manipule qualquer solicitação. Se o nó que recebe uma solicitação de balanceamento de carga tiver os dados necessários localmente, ele responderá imediatamente. Caso contrário, o nó se tornará um gateway e encaminhará a solicitação para os nós apropriados para obter a resposta correta. Da perspectiva do cliente, cada nó de banco de dados é o mesmo: eles aparecem como um único banco de dados *lógico* com garantias de consistência de um sistema de máquina única, apesar de ter dezenas ou até mesmo centenas de nós que estão trabalhando nos bastidores.
 
-Para obter uma visão detalhada da mecânica por trás dos bancos de dados do NewSQL, confira o artigo [Dash: quatro propriedades do banco de dados kubernetes-Native](https://thenewstack.io/dash-four-properties-of-kubernetes-native-databases/) .
+Para obter uma visão detalhada da mecânica por trás dos bancos de dados do NewSQL, consulte o artigo [Dash: quatro propriedades do Kubernetes-Native bancos de dados](https://thenewstack.io/dash-four-properties-of-kubernetes-native-databases/) .
 
 ## <a name="data-migration-to-the-cloud"></a>Migração de dados para a nuvem
 
