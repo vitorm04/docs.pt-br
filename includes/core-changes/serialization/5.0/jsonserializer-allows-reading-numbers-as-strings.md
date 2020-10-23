@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0dfe04ba1313480f15a8e7a7e26da613799180b2
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: a93856aac97af5c392a2e4698d2da42413cfc3c8
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92332869"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434991"
 ---
 ### <a name="aspnet-core-apps-allow-deserializing-quoted-numbers"></a>ASP.NET Core aplicativos permitem a desserialização de números entre aspas
 
@@ -20,7 +20,7 @@ A partir do .NET 5,0, os números entre aspas em cargas JSON são considerados v
 >
 > - Não há nenhuma alteração de comportamento para o padrão, autônomo <xref:System.Text.Json.JsonSerializer> ou <xref:System.Text.Json.JsonSerializerOptions> .
 > - Isso tecnicamente não é uma alteração significativa, pois torna um cenário mais permissivo, em vez de mais restritivo (ou seja, ele tem sucesso em impor um número de uma cadeia de caracteres JSON em vez de gerar uma exceção). No entanto, como essa é uma alteração comportamental significativa que afeta muitos aplicativos ASP.NET Core, ele está documentado aqui.
-> - Os <xref:System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync%2A> <xref:System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsync%2A> métodos de extensão e também usam o <xref:System.Text.Json.JsonSerializerDefaults.Web> conjunto de opções de serialização.
+> - Os <xref:System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync%2A?displayProperty=nameWithType> <xref:System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsync%2A?displayProperty=nameWithType> métodos de extensão e também usam o <xref:System.Text.Json.JsonSerializerDefaults.Web> conjunto de opções de serialização.
 
 #### <a name="version-introduced"></a>Versão introduzida
 

@@ -1,25 +1,23 @@
 ---
-ms.openlocfilehash: 7cb146d19486618a4cee9976abe2220ea4b72790
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 43bd1481ca6c3d3444afda2e2a2c67e7236b4402
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88204031"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434909"
 ---
 ### <a name="binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps"></a>Os métodos de serialização BinaryFormatter são obsoletos e proibidos em aplicativos ASP.NET
 
-`Serialize` e `Deserialize` métodos em <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> , <xref:System.Runtime.Serialization.Formatter> e <xref:System.Runtime.Serialization.IFormatter> agora são obsoletos. Além disso, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> a serialização é proibida por padrão para aplicativos ASP.net.
+`Serialize` e `Deserialize` os métodos em <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> , <xref:System.Runtime.Serialization.Formatter> e <xref:System.Runtime.Serialization.IFormatter> agora são obsoletos como aviso. Além disso, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> a serialização é proibida por padrão para aplicativos ASP.net.
 
 #### <a name="change-description"></a>Descrição das alterações
 
-Devido a [vulnerabilidades de segurança](../../../../docs/standard/serialization/binaryformatter-security-guide.md#binaryformatter-security-vulnerabilities) no <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> , os métodos a seguir agora são obsoletos. Além disso, no ASP.NET Core 5,0 e em aplicativos posteriores, eles lançarão um <xref:System.NotSupportedException> , a menos que o aplicativo Web tenha reativado a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> funcionalidade.
+Devido a [vulnerabilidades de segurança](../../../../docs/standard/serialization/binaryformatter-security-guide.md#binaryformatter-security-vulnerabilities) no <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> , os métodos a seguir agora são obsoletos e produzem um aviso de tempo de compilação com a ID `SYSLIB0011` . Além disso, no ASP.NET Core 5,0 e em aplicativos posteriores, eles lançarão um <xref:System.NotSupportedException> , a menos que o aplicativo Web tenha reativado a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> funcionalidade.
 
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType>
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType>
 
-Esses métodos são marcados como obsoletos como parte de um esforço para o uso do vento <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> no ecossistema do .net.
-
-Os métodos de serialização a seguir também são obsoletos, mas não têm nenhuma alteração comportamental:
+Os seguintes métodos de serialização também são obsoletos e produzem aviso `SYSLIB0011` , mas não têm nenhuma alteração comportamental:
 
 - <xref:System.Runtime.Serialization.Formatter.Serialize(System.IO.Stream,System.Object)?displayProperty=nameWithType>
 - <xref:System.Runtime.Serialization.Formatter.Deserialize(System.IO.Stream)?displayProperty=nameWithType>
@@ -29,6 +27,10 @@ Os métodos de serialização a seguir também são obsoletos, mas não têm nen
 #### <a name="version-introduced"></a>Versão introduzida
 
 5,0 Preview 8
+
+#### <a name="reason-for-change"></a>Motivo da alteração
+
+Esses métodos são marcados como obsoletos como parte de um esforço para o uso do vento <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> no ecossistema do .net.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
@@ -58,7 +60,7 @@ Os métodos de serialização a seguir também são obsoletos, mas não têm nen
   </PropertyGroup>
   ```
 
-  Se você suprimir o aviso no arquivo de projeto, o aviso será suprimido para todos os arquivos de código no projeto. Suprimir SYSLIB0011 não suprime avisos causados por outras APIs obsoletas.
+  Se você suprimir o aviso no arquivo de projeto, o aviso será suprimido para todos os arquivos de código no projeto. A supressão `SYSLIB0011` não elimina os avisos causados pelo uso de outras APIs obsoletas.
 
 - Para continuar usando <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> o em aplicativos ASP.net, você pode reabilitá-lo no arquivo de projeto. No entanto, é altamente recomendável não fazer isso. Para obter mais informações, consulte [Guia de segurança do BinaryFormatter](../../../../docs/standard/serialization/binaryformatter-security-guide.md).
 
