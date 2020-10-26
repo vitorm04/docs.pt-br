@@ -2,12 +2,12 @@
 title: O que há de novo no C# 9,0 – Guia C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 9,0.
 ms.date: 09/04/2020
-ms.openlocfilehash: 57fd5f8775f95b2588e4a7120e35d6d531be4f01
-ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
+ms.openlocfilehash: c256c03831ac759bc45467f38e85fd3a2884dda4
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434825"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526593"
 ---
 # <a name="whats-new-in-c-90"></a>Novidades do C# 9.0
 
@@ -108,7 +108,7 @@ A linha acima cria um novo `Person` registro no qual a `LastName` propriedade é
 
 ***Init somente setters**_ fornecem sintaxe consistente para inicializar membros de um objeto. Os inicializadores de propriedade tornam claro qual valor está definindo qual propriedade. A desvantagem é que essas propriedades devem ser configurável. A partir do C# 9,0, você pode criar `init` acessadores em vez de `set` acessadores para propriedades e indexadores. Os chamadores podem usar a sintaxe do inicializador de propriedade para definir esses valores em expressões de criação, mas essas propriedades são ReadOnly quando a construção é concluída. Os setters somente init fornecem uma janela para alterar o estado. Essa janela fecha quando a fase de construção termina. A fase de construção termina com eficiência após toda a inicialização, incluindo inicializadores de propriedade e with-Expressions concluídos.
 
-O exemplo anterior para registros posicionais demonstra o uso de um setter somente init para definir uma propriedade usando uma expressão with. Você pode declarar somente setters init em qualquer tipo que você escreve. Por exemplo, a seguinte estrutura define uma estrutura de observação do clima:
+Você pode declarar `init` somente setters em qualquer tipo que escrever. Por exemplo, a seguinte estrutura define uma estrutura de observação do clima:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/WeatherObservation.cs" ID="DeclareWeatherObservation":::
 

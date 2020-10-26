@@ -1,7 +1,7 @@
 ---
-description: 'Saiba mais sobre o tipo de struct em C #'
 title: Tipos de estrutura-referência C#
-ms.date: 04/21/2020
+description: 'Saiba mais sobre o tipo de struct em C #'
+ms.date: 10/23/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 5f446dae6a84706e1398a65ffb5a52270cfd92cf
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: daf332dae483d75ef27e78dad5ee912734ccdb5f
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471807"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526596"
 ---
 # <a name="structure-types-c-reference"></a>Tipos de estrutura (referência C#)
 
@@ -37,7 +37,7 @@ A partir do C# 7,2, você usa o `readonly` modificador para declarar que um tipo
 Todos os membros de dados de um `readonly` struct devem ser somente leitura da seguinte maneira:
 
 - Qualquer declaração de campo deve ter o [ `readonly` modificador](../keywords/readonly.md)
-- Qualquer propriedade, incluindo as implementadas automaticamente, deve ser somente leitura
+- Qualquer propriedade, incluindo as implementadas automaticamente, deve ser somente leitura. No C# 9,0 e posterior, uma propriedade pode ter um [ `init` acessador](../../whats-new/csharp-9.md#init-only-setters).
 
 Isso garante que nenhum membro de uma `readonly` struct modifique o estado da estrutura. No C# 8,0 e posterior, isso significa que outros membros da instância, exceto construtores, são implicitamente [`readonly`](#readonly-instance-members) .
 
@@ -68,6 +68,10 @@ Normalmente, você aplica o `readonly` modificador aos seguintes tipos de membro
 
   > [!NOTE]
   > O compilador declara um `get` acessador de uma [propriedade implementada automaticamente](../../programming-guide/classes-and-structs/auto-implemented-properties.md) como `readonly` , independentemente da presença do `readonly` modificador em uma declaração de propriedade.
+
+  No C# 9,0 e posterior, você pode aplicar o `readonly` modificador a uma propriedade ou a um indexador com um `init` acessador:
+
+  :::code language="csharp" source="snippets/shared/StructType.cs" id="ReadonlyWithInit":::
 
 Você não pode aplicar o `readonly` modificador a membros estáticos de um tipo de estrutura.
 

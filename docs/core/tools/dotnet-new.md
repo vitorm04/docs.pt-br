@@ -5,12 +5,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/01/2020
-ms.openlocfilehash: 70297cfe15732716b9ceacae091abe3c8957fb61
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 4a4c8e2806fee663b5f6aa255a6f24250a072a85
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495467"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526617"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -58,7 +58,7 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 
   A tabela a seguir mostra os modelos que vêm pré-instalados com o SDK do .NET Core. O idioma padrão do modelo é mostrado entre parênteses. Clique no link nome curto para ver as opções de modelo específicas.
 
-| Modelos                                    | Nome curto                      | Idioma     | Marcas                                  | Incluída |
+| Modelos                                    | Nome curto                      | Linguagem     | Marcações                                  | Incluída |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | Aplicativo do Console                          | [MMC](#console)             | [C#], F#, VB | Comum/Console                        | 1.0        |
 | Biblioteca de classes                                | [classlib](#classlib)           | [C#], F#, VB | Comum/Library                        | 1.0        |
@@ -74,22 +74,22 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 | Item de Teste do NUnit 3                            | `nunit-test`                    | [C#], F#, VB | Teste/NUnit                            | 2.2        |
 | Projeto de Teste xUnit                           | [xUnit](#test)                  | [C#], F#, VB | Teste/xUnit                            | 1.0        |
 | Componente Razor                              | `razorcomponent`                | [C#]         | Web/ASP.NET                           | 3.0        |
-| Página do Razor                                   | [page](#page)                   | [C#]         | Web/ASP.NET                           | 2,0        |
-| Importações de Exibição do MVC                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2,0        |
-| MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2,0        |
+| Página do Razor                                   | [page](#page)                   | [C#]         | Web/ASP.NET                           | 2.0        |
+| Importações de Exibição do MVC                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
+| MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
 | Blazor Aplicativo de servidor                            | [blazorserver](#blazorserver)   | [C#]         | SiteBlazor                            | 3.0        |
 | BlazorDo WebAssembly aplicativo                       | `blazorwasm`                    | [C#]         | SiteBlazor/WebAssembly                | 3.1.300    |
 | ASP.NET Core Vazio                           | [site](#web)                     | [C#], F#     | Web/Vazio                             | 1.0        |
 | Aplicativo Web ASP.NET Core (Modelo-Exibição-Controlador) | [MVC](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
 | Aplicativo Web ASP.NET Core                         | [webapp, Razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2,2, 2,0   |
-| ASP.NET Core com Angular                    | [angular](#spa)                 | [C#]         | Web/MVC/SPA                           | 2,0        |
-| ASP.NET Core com React.js                   | [reagir](#spa)                   | [C#]         | Web/MVC/SPA                           | 2,0        |
-| ASP.NET Core com React.js e Redux         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2,0        |
+| ASP.NET Core com Angular                    | [angular](#spa)                 | [C#]         | Web/MVC/SPA                           | 2.0        |
+| ASP.NET Core com React.js                   | [reagir](#spa)                   | [C#]         | Web/MVC/SPA                           | 2.0        |
+| ASP.NET Core com React.js e Redux         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2.0        |
 | Biblioteca de Classes do Razor                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/Biblioteca/Biblioteca de Classes do Razor | 2.1        |
 | API Web do ASP.NET Core                         | [webAPI](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
 | ASP.NET Core serviço gRPC                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
 | arquivo dotnet gitignore                        | `gitignore`                     |              | Config                                | 3.0        |
-| Arquivo global.json                             | [globaljson](#globaljson)       |              | Config                                | 2,0        |
+| Arquivo global.json                             | [globaljson](#globaljson)       |              | Config                                | 2.0        |
 | Configuração do NuGet                                 | `nugetconfig`                   |              | Config                                | 1.0        |
 | Arquivo de manifesto da ferramenta local dotnet              | `tool-manifest`                 |              | Config                                | 3.0        |
 | Configuração da Web                                   | `webconfig`                     |              | Config                                | 1.0        |
@@ -143,7 +143,7 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 
 - **`--type <TYPE>`**
 
-  Filtra modelos com base em tipos disponíveis. Os valores predefinidos são `project` , `item` e `other` .
+  Filtra modelos com base em tipos disponíveis. Os valores predefinidos são `project` e `item` .
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
@@ -190,11 +190,11 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   Se especificado, não executa uma restauração implícita durante a criação do projeto. Disponível desde o SDK do .NET Core 2,2.
 
-***
+**_
 
 ### <a name="classlib"></a>classlib
 
-- **`-f|--framework <FRAMEWORK>`**
+- _*`-f|--framework <FRAMEWORK>`**
 
   Especifica a [estrutura](../../standard/frameworks.md) a ser direcionada. Valores: `netcoreapp<version>` para criar uma Biblioteca de classes do .NET Core ou `netstandard<version>` para criar uma Biblioteca de classes .NET Standard. O valor padrão é `netstandard2.0`.
 
@@ -208,11 +208,11 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   Não executa uma restauração implícita durante a criação do projeto.
 
-***
+**_
 
 ### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> WPF, wpflib, wpfcustomcontrollib, wpfusercontrollib
 
-- **`-f|--framework <FRAMEWORK>`**
+- _*`-f|--framework <FRAMEWORK>`**
 
   Especifica a [estrutura](../../standard/frameworks.md) a ser direcionada. O valor padrão é `netcoreapp3.1`. Disponível desde o SDK do .NET Core 3,1.
 
@@ -226,11 +226,11 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   Não executa uma restauração implícita durante a criação do projeto.
 
-***
+**_
 
 ### <a name="winforms-winformslib"></a><a name="winforms"></a> WinForms, winformslib
 
-- **`--langVersion <VERSION_NUMBER>`**
+- _*`--langVersion <VERSION_NUMBER>`**
 
   Define a `LangVersion` propriedade no arquivo de projeto criado. Por exemplo, use `--langVersion 7.3` para usar C# 7.3.
 
@@ -240,11 +240,11 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   Não executa uma restauração implícita durante a criação do projeto.
 
-***
+**_
 
 ### <a name="worker-grpc"></a><a name="web-others"></a> trabalho, grpc
 
-- **`-f|--framework <FRAMEWORK>`**
+- _*`-f|--framework <FRAMEWORK>`**
 
   Especifica a [estrutura](../../standard/frameworks.md) a ser direcionada. O valor padrão é `netcoreapp3.1`. Disponível desde o SDK do .NET Core 3,1.
 
@@ -256,11 +256,11 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   Não executa uma restauração implícita durante a criação do projeto.
 
-***
+**_
 
 ### <a name="mstest-xunit"></a><a name="test"></a> MSTest, xUnit
 
-- **`-f|--framework <FRAMEWORK>`**
+- _*`-f|--framework <FRAMEWORK>`**
 
   Especifica a [estrutura](../../standard/frameworks.md) a ser direcionada. Opção disponível desde o SDK do .NET Core 3,0.
 
@@ -279,11 +279,11 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   Não executa uma restauração implícita durante a criação do projeto.
 
-***
+**_
 
 ### <a name="nunit"></a>NUnit
 
-- **`-f|--framework <FRAMEWORK>`**
+- _*`-f|--framework <FRAMEWORK>`**
 
   Especifica a [estrutura](../../standard/frameworks.md) a ser direcionada.
 
@@ -304,11 +304,11 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   Não executa uma restauração implícita durante a criação do projeto.
 
-***
+**_
 
 ### <a name="page"></a>página
 
-- **`-na|--namespace <NAMESPACE_NAME>`**
+- _*`-na|--namespace <NAMESPACE_NAME>`**
 
   Namespace para o código gerado. O valor padrão é `MyApp.Namespace`.
 
@@ -316,19 +316,19 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   Cria a página sem um PageModel.
 
-***
+**_
 
 ### <a name="viewimports-proto"></a><a name="namespace"></a> viewimports, proto
 
-- **`-na|--namespace <NAMESPACE_NAME>`**
+- _*`-na|--namespace <NAMESPACE_NAME>`**
 
   Namespace para o código gerado. O valor padrão é `MyApp.Namespace`.
 
-***
+**_
 
 ### <a name="blazorserver"></a>blazorserver
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _*`-au|--auth <AUTHENTICATION_TYPE>`**
 
   O tipo de autenticação a ser usado. Os valores possíveis são:
 
@@ -395,11 +395,11 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   Não executa uma restauração implícita durante a criação do projeto.
 
-***
+**_
 
 ### <a name="web"></a>web
 
-- **`--exclude-launch-settings`**
+- _*`--exclude-launch-settings`**
 
   Exclui *launchSettings.js* do modelo gerado.
 
@@ -423,11 +423,11 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   Desativa o HTTPS.
 
-***
+**_
 
 ### <a name="mvc-webapp"></a><a name="web-options"></a> MVC, webapp
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _*`-au|--auth <AUTHENTICATION_TYPE>`**
 
   O tipo de autenticação a ser usado. Os valores possíveis são:
 
@@ -513,11 +513,11 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   Determina se o projeto está configurado para usar a [compilação de tempo de execução do Razor](/aspnet/core/mvc/views/view-compilation#runtime-compilation) em compilações de depuração. Opção disponível desde o SDK do 3.1.201 do .NET Core.
 
-***
+**_
 
 ### <a name="angular-react"></a><a name="spa"></a> angular, reagir
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _*`-au|--auth <AUTHENTICATION_TYPE>`**
 
   O tipo de autenticação a ser usado. Disponível desde o SDK do .NET Core 3.0.
   
@@ -554,11 +554,11 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
 
-***
+**_
 
 ### <a name="reactredux"></a>reactredux
 
-- **`--exclude-launch-settings`**
+- _*`--exclude-launch-settings`**
 
   Exclui *launchSettings.js* do modelo gerado.
 
@@ -582,11 +582,11 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   Desativa o HTTPS.
 
-***
+**_
 
 ### <a name="razorclasslib"></a>razorclasslib
 
-- **`--no-restore`**
+- _*`--no-restore`**
 
   Não executa uma restauração implícita durante a criação do projeto.
 
@@ -594,11 +594,11 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   Dá suporte à adição de páginas e exibições do Razor tradicionais, além dos componentes dessa biblioteca. Disponível desde o SDK do .NET Core 3.0.
 
-***
+**_
   
 ### <a name="webapi"></a>webapi
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _*`-au|--auth <AUTHENTICATION_TYPE>`**
 
   O tipo de autenticação a ser usado. Os valores possíveis são:
 
@@ -663,11 +663,11 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   Não executa uma restauração implícita durante a criação do projeto.
 
-***
+**_
 
 ### <a name="globaljson"></a>globaljson
 
-- **`--sdk-version <VERSION_NUMBER>`**
+- _*`--sdk-version <VERSION_NUMBER>`**
 
   Especifica a versão do SDK do .NET Core a ser usada na *global.jsno* arquivo.
 
@@ -741,7 +741,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
   dotnet new globaljson --sdk-version 3.1.101
   ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Modelos personalizados para dotnet new](custom-templates.md)
 - [Create a custom template for dotnet new](../tutorials/cli-templates-create-item-template.md) (Criar um modelo personalizado para dotnet new)
