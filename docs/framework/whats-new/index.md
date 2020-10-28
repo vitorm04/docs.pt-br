@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 6bbadd05187946cfdc601f9c026d685609251193
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 13346836b6cc1c9db4a1b6fd93a11615c2a843c0
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471937"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687563"
 ---
 # <a name="whats-new-in-net-framework"></a>O que há de novo no .NET Framework
 
@@ -71,7 +71,7 @@ A melhoria na acessibilidade, que permite a um aplicativo proporcionar uma exper
 
 #### <a name="base-classes"></a>Classes base
 
-**Redução do impacto do FIPS na criptografia**. Em versões anteriores do .NET Framework, classes de provedor criptográfico gerenciadas, como <xref:System.Security.Cryptography.SHA256Managed> o throw a, <xref:System.Security.Cryptography.CryptographicException> quando as bibliotecas criptográficas do sistema são configuradas no "modo FIPS". Essas exceções ocorrem porque as versões gerenciadas das classes do provedor criptográfico, ao contrário das bibliotecas criptográficas do sistema, não receberam a certificação 140-2 do padrão FIPS (Federal Information Processing Standards). Como os computadores de desenvolvimento de alguns desenvolvedores estão no modo FIPS, as exceções geralmente ocorrem em sistemas de produção.
+**Redução do impacto do FIPS na criptografia** . Em versões anteriores do .NET Framework, classes de provedor criptográfico gerenciadas, como <xref:System.Security.Cryptography.SHA256Managed> o throw a, <xref:System.Security.Cryptography.CryptographicException> quando as bibliotecas criptográficas do sistema são configuradas no "modo FIPS". Essas exceções ocorrem porque as versões gerenciadas das classes do provedor criptográfico, ao contrário das bibliotecas criptográficas do sistema, não receberam a certificação 140-2 do padrão FIPS (Federal Information Processing Standards). Como os computadores de desenvolvimento de alguns desenvolvedores estão no modo FIPS, as exceções geralmente ocorrem em sistemas de produção.
 
 Por padrão, em aplicativos destinados ao .NET Framework 4.8, as seguintes classes de criptografia gerenciadas não geram mais uma <xref:System.Security.Cryptography.CryptographicException>:
 
@@ -190,11 +190,11 @@ Para habilitar o suporte para ajuste de Alto DPI no Modo Misto, você pode defin
 
 O runtime no .NET Framework 4.8 inclui as seguintes mudanças e melhorias:
 
-**Melhorias no compilador JIT**. O compilador JIT (Just-in-time) no .NET Framework 4.8 baseia-se no compilador JIT do .NET Core 2.1. Muitas das otimizações e todas as correções de bugs feitas no compilador JIT do .NET Core 2.1 estão inclusas no compilador JIT do .NET Framework 4.8.
+**Melhorias no compilador JIT** . O compilador JIT (Just-in-time) no .NET Framework 4.8 baseia-se no compilador JIT do .NET Core 2.1. Muitas das otimizações e todas as correções de bugs feitas no compilador JIT do .NET Core 2.1 estão inclusas no compilador JIT do .NET Framework 4.8.
 
-**Aprimoramentos do NGEN**. O runtime melhorou o gerenciamento de memória para imagens NGEN ([Gerador de Imagem Nativa](../tools/ngen-exe-native-image-generator.md)) para que os dados mapeados das imagens NGEN não residam na memória. Isso reduz a área de superfície disponível para ataques que tentam executar código arbitrário modificando a memória a ser executada.
+**Aprimoramentos do NGEN** . O runtime melhorou o gerenciamento de memória para imagens NGEN ([Gerador de Imagem Nativa](../tools/ngen-exe-native-image-generator.md)) para que os dados mapeados das imagens NGEN não residam na memória. Isso reduz a área de superfície disponível para ataques que tentam executar código arbitrário modificando a memória a ser executada.
 
-**Verificação antimalware em todos os assemblies**. Nas versões anteriores do .NET Framework, o tempo de execução examina todos os assemblies carregados do disco usando o Windows Defender ou software antimalware de terceiros. No entanto, os assemblies carregados de outras fontes, como pelo método <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>, não são examinados e podem conter malware não detectado. A partir do .NET Framework 4.8 em execução no Windows 10, o runtime dispara uma verificação por soluções antimalware que implementam a [AMSI (Interface de Verificação Antimalware)](/windows/desktop/AMSI/antimalware-scan-interface-portal).
+**Verificação antimalware em todos os assemblies** . Nas versões anteriores do .NET Framework, o tempo de execução examina todos os assemblies carregados do disco usando o Windows Defender ou software antimalware de terceiros. No entanto, os assemblies carregados de outras fontes, como pelo método <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>, não são examinados e podem conter malware não detectado. A partir do .NET Framework 4.8 em execução no Windows 10, o runtime dispara uma verificação por soluções antimalware que implementam a [AMSI (Interface de Verificação Antimalware)](/windows/desktop/AMSI/antimalware-scan-interface-portal).
 
 <a name="v472"></a>
 
@@ -688,7 +688,7 @@ Para obter uma lista das novas APIs adicionadas ao .NET Framework 4.7, consulte 
 
 O .NET Framework 4.7 melhora a serialização pelo <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:
 
-**Funcionalidade aprimorada com ECC (criptografia de curva elíptica)**_
+**Funcionalidade aprimorada com ECC (criptografia de curva elíptica)** _
 
 No .NET Framework 4.7, os métodos `ImportParameters(ECParameters)` foram adicionados às classes <xref:System.Security.Cryptography.ECDsa> e <xref:System.Security.Cryptography.ECDiffieHellman> para permitir que um objeto representasse uma chave já estabelecida. Também foi adicionado um método `ExportParameters(Boolean)` à exportação da chave usando parâmetros de curva explícita.
 
@@ -696,7 +696,7 @@ O .NET Framework 4.7 também adiciona suporte para curvas adicionais (incluindo 
 
 Veja um [exemplo dos aprimoramentos de criptografia do .NET Framework 4.7](https://gist.github.com/richlander/5a182899895a87a296c21ada97f7a54e) no GitHub.
 
-_*Suporte melhor para caracteres de controle pelo DataContractJsonSerializer**
+_ *Suporte melhor para caracteres de controle pelo DataContractJsonSerializer**
 
 No .NET Framework 4,7, a <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> classe serializa os caracteres de controle em conformidade com o padrão ECMAScript 6. Esse comportamento é habilitado por padrão para aplicativos direcionados .NET Framework 4,7 e é um recurso de aceitação para aplicativos que estão sendo executados sob .NET Framework 4,7, mas que têm como alvo uma versão anterior do .NET Framework. Para obter mais informações, consulte a seção [compatibilidade de aplicativos](../migration-guide/application-compatibility.md) .
 
@@ -706,7 +706,7 @@ No .NET Framework 4,7, a <xref:System.Runtime.Serialization.Json.DataContractJso
 
 O .NET Framework 4.7 adiciona os seguintes recursos de rede:
 
-**Suporte do sistema operacional padrão para protocolos TLS**_
+**Suporte do sistema operacional padrão para protocolos TLS** _
 
 A pilha de TLS, que é usada por <xref:System.Net.Security.SslStream?displayProperty=nameWithType> e por componentes de início de pilha, como HTTP, FTP e SMTP, permite que os desenvolvedores usem protocolos TLS padrão com suporte do sistema operacional. Os desenvolvedores não precisam mais codificar uma versão de TLS.
 
@@ -716,15 +716,15 @@ A pilha de TLS, que é usada por <xref:System.Net.Security.SslStream?displayProp
 
 No .NET Framework 4.7, o ASP.NET inclui os seguintes recursos novos:
 
-_*Extensibilidade de cache de objeto**
+_ *Extensibilidade de cache de objeto**
 
 A partir do .NET Framework 4.7, o ASP.NET adiciona um novo conjunto de APIs que permitem aos desenvolvedores substituir as implementações padrão de ASP.NET para o armazenamento em cache de objeto na memória e o monitoramento da memória. Agora, os desenvolvedores podem substituir qualquer um dos três componentes a seguir se a implementação do ASP.NET não for adequada:
 
-- **Armazenamento de cache de objeto**. Na nova seção de configuração de provedores de cache, os desenvolvedores podem conectar novas implementações de um cache de objeto para um aplicativo ASP.NET usando a nova interface **ICacheStoreProvider**.
+- **Armazenamento de cache de objeto** . Na nova seção de configuração de provedores de cache, os desenvolvedores podem conectar novas implementações de um cache de objeto para um aplicativo ASP.NET usando a nova interface **ICacheStoreProvider** .
 
-- **Monitoramento de memória**. O monitor de memória padrão no ASP.NET notifica os aplicativos quando eles estiverem se aproximando do limite configurado de bytes particulares para o processo, ou quando o computador estiver com pouca RAM física total disponível. Quando esses limites estiverem próximos, as notificações serão disparadas. Para alguns aplicativos, as notificações são disparadas muito próximas aos limites configurados a fim de permitir reações úteis. Agora, os desenvolvedores podem criar seus próprios monitores de memória para substituir o padrão usando a propriedade <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType>.
+- **Monitoramento de memória** . O monitor de memória padrão no ASP.NET notifica os aplicativos quando eles estiverem se aproximando do limite configurado de bytes particulares para o processo, ou quando o computador estiver com pouca RAM física total disponível. Quando esses limites estiverem próximos, as notificações serão disparadas. Para alguns aplicativos, as notificações são disparadas muito próximas aos limites configurados a fim de permitir reações úteis. Agora, os desenvolvedores podem criar seus próprios monitores de memória para substituir o padrão usando a propriedade <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType>.
 
-- **Reações de limite de memória**. Por padrão, o ASP.NET tenta aparar o cache de objetos e chamar periodicamente <xref:System.GC.Collect%2A?displayProperty=nameWithType> quando o limite do processo de bytes particulares está próximo. Para alguns aplicativos, a frequência de chamadas para <xref:System.GC.Collect%2A?displayProperty=nameWithType> ou a quantidade aparada do cache é ineficaz. Agora, os desenvolvedores podem substituir ou complementar o comportamento padrão incluindo implementações do **IObserver** no monitor de memória do aplicativo.
+- **Reações de limite de memória** . Por padrão, o ASP.NET tenta aparar o cache de objetos e chamar periodicamente <xref:System.GC.Collect%2A?displayProperty=nameWithType> quando o limite do processo de bytes particulares está próximo. Para alguns aplicativos, a frequência de chamadas para <xref:System.GC.Collect%2A?displayProperty=nameWithType> ou a quantidade aparada do cache é ineficaz. Agora, os desenvolvedores podem substituir ou complementar o comportamento padrão incluindo implementações do **IObserver** no monitor de memória do aplicativo.
 
 <a name="wcf47"></a>
 
@@ -746,10 +746,10 @@ A partir do .NET Framework 4,7, o WCF permite que você configure o TLS 1,1 ou o
 
 O WCF inclui diversas alterações de código que eliminam as condições de corrida, melhorando o desempenho e a confiabilidade das opções de serialização. Elas incluem:
 
-- Suporte aprimorado para combinação de código síncrono e assíncrono em chamadas para **SocketConnection.BeginRead** e **SocketConnection.Read**.
-- Confiabilidade aprimorada ao anular uma conexão com **SharedConnectionListener** e **DuplexChannelBinder**.
+- Suporte aprimorado para combinação de código síncrono e assíncrono em chamadas para **SocketConnection.BeginRead** e **SocketConnection.Read** .
+- Confiabilidade aprimorada ao anular uma conexão com **SharedConnectionListener** e **DuplexChannelBinder** .
 - Aumento da confiabilidade das operações de serialização ao chamar o método <xref:System.Runtime.Serialization.FormatterServices.GetSerializableMembers%28System.Type%29?displayProperty=nameWithType>.
-- Confiabilidade aprimorada ao remover um waiter chamando o método **ChannelSynchronizer.RemoveWaiter**.
+- Confiabilidade aprimorada ao remover um waiter chamando o método **ChannelSynchronizer.RemoveWaiter** .
 
 <a name="wf47"></a>
 
@@ -819,7 +819,7 @@ Os validadores de anotação de dados permitem que você execute a validação a
 
 2. O arquivo de recurso é armazenado na pasta App_LocalResources.
 
-3. O nome do arquivo de recursos localizado tem o nome do formulário `DataAnnotation.Localization.{` *name* `}.resx` , em que *Name* é um nome de cultura no formato *languageCode* `-` *Country/regionCode* ou *languageCode*.
+3. O nome do arquivo de recursos localizado tem o nome do formulário `DataAnnotation.Localization.{` *name* `}.resx` , em que *Name* é um nome de cultura no formato *languageCode* `-` *Country/regionCode* ou *languageCode* .
 
 4. O nome da chave do recurso é a cadeia de caracteres atribuída ao atributo <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> e seu valor é a mensagem de erro localizada.
 
@@ -844,7 +844,7 @@ End Class
 
 Você pode criar um arquivo de recurso, DataAnnotation.Localization.fr.resx, cuja chave é a cadeia de caracteres da mensagem de erro e cujo valor é a mensagem de erro localizada. O arquivo deve ser encontrado na pasta `App.LocalResources`. Por exemplo, veja a seguir a chave e seu valor em uma mensagem de erro localizada no idioma francês (fr):
 
-| Nome                                 | Valor                                     |
+| Name                                 | Valor                                     |
 | ------------------------------------ | ----------------------------------------- |
 | A classificação deve estar entre 1 e 10. | La note doit être comprise entre 1 et 10. |
 
@@ -1201,7 +1201,7 @@ No .NET Framework 4.6.2, Windows Workflow Foundation foi aprimorado na seguinte 
 
 A partir do .NET Framework 4,5, o WF dá suporte a expressões C# no Visual Studio Designer e em fluxos de trabalho de código. A Designer de Fluxo de Trabalho rehospedada é um recurso-chave do WF que permite que o Designer de Fluxo de Trabalho esteja em um aplicativo fora do Visual Studio (por exemplo, no WPF).  Windows Workflow Foundation fornece a capacidade de dar suporte a expressões C# e IntelliSense no Designer de Fluxo de Trabalho rehospedado. Para saber mais, confira o [blog do Windows Workflow Foundation](/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer).
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` Em versões do .NET Framework antes do 4.6.2, o WF designer IntelliSense é interrompido quando um cliente recria um projeto de fluxo de trabalho do Visual Studio. Embora a compilação do projeto seja bem-sucedida, os tipos de fluxo de trabalho não são encontrados no designer, e surgem avisos do IntelliSense para os tipos de fluxo de trabalho ausentes na janela **Lista de Erros**. .NET Framework 4.6.2 resolve esse problema e disponibiliza o IntelliSense.
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` Em versões do .NET Framework antes do 4.6.2, o WF designer IntelliSense é interrompido quando um cliente recria um projeto de fluxo de trabalho do Visual Studio. Embora a compilação do projeto seja bem-sucedida, os tipos de fluxo de trabalho não são encontrados no designer, e surgem avisos do IntelliSense para os tipos de fluxo de trabalho ausentes na janela **Lista de Erros** . .NET Framework 4.6.2 resolve esse problema e disponibiliza o IntelliSense.
 
 **Agora, os aplicativos do Fluxo de Trabalho V1 com Acompanhamento de Fluxo de Trabalho ativado são executados no modo FIPS**
 
@@ -1585,9 +1585,9 @@ O .NET 2015 apresenta o .NET Framework 4,6 e o .NET Core. Alguns recursos novos 
 
     É útil usar um formato consistente para opções, já que elas são um contrato formal exposto por uma biblioteca. Veja a seguir dois formatos óbvios.
 
-    - *Opção*.*namespace*.*nomedaopção*
+    - *Opção* . *namespace* . *nomedaopção*
 
-    - *Opção*.*biblioteca*.*nomedaopção*
+    - *Opção* . *biblioteca* . *nomedaopção*
 
   - **Mudanças no TAP (padrão assíncrono baseado em tarefas)**
 
@@ -1843,7 +1843,7 @@ O .NET 2015 apresenta o .NET Framework 4,6 e o .NET Core. Alguns recursos novos 
 
 ## <a name="whats-new-in-net-framework-451"></a>Novidades no .NET Framework 4.5.1
 
-**Atualizações de abril de 2014**:
+**Atualizações de abril de 2014** :
 
 - [Atualização 2 do Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=393658) inclui atualizações para modelos de Biblioteca de Classes Portátil para suporte destes cenários:
 
@@ -1855,7 +1855,7 @@ O .NET 2015 apresenta o .NET Framework 4,6 e o .NET Core. Alguns recursos novos 
 
   - É possível redirecionar uma biblioteca de classes Windows Store ou Windows Phone Store novamente como uma Biblioteca de Classes Portátil.
 
-  Para saber mais sobre essas mudanças, confira [Biblioteca de classes portátil](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+  Para saber mais sobre essas mudanças, confira [Biblioteca de classes portátil](../cross-platform/portable-class-library.md).
 
 - O conjunto de conteúdo do .NET Framework agora inclui documentação para .NET Native, que é uma tecnologia de pré-compilação para construção e implantação dos aplicativos do Windows. Para melhorar o desempenho, o .NET Native compila seus aplicativos diretamente para o código nativo, ao invés de usar uma linguagem intermediária (IL). Para obter detalhes, confira [Compilação de aplicativos com o .NET Nativo](../net-native/index.md).
 
@@ -2081,13 +2081,13 @@ No .NET Framework 4,5, vários novos recursos foram adicionados ao Windows Workf
 
 - Recursos do Designer de Fluxo de Trabalho aperfeiçoados, como o seguinte:
 
-  - Capacidades de pesquisa do fluxo de trabalho aperfeiçoado no Visual Studio, incluindo **Localização Rápida** e **Localizar nos Arquivos**.
+  - Capacidades de pesquisa do fluxo de trabalho aperfeiçoado no Visual Studio, incluindo **Localização Rápida** e **Localizar nos Arquivos** .
 
   - Capacidade de criar automaticamente uma atividade de Sequência quando uma segunda atividade filho é adicionada a uma atividade de contêiner e de incluir ambas as atividades na atividade de Sequência.
 
   - Suporte a movimento panorâmico, o que permite que a parte visível de um fluxo de trabalho seja alterada sem o uso das barras de rolagem.
 
-  - Uma nova exibição **Estrutura de Tópicos de Documentos** mostra os componentes de um fluxo de trabalho em uma exibição de contorno em estilo árvore e permite selecionar um componente na exibição **Estrutura de Tópicos de Documentos**.
+  - Uma nova exibição **Estrutura de Tópicos de Documentos** mostra os componentes de um fluxo de trabalho em uma exibição de contorno em estilo árvore e permite selecionar um componente na exibição **Estrutura de Tópicos de Documentos** .
 
   - Capacidade de adicionar anotações a atividades.
 
@@ -2125,13 +2125,12 @@ Os aplicativos Windows 8.x Store foram projetados para fatores forma específico
 
 ### <a name="portable-class-libraries"></a>Bibliotecas de Classe Portáteis <a name="portable"></a>
 
-O projeto Biblioteca de Classes Portátil no Visual Studio 2012 (e em versões posteriores) permite gravar e compilar assemblies gerenciados que funcionem em várias plataformas do .NET Framework. Usando um projeto de biblioteca de classes portátil, você escolhe as plataformas (como Windows Phone e .NET para aplicativos da loja do Windows 8. x) para o destino. Os tipos e membros disponíveis em seu projeto são restritos automaticamente aos tipos e membros comuns através dessas plataformas. Para saber mais, veja [Biblioteca de Classes Portátil](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+O projeto Biblioteca de Classes Portátil no Visual Studio 2012 (e em versões posteriores) permite gravar e compilar assemblies gerenciados que funcionem em várias plataformas do .NET Framework. Usando um projeto de biblioteca de classes portátil, você escolhe as plataformas (como Windows Phone e .NET para aplicativos da loja do Windows 8. x) para o destino. Os tipos e membros disponíveis em seu projeto são restritos automaticamente aos tipos e membros comuns através dessas plataformas. Para saber mais, veja [Biblioteca de Classes Portátil](../cross-platform/portable-class-library.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [O .NET Framework e lançamentos fora da banda](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [O que há de novo na acessibilidade no .NET Framework](whats-new-in-accessibility.md)
-- [O que há de novo no Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
 - [O que há de novo no Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [O que há de novo para C++ no Visual Studio](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

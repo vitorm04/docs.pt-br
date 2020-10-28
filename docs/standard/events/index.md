@@ -15,26 +15,24 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 83799b0f4c6d6503825ce271fed4bffa7a9775b9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 47021873956f971709b49c1b224e43e4c7f482d0
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545697"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687290"
 ---
-# <a name="handling-and-raising-events"></a>Manipulando e acionando eventos
+# <a name="handle-and-raising-events"></a>Manipular e gerar eventos
 
-Os eventos no .NET são baseados no modelo de representante. O modelo de representante segue o [padrão de design do observador](observer-design-pattern.md), que permite a um assinante se registrar em um provedor e receber notificações dele. Um remetente de eventos envia uma notificação por push de que um evento ocorreu e um receptor de eventos recebe essa notificação e define uma resposta. Este artigo descreve os principais componentes do modelo de representante, como consumir eventos em aplicativos e como implementar eventos no código.  
-  
- Para saber mais sobre como manipular eventos em aplicativos da Windows 8.x Store, confira [Visão geral de eventos e eventos roteados](/previous-versions/windows/apps/hh758286(v=win.10)).  
+Os eventos no .NET são baseados no modelo de representante. O modelo de representante segue o [padrão de design do observador](observer-design-pattern.md), que permite a um assinante se registrar em um provedor e receber notificações dele. Um remetente de eventos envia uma notificação por push de que um evento ocorreu e um receptor de eventos recebe essa notificação e define uma resposta. Este artigo descreve os principais componentes do modelo de representante, como consumir eventos em aplicativos e como implementar eventos no código.
   
 ## <a name="events"></a>Eventos
 
-Um evento é uma mensagem enviada por um objeto para sinalizar a ocorrência de uma ação. A ação pode ser causada pela interação do usuário, como o clique em um botão, ou ser resultado de alguma outra lógica de programa, como a alteração do valor de uma propriedade. O objeto que aciona o evento é chamado de *remetente do evento*. O remetente do evento não sabe qual objeto ou método receberá (identificador) os eventos que ele aciona. O evento normalmente é membro do remetente do evento. Por exemplo, o evento <xref:System.Web.UI.WebControls.Button.Click> é membro da classe <xref:System.Web.UI.WebControls.Button> e o evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> é membro da classe que implementa a interface <xref:System.ComponentModel.INotifyPropertyChanged>.  
+Um evento é uma mensagem enviada por um objeto para sinalizar a ocorrência de uma ação. A ação pode ser causada pela interação do usuário, como um clique de botão, ou pode resultar de alguma outra lógica do programa, como alterar o valor de uma propriedade. O objeto que aciona o evento é chamado de *remetente do evento* . O remetente do evento não sabe qual objeto ou método receberá (identificador) os eventos que ele aciona. O evento normalmente é membro do remetente do evento. Por exemplo, o evento <xref:System.Web.UI.WebControls.Button.Click> é membro da classe <xref:System.Web.UI.WebControls.Button> e o evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> é membro da classe que implementa a interface <xref:System.ComponentModel.INotifyPropertyChanged>.  
   
 Para definir um evento, use o C# [`event`](../../csharp/language-reference/keywords/event.md) ou a [`Event`](../../visual-basic/language-reference/statements/event-statement.md) palavra-chave Visual Basic na assinatura de sua classe de evento e especifique o tipo de delegado para o evento. Os representantes são descritos na próxima seção.  
   
-Normalmente, para acionar um evento, você adiciona um método que é marcado como `protected` e `virtual` (em C#) ou `Protected` e `Overridable` (no Visual Basic). Dê a esse método o nome `On`*EventName*; por exemplo, `OnDataReceived`. O método deve usar um parâmetro que especifica um objeto de dados de evento, que é um objeto do tipo <xref:System.EventArgs> ou um tipo derivado. Você fornece esse método para permitir que as classes derivadas substituam a lógica para acionamento do evento. Uma classe derivada sempre deve chamar o método `On`*EventName* da classe base a fim de garantir que os representantes registrados recebam o evento.  
+Normalmente, para acionar um evento, você adiciona um método que é marcado como `protected` e `virtual` (em C#) ou `Protected` e `Overridable` (no Visual Basic). Dê a esse método o nome `On`*EventName* ; por exemplo, `OnDataReceived`. O método deve usar um parâmetro que especifica um objeto de dados de evento, que é um objeto do tipo <xref:System.EventArgs> ou um tipo derivado. Você fornece esse método para permitir que as classes derivadas substituam a lógica para acionamento do evento. Uma classe derivada sempre deve chamar o método `On`*EventName* da classe base a fim de garantir que os representantes registrados recebam o evento.  
 
 O exemplo de código a seguir mostra como declarar um evento denominado `ThresholdReached`. O evento está associado ao representante <xref:System.EventHandler> e é gerado em um método chamado `OnThresholdReached`.  
   
@@ -82,26 +80,27 @@ O exemplo a seguir mostra um método de manipulador de eventos chamado `c_Thresh
 
 O .NET permite que os assinantes se registrem para receber notificações de eventos de modo estático ou dinâmico. Os manipuladores de eventos estáticos permanecem em vigor por toda a vida da classe cujos eventos eles manipulam. Os manipuladores de eventos dinâmicos são ativados e desativados explicitamente durante a execução do programa, geralmente em resposta a alguma lógica de programa condicional. Por exemplo, eles podem ser usados se as notificações de eventos forem necessárias apenas sob determinadas condições, ou se um aplicativo fornecer vários manipuladores de eventos e as condições de tempo de execução definirem o apropriado para uso. O exemplo na seção anterior mostra como adicionar dinamicamente um manipulador de eventos. Para obter mais informações, veja [Eventos](../../visual-basic/programming-guide/language-features/events/index.md) (no Visual Basic) e [Eventos](../../csharp/programming-guide/events/index.md) (em C#).  
   
-## <a name="raising-multiple-events"></a>Acionando vários eventos  
+## <a name="raising-multiple-events"></a>Acionando vários eventos
+
  Se sua classe acionar vários eventos, o compilador vai gerar um campo por instância de representante de evento. Se o número de eventos for grande, o custo de armazenamento de um campo por representante pode não ser aceitável. Para esses casos, o .NET fornece propriedades de evento que você pode usar com outra estrutura de dados de sua escolha para armazenar representantes de eventos.  
   
  As propriedades de evento consistem em declarações de evento acompanhadas por acessadores de evento. Os acessadores de evento são métodos que você define para adicionar ou remover instâncias de representante de evento da estrutura de dados de armazenamento. Observe que as propriedades de evento são mais lentas que os campos de evento, pois cada representante de evento deve ser recuperado para que possa ser invocado. A compensação está entre a memória e a velocidade. Se sua classe define muitos eventos que raramente são acionados, você desejará implementar as propriedades de evento. Para saber mais, confira [Como manipular vários eventos usando propriedades de evento](how-to-handle-multiple-events-using-event-properties.md).  
   
-## <a name="related-topics"></a>Tópicos relacionados  
+## <a name="related-articles"></a>Artigos relacionados
   
 |Título|Descrição|  
 |-----------|-----------------|  
 |[Como acionar e consumir eventos](how-to-raise-and-consume-events.md)|Contém exemplos de como acionar e consumir eventos.|  
 |[Como manipular vários eventos usando propriedades de evento](how-to-handle-multiple-events-using-event-properties.md)|Mostrar como usar propriedades de evento para manipular vários eventos.|  
-|[Padrão de design do observador](observer-design-pattern.md)|Descreve o padrão de design que permite a um assinante se registrar em um provedor e receber notificações dele.|  
-|[Como consumir eventos em um aplicativo Web Forms](how-to-consume-events-in-a-web-forms-application.md)|Mostra como manipular um evento acionado por um controle do Web Forms.|  
+|[Padrão de design do observador](observer-design-pattern.md)|Descreve o padrão de design que permite a um assinante se registrar em um provedor e receber notificações dele.|
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.EventHandler>
 - <xref:System.EventHandler%601>
 - <xref:System.EventArgs>
 - <xref:System.Delegate>
 - [Eventos (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)
-- [Eventos (guia de programação em C#)](../../csharp/programming-guide/events/index.md)
+- [Eventos (Guia de Programação em C#)](../../csharp/programming-guide/events/index.md)
 - [Visão geral de eventos e eventos roteados (aplicativos UWP)](/windows/uwp/xaml-platform/events-and-routed-events-overview)
+- [Eventos em aplicativos da Windows Store 8. x](/previous-versions/windows/apps/hh758286(v=win.10))

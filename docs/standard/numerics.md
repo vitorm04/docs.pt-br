@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 3b95a322377e82249a0375af589df74c658fcbf4
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 0fdf1b3ec1141dd637f817115bd1d2351c8af7a0
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507410"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687734"
 ---
 # <a name="numerics-in-net"></a>Numéricos no .NET
 
@@ -60,11 +60,11 @@ O .NET inclui três primitivos tipos de ponto flutuante, que estão listados na 
   
 Os tipos <xref:System.Single> e <xref:System.Double> dão suporte a valores especiais que representam não é um número e infinito. Por exemplo, o tipo <xref:System.Double> fornece os seguintes valores: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> e <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Você usa os métodos <xref:System.Double.IsNaN%2A?displayProperty=nameWithType>, <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>, <xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType> e <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> para testar esses valores especiais.
 
-Cada tipo de ponto flutuante dá suporte a um conjunto de operadores aritméticos padrão. A classe <xref:System.Math?displayProperty=nameWithType> fornece métodos para um conjunto mais amplo de funções matemáticas. O .NET Core 2,0 e posterior inclui <xref:System.MathF?displayProperty=nameWithType> a classe, que fornece métodos que aceitam argumentos <xref:System.Single> do tipo.
+Cada tipo de ponto flutuante dá suporte a um conjunto de operadores aritméticos padrão. A classe <xref:System.Math?displayProperty=nameWithType> fornece métodos para um conjunto mais amplo de funções matemáticas. O .NET Core 2,0 e posterior inclui a <xref:System.MathF?displayProperty=nameWithType> classe, que fornece métodos que aceitam argumentos do <xref:System.Single> tipo.
 
 Você também pode trabalhar com os bits individuais nos valores <xref:System.Double> e <xref:System.Single> usando a classe <xref:System.BitConverter?displayProperty=nameWithType>. A estrutura <xref:System.Decimal?displayProperty=nameWithType> tem seus próprios métodos <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> e <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29>, para trabalhar com os bits individuais de um valor decimal, assim como seu próprio conjunto de métodos para executar algumas operações matemáticas adicionais.
   
-Os <xref:System.Double> tipos <xref:System.Single> e devem ser usados para valores que, por sua natureza, são imprecisos (por exemplo, a distância entre duas estrelas) e para aplicativos nos quais um alto grau de precisão e erro de arredondamento pequeno não é necessário. Use o <xref:System.Decimal?displayProperty=nameWithType> tipo para casos em que maior precisão é necessária e os erros de arredondamento devem ser minimizados.
+Os <xref:System.Double> <xref:System.Single> tipos e devem ser usados para valores que, por sua natureza, são imprecisos (por exemplo, a distância entre duas estrelas) e para aplicativos nos quais um alto grau de precisão e erro de arredondamento pequeno não é necessário. Use o <xref:System.Decimal?displayProperty=nameWithType> tipo para casos em que maior precisão é necessária e os erros de arredondamento devem ser minimizados.
 
 > [!NOTE]
 > O tipo <xref:System.Decimal> não elimina a necessidade de arredondamento. Em vez disso, ele minimiza erros devido a arredondamento.
@@ -88,13 +88,14 @@ Os tipos habilitados para SIMD do .NET incluem o seguinte:
 - O tipo <xref:System.Numerics.Quaternion>, que representa um vetor usado para codificar rotações físicas tridimensionais.
 
 - O tipo <xref:System.Numerics.Vector%601>, que representa um vetor de um tipo numérico especificado e fornece um amplo conjunto de operadores que se beneficiam de suporte a SIMD. A contagem de uma instância <xref:System.Numerics.Vector%601> é corrigida, mas seu valor <xref:System.Numerics.Vector%601.Count%2A?displayProperty=nameWithType> depende da CPU do computador em que o código é executado.
+
   > [!NOTE]
-  > O tipo <xref:System.Numerics.Vector%601> não está incluído no .NET Framework. Você deve instalar o pacote [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) do NuGet para obter acesso a esse tipo.
+  > O <xref:System.Numerics.Vector%601> tipo é incluído no .NET Core e no .NET 5 +, mas não .NET Framework. Se você estiver usando .NET Framework, instale o pacote NuGet [System. Numerics. vetores](https://www.nuget.org/packages/System.Numerics.Vectors) para obter acesso a esse tipo.
   
-Os tipos habilitados para SIMD são implementados de modo que possam ser usados com hardware não habilitados para SIMD ou compiladores JIT. Para aproveitar instruções SIMD, seus aplicativos de 64 bits devem ser executados pelo runtime que usa o compilador RyuJIT, que está incluído no .NET Core e no .NET Framework 4.6 e versões posteriores. Ele adiciona suporte a SIMD quando tem processadores de 64 bits como destino.
+Os tipos habilitados para SIMD são implementados de modo que possam ser usados com hardware não habilitados para SIMD ou compiladores JIT. Para aproveitar as instruções de SIMD, seus aplicativos de 64 bits devem ser executados pelo tempo de execução que usa o compilador RyuJIT, que está incluído no .NET Core e no .NET Framework 4,6 e versões posteriores. Ele adiciona suporte a SIMD quando tem processadores de 64 bits como destino.
 
 Para obter mais informações, consulte [usar tipos numéricos acelerados por SIMD](simd.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Cadeias de caracteres de formato numérico padrão](base-types/standard-numeric-format-strings.md)
+- [Cadeias de Caracteres de Formato Numérico Padrão](base-types/standard-numeric-format-strings.md)

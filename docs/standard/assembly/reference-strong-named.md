@@ -5,19 +5,19 @@ ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, compile-time references
 - compile-time assembly referencing
-- assemblies [.NET Framework], strong-named
+- assemblies [.NET], strong-named
 - assembly binding, strong-named
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: e42c1b461da16d7000605b9b9321138bbfebd307
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 478f786995cfc4b57f0b18b2159775db104e9cfb
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379869"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687698"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Como referenciar um assembly de nome forte
 O processo para referenciar tipos ou recursos em um assembly de nome forte é normalmente transparente. Você pode fazer a referência no tempo de compilação (vinculação inicial) ou no tempo de execução.  
@@ -31,11 +31,11 @@ Uma referência de tempo de compilação ocorre quando você indica ao compilado
 
 Em um prompt de comando, digite o comando a seguir:  
 
-\<*comando* >  do compilador **/Reference:** \< *nome do assembly*>  
+\<*compiler command*>**/Reference:**\<*assembly name*>  
 
 Nesse comando, o *comando do compilador* é o comando do compilador para a linguagem que você está usando, e *nome do assembly* é o nome do assembly de nome forte que está sendo referenciado. Você também pode usar outras opções de compilador, como a opção **/t:library** para criar um assembly de biblioteca.  
 
-O exemplo a seguir cria um assembly chamado *myAssembly. dll* que faz referência a um assembly de nome forte chamado *myLibAssembly. dll* de um módulo de código chamado *myAssembly.cs*.  
+O exemplo a seguir cria um assembly chamado *myAssembly.dll* que faz referência a um assembly de nome forte chamado *myLibAssembly.dll* de um módulo de código chamado *myAssembly.cs* .  
 
 ```cmd
 csc /t:library myAssembly.cs /reference:myLibAssembly.dll  
@@ -45,7 +45,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 Quando você faz uma referência de tempo de execução para um assembly de nome forte, por exemplo, usando <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> método ou, você deve usar o nome de exibição do assembly de nome forte referenciado. A sintaxe de um nome de exibição é a seguinte:  
 
-\<*nome* > do assembly **,** \< *número* > de versão **,** \< *cultura* > **,** \< *token de chave pública*>  
+\<*assembly name*>**,** \<*version number*>**,** \<*culture*>**,** \<*public key token*>  
 
 Por exemplo:  
 
@@ -74,12 +74,12 @@ Dim myDll As Assembly = _
 
 Você pode imprimir o formato hexadecimal da chave pública e do token de chave pública para um assembly específico usando o seguinte comando [Nome Forte (Sn.exe)](../../framework/tools/sn-exe-strong-name-tool.md):  
 
-**SN-TP \< ** *assembly* do**>**  
+**SN-TP \<** *assembly* **>**  
 
 Se você tiver um arquivo de chave pública, use o comando a seguir (observe a diferença no caso da opção de linha de comando):  
 
-**sn -tp \<** *arquivo de chave pública* **>**  
+**SN-TP \<** *public key file* **>**  
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Criar e usar assemblies com nome forte](create-use-strong-named.md)

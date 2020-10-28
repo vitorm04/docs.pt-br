@@ -2,12 +2,12 @@
 title: Adicione uma referência de serviço em um projeto de subconjunto portátil
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 8bedfb44523b4f67845d40fadfaa72d64622ba26
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: e9a0d3fbc75a8c64af892f74acedfc41dc115da3
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449472"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687707"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Adicione uma referência de serviço em um projeto de subconjunto portátil
 
@@ -44,7 +44,7 @@ Os projetos de subconjuntos portáteis permitem que os programadores de assembly
   
 14. O <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> não tem suporte em projetos de subconjunto portáteis.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Usando um cliente do WCF para acessar serviços](accessing-services-using-a-wcf-client.md)
-- [Biblioteca de classes portátil](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+- [Usando um cliente WCF para acessar um serviço](accessing-services-using-a-wcf-client.md)
+- [Biblioteca de Classes Portátil](../cross-platform/portable-class-library.md)

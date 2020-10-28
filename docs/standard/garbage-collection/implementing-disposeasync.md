@@ -3,19 +3,19 @@ title: Implementar um método DisposeAsync
 description: Saiba como implementar os métodos DisposeAsync e DisposeAsyncCore para executar a limpeza assíncrona de recursos.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/16/2020
+ms.date: 10/26/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 6ddfd860571d883e20fdb18985fe2bc2d9477dec
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 5aa82c507c22a4795f39267ac8f435599fb9cd92
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720277"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687717"
 ---
 # <a name="implement-a-disposeasync-method"></a>Implementar um método DisposeAsync
 
@@ -102,9 +102,34 @@ Além disso, ele poderia ser escrito para usar o escopo implícito de uma [decla
 
 ## <a name="stacked-usings"></a>Uso empilhado
 
-Em situações em que você cria e usa vários objetos que implementam <xref:System.IAsyncDisposable> , é possível que as `using` instruções de empilhamento em condições errônea pudessem impedir chamadas para <xref:System.IAsyncDisposable.DisposeAsync> . Para ajudar a evitar possíveis preocupações, você deve evitar o empilhamento e, em vez disso, seguir este padrão de exemplo:
+Em situações em que você cria e usa vários objetos que implementam <xref:System.IAsyncDisposable> , é possível que as instruções de empilhamento `await using` com o <xref:System.Threading.Tasks.ValueTask.ConfigureAwait%2A> pudessem impedir chamadas para as <xref:System.IAsyncDisposable.DisposeAsync> condições errônea. Para garantir que o <xref:System.IAsyncDisposable.DisposeAsync> seja sempre chamado, você deve evitar o empilhamento. Os três exemplos de código a seguir mostram padrões aceitáveis para usar em vez disso.
 
-:::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+### <a name="acceptable-pattern-one"></a>Padrão aceitável um
+
+:::code language="csharp" id="one" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+No exemplo anterior, cada operação de limpeza assíncrona é explicitamente delimitada no `await using` bloco. O escopo externo é definido por como o `objOne` define suas chaves, os delimitadores `objTwo` , pois isso `objTwo` é Descartado primeiro, seguido por `objOne` . Ambas as `IAsyncDisposable` instâncias têm <xref:System.IAsyncDisposable.DisposeAsync> métodos aguardados, realizando assim sua operação de limpeza assíncrona. As chamadas estão aninhadas, não empilhadas.
+
+### <a name="acceptable-pattern-two"></a>Padrão aceitável dois
+
+:::code language="csharp" id="two" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+No exemplo anterior, cada operação de limpeza assíncrona é explicitamente delimitada no `await using` bloco. No final de cada bloco, a instância correspondente `IAsyncDisposable` tem seu <xref:System.IAsyncDisposable.DisposeAsync> método aguardado, executando assim sua operação de limpeza assíncrona. As chamadas são sequenciais, não empilhadas. Nesse cenário `objOne` , é Descartado primeiro e, em seguida, `objTwo` é Descartado.
+
+### <a name="acceptable-pattern-three"></a>Padrão aceitável três
+
+:::code language="csharp" id="three" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+No exemplo anterior, cada operação de limpeza assíncrona é implicitamente delimitada com o corpo do método que o contém. No final do bloco delimitador, as `IAsyncDisposable` instâncias executam suas operações de limpeza assíncronas. Isso é executado na ordem inversa da qual eles foram declarados, o que significa que `objTwo` é descartado antes `objOne` .
+
+### <a name="unacceptable-pattern"></a>Padrão inaceitável
+
+Se uma exceção for lançada do `AnotherAsyncDisposable` Construtor, não `objOne` será descartada corretamente:
+
+:::code language="csharp" id="dontdothis" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+> [!TIP]
+> Evite esse padrão, pois isso pode levar a um comportamento inesperado.
 
 ## <a name="see-also"></a>Confira também
 

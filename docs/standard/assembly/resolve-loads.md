@@ -3,24 +3,25 @@ title: Resolver carregamentos de assembly
 description: Este artigo descreve o evento .NET AppDomain. AssemblyResolve. Use esse evento para aplicativos que exigem controle sobre o carregamento de assembly.
 ms.date: 08/20/2019
 helpviewer_keywords:
-- assemblies [.NET Framework], resolving loads
+- assemblies [.NET], resolving loads
 - application domains, loading assemblies
 - resolving assembly loads
-- assemblies [.NET Framework], loading
+- assemblies [.NET], loading
 - application domains, resolving assembly loads
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 36f36b60a3a113c6b020cc1042c786c4091e567b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 16f2f61a2a36e4189e98c85b3d3ce706a52e2938
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378674"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687279"
 ---
 # <a name="resolve-assembly-loads"></a>Resolver carregamentos de assembly
+
 O .NET fornece o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> evento para aplicativos que exigem maior controle sobre o carregamento de assembly. Ao tratar esse evento, seu aplicativo pode carregar um assembly no contexto de carga de fora dos caminhos normais de investigação, selecionar qual das várias versões de assembly carregar, emitir um assembly dinâmico e retorná-lo, etc. Este tópico fornece orientação para a manipulação do evento <xref:System.AppDomain.AssemblyResolve>.  
   
 > [!NOTE]
@@ -197,7 +198,7 @@ End Class
 'Process is terminated due to StackOverflowException.
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Práticas recomendadas para o carregamento de assembly](../../framework/deployment/best-practices-for-assembly-loading.md)
 - [Usar domínios de aplicativo](../../framework/app-domains/use.md)
