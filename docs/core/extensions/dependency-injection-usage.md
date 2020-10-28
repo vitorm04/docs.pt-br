@@ -5,16 +5,21 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 09/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: f2298cb0be6d555a7636903dc251f022a6a62a43
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+no-loc:
+- Transient
+- Scoped
+- Singleton
+- Example
+ms.openlocfilehash: 589e15736c07b465fda308b04c91384a2502755c
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247879"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888581"
 ---
 # <a name="tutorial-use-dependency-injection-in-net"></a>Tutorial: usar injeção de dependência no .NET
 
-Este tutorial mostra como usar [injeção de dependência (di) no .net](dependency-injection.md). Com *o Microsoft Extensions*, di é um cidadão de primeira classe onde os serviços são adicionados e configurados em um <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> . A <xref:Microsoft.Extensions.Hosting.IHost> interface expõe a <xref:System.IServiceProvider> instância, que atua como um contêiner de todos os serviços registrados.
+Este tutorial mostra como usar [injeção de dependência (di) no .net](dependency-injection.md). Com *o Microsoft Extensions* , di é um cidadão de primeira classe onde os serviços são adicionados e configurados em um <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> . A <xref:Microsoft.Extensions.Hosting.IHost> interface expõe a <xref:System.IServiceProvider> instância, que atua como um contêiner de todos os serviços registrados.
 
 Neste tutorial, você aprenderá como:
 
@@ -25,15 +30,14 @@ Neste tutorial, você aprenderá como:
 > - Escrever várias interfaces e implementações correspondentes
 > - Usar o tempo de vida do serviço e o escopo para DI
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
-- [SDK do .NET Core 3,1](https://dotnet.microsoft.com/download/dotnet-core) ou uma versão posterior.
-- Um ambiente de desenvolvimento integrado (IDE), [Visual Studio, Visual Studio Code ou Visual Studio para Mac](https://visualstudio.microsoft.com) são opções válidas.
+- [SDK do .NET Core 3,1](https://dotnet.microsoft.com/download/dotnet-core) ou posterior.
 - Familiaridade com a criação de novos aplicativos .NET e a instalação de pacotes NuGet.
 
 ## <a name="create-a-new-console-application"></a>Criar um novo aplicativo de console
 
-Usando o comando [dotnet New](../tools/dotnet-new.md) ou um assistente de novo projeto do IDE, crie um novo aplicativo de console .NET chamado **ConsoleDI. example**. Adicione o pacote NuGet [Microsoft. Extensions. Hosting](https://www.nuget.org/packages/Microsoft.Extensions.Hosting) ao projeto.
+Usando o comando [dotnet New](../tools/dotnet-new.md) ou um assistente de novo projeto do IDE, crie um novo aplicativo de console .NET chamado **ConsoleDI. Example** . Adicione o pacote NuGet [Microsoft. Extensions. Hosting](https://www.nuget.org/packages/Microsoft.Extensions.Hosting) ao projeto.
 
 ## <a name="add-interfaces"></a>Adicionar interfaces
 
@@ -45,19 +49,19 @@ Adicione as seguintes interfaces ao diretório raiz do projeto:
 
 A `IOperation` interface define uma única `OperationId` propriedade.
 
-*ITransientOperation.cs*
+*Eu Transient Operation.cs*
 
-:::code language="csharp" source="snippets/configuration/console-di/ITransientOperation.cs":::
+::: linguagem de código = "CSharp" origem = "trechos/configuração/console-di/I Transient Operation.cs":::
 
-*IScopedOperation.cs*
+*Eu Scoped Operation.cs*
 
-:::code language="csharp" source="snippets/configuration/console-di/IScopedOperation.cs":::
+::: linguagem de código = "CSharp" origem = "trechos/configuração/console-di/I Scoped Operation.cs":::
 
-*ISingletonOperation.cs*
+*Eu Singleton Operation.cs*
 
-:::code language="csharp" source="snippets/configuration/console-di/ISingletonOperation.cs":::
+::: linguagem de código = "CSharp" origem = "trechos/configuração/console-di/I Singleton Operation.cs":::
 
-Todas as subinterfaces de `IOperation` nome do seu tempo de vida de serviço pretendido. Por exemplo, "transitório" ou "singleton".
+Todas as subinterfaces de `IOperation` nome do seu tempo de vida de serviço pretendido. Por exemplo, " Transient " ou " Singleton ".
 
 ## <a name="add-default-implementation"></a>Adicionar implementação padrão
 
@@ -67,7 +71,7 @@ Adicione a seguinte implementação padrão para as várias operações:
 
 :::code language="csharp" source="snippets/configuration/console-di/DefaultOperation.cs":::
 
-O `DefaultOperation` implementa todas as interfaces nomeadas/de marcador e inicializa a `OperationId` propriedade para os últimos quatro caracteres de um novo GUID (identificador global exclusivo).
+O `DefaultOperation` implementa todas as interfaces do marcador nomeado e inicializa a `OperationId` propriedade para os últimos quatro caracteres de um novo GUID (identificador global exclusivo).
 
 ## <a name="add-service-that-requires-di"></a>Adicionar serviço que requer DI
 
@@ -77,11 +81,11 @@ Adicione o seguinte objeto de agente de operação, que atua como um serviço pa
 
 :::code language="csharp" source="snippets/configuration/console-di/OperationLogger.cs":::
 
-O `OperationLogger` define um construtor que requer cada uma das interfaces de marcador mencionadas anteriormente, ou seja,, `ITransientOperation` `IScopedOperation` e `ISingletonOperation` . O objeto expõe um único método que permite ao consumidor registrar as operações com um determinado `scope` parâmetro. Quando invocado, o `LogOperations` método registrará em log o identificador exclusivo de cada operação com a cadeia de caracteres e a mensagem do escopo.
+O `OperationLogger` define um construtor que requer cada uma das interfaces de marcador mencionadas anteriormente, ou seja,, `ITransientOperation` `IScopedOperation` e `ISingletonOperation` . O objeto expõe um único método que permite ao consumidor registrar as operações com um determinado `scope` parâmetro. Quando invocado, o `LogOperations` método registra o identificador exclusivo de cada operação com a cadeia de caracteres e a mensagem do escopo.
 
 ## <a name="register-services-for-di"></a>Registrar serviços para DI
 
-Por fim, atualize o arquivo *Program.cs* para corresponder ao seguinte:
+Atualize *Program.cs* com o seguinte código:
 
 :::code language="csharp" source="snippets/configuration/console-di/Program.cs" range="1-18,35-60" highlight="22-26":::
 
@@ -94,7 +98,7 @@ O aplicativo:
 
 ## <a name="conclusion"></a>Conclusão
 
-O aplicativo produz uma saída semelhante ao exemplo a seguir:
+O aplicativo exibe uma saída semelhante ao exemplo a seguir:
 
 ```console
 Scope 1-Call 1 .GetRequiredService<OperationLogger>(): ITransientOperation [ 80f4...Always different        ]
@@ -116,11 +120,11 @@ Scope 2-Call 2 .GetRequiredService<OperationLogger>(): ISingletonOperation [ 158
 
 Na saída do aplicativo, você pode ver que:
 
-- As operações transitórias são sempre diferentes, o que significa que uma nova instância é criada com cada recuperação do serviço.
-- As operações com escopo são alteradas somente com um novo escopo, mas são a mesma instância dentro de um escopo.
-- As operações singleton são sempre as mesmas, o que significa que uma nova instância é criada apenas uma vez.
+- Transient as operações são sempre diferentes, uma nova instância é criada com cada recuperação do serviço.
+- Scoped as operações são alteradas somente com um novo escopo, mas são a mesma instância dentro de um escopo.
+- Singleton as operações são sempre as mesmas, uma nova instância é criada apenas uma vez.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="see-also"></a>Veja também
 
-> [!div class="nextstepaction"]
-> [Diretrizes de injeção de dependência](dependency-injection-guidelines.md)
+* [Diretrizes de injeção de dependência](dependency-injection-guidelines.md)
+* [Injeção de dependência no ASP.NET Core](/aspnet/core/fundamentals/dependency-injection)

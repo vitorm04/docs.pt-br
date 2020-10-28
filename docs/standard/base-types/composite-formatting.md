@@ -8,25 +8,25 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - parameter specifiers
-- strings [.NET Framework], alignment
+- strings [.NET], alignment
 - format specifiers, composite formatting
-- strings [.NET Framework], composite
+- strings [.NET], composite
 - composite formatting
-- objects [.NET Framework], formatting multiple objects
+- objects [.NET], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 36197b382c449a2570e1d5530f307c4e66b0d983
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e15452016aa61cf44950e8b9e7fca58f23471ae7
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447258"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889459"
 ---
 # <a name="composite-formatting"></a>Formatação de composição
 
 O recurso de formatação de composição do .NET utiliza uma lista de objetos e uma cadeia de caracteres de formato de composição como entrada. Uma cadeia de formato de composição consiste em um texto fixo intercalado com espaços reservados indexados, chamados de itens de formato, que correspondem aos objetos na lista. A operação de formatação produz uma cadeia de caracteres de resultado que consiste no texto fixo original intercalado com a representação de cadeia de caracteres dos objetos na lista.  
   
 > [!IMPORTANT]
-> Em vez de usar cadeias de caracteres de formato composto, você pode usar *cadeias de caracteres interpoladas* se o idioma e a versão de idioma que você está usando são compatíveis com elas. Uma cadeia de caracteres interpolada é uma cadeia de caracteres que contém *expressões interpoladas*. Cada expressão interpolada é resolvida com o valor da expressão e incluída na cadeia de caracteres resultante quando a cadeia de caracteres é atribuída. Para saber mais, confira [Interpolação de cadeia de caracteres (Referência de C#)](../../csharp/language-reference/tokens/interpolated.md) ou [Cadeias de caracteres interpoladas (Referência do Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+> Em vez de usar cadeias de caracteres de formato composto, você pode usar *cadeias de caracteres interpoladas* se o idioma e a versão de idioma que você está usando são compatíveis com elas. Uma cadeia de caracteres interpolada é uma cadeia de caracteres que contém *expressões interpoladas* . Cada expressão interpolada é resolvida com o valor da expressão e incluída na cadeia de caracteres resultante quando a cadeia de caracteres é atribuída. Para obter mais informações, consulte [interpolação de cadeia de caracteres (referência C#)](../../csharp/language-reference/tokens/interpolated.md) e [cadeias de caracteres interpoladas (referência de Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
 
 O recurso de formatação de composição tem suporte de métodos como:  
   
@@ -56,12 +56,12 @@ O recurso de formatação de composição tem suporte de métodos como:
 ## <a name="format-item-syntax"></a>Sintaxe do item de formato  
  Cada item de formato assume a forma a seguir e consiste nos seguintes componentes:  
   
- `{`*índice*[ `,` *alinhamento*] [ `:` *FormatString*]`}`  
+ `{`*índice* [ `,` *alinhamento* ] [ `:` *FormatString* ]`}`  
   
  As chaves correspondentes ("{" e "}") são necessárias.  
   
 ### <a name="index-component"></a>Componente de índice  
- O componente obrigatório *index*, também chamado de especificador de parâmetro, é um número iniciado por 0 que identifica um item correspondente na lista de objetos. Ou seja, o item de formato cujo especificador de parâmetro é 0 formata o primeiro objeto na lista, o item de formato cujo especificador de parâmetro é 1 formata o segundo objeto na lista e assim por diante. O exemplo a seguir inclui quatro especificadores de parâmetros, numerados de zero a três, para representar números primos menores que dez:  
+ O componente obrigatório *index* , também chamado de especificador de parâmetro, é um número iniciado por 0 que identifica um item correspondente na lista de objetos. Ou seja, o item de formato cujo especificador de parâmetro é 0 formata o primeiro objeto na lista, o item de formato cujo especificador de parâmetro é 1 formata o segundo objeto na lista e assim por diante. O exemplo a seguir inclui quatro especificadores de parâmetros, numerados de zero a três, para representar números primos menores que dez:  
   
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
@@ -84,13 +84,13 @@ O recurso de formatação de composição tem suporte de métodos como:
 ### <a name="format-string-component"></a>Componente da cadeia de caracteres de formato  
  O componente opcional *formatString* é uma cadeia de caracteres de formato que é apropriada para o tipo de objeto que está sendo formatado. Especifique uma cadeia de caracteres de formato numérico padrão ou personalizado se o objeto correspondente é um valor numérico, uma cadeia de caracteres de formato de data e hora padrão ou personalizado, se o objeto é um objeto <xref:System.DateTime> ou uma [cadeia de caracteres de formato de enumeração](enumeration-format-strings.md) se o objeto correspondente é um valor de enumeração. Se *formatString* não for especificado, o especificador de formato geral ("G") para um tipo numérico, de data e hora ou enumeração será usado. Os dois-pontos são necessários quando *formatString* é especificado.  
   
- A tabela a seguir lista tipos ou categorias de tipos na biblioteca de classes do .NET Framework que dão suporte a um conjunto predefinido de cadeias de caracteres de formato e fornece links para tópicos que relacionam as cadeias de caracteres de formato com suporte. Observe que a formatação de cadeias de caracteres é um mecanismo extensível que possibilita definir novas cadeias de caracteres de formato para todos os tipos existentes, bem como definir um conjunto de cadeias de caracteres de formato com suporte por um tipo definido por aplicativo. Para saber mais, veja os tópicos de interface <xref:System.IFormattable> e <xref:System.ICustomFormatter>.  
+ A tabela a seguir lista tipos ou categorias de tipos na biblioteca de classes .NET que dão suporte a um conjunto predefinido de cadeias de caracteres de formato e fornece links para os tópicos que listam as cadeias de caracteres de formato com suporte. Observe que a formatação de cadeias de caracteres é um mecanismo extensível que possibilita definir novas cadeias de caracteres de formato para todos os tipos existentes, bem como definir um conjunto de cadeias de caracteres de formato com suporte por um tipo definido por aplicativo. Para saber mais, veja os tópicos de interface <xref:System.IFormattable> e <xref:System.ICustomFormatter>.  
   
 |Tipo ou categoria de tipo|Consulte|  
 |---------------------------|---------|  
-|Tipos de data e hora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Cadeias de caracteres de formato de data e hora padrão](standard-date-and-time-format-strings.md)<br /><br /> [Cadeias de caracteres de formato de data e hora personalizadas](custom-date-and-time-format-strings.md)|  
+|Tipos de data e hora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Cadeias de caracteres de formato de data e hora padrão](standard-date-and-time-format-strings.md)<br /><br /> [Cadeias de caracteres de formato de data e hora personalizado](custom-date-and-time-format-strings.md)|  
 |Tipos de enumeração (todos os tipos derivados de <xref:System.Enum?displayProperty=nameWithType>)|[Cadeias de caracteres de formato de enumeração](enumeration-format-strings.md)|  
-|Tipos numéricos (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Cadeias de caracteres de formato numérico padrão](standard-numeric-format-strings.md)<br /><br /> [Cadeias de caracteres de formato numérico personalizado](custom-numeric-format-strings.md)|  
+|Tipos numéricos (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Cadeias de Caracteres de Formato Numérico Padrão](standard-numeric-format-strings.md)<br /><br /> [Cadeias de caracteres de formato numérico personalizado](custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[Cadeias de caracteres de formato standard TimeSpan](standard-timespan-format-strings.md)<br /><br /> [Cadeias de caracteres de formato de TimeSpan personalizado](custom-timespan-format-strings.md)|  
   
@@ -158,17 +158,17 @@ O recurso de formatação de composição tem suporte de métodos como:
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Console.WriteLine%2A>
 - <xref:System.String.Format%2A?displayProperty=nameWithType>
 - [Interpolação de cadeia de caracteres (C#)](../../csharp/language-reference/tokens/interpolated.md)
 - [Interpolação de cadeia de caracteres (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
 - [Formatar tipos](formatting-types.md)
-- [Cadeias de caracteres de formato numérico padrão](standard-numeric-format-strings.md)
+- [Cadeias de Caracteres de Formato Numérico Padrão](standard-numeric-format-strings.md)
 - [Cadeias de caracteres de formato numérico personalizado](custom-numeric-format-strings.md)
 - [Cadeias de caracteres de formato de data e hora padrão](standard-date-and-time-format-strings.md)
-- [Cadeias de caracteres de formato de data e hora personalizadas](custom-date-and-time-format-strings.md)
+- [Cadeias de caracteres de formato de data e hora personalizado](custom-date-and-time-format-strings.md)
 - [Cadeias de caracteres de formato standard TimeSpan](standard-timespan-format-strings.md)
 - [Cadeias de caracteres de formato de TimeSpan personalizado](custom-timespan-format-strings.md)
 - [Cadeias de caracteres de formato de enumeração](enumeration-format-strings.md)

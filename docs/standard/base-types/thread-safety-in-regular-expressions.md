@@ -3,23 +3,23 @@ title: Acesso thread-safe em expressões regulares
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- .NET Framework regular expressions, threads
+- .NET regular expressions, threads
 - regular expressions, threads
 - searching with regular expressions, threads
 - parsing text with regular expressions, threads
 - pattern-matching with regular expressions, threads
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
-ms.openlocfilehash: fbcaaf4942f8af1d6c1de52ff5bc11317318f319
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 29ff647d623c047c63c52732a3e8bce5f0e95d6c
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290883"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889277"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>Acesso thread-safe em expressões regulares
 A própria classe <xref:System.Text.RegularExpressions.Regex> é thread-safe e imutável (somente leitura). Ou seja, os objetos de **Regex** podem ser criados em qualquer thread e compartilhados entre os threads. Métodos correspondentes podem ser chamados de qualquer thread e nunca alteram nenhum estado global.  
   
- No entanto, os objetos de resultado (**Match** e **MatchCollection**) retornados pela **Regex** devem ser usados em um único thread. Embora muitos desses objetos sejam logicamente imutáveis, suas implementações poderiam atrasar a computação de alguns resultados para melhorar o desempenho e, como resultado, os chamadores devem serializar o acesso a eles.  
+ No entanto, os objetos de resultado ( **Match** e **MatchCollection** ) retornados pela **Regex** devem ser usados em um único thread. Embora muitos desses objetos sejam logicamente imutáveis, suas implementações poderiam atrasar a computação de alguns resultados para melhorar o desempenho e, como resultado, os chamadores devem serializar o acesso a eles.  
   
  Se houver a necessidade de compartilhar os objetos de resultado da **Regex** em vários threads, esses objetos poderão ser convertidos em instâncias thread-safe chamando seus métodos sincronizados. Com exceção dos enumeradores, todas as classes de expressões regulares são thread-safe ou podem ser convertidas em objetos thread-safe por um método sincronizado.  
   

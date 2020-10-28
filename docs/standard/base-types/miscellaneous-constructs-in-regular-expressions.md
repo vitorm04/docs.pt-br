@@ -7,15 +7,15 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - constructs, miscellaneous
-- .NET Framework regular expressions, miscellaneous constructs
+- .NET regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: 8ca888074aa757a1bfba786a7bec5928b75b1da2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f7800dee67513f885339fad67c7a999cc06cca36
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290403"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889264"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Construtores diversos em expressões regulares
 As expressões regulares em .NET incluem três constructos diversos de linguagem. Um deles permite habilitar ou desabilitar opções específicas de correspondência no meio de um padrão de expressão regular. Os dois restantes permitem incluir comentários em uma expressão regular.  
@@ -27,7 +27,7 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
   
  Você lista as opções que deseja habilitar após o ponto de interrogação e as opções que deseja desabilitar após o sinal de subtração. A tabela a seguir descreve cada opção. Para obter mais informações sobre cada opção, consulte [Opções de expressão regular](regular-expression-options.md).  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |`i`|Correspondência sem diferenciação entre maiúsculas e minúsculas.|  
 |`m`|Modo multilinha.|  

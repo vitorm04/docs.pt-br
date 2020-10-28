@@ -10,16 +10,16 @@ helpviewer_keywords:
 - lookbehinds
 - regular expressions, grouping constructs
 - lookaheads
-- .NET Framework regular expressions, grouping constructs
+- .NET regular expressions, grouping constructs
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: d737e5758ee7a940aeea3ded9a7937d687393116
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: de424b4a022a5e2d2f8a9c12b4147383082f019b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662622"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888502"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Agrupando construtores em expressões regulares
 As construções de agrupamento delineiam as subexpressões de uma expressão regular e capturam a subcadeia de caracteres de uma cadeia de caracteres de entrada. Você pode usar construções de agrupamento para fazer isto:  
@@ -62,7 +62,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
   
  Você pode acessar os grupos capturados de quatro formas:  
   
-- Usando o constructo de referência inversa na expressão regular. A subexpressão correspondente é referenciada na mesma expressão regular usando a sintaxe `\`*number*, em que *number* é o número ordinal da subexpressão capturada.  
+- Usando o constructo de referência inversa na expressão regular. A subexpressão correspondente é referenciada na mesma expressão regular usando a sintaxe `\`*number* , em que *number* é o número ordinal da subexpressão capturada.  
   
 - Usando o constructo de referência inversa nomeado na expressão regular. A subexpressão correspondente é referenciada na mesma expressão regular usando o nome da sintaxe `\k<` *name* `>` , em que *Name* é o nome de um grupo de captura, ou `\k<` *número* `>` , em que *Number* é o número ordinal de um grupo de captura. O grupo de captura tem um nome padrão que é idêntico a seu número ordinal. Para saber mais, confira [Subexpressões coincidentes nomeadas](#named_matched_subexpression) mais adiante neste tópico.  
   
@@ -107,7 +107,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
   
 - Usando o constructo de referência inversa nomeado na expressão regular. A subexpressão correspondente é referenciada na mesma expressão regular usando o nome da sintaxe `\k<` *name* `>` , em que *Name* é o nome da subexpressão capturada.  
   
-- Usando o constructo de referência inversa na expressão regular. A subexpressão correspondente é referenciada na mesma expressão regular usando a sintaxe `\`*number*, em que *number* é o número ordinal da subexpressão capturada. As subexpressões correspondentes nomeadas são numeradas em ordem de sequência, da esquerda da direita, após as subexpressões correspondentes.  
+- Usando o constructo de referência inversa na expressão regular. A subexpressão correspondente é referenciada na mesma expressão regular usando a sintaxe `\`*number* , em que *number* é o número ordinal da subexpressão capturada. As subexpressões correspondentes nomeadas são numeradas em ordem de sequência, da esquerda da direita, após as subexpressões correspondentes.  
   
 - Usando a sequência de substituição de `${` *nome* `}` em <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> uma <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> chamada de método ou, em que *Name* é o nome da subexpressão capturada.  
   
@@ -172,7 +172,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
   
 `(?'name1-name2' subexpression)`
   
- em que *name1* é o grupo atual (opcional), *name2* é um grupo definido anteriormente e *subexpression* é qualquer padrão de expressão regular válido. A definição de grupo de balanceamento exclui a definição de *name2* e armazena o intervalo entre *name2* e *name1* em *name1*. Se nenhum grupo *name2* for definido, a correspondência retrocede. Como a exclusão da última definição de *name2* revela a definição anterior de *name2*, essa construção permite que você use a pilha de capturas para o grupo *name2* como um contador, a fim de registrar construções aninhadas, como parênteses e colchetes.  
+ em que *name1* é o grupo atual (opcional), *name2* é um grupo definido anteriormente e *subexpression* é qualquer padrão de expressão regular válido. A definição de grupo de balanceamento exclui a definição de *name2* e armazena o intervalo entre *name2* e *name1* em *name1* . Se nenhum grupo *name2* for definido, a correspondência retrocede. Como a exclusão da última definição de *name2* revela a definição anterior de *name2* , essa construção permite que você use a pilha de capturas para o grupo *name2* como um contador, a fim de registrar construções aninhadas, como parênteses e colchetes.  
   
  A definição de grupo de balanceamento usa *name2* como pilha. O caractere inicial de cada construção aninhada é colocado no grupo e em sua coleção <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>. Quando o caractere de fechamento passa pela correspondência, seu caractere de abertura é removido do grupo e a coleção <xref:System.Text.RegularExpressions.Group.Captures%2A> diminui em um. Depois da correspondência dos caracteres de abertura e fechamento de todas as construções aninhadas, *name2* fica vazio.  
   
@@ -208,7 +208,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
   
  No exemplo, o mecanismo da expressão regular avalia a cadeia de caracteres de entrada "\<abc><mno\<xyz>>", conforme mostra a tabela a seguir.  
   
-|Etapa|Padrão|Result|  
+|Etapa|Padrão|Resultado|  
 |----------|-------------|------------|  
 |1|`^`|Começa a correspondência no início da cadeia de caracteres de entrada|  
 |2|`[^<>]*`|Procura caracteres que não sejam sinais de menor e maior antes do sinal de menor e não encontra correspondências.|  
@@ -291,7 +291,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
   
  `(?=`*subexpressão*`)`  
   
- em que *subexpression* é qualquer padrão de expressão regular. Para que a correspondência seja executada com êxito, a cadeia de caracteres de entrada deve corresponder ao padrão de expressão regular na *subexpression*, embora a subcadeia de caracteres com a qual a correspondência foi estabelecida não conste no resultado. A asserção lookahead positiva de largura zero não retrocede.  
+ em que *subexpression* é qualquer padrão de expressão regular. Para que a correspondência seja executada com êxito, a cadeia de caracteres de entrada deve corresponder ao padrão de expressão regular na *subexpression* , embora a subcadeia de caracteres com a qual a correspondência foi estabelecida não conste no resultado. A asserção lookahead positiva de largura zero não retrocede.  
   
  Geralmente, as asserções desse tipo podem ser encontradas no final de um padrão de expressão regular. Isso define uma subcadeia de caracteres que deve estar presente no final da cadeia de caracteres para que seja possível estabelecer a correspondência, mas que não seja incluída na correspondência. Isso também é útil para evitar retrocessos em excesso. Você pode usar asserções lookahead positivas de largura zero que garantam que um grupo capturado específico seja iniciado por um texto que corresponda a um subconjunto do padrão definido para o grupo capturado. Por exemplo, se um grupo de captura corresponder a caracteres de palavras em sequência, você pode usar uma asserção desse tipo para que o primeiro caractere seja uma caractere alfabético maiúsculo.  
   
@@ -314,7 +314,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
   
  `(?!`*subexpressão*`)`  
   
- em que *subexpression* é qualquer padrão de expressão regular. Para que a correspondência seja executada com êxito, a cadeia de caracteres de entrada não deve corresponder ao padrão de expressão regular na *subexpression*, embora a cadeia de caracteres com a qual a correspondência foi estabelecida não conste no resultado.  
+ em que *subexpression* é qualquer padrão de expressão regular. Para que a correspondência seja executada com êxito, a cadeia de caracteres de entrada não deve corresponder ao padrão de expressão regular na *subexpression* , embora a cadeia de caracteres com a qual a correspondência foi estabelecida não conste no resultado.  
   
  Geralmente, as asserções desse tipo podem ser encontradas no início ou no final de uma expressão regular. No início da expressão regular, elas podem definir um padrão específico que não deve ser correspondido quando o início da expressão regular definir um padrão parecido, mas mais geral, para a correspondência. Nesse caso, ela geralmente é usada para limitar o retrocesso. No final de uma expressão regular, pode definir uma subexpressão que pode não ocorrer no final de uma correspondência.  
   
@@ -453,7 +453,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
   
  O segundo grupo de captura corresponde a cada palavra da frase. O primeiro grupo de captura corresponde a cada palavra com a pontuação e o espaço em branco que a segue. O objeto <xref:System.Text.RegularExpressions.Group>, cujo índice é 2, fornece informações sobre o texto correspondente ao segundo grupo de captura. O conjunto completo de palavras capturadas pelo grupo de captura está disponível no objeto <xref:System.Text.RegularExpressions.CaptureCollection>, retornado pela propriedade <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Linguagem de expressões regulares – referência rápida](regular-expression-language-quick-reference.md)
 - [Retrocesso](backtracking-in-regular-expressions.md)

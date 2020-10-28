@@ -13,20 +13,20 @@ helpviewer_keywords:
 - anchors, in regular expressions
 - metacharacters, atomic zero-width assertions
 - metacharacters, anchors
-- .NET Framework regular expressions, anchors
-- .NET Framework regular expressions, atomic zero-width assertions
+- .NET regular expressions, anchors
+- .NET regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.openlocfilehash: e86bae8a687e89acba9a0b713630b43809f081d1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a6330eebbc69b9a3877a99a4373810d5a124c570
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290623"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889160"
 ---
 # <a name="anchors-in-regular-expressions"></a>Âncoras em expressões regulares
 Âncoras ou asserções atômicas de largura zero, especificam uma posição na cadeia de caracteres em que uma correspondência deve ocorrer. Quando você usa uma âncora na sua expressão de pesquisa, o mecanismo de expressões regulares não avança pela cadeia de caracteres ou consome caracteres, ele procura uma correspondência apenas na posição especificada. Por exemplo, `^` Especifica que a correspondência deve começar no início de uma linha ou cadeia de caracteres. Portanto, a expressão regular `^http:` corresponde a "http:" apenas quando ele ocorre no início de uma linha. A tabela a seguir lista as âncoras com suporte pelas expressões regulares no .NET.  
   
-|Âncora|Description|  
+|Âncora|Descrição|  
 |------------|-----------------|  
 |`^`|Por padrão, a correspondência deve ocorrer no início da cadeia de caracteres. No modo multilinha, deve ocorrer no início da linha. Para saber mais, veja [Início da cadeia de caracteres ou linha](#start-of-string-or-line-).|  
 |`$`|Por padrão, a correspondência deve ocorrer no fim da cadeia de caracteres ou antes de `\n` no fim da cadeia de caracteres. No modo multilinha, deve ocorrer no fim da linha ou antes de `\n` no fim da linha. Para saber mais, veja [Fim da cadeia de caracteres ou linha](#end-of-string-or-line-).|  

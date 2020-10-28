@@ -7,24 +7,24 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - regular expressions, behavior
-- .NET Framework regular expressions, behavior
+- .NET regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 802c84bf93b3821459ab652e69a12fcc50280b9e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a93e0e7bac782d9a4ce47c1586796b063563d2b6
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290546"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888666"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Detalhes do comportamento de expressões regulares
 
-O mecanismo de expressões regulares do .NET Framework é um correspondente de expressão regular de retrocesso que incorpora um mecanismo de NFA (Automação Finita Não Determinística) tradicional, como o usado pelo Perl, Python, Emacs e Tcl. Isso o distingue de mecanismos de DFA (Autômato finito determinístico) de expressões regulares puras mais rápidos, porém mais limitados, como os encontrados em awk, egrep ou lex. Também o distingue de NFAs POSIX padronizados, porém mais lentos. A seção a seguir descreve os três tipos de mecanismos de expressões regulares e explica por que as expressões regulares no .NET Framework são implementadas usando um mecanismo de NFA tradicional.
+O mecanismo de expressões regulares do .NET é um correspondente de expressão regular de retrocesso que incorpora um mecanismo de NFA (Automação Finita Não Determinística) tradicional, como o usado pelo Perl, Python, Emacs e Tcl. Isso o distingue de mecanismos de DFA (Autômato finito determinístico) de expressões regulares puras mais rápidos, porém mais limitados, como os encontrados em awk, egrep ou lex. Também o distingue de NFAs POSIX padronizados, porém mais lentos. A seção a seguir descreve os três tipos de mecanismos de expressões regulares e explica por que as expressões regulares no .NET são implementadas usando um mecanismo de NFA tradicional.
 
 ## <a name="benefits-of-the-nfa-engine"></a>Benefícios do mecanismo NFA
 
  Quando mecanismos de DFA executam a correspondência de padrões, a ordem de processamento é orientada pela cadeia de caracteres de entrada. O mecanismo começa no início da cadeia de caracteres de entrada e continua sequencialmente para determinar se o próximo caractere corresponde ao padrão de expressão regular. Podem assegurar uma correspondência com a cadeia de caracteres mais longa possível. Como nunca testam o mesmo caractere duas vezes, os mecanismos de DFA não dão suporte ao retrocesso. No entanto, como um mecanismo de DFA contém somente o estado finito, não pode corresponder a um padrão com referências inversas; além disso, uma vez que não constrói uma expansão explícita, não pode capturar subexpressões.
 
- Ao contrário de mecanismos de DFA, quando mecanismos de NFA tradicionais executam a correspondência de padrões, a ordem de processamento é orientada pelo padrão de expressão regular. Como processa um elemento de linguagem específico, o mecanismo usa a correspondência Greedy; ou seja, corresponde à maior parte possível da cadeia de caracteres de entrada. Contudo, também consegue salvar seu estado correspondendo a uma subexpressão. Se uma correspondência falhar, o mecanismo poderá retornar para um estado salvo a fim de tentar correspondências adicionais. Esse processo de abandonar uma correspondência de subexpressão bem-sucedida para que elementos de linguagem posteriores na expressão regular também possam corresponder é conhecido como *retrocesso*. Os mecanismos de NFA usam o retrocesso para testar todas as possíveis expansões de uma expressão regular em uma ordem específica e aceitam a primeira correspondência. Como um mecanismo de NFA tradicional constrói uma expansão específica da expressão regular para uma correspondência de sucesso, pode capturar correspondências de subexpressões e referências inversas correspondentes. Entretanto, como um NFA tradicional retrocede, pode visitar o mesmo estado diversas vezes se chegar no estado por diferentes caminhos. Como resultado, pode executar de modo exponencial lentamente na pior das hipóteses. Já que um mecanismo de NFA tradicional aceita a primeira correspondência que encontra, também pode deixar outras correspondências (possivelmente mais longas) não descobertas.
+ Ao contrário de mecanismos de DFA, quando mecanismos de NFA tradicionais executam a correspondência de padrões, a ordem de processamento é orientada pelo padrão de expressão regular. Como processa um elemento de linguagem específico, o mecanismo usa a correspondência Greedy; ou seja, corresponde à maior parte possível da cadeia de caracteres de entrada. Contudo, também consegue salvar seu estado correspondendo a uma subexpressão. Se uma correspondência falhar, o mecanismo poderá retornar para um estado salvo a fim de tentar correspondências adicionais. Esse processo de abandonar uma correspondência de subexpressão bem-sucedida para que elementos de linguagem posteriores na expressão regular também possam corresponder é conhecido como *retrocesso* . Os mecanismos de NFA usam o retrocesso para testar todas as possíveis expansões de uma expressão regular em uma ordem específica e aceitam a primeira correspondência. Como um mecanismo de NFA tradicional constrói uma expansão específica da expressão regular para uma correspondência de sucesso, pode capturar correspondências de subexpressões e referências inversas correspondentes. Entretanto, como um NFA tradicional retrocede, pode visitar o mesmo estado diversas vezes se chegar no estado por diferentes caminhos. Como resultado, pode executar de modo exponencial lentamente na pior das hipóteses. Já que um mecanismo de NFA tradicional aceita a primeira correspondência que encontra, também pode deixar outras correspondências (possivelmente mais longas) não descobertas.
 
  Os mecanismos de NFA POSIX são como mecanismos de NFA tradicionais, exceto pelo fato de continuarem retrocedendo até poderem assegurar que encontraram a correspondência mais longa possível. Como resultado, um mecanismo de NFA POSIX é mais lento do que um mecanismo de NFA tradicional; quando você usa um mecanismo de NFA POSIX, não pode favorecer uma correspondência menor em detrimento de uma maior alterando a ordem da pesquisa de retrocesso.
 
@@ -33,11 +33,11 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
 > [!NOTE]
 > Para obter informações sobre a penalidade de desempenho causada por retrocesso excessivo e maneiras de criar uma expressão regular para solucioná-lo, consulte [Retrocesso](backtracking-in-regular-expressions.md).
 
-## <a name="net-framework-engine-capabilities"></a>Recursos do mecanismo de .NET Framework
+## <a name="net-engine-capabilities"></a>Recursos do mecanismo .NET
 
- Para tirar proveito dos benefícios de um mecanismo de NFA tradicional, o mecanismo de expressões regulares do .NET Framework inclui um conjunto completo de constructos para permitir que os programadores conduzam o mecanismo de retrocesso. Tais constructos podem ser usados para encontrar correspondências mais rapidamente ou favorecer expansões específicas em detrimento de outras.
+ Para tirar proveito dos benefícios de um mecanismo de NFA tradicional, o mecanismo de expressões regulares do .NET inclui um conjunto completo de constructos para permitir que os programadores conduzam o mecanismo de retrocesso. Tais constructos podem ser usados para encontrar correspondências mais rapidamente ou favorecer expansões específicas em detrimento de outras.
 
- Outros recursos do mecanismo de expressões regulares do .NET Framework incluem o seguinte:
+ Outros recursos do mecanismo de expressões regulares do .NET incluem o seguinte:
 
 - Quantificadores lentos: `??` , `*?` , `+?` , `{` *n* `,` *m* `}?` . Esses constructos instruem o mecanismo de retrocesso a pesquisar o número mínimo de repetições primeiro. Por outro lado, quantificadores Greedy comuns tentam corresponder ao número máximo de repetições primeiro. O exemplo a seguir mostra a diferença entre os dois. Uma expressão regular corresponde a uma frase que termina em um número e um grupo de captura deve extrair esse número. A expressão regular `.+(\d+)\.` inclui o quantificador Greedy `.+`, que faz com que o mecanismo de expressões regulares capture o último dígito do número. Por outro lado, a expressão regular `.+?(\d+)\.` inclui o quantificador lento `.+?`, que faz com que o mecanismo de expressões regulares capture o número inteiro.
 
@@ -104,7 +104,7 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
 
      Para obter mais informações sobre a avaliação condicional, consulte [Constructos de alternância](alternation-constructs-in-regular-expressions.md).
 
-- Definições de grupo de `(?<` *balanceamento:* `-` *name2* `>` *subexpressão*nome2property `)` . Esse recurso permite que o mecanismo de expressões regulares controle constructos aninhados, como parênteses ou colchetes de abertura e fechamento. Para ver um exemplo, consulte [Constructos de agrupamento](grouping-constructs-in-regular-expressions.md).
+- Definições de grupo de `(?<` *balanceamento:* `-` *name2* `>` *subexpressão* nome2property `)` . Esse recurso permite que o mecanismo de expressões regulares controle constructos aninhados, como parênteses ou colchetes de abertura e fechamento. Para ver um exemplo, consulte [Constructos de agrupamento](grouping-constructs-in-regular-expressions.md).
 
 - Grupos atômicos: `(?>` *subexpressão* `)` . Esse recurso permite que o mecanismo de retrocesso assegure que uma subexpressão corresponda apenas à primeira correspondência encontrada para ela, como se a expressão estivesse sendo executada independentemente da expressão que a contém. Se você não usar esse constructo, as pesquisas de retrocesso de expressões maiores poderão alterar o comportamento de uma subexpressão. Por exemplo, a expressão regular `(a+)\w` corresponde a um ou mais caracteres "a", juntamente com um caractere de palavra que segue a sequência de caracteres "a" e atribui a sequência de caracteres "a" para o primeiro grupo de captura. No entanto, se o caractere final da cadeia de caracteres de entrada também for um "a", ele será correspondido pelo `\w` elemento Language e não será incluído no grupo capturado.
 
@@ -144,12 +144,12 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-|Title|Description|
+|Título|Descrição|
 |-----------|-----------------|
 |[Retrocesso](backtracking-in-regular-expressions.md)|Fornece informações sobre como o retrocesso de expressões regulares se ramifica para encontrar correspondências alternativas.|
 |[Compilação e reutilização](compilation-and-reuse-in-regular-expressions.md)|Fornece informações sobre a compilação e a reutilização de expressões regulares para aumentar o desempenho.|
 |[Acesso thread-safe](thread-safety-in-regular-expressions.md)|Fornece informações sobre a segurança de thread de expressões regulares e explica quando você deve sincronizar o acesso a objetos de expressão regular.|
-|[Expressões regulares do .NET Framework](regular-expressions.md)|Fornece uma visão geral sobre o aspecto de linguagem de programação das expressões regulares.|
+|[Expressões regulares do .NET](regular-expressions.md)|Fornece uma visão geral sobre o aspecto de linguagem de programação das expressões regulares.|
 |[O modelo de objeto de expressão regular](the-regular-expression-object-model.md)|Oferece informações e exemplos de código que mostram como usar as classes de expressão regular.|
 |[Linguagem de expressões regulares – referência rápida](regular-expression-language-quick-reference.md)|Oferece informações a respeito do conjunto de caracteres, operadores e constructos que você pode usar para definir expressões regulares.|
 

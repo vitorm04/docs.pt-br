@@ -13,14 +13,14 @@ helpviewer_keywords:
 - alternation constructs
 - optional matching patterns
 - constructs, alternation
-- .NET Framework regular expressions, alternation constructs
+- .NET regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 506c1cdeb577452628d67ab00df20dd30881f406
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 30af871502e0db48853705206db5e2b3da28bb76
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495428"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889173"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Construtores de alternância em expressões regulares
 
@@ -49,7 +49,7 @@ A expressão regular que usa o `|` caractere, `\bgr(a|e)y\b` , é interpretada c
 |<code>(a&#124;e)</code>|Corresponder a um "a" ou "e".|  
 |`y\b`|Corresponder a um “y” em um limite de palavra.|  
 
-O caractere `|` também pode ser usado para executar uma correspondência do tipo um/ou outro com vários caracteres ou subexpressões, que podem incluir qualquer combinação de literais de caracteres e elementos de linguagem de expressão regular. (A classe Character não fornece essa funcionalidade.) O exemplo a seguir usa o `|` caractere para extrair um número de previdência social (SSN) dos EUA, que é um número de 9 dígitos com o formato *DDD* - *DD* - *dddd*ou um número de identificação de empregador dos EUA (Ein), que é um número de 9 dígitos com o formato *DD* - *ddddddd*.
+O caractere `|` também pode ser usado para executar uma correspondência do tipo um/ou outro com vários caracteres ou subexpressões, que podem incluir qualquer combinação de literais de caracteres e elementos de linguagem de expressão regular. (A classe Character não fornece essa funcionalidade.) O exemplo a seguir usa o `|` caractere para extrair um número de previdência social (SSN) dos EUA, que é um número de 9 dígitos com o formato *DDD* - *DD* - *dddd* ou um número de identificação de empregador dos EUA (Ein), que é um número de 9 dígitos com o formato *DD* - *ddddddd* .
 
 [!code-csharp[RegularExpressions.Language.Alternation#2](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
 [!code-vb[RegularExpressions.Language.Alternation#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
@@ -69,11 +69,11 @@ Este elemento de linguagem tenta corresponder a um dos dois padrões dependendo 
 
 `(?(`*expressão* `)` de *Sim* `|` *não*`)`
 
-em que *expressão* é o padrão inicial para corresponder *, sim* é o padrão para corresponder se a *expressão* for correspondida e *não* for o padrão opcional para corresponder se a *expressão* não for correspondida. O mecanismo de expressões regulares trata a *expressão* como uma asserção de largura zero, isto é, o mecanismo de expressões regulares não avança no fluxo de entrada após avaliar a *expressão*. Portanto, esse constructo é equivalente ao seguinte:
+em que *expressão* é o padrão inicial para corresponder *, sim* é o padrão para corresponder se a *expressão* for correspondida e *não* for o padrão opcional para corresponder se a *expressão* não for correspondida. O mecanismo de expressões regulares trata a *expressão* como uma asserção de largura zero, isto é, o mecanismo de expressões regulares não avança no fluxo de entrada após avaliar a *expressão* . Portanto, esse constructo é equivalente ao seguinte:
 
 `(?(?=`*expressão* `)` de *Sim* `|` *não*`)`
 
-`(?=` *expressão* Where `)` é uma construção de asserção de largura zero. (Para obter mais informações, consulte [agrupando construções](grouping-constructs-in-regular-expressions.md).) Como o mecanismo de expressões regulares interpreta a *expressão* como uma âncora (uma declaração de largura zero), a *expressão* deve ser uma asserção de largura zero (para obter mais informações, consulte [âncoras](anchors-in-regular-expressions.md)) ou uma subexpressão que também esteja contida em *Sim*. Caso contrário, o padrão *sim* não pode ser correspondido.  
+`(?=` *expressão* Where `)` é uma construção de asserção de largura zero. (Para obter mais informações, consulte [agrupando construções](grouping-constructs-in-regular-expressions.md).) Como o mecanismo de expressões regulares interpreta a *expressão* como uma âncora (uma declaração de largura zero), a *expressão* deve ser uma asserção de largura zero (para obter mais informações, consulte [âncoras](anchors-in-regular-expressions.md)) ou uma subexpressão que também esteja contida em *Sim* . Caso contrário, o padrão *sim* não pode ser correspondido.  
   
 > [!NOTE]
 > Se *expression* for um grupo de captura nomeado ou numerado, o constructo de alternância será interpretado como um teste de captura; para obter mais informações, consulte a próxima seção, [correspondência condicional com base em um grupo de captura válido](#Conditional_Group). Em outras palavras, o mecanismo de expressões regulares não tenta corresponder a subcadeia de caracteres capturada, mas em vez disso, testa a presença ou ausência do grupo.  

@@ -7,23 +7,23 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- strings [.NET Framework],searching
+- strings [.NET],searching
 - best practices,string comparison and sorting
-- strings [.NET Framework],best practices
-- strings [.NET Framework],basic string operations
+- strings [.NET],best practices
+- strings [.NET],basic string operations
 - sorting strings
-- strings [.NET Framework],sorting
-- string comparison [.NET Framework],best practices
+- strings [.NET],sorting
+- string comparison [.NET],best practices
 - string sorting
 - comparing strings
-- strings [.NET Framework],comparing
+- strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: 28c1397c71debeed181acb2c1acb01b0f8cee7c9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ed85d04ffbee0493745c4a5ef63313571b44628b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289359"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889095"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Práticas recomendadas para o uso de cadeias de caracteres no .NET
 
@@ -56,7 +56,7 @@ Evite as práticas a seguir ao usar cadeias de caracteres:
 
 A maioria dos métodos de manipulação de cadeia de caracteres no .NET é sobrecarregada. Normalmente, uma ou mais sobrecargas aceitam as configurações padrão, enquanto outras não aceitam nenhum padrão e definem a maneira exata em que as cadeias de caracteres devem ser comparadas ou manipuladas. A maioria dos métodos que não dependem de padrões inclui um parâmetro do tipo <xref:System.StringComparison>, que é uma enumeração que especifica explicitamente as regras de comparação de cadeia de caracteres por cultura e maiúsculas e minúsculas. A tabela a seguir descreve os membros de enumeração <xref:System.StringComparison>.
 
-|Membro de StringComparison|Description|
+|Membro de StringComparison|Descrição|
 |-----------------------------|-----------------|
 |<xref:System.StringComparison.CurrentCulture>|Executa uma comparação que diferencia maiúsculas de minúsculas usando a cultura atual.|
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Executa uma comparação que não diferencia maiúsculas de minúsculas usando a cultura atual.|

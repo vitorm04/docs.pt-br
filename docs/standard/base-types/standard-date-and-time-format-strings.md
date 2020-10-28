@@ -7,20 +7,20 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- formatting [.NET Framework], dates
+- formatting [.NET], dates
 - custom DateTime format string
 - format specifiers, custom date and time
 - format strings
 - custom date and time format strings
-- formatting [.NET Framework], time
+- formatting [.NET], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 95f655ace1b2fb38100e3cc1089c4a3f61c5b264
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 36aaef2676383263b2009fd283f1671ef970f20e
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557353"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888627"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora padrão
 
@@ -31,7 +31,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
 - Para definir a representação de texto de um valor de data e hora que possa ser convertido em valor de <xref:System.DateTime> ou <xref:System.DateTimeOffset> por uma operação de análise.
 
 > [!TIP]
-> Baixe o **Utilitário de Formatação**, um aplicativo do Windows Forms do .NET Core que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado. O código-fonte está disponível para o [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) e o [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
+> Baixe o **Utilitário de Formatação** , um aplicativo do Windows Forms do .NET Core que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado. O código-fonte está disponível para o [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) e o [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
 Cadeias de caracteres de formato de data e hora padrão podem ser usadas tanto com valores <xref:System.DateTime> quanto <xref:System.DateTimeOffset>.
 
@@ -447,11 +447,11 @@ Além disso, se o constructo <xref:System.Globalization.CultureInfo.%23ctor%28Sy
 
 A formatação é influenciada pelas propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> atual, que é fornecido implicitamente pela cultura de thread atual ou explicitamente pelo parâmetro <xref:System.IFormatProvider> do método que invoca a formatação. Para o parâmetro <xref:System.IFormatProvider>, seu aplicativo deve especificar um objeto <xref:System.Globalization.CultureInfo>, que representa uma cultura, ou um objeto <xref:System.Globalization.DateTimeFormatInfo>, que representa as convenções de formatação de data e hora de uma determinada cultura. Muitos dos especificadores de formato padrão de data e hora são aliases para padrões de formatação definidos pelas propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> atual. Seu aplicativo pode alterar o resultado produzido por alguns especificadores de formato padrão de data e hora alterando os padrões de formatação de data e hora correspondentes da propriedade <xref:System.Globalization.DateTimeFormatInfo>.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>
 - [Formatar tipos](formatting-types.md)
-- [Cadeias de caracteres de formato de data e hora personalizadas](custom-date-and-time-format-strings.md)
+- [Cadeias de caracteres de formato de data e hora personalizado](custom-date-and-time-format-strings.md)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (C#)](/samples/dotnet/samples/windowsforms-formatting-utility-cs)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (Visual Basic)](/samples/dotnet/samples/windowsforms-formatting-utility-vb)

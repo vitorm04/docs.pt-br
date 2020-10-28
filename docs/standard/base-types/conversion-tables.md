@@ -9,15 +9,15 @@ helpviewer_keywords:
 - converting types, narrowing conversions
 - converting types, widening conversions
 - base types, converting
-- tables [.NET Framework], type conversions
-- data types [.NET Framework], converting
+- tables [.NET], type conversions
+- data types [.NET], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-ms.openlocfilehash: bb696c65078a5dae0b81a48bffc786d2257496c3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 27578d46a80b0372c6ddc2266a751cd0e6e9aa91
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290559"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889446"
 ---
 # <a name="type-conversion-tables-in-net"></a>Tabelas de conversão de tipos em .NET
 Conversões de expansão ocorrem quando um valor de um tipo é convertido em outro tipo de tamanho igual ou maior. Conversões de redução ocorrem quando um valor de um tipo é convertido em um valor de outro tipo de tamanho menor. As tabelas neste tópico ilustram os comportamentos exibidos por ambos os tipos de conversões.  

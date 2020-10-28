@@ -9,15 +9,15 @@ dev_langs:
 helpviewer_keywords:
 - parsing strings, numeric strings
 - numeric strings
-- enumerations [.NET Framework], parsing strings
+- enumerations [.NET], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-ms.openlocfilehash: b184bad10b816c1eae798302337b5c901732ad7f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2ddefde4c9dceffb6adf7e17a965a2b15ff60ed2
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589533"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889017"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Análise de cadeias de caracteres numéricas no .NET
 Todos os tipos numéricos têm dois métodos de análise estáticos, `Parse` e `TryParse`, que podem ser usados para converter a representação de cadeia de caracteres de um número em um tipo numérico. Esses métodos permitem analisar cadeias de caracteres que foram produzidas usando as cadeias de caracteres de formato documentadas em [Cadeias de caracteres de formato numérico padrão](standard-numeric-format-strings.md) e [Cadeias de caracteres de formato numérico personalizadas](custom-numeric-format-strings.md). Por padrão, os métodos `Parse` e `TryParse` conseguem converter cadeias de caracteres que contêm dígitos decimais integrais somente em valores inteiros. Podem converter cadeias de caracteres que contêm dígitos decimais integrais e dígitos fracionários, separadores de grupo e um separador decimal em valores de ponto flutuante. O método `Parse` lança uma exceção se a operação falhar, enquanto o método `TryParse` retorna `false`.  
@@ -82,7 +82,7 @@ Todos os tipos numéricos têm dois métodos de análise estáticos, `Parse` e `
  [!code-csharp[Parsing.Numbers#3](../../../samples/snippets/csharp/VS_Snippets_CLR/parsing.numbers/cs/unicode1.cs#3)]
  [!code-vb[Parsing.Numbers#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/unicode1.vb#3)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Globalization.NumberStyles>
 - [Analisando cadeias de caracteres](parsing-strings.md)

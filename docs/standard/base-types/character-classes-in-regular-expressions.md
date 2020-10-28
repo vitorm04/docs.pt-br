@@ -10,14 +10,14 @@ helpviewer_keywords:
 - character classes
 - regular expressions, character classes
 - characters, matching syntax
-- .NET Framework regular expressions, character classes
+- .NET regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 85107bf2234eda1705126e524acd5b35952094bc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 619a32d98d697b3b1d461921bfe581acb720be68
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292092"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888718"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classes de caracteres em expressões regulares
 
@@ -48,7 +48,7 @@ Uma classe de caracteres define um conjunto de caracteres, qualquer dos quais po
  O .NET dá suporte a expressões de subtração de classes de caracteres, o que permite a você definir um conjunto de caracteres como resultado da exclusão de uma classe de caracteres de outra classe de caracteres. Para obter mais informações, consulte [subtração de classe de caractere](#CharacterClassSubtraction).  
   
 > [!NOTE]
-> Classes de caractere que fazem a correspondência de caracteres por categoria, como [\w](#WordCharacter) para a correspondência de caracteres de palavra ou [\p{}](#CategoryOrBlock) para uma categoria de Unicode, dependem da classe <xref:System.Globalization.CharUnicodeInfo> para fornecer informações sobre categorias de caractere.  Do .NET Framework 4.6.2 em diante, as categorias de caracteres se baseiam no [Padrão Unicode, versão 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). No .NET Framework 4 até o .NET Framework 4.6.1, eles se baseiam no [Padrão Unicode, versão 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+> Classes de caractere que fazem a correspondência de caracteres por categoria, como [\w](#WordCharacter) para a correspondência de caracteres de palavra ou [\p{}](#CategoryOrBlock) para uma categoria de Unicode, dependem da classe <xref:System.Globalization.CharUnicodeInfo> para fornecer informações sobre categorias de caractere. No .NET Framework 4.6.2 e versões posteriores, as categorias de caracteres são baseadas no [padrão Unicode, versão 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/).
   
 <a name="PositiveGroup"></a>
 ## <a name="positive-character-group--"></a>Grupo de caracteres positivo: [ ]  
@@ -226,7 +226,7 @@ em que *firstCharacter* é o caractere que começa o intervalo e *lastCharacter*
 ## <a name="word-character-w"></a>Caractere de palavra: \w  
  `\w` corresponde a qualquer caractere de palavra. Um caractere de palavra é um membro de qualquer uma das categorias Unicode listadas na tabela a seguir.  
   
-|Categoria|Description|  
+|Categoria|Descrição|  
 |--------------|-----------------|  
 |LI|Letra, minúscula|  
 |Lu|Letra, maiúscula|  
@@ -244,7 +244,7 @@ em que *firstCharacter* é o caractere que começa o intervalo e *lastCharacter*
   
  O exemplo a seguir usa o elemento de linguagem `\w` para corresponder a caracteres duplicados em uma palavra. O exemplo define um padrão de expressão regular, `(\w)\1`, que pode ser interpretado como a seguir.  
   
-|Elemento|Description|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
 |(\w)|Corresponder a um caractere de palavra. Este é o primeiro grupo de captura.|  
 |\1|Corresponder ao valor da primeira captura.|  
@@ -278,7 +278,7 @@ em que *firstCharacter* é o caractere que começa o intervalo e *lastCharacter*
   
  O exemplo a seguir ilustra a classe de caracteres `\W`.  Ele define um padrão de expressão regular, `\b(\w+)(\W){1,2}`, que corresponde a uma palavra seguida por um ou dois caracteres não pertencentes a palavras, como espaço em branco ou pontuação. A expressão regular é interpretada conforme mostrado na tabela a seguir.  
   
-|Elemento|Description|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
 |\b|Começar a correspondência em um limite de palavra.|  
 |(\w+)|Fazer a correspondência a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
@@ -307,7 +307,7 @@ em que *firstCharacter* é o caractere que começa o intervalo e *lastCharacter*
   
  O exemplo a seguir ilustra a classe de caracteres `\s`. Ele define um padrão de expressão regular, `\b\w+(e)?s(\s|$)`, que corresponde a uma palavra que termina em “s” ou em “es” seguida por um caractere de espaço em branco ou pelo final da cadeia de caracteres de entrada. A expressão regular é interpretada conforme mostrado na tabela a seguir.  
   
-|Elemento|Description|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
 |\b|Começar a correspondência em um limite de palavra.|  
 |\w+|Fazer a correspondência a um ou mais caracteres de palavra.|  
@@ -326,7 +326,7 @@ em que *firstCharacter* é o caractere que começa o intervalo e *lastCharacter*
   
  O exemplo a seguir ilustra o elemento de linguagem `\S`. O padrão de expressão regular `\b(\S+)\s?` corresponde a cadeias de caracteres que são delimitadas por caracteres de espaço em branco. O segundo elemento no objeto <xref:System.Text.RegularExpressions.GroupCollection> da correspondência contém a cadeia de caracteres correspondida. A expressão regular pode ser interpretada conforme mostrado na tabela a seguir.  
   
-|Elemento|Description|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
 |`\b`|Começar a correspondência em um limite de palavra.|  
 |`(\S+)`|Corresponder a um ou mais caracteres diferentes de espaço em branco. Este é o primeiro grupo de captura.|  
@@ -343,7 +343,7 @@ em que *firstCharacter* é o caractere que começa o intervalo e *lastCharacter*
   
  O exemplo a seguir ilustra o elemento de linguagem `\d`. Ele testa se uma cadeia de caracteres de entrada representa um número de telefone válido nos Estados Unidos e no Canadá. O padrão de expressão regular `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` é definido conforme mostrado na tabela a seguir.  
   
-|Elemento|Description|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
 |`^`|Começar a correspondência no início da cadeia de caracteres de entrada.|  
 |`\(?`|Corresponder a zero ou a um caractere "(" literal.|  
@@ -365,7 +365,7 @@ em que *firstCharacter* é o caractere que começa o intervalo e *lastCharacter*
   
  O exemplo a seguir ilustra o elemento de linguagem \D. Ele testa se uma cadeia de caracteres, como um número de peça, consiste na combinação apropriada de caracteres decimais e não decimais. O padrão de expressão regular `^\D\d{1,5}\D*$` é definido conforme mostrado na tabela a seguir.  
   
-|Elemento|Description|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
 |`^`|Começar a correspondência no início da cadeia de caracteres de entrada.|  
 |`\D`|Corresponder a um caractere que não seja um dígito.|  

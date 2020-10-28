@@ -6,17 +6,17 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- formatting [.NET Framework], dates
-- dates [.NET Framework], formatting
-- calendars [.NET Framework], displaying dates
+- formatting [.NET], dates
+- dates [.NET], formatting
+- calendars [.NET], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-ms.openlocfilehash: 8d02b74f63ec5b6260679ae4cea04791681ec238
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 6c1ab51114a1b39234adbc89526d111b3b9ba44c
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523920"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888437"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Como: exibir datas em calendários não gregorianos
 Os tipos <xref:System.DateTime> e <xref:System.DateTimeOffset> usam o calendário gregoriano como seu calendário padrão. Isso significa que chamar o método `ToString` de um valor de data e hora exibe a representação de cadeia de caracteres da data e hora no calendário gregoriano, mesmo que a data e hora tenha sido criada usando outro calendário. Isso é ilustrado no exemplo a seguir, que usa duas maneiras diferentes para criar um valor de data e hora com o calendário persa, mas ainda exibe esses valores de data e hora no calendário gregoriano quando chama o método <xref:System.DateTime.ToString%2A>. Este exemplo reflete duas técnicas comumente usadas, mas incorretas, para exibir a data em um calendário específico.  

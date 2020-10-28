@@ -12,15 +12,15 @@ helpviewer_keywords:
 - characters, escapes
 - regular expressions, character escapes
 - escape characters
-- .NET Framework regular expressions, character escapes
+- .NET regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 4491b83db195a8d0f5bbf4f4326d92ed9ebd24e7
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 927fb32163a7b44561c19fdb35e38b488fc50fb7
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050436"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889511"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapes de caracteres em expressões regulares
 A barra invertida (\\) em uma expressão regular indica uma das situações a seguir:  
@@ -35,7 +35,7 @@ A barra invertida (\\) em uma expressão regular indica uma das situações a se
 ## <a name="character-escapes-in-net"></a>Escapes de caracteres em .NET  
  A tabela a seguir lista os escapes de caracteres com suporte das expressões regulares em .NET.  
   
-|Caractere ou sequência|Description|  
+|Caractere ou sequência|Descrição|  
 |---------------------------|-----------------|  
 |Todos os caracteres, exceto pelos seguintes:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |Caracteres diferentes dos listados na coluna **Caractere ou sequência** não têm significado especial em expressões regulares; eles correspondem a si mesmos.<br /><br /> Os caracteres incluídos na coluna **Caractere ou sequência** são elementos especiais na linguagem de expressão regular. Para fazer a correspondência com eles em uma expressão regular, eles devem ser ignorados ou incluídos em um [grupo de caracteres positivo](character-classes-in-regular-expressions.md). Por exemplo, a expressão regular `\$\d+` ou `[$]\d+` corresponde a "$1200".|  
 |`\a`|Corresponde a um caractere de sino (alarme), `\u0007`.|  
@@ -49,7 +49,7 @@ A barra invertida (\\) em uma expressão regular indica uma das situações a se
 |`\`*nnn*|Corresponde a um caractere ASCII, em que *nnn* consiste em dois ou três dígitos que representam o código de caractere octal. Por exemplo, `\040` representa um caractere de espaço. Esse constructo é interpretado como referência inversa se tiver apenas um dígito (por exemplo, `\2`) ou se corresponder ao número de um grupo de captura. (Confira [Constructos de referência inversa](backreference-constructs-in-regular-expressions.md)).|  
 |`\x` *nn*|Corresponde a um caractere ASCII, em que *nn* é um código de caractere hexadecimal com dois dígitos.|  
 |`\c`*X*|Corresponde a um caractere de controle ASCII, em que X é a letra do caractere de controle. Por exemplo, `\cC` é CTRL-C.|  
-|`\u` *nnnn*|Corresponde a uma unidade de código UTF-16 cujo valor é *nnnn* hexadecimal. **Observação:**  O caractere de escape do Perl 5 que é usado para especificar o Unicode não tem suporte do .NET. O escape de caractere do Perl 5 tem o formulário `\x{` *####* `…}` , em que *####* `…` é uma série de dígitos hexadecimais. Em vez disso, use `\u`*nnnn*.|  
+|`\u` *nnnn*|Corresponde a uma unidade de código UTF-16 cujo valor é *nnnn* hexadecimal. **Observação:**  O caractere de escape do Perl 5 que é usado para especificar o Unicode não tem suporte do .NET. O escape de caractere do Perl 5 tem o formulário `\x{` *####* `…}` , em que *####* `…` é uma série de dígitos hexadecimais. Em vez disso, use `\u`*nnnn* .|  
 |`\`|Quando seguido por um caractere que não é reconhecido como um caractere com escape, corresponde a esse caractere. Por exemplo, `\*` corresponde a um asterisco (*) e é igual a `\x2A`.|  
   
 ## <a name="an-example"></a>Um Exemplo  

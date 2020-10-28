@@ -9,15 +9,15 @@ dev_langs:
 helpviewer_keywords:
 - backreferences
 - constructs, backreference
-- .NET Framework regular expressions, backreference constructs
+- .NET regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.openlocfilehash: 87c3dbde2eb2b5a19b91f34bb2b088af5c0d1827
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: bc0c6d3dcaa084c168a9c3fc0239116ec8899aae
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290598"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889147"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Construtores de referência inversa em expressões regulares
 
@@ -50,7 +50,7 @@ Se a ambiguidade for um problema, você poderá usar a `\k<` *name* `>` notaçã
 
 O exemplo a seguir localiza caracteres de palavra duplicados em uma cadeia de caracteres. Ele define uma expressão regular, `(\w)\1`, que consiste nos elementos a seguir.
 
-|Elemento|Description|
+|Elemento|Descrição|
 |-------------|-----------------|
 |`(\w)`|Corresponde a um caractere de palavra e o atribui ao primeiro grupo de captura.|
 |`\1`|Corresponde ao próximo caractere que é o mesmo que o valor do primeiro grupo de captura.|
@@ -72,7 +72,7 @@ em que *name* é o nome de um grupo de captura definido no padrão da expressão
 
 O exemplo a seguir localiza caracteres de palavra duplicados em uma cadeia de caracteres. Ele define uma expressão regular, `(?<char>\w)\k<char>`, que consiste nos elementos a seguir.
 
-|Elemento|Description|
+|Elemento|Descrição|
 |-------------|-----------------|
 |`(?<char>\w)`|Corresponde a um caractere de palavra e o atribui a um grupo de captura chamado `char`.|
 |`\k<char>`|Corresponde ao próximo caractere que é o mesmo que o valor do grupo de captura `char`.|

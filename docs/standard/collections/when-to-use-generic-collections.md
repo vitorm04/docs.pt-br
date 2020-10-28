@@ -3,15 +3,15 @@ title: Quando usar coleções genéricas
 ms.date: 04/30/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- collections [.NET Framework], generic
-- generic collections [.NET Framework]
+- collections [.NET], generic
+- generic collections [.NET]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-ms.openlocfilehash: c59a125a8df95e3c4fe6e1839956d800bd6ee910
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e528c712aaddfdc4182940c36e52b968a071daa7
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290377"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888528"
 ---
 # <a name="when-to-use-generic-collections"></a>Quando usar coleções genéricas
 
@@ -25,9 +25,9 @@ Os seguintes tipos genéricos correspondem aos tipos de coleção existentes:
 
 - <xref:System.Collections.Generic.Dictionary%602> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602> são as classes genéricas que correspondem à <xref:System.Collections.Hashtable>.
 
-- <xref:System.Collections.ObjectModel.Collection%601> é a classe genérica que corresponde à <xref:System.Collections.CollectionBase>. <xref:System.Collections.ObjectModel.Collection%601>pode ser usado como uma classe base, mas, ao contrário <xref:System.Collections.CollectionBase> de, não é abstrato, o que o torna muito mais fácil de usar.
+- <xref:System.Collections.ObjectModel.Collection%601> é a classe genérica que corresponde à <xref:System.Collections.CollectionBase>. <xref:System.Collections.ObjectModel.Collection%601> pode ser usado como uma classe base, mas, ao contrário <xref:System.Collections.CollectionBase> de, não é abstrato, o que o torna muito mais fácil de usar.
 
-- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> é a classe genérica que corresponde à <xref:System.Collections.ReadOnlyCollectionBase>. <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>Não é abstrato e tem um construtor que torna mais fácil expor um existente <xref:System.Collections.Generic.List%601> como uma coleção somente leitura.
+- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> é a classe genérica que corresponde à <xref:System.Collections.ReadOnlyCollectionBase>. <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> Não é abstrato e tem um construtor que torna mais fácil expor um existente <xref:System.Collections.Generic.List%601> como uma coleção somente leitura.
 
 - As <xref:System.Collections.Generic.Queue%601> <xref:System.Collections.Concurrent.ConcurrentQueue%601> <xref:System.Collections.Immutable.ImmutableQueue%601> classes genéricas,,,, <xref:System.Collections.Immutable.ImmutableArray%601> <xref:System.Collections.Generic.SortedList%602> e <xref:System.Collections.Immutable.ImmutableSortedSet%601> correspondem às respectivas classes não genéricas com os mesmos nomes.
 

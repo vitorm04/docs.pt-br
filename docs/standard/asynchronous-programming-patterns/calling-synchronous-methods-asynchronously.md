@@ -16,21 +16,21 @@ helpviewer_keywords:
 - WaitHandle class, code examples
 - asynchronous programming, status polling
 - polling asynchronous operation status
-- delegates [.NET Framework], asynchronous
+- delegates [.NET], asynchronous
 - synchronous calling in asynchronous manner
 - waiting for asynchronous calls
-- status information [.NET Framework], asynchronous operations
+- status information [.NET], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-ms.openlocfilehash: ff2d30c00e7b6becb0c3ff910d825c2e9d6f78e3
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: d518e5f64096fde5c9b14222dc4fe0634e6bb7b1
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662635"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888887"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Chamando métodos síncronos de forma assíncrona
 
-O .NET Framework permite que você chame qualquer método de forma assíncrona. Para fazer isso, defina um delegado com a mesma assinatura que o método que você deseja chamar; o common language runtime definirá automaticamente os métodos `BeginInvoke` e `EndInvoke` para este delegado, com as assinaturas apropriadas.
+O .NET permite que você chame qualquer método de forma assíncrona. Para fazer isso, você define um delegado com a mesma assinatura do método que deseja chamar. O Common Language Runtime define automaticamente `BeginInvoke` os `EndInvoke` métodos e para esse delegado, com as assinaturas apropriadas.
 
 > [!NOTE]
 > Chamadas assíncronas de delegado, especificamente os métodos `BeginInvoke` e `EndInvoke`, não têm suporte no .NET Compact Framework.
@@ -110,7 +110,7 @@ Os exemplos de código neste tópico demonstram quatro formas comuns de usar `Be
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]
  [!code-vb[AsyncDelegateExamples#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/callback.vb#5)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Delegate>
-- [EAP (Padrão Assíncrono baseado em Evento)](event-based-asynchronous-pattern-eap.md)
+- [Padrão assíncrono baseado em evento (EAP)](event-based-asynchronous-pattern-eap.md)

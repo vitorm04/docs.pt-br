@@ -10,25 +10,26 @@ helpviewer_keywords:
 - regular expressions, substitutions
 - replacement patterns
 - metacharacters, substitutions
-- .NET Framework regular expressions, substitutions
+- .NET regular expressions, substitutions
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: ab2ed6ff87f2d50d0f518ac64188bf8b5c98351c
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 935fbf573c00aeaec639884888d7e3e6a83c7056
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768099"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888926"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Substituições em expressões regulares
+
 As substituições são elementos de linguagem que são reconhecidos apenas em padrões de substituição. Eles usam um padrão de expressão regular para definir o todo ou parte do texto que substitui o texto correspondente na cadeia de caracteres de entrada. O padrão de substituição pode consistir em uma ou mais substituições junto com caracteres literais. Padrões de substituição são fornecidos para sobrecargas do método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> que têm um parâmetro `replacement` e para o método <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. Os métodos substituem o padrão correspondente pelo padrão que é definido pelo parâmetro `replacement`.  
   
- O .NET Framework define os elementos de substituição listados na tabela a seguir.  
+ O .NET define os elementos de substituição listados na tabela a seguir.  
   
-|Substituição|Description|  
+|Substituição|Descrição|  
 |------------------|-----------------|  
-|$ *number*|Inclui a última subcadeia de caracteres correspondida pelo grupo de captura que é identificado por *number*, no qual *number* é um valor decimal na cadeia de caracteres de substituição. Para obter mais informações, consulte [substituindo um grupo numerado](#substituting-a-numbered-group).|  
+|$ *number*|Inclui a última subcadeia de caracteres correspondida pelo grupo de captura que é identificado por *number* , no qual *number* é um valor decimal na cadeia de caracteres de substituição. Para obter mais informações, consulte [substituindo um grupo numerado](#substituting-a-numbered-group).|  
 |${ *name* }|Inclui a última subcadeia de caracteres correspondida pelo grupo nomeado designado pelo `(?<` *nome* `> )` na cadeia de caracteres de substituição. Para obter mais informações, consulte [substituindo um grupo nomeado](#substituting-a-named-group).|  
 |$$|Inclui um único literal “$” na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um símbolo "$"](#substituting-a--character).|  
 |$&|Inclui uma cópia da correspondência inteira na cadeia de caracteres de substituição. Para obter mais informações, consulte [substituindo toda a correspondência](#substituting-the-entire-match).|  
@@ -141,11 +142,11 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
   
 |Corresponder a|Posição|Cadeia de caracteres antes da correspondência|Cadeia de caracteres de resultado|  
 |-----------|--------------|-------------------------|-------------------|  
-|1|2|aa|aa**aa**bb2cc3dd4ee5|  
-|2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
-|3|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
-|4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**ee5|  
-|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**|
+|1|2|aa|aa **aa** bb2cc3dd4ee5|  
+|2|5|aa1bb|aaaabb **aa1bb** cc3dd4ee5|  
+|3|8|aa1bb2cc|aaaabbaa1bbcc **aa1bb2cc** dd4ee5|  
+|4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd **aa1bb2cc3dd** ee5|  
+|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee **aa1bb2cc3dd4ee**|
 
 ## <a name="substituting-the-text-after-the-match"></a>Substituindo texto após a correspondência  
  A substituição `$'` substitui a cadeia de caracteres correspondida pela cadeia de caracteres de entrada inteira após a correspondência. Ou seja, ela duplica a cadeia de caracteres de entrada após a correspondência e remove o texto correspondido. Qualquer texto antes do texto correspondido permanece inalterado na cadeia de caracteres de resultado. Se não houver correspondência, a substituição `$'` não terá efeito.  
@@ -159,10 +160,10 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
   
 |Corresponder a|Posição|Cadeia de caracteres após a correspondência|Cadeia de caracteres de resultado|  
 |-----------|--------------|------------------------|-------------------|  
-|1|2|bb2cc3dd4ee5|aa**bb2cc3dd4ee5**bb2cc3dd4ee5|  
-|2|5|cc3dd4ee5|aabb2cc3dd4ee5bb**cc3dd4ee5**cc3dd4ee5|  
-|3|8|dd4ee5|aabb2cc3dd4ee5bbcc3dd4ee5cc**dd4ee5**dd4ee5|  
-|4|11|ee5|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd**ee5**ee5|  
+|1|2|bb2cc3dd4ee5|aa **bb2cc3dd4ee5** bb2cc3dd4ee5|  
+|2|5|cc3dd4ee5|aabb2cc3dd4ee5bb **cc3dd4ee5** cc3dd4ee5|  
+|3|8|dd4ee5|aabb2cc3dd4ee5bbcc3dd4ee5cc **dd4ee5** dd4ee5|  
+|4|11|ee5|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd **ee5** ee5|  
 |5|14|<xref:System.String.Empty?displayProperty=nameWithType>|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5ddee5ee|  
 
 ## <a name="substituting-the-last-captured-group"></a>Substituindo o último grupo capturado  
@@ -195,8 +196,8 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
   
 |Corresponder a|Posição|Corresponder a|Cadeia de caracteres de resultado|  
 |-----------|--------------|-----------|-------------------|  
-|1|3|123|ABC**ABC123DEF456**DEF456|  
-|2|5|456|ABCABC123DEF456DEF**ABC123DEF456**|  
+|1|3|123|ABC **ABC123DEF456** DEF456|  
+|2|5|456|ABCABC123DEF456DEF **ABC123DEF456**|  
   
 ## <a name="see-also"></a>Veja também
 

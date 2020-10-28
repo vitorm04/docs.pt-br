@@ -9,19 +9,19 @@ dev_langs:
 helpviewer_keywords:
 - type system
 - common type system
-- assemblies [.NET Framework], types
+- assemblies [.NET], types
 - reference types
 - value types
 - cross-language interoperability
-- namespaces [.NET Framework], types
+- namespaces [.NET], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: 4e3fc4cb03a0b8fd63b41bd912374c29eef3a29a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ad42a77f9c6280211902fc4ffbf25871c537baa5
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555153"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889498"
 ---
 # <a name="common-type-system"></a>Common Type System
 
@@ -178,9 +178,9 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 ### <a name="type-accessibility"></a>Acessibilidade de tipo  
  Todos os tipos têm um modificador que rege sua acessibilidade de outros tipos. A tabela a seguir descreve as acessibilidades de tipo que o runtime dá suporte.  
   
-|Acessibilidade|Description|  
+|Acessibilidade|Descrição|  
 |-------------------|-----------------|  
-|público|O tipo é acessível por todos os assemblies.|  
+|públicos|O tipo é acessível por todos os assemblies.|  
 |assembly|O tipo é acessível somente dentro do assembly.|  
   
  A acessibilidade de um tipo aninhado depende do domínio de acessibilidade, que é determinado pela acessibilidade declarada do membro e pelo domínio da acessibilidade do tipo imediatamente contido. Entretanto, o domínio de acessibilidade de um tipo aninhado não pode exceder o do tipo contido.  
@@ -279,10 +279,10 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 
  O Common Type System permite que os membros de tipo tenham várias características. No entanto, as linguagens não necessariamente dão suporte a todas elas. A tabela a seguir descreve as características de um membro.  
   
-|Característica|Pode ser aplicado a|Description|  
+|Característica|Pode ser aplicado a|Descrição|  
 |--------------------|------------------|-----------------|  
 |abstract|Métodos, propriedades e eventos|O tipo não fornece a implementação do método. Tipos que herdam ou implementam métodos abstratos devem fornecer uma implementação para o método. A única exceção é quando o tipo derivado é um tipo abstrato. Todos os métodos abstratos são virtuais.|  
-|privado, família, assembly, família e assembly, família ou assembly ou público|Tudo|Define a acessibilidade de um membro:<br /><br /> particulares<br /> Acessível somente dentro do mesmo tipo que o membro ou de um tipo aninhado.<br /><br /> família<br /> Acessível dentro do mesmo tipo que o membro e de tipos derivados herdados dele.<br /><br /> assembly<br /> Acessível somente no assembly no qual o tipo é definido.<br /><br /> família e assembly<br /> Acessíveis somente em tipos qualificados para acesso de família e assembly.<br /><br /> família ou assembly<br /> Acessíveis somente dentro de tipos qualificados para acesso de família ou assembly.<br /><br /> público<br /> Acessíveis dentro de qualquer tipo.|  
+|privado, família, assembly, família e assembly, família ou assembly ou público|Tudo|Define a acessibilidade de um membro:<br /><br /> particulares<br /> Acessível somente dentro do mesmo tipo que o membro ou de um tipo aninhado.<br /><br /> família<br /> Acessível dentro do mesmo tipo que o membro e de tipos derivados herdados dele.<br /><br /> assembly<br /> Acessível somente no assembly no qual o tipo é definido.<br /><br /> família e assembly<br /> Acessíveis somente em tipos qualificados para acesso de família e assembly.<br /><br /> família ou assembly<br /> Acessíveis somente dentro de tipos qualificados para acesso de família ou assembly.<br /><br /> públicos<br /> Acessíveis dentro de qualquer tipo.|  
 |final|Métodos, propriedades e eventos|Um método virtual não pode ser substituído em um tipo derivado.|  
 |initialize-only|Campos|O valor pode apenas ser inicializado e não pode ser gravado após a inicialização.|  
 |instance|Campos, métodos, propriedades e eventos|Se um membro não estiver marcado como `static` (C# e C++), `Shared` (Visual Basic), `virtual` (C# e C++) ou `Overridable` (Visual Basic), ele será um membro de instância (não há palavra-chave de instância). Haverá tantas cópias desses membros na memória quanto objetos que as usam.|  
@@ -304,7 +304,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 - Um tipo derivado pode substituir um método virtual herdado. O método de substituição fornece uma nova definição do método que será invocado com base no tipo do valor no tempo de execução em vez do tipo de variável conhecido no tempo de compilação. Um método poderá substituir um método virtual somente se o método virtual não estiver marcado como `final` e o novo método for tão acessível quanto o método virtual.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Navegador de API .NET](../../../api/index.md)
 - [Common Language Runtime](../clr.md)

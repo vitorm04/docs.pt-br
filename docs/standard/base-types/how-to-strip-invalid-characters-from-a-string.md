@@ -10,19 +10,19 @@ helpviewer_keywords:
 - regular expressions, examples
 - cleaning input
 - user input, examples
-- .NET Framework regular expressions, examples
-- regular expressions [.NET Framework], examples
+- .NET regular expressions, examples
+- regular expressions [.NET], examples
 - Regex.Replace method
 - stripping invalid characters
 - Replace method
 - validating user input
 ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
-ms.openlocfilehash: 5e0cd423df7fce03cdefb3da7bc192f3045e8f9c
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 1573724d4fa28380d7267f425547a23566bf4b4a
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803983"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889290"
 ---
 # <a name="how-to-strip-invalid-characters-from-a-string"></a>Como: retirar caracteres inválidos de uma cadeia de caracteres
 O exemplo a seguir usa o método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> estático para retirar caracteres inválidos de uma cadeia de caracteres.  
@@ -37,6 +37,6 @@ O exemplo a seguir usa o método <xref:System.Text.RegularExpressions.Regex.Repl
   
  O padrão da expressão regular `[^\w\.@-]` corresponde a qualquer caractere que não seja um caractere de palavra, um ponto, um símbolo de @ ou um hífen. Um caractere de palavra é qualquer letra, dígito decimal ou conector de pontuação, como um sublinhado. Qualquer caractere que corresponde a esse padrão é substituído pelo <xref:System.String.Empty?displayProperty=nameWithType>, que é a cadeia de caracteres definida pelo padrão de substituição. Para permitir caracteres adicionais na entrada do usuário, adicione esses caracteres à classe de caractere no padrão de expressão regular. Por exemplo, o padrão de expressão regular `[^\w\.@-\\%]` também permite um símbolo percentual e uma barra invertida em uma cadeia de caracteres de entrada.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Expressões regulares do .NET](regular-expressions.md)

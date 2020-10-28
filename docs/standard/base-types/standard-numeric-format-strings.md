@@ -8,33 +8,33 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- numeric format strings [.NET Framework]
-- formatting [.NET Framework], numbers
+- numeric format strings [.NET]
+- formatting [.NET], numbers
 - standard format strings, numeric
 - format strings
-- numbers [.NET Framework], formatting
+- numbers [.NET], formatting
 - format specifiers, numeric
 - standard numeric format strings
-- formatting numbers [.NET Framework]
+- formatting numbers [.NET]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: 857e8803d27ae634dec6e19c6d183943e1c4cc41
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e5e1aa16d8df3d0cfce6dac00c91ca8e99e16e3d
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557366"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888965"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadeias de caracteres de formato numérico padrão
 
 As cadeias de caracteres de formato numérico padrão são usadas para formatar tipos numéricos comuns. Uma cadeia de caracteres de formato numérico padrão assume o formato `Axx`, em que:
 
-- `A` é um caractere alfabético único chamado *especificador de formato*. Qualquer cadeia de caracteres de formato numérico que contém mais de um caractere alfabético, incluindo espaços em branco, é interpretada como uma cadeia de caracteres de formato numérico personalizado. Para obter mais informações, consulte [Cadeias de caracteres de formato numérico personalizado](custom-numeric-format-strings.md).
+- `A` é um caractere alfabético único chamado *especificador de formato* . Qualquer cadeia de caracteres de formato numérico que contém mais de um caractere alfabético, incluindo espaços em branco, é interpretada como uma cadeia de caracteres de formato numérico personalizado. Para obter mais informações, consulte [Cadeias de caracteres de formato numérico personalizado](custom-numeric-format-strings.md).
 
-- `xx` é um inteiro opcional chamado *especificador de precisão*. O especificador de precisão varia de 0 a 99 e afeta o número de dígitos no resultado. Observe que o especificador de precisão controla o número de dígitos na representação da cadeia de caracteres de um número. Ele não arredonda o número em si. Para executar uma operação de arredondamento, use o método <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> ou <xref:System.Math.Round%2A?displayProperty=nameWithType>.
+- `xx` é um inteiro opcional chamado *especificador de precisão* . O especificador de precisão varia de 0 a 99 e afeta o número de dígitos no resultado. Observe que o especificador de precisão controla o número de dígitos na representação da cadeia de caracteres de um número. Ele não arredonda o número em si. Para executar uma operação de arredondamento, use o método <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> ou <xref:System.Math.Round%2A?displayProperty=nameWithType>.
 
   Quando o *especificador de precisão* controla o número de dígitos fracionários na cadeia de caracteres de resultado, ela reflete um número que será arredondado para um resultado representável mais próximo do resultado infinitamente preciso. Se houver dois resultados representáveis igualmente próximos:
-  - **No .NET Framework e .NET Core até o .NET Core 2.0**, o runtime selecionará o resultado com o dígito menos significativo maior (ou seja, usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
-  - **No .NET Core 2.1 e versões posteriores**, o runtime selecionará o resultado com um dígito até menos significativo (ou seja, usando <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>).
+  - **No .NET Framework e no .NET Core até o .net core 2,0** , o tempo de execução seleciona o resultado com um dígito maior, menos significativo (ou seja, usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType> ).
+  - **No .NET Core 2.1 e versões posteriores** , o runtime selecionará o resultado com um dígito até menos significativo (ou seja, usando <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>).
 
   > [!NOTE]
   > O especificador de precisão determina o número de dígitos na cadeia de caracteres de resultado. Para acrescentar espaços à direita ou à esquerda em uma cadeia de caracteres de resultado, use o recurso [formatação de composição](composite-formatting.md) e defina um *componente de alinhamento* no item de formato.
@@ -48,13 +48,13 @@ As cadeias de caractere de formato numérico padrão têm suporte de:
 - [Cadeias de caracteres interpoladas](../../csharp/language-reference/tokens/interpolated.md) em C# e Visual Basic, que fornecem uma sintaxe simplificada quando comparada a cadeias de caracteres de formato composto.
 
 > [!TIP]
-> Baixe o **Utilitário de Formatação**, um aplicativo do Windows Forms do .NET Core que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado. O código-fonte está disponível para o [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) e o [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
+> Baixe o **Utilitário de Formatação** , um aplicativo do Windows Forms do .NET Core que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado. O código-fonte está disponível para o [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) e o [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
 <a name="table"></a> A tabela a seguir descreve os especificadores de formato numérico padrão e exibe a saída de exemplo produzida por cada especificador de formato. Consulte a seção [Notas](#NotesStandardFormatting) para obter informações adicionais sobre como usar cadeias de caracteres de formato numérico padrão e a seção [Exemplo](#example) para obter uma ilustração abrangente de seu uso.
 
-|Especificador de formato|Name|Descrição|Exemplos|
+|Especificador de formato|Nome|Descrição|Exemplos|
 |----------------------|----------|-----------------|--------------|
-|"C" ou "c"|Moeda|Resultado: um valor de moeda.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais.<br /><br /> Especificador de precisão padrão: definido por <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [especificador de formato de moeda ("C")](#CFormatString).|123,456 ("C", en-US)-> \\ $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123,456 ("C3", en-US)-> ( \\ $123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
+|"C" ou "c"|Moeda|Resultado: um valor de moeda.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais.<br /><br /> Especificador de precisão padrão: definido por <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [especificador de formato de moeda ("C")](#CFormatString).|123,456 ("C", en-US)-> \\ $123.46<br /><br /> 123,456 ("C", fr-FR)-> 123, 46 &euro;<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123,456 ("C3", en-US)-> ( \\ $123.456)<br /><br /> -123,456 ("C3", fr-FR)->-123.456 &euro;<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
 |"D" ou "d"|Decimal|Resultado: dígitos inteiros com sinal negativo opcional.<br /><br /> Compatível com: somente tipos integrais.<br /><br /> Especificador de precisão: número mínimo de dígitos.<br /><br /> Especificador de precisão padrão: número mínimo de dígitos necessários.<br /><br /> Para saber mais: [especificador de formato decimal ("D")](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
 |"E" ou "e"|Exponencial (científica)|Resultado: notação Exponencial.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais.<br /><br /> Especificador de precisão padrão: 6.<br /><br /> Para saber mais: [especificador de formato exponencial ("E")](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|
 |"F" ou "f"|Ponto fixo|Resultado: dígitos integrais e decimais com sinal negativo opcional.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais.<br /><br /> Especificador de precisão padrão: definido por <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [especificador de formato de ponto fixo ("F")](#FFormatString).|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|
@@ -105,7 +105,7 @@ Se o valor a ser formatado tem mais do que o número especificado ou padrão de 
 
 A cadeia de caracteres de resultado é afetada pelas informações de formatação do objeto <xref:System.Globalization.NumberFormatInfo> atual. A tabela a seguir lista as propriedades <xref:System.Globalization.NumberFormatInfo> que controlam a formatação da cadeia de caracteres retornada.
 
-|Propriedade NumberFormatInfo|Description|
+|Propriedade NumberFormatInfo|Descrição|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A>|Define o posicionamento do símbolo de moeda para valores positivos.|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>|Define o posicionamento do símbolo da moeda para valores negativos e especifica se o sinal de negativo é representado por parênteses ou pela propriedade <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>.|
@@ -134,7 +134,7 @@ O especificador de precisão indica o número mínimo de dígitos desejados na c
 
 A cadeia de caracteres de resultado é afetada pelas informações de formatação do objeto <xref:System.Globalization.NumberFormatInfo> atual. Conforme mostrado na tabela a seguir, uma única propriedade afeta a formatação da cadeia de caracteres de resultado.
 
-|Propriedade NumberFormatInfo|Description|
+|Propriedade NumberFormatInfo|Descrição|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define a cadeia de caracteres que indica que um número é negativo.|
 
@@ -158,7 +158,7 @@ A caixa do especificador de formato indica se o expoente é prefixado com um "E"
 
 A cadeia de caracteres de resultado é afetada pelas informações de formatação do objeto <xref:System.Globalization.NumberFormatInfo> atual. A tabela a seguir lista as propriedades <xref:System.Globalization.NumberFormatInfo> que controlam a formatação da cadeia de caracteres retornada.
 
-|Propriedade NumberFormatInfo|Description|
+|Propriedade NumberFormatInfo|Descrição|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define a cadeia de caracteres que indica que o número é negativo para o coeficiente e o expoente.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define a cadeia de caracteres que separa o dígito integral dos dígitos decimais no coeficiente.|
@@ -182,7 +182,7 @@ O especificador de precisão indica o número de casas decimais desejadas. Quand
 
 A cadeia de caracteres de resultado é afetada pelas informações de formatação do objeto <xref:System.Globalization.NumberFormatInfo> atual. A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.NumberFormatInfo> que controlam a formatação da cadeia de caracteres de resultado.
 
-|Propriedade NumberFormatInfo|Description|
+|Propriedade NumberFormatInfo|Descrição|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define a cadeia de caracteres que indica que um número é negativo.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define a cadeia de caracteres que separa dígitos integrais de dígitos decimais.|
@@ -229,7 +229,7 @@ Quando usado com um valor <xref:System.Single>, o especificador de formato "G9" 
 
 A cadeia de caracteres de resultado é afetada pelas informações de formatação do objeto <xref:System.Globalization.NumberFormatInfo> atual. A tabela a seguir lista as propriedades <xref:System.Globalization.NumberFormatInfo> que controlam a formatação da cadeia de caracteres de resultado.
 
-|Propriedade NumberFormatInfo|Description|
+|Propriedade NumberFormatInfo|Descrição|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define a cadeia de caracteres que indica que um número é negativo.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define a cadeia de caracteres que separa dígitos integrais de dígitos decimais.|
@@ -251,7 +251,7 @@ O especificador de formato numérico ("N") converte um número em uma cadeia de 
 
 A cadeia de caracteres de resultado é afetada pelas informações de formatação do objeto <xref:System.Globalization.NumberFormatInfo> atual. A tabela a seguir lista as propriedades <xref:System.Globalization.NumberFormatInfo> que controlam a formatação da cadeia de caracteres de resultado.
 
-|Propriedade NumberFormatInfo|Description|
+|Propriedade NumberFormatInfo|Descrição|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define a cadeia de caracteres que indica que um número é negativo.|
 |<xref:System.Globalization.NumberFormatInfo.NumberNegativePattern%2A>|Define o formato dos valores negativos e especifica se o sinal de negativo é representado por parênteses ou a propriedade <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>.|
@@ -276,7 +276,7 @@ O especificador de formato de porcentagem (“P”) multiplica um número por 10
 
 A tabela a seguir lista as propriedades <xref:System.Globalization.NumberFormatInfo> que controlam a formatação da cadeia de caracteres retornada.
 
-|Propriedade NumberFormatInfo|Description|
+|Propriedade NumberFormatInfo|Descrição|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.PercentPositivePattern%2A>|Define o posicionamento do símbolo de porcentagem para valores positivos.|
 |<xref:System.Globalization.NumberFormatInfo.PercentNegativePattern%2A>|Define o posicionamento do símbolo de porcentagem e o símbolo negativo para valores negativos.|
@@ -308,7 +308,7 @@ Quando um valor <xref:System.Numerics.BigInteger> é formatado usando esse espec
 Embora você possa incluir um especificador de precisão, ele será ignorado. Idas e voltas têm precedência sobre a precisão quando esse especificador é usado.
 A cadeia de caracteres de resultado é afetada pelas informações de formatação do objeto <xref:System.Globalization.NumberFormatInfo> atual. A tabela a seguir lista as propriedades <xref:System.Globalization.NumberFormatInfo> que controlam a formatação da cadeia de caracteres de resultado.
 
-|Propriedade NumberFormatInfo|Description|
+|Propriedade NumberFormatInfo|Descrição|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define a cadeia de caracteres que indica que um número é negativo.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define a cadeia de caracteres que separa dígitos integrais de dígitos decimais.|
@@ -382,12 +382,12 @@ O exemplo a seguir formata um inteiro e um valor numérico de ponto flutuante us
 [!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
 [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Globalization.NumberFormatInfo>
 - [Cadeias de caracteres de formato numérico personalizado](custom-numeric-format-strings.md)
 - [Formatar tipos](formatting-types.md)
-- [Como: Preencher um número com zeros à esquerda](how-to-pad-a-number-with-leading-zeros.md)
+- [Como preencher um número com zeros à esquerda](how-to-pad-a-number-with-leading-zeros.md)
 - [Formatação composta](composite-formatting.md)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (C#)](/samples/dotnet/samples/windowsforms-formatting-utility-cs)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (Visual Basic)](/samples/dotnet/samples/windowsforms-formatting-utility-vb)

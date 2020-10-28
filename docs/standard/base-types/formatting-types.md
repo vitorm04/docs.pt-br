@@ -7,31 +7,31 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- data formatting [.NET Framework]
-- dates [.NET Framework], formatting
-- date formatting [.NET Framework]
-- number formatting [.NET Framework]
+- data formatting [.NET]
+- dates [.NET], formatting
+- date formatting [.NET]
+- number formatting [.NET]
 - ToString method
-- custom cultural settings [.NET Framework]
-- numbers [.NET Framework], formatting
-- formatting strings [.NET Framework]
-- time [.NET Framework], formatting
-- currency [.NET Framework], formatting
-- types [.NET Framework], formatting
-- format specifiers [.NET Framework]
-- times [.NET Framework], formatting
-- culture [.NET Framework], formatting
-- formatting [.NET Framework], types supported
-- base types [.NET Framework], formatting
-- custom formatting [.NET Framework]
-- strings [.NET Framework], formatting
+- custom cultural settings [.NET]
+- numbers [.NET], formatting
+- formatting strings [.NET]
+- time [.NET], formatting
+- currency [.NET], formatting
+- types [.NET], formatting
+- format specifiers [.NET]
+- times [.NET], formatting
+- culture [.NET], formatting
+- formatting [.NET], types supported
+- base types [.NET], formatting
+- custom formatting [.NET]
+- strings [.NET], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: 5d280b53d15bc674f325a726d69915d763aec34f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f100c1abcb32e907b92c42f8cfa460d2c1927803
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447076"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888488"
 ---
 # <a name="format-types-in-net"></a>Tipos de formato no .NET
 
@@ -52,7 +52,7 @@ O .NET dá suporte à formatação avançada, que permite aos desenvolvedores at
 
 ## <a name="formatting-in-net"></a>Formatação em .NET
 
-O mecanismo básico de formatação é a implementação padrão do método <xref:System.Object.ToString%2A?displayProperty=nameWithType>, que é abordado na seção [Formatação padrão usando o método ToString](#default-formatting-using-the-tostring-method), mais adiante neste tópico. No entanto, o .NET oferece várias maneiras de modificar e estender o suporte à formatação padrão. Entre elas estão as seguintes:
+O mecanismo básico de formatação é a implementação padrão do método <xref:System.Object.ToString%2A?displayProperty=nameWithType>, que é abordado na seção [Formatação padrão usando o método ToString](#default-formatting-using-the-tostring-method), mais adiante neste tópico. No entanto, o .NET oferece várias maneiras de modificar e estender o suporte à formatação padrão. Eles incluem o seguinte:
 
 - Substituindo o <xref:System.Object.ToString%2A?displayProperty=nameWithType> método para definir uma representação de cadeia de caracteres personalizada do valor de um objeto. Para obter mais informações, consulte a seção [substituir o método ToString](#override-the-tostring-method) mais adiante neste tópico.
 
@@ -102,7 +102,7 @@ A exibição do nome de um tipo é geralmente de uso limitado e não permite que
 
 No .NET, o `ToString` método de cada tipo de valor primitivo foi substituído para exibir o valor do objeto em vez de seu nome. A tabela a seguir mostra a substituição de cada tipo primitivo. Observe que a maioria dos métodos substituídos chama outra sobrecarga do método `ToString` e passa-a ao especificador de formato "G", que define o formato geral de seu tipo, além de um objeto <xref:System.IFormatProvider> que representa a cultura atual.
 
-|Type|Substituição de ToString|
+|Tipo|Substituição de ToString|
 |----------|-----------------------|
 |<xref:System.Boolean>|Retorna <xref:System.Boolean.TrueString?displayProperty=nameWithType> ou <xref:System.Boolean.FalseString?displayProperty=nameWithType>.|
 |<xref:System.Byte>|Chama `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor <xref:System.Byte> para a cultura atual.|
@@ -182,7 +182,7 @@ Você também pode usar cadeias de formato padrão para definir a representaçã
 
 - Suporte para um especificador de formato que é igual a uma referência nula (`Nothing` em Visual Basic). Um especificador de formato igual a uma referência nula deve ser considerado equivalente ao especificador de formato "G".
 
-Por exemplo, um `Temperature` classe interna pode armazenar a temperatura em graus Celsius e usar especificadores de formato para representar o valor do objeto `Temperature` em graus Fahrenheit, graus Celsius e kelvins. O exemplo a seguir ilustra esse cenário.
+Por exemplo, um `Temperature` classe interna pode armazenar a temperatura em graus Celsius e usar especificadores de formato para representar o valor do objeto `Temperature` em graus Fahrenheit, graus Celsius e kelvins. O exemplo a seguir fornece uma ilustração.
 
 [!code-csharp[Conceptual.Formatting.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/appstandard1.cs#7)]
 [!code-vb[Conceptual.Formatting.Overview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/appstandard1.vb#7)]
@@ -214,10 +214,10 @@ Todos os tipos numéricos (ou seja, os tipos <xref:System.Byte>, <xref:System.De
 
 |Título|Definição|
 |-----------|----------------|
-|[Cadeias de caracteres de formato numérico padrão](standard-numeric-format-strings.md)|Descreve cadeias de caracteres de formato padrão que criam representações de cadeia de caracteres de valores numéricos frequentemente usadas.|
+|[Cadeias de Caracteres de Formato Numérico Padrão](standard-numeric-format-strings.md)|Descreve cadeias de caracteres de formato padrão que criam representações de cadeia de caracteres de valores numéricos frequentemente usadas.|
 |[Cadeias de caracteres de formato numérico personalizado](custom-numeric-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores numéricos.|
 |[Cadeias de caracteres de formato de data e hora padrão](standard-date-and-time-format-strings.md)|Descreve cadeias de caracteres de formato padrão que criam representações de cadeia de caracteres de valores <xref:System.DateTime> e <xref:System.DateTimeOffset> frequentemente usadas.|
-|[Cadeias de caracteres de formato de data e hora personalizadas](custom-date-and-time-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores <xref:System.DateTime> e <xref:System.DateTimeOffset>.|
+|[Cadeias de caracteres de formato de data e hora personalizado](custom-date-and-time-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores <xref:System.DateTime> e <xref:System.DateTimeOffset>.|
 |[Cadeias de caracteres de formato standard TimeSpan](standard-timespan-format-strings.md)|Descreve cadeias de caracteres de formato padrão que criam representações de intervalos de tempo frequentemente usadas.|
 |[Cadeias de caracteres de formato de TimeSpan personalizado](custom-timespan-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para intervalos de tempo.|
 |[Cadeias de caracteres de formato de enumeração](enumeration-format-strings.md)|Descreve cadeias de caracteres de formato padrão que são usadas para criar representações de cadeia de caracteres de valores de enumeração.|
@@ -352,10 +352,10 @@ O exemplo a seguir usa a classe `ByteByByteFormatter` para formatar valores inte
 
 |Título|Definição|
 |-----------|----------------|
-|[Cadeias de caracteres de formato numérico padrão](standard-numeric-format-strings.md)|Descreve cadeias de caracteres de formato padrão que criam representações de cadeia de caracteres de valores numéricos frequentemente usadas.|
+|[Cadeias de Caracteres de Formato Numérico Padrão](standard-numeric-format-strings.md)|Descreve cadeias de caracteres de formato padrão que criam representações de cadeia de caracteres de valores numéricos frequentemente usadas.|
 |[Cadeias de caracteres de formato numérico personalizado](custom-numeric-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores numéricos.|
 |[Cadeias de caracteres de formato de data e hora padrão](standard-date-and-time-format-strings.md)|Descreve cadeias de caracteres de formato padrão que criam representações de cadeia de caracteres de valores <xref:System.DateTime> frequentemente usadas.|
-|[Cadeias de caracteres de formato de data e hora personalizadas](custom-date-and-time-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores <xref:System.DateTime>.|
+|[Cadeias de caracteres de formato de data e hora personalizado](custom-date-and-time-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores <xref:System.DateTime>.|
 |[Cadeias de caracteres de formato standard TimeSpan](standard-timespan-format-strings.md)|Descreve cadeias de caracteres de formato padrão que criam representações de intervalos de tempo frequentemente usadas.|
 |[Cadeias de caracteres de formato de TimeSpan personalizado](custom-timespan-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para intervalos de tempo.|
 |[Cadeias de caracteres de formato de enumeração](enumeration-format-strings.md)|Descreve cadeias de caracteres de formato padrão que são usadas para criar representações de cadeia de caracteres de valores de enumeração.|

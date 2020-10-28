@@ -11,14 +11,14 @@ helpviewer_keywords:
 - IComparable.CompareTo method
 - Collections classes
 - Equals method
-- collections [.NET Framework], comparisons
+- collections [.NET], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: aa001e8469947a532d77059bd52024c6b47b508e
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 40a59809723298ddda21e642098ec8ae74a1828b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769191"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889368"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Comparações e classificações dentro de coleções
 
@@ -42,7 +42,7 @@ Além disso, algumas sobrecargas de construtores para coleções de dicionários
 
 Métodos como `BinarySearch` e `Sort` usam um comparador de ordenação para os elementos da coleção. As comparações podem ser entre elementos da coleção ou entre um elemento e um valor especificado. Para comparar objetos, há o conceito de um `default comparer` e um `explicit comparer`.
 
-O comparador padrão baseia-se em pelo menos um dos objetos que estão sendo comparados para implementar a interface **IComparable**. É uma boa prática implementar **IComparable** em todas as classes usadas como valores em uma coleção de lista ou como chaves em uma coleção de dicionário. Para uma coleção genérica, a comparação de igualdade é determinada de acordo com o seguinte:
+O comparador padrão baseia-se em pelo menos um dos objetos que estão sendo comparados para implementar a interface **IComparable** . É uma boa prática implementar **IComparable** em todas as classes usadas como valores em uma coleção de lista ou como chaves em uma coleção de dicionário. Para uma coleção genérica, a comparação de igualdade é determinada de acordo com o seguinte:
 
 - Se o tipo T implementa a interface genérica <xref:System.IComparable%601?displayProperty=nameWithType>, então o comparador padrão será o método <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> dessa interface.
 

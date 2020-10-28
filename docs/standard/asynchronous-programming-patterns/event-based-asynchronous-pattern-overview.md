@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - Asynchronous Pattern
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
+- threading [.NET], asynchronous features
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: f0d3e2e8f1d1f58c9df8026b38fc0264812b092a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5ab3229f71e264bbcd26d3d4c7bb52430b02865a
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555673"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888822"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Visão geral do padrão assíncrono baseado em evento
 Aplicativos que realizam várias tarefas simultaneamente, mas que ainda permanecem responsivos para interação com o usuário, geralmente exigem um projeto que utilize vários threads. O namespace <xref:System.Threading> oferece todas as ferramentas necessárias para criar aplicativos commulti-thread de alto desempenho. No entanto, usar essas ferramentas de maneira eficaz requer um nível de experiência significativo com engenharia de software com multi-thread. Para aplicativos com multi-thread relativamente simples, o componente <xref:System.ComponentModel.BackgroundWorker> oferece uma solução direta. Para aplicativos assíncronos mais sofisticados, considere implementar uma classe que adere ao Padrão Assíncrono baseado em Evento.  
@@ -37,7 +37,7 @@ Aplicativos que realizam várias tarefas simultaneamente, mas que ainda permanec
   
 - Comunicar-se com operações assíncronas pendentes usando o modelo familiar de eventos e representantes. Para saber mais sobre como usar manipuladores e representantes de eventos, confira [Eventos](../events/index.md).  
   
- Uma classe compatível com o Padrão Assíncrono baseado em Evento terá um ou mais métodos denominados _MethodName_**Async**. Esses métodos podem espelhar versões síncronas, que realizam a mesma operação no thread atual. A classe também pode ter um evento _MethodName_**Completed** e pode ter um método _MethodName_**AsyncCancel** (ou simplesmente **CancelAsync**).  
+ Uma classe compatível com o Padrão Assíncrono baseado em Evento terá um ou mais métodos denominados _MethodName_**Async** . Esses métodos podem espelhar versões síncronas, que realizam a mesma operação no thread atual. A classe também pode ter um evento _MethodName_**Completed** e pode ter um método _MethodName_**AsyncCancel** (ou simplesmente **CancelAsync** ).  
   
  <xref:System.Windows.Forms.PictureBox> é um componente típico que oferece suporte ao Padrão Assíncrono baseado em Evento. Você pode baixar uma imagem de maneira síncrona chamando seu método <xref:System.Windows.Forms.PictureBox.Load%2A>, mas se a imagem for grande, ou se a conexão de rede estiver lenta, seu aplicativo deixará de responder até que a operação de download seja concluída e a chamada para <xref:System.Windows.Forms.PictureBox.Load%2A> retorne.  
   
@@ -49,7 +49,7 @@ Aplicativos que realizam várias tarefas simultaneamente, mas que ainda permanec
 > É possível que o download termine assim que a solicitação <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> seja enviada, por isso, <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> pode não refletir a solicitação de cancelamento. Isso é chamado de *condição de corrida* e é um problema comum na programação com multi-thread. Para saber mais sobre problemas de programação multi-thread, confira [Práticas recomendadas de threading gerenciado](../threading/managed-threading-best-practices.md).  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Características do Padrão Assíncrono baseado em Evento  
- O Padrão Assíncrono baseado em Evento pode assumir diversos formatos, dependendo da complexidade das operações compatíveis com uma classe específica. As classes mais simples podem ter um único método _MethodName_**Async** e um evento _MethodName_**Completed** correspondente. Classes mais complexas podem ter vários métodos _MethodName_**Async**, cada um com um evento _MethodName_**Completed** correspondente, bem como versões síncronas desses métodos. As classes podem opcionalmente oferecer suporte a cancelamento, relatórios de progresso e resultados incrementais para cada método assíncrono.  
+ O Padrão Assíncrono baseado em Evento pode assumir diversos formatos, dependendo da complexidade das operações compatíveis com uma classe específica. As classes mais simples podem ter um único método _MethodName_**Async** e um evento _MethodName_**Completed** correspondente. Classes mais complexas podem ter vários métodos _MethodName_**Async** , cada um com um evento _MethodName_**Completed** correspondente, bem como versões síncronas desses métodos. As classes podem opcionalmente oferecer suporte a cancelamento, relatórios de progresso e resultados incrementais para cada método assíncrono.  
   
  Um método assíncrono também pode oferecer suporte a várias chamadas pendentes (várias invocações simultâneas), permitindo que seu código o chame quantas vezes desejar antes de concluir outras operações pendentes. Lidar da maneira correta com essa situação pode exigir que seu aplicativo acompanhe a conclusão de cada operação.  
   
@@ -132,7 +132,7 @@ public class AsyncExample
   
  Algumas classes podem relatar resultados incrementais conforme as operações assíncronas prosseguem. Esses resultados serão armazenados em uma classe derivada de <xref:System.ComponentModel.ProgressChangedEventArgs> e aparecerão como propriedades na classe derivada. Você pode acessar esses resultados no manipulador de eventos para o evento `ProgressChanged`, assim como acessaria a propriedade <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A>. Se várias operações assíncronas estiverem pendentes, você poderá usar a propriedade <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> para distinguir qual operação está relatando resultados incrementais.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>

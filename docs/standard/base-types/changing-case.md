@@ -7,19 +7,19 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- strings [.NET Framework], case
+- strings [.NET], case
 - case sensitivity
 - ToUpper method
 - ToLower method
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: e838d6df778802d7eaab3f12205698cc6ca5f72b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 424219c8f660b7592996436160f2667f70be654f
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290585"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889524"
 ---
 # <a name="change-case-in-net"></a>Alterar maiúsculas e minúsculas no .NET
 
@@ -49,7 +49,7 @@ Se você escrever um aplicativo que aceita entrada de um usuário, nunca poderá
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
  [!code-vb[Strings.ChangingCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#1)]  
   
- O exemplo anterior diferencia culturas por padrão e aplica as convenções de capitalização da cultura atual. Para realizar uma alteração de capitalização que não diferencia a cultura ou para aplicar as convenções de capitalização de uma cultura específica, use a sobrecarga do método <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> e forneça um valor de <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> ou um objeto <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> que representa a cultura especificada para o parâmetro *culture*. Confira um exemplo que demonstra como usar o método <xref:System.String.ToUpper%2A> para realizar uma [Alteração de capitalização que não diferencia a cultura](../globalization-localization/performing-culture-insensitive-case-changes.md).  
+ O exemplo anterior diferencia culturas por padrão e aplica as convenções de capitalização da cultura atual. Para realizar uma alteração de capitalização que não diferencia a cultura ou para aplicar as convenções de capitalização de uma cultura específica, use a sobrecarga do método <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> e forneça um valor de <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> ou um objeto <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> que representa a cultura especificada para o parâmetro *culture* . Confira um exemplo que demonstra como usar o método <xref:System.String.ToUpper%2A> para realizar uma [Alteração de capitalização que não diferencia a cultura](../globalization-localization/performing-culture-insensitive-case-changes.md).  
   
 ## <a name="tolower"></a>ToLower  
  O método <xref:System.String.ToLower%2A?displayProperty=nameWithType> é semelhante ao anterior, porém ele converte todos os caracteres de uma cadeia para minúsculas. O exemplo a seguir converte a cadeia de caracteres "Olá, mundo!" para minúsculas.  
@@ -57,7 +57,7 @@ Se você escrever um aplicativo que aceita entrada de um usuário, nunca poderá
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
  [!code-vb[Strings.ChangingCase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#2)]  
   
- O exemplo anterior diferencia culturas por padrão e aplica as convenções de capitalização da cultura atual. Para realizar uma alteração de capitalização que não diferencia a cultura ou para aplicar as convenções de capitalização de uma cultura específica, use a sobrecarga do método <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> e forneça um valor de <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> ou um objeto <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> que representa a cultura especificada para o parâmetro *culture*. Confira um exemplo que demonstra como usar o método <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> para realizar uma [Alteração de capitalização que não diferencia a cultura](../globalization-localization/performing-culture-insensitive-case-changes.md).  
+ O exemplo anterior diferencia culturas por padrão e aplica as convenções de capitalização da cultura atual. Para realizar uma alteração de capitalização que não diferencia a cultura ou para aplicar as convenções de capitalização de uma cultura específica, use a sobrecarga do método <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> e forneça um valor de <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> ou um objeto <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> que representa a cultura especificada para o parâmetro *culture* . Confira um exemplo que demonstra como usar o método <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> para realizar uma [Alteração de capitalização que não diferencia a cultura](../globalization-localization/performing-culture-insensitive-case-changes.md).  
   
 ## <a name="totitlecase"></a>ToTitleCase  
  O <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> converte o primeiro caractere de cada palavra em maiúscula e os restantes em minúsculas. No entanto, as palavras que são totalmente maiúsculas são consideradas acrônimos e não são convertidas.  

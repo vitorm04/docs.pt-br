@@ -6,36 +6,40 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
+- threading [.NET], asynchronous features
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 66979415f2951acc78dc4eb7b2aafe3c84e85397
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8f2b1b4d6793be3e4de6fbc9fc09e8a7e690762c
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289935"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888913"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Práticas recomendadas para a implementação do padrão assíncrono baseado em evento
+
 O padrão assíncrono baseado em eventos proporciona uma maneira eficiente de expor o comportamento assíncrono nas classes, com evento familiar e semântica de representante. Para implementá-lo, você deve seguir alguns requisitos de comportamento específicos. As seções a seguir descrevem os requisitos e as diretrizes a serem considerados ao implementar uma classe que segue o padrão assíncrono baseado em eventos.  
   
  Para obter uma visão geral, veja [Implementação do padrão assíncrono baseado em evento](implementing-the-event-based-asynchronous-pattern.md).  
   
-## <a name="required-behavioral-guarantees"></a>Garantias comportamentais necessárias  
+## <a name="required-behavioral-guarantees"></a>Garantias comportamentais necessárias
+
  Se implementar o padrão assíncrono baseado em eventos, você deve fornecer diversas garantias para assegurar que a classe se comportará corretamente e que os clientes da classe podem confiar nesse comportamento.  
   
-### <a name="completion"></a>Completion  
+### <a name="completion"></a>Completion
+
  Sempre invoque o manipulador de eventos <em>MethodName</em>**Completed** quando houver uma conclusão com êxito, um erro ou um cancelamento. Os aplicativos nunca devem permanecer inativos sem que a conclusão ocorra. Uma exceção a essa regra é se a própria operação assíncrona for projetada para nunca ser concluída.  
   
-### <a name="completed-event-and-eventargs"></a>Evento e argumentos de eventos concluídos  
- Para cada método de <em>MethodName</em>**Async** separado, aplique os seguintes requisitos de design:  
+### <a name="completed-event-and-eventargs"></a>Evento e argumentos de eventos concluídos
+
+Para cada método de <em>MethodName</em>**Async** separado, aplique os seguintes requisitos de design:  
   
 - Defina um evento <em>MethodName</em>**Completed** na mesma classe que o método.  
   
-- Defina uma <xref:System.EventArgs> classe e um delegado de acompanhamento para o evento <em>MethodName</em>**Completed** que deriva da <xref:System.ComponentModel.AsyncCompletedEventArgs> classe. O nome padrão da classe deve seguir a forma <em>MethodName</em>**CompletedEventArgs**.  
+- Defina uma <xref:System.EventArgs> classe e um delegado de acompanhamento para o evento <em>MethodName</em>**Completed** que deriva da <xref:System.ComponentModel.AsyncCompletedEventArgs> classe. O nome padrão da classe deve seguir a forma <em>MethodName</em>**CompletedEventArgs** .  
   
 - Verifique se a classe <xref:System.EventArgs> é específica aos valores retornados do método <em>MethodName</em>. Ao usar a classe <xref:System.EventArgs>, você nunca deve solicitar que os desenvolvedores convertam o resultado.  
   
@@ -117,7 +121,8 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - Capture todas as exceções que ocorrerem na operação assíncrona e defina o valor da propriedade <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> para essa exceção.  
   
-### <a name="threading-and-contexts"></a>Threads e contextos  
+### <a name="threading-and-contexts"></a>Threads e contextos
+
  Para que sua classe opere corretamente, é essencial que os indicadores de eventos do cliente sejam invocados no thread ou contexto certo de acordo com o modelo do aplicativo, incluindo ASP.NET e aplicativos Windows Forms. Duas importantes classes auxiliares são fornecidas para garantir que a classe assíncrona se comporte corretamente em qualquer modelo de aplicativo: <xref:System.ComponentModel.AsyncOperation> e <xref:System.ComponentModel.AsyncOperationManager>.  
   
  <xref:System.ComponentModel.AsyncOperationManager> fornece um método, <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, que retorna um <xref:System.ComponentModel.AsyncOperation>. Seu método <em>MethodName</em>**Async** chama <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> e sua classe usa o retornado <xref:System.ComponentModel.AsyncOperation> para acompanhar o tempo de vida da tarefa assíncrona.  
@@ -150,9 +155,9 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Implementando o Padrão Assíncrono baseado em Evento](implementing-the-event-based-asynchronous-pattern.md)
-- [EAP (Padrão Assíncrono baseado em Evento)](event-based-asynchronous-pattern-eap.md)
+- [Implementando o padrão assíncrono baseado em evento](implementing-the-event-based-asynchronous-pattern.md)
+- [Padrão assíncrono baseado em evento (EAP)](event-based-asynchronous-pattern-eap.md)
 - [Decidindo quando implementar o padrão assíncrono baseado em evento](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
 - [Práticas recomendadas para a implementação do padrão assíncrono baseado em evento](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [Como usar componentes compatíveis com o padrão assíncrono baseado em evento](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [Como implementar um componente compatível com o padrão assíncrono baseado em evento](component-that-supports-the-event-based-asynchronous-pattern.md)
+- [Como: Usar componentes compatíveis com o padrão assíncrono baseado em evento](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
+- [Como: Implementar um componente compatível com o padrão assíncrono baseado em evento](component-that-supports-the-event-based-asynchronous-pattern.md)

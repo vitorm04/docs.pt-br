@@ -8,27 +8,27 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- formatting [.NET Framework], dates
+- formatting [.NET], dates
 - custom DateTime format string
 - format specifiers, custom date and time
 - format strings
 - custom date and time format strings
-- formatting [.NET Framework], time
+- formatting [.NET], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: b6197acf9ceee5862cf13eceab178df513eb91d7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d58bcc4008c706395aaeee3b5dc9ea3fa96cce9b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541663"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888705"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora personalizado
 
 Uma cadeia de caracteres de formato de data e hora define a representação de texto de um valor <xref:System.DateTime> ou <xref:System.DateTimeOffset> que é resultante de uma operação de formatação. Ela também pode definir a representação de um valor de data e hora necessário em uma operação de análise para converter com êxito a cadeia de caracteres para uma data e hora. Uma cadeia de caracteres de formato personalizado consiste em um ou mais especificadores de formato de data e hora personalizado. Qualquer cadeia de caracteres que não é uma [cadeia de caracteres de formato de data e hora padrão](standard-date-and-time-format-strings.md) é interpretada como uma cadeia de caracteres de formato de data e hora personalizado.
 
 > [!TIP]
-> Baixe o **Utilitário de Formatação**, um aplicativo do Windows Forms do .NET Core que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado. O código-fonte está disponível para o [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) e o [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
+> Baixe o **Utilitário de Formatação** , um aplicativo do Windows Forms do .NET Core que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado. O código-fonte está disponível para o [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) e o [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
 As cadeias de caracteres de formato de data e hora personalizado podem ser usadas tanto com valores <xref:System.DateTime> quanto <xref:System.DateTimeOffset>.
 
@@ -92,7 +92,7 @@ A tabela a seguir descreve os especificadores de formato de data e hora padrão 
 | "zzz" | Diferença de horas e minutos em relação ao UTC.<br /><br /> Mais informações: [Especificador de formato personalizado "zzz"](#zzzSpecifier). | 2009-06-15T13:45:30-07:00 -> -07:00 |
 | ":" | O separador de hora.<br /><br /> Mais informações: [Especificador de formato personalizado ":"](#timeSeparator). | 2009-06-15T13:45:30 -> : (en-US)<br /><br /> 2009-06-15T13:45:30 -> . (it-IT)<br /><br /> 2009-06-15T13:45:30 -> : (ja-JP) |
 | "/" | O separador de data.<br /><br /> Mais informações: [o especificador de formato personalizado "/"](#dateSeparator). | 2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR) |
-| "*String*"<br /><br /> '*cadeia de caracteres*' | Delimitador de cadeia de caracteres literal.<br /><br /> Para saber mais: [Literais de cadeia de caracteres](#Literals). | 2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P |
+| " *String* "<br /><br /> ' *cadeia de caracteres* ' | Delimitador de cadeia de caracteres literal.<br /><br /> Para saber mais: [Literais de cadeia de caracteres](#Literals). | 2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P |
 | % | Define o caractere seguinte como um especificador de formato personalizado.<br /><br /> Mais informações:[Usar especificadores de formato personalizado simples](#UsingSingleSpecifiers). | 2009-06-15T13:45:30 (%h) -> 1 |
 | &#92; | O caractere de escape.<br /><br /> Para saber mais: [Literais de cadeia de caracteres](#Literals) e [Como usar o caractere de escape](#escape). | 2009-06-15T13:45:30 (h \h) -> 1 h |
 | Qualquer outro caractere | O caractere é copiado, inalterado, para a cadeia de caracteres de resultado.<br /><br /> Para saber mais: [Literais de cadeia de caracteres](#Literals). | 2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A |
@@ -722,7 +722,7 @@ A formatação é influenciada pelas propriedades do objeto <xref:System.Globali
 
 A cadeia de caracteres de resultado produzida por muitos dos especificadores de formato de data e hora personalizado também depende das propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> atual. Seu aplicativo pode alterar o resultado produzido por alguns especificadores de formato personalizado de data e hora ao alterar a propriedade <xref:System.Globalization.DateTimeFormatInfo> correspondente. Por exemplo, o especificador de formato "ddd" adiciona um nome de dia da semana abreviado encontrado na matriz de cadeia de caracteres <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> à cadeia de caracteres de resultado. Da mesma forma, o especificador de formato "MMMM" adiciona um nome de mês completo encontrado na matriz de cadeias de caracteres <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A> à cadeia de caracteres de resultado.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>

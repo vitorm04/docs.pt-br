@@ -4,21 +4,21 @@ description: Saiba mais sobre os tipos de coleção comumente usados no .NET, co
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- collections [.NET Framework], generic
-- objects [.NET Framework], grouping in collections
-- generics [.NET Framework], collections
+- collections [.NET], generic
+- objects [.NET], grouping in collections
+- generics [.NET], collections
 - IList interface, grouping data in collections
 - IDictionary interface, grouping data in collections
 - grouping data in collections, generic collection types
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: d0f2abc71524408c2bd2fa35a1a2dde0e664d273
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8677ba5b4404d49e2f6e07cda19ac437254a5897
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600835"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889381"
 ---
 # <a name="commonly-used-collection-types"></a>Tipos de coleção de uso comum
 Tipos de coleção são as variações comuns de coleções de dados, como tabelas de hash, filas, pilhas, pacotes, dicionários e listas.  
@@ -31,14 +31,14 @@ Tipos de coleção são as variações comuns de coleções de dados, como tabel
   
  O recurso LINQ para objetos permite que você use consultas LINQ para acessar objetos na memória, desde que o tipo de objeto implemente <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>. Consultas LINQ fornecem um padrão comum para acessar dados; normalmente são mais concisos e legíveis do que `foreach` loops padrão e fornecem recursos de filtragem, classificação e agrupamento. Consultas LINQ também podem melhorar o desempenho. Para obter mais informações, confira [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) e [PLINQ (Parallel LINQ)](../parallel-programming/introduction-to-plinq.md).  
   
-## <a name="related-topics"></a>Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos Relacionados  
   
-|Title|Descrição|  
+|Título|Descrição|  
 |-----------|-----------------|  
-|[Coleções e estruturas de dados](index.md)|Discute os vários tipos de coleção disponíveis no .NET Framework, incluindo pilhas, filas, listas, matrizes e dicionários.|  
+|[Coleções e estruturas de dados](index.md)|Discute os vários tipos de coleção disponíveis no .NET, incluindo pilhas, filas, listas, matrizes e dicionários.|  
 |[Tipos de Coleção de Tabela de Hash e Dicionário](hashtable-and-dictionary-collection-types.md)|Descreve os recursos de tipos de dicionário baseados em hash genérico e não genérico.|  
 |[Tipos de coleção classificados](sorted-collection-types.md)|Descreve as classes que fornecem funcionalidade de classificação para listas e conjuntos.|  
-|[Genéricos](../generics/index.md)|Descreve o recurso de genéricos, incluindo coleções, interfaces e representantes genéricos fornecidos pelo .NET Framework. Fornece links à documentação de recursos para C#, Visual Basic e Visual C++ e para oferecer suporte a tecnologias, tais como a de reflexão.|  
+|[Genéricos](../generics/index.md)|Descreve o recurso de genéricos, incluindo coleções, delegados e interfaces genéricas fornecidos pelo .NET. Fornece links à documentação de recursos para C#, Visual Basic e Visual C++ e para oferecer suporte a tecnologias, tais como a de reflexão.|  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Collections?displayProperty=nameWithType>  

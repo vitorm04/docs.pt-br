@@ -1,5 +1,5 @@
 ---
-title: 'Como: Valores de data e hora de viagem de ida e volta'
+title: Como aplicar uma viagem de ida e volta a valores de data e hora
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -7,19 +7,19 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - round-trip date and time values
-- dates [.NET Framework], round-trip values
-- time zones [.NET Framework], round-trip date and time values
-- time [.NET Framework], round-trip values
-- formatting strings [.NET Framework], round-trip values
+- dates [.NET], round-trip values
+- time zones [.NET], round-trip date and time values
+- time [.NET], round-trip values
+- formatting strings [.NET], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
-ms.openlocfilehash: 60483a6e29c65fc0c5803e8084053d53d9fc3c37
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4dce882e29afd5084dc84d3e176e6121c55f4af8
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290442"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889082"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>Como: Valores de data e hora de viagem de ida e volta
+# <a name="how-to-round-trip-date-and-time-values"></a>Como aplicar uma viagem de ida e volta a valores de data e hora
 
 Em muitos aplicativos, um valor de data e hora destina-se a identificar sem ambiguidade um único ponto no tempo. Este artigo mostra como salvar e restaurar um <xref:System.DateTime> valor, um <xref:System.DateTimeOffset> valor e um valor de data e hora com informações de fuso horário para que o valor restaurado identifique a mesma hora que o valor salvo.
 
@@ -85,7 +85,7 @@ Estes exemplos exigem que:
 
 - Os namespaces a seguir são importados com `using` diretivas C# ou `Imports` instruções Visual Basic:
 
-  - <xref:System>(Somente C#)
+  - <xref:System> (Somente C#)
 
   - <xref:System.Globalization?displayProperty=nameWithType>
 

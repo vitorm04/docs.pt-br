@@ -6,18 +6,17 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- .NET Framework, and TAP
-- asynchronous design patterns, .NET Framework
-- TAP, .NET Framework support for
-- Task-based Asynchronous Pattern, .NET Framework support for
-- .NET Framework, asynchronous design patterns
+- asynchronous design patterns, .NET
+- TAP, .NET support for
+- Task-based Asynchronous Pattern, .NET support for
+- .NET, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: 1f2f44b6b92f66f95816778c6dc8e893f1291abe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8bac9d265211d2f266db634d4bcebb87c2debd9a
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289350"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888770"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementando o padrão assíncrono baseado em tarefa
 Você pode implementar o Padrão Assíncrono baseado em Tarefas (TAP) de três formas: usando os compiladores C# e Visual Basic no Visual Studio, manualmente ou por meio de uma combinação dos métodos de compilador e manual. As seções a seguir discutem cada método em detalhes. Você pode usar o padrão TAP para implementar operações assíncronas associadas ao cálculo e associadas à E/S. A seção [Cargas de trabalho](#workloads) descreve cada tipo de operação.
@@ -34,7 +33,7 @@ Você pode implementar o padrão TAP manualmente para obter maior controle sobre
 [!code-vb[Conceptual.TAP_Patterns#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#1)]
 
 ### <a name="hybrid-approach"></a>Abordagem híbrida
- Você pode achá-la útil para implementar o padrão TAP manualmente, mas também para delegar a lógica principal para a implementação para o compilador. Por exemplo, talvez você queira usar a abordagem híbrida quando quiser verificar argumentos fora de um método assíncrono gerado pelo compilador para que as exceções possam escapar para o chamador direto do método, em vez de serem expostas por meio do objeto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>:
+ Você pode achá-la útil para implementar o padrão TAP manualmente, mas também para delegar a lógica principal para a implementação para o compilador. Por exemplo, você pode querer usar a abordagem híbrida quando quiser verificar argumentos fora de um método assíncrono gerado pelo compilador para que as exceções possam escapar para o chamador direto do método, em vez de serem expostas por meio do <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> objeto:
 
  [!code-csharp[Conceptual.TAP_Patterns#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#2)]
  [!code-vb[Conceptual.TAP_Patterns#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#2)]
@@ -49,9 +48,9 @@ A classe <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> é tota
 
 Você pode gerar tarefas associadas ao cálculo de uma das seguintes maneiras:
 
-- No .NET Framework 4, use o método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>, que aceita um delegado (geralmente um <xref:System.Action%601> ou um <xref:System.Func%601>) a ser executado de forma assíncrona. Se você fornecer um delegado <xref:System.Action%601>, o método retornará um objeto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> que representa a execução assíncrona desse delegado. Se você fornecer um delegado <xref:System.Func%601>, o método retornará um objeto <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Sobrecargas do método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> aceitam um token de cancelamento (<xref:System.Threading.CancellationToken>), opções de criação de tarefas (<xref:System.Threading.Tasks.TaskCreationOptions>) e um agendador de tarefas (<xref:System.Threading.Tasks.TaskScheduler>), que fornecem controle refinado sobre o planejamento e a execução da tarefa. Uma instância de fábrica que tem como destino o agendador de tarefas atual está disponível como uma propriedade estática (<xref:System.Threading.Tasks.Task.Factory%2A>) da classe <xref:System.Threading.Tasks.Task>; por exemplo: `Task.Factory.StartNew(…)`.
+- No .NET Framework 4,5 e versões posteriores (incluindo .NET Core e .NET 5 +), use o <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> método estático como um atalho para <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> . Você pode usar <xref:System.Threading.Tasks.Task.Run%2A> para iniciar com facilidade uma tarefa associada ao cálculo que tem como destino o pool de threads. Esse é o mecanismo preferencial para iniciar uma tarefa associada à computação. Use `StartNew` diretamente somente quando desejar um controle mais refinado sobre a tarefa.
 
-- No .NET Framework 4.5 e em versões posteriores (incluindo o .NET Core e o .NET Standard), use o método <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> estático como um atalho para o <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. Você pode usar <xref:System.Threading.Tasks.Task.Run%2A> para iniciar com facilidade uma tarefa associada ao cálculo que tem como destino o pool de threads. No .NET Framework 4.5 e em versões posteriores, esse é o mecanismo preferido para iniciar uma tarefa associada a cálculo. Use `StartNew` diretamente somente quando desejar um controle mais refinado sobre a tarefa.
+- No .NET Framework 4, use o <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> método, que aceita um delegado (normalmente um <xref:System.Action%601> ou um <xref:System.Func%601> ) a ser executado de forma assíncrona. Se você fornecer um delegado <xref:System.Action%601>, o método retornará um objeto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> que representa a execução assíncrona desse delegado. Se você fornecer um delegado <xref:System.Func%601>, o método retornará um objeto <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Sobrecargas do método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> aceitam um token de cancelamento (<xref:System.Threading.CancellationToken>), opções de criação de tarefas (<xref:System.Threading.Tasks.TaskCreationOptions>) e um agendador de tarefas (<xref:System.Threading.Tasks.TaskScheduler>), que fornecem controle refinado sobre o planejamento e a execução da tarefa. Uma instância de fábrica que tem como destino o agendador de tarefas atual está disponível como uma propriedade estática (<xref:System.Threading.Tasks.Task.Factory%2A>) da classe <xref:System.Threading.Tasks.Task>; por exemplo: `Task.Factory.StartNew(…)`.
 
 - Use os construtores do tipo `Task` ou o método `Start` se desejar gerar e agendar a tarefa separadamente. Métodos públicos devem retornar somente as tarefas que já foram iniciadas.
 
@@ -82,7 +81,7 @@ Digamos que você deseja criar uma tarefa que será concluída após um período
 [!code-csharp[Conceptual.TAP_Patterns#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#4)]
 [!code-vb[Conceptual.TAP_Patterns#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#4)]
 
-Desde o .NET Framework 4.5, o método <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> é fornecido para essa finalidade e você pode usá-lo dentro de outro método assíncrono, por exemplo, para implementar um loop de sondagem assíncrono:
+O <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> método é fornecido para essa finalidade e você pode usá-lo dentro de outro método assíncrono, por exemplo, para implementar um loop de sondagem assíncrona:
 
 [!code-csharp[Conceptual.TAP_Patterns#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#5)]
 [!code-vb[Conceptual.TAP_Patterns#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#5)]
@@ -102,6 +101,6 @@ Esse exemplo também demonstra como um token de cancelamento único pode ser enc
 
 ## <a name="see-also"></a>Veja também
 
-- [TAP (Padrão Assíncrono Baseado em Tarefa)](task-based-asynchronous-pattern-tap.md)
+- [Padrão assíncrono baseado em tarefa (TAP)](task-based-asynchronous-pattern-tap.md)
 - [Consumindo o padrão assíncrono baseado em tarefa](consuming-the-task-based-asynchronous-pattern.md)
 - [Interoperabilidade com outros tipos e padrões assíncronos](interop-with-other-asynchronous-patterns-and-types.md)

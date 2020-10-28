@@ -10,19 +10,19 @@ dev_langs:
 helpviewer_keywords:
 - multiple attribute instances
 - AttributeTargets enumeration
-- attributes [.NET Framework], custom
+- attributes [.NET], custom
 - AllowMultiple property
 - custom attributes
 - AttributeUsageAttribute class, custom attributes
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: f047e18531b46f0c89be9a6feaa9aa50341205e3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 670f34083834b35d26e6018372948022eec17d47
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550918"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889186"
 ---
 # <a name="writing-custom-attributes"></a>Escrevendo atributos personalizados
 Para criar seus próprios atributos personalizados, não é preciso dominar muitos novos conceitos. Se estiver familiarizado com a programação orientada a objeto e souber como criar classes, você já domina a maior parte do conhecimento necessário. Os atributos personalizados são classes essencialmente tradicionais que derivam direta ou indiretamente de <xref:System.Attribute?displayProperty=nameWithType>. Como acontece nas classes tradicionais, os atributos personalizados contêm métodos que armazenam e recuperam dados.  
@@ -104,7 +104,7 @@ Para criar seus próprios atributos personalizados, não é preciso dominar muit
   
 - As classes de atributos devem ser declaradas como classes públicas.  
   
-- Por convenção, o nome da classe de atributos termina com a palavra **Attribute**. Embora não seja necessária, essa convenção é recomendada para facilitar a leitura. Quando o atributo é aplicado, a inclusão da palavra Attribute torna-se opcional.  
+- Por convenção, o nome da classe de atributos termina com a palavra **Attribute** . Embora não seja necessária, essa convenção é recomendada para facilitar a leitura. Quando o atributo é aplicado, a inclusão da palavra Attribute torna-se opcional.  
   
 - Todas as classes de atributos devem ser herdadas diretamente ou indiretamente de <xref:System.Attribute?displayProperty=nameWithType>.  
   
@@ -126,7 +126,7 @@ Para criar seus próprios atributos personalizados, não é preciso dominar muit
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
 ## <a name="declaring-properties"></a>Declarar propriedades  
- Se quiser definir um parâmetro nomeado ou disponibilizar uma maneira fácil de retornar os valores armazenados pelo seu atributo, declare uma [propriedade](/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). As propriedades de atributos devem ser declaradas como entidades públicas com uma descrição do tipo de dados que será retornado. Defina a variável que conterá o valor de sua propriedade e irá associá-la aos métodos **get** e **set**. O exemplo de código a seguir demonstra como implementar uma propriedade simples em seu atributo.  
+ Se quiser definir um parâmetro nomeado ou disponibilizar uma maneira fácil de retornar os valores armazenados pelo seu atributo, declare uma [propriedade](/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). As propriedades de atributos devem ser declaradas como entidades públicas com uma descrição do tipo de dados que será retornado. Defina a variável que conterá o valor de sua propriedade e irá associá-la aos métodos **get** e **set** . O exemplo de código a seguir demonstra como implementar uma propriedade simples em seu atributo.  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]
@@ -147,7 +147,7 @@ Para criar seus próprios atributos personalizados, não é preciso dominar muit
   
  O primeiro exemplo mostra o atributo aplicado com apenas os parâmetros nomeados necessários e o segundo mostra o atributo aplicado com os parâmetros necessários e opcionais.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Attribute?displayProperty=nameWithType>
 - <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>
