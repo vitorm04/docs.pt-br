@@ -1,6 +1,6 @@
 ---
 title: Introdução ao PLINQ
-description: Saiba como fazer consultas em paralelo usando PLINQ no .NET. PLINQ significa consulta integrada de linguagem paralela (LINQ).
+description: Saiba como fazer consultas em paralelo usando PLINQ no .NET. PLINQ significa consulta de Language-Integrated paralela (LINQ).
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: 9dbc4fde3f72d01aee91978ed5cb0baf0895de26
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 37414c7963a3803518b41a5c6d262740313e2b37
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662453"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925344"
 ---
 # <a name="introduction-to-plinq"></a>Introdução ao PLINQ
 
@@ -42,7 +42,7 @@ A classe <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> exp�
 
 Além dos operadores de consulta padrão, a classe <xref:System.Linq.ParallelEnumerable> contém um conjunto de métodos que permitem comportamentos específicos para execução paralela. Esses métodos específicos de PLINQ são listados na tabela a seguir.
 
-|Operador ParallelEnumerable|Descrição|
+|Operador ParallelEnumerable|Description|
 |---------------------------------|-----------------|
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|O ponto de entrada para PLINQ. Especifica que o restante da consulta deverá ser paralelizado, se possível.|
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|Especifica que o restante da consulta deve ser executado em sequência, como uma consulta LINQ não paralela.|
@@ -109,7 +109,7 @@ A ilustração a seguir mostra a diferença entre `foreach` e <xref:System.Linq.
 
 ## <a name="cancellation"></a>Cancelamento
 
-A PLINQ é integrada aos tipos de cancelamento no .NET Framework 4. (Para obter mais informações, consulte [cancelamento em threads gerenciados](../threading/cancellation-in-managed-threads.md).) Portanto, diferentemente das consultas de LINQ to Objects sequenciais, as consultas PLINQ podem ser canceladas. Para criar uma consulta PLINQ anulável, use o operador <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> na consulta e forneça uma instância <xref:System.Threading.CancellationToken> como argumento. Quando a propriedade <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> no token é definida como true, o PLINQ a observa, para o processamento de todos os threads e lança um <xref:System.OperationCanceledException>.
+O PLINQ é integrado com os tipos de cancelamento no .NET. (Para obter mais informações, consulte [cancelamento em threads gerenciados](../threading/cancellation-in-managed-threads.md).) Portanto, diferentemente das consultas de LINQ to Objects sequenciais, as consultas PLINQ podem ser canceladas. Para criar uma consulta PLINQ anulável, use o operador <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> na consulta e forneça uma instância <xref:System.Threading.CancellationToken> como argumento. Quando a propriedade <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> no token é definida como true, o PLINQ a observa, para o processamento de todos os threads e lança um <xref:System.OperationCanceledException>.
 
 É possível que uma consulta PLINQ possa continuar a processar alguns elementos depois que o token de cancelamento é definido.
 
@@ -136,7 +136,7 @@ A PLINQ oferece suporte a um número fixo de partições (embora os dados possam
 
 Em muitos casos, uma consulta pode ser paralelizada, mas a sobrecarga de configuração de consulta paralela supera o benefício de desempenho obtido. Se uma consulta não gerar muita computação ou se a fonte de dados for pequena, uma consulta PLINQ poderá ser mais lenta do que uma consulta sequencial LINQ to Objects. Você pode usar o Analisador de Desempenho Paralelo no Visual Studio Team Server para comparar o desempenho de várias consultas, para localizar gargalos de processamento e para determinar se a consulta está em execução em paralelo ou sequencialmente. Para saber mais, veja [Visualizador de Simultaneidade](/visualstudio/profiling/concurrency-visualizer) e [Como medir o Desempenho da Consulta PLINQ](how-to-measure-plinq-query-performance.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [LINQ paralelo (PLINQ)](introduction-to-plinq.md)
 - [Noções básicas sobre agilização em PLINQ](understanding-speedup-in-plinq.md)

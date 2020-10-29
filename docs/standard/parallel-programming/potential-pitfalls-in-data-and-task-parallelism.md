@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel programming, pitfalls
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
-ms.openlocfilehash: 05d934b80e60a8630db5b70e16a07c014598487a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c66eae48df54b330843b4967f957264f2bddee1d
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599757"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925305"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Armadilhas em potencial em dados e paralelismo da tarefa
 Em muitos casos, o <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> podem melhorar consideravelmente o desempenho em comparação com consultas sequenciais comuns. No entanto, o trabalho de paralelizar o loop apresenta complexidade que pode levar a problemas que, em código sequencial, não são tão comuns ou não são encontrados. Este tópico lista algumas práticas a serem evitadas ao escrever loops paralelos.  
@@ -45,7 +45,7 @@ Em muitos casos, o <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=
  [!code-vb[TPL_Pitfalls#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#04)]  
   
 ## <a name="limit-calls-to-thread-safe-methods"></a>Limite chamadas para métodos thread-safe  
- A maioria dos métodos estáticos no .NET Framework é thread-safe e pode ser chamada de vários threads simultaneamente. No entanto, mesmo nesses casos, a sincronização envolvida pode levar a uma desaceleração significativa na consulta.  
+ A maioria dos métodos estáticos no .NET são thread-safe e podem ser chamados de vários threads simultaneamente. No entanto, mesmo nesses casos, a sincronização envolvida pode levar a uma desaceleração significativa na consulta.  
   
 > [!NOTE]
 > Você pode testar isso sozinho inserindo algumas chamadas para <xref:System.Console.WriteLine%2A> nas suas consultas. Embora esse método seja usado nos exemplos de documentação para fins de demonstração, não o use em loops paralelos, a menos que seja necessário.  
@@ -69,7 +69,7 @@ Em muitos casos, o <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=
 ## <a name="avoid-executing-parallel-loops-on-the-ui-thread"></a>Evitar loops paralelos em execução no thread de interface do usuário  
  É importante manter a interface do usuário (IU) do aplicativo responsiva. Se uma operação contiver trabalho suficiente para garantir a paralelização, provavelmente não deverá ser executada no thread da interface do usuário.  Em vez disso, deverá ser descarregada para execução em um thread em segundo plano. Por exemplo, se você quiser usar um loop paralelo para calcular alguns dados que, depois, deverão ser renderizados em um controle de interface do usuário, convém executar o loop dentro de uma instância de tarefa, em vez de diretamente em um manipulador de eventos de interface do usuário.  Somente após a conclusão do cálculo principal você deverá realizar marshaling da atualização da interface do usuário para o thread de interface do usuário.  
   
- Se você executar loops paralelos no thread da interface do usuário, tenha cuidado para evitar a atualização dos controles de interface do usuário de dentro do loop. A tentativa de atualizar os controles de interface do usuário de dentro de um loop paralelo em execução no thread da interface do usuário poderá causar a corrupção do estado, exceções, atraso nas atualizações e até mesmo deadlocks, dependendo de como a atualização da interface do usuário é invocada. No exemplo a seguir, o loop paralelo bloqueia o thread de interface do usuário no qual ele está em execução até que todas as iterações sejam concluídas. No entanto, se uma iteração do loop estiver em execução em um thread em segundo plano (como <xref:System.Threading.Tasks.Parallel.For%2A> pode fazer), a chamada a Invoke faz com que uma mensagem seja enviada ao thread de interface do usuário e causa um bloqueio aguardando o processo da mensagem. Como o thread da interface do usuário está bloqueado executando <xref:System.Threading.Tasks.Parallel.For%2A>, a mensagem nunca pode ser processada e o thread da interface do usuário sofre um deadlock.  
+ Se você executar loops paralelos no thread da interface do usuário, tenha cuidado para evitar a atualização dos controles de interface do usuário de dentro do loop. A tentativa de atualizar os controles de interface do usuário de dentro de um loop paralelo em execução no thread da interface do usuário poderá causar a corrupção do estado, exceções, atraso nas atualizações e até mesmo deadlocks, dependendo de como a atualização da interface do usuário é invocada. No exemplo a seguir, o loop paralelo bloqueia o thread da interface do usuário no qual ele está sendo executado até que todas as iterações sejam concluídas. No entanto, se uma iteração do loop estiver em execução em um thread em segundo plano (como <xref:System.Threading.Tasks.Parallel.For%2A> pode fazer), a chamada a Invoke faz com que uma mensagem seja enviada ao thread de interface do usuário e causa um bloqueio aguardando o processo da mensagem. Como o thread da interface do usuário está bloqueado executando <xref:System.Threading.Tasks.Parallel.For%2A>, a mensagem nunca pode ser processada e o thread da interface do usuário sofre um deadlock.  
   
  [!code-csharp[TPL_Pitfalls#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#02)]
  [!code-vb[TPL_Pitfalls#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#02)]  
@@ -79,7 +79,7 @@ Em muitos casos, o <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=
  [!code-csharp[TPL_Pitfalls#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#03)]
  [!code-vb[TPL_Pitfalls#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#03)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Programação paralela](index.md)
 - [Armadilhas em potencial com PLINQ](potential-pitfalls-with-plinq.md)

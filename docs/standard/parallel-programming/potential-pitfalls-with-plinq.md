@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-ms.openlocfilehash: b4d58734fba4b834d5f5819a6bf19da0b7b7e8db
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 012ac4078c1e2f17d6eef88ee295b11161a0e24a
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285307"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925266"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Possíveis armadilhas com PLINQ
 
@@ -62,7 +62,7 @@ a.AsParallel().Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));
 
 ## <a name="limit-calls-to-thread-safe-methods"></a>Limitar chamadas para métodos de thread-safe
 
-A maioria dos métodos estáticos no .NET Framework é thread-safe e pode ser chamada de vários threads simultaneamente. No entanto, mesmo nesses casos, a sincronização envolvida pode levar a uma desaceleração significativa na consulta.
+A maioria dos métodos estáticos no .NET são thread-safe e podem ser chamados de vários threads simultaneamente. No entanto, mesmo nesses casos, a sincronização envolvida pode levar a uma desaceleração significativa na consulta.
 
 > [!NOTE]
 > Você pode testar isso sozinho inserindo algumas chamadas para <xref:System.Console.WriteLine%2A> nas suas consultas. Embora esse método seja usado nos exemplos de documentação para fins de demonstração, não o use em consultas PLINQ.

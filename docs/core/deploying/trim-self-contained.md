@@ -4,12 +4,12 @@ description: Saiba como cortar aplicativos independentes para reduzir seu tamanh
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 1ebcac51331407069e26b49e40bb6e071cefb752
-ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
+ms.openlocfilehash: bf38ffe4d47986ae78c6cf2b2e5ecb292411ba6c
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90770449"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925279"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Cortar implantações e executáveis autossuficientes
 
@@ -36,6 +36,39 @@ Quando o código está indiretamente referenciando um assembly por meio de refle
 <ItemGroup>
     <TrimmerRootAssembly Include="System.Security" />
 </ItemGroup>
+```
+
+### <a name="support-for-ssl-certificates"></a>Suporte para certificados SSL
+
+Se seu aplicativo carregar certificados SSL, como em um aplicativo de ASP.NET Core, você desejará garantir que, ao cortar, você impeça o corte de assemblies que ajudarão no carregamento de certificados SSL.
+
+Podemos atualizar nosso arquivo de projeto para incluir o seguinte para ASP.NET Core 3,1:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>...</PropertyGroup>
+  <!--Include the following for .aspnetcore 3.1-->
+  <ItemGroup>
+    <TrimmerRootAssembly Include="System.Net" />
+    <TrimmerRootAssembly Include="System.Net.Security" />
+    <TrimmerRootAssembly Include="System.Security" />
+  </ItemGroup>
+  ...
+</Project>
+```
+
+Se estivermos usando o .NET 5,0, podemos atualizar nosso arquivo de projeto para incluir o seguinte:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+ <PropertyGroup>...</PropertyGroup>
+ <!--Include the following for .net 5.0-->
+ <ItemGroup>
+    <TrimmerRootAssembly Include="System.Net.Security" />
+    <TrimmerRootAssembly Include="System.Security" />
+  </ItemGroup>
+  ...
+</Project>
 ```
 
 ## <a name="trim-your-app---cli"></a>Cortar sua app-CLI
@@ -71,25 +104,25 @@ Para obter mais informações, consulte [publicar aplicativos .NET Core com CLI 
 
 O Visual Studio cria perfis de publicação reutilizáveis que controlam como seu aplicativo é publicado.
 
-01. No painel **Gerenciador de soluções** , clique com o botão direito do mouse no projeto que você deseja publicar. Selecione **publicar...**.
+01. No painel **Gerenciador de soluções** , clique com o botão direito do mouse no projeto que você deseja publicar. Selecione **publicar...** .
 
     :::image type="content" source="media/trim-self-contained/visual-studio-solution-explorer.png" alt-text="Gerenciador de Soluções com um menu de clique com o botão direito do mouse, realçando a opção publicar.":::
 
     Se você ainda não tiver um perfil de publicação, siga as instruções para criar um e escolha o tipo de destino da **pasta** .
 
-01. Escolha **Editar**.
+01. Escolha **Editar** .
 
-    :::image type="content" source="media/trim-self-contained/visual-studio-publish-edit-settings.png" alt-text="Perfil de publicação do Visual Studio com o botão Editar.":::
+    :::image type="content" source="media/trim-self-contained/visual-studio-publish-edit-settings.png" alt-text="Gerenciador de Soluções com um menu de clique com o botão direito do mouse, realçando a opção publicar.":::
 
 01. Na caixa de diálogo **configurações de perfil** , defina as seguintes opções:
 
-    - Defina o **modo de implantação** **como autônomo**.
+    - Defina o **modo de implantação** **como autônomo** .
     - Defina o **tempo de execução de destino** para a plataforma na qual você deseja publicar.
-    - Selecione **aparar assemblies não utilizados (em visualização)**.
+    - Selecione **aparar assemblies não utilizados (em visualização)** .
 
     Escolha **salvar** para salvar as configurações e retornar para a caixa de diálogo de **publicação** .
 
-    :::image type="content" source="media/trim-self-contained/visual-studio-publish-properties.png" alt-text="Caixa de diálogo Configurações de perfil com modo de implantação, tempo de execução de destino e opções de corte de assemblies não utilizados realçadas.":::
+    :::image type="content" source="media/trim-self-contained/visual-studio-publish-properties.png" alt-text="Gerenciador de Soluções com um menu de clique com o botão direito do mouse, realçando a opção publicar.":::
 
 01. Escolha **publicar** para publicar seu aplicativo cortado.
 
@@ -99,7 +132,7 @@ Para obter mais informações, consulte [publicar aplicativos .NET Core com o Vi
 
 Visual Studio para Mac não fornece opções para cortar seu aplicativo durante a publicação. Você precisará publicar manualmente seguindo as instruções da seção [cortar sua app-CLI](#trim-your-app---cli) . Para obter mais informações, consulte [publicar aplicativos .NET Core com CLI do .NET Core](deploy-with-cli.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Implantação de aplicativo .NET Core](index.md).
 - [Publicar aplicativos .NET Core com CLI do .NET Core](deploy-with-cli.md).

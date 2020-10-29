@@ -10,15 +10,16 @@ helpviewer_keywords:
 - tasks, cancellation
 - asynchronous task cancellation
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
-ms.openlocfilehash: 1d9b7b35341961c27107f007e0eafa51ef49e232
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: dba2f2ad9733f8881276bdb2705a6c8457351f9c
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768658"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925292"
 ---
-# <a name="task-cancellation"></a>Cancelamento da tarefa
-As classes <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> oferecem suporte ao cancelamento por meio do uso de tokens de cancelamento no .NET Framework. Para obter mais informações, consulte [cancelamento em threads gerenciados](../threading/cancellation-in-managed-threads.md). Nas classes de tarefas, o cancelamento envolve a cooperação entre o delegado do usuário, que representa uma operação cancelável, e o código que solicitou o cancelamento.  Um cancelamento bem-sucedido envolve o código de solicitação chamar o método <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> e o delegado do usuário terminar a operação de forma breve. Você pode terminar a operação ao usar uma destas opções:  
+# <a name="task-cancellation"></a>Cancelamento de tarefa
+
+As <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> classes e dão suporte ao cancelamento por meio do uso de tokens de cancelamento. Para obter mais informações, consulte [cancelamento em threads gerenciados](../threading/cancellation-in-managed-threads.md). Nas classes de tarefa, o cancelamento envolve a cooperação entre o delegado de usuário, que representa uma operação cancelável e o código que solicitou o cancelamento. Um cancelamento bem-sucedido envolve o código de solicitação que chama o <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> método e o delegado do usuário encerrando a operação em tempo hábil. Você pode terminar a operação ao usar uma destas opções:  
   
 - Simplesmente ao sair do delegado. Em muitos cenários isso é suficiente. Entretanto, uma instância da tarefa que é cancelada desse modo faz a transição para o estado <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>, e não para o estado <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>.  
   

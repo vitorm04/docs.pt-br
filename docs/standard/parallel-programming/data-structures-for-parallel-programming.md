@@ -5,20 +5,21 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: f9c130b73044440f24b7b8bbebe9527490a165c1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cea9264a30469881e3ec54fc378af3ddb70bff8e
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288518"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925318"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Estruturas de dados para programação paralela
-O .NET Framework versão 4 apresenta vários tipos novos que são úteis em programação paralela, incluindo um conjunto de classes de coleção simultâneas, primitivos de sincronização leve e tipos para inicialização lenta. Você pode usar esses tipos com qualquer código de aplicativo multithread, incluindo PLINQ e biblioteca de paralelismo de tarefas.  
+
+O .NET fornece vários tipos úteis em programação paralela, incluindo um conjunto de classes de coleção simultâneas, primitivos de sincronização leves e tipos de inicialização lenta. Você pode usar esses tipos com qualquer código de aplicativo multithread, incluindo PLINQ e biblioteca de paralelismo de tarefas.  
   
 ## <a name="concurrent-collection-classes"></a>Classes de coleção simultâneas  
- As classes de coleção no namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType> fornecem operações de adição e remoção thread-safe que, sempre que possível, evitam bloqueios e usam o bloqueio refinado quando os bloqueios forem necessários. Ao contrário de coleções que foram introduzidas no .NET Framework versões 1.0 e 2.0, uma classe de coleção simultânea não exige que o código de usuário use qualquer bloqueio ao acessar itens. As classes de coleção simultânea podem melhorar consideravelmente o desempenho em tipos como <xref:System.Collections.ArrayList?displayProperty=nameWithType> e <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> (com bloqueio implementado pelo usuário) em cenários nos quais vários threads adicionam e removem itens de uma coleção.  
+ As classes de coleção no namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType> fornecem operações de adição e remoção thread-safe que, sempre que possível, evitam bloqueios e usam o bloqueio refinado quando os bloqueios forem necessários. Uma classe de coleção simultânea não exige que o código do usuário assuma nenhum bloqueio ao acessar itens. As classes de coleção simultânea podem melhorar consideravelmente o desempenho em tipos como <xref:System.Collections.ArrayList?displayProperty=nameWithType> e <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> (com bloqueio implementado pelo usuário) em cenários nos quais vários threads adicionam e removem itens de uma coleção.  
   
- A tabela a seguir lista as novas classes de coleção simultâneas:  
+ A tabela a seguir lista as classes de coleção simultâneas:  
   
 |Tipo|Description|  
 |----------|-----------------|  
@@ -31,9 +32,9 @@ O .NET Framework versão 4 apresenta vários tipos novos que são úteis em prog
  Para obter mais informações, veja [Coleções thread-safe](../collections/thread-safe/index.md).  
   
 ## <a name="synchronization-primitives"></a>Primitivos de sincronização  
- Os novos primitivos de sincronização no namespace <xref:System.Threading?displayProperty=nameWithType> habilitam simultaneidade refinada e desempenho mais rápido, evitando mecanismos de bloqueio caros encontrados no código de multithreading herdado. Alguns dos novos tipos, como <xref:System.Threading.Barrier?displayProperty=nameWithType> e <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> não têm correspondentes em versões anteriores do .NET Framework.  
+ Os primitivos de sincronização no <xref:System.Threading?displayProperty=nameWithType> namespace permitem uma simultaneidade refinada e desempenho mais rápido, evitando mecanismos de bloqueio caros encontrados no código multithread herdado.
   
- A tabela a seguir lista os novos tipos de sincronização:  
+ A tabela a seguir lista os tipos de sincronização:  
   
 |Tipo|Description|  
 |----------|-----------------|  
@@ -41,12 +42,12 @@ O .NET Framework versão 4 apresenta vários tipos novos que são úteis em prog
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Simplifica cenários de bifurcação e junção fornecendo um mecanismo fácil de encontro. Para saber mais, confira [CountdownEvent](../threading/countdownevent.md).|  
 |<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Um primitivo de sincronização semelhante a <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> é leve, mas só pode ser usado para comunicação entre processos.|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|Um primitivo de sincronização que limita o número de threads que podem acessar simultaneamente um recurso ou um pool de recursos. Para saber mais, confira [Semaphore e SemaphoreSlim](../threading/semaphore-and-semaphoreslim.md).|  
-|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Um primitivo de bloqueio de exclusão mútua que faz com que o thread que está tentando adquirir o bloqueio aguarde em um loop, ou *rotação*, durante um período antes de gerar seu quantum. Em cenários nos quais a espera pelo bloqueio deve ser curta, <xref:System.Threading.SpinLock> oferece um desempenho melhor do que outras formas de bloqueio. Para saber mais, veja [SpinLock](../threading/spinlock.md).|  
+|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Um primitivo de bloqueio de exclusão mútua que faz com que o thread que está tentando adquirir o bloqueio aguarde em um loop, ou *rotação* , durante um período antes de gerar seu quantum. Em cenários nos quais a espera pelo bloqueio deve ser curta, <xref:System.Threading.SpinLock> oferece um desempenho melhor do que outras formas de bloqueio. Para saber mais, veja [SpinLock](../threading/spinlock.md).|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Um tipo de pequeno e leve que girará por um tempo especificado e, no final, colocará o thread em um estado de espera se a contagem de rotações for ultrapassada.  Para saber mais, veja [SpinWait](../threading/spinwait.md).|  
   
  Para obter mais informações, consulte:  
   
-- [Como: usar o SpinLock para sincronização de nível baixo](../threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+- [Como usar SpinLock para sincronização de baixo nível](../threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
 - [Como sincronizar operações simultâneas com uma barreira](../threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
