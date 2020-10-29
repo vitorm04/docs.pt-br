@@ -1524,6 +1524,8 @@ items:
             href: ../standard/attributes/retrieving-information-stored-in-attributes.md
       - name: Escolha entre os tipos anônimo e tupla
         href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
+      - name: Conceitos de aplicativos de console
+        href: ../standard/building-console-apps.md
   - name: Injeção de dependência
     items:
       - name: Visão geral
