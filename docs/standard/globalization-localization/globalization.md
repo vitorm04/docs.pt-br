@@ -6,19 +6,19 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- globalization [.NET Framework], about globalization
+- globalization [.NET], about globalization
 - global applications, globalization
-- international applications [.NET Framework], globalization
+- international applications [.NET], globalization
 - world-ready applications, globalization
-- application development [.NET Framework], globalization
+- application development [.NET], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: adc617362cf3ba07ff63f1095968e2bd88df88d9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 66ed197f102583553112083e3a21f89e33cd3e3f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291910"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064165"
 ---
 # <a name="globalization"></a>Globalização
 
@@ -102,7 +102,7 @@ Normalmente, cadeias de caracteres ordenadas que devem ser exibidas na interface
 
 A comparação de cadeia de caracteres sensíveis à cultura é definida pelo objeto <xref:System.Globalization.CompareInfo>, que é retornado pela propriedade <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> de cada cultura. Comparações de cadeia de caracteres sensíveis à cultura que usam sobrecargas do método <xref:System.String.Compare%2A?displayProperty=nameWithType> também usam o objeto <xref:System.Globalization.CompareInfo>.
 
-O .NET usa tabelas para realizar classificações com detecção de cultura em dados de cadeia de caracteres. O conteúdo dessas tabelas, que contêm dados sobre os pesos de classificação e a normalização de cadeias de caracteres, é determinado pela versão do padrão Unicode implementada por uma versão específica do .NET. A tabela a seguir lista as versões do Unicode implementadas pelas versões especificadas do .NET Framework e pelo .NET Core. Observe que essa lista de versões com suporte do Unicode aplica-se somente à comparação e classificação de caracteres. ela não se aplica à classificação de caracteres Unicode por categoria. Para saber mais, confira a seção "Cadeias de caracteres e o padrão Unicode" no artigo <xref:System.String>.
+O .NET usa tabelas para realizar classificações com detecção de cultura em dados de cadeia de caracteres. O conteúdo dessas tabelas, que contêm dados sobre os pesos de classificação e a normalização de cadeias de caracteres, é determinado pela versão do padrão Unicode implementada por uma versão específica do .NET. A tabela a seguir lista as versões do Unicode implementadas pelas versões especificadas do .NET. Esta lista de versões Unicode com suporte se aplica somente à comparação e à classificação de caracteres; Ele não se aplica à classificação de caracteres Unicode por categoria. Para saber mais, confira a seção "Cadeias de caracteres e o padrão Unicode" no artigo <xref:System.String>.
 
 |Versão do .NET Framework|Sistema operacional|Versão Unicode|
 |----------------------------|----------------------|---------------------|
@@ -112,9 +112,9 @@ O .NET usa tabelas para realizar classificações com detecção de cultura em d
 |.NET Framework 4|Todos os sistemas operacionais|Unicode 5.0|
 |.NET Framework 4.5 e posterior no Windows 7|Unicode 5.0|
 |.NET Framework 4.5 e posterior nos sistemas operacionais Windows 8 e posteriores|Unicode 6.3.0|
-|.NET Core (todas as versões)|Depende da versão do padrão Unicode compatível com o sistema operacional subjacente.|
+|.NET Core e .NET 5 +|Depende da versão do padrão Unicode compatível com o sistema operacional subjacente.|
 
-Começando com o .NET Framework 4.5 e em todas as versões do .NET Core, a comparação e a classificação de cadeia de caracteres dependem do sistema operacional. O .NET Framework 4.5 e posteriores em execução no Windows 7 recuperam dados de suas próprias tabelas que implementam o Unicode 5.0. O .NET Framework 4.5 e posteriores em execução no Windows 8 e nas versões posteriores recuperam dados das tabelas do sistema operacional que implementam o Unicode 6.3. No .NET Core, a versão compatível do Unicode depende do sistema operacional subjacente. Ao serializar os dados classificados com detecção de cultura, você pode usar a classe <xref:System.Globalization.SortVersion> para determinar quando os dados serializados precisam ser classificados para que fiquem consistentes com o .NET e a ordem de classificação do sistema operacional. Para obter um exemplo, consulte o tópico da classe <xref:System.Globalization.SortVersion>.
+A partir do .NET Framework 4,5 e em todas as versões do .NET Core e do .NET 5 +, a comparação de cadeias de caracteres e a classificação dependem do sistema operacional. .NET Framework 4,5 e posterior em execução no Windows 7 recupera dados de suas próprias tabelas que implementam o Unicode 5,0. .NET Framework 4,5 e posterior em execução no Windows 8 e posterior recupera dados de tabelas do sistema operacional que implementam Unicode 6,3. No .NET Core e no .NET 5 +, a versão com suporte do Unicode depende do sistema operacional subjacente. Ao serializar os dados classificados com detecção de cultura, você pode usar a classe <xref:System.Globalization.SortVersion> para determinar quando os dados serializados precisam ser classificados para que fiquem consistentes com o .NET e a ordem de classificação do sistema operacional. Para obter um exemplo, consulte o tópico da classe <xref:System.Globalization.SortVersion>.
 
 Se seu aplicativo executa classificações específicas de cultura abrangentes de dados de cadeia de caracteres, você pode trabalhar com a classe <xref:System.Globalization.SortKey> para comparar cadeias de caracteres. Uma chave de classificação reflete os pesos de classificação específicos de uma determinada cultura, incluindo os pesos alfabético, de maiúsculas e minúsculas e de diacríticos de uma determinada cadeia de caracteres. Já que as comparações usando chaves de classificação são binárias, elas são mais rápidas que comparações que usam um objeto <xref:System.Globalization.CompareInfo> implícita ou explicitamente. Crie uma chave de classificação específica à cultura para uma determinada cadeia de caracteres passando a cadeia de caracteres para o método <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType>.
 
@@ -338,7 +338,7 @@ Em geral, não faça suposições sobre os valores de propriedades <xref:System.
 
 - Nos sistemas Windows, o usuário pode personalizar as configurações específicas da cultura usando o aplicativo **Região e Idioma** no Painel de Controle. Quando você instancia um objeto <xref:System.Globalization.CultureInfo>, é possível determinar se ele reflete as personalizações desse usuário chamando o construtor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29>. Normalmente, para aplicativos de usuário final, você deve respeitar as preferências do usuário para que o usuário seja apresentado aos dados em um formato que eles esperam.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Globalização e localização](index.md)
 - [Práticas recomendadas para usar cadeias de caracteres](../base-types/best-practices-strings.md)

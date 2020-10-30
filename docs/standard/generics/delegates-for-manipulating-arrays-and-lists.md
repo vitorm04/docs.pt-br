@@ -3,19 +3,19 @@ title: Delegados genéricos para manipulação de matrizes e listas
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- delegates [.NET Framework], generic delegates
+- delegates [.NET], generic delegates
 - chaining delegates
-- arrays [.NET Framework], generic delegates
-- generic delegates [.NET Framework]
-- lists [.NET Framework], generic delegates
-- generics [.NET Framework], delegates
+- arrays [.NET], generic delegates
+- generic delegates [.NET]
+- lists [.NET], generic delegates
+- generics [.NET], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-ms.openlocfilehash: b0ecd8661b7c58645e49ca884ed0499e8c828af9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2ee80acb51ab3c394a3c0b12fface93a9d541f30
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287526"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063196"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Delegados genéricos para manipulação de matrizes e listas
 Este tópico fornece uma visão geral de delegados genéricos para conversões, predicados de pesquisa e ações a serem tomadas nos elementos de uma matriz ou coleção.  
@@ -39,11 +39,11 @@ Este tópico fornece uma visão geral de delegados genéricos para conversões, 
 ### <a name="chaining-delegates"></a>Encadeando delegados  
  Muitos dos métodos que usam esses delegados retornam uma matriz ou lista, que pode ser passada para outro método. Por exemplo, se você quiser selecionar determinados elementos de uma matriz, converta esses elementos em um novo tipo e salve-os em uma nova matriz, você pode passar a matriz retornada pelo método <xref:System.Array.FindAll%2A> genérico para o método <xref:System.Array.ConvertAll%2A> genérico. Se o novo tipo de elemento não tiver uma ordem de classificação natural, você poderá passar a matriz retornada pelo método <xref:System.Array.ConvertAll%2A> genérico para o método <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29> genérico.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
 - [Genéricos](index.md)
-- [Coleções genéricas no .NET Framework](collections.md)
+- [Coleções genéricas no .NET](collections.md)
 - [Interfaces genéricas](interfaces.md)
 - [Covariância e contravariância](covariance-and-contravariance.md)

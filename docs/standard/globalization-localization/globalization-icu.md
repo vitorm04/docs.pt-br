@@ -3,19 +3,19 @@ title: Globalização e ICU
 ms.date: 05/21/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- globalization [.NET Framework], about globalization
+- globalization [.NET], about globalization
 - global applications, globalization
-- international applications [.NET Framework], globalization
+- international applications [.NET], globalization
 - world-ready applications, globalization
-- application development [.NET Framework], globalization
+- application development [.NET], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: 60533fbb215ffe8baba7e2d200faa1c4937294b9
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 87d0103e90d46ae83b23c9cc05e9efcaa51c831f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654875"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063983"
 ---
 # <a name="net-globalization-and-icu"></a>Globalização e ICU do .NET
 
@@ -107,7 +107,7 @@ Para aplicativos independentes, nenhuma ação especial é exigida pelo usuário
 
 Se você estiver consumindo o ICU por meio de um pacote NuGet, isso funcionará em aplicativos dependentes da estrutura. O NuGet resolve os ativos nativos e os inclui no `deps.json` arquivo e no diretório de saída para o aplicativo no `runtimes` diretório. O .NET o carrega a partir daí.
 
-Para aplicativos dependentes da estrutura (não independentes) em que o ICU é consumido de uma compilação local, você deve executar etapas adicionais. O SDK do .NET ainda não tem um recurso para binários nativos "flexíveis" a serem incorporados ao `deps.json` (consulte [este problema do SDK](https://github.com/dotnet/sdk/issues/11373)). Em vez disso, você pode habilitar isso adicionando informações adicionais ao arquivo de projeto do aplicativo. Por exemplo:
+Para aplicativos dependentes da estrutura (não independentes) em que o ICU é consumido de uma compilação local, você deve executar etapas adicionais. O SDK do .NET ainda não tem um recurso para binários nativos "flexíveis" a serem incorporados ao `deps.json` (consulte [este problema do SDK](https://github.com/dotnet/sdk/issues/11373)). Em vez disso, você pode habilitar isso adicionando informações adicionais ao arquivo de projeto do aplicativo. Por exemplo: 
 
 ```xml
 <ItemGroup>

@@ -1,23 +1,23 @@
 ---
-title: Como usar fusos horários em aritmética de data e hora
+title: 'Como: usar fusos horários em aritmética de data e hora'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], arithmetic operations
-- arithmetic operations [.NET Framework], dates and times
-- dates [.NET Framework], adding and subtracting
+- time zones [.NET], arithmetic operations
+- arithmetic operations [.NET], dates and times
+- dates [.NET], adding and subtracting
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
-ms.openlocfilehash: af19145f7caa9dbe8630ae7593734769e98720d0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cb1abbcab10d52f9ba898e2f4e2468b04cfcff1f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280914"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064256"
 ---
-# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Como usar fusos horários em aritmética de data e hora
+# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Como: usar fusos horários em aritmética de data e hora
 
 Normalmente, quando você executa cálculos de data e hora <xref:System.DateTime> usando <xref:System.DateTimeOffset> valores ou, o resultado não reflete nenhuma regra de ajuste de fuso horário. Isso é verdadeiro mesmo quando o fuso horário do valor de data e hora é claramente identificável (por exemplo, quando a <xref:System.DateTime.Kind%2A> propriedade é definida como <xref:System.DateTimeKind.Local> ). Este tópico mostra como executar operações aritméticas em valores de data e hora que pertencem a um determinado fuso horário. Os resultados das operações aritméticas refletirão as regras de ajuste do fuso horário.
 
@@ -60,7 +60,7 @@ Este exemplo requer:
 
 - Que o <xref:System> namespace seja importado com a `using` instrução (necessária no código C#).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Datas, horas e fusos horários](index.md)
 - [Executando operações aritméticas com datas e horas](performing-arithmetic-operations.md)

@@ -9,17 +9,17 @@ dev_langs:
 helpviewer_keywords:
 - DateTimeOffset structure
 - TimeZoneInfo class
-- time zones [.NET Framework], common uses
-- date and time classes [.NET Framework]
-- time zones [.NET Framework], type options
+- time zones [.NET], common uses
+- date and time classes [.NET]
+- time zones [.NET], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-ms.openlocfilehash: 7ef8782c15ad816b8bb0356e74615a49387f73b9
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5d6173642e88165bb52d5d9cfc85c8889ce763a5
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89129122"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063866"
 ---
 # <a name="choose-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Escolha entre DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo
 
@@ -119,6 +119,6 @@ Em alguns casos, aproveitar ao máximo a <xref:System.TimeZoneInfo> classe pode 
 
 Para aproveitar o suporte de fuso horário no .NET, você deve saber o fuso horário ao qual um valor de data e hora pertence quando esse objeto de data e hora é instanciado. O fuso horário geralmente não é conhecido, especialmente em aplicativos Web ou de rede.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Datas, horas e fusos horários](index.md)

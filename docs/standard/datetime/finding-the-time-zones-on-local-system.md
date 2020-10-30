@@ -3,20 +3,20 @@ title: Encontrando os fusos horários definidos em um sistema local
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- time zones [.NET Framework], local
-- time zones [.NET Framework], finding local system time zones
-- time zone identifiers [.NET Framework]
+- time zones [.NET], local
+- time zones [.NET], finding local system time zones
+- time zone identifiers [.NET]
 - local time zone access
-- time zones [.NET Framework], retrieving
+- time zones [.NET], retrieving
 - UTC times, finding local system time zones
-- time zones [.NET Framework], UTC
+- time zones [.NET], UTC
 ms.assetid: 3f63b1bc-9a4b-4bde-84ea-ab028a80d3e1
-ms.openlocfilehash: d313bbed3cc525a74b90537dd4f1742c09c62cd4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c968c7891a4fc9b77ed6224a9fc5f8f6d8f5d80b
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277018"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063684"
 ---
 # <a name="finding-the-time-zones-defined-on-a-local-system"></a>Encontrando os fusos horários definidos em um sistema local
 
@@ -35,7 +35,7 @@ Você também pode criar uma instância de um <xref:System.TimeZoneInfo> objeto 
 
 O identificador do fuso horário é um campo de chave que identifica exclusivamente o fuso horário. Enquanto a maioria das chaves são relativamente curtas, o identificador de fuso horário é comparativamente longo. Na maioria dos casos, seu valor corresponde à <xref:System.TimeZoneInfo.StandardName%2A?displayProperty=nameWithType> propriedade, que é usada para fornecer o nome do horário padrão do fuso horário. No entanto, há exceções. A melhor maneira de certificar-se de que você forneça um identificador válido é enumerar os fusos horários disponíveis no sistema e observar os identificadores associados.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Datas, horas e fusos horários](index.md)
 - [Como acessar o UTC predefinido e os objetos de fuso horário local](access-utc-and-local.md)

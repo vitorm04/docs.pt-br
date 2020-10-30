@@ -1,26 +1,26 @@
 ---
-title: Como acessar o UTC predefinido e os objetos de fuso horário local
+title: 'Como: acessar os objetos de fuso horário predefinidos UTC e local'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], local
+- time zones [.NET], local
 - predefined time zones
 - UTC times, predefined
 - local time zone access
-- time zones [.NET Framework], retrieving
-- time zones [.NET Framework], UTC
+- time zones [.NET], retrieving
+- time zones [.NET], UTC
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
-ms.openlocfilehash: ebb07800b2a35f4faf312dc55b8c5679079b4b68
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 598cd631fab1ddc115bc6153580351b1dc14d5bf
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291403"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063879"
 ---
-# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Como acessar o UTC predefinido e os objetos de fuso horário local
+# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Como: acessar os objetos de fuso horário predefinidos UTC e local
 
 A <xref:System.TimeZoneInfo> classe fornece duas propriedades <xref:System.TimeZoneInfo.Utc%2A> e <xref:System.TimeZoneInfo.Local%2A> , que dão ao seu código acesso a objetos de fuso horário predefinidos. Este tópico discute como acessar os objetos <xref:System.TimeZoneInfo> retornados por essas propriedades.
 
@@ -51,8 +51,8 @@ Este exemplo requer:
 
 - Que o <xref:System> namespace seja importado com a `using` instrução (necessária no código C#).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Datas, horas e fusos horários](index.md)
-- [Localizando os fusos horários definidos em um sistema local](finding-the-time-zones-on-local-system.md)
+- [Encontrando os fusos horários definidos em um sistema local](finding-the-time-zones-on-local-system.md)
 - [Como criar uma instância de um objeto TimeZoneInfo](instantiate-time-zone-info.md)

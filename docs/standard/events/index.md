@@ -9,18 +9,18 @@ dev_langs:
 helpviewer_keywords:
 - delegate model for events
 - application development [.NET], events
-- application development [.NET Framework], events
+- application development [.NET], events
 - application development [.NET Core], events
 - events [.NET]
 - events [.NET Core]
-- events [.NET Framework]
+- events [.NET]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 47021873956f971709b49c1b224e43e4c7f482d0
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: a2bfbe9a411d3099d02df7a43a42baaad2bb32da
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687290"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064087"
 ---
 # <a name="handle-and-raising-events"></a>Manipular e gerar eventos
 
@@ -94,7 +94,7 @@ O .NET permite que os assinantes se registrem para receber notificações de eve
 |[Como manipular vários eventos usando propriedades de evento](how-to-handle-multiple-events-using-event-properties.md)|Mostrar como usar propriedades de evento para manipular vários eventos.|  
 |[Padrão de design do observador](observer-design-pattern.md)|Descreve o padrão de design que permite a um assinante se registrar em um provedor e receber notificações dele.|
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.EventHandler>
 - <xref:System.EventHandler%601>

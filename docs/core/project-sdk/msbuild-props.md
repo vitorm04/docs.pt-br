@@ -4,12 +4,12 @@ description: Referência para as propriedades e os itens do MSBuild que são com
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: ac5d082acae582352680782deadb71a86f977f3b
-ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
+ms.openlocfilehash: 463e2a163e6a20f5631b0ab82462614834156ae3
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91354447"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063222"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>Referência do MSBuild para projetos do SDK do .NET
 
@@ -142,7 +142,7 @@ Para obter mais informações sobre a implantação, consulte [implantação de 
 
 ### <a name="embeddedresourceusedependentuponconvention"></a>EmbeddedResourceUseDependentUponConvention
 
-A `EmbeddedResourceUseDependentUponConvention` propriedade define se os nomes de arquivo de manifesto de recurso são gerados a partir de informações de tipo em arquivos de origem que são colocados com arquivos de recursos. Por exemplo, se *Form1. resx* estiver na mesma pasta que *Form1.cs*e `EmbeddedResourceUseDependentUponConvention` for definido como `true` , o arquivo *. Resources* gerado usará seu nome do primeiro tipo definido em *Form1.cs*. Por exemplo, se `MyNamespace.Form1` for o primeiro tipo definido em *Form1.cs*, o nome de arquivo gerado *será MyNamespace. Form1. Resources*.
+A `EmbeddedResourceUseDependentUponConvention` propriedade define se os nomes de arquivo de manifesto de recurso são gerados a partir de informações de tipo em arquivos de origem que são colocados com arquivos de recursos. Por exemplo, se *Form1. resx* estiver na mesma pasta que *Form1.cs* e `EmbeddedResourceUseDependentUponConvention` for definido como `true` , o arquivo *. Resources* gerado usará seu nome do primeiro tipo definido em *Form1.cs* . Por exemplo, se `MyNamespace.Form1` for o primeiro tipo definido em *Form1.cs* , o nome de arquivo gerado *será MyNamespace. Form1. Resources* .
 
 > [!NOTE]
 > Se `LogicalName` `ManifestResourceName` os metadados,, ou `DependentUpon` forem especificados para um `EmbeddedResource` Item, o nome do arquivo de manifesto gerado para esse arquivo de recurso será baseado nesses metadados em vez disso.
@@ -183,7 +183,7 @@ A tabela a seguir mostra as opções disponíveis.
 
 | Valor | Significado |
 |-|-|
-| `latest` | Os analisadores de código mais recentes que foram lançados são usados. Este é o padrão. |
+| `latest` | Os analisadores de código mais recentes que foram lançados são usados. Esse é o padrão. |
 | `preview` | Os analisadores de código mais recentes são usados, mesmo se estiverem em versão prévia. |
 | `5.0` | O conjunto de regras que foi habilitado para a versão 5,0 do .NET é usado, mesmo se as regras mais recentes estiverem disponíveis. |
 | `5` | O conjunto de regras que foi habilitado para a versão 5,0 do .NET é usado, mesmo se as regras mais recentes estiverem disponíveis. |
@@ -230,6 +230,9 @@ A [análise de qualidade de código .net](../../fundamentals/code-analysis/overv
 > Outra maneira de habilitar a análise de código .NET em projetos que visam versões .NET anteriores ao .NET 5,0 é definir a propriedade [AnalysisLevel](#analysislevel) como `latest` .
 
 ### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
+
+> [!NOTE]
+> Este recurso está experimental no momento e pode ser alterado entre as versões do .NET 5 e do .NET 6.
 
 A [análise de estilo de código .net](../../fundamentals/code-analysis/overview.md#code-style-analysis) está desabilitada, por padrão, na compilação para todos os projetos .net. Você pode habilitar a análise de estilo de código para projetos .NET definindo a `EnforceCodeStyleInBuild` propriedade como `true` .
 
@@ -419,7 +422,7 @@ A restauração de um pacote referenciado instala todas as suas dependências di
 </PropertyGroup>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de esquema do MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference)
 - [Propriedades comuns do MSBuild](/visualstudio/msbuild/common-msbuild-project-properties)

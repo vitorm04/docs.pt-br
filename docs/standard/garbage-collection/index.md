@@ -6,7 +6,7 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - memory, garbage collection
 - garbage collection, automatic memory management
-- GC [.NET Framework]
+- GC [.NET]
 - memory, allocating
 - common language runtime, garbage collection
 - garbage collector
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-ms.openlocfilehash: dde0012ff7233eb7ee13efab1931f129b0eae276
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 39b5bf62935054bd4b9be2d228cc42202aa89144
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662479"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063183"
 ---
 # <a name="garbage-collection"></a>Coleta de lixo
 
@@ -32,7 +32,7 @@ O coletor de lixo do .NET gerencia a alocação e a liberação de memória para
   
 ## <a name="in-this-section"></a>Nesta seção
   
-|Title|Descrição|  
+|Título|Descrição|  
 |-----------|-----------------|  
 |[Conceitos básicos da coleta de lixo](fundamentals.md)|Descreve como funciona a coleta de lixo, como os objetos são alocados no heap gerenciado e outros conceitos principais.|  
 |[Coleta de lixo de estação de trabalho ou de servidor](workstation-server-gc.md)|Descreve as diferenças entre a coleta de lixo da estação de trabalho para aplicativos cliente e a coleta de lixo do servidor para aplicativos de servidor.|
@@ -57,6 +57,6 @@ O coletor de lixo do .NET gerencia a alocação e a liberação de memória para
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>  
 - <xref:System.IDisposable?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Limpar recursos não gerenciados](unmanaged.md)

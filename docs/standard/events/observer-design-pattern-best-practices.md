@@ -3,18 +3,19 @@ title: Práticas recomendadas para o padrão de design do observador
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- observer design pattern [.NET Framework], best practices
-- best practices [.NET Framework], observer design pattern
+- observer design pattern [.NET], best practices
+- best practices [.NET], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-ms.openlocfilehash: b4f8e568dcb6790dac1dc8fc5c969d6fa1367c4e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8e75343e1ca1c7f69306ee45148f2dc0eec3585f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288453"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064074"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Práticas recomendadas para o padrão de design do observador
-No .NET Framework, o padrão de design de observador é implementado como um conjunto de interfaces. A interface <xref:System.IObservable%601?displayProperty=nameWithType> representa o provedor de dados, que também é responsável por fornecer uma implementação <xref:System.IDisposable> que permite que os observadores cancelem a assinatura de notificações. A interface <xref:System.IObserver%601?displayProperty=nameWithType> representa o observador. Este tópico descreve as práticas recomendadas que os desenvolvedores devem seguir ao implementar o padrão de design de observador usando essas interfaces.  
+
+No .NET, o padrão de design do observador é implementado como um conjunto de interfaces. A interface <xref:System.IObservable%601?displayProperty=nameWithType> representa o provedor de dados, que também é responsável por fornecer uma implementação <xref:System.IDisposable> que permite que os observadores cancelem a assinatura de notificações. A interface <xref:System.IObserver%601?displayProperty=nameWithType> representa o observador. Este tópico descreve as práticas recomendadas que os desenvolvedores devem seguir ao implementar o padrão de design de observador usando essas interfaces.  
   
 ## <a name="threading"></a>Threading  
  Normalmente, um provedor implementa o método <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> adicionando um observador específico a uma lista de assinantes que é representada por algum objeto de coleção e implementa o método <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> removendo um determinado observador da lista de assinantes. Um observador pode chamar esses métodos a qualquer momento. Além disso, como o contrato de provedor/observador não especifica quem é responsável por cancelar a assinatura após o método de retorno de chamada <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, o provedor e o observador podem tentar ambos remover o mesmo membro da lista. Devido a essa possibilidade, tanto o método <xref:System.IObservable%601.Subscribe%2A> quanto o método <xref:System.IDisposable.Dispose%2A> devem ser thread-safe. Normalmente, isso envolve o uso de uma [coleção simultânea](../parallel-programming/data-structures-for-parallel-programming.md) ou um bloqueio. As implementações que não são thread-safe devem documentar explicitamente esse fato.  
@@ -51,7 +52,7 @@ No .NET Framework, o padrão de design de observador é implementado como um con
   
  Embora seja possível anexar um observador para vários provedores, o padrão recomendado é anexar uma <xref:System.IObserver%601> instância a uma única instância <xref:System.IObservable%601>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Padrão de design do observador](observer-design-pattern.md)
 - [Como: implementar um observador](how-to-implement-an-observer.md)

@@ -3,14 +3,14 @@ title: Injeção de dependência no .NET
 description: Saiba como o .NET implementa a injeção de dependência e como usá-la.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/23/2020
+ms.date: 10/28/2020
 ms.topic: overview
-ms.openlocfilehash: d2dbe06597c99158eaa39812d4d5a95288450adc
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 2199f51ab13bedd50af747ce33ceee7b6eaefd8f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888561"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063143"
 ---
 # <a name="dependency-injection-in-net"></a>Injeção de dependência no .NET
 
@@ -210,16 +210,41 @@ A estrutura fornece métodos de extensão de registro de serviço que são útei
 
 Para obter mais informações sobre o descarte de tipos, consulte a seção [Descarte de serviços](dependency-injection-guidelines.md#disposal-of-services).
 
+O registro de um serviço com apenas um tipo de implementação é equivalente ao registro desse serviço com a mesma implementação e tipo de serviço. É por isso que várias implementações de um serviço não podem ser registradas usando os métodos que não usam um tipo de serviço explícito. Esses métodos podem registrar vários _instances * de um serviço, mas todos terão o mesmo tipo de *implementação* .
+
+Qualquer um dos métodos de registro de serviço acima pode ser usado para registrar várias instâncias de serviço do mesmo tipo de serviço. No exemplo a seguir, `AddSingleton` é chamado duas vezes com `IMessageWriter` como o tipo de serviço. A segunda chamada para `AddSingleton` substitui a anterior quando resolvida como `IMessageWriter` e a adiciona à anterior quando vários serviços são resolvidos por meio de `IEnumerable<IMessageWriter>` . Os serviços aparecem na ordem em que foram registrados quando resolvidos por meio de `IEnumerable<{SERVICE}>` .
+
+:::code language="csharp" source="snippets/configuration/console-di-ienumerable/Program.cs" highlight="19-24":::
+
+O código-fonte de exemplo anterior registra duas implementações do `IMessageWriter` .
+
+:::code language="csharp" source="snippets/configuration/console-di-ienumerable/ExampleService.cs" highlight="9-18":::
+
+O `ExampleService` define dois parâmetros de Construtor; um único `IMessageWriter` e um `IEnumerable<IMessageWriter>` . O único `IMessageWriter` é o último implementação a ser registrado, enquanto que `IEnumerable<IMessageWriter>` representa todas as implementações registradas.
+
 A estrutura também fornece `TryAdd{LIFETIME}` métodos de extensão, que registram o serviço somente se ainda não houver uma implementação registrada.
 
-No exemplo a seguir, a chamada para `AddSingleton` registra `MessageWriter` como uma implementação para `IMessageWriter` . A chamada para `TryAddSingleton` não tem efeito porque `IMessageWriter` já tem uma implementação registrada:
+No exemplo a seguir, a chamada para `AddSingleton` registra `ConsoleMessageWriter` como uma implementação para `IMessageWriter` . A chamada para `TryAddSingleton` não tem efeito porque `IMessageWriter` já tem uma implementação registrada:
 
 ```csharp
-services.AddSingleton<IMessageWriter, MessageWriter>();
-services.TryAddSingleton<IMessageWriter, DifferentMessageWriter>();
+services.AddSingleton<IMessageWriter, ConsoleMessageWriter>();
+services.TryAddSingleton<IMessageWriter, LoggingMessageWriter>();
 ```
 
-O `TryAddSingleton` não tem efeito, pois já foi adicionado e o "try" falhará.
+O `TryAddSingleton` não tem efeito, pois já foi adicionado e o "try" falhará. O `ExampleService` declararia o seguinte:
+
+```csharp
+public class ExampleService
+{
+    public ExampleService(
+        IMessageWriter messageWriter,
+        IEnumerable<IMessageWriter> messageWriters)
+    {
+        Trace.Assert(messageWriter is ConsoleMessageWriter);
+        Trace.Assert(messageWriters.Single() is ConsoleMessageWriter);
+    }
+}
+```
 
 Para obter mais informações, consulte:
 
@@ -228,7 +253,7 @@ Para obter mais informações, consulte:
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddScoped%2A>
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddSingleton%2A>
 
-Os métodos [TryAddEnumerable (Service Descriptor)](xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddEnumerable%2A) registram o serviço somente se ainda não houver uma implementação _of mesmo tipo *. Vários serviços são resolvidos via `IEnumerable<{SERVICE}>`. Ao registrar serviços, adicione uma instância se um dos mesmos tipos ainda não tiver sido adicionado. Os autores de biblioteca usam `TryAddEnumerable` para evitar o registro de várias cópias de uma implementação no contêiner.
+Os métodos [TryAddEnumerable (Service Descriptor)](xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddEnumerable%2A) registram o serviço somente se ainda não houver uma implementação *do mesmo tipo* . Vários serviços são resolvidos via `IEnumerable<{SERVICE}>`. Ao registrar serviços, adicione uma instância se um dos mesmos tipos ainda não tiver sido adicionado. Os autores de biblioteca usam `TryAddEnumerable` para evitar o registro de várias cópias de uma implementação no contêiner.
 
 No exemplo a seguir, a primeira chamada para `TryAddEnumerable` registra `MessageWriter` como uma implementação para `IMessageWriter1` . A segunda chamada é registrada `MessageWriter` para `IMessageWriter2` . A terceira chamada não tem nenhum efeito porque `IMessageWriter1` já tem uma implementação registrada de `MessageWriter` :
 
@@ -287,7 +312,7 @@ O provedor de serviços raiz é criado quando <xref:Microsoft.Extensions.Depende
 
 Os serviços com escopo são descartados pelo contêiner que os criou. Se um serviço com escopo for criado no contêiner raiz, o tempo de vida do serviço será efetivamente promovido para singleton porque é descartado apenas pelo contêiner raiz quando o aplicativo é desligado. A validação dos escopos de serviço detecta essas situações quando `BuildServiceProvider` é chamado.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Usar injeção de dependência no .NET](dependency-injection-usage.md)
 - [Diretrizes de injeção de dependência](dependency-injection-guidelines.md)

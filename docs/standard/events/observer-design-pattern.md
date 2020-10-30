@@ -11,18 +11,18 @@ helpviewer_keywords:
 - IObservable<T> interface
 - IObserver<T> interface
 - IObservable(Of T) interface
-- observer design pattern [.NET Framework]
+- observer design pattern [.NET]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 80dac36199dd13abeab295d4b53a52615e7ae625
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e1f8dad2c19d3e11281cda5ef749730c5c6334d7
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559155"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064061"
 ---
 # <a name="observer-design-pattern"></a>Padrão de design do observador
 
-O padrão de design do observador permite a um assinante se registrar em um provedor e receber notificações dele. Ele é adequado para qualquer cenário que requer a notificação por push. O padrão define um *provedor* (também conhecido como *assunto* ou *observável*) e zero, um ou mais *observadores*. Observadores registram-se com o provedor e, sempre que uma condição, evento ou alteração de estado predefinido ocorrer, o provedor notificará automaticamente todos os observadores chamando um dos seus métodos. Nessa chamada de método, o provedor também pode fornecer informações sobre o estado atual para observadores. No .NET Framework, o padrão de design de observador é aplicado ao implementar as interfaces genéricas <xref:System.IObservable%601?displayProperty=nameWithType> e <xref:System.IObserver%601?displayProperty=nameWithType>. O parâmetro de tipo genérico representa o tipo que fornece informações de notificação.
+O padrão de design do observador permite a um assinante se registrar em um provedor e receber notificações dele. Ele é adequado para qualquer cenário que requer a notificação por push. O padrão define um *provedor* (também conhecido como *assunto* ou *observável* ) e zero, um ou mais *observadores* . Observadores registram-se com o provedor e, sempre que uma condição, evento ou alteração de estado predefinido ocorrer, o provedor notificará automaticamente todos os observadores chamando um dos seus métodos. Nessa chamada de método, o provedor também pode fornecer informações sobre o estado atual para observadores. No .NET, o padrão de design do observador é aplicado pela implementação das <xref:System.IObservable%601?displayProperty=nameWithType> interfaces e genéricas <xref:System.IObserver%601?displayProperty=nameWithType> . O parâmetro de tipo genérico representa o tipo que fornece informações de notificação.
 
 ## <a name="applying-the-pattern"></a>Aplicando o padrão
 
@@ -90,7 +90,7 @@ O exemplo a seguir contém o ponto de entrada do aplicativo que instancia a clas
 [!code-csharp[Conceptual.ObserverDesignPattern#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/program.cs#5)]
 [!code-vb[Conceptual.ObserverDesignPattern#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/module1.vb#5)]
 
-## <a name="related-topics"></a>Tópicos relacionados
+## <a name="related-topics"></a>Tópicos Relacionados
 
 |Título|Descrição|
 |-----------|-----------------|

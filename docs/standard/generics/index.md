@@ -9,30 +9,30 @@ dev_langs:
 - cpp
 helpviewer_keywords:
 - generic methods, type inference
-- generics [.NET Framework], collections
-- generic interfaces [.NET Framework]
+- generics [.NET], collections
+- generic interfaces [.NET]
 - constructed generic types
 - nested generic types
 - generic type definitions
-- generic classes [.NET Framework]
-- generics [.NET Framework], interfaces
-- generics [.NET Framework], about
-- generics [.NET Framework]
-- generic collections [.NET Framework]
-- generic delegates [.NET Framework]
+- generic classes [.NET]
+- generics [.NET], interfaces
+- generics [.NET], about
+- generics [.NET]
+- generic collections [.NET]
+- generic delegates [.NET]
 - generic type arguments
-- generics [.NET Framework], delegates
-- generics [.NET Framework], features
-- constraints [.NET Framework]
+- generics [.NET], delegates
+- generics [.NET], features
+- constraints [.NET]
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 91bb96c04c8a5d410f0a88c7e8eedf622fe66c94
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6455de8e6b874547be7838090fc0527a6ce72b71
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599809"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063150"
 ---
 # <a name="generics-in-net"></a>Generics in .NET (Genéricos no .NET)
 
@@ -64,7 +64,7 @@ Os genéricos permitem que você personalize um método, uma classe, uma estrutu
   
 - O termo geral *tipo genérico* inclui definições de tipo genérico e de tipos construídos.  
   
-- *Covariância* e *contravariância* de parâmetros de tipo genérico permitem que você use tipos genéricos construídos cujos argumentos de tipo sejam mais derivados (covariância) ou menos derivados (contravariância) de um tipo construído de destino. A covariância e a contravariância são referidas coletivamente como *variância*. Para obter mais informações, consulte [Covariância e contravariância](covariance-and-contravariance.md).  
+- *Covariância* e *contravariância* de parâmetros de tipo genérico permitem que você use tipos genéricos construídos cujos argumentos de tipo sejam mais derivados (covariância) ou menos derivados (contravariância) de um tipo construído de destino. A covariância e a contravariância são referidas coletivamente como *variância* . Para obter mais informações, consulte [Covariância e contravariância](covariance-and-contravariance.md).  
   
 - *Restrições* são limites colocados em parâmetros de tipo genérico. Por exemplo, você pode limitar um parâmetro de tipo a tipos que implementam a interface genérica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType>, para garantir que instâncias do tipo possam ser classificadas. Você também pode restringir parâmetros de tipo a tipos que tenham uma determinada classe base, que tenham um construtor sem parâmetros ou que sejam tipos de referência ou tipos de valor. Os usuários do tipo genérico não podem substituir argumentos de tipo que não satisfaçam as restrições.  
   
@@ -99,7 +99,7 @@ Os genéricos permitem que você personalize um método, uma classe, uma estrutu
   
  Veja a seguir algumas limitações de genéricos:  
   
-- Os tipos genéricos podem ser derivados da maioria das classes base, tais como <xref:System.MarshalByRefObject> (e restrições podem ser usadas para exigir que parâmetros do tipo genérico derivem de classes base como <xref:System.MarshalByRefObject>). No entanto, o .NET Framework não dá suporte para tipos genéricos vinculados a um contexto. Um tipo genérico pode ser derivado de <xref:System.ContextBoundObject>, mas tentar criar uma instância desse tipo causa uma <xref:System.TypeLoadException>.  
+- Os tipos genéricos podem ser derivados da maioria das classes base, tais como <xref:System.MarshalByRefObject> (e restrições podem ser usadas para exigir que parâmetros do tipo genérico derivem de classes base como <xref:System.MarshalByRefObject>). No entanto, o .NET não oferece suporte a tipos genéricos associados a contexto. Um tipo genérico pode ser derivado de <xref:System.ContextBoundObject>, mas tentar criar uma instância desse tipo causa uma <xref:System.TypeLoadException>.  
   
 - Enumerações não podem ter parâmetros do tipo genérico. Uma enumeração pode ser genérica somente incidentalmente (por exemplo, porque ela está aninhada em um tipo genérico que é definido usando Visual Basic, C# ou C++). Para saber mais, confira "Enumerações" em [Common Type System](../base-types/common-type-system.md).  
   
@@ -130,9 +130,9 @@ Os genéricos permitem que você personalize um método, uma classe, uma estrutu
 ## <a name="nested-types-and-generics"></a>Tipos e genéricos aninhados  
  Um tipo que é aninhado em um tipo genérico pode depender dos parâmetros de tipo do tipo genérico de delimitador. O Common Language Runtime considera tipos aninhados como genéricos, mesmo que eles não tenham seus próprios parâmetros de tipo genérico. Quando você cria uma instância de um tipo aninhado, deverá especificar argumentos de tipo para todos os tipos de delimitadores.  
 
-## <a name="related-topics"></a>Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos Relacionados  
   
-|Title|Descrição|  
+|Título|Descrição|  
 |-----------|-----------------|  
 |[Coleções genéricas no .NET](collections.md)|Descreve as classes de coleção genérica e outros tipos genéricos no .NET.|  
 |[Delegados genéricos para manipular matrizes e listas](delegates-for-manipulating-arrays-and-lists.md)|Descreve delegados genéricos para conversões, predicados de pesquisa e ações a serem tomadas nos elementos de uma matriz ou coleção.|  
