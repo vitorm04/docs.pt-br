@@ -116,3 +116,5 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/function-pointers.md
         - name: Suprimir a emissão do sinalizador localsinit
           href: ../../../../_csharplang/proposals/csharp-9.0/skip-localsinit.md
+        - name: Anotações de parâmetro de tipo sem restrição
+          href: ../../../../_csharplang/proposals/csharp-9.0/unconstrained-type-parameter-annotations.md
