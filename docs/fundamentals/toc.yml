@@ -1734,10 +1734,9 @@ items:
                     href: ../standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md
                   - name: 'Passo a passo: usando BatchBlock e BatchedJoinBlock para melhorar a eficiência'
                     href: ../standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md
-              - name: Usando TPL com outros padrões assíncronos
-                href: ../standard/parallel-programming/using-tpl-with-other-asynchronous-patterns.md
+              - name: Usar TPL com Outros Padrões Assíncronos
                 items:
-                  - name: TPL e programação assíncrona do .NET Framework
+                  - name: TPL e Programação Assíncrona do .NET Tradicional
                     href: ../standard/parallel-programming/tpl-and-traditional-async-programming.md
                   - name: 'Como: encapsular padrões de EAP em uma tarefa'
                     href: ../standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md
