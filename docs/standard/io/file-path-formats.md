@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 36ecbe763ed47e95d9339d1d748b3faab100c15e
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: e24772ee9c9d22786c9cfece43017f8526434601
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679593"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188049"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de caminho de arquivo em sistemas Windows
 
@@ -90,7 +90,7 @@ O caminho de dispositivo DOS tem os seguintes componentes:
 - O especificador de caminho do dispositivo (`\\.\` ou `\\?\`), que identifica o caminho como um caminho de dispositivo DOS.
 
    > [!NOTE]
-   > O `\\?\` é compatível com todas as versões do .NET Core e, no .NET Framework, a partir da versão 4.6.2.
+   > O `\\?\` tem suporte em todas as versões do .NET Core e do .NET 5 + e no .NET Framework a partir da versão 4.6.2.
 
 - Um link simbólico para o objeto de dispositivo "real" (C: no caso de um nome de unidade ou Volume{b75e2c83-0000-0000-0000-602f00000000} no caso de um GUID de volume).
 
@@ -194,10 +194,10 @@ Por que ignorar a normalização? Existem três motivos principais:
 
 1. Para melhorar o desempenho ignorando a normalização, se você já tiver normalizado.
 
-1. Somente no .NET Framework, ignorar a verificação `MAX_PATH` do tamanho do caminho para permitir caminhos com mais de 259 caracteres. A maioria das APIs permitem isso, com algumas exceções.
+1. Somente no .NET Framework, para ignorar a `MAX_PATH` verificação do comprimento do caminho para permitir caminhos maiores que 259 caracteres. A maioria das APIs permitem isso, com algumas exceções.
 
 > [!NOTE]
-> O .NET Core trata caminhos longos de maneira implícita e não executa uma verificação `MAX_PATH`. A verificação `MAX_PATH` se aplica somente ao .NET Framework.
+> O .NET Core e o .NET 5 + manipulam caminhos longos implicitamente e não realiza uma `MAX_PATH` verificação. A `MAX_PATH` verificação se aplica somente a .NET Framework.
 
 Ignorar a normalização e as verificações de tamanho do caminho é a única diferença entre as duas sintaxes de caminho de dispositivo. Caso contrário, elas serão idênticas. Tenha cuidado ao ignorar a normalização, pois é fácil criar caminhos de difícil tratamento para aplicativos "normais".
 

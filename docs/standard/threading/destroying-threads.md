@@ -8,18 +8,18 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - destroying threads
-- threading [.NET Framework], destroying threads
+- threading [.NET], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: baf9289413de0e99533f121eb2a404ff0d873511
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: caf7e29742bd7c0481badeeace91b7851520ad12
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768502"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188361"
 ---
 # <a name="destroying-threads"></a>Destruindo threads
 
-Para encerrar a execução do thread, você geralmente usa o [modelo de cancelamento cooperativo](cancellation-in-managed-threads.md). Às vezes, não é possível parar um thread de cooperativa, pois ele executa código de terceiros não projetado para cancelamento cooperativo. O <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> método no .NET Framework pode ser usado para encerrar forçosamente um thread gerenciado. Quando você chama <xref:System.Threading.Thread.Abort%2A> , o Common Language Runtime gera um <xref:System.Threading.ThreadAbortException> no thread de destino, que pode ser detectado pelo thread de destino. Para obter mais informações, consulte <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. O <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> método não tem suporte no .NET Core. Se você precisar encerrar a execução de código de terceiros de modo forçado no .NET Core, execute-o no processo e uso separados <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType> .
+Para encerrar a execução do thread, você geralmente usa o [modelo de cancelamento cooperativo](cancellation-in-managed-threads.md). Às vezes, não é possível parar um thread de cooperativa, pois ele executa código de terceiros não projetado para cancelamento cooperativo. O <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> método no .NET Framework pode ser usado para encerrar forçosamente um thread gerenciado. Quando você chama <xref:System.Threading.Thread.Abort%2A> , o Common Language Runtime gera um <xref:System.Threading.ThreadAbortException> no thread de destino, que pode ser detectado pelo thread de destino. Para obter mais informações, consulte <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. O <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> método não tem suporte no .NET 5 (incluindo o .NET Core) e versões posteriores. Se você precisar encerrar a execução de código de terceiros de modo forçado no .NET 5 +, execute-o no processo e uso separados <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType> .
 
 > [!NOTE]
 > Se um thread estiver executando um código não gerenciado quando seu método <xref:System.Threading.Thread.Abort%2A> for chamado, o runtime o marca <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>. A exceção é lançada quando o thread retorna para código gerenciado.  
@@ -66,7 +66,7 @@ catch (ThreadAbortException ex)
   
  Você pode impedir que o sistema relance a exceção chamando o método <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType>. No entanto, você deve fazer isso apenas se seu próprio código tiver causado a <xref:System.Threading.ThreadAbortException>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.ThreadAbortException>
 - <xref:System.Threading.Thread>

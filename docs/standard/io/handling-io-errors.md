@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 45f3951b727d3b615d8384541ff169e8840acab0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bd7112b3052f246a01e4a36d6d425b37cb6174dd
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599796"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188036"
 ---
 # <a name="handling-io-errors-in-net"></a>Tratamento de erros de E/S no .NET
 
@@ -46,7 +46,7 @@ No entanto, as condições precisas sob as quais o sistema operacional retorna c
 
 Por causa dessa dependência do sistema operacional, condições de exceção idênticas (como o erro de diretório não encontrado em nosso exemplo) podem resultar na geração de toda uma classe de exceções de E/S pelo método de E/S. Isso significa que, ao chamar APIs de E/S, seu código deve estar preparado para lidar com a maioria ou com todas essas exceções, conforme mostrado na tabela a seguir:
 
-| Tipo de exceção | .NET Core | .NET Framework |
+| Tipo de exceção | .NET Core/. NET 5 + | .NET Framework |
 |---|---|---|
 | <xref:System.IO.IOException> | Sim | Sim |
 | <xref:System.IO.FileNotFoundException> | Sim | Sim |
@@ -84,9 +84,9 @@ No caso de um <xref:System.IO.IOException>, é possível obter outras informaç�
 [!code-csharp[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/cs/io-exceptions.cs)]
 [!code-vb[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/vb/io-exceptions.vb)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Tratando e gerando exceções no .NET](../exceptions/index.md)
-- [Tratamento de exceções (biblioteca de paralelismo de tarefas)](../parallel-programming/exception-handling-task-parallel-library.md)
+- [Tratamento de exceção (biblioteca paralela de tarefas)](../parallel-programming/exception-handling-task-parallel-library.md)
 - [Práticas recomendadas para exceções](../exceptions/best-practices-for-exceptions.md)
 - [Como usar exceções específicas em um bloco catch](../exceptions/how-to-use-specific-exceptions-in-a-catch-block.md)

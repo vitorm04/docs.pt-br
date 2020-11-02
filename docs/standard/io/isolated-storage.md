@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 4ad7779b9810954d110af576dd834daf61888d59
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4289b809d9a401de92c74063a42216f3051543f6
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555914"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188556"
 ---
 # <a name="isolated-storage"></a>Armazenamento isolado
 
@@ -59,7 +59,7 @@ Usar o armazenamento isolado permite que aplicativos parcialmente confiáveis ar
 
 Os administradores podem limitar a quantidade de armazenamento isolado que um aplicativo ou usuário tem disponível com base em um nível de confiança apropriado. Além disso, os administradores podem remover todos os dados persistentes de um usuário. Para criar ou acessar um armazenamento isolado, o código deve receber a permissão <xref:System.Security.Permissions.IsolatedStorageFilePermission> apropriada.
 
-Para acessar um armazenamento isolado, o código deve ter todos os direitos do sistema operacional da plataforma nativa necessários. As listas de controle de acesso (ACLs) que controlam quais usuários têm os direitos necessários para usar o sistema de arquivos devem ser satisfeitas. Os aplicativos .NET Framework já possuem direitos do sistema operacional para acessar armazenamentos isolados, a menos que eles executem a personificação (referente à plataforma). Nesse caso, o aplicativo é responsável por garantir que a identidade do usuário personificado tenha os direitos adequados do sistema operacional para acessar o armazenamento isolado. Esse acesso oferece uma maneira conveniente para que códigos que são executados ou baixados da Web possam ler e gravar em uma área de armazenamento relacionada a um usuário específico.
+Para acessar um armazenamento isolado, o código deve ter todos os direitos do sistema operacional da plataforma nativa necessários. As listas de controle de acesso (ACLs) que controlam quais usuários têm os direitos necessários para usar o sistema de arquivos devem ser satisfeitas. Os aplicativos .NET já têm direitos de sistema operacional para acessar o armazenamento isolado, a menos que executem a representação (específica da plataforma). Nesse caso, o aplicativo é responsável por garantir que a identidade do usuário personificado tenha os direitos adequados do sistema operacional para acessar o armazenamento isolado. Esse acesso oferece uma maneira conveniente para que códigos que são executados ou baixados da Web possam ler e gravar em uma área de armazenamento relacionada a um usuário específico.
 
 Para controlar o acesso ao armazenamento isolado, o Common Language Runtime utiliza objetos <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Cada objeto tem propriedades que especificam os seguintes valores:
 
@@ -134,7 +134,7 @@ O terceiro local é compartilhado entre todas as contas de usuário no computado
 
 Os caminhos anteriores podem ser diferentes com base na versão do Windows em uso.
 
-Agora, considere um sistema de vários usuários com dois usuários registrados _Mallory_ e _Bob_. O Mallory tem a capacidade de acessar seu diretório de perfil de usuário `C:\Users\Mallory\` e pode acessar o local de armazenamento em todo o computador compartilhado `C:\ProgramData\IsolatedStorage\` . Ela não pode acessar o diretório de perfil de usuário de Bob `C:\Users\Bob\` .
+Agora, considere um sistema de vários usuários com dois usuários registrados _Mallory_ e _Bob_ . O Mallory tem a capacidade de acessar seu diretório de perfil de usuário `C:\Users\Mallory\` e pode acessar o local de armazenamento em todo o computador compartilhado `C:\ProgramData\IsolatedStorage\` . Ela não pode acessar o diretório de perfil de usuário de Bob `C:\Users\Bob\` .
 
 Se Mallory quiser atacar Bob, ela poderá gravar dados no local de armazenamento em todo o computador e, em seguida, tentar influenciar Bob na leitura do repositório de todo o computador. Quando Bob executa um aplicativo que lê esse armazenamento, esse aplicativo funcionará nos dados Mallory colocados ali, mas de dentro do contexto da conta de usuário de Bob. O restante deste documento contemplates vários vetores de ataque e quais etapas os aplicativos podem fazer para minimizar seus riscos a esses ataques.
 
@@ -150,7 +150,7 @@ Esses não são vetores de ameaça que se aplicam a ambientes de desktop de usu�
 
 Um ataque __de elevação de privilégio__ ocorre quando o aplicativo de Bob lê o arquivo de Mallory e tenta automaticamente executar alguma ação com base no conteúdo dessa carga. Considere um aplicativo que leia o conteúdo de um script de inicialização do repositório de todo o computador e passe esse conteúdo para `Process.Start` . Se o Mallory puder fazer um script mal-intencionado dentro da loja de todo o computador, quando Bob iniciar seu aplicativo:
 
-* Seu aplicativo analisa e inicia o script mal-intencionado do Mallory _no contexto do perfil de usuário de Bob_.
+* Seu aplicativo analisa e inicia o script mal-intencionado do Mallory _no contexto do perfil de usuário de Bob_ .
 * Mallory acessa a conta do Bob no computador local.
 
 #### <a name="denial-of-service"></a>Negação de serviço
@@ -195,7 +195,7 @@ Se um aplicativo precisar usar o escopo da _máquina_ em um ambiente de vários 
 
 ## <a name="creating-enumerating-and-deleting-isolated-storage"></a>Criando, Enumerando e Excluindo Armazenamento Isolado
 
-O .NET Framework fornece três classes no namespace <xref:System.IO.IsolatedStorage> para ajudar a executar as tarefas que envolvem o armazenamento isolado:
+O .NET fornece três classes no <xref:System.IO.IsolatedStorage> namespace para ajudá-lo a executar tarefas que envolvem o armazenamento isolado:
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, que é derivado de <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType> e fornece gerenciamento básico de assemblies armazenados e arquivos de aplicativos. Uma instância da classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> representa um único repositório localizado no sistema de arquivos.
 
@@ -235,7 +235,7 @@ Muitos aplicativos usam bancos de dados para armazenar e isolar os dados. Nesse 
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-|Title|Descrição|
+|Título|Descrição|
 |-----------|-----------------|
 |[Tipos de isolamento](types-of-isolation.md)|Descreve os diferentes tipos de isolamento.|
 |[Como: Obter repositórios para o armazenamento isolado](how-to-obtain-stores-for-isolated-storage.md)|Fornece um exemplo de uso da classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> para obter um armazenamento isolado por usuário e assembly.|

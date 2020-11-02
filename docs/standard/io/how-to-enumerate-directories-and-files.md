@@ -7,14 +7,14 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- I/O [.NET Framework], enumerating directories and files
+- I/O [.NET], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
-ms.openlocfilehash: 276668f4a3eee89610a81b1256820770d1f72dc3
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 7a757fc97fd934f02592264c3a495c3efc435fd5
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662570"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187886"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Como: enumerar diretórios e arquivos
 Coleções enumeráveis fornecem um desempenho melhor do que matrizes ao trabalhar com coleções grandes de arquivos e diretórios. Para enumerar diretórios e arquivos, use métodos que retornam uma coleção enumerável de nomes de diretório ou arquivo ou seus objetos <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo> ou <xref:System.IO.FileSystemInfo>.  

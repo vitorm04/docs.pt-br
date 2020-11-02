@@ -7,16 +7,16 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- I/O [.NET Framework], compression
+- I/O [.NET], compression
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: c13f464432aa6f67136d3a844bdeda256e7ab9b6
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: ea078099aba3161818844d14af221eb582e7f11b
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769230"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188283"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Como compactar e extrair arquivos
 
@@ -49,7 +49,7 @@ Para executar a amostra, crie uma pasta *Iniciar* na pasta do programa e popule-
 
 ## <a name="example-2-extract-specific-file-extensions"></a>Exemplo 2: extrair extensões de arquivo específicas
 
-O próximo exemplo itera pelo conteúdo de um arquivo *.zip* existente e extrai os arquivos que têm uma extensão *.txt*. Ele usa a classe <xref:System.IO.Compression.ZipArchive> para acessar o zip e a classe <xref:System.IO.Compression.ZipArchiveEntry> para inspecionar as entradas individuais. O método de extensão <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> para o objeto <xref:System.IO.Compression.ZipArchiveEntry> está disponível na classe <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>.
+O próximo exemplo itera pelo conteúdo de um arquivo *.zip* existente e extrai os arquivos que têm uma extensão *.txt* . Ele usa a classe <xref:System.IO.Compression.ZipArchive> para acessar o zip e a classe <xref:System.IO.Compression.ZipArchiveEntry> para inspecionar as entradas individuais. O método de extensão <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> para o objeto <xref:System.IO.Compression.ZipArchiveEntry> está disponível na classe <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>.
 
 Para executar a amostra, coloque um arquivo *.zip* chamado *result.zip* na pasta do programa. Quando solicitado, forneça um nome de pasta na qual extrair.
 
@@ -73,7 +73,7 @@ Você também pode usar as classes <xref:System.IO.Compression.GZipStream> e <xr
 [!code-csharp[IO.Compression.GZip1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/IO.Compression.GZip1/CS/gziptest.cs#1)]
 [!code-vb[IO.Compression.GZip1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/IO.Compression.GZip1/VB/gziptest.vb#1)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IO.Compression.ZipArchive>  
 - <xref:System.IO.Compression.ZipFile>  

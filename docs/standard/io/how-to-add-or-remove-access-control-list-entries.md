@@ -1,5 +1,5 @@
 ---
-title: 'Como: Adicionar ou remover entradas da Lista de Controle de Acesso (somente o Framework.NET)'
+title: 'Como: Adicionar ou remover entradas da lista de controle de acesso (somente .NET Framework)'
 ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,15 @@ helpviewer_keywords:
 - I/O [.NET Framework], access control list entries
 - access control lists [.NET Framework]
 ms.assetid: 53758b39-bd9b-4640-bb04-cad5ed8d0abf
-ms.openlocfilehash: 5f41c518b8732adff95593cab29d7085adcc9ab3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff5a09207b3a1d810f9611dd6bb8cfd206adf1e8
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708122"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187964"
 ---
-# <a name="how-to-add-or-remove-access-control-list-entries-net-framework-only"></a>Como: Adicionar ou remover entradas da Lista de Controle de Acesso (somente o Framework.NET)
+# <a name="how-to-add-or-remove-access-control-list-entries-net-framework-only"></a>Como: Adicionar ou remover entradas da lista de controle de acesso (somente .NET Framework)
+
 Para adicionar entradas ACL (lista de controle de acesso) a um arquivo ou um diretório ou removê-las de um arquivo ou um diretório, obtenha o objeto <xref:System.Security.AccessControl.FileSecurity> ou <xref:System.Security.AccessControl.DirectorySecurity> no arquivo ou no diretório. Modifique o objeto e, em seguida, aplique-o novamente ao arquivo ou ao diretório.  
   
 ## <a name="add-or-remove-an-acl-entry-from-a-file"></a>Adicionar ou remover uma entrada ACL de um arquivo  
