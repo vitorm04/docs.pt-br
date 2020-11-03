@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cryptography [.NET], model
 - encryption [.NET], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: 0b3e07238bf0932572c222f7b947cfa7ae0221a9
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: a157a9a76f87a2a56c616b76c933e6d8d6415b03
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556989"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281578"
 ---
 # <a name="net-cryptography-model"></a>Modelo de criptografia .NET
 
@@ -25,7 +25,7 @@ O .NET fornece implementações de muitos algoritmos criptográficos padrão, e 
 
 O sistema de criptografia .NET implementa um padrão extensível de herança de classe derivada. A hierarquia é a seguinte:
 
-- Classe de tipo de algoritmo, como <xref:System.Security.Cryptography.SymmetricAlgorithm> , <xref:System.Security.Cryptography.AsymmetricAlgorithm> ou <xref:System.Security.Cryptography.HashAlgorithm> . Esse nível é abstrato.
+- Classe de tipo de algoritmo, como <xref:System.Security.Cryptography.SymmetricAlgorithm> ,  <xref:System.Security.Cryptography.AsymmetricAlgorithm> ou <xref:System.Security.Cryptography.HashAlgorithm> . Esse nível é abstrato.
 
 - Classe de algoritmo que herda de uma classe de tipo de algoritmo; por exemplo, <xref:System.Security.Cryptography.Aes> , <xref:System.Security.Cryptography.RSA> ou <xref:System.Security.Cryptography.ECDiffieHellman> . Esse nível é abstrato.
 
@@ -37,13 +37,13 @@ Esse padrão de classes derivadas permite que você adicione um novo algoritmo o
 
 Como um exemplo das diferentes implementações disponíveis para um algoritmo, considere algoritmos simétricos. A base para todos os algoritmos simétricos é <xref:System.Security.Cryptography.SymmetricAlgorithm> herdada por <xref:System.Security.Cryptography.Aes> , <xref:System.Security.Cryptography.TripleDES> e outras que não são mais recomendadas.
 
-<xref:System.Security.Cryptography.Aes>é herdado por <xref:System.Security.Cryptography.AesCryptoServiceProvider> , <xref:System.Security.Cryptography.AesCng> e <xref:System.Security.Cryptography.AesManaged> .
+<xref:System.Security.Cryptography.Aes> é herdado por <xref:System.Security.Cryptography.AesCryptoServiceProvider> , <xref:System.Security.Cryptography.AesCng> e <xref:System.Security.Cryptography.AesManaged> .
 
 Em .NET Framework no Windows:
 
-* `*CryptoServiceProvider`as classes de algoritmo, como <xref:System.Security.Cryptography.AesCryptoServiceProvider> , são wrappers em relação à implementação da capi (API de criptografia do Windows) de um algoritmo.
-* `*Cng`classes de algoritmo, como <xref:System.Security.Cryptography.ECDiffieHellmanCng> os wrappers em relação à implementação da CNG (criptografia próxima geração) do Windows.
-* `*Managed`classes, como <xref:System.Security.Cryptography.AesManaged> , são inteiramente escritas em código gerenciado. `*Managed`as implementações não são certificadas pelo FIPS (Federal Information Processing Standards) e podem ser mais lentas do que as `*CryptoServiceProvider` `*Cng` classes wrapper.
+* `*CryptoServiceProvider` as classes de algoritmo, como <xref:System.Security.Cryptography.AesCryptoServiceProvider> , são wrappers em relação à implementação da capi (API de criptografia do Windows) de um algoritmo.
+* `*Cng` as classes de algoritmo, como <xref:System.Security.Cryptography.ECDiffieHellmanCng> , são wrappers em relação à implementação da CNG (criptografia próxima geração) do Windows.
+* `*Managed` classes, como <xref:System.Security.Cryptography.AesManaged> , são inteiramente escritas em código gerenciado. `*Managed` as implementações não são certificadas pelo FIPS (Federal Information Processing Standards) e podem ser mais lentas do que as `*CryptoServiceProvider` `*Cng` classes wrapper.
 
 No .NET Core e no .NET 5 e versões posteriores, todas as classes de implementação ( `*CryptoServiceProvider` , `*Managed` e `*Cng` ) são wrappers para os algoritmos do sistema operacional (SO). Se os algoritmos do sistema operacional forem certificados pelo FIPS, o .NET usará algoritmos com certificação FIPS. Para obter mais informações, consulte [criptografia de plataforma cruzada](cross-platform-cryptography.md).
 
@@ -78,7 +78,7 @@ Aqui está uma lista de algoritmos recomendados por aplicativo:
 - Gerando uma chave a partir de uma senha:
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Serviços criptográficos](cryptographic-services.md)
 - [Criptografia de plataforma cruzada](cross-platform-cryptography.md)

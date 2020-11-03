@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 4289b809d9a401de92c74063a42216f3051543f6
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 3699edda6cce24adb8e932d6e8b8a0a5bb977142
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188556"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282024"
 ---
 # <a name="isolated-storage"></a>Armazenamento isolado
 
@@ -37,7 +37,7 @@ ms.locfileid: "93188556"
 
 ## <a name="data-compartments-and-stores"></a>Compartimentos e Repositórios de Dados
 
-Quando um aplicativo armazena dados em um arquivo, o nome do arquivo e o local de armazenamento devem ser escolhidos cuidadosamente para minimizar a possibilidade de o local de armazenamento ser conhecido por outro aplicativo e, portanto, tornar-se vulnerável a corrompimento. Sem um sistema padrão para gerenciar esses problemas, o desenvolvimento de técnicas ad hoc que minimizam conflitos de armazenamento pode ser complexo e os resultados podem não ser confiáveis.
+Quando um aplicativo armazena dados em um arquivo, o nome do arquivo e o local de armazenamento devem ser cuidadosamente escolhidos para minimizar a possibilidade de que o local de armazenamento seja conhecido por outro aplicativo e, portanto, vulnerável a danos. Sem um sistema padrão em vigor para gerenciar esses problemas, as técnicas de improvising que minimizam conflitos de armazenamento podem ser complexas e os resultados podem não ser confiáveis.
 
 Com armazenamento isolado, os dados são sempre isolados pelo usuário e pelo assembly. Credenciais como a origem ou o nome forte do assembly determinam a identidade do assembly. Os dados também podem ser isolados por domínio de aplicativo, usando credenciais semelhantes.
 
@@ -134,24 +134,25 @@ O terceiro local é compartilhado entre todas as contas de usuário no computado
 
 Os caminhos anteriores podem ser diferentes com base na versão do Windows em uso.
 
-Agora, considere um sistema de vários usuários com dois usuários registrados _Mallory_ e _Bob_ . O Mallory tem a capacidade de acessar seu diretório de perfil de usuário `C:\Users\Mallory\` e pode acessar o local de armazenamento em todo o computador compartilhado `C:\ProgramData\IsolatedStorage\` . Ela não pode acessar o diretório de perfil de usuário de Bob `C:\Users\Bob\` .
+Agora, considere um sistema de vários usuários com dois usuários registrados _Mallory_ e _Bob_. O Mallory tem a capacidade de acessar seu diretório de perfil de usuário `C:\Users\Mallory\` e pode acessar o local de armazenamento em todo o computador compartilhado `C:\ProgramData\IsolatedStorage\` . Ela não pode acessar o diretório de perfil de usuário de Bob `C:\Users\Bob\` .
 
 Se Mallory quiser atacar Bob, ela poderá gravar dados no local de armazenamento em todo o computador e, em seguida, tentar influenciar Bob na leitura do repositório de todo o computador. Quando Bob executa um aplicativo que lê esse armazenamento, esse aplicativo funcionará nos dados Mallory colocados ali, mas de dentro do contexto da conta de usuário de Bob. O restante deste documento contemplates vários vetores de ataque e quais etapas os aplicativos podem fazer para minimizar seus riscos a esses ataques.
 
-__Observação:__ Para que tal ataque ocorra, o Mallory requer:
-
-* Uma conta de usuário no computador.
-* A capacidade de inserir um arquivo em um local conhecido no sistema de arquivos.
-* O conhecimento que Bob irá, em algum momento, executar um aplicativo que tenta ler esses dados.
-
-Esses não são vetores de ameaça que se aplicam a ambientes de desktop de usuário único padrão como PCs domésticos ou estações de trabalho de um funcionário corporativo.
+> [!NOTE]
+> Para que tal ataque ocorra, o Mallory requer:
+>
+> * Uma conta de usuário no computador.
+> * A capacidade de inserir um arquivo em um local conhecido no sistema de arquivos.
+> * O conhecimento que Bob irá, em algum momento, executar um aplicativo que tente ler esses dados.
+>
+> Esses não são vetores de ameaça que se aplicam a ambientes de desktop de usuário único padrão como PCs domésticos ou estações de trabalho de um funcionário corporativo.
 
 #### <a name="elevation-of-privilege"></a>Elevação de privilégio
 
 Um ataque __de elevação de privilégio__ ocorre quando o aplicativo de Bob lê o arquivo de Mallory e tenta automaticamente executar alguma ação com base no conteúdo dessa carga. Considere um aplicativo que leia o conteúdo de um script de inicialização do repositório de todo o computador e passe esse conteúdo para `Process.Start` . Se o Mallory puder fazer um script mal-intencionado dentro da loja de todo o computador, quando Bob iniciar seu aplicativo:
 
-* Seu aplicativo analisa e inicia o script mal-intencionado do Mallory _no contexto do perfil de usuário de Bob_ .
-* Mallory acessa a conta do Bob no computador local.
+* Seu aplicativo analisa e inicia o script mal-intencionado do Mallory _no contexto do perfil de usuário de Bob_.
+* Mallory obtém acesso à conta de Bob no computador local.
 
 #### <a name="denial-of-service"></a>Negação de serviço
 
@@ -174,7 +175,7 @@ Quando o aplicativo de Bob lê da loja em todo o computador, ele agora lê inadv
 
 __Importante:__ Se o seu ambiente tiver vários usuários mutuamente não confiáveis, __não__ chame a API `IsolatedStorageFile.GetEnumerator(IsolatedStorageScope.Machine)` nem invoque a ferramenta `storeadm.exe /machine /list` . Ambos pressupõem que eles estão operando em dados confiáveis. Se um invasor puder propagar uma carga mal-intencionada na loja de todo o computador, essa carga poderá levar a uma elevação de ataque de privilégio sob o contexto do usuário que executa esses comandos.
 
-Se estiver operando em um ambiente de vários usuários, reconsidere o uso de recursos de armazenamento isolado que se destinam ao escopo da _máquina_ . Se um aplicativo precisar ler dados de um local em todo o computador, prefira ler os dados de um local que são graváveis somente por contas de administrador. O `%PROGRAMFILES%` diretório e o `HKLM` hive do registro são exemplos de locais que são graváveis somente por administradores e legíveis por todos. Portanto, os dados lidos desses locais são considerados confiáveis.
+Se estiver operando em um ambiente de vários usuários, reconsidere o uso de recursos de armazenamento isolado direcionados ao escopo da _máquina_ . Se um aplicativo precisar ler dados de um local em todo o computador, prefira ler os dados de um local que seja gravável somente por contas de administrador. O `%PROGRAMFILES%` diretório e o `HKLM` hive do registro são exemplos de locais que são graváveis somente por administradores e legíveis por todos. Portanto, os dados lidos desses locais são considerados confiáveis.
 
 Se um aplicativo precisar usar o escopo da _máquina_ em um ambiente de vários usuários, valide o conteúdo de qualquer arquivo que você ler do repositório de todo o computador. Se o aplicativo desserializar grafos de objeto desses arquivos, considere usar serializadores mais seguros como `XmlSerializer` em vez de serializadores perigosos como `BinaryFormatter` ou `NetDataContractSerializer` . Tenha cuidado com grafos de objeto profundamente aninhados ou grafos de objetos que executam a alocação de recursos com base no conteúdo do arquivo.
 
@@ -221,7 +222,7 @@ O armazenamento isolado é útil em muitas situações, inclusive nestes quatro 
 
 - Roaming. Os aplicativos também podem usar o armazenamento isolado com perfis de usuários móveis. Isso permite que repositórios isolados de um usuário façam roaming com o perfil.
 
-Você não deve usar um armazenamento isolado nas seguintes situações:
+Não use o armazenamento isolado nas seguintes situações:
 
 - Para armazenar segredos de alto valor, como chaves sem criptografia ou senhas, pois o armazenamento isolado não é protegido contra código altamente confiável, código não gerenciado ou usuários confiáveis do computador.
 

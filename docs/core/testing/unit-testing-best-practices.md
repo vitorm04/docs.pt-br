@@ -4,12 +4,12 @@ description: Conheça as melhores práticas para escrever testes de unidade que 
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 18f17839361d0cb60a52fbf4415665855f1d53be
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 6c1e9a665ad541bf6109634a6df857880ee47042
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223483"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281643"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Melhores práticas de teste de unidade com .NET Core e .NET Standard
 
@@ -188,7 +188,7 @@ Nomear variáveis em testes de unidade é tão importante, se não mais importan
 #### <a name="why"></a>Por quê?
 
 - Evita a necessidade de o leitor do teste inspecionar o código de produção a fim de descobrir o que torna o valor especial.
-- Mostra explicitamente o que você está tentando *provar*, em vez de o que você está tentando *realizar*.
+- Mostra explicitamente o que você está tentando *provar* , em vez de o que você está tentando *realizar*.
 
 Cadeias de caracteres mágicas podem gerar confusão no leitor dos seus testes. Se uma cadeia de caracteres parecer estar fora do comum, eles poderão ser perguntar por que um determinado valor foi escolhido para um parâmetro ou valor retornado. Talvez isso os leve a examinar mais detalhadamente os detalhes da implementação, em vez de se concentrar no teste.
 
@@ -227,7 +227,7 @@ Quando você introduz a lógica em seu conjunto de testes, a possibilidade de in
 
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>Preferir métodos auxiliares para instalação (setup) e desinstalação (teardown)
 
-Se você precisar de um objeto ou estado semelhante para seus testes, prefira um método auxiliar do que usar atributos Setup e Teardown, se existirem.
+Se você precisar de um objeto ou estado semelhante para seus testes, prefira um método auxiliar do que o aproveitamento `Setup` e os `Teardown` atributos, se existirem.
 
 #### <a name="why"></a>Por quê?
 

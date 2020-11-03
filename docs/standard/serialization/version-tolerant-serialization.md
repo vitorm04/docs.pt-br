@@ -1,6 +1,6 @@
 ---
 title: Serialização tolerante a versão
-description: O .NET Framework 2,0 apresenta a serialização tolerante a versão, um conjunto de recursos que facilita a modificação de tipos serializáveis.
+description: Saiba mais sobre a serialização tolerante a versões, um conjunto de recursos que facilita a modificação de tipos serializáveis.
 ms.date: 08/08/2017
 dev_langs:
 - csharp
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: afc822e1f8873bac069f6634fdf1d4665d392e69
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e7c4d6ca4c72390c3e0803502aa9c1a675e02345
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "83762585"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282418"
 ---
 # <a name="version-tolerant-serialization"></a>Serialização tolerante a versão
 
-Na versão 1.0 e 1.1 do .NET Framework, criar tipos serializáveis que fossem reutilizáveis de uma versão de um aplicativo para a outra era problemático. Se um tipo tivesse sido modificado adicionando campos extras, o seguinte problema ocorreria.
+Nas versões mais antigas do .NET Framework, a criação de tipos serializáveis que seriam reutilizáveis a partir de uma versão de um aplicativo para a próxima era problemática. Se um tipo tivesse sido modificado adicionando campos extras, o seguinte problema ocorreria.
 
 - As versões antigas de um aplicativo gerariam exceções quando fossem solicitadas a desserializar novas versões do tipo antigo.
 - As versões recentes de um aplicativo gerariam exceções ao desserializar versões antigas de um tipo com dados ausentes.
 
-VTS (Version Tolerant Serialization) é um conjunto de recursos introduzido no .NET Framework 2.0 que facilita, ao longo do tempo, modificar tipos serializáveis. Especificamente, os recursos do VTS serão habilitados para classes para as quais o atributo <xref:System.SerializableAttribute> tiver sido aplicado, incluindo tipos genéricos. O VTS possibilita adicionar novos campos a essas classes sem interromper a compatibilidade com outras versões do tipo. Para obter um aplicativo de exemplo funcional, consulte [Amostra de tecnologia de serialização tolerante a versão](basic-serialization-technology-sample.md).
+A VTS (serialização tolerante à versão) é um conjunto de recursos que torna mais fácil, ao longo do tempo, modificar os tipos serializáveis. Especificamente, os recursos do VTS serão habilitados para classes para as quais o atributo <xref:System.SerializableAttribute> tiver sido aplicado, incluindo tipos genéricos. O VTS possibilita adicionar novos campos a essas classes sem interromper a compatibilidade com outras versões do tipo. Para obter um aplicativo de exemplo funcional, consulte [Amostra de tecnologia de serialização tolerante a versão](basic-serialization-technology-sample.md).
 
 Os recursos do VTS são habilitados ao usar o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Além disso, todos os recursos exceto tolerância a dados desconhecidos também são habilitados ao usar o <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Para obter mais informações sobre como usar essas classes para serialização, consulte [Serialização binária](binary-serialization.md).
 
@@ -188,9 +188,7 @@ End Class
 
 ## <a name="the-versionadded-property"></a>A propriedade VersionAdded
 
-O **OptionalFieldAttribute** tem a propriedade **VersionAdded**. Na versão 2.0 do .NET Framework, isso não é usado. No entanto, é importante definir essa propriedade corretamente para verificar se o tipo será compatível com mecanismos de serialização futuros.
-
-A propriedade indica a qual versão de um tipo um determinado campo foi adicionado. Ele deve ser incrementado exatamente em um (a partir de 2) a cada vez que o tipo é modificado, conforme mostrado no seguinte exemplo:
+O **OptionalFieldAttribute** tem a propriedade **VersionAdded**. A propriedade indica a qual versão de um tipo um determinado campo foi adicionado. Ele deve ser incrementado exatamente em um (a partir de 2) a cada vez que o tipo é modificado, conforme mostrado no seguinte exemplo:
 
 ```csharp
 // Version 1.0
@@ -281,7 +279,7 @@ Para definir que um tipo seja compatível com mecanismos de serialização futur
 - Sempre defina a propriedade **VersionAdded** no atributo **OptionalFieldAttribute** corretamente.
 - Evite controle de versão ramificado.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.SerializableAttribute>
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>

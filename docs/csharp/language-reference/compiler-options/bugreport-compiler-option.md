@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 2afab44eec0c7bcc9809b458be0348093cb6dd07
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1fb2efc9b12680e95767746c7e4e1ddacbdd2594
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91196813"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281500"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (opções do compilador C#)
 
@@ -41,7 +41,7 @@ Especifica que as informações de depuração devem ser colocadas em um arquivo
   
 - Informações de versão sobre o compilador, o tempo de execução e o sistema operacional.  
   
-- Assemblies e módulos referenciados, salvos como dígitos hexadecimais, exceto os assemblies que vêm com o .NET Framework e o SDK.  
+- Assemblies e módulos referenciados, salvos como dígitos hexadecimais, exceto assemblies que são fornecidos com o .NET e o SDK do .NET.  
   
 - Saída do compilador, se houver.  
   
@@ -49,7 +49,7 @@ Especifica que as informações de depuração devem ser colocadas em um arquivo
   
 - Uma solicitação de como você acha que o problema deve ser corrigido.  
   
- Se essa opção for usada com **-errorreport:prompt** ou **-errorreport:send**, as informações no arquivo serão enviadas à Microsoft Corporation.  
+ Se essa opção for usada com **-errorreport:prompt** ou **-errorreport:send** , as informações no arquivo serão enviadas à Microsoft Corporation.  
   
  Como uma cópia de todos os arquivos de código-fonte será colocada no `file`, talvez seja desejável reproduzir o suposto defeito do código no programa mais curto possível.  
   

@@ -4,12 +4,12 @@ description: Saiba como usar o arquivo global.json para definir a versão do SDK
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 7e372c75812e79f85bb8965895d5fef694d9af1a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 714e32ec841cee214f801de65bccf0041af66b0b
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872387"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281539"
 ---
 # <a name="globaljson-overview"></a>Visão geral do global.json
 
@@ -31,7 +31,7 @@ Digite: `object`
 
 Especifica as informações sobre o SDK do .NET Core a ser selecionado.
 
-#### <a name="version"></a>Versão
+#### <a name="version"></a>version
 
 - Digite: `string`
 
@@ -55,7 +55,7 @@ Indica se o resolvedor do SDK deve considerar versões de pré-lançamento ao se
 Se você não definir esse valor explicitamente, o valor padrão dependerá do fato de você estar executando a partir do Visual Studio:
 
 - Se você **não** estiver no Visual Studio, o valor padrão será `true` .
-- Se você estiver no Visual Studio, ele usará o status de pré-lançamento solicitado. Ou seja, se você estiver usando uma versão de visualização do Visual Studio ou se definir a opção **usar visualizações da SDK do .NET Core** (em **ferramentas**  >  **Opções**  >  **Environment**  >  **recursos de visualização**do ambiente), o valor padrão será `true` ; caso contrário, `false` .
+- Se você estiver no Visual Studio, ele usará o status de pré-lançamento solicitado. Ou seja, se você estiver usando uma versão de visualização do Visual Studio ou se definir a opção **usar visualizações da SDK do .NET Core** (em **ferramentas**  >  **Opções**  >  **Environment**  >  **recursos de visualização** do ambiente), o valor padrão será `true` ; caso contrário, `false` .
 
 #### <a name="rollforward"></a>Avanço
 
@@ -64,6 +64,7 @@ Se você não definir esse valor explicitamente, o valor padrão dependerá do f
 - Disponível desde: SDK do .NET Core 3,0.
 
 A política de roll-forward a ser usada ao selecionar uma versão do SDK, seja como um fallback quando uma versão específica do SDK estiver ausente ou como uma diretiva para usar uma versão superior. Uma [versão](#version) deve ser especificada com um `rollForward` valor, a menos que você esteja definindo-a como `latestMajor` .
+O comportamento de roll-forward padrão é determinado pelas [regras de correspondência](#matching-rules).
 
 Para entender as políticas disponíveis e seu comportamento, considere as seguintes definições para uma versão do SDK no formato `x.y.znn` :
 
@@ -163,7 +164,7 @@ dotnet new globaljson --sdk-version 3.0.100
 ## <a name="matching-rules"></a>Regras de correspondência
 
 > [!NOTE]
-> As regras de correspondência são governadas pelo `dotnet.exe` ponto de entrada, que é comum em todos os tempos de execução instalados do .NET Core instalados. As regras de correspondência para a versão mais recente instalada do tempo de execução do .NET Core são usadas quando você tem vários tempos de execução instalados lado a lado.
+> As regras de correspondência são governadas pelo `dotnet.exe` ponto de entrada, que é comum em todos os tempos de execução instalados do .NET Core instalados. As regras de correspondência para a versão mais recente instalada do tempo de execução do .NET Core são usadas quando você tem vários tempos de execução instalados lado a lado ou se estiver usando um *global.jsno* arquivo.
 
 ## <a name="net-core-3x"></a>[.NET Core 3.x](#tab/netcore3x)
 
@@ -171,7 +172,7 @@ A partir do .NET Core 3,0, as seguintes regras se aplicam ao determinar qual ver
 
 - Se nenhum *global.jsno* arquivo for encontrado ou *global.jsem* não especificar uma versão do SDK nem um `allowPrerelease` valor, a versão mais recente do SDK será usada (equivalente a definir `rollForward` como `latestMajor` ). Se as versões de pré-lançamento do SDK são consideradas depende de como o `dotnet` está sendo invocado.
   - Se você **não** estiver no Visual Studio, as versões de pré-lançamento serão consideradas.
-  - Se você estiver no Visual Studio, ele usará o status de pré-lançamento solicitado. Ou seja, se você estiver usando uma versão prévia do Visual Studio ou se definir a opção **usar visualizações da SDK do .NET Core** (em **ferramentas**  >  **Opções**  >  recursos de visualização do**ambiente**  >  **Preview Features**), as versões de pré-lançamento serão consideradas; caso contrário, apenas as versões de lançamento serão consideradas.
+  - Se você estiver no Visual Studio, ele usará o status de pré-lançamento solicitado. Ou seja, se você estiver usando uma versão prévia do Visual Studio ou se definir a opção **usar visualizações da SDK do .NET Core** (em **ferramentas**  >  **Opções**  >  recursos de visualização do **ambiente**  >  **Preview Features** ), as versões de pré-lançamento serão consideradas; caso contrário, apenas as versões de lançamento serão consideradas.
 - Se um *global.jsno* arquivo for encontrado e não especificar uma versão do SDK, mas especificar um `allowPrerelease` valor, a versão mais recente do SDK instalada será usada (equivalente a definir `rollForward` como `latestMajor` ). Se a versão mais recente do SDK pode ser Release ou pré-lançamento depende do valor de `allowPrerelease` . `true` indica que as versões de pré-lançamento são consideradas; `false` indica que apenas versões de lançamento são consideradas.
 - Se um *global.jsno* arquivo for encontrado e ele especificar uma versão do SDK:
 
@@ -196,7 +197,7 @@ A **versão de recursos** do SDK do .NET Core é representada pelo primeiro díg
 
 A **versão de patch** é definida pelos dois últimos dígitos (`yz`) na última parte do número (`xyz`) do SDK versões 2.1.100 e superiores. Por exemplo, se você especificar `2.1.300` como a versão do SDK, a seleção de SDK localizará até a `2.1.399` mas a `2.1.400` não será considerada uma versão de patch para `2.1.300`.
 
-As versões do SDK do .NET Core `2.1.100` até `2.1.201` foram lançadas durante a transição entre os esquemas de número de versão e não lidam corretamente com a notação `xyz`. Se você especificar essas versões no arquivo *global.json*, será altamente recomendado verificar se as versões especificadas estão nos computadores de destino.
+As versões do SDK do .NET Core `2.1.100` até `2.1.201` foram lançadas durante a transição entre os esquemas de número de versão e não lidam corretamente com a notação `xyz`. Se você especificar essas versões no arquivo *global.json* , será altamente recomendado verificar se as versões especificadas estão nos computadores de destino.
 
 ---
 
@@ -214,6 +215,6 @@ As versões do SDK do .NET Core `2.1.100` até `2.1.201` foram lançadas durante
 
   A partir do SDK do .NET Core 2.1 (versão 2.1.300), o comando `dotnet ef` vem incluído no SDK. Para compilar seu projeto, instale o SDK do .NET Core 2,0 (versão 2.1.201) ou anterior em seu computador e defina a versão do SDK desejada usando o *global.jsno* arquivo. Para saber mais sobre o comando `dotnet ef`, confira [Ferramentas da linha de comando do .NET EF Core](/ef/core/miscellaneous/cli/dotnet).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Como os SDKs de projeto são resolvidos](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

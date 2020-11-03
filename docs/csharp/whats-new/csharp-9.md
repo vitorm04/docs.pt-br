@@ -2,12 +2,12 @@
 title: O que há de novo no C# 9,0 – Guia C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 9,0.
 ms.date: 09/04/2020
-ms.openlocfilehash: c256c03831ac759bc45467f38e85fd3a2884dda4
-ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
+ms.openlocfilehash: c65f7220c44e86fac7e8beba28277bf43af95088
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526593"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282341"
 ---
 # <a name="whats-new-in-c-90"></a>Novidades do C# 9.0
 
@@ -34,7 +34,7 @@ O C# 9,0 tem suporte no **.NET 5**. Para obter mais informações, consulte [con
 
 ## <a name="record-types"></a>Tipos de registro
 
-O C# 9,0 introduz **_tipos de registro_*_, que são um tipo de referência que fornece métodos sintetizados para fornecer a semântica de valor para igualdade. Os registros são imutáveis por padrão.
+O C# 9,0 introduz * *_tipos de registro_* _, que são um tipo de referência que fornece métodos sintetizados para fornecer a semântica de valor para igualdade. Os registros são imutáveis por padrão.
 
 Os tipos de registro facilitam a criação de tipos de referência imutáveis no .NET. Historicamente, os tipos .NET são classificados em grande parte como tipos de referência (incluindo classes e tipos anônimos) e tipos de valor (incluindo structs e tuplas). Embora tipos de valor imutáveis sejam recomendados, os tipos de valores mutáveis geralmente não introduzem erros. As variáveis de tipo de valor contêm os valores para que as alterações sejam feitas em uma cópia dos dados originais quando os tipos de valor são passados para métodos.
 
@@ -106,7 +106,7 @@ A linha acima cria um novo `Person` registro no qual a `LastName` propriedade é
 
 ## <a name="init-only-setters"></a>Setters somente init
 
-***Init somente setters**_ fornecem sintaxe consistente para inicializar membros de um objeto. Os inicializadores de propriedade tornam claro qual valor está definindo qual propriedade. A desvantagem é que essas propriedades devem ser configurável. A partir do C# 9,0, você pode criar `init` acessadores em vez de `set` acessadores para propriedades e indexadores. Os chamadores podem usar a sintaxe do inicializador de propriedade para definir esses valores em expressões de criação, mas essas propriedades são ReadOnly quando a construção é concluída. Os setters somente init fornecem uma janela para alterar o estado. Essa janela fecha quando a fase de construção termina. A fase de construção termina com eficiência após toda a inicialização, incluindo inicializadores de propriedade e with-Expressions concluídos.
+***Init somente setters** _ fornecem sintaxe consistente para inicializar membros de um objeto. Os inicializadores de propriedade tornam claro qual valor está definindo qual propriedade. A desvantagem é que essas propriedades devem ser configurável. A partir do C# 9,0, você pode criar `init` acessadores em vez de `set` acessadores para propriedades e indexadores. Os chamadores podem usar a sintaxe do inicializador de propriedade para definir esses valores em expressões de criação, mas essas propriedades são ReadOnly quando a construção é concluída. Os setters somente init fornecem uma janela para alterar o estado. Essa janela fecha quando a fase de construção termina. A fase de construção termina com eficiência após toda a inicialização, incluindo inicializadores de propriedade e with-Expressions concluídos.
 
 Você pode declarar `init` somente setters em qualquer tipo que escrever. Por exemplo, a seguinte estrutura define uma estrutura de observação do clima:
 
@@ -166,9 +166,9 @@ O C# 9 inclui novas melhorias de correspondência de padrões:
 
 - _*_Padrões de tipo_*_ correspondem a uma variável é um tipo
 - _*_Padrões entre parênteses_*_ impõem ou enfatizam a precedência de combinações de padrões
-- _*_ `and` Padrões de conjuntiva_*_ exigem os dois padrões para corresponder
-- _*_ `or` Padrões de disjunctive_*_ exigem qualquer padrão para corresponder
-- _*_ `not` Padrões negados_*_ exigem que um padrão não corresponda
+- _*_`and` Padrões de conjuntiva_*_ exigem os dois padrões para corresponder
+- _*_`or` Padrões de disjunctive_*_ exigem qualquer padrão para corresponder
+- _*_`not` Padrões negados_*_ exigem que um padrão não corresponda
 - Os _*_padrões relacionais_*_ exigem que a entrada seja menor que, maior que, menor ou igual ou maior ou igual a uma determinada constante.
 
 Esses padrões enriquecem a sintaxe para padrões. Considere estes exemplos:
@@ -240,9 +240,9 @@ Dois recursos finais dão suporte a geradores de código C#. Os geradores de có
 
 Um gerador de código lê atributos ou outros elementos de código usando as APIs de análise de Roslyn. A partir dessas informações, ele adiciona um novo código à compilação. Os geradores de origem só podem adicionar código; Eles não têm permissão para modificar nenhum código existente na compilação.
 
-Os dois recursos adicionados para geradores de código são extensões para ***sintaxe do método parcial**_ e _*_inicializadores de módulo_*_. Primeiro, as alterações em métodos parciais. Antes do C# 9,0, os métodos parciais são `private` , mas não podem especificar um modificador de acesso, ter um `void` retorno e não podem ter `out` parâmetros. Essas restrições destinam-se que, se nenhuma implementação de método for fornecida, o compilador removerá todas as chamadas para o método parcial. O C# 9,0 remove essas restrições, mas requer que as declarações de método parciais tenham uma implementação. Os geradores de código podem fornecer essa implementação. Para evitar a introdução de uma alteração significativa, o compilador considera qualquer método parcial sem um modificador de acesso para seguir as regras antigas. Se o método parcial incluir o `private` modificador de acesso, as novas regras regem esse método parcial.
+Os dois recursos adicionados para geradores de código são extensões para * **sintaxe do método parcial** _ e _*_inicializadores de módulo_*_. Primeiro, as alterações em métodos parciais. Antes do C# 9,0, os métodos parciais são `private` , mas não podem especificar um modificador de acesso, ter um `void` retorno e não podem ter `out` parâmetros. Essas restrições destinam-se que, se nenhuma implementação de método for fornecida, o compilador removerá todas as chamadas para o método parcial. O C# 9,0 remove essas restrições, mas requer que as declarações de método parciais tenham uma implementação. Os geradores de código podem fornecer essa implementação. Para evitar a introdução de uma alteração significativa, o compilador considera qualquer método parcial sem um modificador de acesso para seguir as regras antigas. Se o método parcial incluir o `private` modificador de acesso, as novas regras regem esse método parcial.
 
-O segundo novo recurso para geradores de código é _ *_inicializadores de módulo_* *. Inicializadores de módulo são métodos que têm o <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> atributo anexado a eles. Esses métodos serão chamados pelo tempo de execução quando o assembly for carregado. Um método inicializador de módulo:
+O segundo novo recurso para geradores de código é _ * _inicializadores de módulo_ * *. Inicializadores de módulo são métodos que têm o <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> atributo anexado a eles. Esses métodos serão chamados pelo tempo de execução quando o assembly for carregado. Um método inicializador de módulo:
 
 - Deve ser estático
 - Não deve ter parâmetros

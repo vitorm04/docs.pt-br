@@ -6,16 +6,16 @@ helpviewer_keywords:
 - classes, serializing
 - XmlSerializer class, serializing
 - XML serialization, attributes
-- attributes [.NET Framework], XML serialization
+- attributes [.NET], XML serialization
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-ms.openlocfilehash: fbc42ff696107f4a1b06d3611fc97a09cc4a3542
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 032843728c74799d7ee78257b21243b31cb4f99c
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84276693"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281982"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>Atributos que controlam a serialização XML
 Você pode aplicar os atributos na tabela a seguir para classes e membros de classe para controlar a maneira pela qual o <xref:System.Xml.Serialization.XmlSerializer> serializa ou desserializa uma instância da classe. Para entender como esses atributos controlam a serialização XML, consulte [Controlando a serialização XML usando atributos](controlling-xml-serialization-using-attributes.md).  
@@ -44,7 +44,7 @@ Você pode aplicar os atributos na tabela a seguir para classes e membros de cla
   
  Para controlar a serialização XML de SOAP codificada, consulte [Atributos que controlam a serialização SOAP codificada](attributes-that-control-encoded-soap-serialization.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Serialização de XML e SOAP](xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>

@@ -10,18 +10,18 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: d1f9878c7e7c07944a943c0b05e557ceaa5d1b2f
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 572fcd289eea720873d94e7fc71f3b4a030d1d70
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812114"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282310"
 ---
 # <a name="character-encoding-in-net"></a>Codificação de caracteres no .NET
 
 Este artigo fornece uma introdução aos char sistemas de codificação acter que são usados pelo .net. O artigo explica como os <xref:System.String> tipos,, <xref:System.Char> <xref:System.Text.Rune> e <xref:System.Globalization.StringInfo> funcionam com Unicode, UTF-16 e UTF-8.
 
-O termo * char acter* é usado aqui no sentido geral do *que um leitor percebe como um único elemento de exibição*. Exemplos comuns são a letra "a", o símbolo "@" e o Emoji " 🐂 ". Às vezes, o que parece um char acter é, na verdade, composto por vários elementos de exibição independentes, como explica a seção sobre [clusters grafemas](#grapheme-clusters) .
+O termo *char acter* é usado aqui no sentido geral do *que um leitor percebe como um único elemento de exibição*. Exemplos comuns são a letra "a", o símbolo "@" e o Emoji " 🐂 ". Às vezes, o que parece um char acter é, na verdade, composto por vários elementos de exibição independentes, como explica a seção sobre [clusters grafemas](#grapheme-clusters) .
 
 ## <a name="the-no-locstring-and-no-locchar-types"></a>Os string char tipos e
 
@@ -46,7 +46,7 @@ s[3] = 'l' ('\u006c')
 s[4] = 'o' ('\u006f')
 ```
 
-Cada char acter é representado por um único `char` valor. Esse padrão é verdadeiro para a maioria dos idiomas do mundo. Por exemplo, aqui está a saída de dois char Acters chineses que parece *nǐ hǎo* e Mean *Hello*:
+Cada char acter é representado por um único `char` valor. Esse padrão é verdadeiro para a maioria dos idiomas do mundo. Por exemplo, aqui está a saída de dois char Acters chineses que parece *nǐ hǎo* e Mean *Hello* :
 
 ```csharp
 PrintChars("你好");
@@ -110,7 +110,7 @@ Aqui estão alguns exemplos de atribuições de ponto de código, com links para
 |Decimal|Hex       |Exemplo|Descrição|
 |------:|----------|-------|-----------|
 |10     | `U+000A` |N/D| [ALIMENTAÇÃO DE LINHA](https://www.unicode.org/charts/PDF/U0000.pdf) |
-|65     | `U+0061` | um | [LETRA LATINA MINÚSCULA A](https://www.unicode.org/charts/PDF/U0000.pdf) |
+|97     | `U+0061` | um | [LETRA LATINA MINÚSCULA A](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |562    | `U+0232` | Ȳ | [LETRA LATINA MAIÚSCULA Y COM MACRON](https://www.unicode.org/charts/PDF/U0180.pdf) |
 |68.675 | `U+10C43`| 𐱃 | [ANTIGA LETRA TURCO ORKHON EM](https://www.unicode.org/charts/PDF/U10C00.pdf) |
 |127.801| `U+1F339`| 🌹 | [Emoji rosa](https://www.unicode.org/charts/PDF/U1F300.pdf) |
@@ -128,13 +128,13 @@ O diagrama a seguir ilustra a relação entre o BMP e os pontos de código suple
 
 ## <a name="utf-16-code-units"></a>Unidades de código UTF-16
 
-o formato de transformação Unicode de 16 bits ([UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) é um char sistema de codificação acter que usa *unidades de código* de 16 bits para representar pontos de código Unicode. O .NET usa UTF-16 para codificar o texto em um `string` . Uma `char` instância representa uma unidade de código de 16 bits.
+o formato de transformação Unicode de 16 bits ( [UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) é um char sistema de codificação acter que usa *unidades de código* de 16 bits para representar pontos de código Unicode. O .NET usa UTF-16 para codificar o texto em um `string` . Uma `char` instância representa uma unidade de código de 16 bits.
 
 Uma única unidade de código de 16 bits pode representar qualquer ponto de código no intervalo de 16 bits do plano multilíngüe básico. Mas, para um ponto de código no intervalo suplementar, `char` são necessárias duas instâncias.
 
 ## <a name="surrogate-pairs"></a>Pares substitutos
 
-A conversão de valores de 2 16 bits em um único valor de 21 bits é facilitada por um intervalo especial denominado *pontos de código substitutos*, de `U+D800` até `U+DFFF` (decimal 55.296 a 57.343), inclusive.
+A conversão de valores de 2 16 bits em um único valor de 21 bits é facilitada por um intervalo especial denominado *pontos de código substitutos* , de `U+D800` até `U+DFFF` (decimal 55.296 a 57.343), inclusive.
 
 O diagrama a seguir ilustra a relação entre o BMP e os pontos de código substitutos.
 
@@ -384,7 +384,7 @@ string asString = encoding.GetString(utf8Bytes); // will throw if 'utf8Bytes' is
 
 Para obter informações sobre como usar as `Encoding` classes internas, consulte [como usar char classes de codificação acter no .net](character-encoding.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.String>
 - <xref:System.Char>

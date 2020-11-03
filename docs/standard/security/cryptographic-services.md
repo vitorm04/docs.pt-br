@@ -25,12 +25,12 @@ helpviewer_keywords:
 - cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 651231dcc41926307e3a46b67c80ba3df1fb25e9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 463ccec5f60ff10331d501d39144a979d95eff95
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549974"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281729"
 ---
 # <a name="cryptographic-services"></a>Serviços criptográficos
 
@@ -56,14 +56,14 @@ A criptografia é usada para atingir as seguintes metas:
 
 Para atingir essas metas, você pode usar uma combinação de algoritmos e práticas conhecidas como primitivos de criptografia para criar um esquema criptográfico. A tabela a seguir lista os primitivos criptográficos e seus usos.
 
-|Primitivo de criptografia|Uso|
+|Primitivo de criptografia|Use|
 |-----------------------------|---------|
 |Criptografia de chave secreta (criptografia simétrica)|Executa uma transformação nos dados para impedir que sejam lidos por terceiros. Esse tipo de criptografia usa uma única chave secreta compartilhada para criptografar e descriptografar dados.|
 |Criptografia de chave pública (criptografia assimétrica)|Executa uma transformação nos dados para impedir que sejam lidos por terceiros. Esse tipo de criptografia usa um par de chaves pública/privada para criptografar e descriptografar dados.|
 |Assinatura criptográfica|Ajuda a verificar se os dados são provenientes de uma parte específica por meio da criação de uma assinatura digital exclusiva para essa parte. Esse processo também usa funções de hash.|
 |Hashes criptográficos|Mapeia dados de qualquer comprimento para uma sequência de bytes de comprimento fixo. Hashes são estatisticamente exclusivos; uma sequência diferente de dois bytes não fará hash para o mesmo valor.|
 
-## <a name="secret-key-encryption"></a>Criptografia de chave secreta
+## <a name="secret-key-encryption"></a>Secret-Key criptografia
 
 Os algoritmos de criptografia de chave secreta usam uma única chave secreta para criptografar e descriptografar dados. Você deve proteger a chave do acesso por agentes não autorizados, pois qualquer parte que tenha a chave pode usá-la para descriptografar seus dados ou criptografar seus próprios dados, reivindicando-os de sua origem.
 
@@ -71,7 +71,7 @@ A criptografia de chave secreta também é conhecida como criptografia simétric
 
 Um tipo de algoritmo de chave secreta chamado de codificação de bloco é usado para criptografar um bloco de dados de cada vez. As codificações de bloco, como o padrão de criptografia de dados (DES), TripleDES e criptografia AES (AES) transformam criptograficamente um bloco de entrada de *n* bytes em um bloco de saída de bytes criptografados. Se você quiser criptografar ou descriptografar uma sequência de bytes, será necessário bloquear por bloco. Como *n* é pequeno (8 bytes para des e TripleDES; 16 bytes [o padrão], 24 bytes ou 32 bytes para AES), os valores de dados maiores que *n* precisam ser criptografados um bloco por vez. Valores de dados menores que *n* precisam ser expandidos para *n* para serem processados.
 
-Uma forma simples de codificação de bloco é chamada de modo de Codebook eletrônico (ECB). O modo ECB não é considerado seguro, pois não usa um vetor de inicialização para inicializar o primeiro bloco de texto sem formatação. Para uma determinada chave secreta *k*, uma codificação simples de bloco que não usa um vetor de inicialização criptografará o mesmo bloco de entrada de texto sem formatação no mesmo bloco de saída de texto cifrado. Portanto, se você tiver blocos duplicados em seu fluxo de texto não criptografado de entrada, você terá blocos duplicados no fluxo de texto cifrado de saída. Esses blocos de saída duplicados alertam usuários não autorizados à criptografia fraca, usavam os algoritmos que podem ter sido empregados e os possíveis modos de ataque. O modo de codificação ECB é, portanto, muito vulnerável à análise e, por fim, à descoberta de chaves.
+Uma forma simples de codificação de bloco é chamada de modo de Codebook eletrônico (ECB). O modo ECB não é considerado seguro, pois não usa um vetor de inicialização para inicializar o primeiro bloco de texto sem formatação. Para uma determinada chave secreta *k* , uma codificação simples de bloco que não usa um vetor de inicialização criptografará o mesmo bloco de entrada de texto sem formatação no mesmo bloco de saída de texto cifrado. Portanto, se você tiver blocos duplicados em seu fluxo de texto não criptografado de entrada, você terá blocos duplicados no fluxo de texto cifrado de saída. Esses blocos de saída duplicados alertam usuários não autorizados à criptografia fraca, usavam os algoritmos que podem ter sido empregados e os possíveis modos de ataque. O modo de codificação ECB é, portanto, muito vulnerável à análise e, por fim, à descoberta de chaves.
 
 As classes de codificação de bloco que são fornecidas na biblioteca de classes base usam um modo de encadeamento padrão chamado CBC (encadeamento de bloco de codificação), embora você possa alterar esse padrão, se desejar.
 
@@ -89,7 +89,7 @@ O .NET fornece as seguintes classes que implementam algoritmos de criptografia d
 
 - <xref:System.Security.Cryptography.HMACSHA256>, <xref:System.Security.Cryptography.HMACSHA384> e <xref:System.Security.Cryptography.HMACSHA512> (Esses são tecnicamente algoritmos de chave secreta porque representam códigos de autenticação de mensagens que são calculados usando uma função de hash criptográfico combinada com uma chave secreta. Consulte [valores de hash](#hash-values), mais adiante neste artigo.)
 
-## <a name="public-key-encryption"></a>Criptografia de chave pública
+## <a name="public-key-encryption"></a>Public-Key criptografia
 
 A criptografia de chave pública usa uma chave privada que deve ser mantida em segredo de usuários não autorizados e uma chave pública que pode ser tornada pública para qualquer pessoa. A chave pública e a chave privada são matematicamente vinculadas; os dados criptografados com a chave pública só podem ser descriptografados com a chave privada, e os dados assinados com a chave privada podem ser verificados somente com a chave pública. A chave pública pode ser disponibilizada para qualquer pessoa; Ele é usado para criptografar dados a serem enviados para o protetor da chave privada. Os algoritmos de criptografia de chave pública também são conhecidos como algoritmos assimétricos porque uma chave é necessária para criptografar dados e outra chave é necessária para descriptografar dados. Uma regra básica de criptografia proíbe a reutilização de chave e ambas as chaves devem ser exclusivas para cada sessão de comunicação. No entanto, na prática, as chaves assimétricas geralmente são de longa duração.
 
@@ -123,7 +123,7 @@ O .NET fornece as seguintes classes que implementam algoritmos de chave pública
 
 - <xref:System.Security.Cryptography.DSA>
 
-A RSA permite criptografia e assinatura, mas o DSA pode ser usado apenas para assinatura. O DSA não é tão seguro quanto o RSA, e recomendamos a RSA. O Diffie-Hellman pode ser usado somente para geração de chave. Em geral, os algoritmos de chave pública são mais limitados em seus usos que os algoritmos de chave privada.
+A RSA permite criptografia e assinatura, mas o DSA pode ser usado apenas para assinatura. O DSA não é tão seguro quanto o RSA, e recomendamos a RSA. Diffie-Hellman pode ser usado somente para geração de chave. Em geral, os algoritmos de chave pública são mais limitados em seus usos que os algoritmos de chave privada.
 
 ## <a name="digital-signatures"></a>Assinaturas digitais
 
@@ -178,13 +178,13 @@ O .NET também fornece <xref:System.Security.Cryptography.MD5> e <xref:System.Se
 
 ## <a name="random-number-generation"></a>Geração de números aleatórios
 
-A geração de números aleatórios é integral para muitas operações criptográficas. Por exemplo, as chaves de criptografia precisam ser o mais aleatório possível para que seja impraticável reproduzi-las. Os geradores de número aleatório criptográfico devem gerar uma saída que seja computacionalmente inviável para prever com uma probabilidade melhor do que uma metade. Portanto, qualquer método de previsão do próximo bit de saída não deve funcionar melhor do que a adivinhação aleatória. As classes no .NET Framework usam geradores de números aleatórios para gerar chaves criptográficas.
+A geração de números aleatórios é integral para muitas operações criptográficas. Por exemplo, as chaves de criptografia precisam ser o mais aleatório possível para que seja impraticável reproduzi-las. Os geradores de número aleatório criptográfico devem gerar uma saída que seja computacionalmente inviável para prever com uma probabilidade melhor do que uma metade. Portanto, qualquer método de previsão do próximo bit de saída não deve funcionar melhor do que a adivinhação aleatória. As classes no .NET usam geradores de números aleatórios para gerar chaves criptográficas.
 
 A <xref:System.Security.Cryptography.RandomNumberGenerator> classe é uma implementação de um algoritmo gerador de números aleatórios.
 
 ## <a name="clickonce-manifests"></a>Manifestos ClickOnce
 
-No .NET Framework 3,5, as seguintes classes de criptografia permitem obter e verificar informações sobre assinaturas de manifesto para aplicativos que são implantados usando a [tecnologia ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment):
+As classes de criptografia a seguir permitem obter e verificar as informações sobre assinaturas de manifesto para aplicativos que são implantados usando a [tecnologia ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment):
 
 - A <xref:System.Security.Cryptography.ManifestSignatureInformation> classe obtém informações sobre uma assinatura de manifesto quando você usa suas <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> sobrecargas de método.
 
@@ -192,7 +192,7 @@ No .NET Framework 3,5, as seguintes classes de criptografia permitem obter e ver
 
 - A <xref:System.Security.Cryptography.ManifestSignatureInformationCollection> classe fornece uma coleção somente leitura de <xref:System.Security.Cryptography.ManifestSignatureInformation> objetos das assinaturas verificadas.
 
- Além disso, as seguintes classes fornecem informações de assinatura específicas:
+Além disso, as seguintes classes fornecem informações de assinatura específicas:
 
 - <xref:System.Security.Cryptography.StrongNameSignatureInformation> contém as informações de assinatura de nome forte para um manifesto.
 
@@ -204,11 +204,11 @@ No .NET Framework 3,5, as seguintes classes de criptografia permitem obter e ver
 
 ## <a name="cryptography-next-generation-cng-classes"></a>Classes CNG (Cryptography Next Generation)
 
-No .NET Framework 3,5 e versões posteriores, as classes CNG (Cryptography Next Generation) fornecem um wrapper gerenciado em relação às funções CNG nativas. (CNG é a substituição para CryptoAPI.) Essas classes têm "CNG" como parte de seus nomes. Central para as classes de wrapper CNG é a <xref:System.Security.Cryptography.CngKey> classe de contêiner de chave, que abstrai o armazenamento e o uso de chaves CNG. Essa classe permite que você armazene um par de chaves ou uma chave pública com segurança e faça referência a ela usando um nome de cadeia de caracteres simples. A classe de assinatura baseada em curva elíptica <xref:System.Security.Cryptography.ECDsaCng> e a <xref:System.Security.Cryptography.ECDiffieHellmanCng> classe de criptografia podem usar <xref:System.Security.Cryptography.CngKey> objetos.
+As classes CNG (Cryptography Next Generation) fornecem um wrapper gerenciado em relação às funções CNG nativas. (CNG é a substituição para CryptoAPI.) Essas classes têm "CNG" como parte de seus nomes. Central para as classes de wrapper CNG é a <xref:System.Security.Cryptography.CngKey> classe de contêiner de chave, que abstrai o armazenamento e o uso de chaves CNG. Essa classe permite que você armazene um par de chaves ou uma chave pública com segurança e faça referência a ela usando um nome de cadeia de caracteres simples. A classe de assinatura baseada em curva elíptica <xref:System.Security.Cryptography.ECDsaCng> e a <xref:System.Security.Cryptography.ECDiffieHellmanCng> classe de criptografia podem usar <xref:System.Security.Cryptography.CngKey> objetos.
 
 A <xref:System.Security.Cryptography.CngKey> classe é usada para uma variedade de operações adicionais, incluindo abrir, criar, excluir e exportar chaves. Ele também fornece acesso ao identificador de chave subjacente a ser usado ao chamar funções nativas diretamente.
 
-O .NET Framework 3,5 também inclui uma variedade de classes CNG com suporte, como as seguintes:
+O .NET também inclui uma variedade de classes CNG com suporte, como as seguintes:
 
 - <xref:System.Security.Cryptography.CngProvider> mantém um provedor de armazenamento de chaves.
 
@@ -216,7 +216,7 @@ O .NET Framework 3,5 também inclui uma variedade de classes CNG com suporte, co
 
 - <xref:System.Security.Cryptography.CngProperty> mantém as propriedades de chave usadas com frequência.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Modelo de criptografia](cryptography-model.md) – descreve como a criptografia é implementada na biblioteca de classes base.
 - [Criptografia de plataforma cruzada](cross-platform-cryptography.md)

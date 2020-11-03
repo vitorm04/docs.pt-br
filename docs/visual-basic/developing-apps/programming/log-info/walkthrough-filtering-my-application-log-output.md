@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: aa63e7d23641ad71b135f15236e29399a535784f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e77a56b2be33555bc02157c8e643ac655b083bc3
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398247"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282204"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Instruções passo a passo: filtrando a saída de My.Application.Log (Visual Basic)
 
@@ -76,13 +76,13 @@ Esta tabela explica a saída de log mostrada no exemplo anterior: com a configur
 
 1. Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e selecione **Abrir**.
 
-     -ou-
+     - ou -
 
      Se não houver nenhum arquivo app.config:
 
-    1. No menu **Projeto**, escolha **Adicionar Novo Item**.
+    1. No menu **Projeto** , escolha **Adicionar Novo Item**.
 
-    2. Na caixa de diálogo **Adicionar novo item**, escolha **Arquivo de configuração de aplicativo**.
+    2. Na caixa de diálogo **Adicionar novo item** , escolha **Arquivo de configuração de aplicativo**.
 
     3. Clique em **Adicionar**.
 
@@ -138,7 +138,7 @@ Esta tabela explica a saída de log mostrada no exemplo anterior: com a configur
 9. Altere o valor do atributo `value` de volta para "Information".
 
     > [!NOTE]
-    > A configuração da opção `DefaultSwitch` controla apenas `My.Application.Log`. Ele não altera como as classes <xref:System.Diagnostics.Trace?displayProperty=nameWithType> e <xref:System.Diagnostics.Debug?displayProperty=nameWithType> do .NET Framework se comportam.
+    > A configuração da opção `DefaultSwitch` controla apenas `My.Application.Log`. Ele não altera a forma como o .NET <xref:System.Diagnostics.Trace?displayProperty=nameWithType> e as <xref:System.Diagnostics.Debug?displayProperty=nameWithType> classes se comportam.
 
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Filtragem individual de ouvintes de My.Application.Log
 
@@ -156,9 +156,9 @@ Este exemplo demonstra como configurar a filtragem para um novo ouvinte de depur
 
      Se não houver nenhum arquivo app.config:
 
-    1. No menu **Projeto**, escolha **Adicionar Novo Item**.
+    1. No menu **Projeto** , escolha **Adicionar Novo Item**.
 
-    2. Na caixa de diálogo **Adicionar novo item**, escolha **Arquivo de configuração de aplicativo**.
+    2. Na caixa de diálogo **Adicionar novo item** , escolha **Arquivo de configuração de aplicativo**.
 
     3. Clique em **Adicionar**.
 
@@ -251,7 +251,7 @@ Este exemplo demonstra como configurar a filtragem para um novo ouvinte de depur
 
 Para obter mais informações sobre como alterar as configurações de log após a implantação, consulte [Trabalhando com logs de aplicativo](working-with-application-logs.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Passo a passo: determinar o local no qual My.Application.Log grava informações](walkthrough-determining-where-my-application-log-writes-information.md)
 - [Passo a passo: alterar o local no qual My.Application.Log grava informações](walkthrough-changing-where-my-application-log-writes-information.md)

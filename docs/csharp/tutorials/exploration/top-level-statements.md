@@ -2,12 +2,12 @@
 title: Instruções de nível superior – tutorial em C#
 description: Este tutorial mostra como você pode usar as instruções de nível superior para testar e provar os conceitos enquanto explora suas ideias
 ms.date: 10/28/2020
-ms.openlocfilehash: 210fbd83bf4677061cab303089d0b27f1a4a7d01
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 5e5dc6cec382baa69ac8cb4625684315bb2cd5e0
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189386"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282258"
 ---
 # <a name="tutorial-explore-ideas-using-top-level-statements-to-build-code-as-you-learn"></a>Tutorial: explorar ideias usando instruções de nível superior para criar código conforme você aprende
 
@@ -210,7 +210,7 @@ As instruções de nível superior só podem estar em um arquivo, e esse arquivo
 
 Por fim, você pode limpar o código de animação para remover alguma duplicação:
 
-:::code language="csharp" source="snippets/top-level-statements/Utiliities.cs" ID="Animation":::
+:::code language="csharp" source="snippets/top-level-statements/Utilities.cs" ID="Animation":::
 
 Agora você tem um aplicativo completo e refatorou as partes reutilizáveis para uso posterior.
 

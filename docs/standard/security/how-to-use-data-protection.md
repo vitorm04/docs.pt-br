@@ -17,12 +17,12 @@ helpviewer_keywords:
 - decryption
 - data [.NET], encryption
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
-ms.openlocfilehash: 263a07ddf357734e819fffdd41cdff60657adf15
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: d3fe7ef3ddbc6e75a248101829b11a8abcb3c15a
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557054"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282049"
 ---
 # <a name="how-to-use-data-protection"></a>Como: usar a proteção de dados
 
@@ -35,7 +35,7 @@ O .NET fornece acesso à DPAPI (API de proteção de dados), que permite que voc
   
 Use a <xref:System.Security.Cryptography.ProtectedData> classe para criptografar uma cópia de uma matriz de bytes. Essa funcionalidade está disponível em .NET Framework, .NET Core e .NET 5.  Você pode especificar que os dados criptografados pela conta de usuário atual possam ser descriptografados somente pela mesma conta de usuário ou pode especificar que os dados criptografados pela conta de usuário atual possam ser descriptografados por qualquer conta no computador.  Consulte a <xref:System.Security.Cryptography.DataProtectionScope> enumeração para obter uma descrição detalhada das <xref:System.Security.Cryptography.ProtectedData> opções.  
   
-### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>Para criptografar dados para um arquivo ou fluxo usando a proteção de dados  
+## <a name="encrypt-data-to-a-file-or-stream-using-data-protection"></a>Criptografar dados para um arquivo ou fluxo usando a proteção de dados  
   
 1. Criar entropia aleatória.  
   
@@ -64,7 +64,7 @@ Este exemplo compila e executa somente ao direcionar .NET Framework e em execuç
   
 - Inclua o <xref:System> namespace,, <xref:System.IO> <xref:System.Security.Cryptography> e <xref:System.Text> .  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Modelo de criptografia](cryptography-model.md)
 - [Serviços criptográficos](cryptographic-services.md)

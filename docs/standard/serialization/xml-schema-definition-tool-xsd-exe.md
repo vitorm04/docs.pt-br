@@ -3,21 +3,21 @@ title: Ferramenta de Definição de Esquema XML (Xsd.exe)
 description: O gerador de serializador XML cria um assembly de serialização XML para tipos em um assembly especificado, o que melhora o desempenho de inicialização do XmlSerializer.
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 0275ecfebd427feb104013024654d4a0bc98748a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c8ae3e05f2d775cbc4c44ce27e7474d1fcfc06a3
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84288973"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281751"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Ferramenta de Definição de Esquema XML (Xsd.exe)
 
 A Ferramenta de Definição de Esquema XML (Xsd.exe) gera um esquema XML ou classes de common language runtime de arquivos XDR, XML e XSD files, ou de classes em um assembly de tempo de execução.
 
-A ferramenta de definição de esquema XML (XSD. exe) geralmente pode ser encontrada no seguinte caminho: \
+A ferramenta de definição de esquema XML (Xsd.exe) geralmente pode ser encontrada no seguinte caminho: \
 _C: \\ arquivos de programas (x86) \\ Microsoft SDKs \\ Windows \\ {version} \\ Bint \\ {version} ferramentas\\_
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 Execute a ferramenta na linha de comando.
 
@@ -32,7 +32,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 ```
   
 > [!TIP]
-> Para que as ferramentas de .NET Framework funcionem corretamente, você deve definir as `Path` `Include` variáveis de ambiente, e `Lib` corretamente. Defina essas variáveis de ambiente executando SDKVars. bat, que está localizado no \<SDK> diretório \v2.0\Bin. SDKVars.bat deve ser executado em todo shell de comando.
+> Para que as ferramentas de .NET Framework funcionem corretamente, você deve definir as `Path` `Include` variáveis de ambiente, e `Lib` corretamente. Defina essas variáveis de ambiente executando SDKVars.bat, que está localizado no \<SDK> \\ \<version> diretório \bin. SDKVars.bat deve ser executado em todo shell de comando.
 
 ## <a name="argument"></a>Argumento
 
@@ -47,7 +47,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |**/h \[\]**|Exibe sintaxe de comando e opções para a ferramenta.|
 |**/o \[ utputdir \] :**_diretório_|Especifica o diretório para arquivos de saída. Esse argumento pode aparecer somente uma vez. O padrão é o diretório atual.|
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|
-|**/p \[ arameters \] :**_File. xml_|As opções de leitura para vários modos de operação do arquivo .xml especificado. A forma curta é `/p:`. Para obter mais informações, consulte a seção [comentários](#remarks) .|
+|**/p \[ arameters \] :** _file.xml_|As opções de leitura para vários modos de operação do arquivo .xml especificado. A forma curta é `/p:`. Para obter mais informações, consulte a seção [comentários](#remarks) .|
 
 ## <a name="xsd-file-options"></a>Opções de arquivo XSD
  Você deve especificar somente uma das seguintes opções para arquivos .xsd.
@@ -105,7 +105,7 @@ Ao usar a opção `/parameters`, você pode especificar um único arquivo XML qu
 </xsd>
 ```
 
-Se o XML anterior estiver contido em um arquivo chamado GenerateSchemas. xml, use a `/parameters` opção digitando o seguinte em um prompt de comando e pressionando **Enter**:
+Se o XML anterior estiver contido em um arquivo chamado GenerateSchemas.xml, use a `/parameters` opção digitando o seguinte em um prompt de comando e pressionando **Enter** :
 
 ```console
  xsd /p:GenerateSchemas.xml
@@ -122,7 +122,7 @@ Por outro lado, se você estiver gerando um esquema para um único tipo localiza
 </xsd>
 ```
 
-Mas para usar o código precedente, você também deverá fornecer o nome do assembly no prompt de comando. Insira o seguinte em um prompt de comando (supondo que o arquivo XML é denominado GenerateSchemaFromType. xml):
+Mas para usar o código precedente, você também deverá fornecer o nome do assembly no prompt de comando. Insira o seguinte em um prompt de comando (supondo que o arquivo XML é denominado GenerateSchemaFromType.xml):
 
 ```console
 xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
@@ -229,7 +229,7 @@ O comando a seguir gera esquemas XML para todos os tipos no assembly `myAssembly
 xsd myAssembly.dll
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Data.DataSet>
 - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>

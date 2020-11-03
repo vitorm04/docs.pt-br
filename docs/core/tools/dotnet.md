@@ -2,18 +2,18 @@
 title: Comando dotnet
 description: Saiba mais sobre o comando dotNet (o Driver genérico para o CLI do .NET Core) e seu uso.
 ms.date: 02/13/2020
-ms.openlocfilehash: 4476dcf36455e0dc1b89712409818cf7e0352f2c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e182e1b8dff725c479297f7f1587ceaccf2942f
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537659"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281617"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nome
 
 `dotnet` -O Driver genérico para o CLI do .NET Core.
 
@@ -48,7 +48,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 `--roll-forward` está disponível desde o .NET Core 3. x. Use o `--roll-forward-on-no-candidate-fx` para .NET Core 2. x.
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 O `dotnet` comando tem duas funções:
 
@@ -262,7 +262,7 @@ dotnet myapp.dll
 
   Especifica o local dos tempos de execução do .NET Core, se eles não estiverem instalados no local padrão. O local padrão no Windows é `C:\Program Files\dotnet` . O local padrão no Linux e no macOS é `/usr/share/dotnet` . Essa variável de ambiente é usada somente ao executar aplicativos por meio de executáveis gerados (apphosts). `DOTNET_ROOT(x86)` é usado em vez disso, ao executar um executável de 32 bits em um sistema operacional de 64 bits.
 
-- `DOTNET_PACKAGES`
+- `NUGET_PACKAGES`
 
   A pasta de pacotes globais. Se não estiver definido, o padrão será `~/.nuget/packages` em Unix ou `%userprofile%\.nuget\packages` no Windows.
 
@@ -342,7 +342,7 @@ dotnet myapp.dll
 
   A maneira típica de obter informações detalhadas de rastreamento sobre a inicialização do aplicativo é definir `COREHOST_TRACE=1` e `COREHOST_TRACEFILE=host_trace.txt` , em seguida, executar o aplicativo. Um novo arquivo `host_trace.txt` será criado no diretório atual com as informações detalhadas.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Arquivos de configuração de runtime](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
 - [Definições de configuração de tempo de execução do .NET Core](../run-time-config/index.md)
