@@ -7,22 +7,23 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- threading [.NET Framework], design guidelines
-- threading [.NET Framework], best practices
+- threading [.NET], design guidelines
+- threading [.NET], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: 8d5c37bf2ed80e9b6ea071fcd2080c43be8f6247
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 88e1f34388cd58fef59bc4005bcaf630c59a661e
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546361"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188998"
 ---
 # <a name="managed-threading-best-practices"></a>Práticas recomendadas de threading gerenciado
+
 O multithreading requer programação cuidadosa. Para a maioria das tarefas, você pode reduzir a complexidade ao enfileirar solicitações para a execução por parte de threads de pool. Este tópico aborda situações mais difíceis, como coordenar o trabalho de vários threads ou manipular threads que bloqueiam.  
   
 > [!NOTE]
-> A partir do .NET Framework 4, a biblioteca de paralelismo de tarefas e o PLINQ fornecem APIs que reduzem parte da complexidade e os riscos da programação de multithreading. Para saber mais, confira [Programação paralela em .NET](../parallel-programming/index.md).  
+> A partir do .NET Framework 4, a biblioteca paralela de tarefas e o PLINQ fornecem APIs que reduzem parte da complexidade e dos riscos da programação multi-threaded. Para saber mais, confira [Programação paralela em .NET](../parallel-programming/index.md).  
   
 ## <a name="deadlocks-and-race-conditions"></a>Deadlocks e condições de corrida  
  O multithreading resolve problemas com taxa de transferência e capacidade de resposta, mas, ao fazer isso, ele introduz novos problemas: deadlocks e condições de corrida.  
@@ -61,7 +62,7 @@ else {
 ### <a name="race-conditions"></a>Condições de corrida  
  Uma condição de corrida é um bug que ocorre quando o resultado de um programa depende de qual dos dois ou mais threads alcança um determinado bloco de código primeiro. Executar o programa muitas vezes produz resultados diferentes e o resultado de qualquer execução não pode ser previsto.  
   
- Um exemplo simples de uma condição de corrida é incrementar um campo. Suponha que uma classe tem um campo **static** particular (**Shared** no Visual Basic) que é incrementado toda vez que uma instância da classe é criada, usando um código como `objCt++;` (C#) ou `objCt += 1` (Visual Basic). Esta operação requer o carregamento do valor de `objCt` em um registro, incrementando o valor e o armazenando em `objCt`.  
+ Um exemplo simples de uma condição de corrida é incrementar um campo. Suponha que uma classe tem um campo **static** particular ( **Shared** no Visual Basic) que é incrementado toda vez que uma instância da classe é criada, usando um código como `objCt++;` (C#) ou `objCt += 1` (Visual Basic). Esta operação requer o carregamento do valor de `objCt` em um registro, incrementando o valor e o armazenando em `objCt`.  
   
  Em um aplicativo com multithreading, um thread que carregou e incrementou o valor pode ser impedido por outro thread que execute todas as três etapas; quando o primeiro thread retomar a execução e armazenar seu valor, ele substituirá `objCt` sem levar em conta o fato de que o valor foi alterado durante o processo.  
   
@@ -95,7 +96,7 @@ Use a <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> prop
   
 - Tenha cuidado ao bloquear em instâncias, por exemplo `lock(this)` em C# ou `SyncLock(Me)` no Visual Basic. Se outro código no seu aplicativo, externo ao tipo, assumir um bloqueio no objeto, podem ocorrer deadlocks.  
   
-- Certifique-se de que um thread que tenha entrado em um monitor sempre o deixe, mesmo que uma exceção ocorra enquanto o thread estiver no monitor. A instrução [lock](../../csharp/language-reference/keywords/lock-statement.md) do C# e a instrução [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) do Visual Basic oferece esse comportamento automaticamente, empregando um bloco **finally** para garantir que <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> seja chamado. Se você não puder garantir que **Exit** seja chamado, considere alterar o design para usar **Mutex**. Um mutex é liberado automaticamente quando o thread que o possui atualmente for encerrado.  
+- Certifique-se de que um thread que tenha entrado em um monitor sempre o deixe, mesmo que uma exceção ocorra enquanto o thread estiver no monitor. A instrução [lock](../../csharp/language-reference/keywords/lock-statement.md) do C# e a instrução [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) do Visual Basic oferece esse comportamento automaticamente, empregando um bloco **finally** para garantir que <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> seja chamado. Se você não puder garantir que **Exit** seja chamado, considere alterar o design para usar **Mutex** . Um mutex é liberado automaticamente quando o thread que o possui atualmente for encerrado.  
   
 - Usar vários threads para tarefas que exigem recursos diferentes e evite atribuir vários threads para um único recurso. Por exemplo, qualquer tarefa que envolva E/S se beneficia em ter seu próprio thread, porque esse thread bloqueará durante as operações de E/S e, assim, permitirá que outros threads sejam executados. A entrada do usuário é outro recurso que se beneficia com um thread dedicado. Em um computador de um processador, uma tarefa que envolve a computação intensiva coexiste com a entrada do usuário e com tarefas que envolvem E/S, mas várias tarefas competem umas com as outras.  
   
@@ -125,7 +126,7 @@ Use a <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> prop
     ```  
   
     > [!NOTE]
-    > No .NET Framework 2.0 e posteriores, use o método <xref:System.Threading.Interlocked.Add%2A> para incrementos atômicos maiores do que 1.  
+    > Use o <xref:System.Threading.Interlocked.Add%2A> método para incrementos atômicos maiores que 1.  
   
      No segundo exemplo, uma variável de tipo de referência é atualizada somente se ela for uma referência nula (`Nothing` no Visual Basic).  
   
@@ -160,7 +161,7 @@ Use a <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> prop
     ```  
   
     > [!NOTE]
-    > Começando com o .NET Framework 2.0, a sobrecarga do método <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> fornece uma alternativa fortemente tipada para tipos de referência.
+    > A <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> sobrecarga do método fornece uma alternativa de tipo seguro para tipos de referência.
   
 ## <a name="recommendations-for-class-libraries"></a>Recomendações para bibliotecas de classes  
  Considere as seguintes diretrizes ao criar bibliotecas de classes para multithreading:  
@@ -169,7 +170,7 @@ Use a <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> prop
   
 - Torne os dados estáticos (`Shared` no Visual Basic) thread-safe por padrão.  
   
-- Não torne dados de instância thread-safe por padrão. Adicionar bloqueios para criar códigos de thread-safe reduz o desempenho, aumenta a contenção de bloqueios e cria a possibilidade de deadlocks. Em modelos de aplicativo comuns, somente um thread por vez executa código do usuário, o que minimiza a necessidade de acesso thread-safe. Por esse motivo, as bibliotecas de classes do .NET Framework não são thread-safe por padrão.  
+- Não torne dados de instância thread-safe por padrão. Adicionar bloqueios para criar códigos de thread-safe reduz o desempenho, aumenta a contenção de bloqueios e cria a possibilidade de deadlocks. Em modelos de aplicativo comuns, somente um thread por vez executa código do usuário, o que minimiza a necessidade de acesso thread-safe. Por esse motivo, as bibliotecas de classes do .NET não são thread-safe por padrão.  
   
 - Evite fornecer métodos estáticos que alteram o estado estático. Em cenários de servidor comuns, o estado estático é compartilhado entre as solicitações, que significa que vários threads podem executar esse código ao mesmo tempo. Isso abre a possibilidade de bugs de threading. Considere usar um padrão de design que encapsule dados em instâncias que não sejam compartilhadas entre solicitações. Além disso, se os dados estáticos forem sincronizados, chamadas entre os métodos estáticos que alteram o estado podem resultar em deadlocks ou em sincronização redundante, afetando negativamente o desempenho.  
   

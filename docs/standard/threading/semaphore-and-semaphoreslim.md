@@ -6,19 +6,20 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - counting semaphores
 - semaphores
-- threading [.NET Framework], cross-process synchronization
+- threading [.NET], cross-process synchronization
 - Semaphore class, about Semaphore class
 - SemaphoreSlim class, about SemaphoreSlim class
-- threading [.NET Framework], Semaphore class
+- threading [.NET], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-ms.openlocfilehash: 21f0d7e3fb446a7b750c45cfe8ef3f087a77888a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b9c13ace086b4df08108a844aea78e5d550e6958
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600445"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188933"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore e SemaphoreSlim
+
 A classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> representa um sinal com nome (em todo o sistema) ou local. É um wrapper fino em torno do objeto de sinal Win32. Sinais do Win32 são contagem de sinais que podem ser usadas para controlar o acesso a um pool de recursos.  
   
  A classe <xref:System.Threading.SemaphoreSlim> representa um sinal leve e rápido que pode ser usado para aguardar por um único processo quando forem esperados tempos de espera muito curtos. <xref:System.Threading.SemaphoreSlim> conta com o máximo possível em primitivos de sincronização fornecidos pelo Common Language Runtime (CLR). No entanto, fornece também identificadores de espera baseados no kernel inicializados lentamente, conforme necessário para dar suporte à espera de vários sinais. <xref:System.Threading.SemaphoreSlim> oferece suporte também ao uso de tokens de cancelamento, mas não oferece suporte a sinais com nome ou ao uso de um identificador de espera para sincronização.  
@@ -45,8 +46,8 @@ A classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> represen
   
  Use a segurança de controle de acesso para proteger um objeto <xref:System.Threading.Semaphore> que representa um sinal com nome, preferencialmente usando um construtor que especifica um objeto <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType>. Também é possível aplicar a segurança de controle de acesso usando o método <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType>, mas isso deixa uma janela de vulnerabilidade entre o momento em que o sinal é criado e o momento em que ele é protegido. Proteger sinais com a segurança de controle de acesso ajuda a impedir ataques mal-intencionados, mas não resolve o problema de colisão de nome não intencional.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.Semaphore>
 - <xref:System.Threading.SemaphoreSlim>
-- [Objetos e recursos de Threading](threading-objects-and-features.md)
+- [Threading de objetos e recursos](threading-objects-and-features.md)

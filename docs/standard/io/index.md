@@ -7,20 +7,20 @@ helpviewer_keywords:
 - IO namespace
 - files, I/O
 - System.IO namespace
-- I/O [.NET Framework]
+- I/O [.NET]
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-ms.openlocfilehash: 2f7da6bd967abce8c2fefdc54a0043b5505e22e3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: aced59995c8d0f478d0565c8fb8faa4f40c32968
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558934"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189193"
 ---
 # <a name="file-and-stream-io"></a>E/S de arquivo e de fluxo
 
-E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados de ou para uma mídia de armazenamento. No .NET Framework, os namespaces `System.IO` contêm tipos que permitem a leitura e a gravação, de forma síncrona e assíncrona, em fluxos de dados e arquivos. Esses namespaces também contêm tipos que executam compactação e descompactação em arquivos e tipos que possibilitam a comunicação por meio de pipes e portas seriais.
+E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados de ou para uma mídia de armazenamento. No .NET, os `System.IO` namespaces contêm tipos que permitem leitura e gravação, de forma síncrona e assíncrona, em arquivos e fluxos de dados. Esses namespaces também contêm tipos que executam compactação e descompactação em arquivos e tipos que possibilitam a comunicação por meio de pipes e portas seriais.
 
 Um arquivo é uma coleção ordenada e nomeada de bytes com armazenamento persistente. Ao trabalhar com arquivos, você trabalha com caminhos de diretórios, armazenamento em disco e nomes de arquivos e diretórios. Por outro lado, um fluxo é uma sequência de bytes que você pode usar para ler e gravar em um repositório, o qual pode ser uma entre vários tipos de mídia de armazenamento (por exemplo, discos ou memória). Assim como há vários repositórios diferentes de discos, há vários tipos diferentes de fluxos diferentes de fluxos de arquivos, como os fluxos de rede, memória e pipes.
 
@@ -28,7 +28,7 @@ Um arquivo é uma coleção ordenada e nomeada de bytes com armazenamento persis
 
 Você pode usar os tipos no namespace <xref:System.IO?displayProperty=nameWithType> para interagir com arquivos e diretórios. Por exemplo, você pode obter e definir propriedades para arquivos e diretórios e recuperar coleções de arquivos e diretórios com base em critérios de pesquisa.
 
-Para convenções de nomenclatura de caminhos e os modos de expressar um caminho de arquivo para sistemas Windows, incluindo a sintaxe de dispositivo DOS compatível com o .NET Core 1.1 e posterior e o .NET Framework 4.6.2 e posterior, veja [Formatos de caminho de arquivo em sistemas Windows](file-path-formats.md).
+Para obter as convenções de nomenclatura de caminho e as maneiras de expressar um caminho de arquivo para sistemas Windows, incluindo com a sintaxe de dispositivo DOS com suporte no .NET Core 1,1 e posterior e .NET Framework 4.6.2 e posterior, consulte [formatos de caminho de arquivo em sistemas Windows](file-path-formats.md).
 
 Aqui estão algumas classes de arquivos e diretórios comumente usadas:
 
@@ -142,7 +142,7 @@ Confira [Armazenamentos isolado](isolated-storage.md).
 
 ## <a name="io-operations-in-windows-store-apps"></a>Operações de E/S em aplicativos da Windows Store
 
-O .NET para aplicativos da loja do Windows 8. x contém muitos dos tipos de leitura e gravação em fluxos; no entanto, esse conjunto não inclui todos os tipos de e/s de .NET Framework.
+O .NET para aplicativos da loja do Windows 8. x contém muitos dos tipos de leitura e gravação em fluxos; no entanto, esse conjunto não inclui todos os tipos de e/s do .NET.
 
 Algumas diferenças importantes a serem observadas ao usar operações de e/s em aplicativos da loja do Windows 8. x:
 
@@ -162,7 +162,7 @@ Para obter mais informações sobre operações de e/s em um aplicativo da loja 
 
 Ao usar as classes no namespace <xref:System.IO?displayProperty=nameWithType>, você deve atender aos requisitos de segurança do sistema operacional, como ACLs (listas de controle de acesso) para controlar o acesso a arquivos e diretórios. Esse é um requisito adicional aos requisitos de <xref:System.Security.Permissions.FileIOPermission>. As ACLs podem ser gerenciadas por meio de programação. Para saber mais, confira [Como adicionar ou remover entradas da lista de controle de acesso](how-to-add-or-remove-access-control-list-entries.md).
 
-As políticas de segurança padrão impedem que aplicativos da Internet ou intranet acessem arquivos no computador do usuário. Consequentemente, não use classes de E/S que exijam um caminho para um arquivo físico ao escrever código que será baixado via Internet ou intranet. Em vez disso, use o [armazenamento isolado](isolated-storage.md) para aplicativos .NET Framework tradicionais ou use [dados de aplicativos](/previous-versions/windows/apps/hh464917(v=win.10)) para aplicativos da loja do Windows 8. x.
+As políticas de segurança padrão impedem que aplicativos de Internet ou intranet acessem arquivos no computador do usuário. Portanto, não use as classes de e/s que exigem um caminho para um arquivo físico ao escrever código que será baixado pela Internet ou intranet. Em vez disso, use o [armazenamento isolado](isolated-storage.md) para aplicativos .net.
 
 Uma verificação de segurança é executada somente quando o fluxo é construído. Consequentemente, não abra um fluxo para depois passá-lo para código ou domínios de aplicativos menos confiáveis.
 
@@ -178,7 +178,7 @@ Descreve as vantagens de desempenho e a operação básica da E/S assíncrona.
 Descreve um mecanismo de armazenamento isolado que fornece isolamento e segurança ao definir maneiras padronizadas de associar códigos aos dados salvos.
 
 - [Especificadas](pipe-operations.md)\
-Descreve operações de pipes anônimos e nomeados no .NET Framework.
+Descreve as operações de Pipes anônimos e nomeados no .NET.
 
 - [Arquivos mapeados para memória](memory-mapped-files.md)\
 Descreve arquivos mapeados na memória, os quais armazenam o conteúdo de arquivos do disco na memória virtual. Você pode usar arquivos mapeados na memória para editar arquivos muito grandes e para criar memória compartilhada para a comunicação entre processos.

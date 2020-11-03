@@ -10,17 +10,18 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: 74d821aff8308618f7c0efeb1b453db8214b877e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e6f9a760d7673eecf161b1d84d890cc14d09235e
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555940"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189011"
 ---
 # <a name="memory-mapped-files"></a>Arquivos mapeados na memória
-Um arquivo mapeado pela memória tem o conteúdo de um arquivo em memória virtual. Esse mapeamento entre um espaço de arquivo e a memória permite que um aplicativo, inclusive vários processos, modifique o arquivo ao ler e gravar diretamente na memória. A partir do .NET Framework 4, é possível usar o código gerenciado para acessar arquivos mapeados na memória da mesma maneira que funções nativas do Windows acessam arquivos mapeados na memória, conforme descrito em [Gerenciamento de arquivos mapeados na memória](/previous-versions/ms810613(v=msdn.10)).  
+
+Um arquivo mapeado pela memória tem o conteúdo de um arquivo em memória virtual. Esse mapeamento entre um espaço de arquivo e a memória permite que um aplicativo, inclusive vários processos, modifique o arquivo ao ler e gravar diretamente na memória. Você pode usar código gerenciado para acessar arquivos mapeados na memória da mesma maneira que as funções nativas do Windows acessam arquivos mapeados por memória, conforme descrito em [gerenciando Memory-Mapped arquivos](/previous-versions/ms810613(v=msdn.10)).  
   
- Há dois tipos de arquivos mapeados na memória:  
+Há dois tipos de arquivos mapeados na memória:  
   
 - Arquivos persistentes mapeados na memória  
   
@@ -35,11 +36,11 @@ Um arquivo mapeado pela memória tem o conteúdo de um arquivo em memória virtu
   
  Para trabalhar com um arquivo mapeado na memória, você deve criar uma exibição de todo o arquivo mapeado na memória ou de parte dele. Também é possível criar vários modos de exibição para a mesma parte do arquivo mapeado na memória, criando assim memórias simultâneas. Para que dois modos de exibição permaneçam simultâneos, precisam ser criados usando o mesmo arquivo de memória mapeada.  
   
- Vários modos de exibição também poderão ser necessários se o arquivo for maior que o tamanho do espaço de memória lógica do aplicativo disponível para o mapeamento de memória (2GB em um computador de 32 bits).  
+ Várias exibições também poderão ser necessárias se o arquivo for maior que o tamanho do espaço de memória lógica do aplicativo disponível para o mapeamento de memória (2 GB em um computador de 32 bits).  
   
  Há dois tipos de modos de exibição: modo de exibição de acesso por fluxo e modo de exibição de acesso aleatório. Use os modos de exibição de acesso por fluxo para acessos sequenciais a um arquivo. Isso é recomendado para arquivos não persistentes e IPCs. A preferência é para os modos de exibição de acessos aleatórios para trabalhos com arquivos persistentes.  
   
- Os arquivos mapeados na memória são acessados pelo gerenciador de memória do sistema operacional, então o arquivo é automaticamente particionado em um número de páginas e acessado conforme a necessidade. Não é preciso lidar com o gerenciamento de memória por conta própria.  
+ Os arquivos mapeados por memória são acessados por meio do Gerenciador de memória do sistema operacional, portanto, o arquivo é particionado automaticamente em várias páginas e acessado conforme necessário. Não é preciso lidar com o gerenciamento de memória por conta própria.  
   
  A ilustração a seguir mostra como vários processos podem ter modos de exibição variados e sobrepostos para o mesmo arquivo mapeado na memória ao mesmo tempo.
 

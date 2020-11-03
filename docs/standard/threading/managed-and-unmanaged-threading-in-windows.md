@@ -3,18 +3,18 @@ title: Threading gerenciado e não gerenciado no Windows
 ms.date: 10/24/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], unmanaged
-- threading [.NET Framework], managed
+- threading [.NET], unmanaged
+- threading [.NET], managed
 - threading [.NET], managed
 - threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-ms.openlocfilehash: de823297540d5ce3740a26614dbb9a82881decf3
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 7b2eca1275aba5139bd19662674cd76d95e92fd0
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924377"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189154"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Threading gerenciado e não gerenciado no Windows
 
@@ -52,7 +52,7 @@ Um thread gerenciado pode ser marcado para indicar que ele irá hospedar um [sin
  Se o estado do apartment não for definido antes do início do thread, o thread será iniciado como MTA (multithreaded apartment). O thread finalizador e todos os threads controlados por <xref:System.Threading.ThreadPool> são do tipo MTA.  
   
 > [!IMPORTANT]
-> No caso do código de inicialização do aplicativo, a única forma de controlar o estado do apartment é aplicar <xref:System.MTAThreadAttribute> ou <xref:System.STAThreadAttribute> ao procedimento do ponto de entrada. No .NET Framework 1.0 e 1.1, você pode definir a propriedade <xref:System.Threading.Thread.ApartmentState%2A> como a primeira linha de código. Isso não é permitido no .NET Framework 2.0.  
+> No caso do código de inicialização do aplicativo, a única forma de controlar o estado do apartment é aplicar <xref:System.MTAThreadAttribute> ou <xref:System.STAThreadAttribute> ao procedimento do ponto de entrada.
   
  Os objetos gerenciados que são expostos ao comportamento COM comportam-se como se houvesse um marshaler de thread livre agregado a eles. Em outras palavras, eles podem ser chamados por qualquer apartment COM no modo de threading livre. Os únicos objetos gerenciados que não apresentam esse comportamento são os objetos derivados de <xref:System.EnterpriseServices.ServicedComponent> ou <xref:System.Runtime.InteropServices.StandardOleMarshalObject>.  
   
