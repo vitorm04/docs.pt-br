@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom strings
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 ms.custom: seadec18
-ms.openlocfilehash: 6ec244ab6935f4a92b0f59fa6c1cb8bc45638ce4
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 4ab087435880c6a5357bc161899cd585982622f4
+ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889108"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342599"
 ---
 # <a name="basic-string-operations-in-net"></a>Operações básicas de cadeia de caracteres no .NET
 
@@ -24,7 +24,7 @@ Vários métodos nas classes <xref:System.String?displayProperty=nameWithType> e
 ## <a name="related-sections"></a>Seções relacionadas
 
 [Conversão de tipo no .NET](type-conversion.md)\
-Descreve como converter de um tipo para outro.  
+Descreve como converter de um tipo para outro.
 
 [Tipos de formatação](formatting-types.md)\
 Descreve como formatar cadeias de caracteres usando especificadores de formato.

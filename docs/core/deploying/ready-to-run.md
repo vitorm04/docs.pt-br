@@ -4,12 +4,12 @@ description: Saiba o que são implantações ReadyToRun e por que você deve con
 author: davidwr
 ms.author: davidwr
 ms.date: 09/21/2020
-ms.openlocfilehash: b4052a0c0f4ed9f6cfd273abe5ef45d018bd0ae0
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: cd8eaebd05d79b11e90e255e702a52220fffda76
+ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654956"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342625"
 ---
 # <a name="readytorun-compilation"></a>Compilação ReadyToRun
 
@@ -45,7 +45,7 @@ Há duas maneiras de publicar seu aplicativo como ReadyToRun:
 
 ## <a name="impact-of-using-the-readytorun-feature"></a>Impacto do uso do recurso ReadyToRun
 
-A compilação antecipada tem um impacto complexo no desempenho do aplicativo, o que pode ser difícil de prever. Em geral, o tamanho de um assembly aumentará entre dois a três vezes maior. Esse aumento no tamanho físico do arquivo pode reduzir o desempenho do carregamento do assembly do disco e aumentar o conjunto de trabalho do processo. No entanto, em retorno, o número de métodos compilados no tempo de execução normalmente é reduzido substancialmente. O resultado é que a maioria dos aplicativos que grandes quantidades de código recebem grandes benefícios de desempenho de habilitar o ReadyToRun. Os aplicativos, que têm pequenas quantidades de código, provavelmente não terão uma melhoria significativa da habilitação de ReadyToRun, já que as bibliotecas de tempo de execução do .NET ainda foram pré-compiladas com o ReadyToRun.
+A compilação antecipada tem um impacto complexo no desempenho do aplicativo, o que pode ser difícil de prever. Em geral, o tamanho de um assembly aumentará entre dois a três vezes maior. Esse aumento no tamanho físico do arquivo pode reduzir o desempenho do carregamento do assembly do disco e aumentar o conjunto de trabalho do processo. No entanto, em retorno, o número de métodos compilados no tempo de execução normalmente é reduzido substancialmente. O resultado é que a maioria dos aplicativos que têm grandes quantidades de código recebem grandes benefícios de desempenho ao habilitar o ReadyToRun. Os aplicativos, que têm pequenas quantidades de código, provavelmente não terão uma melhoria significativa da habilitação de ReadyToRun, já que as bibliotecas de tempo de execução do .NET ainda foram pré-compiladas com o ReadyToRun.
 
 A melhoria da inicialização discutida aqui se aplica não apenas à inicialização do aplicativo, mas também ao primeiro uso de qualquer código no aplicativo. Por exemplo, ReadyToRun pode ser usado para reduzir a latência de resposta do primeiro uso da API Web em um aplicativo ASP.NET.
 
