@@ -1,62 +1,130 @@
 ---
 title: Referência de F# Interativo (dotnet)
 description: 'Saiba como F# Interativo (dotNet FSI) é usado para executar o código F # interativamente no console ou para executar scripts em F #.'
-ms.date: 08/20/2020
+ms.date: 10/31/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: b1020d8ab8f2282c792fb5d00656b6d43c2c6610
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 770ac24feababcfc840ae26196ba8b6180d378a0
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064113"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282007"
 ---
-# <a name="interactive-programming-with-f"></a><span data-ttu-id="0b7fe-103">Programação interativa com F\#</span><span class="sxs-lookup"><span data-stu-id="0b7fe-103">Interactive programming with F\#</span></span>
+# <a name="interactive-programming-with-f"></a><span data-ttu-id="cbd16-103">Programação interativa com F\#</span><span class="sxs-lookup"><span data-stu-id="cbd16-103">Interactive programming with F\#</span></span>
 
-<span data-ttu-id="0b7fe-104">F# Interativo (dotNet FSI) é usado para executar o código F # interativamente no console ou para executar scripts em F #.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-104">F# Interactive (dotnet fsi) is used to run F# code interactively at the console, or to execute F# scripts.</span></span> <span data-ttu-id="0b7fe-105">Em outras palavras, o F# interativo executa um REPL (Ler, Avaliar, Imprimir Loop) para a linguagem F#.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-105">In other words, F# interactive executes a REPL (Read, Evaluate, Print Loop) for the F# language.</span></span>
+<span data-ttu-id="cbd16-104">F# Interativo (dotNet FSI) é usado para executar o código F # interativamente no console ou para executar scripts em F #.</span><span class="sxs-lookup"><span data-stu-id="cbd16-104">F# Interactive (dotnet fsi) is used to run F# code interactively at the console, or to execute F# scripts.</span></span> <span data-ttu-id="cbd16-105">Em outras palavras, o F# interativo executa um REPL (Ler, Avaliar, Imprimir Loop) para a linguagem F#.</span><span class="sxs-lookup"><span data-stu-id="cbd16-105">In other words, F# interactive executes a REPL (Read, Evaluate, Print Loop) for the F# language.</span></span>
 
-<span data-ttu-id="0b7fe-106">Para executar o F# Interativo no console do, execute `dotnet fsi` .</span><span class="sxs-lookup"><span data-stu-id="0b7fe-106">To run F# Interactive from the console, run `dotnet fsi`.</span></span> <span data-ttu-id="0b7fe-107">Você encontrará `dotnet fsi` em qualquer SDK do .net.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-107">You will find `dotnet fsi` in any .NET SDK.</span></span>
+<span data-ttu-id="cbd16-106">Para executar o F# Interativo no console do, execute `dotnet fsi` .</span><span class="sxs-lookup"><span data-stu-id="cbd16-106">To run F# Interactive from the console, run `dotnet fsi`.</span></span> <span data-ttu-id="cbd16-107">Você encontrará `dotnet fsi` em qualquer SDK do .net.</span><span class="sxs-lookup"><span data-stu-id="cbd16-107">You will find `dotnet fsi` in any .NET SDK.</span></span>
 
-<span data-ttu-id="0b7fe-108">Para saber mais sobre as opções de linha de comando disponíveis, veja [Opções de F# Interativo](../../language-reference/fsharp-interactive-options.md).</span><span class="sxs-lookup"><span data-stu-id="0b7fe-108">For information about command line options available, see [F# Interactive Options](../../language-reference/fsharp-interactive-options.md).</span></span>
+<span data-ttu-id="cbd16-108">Para saber mais sobre as opções de linha de comando disponíveis, veja [Opções de F# Interativo](../../language-reference/fsharp-interactive-options.md).</span><span class="sxs-lookup"><span data-stu-id="cbd16-108">For information about command line options available, see [F# Interactive Options](../../language-reference/fsharp-interactive-options.md).</span></span>
 
-<span data-ttu-id="0b7fe-109">Para executar o F# Interativo por meio do Visual Studio, você pode clicar no botão de barra de ferramentas apropriado rotulado como **F# Interativo** ou usar as teclas **Ctrl+Alt+F** .</span><span class="sxs-lookup"><span data-stu-id="0b7fe-109">To run F# Interactive through Visual Studio, you can click the appropriate toolbar button labeled **F# Interactive** , or use the keys **Ctrl+Alt+F** .</span></span> <span data-ttu-id="0b7fe-110">Isso abrirá a janela interativa, uma janela da ferramenta que executa uma sessão de F# interativo.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-110">Doing this will open the interactive window, a tool window running an F# Interactive session.</span></span> <span data-ttu-id="0b7fe-111">Você também pode selecionar um código que deseja executar na janela interativa e pressionar a combinação de teclas **ALT + Enter** .</span><span class="sxs-lookup"><span data-stu-id="0b7fe-111">You can also select some code that you want to run in the interactive window and hit the key combination **Alt+Enter** .</span></span> <span data-ttu-id="0b7fe-112">O F# interativo é iniciado em uma janela da ferramenta rotulada como **F# Interativo** .</span><span class="sxs-lookup"><span data-stu-id="0b7fe-112">F# Interactive starts in a tool window labeled **F# Interactive** .</span></span> <span data-ttu-id="0b7fe-113">Quando você usar essa combinação de teclas, certifique-se de que a janela do editor tenha o foco.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-113">When you use this key combination, make sure that the editor window has the focus.</span></span>
+## <a name="executing-code-directly-in-f-interactive"></a><span data-ttu-id="cbd16-109">Executando o código diretamente no F# Interativo</span><span class="sxs-lookup"><span data-stu-id="cbd16-109">Executing code directly in F# Interactive</span></span>
 
-<span data-ttu-id="0b7fe-114">Se você estiver usando o console ou o Visual Studio, será exibido um prompt de comando e o interpretador aguardará a entrada.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-114">Whether you are using the console or Visual Studio, a command prompt appears and the interpreter awaits your input.</span></span> <span data-ttu-id="0b7fe-115">Você pode inserir o código como faria em um arquivo de código.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-115">You can enter code just as you would in a code file.</span></span> <span data-ttu-id="0b7fe-116">Para compilar e executar o código, insira dois sinais de ponto e vírgula ( **;;** ) para terminar uma linha ou várias linhas de entrada.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-116">To compile and execute the code, enter two semicolons ( **;;** ) to terminate a line or several lines of input.</span></span>
+<span data-ttu-id="cbd16-110">Como F# Interativo é uma REPL (loop Read-eval-Print), você pode executar o código interativamente nele.</span><span class="sxs-lookup"><span data-stu-id="cbd16-110">Because F# Interactive is a REPL (read-eval-print loop), you can execute code interactively in it.</span></span> <span data-ttu-id="cbd16-111">Aqui está um exemplo de uma sessão interativa após `dotnet fsi` a execução na linha de comando:</span><span class="sxs-lookup"><span data-stu-id="cbd16-111">Here is an example of an interactive session after executing `dotnet fsi` from the command line:</span></span>
 
-<span data-ttu-id="0b7fe-117">O F# interativo tenta compilar o código e, se tiver êxito, executará o código e imprimirá a assinatura dos tipos e valores que ele compilou.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-117">F# Interactive attempts to compile the code and, if successful, it executes the code and prints the signature of the types and values that it compiled.</span></span> <span data-ttu-id="0b7fe-118">Se ocorrerem erros, o interpretador imprime as mensagens de erro.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-118">If errors occur, the interpreter prints the error messages.</span></span>
+```console
+Microsoft (R) F# Interactive version 11.0.0.0 for F# 5.0
+Copyright (c) Microsoft Corporation. All Rights Reserved.
 
-<span data-ttu-id="0b7fe-119">O código digitado na mesma sessão tem acesso a quaisquer construções inseridas anteriormente, para poder criar os programas.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-119">Code entered in the same session has access to any constructs entered previously, so you can build up programs.</span></span> <span data-ttu-id="0b7fe-120">Um buffer extensivo na janela da ferramenta permite que você copie o código para um arquivo, se necessário.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-120">An extensive buffer in the tool window allows you to copy the code into a file if needed.</span></span>
+For help type #help;;
 
-<span data-ttu-id="0b7fe-121">Quando executado no Visual Studio, o F# interativo é executado independentemente do seu projeto, então, por exemplo, não é possível usar construções definidas em seu projeto em F# interativo, a menos que você copie o código para a função na janela interativa.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-121">When run in Visual Studio, F# Interactive runs independently of your project, so, for example, you cannot use constructs defined in your project in F# Interactive unless you copy the code for the function into the interactive window.</span></span>
+> let square x = x *  x;;
+val square : x:int -> int
 
-<span data-ttu-id="0b7fe-122">Se você tiver um projeto aberto que faça referência a algumas bibliotecas, poderá fazer referência em F# interativo por meio do **Gerenciador de Soluções** .</span><span class="sxs-lookup"><span data-stu-id="0b7fe-122">If you have a project open that references some libraries, you can reference these in F# Interactive through **Solution Explorer** .</span></span> <span data-ttu-id="0b7fe-123">Para fazer referência a uma biblioteca de F# Interativo, expanda o nó **Referências** , abra o menu de atalho da biblioteca e escolha **Enviar para F# Interativo** .</span><span class="sxs-lookup"><span data-stu-id="0b7fe-123">To reference a library in F# Interactive, expand the **References** node, open the shortcut menu for the library, and choose **Send to F# Interactive** .</span></span>
+> square 12;;
+val it : int = 144
 
-<span data-ttu-id="0b7fe-124">Você pode controlar os argumentos de linha de comando do F# interativo (opções) ajustando as configurações.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-124">You can control the F# Interactive command line arguments (options) by adjusting the settings.</span></span> <span data-ttu-id="0b7fe-125">No menu **Ferramentas** , selecione **Opções...** e expanda **Ferramentas do F#** .</span><span class="sxs-lookup"><span data-stu-id="0b7fe-125">On the **Tools** menu, select **Options...** , and then expand **F# Tools** .</span></span> <span data-ttu-id="0b7fe-126">As duas configurações que podem ser alteradas são as opções do F# interativo e a configuração do **F# Interativo de 64 bits** , que é relevante apenas se você estiver executando o F# interativo em uma máquina de 64 bits.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-126">The two settings that you can change are the F# Interactive options and the **64-bit F# Interactive** setting, which is relevant only if you are running F# Interactive on a 64-bit machine.</span></span> <span data-ttu-id="0b7fe-127">Essa configuração determina se você deseja executar a versão de 64 bits dedicada do fsi.exe ou do fsianycpu.exe, que usa a arquitetura de máquina para determinar se deve ser executada como um processo de 32 ou 64 bits.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-127">This setting determines whether you want to run the dedicated 64-bit version of fsi.exe or fsianycpu.exe, which uses the machine architecture to determine whether to run as a 32-bit or 64-bit process.</span></span>
+> printfn "Hello, FSI!"
+- ;;
+Hello, FSI!
+val it : unit = ()
+```
 
-## <a name="scripting-with-f"></a><span data-ttu-id="0b7fe-128">Criando scripts com o F\#</span><span class="sxs-lookup"><span data-stu-id="0b7fe-128">Scripting with F\#</span></span>
+<span data-ttu-id="cbd16-112">Você observará duas coisas principais:</span><span class="sxs-lookup"><span data-stu-id="cbd16-112">You'll notice two main things:</span></span>
 
-<span data-ttu-id="0b7fe-129">Os scripts usam a extensão de arquivo **.fsx** ou **.fsscript** .</span><span class="sxs-lookup"><span data-stu-id="0b7fe-129">Scripts use the file extension **.fsx** or **.fsscript** .</span></span> <span data-ttu-id="0b7fe-130">Em vez de compilar o código-fonte e, posteriormente, executar o assembly compilado, você pode apenas executar **dotnet FSI** e especificar o nome de arquivo do script do código-fonte f # e o f # Interactive lê o código e o executa em tempo real.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-130">Instead of compiling source code and then later running the compiled assembly, you can just run **dotnet fsi** and specify the filename of the script of F# source code, and F# interactive reads the code and executes it in real time.</span></span>
+1. <span data-ttu-id="cbd16-113">Todo o código deve ser encerrado com um ponto-e-vírgula duplo ( `;;` ) a ser avaliado</span><span class="sxs-lookup"><span data-stu-id="cbd16-113">All code must be terminated with a double semicolon (`;;`) to be evaluated</span></span>
+2. <span data-ttu-id="cbd16-114">O código é avaliado e armazenado em um `it` valor.</span><span class="sxs-lookup"><span data-stu-id="cbd16-114">Code is evaluated and stored in an `it` value.</span></span> <span data-ttu-id="cbd16-115">Você pode fazer referência `it` interativamente.</span><span class="sxs-lookup"><span data-stu-id="cbd16-115">You can reference `it` interactively.</span></span>
 
-## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a><span data-ttu-id="0b7fe-131">Diferenças entre os ambientes interativo, de script e compilados</span><span class="sxs-lookup"><span data-stu-id="0b7fe-131">Differences between the interactive, scripting, and compiled environments</span></span>
+<span data-ttu-id="cbd16-116">F# Interativo também dá suporte à entrada de várias linhas.</span><span class="sxs-lookup"><span data-stu-id="cbd16-116">F# Interactive also supports multi-line input.</span></span> <span data-ttu-id="cbd16-117">Você só precisa encerrar o envio com um ponto-e-vírgula duplo ( `;;` ).</span><span class="sxs-lookup"><span data-stu-id="cbd16-117">You just need to terminate your submission with a double semicolon (`;;`).</span></span> <span data-ttu-id="cbd16-118">Considere o trecho a seguir que foi colado e avaliado por F# Interativo:</span><span class="sxs-lookup"><span data-stu-id="cbd16-118">Consider the following snippet that has been pasted into and evaluated by F# Interactive:</span></span>
 
-<span data-ttu-id="0b7fe-132">Quando você está compilando código em F# interativo, se estiver executando de forma interativa ou executando um script, o símbolo **INTERACTIVE** será definido.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-132">When you are compiling code in F# Interactive, whether you are running interactively or running a script, the symbol **INTERACTIVE** is defined.</span></span> <span data-ttu-id="0b7fe-133">Quando você está compilando código no compilador, o símbolo **COMPILED** é definido.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-133">When you are compiling code in the compiler, the symbol **COMPILED** is defined.</span></span> <span data-ttu-id="0b7fe-134">Assim, se o código precisar ser diferente nos modos compilados e interativos, você poderá usar diretivas de pré-processador para compilação condicional para determinar qual você deseja usar.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-134">Thus, if code needs to be different in compiled and interactive modes, you can use preprocessor directives for conditional compilation to determine which to use.</span></span>
+```console
+> let getOddSquares xs =
+-     xs
+-     |> List.filter (fun x -> x % 2 <> 0)
+-     |> List.map (fun x -> x * x)
+-
+- printfn "%A" (getOddSquares [1..10]);;
+[1; 9; 25; 49; 81]
+val getOddSquares : xs:int list -> int list
+val it : unit = ()
 
-<span data-ttu-id="0b7fe-135">Algumas diretivas estão disponíveis durante a execução de scripts no F# interativo, mas não estão disponíveis quando você está executando o compilador.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-135">Some directives are available when you are executing scripts in F# Interactive that are not available when you are executing the compiler.</span></span> <span data-ttu-id="0b7fe-136">A tabela a seguir resume as diretivas que estão disponíveis quando você estiver usando o F# interativo.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-136">The following table summarizes directives that are available when you are using F# Interactive.</span></span>
+>
+```
 
-|<span data-ttu-id="0b7fe-137">Diretiva</span><span class="sxs-lookup"><span data-stu-id="0b7fe-137">Directive</span></span>|<span data-ttu-id="0b7fe-138">Descrição</span><span class="sxs-lookup"><span data-stu-id="0b7fe-138">Description</span></span>|
-|---------|-----------|
-|<span data-ttu-id="0b7fe-139">**#help**</span><span class="sxs-lookup"><span data-stu-id="0b7fe-139">**#help**</span></span>|<span data-ttu-id="0b7fe-140">Exibe informações sobre as diretivas disponíveis.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-140">Displays information about available directives.</span></span>|
-|<span data-ttu-id="0b7fe-141">**#I**</span><span class="sxs-lookup"><span data-stu-id="0b7fe-141">**#I**</span></span>|<span data-ttu-id="0b7fe-142">Especifica um caminho de pesquisa de assembly entre aspas.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-142">Specifies an assembly search path in quotation marks.</span></span>|
-|<span data-ttu-id="0b7fe-143">**#load**</span><span class="sxs-lookup"><span data-stu-id="0b7fe-143">**#load**</span></span>|<span data-ttu-id="0b7fe-144">Lê um arquivo de origem, compila e o executa.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-144">Reads a source file, compiles it, and runs it.</span></span>|
-|<span data-ttu-id="0b7fe-145">**#quit**</span><span class="sxs-lookup"><span data-stu-id="0b7fe-145">**#quit**</span></span>|<span data-ttu-id="0b7fe-146">Finaliza uma sessão do F# interativo.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-146">Terminates an F# Interactive session.</span></span>|
-|<span data-ttu-id="0b7fe-147">**#r**</span><span class="sxs-lookup"><span data-stu-id="0b7fe-147">**#r**</span></span>|<span data-ttu-id="0b7fe-148">Faz referência a um assembly.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-148">References an assembly.</span></span>|
-|<span data-ttu-id="0b7fe-149">**#time ["on"&#124;"off"]**</span><span class="sxs-lookup"><span data-stu-id="0b7fe-149">**#time ["on"&#124;"off"]**</span></span>|<span data-ttu-id="0b7fe-150">Por si só, **#time** alterna se deve exibir informações sobre o desempenho.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-150">By itself, **#time** toggles whether to display performance information.</span></span> <span data-ttu-id="0b7fe-151">Quando habilitado, o F# interativo mede informações em tempo real, em tempo de CPU e de coleta de lixo de cada seção do código que é interpretado e executado.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-151">When it is enabled, F# Interactive measures real time, CPU time, and garbage collection information for each section of code that is interpreted and executed.</span></span>|
+<span data-ttu-id="cbd16-119">A formatação do código é preservada e há um semiclon duplo ( `;;` ) finalizando a entrada.</span><span class="sxs-lookup"><span data-stu-id="cbd16-119">The code's formatting is preserved, and there is a double semiclon (`;;`) terminating the input.</span></span> <span data-ttu-id="cbd16-120">F# Interativo, em seguida, avaliou o código e imprimiu os resultados!</span><span class="sxs-lookup"><span data-stu-id="cbd16-120">F# Interactive then evaluated the code and printed the results!</span></span>
 
-<span data-ttu-id="0b7fe-152">Quando você especificar arquivos ou caminhos em F# interativo, uma sequência literal é esperada.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-152">When you specify files or paths in F# Interactive, a string literal is expected.</span></span> <span data-ttu-id="0b7fe-153">Portanto, arquivos e caminhos devem estar entre aspas e os caracteres de escape comuns se aplicam.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-153">Therefore, files and paths must be in quotation marks, and the usual escape characters apply.</span></span> <span data-ttu-id="0b7fe-154">Além disso, você pode usar o caractere @ para fazer com que o F# interativo interprete uma cadeia de caracteres que contenha um caminho como uma cadeia de caracteres textuais.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-154">Also, you can use the @ character to cause F# Interactive to interpret a string that contains a path as a verbatim string.</span></span> <span data-ttu-id="0b7fe-155">Isso faz com que o F# interativo ignore quaisquer caracteres de escape.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-155">This causes F# Interactive to ignore any escape characters.</span></span>
+## <a name="scripting-with-f"></a><span data-ttu-id="cbd16-121">Criando scripts com o F\#</span><span class="sxs-lookup"><span data-stu-id="cbd16-121">Scripting with F\#</span></span>
 
-<span data-ttu-id="0b7fe-156">Uma das diferenças entre o modo interativo e compilado é a maneira como você acessa argumentos da linha de comando.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-156">One of the differences between compiled and interactive mode is the way you access command line arguments.</span></span> <span data-ttu-id="0b7fe-157">No modo compilado, use **System.Environment.GetCommandLineArgs** .</span><span class="sxs-lookup"><span data-stu-id="0b7fe-157">In compiled mode, use **System.Environment.GetCommandLineArgs** .</span></span> <span data-ttu-id="0b7fe-158">Em scripts, use **fsi.CommandLineArgs** .</span><span class="sxs-lookup"><span data-stu-id="0b7fe-158">In scripts, use **fsi.CommandLineArgs** .</span></span>
+<span data-ttu-id="cbd16-122">Avaliar o código interativamente no F# Interativo pode ser uma excelente ferramenta de aprendizado, mas você descobrirá rapidamente que não é tão produtivo quanto escrever código em um editor normal.</span><span class="sxs-lookup"><span data-stu-id="cbd16-122">Evaluating code interactively in F# Interactive can be a great learning tool, but you'll quickly find that it's not as productive as writing code in a normal editor.</span></span> <span data-ttu-id="cbd16-123">Para dar suporte à edição de código normal, você pode escrever scripts em F #.</span><span class="sxs-lookup"><span data-stu-id="cbd16-123">To support normal code editing, you can write F# scripts.</span></span>
 
-<span data-ttu-id="0b7fe-159">O código a seguir ilustra como criar uma função que lê os argumentos da linha de comando em um script e também demonstra como fazer referência a outro conjunto por meio de um script.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-159">The following code illustrates how to create a function that reads the command line arguments in a script and also demonstrates how to reference another assembly from a script.</span></span> <span data-ttu-id="0b7fe-160">O primeiro arquivo de código, **MyAssembly.fs** , é o código do assembly que está sendo referenciado.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-160">The first code file, **MyAssembly.fs** , is the code for the assembly being referenced.</span></span> <span data-ttu-id="0b7fe-161">Compile esse arquivo com a linha de comando: **fsc -a MyAssembly.fs** e, em seguida, execute o segundo arquivo como um script com a linha de comando: **fsi --exec file1.fsx** test</span><span class="sxs-lookup"><span data-stu-id="0b7fe-161">Compile this file with the command line: **fsc -a MyAssembly.fs** and then execute the second file as a script with the command line: **fsi --exec file1.fsx** test</span></span>
+<span data-ttu-id="cbd16-124">Os scripts usam a extensão de arquivo **. fsx**.</span><span class="sxs-lookup"><span data-stu-id="cbd16-124">Scripts use the file extension **.fsx**.</span></span> <span data-ttu-id="cbd16-125">Em vez de compilar o código-fonte e, posteriormente, executar o assembly compilado, você pode apenas executar **dotnet FSI** e especificar o nome de arquivo do script do código-fonte f # e o f # Interactive lê o código e o executa em tempo real.</span><span class="sxs-lookup"><span data-stu-id="cbd16-125">Instead of compiling source code and then later running the compiled assembly, you can just run **dotnet fsi** and specify the filename of the script of F# source code, and F# interactive reads the code and executes it in real time.</span></span> <span data-ttu-id="cbd16-126">Por exemplo, considere o script a seguir chamado `Script.fsx` :</span><span class="sxs-lookup"><span data-stu-id="cbd16-126">For example, consider the following script called `Script.fsx`:</span></span>
+
+```fsharp
+let getOddSquares xs =
+    xs
+    |> List.filter (fun x -> x % 2 <> 0)
+    |> List.map (fun x -> x * x)
+
+getOddSquares [1..10]
+```
+
+<span data-ttu-id="cbd16-127">Quando esse arquivo é criado em seu computador, você pode executá-lo com `dotnet fsi` e ver a saída diretamente na janela do seu terminal:</span><span class="sxs-lookup"><span data-stu-id="cbd16-127">When this file is created in your machine, you can run it with `dotnet fsi` and see the output directly in your terminal window:</span></span>
+
+```console
+dotnet fsi Script.fsx
+[1; 9; 25; 49; 81]
+```
+
+<span data-ttu-id="cbd16-128">O script F # tem suporte nativo no [Visual Studio](../../get-started/get-started-visual-studio.md), [Visual Studio Code](../../get-started/get-started-vscode.md)e [Visual Studio para Mac](../../get-started/get-started-visual-studio-for-mac.md).</span><span class="sxs-lookup"><span data-stu-id="cbd16-128">F# scripting is natively supported in [Visual Studio](../../get-started/get-started-visual-studio.md), [Visual Studio Code](../../get-started/get-started-vscode.md), and [Visual Studio for Mac](../../get-started/get-started-visual-studio-for-mac.md).</span></span>
+
+## <a name="referencing-packages-in-f-interactive"></a><span data-ttu-id="cbd16-129">Referenciando pacotes no F# Interativo</span><span class="sxs-lookup"><span data-stu-id="cbd16-129">Referencing packages in F# Interactive</span></span>
+
+> [!NOTE] <span data-ttu-id="cbd16-130">O gerenciamento de pacotes é um recurso F # 5 e está disponível no momento usando o SDK do .NET 5 mais recente.</span><span class="sxs-lookup"><span data-stu-id="cbd16-130">Package management is an F# 5 feature and is currently available using the latest .NET 5 SDK.</span></span>
+
+<span data-ttu-id="cbd16-131">O F# Interativo dá suporte à referência de pacotes NuGet com a `#r "nuget:"` sintaxe e uma versão opcional:</span><span class="sxs-lookup"><span data-stu-id="cbd16-131">F# Interactive supports referencing NuGet packages with the `#r "nuget:"` syntax and an optional version:</span></span>
+
+```fsharp
+#r "nuget: Newtonsoft.Json"
+open Newtonsoft.Json
+
+let data = {| Name = "Don Syme"; Occupation = "F# Creator" |}
+JsonConvert.SerializeObject(data)
+```
+
+<span data-ttu-id="cbd16-132">Se uma versão não for especificada, o pacote de não visualização mais alto disponível será obtido.</span><span class="sxs-lookup"><span data-stu-id="cbd16-132">If a version is not specified, the highest available non-preview package is taken.</span></span> <span data-ttu-id="cbd16-133">Para fazer referência a uma versão específica, introduza a versão por vírgula.</span><span class="sxs-lookup"><span data-stu-id="cbd16-133">To reference a specific version, introduce the version via a comma.</span></span> <span data-ttu-id="cbd16-134">Isso pode ser útil ao fazer referência a uma versão de visualização de um pacote.</span><span class="sxs-lookup"><span data-stu-id="cbd16-134">This can be handy when referencing a preview version of a package.</span></span> <span data-ttu-id="cbd16-135">Por exemplo, considere este script usando uma versão de visualização do [DiffSharp](https://diffsharp.github.io/):</span><span class="sxs-lookup"><span data-stu-id="cbd16-135">For example, consider this script using a preview version of [DiffSharp](https://diffsharp.github.io/):</span></span>
+
+```fsharp
+#r "nuget: DiffSharp-lite,1.0.0-preview-328097867"
+open DiffSharp
+
+// A 1D tensor
+let t1 = dsharp.tensor [ 0.0 .. 0.2 .. 1.0 ]
+
+// A 2x2 tensor
+let t2 = dsharp.tensor [ [ 0; 1 ]; [ 2; 2 ] ]
+
+// Define a scalar-to-scalar function
+let f (x: Tensor) = sin (sqrt x)
+
+printfn "%A" (f (dsharp.tensor 1.2))
+```
+
+<span data-ttu-id="cbd16-136">Você pode especificar quantas referências de pacote desejar em um script.</span><span class="sxs-lookup"><span data-stu-id="cbd16-136">You can specify as many package references as you like in a script.</span></span>
+
+## <a name="referencing-assemblies-on-disk-with-f-interactive"></a><span data-ttu-id="cbd16-137">Referenciando assemblies em disco com F # interativo</span><span class="sxs-lookup"><span data-stu-id="cbd16-137">Referencing assemblies on disk with F# interactive</span></span>
+
+<span data-ttu-id="cbd16-138">Como alternativa, se você tiver um assembly em disco e desejar fazer referência a ele em um script, você poderá usar a `#r` sintaxe para especificar um assembly.</span><span class="sxs-lookup"><span data-stu-id="cbd16-138">Alternatively, if you have an assembly on disk and wish to reference that in a script, you can use the `#r` syntax to specify an assembly.</span></span> <span data-ttu-id="cbd16-139">Considere o seguinte código em um projeto compilado em `MyAssembly.dll` :</span><span class="sxs-lookup"><span data-stu-id="cbd16-139">Consider the following code in a project compiled into `MyAssembly.dll`:</span></span>
 
 ```fsharp
 // MyAssembly.fs
@@ -64,59 +132,122 @@ module MyAssembly
 let myFunction x y = x + 2 * y
 ```
 
+<span data-ttu-id="cbd16-140">Um compilado, você pode fazer referência a ele em um arquivo chamado da `Script.fsx` seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="cbd16-140">One compiled, you can reference it in a file called `Script.fsx` like so:</span></span>
+
 ```fsharp
-// file1.fsx
-#r "MyAssembly.dll"
-
-printfn "Command line arguments: "
-
-for arg in fsi.CommandLineArgs do
-    printfn "%s" arg
+#r "path/to/MyAssembly.dll"
 
 printfn "%A" (MyAssembly.myFunction 10 40)
 ```
 
-<span data-ttu-id="0b7fe-162">A saída é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="0b7fe-162">The output is as follows:</span></span>
+<span data-ttu-id="cbd16-141">A saída é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="cbd16-141">The output is as follows:</span></span>
 
 ```console
-Command line arguments:
-file1.fsx
-test
+dotnet fsi Script.fsx
 90
 ```
 
-## <a name="package-management-in-f-interactive"></a><span data-ttu-id="0b7fe-163">Gerenciamento de Pacotes em F# Interativo</span><span class="sxs-lookup"><span data-stu-id="0b7fe-163">Package Management in F# Interactive</span></span>
+<span data-ttu-id="cbd16-142">Você pode especificar quantas referências de assembly desejar em um script.</span><span class="sxs-lookup"><span data-stu-id="cbd16-142">You can specify as many assembly references as you like in a script.</span></span>
 
-[!NOTE] <span data-ttu-id="0b7fe-164">O gerenciamento de pacotes está disponível como um recurso de visualização em versões do `dotnet fsi` fornecidas no `3.1.300` e em versões posteriores do SDK do .net, bem como todas as `5.*` versões do SDK do .net.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-164">Package management is available as a preview feature in versions of `dotnet fsi` shipped in the `3.1.300` and greater versions of the .NET SDK, as well as all `5.*` versions of the .NET SDK.</span></span> <span data-ttu-id="0b7fe-165">Para habilitá-lo nesta versão de visualização, execute `dotnet fsi` com o `--langversion:preview` argumento.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-165">To enable it in this preview release, run `dotnet fsi` with the `--langversion:preview` argument.</span></span>
+## <a name="loading-other-scripts"></a><span data-ttu-id="cbd16-143">Carregando outros scripts</span><span class="sxs-lookup"><span data-stu-id="cbd16-143">Loading other scripts</span></span>
 
-<span data-ttu-id="0b7fe-166">A `#r` sintaxe para referenciar uma dll no F# interativo também pode ser usada para fazer referência a um pacote NuGet por meio da seguinte sintaxe:</span><span class="sxs-lookup"><span data-stu-id="0b7fe-166">The `#r` syntax for referencing a DLL in F# Interactive can also be used to reference a nuget package via the following syntax:</span></span>
+<span data-ttu-id="cbd16-144">Ao criar scripts, muitas vezes pode ser útil usar scripts diferentes para tarefas diferentes.</span><span class="sxs-lookup"><span data-stu-id="cbd16-144">When scripting, it can often be helpful to use different scripts for different tasks.</span></span> <span data-ttu-id="cbd16-145">Às vezes, talvez você queira reutilizar o código do script em outro.</span><span class="sxs-lookup"><span data-stu-id="cbd16-145">Sometimes you may want to re-use code from on script in another.</span></span> <span data-ttu-id="cbd16-146">Em vez de copiar e colar seu conteúdo em seu arquivo, você pode carregar simples e avaliá-lo com `#load` .</span><span class="sxs-lookup"><span data-stu-id="cbd16-146">Rather than copy-pasting its contents into your file, you can simple load and evaluate it with `#load`.</span></span>
 
-```fsharp
-#r "nuget: <package name>"
-```
-
-<span data-ttu-id="0b7fe-167">Por exemplo, para fazer referência ao `FSharp.Data` pacote, use a seguinte `#r` referência:</span><span class="sxs-lookup"><span data-stu-id="0b7fe-167">For example, to reference the `FSharp.Data` package, use the following `#r` reference:</span></span>
+<span data-ttu-id="cbd16-147">Considere o seguinte `Script1.fsx` :</span><span class="sxs-lookup"><span data-stu-id="cbd16-147">Consider the following `Script1.fsx`:</span></span>
 
 ```fsharp
-#r "nuget: FSharp.Data"
+let square x = x * x
 ```
 
-<span data-ttu-id="0b7fe-168">Depois de executar essa linha, a versão mais recente do `FSharp.Data` pacote será baixada para o cache do NuGet e referenciada na sessão de F# interativo atual.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-168">After executing this line, the latest version of the `FSharp.Data` package will be downloaded to your nuget cache and referenced in the current F# Interactive session.</span></span>
-
-<span data-ttu-id="0b7fe-169">Além do nome do pacote, versões específicas de um pacote podem ser referenciadas por meio de uma sintaxe curta:</span><span class="sxs-lookup"><span data-stu-id="0b7fe-169">In addition to the package name, specific versions of a package can be referenced via a short syntax:</span></span>
+<span data-ttu-id="cbd16-148">E o arquivo de consumo, `Script2.fsx` :</span><span class="sxs-lookup"><span data-stu-id="cbd16-148">And the consuming file, `Script2.fsx`:</span></span>
 
 ```fsharp
-#r "nuget: FSharp.Data, 3.3.2"
+#load "Script1.fsx"
+open Script1
+
+printfn "%d" (square 12)
 ```
 
-<span data-ttu-id="0b7fe-170">ou de maneira mais explícita:</span><span class="sxs-lookup"><span data-stu-id="0b7fe-170">or in a more explicit fashion:</span></span>
+<span data-ttu-id="cbd16-149">Observe que a `open Script1` declaração é necessária.</span><span class="sxs-lookup"><span data-stu-id="cbd16-149">Note that the `open Script1` declaration is required.</span></span> <span data-ttu-id="cbd16-150">Isso ocorre porque as construções em um script F # são compiladas em um módulo de nível superior que é o nome do arquivo de script em que se encontra.</span><span class="sxs-lookup"><span data-stu-id="cbd16-150">This is because constructs in an F# script are compiled into a top-level module that is the name of the script file it is in.</span></span>
+
+<span data-ttu-id="cbd16-151">Você pode avaliar da `Script2.fsx` seguinte forma:</span><span class="sxs-lookup"><span data-stu-id="cbd16-151">You can evaluate `Script2.fsx` like so:</span></span>
+
+```console
+dotnet fsi Script2.fsx
+144
+```
+
+<span data-ttu-id="cbd16-152">Você pode especificar quantas `#load` diretivas desejar em um script.</span><span class="sxs-lookup"><span data-stu-id="cbd16-152">You can specify as many `#load` directives as you like in a script.</span></span>
+
+## <a name="using-the-fsi-object-in-f-code"></a><span data-ttu-id="cbd16-153">Usando o `fsi` objeto no código F #</span><span class="sxs-lookup"><span data-stu-id="cbd16-153">Using the `fsi` object in F# code</span></span>
+
+<span data-ttu-id="cbd16-154">Os scripts F # têm acesso a um `fsi` objeto personalizado que representa a sessão de F# interativo.</span><span class="sxs-lookup"><span data-stu-id="cbd16-154">F# scripts have access to a custom `fsi` object that represents the F# Interactive session.</span></span> <span data-ttu-id="cbd16-155">Ele permite que você personalize coisas como formatação de saída.</span><span class="sxs-lookup"><span data-stu-id="cbd16-155">It allows you to customize things like output formatting.</span></span> <span data-ttu-id="cbd16-156">Também é como você pode acessar argumentos de linha de comando.</span><span class="sxs-lookup"><span data-stu-id="cbd16-156">It is also how you can access command-line arguments.</span></span>
+
+<span data-ttu-id="cbd16-157">O exemplo a seguir mostra como obter e usar argumentos de linha de comando:</span><span class="sxs-lookup"><span data-stu-id="cbd16-157">The following example shows how to get and use command-line arguments:</span></span>
 
 ```fsharp
-#r "nuget: FSharp.Data, Version=3.3.2"
+let args = fsi.CommandLineArgs
+
+for arg in args do
+    printfn "%s" arg
 ```
 
-## <a name="related-articles"></a><span data-ttu-id="0b7fe-171">Artigos relacionados</span><span class="sxs-lookup"><span data-stu-id="0b7fe-171">Related articles</span></span>
+<span data-ttu-id="cbd16-158">Quando avaliado, ele imprime todos os argumentos.</span><span class="sxs-lookup"><span data-stu-id="cbd16-158">When evaluated, it prints all arguments.</span></span> <span data-ttu-id="cbd16-159">O primeiro argumento é sempre o nome do script que é avaliado:</span><span class="sxs-lookup"><span data-stu-id="cbd16-159">The first argument is always the name of the script that is evaluated:</span></span>
 
-|<span data-ttu-id="0b7fe-172">Título</span><span class="sxs-lookup"><span data-stu-id="0b7fe-172">Title</span></span>|<span data-ttu-id="0b7fe-173">Descrição</span><span class="sxs-lookup"><span data-stu-id="0b7fe-173">Description</span></span>|
+```dotnet
+dotnet fsi Script1.fsx hello world from fsi
+Script1.fsx
+hello
+world
+from
+fsi
+```
+
+<span data-ttu-id="cbd16-160">Observe que você também pode usar `System.Environment.GetCommandLineArgs()` o para acessar os mesmos argumentos.</span><span class="sxs-lookup"><span data-stu-id="cbd16-160">Note that you can also use `System.Environment.GetCommandLineArgs()` to access the same arguments.</span></span>
+
+## <a name="f-interactive-directive-reference"></a><span data-ttu-id="cbd16-161">Referência de diretiva de F# Interativo</span><span class="sxs-lookup"><span data-stu-id="cbd16-161">F# Interactive directive reference</span></span>
+
+<span data-ttu-id="cbd16-162">As `#r` `#load` diretivas e vistas anteriormente só estão disponíveis no F# interativo.</span><span class="sxs-lookup"><span data-stu-id="cbd16-162">The `#r` and `#load` directives seen previously are only available in F# Interactive.</span></span> <span data-ttu-id="cbd16-163">Há várias diretivas disponíveis somente no F# Interativo:</span><span class="sxs-lookup"><span data-stu-id="cbd16-163">There are several directives only available in F# Interactive:</span></span>
+
+|<span data-ttu-id="cbd16-164">Diretiva</span><span class="sxs-lookup"><span data-stu-id="cbd16-164">Directive</span></span>|<span data-ttu-id="cbd16-165">Descrição</span><span class="sxs-lookup"><span data-stu-id="cbd16-165">Description</span></span>|
+|---------|-----------|
+|`#r "nuget:..."`|<span data-ttu-id="cbd16-166">Referencia um pacote do NuGet</span><span class="sxs-lookup"><span data-stu-id="cbd16-166">References a package from Nuget</span></span>|
+|`#r "assembly-name.dll"`|<span data-ttu-id="cbd16-167">Faz referência a um assembly no disco</span><span class="sxs-lookup"><span data-stu-id="cbd16-167">References an assembly on disk</span></span>|
+|`#load "file-name.fsx"`|<span data-ttu-id="cbd16-168">Lê um arquivo de origem, compila e o executa.</span><span class="sxs-lookup"><span data-stu-id="cbd16-168">Reads a source file, compiles it, and runs it.</span></span>|
+|`#help`|<span data-ttu-id="cbd16-169">Exibe informações sobre as diretivas disponíveis.</span><span class="sxs-lookup"><span data-stu-id="cbd16-169">Displays information about available directives.</span></span>|
+|`#I`|<span data-ttu-id="cbd16-170">Especifica um caminho de pesquisa de assembly entre aspas.</span><span class="sxs-lookup"><span data-stu-id="cbd16-170">Specifies an assembly search path in quotation marks.</span></span>|
+|`#quit`|<span data-ttu-id="cbd16-171">Finaliza uma sessão do F# interativo.</span><span class="sxs-lookup"><span data-stu-id="cbd16-171">Terminates an F# Interactive session.</span></span>|
+|<span data-ttu-id="cbd16-172">`#time "on"` ou `#time "off"`</span><span class="sxs-lookup"><span data-stu-id="cbd16-172">`#time "on"` or `#time "off"`</span></span>|<span data-ttu-id="cbd16-173">Por si só, `#time` alterna se as informações de desempenho devem ser exibidas.</span><span class="sxs-lookup"><span data-stu-id="cbd16-173">By itself, `#time` toggles whether to display performance information.</span></span> <span data-ttu-id="cbd16-174">Quando é `"on"` , F# interativo mede as informações em tempo real, tempo de CPU e coleta de lixo para cada seção de código que é interpretada e executada.</span><span class="sxs-lookup"><span data-stu-id="cbd16-174">When it is `"on"`, F# Interactive measures real time, CPU time, and garbage collection information for each section of code that is interpreted and executed.</span></span>|
+
+<span data-ttu-id="cbd16-175">Quando você especificar arquivos ou caminhos em F# interativo, uma sequência literal é esperada.</span><span class="sxs-lookup"><span data-stu-id="cbd16-175">When you specify files or paths in F# Interactive, a string literal is expected.</span></span> <span data-ttu-id="cbd16-176">Portanto, arquivos e caminhos devem estar entre aspas e os caracteres de escape comuns se aplicam.</span><span class="sxs-lookup"><span data-stu-id="cbd16-176">Therefore, files and paths must be in quotation marks, and the usual escape characters apply.</span></span> <span data-ttu-id="cbd16-177">Você pode usar o `@` caractere para fazer com que F# interativo interprete uma cadeia de caracteres que contém um caminho como uma cadeia de caracteres textual.</span><span class="sxs-lookup"><span data-stu-id="cbd16-177">You can use the `@` character to cause F# Interactive to interpret a string that contains a path as a verbatim string.</span></span> <span data-ttu-id="cbd16-178">Isso faz com que o F# interativo ignore quaisquer caracteres de escape.</span><span class="sxs-lookup"><span data-stu-id="cbd16-178">This causes F# Interactive to ignore any escape characters.</span></span>
+
+## <a name="interactive-and-compiled-preprocessor-directives"></a><span data-ttu-id="cbd16-179">Diretivas de pré-processador interativo e compilado</span><span class="sxs-lookup"><span data-stu-id="cbd16-179">Interactive and compiled preprocessor directives</span></span>
+
+<span data-ttu-id="cbd16-180">Quando você compila o código no F# Interativo, quer você esteja executando interativamente ou executando um script, o símbolo **interativo** é definido.</span><span class="sxs-lookup"><span data-stu-id="cbd16-180">When you compile code in F# Interactive, whether you are running interactively or running a script, the symbol **INTERACTIVE** is defined.</span></span> <span data-ttu-id="cbd16-181">Quando você compila o código no compilador, o símbolo **compilado** é definido.</span><span class="sxs-lookup"><span data-stu-id="cbd16-181">When you compile code in the compiler, the symbol **COMPILED** is defined.</span></span> <span data-ttu-id="cbd16-182">Portanto, se o código precisar ser diferente em modos compilados e interativos, você poderá usar essas diretivas de pré-processador para compilação condicional para determinar qual delas usar.</span><span class="sxs-lookup"><span data-stu-id="cbd16-182">Thus, if code needs to be different in compiled and interactive modes, you can use these preprocessor directives for conditional compilation to determine which to use.</span></span> <span data-ttu-id="cbd16-183">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="cbd16-183">For example:</span></span>
+
+```fsharp
+#if INTERACTIVE
+// Some code that executes only in FSI
+// ...
+#endif
+```
+
+## <a name="using-f-interactive-in-visual-studio"></a><span data-ttu-id="cbd16-184">Usando F# Interativo no Visual Studio</span><span class="sxs-lookup"><span data-stu-id="cbd16-184">Using F# Interactive in Visual Studio</span></span>
+
+<span data-ttu-id="cbd16-185">Para executar o F# Interativo por meio do Visual Studio, você pode clicar no botão de barra de ferramentas apropriado rotulado como **F# Interativo** ou usar as teclas **Ctrl+Alt+F**.</span><span class="sxs-lookup"><span data-stu-id="cbd16-185">To run F# Interactive through Visual Studio, you can click the appropriate toolbar button labeled **F# Interactive** , or use the keys **Ctrl+Alt+F**.</span></span> <span data-ttu-id="cbd16-186">Isso abrirá a janela interativa, uma janela da ferramenta que executa uma sessão de F# interativo.</span><span class="sxs-lookup"><span data-stu-id="cbd16-186">Doing this will open the interactive window, a tool window running an F# Interactive session.</span></span> <span data-ttu-id="cbd16-187">Você também pode selecionar um código que deseja executar na janela interativa e pressionar a combinação de teclas **ALT + Enter**.</span><span class="sxs-lookup"><span data-stu-id="cbd16-187">You can also select some code that you want to run in the interactive window and hit the key combination **Alt+Enter**.</span></span> <span data-ttu-id="cbd16-188">O F# interativo é iniciado em uma janela da ferramenta rotulada como **F# Interativo**.</span><span class="sxs-lookup"><span data-stu-id="cbd16-188">F# Interactive starts in a tool window labeled **F# Interactive**.</span></span> <span data-ttu-id="cbd16-189">Quando você usar essa combinação de teclas, certifique-se de que a janela do editor tenha o foco.</span><span class="sxs-lookup"><span data-stu-id="cbd16-189">When you use this key combination, make sure that the editor window has the focus.</span></span>
+
+<span data-ttu-id="cbd16-190">Se você estiver usando o console ou o Visual Studio, será exibido um prompt de comando e o interpretador aguardará a entrada.</span><span class="sxs-lookup"><span data-stu-id="cbd16-190">Whether you are using the console or Visual Studio, a command prompt appears and the interpreter awaits your input.</span></span> <span data-ttu-id="cbd16-191">Você pode inserir o código como faria em um arquivo de código.</span><span class="sxs-lookup"><span data-stu-id="cbd16-191">You can enter code just as you would in a code file.</span></span> <span data-ttu-id="cbd16-192">Para compilar e executar o código, insira dois sinais de ponto e vírgula ( **;;** ) para terminar uma linha ou várias linhas de entrada.</span><span class="sxs-lookup"><span data-stu-id="cbd16-192">To compile and execute the code, enter two semicolons ( **;;** ) to terminate a line or several lines of input.</span></span>
+
+<span data-ttu-id="cbd16-193">O F# interativo tenta compilar o código e, se tiver êxito, executará o código e imprimirá a assinatura dos tipos e valores que ele compilou.</span><span class="sxs-lookup"><span data-stu-id="cbd16-193">F# Interactive attempts to compile the code and, if successful, it executes the code and prints the signature of the types and values that it compiled.</span></span> <span data-ttu-id="cbd16-194">Se ocorrerem erros, o interpretador imprime as mensagens de erro.</span><span class="sxs-lookup"><span data-stu-id="cbd16-194">If errors occur, the interpreter prints the error messages.</span></span>
+
+<span data-ttu-id="cbd16-195">O código digitado na mesma sessão tem acesso a quaisquer construções inseridas anteriormente, para poder criar os programas.</span><span class="sxs-lookup"><span data-stu-id="cbd16-195">Code entered in the same session has access to any constructs entered previously, so you can build up programs.</span></span> <span data-ttu-id="cbd16-196">Um buffer extensivo na janela da ferramenta permite que você copie o código para um arquivo, se necessário.</span><span class="sxs-lookup"><span data-stu-id="cbd16-196">An extensive buffer in the tool window allows you to copy the code into a file if needed.</span></span>
+
+<span data-ttu-id="cbd16-197">Quando executado no Visual Studio, o F# interativo é executado independentemente do seu projeto, então, por exemplo, não é possível usar construções definidas em seu projeto em F# interativo, a menos que você copie o código para a função na janela interativa.</span><span class="sxs-lookup"><span data-stu-id="cbd16-197">When run in Visual Studio, F# Interactive runs independently of your project, so, for example, you cannot use constructs defined in your project in F# Interactive unless you copy the code for the function into the interactive window.</span></span>
+
+<span data-ttu-id="cbd16-198">Você pode controlar os argumentos de linha de comando do F# interativo (opções) ajustando as configurações.</span><span class="sxs-lookup"><span data-stu-id="cbd16-198">You can control the F# Interactive command line arguments (options) by adjusting the settings.</span></span> <span data-ttu-id="cbd16-199">No menu **Ferramentas** , selecione **Opções...** e expanda **Ferramentas do F#**.</span><span class="sxs-lookup"><span data-stu-id="cbd16-199">On the **Tools** menu, select **Options...** , and then expand **F# Tools**.</span></span> <span data-ttu-id="cbd16-200">As duas configurações que podem ser alteradas são as opções do F# interativo e a configuração do **F# Interativo de 64 bits** , que é relevante apenas se você estiver executando o F# interativo em uma máquina de 64 bits.</span><span class="sxs-lookup"><span data-stu-id="cbd16-200">The two settings that you can change are the F# Interactive options and the **64-bit F# Interactive** setting, which is relevant only if you are running F# Interactive on a 64-bit machine.</span></span> <span data-ttu-id="cbd16-201">Essa configuração determina se você deseja executar a versão dedicada de 64 bits do **fsi.exe** ou **fsianycpu.exe** , que usa a arquitetura do computador para determinar se deve ser executado como um processo de 32 ou 64 bits.</span><span class="sxs-lookup"><span data-stu-id="cbd16-201">This setting determines whether you want to run the dedicated 64-bit version of **fsi.exe** or **fsianycpu.exe** , which uses the machine architecture to determine whether to run as a 32-bit or 64-bit process.</span></span>
+
+## <a name="related-articles"></a><span data-ttu-id="cbd16-202">Artigos relacionados</span><span class="sxs-lookup"><span data-stu-id="cbd16-202">Related articles</span></span>
+
+|<span data-ttu-id="cbd16-203">Título</span><span class="sxs-lookup"><span data-stu-id="cbd16-203">Title</span></span>|<span data-ttu-id="cbd16-204">Descrição</span><span class="sxs-lookup"><span data-stu-id="cbd16-204">Description</span></span>|
 |-----|-----------|
-|[<span data-ttu-id="0b7fe-174">Opções do F# Interativo</span><span class="sxs-lookup"><span data-stu-id="0b7fe-174">F# Interactive Options</span></span>](../../language-reference/fsharp-interactive-options.md)|<span data-ttu-id="0b7fe-175">Descreve a sintaxe de linha de comando e as opções para o F# Interativo, fsi.exe.</span><span class="sxs-lookup"><span data-stu-id="0b7fe-175">Describes command-line syntax and options for the F# Interactive, fsi.exe.</span></span>|
+|[<span data-ttu-id="cbd16-205">Opções do F# Interativo</span><span class="sxs-lookup"><span data-stu-id="cbd16-205">F# Interactive Options</span></span>](../../language-reference/fsharp-interactive-options.md)|<span data-ttu-id="cbd16-206">Descreve a sintaxe de linha de comando e as opções para o F# Interativo, fsi.exe.</span><span class="sxs-lookup"><span data-stu-id="cbd16-206">Describes command-line syntax and options for the F# Interactive, fsi.exe.</span></span>|
