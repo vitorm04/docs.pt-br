@@ -1,6 +1,6 @@
 ---
-title: Analisar cadeias de caracteres usando String. Split (guia C#)
-description: O método Split retorna uma matriz de cadeias de caracteres divididas de um conjunto de delimitadores. Esta á uma maneira fácil de analisar cadeias de caracteres.
+title: Dividir cadeias de caracteres usando String. Split (guia C#)
+description: O método Split retorna uma matriz de cadeias de caracteres divididas de um conjunto de delimitadores. É uma maneira fácil de extrair subsequências de uma cadeia de caracteres.
 ms.date: 01/03/2018
 helpviewer_keywords:
 - splitting strings [C#]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: ee0921c4d3c931e2f677ec0bb8458992afc57d57
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.openlocfilehash: 5361a3c60905edd19b180c5ddb14064a85f64337
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342638"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400494"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-in-c"></a>Como analisar cadeias de caracteres usando String. Split em C\#
+# <a name="how-to-separate-strings-using-stringsplit-in-c"></a>Como separar cadeias de caracteres usando String. Split em C\#
 
 O método <xref:System.String.Split%2A?displayProperty=nameWithType> cria uma matriz de subcadeias, dividindo a cadeia de caracteres de entrada com base em um ou mais delimitadores. Esse método é geralmente a maneira mais fácil de separar uma cadeia de caracteres em limites de palavras. Ele também é usado para dividir cadeias de caracteres em outras cadeias ou caractere específico.
 
@@ -50,7 +50,7 @@ O <xref:System.String.Split%2A?displayProperty=nameWithType> pode receber uma ma
 
 ## <a name="see-also"></a>Confira também
 
-- [Extrair elementos de uma cadeia de caracteres](../../standard/base-types/parse-strings.md)
+- [Extrair elementos de uma cadeia de caracteres](../../standard/base-types/divide-up-strings.md)
 - [Guia de programação em C#](../programming-guide/index.md)
 - [Cadeias de caracteres](../programming-guide/strings/index.md)
 - [Expressões regulares do .NET](../../standard/base-types/regular-expressions.md)

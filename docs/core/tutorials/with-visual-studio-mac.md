@@ -2,12 +2,12 @@
 title: Criar um aplicativo de console do .NET Core usando Visual Studio para Mac
 description: Saiba como criar um aplicativo de console do .NET Core usando Visual Studio para Mac.
 ms.date: 06/02/2020
-ms.openlocfilehash: ca933bc9322109ba7d1f808fcc44696a9766a6d4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0248e48865541a7c73b9e219a06a57996c5cf601
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537594"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400520"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>Tutorial: criar um aplicativo de console do .NET Core usando Visual Studio para Mac
 
@@ -16,12 +16,12 @@ Este tutorial mostra como criar e executar um aplicativo de console do .NET Core
 > [!NOTE]
 > Seus comentários são muito importantes. Há duas maneiras de enviar comentários à equipe de desenvolvimento no Visual Studio para Mac:
 >
-> * Em Visual Studio para Mac, selecione **ajuda**para  >  **relatar um problema** no menu ou **relatar um problema** na tela de boas-vindas, que abrirá uma janela para o arquivamento de um relatório de bug. Você pode acompanhar seus comentários no portal [Developer Community (Comunidade do Desenvolvedor)](https://developercommunity.visualstudio.com/spaces/8/index.html).
-> * Para fazer uma sugestão, selecione **ajuda**  >  **fornecer uma sugestão** no menu ou **forneça uma sugestão** na tela de boas-vindas, que levará você para a [página da Web do Visual Studio para Mac Developer Community](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
+> * Em Visual Studio para Mac, selecione **ajuda** para  >  **relatar um problema** no menu ou **relatar um problema** na tela de boas-vindas, que abrirá uma janela para o arquivamento de um relatório de bug. Você pode acompanhar seus comentários no portal [Developer Community (Comunidade do Desenvolvedor)](https://aka.ms/feedback/report?space=41).
+> * Para fazer uma sugestão, selecione **ajuda**  >  **fornecer uma sugestão** no menu ou **forneça uma sugestão** na tela de boas-vindas, que levará você para a [página da Web do Visual Studio para Mac Developer Community](https://aka.ms/feedback/suggest?space=41).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* [Visual Studio para Mac versão 8,6 ou posterior](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Selecione a opção para instalar o .NET Core. A instalação do Xamarin é opcional para o desenvolvimento do .NET Core. Para saber mais, consulte os recursos a seguir:
+* [Visual Studio para Mac versão 8,6 ou posterior](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Selecione a opção para instalar o .NET Core. A instalação do Xamarin é opcional para o desenvolvimento do .NET Core. Para obter mais informações, consulte os seguintes recursos:
 
   * [Tutorial: instalar o Visual Studio para Mac](/visualstudio/mac/installation).
   * [Versões do MacOS com suporte](../install/windows.md).
@@ -41,11 +41,11 @@ Crie um projeto de aplicativo de console do .NET Core chamado "HelloWorld".
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-dialog.png" alt-text="Lista de modelos de novo projeto":::
 
-1. Na lista **suspensa estrutura de destino** da caixa de diálogo **configurar seu novo aplicativo de console** , selecione **.NET Core 3,1**e selecione **Avançar**.
+1. Na lista **suspensa estrutura de destino** da caixa de diálogo **configurar seu novo aplicativo de console** , selecione **.NET Core 3,1** e selecione **Avançar**.
 
    :::image type="content" source="media/with-visual-studio-mac/target-framework.png" alt-text="Selecionar estrutura de destino":::
 
-1. Digite "HelloWorld" para o **nome do projeto**e selecione **criar**.
+1. Digite "HelloWorld" para o **nome do projeto** e selecione **criar**.
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-options.png" alt-text="Configurar a caixa de diálogo Novo Aplicativo de Console":::
 
@@ -82,7 +82,7 @@ namespace HelloWorld
 
 Aprimore o aplicativo para solicitar ao usuário seu nome e exibi-lo junto com a data e hora.
 
-1. No *Program.cs*, substitua o conteúdo do `Main` método, que é a linha que chama `Console.WriteLine` , com o seguinte código:
+1. No *Program.cs* , substitua o conteúdo do `Main` método, que é a linha que chama `Console.WriteLine` , com o seguinte código:
 
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 

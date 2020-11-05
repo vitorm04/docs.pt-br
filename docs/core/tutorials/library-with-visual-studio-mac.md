@@ -2,12 +2,12 @@
 title: Criar uma biblioteca de classes de .NET Standard usando Visual Studio para Mac
 description: Saiba como criar uma biblioteca de classes de .NET Standard usando Visual Studio para Mac.
 ms.date: 06/08/2020
-ms.openlocfilehash: 433f6e0e2d784878c9a1616139b39ec56d695bcf
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a78cc68d29095e4fefcaf1d3b2158d673b8892ec
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537633"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400559"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>Tutorial: criar uma biblioteca de .NET Standard usando Visual Studio para Mac
 
@@ -18,12 +18,12 @@ Uma *biblioteca de classes* define tipos e métodos que são chamados por um apl
 > [!NOTE]
 > Seus comentários são muito importantes. Há duas maneiras de enviar comentários à equipe de desenvolvimento no Visual Studio para Mac:
 >
-> - Em Visual Studio para Mac, selecione **ajuda**  >  **relatar um problema** no menu ou **relatar um problema** na tela de boas-vindas, que abre uma janela para o arquivamento de um relatório de bug. Você pode acompanhar seus comentários no portal [Developer Community (Comunidade do Desenvolvedor)](https://developercommunity.visualstudio.com/spaces/41/index.html).
-> - Para fazer uma sugestão, selecione **ajuda**  >  **fornecer uma sugestão** no menu ou **forneça uma sugestão** na tela de boas-vindas, que leva você para a [página da Web do Visual Studio para Mac Developer Community](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
+> - Em Visual Studio para Mac, selecione **ajuda**  >  **relatar um problema** no menu ou **relatar um problema** na tela de boas-vindas, que abre uma janela para o arquivamento de um relatório de bug. Você pode acompanhar seus comentários no portal [Developer Community (Comunidade do Desenvolvedor)](https://aka.ms/feedback/report?space=41).
+> - Para fazer uma sugestão, selecione **ajuda**  >  **fornecer uma sugestão** no menu ou **forneça uma sugestão** na tela de boas-vindas, que leva você para a [página da Web do Visual Studio para Mac Developer Community](https://aka.ms/feedback/suggest?space=41).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* [Instale Visual Studio para Mac versão 8,6 ou posterior](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Selecione a opção para instalar o .NET Core. A instalação do Xamarin é opcional para o desenvolvimento do .NET Core. Para saber mais, consulte os recursos a seguir:
+* [Instale Visual Studio para Mac versão 8,6 ou posterior](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Selecione a opção para instalar o .NET Core. A instalação do Xamarin é opcional para o desenvolvimento do .NET Core. Para obter mais informações, consulte os seguintes recursos:
 
   * [Tutorial: instalar o Visual Studio para Mac](/visualstudio/mac/installation).
   * [Versões do MacOS com suporte](../install/macos.md).
@@ -37,7 +37,7 @@ Uma solução do Visual Studio serve como um contêiner para um ou mais projetos
 
 1. Na janela iniciar, selecione **novo projeto**.
 
-1. Na caixa de diálogo **novo projeto** no nó **várias plataformas** , selecione **biblioteca**, em seguida, selecione o modelo de **biblioteca de .net Standard** e selecione **Avançar**.
+1. Na caixa de diálogo **novo projeto** no nó **várias plataformas** , selecione **biblioteca** , em seguida, selecione o modelo de **biblioteca de .net Standard** e selecione **Avançar**.
 
    :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Caixa de diálogo Novo Projeto":::
 
@@ -49,7 +49,7 @@ Uma solução do Visual Studio serve como um contêiner para um ou mais projetos
 
    :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project-options.png" alt-text="Opções da caixa de diálogo Novo projeto do Visual Studio para Mac":::
 
-1. No menu principal, selecione **Exibir**  >  **painéis**  >  **solução**e selecione o ícone de encaixe para manter o pad aberto.
+1. No menu principal, selecione **Exibir**  >  **painéis**  >  **solução** e selecione o ícone de encaixe para manter o pad aberto.
 
    :::image type="content" source="media/library-with-visual-studio-mac/solution-dock-icon.png" alt-text="Ícone de encaixe para o painel de solução":::
 
@@ -77,7 +77,7 @@ Adicione um aplicativo de console que usa a biblioteca de classes. O aplicativo 
 
 1. Selecione **.NET Core 3,1** como a **estrutura de destino** e selecione **Avançar**.
 
-1. Nomeie a **demonstração**do projeto. Selecione **Criar** para criar o projeto na solução.
+1. Nomeie a **demonstração** do projeto. Selecione **Criar** para criar o projeto na solução.
 
    :::image type="content" source="media/library-with-visual-studio-mac/add-showcase-project.png" alt-text="Adicionar projeto de demonstração":::
 

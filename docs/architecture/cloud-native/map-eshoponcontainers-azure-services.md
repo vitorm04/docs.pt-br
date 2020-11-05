@@ -2,12 +2,12 @@
 title: Como mapear o eShopOnContainers para os Serviços do Azure
 description: Mapeamento de eShopOnContainers para serviços do Azure, como o serviço kubernetes do Azure, o gateway de API e o barramento de serviço do Azure.
 ms.date: 05/13/2020
-ms.openlocfilehash: e938bf9a8f93f9e375a22ffb94395b9e85b0fe63
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c4627a4b6d9d8b62737984b507e638019544ab67
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155257"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400442"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Como mapear o eShopOnContainers para os Serviços do Azure
 
@@ -24,7 +24,7 @@ Todos os componentes do lado do servidor dessa arquitetura são mapeados facilme
 
 Os serviços hospedados por contêiner do aplicativo, de ASP.NET Core aplicativos MVC para os microserviços de catálogo individual e ordenação, podem ser hospedados e gerenciados no AKS (serviço kubernetes do Azure). O aplicativo pode ser executado localmente no Docker e no kubernetes, e os mesmos contêineres podem ser implantados em ambientes de produção e de preparo hospedados em AKS. Esse processo pode ser automatizado, como veremos na próxima seção.
 
-O AKS fornece serviços de gerenciamento para clusters individuais de contêineres. O aplicativo implantará clusters AKS separados para cada microserviço mostrado no diagrama de arquitetura acima. Essa abordagem permite que cada serviço individual seja dimensionado de forma independente de acordo com suas demandas de recursos. Cada microserviço também pode ser implantado de forma independente e, teoricamente, essas implantações devem incorrer em tempo de inatividade do sistema
+O AKS fornece serviços de gerenciamento para clusters individuais de contêineres. O aplicativo implantará contêineres separados para cada microserviço no cluster AKS, conforme mostrado no diagrama de arquitetura acima. Essa abordagem permite que cada serviço individual seja dimensionado de forma independente de acordo com suas demandas de recursos. Cada microserviço também pode ser implantado de forma independente e, teoricamente, essas implantações devem incorrer em tempo de inatividade do sistema
 
 ## <a name="api-gateway"></a>Gateway de API
 

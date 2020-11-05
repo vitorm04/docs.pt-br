@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 824765e1f3ecfd1381f9c5f8b144b7b11aee8f0b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2be9c4e12d6a613e7f1062ec7492b0b99203f39d
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550378"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400690"
 ---
 # <a name="version-compatibility"></a>Compatibilidade de versões
 
@@ -61,7 +61,7 @@ Se o aplicativo ou o componente não funcionar conforme esperado no .NET Framewo
 
 - Se você determinar que uma alteração no .NET Framework 4,5 desrompeu o aplicativo, verifique o [esquema de configurações de tempo de execução](../configure-apps/file-schema/runtime/index.md)e, particularmente, o [ \<AppContextSwitchOverrides> elemento](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), para determinar se você pode usar uma configuração de tempo de execução no arquivo de configuração do aplicativo para restaurar o comportamento anterior.
 
-- Se você encontrar um problema que não está documentado, abra um problema no [site da Comunidade de Desenvolvedores do .NET](https://developercommunity.visualstudio.com/spaces/61/index.html) ou no [repositório GitHub do Microsoft/dotnet](https://github.com/microsoft/dotnet/issues).
+- Se você encontrar um problema que não está documentado, abra um problema no [site da Comunidade de Desenvolvedores do .NET](https://aka.ms/feedback/report?space=61) ou no [repositório GitHub do Microsoft/dotnet](https://github.com/microsoft/dotnet/issues).
 
 ## <a name="side-by-side-execution"></a>Execução lado a lado
 

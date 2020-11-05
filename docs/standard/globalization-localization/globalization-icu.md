@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: 7b367fe694c9dd153372fadfe29461ea8b6a0415
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.openlocfilehash: e0ca78871d1ddf851148096c8c6cfd10076763ab
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342586"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400873"
 ---
 # <a name="net-globalization-and-icu"></a>Globalização e ICU do .NET
 
@@ -33,12 +33,12 @@ A partir do .NET 5,0, os desenvolvedores têm mais controle sobre qual bibliotec
 
 ## <a name="icu-on-windows"></a>ICU no Windows
 
-O Windows 10 pode 2019 atualização e as versões posteriores incluem [icu.dll](/windows/win32/intl/international-components-for-unicode--icu-) como parte do sistema operacional, e o .NET 5,0 e versões posteriores usam o ICU por padrão. Quando executado no Windows, o .NET 5,0 e versões posteriores tentam carregar `icu.dll` e, se estiver disponível, usa-o para a implementação da globalização.  Se essa biblioteca não puder ser encontrada ou carregada, como quando executada em versões mais antigas do Windows, o .NET 5,0 e versões posteriores retornem à implementação baseada em NLS.
+O Windows 10 pode 2019 atualização e as versões posteriores incluem [icu.dll](/windows/win32/intl/international-components-for-unicode--icu-) como parte do sistema operacional, e o .NET 5,0 e versões posteriores usam o ICU por padrão. Ao executar no Windows, o .NET 5,0 e versões posteriores tentam carregar `icu.dll` e, se estiver disponível, usá-lo para a implementação da globalização. Se a biblioteca ICU não puder ser encontrada ou carregada, como quando executada em versões mais antigas do Windows, o .NET 5,0 e versões posteriores retornem à implementação baseada em NLS.
 
 > [!NOTE]
 > Mesmo ao usar o ICU, `CurrentCulture` os `CurrentUICulture` Membros, e `CurrentRegion` ainda usam as APIs do sistema operacional Windows para honrar as configurações do usuário.
 
-### <a name="using-nls-instead-of-icu"></a>Usando o NLS em vez do ICU
+### <a name="use-nls-instead-of-icu"></a>Usar NLS em vez de ICU
 
 Usar o ICU em vez do NLS pode resultar em diferenças comportamentais com algumas operações relacionadas à globalização. Para reverter para o uso do NLS, um desenvolvedor pode recusar a implementação do ICU. Os aplicativos podem habilitar o modo NLS de qualquer uma das seguintes maneiras:
 
@@ -71,7 +71,7 @@ Para obter mais informações, consulte [definições de configuração de tempo
 
 ## <a name="app-local-icu"></a>ICU de aplicativo local
 
-Cada versão do ICU pode trazer suas correções de bug de ti, bem como dados de CLDR (repositório de dados de localidade comum) que descrevem os idiomas do mundo. A movimentação entre versões do ICU pode afetar sutilmente o comportamento do aplicativo quando se trata de operações relacionadas à globalização.  Para ajudar os desenvolvedores de aplicativos a garantir a consistência em todas as implantações, o .NET 5,0 e versões posteriores permitem que os aplicativos no Windows e no UNIX executem e usem sua própria cópia do ICU.
+Cada versão do ICU pode trazer suas correções de bug de ti, bem como dados de CLDR (repositório de dados de localidade comum) que descrevem os idiomas do mundo. A movimentação entre versões do ICU pode afetar sutilmente o comportamento do aplicativo quando se trata de operações relacionadas à globalização. Para ajudar os desenvolvedores de aplicativos a garantir a consistência em todas as implantações, o .NET 5,0 e versões posteriores permitem que os aplicativos no Windows e no UNIX executem e usem sua própria cópia do ICU.
 
 Os aplicativos podem aceitar um modo de implementação do ICU local do aplicativo de qualquer uma das seguintes maneiras:
 
@@ -120,7 +120,7 @@ Isso deve ser feito para todos os binários do ICU para os tempos de execução 
 
 ### <a name="macos-behavior"></a>comportamento do macOS
 
-`macOS` tem um comportamento diferente para resolver bibliotecas dinâmicas dependentes dos comandos de carregamento especificados no `match-o` arquivo do que o carregador do Linux. No carregador do Linux, o .NET pode tentar `libicudata` , `libicuuc` e `libicui18n` (nessa ordem) para satisfazer o grafo de dependências do ICU. No entanto, no macOS, isso não funciona. Ao criar o ICU no macOS, você, por padrão, obtém uma biblioteca dinâmica com esses comandos de carregamento no `libicuuc` . Por exemplo:
+`macOS` tem um comportamento diferente para resolver bibliotecas dinâmicas dependentes dos comandos de carregamento especificados no `match-o` arquivo do que o carregador do Linux. No carregador do Linux, o .NET pode tentar `libicudata` , `libicuuc` e `libicui18n` (nessa ordem) para satisfazer o grafo de dependências do ICU. No entanto, no macOS, isso não funciona. Ao criar o ICU no macOS, você, por padrão, obtém uma biblioteca dinâmica com esses comandos de carregamento no `libicuuc` . O trecho a seguir mostra um exemplo.
 
 ```sh
 ~/ % otool -L /Users/santifdezm/repos/icu-build/icu/install/lib/libicuuc.67.1.dylib
