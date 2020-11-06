@@ -4,12 +4,12 @@ description: Saiba mais sobre o .NET, uma plataforma de desenvolvimento de softw
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: d008fbeabf58a3dddf1ee96fc655b6a685f8edfd
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 5c600ca999089d005f4f8eb2db332e938df7bfcb
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223575"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329788"
 ---
 # <a name="introduction-to-net"></a>Introdução ao .NET
 
@@ -23,8 +23,8 @@ O .NET é uma plataforma de desenvolvimento de software livre gratuita para a cr
   * [WPF do Windows](/dotnet/desktop/wpf/)
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [UWP (Plataforma Universal do Windows)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
-* [Jogos](https://dotnet.microsoft.com/learn/games/unity-tutorial/intro)
-* [Internet das coisas (IoT)](https://dotnet.microsoft.com/apps/iot)
+* [Jogos](https://dotnet.microsoft.com/apps/games)
+* [Internet das Coisas (IoT)](https://dotnet.microsoft.com/apps/iot)
 * [Aprendizado de máquina](../machine-learning/index.yml)
 * [Aplicativos de console](tutorials/with-visual-studio-code.md)
 * [Serviços do Windows](/aspnet/core/host-and-deploy/windows-service)
@@ -132,7 +132,7 @@ Os ambientes de desenvolvimento integrados para .NET incluem:
 
 O [SDK do .net](sdk.md) é um conjunto de bibliotecas e ferramentas para desenvolver e executar aplicativos .net.
 
-Ao [baixar o .net](https://dotnet.microsoft.com/download/dotnet-core/), você pode escolher o SDK ou um *tempo de execução*, como o tempo de execução do .net ou o tempo de execução do ASP.NET Core. Instale um tempo de execução em um computador que você deseja preparar para executar aplicativos .NET. Instale o SDK em um computador que você deseja usar para desenvolvimento. Ao baixar o SDK, você obtém automaticamente os tempos de execução com ele.
+Ao [baixar o .net](https://dotnet.microsoft.com/download/dotnet-core/), você pode escolher o SDK ou um *tempo de execução* , como o tempo de execução do .net ou o tempo de execução do ASP.NET Core. Instale um tempo de execução em um computador que você deseja preparar para executar aplicativos .NET. Instale o SDK em um computador que você deseja usar para desenvolvimento. Ao baixar o SDK, você obtém automaticamente os tempos de execução com ele.
 
 O download do SDK inclui os seguintes componentes:
 
@@ -145,7 +145,7 @@ O download do SDK inclui os seguintes componentes:
 * O tempo de execução de ASP.NET Core. Fornece serviços básicos para aplicativos conectados à Internet, como aplicativos Web, aplicativos de IoT e back-ends móveis.
 * O tempo de execução da área de trabalho. Fornece serviços básicos para aplicativos da área de trabalho do Windows, incluindo Windows Forms e WPF.
 
-Para saber mais, consulte os recursos a seguir:
+Para obter mais informações, consulte os seguintes recursos:
 
 * [Visão geral do SDK do .NET](sdk.md)
 * [Visão geral da CLI do .NET](tools/index.md)
@@ -153,7 +153,7 @@ Para saber mais, consulte os recursos a seguir:
 
 ### <a name="project-system-and-msbuild"></a>Sistema de projeto e MSBuild
 
-Um aplicativo .NET é criado a partir do código-fonte usando o [MSBuild](/visualstudio/msbuild/msbuild). Um arquivo de projeto (*. csproj*, *. fsproj*ou *. vbproj*) especifica [destinos](/visualstudio/msbuild/msbuild-targets) e [tarefas](/visualstudio/msbuild/msbuild-tasks) associadas que são responsáveis por compilar, empacotar e publicar código. Há identificadores do SDK que se referem a coleções padrão de destinos e tarefas. O uso desses identificadores ajuda a manter os arquivos de projeto pequenos e fáceis de trabalhar com o. Por exemplo, aqui está um arquivo de projeto para um aplicativo de console:
+Um aplicativo .NET é criado a partir do código-fonte usando o [MSBuild](/visualstudio/msbuild/msbuild). Um arquivo de projeto ( *. csproj* , *. fsproj* ou *. vbproj* ) especifica [destinos](/visualstudio/msbuild/msbuild-targets) e [tarefas](/visualstudio/msbuild/msbuild-tasks) associadas que são responsáveis por compilar, empacotar e publicar código. Há identificadores do SDK que se referem a coleções padrão de destinos e tarefas. O uso desses identificadores ajuda a manter os arquivos de projeto pequenos e fáceis de trabalhar com o. Por exemplo, aqui está um arquivo de projeto para um aplicativo de console:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -199,7 +199,7 @@ Para obter mais informações, consulte a [documentação do NuGet](/nuget/).
 
 O .NET Interactive é um grupo de ferramentas de CLI e APIs que permitem aos usuários criar experiências interativas na Web, na redução e nos notebooks.
 
-Para saber mais, consulte os recursos a seguir:
+Para obter mais informações, consulte os seguintes recursos:
 
 * [Tutorial do .NET In-Browser](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)
 * [Usando blocos de anotações do .NET com o Jupyter em seu computador](https://github.com/dotnet/interactive/blob/main/docs/NotebooksLocalExperience.md)
@@ -221,7 +221,7 @@ As linguagens .NET de nível mais alto , como C#, são compiladas em um conjunto
 
 Como a compilação JIT ocorre durante a execução do aplicativo, o tempo de compilação é parte do tempo de execução. Portanto, os compiladores JIT precisam balancear o tempo gasto otimizando o código contra as economias que o código resultante pode produzir. Mas um compilador JIT conhece o hardware real e pode liberar os desenvolvedores de ter que enviar diferentes implementações para diferentes plataformas.
 
-O compilador JIT .NET pode fazer uma *compilação em camadas*, o que significa que ele pode recompilar métodos individuais em tempo de execução. Esse recurso permite que ele seja compilado rapidamente e ainda seja capaz de produzir uma versão altamente ajustada do código para métodos usados com frequência.
+O compilador JIT .NET pode fazer uma *compilação em camadas* , o que significa que ele pode recompilar métodos individuais em tempo de execução. Esse recurso permite que ele seja compilado rapidamente e ainda seja capaz de produzir uma versão altamente ajustada do código para métodos usados com frequência.
 
 Para obter mais informações, consulte [processo de execução gerenciado](../standard/managed-execution-process.md) e [compilação em camadas](whats-new/dotnet-core-3-0.md#tiered-compilation).
 
@@ -292,7 +292,7 @@ As bibliotecas para algumas funcionalidades de aplicativos comumente usadas não
 
 Para obter mais informações, consulte o [repositório dotnet/extensões no GitHub](https://github.com/dotnet/extensions).
 
-## <a name="data-access"></a>Acesso aos dados
+## <a name="data-access"></a>Acesso de dados
 
 O .NET fornece um ORM (objeto/mapeador relacional) e uma maneira de escrever consultas SQL no código.
 

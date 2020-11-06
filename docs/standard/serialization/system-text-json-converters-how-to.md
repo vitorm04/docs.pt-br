@@ -1,21 +1,23 @@
 ---
 title: Como escrever conversores personalizados para serialização JSON-.NET
+description: Saiba como criar conversores personalizados para as classes de serialização JSON que são fornecidas no System.Text.Json namespace.
 ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
+zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: e0b769d7bb6b336d226cd48de1932524c4d7e74d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: ba6b61232ccf7ed493fe5809e5c0b8ba21091d3d
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811061"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329801"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Como escrever conversores personalizados para serialização JSON (Marshalling) no .NET
 
@@ -28,10 +30,20 @@ Um *conversor* é uma classe que converte um objeto ou um valor de e para JSON. 
 
 Você também pode escrever conversores personalizados para personalizar ou estender `System.Text.Json` com funcionalidade não incluída na versão atual. Os cenários a seguir serão abordados posteriormente neste artigo:
 
+::: zone pivot="dotnet-5-0"
+
+* [Desserializar tipos inferidos para propriedades de objeto](#deserialize-inferred-types-to-object-properties).
+* [Suporte à desserialização polimórfico](#support-polymorphic-deserialization).
+* [Dar suporte à viagem de ida \<T> e volta para pilha](#support-round-trip-for-stackt).
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
 * [Desserializar tipos inferidos para propriedades de objeto](#deserialize-inferred-types-to-object-properties).
 * [Dicionário de suporte com chave não cadeia de caracteres](#support-dictionary-with-non-string-key).
 * [Suporte à desserialização polimórfico](#support-polymorphic-deserialization).
 * [Dar suporte à viagem de ida \<T> e volta para pilha](#support-round-trip-for-stackt).
+::: zone-end
 
 ## <a name="custom-converter-patterns"></a>Padrões de conversor personalizado
 
@@ -177,10 +189,20 @@ Um conversor interno será escolhido somente se nenhum conversor personalizado a
 
 As seções a seguir fornecem exemplos de conversor que abordam alguns cenários comuns que a funcionalidade interna não trata.
 
-* [Desserializar tipos inferidos para propriedades de objeto](#deserialize-inferred-types-to-object-properties)
-* [Dicionário de suporte com chave não cadeia de caracteres](#support-dictionary-with-non-string-key)
-* [Suporte à desserialização polimórfico](#support-polymorphic-deserialization)
+::: zone pivot="dotnet-5-0"
+
+* [Desserializar tipos inferidos para propriedades de objeto](#deserialize-inferred-types-to-object-properties).
+* [Suporte à desserialização polimórfico](#support-polymorphic-deserialization).
 * [Dar suporte à viagem de ida \<T> e volta para pilha](#support-round-trip-for-stackt).
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
+* [Desserializar tipos inferidos para propriedades de objeto](#deserialize-inferred-types-to-object-properties).
+* [Dicionário de suporte com chave não cadeia de caracteres](#support-dictionary-with-non-string-key).
+* [Suporte à desserialização polimórfico](#support-polymorphic-deserialization).
+* [Dar suporte à viagem de ida \<T> e volta para pilha](#support-round-trip-for-stackt).
+::: zone-end
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>Desserializar tipos inferidos para propriedades de objeto
 
@@ -221,6 +243,8 @@ Sem o conversor personalizado, a desserialização coloca um `JsonElement` em ca
 
 A [pasta de testes de unidade](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) no `System.Text.Json.Serialization` namespace tem mais exemplos de conversores personalizados que manipulam a desserialização para `object` Propriedades.
 
+::: zone pivot="dotnet-core-3-1"
+
 ### <a name="support-dictionary-with-non-string-key"></a>Dicionário de suporte com chave não cadeia de caracteres
 
 O suporte interno para coleções de dicionário é para o `Dictionary<string, TValue>` . Ou seja, a chave deve ser uma cadeia de caracteres. Para dar suporte a um dicionário com um inteiro ou algum outro tipo como a chave, um conversor personalizado é necessário.
@@ -252,6 +276,7 @@ A saída JSON da serialização é semelhante ao exemplo a seguir:
 ```
 
 A [pasta de testes de unidade](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) no `System.Text.Json.Serialization` namespace tem mais exemplos de conversores personalizados que manipulam dicionários que não são de chave de cadeia de caracteres.
+::: zone-end
 
 ### <a name="support-polymorphic-deserialization"></a>Suporte à desserialização polimórfico
 
@@ -288,7 +313,7 @@ O conversor pode desserializar o JSON criado usando o mesmo conversor para seria
 
 O código do conversor no exemplo anterior lê e grava cada propriedade manualmente. Uma alternativa é chamar `Deserialize` ou `Serialize` fazer parte do trabalho. Para obter um exemplo, consulte [esta postagem de StackOverflow](https://stackoverflow.com/a/59744873/12509023).
 
-### <a name="support-round-trip-for-stackt"></a>Dar suporte à viagem de ida e volta para pilha\<T>
+### <a name="support-round-trip-for-stackt"></a>Dar suporte à viagem de ida e volta para a pilha\<T>
 
 Se você desserializar uma cadeia de caracteres JSON em um <xref:System.Collections.Generic.Stack%601> objeto e, em seguida, serializar esse objeto, o conteúdo da pilha estará na ordem inversa. Esse comportamento se aplica aos tipos e à interface a seguir e aos tipos definidos pelo usuário que derivam deles:
 
@@ -307,6 +332,29 @@ O código a seguir mostra um conversor personalizado que permite a passagem de i
 O código a seguir registra o conversor:
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripStackOfT.cs?name=SnippetRegister)]
+
+## <a name="handle-null-values"></a>Manipular valores nulos
+
+Por padrão, o serializador trata valores nulos da seguinte maneira:
+
+* Para tipos de referência e `Nullable<T>` tipos:
+
+  * Ele não passa `null` para conversores personalizados na serialização.
+  * Ele não passa `JsonTokenType.Null` para conversores personalizados na desserialização.
+  * Ele retorna uma `null` instância na desserialização.
+  * Ele grava `null` diretamente com o gravador na serialização.
+
+* Para tipos de valores não anuláveis:
+
+  * Ele passa `JsonTokenType.Null` para conversores personalizados na desserialização. (Se nenhum conversor personalizado estiver disponível, uma `JsonException` exceção será lançada pelo conversor interno para o tipo.)
+
+Esse comportamento de tratamento nulo é principalmente para otimizar o desempenho, ignorando uma chamada extra para o conversor. Além disso, evita a força de conversores para tipos anuláveis a serem verificados `null` no início de cada `Read` e `Write` substituição de método.
+
+::: zone pivot="dotnet-5-0"
+Para habilitar um conversor personalizado para tratar `null` de uma referência ou tipo de valor, substitua <xref:System.Text.Json.Serialization.JsonConverter%601.HandleNull%2A?displayProperty=nameWithType> para retornar `true` , conforme mostrado no exemplo a seguir:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterHandleNull.cs" highlight="19":::
+::: zone-end
 
 ## <a name="other-custom-converter-samples"></a>Outras amostras de conversor personalizadas
 

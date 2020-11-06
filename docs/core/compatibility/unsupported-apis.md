@@ -3,12 +3,12 @@ title: APIs sem suporte no .NET Core e no .NET 5 +
 titleSuffix: ''
 description: Saiba quais APIs do .NET sempre geram uma exceção no .NET Core e no .NET 5,0 e versões posteriores.
 ms.date: 10/13/2020
-ms.openlocfilehash: 0164ebff51de82d548a02f9fde754c1052a9c2b5
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 51d73557a48910d9cb1c4d3cdced34dfe4d849d8
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159333"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329775"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core-and-net-5"></a>APIs que sempre lançam exceções no .NET Core e no .NET 5 +
 
@@ -223,7 +223,7 @@ Este artigo organiza as APIs afetadas por namespace.
 
 | Membro | Plataformas que lançam |
 | - | - |
-| <xref:System.Security.Claims.ClaimsPrincipal.%23ctor> | Todos |
+| <xref:System.Security.Claims.ClaimsPrincipal.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Todos |
 | <xref:System.Security.Claims.ClaimsPrincipal.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Todos |
 | <xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Runtime.Serialization.SerializationInfo)> | Todos |
 | <xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Todos |
@@ -321,7 +321,7 @@ Este artigo organiza as APIs afetadas por namespace.
 | <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.IO.Stream,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | Todos |
 | <xref:System.Xml.XmlDictionaryWriter.CreateMtomWriter(System.IO.Stream,System.Text.Encoding,System.Int32,System.String,System.String,System.String,System.Boolean,System.Boolean)?displayProperty=nameWithType> | Todos |
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Alterações recentes de migração do .NET Framework para o .NET Core](fx-core.md)
 - [Serialização binária no .NET Core](../../standard/serialization/binary-serialization.md#net-core)
