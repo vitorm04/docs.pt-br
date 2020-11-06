@@ -4,12 +4,12 @@ description: 'Saiba como F# Interativo (dotNet FSI) é usado para executar o có
 ms.date: 10/31/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: ba9111efccceca03fda43ff11c3f111610541595
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.openlocfilehash: 89570a54ecebe625a1612e4b97b01c3693e4707c
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342677"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400860"
 ---
 # <a name="interactive-programming-with-f"></a>Programação interativa com F\#
 
@@ -17,7 +17,7 @@ F# Interativo (dotNet FSI) é usado para executar o código F # interativamente 
 
 Para executar o F# Interativo no console do, execute `dotnet fsi` . Você encontrará `dotnet fsi` em qualquer SDK do .net.
 
-Para saber mais sobre as opções de linha de comando disponíveis, veja [Opções de F# Interativo](../../language-reference/fsharp-interactive-options.md).
+Para obter informações sobre opções de linha de comando disponíveis, consulte [Opções de F# interativo](../../language-reference/fsharp-interactive-options.md).
 
 ## <a name="executing-code-directly-in-f-interactive"></a>Executando o código diretamente no F# Interativo
 
@@ -62,7 +62,7 @@ val it : unit = ()
 >
 ```
 
-A formatação do código é preservada e há um semiclon duplo ( `;;` ) finalizando a entrada. F# Interativo, em seguida, avaliou o código e imprimiu os resultados!
+A formatação do código é preservada e há um ponto-e-vírgula duplo ( `;;` ) encerrando a entrada. F# Interativo, em seguida, avaliou o código e imprimiu os resultados!
 
 ## <a name="scripting-with-f"></a>Criando scripts com o F\#
 
@@ -204,7 +204,7 @@ from
 fsi
 ```
 
-Observe que você também pode usar `System.Environment.GetCommandLineArgs()` o para acessar os mesmos argumentos.
+Você também pode usar `System.Environment.GetCommandLineArgs()` o para acessar os mesmos argumentos.
 
 ## <a name="f-interactive-directive-reference"></a>Referência de diretiva de F# Interativo
 
@@ -245,7 +245,7 @@ O código digitado na mesma sessão tem acesso a quaisquer construções inserid
 
 Quando executado no Visual Studio, o F# interativo é executado independentemente do seu projeto, então, por exemplo, não é possível usar construções definidas em seu projeto em F# interativo, a menos que você copie o código para a função na janela interativa.
 
-Você pode controlar os argumentos de linha de comando do F# interativo (opções) ajustando as configurações. No menu **Ferramentas** , selecione **Opções...** e expanda **Ferramentas do F#**. As duas configurações que podem ser alteradas são as opções do F# interativo e a configuração do **F# Interativo de 64 bits** , que é relevante apenas se você estiver executando o F# interativo em uma máquina de 64 bits. Essa configuração determina se você deseja executar a versão dedicada de 64 bits do **fsi.exe** ou **fsianycpu.exe** , que usa a arquitetura do computador para determinar se deve ser executado como um processo de 32 ou 64 bits.
+Você pode controlar a F# Interativo argumentos de linha de comando (opções) ajustando as configurações. No menu **Ferramentas** , selecione **Opções...** e expanda **Ferramentas do F#**. As duas configurações que podem ser alteradas são as opções do F# interativo e a configuração do **F# Interativo de 64 bits** , que é relevante apenas se você estiver executando o F# interativo em uma máquina de 64 bits. Essa configuração determina se você deseja executar a versão dedicada de 64 bits do **fsi.exe** ou **fsianycpu.exe** , que usa a arquitetura do computador para determinar se deve ser executado como um processo de 32 ou 64 bits.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
