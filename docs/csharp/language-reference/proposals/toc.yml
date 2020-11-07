@@ -63,7 +63,7 @@
         - name: Tipos de referência que permitem valor nulo – proposta
           href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
         - name: Tipos de referência que permitem valor nulo – especificação
-          href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
+          href: ../../../../_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md
         - name: Correspondência de padrões recursiva
           href: ../../../../_csharplang/proposals/csharp-8.0/patterns.md
         - name: Métodos de interface padrão
@@ -88,6 +88,8 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/records.md
         - name: Instruções de nível superior
           href: ../../../../_csharplang/proposals/csharp-9.0/top-level-statements.md
+        - name: Tipos de referência que permitem valor nulo – especificação
+          href: ../../../../_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md
         - name: Melhorias na correspondência de padrões
           href: ../../../../_csharplang/proposals/csharp-9.0/patterns3.md
         - name: Setters somente init
