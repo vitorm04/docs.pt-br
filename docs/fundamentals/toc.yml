@@ -1167,6 +1167,8 @@ items:
                         href: code-analysis/style-rules/ide0081.md
                       - name: IDE0100
                         href: code-analysis/style-rules/ide0100.md
+                      - name: IDE0110
+                        href: code-analysis/style-rules/ide0110.md
                   - name: Regras diversas
                     items:
                       - name: IDE0076
@@ -1419,14 +1421,20 @@ items:
                 href: ../standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md
               - name: Exibir datas em calendários que não sejam gregorianos
                 href: ../standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md
-      - name: Manipular cadeias de caracteres
+      - name: Cadeias de caracteres
         items:
           - name: Codificação de caracteres no .NET
             href: ../standard/base-types/character-encoding-introduction.md
           - name: Como usar as classes de codificação de caracteres
             href: ../standard/base-types/character-encoding.md
-          - name: Práticas recomendadas para o uso de cadeias de caracteres
-            href: ../standard/base-types/best-practices-strings.md
+          - name: Práticas recomendadas
+            items:
+              - name: Comparando cadeias de caracteres
+                href: ../standard/base-types/best-practices-strings.md
+              - name: Exibição e persistência de dados formatados
+                href: ../standard/base-types/best-practices-display-data.md
+          - name: Alterações de comportamento no .NET 5+ (Windows)
+            href: ../standard/base-types/string-comparison-net-5-plus.md
           - name: Operações básicas de cadeias de caracteres
             items:
               - name: Visão geral
@@ -1438,12 +1446,12 @@ items:
                 href: ../standard/base-types/trimming.md
               - name: Preencher cadeias de caracteres
                 href: ../standard/base-types/padding.md
-              - name: Comparar cadeias de caracteres
+              - name: Métodos de comparação
                 href: ../standard/base-types/comparing.md
               - name: Alterar o uso de maiúsculas e minúsculas
                 href: ../standard/base-types/changing-case.md
-              - name: Extrair elementos de uma cadeia de caracteres
-                href: ../standard/base-types/parse-strings.md
+              - name: Separar partes de uma cadeia de caracteres
+                href: ../standard/base-types/divide-up-strings.md
               - name: Usar a classe StringBuilder
                 href: ../standard/base-types/stringbuilder.md
               - name: 'Como: Executar manipulações básicas de cadeia de caracteres'
@@ -1503,16 +1511,16 @@ items:
                     href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
                   - name: Verificar se as cadeias de caracteres estão em um formato de email válido
                     href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
-      - name: Analisar as cadeias de caracteres
-        items:
-          - name: Visão geral
-            href: ../standard/base-types/parsing-strings.md
-          - name: Analisar as cadeias de caracteres numéricas
-            href: ../standard/base-types/parsing-numeric.md
-          - name: Analisar as cadeias de caracteres de data e hora
-            href: ../standard/base-types/parsing-datetime.md
-          - name: Analisar outras cadeias de caracteres
-            href: ../standard/base-types/parsing-other.md
+          - name: Analisar (converter) cadeias de caracteres
+            items:
+              - name: Visão geral
+                href: ../standard/base-types/parsing-strings.md
+              - name: Analisar as cadeias de caracteres numéricas
+                href: ../standard/base-types/parsing-numeric.md
+              - name: Analisar as cadeias de caracteres de data e hora
+                href: ../standard/base-types/parsing-datetime.md
+              - name: Analisar outras cadeias de caracteres
+                href: ../standard/base-types/parsing-other.md
       - name: Atributos
         items:
           - name: Visão geral
