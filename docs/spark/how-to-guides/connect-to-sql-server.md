@@ -6,49 +6,49 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: b20710000d8717b5df238aa9a782371fbe586037
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 1fecd796aeefd6c5681c4c2ea623e89f3a5a3c1d
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224029"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439528"
 ---
-# <a name="connect-net-for-apache-spark-to-sql-server"></a><span data-ttu-id="982ef-103">Conectar .NET para Apache Spark a SQL Server</span><span class="sxs-lookup"><span data-stu-id="982ef-103">Connect .NET for Apache Spark to SQL Server</span></span>
+# <a name="connect-net-for-apache-spark-to-sql-server"></a><span data-ttu-id="9e101-103">Conectar .NET para Apache Spark a SQL Server</span><span class="sxs-lookup"><span data-stu-id="9e101-103">Connect .NET for Apache Spark to SQL Server</span></span>
 
-<span data-ttu-id="982ef-104">Neste artigo, você aprenderá a se conectar a uma instância do SQL Server de seu aplicativo [.net para Apache Spark](https://github.com/dotnet/spark) .</span><span class="sxs-lookup"><span data-stu-id="982ef-104">In this article, you learn how to connect to an SQL server instance from your [.NET for Apache Spark](https://github.com/dotnet/spark) application.</span></span>
+<span data-ttu-id="9e101-104">Neste artigo, você aprenderá a se conectar a uma instância do SQL Server de seu aplicativo [.net para Apache Spark](https://github.com/dotnet/spark) .</span><span class="sxs-lookup"><span data-stu-id="9e101-104">In this article, you learn how to connect to an SQL server instance from your [.NET for Apache Spark](https://github.com/dotnet/spark) application.</span></span>
 
-## <a name="configure-sql-server-to-grant-your-application-access"></a><span data-ttu-id="982ef-105">Configurar SQL Server para conceder acesso ao aplicativo</span><span class="sxs-lookup"><span data-stu-id="982ef-105">Configure SQL Server to grant your application access</span></span>
+## <a name="configure-sql-server-to-grant-your-application-access"></a><span data-ttu-id="9e101-105">Configurar SQL Server para conceder acesso ao aplicativo</span><span class="sxs-lookup"><span data-stu-id="9e101-105">Configure SQL Server to grant your application access</span></span>
 
-1. <span data-ttu-id="982ef-106">Adicione um usuário e senha de logon escolhendo SQL Server autenticação para sua instância do SQL Server.</span><span class="sxs-lookup"><span data-stu-id="982ef-106">Add a login user and password choosing SQL Server authentication to your SQL Server instance.</span></span>
-2. <span data-ttu-id="982ef-107">Conceda permissões necessárias ao usuário de logon no nível de banco de dados relevante, conforme mostrado abaixo:</span><span class="sxs-lookup"><span data-stu-id="982ef-107">Give that login user necessary permissions at the relevant database level as shown below:</span></span>
+1. <span data-ttu-id="9e101-106">Adicione um usuário e senha de logon escolhendo SQL Server autenticação para sua instância do SQL Server.</span><span class="sxs-lookup"><span data-stu-id="9e101-106">Add a login user and password choosing SQL Server authentication to your SQL Server instance.</span></span>
+2. <span data-ttu-id="9e101-107">Conceda permissões necessárias ao usuário de logon no nível de banco de dados relevante, conforme mostrado abaixo:</span><span class="sxs-lookup"><span data-stu-id="9e101-107">Give that login user necessary permissions at the relevant database level as shown below:</span></span>
 
     ![Permissões do SQL Server](./media/connect-external-sources/SqlServerAuth.png)
 
-3. <span data-ttu-id="982ef-109">Verifique se a porta padrão para SQL Server `1433` é permitida por meio do firewall.</span><span class="sxs-lookup"><span data-stu-id="982ef-109">Make sure the default port for SQL Server `1433` is allowed through the firewall.</span></span>
-4. <span data-ttu-id="982ef-110">Abra o SQL configure Manager para habilitar o TCP/IP por meio da configuração de rede, conforme mostrado abaixo:</span><span class="sxs-lookup"><span data-stu-id="982ef-110">Open SQL configure manager to enable TCP/IP through the network configuration as shown below:</span></span>
+3. <span data-ttu-id="9e101-109">Verifique se a porta padrão para SQL Server `1433` é permitida por meio do firewall.</span><span class="sxs-lookup"><span data-stu-id="9e101-109">Make sure the default port for SQL Server `1433` is allowed through the firewall.</span></span>
+4. <span data-ttu-id="9e101-110">Abra o SQL configure Manager para habilitar o TCP/IP por meio da configuração de rede, conforme mostrado abaixo:</span><span class="sxs-lookup"><span data-stu-id="9e101-110">Open SQL configure manager to enable TCP/IP through the network configuration as shown below:</span></span>
 
     ![Habilitar SQL Server TCP/IP](./media/connect-external-sources/SqlServerTCPIP.png)
 
-    <span data-ttu-id="982ef-112">Observe também o valor de **escutar tudo** na guia acima, em **protocolo**.</span><span class="sxs-lookup"><span data-stu-id="982ef-112">Also note the value of **Listen All** in above tab under **Protocol**.</span></span>
+    <span data-ttu-id="9e101-112">Observe também o valor de **escutar tudo** na guia acima, em **protocolo**.</span><span class="sxs-lookup"><span data-stu-id="9e101-112">Also note the value of **Listen All** in above tab under **Protocol**.</span></span>
 
-5. <span data-ttu-id="982ef-113">Configure a porta TCP/IP para 1433 para todos os endereços IP necessários se o `Listen All` for definido como `No` .</span><span class="sxs-lookup"><span data-stu-id="982ef-113">Configure the TCP/IP port to 1433 for all required IP addresses if the `Listen All` is set to `No`.</span></span> <span data-ttu-id="982ef-114">Caso contrário, defina a porta TCP em IPAll.</span><span class="sxs-lookup"><span data-stu-id="982ef-114">Otherwise, set the TCP Port in IPAll.</span></span>
+5. <span data-ttu-id="9e101-113">Configure a porta TCP/IP para 1433 para todos os endereços IP necessários se o `Listen All` for definido como `No` .</span><span class="sxs-lookup"><span data-stu-id="9e101-113">Configure the TCP/IP port to 1433 for all required IP addresses if the `Listen All` is set to `No`.</span></span> <span data-ttu-id="9e101-114">Caso contrário, defina a porta TCP em IPAll.</span><span class="sxs-lookup"><span data-stu-id="9e101-114">Otherwise, set the TCP Port in IPAll.</span></span>
 
     ![SQL Server porta TCP/IP](./media/connect-external-sources/SQLServerTCPIIPPort.png)
 
-## <a name="connect-to-sql-server-from-your-application"></a><span data-ttu-id="982ef-116">Conectar-se a SQL Server do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="982ef-116">Connect to SQL Server from your application</span></span>
+## <a name="connect-to-sql-server-from-your-application"></a><span data-ttu-id="9e101-116">Conectar-se a SQL Server do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="9e101-116">Connect to SQL Server from your application</span></span>
 
-1. <span data-ttu-id="982ef-117">Use o Microsoft JDBC Driver para SQL Server para fornecer conectividade de banco de dados por meio de seu aplicativo (Baixe deste [site oficial](https://docs.microsoft.com/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15)).</span><span class="sxs-lookup"><span data-stu-id="982ef-117">Use the Microsoft JDBC Driver for SQL Server to provide database connectivity through your application (download from [this official website](https://docs.microsoft.com/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15)).</span></span>
-2. <span data-ttu-id="982ef-118">Defina as seguintes configurações para se conectar à instância do SQL Server e ao banco de dados do seu aplicativo:</span><span class="sxs-lookup"><span data-stu-id="982ef-118">Set the following configurations to connect to the SQL server instance and database from your application:</span></span>
-    1. <span data-ttu-id="982ef-119">**connection_url**: essa é a URL usada para se conectar à instância/banco de dados do SQL Server e tem o seguinte formato:</span><span class="sxs-lookup"><span data-stu-id="982ef-119">**connection_url**: This is the URL used to connect to the SQL server instance/database and has the following format:</span></span>
+1. <span data-ttu-id="9e101-117">Use o Microsoft JDBC Driver para SQL Server para fornecer conectividade de banco de dados por meio de seu aplicativo (Baixe deste [site oficial](/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15)).</span><span class="sxs-lookup"><span data-stu-id="9e101-117">Use the Microsoft JDBC Driver for SQL Server to provide database connectivity through your application (download from [this official website](/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15)).</span></span>
+2. <span data-ttu-id="9e101-118">Defina as seguintes configurações para se conectar à instância do SQL Server e ao banco de dados do seu aplicativo:</span><span class="sxs-lookup"><span data-stu-id="9e101-118">Set the following configurations to connect to the SQL server instance and database from your application:</span></span>
+    1. <span data-ttu-id="9e101-119">**connection_url** : essa é a URL usada para se conectar à instância/banco de dados do SQL Server e tem o seguinte formato:</span><span class="sxs-lookup"><span data-stu-id="9e101-119">**connection_url** : This is the URL used to connect to the SQL server instance/database and has the following format:</span></span>
 
         ```
         jdbc:sqlserver://<SQL_server_IP_address>:1433;instanceName=<instance_name>;databaseName=<database_name>;
         ```
 
-    2. <span data-ttu-id="982ef-120">**DBTABLE**: nome da tabela que está sendo acessada.</span><span class="sxs-lookup"><span data-stu-id="982ef-120">**dbtable**: Name of table being accessed.</span></span>
-    3. <span data-ttu-id="982ef-121">**usuário**: logon de usuário configurado na etapa 1 de configuração do SQL Server.</span><span class="sxs-lookup"><span data-stu-id="982ef-121">**user**: Login user set up in Step 1 of configuring the SQL server.</span></span>
-    4. <span data-ttu-id="982ef-122">**senha**: senha do usuário configurada na etapa 1 de configuração do SQL Server.</span><span class="sxs-lookup"><span data-stu-id="982ef-122">**password**: Password of user set up in Step 1 of configuring the SQL server.</span></span>
-3. <span data-ttu-id="982ef-123">Use a configuração acima no código do aplicativo para ler os dados de uma tabela, conforme mostrado abaixo:</span><span class="sxs-lookup"><span data-stu-id="982ef-123">Use the above configuration in your application code to read the data from a table as shown below:</span></span>
+    2. <span data-ttu-id="9e101-120">**DBTABLE** : nome da tabela que está sendo acessada.</span><span class="sxs-lookup"><span data-stu-id="9e101-120">**dbtable** : Name of table being accessed.</span></span>
+    3. <span data-ttu-id="9e101-121">**usuário** : logon de usuário configurado na etapa 1 de configuração do SQL Server.</span><span class="sxs-lookup"><span data-stu-id="9e101-121">**user** : Login user set up in Step 1 of configuring the SQL server.</span></span>
+    4. <span data-ttu-id="9e101-122">**senha** : senha do usuário configurada na etapa 1 de configuração do SQL Server.</span><span class="sxs-lookup"><span data-stu-id="9e101-122">**password** : Password of user set up in Step 1 of configuring the SQL server.</span></span>
+3. <span data-ttu-id="9e101-123">Use a configuração acima no código do aplicativo para ler os dados de uma tabela, conforme mostrado abaixo:</span><span class="sxs-lookup"><span data-stu-id="9e101-123">Use the above configuration in your application code to read the data from a table as shown below:</span></span>
 
     ```csharp
     static void Main()
