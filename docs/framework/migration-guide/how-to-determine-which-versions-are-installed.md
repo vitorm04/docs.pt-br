@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: faeb2c14b9c1d93b558c67a42c223702178407c0
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 79c60c8dbc29d8985f3cfb2ffc2436539155c555
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955584"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440139"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Como determinar quais versões do .NET Framework estão instaladas
 
@@ -64,9 +64,7 @@ O valor da **versão** REG_DWORD no registro representa a versão do .NET Framew
 
 ### <a name="minimum-version"></a>Versão mínima
 
-Para determinar se uma versão *mínima* do .NET Framework está presente, use a menor **versão** REG_DWORD valor para essa versão da tabela anterior.
-
-Por exemplo, se seu aplicativo for executado em .NET Framework 4,8 ou em uma versão posterior, teste para **obter uma versão** REG_DWORD valor que seja *maior ou igual a* 528040.
+Para determinar se uma versão *mínima* do .NET Framework está presente, verifique uma versão **REG_DWORD valor** que seja maior ou igual ao valor correspondente listado na tabela a seguir. Por exemplo, se seu aplicativo for executado em .NET Framework 4,8 ou em uma versão posterior, teste para **obter uma versão** REG_DWORD valor *maior ou igual a* 528040.
 
 | Versão do .NET Framework | Valor mínimo |
 | ---------------------- | ------------- |
@@ -83,7 +81,7 @@ Por exemplo, se seu aplicativo for executado em .NET Framework 4,8 ou em uma ver
 
 ### <a name="use-registry-editor"></a>Usar o editor do registro
 
-01. No menu **Iniciar**, escolha **Executar**, insira *regedit* e, em seguida, selecione **OK**.
+01. No menu **Iniciar** , escolha **Executar** , insira *regedit* e, em seguida, selecione **OK**.
 
    (Você deve ter credenciais administrativas para executar o regedit.)
 
@@ -108,7 +106,7 @@ Os exemplos a seguir verificam o valor da entrada de **versão** para determinar
 01. Use os <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A?displayProperty=nameWithType> <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A?displayProperty=nameWithType> métodos e para acessar o **HKEY_LOCAL_MACHINE \\ software \\ Microsoft \\ NET Framework instalação \\ NDP \\ v4 \\ completa** subkey no registro do Windows.
 
     > [!IMPORTANT]
-    > Se o aplicativo que você está executando for de 32 bits e estiver em execução no Windows de 64 bits, os caminhos do registro serão diferentes dos listados anteriormente. O registro de 64 bits está disponível na subchave **HKEY_LOCAL_MACHINE \\ software \\ Wow6432Node \\ ** . Por exemplo, a subchave do registro para .NET Framework 4,5 é **HKEY_LOCAL_MACHINE \\ software \\ Wow6432Node \\ Microsoft \\ NET Framework Setup \\ NDP \\ v4 \\ Full**.
+    > Se o aplicativo que você está executando for de 32 bits e estiver em execução no Windows de 64 bits, os caminhos do registro serão diferentes dos listados anteriormente. O registro de 64 bits está disponível na subchave **HKEY_LOCAL_MACHINE \\ software \\ Wow6432Node \\** . Por exemplo, a subchave do registro para .NET Framework 4,5 é **HKEY_LOCAL_MACHINE \\ software \\ Wow6432Node \\ Microsoft \\ NET Framework Setup \\ NDP \\ v4 \\ Full**.
 
 01. Verifique o valor da **versão** REG_DWORD para determinar a versão instalada. Para compatibilidade com a versão atual, verifique se há um valor superior ou igual ao valor listado na [tabela de versões do .NET Framework](#version_table).
 
@@ -138,22 +136,22 @@ Cada versão do .NET Framework de 1,1 a 4,0 é listada como uma subchave em **HK
 
 | Versão do Framework  | Subchave do registro | Valor |
 | ------------------ | --------------- | ----- |
-| 1,0                | **HKLM \\ software \\ Microsoft \\ . Política de NETFramework \\ \\ v 1.0 \\ 3705**     | **Instalar** o REG_SZ igual a `1` |
+| 1.0                | **HKLM \\ software \\ Microsoft \\ . Política de NETFramework \\ \\ v 1.0 \\ 3705**     | **Instalar** o REG_SZ igual a `1` |
 | 1,1                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 1.1.4322**   | **Instalar** o REG_DWORD igual a `1` |
-| 2,0                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 2.0.50727**  | **Instalar** o REG_DWORD igual a `1` |
+| 2.0                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 2.0.50727**  | **Instalar** o REG_DWORD igual a `1` |
 | 3.0                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 3.0 \\ instalação** | **InstallSuccess** REG_DWORD igual a `1` |
 | 3,5                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 3.5**        | **Instalar** o REG_DWORD igual a `1` |
 | 4,0 perfil do cliente | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v4 \\ Client**  | **Instalar** o REG_DWORD igual a `1` |
 | 4,0 perfil completo   | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v4 \\ completo**    | **Instalar** o REG_DWORD igual a `1` |
 
 > [!IMPORTANT]
-> Se o aplicativo que você está executando for de 32 bits e estiver em execução no Windows de 64 bits, os caminhos do registro serão diferentes dos listados anteriormente. O registro de 64 bits está disponível na subchave **HKEY_LOCAL_MACHINE \\ software \\ Wow6432Node \\ ** . Por exemplo, a subchave do registro para .NET Framework 3,5 é **HKEY_LOCAL_MACHINE \\ software \\ Wow6432Node \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 3.5**.
+> Se o aplicativo que você está executando for de 32 bits e estiver em execução no Windows de 64 bits, os caminhos do registro serão diferentes dos listados anteriormente. O registro de 64 bits está disponível na subchave **HKEY_LOCAL_MACHINE \\ software \\ Wow6432Node \\** . Por exemplo, a subchave do registro para .NET Framework 3,5 é **HKEY_LOCAL_MACHINE \\ software \\ Wow6432Node \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 3.5**.
 
 Observe que o caminho do registro para a subchave .NET Framework 1,0 é diferente dos outros.
 
 ### <a name="use-registry-editor-older-framework-versions"></a>Usar o editor do registro (versões mais antigas do Framework)
 
-01. No menu **Iniciar**, escolha **Executar**, insira *regedit* e, em seguida, selecione **OK**.
+01. No menu **Iniciar** , escolha **Executar** , insira *regedit* e, em seguida, selecione **OK**.
 
     Você precisará ter credenciais administrativas para executar o REGEDIT.
 
@@ -165,10 +163,10 @@ Observe que o caminho do registro para a subchave .NET Framework 1,0 é diferent
 
 ### <a name="query-the-registry-using-code-older-framework-versions"></a>Consultar o registro usando código (versões mais antigas do Framework)
 
-Use a <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> classe para acessar a subchave de **instalação HKEY_LOCAL_MACHINE do \\ \\ NDP software Microsoft \\ NET Framework Setup \\ ** no registro do Windows.
+Use a <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> classe para acessar a subchave de **instalação HKEY_LOCAL_MACHINE do \\ \\ NDP software Microsoft \\ NET Framework Setup \\** no registro do Windows.
 
 > [!IMPORTANT]
-> Se o aplicativo que você está executando for de 32 bits e estiver em execução no Windows de 64 bits, os caminhos do registro serão diferentes dos listados anteriormente. O registro de 64 bits está disponível na subchave **HKEY_LOCAL_MACHINE \\ software \\ Wow6432Node \\ ** . Por exemplo, a subchave do registro para .NET Framework 3,5 é **HKEY_LOCAL_MACHINE \\ software \\ Wow6432Node \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 3.5**.
+> Se o aplicativo que você está executando for de 32 bits e estiver em execução no Windows de 64 bits, os caminhos do registro serão diferentes dos listados anteriormente. O registro de 64 bits está disponível na subchave **HKEY_LOCAL_MACHINE \\ software \\ Wow6432Node \\** . Por exemplo, a subchave do registro para .NET Framework 3,5 é **HKEY_LOCAL_MACHINE \\ software \\ Wow6432Node \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 3.5**.
 
 O exemplo a seguir localiza as versões do .NET Framework 1-4 que estão instaladas:
 
@@ -211,7 +209,7 @@ O .NET Framework CLR instalado com .NET Framework tem controle de versão separa
 
      O objeto `System.Version` retornado identifica a versão do runtime que está executando o código. Ele não retorna versões de assembly nem outras versões do runtime que possam ter sido instaladas no computador.
 
-     Para .NET Framework versões 4, 4,5, 4.5.1 e 4.5.2, a representação de cadeia de caracteres do <xref:System.Version> objeto retornado tem o formato 4.0.30319.* xxxxx*, em que *xxxxx* é menor que 42000. Para .NET Framework 4,6 e versões posteriores, ele tem o formato 4.0.30319.42000.
+     Para .NET Framework versões 4, 4,5, 4.5.1 e 4.5.2, a representação de cadeia de caracteres do <xref:System.Version> objeto retornado tem o formato 4.0.30319. *xxxxx* , em que *xxxxx* é menor que 42000. Para .NET Framework 4,6 e versões posteriores, ele tem o formato 4.0.30319.42000.
 
   1. Depois de ter o objeto **version** , consulte o seguinte:
 
@@ -219,7 +217,7 @@ O .NET Framework CLR instalado com .NET Framework tem controle de versão separa
 
      - Para o identificador de versão secundária (por exemplo, *0* para a versão 4.0), use a propriedade <xref:System.Version.Minor%2A?displayProperty=nameWithType>.
 
-     - Para a cadeia de caracteres de versão inteira (por exemplo, *4.0.30319.18010*), use o método <xref:System.Version.ToString%2A?displayProperty=nameWithType>. Esse método retorna um único valor que reflete a versão do runtime que está executando o código. Ele não retorna versões de assembly nem outras versões do runtime que possam ter sido instaladas no computador.
+     - Para a cadeia de caracteres de versão inteira (por exemplo, *4.0.30319.18010* ), use o método <xref:System.Version.ToString%2A?displayProperty=nameWithType>. Esse método retorna um único valor que reflete a versão do runtime que está executando o código. Ele não retorna versões de assembly nem outras versões do runtime que possam ter sido instaladas no computador.
 
   O seguinte exemplo usa a propriedade <xref:System.Environment.Version%2A?displayProperty=nameWithType> para recuperar informações de versão do CLR:
 
@@ -237,7 +235,7 @@ O .NET Framework CLR instalado com .NET Framework tem controle de versão separa
   Version: 4.0.30319.18010
   ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Como determinar quais .NET Framework atualizações estão instaladas](how-to-determine-which-net-framework-updates-are-installed.md)
 - [Instalar o .NET Framework para desenvolvedores](../install/guide-for-developers.md)

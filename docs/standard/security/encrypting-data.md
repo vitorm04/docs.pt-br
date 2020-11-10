@@ -12,12 +12,12 @@ helpviewer_keywords:
 - cryptography [.NET], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 8a8b5988a13ab571284b08c7aaece3542467aa71
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 75bb0fa52b8002efe0027f026de8c0910735e55e
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556963"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440966"
 ---
 # <a name="encrypting-data"></a>Criptografando dados
 
@@ -41,23 +41,23 @@ CryptoStream cryptStream = new CryptoStream(myStream, aes.CreateEncryptor(key, i
   
 Depois que esse código é executado, todos os dados gravados no objeto **CryptoStream** são criptografados usando o algoritmo AES.  
   
-O exemplo a seguir mostra todo o processo de criação de um fluxo, criptografia do fluxo, gravação no fluxo e fechamento do fluxo. Este exemplo cria um fluxo de arquivos que é criptografado usando a classe **CryptoStream** e a classe **AES** . Uma mensagem é gravada no fluxo criptografado com a <xref:System.IO.StreamWriter> classe.
+O exemplo a seguir mostra todo o processo de criação de um fluxo, criptografia do fluxo, gravação no fluxo e fechamento do fluxo. Este exemplo cria um fluxo de arquivos que é criptografado usando a classe **CryptoStream** e a classe **AES** . O IV gerado é gravado no início de <xref:System.IO.FileStream> , portanto, ele pode ser lido e usado para descriptografia. Em seguida, uma mensagem é gravada no fluxo criptografado com a <xref:System.IO.StreamWriter> classe. Embora a mesma chave possa ser usada várias vezes para criptografar e descriptografar dados, é recomendável gerar um novo IV aleatório a cada vez. Dessa forma, os dados criptografados são sempre diferentes, mesmo quando o texto sem formatação é o mesmo.
   
 :::code language="csharp" source="snippets/encrypting-data/csharp/aes-encrypt.cs":::
 :::code language="vb" source="snippets/encrypting-data/vb/aes-encrypt.vb":::
 
-O código criptografa o fluxo usando o algoritmo simétrico AES e grava "Olá, Mundo!" para o fluxo. Se o código for bem-sucedido, ele criará um arquivo criptografado chamado *TestData.txt* e exibirá o seguinte texto no console:  
+O código criptografa o fluxo usando o algoritmo simétrico AES e grava o IV e, em seguida, criptografado "Olá, Mundo!" para o fluxo. Se o código for bem-sucedido, ele criará um arquivo criptografado chamado *TestData.txt* e exibirá o seguinte texto no console:
   
 ```console  
-The text was encrypted.  
+The text was encrypted.
 ```  
 
-Você pode descriptografar o arquivo usando o exemplo de descriptografia simétrica na [descriptografia de dados](decrypting-data.md). Esse exemplo e este exemplo especificam a mesma chave e IV.
+Você pode descriptografar o arquivo usando o exemplo de descriptografia simétrica na [descriptografia de dados](decrypting-data.md). Esse exemplo e este exemplo especificam a mesma chave.
 
-No entanto, se uma exceção for gerada, o código exibirá o seguinte texto no console:  
+No entanto, se uma exceção for gerada, o código exibirá o seguinte texto no console:
   
 ```console  
-The encryption failed.  
+The encryption failed.
 ```
 
 ## <a name="asymmetric-encryption"></a>Criptografia assimétrica

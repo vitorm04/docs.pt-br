@@ -4,12 +4,12 @@ description: Saiba como desconstruir tuplas e outros tipos.
 ms.technology: csharp-fundamentals
 ms.date: 11/23/2017
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 8defd75a7cdff3490d2b0a6097ec2a898576e113
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 96168b729ae3ec11d7a38444b8c100bdbff4efbf
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174160"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439697"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Desconstruindo tuplas e outros tipos
 
@@ -57,7 +57,7 @@ Observe que não é possível combinar declarações e as atribuições com as v
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>Desconstruir elementos de tupla com descartes
 
-Geralmente, ao desconstruir uma tupla, você está interessado nos valores de apenas alguns elementos. Começando com o C# 7.0, você pode aproveitar o suporte do C# para *descartes*, que são variáveis somente gravação cujos valores você opta por ignorar. Um descarte é designado por um caractere de sublinhado ("\_") em uma atribuição. Você pode descartar tantos valores quantos desejar; todos são representados pelo descarte único, `_`.
+Geralmente, ao desconstruir uma tupla, você está interessado nos valores de apenas alguns elementos. Começando com o C# 7.0, você pode aproveitar o suporte do C# para *descartes* , que são variáveis somente gravação cujos valores você opta por ignorar. Um descarte é designado por um caractere de sublinhado ("\_") em uma atribuição. Você pode descartar tantos valores quantos desejar; todos são representados pelo descarte único, `_`.
 
 O exemplo a seguir ilustra o uso de tuplas com descartes. O método `QueryCityDataForYears` a seguir retorna uma tupla de 6 com o nome de uma cidade, sua área, um ano, a população da cidade nesse ano, um segundo ano e população da cidade nesse segundo ano. O exemplo mostra a alteração na população entre esses dois anos. Entre os dados disponíveis da tupla, não estamos preocupados com a área da cidade e sabemos o nome da cidade e as duas datas em tempo de design. Como resultado, estamos interessados apenas nos dois valores de população armazenados na tupla e podemos lidar com seus valores restantes como descartes.  
 
@@ -76,7 +76,7 @@ Em seguida, você pode desconstruir uma instância da classe `Person` denominada
 O exemplo a seguir sobrecarrega o método `Deconstruct` para retornar várias combinações de propriedades de um objeto `Person`. As sobrecargas individuais retornam:
 
 - Um nome e um sobrenome.
-- Um nome, um sobrenome e um segundo nome.
+- Um nome, meio e sobrenome.
 - Um nome, um sobrenome, um nome de cidade e um nome de estado.
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
@@ -103,7 +103,7 @@ O exemplo a seguir define dois métodos de extensão `Deconstruct` para a classe
 
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Descartes](discards.md)
 - [Tipos de tupla](language-reference/builtin-types/value-tuples.md)

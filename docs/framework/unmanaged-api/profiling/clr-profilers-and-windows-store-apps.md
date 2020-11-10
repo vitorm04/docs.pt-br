@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: 8922f057cb59258e2dd002cec4015af518dc255f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 04b4b529a5a1adaa40e804988dee506942c863c4
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553350"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440074"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Criadores de perfil CLR e aplicativos da Windows Store
 
@@ -356,7 +356,7 @@ A DLL do criador de perfil pode distinguir arquivos WinMD de outros módulos cha
 
 ### <a name="reading-metadata-from-winmds"></a>Lendo metadados do WinMDs
 
-Os arquivos WinMD, como os módulos regulares, contêm metadados que podem ser lidos por meio das [APIs de metadados](../metadata/index.md). No entanto, o CLR mapeia tipos de Windows Runtime para .NET Framework tipos quando lê arquivos WinMD para que os desenvolvedores que programam em código gerenciado e consumam o arquivo WinMD possam ter uma experiência de programação mais natural. Para obter alguns exemplos desses mapeamentos, consulte [suporte de .NET Framework para aplicativos da Windows Store e Windows Runtime](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).
+Os arquivos WinMD, como os módulos regulares, contêm metadados que podem ser lidos por meio das [APIs de metadados](../metadata/index.md). No entanto, o CLR mapeia tipos de Windows Runtime para .NET Framework tipos quando lê arquivos WinMD para que os desenvolvedores que programam em código gerenciado e consumam o arquivo WinMD possam ter uma experiência de programação mais natural. Para obter alguns exemplos desses mapeamentos, consulte [suporte de .NET Framework para aplicativos da Windows Store e Windows Runtime](../../cross-platform/support-for-windows-store-apps-and-windows-runtime.md).
 
 Então, qual exibição o criador de perfil obterá quando usar as APIs de metadados: a exibição Windows Runtime bruta ou a exibição .NET Framework mapeada?  A resposta: cabe a você.
 
@@ -406,7 +406,7 @@ No entanto, os aplicativos XAML gerenciados da Windows Store agora fazem uso int
 
 **A interação do CLR com o Windows Runtime**
 
-- [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](../../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 
 **Aplicativos da Windows Store**
 

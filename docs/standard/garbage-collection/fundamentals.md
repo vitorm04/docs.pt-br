@@ -11,12 +11,12 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: 322e079a1be556efb536b24e216e480c1950bd8c
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: b70eb44c3d92e03ab4b33f81b87d48c70797cec5
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917020"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441005"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Noções básicas da coleta de lixo
 
@@ -24,7 +24,7 @@ No Common Language Runtime (CLR), o coletor de lixo (GC) serve como um Gerenciad
 
 Este artigo descreve os principais conceitos da coleta de lixo.
 
-## <a name="benefits"></a>Vantagens
+## <a name="benefits"></a>Benefícios
 
 O coletor de lixo fornece os seguintes benefícios:
 
@@ -52,7 +52,7 @@ A lista a seguir resume conceitos importantes de memória do CLR.
 
   | Estado | Descrição |
   |---------|---------|
-  | Grátis | O bloco de memória não tem referências a ele e está disponível para alocação. |
+  | Gratuita | O bloco de memória não tem referências a ele e está disponível para alocação. |
   | Reservado | O bloco de memória está disponível para seu uso e não pode ser usado para nenhuma outra solicitação de alocação. No entanto, você não pode armazenar dados nesse bloco de memória até que ele esteja comprometido. |
   | Confirmado | O bloco de memória é atribuído para armazenamento físico. |
 
@@ -70,7 +70,7 @@ A alocação memória com base no heap gerenciado é mais rápida do que a aloca
 
 ### <a name="memory-release"></a>Liberação de memória
 
-O mecanismo de otimização do coletor de lixo determina o melhor momento para executar uma coleta com base nas alocações que estão sendo feitas. Quando o coletor de lixo executa uma coleta, ele libera a memória dos objetos que não estão mais sendo usados pelo aplicativo. Ele determina quais objetos não estão mais sendo usados examinando as *raízes*do aplicativo. As raízes de um aplicativo incluem campos estáticos, variáveis locais e parâmetros na pilha de um thread, além de registros de CPU. Cada raiz refere-se a um objeto no heap gerenciado ou é definida como nula. O coletor de lixo tem acesso à lista de raízes ativas mantidas pelo runtime e pelo compilador JIT (just-in-time). Usando essa lista, o coletor de lixo cria um grafo que contém todos os objetos que podem ser acessados por meio das raízes.
+O mecanismo de otimização do coletor de lixo determina o melhor momento para executar uma coleta com base nas alocações que estão sendo feitas. Quando o coletor de lixo executa uma coleta, ele libera a memória dos objetos que não estão mais sendo usados pelo aplicativo. Ele determina quais objetos não estão mais sendo usados examinando as *raízes* do aplicativo. As raízes de um aplicativo incluem campos estáticos, variáveis locais na pilha de um thread, registros de CPU, identificadores de GC e a fila de finalização. Cada raiz refere-se a um objeto no heap gerenciado ou é definida como nula. O coletor de lixo pode pedir o restante do tempo de execução para essas raízes. Usando essa lista, o coletor de lixo cria um grafo que contém todos os objetos que podem ser acessados por meio das raízes.
 
 Objetos que não estão no gráfico são inacessíveis a partir das raízes do aplicativo. O coletor de lixo considera o lixo dos objetos inacessíveis e libera a memória alocada para eles. Durante uma coleta, o coletor de lixo examina o heap gerenciado, procurando os blocos de espaço de endereço ocupados por objetos inacessíveis. Na medida em que descobre cada objeto inacessível, ele usa uma função de cópia de memória para compactar os objetos acessíveis na memória, liberando os blocos de espaços de endereço alocados para objetos inacessíveis. Uma vez que a memória dos objetos acessíveis tenha sido compactada, o coletor de lixo faz as correções necessárias no ponteiro de forma que as raízes do aplicativo apontem para os objetos em seus novos locais. Ele também posiciona o ponteiro do heap gerenciado após o último objeto acessível.
 
@@ -138,7 +138,7 @@ A coleta de lixo ocorre principalmente com a recuperação de objetos de curta d
 
   Os objetos na geração 2 que sobrevivem a uma coleção permanecem na geração 2 até que sejam determinados como inacessíveis em uma coleção futura.
   
-  Objetos na heap de objeto grande (que às vezes é chamado de *geração 3*) também são coletados na geração 2.
+  Objetos na heap de objeto grande (que às vezes é chamado de *geração 3* ) também são coletados na geração 2.
 
 Coletas de lixo ocorrem em gerações específicas conforme as condições permitirem. Coletar uma geração significa coletar objetos nessa geração e todas as suas gerações mais jovens. Uma coleta de lixo de geração 2 também é conhecida como uma coleta de lixo completa, porque recupera objetos em todas as gerações (ou seja, todos os objetos no heap gerenciado).
 
@@ -212,7 +212,7 @@ Você também deve fornecer uma maneira para que seus recursos não gerenciados 
 
 Para obter mais informações sobre como limpar recursos não gerenciados, consulte [limpar recursos não gerenciados](unmanaged.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Coleta de lixo de estação de trabalho ou de servidor](workstation-server-gc.md)
 - [Coleta de lixo em segundo plano](background-gc.md)

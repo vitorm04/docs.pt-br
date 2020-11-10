@@ -2,12 +2,12 @@
 title: Migrando seu aplicativo da Windows Store para .NET Nativo
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: cef985200efaf2ed7488d5e99394a5f01cc38594
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ee17e50590a80d8973197b46910d5e22296c265f
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556922"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440888"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Migre seu aplicativo da Windows Store para .NET Native
 
@@ -208,7 +208,9 @@ Em .NET Native:
 - O cabeçalho `SetCookie2` em respostas será ignorado como obsoleto.
 
 <a name="Interop"></a>
+
 ### <a name="interop-differences"></a>Diferenças de interoperabilidade
+
  **APIs obsoletas**
 
  Várias APIs pouco usadas para a interoperabilidade com código gerenciado foram preteridas. Quando usado com .NET Native, essas APIs podem gerar uma <xref:System.NotImplementedException> <xref:System.PlatformNotSupportedException> exceção ou, ou resultar em um erro do compilador. Em aplicativos .NET para Windows Store, essas APIs são marcadas como obsoletas, embora chamá-las gere um aviso do compilador em vez de um erro do compilador.
@@ -666,4 +668,4 @@ A habilitação de .NET Native em uma biblioteca de teste de unidade para um pro
 - [Introdução](getting-started-with-net-native.md)
 - [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Visão geral dos aplicativos .NET para Windows Store](/previous-versions/windows/apps/br230302(v=vs.140))
-- [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

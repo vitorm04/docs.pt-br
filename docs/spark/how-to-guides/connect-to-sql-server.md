@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: b20710000d8717b5df238aa9a782371fbe586037
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 1fecd796aeefd6c5681c4c2ea623e89f3a5a3c1d
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224029"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439528"
 ---
 # <a name="connect-net-for-apache-spark-to-sql-server"></a>Conectar .NET para Apache Spark a SQL Server
 
@@ -37,17 +37,17 @@ Neste artigo, você aprenderá a se conectar a uma instância do SQL Server de s
 
 ## <a name="connect-to-sql-server-from-your-application"></a>Conectar-se a SQL Server do seu aplicativo
 
-1. Use o Microsoft JDBC Driver para SQL Server para fornecer conectividade de banco de dados por meio de seu aplicativo (Baixe deste [site oficial](https://docs.microsoft.com/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15)).
+1. Use o Microsoft JDBC Driver para SQL Server para fornecer conectividade de banco de dados por meio de seu aplicativo (Baixe deste [site oficial](/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15)).
 2. Defina as seguintes configurações para se conectar à instância do SQL Server e ao banco de dados do seu aplicativo:
-    1. **connection_url**: essa é a URL usada para se conectar à instância/banco de dados do SQL Server e tem o seguinte formato:
+    1. **connection_url** : essa é a URL usada para se conectar à instância/banco de dados do SQL Server e tem o seguinte formato:
 
         ```
         jdbc:sqlserver://<SQL_server_IP_address>:1433;instanceName=<instance_name>;databaseName=<database_name>;
         ```
 
-    2. **DBTABLE**: nome da tabela que está sendo acessada.
-    3. **usuário**: logon de usuário configurado na etapa 1 de configuração do SQL Server.
-    4. **senha**: senha do usuário configurada na etapa 1 de configuração do SQL Server.
+    2. **DBTABLE** : nome da tabela que está sendo acessada.
+    3. **usuário** : logon de usuário configurado na etapa 1 de configuração do SQL Server.
+    4. **senha** : senha do usuário configurada na etapa 1 de configuração do SQL Server.
 3. Use a configuração acima no código do aplicativo para ler os dados de uma tabela, conforme mostrado abaixo:
 
     ```csharp

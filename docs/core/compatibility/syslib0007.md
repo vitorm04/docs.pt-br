@@ -3,12 +3,12 @@ title: Aviso de SYSLIB0007
 description: Saiba mais sobre o obsoletions que gera SYSLIB0007 de aviso de tempo de compilação.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: d5410a3b3d33515e2ee6f578cad2f4deaec9c25d
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 4c0feac1d673e3462a4f2db470825b15cf1b1706
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333208"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439931"
 ---
 # <a name="syslib0007-default-implementations-of-cryptography-algorithms-not-supported"></a>SYSLIB0007: não há suporte para implementações padrão de algoritmos de criptografia
 
@@ -20,7 +20,7 @@ O sistema de configuração criptográfica no .NET Framework não permite a agil
 - <xref:System.Security.Cryptography.KeyedHashAlgorithm.Create?displayProperty=fullName>
 - <xref:System.Security.Cryptography.SymmetricAlgorithm.Create?displayProperty=fullName>
 
-## <a name="workaround"></a>Solução alternativa
+## <a name="workarounds"></a>Soluções Alternativas
 
 - O curso de ação recomendado é substituir as chamadas para as APIs agora obsoletas por chamadas para métodos de fábrica para algoritmos específicos, por exemplo, <xref:System.Security.Cryptography.Aes.Create?displayProperty=nameWithType> . Isso lhe dá controle total sobre quais algoritmos são instanciados.
 
@@ -34,6 +34,8 @@ O sistema de configuração criptográfica no .NET Framework não permite a agil
   | <xref:System.Security.Cryptography.KeyedHashAlgorithm.Create?displayProperty=nameWithType> | <xref:System.Security.Cryptography.HMACSHA1.%23ctor> | O algoritmo HMACSHA1 não é recomendado para a maioria dos aplicativos modernos. Considere o uso de um algoritmo mais forte, se possível. Consulte seu supervisor de segurança para obter mais diretrizes. |
   | <xref:System.Security.Cryptography.SymmetricAlgorithm.Create?displayProperty=nameWithType> | <xref:System.Security.Cryptography.Aes.Create?displayProperty=nameWithType> |
 
-## <a name="see-also"></a>Consulte também
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
+
+## <a name="see-also"></a>Confira também
 
 - [Alterações significativas de criptografia](cryptography.md#instantiating-default-implementations-of-cryptographic-abstractions-is-not-supported)

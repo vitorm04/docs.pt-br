@@ -2,12 +2,12 @@
 title: Criar ASP.NET Core aplicativos implantados como contêineres do Linux em clusters AKS/kubernetes
 description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
 ms.date: 08/06/2020
-ms.openlocfilehash: 8b3141d79eeb252ec3721d57293bed0e335b41d3
-ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
+ms.openlocfilehash: 831d2372131e20788d0f48190eb8c600aa02485c
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91844557"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440823"
 ---
 # <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Crie ASP.NET Core aplicativos implantados como contêineres do Linux em um orquestrador AKS/kubernetes
 
@@ -33,7 +33,7 @@ Este exemplo usa alguns projetos simples baseados em modelos do Visual Studio, d
 
 **Figura 4-35**. Criar um aplicativo Web ASP.NET Core no Visual Studio 2019.
 
-Para criar o projeto de exemplo no Visual Studio, selecione **arquivo**  >  **novo**  >  **projeto**, selecione o tipo de projeto **Web** e, em seguida, o modelo de **aplicativo Web ASP.NET Core** . Você também pode pesquisar o modelo se precisar dele.
+Para criar o projeto de exemplo no Visual Studio, selecione **arquivo**  >  **novo**  >  **projeto** , selecione o tipo de projeto **Web** e, em seguida, o modelo de **aplicativo Web ASP.NET Core** . Você também pode pesquisar o modelo se precisar dele.
 
 Em seguida, insira o nome do aplicativo e o local, conforme mostrado na próxima imagem.
 
@@ -193,24 +193,24 @@ Você pode carregar as imagens no [ACR (registro de contêiner do Azure)](https:
 
 ### <a name="create-an-acr-instance"></a>Criar uma instância de ACR
 
-Execute o seguinte comando na **CLI do AZ**:
+Execute o seguinte comando na **CLI do AZ** :
 
 ```powershell
 az acr create --name exploredocker --resource-group explore-docker-aks-rg --sku basic --admin-enabled
 ```
 
 > [!NOTE]
-> O nome do registro de contêiner (por exemplo `exploredocker` ,) deve ser exclusivo no Azure e conter 5-50 caracteres alfanuméricos. Para obter mais detalhes, consulte [criar um registro de contêiner](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli#create-a-container-registry)
+> O nome do registro de contêiner (por exemplo `exploredocker` ,) deve ser exclusivo no Azure e conter 5-50 caracteres alfanuméricos. Para obter mais detalhes, consulte [criar um registro de contêiner](/azure/container-registry/container-registry-get-started-azure-cli#create-a-container-registry)
 
 ### <a name="create-the-image-in-release-mode"></a>Criar a imagem no modo de versão
 
-Agora, você criará a imagem no modo de **liberação** (pronto para produção) alterando para **lançamento**, conforme mostrado na Figura 4-46 e executando o aplicativo como fazia antes.
+Agora, você criará a imagem no modo de **liberação** (pronto para produção) alterando para **lançamento** , conforme mostrado na Figura 4-46 e executando o aplicativo como fazia antes.
 
 ![Opção de barra de ferramentas no VS para build no modo de versão.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/select-release-mode.png)
 
 **Figura 4-46**. Como selecionar o modo de versão
 
-Se você executar o `docker images` comando, verá as duas imagens criadas, uma para `debug` (**dev**) e outra para o `release` modo (**mais recente**).
+Se você executar o `docker images` comando, verá as duas imagens criadas, uma para `debug` ( **dev** ) e outra para o `release` modo ( **mais recente** ).
 
 ### <a name="create-a-new-tag-for-the-image"></a>Criar uma marca para a imagem
 
@@ -371,7 +371,7 @@ spec:
 > [!TIP]
 > Você pode ver como criar o Cluster do AKS para esta amostra na seção [**Implantar no AKS (Serviço de Kubernetes do Azure)**](deploy-azure-kubernetes-service.md) neste guia.
 
-Agora você está quase pronto para implantar usando **kubectl**, mas primeiro você deve obter as credenciais do cluster AKs com este comando:
+Agora você está quase pronto para implantar usando **kubectl** , mas primeiro você deve obter as credenciais do cluster AKs com este comando:
 
 ```console
 az aks get-credentials --resource-group explore-docker-aks-rg --name explore-docker-aks

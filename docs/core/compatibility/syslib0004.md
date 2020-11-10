@@ -3,12 +3,12 @@ title: Aviso de SYSLIB0004
 description: Saiba mais sobre o obsoletions que gera SYSLIB0004 de aviso de tempo de compilação.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: ba7cd8a890a89000b241d286c9d8069ba1398849
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: f48fd8915a13f9f99b091eca895dcd74a8f18907
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333210"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440712"
 ---
 # <a name="syslib0004-the-constrained-execution-region-cer-feature-is-not-supported"></a>SYSLIB0004: não há suporte para o recurso CER (região de execução restrita)
 
@@ -26,6 +26,99 @@ As seguintes APIs relacionadas a CER são obsoletas:
 - <xref:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute?displayProperty=nameWithType>
 - <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute?displayProperty=nameWithType>
 
-## <a name="see-also"></a>Consulte também
+## <a name="workarounds"></a>Soluções Alternativas
+
+- Se você aplicou um atributo CER a um método, remova o atributo. Esses atributos não têm nenhum efeito no .NET 5,0 e versões posteriores.
+
+  ```csharp
+  // REMOVE the attribute below.
+  [ReliabilityContract(Consistency.WillNotCorruptState, Cer.Success)]
+  public void DoSomething()
+  {
+  }
+
+  // REMOVE the attribute below.
+  [PrePrepareMethod]
+  public void DoSomething()
+  {
+  }
+  ```
+
+- Se você estiver chamando `RuntimeHelpers.ProbeForSufficientStack` ou `RuntimeHelpers.PrepareContractedDelegate` , remova a chamada. Essas chamadas não têm nenhum efeito no .NET 5,0 e versões posteriores.
+
+  ```csharp
+  public void DoSomething()
+  {
+      // REMOVE the call below.
+      RuntimeHelpers.ProbeForSufficientStack();
+
+      // (Remainder of your method logic here.)
+  }
+  ```
+
+- Se você estiver chamando `RuntimeHelpers.PrepareConstrainedRegions` , remova a chamada. Essa chamada não tem nenhum efeito no .NET 5,0 e versões posteriores.
+
+  ```csharp
+  public void DoSomething_Old()
+  {
+      // REMOVE the call below.
+      RuntimeHelpers.PrepareConstrainedRegions();
+      try
+      {
+          // try code
+      }
+      finally
+      {
+          // cleanup code
+      }
+  }
+
+  public void DoSomething_Corrected()
+  {
+      // There is no call to PrepareConstrainedRegions. It's a normal try / finally block.
+
+      try
+      {
+          // try code
+      }
+      finally
+      {
+          // cleanup code
+      }
+  }
+  ```
+
+- Se você estiver chamando `RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup` , substitua a chamada por um bloco _try/catch/finally_ padrão.
+
+  ```csharp
+  // The sample below produces warning SYSLIB0004.
+  public void DoSomething_Old()
+  {
+      RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup(MyTryCode, MyCleanupCode, null);
+  }
+  public void MyTryCode(object state) { /* try code */ }
+  public void MyCleanupCode(object state, bool exceptionThrown) { /* cleanup code */ }
+
+  // The corrected sample below does not produce warning SYSLIB0004.
+  public void DoSomething_Corrected()
+  {
+      try
+      {
+          // try code
+      }
+      catch (Exception ex)
+      {
+          // exception handling code
+      }
+      finally
+      {
+          // cleanup code
+      }
+  }
+  ```
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
+
+## <a name="see-also"></a>Confira também
 
 - [Regiões de execução restrita](../../framework/performance/constrained-execution-regions.md)

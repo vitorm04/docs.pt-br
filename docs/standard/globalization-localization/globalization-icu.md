@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: e0ca78871d1ddf851148096c8c6cfd10076763ab
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: ca579e837b801de237859963ede0e5a9a4bfbcbf
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400873"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439463"
 ---
 # <a name="net-globalization-and-icu"></a>Globalização e ICU do .NET
 
@@ -37,6 +37,29 @@ O Windows 10 pode 2019 atualização e as versões posteriores incluem [icu.dll]
 
 > [!NOTE]
 > Mesmo ao usar o ICU, `CurrentCulture` os `CurrentUICulture` Membros, e `CurrentRegion` ainda usam as APIs do sistema operacional Windows para honrar as configurações do usuário.
+
+### <a name="behavioral-differences"></a>Diferenças de comportamento
+
+Se você atualizar seu aplicativo para o .NET 5 de destino, poderá ver as alterações em seu aplicativo mesmo se não perceber que está usando instalações de globalização. Esta seção lista uma das alterações comportamentais que você pode ver, mas também há outras.
+
+##### <a name="stringindexof"></a>String.IndexOf
+
+Considere o código a seguir que chama <xref:System.String.IndexOf(System.String)?displayProperty=nameWithType> para localizar o índice do caractere de nova linha em uma cadeia de caracteres.
+
+```csharp
+string s = "Hello\r\nworld!";
+int idx = s.IndexOf("\n");
+Console.WriteLine(idx);
+```
+
+- Nas versões anteriores do .NET no Windows, o trecho é impresso `6` .
+- No .NET 5,0 e versões posteriores no Windows 10 podem ser 2019 atualização e versões posteriores, o trecho de código é impresso `-1` .
+
+Para corrigir esse código realizando uma pesquisa ordinal em vez de uma pesquisa sensível à cultura, chame a <xref:System.String.IndexOf(System.String,System.StringComparison)> sobrecarga e passe <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> como um argumento.
+
+Você pode executar as regras [de análise de código CA1307: especificar StringComparison para clareza](../../../docs/fundamentals/code-analysis/quality-rules/ca1307.md) e [CA1309: Use o ordinal StringComparison](../../../docs/fundamentals/code-analysis/quality-rules/ca1309.md) para encontrar esses sites de chamada em seu código.
+
+Para obter mais informações, consulte [comportamento de alterações ao comparar cadeias de caracteres no .NET 5 +](../base-types/string-comparison-net-5-plus.md).
 
 ### <a name="use-nls-instead-of-icu"></a>Usar NLS em vez de ICU
 

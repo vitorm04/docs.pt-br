@@ -3,12 +3,12 @@ title: Aviso de SYSLIB0001
 description: Saiba mais sobre o obsoletions que gera SYSLIB0001 de aviso de tempo de compilação.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 58c16879b7d91598ea0848bb0ba95f8fa0200cfe
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: d38d915e902d3c37cc461452f805e8349f11deeb
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333216"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439983"
 ---
 # <a name="syslib0001-the-utf-7-encoding-is-insecure"></a>SYSLIB0001: a codificação UTF-7 é insegura
 
@@ -47,6 +47,8 @@ Consequentemente, as seguintes APIs são marcadas como obsoletas, a partir do .N
   }
   ```
 
-## <a name="see-also"></a>Consulte também
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
+
+## <a name="see-also"></a>Confira também
 
 - [Os caminhos de código UTF-7 estão obsoletos](3.1-5.0.md#utf-7-code-paths-are-obsolete)

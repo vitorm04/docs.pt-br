@@ -3,12 +3,12 @@ title: Porte do .NET Framework para o .NET Core
 description: Entenda o processo de compatibilidade e descubra ferramentas que podem ser úteis ao realizar a portabilidade de um projeto do .NET Framework para o .NET Core.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 00d6bb513a6bd8ee511b69c07272f605c39e5619
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 7719742294c04aadbfd2e5f223040d3b5b485b5b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063235"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439736"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Visão geral da portabilidade do .NET Framework para o .NET Core
 
@@ -115,8 +115,8 @@ Recomendamos que você use o seguinte processo ao portar seu projeto para o .NET
 > [Analisar dependências](third-party-deps.md) 
 >  [Empacotar um pacote NuGet](../deploying/creating-nuget-packages.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [ASP.NET para migração de ASP.NET Core](/aspnet/core/migration/proper-to-2x)
 - [Migrar aplicativos do WPF para o .NET Core](/dotnet/desktop/wpf/migration/convert-project-from-net-framework)
-- [Migrar aplicativos Windows Forms para o .NET Core](winforms.md)
+- [Migrar .NET Framework Windows Forms aplicativos para o .NET](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true)

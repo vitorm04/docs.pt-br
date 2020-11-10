@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 02480641af5ad2c973f7dbbbc233d3d89ff4617e
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 3ab1c502508dd042940a6c5d2a73a5b71af6a9f4
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471659"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440836"
 ---
 # <a name="get-started-with-net-framework"></a>Introdução ao .NET Framework
 
@@ -40,6 +40,7 @@ ms.locfileid: "92471659"
 - Multiplataforma. Ao direcionar o [.NET Standard](../../standard/net-standard.md), desenvolvedores criam bibliotecas de classes que funcionam em várias plataformas do .NET Framework com suporte por essa versão do padrão. Por exemplo, as bibliotecas que visam .NET Standard 2,0 podem ser usadas por aplicativos direcionados .NET Framework 4.6.1, .NET Core 2,0 e UWP 10.0.16299.
 
 <a name="ForUsers"></a>
+
 ## <a name="net-framework-for-users"></a>.NET Framework para usuários
 
 Se você não desenvolver .NET Framework aplicativos, mas usá-los, não será necessário ter conhecimento específico sobre .NET Framework ou sua operação. Na maior parte, a estrutura é completamente transparente para os usuários.
@@ -78,13 +79,12 @@ Para obter mais informações sobre como desenvolver aplicativos direcionados .N
 | [Guia de instalação](../install/index.md) | Fornece informações sobre como instalar .NET Framework. |
 | [.NET Framework e versões fora de banda](the-net-framework-and-out-of-band-releases.md) | Descreve as versões fora de faixa do .NET Framework e como usá-las em seu aplicativo. |
 | [Requisitos do sistema](system-requirements.md) | Lista os requisitos de hardware e software para executar o .NET Framework. |
-| [.NET Core e software livre](net-core-and-open-source.md) | Descreve o .NET Core em relação a .NET Framework e como acessar os projetos .NET Core de código-fonte aberto. |
 | [Documentação do .NET Core](../../core/introduction.md) | Fornece a documentação conceitual e de referência de API para .NET Core. |
 | [.NET Standard](../../standard/net-standard.md) | Discute .NET Standard, uma especificação com controle de versão com suporte das implementações individuais do .NET para garantir que um conjunto consistente de APIs esteja disponível em várias plataformas.
 
 ## <a name="see-also"></a>Confira também
 
-- [Guia do .NET Framework](../index.yml)
+- [Guia de .NET Framework](../index.yml)
 - [Novidades](../whats-new/index.md)
 - [Navegador de API do .NET](../../../api/index.md)
 - [Guia de desenvolvimento](../development-guide.md)

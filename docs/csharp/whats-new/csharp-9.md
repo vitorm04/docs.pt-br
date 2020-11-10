@@ -2,12 +2,12 @@
 title: O que há de novo no C# 9,0 – Guia C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 9,0.
 ms.date: 09/04/2020
-ms.openlocfilehash: c65f7220c44e86fac7e8beba28277bf43af95088
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: e1c297cd0ff75d6a6fb4a9d38c9a241e216f500b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282341"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440862"
 ---
 # <a name="whats-new-in-c-90"></a>Novidades do C# 9.0
 
@@ -66,7 +66,7 @@ O compilador sintetiza versões diferentes dos métodos acima. As assinaturas de
 
 Além das `Equals` sobrecargas conhecidas, `operator ==` e `operator !=` , o compilador sintetiza uma nova `EqualityContract` propriedade. A propriedade retorna um `Type` objeto que corresponde ao tipo do registro. Se o tipo base for `object` , a propriedade será `virtual` . Se o tipo base for outro tipo de registro, a propriedade será um `override` . Se o tipo de registro for `sealed` , a propriedade será `sealed` . O sintetizado `GetHashCode` usa o `GetHashCode` de todas as propriedades e campos declarados no tipo base e no tipo de registro. Esses métodos sintetizados impõem a igualdade baseada em valor em uma hierarquia de herança. Isso significa que um `Student` nunca será considerado igual a um `Person` com o mesmo nome. Os tipos dos dois registros devem corresponder e todas as propriedades compartilhadas entre os tipos de registro são iguais.
 
-Os registros também têm um Construtor sintetizado e um método de "clonagem" para a criação de cópias. O Construtor sintetizado tem um argumento do tipo de registro. Ele produz um novo registro com os mesmos valores para todas as propriedades do registro. Esse construtor é privado se o registro estiver lacrado, caso contrário, será protegido. O método "clone" sintetizado dá suporte à construção de cópia para hierarquias de registro. O termo "clone" está entre aspas porque o nome real é gerado pelo compilador. Você não pode criar um método chamado `Clone` em um tipo de registro. O método "clone" sintetizado retorna o tipo de registro que está sendo copiado usando a expedição virtual. O compilador adiciona diferentes modificadores para o método "clone" dependendo dos modificadores de acesso no `record` :
+Os registros também têm um Construtor sintetizado e um método de "clonagem" para a criação de cópias. O Construtor sintetizado tem um único parâmetro do tipo de registro. Ele produz um novo registro com os mesmos valores para todas as propriedades do registro. Esse construtor é privado se o registro estiver lacrado, caso contrário, será protegido. O método "clone" sintetizado dá suporte à construção de cópia para hierarquias de registro. O termo "clone" está entre aspas porque o nome real é gerado pelo compilador. Você não pode criar um método chamado `Clone` em um tipo de registro. O método "clone" sintetizado retorna o tipo de registro que está sendo copiado usando a expedição virtual. O compilador adiciona diferentes modificadores para o método "clone" dependendo dos modificadores de acesso no `record` :
 
 - Se o tipo de registro for `abstract` , o método "clone" também será `abstract` . Se o tipo base não for `object` , o método também será `override` .
 - Para tipos de registro que não são `abstract` quando o tipo base é `object` :
@@ -98,11 +98,13 @@ O compilador produz um `Deconstruct` método para registros posicionais. O `Deco
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="DeconstructRecord":::
 
-Por fim, os registros têm suporte _*_com expressões-Expressions_*_. Uma _*_expressão with_*_ instrui o compilador a criar uma cópia de um registro, mas _with * propriedades especificadas modificadas:
+Por fim, o registra as [ `with` expressões](../language-reference/operators/with-expression.md)de suporte. Um _*_ `with` expression_ *_ instrui o compilador a criar uma cópia de um registro, mas _with* propriedades especificadas modificadas:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
-A linha acima cria um novo `Person` registro no qual a `LastName` propriedade é uma cópia de `person` e o `FirstName` é "Paul". Você pode definir qualquer número de propriedades em uma expressão with.  Qualquer um dos membros sintetizados, exceto o método "clone", pode ser escrito por você. Se um tipo de registro tiver um método que corresponda à assinatura de qualquer método sintetizado, o compilador não sintetizará esse método. O `Dog` exemplo de registro anterior contém um método codificado <xref:System.String.ToString> por mão como um exemplo.
+A linha acima cria um novo `Person` registro no qual a `LastName` propriedade é uma cópia de `person` e o `FirstName` é `"Paul"` . Você pode definir qualquer número de propriedades em uma `with` expressão.
+
+Qualquer um dos membros sintetizados, exceto o método "clone", pode ser escrito por você. Se um tipo de registro tiver um método que corresponda à assinatura de qualquer método sintetizado, o compilador não sintetizará esse método. O `Dog` exemplo de registro anterior contém um método codificado <xref:System.String.ToString> por mão como um exemplo.
 
 ## <a name="init-only-setters"></a>Setters somente init
 
@@ -242,7 +244,7 @@ Um gerador de código lê atributos ou outros elementos de código usando as API
 
 Os dois recursos adicionados para geradores de código são extensões para * **sintaxe do método parcial** _ e _*_inicializadores de módulo_*_. Primeiro, as alterações em métodos parciais. Antes do C# 9,0, os métodos parciais são `private` , mas não podem especificar um modificador de acesso, ter um `void` retorno e não podem ter `out` parâmetros. Essas restrições destinam-se que, se nenhuma implementação de método for fornecida, o compilador removerá todas as chamadas para o método parcial. O C# 9,0 remove essas restrições, mas requer que as declarações de método parciais tenham uma implementação. Os geradores de código podem fornecer essa implementação. Para evitar a introdução de uma alteração significativa, o compilador considera qualquer método parcial sem um modificador de acesso para seguir as regras antigas. Se o método parcial incluir o `private` modificador de acesso, as novas regras regem esse método parcial.
 
-O segundo novo recurso para geradores de código é _ * _inicializadores de módulo_ * *. Inicializadores de módulo são métodos que têm o <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> atributo anexado a eles. Esses métodos serão chamados pelo tempo de execução quando o assembly for carregado. Um método inicializador de módulo:
+O segundo novo recurso para geradores de código é _ * _inicializadores de módulo_ * *. Inicializadores de módulo são métodos que têm o <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> atributo anexado a eles. Esses métodos serão chamados pelo tempo de execução antes de qualquer outro acesso de campo ou invocação de método dentro do módulo inteiro. Um método inicializador de módulo:
 
 - Deve ser estático
 - Não deve ter parâmetros

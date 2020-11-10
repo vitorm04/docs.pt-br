@@ -2,12 +2,12 @@
 title: Marshaling de tipo – .NET
 description: Saiba como o .NET realizar marshal de seus tipos para uma representação nativa.
 ms.date: 01/18/2019
-ms.openlocfilehash: bedaf49a5f7c5274f5e1bc7774490fec73651259
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 7fc3dfe950ecd3ed0ff5e4eb0e101c1596a831e1
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188387"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440992"
 ---
 # <a name="type-marshaling"></a>Marshaling de tipo
 
@@ -65,7 +65,7 @@ A tabela a seguir inclui as regras de marshaling padrão que são somente do Win
 | `System.ArgIterator` | `va_list` | Não permitido |
 | `System.Collections.IEnumerator` | `IEnumVARIANT*` | Não permitido |
 | `System.Collections.IEnumerable` | `IDispatch*` | Não permitido |
-| `System.DateTimeOffset` | `int64_t` representando o número de tiques desde a meia-noite de 1º de janeiro de 1601 || `int64_t` representando o número de tiques desde a meia-noite de 1º de janeiro de 1601 |
+| `System.DateTimeOffset` | `int64_t` representando o número de tiques desde a meia-noite de 1º de janeiro de 1601 | `int64_t` representando o número de tiques desde a meia-noite de 1º de janeiro de 1601 |
 
 Alguns tipos só podem ter o marshaling realizado como parâmetros e não como campos. Esses tipos estão listados na tabela a seguir:
 

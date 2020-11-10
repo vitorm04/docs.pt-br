@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d07d757f9e47a84c75f46b190bdb613b8d2db7c1
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 8fb729a0b8220d15af641f916383bbd6146e2e33
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224136"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441070"
 ---
 # <a name="write-and-call-udfs-in-net-for-apache-spark-interactive-environments"></a>Escreva e chame UDFs no .NET para Apache Spark ambientes interativos
 
@@ -49,7 +49,7 @@ Agora, vamos ver o que acontece se chamarmos o UDF na mesma célula onde ele est
 
 O erro realçado acima é porque os assemblies UDF precisam primeiro ser compilados e enviados para os trabalhadores antes que possam ser chamados em um dataframe.
 
-Essas são algumas coisas importantes para se ter em mente ao implementar UDFs no .NET para Apache Spark experiência interativa (como [notebooks Synapse do Azure](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-development-using-notebooks)).
+Essas são algumas coisas importantes para se ter em mente ao implementar UDFs no .NET para Apache Spark experiência interativa (como [notebooks Synapse do Azure](/azure/synapse-analytics/spark/apache-spark-development-using-notebooks)).
 
 ## <a name="faqs"></a>Perguntas frequentes
 

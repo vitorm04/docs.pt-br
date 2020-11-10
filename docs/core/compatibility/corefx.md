@@ -2,12 +2,12 @@
 title: Alterações significativas na biblioteca de classes base
 description: Lista as alterações significativas nas principais bibliotecas do .NET.
 ms.date: 07/27/2020
-ms.openlocfilehash: 900fd4e0e071f19aa286dec84632006870822f26
-ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
+ms.openlocfilehash: 8ea1cd995484c2930c8a9c2eb4c7419be57cf9c0
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434902"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440165"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Principais alterações significativas nas bibliotecas do .NET
 
@@ -17,6 +17,7 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 | Alteração significativa | Versão introduzida |
 | - | :-: |
+| [LastIndexOf aprimorou o tratamento de cadeias de caracteres de pesquisa vazias](#lastindexof-has-improved-handling-of-empty-search-strings) | 5.0 |
 | [As APIs do cache de assembly global estão obsoletas](#global-assembly-cache-apis-are-obsolete) | 5.0 |
 | [As APIs de comunicação remota estão obsoletas](#remoting-apis-are-obsolete) | 5.0 |
 | [A maioria das APIs de segurança de acesso a código está obsoleta](#most-code-access-security-apis-are-obsolete) | 5.0 |
@@ -63,13 +64,17 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 ## <a name="net-50"></a>.NET 5,0
 
-[!INCLUDE [remoting-apis-obsolete](../../../includes/core-changes/corefx/5.0/remoting-apis-obsolete.md)]
+[!INCLUDE [lastindexof-improved-handling-of-empty-values](../../../includes/core-changes/corefx/5.0/lastindexof-improved-handling-of-empty-values.md)]
 
 ***
 
-[!INCLUDE [globalassemblycache-property-obsolete](../../../includes/core-changes/corefx/5.0/global-assembly-cache-apis-obsolete.md)]
+[!INCLUDE [remoting-apis-obsolete](../../../includes/core-changes/corefx/5.0/remoting-apis-obsolete.md)]
 
 **_
+
+[!INCLUDE [globalassemblycache-property-obsolete](../../../includes/core-changes/corefx/5.0/global-assembly-cache-apis-obsolete.md)]
+
+_*_
 
 [!INCLUDE [code-access-security-apis-obsolete](../../../includes/core-changes/corefx/5.0/code-access-security-apis-obsolete.md)]
 

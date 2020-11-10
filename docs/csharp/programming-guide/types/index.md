@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: ad14c3367809c16268abedc99596089514986e3f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: aba59f6626661145c10d23d4a2c167b8337ec559
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91205107"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440374"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guia de Programação em C#)
 
@@ -34,6 +34,8 @@ As informações armazenadas em um tipo podem incluir o seguinte:
 - Os membros (métodos, campos, eventos e etc.) que ele contém.
 
 - O tipo base do qual ele herda.
+
+- As interfaces que ela implementa.
 
 - O local no qual a memória para as variáveis será alocada em tempo de execução.
 
@@ -108,7 +110,7 @@ int i = 5;
 char c = 'Z';
 ```
 
-Tipos de valor são *lacrados*, o que significa, por exemplo, que você não pode derivar um tipo de <xref:System.Int32?displayProperty=nameWithType> e não pode definir um struct para herdar de qualquer struct ou classe definida pelo usuário, porque um struct apenas pode herdar de <xref:System.ValueType?displayProperty=nameWithType>. No entanto, um struct pode implementar uma ou mais interfaces. É possível converter um tipo de struct em qualquer tipo de interface que ele implementa. Isso faz com que uma operação de *conversão boxing* envolva o struct dentro de um objeto de tipo de referência no heap gerenciado. As operações de conversão boxing ocorrem quando você passa um tipo de valor para um método que usa um <xref:System.Object?displayProperty=nameWithType> ou qualquer tipo de interface como parâmetro de entrada. Para obter mais informações, consulte [Conversões boxing e unboxing](./boxing-and-unboxing.md).
+Tipos de valor são *lacrados* , o que significa, por exemplo, que você não pode derivar um tipo de <xref:System.Int32?displayProperty=nameWithType> e não pode definir um struct para herdar de qualquer struct ou classe definida pelo usuário, porque um struct apenas pode herdar de <xref:System.ValueType?displayProperty=nameWithType>. No entanto, um struct pode implementar uma ou mais interfaces. É possível converter um tipo de struct em qualquer tipo de interface que ele implementa. Isso faz com que uma operação de *conversão boxing* envolva o struct dentro de um objeto de tipo de referência no heap gerenciado. As operações de conversão boxing ocorrem quando você passa um tipo de valor para um método que usa um <xref:System.Object?displayProperty=nameWithType> ou qualquer tipo de interface como parâmetro de entrada. Para obter mais informações, consulte [Conversões boxing e unboxing](./boxing-and-unboxing.md).
 
 Você usa a palavra-chave [struct](../../language-reference/builtin-types/struct.md) para criar seus próprios tipos de valor personalizados. Normalmente, um struct é usado como um contêiner para um pequeno conjunto de variáveis relacionadas, conforme mostrado no exemplo a seguir:
 
@@ -157,7 +159,7 @@ Como os literais são tipados e todos os tipos derivam basicamente de <xref:Syst
 
 ## <a name="generic-types"></a>Tipos genéricos
 
-Um tipo pode ser declarado com um ou mais *parâmetros de tipo* que servem como um espaço reservado para o tipo real (o *tipo concreto*) que o código cliente fornecerá ao criar uma instância do tipo. Esses tipos são chamados de *tipos genéricos*. Por exemplo, o tipo .NET <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> tem um parâmetro de tipo que, por convenção, recebe o nome *T*. Ao criar uma instância do tipo, você especifica o tipo dos objetos que a lista conterá, por exemplo, Cadeia de caracteres:
+Um tipo pode ser declarado com um ou mais *parâmetros de tipo* que servem como um espaço reservado para o tipo real (o *tipo concreto* ) que o código cliente fornecerá ao criar uma instância do tipo. Esses tipos são chamados de *tipos genéricos*. Por exemplo, o tipo .NET <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> tem um parâmetro de tipo que, por convenção, recebe o nome *T*. Ao criar uma instância do tipo, você especifica o tipo dos objetos que a lista conterá, por exemplo, Cadeia de caracteres:
 
 ```csharp
 List<string> stringList = new List<string>();
@@ -178,7 +180,7 @@ Os tipos comuns de valor não podem ter valor [nulo](../../language-reference/ke
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-Para obter mais informações, consulte estes tópicos:
+Para mais informações, consulte os seguintes tópicos:
 
 - [Conversões cast e conversões de tipo](./casting-and-type-conversions.md)
 
@@ -200,7 +202,7 @@ Para obter mais informações, consulte estes tópicos:
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência do C#](../../language-reference/index.md)
 - [Guia de programação C#](../index.md)

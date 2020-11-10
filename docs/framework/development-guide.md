@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 73b930efa893fd2b481c4c130754154a0d10d5b4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ef3fe36ce0c53821fb79fd7689ec6f7176af3e2f
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547878"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440849"
 ---
 # <a name="net-framework-development-guide"></a>Guia de desenvolvimento do .NET Framework
 
@@ -52,7 +52,7 @@ Esta seção explica como criar, configurar, depurar, proteger e implantar aplic
  [Depuração, rastreamento e criação de perfil](./debug-trace-profile/index.md)  
  Explica como testar, otimizar e criar perfis de aplicativos .NET Framework e do ambiente de aplicativo. Esta seção inclui informações para administradores e para desenvolvedores.  
   
- [Desenvolvimento para várias plataformas](../standard/cross-platform/index.md)  
+ [Desenvolvimento para várias plataformas](./cross-platform/index.md)  
  Fornece informações sobre como usar o .NET Framework para compilar assemblies que podem ser compartilhados entre múltiplas plataformas e múltiplos dispositivos como celulares, desktops e Web.  
   
  [Implantação](./deployment/index.md)  
@@ -62,10 +62,12 @@ Esta seção explica como criar, configurar, depurar, proteger e implantar aplic
  Fornece informações sobre armazenamento em cache, inicialização ociosa, confiabilidade e eventos ETW.  
 
 ## <a name="reference"></a>Referência  
+
  [Biblioteca de classes .NET Framework](../../api/index.md?view=netframework-4.7)  
  Fornece sintaxe, exemplos de código e informações de uso para cada classe contida nos namespaces do .NET Framework.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Introdução](./get-started/index.md)  
  Fornece uma visão geral abrangente do .NET Framework e links para recursos adicionais.  
   

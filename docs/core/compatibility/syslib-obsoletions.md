@@ -2,12 +2,12 @@
 title: Recursos obsoletos no .NET 5 +
 description: Saiba mais sobre as APIs que estão marcadas como obsoletas no .NET 5,0 e versões posteriores que produzem avisos do compilador SYSLIB.
 ms.date: 10/20/2020
-ms.openlocfilehash: 13f5fb10cfe693ed621b3f45fc22e024875890c8
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: aa5716ba8fe46c7c4ae2faafe7cc963551eecef7
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333217"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440758"
 ---
 # <a name="obsolete-features-in-net-5"></a>Recursos obsoletos no .NET 5
 
@@ -61,9 +61,14 @@ Arquivo de projeto:
    <TargetFramework>net5.0</TargetFramework>
    <!-- NoWarn below suppresses SYSLIB0001 project-wide -->
    <NoWarn>$(NoWarn);SYSLIB0001</NoWarn>
+   <!-- To suppress multiple warnings, you can use multiple NoWarn elements -->
+   <NoWarn>$(NoWarn);SYSLIB0002</NoWarn>
+   <NoWarn>$(NoWarn);SYSLIB0003</NoWarn>
+   <!-- Alternatively, you can suppress multiple warnings by using a semicolon-delimited list -->
+   <NoWarn>$(NoWarn);SYSLIB0001;SYSLIB0002;SYSLIB0003</NoWarn>
   </PropertyGroup>
 </Project>
 ```
 
 > [!NOTE]
-> Suprimir um aviso dessa forma apenas desabilita esse aviso obsoletion específico. Ele não desabilita nenhum outro aviso, incluindo outros avisos de obsoletion.
+> Suprimir avisos dessa forma apenas desabilita os avisos obsoletion que você especificar. Ele não desabilita nenhum outro aviso, incluindo avisos de obsoletion com diferentes IDs de diagnóstico.

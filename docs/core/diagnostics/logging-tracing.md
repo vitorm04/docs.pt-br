@@ -2,12 +2,12 @@
 title: Registro em log e rastreamento – .NET Core
 description: Uma introdução ao rastreamento e registro em log do .NET Core.
 ms.date: 10/12/2020
-ms.openlocfilehash: 33c78ecc839b552267ad43dd00b7d627e756a939
-ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
+ms.openlocfilehash: e3f809dab64d66d8b4ba16ca55fc426309614715
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997699"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439918"
 ---
 # <a name="net-core-logging-and-tracing"></a>Log e rastreamento do .NET Core
 
@@ -17,11 +17,11 @@ O registro em log e o rastreamento são, na verdade, dois nomes para a mesma té
 
 Essa técnica simples é surpreendentemente poderosa. Ele pode ser usado em situações em que um depurador falha:
 
-- Problemas que ocorrem por longos períodos de tempo podem ser difíceis de depurar com um depurador tradicional. Os logs permitem uma análise detalhada do post-mortem, abrangendo longos períodos de tempo. Por outro lado, os depuradores são restritos à análise em tempo real.
-- Aplicativos multithread e aplicativos distribuídos costumam ser difíceis de depurar.  A anexação de um depurador tende a modificar comportamentos. Logs detalhados podem ser analisados conforme necessário para entender sistemas complexos.
-- Problemas em aplicativos distribuídos podem surgir de uma interação complexa entre vários componentes e talvez não seja razoável conectar um depurador a todas as partes do sistema.
+- Problemas que ocorrem por longos períodos podem ser difíceis de depurar com um depurador tradicional. Os logs permitem uma análise detalhada post mortem, abrangendo longos períodos. Por outro lado, os depuradores são limitados a análises em tempo real.
+- Aplicativos distribuídos e com multithread costumam ser difíceis de depurar.  A anexação de um depurador tende a modificar comportamentos. Logs detalhados podem ser analisados conforme necessário para entender sistemas complexos.
+- Problemas em aplicativos distribuídos podem surgir de uma interação complexa entre vários componentes, e talvez não seja plausível conectar um depurador a todas as partes do sistema.
 - Muitos serviços não devem ser interrompidos. A anexação de um depurador geralmente causa falhas de tempo limite.
-- Os problemas nem sempre são previstoss. O registro em log e o rastreamento são projetados para baixa sobrecarga, para que os programas sempre possam ser gravados caso ocorra um problema.
+- Os problemas nem sempre são previstos. O registro em log e o rastreamento são projetados para baixa sobrecarga, de modo que os programas possam ser gravados caso ocorra um problema.
 
 ## <a name="net-core-apis"></a>APIs do .NET Core
 
@@ -32,18 +32,18 @@ As <xref:System.Console?displayProperty=nameWithType> <xref:System.Diagnostics.T
 A escolha da API de estilo de impressão a ser usada cabe a você. As principais diferenças são:
 
 - <xref:System.Console?displayProperty=nameWithType>
-  - Sempre habilitado e sempre grava no console.
+  - Está sempre habilitado e sempre grava no console.
   - Útil para informações que seu cliente talvez precise ver na versão.
-  - Por ser a abordagem mais simples, ela é frequentemente usada para depuração temporária ad hoc. Geralmente, esse código de depuração nunca é verificado no controle do código-fonte.
+  - Por ser a abordagem mais simples, costuma ser usado para a depuração temporária ad hoc. Geralmente, esse código de depuração nunca é submetido a check-in no controle do código-fonte.
 - <xref:System.Diagnostics.Trace?displayProperty=nameWithType>
   - Habilitado somente quando `TRACE` é definido.
   - Grava em anexado <xref:System.Diagnostics.Trace.Listeners> , por padrão, o <xref:System.Diagnostics.DefaultTraceListener> .
-  - Use essa API ao criar logs que serão habilitados na maioria das compilações.
+  - Use essa API ao criar logs que serão habilitados na maioria dos builds.
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
   - Habilitado somente quando `DEBUG` é definido.
   - Grava em um depurador anexado.
   - Em `*nix` gravações em stderr, se `COMPlus_DebugWriteToStdErr` estiver definido.
-  - Use essa API ao criar logs que serão habilitados somente em compilações de depuração.
+  - Use essa API ao criar logs que serão habilitados apenas nos builds de depuração.
 
 ### <a name="logging-events"></a>Eventos de log
 
@@ -53,11 +53,12 @@ As APIs a seguir são mais orientadas a eventos. Em vez de registrar cadeias de 
   - EventSource é a principal API de rastreamento do .NET Core raiz.
   - Disponível em todas as versões de .NET Standard.
   - Permite apenas rastrear objetos serializáveis.
-  - Grava nos [ouvintes de eventos](xref:System.Diagnostics.Tracing.EventListener)anexados.
-  - O .NET Core fornece ouvintes para:
+  - Pode ser consumido em processo por meio de todas as instâncias de [EventListener](xref:System.Diagnostics.Tracing.EventListener) configuradas para consumir a EventSource.
+  - Pode ser consumido fora do processo por meio de:
     - EventPipe do .NET Core em todas as plataformas
     - [ETW (Rastreamento de Eventos para Windows)](/windows/win32/etw/event-tracing-portal)
     - [Estrutura de rastreamento do LTTng para Linux](https://lttng.org/)
+      - Walkthrough: [coletar um rastreamento de LTTng usando PerfCollect](trace-perfcollect-lttng.md).
 
 - <xref:System.Diagnostics.DiagnosticSource?displayProperty=nameWithType>
   - Incluído no .NET Core e como um [pacote NuGet](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource) para .NET Framework.

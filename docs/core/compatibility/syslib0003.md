@@ -3,12 +3,12 @@ title: Aviso de SYSLIB0003
 description: Saiba mais sobre o obsoletions que gera SYSLIB0003 de aviso de tempo de compilação.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: ca774f3e4b5132cf40c632f7c49d3f183f5d578f
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: a9f925904641a1aa4fd229c81ff680850e4f84bd
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333211"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439957"
 ---
 # <a name="syslib0003-code-access-security-is-not-supported"></a>SYSLIB0003: não há suporte para a segurança de acesso do código
 
@@ -210,6 +210,8 @@ A lista completa de APIs de CAS obsoletas é a seguinte:
 
 - Se você estiver exigindo <xref:System.Security.Permissions.PrincipalPermission> , consulte as diretrizes para [SYSLIB0002: PrincipalPermissionAttribute é obsoleto](syslib0002.md#workarounds). Essa orientação se aplica para o <xref:System.Security.Permissions.PrincipalPermission> e o <xref:System.Security.Permissions.PrincipalPermissionAttribute> .
 
-## <a name="see-also"></a>Consulte também
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
+
+## <a name="see-also"></a>Confira também
 
 - [SYSLIB0002: PrincipalPermissionattribute está obsoleto](syslib0002.md)

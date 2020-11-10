@@ -3,12 +3,12 @@ title: Aviso de SYSLIB0005
 description: Saiba mais sobre o obsoletion que gera SYSLIB0005 de aviso de tempo de compilação.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 8a9893d81c781335014c8b970c460b5a4241ed18
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 8e5420b5cfaa9515ed7a3ac4472dc5d4e49f5bcb
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333209"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439996"
 ---
 # <a name="syslib0005-the-global-assembly-cache-gac-is-not-supported"></a>SYSLIB0005: não há suporte para o GAC (cache de assembly global)
 
@@ -20,10 +20,12 @@ As seguintes APIs relacionadas ao GAC estão marcadas como obsoletas:
 
   Bibliotecas e aplicativos não devem usar a <xref:System.Reflection.Assembly.GlobalAssemblyCache> API para fazer determinações sobre o comportamento de tempo de execução, como sempre retorna `false` no .NET Core e no .NET 5 +.
 
-## <a name="workaround"></a>Solução alternativa
+## <a name="workarounds"></a>Soluções Alternativas
 
 Se seu aplicativo consulta a <xref:System.Reflection.Assembly.GlobalAssemblyCache> propriedade, considere remover a chamada. Se você usar o <xref:System.Reflection.Assembly.GlobalAssemblyCache> valor para escolher entre um "assembly no GAC"-Flow versus um "assembly que não está no GAC"-Flow em tempo de execução, reconsidere se o fluxo ainda faz sentido para um aplicativo .NET 5 +.
 
-## <a name="see-also"></a>Consulte também
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
+
+## <a name="see-also"></a>Confira também
 
 - [Cache de assembly global](../../framework/app-domains/gac.md)

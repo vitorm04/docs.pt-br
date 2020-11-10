@@ -3,12 +3,12 @@ title: Aviso de SYSLIB0011
 description: Saiba mais sobre o obsoletions que gera SYSLIB0011 de aviso de tempo de compilação.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 2b363e565ce1143c162679c6b74621885378d7ff
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 1b4f4c24c64148319f659b78573a4d80fd5b98a7
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333200"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440009"
 ---
 # <a name="syslib0011-binaryformatter-serialization-is-obsolete"></a>SYSLIB0011: a serialização BinaryFormatter está obsoleta
 
@@ -21,13 +21,15 @@ Devido a [vulnerabilidades de segurança](../../standard/serialization/binaryfor
 - <xref:System.Runtime.Serialization.IFormatter.Serialize(System.IO.Stream,System.Object)?displayProperty=nameWithType>
 - <xref:System.Runtime.Serialization.IFormatter.Deserialize(System.IO.Stream)?displayProperty=nameWithType>
 
-## <a name="workaround"></a>Solução alternativa
+## <a name="workarounds"></a>Soluções Alternativas
 
 Considere usar <xref:System.Text.Json.JsonSerializer> ou <xref:System.Xml.Serialization.XmlSerializer> em vez de <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> .
 
 Para obter mais informações sobre as ações recomendadas, consulte [Resolvendo erros de BinaryFormatter obsoletion e de desativação](https://aka.ms/binaryformatter).
 
-## <a name="see-also"></a>Consulte também
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
+
+## <a name="see-also"></a>Confira também
 
 - [Resolvendo erros de desativação e BinaryFormatter obsoletion](https://aka.ms/binaryformatter)
 - [Os métodos de serialização BinaryFormatter são obsoletos e proibidos em aplicativos ASP.NET](corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)

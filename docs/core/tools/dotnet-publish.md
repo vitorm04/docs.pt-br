@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: O comando dotnet publish publica um projeto do .NET Core ou uma solução em um diretório.
 ms.date: 02/24/2020
-ms.openlocfilehash: 2c33f99ce652dadc6e0c1a4c5e9e78fff9f54254
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: e35a0671cb964e7d9b68ed5bbe261045038229aa
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654888"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440563"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -45,7 +45,7 @@ A saída do comando `dotnet publish` está pronta para implantação em um siste
 
 ### <a name="implicit-restore"></a>Restauração implícita
 
-[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[dotnet restore note](../../../includes/dotnet-restore-note.md)]
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -59,9 +59,9 @@ Você também pode definir propriedades relacionadas à publicação fazendo ref
 dotnet publish -p:PublishProfile=FolderProfile
 ```
 
-O exemplo anterior usa o arquivo *FolderProfile. pubxml* que é encontrado na pasta * \<project_folder> /Properties/PublishProfiles* . Se você especificar um caminho e uma extensão de arquivo ao definir a `PublishProfile` propriedade, eles serão ignorados. Por padrão, o MSBuild procura na pasta *Properties/PublishProfiles* e assume a extensão de arquivo *pubxml* . Para especificar o caminho e o nome de arquivo, incluindo a extensão, defina a `PublishProfileFullPath` propriedade em vez da `PublishProfile` propriedade.
+O exemplo anterior usa o arquivo *FolderProfile. pubxml* que é encontrado na pasta *\<project_folder> /Properties/PublishProfiles* . Se você especificar um caminho e uma extensão de arquivo ao definir a `PublishProfile` propriedade, eles serão ignorados. Por padrão, o MSBuild procura na pasta *Properties/PublishProfiles* e assume a extensão de arquivo *pubxml* . Para especificar o caminho e o nome de arquivo, incluindo a extensão, defina a `PublishProfileFullPath` propriedade em vez da `PublishProfile` propriedade.
 
-Para saber mais, consulte os recursos a seguir:
+Para obter mais informações, consulte os seguintes recursos:
 
 - [Referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference)
 - [Perfis de publicação do Visual Studio (. pubxml) para implantação de aplicativo ASP.NET Core](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
@@ -125,7 +125,7 @@ Para saber mais, consulte os recursos a seguir:
   
   Se não for especificado, o padrão é *[project_file_folder]/bin/[Configuration]/[Framework]/Publish/* para um executável dependente de estrutura e binários de plataforma cruzada. O padrão é *[project_file_folder]/bin/[Configuration]/[Framework]/[Runtime]/Publish/* para um executável independente.
 
-  Em um projeto Web, se a pasta de saída estiver na pasta do projeto, os `dotnet publish` comandos sucessivos resultarão em pastas de saída aninhadas. Por exemplo, se a pasta do projeto *for MyProject*e a pasta de saída de publicação for *MyProject/Publish*e você `dotnet publish` executar duas vezes, a segunda execução colocará arquivos de conteúdo como arquivos *. config* e *. JSON* no *MyProject/publicar/Publish*. Para evitar o aninhamento de pastas de publicação, especifique uma pasta de publicação que não esteja **diretamente** sob a pasta do projeto ou exclua a pasta de publicação do projeto. Para excluir uma pasta de publicação chamada *publishoutput*, adicione o seguinte elemento a um `PropertyGroup` elemento no arquivo *. csproj* :
+  Em um projeto Web, se a pasta de saída estiver na pasta do projeto, os `dotnet publish` comandos sucessivos resultarão em pastas de saída aninhadas. Por exemplo, se a pasta do projeto *for MyProject* e a pasta de saída de publicação for *MyProject/Publish* e você `dotnet publish` executar duas vezes, a segunda execução colocará arquivos de conteúdo como arquivos *. config* e *. JSON* no *MyProject/publicar/Publish*. Para evitar o aninhamento de pastas de publicação, especifique uma pasta de publicação que não esteja **diretamente** sob a pasta do projeto ou exclua a pasta de publicação do projeto. Para excluir uma pasta de publicação chamada *publishoutput* , adicione o seguinte elemento a um `PropertyGroup` elemento no arquivo *. csproj* :
 
   ```xml
   <DefaultItemExcludes>$(DefaultItemExcludes);publishoutput**</DefaultItemExcludes>
@@ -229,7 +229,7 @@ Para saber mais, consulte os recursos a seguir:
   dotnet publish --no-dependencies
   ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral da publicação de aplicativos do .NET Core](../deploying/index.md)
 - [Publicar aplicativos .NET Core com o CLI do .NET Core](../deploying/deploy-with-cli.md)

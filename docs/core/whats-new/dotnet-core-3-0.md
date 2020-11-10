@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: b0b1f4492d68ff2f2218b7c977f57cad3f582bb0
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 2488499c1b0e8d12eb3be04b9bb885649b4da974
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050274"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439723"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novidades do .NET Core 3.0
 
@@ -42,7 +42,7 @@ Foram adicionados aprimoramentos de linguagem para dar suporte aos seguintes rec
 
 ## <a name="net-standard-21"></a>.NET Standard 2.1
 
-O .NET Core 3,0 implementa **.NET Standard 2,1**. No entanto, o `dotnet new classlib` modelo padrão gera um projeto que ainda tem como alvo **.net Standard 2,0**. Para direcionar ao **.NET Standard 2.1**, edite seu arquivo de projeto e altere a propriedade `TargetFramework` para `netstandard2.1`:
+O .NET Core 3,0 implementa **.NET Standard 2,1**. No entanto, o `dotnet new classlib` modelo padrão gera um projeto que ainda tem como alvo **.net Standard 2,0**. Para direcionar ao **.NET Standard 2.1** , edite seu arquivo de projeto e altere a propriedade `TargetFramework` para `netstandard2.1`:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -62,7 +62,7 @@ Se você estiver usando o Visual Studio, precisará do [Visual Studio 2019](http
 
 O .NET Core agora compila [executáveis dependentes de estrutura](../deploying/index.md#publish-framework-dependent) por padrão. Esse comportamento é novo para aplicativos que usam uma versão do .NET Core instalada globalmente. Anteriormente, apenas [implantações autocontidas](../deploying/index.md#publish-self-contained) produziam um executável.
 
-Durante `dotnet build` ou `dotnet publish` , um executável (conhecido como **appHost**) é criado que corresponde ao ambiente e à plataforma do SDK que você está usando. Você pode esperar desses executáveis o mesmo que de outros executáveis nativos, como:
+Durante `dotnet build` ou `dotnet publish` , um executável (conhecido como **appHost** ) é criado que corresponde ao ambiente e à plataforma do SDK que você está usando. Você pode esperar desses executáveis o mesmo que de outros executáveis nativos, como:
 
 - Você pode clicar duas vezes no arquivo executável.
 - Você pode iniciar o aplicativo diretamente de um prompt de comando, como `myapp.exe` no Windows e `./myapp` no Linux e macOS.
@@ -240,7 +240,7 @@ Efetuar roll forward para a versão principal e a secundária mais altas, mesmo 
 - **Desativar**\
 Não efetuar roll forward. Associar somente à versão especificada. Essa política não é recomendada para uso geral, pois ela desabilita a capacidade de efetuar roll forward para os patches mais recentes. Esse valor só é recomendado para teste.
 
-Com a exceção da configuração **Desabilitar**, todas as configurações usarão a versão de patch mais recente disponível.
+Com a exceção da configuração **Desabilitar** , todas as configurações usarão a versão de patch mais recente disponível.
 
 Por padrão, se a versão solicitada (conforme especificado em `.runtimeconfig.json` para o aplicativo) for uma versão de lançamento, somente as versões de lançamento serão consideradas para roll-forward. Todas as versões de pré-lançamento são ignoradas. Se não houver nenhuma versão de lançamento correspondente, as versões de pré-lançamento serão levadas em conta. Esse comportamento pode ser alterado por meio da configuração `DOTNET_ROLL_FORWARD_TO_PRERELEASE=1` , caso em que todas as versões são sempre consideradas.
 
@@ -288,7 +288,7 @@ O coletor de lixo agora pode ser configurado com a configuração **GCLargePages
 
 ### <a name="net-core-sdk-windows-installer"></a>Windows Installer do SDK do .NET Core
 
-O instalador MSI para Windows foi alterado do .NET Core 3.0 em diante. Os instaladores de SDK agora atualizarão versões de faixa de recurso do SDK no local. Faixas de recurso são definidas nos grupos de *centenas* na seção *patch* do número de versão. Por exemplo, **3.0._101_** e **3.0._201_** são versões em duas faixas de recurso diferentes, enquanto **3.0._101_** e **3.0._199_** estão na mesma faixa de recurso. Além disso, quando o SDK do .NET Core **3.0._101_** for instalado, o SDK do .NET Core **3.0._100_** será removido do computador se ele existir. Quando o SDK do .NET Core **3.0._200_** for instalado no mesmo computador, o SDK do .NET Core **3.0._101_** não será removido.
+O instalador MSI para Windows foi alterado do .NET Core 3.0 em diante. Os instaladores de SDK agora atualizarão versões de faixa de recurso do SDK no local. Faixas de recurso são definidas nos grupos de *centenas* na seção *patch* do número de versão. Por exemplo, **3.0. _101_** e **3.0. _201_** são versões em duas faixas de recurso diferentes, enquanto **3.0. _101_** e **3.0. _199_** estão na mesma faixa de recurso. Além disso, quando o SDK do .NET Core **3.0. _101_** for instalado, o SDK do .NET Core **3.0. _100_** será removido do computador se ele existir. Quando o SDK do .NET Core **3.0. _200_** for instalado no mesmo computador, o SDK do .NET Core **3.0. _101_** não será removido.
 
 Para obter mais informações sobre controle de versão, consulte [Visão geral de como é o controle de versão no .NET Core](../versions/index.md).
 
@@ -307,7 +307,7 @@ dotnet new winforms
 
 O Visual Studio 2019 adiciona modelos de **Novo Projeto** ao Windows Forms e WPF no .NET Core 3.0.
 
-Para obter mais informações sobre como portar um aplicativo existente do .NET Framework, consulte [Portar projetos do WPF](/dotnet/desktop/wpf/migration/convert-project-from-net-framework) e [Portar projetos do Windows Forms](../porting/winforms.md).
+Para obter mais informações sobre como portar um aplicativo existente do .NET Framework, consulte [Portar projetos do WPF](/dotnet/desktop/wpf/migration/convert-project-from-net-framework) e [Portar projetos do Windows Forms](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true).
 
 #### <a name="winforms-high-dpi"></a>WinForms com DPI alto
 
@@ -333,7 +333,7 @@ Para obter um exemplo de como criar um componente COM e consumi-lo, veja a [demo
 
 ### <a name="windows-native-interop"></a>Interoperabilidade nativa do Windows
 
-O Windows oferece uma API nativa rica na forma de APIs C simples, COM e WinRT. Embora o .NET Core dê suporte a **P/Invoke**, o .NET Core 3.0 adiciona a capacidade de **criar conjuntamente APIs COM** e **ativar APIs WinRT**. Para obter um exemplo de código, consulte a [demonstração do Excel](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
+O Windows oferece uma API nativa rica na forma de APIs C simples, COM e WinRT. Embora o .NET Core dê suporte a **P/Invoke** , o .NET Core 3.0 adiciona a capacidade de **criar conjuntamente APIs COM** e **ativar APIs WinRT**. Para obter um exemplo de código, consulte a [demonstração do Excel](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
 
 ### <a name="msix-deployment"></a>Implantação do MSIX
 
@@ -372,7 +372,7 @@ Foram lançados dois pacotes para o NuGet que você pode usar para programação
 - [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
 - [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
 
-Os pacotes GPIO incluem as APIs para dispositivos *GPIO*, *SPI*, *I2C* e *PWM*. O pacote de associações de IoT inclui associações de dispositivo. Para obter mais informações, veja o [repositório GitHub de dispositivos](https://github.com/dotnet/iot/blob/master/src/devices/).
+Os pacotes GPIO incluem as APIs para dispositivos *GPIO* , *SPI* , *I2C* e *PWM*. O pacote de associações de IoT inclui associações de dispositivo. Para obter mais informações, veja o [repositório GitHub de dispositivos](https://github.com/dotnet/iot/blob/master/src/devices/).
 
 ### <a name="arm64-linux-support"></a>Suporte a ARM64 no Linux
 
@@ -392,7 +392,7 @@ O .NET Core agora faz proveito do [suporte a protocolo TLS 1.3 no OpenSSL 1.1.1]
 - Tempos de conexão são aprimorados com um menor número de viagens de ida e volta necessárias entre o cliente e o servidor.
 - Segurança aprimorada devido à remoção de vários algoritmos criptográficos obsoletos e não seguros.
 
-Quando disponíveis, o .NET Core 3.0 usa **OpenSSL 1.1.1**, **1.1.0** ou **1.0.2** em um sistema Linux. Quando o **OpenSSL 1.1.1** está disponível, ambos os tipos <xref:System.Net.Security.SslStream?displayProperty=nameWithType> e <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> usarão o **protocolo TLS 1.3** (supondo que o cliente e o servidor deem suporte ao **protocolo TLS 1.3**).
+Quando disponíveis, o .NET Core 3.0 usa **OpenSSL 1.1.1** , **1.1.0** ou **1.0.2** em um sistema Linux. Quando o **OpenSSL 1.1.1** está disponível, ambos os tipos <xref:System.Net.Security.SslStream?displayProperty=nameWithType> e <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> usarão o **protocolo TLS 1.3** (supondo que o cliente e o servidor deem suporte ao **protocolo TLS 1.3** ).
 
 > [!IMPORTANT]
 > Windows e macOS ainda não oferecem suporte a **TLS 1.3**.
@@ -403,7 +403,7 @@ O exemplo de C# 8.0 a seguir demonstra o .NET Core 3.0 no Ubuntu 18.10 conectand
 
 ### <a name="cryptography-ciphers"></a>Cifras de criptografia
 
-O .NET 3.0 adiciona o suporte para as criptografias **AES-GCM** e **AES-CCM**, implementadas com <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> e <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType>, respectivamente. Esses algoritmos são ambos do tipo [AEAD (criptografia autenticada com os dados de associação)](https://en.wikipedia.org/wiki/Authenticated_encryption).
+O .NET 3.0 adiciona o suporte para as criptografias **AES-GCM** e **AES-CCM** , implementadas com <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> e <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType>, respectivamente. Esses algoritmos são ambos do tipo [AEAD (criptografia autenticada com os dados de associação)](https://en.wikipedia.org/wiki/Authenticated_encryption).
 
 O código a seguir demonstra como usar criptografia `AesGcm` para criptografar e descriptografar dados aleatórios.
 
@@ -413,7 +413,7 @@ O código a seguir demonstra como usar criptografia `AesGcm` para criptografar e
 
 O .NET Core 3.0 dá suporte à importação e exportação de chaves públicas e privadas assimétricas de formatos padrão. Você não precisa usar um certificado X.509.
 
-Todos os tipos principais, tais como *RSA*, *DSA*, *ECDsa* e *ECDiffieHellman*, dão suporte aos seguintes formatos:
+Todos os tipos principais, tais como *RSA* , *DSA* , *ECDsa* e *ECDiffieHellman* , dão suporte aos seguintes formatos:
 
 - **Chave pública**
   - X.509 SubjectPublicKeyInfo

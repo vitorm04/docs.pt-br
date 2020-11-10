@@ -2,12 +2,12 @@
 title: Windows Forms alterações significativas
 description: Lista as alterações significativas em Windows Forms para .NET Core e .NET 5.
 ms.date: 09/08/2020
-ms.openlocfilehash: 01810a690227bbcab2103f00767315dbc5d5fae3
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: c79fd28b5c3b81ae7ddf1ef3f470601108b87705
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400625"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440784"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Alterações recentes no Windows Forms
 
@@ -136,4 +136,4 @@ _**
 
 ## <a name="see-also"></a>Confira também
 
-- [Porta um aplicativo de Windows Forms para o .NET Core](../porting/winforms.md)
+- [Porta um aplicativo de Windows Forms para o .NET Core](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true)
