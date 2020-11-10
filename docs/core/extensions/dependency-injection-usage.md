@@ -6,10 +6,10 @@ ms.author: dapine
 ms.date: 09/23/2020
 ms.topic: tutorial
 no-loc:
-- ':::no-loc(Transient):::'
-- ':::no-loc(Scoped):::'
-- ':::no-loc(Singleton):::'
-- ':::no-loc(Example):::'
+- 'Transient'
+- 'Scoped'
+- 'Singleton'
+- 'Example'
 ms.openlocfilehash: 589e15736c07b465fda308b04c91384a2502755c
 ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
@@ -37,7 +37,7 @@ ms.locfileid: "92888581"
 
 ## <a name="create-a-new-console-application"></a><span data-ttu-id="5fe6c-115">Criar um novo aplicativo de console</span><span class="sxs-lookup"><span data-stu-id="5fe6c-115">Create a new console application</span></span>
 
-<span data-ttu-id="5fe6c-116">Usando o comando [dotnet New](../tools/dotnet-new.md) ou um assistente de novo projeto do IDE, crie um novo aplicativo de console .NET chamado **ConsoleDI. :::no-loc(Example):::** .</span><span class="sxs-lookup"><span data-stu-id="5fe6c-116">Using either the [dotnet new](../tools/dotnet-new.md) command or an IDE new project wizard, create a new .NET console application named **ConsoleDI.:::no-loc(Example):::** .</span></span> <span data-ttu-id="5fe6c-117">Adicione o pacote NuGet [Microsoft. Extensions. Hosting](https://www.nuget.org/packages/Microsoft.Extensions.Hosting) ao projeto.</span><span class="sxs-lookup"><span data-stu-id="5fe6c-117">Add the [Microsoft.Extensions.Hosting](https://www.nuget.org/packages/Microsoft.Extensions.Hosting) NuGet package to the project.</span></span>
+<span data-ttu-id="5fe6c-116">Usando o comando [dotnet New](../tools/dotnet-new.md) ou um assistente de novo projeto do IDE, crie um novo aplicativo de console .NET chamado **ConsoleDI. Example** .</span><span class="sxs-lookup"><span data-stu-id="5fe6c-116">Using either the [dotnet new](../tools/dotnet-new.md) command or an IDE new project wizard, create a new .NET console application named **ConsoleDI.Example** .</span></span> <span data-ttu-id="5fe6c-117">Adicione o pacote NuGet [Microsoft. Extensions. Hosting](https://www.nuget.org/packages/Microsoft.Extensions.Hosting) ao projeto.</span><span class="sxs-lookup"><span data-stu-id="5fe6c-117">Add the [Microsoft.Extensions.Hosting](https://www.nuget.org/packages/Microsoft.Extensions.Hosting) NuGet package to the project.</span></span>
 
 ## <a name="add-interfaces"></a><span data-ttu-id="5fe6c-118">Adicionar interfaces</span><span class="sxs-lookup"><span data-stu-id="5fe6c-118">Add interfaces</span></span>
 
@@ -49,19 +49,19 @@ ms.locfileid: "92888581"
 
 <span data-ttu-id="5fe6c-121">A `IOperation` interface define uma única `OperationId` propriedade.</span><span class="sxs-lookup"><span data-stu-id="5fe6c-121">The `IOperation` interface defines a single `OperationId` property.</span></span>
 
-<span data-ttu-id="5fe6c-122">*Eu :::no-loc(Transient)::: Operation.cs*</span><span class="sxs-lookup"><span data-stu-id="5fe6c-122">*I:::no-loc(Transient):::Operation.cs*</span></span>
+<span data-ttu-id="5fe6c-122">*Eu Transient Operation.cs*</span><span class="sxs-lookup"><span data-stu-id="5fe6c-122">*ITransientOperation.cs*</span></span>
 
-<span data-ttu-id="5fe6c-123">::: linguagem de código = "CSharp" origem = "trechos/configuração/console-di/I :::no-loc(Transient)::: Operation.cs":::</span><span class="sxs-lookup"><span data-stu-id="5fe6c-123">:::code language="csharp" source="snippets/configuration/console-di/I:::no-loc(Transient):::Operation.cs":::</span></span>
+<span data-ttu-id="5fe6c-123">::: linguagem de código = "CSharp" origem = "trechos/configuração/console-di/I Transient Operation.cs":::</span><span class="sxs-lookup"><span data-stu-id="5fe6c-123">:::code language="csharp" source="snippets/configuration/console-di/ITransientOperation.cs":::</span></span>
 
-<span data-ttu-id="5fe6c-124">*Eu :::no-loc(Scoped)::: Operation.cs*</span><span class="sxs-lookup"><span data-stu-id="5fe6c-124">*I:::no-loc(Scoped):::Operation.cs*</span></span>
+<span data-ttu-id="5fe6c-124">*Eu Scoped Operation.cs*</span><span class="sxs-lookup"><span data-stu-id="5fe6c-124">*IScopedOperation.cs*</span></span>
 
-<span data-ttu-id="5fe6c-125">::: linguagem de código = "CSharp" origem = "trechos/configuração/console-di/I :::no-loc(Scoped)::: Operation.cs":::</span><span class="sxs-lookup"><span data-stu-id="5fe6c-125">:::code language="csharp" source="snippets/configuration/console-di/I:::no-loc(Scoped):::Operation.cs":::</span></span>
+<span data-ttu-id="5fe6c-125">::: linguagem de código = "CSharp" origem = "trechos/configuração/console-di/I Scoped Operation.cs":::</span><span class="sxs-lookup"><span data-stu-id="5fe6c-125">:::code language="csharp" source="snippets/configuration/console-di/IScopedOperation.cs":::</span></span>
 
-<span data-ttu-id="5fe6c-126">*Eu :::no-loc(Singleton)::: Operation.cs*</span><span class="sxs-lookup"><span data-stu-id="5fe6c-126">*I:::no-loc(Singleton):::Operation.cs*</span></span>
+<span data-ttu-id="5fe6c-126">*Eu Singleton Operation.cs*</span><span class="sxs-lookup"><span data-stu-id="5fe6c-126">*ISingletonOperation.cs*</span></span>
 
-<span data-ttu-id="5fe6c-127">::: linguagem de código = "CSharp" origem = "trechos/configuração/console-di/I :::no-loc(Singleton)::: Operation.cs":::</span><span class="sxs-lookup"><span data-stu-id="5fe6c-127">:::code language="csharp" source="snippets/configuration/console-di/I:::no-loc(Singleton):::Operation.cs":::</span></span>
+<span data-ttu-id="5fe6c-127">::: linguagem de código = "CSharp" origem = "trechos/configuração/console-di/I Singleton Operation.cs":::</span><span class="sxs-lookup"><span data-stu-id="5fe6c-127">:::code language="csharp" source="snippets/configuration/console-di/ISingletonOperation.cs":::</span></span>
 
-<span data-ttu-id="5fe6c-128">Todas as subinterfaces de `IOperation` nome do seu tempo de vida de serviço pretendido.</span><span class="sxs-lookup"><span data-stu-id="5fe6c-128">All of the subinterfaces of `IOperation` name their intended service lifetime.</span></span> <span data-ttu-id="5fe6c-129">Por exemplo, " :::no-loc(Transient)::: " ou " :::no-loc(Singleton)::: ".</span><span class="sxs-lookup"><span data-stu-id="5fe6c-129">For example, ":::no-loc(Transient):::" or ":::no-loc(Singleton):::".</span></span>
+<span data-ttu-id="5fe6c-128">Todas as subinterfaces de `IOperation` nome do seu tempo de vida de serviço pretendido.</span><span class="sxs-lookup"><span data-stu-id="5fe6c-128">All of the subinterfaces of `IOperation` name their intended service lifetime.</span></span> <span data-ttu-id="5fe6c-129">Por exemplo, " Transient " ou " Singleton ".</span><span class="sxs-lookup"><span data-stu-id="5fe6c-129">For example, "Transient" or "Singleton".</span></span>
 
 ## <a name="add-default-implementation"></a><span data-ttu-id="5fe6c-130">Adicionar implementação padrão</span><span class="sxs-lookup"><span data-stu-id="5fe6c-130">Add default implementation</span></span>
 
@@ -81,7 +81,7 @@ ms.locfileid: "92888581"
 
 :::code language="csharp" source="snippets/configuration/console-di/OperationLogger.cs":::
 
-<span data-ttu-id="5fe6c-137">O `OperationLogger` define um construtor que requer cada uma das interfaces de marcador mencionadas anteriormente, ou seja,, `I:::no-loc(Transient):::Operation` `I:::no-loc(Scoped):::Operation` e `I:::no-loc(Singleton):::Operation` .</span><span class="sxs-lookup"><span data-stu-id="5fe6c-137">The `OperationLogger` defines a constructor that requires each of the aforementioned marker interfaces, that is; `I:::no-loc(Transient):::Operation`, `I:::no-loc(Scoped):::Operation`, and `I:::no-loc(Singleton):::Operation`.</span></span> <span data-ttu-id="5fe6c-138">O objeto expõe um único método que permite ao consumidor registrar as operações com um determinado `scope` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="5fe6c-138">The object exposes a single method that allows the consumer to log the operations with a given `scope` parameter.</span></span> <span data-ttu-id="5fe6c-139">Quando invocado, o `LogOperations` método registra o identificador exclusivo de cada operação com a cadeia de caracteres e a mensagem do escopo.</span><span class="sxs-lookup"><span data-stu-id="5fe6c-139">When invoked, the `LogOperations` method logs each operation's unique identifier with the scope string and message.</span></span>
+<span data-ttu-id="5fe6c-137">O `OperationLogger` define um construtor que requer cada uma das interfaces de marcador mencionadas anteriormente, ou seja,, `ITransientOperation` `IScopedOperation` e `ISingletonOperation` .</span><span class="sxs-lookup"><span data-stu-id="5fe6c-137">The `OperationLogger` defines a constructor that requires each of the aforementioned marker interfaces, that is; `ITransientOperation`, `IScopedOperation`, and `ISingletonOperation`.</span></span> <span data-ttu-id="5fe6c-138">O objeto expõe um único método que permite ao consumidor registrar as operações com um determinado `scope` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="5fe6c-138">The object exposes a single method that allows the consumer to log the operations with a given `scope` parameter.</span></span> <span data-ttu-id="5fe6c-139">Quando invocado, o `LogOperations` método registra o identificador exclusivo de cada operação com a cadeia de caracteres e a mensagem do escopo.</span><span class="sxs-lookup"><span data-stu-id="5fe6c-139">When invoked, the `LogOperations` method logs each operation's unique identifier with the scope string and message.</span></span>
 
 ## <a name="register-services-for-di"></a><span data-ttu-id="5fe6c-140">Registrar serviços para DI</span><span class="sxs-lookup"><span data-stu-id="5fe6c-140">Register services for DI</span></span>
 
@@ -101,28 +101,28 @@ ms.locfileid: "92888581"
 <span data-ttu-id="5fe6c-148">O aplicativo exibe uma saída semelhante ao exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="5fe6c-148">The app displays output similar to the following example:</span></span>
 
 ```console
-Scope 1-Call 1 .GetRequiredService<OperationLogger>(): I:::no-loc(Transient):::Operation [ 80f4...Always different        ]
-Scope 1-Call 1 .GetRequiredService<OperationLogger>(): I:::no-loc(Scoped):::Operation    [ c878...Changes only with scope ]
-Scope 1-Call 1 .GetRequiredService<OperationLogger>(): I:::no-loc(Singleton):::Operation [ 1586...Always the same         ]
+Scope 1-Call 1 .GetRequiredService<OperationLogger>(): ITransientOperation [ 80f4...Always different        ]
+Scope 1-Call 1 .GetRequiredService<OperationLogger>(): IScopedOperation    [ c878...Changes only with scope ]
+Scope 1-Call 1 .GetRequiredService<OperationLogger>(): ISingletonOperation [ 1586...Always the same         ]
 ...
-Scope 1-Call 2 .GetRequiredService<OperationLogger>(): I:::no-loc(Transient):::Operation [ f3c0...Always different        ]
-Scope 1-Call 2 .GetRequiredService<OperationLogger>(): I:::no-loc(Scoped):::Operation    [ c878...Changes only with scope ]
-Scope 1-Call 2 .GetRequiredService<OperationLogger>(): I:::no-loc(Singleton):::Operation [ 1586...Always the same         ]
+Scope 1-Call 2 .GetRequiredService<OperationLogger>(): ITransientOperation [ f3c0...Always different        ]
+Scope 1-Call 2 .GetRequiredService<OperationLogger>(): IScopedOperation    [ c878...Changes only with scope ]
+Scope 1-Call 2 .GetRequiredService<OperationLogger>(): ISingletonOperation [ 1586...Always the same         ]
 
-Scope 2-Call 1 .GetRequiredService<OperationLogger>(): I:::no-loc(Transient):::Operation [ f9af...Always different        ]
-Scope 2-Call 1 .GetRequiredService<OperationLogger>(): I:::no-loc(Scoped):::Operation    [ 2bd0...Changes only with scope ]
-Scope 2-Call 1 .GetRequiredService<OperationLogger>(): I:::no-loc(Singleton):::Operation [ 1586...Always the same         ]
+Scope 2-Call 1 .GetRequiredService<OperationLogger>(): ITransientOperation [ f9af...Always different        ]
+Scope 2-Call 1 .GetRequiredService<OperationLogger>(): IScopedOperation    [ 2bd0...Changes only with scope ]
+Scope 2-Call 1 .GetRequiredService<OperationLogger>(): ISingletonOperation [ 1586...Always the same         ]
 ...
-Scope 2-Call 2 .GetRequiredService<OperationLogger>(): I:::no-loc(Transient):::Operation [ fa65...Always different        ]
-Scope 2-Call 2 .GetRequiredService<OperationLogger>(): I:::no-loc(Scoped):::Operation    [ 2bd0...Changes only with scope ]
-Scope 2-Call 2 .GetRequiredService<OperationLogger>(): I:::no-loc(Singleton):::Operation [ 1586...Always the same         ]
+Scope 2-Call 2 .GetRequiredService<OperationLogger>(): ITransientOperation [ fa65...Always different        ]
+Scope 2-Call 2 .GetRequiredService<OperationLogger>(): IScopedOperation    [ 2bd0...Changes only with scope ]
+Scope 2-Call 2 .GetRequiredService<OperationLogger>(): ISingletonOperation [ 1586...Always the same         ]
 ```
 
 <span data-ttu-id="5fe6c-149">Na saída do aplicativo, você pode ver que:</span><span class="sxs-lookup"><span data-stu-id="5fe6c-149">From the app output, you can see that:</span></span>
 
-- <span data-ttu-id="5fe6c-150">:::no-loc(Transient)::: as operações são sempre diferentes, uma nova instância é criada com cada recuperação do serviço.</span><span class="sxs-lookup"><span data-stu-id="5fe6c-150">:::no-loc(Transient)::: operations are always different, a new instance is created with every retrieval of the service.</span></span>
-- <span data-ttu-id="5fe6c-151">:::no-loc(Scoped)::: as operações são alteradas somente com um novo escopo, mas são a mesma instância dentro de um escopo.</span><span class="sxs-lookup"><span data-stu-id="5fe6c-151">:::no-loc(Scoped)::: operations change only with a new scope, but are the same instance within a scope.</span></span>
-- <span data-ttu-id="5fe6c-152">:::no-loc(Singleton)::: as operações são sempre as mesmas, uma nova instância é criada apenas uma vez.</span><span class="sxs-lookup"><span data-stu-id="5fe6c-152">:::no-loc(Singleton)::: operations are always the same, a new instance is only created once.</span></span>
+- <span data-ttu-id="5fe6c-150">Transient as operações são sempre diferentes, uma nova instância é criada com cada recuperação do serviço.</span><span class="sxs-lookup"><span data-stu-id="5fe6c-150">Transient operations are always different, a new instance is created with every retrieval of the service.</span></span>
+- <span data-ttu-id="5fe6c-151">Scoped as operações são alteradas somente com um novo escopo, mas são a mesma instância dentro de um escopo.</span><span class="sxs-lookup"><span data-stu-id="5fe6c-151">Scoped operations change only with a new scope, but are the same instance within a scope.</span></span>
+- <span data-ttu-id="5fe6c-152">Singleton as operações são sempre as mesmas, uma nova instância é criada apenas uma vez.</span><span class="sxs-lookup"><span data-stu-id="5fe6c-152">Singleton operations are always the same, a new instance is only created once.</span></span>
 
 ## <a name="see-also"></a><span data-ttu-id="5fe6c-153">Veja também</span><span class="sxs-lookup"><span data-stu-id="5fe6c-153">See also</span></span>
 
