@@ -1,17 +1,17 @@
 ### YamlMime:Landing
-title: Instalar o .NET Core no Windows, Linux e macOS
-summary: Saiba mais sobre como instalar o .NET em versões do Windows, Linux e macOS. Descubra as dependências necessárias para desenvolver, implantar e executar aplicativos .NET Core.
+title: Instalar o .NET no Windows, Linux e macOS
+summary: Saiba mais sobre como instalar o .NET em versões do Windows, Linux e macOS. Descubra as dependências necessárias para desenvolver, implantar e executar aplicativos .NET.
 metadata:
-  title: Instalar o .NET Core no Windows, Linux e macOS
-  description: Saiba onde baixar e instalar o .NET Core em versões do Windows, Linux e macOS. Descubra as dependências necessárias para desenvolver, implantar e executar aplicativos .NET Core.
+  title: Instalar o .NET no Windows, Linux e macOS
+  description: Saiba onde baixar e instalar o .NET nas versões Windows, Linux e macOS. Descubra as dependências necessárias para desenvolver, implantar e executar aplicativos .NET.
   ms.topic: landing-page
   ms.date: 06/29/2020
-  ms.openlocfilehash: dbc159bc4ff2d10bf55bd0c0b4d4e07a8fc04a4a
-  ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+  ms.openlocfilehash: 53c4485b986abf58bdff45d78342c110b15d7824
+  ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 07/01/2020
-  ms.locfileid: "85804471"
+  ms.lasthandoff: 11/11/2020
+  ms.locfileid: "94507196"
 landingContent:
 - title: Windows
   linkLists:

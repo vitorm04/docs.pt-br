@@ -48,6 +48,8 @@
               href: tutorials/intro-to-csharp/object-oriented-programming.md
     - name: Explorar instruções de nível superior
       href: tutorials/exploration/top-level-statements.md
+    - name: Explorar padrões em objetos
+      href: tutorials/exploration/patterns-objects.md
     - name: Explorar o C# 6
       href: tutorials/exploration/csharp-6.yml
     - name: Explorar a interpolação de cadeia de caracteres – interativo
@@ -224,7 +226,7 @@
     - name: Índice do artigo
       displayName: how to's
       href: how-to/index.md
-    - name: Analisar cadeias de caracteres usando `String.Split`
+    - name: Dividir cadeias de caracteres em substrings
       href: how-to/parse-strings-using-split.md
     - name: Concatenar cadeias de caracteres
       href: how-to/concatenate-multiple-strings.md
@@ -234,7 +236,7 @@
       href: how-to/modify-string-contents.md
     - name: Comparar cadeias de caracteres
       href: how-to/compare-strings.md
-    - name: Converter usando a correspondência de padrões e os operadores is e as com segurança
+    - name: Converter de forma segura usando correspondência de padrões e operadores is/as
       href: how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
 - name: O SDK do .NET Compiler Platform (APIs do Roslyn)
   items:
