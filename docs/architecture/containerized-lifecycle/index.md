@@ -1,19 +1,21 @@
 ---
 title: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
 description: Obtenha uma visão geral de alto nível do processo de desenvolvimento e implantação para desenvolver e implantar aplicativos em contêineres com o Docker e a plataforma e as ferramentas da Microsoft.
-ms.date: 07/30/2020
-ms.openlocfilehash: c506a3423ac4511f23452192e361e88dce6efec4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/10/2020
+ms.openlocfilehash: cf20ea97ec252649cdb14add40ead67b6319520a
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160691"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506656"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
 
 ![Capa do livro](./media/devops-book-cover-large-we.png)
 
 **Edição v 3.1** -atualizado para ASP.NET Core 3,1
+
+Consulte o [changelog](https://aka.ms/DockerLifecycleEbookChangelog) para obter as atualizações do livro e as contribuições da Comunidade.
 
 Este guia é uma visão geral para desenvolver e implantar aplicativos ASP.NET Core em contêineres com o Docker, usando a plataforma e as ferramentas da Microsoft. O guia inclui uma introdução de alto nível ao Azure DevOps, para implementar pipelines de CI/CD, bem como o ACR (registro de contêiner do Azure) e os serviços Kubernetess do Azure AKS para implantação.
 
@@ -27,7 +29,7 @@ Escrevemos este guia para ajudá-lo a entender a arquitetura de aplicativos em c
 
 Autor:
 
-> **Cesar de la Torre**, Gerente sênior de produtos , equipe de produto do .NET, Microsoft Corp.
+> **Cesar de la Torre** , Gerente sênior de produtos , equipe de produto do .NET, Microsoft Corp.
 
 Editor de aquisições:
 
@@ -35,7 +37,7 @@ Editor de aquisições:
 
 Editor de desenvolvimento:
 
-> **Bob Russell**, profissional de soluções na Microsoft
+> **Bob Russell** , profissional de soluções na Microsoft
 >
 > [**Publicação octal, Inc.**](http://www.octalpub.com/)
 
@@ -47,15 +49,15 @@ Produção editorial:
 
 Copyeditor:
 
-> **Bob Russell**, profissional de soluções na Microsoft
+> **Bob Russell** , profissional de soluções na Microsoft
 
 Participantes e revisores:
 
-> **Nish Anil**, Gerente de Programa Sênior, Equipe .NET, Microsoft
+> **Nish Anil** , Gerente de Programa Sênior, Equipe .NET, Microsoft
 >
-> **Miguel Veloso**, engenheiro de desenvolvimento de software em conceitos simples
+> **Miguel Veloso** , engenheiro de desenvolvimento de software em conceitos simples
 >
-> **Pedro Ghosh**, consultor principal da Neudesic
+> **Pedro Ghosh** , consultor principal da Neudesic
 
 ## <a name="copyright"></a>Direitos autorais
 

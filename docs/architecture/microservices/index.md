@@ -1,19 +1,21 @@
 ---
 title: Microsserviços do .NET. Arquitetura de aplicativos .NET em contêineres
 description: Arquitetura de microsserviços do .NET para aplicativos do .NET em contêineres | Microsserviços são serviços implantáveis de maneira modular e independente. Os contêineres do Docker (para Linux e Windows) simplificam a implantação e o teste ao agrupar um serviço e suas dependências em uma única unidade, que será executada em um ambiente isolado.
-ms.date: 09/02/2020
-ms.openlocfilehash: aea5012fee102f388827d146043e69592e14f22b
-ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
+ms.date: 11/10/2020
+ms.openlocfilehash: 2055dacd46f90ba3714edb1437bcacad4c175e65
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89379129"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507261"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microsserviços do .NET: Arquitetura de aplicativos .NET em contêineres
 
 ![Capa do livro](./media/cover-small.png)
 
-**Edição v 3.1.2** -atualizado para ASP.NET Core 3,1
+**Edição v 3.1** -atualizado para ASP.NET Core 3,1
+
+Consulte o [changelog](https://aka.ms/MicroservicesEbookChangelog) para obter as atualizações do livro e as contribuições da Comunidade.
 
 Este guia é uma introdução ao desenvolvimento de aplicativos com base em microsserviços e ao gerenciamento deles usando contêineres. Ele discute as abordagens de design de arquitetura e de implementação usando o .NET Core e os contêineres do Docker.
 
@@ -84,11 +86,11 @@ Escrevemos este guia para ajudá-lo a entender a arquitetura de aplicativos em c
 
 Coautores:
 
-> **Cesar de la Torre**, Gerente sênior de produtos , equipe de produto do .NET, Microsoft Corp.
+> **Cesar de la Torre** , Gerente sênior de produtos , equipe de produto do .NET, Microsoft Corp.
 >
-> **Bill Wagner**, Desenvolvedor sênior de conteúdo, C+E, Microsoft Corp.
+> **Bill Wagner** , Desenvolvedor sênior de conteúdo, C+E, Microsoft Corp.
 >
-> **Mike Rousos**, Engenheiro de Software Principal, equipe DevDiv CAT, Microsoft
+> **Mike Rousos** , Engenheiro de Software Principal, equipe DevDiv CAT, Microsoft
 
 Editores:
 
@@ -98,55 +100,55 @@ Editores:
 
 Participantes e revisores:
 
-> **Jeffrey Richter**, engenheiro de software parceiro, equipe do Azure, Microsoft
+> **Jeffrey Richter** , engenheiro de software parceiro, equipe do Azure, Microsoft
 >
-> **Jimmy Bogard**, Arquiteto Chefe na Headspring
+> **Jimmy Bogard** , Arquiteto Chefe na Headspring
 >
-> **Udi Dahan**, Fundador e CEO, Particular Software
+> **Udi Dahan** , Fundador e CEO, Particular Software
 >
-> **Jimmy Nilsson**, Cofundador e CEO da Factor10
+> **Jimmy Nilsson** , Cofundador e CEO da Factor10
 >
-> **Glenn Condron**, Gerente sênior de programas, equipe do ASP.NET
+> **Glenn Condron** , Gerente sênior de programas, equipe do ASP.NET
 >
-> **Mark Fussell**, PM Líder Principal, equipe do Azure Service Fabric, Microsoft
+> **Mark Fussell** , PM Líder Principal, equipe do Azure Service Fabric, Microsoft
 >
-> **Diego Vega**, PM Líder, equipe do Entity Framework, Microsoft
+> **Diego Vega** , PM Líder, equipe do Entity Framework, Microsoft
 >
-> **Barry Dorrans**, gerente de programas de segurança sênior
+> **Barry Dorrans** , gerente de programas de segurança sênior
 >
-> **Rowan Miller**, Gerente sênior de programas, Microsoft
+> **Rowan Miller** , Gerente sênior de programas, Microsoft
 >
-> **Ankit Asthana**, Gerente de PM Principal, equipe do .NET, Microsoft
+> **Ankit Asthana** , Gerente de PM Principal, equipe do .NET, Microsoft
 >
-> **Scott Hunter**, PM Diretor de Parceiro, equipe do .NET, Microsoft
+> **Scott Hunter** , PM Diretor de Parceiro, equipe do .NET, Microsoft
 >
-> **Nish Anil**, Gerente de Programa Sênior, Equipe .NET, Microsoft
+> **Nish Anil** , Gerente de Programa Sênior, Equipe .NET, Microsoft
 >
-> **Dylan Reisenberger**, Arquiteto e Desenvolvedor Líder na Polly
+> **Dylan Reisenberger** , Arquiteto e Desenvolvedor Líder na Polly
 >
 > **Steve "ardalis" Smith** – Arquiteto de software e instrutor – [Ardalis.com](https://ardalis.com)
 >
-> **Cooper Ian**, Arquiteto de Codificação na Brighter
+> **Cooper Ian** , Arquiteto de Codificação na Brighter
 >
-> **Unai Zorrilla**, Arquiteto e Desenvolvedor Líder na Plain Concepts
+> **Unai Zorrilla** , Arquiteto e Desenvolvedor Líder na Plain Concepts
 >
-> **Eduard Tomas**, Desenvolvedor Líder na Plain Concepts
+> **Eduard Tomas** , Desenvolvedor Líder na Plain Concepts
 >
-> **Ramon Tomas**, Desenvolvedor na Plain Concepts
+> **Ramon Tomas** , Desenvolvedor na Plain Concepts
 >
-> **David Sanz**, Desenvolvedor na Plain Concepts
+> **David Sanz** , Desenvolvedor na Plain Concepts
 >
-> **Javier Valero**, Diretor Executivo de Operações no Grupo Solutio
+> **Javier Valero** , Diretor Executivo de Operações no Grupo Solutio
 >
-> **Pierre Millet**, Consultor sênior, Microsoft
+> **Pierre Millet** , Consultor sênior, Microsoft
 >
-> **Michael Friis**, Gerente de Produto, Docker Inc
+> **Michael Friis** , Gerente de Produto, Docker Inc
 >
-> **Charles Lowell**, Engenheiro de Software, equipe do VS CAT, Microsoft
+> **Charles Lowell** , Engenheiro de Software, equipe do VS CAT, Microsoft
 >
-> **Miguel Veloso**, engenheiro de desenvolvimento de software em conceitos simples
+> **Miguel Veloso** , engenheiro de desenvolvimento de software em conceitos simples
 >
-> **Pedro Ghosh**, consultor principal da Neudesic
+> **Pedro Ghosh** , consultor principal da Neudesic
 
 ## <a name="copyright"></a>Direitos autorais
 

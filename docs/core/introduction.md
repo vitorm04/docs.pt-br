@@ -4,12 +4,12 @@ description: Saiba mais sobre o .NET, uma plataforma de desenvolvimento de softw
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 5c600ca999089d005f4f8eb2db332e938df7bfcb
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: c3626ed223f66622b65cca888b1b043de275f950
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329788"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506734"
 ---
 # <a name="introduction-to-net"></a>Introdução ao .NET
 
@@ -24,7 +24,7 @@ O .NET é uma plataforma de desenvolvimento de software livre gratuita para a cr
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [UWP (Plataforma Universal do Windows)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 * [Jogos](https://dotnet.microsoft.com/apps/games)
-* [Internet das Coisas (IoT)](https://dotnet.microsoft.com/apps/iot)
+* [Internet das coisas (IoT)](/dotnet/iot)
 * [Aprendizado de máquina](../machine-learning/index.yml)
 * [Aplicativos de console](tutorials/with-visual-studio-code.md)
 * [Serviços do Windows](/aspnet/core/host-and-deploy/windows-service)
@@ -141,7 +141,7 @@ O download do SDK inclui os seguintes componentes:
 * Os compiladores da linguagem de programação [Roslyn](https://github.com/dotnet/roslyn) e [F #](https://github.com/microsoft/visualfsharp) .
 * O mecanismo de compilação do [MSBuild](/visualstudio/msbuild/msbuild) .
 * O [tempo de execução do .net](#clr). Fornece um sistema de tipos, carregamento de assembly, coletor de lixo, interoperabilidade nativa e outros serviços básicos.
-* [Bibliotecas de runtime](#runtime-libraries). Fornece tipos de dados primitivos e utilitários fundamentais.
+* [Bibliotecas de tempo de execução](#runtime-libraries). Fornece tipos de dados primitivos e utilitários fundamentais.
 * O tempo de execução de ASP.NET Core. Fornece serviços básicos para aplicativos conectados à Internet, como aplicativos Web, aplicativos de IoT e back-ends móveis.
 * O tempo de execução da área de trabalho. Fornece serviços básicos para aplicativos da área de trabalho do Windows, incluindo Windows Forms e WPF.
 
@@ -262,7 +262,7 @@ Os executáveis são produzidos para plataformas de destino específicas, que vo
 
 Para obter mais informações, consulte [visão geral da publicação de aplicativos .net](deploying/index.md) e [introdução ao .net e ao Docker](docker/introduction.md).
 
-## <a name="runtime-libraries"></a>Bibliotecas de tempo de execução
+## <a name="runtime-libraries"></a>Bibliotecas de runtime
 
 O .NET tem um conjunto extenso padrão de bibliotecas de classes. O conjunto principal é referido como a BCL (base Class Library). O conjunto completo é conhecido como bibliotecas de tempo de execução ou bibliotecas de estrutura. Essas bibliotecas fornecem implementações para muitos tipos específicos de carga de trabalho e de finalidade geral e funcionalidade de utilitário.
 
@@ -328,7 +328,7 @@ Para obter mais informações, consulte [componentes arquitetônicos .net](../st
 
 Algumas das terminologias do .NET podem ser confusas porque a mesma palavra é usada de maneiras diferentes em diferentes contextos. Aqui estão algumas das instâncias mais proeminentes:
 
-* **appmodel**
+* **runtime**
 
   |Contexto  |"tempo de execução" significando |
   |---------|---------|

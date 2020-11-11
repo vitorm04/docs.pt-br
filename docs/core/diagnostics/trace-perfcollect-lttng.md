@@ -3,14 +3,14 @@ title: Rastreando aplicativos .NET com PerfCollect.
 description: Um tutorial que orienta você pela coleta de um rastreamento com perfcollect no .NET.
 ms.topic: tutorial
 ms.date: 10/23/2020
-ms.openlocfilehash: 7bf058869f0b9f76204d775b12febe7c58b78877
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 376c957833924a9991e574557671ea3c8503d7c2
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94445753"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507235"
 ---
-# <a name="tracing-net-applications-with-perfcollect"></a>Rastreando aplicativos .NET com PerfCollect
+# <a name="trace-net-applications-with-perfcollect"></a>Rastrear aplicativos .NET com PerfCollect
 
 **Este artigo aplica-se a: ✔️** SDK do .net Core 2,1 e versões posteriores
 
@@ -18,17 +18,17 @@ Quando são encontrados problemas de desempenho no Linux, a coleta de um rastrea
 
 `perfcollect` é um script bash que aproveita a [geração de Tookit-Next de rastreamento do Linux (LTTng)](https://lttng.org) para coletar eventos gravados do tempo de execução ou de qualquer [EventSource](xref:System.Diagnostics.Tracing.EventListener), bem como [perf](https://perf.wiki.kernel.org/) , para coletar amostras de CPU do processo de destino.
 
-## <a name="preparing-your-machine"></a>Preparando seu computador
+## <a name="prepare-your-machine"></a>Preparar seu computador
 
 Siga estas etapas para preparar seu computador para coletar um rastreamento de desempenho com o `perfcollect` .
 
 > [!NOTE]
-> Se você estiver em um ambiente de contêiner, seu contêiner precisará ter `SYS_ADMIN` capacidade. Para obter mais informações sobre como rastrear aplicativos dentro do contêiner usando o PerfCollect, consulte a documentação sobre [coletar diagnósticos em contêineres](./diagnostics-in-containers.md) .
+> Se você estiver em um ambiente de contêiner, seu contêiner precisará ter `SYS_ADMIN` capacidade. Para obter mais informações sobre como rastrear aplicativos dentro de contêineres usando o PerfCollect, consulte [coletar diagnósticos em contêineres](./diagnostics-in-containers.md).
 
 1. Baixar `perfcollect` .
 
     > ```bash
-    > curl -OL http://aka.ms/perfcollect
+    > curl -OL https://aka.ms/perfcollect
     > ```
 
 2. Torne o script executável.
@@ -45,15 +45,15 @@ Siga estas etapas para preparar seu computador para coletar um rastreamento de d
 
     Isso instalará os seguintes pré-requisitos em seu computador:
 
-    1. `perf`: o aplicativo de eventos de desempenho do Linux e a coleção/Visualizador do modo de usuário complementar. `perf` faz parte da origem do kernel do Linux, mas geralmente não é instalado por padrão.
+    1. `perf`: o subsistema de eventos de desempenho do Linux e o aplicativo de coleta/Visualizador do modo de usuário complementar. `perf` faz parte da origem do kernel do Linux, mas geralmente não é instalado por padrão.
 
     2. `LTTng`: Usado para capturar dados de eventos emitidos em tempo de execução pelo CoreCLR. Esses dados são usados para analisar o comportamento de vários componentes de tempo de execução, como GC, JIT e pool de threads.
 
-As versões recentes do .NET Core e da ferramenta de desempenho do Linux dão suporte à resolução automática de nomes de método para código de estrutura. Se você estiver trabalhando com o .NET Core versão 3,1 ou menos, será necessária uma etapa extra. Consulte [resolvendo símbolos de estrutura](#resolving-framework-symbols) para obter detalhes.
+As versões recentes do .NET Core e da ferramenta de desempenho do Linux dão suporte à resolução automática de nomes de método para código de estrutura. Se você estiver trabalhando com o .NET Core versão 3,1 ou menos, será necessária uma etapa extra. Consulte [resolvendo símbolos de estrutura](#resolve-framework-symbols) para obter detalhes.
 
-Para resolver nomes de método de DLLs de tempo de execução nativas (como libcoreclr.so), o `perfcollect` resolve os símbolos para eles ao converter os dados, mas somente se os símbolos desses binários estiverem presentes. Consulte [obtendo símbolos para a seção de tempo de execução nativo](#getting-symbols-for-the-native-runtime) para obter detalhes.
+Para resolver nomes de método de DLLs de tempo de execução nativas (como libcoreclr.so), o `perfcollect` resolve os símbolos para eles ao converter os dados, mas somente se os símbolos desses binários estiverem presentes. Consulte [obtendo símbolos para a seção de tempo de execução nativo](#get-symbols-for-the-native-runtime) para obter detalhes.
 
-## <a name="collecting-a-trace"></a>Coletando um rastreamento
+## <a name="collect-a-trace"></a>Coletar um rastreamento
 
 1. Ter dois shells disponíveis-um para controlar o rastreamento, conhecido como **[Trace]** e outro para executar o aplicativo, chamado de **[App]**.
 
@@ -106,11 +106,11 @@ Para resolver nomes de método de DLLs de tempo de execução nativas (como libc
 
     O arquivo de rastreamento compactado agora é armazenado no diretório de trabalho atual.
 
-## <a name="viewing-a-trace"></a>Exibindo um rastreamento
+## <a name="view-a-trace"></a>Exibir um rastreamento
 
-Há várias opções para exibir o rastreamento que foi coletado. Os rastreamentos são mais bem exibidos usando o [Perfview](http://aka.ms/perfview>) no Windows, mas eles podem ser exibidos diretamente no Linux usando- `PerfCollect` se ou `TraceCompass` .
+Há várias opções para exibir o rastreamento que foi coletado. Os rastreamentos são mais bem exibidos usando o [Perfview](https://aka.ms/perfview) no Windows, mas eles podem ser exibidos diretamente no Linux usando- `PerfCollect` se ou `TraceCompass` .
 
-### <a name="using-perfcollect-to-view-the-trace-file"></a>Usando PerfCollect para exibir o arquivo de rastreamento
+### <a name="use-perfcollect-to-view-the-trace-file"></a>Use PerfCollect para exibir o arquivo de rastreamento
 
 Você pode usar o perfcollect em si para exibir o rastreamento que você coletou. Para isso, use o seguinte comando:
 
@@ -133,13 +133,13 @@ Isso usará `babeltrace` o visualizador para imprimir a carga de eventos:
 # [01:02:18.189250227] (+0.020165171) ubuntu-xenial DotNETRuntime:ExceptionCatchStart: { cpu_id = 0 }, { EntryEIP = 139873639728404, MethodID = 139873626968120, MethodName = "void [helloworld] helloworld.Program::Main(string[])", ClrInstanceID = 0 }
 ```
 
-### <a name="using-perfview-to-open-the-trace-file"></a>Usando PerfView para abrir o arquivo de rastreamento
+### <a name="use-perfview-to-open-the-trace-file"></a>Use PerfView para abrir o arquivo de rastreamento
 
 Para ver uma exibição agregada do exemplo de CPU e dos eventos, você pode usar `PerfView` em um computador Windows.
 
 1. Copie o arquivo de trace.zip do Linux para um computador Windows.
 
-2. Baixe o PerfView de <http://aka.ms/perfview> .
+2. Baixe o PerfView de <https://aka.ms/perfview> .
 
 3. Executar PerfView.exe
 
@@ -157,9 +157,9 @@ PerfView exibirá a lista de exibições com suporte com base nos dados contidos
 
 - Se não houver uma exibição para as informações necessárias, você poderá tentar procurar os eventos na exibição de eventos brutos.  Escolha **eventos**.
 
-Para obter mais detalhes sobre como interpretar exibições no PerfView, consulte links de ajuda na própria exibição ou na janela principal do PerfView escolha **ajuda – >guia de usuários**.
+Para obter mais informações sobre como interpretar exibições no PerfView, consulte links de ajuda na própria exibição ou na janela principal do PerfView, escolha **ajuda – >guia de usuários**.
 
-### <a name="using-tracecompass-to-open-the-trace-file"></a>Usando TraceCompass para abrir o arquivo de rastreamento
+### <a name="use-tracecompass-to-open-the-trace-file"></a>Use TraceCompass para abrir o arquivo de rastreamento
 
 O [Eclipse TraceCompass](https://www.eclipse.org/tracecompass/) é outra opção que você pode usar para exibir os rastreamentos. `TraceCompass` também funciona em computadores Linux, portanto, você não precisa mover seu rastreamento para um computador Windows. Para usar `TraceCompass` o para abrir o arquivo de rastreamento, será necessário descompactar o arquivo.
 
@@ -173,7 +173,7 @@ Você pode abrir o arquivo de rastreamento CTF no selecionando `TraceCompass` `F
 
 Para obter mais detalhes, consulte a [ `TraceCompass` documentação](https://www.eclipse.org/tracecompass/).
 
-## <a name="resolving-framework-symbols"></a>Resolvendo símbolos de estrutura
+## <a name="resolve-framework-symbols"></a>Resolver símbolos de estrutura
 
 Os símbolos de estrutura precisam ser gerados manualmente no momento em que o rastreamento é coletado. Eles são diferentes dos símbolos de nível de aplicativo porque a estrutura é pré-compilado enquanto o código do aplicativo é compilado just-in-time. Para o código de estrutura que foi pré-compilado ao código nativo, você precisa chamar `crossgen` isso que sabe como gerar o mapeamento do código nativo para o nome dos métodos.
 
@@ -218,9 +218,9 @@ export COMPlus_ZapDisable=1
 
 Com essa alteração, você deve obter os símbolos para todo o código .NET.
 
-## <a name="getting-symbols-for-the-native-runtime"></a>Obtendo símbolos para o tempo de execução nativo
+## <a name="get-symbols-for-the-native-runtime"></a>Obter símbolos para o tempo de execução nativo
 
-Na maioria das vezes, você está interessado em seu próprio código, que é `perfcollect` resolvido por padrão. Às vezes, é muito útil ver o que está acontecendo dentro das DLLs do .NET (que é a última seção sobre), mas às vezes, o que está acontecendo nas DLLs de tempo de execução nativas (normalmente libcoreclr.so) é interessante.  `perfcollect` o resolverá os símbolos para eles quando ele converter seus dados, mas somente se os símbolos para essas DLLs nativas estiverem presentes (e estiverem ao lado da biblioteca de onde estão).
+Na maioria das vezes, você está interessado em seu próprio código, que é `perfcollect` resolvido por padrão. Às vezes, é útil ver o que está acontecendo dentro das DLLs do .NET (que é a última seção sobre), mas às vezes, o que está acontecendo nas DLLs do tempo de execução nativo (normalmente libcoreclr.so) é interessante.  `perfcollect` o resolverá os símbolos para eles quando ele converter seus dados, mas somente se os símbolos para essas DLLs nativas estiverem presentes (e estiverem ao lado da biblioteca de onde estão).
 
 Há um comando global chamado [dotnet-símbolo](https://github.com/dotnet/symstore/blob/master/src/dotnet-symbol/README.md#symbol-downloader-dotnet-cli-extension) que faz isso. Para usar dotnet-Symbol para obter símbolos de tempo de execução nativos:
 
@@ -230,14 +230,14 @@ Há um comando global chamado [dotnet-símbolo](https://github.com/dotnet/symsto
     dotnet tool install -g dotnet-symbol
     ```
 
-2. Baixe os símbolos. Se a versão instalada do tempo de execução do .NET Core for 2.1.0, o comando para fazer isso é
+2. Baixe os símbolos. Se a versão instalada do tempo de execução do .NET Core for 2.1.0, o comando para fazer isso é:
 
     ```bash
     mkdir mySymbols
     dotnet symbol --symbols --output mySymbols  /usr/share/dotnet/shared/Microsoft.NETCore.App/2.1.0/lib*.so
     ```
 
-3. Copiar os símbolos para o local correto
+3. Copie os símbolos para o local correto.
 
     ```bash
     sudo cp mySymbols/* /usr/share/dotnet/shared/Microsoft.NETCore.App/2.1.0
@@ -247,6 +247,6 @@ Há um comando global chamado [dotnet-símbolo](https://github.com/dotnet/symsto
 
 Depois disso, você deve obter nomes simbólicos para as DLLs nativas ao executar o `perfcollect` .
 
-## <a name="collecting-in-a-docker-container"></a>Coletando em um contêiner do Docker
+## <a name="collect-in-a-docker-container"></a>Coletar em um contêiner do Docker
 
-Para obter mais informações sobre como usar `perfcollect` em ambientes de contêiner, consulte a documentação [coletar diagnósticos em contêineres](./diagnostics-in-containers.md) .
+Para obter mais informações sobre como usar `perfcollect` em ambientes de contêiner, consulte [coletar diagnósticos em contêineres](./diagnostics-in-containers.md).

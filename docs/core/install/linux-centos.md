@@ -1,19 +1,19 @@
 ---
-title: Instalar o .NET Core no CentOS-.NET Core
-description: Demonstra as várias maneiras de instalar o SDK do .NET Core e o tempo de execução do .NET Core no CentOS.
+title: Instalar o .NET no CentOS-.NET
+description: Demonstra as várias maneiras de instalar o SDK do .NET e o tempo de execução do .NET no CentOS.
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: 7937502067e1717fd7f5c973c64ad33ae2a443a0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: d0f5d38de0f505d62f2a35c5d1c3f7161c91a96b
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538612"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507085"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-centos"></a>Instalar o SDK do .NET Core ou o tempo de execução do .NET Core no CentOS
+# <a name="install-the-net-sdk-or-the-net-runtime-on-centos"></a>Instalar o SDK do .NET ou o tempo de execução do .NET no CentOS
 
-O .NET Core tem suporte no CentOS. Este artigo descreve como instalar o .NET Core no CentOS.
+O .NET tem suporte no CentOS. Este artigo descreve como instalar o .NET no CentOS.
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,18 +21,18 @@ O .NET Core tem suporte no CentOS. Este artigo descreve como instalar o .NET Cor
 
 ## <a name="supported-distributions"></a>Distribuições com suporte
 
-A tabela a seguir é uma lista de versões do .NET Core com suporte atualmente no CentOS 7 e no CentOS 8. Essas versões permanecem com suporte até que a versão do [.NET Core atinja o fim do suporte](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) ou a versão do CentOS não seja mais suportada.
+A tabela a seguir é uma lista de versões do .NET com suporte no momento no CentOS 7 e no CentOS 8. Essas versões permanecem com suporte até que a versão do [.net atinja o fim do suporte](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) ou a versão do CentOS não seja mais suportada.
 
-- Um ✔️ indica que a versão do CentOS ou do .NET Core ainda tem suporte.
-- Um ❌ indica que a versão do CentOS ou do .NET Core não tem suporte nessa versão do CentOS.
-- Quando uma versão do CentOS e uma versão do .NET Core têm ✔️, há suporte para essa combinação de so e .NET.
+- Um ✔️ indica que a versão do CentOS ou do .NET ainda tem suporte.
+- Um ❌ indica que a versão do CentOS ou do .net não tem suporte nessa versão do CentOS.
+- Quando uma versão do CentOS e uma versão do .NET têm ✔️, essa combinação de so e .NET é suportada.
 
-| CentOS                   | .NET Core 2.1 | .NET Core 3.1 | Versão prévia do .NET 5 (somente instalação manual) |
+| CentOS                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5,0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [8](#centos-8-) | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
-| ✔️ [7](#centos-7-) | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
+| ✔️ [8](#centos-8-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
+| ✔️ [7](#centos-7-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 
-Não há mais suporte para as seguintes versões do .NET Core. Os downloads para eles ainda permanecem publicados:
+Não há mais suporte para as seguintes versões do .NET. Os downloads para eles ainda permanecem publicados:
 
 - 3.0
 - 2.2
@@ -46,9 +46,9 @@ Não há mais suporte para as seguintes versões do .NET Core. Os downloads para
 
 ## <a name="centos-8-"></a>CentOS 8 ✔️
 
-O .NET Core 3,1 está disponível nos repositórios de pacotes padrão do CentOS 8.
+O .NET 5,0 está disponível nos repositórios de pacotes padrão do CentOS 8.
 
-[!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
+[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 
 ## <a name="centos-7-"></a>CentOS 7 ✔️
 
@@ -58,11 +58,11 @@ O .NET Core 3,1 está disponível nos repositórios de pacotes padrão do CentOS
 sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
 ```
 
-[!INCLUDE [linux-yum-install-31](includes/linux-install-31-yum.md)]
+[!INCLUDE [linux-yum-install-50](includes/linux-install-50-yum.md)]
 
 ## <a name="troubleshoot-the-package-manager"></a>Solucionar problemas do Gerenciador de pacotes
 
-Esta seção fornece informações sobre erros comuns que você pode obter ao usar o Gerenciador de pacotes para instalar o .NET Core.
+Esta seção fornece informações sobre erros comuns que você pode obter ao usar o Gerenciador de pacotes para instalar o .NET.
 
 ### <a name="unable-to-find-package"></a>Não é possível localizar o pacote
 
@@ -90,4 +90,4 @@ Esta seção fornece informações sobre erros comuns que você pode obter ao us
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Tutorial: criar um aplicativo de console com SDK do .NET Core usando Visual Studio Code](../tutorials/with-visual-studio-code.md)
+- [Tutorial: criar um aplicativo de console com o SDK do .NET usando o Visual Studio Code](../tutorials/with-visual-studio-code.md)

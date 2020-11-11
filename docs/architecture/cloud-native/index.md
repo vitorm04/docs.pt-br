@@ -2,18 +2,21 @@
 title: Arquitetando aplicativos .NET nativos de nuvem para o Azure
 description: Um guia para a criação de aplicativos nativos de nuvem que aproveitam contêineres, microservices e recursos sem servidor do Azure.
 author: ardalis
-ms.date: 05/13/2020
-ms.openlocfilehash: 172097b4915deb2d6f0b06441d7c4ca389bbca25
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.date: 11/10/2020
+ms.openlocfilehash: 673bfef27c3767f68b1c30d4383cee010ba377f0
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051500"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506643"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Arquitetando aplicativos .NET nativos de nuvem para o Azure
 
 ![imagem da capa](./media/cover.png)
 
-**Edição v. 1.0**
+**Edição v 1.0**
+
+Consulte o [changelog](https://aka.ms/cn-ebook-changelog) para obter as atualizações do livro e as contribuições da Comunidade.
 
 PUBLICADO POR
 
@@ -43,23 +46,23 @@ Todas as outras marcas e logotipos são propriedade de seus respectivos propriet
 
 Autores:
 
-> **Rob Vettor**, arquiteto de sistema de nuvem principal/arquiteto de IP- [thinkingincloudnative.com](https://thinkingincloudnative.com/about/), Microsoft
+> **Rob Vettor** , arquiteto de sistema de nuvem principal/arquiteto de IP- [thinkingincloudnative.com](https://thinkingincloudnative.com/about/), Microsoft
 >
-> **Steve "ardalis" Smith**, arquiteto de software e instrutor- [Ardalis.com](https://ardalis.com)
+> **Steve "ardalis" Smith** , arquiteto de software e instrutor- [Ardalis.com](https://ardalis.com)
 
 Participantes e revisores:
 
-> **Cesar de la Torre**, gerente de programa principal, equipe do .net, Microsoft
+> **Cesar de la Torre** , gerente de programa principal, equipe do .net, Microsoft
 >
-> **Nish Anil**, gerente de programas sênior, equipe do .net, Microsoft
+> **Nish Anil** , gerente de programas sênior, equipe do .net, Microsoft
 >
-> **Jeremy Likness**, gerente de programas sênior, equipe do .net, Microsoft
+> **Jeremy Likness** , gerente de programas sênior, equipe do .net, Microsoft
 >
-> **Cecil Phillip**, defensora da nuvem sênior, Microsoft
+> **Cecil Phillip** , defensora da nuvem sênior, Microsoft
 
 Editores:
 
-> **Maira Wenzel**, gerente de programas, equipe do .net, Microsoft
+> **Maira Wenzel** , gerente de programas, equipe do .net, Microsoft
 
 ## <a name="version"></a>Versão
 
@@ -90,4 +93,4 @@ Este guia está disponível em formato [PDF](https://dotnet.microsoft.com/downlo
 Este livro e exemplos relacionados estão em constante evolução, para que seus comentários sejam bem-vindos! Se você tiver comentários sobre como esse livro pode ser melhorado, use a seção de comentários na parte inferior de qualquer página criada com base nos [problemas do GitHub](https://github.com/dotnet/docs/issues).
 
 >[!div class="step-by-step"]
->[Avançar](introduction.md)
+>[Próximo](introduction.md)

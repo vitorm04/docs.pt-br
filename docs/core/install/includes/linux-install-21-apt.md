@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: 188fef66444cd60f59a3cb9619c0d86efd155f99
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: f7cd60f02a51516b8e35cdb9014fa8b96a188ae2
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93135533"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506942"
 ---
 
 ### <a name="install-the-sdk"></a>Instalar o SDK
 
-SDK do .NET Core permite que você desenvolva aplicativos com o .NET Core. Se você instalar SDK do .NET Core, não será necessário instalar o tempo de execução correspondente. Para instalar o SDK do .NET Core, execute os seguintes comandos:
+O SDK do .NET Core permite que você desenvolva aplicativos com o .NET Core. Se você instalar o SDK do .NET Core, não será necessário instalar o tempo de execução correspondente. Para instalar o SDK do .NET Core, execute os seguintes comandos:
 
 ```bash
 sudo apt-get update; \
@@ -35,7 +35,7 @@ sudo apt-get update; \
 > [!IMPORTANT]
 > Se você receber uma mensagem de erro semelhante a **não é possível localizar o pacote aspnetcore-Runtime-2,1** , consulte a seção [solução de problemas da apt](#apt-troubleshooting) .
 
-Como alternativa ao tempo de execução de ASP.NET Core, você pode instalar o tempo de execução do .NET Core que não inclui suporte a ASP.NET Core: substitua `aspnetcore-runtime-2.1` no comando anterior por `dotnet-runtime-2.1` .
+Como alternativa ao tempo de execução de ASP.NET Core, você pode instalar o tempo de execução do .NET Core, que não inclui suporte a ASP.NET Core: substitua `aspnetcore-runtime-2.1` no comando anterior por `dotnet-runtime-2.1` .
 
 ```bash
 sudo apt-get install -y dotnet-runtime-2.1

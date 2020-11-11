@@ -2,12 +2,12 @@
 title: dotnet-contadores-.NET Core
 description: Saiba como instalar e usar a ferramenta de linha de comando dotnet-Counter.
 ms.date: 02/26/2020
-ms.openlocfilehash: 6a4fd92540dbc16173dfa3a10ff9dfaa1f31f7d0
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 7ff29ad91ad271afd35e3d38a4d748bc79ad6c03
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062893"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507248"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -29,7 +29,7 @@ dotnet-counters [-h|--help] [--version] <command>
 
 ## <a name="description"></a>Descrição
 
-`dotnet-counters`é uma ferramenta de monitoramento de desempenho para monitoramento de integridade ad hoc e investigação de desempenho de primeiro nível. Ele pode observar os valores do contador de desempenho que são publicados por meio da <xref:System.Diagnostics.Tracing.EventCounter> API. Por exemplo, você pode monitorar rapidamente coisas como o uso da CPU ou a taxa de exceções que estão sendo geradas em seu aplicativo .NET Core para ver se há algo suspeito antes de mergulhar em uma investigação de desempenho mais séria usando o `PerfView` ou o `dotnet-trace` .
+`dotnet-counters` é uma ferramenta de monitoramento de desempenho para monitoramento de integridade ad hoc e investigação de desempenho de primeiro nível. Ele pode observar os valores do contador de desempenho que são publicados por meio da <xref:System.Diagnostics.Tracing.EventCounter> API. Por exemplo, você pode monitorar rapidamente coisas como o uso da CPU ou a taxa de exceções que estão sendo geradas em seu aplicativo .NET Core para ver se há algo suspeito antes de mergulhar em uma investigação de desempenho mais séria usando o `PerfView` ou o `dotnet-trace` .
 
 ## <a name="options"></a>Opções
 
@@ -57,7 +57,7 @@ Coletar periodicamente os valores de contador selecionados e exportá-los para u
 ### <a name="synopsis"></a>Sinopse
 
 ```console
-dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list] [--format] [-o|--output]
+dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
 ```
 
 ### <a name="options"></a>Opções
@@ -70,9 +70,9 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
   O número de segundos de atraso entre a atualização dos contadores exibidos
 
-- **`counter_list <COUNTERS>`**
+- **`--counters <COUNTERS>`**
 
-  Uma lista de contadores separados por espaços. Os contadores podem ser especificados `provider_name[:counter_name]` . Se o `provider_name` for usado sem uma qualificação `counter_name` , todos os contadores serão mostrados. Para descobrir os nomes de provedor e contador, use o comando [dotnet-Counters List](#dotnet-counters-list) .
+  Uma lista separada por vírgulas de contadores. Os contadores podem ser especificados `provider_name[:counter_name]` . Se o `provider_name` for usado sem uma lista de contadores de qualificação, todos os contadores do provedor serão mostrados. Para descobrir os nomes de provedor e contador, use o comando [dotnet-Counters List](#dotnet-counters-list) .
 
 - **`--format <csv|json>`**
 
@@ -81,6 +81,13 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 - **`-o|--output <output>`**
 
   O nome do arquivo de saída.
+
+- **`-- <command>` (para aplicativos de destino que executam o .NET 5,0 ou posterior somente)**
+
+  Após os parâmetros de configuração da coleção, o usuário pode acrescentar `--` seguido por um comando para iniciar um aplicativo .NET com pelo menos um tempo de execução de 5,0. `dotnet-counters` o iniciará um processo com o comando fornecido e coletará as métricas solicitadas. Isso geralmente é útil para coletar métricas para o caminho de inicialização do aplicativo e pode ser usado para diagnosticar ou monitorar problemas que ocorrem antes ou logo após o ponto de entrada principal.
+
+> [!NOTE]
+> O uso dessa opção monitora o primeiro processo do .NET 5,0 que se comunica de volta à ferramenta, o que significa que, se o comando iniciar vários aplicativos .NET, ele só coletará o primeiro aplicativo. Portanto, é recomendável usar essa opção em aplicativos independentes ou usando a `dotnet exec <app.dll>` opção.
 
 ### <a name="examples"></a>Exemplos
 
@@ -91,6 +98,14 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
   counter_list is unspecified. Monitoring all counters by default.
   Starting a counter session. Press Q to quit.
+  ```
+
+- Inicie `dotnet mvc.dll` o como um processo filho e comece a coletar contadores de tempo de execução e ASP.NET Core contadores de hospedagem da inicialização e salve-os como uma saída JSON:
+
+  ```console
+  > dotnet-counters collect --format json --counters System.Runtime,Microsoft.AspNetCore.Hosting -- dotnet mvc.dll
+  Starting a counter session. Press Q to quit.
+  File saved to counter.json
   ```
 
 ## <a name="dotnet-counters-list"></a>dotnet – lista de contadores
@@ -147,7 +162,7 @@ Exibe a atualização periódica de valores dos contadores selecionados.
 ### <a name="synopsis"></a>Sinopse
 
 ```console
-dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list]
+dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--counters] [-- <command>]
 ```
 
 ### <a name="options"></a>Opções
@@ -160,35 +175,61 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
   O número de segundos de atraso entre a atualização dos contadores exibidos
 
-- **`counter_list <COUNTERS>`**
+- **`--counters <COUNTERS>`**
 
-  Uma lista de contadores separados por espaços. Os contadores podem ser especificados `provider_name[:counter_name]` . Se o `provider_name` for usado sem uma qualificação `counter_name` , todos os contadores serão mostrados. Para descobrir os nomes de provedor e contador, use o comando [dotnet-Counters List](#dotnet-counters-list) .
+  Uma lista separada por vírgulas de contadores. Os contadores podem ser especificados `provider_name[:counter_name]` . Se o `provider_name` for usado sem uma lista de contadores de qualificação, todos os contadores do provedor serão mostrados. Para descobrir os nomes de provedor e contador, use o comando [dotnet-Counters List](#dotnet-counters-list) .
+
+ **`-- <command>` (para aplicativos de destino que executam o .NET 5,0 ou posterior somente)**
+
+  Após os parâmetros de configuração da coleção, o usuário pode acrescentar `--` seguido por um comando para iniciar um aplicativo .NET com pelo menos um tempo de execução de 5,0. `dotnet-counters` o iniciará um processo com o comando fornecido e monitorará as métricas solicitadas. Isso geralmente é útil para coletar métricas para o caminho de inicialização do aplicativo e pode ser usado para diagnosticar ou monitorar problemas que ocorrem antes ou logo após o ponto de entrada principal.
+
+  > [!NOTE]
+  > O uso dessa opção monitora o primeiro processo do .NET 5,0 que se comunica de volta à ferramenta, o que significa que, se o comando iniciar vários aplicativos .NET, ele só coletará o primeiro aplicativo. Portanto, é recomendável usar essa opção em aplicativos independentes ou usando a `dotnet exec <app.dll>` opção.
 
 ### <a name="examples"></a>Exemplos
 
 - Monitorar todos os contadores de `System.Runtime` em um intervalo de atualização de 3 segundos:
 
   ```console
-  > dotnet-counters monitor --process-id 1902  --refresh-interval 3 System.Runtime
-
+  > dotnet-counters monitor --process-id 1902  --refresh-interval 3 --counters System.Runtime
   Press p to pause, r to resume, q to quit.
-    System.Runtime:
-      CPU Usage (%)                                 24
-      Working Set (MB)                            1982
-      GC Heap Size (MB)                            811
-      Gen 0 GC / second                             20
-      Gen 1 GC / second                              4
-      Gen 2 GC / second                              1
-      Number of Exceptions / sec                     4
+      Status: Running
+
+  [System.Runtime]
+      % Time in GC since last GC (%)                                 0
+      Allocation Rate (B / 1 sec)                                5,376
+      CPU Usage (%)                                                  0
+      Exception Count (Count / 1 sec)                                0
+      GC Fragmentation (%)                                          48.467
+      GC Heap Size (MB)                                              0
+      Gen 0 GC Count (Count / 1 sec)                                 1
+      Gen 0 Size (B)                                                24
+      Gen 1 GC Count (Count / 1 sec)                                 1
+      Gen 1 Size (B)                                                24
+      Gen 2 GC Count (Count / 1 sec)                                 1
+      Gen 2 Size (B)                                           272,000
+      IL Bytes Jitted (B)                                       19,449
+      LOH Size (B)                                              19,640
+      Monitor Lock Contention Count (Count / 1 sec)                  0
+      Number of Active Timers                                        0
+      Number of Assemblies Loaded                                    7
+      Number of Methods Jitted                                     166
+      POH (Pinned Object Heap) Size (B)                             24
+      ThreadPool Completed Work Item Count (Count / 1 sec)           0
+      ThreadPool Queue Length                                        0
+      ThreadPool Thread Count                                        2
+      Working Set (MB)                                              19
   ```
 
 - Monitorar apenas o uso da CPU e o tamanho do heap do GC de `System.Runtime` :
 
   ```console
-  > dotnet-counters monitor --process-id 1902 System.Runtime[cpu-usage,gc-heap-size]
+  > dotnet-counters monitor --process-id 1902 --counters System.Runtime[cpu-usage,gc-heap-size]
 
   Press p to pause, r to resume, q to quit.
-    System.Runtime:
+    Status: Running
+
+  [System.Runtime]
       CPU Usage (%)                                 24
       GC Heap Size (MB)                            811
   ```
@@ -196,12 +237,43 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 - Monitorar `EventCounter` valores de definidos pelo usuário `EventSource` . Para obter mais informações, consulte [tutorial: medir o desempenho usando o EventCounters no .NET Core](event-counter-perf.md).
 
   ```console
-  > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal
+  > dotnet-counters monitor --process-id 1902 --counters Samples-EventCounterDemos-Minimal
 
   Press p to pause, r to resume, q to quit.
       request                                      100
   ```
+
+- Inicie `my-aspnet-server.exe` e monitore o número de assemblies carregados a partir de sua inicialização (somente .net 5,0 ou posterior):
+
+  Observação: isso funciona somente para aplicativos que executam o .NET 5,0 ou posterior.
+
+  ```console
+  > dotnet-counters monitor --counters System.Runtime[assembly-count] -- my-aspnet-server.exe
+
+  Press p to pause, r to resume, q to quit.
+    Status: Running
+
+  [System.Runtime]
+      Number of Assemblies Loaded                   24
+  ```
   
+- Inicie `my-aspnet-server.exe` com `arg1` e `arg2` como argumentos de linha de comando e monitore seu conjunto de trabalho e o tamanho do heap de GC de sua inicialização (somente .NET 5,0 ou posterior):
+
+  Observação: isso funciona somente para aplicativos que executam o .NET 5,0 ou posterior.
+
+  ```console
+  > dotnet-counters monitor --counters System.Runtime[working-set,gc-heap-size] -- my-aspnet-server.exe arg1 arg2
+  ```
+
+  ```console
+  Press p to pause, r to resume, q to quit.
+    Status: Running
+
+  [System.Runtime]
+      GC Heap Size (MB)                                 39
+      Working Set (MB)                                  59
+  ```
+
 ## <a name="dotnet-counters-ps"></a>dotnet-contadores PS
 
 Exibe uma lista de processos dotnet que podem ser monitorados.

@@ -1,19 +1,19 @@
 ---
-title: Instalar o .NET Core no Debian – .NET Core
-description: Demonstra as várias maneiras de instalar o SDK do .NET Core e o tempo de execução do .NET Core no Debian.
+title: Instalar o .NET no Debian-.NET
+description: Demonstra as várias maneiras de instalar o SDK do .NET e o tempo de execução do .NET no Debian.
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: d0f7d4092ec420d031d0874a56b9e2148afdb865
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: 6dad4e1779600b22b8301e03ffb8fb2c16786ead
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538534"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506945"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-debian"></a>Instalar o SDK do .NET Core ou o tempo de execução do .NET Core no Debian
+# <a name="install-the-net-sdk-or-the-net-runtime-on-debian"></a>Instalar o SDK do .NET ou o tempo de execução do .NET no Debian
 
-Este artigo descreve como instalar o .NET Core no Debian. Quando uma versão Debian fica sem suporte, o .NET Core não é mais compatível com essa versão. No entanto, essas instruções podem ajudá-lo a obter o .NET Core em execução nessas versões, mesmo que não haja suporte.
+Este artigo descreve como instalar o .NET no Debian. Quando uma versão Debian fica sem suporte, o .NET não é mais compatível com essa versão. No entanto, essas instruções podem ajudá-lo a obter o .NET em execução nessas versões, mesmo que não haja suporte.
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,19 +21,19 @@ Este artigo descreve como instalar o .NET Core no Debian. Quando uma versão Deb
 
 ## <a name="supported-distributions"></a>Distribuições com suporte
 
-A tabela a seguir é uma lista de versões do .NET Core com suporte no momento e as versões do Debian nas quais elas têm suporte. Essas versões permanecem com suporte até que a versão do [.NET Core atinja o fim do suporte](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) ou a versão do [Debian atinja o fim da vida útil](https://wiki.debian.org/DebianReleases).
+A tabela a seguir é uma lista de versões do .NET com suporte no momento e as versões do Debian nas quais elas têm suporte. Essas versões permanecem com suporte até que a versão do [.net atinja o fim do suporte](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) ou a versão do [Debian atinja o fim da vida útil](https://wiki.debian.org/DebianReleases).
 
-- Um ✔️ indica que a versão do Debian ou do .NET Core ainda tem suporte.
-- Um ❌ indica que a versão do Debian ou do .NET Core não tem suporte nessa versão do Debian.
-- Quando uma versão do Debian e uma versão do .NET Core têm ✔️, há suporte para essa combinação de so e .NET.
+- Um ✔️ indica que a versão do Debian ou do .NET ainda tem suporte.
+- Um ❌ indica que a versão do Debian ou do .net não tem suporte nessa versão do Debian.
+- Quando uma versão do Debian e uma versão do .NET têm ✔️, essa combinação de so e .NET é suportada.
 
-| Debian                   | .NET Core 2.1 | .NET Core 3.1 | Versão prévia do .NET 5 (somente instalação manual) |
+| Debian                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5,0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [10](#debian-10-)     | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
-| ✔️ [9](#debian-9-)       | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
-| ❌ [8](#debian-8-)       | ✔️ 2,1        | ❌ 3,1        | ❌ visualização de 5,0 |
+| ✔️ [10](#debian-10-)     | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
+| ✔️ [9](#debian-9-)       | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
+| ❌ [8](#debian-8-)       | ✔️ 2,1        | ❌ 3,1        | ❌ 5,0 |
 
-Não há mais suporte para as seguintes versões do .NET Core. Os downloads para eles ainda permanecem publicados:
+Não há mais suporte para as seguintes versões do .NET. Os downloads para eles ainda permanecem publicados:
 
 - 3.0
 - 2.2
@@ -52,7 +52,7 @@ wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="debian-9-"></a>Debian 9 ✔️
 
@@ -67,7 +67,7 @@ sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="debian-8-"></a>Debian 8 ❌
 
@@ -88,7 +88,7 @@ sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 
 ## <a name="apt-update-sdk-or-runtime"></a>SDK de atualização de APT ou tempo de execução
 
-Quando uma nova versão de patch está disponível para o .NET Core, você pode simplesmente atualizá-la por meio de APT com os seguintes comandos:
+Quando uma nova versão de patch estiver disponível para o .NET, você poderá simplesmente atualizá-la por meio de APT com os seguintes comandos:
 
 ```bash
 sudo apt-get update
@@ -97,7 +97,7 @@ sudo apt-get upgrade
 
 ## <a name="apt-troubleshooting"></a>Solução de problemas da APT
 
-Esta seção fornece informações sobre erros comuns que você pode obter ao usar a APT para instalar o .NET Core.
+Esta seção fornece informações sobre erros comuns que você pode obter ao usar a APT para instalar o .NET.
 
 ### <a name="unable-to-find-package"></a>Não é possível localizar o pacote
 
@@ -162,4 +162,4 @@ Para aplicativos .NET Core que usam o assembly *System. Drawing. Common* , você
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Tutorial: criar um aplicativo de console com SDK do .NET Core usando Visual Studio Code](../tutorials/with-visual-studio-code.md)
+- [Tutorial: criar um aplicativo de console com o SDK do .NET usando o Visual Studio Code](../tutorials/with-visual-studio-code.md)

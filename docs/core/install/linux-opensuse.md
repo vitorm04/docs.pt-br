@@ -1,19 +1,19 @@
 ---
-title: Instalar o .NET Core no openSUSE-.NET Core
-description: Demonstra as várias maneiras de instalar SDK do .NET Core e o tempo de execução do .NET Core no openSUSE.
+title: Instalar o .NET em openSUSE-.NET
+description: Demonstra as várias maneiras de instalar o SDK do .NET e o tempo de execução do .NET no openSUSE.
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: ccdb23ca1838d2c15c9a95b45c8505efe7a6df0e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: 17012f3689e5834fd1629946767e931cb22a2c1b
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539224"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506891"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a>Instalar o SDK do .NET Core ou o tempo de execução do .NET Core no openSUSE
+# <a name="install-the-net-sdk-or-the-net-runtime-on-opensuse"></a>Instalar o SDK do .NET ou o tempo de execução do .NET no openSUSE
 
-O .NET Core tem suporte no openSUSE. Este artigo descreve como instalar o .NET Core no openSUSE.
+O .NET tem suporte no openSUSE. Este artigo descreve como instalar o .NET no openSUSE.
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,17 +21,17 @@ O .NET Core tem suporte no openSUSE. Este artigo descreve como instalar o .NET C
 
 ## <a name="supported-distributions"></a>Distribuições com suporte
 
-A tabela a seguir é uma lista de versões do .NET Core com suporte no momento no openSUSE 15. Essas versões permanecem com suporte até que a versão do [.NET Core atinja o fim do suporte](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) ou a versão do openSUSE não seja mais suportada.
+A tabela a seguir é uma lista de versões do .NET com suporte no momento no openSUSE 15. Essas versões permanecem com suporte até que a versão do [.net atinja o fim do suporte](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) ou a versão do openSUSE não seja mais suportada.
 
-- Um ✔️ indica que a versão do openSUSE ou do .NET Core ainda tem suporte.
-- Um ❌ indica que a versão do openSUSE ou do .NET Core não tem suporte nessa versão do openSUSE.
-- Quando uma versão do openSUSE e uma versão do .NET Core têm ✔️, há suporte para essa combinação de so e .NET.
+- Um ✔️ indica que a versão do openSUSE ou do .NET ainda tem suporte.
+- Um ❌ indica que a versão do openSUSE ou do .net não tem suporte nessa versão do openSUSE.
+- Quando uma versão do openSUSE e uma versão do .NET têm ✔️, há suporte para essa combinação de so e .NET.
 
-| openSUSE                   | .NET Core 2.1 | .NET Core 3.1 | Versão prévia do .NET 5 (somente instalação manual) |
+| openSUSE                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5,0 |
 |----------------------------|---------------|---------------|----------------|
-| ✔️ [15](#opensuse-15-)     | ✔️ 2,1        | ✔️ 3,1        | versão prévia do ✔️ 5,0 |
+| ✔️ [15](#opensuse-15-)     | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 
-Não há mais suporte para as seguintes versões do .NET Core. Os downloads para eles ainda permanecem publicados:
+Não há mais suporte para as seguintes versões do .NET. Os downloads para eles ainda permanecem publicados:
 
 - 3.0
 - 2.2
@@ -53,11 +53,11 @@ sudo mv prod.repo /etc/zypp/repos.d/microsoft-prod.repo
 sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 ```
 
-[!INCLUDE [linux-zyp-install-31](includes/linux-install-31-zyp.md)]
+[!INCLUDE [linux-zyp-install-50](includes/linux-install-50-zyp.md)]
 
 ## <a name="troubleshoot-the-package-manager"></a>Solucionar problemas do Gerenciador de pacotes
 
-Esta seção fornece informações sobre erros comuns que você pode obter ao usar o Gerenciador de pacotes para instalar o .NET Core.
+Esta seção fornece informações sobre erros comuns que você pode obter ao usar o Gerenciador de pacotes para instalar o .NET.
 
 ### <a name="unable-to-find-package"></a>Não é possível localizar o pacote
 
@@ -73,7 +73,7 @@ Esta seção fornece informações sobre erros comuns que você pode obter ao us
 
 ## <a name="dependencies"></a>Dependências
 
-Quando você instala o com um Gerenciador de pacotes, essas bibliotecas são instaladas para você. Mas, se você instalar manualmente o .NET Core ou publicar um aplicativo independente, precisará verificar se essas bibliotecas estão instaladas:
+Quando você instala o com um Gerenciador de pacotes, essas bibliotecas são instaladas para você. Mas, se você instalar o .NET manualmente ou publicar um aplicativo independente, precisará verificar se essas bibliotecas estão instaladas:
 
 - krb5
 - libicu
@@ -83,7 +83,7 @@ Se a versão do OpenSSL do ambiente de tempo de execução de destino for 1,1 ou
 
 Para obter mais informações sobre as dependências, consulte [aplicativos do Linux autocontidos](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
 
-Para aplicativos .NET Core que usam o assembly *System. Drawing. Common* , você também precisará da seguinte dependência:
+Para aplicativos .NET que usam o assembly *System. Drawing. Common* , você também precisará da seguinte dependência:
 
 - [libgdiplus (versão 6.0.1 ou posterior)](https://www.mono-project.com/docs/gui/libgdiplus/)
 
@@ -100,4 +100,4 @@ Para aplicativos .NET Core que usam o assembly *System. Drawing. Common* , você
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Tutorial: criar um aplicativo de console com SDK do .NET Core usando Visual Studio Code](../tutorials/with-visual-studio-code.md)
+- [Tutorial: criar um aplicativo de console com o SDK do .NET usando o Visual Studio Code](../tutorials/with-visual-studio-code.md)

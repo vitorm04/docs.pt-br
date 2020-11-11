@@ -2,12 +2,12 @@
 title: dotnet-ferramenta de rastreamento-.NET Core
 description: Instalando e usando a ferramenta de linha de comando dotnet-Trace.
 ms.date: 11/21/2019
-ms.openlocfilehash: 25178a0e59ce9edb69d15ee761c1b9e56aa5eb3a
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: d4175ccad785b21f860044a4fd5d691624ec495e
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517302"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507220"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-utilitário de análise de desempenho de rastreamento
 
@@ -66,6 +66,7 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
     [--format <Chromium|NetTrace|Speedscope>] [-h|--help]
     [-n, --name <name>]  [-o|--output <trace-file-path>] [-p|--process-id <pid>]
     [--profile <profile-name>] [--providers <list-of-comma-separated-providers>]
+    [-- <command>] (for target applications running .NET 5.0 or later)
 ```
 
 ### <a name="options"></a>Opções
@@ -109,8 +110,15 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
   Esta lista de provedores está no formato:
 
   - `Provider[,Provider]`
-  - `Provider`está no formato: `KnownProviderName[:Flags[:Level][:KeyValueArgs]]` .
-  - `KeyValueArgs`está no formato: `[key1=value1][;key2=value2]` .
+  - `Provider` está no formato: `KnownProviderName[:Flags[:Level][:KeyValueArgs]]` .
+  - `KeyValueArgs` está no formato: `[key1=value1][;key2=value2]` .
+
+- **`-- <command>` (somente para aplicativos de destino que executam o .NET 5,0)**
+
+  Após os parâmetros de configuração da coleção, o usuário pode acrescentar `--` seguido por um comando para iniciar um aplicativo .NET com pelo menos um tempo de execução de 5,0. Isso pode ser útil ao diagnosticar problemas que ocorrem no início do processo, como problemas de desempenho de inicialização ou carregador de assembly e erros de fichário.
+
+  > [!NOTE]
+  > O uso dessa opção monitora o primeiro processo do .NET 5,0 que se comunica de volta à ferramenta, o que significa que, se o comando iniciar vários aplicativos .NET, ele só coletará o primeiro aplicativo. Portanto, é recomendável usar essa opção em aplicativos independentes ou usando a `dotnet exec <app.dll>` opção.
 
 ## <a name="dotnet-trace-convert"></a>dotnet-conversão de rastreamento
 
@@ -168,7 +176,7 @@ Para coletar rastreamentos usando `dotnet-trace` :
   - No Linux, por exemplo, o `ps` comando.
   - [dotnet-rastrear PS](#dotnet-trace-ps)
 
-- Execute o comando a seguir:
+- Execute o seguinte comando:
 
   ```console
   dotnet-trace collect --process-id <PID>
@@ -184,20 +192,56 @@ Para coletar rastreamentos usando `dotnet-trace` :
   Recording trace 721.025 (KB)
   ```
 
-- Pare a coleta pressionando a `<Enter>` tecla. `dotnet-trace`encerrará eventos de log no arquivo *trace. NetTrace* .
+- Pare a coleta pressionando a `<Enter>` tecla. `dotnet-trace` encerrará eventos de log no arquivo *trace. NetTrace* .
+
+## <a name="launch-a-child-application-and-collect-a-trace-from-its-startup-using-dotnet-trace"></a>Iniciar um aplicativo filho e coletar um rastreamento de sua inicialização usando dotNet-Trace
+
+Observação: isso funciona somente para aplicativos que executam o .NET 5,0 ou posterior.
+
+Às vezes, pode ser útil coletar um rastreamento de um processo a partir de sua inicialização. Para aplicativos que executam o .NET 5,0 ou posterior, é possível fazer isso usando o rastreamento dotnet.
+
+Isso será iniciado `hello.exe` com `arg1` e `arg2` como seus argumentos de linha de comando e coletará um rastreamento de sua inicialização de tempo de execução:
+
+```console
+dotnet-trace collect -- hello.exe arg1 arg2
+```
+
+O comando anterior gera uma saída semelhante à seguinte:
+
+```console
+No profile or providers specified, defaulting to trace profile 'cpu-sampling'
+
+Provider Name                           Keywords            Level               Enabled By
+Microsoft-DotNETCore-SampleProfiler     0x0000F00000000000  Informational(4)    --profile
+Microsoft-Windows-DotNETRuntime         0x00000014C14FCCBD  Informational(4)    --profile
+
+Process        : E:\temp\gcperfsim\bin\Debug\net5.0\gcperfsim.exe
+Output File    : E:\temp\gcperfsim\trace.nettrace
+
+
+[00:00:00:05]   Recording trace 122.244  (KB)
+Press <Enter> or <Ctrl+C> to exit...
+```
+
+Você pode parar de coletar o rastreamento pressionando `<Enter>` ou `<Ctrl + C>` tecla. Isso também será encerrado `hello.exe` .
+
+> [!NOTE]
+> `hello.exe`A inicialização por meio de dotnet-Trace fará com que sua entrada/saída seja redirecionada e você não conseguirá interagir com seu STDIN/STDOUT.
+> Sair da ferramenta por meio de CTRL + C ou SIGTERM irá encerrar com segurança a ferramenta e o processo filho.
+> Se o processo filho for encerrado antes da ferramenta, a ferramenta também será encerrada e o rastreamento deverá ser visível com segurança.
 
 ## <a name="view-the-trace-captured-from-dotnet-trace"></a>Exibir o rastreamento capturado de dotnet-Trace
 
 No Windows, os arquivos *. NetTrace* podem ser exibidos em [Perfview](https://github.com/microsoft/perfview) para análise: para rastreamentos coletados em outras plataformas, o arquivo de rastreamento pode ser movido para um computador Windows para ser exibido em Perfview.
 
-No Linux, o rastreamento pode ser exibido alterando o formato de saída de `dotnet-trace` para `speedscope` . O formato do arquivo de saída pode ser alterado usando a `-f|--format` opção- `-f speedscope` fará com que o `dotnet-trace` produza um `speedscope` arquivo. Você pode escolher entre `nettrace` (a opção padrão) e `speedscope` . `Speedscope`os arquivos podem ser abertos em <https://www.speedscope.app> .
+No Linux, o rastreamento pode ser exibido alterando o formato de saída de `dotnet-trace` para `speedscope` . O formato do arquivo de saída pode ser alterado usando a `-f|--format` opção- `-f speedscope` fará com que o `dotnet-trace` produza um `speedscope` arquivo. Você pode escolher entre `nettrace` (a opção padrão) e `speedscope` . `Speedscope` os arquivos podem ser abertos em <https://www.speedscope.app> .
 
 > [!NOTE]
 > O tempo de execução do .NET Core gera rastreamentos no `nettrace` formato. Os rastreamentos são convertidos em speedscope (se especificado) após a conclusão do rastreamento. Como algumas conversões podem resultar em perda de dados, o arquivo original `nettrace` é preservado ao lado do arquivo convertido.
 
 ## <a name="use-dotnet-trace-to-collect-counter-values-over-time"></a>Usar o rastreamento dotnet para coletar valores de contador ao longo do tempo
 
-`dotnet-trace`podem
+`dotnet-trace` podem
 
 * Use `EventCounter` para o monitoramento de integridade básico em ambientes sensíveis ao desempenho. Por exemplo, em produção.
 * Colete rastreamentos para que eles não precisem ser exibidos em tempo real.
@@ -222,7 +266,7 @@ O comando anterior desabilita os eventos de tempo de execução e o profiler de 
 
 O tempo de execução do .NET Core dá suporte aos provedores .NET a seguir. O .NET Core usa as mesmas palavras-chave para habilitar `Event Tracing for Windows (ETW)` os `EventPipe` rastreamentos e.
 
-| Nome do provedor                            | Informações do |
+| Nome do provedor                            | Informações |
 |------------------------------------------|-------------|
 | `Microsoft-Windows-DotNETRuntime`        | [O provedor de runtime](../../framework/performance/clr-etw-providers.md#the-runtime-provider)<br>[Palavras-chave de tempo de execução CLR](../../framework/performance/clr-etw-keywords-and-levels.md#runtime) |
 | `Microsoft-Windows-DotNETRuntimeRundown` | [O provedor de encerramento](../../framework/performance/clr-etw-providers.md#the-rundown-provider)<br>[Palavras-chave de resumo do CLR](../../framework/performance/clr-etw-keywords-and-levels.md#rundown) |

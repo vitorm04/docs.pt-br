@@ -2,12 +2,12 @@
 title: Instalar arquivos do IntelliSense localizado
 description: Saiba como configurar seu computador de desenvolvimento para usar arquivos do IntelliSense localizados para projetos do .NET 5 + (incluindo o .NET Core) no Visual Studio.
 ms.date: 11/06/2020
-ms.openlocfilehash: 121439199f0de6d29a18ea55031976680fc1f833
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 45eeae12ca79179cacb3d48fca28118de70e0a4f
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439814"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506760"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net"></a>Como instalar arquivos do IntelliSense localizados para .NET
 
@@ -43,7 +43,7 @@ O [IntelliSense](/visualstudio/ide/using-intellisense) é um recurso de conclus�
       | Windows Desktop       | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET Standard         | *NETStandard.Library.Ref*          |
 
-   1. Navegue até a versão para a qual você deseja instalar o IntelliSense localizado. Por exemplo, *3.1.0*.
+   1. Navegue até a versão para a qual você deseja instalar o IntelliSense localizado. Por exemplo, *5.0.0*.
    1. Abra a pasta *ref*.
    1. Abra a pasta moniker. Por exemplo, *net 5.0*.
 
