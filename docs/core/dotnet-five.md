@@ -5,12 +5,12 @@ ms.date: 11/06/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 43d7a2baa75f3d71de8bbbf1d0bff7d1beb3d7cd
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: efce75159cd631ad64ba03d4b65aaeb64ccdc809
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440530"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557025"
 ---
 # <a name="whats-new-in-net-5"></a>Novidades do .NET 5
 
@@ -108,7 +108,7 @@ Isso é semelhante à [`sprintf`](https://fsharp.github.io/fsharp-core-docs/refe
 
 Não há novos recursos de linguagem para Visual Basic no .NET 5. No entanto, com o .NET 5, Visual Basic suporte é estendido para:
 
-| Descrição                            | Parâmetro `dotnet new` |
+| Description                            | Parâmetro `dotnet new` |
 |----------------------------------------|------------------------|
 | Aplicativo do Console                    | `console`              |
 | Biblioteca de classes                          | `classlib`             |
@@ -171,7 +171,8 @@ View body() => new StackLayout
 
 Para obter mais informações, consulte o [roteiro do .net Maui](https://github.com/dotnet/maui/wiki/Roadmap)e apresentando o artigo do [.net Maui](https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui) .
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [A jornada para um .NET](https://channel9.msdn.com/Events/Build/2020/BOD106)
 - [Melhorias de desempenho no .NET 5](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5)
+- [Baixar o SDK do .NET](https://dotnet.microsoft.com/download)

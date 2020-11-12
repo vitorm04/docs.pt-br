@@ -1,17 +1,17 @@
 ---
-title: Azure Functions duráveis – aplicativos sem servidor
-description: As Azure Functions duráveis estendem o tempo de execução de Azure Functions para habilitar fluxos de trabalho com estado no código.
+title: Aplicativos duráveis Azure Functions-sem servidor
+description: Os Azure Functions duráveis estendem o tempo de execução Azure Functions para permitir fluxos de trabalho com estado no código.
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 1498b5a19bc92b7db16f7422a35ac3afffb82b60
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c3ee628b5c2239cd13395fda7714b38b06efa058
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171787"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557149"
 ---
-# <a name="durable-azure-functions"></a>Funções duráveis do Azure
+# <a name="durable-azure-functions"></a>Azure Functions durável
 
 Ao criar aplicativos sem servidor com o Azure Functions, suas operações normalmente serão projetadas para serem executadas de maneira sem monitoração de estado. A razão para essa escolha de design é porque, à medida que a plataforma é dimensionada, fica difícil saber em quais servidores o código está sendo executado. Também se torna difícil saber quantas instâncias estão ativas em qualquer ponto determinado. No entanto, há classes de aplicativos que exigem que o estado atual de um processo seja conhecido. Considere o processo de envio de um pedido para uma loja online. A operação de check-out pode ser um fluxo de trabalho composto por várias operações que precisam saber o estado do processo. Essas informações podem incluir o inventário do produto, se o cliente tiver créditos de sua conta e também os resultados do processamento do cartão de crédito. Essas operações podem ser facilmente seus próprios fluxos de trabalho internos ou até mesmo serviços de sistemas de terceiros.
 
@@ -96,7 +96,7 @@ public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityCon
 
 ## <a name="recommended-resources"></a>Recursos recomendados
 
-- [Funções duráveis](/azure/azure-functions/durable-functions-overview)
+- [Durable Functions](/azure/azure-functions/durable-functions-overview)
 - [Associações para Durable Functions](/azure/azure-functions/durable-functions-bindings)
 - [Gerenciar instâncias no Durable Functions](/azure/azure-functions/durable-functions-instance-management)
 

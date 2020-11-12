@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet add package
 description: O comando 'dotnet add package' fornece uma opção conveniente para adicionar uma referência de pacote NuGet a um projeto.
-ms.date: 02/14/2020
-ms.openlocfilehash: 1bdda241c1301b926ba2fd322f969407038b7b62
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/11/2020
+ms.openlocfilehash: 10373b3b69c669323674b192d54cd277a5828f24
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538062"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556869"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -23,7 +23,7 @@ ms.locfileid: "90538062"
 dotnet add [<PROJECT>] package <PACKAGE_NAME>
     [-f|--framework <FRAMEWORK>] [--interactive]
     [-n|--no-restore] [--package-directory <PACKAGE_DIRECTORY>]
-    [-s|--source <SOURCE>] [-v|--version <VERSION>]
+    [--prerelease] [-s|--source <SOURCE>] [-v|--version <VERSION>]
 
 dotnet add package -h|--help
 ```
@@ -89,6 +89,10 @@ O arquivo *ToDo.csproj* agora contém um elemento [`<PackageReference>`](/nuget/
 
   O diretório no qual restaurar os pacotes. O local de restauração de pacote padrão é `%userprofile%\.nuget\packages` no Windows e `~/.nuget/packages` no macOS e Linux. Para obter mais informações, consulte [Como gerenciar as pastas de pacotes globais, de cache e temporárias no NuGet](/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
 
+- **`--prerelease`**
+
+  Permite que pacotes de pré-lançamento sejam instalados.
+
 - **`-s|--source <SOURCE>`**
 
   O URI da origem do pacote NuGet a ser usado durante a operação de restauração.
@@ -117,7 +121,7 @@ O arquivo *ToDo.csproj* agora contém um elemento [`<PackageReference>`](/nuget/
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Como gerenciar as pastas de pacotes globais, de cache e temporárias no NuGet](/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
 - [Controle de versão do pacote NuGet](/nuget/reference/package-versioning)

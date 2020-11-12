@@ -1,19 +1,19 @@
 ---
 title: Comando dotnet list package
 description: O comando 'dotnet list package' fornece uma opção conveniente para listar as referências de pacote de um projeto ou solução.
-ms.date: 02/14/2020
-ms.openlocfilehash: 7157e56860936d10aa322854a589ae89e2bc0826
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.date: 11/11/2020
+ms.openlocfilehash: ecb83e5485c9fb49a454a35091e1a7b753b1f291
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164759"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556882"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 2,2 e versões posteriores
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
 `dotnet list package` – Lista as referências de pacote para um projeto ou solução.
 
@@ -24,12 +24,12 @@ dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
     [--deprecated]
     [--framework <FRAMEWORK>] [--highest-minor] [--highest-patch]
     [--include-prerelease] [--include-transitive] [--interactive]
-    [--outdated] [--source <SOURCE>]
+    [--outdated] [--source <SOURCE>] [-v|--verbosity <LEVEL>]
 
 dotnet list package -h|--help
 ```
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Description
 
 O comando `dotnet list package` fornece uma opção conveniente para listar todas as referências de pacotes do NuGet para um projeto específico ou uma solução. Primeiro, você precisa criar o projeto para ter os recursos necessários para que esse comando seja processado. O exemplo a seguir mostra a saída do comando `dotnet list package` para o projeto [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis):
 
@@ -118,6 +118,10 @@ O arquivo de projeto ou solução para operar. Se não for especificado, o coman
 - **`-s|--source <SOURCE>`**
 
   A fontes do NuGet a serem usadas ao procurar pacotes mais novos. Requer a `--outdated` `--deprecated` opção ou.
+
+- **`-v|--verbosity <LEVEL>`**
+
+  Define o nível de detalhamento do MSBuild. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. O padrão é `minimal`.
 
 ## <a name="examples"></a>Exemplos
 

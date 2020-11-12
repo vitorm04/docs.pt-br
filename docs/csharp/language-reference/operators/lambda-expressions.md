@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: a3a753ccea45193c57f31453d7318c14f4898864
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 51bf44af5ec3478f2b2557b047df270c0c22990d
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247703"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556836"
 ---
 # <a name="lambda-expressions-c-reference"></a>Expressões lambda (referência C#)
 
@@ -56,7 +56,7 @@ Uma expressão lambda com uma expressão no lado direito do operador `=>` é cha
 (input-parameters) => expression
 ```
 
-O corpo de um lambda de expressão pode consistir em uma chamada de método. No entanto, se você estiver criando [árvores de expressão](../../programming-guide/concepts/expression-trees/index.md) que são avaliadas fora do contexto do Common Language Runtime do .net, como no SQL Server, você não deve usar chamadas de método em expressões lambda. Os métodos não terão significado fora do contexto do .NET Common Language Runtime.
+O corpo de um lambda de expressão pode consistir em uma chamada de método. No entanto, se você estiver criando [árvores de expressão](../../programming-guide/concepts/expression-trees/index.md) que são avaliadas fora do contexto do CLR (Common Language Runtime) do .net, como no SQL Server, você não deve usar chamadas de método em expressões lambda. Os métodos não terão significado fora do contexto do CLR (Common Language Runtime) do .NET.
 
 ## <a name="statement-lambdas"></a>Lambdas de instrução
 
@@ -246,7 +246,7 @@ Para obter mais informações sobre os recursos adicionados em C# 9,0, consulte 
 - [Parâmetros discard de lambda](~/_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md)
 - [Funções anônimas static](~/_csharplang/proposals/csharp-9.0/static-anonymous-functions.md)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

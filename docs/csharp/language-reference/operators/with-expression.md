@@ -1,18 +1,18 @@
 ---
 title: com expressão-referência C#
 description: Saiba mais sobre uma expressão with que executa mutação não destrutiva de registros C#
-ms.date: 11/10/2020
+ms.date: 11/12/2020
 f1_keywords:
 - with_CSharpKeyword
 helpviewer_keywords:
 - with expression [C#]
 - with operator [C#]
-ms.openlocfilehash: 7948df3c6260e297cdb2fa380f1790a55e0abb58
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 8412dfe8663703d3b201fe98b5f4752da1b344cf
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94445811"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556706"
 ---
 # <a name="with-expression-c-reference"></a>expressão with (referência C#)
 
@@ -21,6 +21,10 @@ Disponível em C# 9,0 e posterior, uma `with` expressão produz uma cópia de se
 :::code language="csharp" source="snippets/with-expression/BasicExample.cs" :::
 
 Como mostra o exemplo anterior, você usa a sintaxe do [inicializador de objeto](../../programming-guide/classes-and-structs/object-and-collection-initializers.md) para especificar quais membros modificar e seus novos valores. Em uma `with` expressão, um operando à esquerda deve ser de um tipo de registro.
+
+O resultado de uma `with` expressão tem o mesmo tipo de tempo de execução que o operando da expressão, como mostra o exemplo a seguir:
+
+:::code language="csharp" source="snippets/with-expression/InheritanceExample.cs" :::
 
 No caso de um membro de tipo de referência, somente a referência a uma instância é copiada quando um registro é copiado. A cópia e o registro original têm acesso à mesma instância de tipo de referência. O exemplo a seguir demonstra esse comportamento:
 
@@ -37,7 +41,7 @@ Para obter mais informações, consulte as seções a seguir da [proposta de rec
 - [`with` expressão](~/_csharplang/proposals/csharp-9.0/records.md#with-expression)
 - [Copiar e clonar Membros](~/_csharplang/proposals/csharp-9.0/records.md#copy-and-clone-members)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

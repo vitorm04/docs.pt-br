@@ -2,12 +2,12 @@
 title: O que há de novo no C# 9,0 – Guia C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 9,0.
 ms.date: 09/04/2020
-ms.openlocfilehash: e1c297cd0ff75d6a6fb4a9d38c9a241e216f500b
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 5b3695dee8fc26f69e713d1d6811acdf0cfa9764
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440862"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557214"
 ---
 # <a name="whats-new-in-c-90"></a>Novidades do C# 9.0
 
@@ -31,6 +31,8 @@ O c# 9,0 adiciona os seguintes recursos e aprimoramentos à linguagem C#:
 - Novos recursos para métodos parciais
 
 O C# 9,0 tem suporte no **.NET 5**. Para obter mais informações, consulte [controle de versão da linguagem C#](../language-reference/configure-language-version.md).
+
+Você pode baixar o SDK do .NET mais recente na [página de downloads do .net](https://dotnet.microsoft.com/download).
 
 ## <a name="record-types"></a>Tipos de registro
 
@@ -158,7 +160,7 @@ System.Console.WriteLine("Hello World!");
 
 Somente um arquivo em seu aplicativo pode usar instruções de nível superior. Se o compilador encontrar instruções de nível superior em vários arquivos de origem, será um erro. Também será um erro se você combinar instruções de nível superior com um método de ponto de entrada de programa declarado, normalmente um `Main` método. De certa forma, você pode imaginar que um arquivo contém as instruções que normalmente estaria no `Main` método de uma `Program` classe.  
 
-Um dos usos mais comuns para esse recurso é a criação de materiais de ensino. Desenvolvedores de C# iniciantes podem escrever o "Olá, Mundo!" canônico em uma ou duas linhas de código. Nenhuma das cerimônias extras é necessária. No entanto, os desenvolvedores experientes também encontrarão muitos usos para esse recurso. As instruções de nível superior permitem uma experiência semelhante a um script para experimentação semelhante ao que os notebooks Jupyter fornecem. As instruções de nível superior são ótimas para pequenos programas de console e utilitários. O Azure Functions é um caso de uso ideal para instruções de nível superior.
+Um dos usos mais comuns para esse recurso é a criação de materiais de ensino. Desenvolvedores de C# iniciantes podem escrever o "Olá, Mundo!" canônico em uma ou duas linhas de código. Nenhuma das cerimônias extras é necessária. No entanto, os desenvolvedores experientes também encontrarão muitos usos para esse recurso. As instruções de nível superior permitem uma experiência semelhante a um script para experimentação semelhante ao que os notebooks Jupyter fornecem. As instruções de nível superior são ótimas para pequenos programas de console e utilitários. Azure Functions são um caso de uso ideal para instruções de nível superior.
 
 O mais importante é que as instruções de nível superior não limitam o escopo ou a complexidade do aplicativo. Essas instruções podem acessar ou usar qualquer classe .NET. Eles também não limitam o uso de argumentos de linha de comando ou valores de retorno. Instruções de nível superior podem acessar uma matriz de cadeias de caracteres denominadas args. Se as instruções de nível superior retornarem um valor inteiro, esse valor se tornará o código de retorno de inteiro de um método sintetizado `Main` . As instruções de nível superior podem conter expressões assíncronas. Nesse caso, o ponto de entrada sintetizado retorna um `Task` , ou `Task<int>` .
 

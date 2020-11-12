@@ -4,16 +4,16 @@ description: O Azure Functions fornece recursos sem servidor em vários idiomas 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 7625b2a0dafb90dc1bf2fb7fe680d53b20764c09
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 08e1aaecdee753dc25cca0d6356caaafae1ad510
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171800"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557110"
 ---
-# <a name="azure-functions"></a>Verificação de
+# <a name="azure-functions"></a>Azure Functions
 
-O Azure Functions fornece uma experiência de computação sem servidor. Uma função é invocada por um *gatilho* (como o acesso a um ponto de extremidade http ou um temporizador) e executa um bloco de código ou lógica de negócios. As funções também dão suporte a *associações* especializadas que se conectam a recursos como armazenamento e filas.
+Azure Functions fornecer uma experiência de computação sem servidor. Uma função é invocada por um *gatilho* (como o acesso a um ponto de extremidade http ou um temporizador) e executa um bloco de código ou lógica de negócios. As funções também dão suporte a *associações* especializadas que se conectam a recursos como armazenamento e filas.
 
 ![Logotipo do Azure Functions](./media/azure-functions-logo.png)
 
@@ -61,7 +61,7 @@ Para criar uma função do Visual Studio, consulte [criar sua primeira função 
 
 ## <a name="understand-triggers-and-bindings"></a>Entender gatilhos e associações
 
-As funções são invocadas por um *gatilho* e podem ter exatamente uma. Além de invocar a função, determinados gatilhos também servem como associações. Você também pode definir várias associações além do gatilho. As *associações* fornecem uma maneira declarativa de conectar dados ao seu código. Eles podem ser passados (entrada) ou receber dados (saída). Os gatilhos e as associações facilitam o trabalho com as funções. As associações removem a sobrecarga de criar manualmente as conexões do banco de dados ou do sistema de arquivos. Todas as informações necessárias para as associações estão contidas em umfunctions.jsespecial * no* arquivo para scripts ou declaradas com atributos no código.
+As funções são invocadas por um *gatilho* e podem ter exatamente uma. Além de invocar a função, determinados gatilhos também servem como associações. Você também pode definir várias associações além do gatilho. As *associações* fornecem uma maneira declarativa de conectar dados ao seu código. Eles podem ser passados (entrada) ou receber dados (saída). Os gatilhos e as associações facilitam o trabalho com as funções. As associações removem a sobrecarga de criar manualmente as conexões do banco de dados ou do sistema de arquivos. Todas as informações necessárias para as associações estão contidas em umfunctions.jsespecial *no* arquivo para scripts ou declaradas com atributos no código.
 
 Alguns gatilhos comuns incluem:
 
