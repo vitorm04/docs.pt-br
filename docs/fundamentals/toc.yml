@@ -43,7 +43,7 @@ items:
             href: ../core/install/templates.md
           - name: Problemas de notarização do macOS
             href: ../core/install/macos-notarization-issues.md
-          - name: Como verificar as versões do .NET Core
+          - name: Como verificar as versões do .NET
             href: ../core/install/how-to-detect-installed-versions.md
           - name: Instalar IntelliSense localizado
             href: ../core/install/localized-intellisense.md
@@ -1412,6 +1412,8 @@ items:
             href: ../standard/attributes/retrieving-information-stored-in-attributes.md
   - name: Bibliotecas de runtime
     items:
+      - name: Visão geral
+        href: ../standard/runtime-libraries-overview.md
       - name: 'Formatar números, datas e outros tipos'
         items:
           - name: Visão geral
@@ -1446,7 +1448,7 @@ items:
                 href: ../standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md
               - name: Exibir datas em calendários que não sejam gregorianos
                 href: ../standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md
-      - name: Cadeias de caracteres
+      - name: Trabalhar com cadeias de caracteres
         items:
           - name: Codificação de caracteres no .NET
             href: ../standard/base-types/character-encoding-introduction.md
@@ -1481,109 +1483,71 @@ items:
                 href: ../standard/base-types/stringbuilder.md
               - name: 'Como: Executar manipulações básicas de cadeia de caracteres'
                 href: ../standard/base-types/basic-manipulations.md
-          - name: Expressões regulares no .NET
+          - name: Analisar (converter) cadeias de caracteres
             items:
               - name: Visão geral
-                href: ../standard/base-types/regular-expressions.md
-                displayName: regular expressions
-              - name: Referência de linguagem
-                items:
-                  - name: Visão geral
-                    href: ../standard/base-types/regular-expression-language-quick-reference.md
-                  - name: Escapes de caractere
-                    href: ../standard/base-types/character-escapes-in-regular-expressions.md
-                  - name: Classes de caracteres
-                    href: ../standard/base-types/character-classes-in-regular-expressions.md
-                  - name: Âncoras
-                    href: ../standard/base-types/anchors-in-regular-expressions.md
-                  - name: Constructos de agrupamento
-                    href: ../standard/base-types/grouping-constructs-in-regular-expressions.md
-                  - name: Quantificadores
-                    href: ../standard/base-types/quantifiers-in-regular-expressions.md
-                  - name: Constructos de referência inversa
-                    href: ../standard/base-types/backreference-constructs-in-regular-expressions.md
-                  - name: Constructos de alternância
-                    href: ../standard/base-types/alternation-constructs-in-regular-expressions.md
-                  - name: Substituições
-                    href: ../standard/base-types/substitutions-in-regular-expressions.md
-                  - name: Opções de expressões regulares
-                    href: ../standard/base-types/regular-expression-options.md
-                  - name: Constructos diversos
-                    href: ../standard/base-types/miscellaneous-constructs-in-regular-expressions.md
-              - name: Práticas recomendadas para expressões regulares
-                href: ../standard/base-types/best-practices.md
-              - name: Modelo de objeto de expressão regular
-                href: ../standard/base-types/the-regular-expression-object-model.md
-              - name: Comportamento da expressão regular
-                items:
-                  - name: Visão geral
-                    href: ../standard/base-types/details-of-regular-expression-behavior.md
-                  - name: Retrocesso
-                    href: ../standard/base-types/backtracking-in-regular-expressions.md
-                  - name: Compilação e reutilização
-                    href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
-                  - name: Acesso thread-safe
-                    href: ../standard/base-types/thread-safety-in-regular-expressions.md
-              - name: Exemplos
-                items:
-                  - name: Verificar se há HREFs
-                    href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
-                  - name: Alterar os formatos de data
-                    href: ../standard/base-types/regular-expression-example-changing-date-formats.md
-                  - name: Extrair um protocolo e um número da porta de uma URL
-                    href: ../standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
-                  - name: Retirar os caracteres inválidos de uma cadeia de caracteres
-                    href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
-                  - name: Verificar se as cadeias de caracteres estão em um formato de email válido
-                    href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
-      - name: Analisar (converter) cadeias de caracteres
+                href: ../standard/base-types/parsing-strings.md
+              - name: Analisar as cadeias de caracteres numéricas
+                href: ../standard/base-types/parsing-numeric.md
+              - name: Analisar as cadeias de caracteres de data e hora
+                href: ../standard/base-types/parsing-datetime.md
+              - name: Analisar outras cadeias de caracteres
+                href: ../standard/base-types/parsing-other.md
+      - name: Expressões regulares
         items:
           - name: Visão geral
-            href: ../standard/base-types/parsing-strings.md
-          - name: Analisar as cadeias de caracteres numéricas
-            href: ../standard/base-types/parsing-numeric.md
-          - name: Analisar as cadeias de caracteres de data e hora
-            href: ../standard/base-types/parsing-datetime.md
-          - name: Analisar outras cadeias de caracteres
-            href: ../standard/base-types/parsing-other.md
-      - name: Injeção de dependência
-        items:
-          - name: Visão geral
-            href: ../core/extensions/dependency-injection.md
-            displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
-          - name: Usar injeção de dependência
-            href: ../core/extensions/dependency-injection-usage.md
-            displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
-          - name: Diretrizes de injeção de dependência
-            href: ../core/extensions/dependency-injection-guidelines.md
-            displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
-      - name: Configuração
-        items:
-          - name: Visão geral
-            href: ../core/extensions/configuration.md
-            displayName: 'configuration,config,configuration sources,config sources'
-          - name: Provedores de configuração
-            href: ../core/extensions/configuration-providers.md
-            displayName: 'configuration providers,config providers'
-          - name: Implementar um provedor de configuração personalizado
-            href: ../core/extensions/custom-configuration-provider.md
-            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
-          - name: Padrão de opções
-            href: ../core/extensions/options.md
-      - name: Registrando em log
-        items:
-          - name: Visão geral
-            href: ../core/extensions/logging.md
-          - name: Provedores de log
-            href: ../core/extensions/logging-providers.md
-          - name: Implementar um provedor de log personalizado
-            href: ../core/extensions/custom-logging-provider.md
-          - name: Registrar em log de alto desempenho
-            href: ../core/extensions/high-performance-logging.md
-          - name: Formatação de log de console
-            href: ../core/extensions/console-log-formatter.md
-      - name: HostBuilder (host genérico)
-        href: ../core/extensions/generic-host.md
+            href: ../standard/base-types/regular-expressions.md
+            displayName: regular expressions
+          - name: Referência de linguagem
+            items:
+              - name: Visão geral
+                href: ../standard/base-types/regular-expression-language-quick-reference.md
+              - name: Escapes de caractere
+                href: ../standard/base-types/character-escapes-in-regular-expressions.md
+              - name: Classes de caracteres
+                href: ../standard/base-types/character-classes-in-regular-expressions.md
+              - name: Âncoras
+                href: ../standard/base-types/anchors-in-regular-expressions.md
+              - name: Constructos de agrupamento
+                href: ../standard/base-types/grouping-constructs-in-regular-expressions.md
+              - name: Quantificadores
+                href: ../standard/base-types/quantifiers-in-regular-expressions.md
+              - name: Constructos de referência inversa
+                href: ../standard/base-types/backreference-constructs-in-regular-expressions.md
+              - name: Constructos de alternância
+                href: ../standard/base-types/alternation-constructs-in-regular-expressions.md
+              - name: Substituições
+                href: ../standard/base-types/substitutions-in-regular-expressions.md
+              - name: Opções de expressões regulares
+                href: ../standard/base-types/regular-expression-options.md
+              - name: Constructos diversos
+                href: ../standard/base-types/miscellaneous-constructs-in-regular-expressions.md
+          - name: Práticas recomendadas para expressões regulares
+            href: ../standard/base-types/best-practices.md
+          - name: Modelo de objeto de expressão regular
+            href: ../standard/base-types/the-regular-expression-object-model.md
+          - name: Comportamento da expressão regular
+            items:
+              - name: Visão geral
+                href: ../standard/base-types/details-of-regular-expression-behavior.md
+              - name: Retrocesso
+                href: ../standard/base-types/backtracking-in-regular-expressions.md
+              - name: Compilação e reutilização
+                href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
+              - name: Acesso thread-safe
+                href: ../standard/base-types/thread-safety-in-regular-expressions.md
+          - name: Exemplos
+            items:
+              - name: Verificar se há HREFs
+                href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
+              - name: Alterar os formatos de data
+                href: ../standard/base-types/regular-expression-example-changing-date-formats.md
+              - name: Extrair um protocolo e um número da porta de uma URL
+                href: ../standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
+              - name: Retirar os caracteres inválidos de uma cadeia de caracteres
+                href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
+              - name: Verificar se as cadeias de caracteres estão em um formato de email válido
+                href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
       - name: Serialização
         items:
           - name: Visão geral
@@ -1753,6 +1717,44 @@ items:
             href: ../standard/io/memory-mapped-files.md
       - name: A classe System.Console
         href: ../standard/building-console-apps.md
+      - name: Injeção de dependência
+        items:
+          - name: Visão geral
+            href: ../core/extensions/dependency-injection.md
+            displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
+          - name: Usar injeção de dependência
+            href: ../core/extensions/dependency-injection-usage.md
+            displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
+          - name: Diretrizes de injeção de dependência
+            href: ../core/extensions/dependency-injection-guidelines.md
+            displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
+      - name: Configuração
+        items:
+          - name: Visão geral
+            href: ../core/extensions/configuration.md
+            displayName: 'configuration,config,configuration sources,config sources'
+          - name: Provedores de configuração
+            href: ../core/extensions/configuration-providers.md
+            displayName: 'configuration providers,config providers'
+          - name: Implementar um provedor de configuração personalizado
+            href: ../core/extensions/custom-configuration-provider.md
+            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
+          - name: Padrão de opções
+            href: ../core/extensions/options.md
+      - name: Registrando em log
+        items:
+          - name: Visão geral
+            href: ../core/extensions/logging.md
+          - name: Provedores de log
+            href: ../core/extensions/logging-providers.md
+          - name: Implementar um provedor de log personalizado
+            href: ../core/extensions/custom-logging-provider.md
+          - name: Registrar em log de alto desempenho
+            href: ../core/extensions/high-performance-logging.md
+          - name: Formatação de log de console
+            href: ../core/extensions/console-log-formatter.md
+      - name: HostBuilder (host genérico)
+        href: ../core/extensions/generic-host.md
   - name: Acesso de dados
     items:
       - name: LINQ
