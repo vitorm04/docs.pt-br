@@ -2,12 +2,12 @@
 title: 'Declarações de importação: a palavra-chave open'
 description: 'Saiba mais sobre as declarações de importação de F # e como elas especificam um módulo ou namespace cujos elementos você pode referenciar sem usar um nome totalmente qualificado.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 6420df071f86159c44606c2710331d5f587023cc
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: ab208c53809e120bc216c8f8b4d04a322d67cf2f
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557601"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557175"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Importar declarações: a `open` palavra-chave
 
@@ -17,6 +17,7 @@ Uma *declaração de importação* especifica um módulo ou namespace cujos elem
 
 ```fsharp
 open module-or-namespace-name
+open type type-name
 ```
 
 ## <a name="remarks"></a>Comentários
@@ -43,6 +44,31 @@ printfn "%A" empty
 
 Portanto, tenha cuidado ao abrir módulos ou namespaces, como `List` ou `Seq` que contenham Membros com nomes idênticos; em vez disso, considere usar os nomes qualificados. Você deve evitar qualquer situação na qual o código seja dependente da ordem das declarações de importação.
 
+## <a name="open-type-declarations"></a>Abrir declarações de tipo
+
+O F # dá suporte `open` a um tipo como este:
+
+```fsharp
+open type System.Math
+PI
+```
+
+Isso vai expor todos os campos estáticos e membros acessíveis no tipo.
+
+Você também pode `open` [gravar registros](records.md) definidos e tipos de [União discriminados](discriminated-unions.md) em F # para expor membros estáticos. No caso de uniões discriminadas, você também pode expor os casos de União. Isso pode ser útil para acessar casos de União em um tipo declarado dentro de um módulo que talvez você não queira abrir, desta forma:
+
+```fsharp
+module M =
+    type DU = A | B | C
+
+    let someOtherFunction x = x + 1
+
+// Open only the type inside the module
+open type M.DU
+
+printfn "%A" A
+```
+
 ## <a name="namespaces-that-are-open-by-default"></a>Namespaces que estão abertos por padrão
 
 Alguns namespaces são frequentemente usados no código F # que eles são abertos implicitamente sem a necessidade de uma declaração de importação explícita. A tabela a seguir mostra os namespaces que estão abertos por padrão.
@@ -63,7 +89,7 @@ Você pode aplicar o `AutoOpen` atributo a um assembly se desejar abrir automati
 
 Alguns módulos, registros ou tipos de União podem especificar o `RequireQualifiedAccess` atributo. Ao referenciar elementos desses módulos, registros ou uniões, você deve usar um nome qualificado, independentemente de você incluir uma declaração de importação. Se você usar esse atributo estrategicamente em tipos que definem nomes comumente usados, você ajudará a evitar colisões de nomes e, portanto, tornará o código mais resiliente às alterações nas bibliotecas. Para obter mais informações, consulte [RequireQualifiedAccessAttribute](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-requirequalifiedaccessattribute.html).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de linguagem F #](index.md)
 - [Namespaces](namespaces.md)

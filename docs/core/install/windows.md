@@ -4,12 +4,12 @@ description: Saiba mais sobre quais versões do Windows você pode instalar no .
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 1b1f2e383e270e646436f8aa1ce19edd8da262b3
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: fe18cda64e0c9986884486298adf4a83b604f323
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506747"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594528"
 ---
 # <a name="install-net-on-windows"></a>Instalar o .NET no Windows
 
@@ -204,7 +204,7 @@ Os requisitos anteriores também serão necessários se você vir entre um dos s
 
 Os [scripts dotnet-install](../tools/dotnet-install-script.md) são usados para a automação CI e para instalações não administrativas do tempo de execução. Você pode baixar o script na [página de referência de script dotnet-install](../tools/dotnet-install-script.md).
 
-O script assume como padrão a instalação da versão mais recente do [LTS (suporte a longo prazo)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , que é o .NET 5,0. Você pode escolher uma versão específica especificando a `Channel` opção. Inclua a `Runtime` opção para instalar um tempo de execução. Caso contrário, o script instalará o SDK.
+O script assume como padrão a instalação da versão mais recente do [LTS (suporte a longo prazo)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , que é o .net 3,1. Você pode escolher uma versão específica especificando a `Channel` opção. Inclua a `Runtime` opção para instalar um tempo de execução. Caso contrário, o script instalará o SDK.
 
 ```powershell
 dotnet-install.ps1 -Channel 5.0 -Runtime aspnetcore

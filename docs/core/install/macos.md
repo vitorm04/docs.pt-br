@@ -4,12 +4,12 @@ description: Saiba mais sobre quais versões do macOS você pode instalar o .NET
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: c5b98767388937ba1e06b0e856a9a923d4a18b3c
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 983c5d2c04b87759b898f449bc092161b03c8ace
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506773"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594450"
 ---
 # <a name="install-net-on-macos"></a>Instalar o .NET no macOS
 
@@ -181,7 +181,7 @@ Embora Visual Studio Code não venha com um instalador .NET automatizado como o 
 
 Os [scripts dotnet-install](../tools/dotnet-install-script.md) são usados para automação e instalações não administrativas do tempo de execução. Você pode baixar o script na [página de referência de script dotnet-install](../tools/dotnet-install-script.md).
 
-O script assume como padrão a instalação da versão mais recente do [LTS (suporte a longo prazo)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , que é o .NET 5,0. Você pode escolher uma versão específica especificando a `current` opção. Inclua a `runtime` opção para instalar um tempo de execução. Caso contrário, o script instalará o [SDK](./windows.md).
+O script assume como padrão a instalação da versão mais recente do [LTS (suporte a longo prazo)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , que é o .net 3,1. Você pode escolher uma versão específica especificando a `current` opção. Inclua a `runtime` opção para instalar um tempo de execução. Caso contrário, o script instalará o [SDK](./windows.md).
 
 ```bash
 ./dotnet-install.sh --channel 5.0 --runtime aspnetcore

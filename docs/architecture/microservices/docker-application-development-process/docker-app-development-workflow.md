@@ -2,12 +2,12 @@
 title: Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 description: Entenda os detalhes do fluxo de trabalho para o desenvolvimento de aplicativos baseados no Docker. Comece o passo a passo e obtenha alguns detalhes para otimizar Dockerfiles e concluir com o fluxo de trabalho simplificado disponível ao usar o Visual Studio.
 ms.date: 01/30/2020
-ms.openlocfilehash: 04b59a6c30b4fb8f34fe1d0e5cd5328ac77ecb4e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1ae4e3cda71676caeab849a92207477652050e25
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172548"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594587"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 
@@ -77,13 +77,13 @@ Você precisa de um Dockerfile para cada imagem personalizada que você deseja c
 
 O Dockerfile é colocado na pasta raiz do seu aplicativo ou serviço. Ele contém os comandos que indicam ao Docker como configurar e executar seu aplicativo ou serviço em um contêiner. Você pode criar manualmente um Dockerfile por meio de código e adicioná-lo ao seu projeto junto com as dependências do .NET.
 
-Com o Visual Studio e suas ferramentas para Docker, esta tarefa requer apenas alguns cliques do mouse. Quando você cria um novo projeto no Visual Studio 2019, há uma opção chamada **habilitar suporte do Docker**, como mostra a Figura 5-3.
+Com o Visual Studio e suas ferramentas para Docker, esta tarefa requer apenas alguns cliques do mouse. Quando você cria um novo projeto no Visual Studio 2019, há uma opção chamada **habilitar suporte do Docker** , como mostra a Figura 5-3.
 
 ![Captura de tela mostrando a caixa de seleção Habilitar suporte ao Docker.](./media/docker-app-development-workflow/enable-docker-support-check-box.png)
 
 **Figura 5-3**. Habilitando o suporte do Docker ao criar um novo projeto de ASP.NET Core no Visual Studio 2019
 
-Você também pode habilitar o suporte do Docker em um projeto de aplicativo Web ASP.NET Core existente clicando com o botão direito do mouse no projeto em **Gerenciador de soluções** e selecionando **Adicionar**  >  **suporte ao Docker...**, conforme mostrado na Figura 5-4.
+Você também pode habilitar o suporte do Docker em um projeto de aplicativo Web ASP.NET Core existente clicando com o botão direito do mouse no projeto em **Gerenciador de soluções** e selecionando **Adicionar**  >  **suporte ao Docker...** , conforme mostrado na Figura 5-4.
 
 ![Captura de tela mostrando a opção de suporte do Docker no menu Adicionar.](./media/docker-app-development-workflow/add-docker-support-option.png)
 
@@ -264,7 +264,7 @@ Isso restauraria os pacotes de toda a solução, mas, novamente, isso seria feit
 
 No entanto, `dotnet restore` só será executado se houver um único arquivo de projeto ou de solução na pasta, portanto, isso é um pouco mais complicado e a maneira de resolvê-lo, sem entrar em muitos detalhes, é esta:
 
-1. adicione as seguintes linhas ao **.dockerignore**:
+1. adicione as seguintes linhas ao **.dockerignore** :
 
    - `*.sln`, para ignorar todos os arquivos de solução na árvore da pasta principal
 
@@ -290,7 +290,7 @@ O arquivo resultante é:
 11
 12  FROM base AS final
 13  WORKDIR /app
-14  COPY --from=publish /app
+14  COPY --from=publish /app .
 15  ENTRYPOINT ["dotnet", "Catalog.API.dll"]
 ```
 
@@ -336,7 +336,7 @@ Você pode encontrar as imagens existentes no seu repositório local usando o co
 
 ### <a name="creating-docker-images-with-visual-studio"></a>Criação de imagens do Docker com o Visual Studio
 
-Ao usar o Visual Studio para criar um projeto com suporte ao Docker, você não cria explicitamente uma imagem. Em vez disso, a imagem é criada quando você pressiona **F5** (ou **Ctrl+F5**) para executar o aplicativo ou o serviço convertido para Docker. Esta etapa é automática no Visual Studio e você não verá ela ocorrer, mas é importante que você saiba o que está acontecendo nos bastidores.
+Ao usar o Visual Studio para criar um projeto com suporte ao Docker, você não cria explicitamente uma imagem. Em vez disso, a imagem é criada quando você pressiona **F5** (ou **Ctrl+F5** ) para executar o aplicativo ou o serviço convertido para Docker. Esta etapa é automática no Visual Studio e você não verá ela ocorrer, mas é importante que você saiba o que está acontecendo nos bastidores.
 
 ![Imagem para a etapa 4 opcional.](./media/docker-app-development-workflow/step-4-define-services-docker-compose-yml.png)
 
@@ -469,7 +469,7 @@ Na maioria dos cenários empresariais, um aplicativo do Docker será ser compost
 
 #### <a name="using-docker-cli"></a>Usando a CLI do Docker
 
-Para executar um aplicativo de vários contêineres com a CLI do Docker, use o comando `docker-compose up`. Esse comando usa o arquivo **docker-compose.yml**, que existe no nível da solução, para implantar um aplicativo de vários contêineres. A figura 5-11 mostra os resultados da execução do comando no diretório principal da solução, que contém o arquivo docker-compose.yml.
+Para executar um aplicativo de vários contêineres com a CLI do Docker, use o comando `docker-compose up`. Esse comando usa o arquivo **docker-compose.yml** , que existe no nível da solução, para implantar um aplicativo de vários contêineres. A figura 5-11 mostra os resultados da execução do comando no diretório principal da solução, que contém o arquivo docker-compose.yml.
 
 ![Exibição da tela ao executar o comando docker-compose up](./media/docker-app-development-workflow/results-docker-compose-up.png)
 

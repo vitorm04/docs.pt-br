@@ -2,16 +2,18 @@
 title: 'O que há de novo no guia F # 5,0-F #'
 description: 'Obtenha uma visão geral dos novos recursos disponíveis em F # 5,0.'
 ms.date: 11/06/2020
-ms.openlocfilehash: 0c4c9f42c63a1dc8c90213c43edbadd4061c132d
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 51d6dd2457ee9966a86d0d9ac686f2af15772999
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94445825"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557136"
 ---
 # <a name="whats-new-in-f-50"></a>O que há de novo no F # 5,0
 
 O f # 5,0 adiciona várias melhorias à linguagem F # e à F# Interativo. Ele é lançado com o **.NET 5**.
+
+Você pode baixar o SDK do .NET mais recente na [página de downloads do .net](https://dotnet.microsoft.com/download).
 
 ## <a name="get-started"></a>Introdução
 
@@ -149,7 +151,6 @@ nameof op_Addition // "op_Addition"
 A obtenção do nome de um parâmetro de tipo requer uma sintaxe ligeiramente diferente:
 
 ```fsharp
-
 type C<'TType> =
     member _.TypeName = nameof<'TType>
 ```
@@ -228,16 +229,16 @@ O F # 5,0 oferece suporte para fatiar com um índice fixo nos tipos de matriz 3D
 Para ilustrar isso, considere a seguinte matriz 3D:
 
 *z = 0*
-|x\y|0|1|
-|---|-|-|
-|**0**|0|1|
-|**1**|2|3|
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 0 | 1 |
+| **1** | 2 | 3 |
 
 *z = 1*
-|x\y|0|1|
-|---|-|-|
-|**0**|4|5|
-|**1**|6|7|
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 4 | 5 |
+| **1** | 6 | 7 |
 
 E se você quisesse extrair a fatia `[| 4; 5 |]` da matriz? Agora isso é muito simples!
 
@@ -258,6 +259,23 @@ for z in 0..dim-1 do
 // Now let's get the [4;5] slice!
 m.[*, 0, 1]
 ```
+
+## <a name="f-quotations-improvements"></a>Melhorias de Cotações de F #
+
+As [Cotações de código](../language-reference/code-quotations.md) F # agora têm a capacidade de reter informações de restrição de tipo. Considere o exemplo a seguir:
+
+```fsharp
+open FSharp.Linq.RuntimeHelpers
+
+let eval q = LeafExpressionConverter.EvaluateQuotation q
+
+let inline negate x = -x
+// val inline negate: x: ^a ->  ^a when  ^a : (static member ( ~- ) :  ^a ->  ^a)
+
+<@ negate 1.0 @>  |> eval
+```
+
+A restrição gerada pela `inline` função é mantida no código qutoation. O `negate` formulário quotated da função agora pode ser avaliado.
 
 ## <a name="applicative-computation-expressions"></a>Expressões de computação Applicative
 

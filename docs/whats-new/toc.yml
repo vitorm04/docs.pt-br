@@ -4,6 +4,8 @@ expanded: true
 items:
   - name: 2020
     items:
+      - name: Outubro
+        href: 2020-10.md
       - name: Setembro
         href: 2020-09.md
       - name: Agosto
@@ -14,5 +16,3 @@ items:
         href: 2020-06.md
       - name: Mai
         href: dotnet-2020-05.md
-      - name: Abril
-        href: dotnet-2020-04.md

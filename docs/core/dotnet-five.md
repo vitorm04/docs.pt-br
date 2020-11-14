@@ -5,12 +5,12 @@ ms.date: 11/06/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: efce75159cd631ad64ba03d4b65aaeb64ccdc809
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 10c1345f4a0a37e04377250da9a7b6df7df3a105
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557025"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594530"
 ---
 # <a name="whats-new-in-net-5"></a>Novidades do .NET 5
 
@@ -137,7 +137,6 @@ Há novos recursos no e para o [System.Text.Jsem](../standard/serialization/syst
 - [campos de suporte](../standard/serialization/system-text-json-how-to.md#include-fields)
 - [Ignorar as propriedades condicionalmente](../standard/serialization/system-text-json-how-to.md#ignore-properties)
 - [Suporte a dicionários de chave não cadeia de caracteres](../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md#dictionary-with-non-string-key)
-- [Suporte a acessadores de propriedade não públicos](../standard/serialization/system-text-json-how-to.md#non-public-property-accessors)
 - [Permitir que conversores personalizados manipulem NULL](../standard/serialization/system-text-json-converters-how-to.md#handle-null-values)
 - [Copiar JsonSerializerOptions](../standard/serialization/system-text-json-how-to.md#copy-jsonserializeroptions)
 - [Criar JsonSerializerOptions com padrões da Web](../standard/serialization/system-text-json-how-to.md#web-defaults-for-jsonserializeroptions)
@@ -171,7 +170,7 @@ View body() => new StackLayout
 
 Para obter mais informações, consulte o [roteiro do .net Maui](https://github.com/dotnet/maui/wiki/Roadmap)e apresentando o artigo do [.net Maui](https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui) .
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [A jornada para um .NET](https://channel9.msdn.com/Events/Build/2020/BOD106)
 - [Melhorias de desempenho no .NET 5](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5)

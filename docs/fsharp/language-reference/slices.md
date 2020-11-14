@@ -2,12 +2,12 @@
 title: Fatias
 description: 'Saiba como usar fatias para tipos de dados F # existentes e como definir suas próprias fatias para outros tipos de dados.'
 ms.date: 12/23/2019
-ms.openlocfilehash: d3ddb2c247c36a85842f565f051372c5f2c9a9e9
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: a3920ad9e1b205b506aaee92c4606bcebf94feba
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559005"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557071"
 ---
 # <a name="slices"></a>Fatias
 
@@ -149,6 +149,62 @@ let xs = [1 .. 10]
 printfn "%A" xs.[2..5] // Includes the 5th index
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="built-in-f-empty-slices"></a>Fatias internas F # vazias
+
+Listas F #, matrizes, sequências, cadeias de caracteres, matrizes 2D, matrizes 3D e matrizes 4D produzirão uma fatia vazia se a sintaxe puder produzir uma fatia que não existe.
+
+Considere o seguinte:
+
+```fsharp
+let l = [ 1..10 ]
+let a = [| 1..10 |]
+let s = "hello!"
+
+let emptyList = l.[-2..(-1)]
+let emptyArray = a.[-2..(-1)]
+let emptyString = s.[-2..(-1)]
+```
+
+Os desenvolvedores de C# podem esperar que eles lancem uma exceção em vez de produzir uma fatia vazia. Essa é uma decisão de design enraizada no fato de que coleções vazias compõem em F #. Uma lista de F # vazia pode ser composta com outra lista de F #, uma cadeia de caracteres vazia pode ser adicionada a uma cadeia de caracteres existente e assim por diante. Pode ser comum pegar fatias com base nos valores passados como parâmetros e ser tolerante a fora dos limites, produzindo uma coleção vazia se ajusta à natureza composicional do código F #.
+
+## <a name="fixed-index-slices-for-3d-and-4d-arrays"></a>Fatias de índice fixo para matrizes 3D e 4D
+
+Para matrizes F # 3D e 4D, você pode "corrigir" um índice específico e fatiar outras dimensões com esse índice fixo.
+
+Para ilustrar isso, considere a seguinte matriz 3D:
+
+*z = 0*
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 0 | 1 |
+| **1** | 2 | 3 |
+
+*z = 1*
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 4 | 5 |
+| **1** | 6 | 7 |
+
+Se você quiser extrair a fatia `[| 4; 5 |]` da matriz, use uma fatia de índice fixo.
+
+```fsharp
+let dim = 2
+let m = Array3D.zeroCreate<int> dim dim dim
+
+let mutable count = 0
+
+for z in 0..dim-1 do
+    for y in 0..dim-1 do
+        for x in 0..dim-1 do
+            m.[x,y,z] <- count
+            count <- count + 1
+
+// Now let's get the [4;5] slice!
+m.[*, 0, 1]
+```
+
+A última linha corrige o `y` e as `z` índicos da matriz 3D e leva o restante dos `x` valores que correspondem à matriz.
+
+## <a name="see-also"></a>Consulte também
 
 - [Propriedades indexadas](./members/indexed-properties.md)
