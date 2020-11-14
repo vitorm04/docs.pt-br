@@ -26,7 +26,7 @@ O .NET 5,0 inclui os seguintes aprimoramentos e novos recursos em comparação c
 - [Atualizações em C#](#c-updates)
 - [Atualizações de F #](#f-updates)
 - [Atualizações de Visual Basic](#visual-basic-updates)
-- [System.Text.Jssobre novos recursos](#systemtextjson-new-features)
+- [Novos recursos do System.Text.Json](#systemtextjson-new-features)
 - [Aplicativos de arquivo único](deploying/single-file.md)
 - [Corte de aplicativo](https://devblogs.microsoft.com/dotnet/app-trimming-in-net-5)
 - Intrínsecos do Windows ARM64 e ARM64
@@ -125,7 +125,7 @@ Não há novos recursos de linguagem para Visual Basic no .NET 5. No entanto, co
 
 Para obter mais informações sobre modelos de projeto da CLI do .NET, consulte [`dotnet new`](tools/dotnet-new.md) .
 
-## <a name="systemtextjson-new-features"></a>System.Text.Jssobre novos recursos
+## <a name="systemtextjson-new-features"></a>Novos recursos do System.Text.Json
 
 Há novos recursos no e para o [System.Text.Jsem](../standard/serialization/system-text-json-overview.md):
 
